@@ -1,6 +1,6 @@
 ---
 name: roblox-performance-audit
-description: 'LihFolk: Find and fix performance problems in a Roblox game with measurements instead of guesses: MicroProfiler, memory leaks, network bandwidth, instance counts and mobile budgets. Use when the user says "lag", "low fps", "frame spikes", "memory keeps growing", "phones crash", "slow join", "place is too big", "optimize this", or asks for a performance review.'
+description: 'LihFolk: measured performance fixes (MicroProfiler, memory, network, instance counts, mobile budgets). Use for lag, low fps, spikes, growing memory, phone crashes, slow joins, "optimize this".'
 ---
 # LihFolk Performance Audit
 

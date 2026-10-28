@@ -12,7 +12,7 @@ tags: [monetization, robux, overview, business, live-ops]
 > - Every product and pass created on the dashboard; no id 0 left visible as purchasable
 > - One server script owns `ProcessReceipt`, idempotent and data-store backed
 >
-> Read more (15 KB note): ## 1. The money map (October 2026) · ## 4. What the reference project sold · ## 7. Common mistakes · ## 8. Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.8k tok. Read more: ## 1. The money map (October 2026) · ## 4. What the reference project sold · ## 7. Common mistakes · ## 8. Checklist
 <!-- tldr:end -->
 
 This note maps every way a Roblox experience can earn, explains how each one actually pays, and gives a decision framework for choosing between them. It is the entry point for the folder. Each mechanism has its own deep note; this one is about the whole system and the trade-offs between parts.

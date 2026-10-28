@@ -12,7 +12,7 @@ tags: [lighting, untextured, stylised, flat-colour, materials, look-dev, roblox,
 > - Sun 30 to 50 degrees up at the chosen time; lit faces about 1.5 to 2.5 times shadow faces.
 > - Warm top tint and cool ambient (or the zone's equivalent) set.
 >
-> Read more (16 KB note): ## Choosing a built-in material under flat colour · ## Building a look-dev room · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~210 tok · whole note ~4.2k tok. Read more: ## Choosing a built-in material under flat colour · ## Building a look-dev room · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Painted textures carry their own light: an artist paints the highlight on the top of a barrel and the shadow under its rim, and the barrel reads even in dull light. Untextured art (flat colour, gradient atlases, vertex colour) carries little or none. Every bit of form a player sees on a flat-coloured MeshPart comes from three sources: the mesh's normals, any gradient baked into its colour, and Roblox's lighting. That makes lighting a much bigger share of the look than in a textured game, and it makes untextured art sensitive to things textured art shrugs off: ambient balance, sun angle, material choice, and how the game degrades on low graphics settings.

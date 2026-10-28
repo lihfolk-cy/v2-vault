@@ -12,7 +12,7 @@ tags: [game-feel, input, responsiveness, buffering, coyote-time, controls, comba
 > - Nothing waits for a server reply before showing local feedback.
 > - Buffer windows per action; consume once; priorities; cleared on state changes.
 >
-> Read more (22 KB note): ## 2. Input buffering · ## 4. Coyote time on the default Humanoid · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~5.6k tok. Read more: ## 2. Input buffering · ## 4. Coyote time on the default Humanoid · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most "this game feels bad" complaints are not about effects at all. They are about **input**: a jump that did not happen on the edge of a platform, an attack pressed slightly early that was swallowed, a dodge that came out a beat late, a phone button that only reacts when the finger lifts. [[Custom Character Controllers]] introduces coyote time and jump buffering in two bullet points with typical windows. This note goes into the mechanism: the responsiveness budget, the first-frame rule, buffering semantics (windows, priority, consumption, clearing), cancel windows, a full coyote and jump-buffer implementation on the default Humanoid, the forgiveness family beyond jumping, touch and gamepad specifics, and how the server should treat inputs that arrive slightly early.

@@ -12,7 +12,7 @@ tags: [genre-system, rounds, minigames, teams, spectating, worked-build, matchma
 > - Leave during countdown: countdown cancels when the queue drops below the requirement.
 > - Leave mid-round as the last player on a team: the other team wins; no rewards if under 20 s.
 >
-> Read more (29 KB note): ## 4. The server: ArenaService · ## 5. The client: spectating and status · ## 6. Common mistakes · ## 9. Test checklist
+> Cost: TL;DR ~160 tok · whole note ~7.5k tok. Read more: ## 4. The server: ArenaService · ## 5. The client: spectating and status · ## 6. Common mistakes · ## 9. Test checklist
 <!-- tldr:end -->
 
 This note builds the round loop that comes after the single global loop: several arenas running independent rounds in one server, a queue per arena, teams balanced by a saved rating, late joiners routed into spectating or into the round, a spectator camera that follows only valid targets, leavers and AFK players handled without stalling a round, and results that update wins and rating without rewarding alt-account farming. It is the "several arenas per server" and "spectating" extension that [[Round-Based Minigame Loop End to End]] lists in its own extension section, built out in full.

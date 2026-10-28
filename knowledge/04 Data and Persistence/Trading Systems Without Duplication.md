@@ -12,7 +12,7 @@ tags: [data, trading, duplication, transactions, security, economy, luau]
 > - Server-owned offers; edits bump a version; ready and confirm carry it.
 > - Countdown before confirm; any edit cancels it.
 >
-> Read more (20 KB note): ## 3. The state machine and the server-owned offer · ## 5. Committing across two profiles · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.2k tok. Read more: ## 3. The state machine and the server-owned offer · ## 5. Committing across two profiles · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Player-to-player trading is the feature most likely to destroy an economy. A single duplication bug turns your rarest item into the most common one in a weekend, and every trade after that spreads the copies. The cause is almost never exotic: a trade changes **two** player profiles, Roblox data stores have no multi-key transaction, and the gap between "player A saved" and "player B saved" is where items are born or lost.

@@ -10,7 +10,7 @@ tags: [core-concept, art, texturing, 3d-modeling, performance]
 > - Big surfaces should tile. A 200-stud wall cannot get good density from one unique texture, even a 4K one.
 > - Scaling a mesh in Studio scales its density down.
 >
-> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~1.0k tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Texel density** is how many texture pixels (texels) cover one unit of surface in the world, for example 256 texels per stud. Consistent texel density means a crate, a wall and a sword all look equally sharp at the same viewing distance; inconsistent density makes some objects crisp and others blurry side by side.

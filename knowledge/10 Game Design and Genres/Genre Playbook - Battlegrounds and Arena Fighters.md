@@ -12,7 +12,7 @@ tags: [game-design, genre, battlegrounds, fighting, pvp, combos, netcode, arena]
 > - Two-client test with simulated latency (100 and 250 ms) for every character's combos.
 > - Hit validation and rate limits on every combat remote; fuzzed.
 >
-> Read more (16 KB note): ## 1. Core loop · ## 3. Fairness under latency · ## 8. Common mistakes · ## 9. Launch checklist
+> Cost: TL;DR ~160 tok · whole note ~4.0k tok. Read more: ## 1. Core loop · ## 3. Fairness under latency · ## 8. Common mistakes · ## 9. Launch checklist
 <!-- tldr:end -->
 
 A "battlegrounds" game drops a server of players into one open arena, each picking a character with a fixed move set (usually four abilities plus a basic attack chain and an ultimate that charges in combat), and lets them fight freely. Arena fighters are the tighter cousin: one-on-one or small-team rounds, often ranked. Both are pure PvP skill games built on the moment-to-moment feel of hits, which makes them the most netcode-sensitive genre on Roblox and the one where exploiters do the most visible damage.

@@ -12,7 +12,7 @@ tags: [worked-build, daily-rewards, retention, time, remotes, ui, luau, strict]
 > - Missed-day policy decided and written down
 > - Claim takes no arguments, is rate-limited, never yields between check and mark
 >
-> Read more (23 KB note): ## 4. Server · ## 5. Client and UI · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.9k tok. Read more: ## 4. Server · ## 5. Client and UI · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A seven-day reward track with a streak: the player claims once per UTC day, consecutive days advance the track, a missed day resets it, and day 7 pays a bigger prize before the track loops. The server decides everything from its own clock; the client only displays state and asks to claim. This note builds it from an empty place on top of the foundation in [[Saved Inventory End to End]] (the `PlayerData`, `Net`, `RateLimiter` and `InventoryService` modules), and shows the UI, the tests, the attacks and the extensions.

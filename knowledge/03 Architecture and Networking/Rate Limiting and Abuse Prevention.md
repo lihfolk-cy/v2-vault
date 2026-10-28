@@ -12,7 +12,7 @@ tags: [security, rate-limiting, networking, performance, abuse]
 > - Limits are 1.5x to 2x the fastest legitimate use, with logged rejections.
 > - Backend calls go through server-wide budgets.
 >
-> Read more (17 KB note): ## A reusable rate limiter · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.4k tok. Read more: ## A reusable rate limiter · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Any server logic a client can trigger (remotes, Touched, ProximityPrompts, ClickDetectors, chat, trade requests) can be triggered faster than you planned: by exploiters on purpose, by auto-clickers, by a buggy client loop, or by an honest player mashing a button on a laggy connection. Rate limiting decides how often each action may run, protects the economy from timing exploits, and protects the server (and Roblox's backend services) from overload. This note covers the algorithms, how to choose limits, the engine's own limits you must stay under, coalescing and idempotency, cleanup, and production numbers.

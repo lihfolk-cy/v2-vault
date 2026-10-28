@@ -12,7 +12,7 @@ tags: [production, team, workflow, ownership, collaboration, case-study]
 > - An ownership map exists, by path, and is kept current.
 > - Shared hot files have a written edit protocol.
 >
-> Read more (14 KB note): ## The ownership map · ## The daily loop · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.5k tok. Read more: ## The ownership map · ## The daily loop · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A Roblox game is usually made by a small group: an owner who decides taste and holds the account, one or more builders and scripters, sometimes an artist or animator, and testers who are often friends or the owner. Studio makes it easy for all of them to work in the same place at the same time ([[Team Create and Collaboration]]). It does not make it easy for them to avoid stepping on each other. This note is about roles, ownership and the daily loop that keeps several people (or several parallel workstreams) productive in one place.

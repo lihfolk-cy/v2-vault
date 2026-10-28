@@ -12,7 +12,7 @@ tags: [world-building, art, parts, csg, unions, meshparts, geometry]
 > - Repeated objects are one mesh asset, cloned.
 > - No mesh over 20,000 triangles; heavy objects split.
 >
-> Read more (20 KB note): ## Unions and solid modeling (CSG) · ## MeshParts · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~5.2k tok. Read more: ## Unions and solid modeling (CSG) · ## MeshParts · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Everything you see in a Roblox world is one of four kinds of geometry: **primitive Parts** (Block, Ball, Cylinder, Wedge, CornerWedge), **solid-model operations** (Unions, Intersects, Negates, all `PartOperation`s), **MeshParts** (imported triangle meshes) and **Terrain** (voxels, see [[Terrain Tools and Terrain API]]). Each has a different cost profile for rendering, physics, memory, place size and iteration speed. Picking the wrong one is the most common reason a map that looked fine in Studio stutters on a phone, or a build that looked "pro" in Blender looks cheap once it is in the game.

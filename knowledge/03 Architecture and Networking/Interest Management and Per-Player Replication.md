@@ -12,7 +12,7 @@ tags: [networking, replication, streaming, interest-management, bandwidth, priva
 > - Bandwidth estimated as entities x rate x bytes per relevant player, against a low tens of kbps target.
 > - Relevance sets use hysteresis; enter carries a snapshot; enter/leave are reliable.
 >
-> Read more (20 KB note): ## 1. What the engine gives you · ## 4. Building a relevance layer · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~200 tok · whole note ~5.2k tok. Read more: ## 1. What the engine gives you · ## 4. Building a relevance layer · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Interest management means deciding, **per player**, what that player's client needs to know, how often, and at what detail. By default Roblox replicates the server's DataModel to everyone, filtered only by Instance Streaming distance and a few owner-only containers. That default is fine for small games and wasteful or leaky for large ones: 40 enemies across a 4 km map do not all need 20 updates per second to every player, and one player's hidden loot table should never reach anyone else.

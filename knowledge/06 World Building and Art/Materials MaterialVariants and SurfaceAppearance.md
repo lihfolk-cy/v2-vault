@@ -12,7 +12,7 @@ tags: [world-building, art, materials, materialvariant, materialservice, surface
 > - Override slots planned and documented; terrain materials chosen with global colours in mind.
 > - MaterialVariants live in MaterialService with a stable naming convention.
 >
-> Read more (16 KB note): ## MaterialService and MaterialVariant · ## SurfaceAppearance · ## Gotchas collected · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~4.0k tok. Read more: ## MaterialService and MaterialVariant · ## SurfaceAppearance · ## Gotchas collected · ## Checklist
 <!-- tldr:end -->
 
 Roblox has three layers of surface appearance, and mixing them up is the cause of most "why won't this change colour / texture" bugs:

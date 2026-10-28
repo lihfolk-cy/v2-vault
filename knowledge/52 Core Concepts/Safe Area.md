@@ -10,7 +10,7 @@ tags: [core-concept, ui, mobile, console, layout]
 > - Thumb reach is a second safe area. On phones the bottom corners are easiest to reach and the top centre is hardest.
 > - Orientation changes the shape. A notch is on the left or right depending on which way the phone is turned.
 >
-> Read more (3 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~850 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 The **safe area** is the part of the screen where UI can be placed without being covered by hardware (notches, rounded corners, camera cut-outs, home indicators), Roblox's own top bar and buttons, or the overscan edge of a TV. Anything outside it may be hidden or hard to tap.

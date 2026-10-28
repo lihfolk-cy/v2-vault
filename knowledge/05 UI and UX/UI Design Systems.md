@@ -12,7 +12,7 @@ tags: [ui, design-system, tokens, theming, styling, components, audit]
 > - Component builders or style rules; screens never hard-code values.
 > - Exceptions are attributes that every pass respects.
 >
-> Read more (17 KB note): ## 3. Theme module: one source of truth in code · ## 4. The engine option: UI styling · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.4k tok. Read more: ## 3. Theme module: one source of truth in code · ## 4. The engine option: UI styling · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A design system is the set of decisions that make forty screens look like one game: a palette with roles, a type scale, spacing and radius steps, a handful of components with defined states, and motion rules. On Roblox it can live in a theme ModuleScript, in the engine's own UI styling system (`StyleSheet`, tokens, themes, queries), or both. This note covers what to put in a system, how to enforce it, the cartoon "simulator" style in concrete numbers, and the tooling that took one production game's 92 screens to a measured 10/10 for positioning and sizing.

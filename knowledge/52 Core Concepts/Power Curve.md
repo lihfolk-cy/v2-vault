@@ -10,7 +10,7 @@ tags: [core-concept, progression, economy, balancing, math]
 > - Exponential income demands exponential costs.
 > - Walls are a design choice. A deliberate steepening before a rebirth or a new zone tells the player "change strategy".
 >
-> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~930 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 A **power curve** describes how a player's strength (damage, income, speed) grows as they progress, usually plotted against level, time played or currency spent. It is always paired with a **cost curve**: how much each next step costs. The relationship between the two decides pacing.

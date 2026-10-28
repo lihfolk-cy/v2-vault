@@ -1,3 +1,8 @@
+---
+tags: [field-notes, ai, agents, mcp, coordination, studio, workflow, backups]
+---
+# Running Many AI Agents on One Roblox Place
+
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - A fix disappears after another agent's change: Two writers on one module -> Single owner per area
@@ -7,13 +12,8 @@
 > - Claim files with `claimed_by`, `claimed_at`, status and expiry for batch work.
 > - Every edit preceded by a fresh read and guarded by a changed-since-read check.
 >
-> Read more (6 KB note): ## 2. Claim files for batch jobs · ## 3. Re-read before every edit · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~1.6k tok. Read more: ## 2. Claim files for batch jobs · ## 3. Re-read before every edit · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
----
-tags: [field-notes, ai, agents, mcp, coordination, studio, workflow, backups]
----
-# Running Many AI Agents on One Roblox Place
 
 [[Multiple Agents in One Studio]] covers what agents share in one Studio window and the rules that keep them from colliding. This note adds the operational lessons that only showed up after weeks of many agents editing one large place: ownership that is written down, claim files for batch jobs, why "re-read before edit" is not optional, where backups belong, who holds Play mode, the autosave restart trap, and tagging every edit so it can be found again. Safety rules are in [[Safety Rules for AI Agents in Studio]]; the wider story in [[Case Study - Building a Game with AI Agents]].
 

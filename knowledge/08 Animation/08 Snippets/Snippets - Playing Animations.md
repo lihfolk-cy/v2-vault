@@ -9,7 +9,7 @@ tags: [snippets, luau, playback, animator]
 > - Avoid: Setting `Priority` after `Play`.
 > - Avoid: Computing speed from `Length` before the clip has loaded (speed 0, frozen clip).
 >
-> Read more (24 KB note): ## 1. The module · ## 3. Swapping the default Animate clips · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~6.1k tok. Read more: ## 1. The module · ## 3. Swapping the default Animate clips · ## Common mistakes
 <!-- tldr:end -->
 
 Production patterns for playing clips through the engine `Animator`: finding the Animator, caching tracks, preloading, waiting for a clip to load, marker hooks that do not leak, fitting a clip to a gameplay window, hit-stop that survives overlapping hits, swapping the default Animate clips, phase-synced locomotion crossfades, and resolving a published id with a fallback.

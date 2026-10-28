@@ -10,7 +10,7 @@ tags: [core-concept, animation, ui, math, game-feel]
 > - Entrances and exits should not mirror. Exits are usually shorter (rule of thumb: about 70 to 80 percent of the entrance...
 > - Strong curves need shorter durations. Exponential and Quint Out spend most of the time in a tiny tail; at 0.5 s they feel...
 >
-> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~140 tok · whole note ~900 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Easing** is the shape of change over time: a function that maps linear progress `t` (0 to 1) to eased progress. Linear motion moves at constant speed; eased motion speeds up, slows down, overshoots or bounces. Roblox exposes this as `Enum.EasingStyle` (Linear, Sine, Quad, Cubic, Quart, Quint, Exponential, Circular, Back, Bounce, Elastic) combined with `Enum.EasingDirection` (In, Out, InOut) (Roblox docs, as of October 2026).

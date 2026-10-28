@@ -10,7 +10,7 @@ tags: [core-concept, analytics, onboarding, game-design, retention]
 > - Steps must be ordered and each logged once.
 > - The biggest drop is not always the one to fix.
 >
-> Read more (3 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~110 tok · whole note ~890 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 An **onboarding funnel** is the ordered list of steps a new player should pass through in their first session (joined, loaded, moved, finished the first action, got the first reward, made the first upgrade), with the share of players who reach each step. Each drop between steps shows where new players give up.

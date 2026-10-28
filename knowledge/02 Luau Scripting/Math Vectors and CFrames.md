@@ -12,7 +12,7 @@ tags: [luau, math, vector3, cframe, random, geometry]
 > - Every normalization guards against zero length.
 > - Per-frame smoothing uses `dt`.
 >
-> Read more (20 KB note): ## 4. CFrame fundamentals · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.2k tok. Read more: ## 4. CFrame fundamentals · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Game code is mostly arithmetic on numbers, `Vector3`s and `CFrame`s. This note covers the `math` library (including the newer `lerp`, `map`, `isnan` family and constants), randomness with `Random`, `Vector3` and the native `vector` library, `CFrame` construction, composition and space conversion, the recipes you need every week (look-at, facing angles, projections, frame-rate independent smoothing), and the numeric traps: float precision, NaN, Euler angles and the far-from-origin problem. Character joints and CFrame composition for rigs are covered in depth in [[Motor6D Math and CFrame Composition]].

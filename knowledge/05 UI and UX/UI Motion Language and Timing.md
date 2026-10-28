@@ -12,7 +12,7 @@ tags: [ui, motion, animation, tweenservice, timing, easing, springs, reduced-mot
 > - Exits are faster than entrances and use In easing without overshoot.
 > - Moves scale duration with screen-space distance, clamped.
 >
-> Read more (24 KB note): ## 5. Interruption: where most UI motion breaks · ## 8. A motion module that enforces the language · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~6.3k tok. Read more: ## 5. Interruption: where most UI motion breaks · ## 8. A motion module that enforces the language · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A motion language is the small set of rules that decides how every piece of UI moves: which direction things come from, how long they take, which easing they use, what happens when the player interrupts them, and what all of it collapses to when the player asks for reduced motion. Without one, every panel gets tuned by whoever built it, and the game ends up with 40 different "open" animations that feel like 40 different products.

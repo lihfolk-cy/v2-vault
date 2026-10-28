@@ -9,7 +9,7 @@ tags: [snippets, luau, procedural, springs]
 > - Avoid: Compounding `Transform = Transform * offset` (winds up on throttled or unkeyed frames).
 > - Avoid: Per-frame smoothing with a constant factor (`x += (t - x) * 0.2`), which changes with frame rate.
 >
-> Read more (22 KB note): ## 3. Look-at for neck and waist, clamped and smoothed · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~120 tok · whole note ~5.7k tok. Read more: ## 3. Look-at for neck and waist, clamped and smoothed · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 Code for motion computed at runtime instead of played from clips: additive layers on top of the Animator, springs, look-at, recoil, breathing, lean, spinning and bobbing objects, a weapon toss, a hinged lid, and server-synchronised one-off motion. The theory is in [[Procedural Animation]], [[Springs Damping and Smoothing]] and [[Look-At Aim and Head Tracking]].

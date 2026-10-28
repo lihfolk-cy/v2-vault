@@ -9,7 +9,7 @@ tags: [procedural, ik, arms, wrist, swing-twist, viterbi, limits, quality]
 > - Wrist flips 170 degrees in one frame: twist wrapped at +-180 then clamped -> unwrap twist against last frame before clamping
 > - Thrust looks like a broken wrist: wrist asked to aim the blade -> aim with the arm; wrist limits force it
 >
-> Read more (16 KB note): ## Swing/twist decomposition · ## Continuity: Viterbi over the whole clip · ## Common mistakes
+> Cost: TL;DR ~130 tok · whole note ~4.0k tok. Read more: ## Swing/twist decomposition · ## Continuity: Viterbi over the whole clip · ## Common mistakes
 <!-- tldr:end -->
 
 A two-bone solver puts the hand on the target. It does not make the arm look human. That depends on three choices the solver leaves open: **which way the elbow points** (the pole or swivel), **how much the wrist is allowed to do** (limits on flex, deviation and twist), and **how those choices change from frame to frame** (continuity). This note covers all three with the numbers one live action game (the reference project) arrived at after baking and scoring a few hundred attack clips.

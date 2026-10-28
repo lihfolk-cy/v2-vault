@@ -12,7 +12,7 @@ tags: [2d, sprites, sprite-sheet, animation, imagelabel, imagerectoffset, pixel-
 > - 1 to 2 pixels of padding or extrusion between frames.
 > - Frame data imported from the art tool, converted to a committed Luau module, validated (no zero sizes).
 >
-> Read more (22 KB note): ## 6. Importing frame data · ## 7. The animation player · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.7k tok. Read more: ## 6. Importing frame data · ## 7. The animation player · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 A 2D character is a sequence of drawings shown one after another. On Roblox, the efficient way to show them is one uploaded image that contains every frame (a **sprite sheet** or **atlas**), displayed through an `ImageLabel` that shows only one rectangle of it at a time. Changing the rectangle changes the frame. This note covers how the rectangle properties really behave, how to lay out sheets so frames do not bleed or blur, mirroring, importing frame data from an art tool, a frame-accurate animation player driven by the game loop, gameplay events on frames, and the mistakes that cost the most time.

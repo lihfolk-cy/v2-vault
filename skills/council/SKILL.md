@@ -1,6 +1,6 @@
 ---
 name: council
-description: 'LihFolk: Blind, anonymized multi-agent review for objective verdicts on high-stakes Roblox decisions (game direction, economy/pricing, art style, architecture, "is this good enough to ship"). Use when the user asks for a council, an unbiased/objective verdict or a second opinion, or before an irreversible or expensive decision. Not for routine coding questions.'
+description: 'LihFolk: blind multi-agent verdict (Quick 1 seat / Standard 3 / Full) for high-stakes Roblox decisions, ship-readiness and "be objective" / "second opinion" requests. Not for routine coding.'
 ---
 
 # LihFolk Council

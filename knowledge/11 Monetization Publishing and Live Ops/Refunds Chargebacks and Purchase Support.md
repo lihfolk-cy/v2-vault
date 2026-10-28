@@ -12,7 +12,7 @@ tags: [monetization, refunds, chargebacks, support, webhooks, purchases, live-op
 > - Boot assertion: every product has a supported grant.
 > - Transaction Refunded (and Subscription Refunded if relevant) webhooks configured with a secret.
 >
-> Read more (20 KB note): ## 2. Receiving refund notifications · ## 5. Purchase support: the tickets you will get · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.1k tok. Read more: ## 2. Receiving refund notifications · ## 5. Purchase support: the tickets you will get · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Every game that sells things eventually has to answer three kinds of message: "I paid and got nothing", "my child bought this without asking", and, from Roblox, "this transaction was refunded". This note covers what Roblox does on its side when a purchase is refunded, what it leaves to you, how to receive refund notifications reliably, how to claw back developer product grants without punishing the wrong person, and how to run purchase support with the tools and logs that make it answerable.

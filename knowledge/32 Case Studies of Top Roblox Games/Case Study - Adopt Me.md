@@ -12,7 +12,7 @@ tags: [case-study, top-games, pet-care, roleplay, trading, live-ops, monetizatio
 > - Event currency is event-only; any multiplier pass is cheap and expires with the event.
 > - Retired items or passes are announced before they leave.
 >
-> Read more (20 KB note): ## 1. Snapshot · ## 6. What to copy and what not to copy · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~5.1k tok. Read more: ## 1. Snapshot · ## 6. What to copy and what not to copy · ## Checklist
 <!-- tldr:end -->
 
 Adopt Me is the clearest example on Roblox of a game that turned a light roleplay toy (adopt a baby, decorate a house) into a collection and trading economy, then kept that economy alive for years with a strict event calendar. It is not a game you should clone. It is a game you should study for three things: how a care loop makes cute objects feel earned, how a trade layer turns a single player collection into a social status system, and how a studio ships a seasonal event almost every few weeks without breaking the economy that pays for everything.

@@ -12,7 +12,7 @@ tags: [world-building, terrain, voxels, api, materials, tools]
 > - Snapshot (CopyRegion) taken and named before every edit.
 > - Writes chunked, read back, verified.
 >
-> Read more (17 KB note): ## The scripting API · ## Recipes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.4k tok. Read more: ## The scripting API · ## Recipes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox Terrain is a voxel field: the world is divided into **4 x 4 x 4 stud cells**, each with a **material** and an **occupancy** between 0 and 1 (Roblox docs). The engine builds a smooth surface from those numbers, renders it with its own LOD, and collides against it. Terrain is the cheapest way to cover large ground areas, make caves and cliffs, and fill water bodies; it is also global, hard to undo, and full of measured quirks. This note covers the Studio tools briefly, the scripting API in depth, and the hard lessons of one production game that lost and rebuilt its terrain.

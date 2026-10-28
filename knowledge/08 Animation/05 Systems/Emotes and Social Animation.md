@@ -9,7 +9,7 @@ tags: [systems, emotes, social, humanoiddescription, networking]
 > - Only arms move during an emote: Locomotion at higher priority than the emote asset -> Play emotes at Action yourself
 > - Emote survives into combat: No cancel hooks -> Central `stop()` from every gameplay action
 >
-> Read more (16 KB note): ## Roblox's built-in emotes · ## A custom emote layer · ## Common mistakes
+> Cost: TL;DR ~130 tok · whole note ~4.1k tok. Read more: ## Roblox's built-in emotes · ## A custom emote layer · ## Common mistakes
 <!-- tldr:end -->
 
 Social animation is everything a character does for other people rather than for gameplay: emotes, dances, waves, flourishes, synchronised moments, NPCs that acknowledge you. It is low-stakes per clip and high-stakes overall, because it is how players express themselves and what makes a server feel inhabited. This note covers Roblox's built-in emote system (with the APIs checked against the official docs), how to build your own emote layer when you replace locomotion, how emotes interact with weapons and combat, and synchronised social animation.

@@ -12,7 +12,7 @@ tags: [modeling, retopology, decimation, remesh, lod, optimization, blender, pyt
 > - Source kept hidden; work on a duplicate.
 > - Merge by distance before decimating; symmetry on.
 >
-> Read more (14 KB note): ## 2. Decimation in Blender · ## 5. Level of detail on Roblox · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.6k tok. Read more: ## 2. Decimation in Blender · ## 5. Level of detail on Roblox · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Sooner or later every model has too many triangles: a sculpt with two million, a boolean-heavy prop with 60,000, an AI-generated or scanned mesh with a triangle soup, a kit piece that needs a cheaper far version. There are three ways down, and they produce very different meshes:

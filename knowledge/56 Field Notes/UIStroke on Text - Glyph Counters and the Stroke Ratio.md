@@ -1,3 +1,8 @@
+---
+tags: [field-notes, ui, uistroke, text, fonts, readability, numbers]
+---
+# UIStroke on Text - Glyph Counters and the Stroke Ratio
+
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - "10" reads as "1" plus a blob: Stroke closes the 0's counter -> Stroke at or below 7% of text size for rounded fonts
@@ -7,13 +12,8 @@
 > - Rounded heavy fonts at or below about 7% stroke.
 > - Test string with 0, 6, 8, 9, a and e checked at the smallest size on a phone.
 >
-> Read more (6 KB note): ## What the stroke does to a glyph · ## How to test · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~1.5k tok. Read more: ## What the stroke does to a glyph · ## How to test · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
----
-tags: [field-notes, ui, uistroke, text, fonts, readability, numbers]
----
-# UIStroke on Text - Glyph Counters and the Stroke Ratio
 
 A thick outline makes cartoon text pop, and past a certain thickness it starts eating the letters. A `UIStroke` in `Contextual` mode grows outward *and* into the small enclosed holes of glyphs (the counters of 0, 6, 8, 9, a, e, o), so "10" and "20" turn into blobs and "Fast" reads as "Fust". This note gives the ratio that avoids it, why scaling does not help, and how to test. The general outline properties are in [[Text Fonts and Rich Text]]; minimum sizes in [[Readable Text and UI Scale]].
 

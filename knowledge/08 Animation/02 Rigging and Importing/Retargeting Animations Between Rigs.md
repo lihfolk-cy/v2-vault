@@ -9,7 +9,7 @@ tags: [retargeting, rigging, math, keyframesequence, clips]
 > - Avoid: Delta retarget across different rest poses -> Absolute retarget, or pose-match the rests
 > - Avoid: Root translation unscaled -> Scale by height or hip-height ratio
 >
-> Read more (14 KB note): ## 3. Different joint frames: conjugation · ## 5. Proportions: translations, contacts and speed · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~3.5k tok. Read more: ## 3. Different joint frames: conjugation · ## 5. Proportions: translations, contacts and speed · ## Common mistakes
 <!-- tldr:end -->
 
 Retargeting is making a clip authored on one rig play correctly on another. In Roblox the engine does the easy part automatically (it matches joints by name), which hides the hard parts: different joint frames, different rest poses, different proportions, different hierarchies. This note explains what a clip actually stores, which differences break it, the maths to fix each, and the practical routes one production game used (shared family clips, root-translation rescaling, offline arm re-solving).

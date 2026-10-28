@@ -12,7 +12,7 @@ tags: [modeling, untextured, stylised, flat-colour, gradient-atlas, vertex-colou
 > - Colour regions per prop counted and instance totals estimated before modelling.
 > - Recolour needs (zones, seasons, teams) known, and the method supports them.
 >
-> Read more (18 KB note): ## How each method reaches the screen in Roblox · ## Costs in numbers · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~220 tok · whole note ~4.5k tok. Read more: ## How each method reaches the screen in Roblox · ## Costs in numbers · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Low-Poly and Stylized Modeling]] lists three ways to colour a stylised mesh without a unique texture, and [[Trim Sheets Atlases and Vertex Colors]] explains each one technically. This note is the decision layer on top of them: how each method actually reaches the screen in Roblox, what it costs, which Roblox properties it collides with, and how to pick one per kit instead of per asset. It assumes the art is "non-hand-painted": the look comes from geometry, flat or gradient colour, vertex colour and lighting, never from painted texture detail.

@@ -12,7 +12,7 @@ tags: [platform-features, badges, achievements, badgeservice, progression, reten
 > - Every award is server-side and preceded by validation of the feat
 > - Pending awards retried with backoff and on next join
 >
-> Read more (22 KB note): ## 1. What the platform gives you · ## 4. An award pipeline that does not lose badges · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.7k tok. Read more: ## 1. What the platform gives you · ## 4. An award pipeline that does not lose badges · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Badges are the one piece of your progression that leaves your game. A badge lands in the player's Roblox inventory, shows on their profile and stays there after they stop playing. That makes badges powerful (they are a public trophy and a reason to come back) and awkward (they cost money past a daily allowance, you cannot take them back, and the API that awards them has rules that bite at the worst moment). This note covers the platform facts, a two-layer model that separates badges from in-game achievements, rarity design, an award pipeline that never loses or double-awards a badge, and the failure modes that show up in live games.

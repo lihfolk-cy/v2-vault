@@ -12,7 +12,7 @@ tags: [lighting, lights, shadows, performance, vfx]
 > - Shadow-casting lights limited to a few hero lights per view.
 > - VFX parts have CastShadow off; VFX lights have Shadows off and expire.
 >
-> Read more (13 KB note): ## 2. Shadows: sun versus local lights · ## 5. Managing many lights in code · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~3.4k tok. Read more: ## 2. Shadows: sun versus local lights · ## 5. Managing many lights in code · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Local lights are where lighting stops being global and starts telling the player things: the lantern on the safe path, the glow under a charging ability, the red alarm strobe, the flicker that says "this corridor is wrong". They are also the lighting feature that most often ruins frame rate, because each one is cheap until there are forty of them overlapping the camera with shadows on.

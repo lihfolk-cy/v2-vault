@@ -12,7 +12,7 @@ tags: [pipelines, config, data, spreadsheets, balancing, codegen, validation]
 > - Schema validation plus cross-table references in CI
 > - Derived stats computed by tested code, overrides explicit
 >
-> Read more (20 KB note): ## Stage 2: validate before anything touches the game · ## Stage 5: install · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.1k tok. Read more: ## Stage 2: validate before anything touches the game · ## Stage 5: install · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most of a game's content is numbers: item stats, drop odds, prices, enemy health, quest rewards, cooldowns. Designers want to edit them in a spreadsheet where they can sort, chart and compare; the game wants them in a ModuleScript it can `require`. The gap between the two is where balance bugs, typos and lost edits live. This note is a pipeline that closes it: **sheet, validate, generate, install safely, read back**. The balancing method itself is in [[Balancing with Spreadsheets and Data]]; schema design in [[Data Schema Design and Migrations]]; changing values on live servers without a publish in [[Global State and Live Config]].

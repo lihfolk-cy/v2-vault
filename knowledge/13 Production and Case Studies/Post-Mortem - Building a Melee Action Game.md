@@ -9,7 +9,7 @@ tags: [production, post-mortem, case-study, combat, rng, retrospective]
 > - Week 1: a vertical slice and a play-test cadence.
 > - The reference project shipped an enormous amount of content quickly because its pipelines were good and its verification was...
 >
-> Read more (12 KB note): ## What went right · ## What went wrong
+> Cost: TL;DR ~110 tok · whole note ~3.2k tok. Read more: ## What went right · ## What went wrong
 <!-- tldr:end -->
 
 This is a post-mortem in the classic format (what went right, what went wrong, the numbers) for one live action game on Roblox: a melee game with collectible weapons of rising rarity, zones of enemies, crafting and bosses. The project is anonymised; it is called "the reference project" elsewhere in this vault. All figures are measured from the project's own notes unless marked otherwise.

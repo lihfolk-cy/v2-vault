@@ -1,6 +1,6 @@
 ---
 name: roblox-asset-import
-description: 'LihFolk: Import 3D models, rigs, kits and PBR textures into Roblox Studio at the right scale, within triangle and texture budgets, with correct pivots, collision fidelity and SurfaceAppearance setup. Use when bringing in an FBX, GLB or OBJ, using the LihFolk Vault V2 skeleton rigs, the LihFolk Asset Pack, or outside kits and CC0 textures, or when the user says "import this model", "model is the wrong size", "pivot is off", "set up textures", "invisible walls", or "too many triangles".'
+description: 'LihFolk: import FBX/GLB/OBJ, rigs, kits and PBR textures into Studio at correct scale, budget, pivot and collision. Use for "import this model", wrong size, bad pivot, invisible walls, too many tris.'
 ---
 # LihFolk Asset Import
 

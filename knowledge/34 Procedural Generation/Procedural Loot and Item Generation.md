@@ -12,7 +12,7 @@ tags: [procedural, generation, loot, items, affixes, economy, rng, datastores, l
 > - Affix defs with tags, groups, ilvl gates, quantised ranges.
 > - Generator is pure; simulated at scale; perfect-roll odds converted to hours.
 >
-> Read more (18 KB note): ## The generator · ## Storing generated items · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.5k tok. Read more: ## The generator · ## Storing generated items · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[RNG Drops and Luck Systems]] covers **whether** something drops: weighted tables, luck, pity, odds disclosure. [[Rarity Ladders and Drop Pacing Math]] covers how rare each tier should be. This note covers what happens after the roll says "a rare sword dropped": generating **the item itself**. Stat ranges, affixes, item level, power budgets, names, how to store generated items so a balance patch does not rewrite every inventory, how to keep them dupe-proof, and the economy consequences of near-infinite item variety. It is for action RPGs, looters, roguelikes and any game where two items of the same name can differ.

@@ -12,7 +12,7 @@ tags: [math, game-math, collision, intersection, hit-detection, raycast, zones, 
 > - Zones are polled with containment tests, not `Touched`.
 > - Ray tests handle parallel rays and origins inside the shape.
 >
-> Read more (21 KB note): ## 3. Rays against simple shapes · ## 4. Capsules: the right shape for characters · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.3k tok. Read more: ## 3. Rays against simple shapes · ## 4. Capsules: the right shape for characters · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox gives you a physics engine and fast spatial queries, so why do the maths yourself? Because a lot of gameplay collision is not about parts at all. A safe zone drawn as a polygon, a hitbox that exists only for one server tick, a lag-compensated capsule around where a player was 120 ms ago, a building cursor projected onto a floor plane, a turret leading a moving target, a thousand bullets in a bullet-hell mode: none of those need an `Instance`, and several cannot use one. Pure geometry is deterministic, runs in parallel Luau, costs nothing in replication and is easy to test.

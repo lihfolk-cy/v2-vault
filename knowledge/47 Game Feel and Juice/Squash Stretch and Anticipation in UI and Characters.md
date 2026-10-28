@@ -12,7 +12,7 @@ tags: [game-feel, juice, squash-stretch, anticipation, ui, animation, springs, l
 > - Text is never squashed; art and labels are separate layers.
 > - Pivot chosen by force direction (centre for presses, bottom for landings).
 >
-> Read more (19 KB note): ## 3. A volume-preserving squash spring · ## 6. Anticipation that hides latency · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.8k tok. Read more: ## 3. A volume-preserving squash spring · ## 6. Anticipation that hides latency · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Principles of Animation for Games]] explains squash, stretch and anticipation as animation principles, and notes that rigid R15 parts cannot squash. [[UI Motion Language and Timing]] gives UI motion verbs and durations, including a press squash. This note is the engineering layer between them: how to get real non-uniform squash on Roblox UI and props when `UIScale` is uniform and CFrames carry no scale, how to keep volume so squash looks elastic rather than broken, how to stretch along velocity, and how to use anticipation to **hide latency** instead of adding it. It ends with the cases where both principles make a game feel worse.

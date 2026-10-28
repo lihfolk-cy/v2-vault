@@ -12,7 +12,7 @@ tags: [performance, memory, leaks, debugging, luau-heap, soak-test, procedure]
 > - Growth expressed as MB per hour or KB per repetition.
 > - Time-to-ceiling estimated for server and for a low-end phone.
 >
-> Read more (23 KB note): ## 2. Find the category that grows · ## 6. Worked cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~5.9k tok. Read more: ## 2. Find the category that grows · ## 6. Worked cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Memory Budgets and Leaks]] explains where memory goes, the leak patterns and the Luau heap tool. This note is the procedure: what to do from the first "memory feels high" report to a fix you can prove. It is written for the case that actually happens in production: a server that crashes after eight hours, or phones that start dropping after twenty minutes, and nobody knows which of forty systems is responsible.

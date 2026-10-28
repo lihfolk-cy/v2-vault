@@ -1,6 +1,6 @@
 ---
 name: lihfolk
-description: 'LihFolk: Roblox knowledge router for LihFolk Vault V2 (800+ expert notes). Use for non-trivial Roblox work - Luau, Studio, remotes, DataStores, UI, worldbuilding, modeling, VFX, animation, game design, economy, monetization, performance, security, publishing - before writing, reviewing or debugging it.'
+description: 'LihFolk: Roblox knowledge router (800+ notes, also answers "check the vault"). Use before non-trivial Roblox work: Luau, Studio, remotes, data, UI, building, modelling, VFX, animation, design, money, performance, security, publishing.'
 ---
 
 # LihFolk Roblox Knowledge Router
@@ -24,6 +24,8 @@ Scale the lookup to the task. The goal is the few lines that change what you do,
 5. **Reuse within the session:** don't re-read a note you've already used for the same topic.
 6. **Apply and cite** the note titles briefly.
 7. **Trust labels:** `Roblox docs` and `Measured` beat `Rule of thumb`; check `Unverified` before relying on it. If nothing matches, say so and use the official Roblox docs. Never invent APIs or asset ids.
+
+**Accuracy over savings (non-negotiable):** the TL;DR is a pointer, not a substitute. For high-stakes work (player data and DataStores, purchases and receipts, paid random items and policy, remotes and security, anything that ships to live players), always read the note's full `## Common mistakes` and `## Checklist` sections, and the section that holds the exact numbers or API rules you are about to use. Also read further whenever the TL;DR leaves any doubt. Never cite a number you only saw in a TL;DR without opening its section.
 
 ## Where things are
 
@@ -51,7 +53,7 @@ Scale the lookup to the task. The goal is the few lines that change what you do,
 
 ## Specialist skills in this plugin
 
-Prefer these when the task matches: `quality-score` (every generated asset or system must score at least 8.5/10), `council` (objective verdicts), `lihfolk-ui` (house menu style), `roblox-blender-modeling`, `roblox-trend-game`, `roblox-system-builder`, `roblox-ui-builder`, `roblox-secure-remotes`, `roblox-datastore-safety`, `roblox-performance-audit`, `roblox-debugging`, `roblox-anti-exploit-review`, `roblox-monetization-compliance`, `roblox-asset-import`, `roblox-vault-research`.
+Prefer these when the task matches: `quality-score` (every generated asset or system must score at least 8.5/10), `council` (objective verdicts), `lihfolk-ui` (house menu style), `roblox-blender-modeling`, `roblox-trend-game`, `roblox-system-builder`, `roblox-ui-builder`, `roblox-secure-remotes`, `roblox-datastore-safety`, `roblox-performance-audit`, `roblox-debugging`, `roblox-anti-exploit-review`, `roblox-monetization-compliance`, `roblox-asset-import`.
 
 ## Reference images
 

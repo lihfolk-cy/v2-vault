@@ -12,7 +12,7 @@ tags: [art-direction, untextured, stylised, asset-library, consistency, pipeline
 > - Shared Blender template with palette, modifier presets, measuring cube and export preset.
 > - Per-source normalisation steps applied (Parts, Blender, CC0, store, voxel, AI).
 >
-> Read more (16 KB note): ## Normalising each source · ## Auditing a place with Luau · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~210 tok · whole note ~4.0k tok. Read more: ## Normalising each source · ## Auditing a place with Luau · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Very few Roblox games are built from one source. A typical library mixes Parts and unions built in Studio, meshes modelled in Blender by two or three people, a CC0 pack (Kenney and Quaternius publish large free low-poly kits), a few Creator Store models, voxel props exported from MagicaVoxel, and lately AI-generated meshes. Each source arrives with its own scale, palette, shading, bevel size and material habits. Textured games can hide some of the mismatch under a shared texture style; untextured games cannot, because the mismatch is in the geometry and the flat colours themselves. Put a gently bevelled Blender barrel next to a sharp-edged Studio crate and a faceted store rock, and the scene reads as an asset flip even if every piece is good on its own.

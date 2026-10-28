@@ -12,7 +12,7 @@ tags: [math, game-math, rotations, quaternions, euler-angles, cframe, turrets, n
 > - Camera state is scalar yaw and pitch; pitch is clamped below 90 degrees.
 > - Rate-limited turning uses axis-angle with the correct world or local order.
 >
-> Read more (23 KB note): ## 6. A small quaternion toolkit in Luau · ## 9. Compressing rotations for the network and for saves · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~6.0k tok. Read more: ## 6. A small quaternion toolkit in Luau · ## 9. Compressing rotations for the network and for saves · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Rotations cause more confusing bugs than any other part of game maths: turrets that spin the long way round, cameras that flip at the top of a look, held items that drift and skew, thrown objects that tumble wrong, and animations that interpolate through an impossible pose. [[Math Vectors and CFrames]] covers building rotations (`CFrame.Angles`, `fromAxisAngle`, `lookAt`), Euler orders, composition order and `Orthonormalize`. [[Motor6D Math and CFrame Composition]] covers joints. This note goes deeper into the representations themselves and the gameplay jobs that need them: wrapping and limiting angles, turning at a fixed rate in 3D, splitting a rotation into swing and twist for turret and head limits, angular velocity for throws, averaging orientations, quaternion maths you can run in Luau, and compressing rotations for the network.

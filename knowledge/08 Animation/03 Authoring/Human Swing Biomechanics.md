@@ -12,7 +12,7 @@ tags: [animation, authoring, combat, sword, biomechanics, kinematic-chain, prona
 > - 35-60 deg hip-shoulder separation at the top of the windup
 > - `Clip.cut()` declared for every swing
 >
-> Read more (5 KB note): ## 1. What the data says · ## 2. Rules at 30 fps · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~1.4k tok. Read more: ## 2. Rules at 30 fps · ## 3. QA in the pipeline · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Measured strikes (kendo, batting, tennis, golf) agree on one pattern: a swing is a proximal-to-distal wave. The hips turn first, then the trunk, upper arm, elbow, wrist, and last the forearm twist. Each segment twists **once, in one direction**. Keyed swings that re-twist the arm between poses read as "the arm randomly twisting", even when every single pose looks fine. This note turns the published numbers into keyframe rules and QA gates. Full citations are in `D:\LihFolk Build\research\animation-references.md`.
@@ -48,7 +48,8 @@ Measured strikes (kendo, batting, tennis, golf) agree on one pattern: a swing is
 **Measured on the LihFolk sword set.**
 - The first rebuild had 42-73 deg per frame of roll and 4-7 reversals per swing.
 - After the continuity + planned-curve solver: Heavy 12.6, Parry 16, Light1 33 deg per frame.
-- Reversals are 0 on Parry. They are still 1-6 on the cuts, because interpolating between keys with large swings re-introduces small counter-rolls. **Unsolved**; see Common mistakes.
+- Reversals were 0 on Parry but still 1-6 on the cuts: interpolating between keys with large swings re-introduced small counter-rolls.
+- **Fixed in v4** by `lihanim/twist_dp.py`. After baking, it keeps each frame's wrist position and blade direction and re-plans the elbow swivel and forearm pronation per frame. It uses a Viterbi path with one roll direction per segment, wrist deviation and flexion in closed form, and keys every frame. All five cuts now have 0 reversals in the swing and 1-2 right-arm reversals in total (previously 6-9), with a max of 11-20 deg per frame outside contact.
 
 ## Common mistakes
 

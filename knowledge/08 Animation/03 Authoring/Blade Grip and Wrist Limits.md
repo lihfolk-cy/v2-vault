@@ -12,7 +12,7 @@ tags: [animation, weapons, sword, grip, wrist, authoring, r15, blender, tool-gri
 > - Keys authored with `skey` (hand target + blade), never a raw hand rotation
 > - `qa.wrist.blade_err_max_deg` under 5; breakdown keys reviewed
 >
-> Read more (8 KB note): ## 4. The solve (lihanim/sword.py) · ## 5. Choosing blade directions per key · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~2.1k tok. Read more: ## 4. The solve (lihanim/sword.py) · ## 5. Choosing blade directions per key · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A sword clip looks wrong long before anyone can say why. The blade comes out of the fist at an odd angle, the crossguard points the wrong way, the wrist snaps 120 degrees between two frames, or the forearm passes through the chest. Almost always the cause is the same: the animator (or the AI) keyed **where the blade should point** and let a solver turn the hand by whatever amount got it there. This note gives the real grip geometry, the Roblox numbers that reproduce it, the wrist ranges, and the solve the LihFolk pipeline uses. Sources are in `D:\LihFolk Build\research\animation-references.md`.

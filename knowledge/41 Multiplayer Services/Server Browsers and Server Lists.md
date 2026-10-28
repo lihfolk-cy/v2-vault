@@ -12,7 +12,7 @@ tags: [multiplayer, server-browser, memorystore, teleport, lobby, text-filtering
 > - Registry entries small, TTL 90 s, heartbeat 30 s, early write near full.
 > - One snapshot builder under a lease; compact rows under 30 KB; copies for hot reads.
 >
-> Read more (21 KB note): ## 5. Building the snapshot · ## 6. Serving and joining · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.4k tok. Read more: ## 5. Building the snapshot · ## 6. Serving and joining · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A server browser is a list of live servers a player can pick from: "EU Roleplay, 18/24, night cycle", "Trading hub 3, 40/50", "Your friend is here". Some genres expect it (roleplay, hangouts, competitive communities that want specific rules); most games are better off without one. When you do build it, the engine gives you no list of your own public servers, so you build a registry out of MemoryStore, and the hard parts are not the list itself but its cost at scale, the 32 KB value limit, stale entries, joining a server that filled a second ago, showing friends without leaking privacy, and user-named servers that must pass text filtering. This note goes deeper than the registry sketches in [[MemoryStore Service]] and [[Cross-Server Messaging]].

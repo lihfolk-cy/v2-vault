@@ -12,7 +12,7 @@ tags: [modeling, ugc, marketplace, accessories, layered-clothing, avatar]
 > - Budget: upload fee (80, or 500 emissive) plus the publishing advance for the type.
 > - Triangles at most 4,000; one mesh; watertight.
 >
-> Read more (17 KB note): ## 2. Fees, advances and revenue share (as of October 2026) · ## 3. Item types and the two technical families · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.3k tok. Read more: ## 2. Fees, advances and revenue share (as of October 2026) · ## 3. Item types and the two technical families · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 UGC (user-generated content) avatar items are 3D accessories, layered clothing, bodies, heads and emotes that creators sell on the Roblox Marketplace. Making one is a modelling and texturing job with an unusually strict technical spec, an automated validator, human moderation, real Robux fees and a revenue share. This note collects the requirements, specs, fees and publishing flow, all checked against the Creator Hub and Roblox announcements **as of October 2026**. Marketplace rules change several times a year; before you spend Robux, re-read the linked official pages.

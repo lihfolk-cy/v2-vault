@@ -12,7 +12,7 @@ tags: [blender, python, props, stylised, low-poly, environment, awning, export]
 > - Every hard part bevelled with an angle limit
 > - Repeats varied in width and tone; small tilts everywhere
 >
-> Read more (13 KB note): ## The awning: the focal feature · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.4k tok. Read more: ## The awning: the focal feature · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 ![[p45_shop_stand.png]]

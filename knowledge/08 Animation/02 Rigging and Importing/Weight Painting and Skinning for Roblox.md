@@ -12,7 +12,7 @@ tags: [rigging, blender, skinning, weights, deformation]
 > - Preserve Volume off while judging.
 > - Clean, Limit Total 4, Normalize All.
 >
-> Read more (14 KB note): ## 4. Painting workflow in Blender · ## 7. Making joints deform well without correctives · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.6k tok. Read more: ## 4. Painting workflow in Blender · ## 7. Making joints deform well without correctives · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Skinning decides whether a perfectly keyed animation looks good. A clean clip on bad weights reads as rubber elbows, collapsing wrists and shoulders that cave in; the animator gets blamed. This note covers what Roblox does with your weights, the hard limits, how to paint and generate weights in Blender, how to make joints deform well without the corrective machinery Roblox lacks, and how to test.

@@ -9,7 +9,7 @@ tags: [rigging, layered-clothing, cages, wraplayer, avatar]
 > - Avoid: Deleted or re-UV'd cage vertices -> Start from the cage templates; edit positions only
 > - Avoid: Only an inner cage -> Both cages, outer adjusted
 >
-> Read more (10 KB note): ## 2. How it deforms when the character moves · ## 4. What this means for animation · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~2.7k tok. Read more: ## 2. How it deforms when the character moves · ## 4. What this means for animation · ## Common mistakes
 <!-- tldr:end -->
 
 Layered clothing is Roblox's system for 3D garments that fit any body and stack over each other (a shirt under a jacket under a scarf). For an animator it matters because it changes what your clips look like on real players: clothes stretch, pinch and clip in extreme poses, long garments behave badly between the legs, and none of it is visible on the blocky test dummy. This note explains how the system deforms with animation, the specifications (Creator Hub, checked October 2026), and how to author clips and rigs that survive it.

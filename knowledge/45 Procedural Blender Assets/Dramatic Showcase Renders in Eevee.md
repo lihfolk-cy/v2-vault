@@ -9,7 +9,7 @@ tags: [blender, eevee, rendering, presentation, volumetrics, lighting]
 > - Avoid: Fog density too high. Symptom: pink or purple wash over the whole frame.
 > - Avoid: Visible volume box edges. Symptom: straight vertical walls in the gas.
 >
-> Read more (8 KB note): ## Building blocks · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~2.2k tok. Read more: ## Building blocks · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 ![[p45_cosmic_sword.png]]

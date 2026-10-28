@@ -9,7 +9,7 @@ tags: [blender, vfx, meshes, textures, roblox]
 > - Avoid: Meshes collidable or queryable. Symptom: slashes block players, trip hitbox raycasts or shift physics.
 > - Avoid: Destroying and recreating per hit. Symptom: frame spikes during busy fights and growing memory.
 >
-> Read more (8 KB note): ## The parts that made each effect · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~130 tok · whole note ~2.1k tok. Read more: ## The parts that made each effect · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 ![[p45_mesh_vfx_pack.png]]

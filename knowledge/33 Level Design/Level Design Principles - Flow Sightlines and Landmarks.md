@@ -12,7 +12,7 @@ tags: [level-design, flow, sightlines, landmarks, wayfinding, readability, camer
 > - Critical path marked in the blockout; most first-time testers find it without UI.
 > - Optional content branches off and rejoins the critical path.
 >
-> Read more (20 KB note): ## 2. Flow: making the intended route the easy one · ## 3. Sightlines: what the player actually sees · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.1k tok. Read more: ## 2. Flow: making the intended route the easy one · ## 3. Sightlines: what the player actually sees · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 [[Level Design for Roblox]] covers the practical basics: measure the character, block out first, time the walks, give every zone one colour and one landmark, test for sight-line leaks into locked zones. This note goes a level deeper into the three ideas underneath all of that: **flow** (how players move through a space without being told), **sightlines** (what they can see from where they stand, and why it changes on every device), and **landmarks** (what they use to build a mental map). It ends with tools to measure all three instead of guessing.

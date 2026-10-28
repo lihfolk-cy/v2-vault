@@ -12,7 +12,7 @@ tags: [modeling, texturing, stylized, hand-painted, toon, blender]
 > - Painted lighting subtle; AO allowed, directional light minimal.
 > - Roughness and metalness set to stop the engine fighting the paint.
 >
-> Read more (13 KB note): ## 2. The engine problem: no unlit shading · ## 4. Toon and cel textures · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.3k tok. Read more: ## 2. The engine problem: no unlit shading · ## 4. Toon and cel textures · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most successful Roblox games are stylised: chunky shapes, readable colours, painted or flat-shaded surfaces. Stylised texturing is not "PBR but simpler"; it is a different set of goals (readability at a glance on a phone, consistency with blocky avatars, low memory) and it fights the engine in a few specific ways, because Roblox has no unlit or custom shaders. This note covers the styles (hand-painted, toon, gradient, flat), how to paint and generate them in Blender, how to make them survive Roblox's PBR lighting, and how one production game (the reference project) produced a whole stylised armour line and its VFX textures procedurally.

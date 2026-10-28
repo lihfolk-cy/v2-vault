@@ -12,7 +12,7 @@ tags: [community, moderation, safety, reports, ban-api, luau, live-ops]
 > - Rule-report flow with categories, no free text, server-attached context
 > - Reports rate-limited, retained for a fixed window, user ids only
 >
-> Read more (18 KB note): ## 3. An in-game report flow for your rules · ## 4. Moderating what players create · ## 8. Failure modes · ## 10. Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.6k tok. Read more: ## 3. An in-game report flow for your rules · ## 4. Moderating what players create · ## 8. Failure modes · ## 10. Checklist
 <!-- tldr:end -->
 
 Roblox moderates its platform; you moderate your game. The two overlap but are not the same job. Roblox handles anything that breaks the Community Standards (harassment, sexual content, grooming, hate, scams, real-world threats) through its report system and moderators. You handle your own game's rules (griefing, spawn-camping, exploiting, trade scams in your economy, abusing a mechanic) and you are responsible for the safety of what your game lets players create and show each other. This note covers where the line sits, the Safety Dashboard, building an in-game report flow that does not collect personal data, moderating user-generated content, staffing moderators, and the tools that act (kick, ban, mute, restrict). For the Ban API itself, evidence and appeals, read [[Logging Bans and Appeals]]; for cheat detection, [[False Positives Lag and Fair Enforcement]].

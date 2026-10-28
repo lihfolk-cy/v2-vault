@@ -12,7 +12,7 @@ tags: [level-design, combat, arena, encounters, enemy-spawning, pvp, cover, tele
 > - Every telegraph passes the dodge test or is a deliberate damage check.
 > - Arena radius leaves dodge room but keeps the fight on one screen.
 >
-> Read more (18 KB note): ## 3. Where enemies come from · ## 4. Keeping fights in their space · ## 9. Common mistakes · ## 10. Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.6k tok. Read more: ## 3. Where enemies come from · ## 4. Keeping fights in their space · ## 9. Common mistakes · ## 10. Checklist
 <!-- tldr:end -->
 
 [[Level Design for Roblox]] sets the basic rules for combat spaces: clamp enemies to a walk box, keep colliding props out of it, use invisible tagged combat floors, keep boss spawns clear, seal arenas during fights and keep the floor readable. [[Boss Fight Design Patterns]] covers the fight itself, and [[Genre Playbook - Battlegrounds and Arena Fighters]] covers PvP as a genre. This note sits between them: how to size a space from the combat numbers, where enemies should enter, how cover and verticality interact with the Roblox camera and with pathfinding, how to lay out a PvP arena so it stays fair, and how to stop fights from spilling out of their space.

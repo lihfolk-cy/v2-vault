@@ -9,7 +9,7 @@ tags: [snippets, luau, enemies, npc, replication, client]
 > - Avoid: Using `os.clock()` instead of `workspace:GetServerTimeNow()` for start times.
 > - Avoid: Writing the serial before the other attributes (the client reads a half-updated state).
 >
-> Read more (23 KB note): ## 4. The client animator · ## 5. Notes and nuance · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~6.0k tok. Read more: ## 4. The client animator · ## 5. Notes and nuance · ## Common mistakes
 <!-- tldr:end -->
 
 A client-side animator for enemies and NPCs driven entirely by **server attributes**. The server never plays a clip: it decides what the enemy is doing and when it started, writes a few attributes, and uses marker times from data for gameplay. Every client plays the clips locally from those attributes, which gives late joining, streaming, LOD and lag tolerance almost for free.

@@ -12,7 +12,7 @@ tags: [luau, collectionservice, tags, architecture, patterns]
 > - Removed-signal connected, `GetTagged` iterated, setup idempotent.
 > - Cleanup releases connections, effects and table entries.
 >
-> Read more (20 KB note): ## 3. A binder with per-instance cleanup · ## 8. Worked example: doors driven by tags and attributes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.0k tok. Read more: ## 3. A binder with per-instance cleanup · ## 8. Worked example: doors driven by tags and attributes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 `CollectionService` turns tags into behaviour. Instead of copying a script into every lava brick, door, coin or enemy, you tag the instances and one module handles all of them: present ones at startup, new ones as they appear, removed ones as they go. Roblox's own guidance recommends this: avoid attaching scripts directly to Workspace instances, tag them and work with them from a single ModuleScript (Docs: script types and locations). This note covers the tag API and its guarantees, the binder pattern with correct cleanup, streaming and replication interactions, the newer query-based `Collection` API, and when tags are the wrong tool.

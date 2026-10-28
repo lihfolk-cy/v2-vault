@@ -12,7 +12,7 @@ tags: [luau, errors, pcall, xpcall, promises, async, reliability]
 > - `xpcall` with a small, non-yielding trace handler at every catching boundary.
 > - Rethrows use level 0 or structured errors with `cause`.
 >
-> Read more (22 KB note): ## 4. Boundaries: where error handling belongs · ## 6. Promises: when they earn their place · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.5k tok. Read more: ## 4. Boundaries: where error handling belongs · ## 6. Promises: when they earn their place · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Error Handling and Retries]] covers the foundations: how errors propagate per thread, which Roblox APIs fail at runtime, retry with backoff, timeouts, result types and a circuit breaker. This note goes one level deeper. It covers the details of `pcall` and `xpcall` that bite in production (what they catch and what they do not, rethrowing without losing the trace, structured error values), error handling at system boundaries (module loading, remote handlers, per-entity loops), how to fingerprint errors so telemetry stays readable, and when a Promise library earns its place versus plain Luau coroutines.

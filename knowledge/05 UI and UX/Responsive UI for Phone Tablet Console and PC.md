@@ -12,7 +12,7 @@ tags: [ui, responsive, mobile, phone, tablet, console, cross-platform]
 > - Five viewports plus a notched phone in every test pass.
 > - Numbers enforced: 12 px text, 44 px taps, 8 px gaps, 0 overlaps.
 >
-> Read more (16 KB note): ## 1. Classify by capability, not by guessing the device · ## 4. Four strategies for small screens, ranked by what survived · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.0k tok. Read more: ## 1. Classify by capability, not by guessing the device · ## 4. Four strategies for small screens, ranked by what survived · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox players arrive on 4.7 inch phones, tablets, laptops, ultrawide monitors and living-room TVs, and the same player may switch device between sessions. Mobile is a large share of the audience, so a UI signed off only at Studio's default desktop window is broken for many of your players. This note is about strategy: how to classify devices without guessing, which viewports to test, the measurable rules (text size, tap size, gaps, overlaps) that define "fits", and why the reference project ended up building real phone layouts instead of shrinking or zooming desktop ones.

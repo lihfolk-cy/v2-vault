@@ -12,7 +12,7 @@ tags: [field-notes, animation, motor6d, weapons, grip, procedural, combat]
 > - Clearance and sway corrections disabled from attack accept to recovery end.
 > - Locked frames write identity, or deliberately defer to clips that key the grip.
 >
-> Read more (6 KB note): ## What went wrong · ## The rule · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~1.6k tok. Read more: ## What went wrong · ## The rule · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A weapon held by a `Motor6D` between the hand and the handle is usually animated by two things at once: the attack clip and some procedural correction (sway, a "blade clearance" spring that tilts the blade away from the body or the ground, a look-at). During idle and walking that layering looks great. During attacks it makes the blade twist inside the hand, because the correction fights the clip on the one joint where the player is looking hardest. This note covers why, and the rule that fixed it: lock the grip during attack clips and keep the hold tilt constant. Grip angles are covered in [[Blade Grip and Wrist Limits]]; joint maths in [[Motor6D Math and CFrame Composition]].

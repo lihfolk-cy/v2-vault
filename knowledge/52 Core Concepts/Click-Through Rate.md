@@ -10,7 +10,7 @@ tags: [core-concept, marketing, discovery, analytics, thumbnails]
 > - CTR depends on placement. The same icon gets a different CTR in search (players looking for it) than in a recommendation row...
 > - Small differences need large samples. A change from 4.0 to 4.3 percent needs many thousands of impressions per variant before...
 >
-> Read more (3 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~170 tok · whole note ~880 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Click-through rate (CTR)** is the share of people who saw something and clicked it: clicks divided by impressions. On Roblox it most often means how many players who saw your experience's tile in discovery (home sort, search, recommendations) opened or played it. It also applies to ads, in-game prompts and shop buttons.

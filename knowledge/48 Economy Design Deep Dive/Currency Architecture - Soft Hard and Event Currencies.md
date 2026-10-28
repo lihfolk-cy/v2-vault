@@ -12,7 +12,7 @@ tags: [economy, currency, soft-currency, premium-currency, event-currency, walle
 > - Scale decided (flat or exponential); fixed-price content lives in a flat currency.
 > - Premium anchor fixed; every price and pack a multiple of a common unit.
 >
-> Read more (23 KB note): ## 3. Premium currency: the decisions that are hard to undo · ## 5. A wallet module with buckets, idempotency and analytics · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.8k tok. Read more: ## 3. Premium currency: the decisions that are hard to undo · ## 5. A wallet module with buckets, idempotency and analytics · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Economies and Currencies]] lists the kinds of currency a Roblox game can have and how to write a safe server transaction. [[Economy Inflation Sinks and Faucets Math]] gives the arithmetic of faucets, sinks and the premium currency anchor. [[Big Numbers Precision and Formatting]] covers doubles, integer limits and number formatting. This note sits between them and answers the architecture questions: how many currencies, what each one is for, how they convert, how an event currency is born and dies, how a wallet stores paid and free units separately, and how the whole set maps onto analytics before you log your first event.

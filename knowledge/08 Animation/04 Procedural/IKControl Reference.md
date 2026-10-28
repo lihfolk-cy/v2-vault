@@ -9,7 +9,7 @@ tags: [procedural, ik, ikcontrol, reference, api]
 > - Whole character slides or tilts: `ChainRoot` set to the HumanoidRootPart or LowerTorso -> start the chain at the limb
 > - Limb pops on start and stop: toggling `Enabled` -> fade `Weight`
 >
-> Read more (15 KB note): ## Properties · ## Recipes · ## Common mistakes
+> Cost: TL;DR ~120 tok · whole note ~3.8k tok. Read more: ## Properties · ## Recipes · ## Common mistakes
 <!-- tldr:end -->
 
 `IKControl` is Roblox's built-in runtime IK component. You point it at a chain (`ChainRoot` to `EndEffector`) and a `Target`, and the engine poses the chain every frame on top of the animation. No maths on your side. This note lists every member as the official API reference documents it (checked against create.roblox.com), explains how it interacts with the Animator, and gives recipes, limits and the cases where you should write your own solver instead.

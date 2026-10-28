@@ -10,7 +10,7 @@ tags: [core-concept, analytics, live-ops, debugging, economy]
 > - Names and fields are a schema. Rename an event and your charts break.
 > - Log on the server. Client-logged events can be forged and are lost when the client crashes.
 >
-> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~900 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Telemetry events** are small structured records your game emits when something meaningful happens: a purchase, a level-up, a funnel step, an error, a currency gain. Collected across thousands of sessions they show what players actually do, as opposed to what you assumed.

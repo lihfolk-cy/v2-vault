@@ -9,7 +9,7 @@ tags: [systems, enemies, npc, ai, performance, hub]
 > - Root motion missing: Root keyed at the top-level pose -> Key a child joint
 > - Floating or sinking: Clips not ground-fitted; wrong HipHeight -> Fit per clip; set HipHeight; runtime slope clamp
 >
-> Read more (13 KB note): ## Rig choices · ## Ground fitting (floating and sinking) · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~3.3k tok. Read more: ## Rig choices · ## Ground fitting (floating and sinking) · ## Common mistakes
 <!-- tldr:end -->
 
 Enemies are where animation meets scale: dozens on screen, each with 17 to 34 clips, driven by server AI, seen by every player, and expected to read clearly at a glance. NPCs are the opposite problem: one or two characters that must feel alive for minutes while doing nothing. This note is the hub for both. The precise server/client protocol is in [[Enemy Animation State Protocol]]; bosses in [[Boss Animation and Phases]]. Numbers come from one live action game (the reference project) unless marked otherwise.

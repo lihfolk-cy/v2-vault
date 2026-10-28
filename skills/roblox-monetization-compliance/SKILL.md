@@ -1,6 +1,6 @@
 ---
 name: roblox-monetization-compliance
-description: 'LihFolk: Build or audit game passes, developer products, ProcessReceipt, shop prices, paid random items (eggs, crates, luck boosts) and PolicyService gating so purchases are reliable and follow Roblox policy. Use when adding a product or pass, building a shop, adding an egg or gacha or luck boost, or when the user says "monetization review", "is this compliant", "odds disclosure", "prices are wrong", or "players paid and got nothing".'
+description: 'LihFolk: game passes, dev products, ProcessReceipt, shop prices, eggs/luck boosts with 2026 odds rules and PolicyService. Use when adding or auditing purchases, or "players paid and got nothing".'
 ---
 # LihFolk Monetization Compliance
 

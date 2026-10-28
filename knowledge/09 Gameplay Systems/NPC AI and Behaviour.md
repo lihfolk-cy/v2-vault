@@ -12,7 +12,7 @@ tags: [gameplay, ai, npc, enemies, aggro, behaviour, bosses]
 > - State machine with explicit return-home.
 > - Tokens limit simultaneous attackers and are always returned.
 >
-> Read more (14 KB note): ## 4. Decision: state machine first · ## 5. Group behaviour: fights that read · ## 10. Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.6k tok. Read more: ## 4. Decision: state machine first · ## 5. Group behaviour: fights that read · ## 10. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Good enemy AI on Roblox is rarely clever. It is readable, cheap, fair and tunable: enemies notice you at a predictable range, announce it, take turns attacking, telegraph every blow, keep out of each other's way, give up when you leave their area, and do all of that for hundreds of enemies on one server without hurting frame time. This note describes the architecture (perception, decision, action, presentation), the scheduling that keeps it cheap, and the group behaviours that make fights feel designed. Numbers come from one production combat game's enemy system, which ran a data-driven "kit" brain for roughly 90 enemy kinds plus elites and bosses.

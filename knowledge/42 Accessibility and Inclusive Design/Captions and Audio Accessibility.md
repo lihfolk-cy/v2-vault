@@ -12,7 +12,7 @@ tags: [accessibility, captions, subtitles, audio, deaf, hard-of-hearing, haptics
 > - Two to three lines at most; reading time at least 1.5 s; merged repeats; priorities.
 > - Captions sized by player setting, on a plate that respects `PreferredTransparency`.
 >
-> Read more (21 KB note): ## 4. A caption service · ## 7. Haptics as a third channel · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.3k tok. Read more: ## 4. A caption service · ## 7. Haptics as a third channel · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Accessibility]] states the rule: every important sound needs a visual. This note builds the systems behind it: a caption service that handles dialogue subtitles and sound captions with speaker labels, timing, queueing and direction; a directional sound indicator for threats you hear but cannot see; volume categories that actually separate speech from music; haptics as a third channel; and the places where Roblox gives you nothing and you have to build it yourself.

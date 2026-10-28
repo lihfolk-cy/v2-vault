@@ -12,7 +12,7 @@ tags: [ugc, bundles, emotes, animation-packs, marketplace, animation, avatars]
 > - Emote: under 10 s, root near origin, no frame pops, CurveAnimation, standard R15.
 > - Emote tested on several bodies and with bulky layered clothing.
 >
-> Read more (15 KB note): ## 3. Emotes · ## 5. Games and emotes: three integration levels · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.0k tok. Read more: ## 3. Emotes · ## 5. Games and emotes: three integration levels · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Single accessories are only part of the avatar Marketplace. Bodies, dynamic heads, shoes and animation packs are sold as **bundles**, and emotes are sold as single animation assets that players equip into an eight-slot wheel. These products sit where modelling, animation and game code meet: an emote has to pass a validator that measures root motion, an animation pack has to work inside every game's Animate script, and a game that sells either has to cooperate with the default emote menu or replace it. This note covers what each product is, the creation rules that matter, who can sell what (as of October 2026), and how games integrate them.

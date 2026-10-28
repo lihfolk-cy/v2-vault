@@ -12,7 +12,7 @@ tags: [modeling, low-poly, stylized, palette, vertex-colors, blender, art-style]
 > - One focal feature; exaggerated proportions; tapers and tilts.
 > - Segment counts chosen by on-screen size.
 >
-> Read more (13 KB note): ## 4. Colouring without unique textures · ## 5. Building common stylised assets · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.4k tok. Read more: ## 4. Colouring without unique textures · ## 5. Building common stylised assets · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most successful Roblox games are stylised: chunky shapes, saturated colours, simple materials, readable at a glance on a phone. That is not only taste. Stylised art ages slowly, survives low graphics settings, keeps texture memory tiny, and lets one artist (or one script) build a whole world. This note covers the two related styles, **faceted low-poly** and **smooth stylised**, how to design shapes for them, how to colour them without per-asset textures (palette atlases and vertex colours), segment counts that look right at Roblox camera distances, and the production tricks that let one geometry serve ten zones.

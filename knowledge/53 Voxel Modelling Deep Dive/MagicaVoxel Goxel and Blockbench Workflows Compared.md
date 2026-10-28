@@ -12,7 +12,7 @@ tags: [modeling, voxel, magicavoxel, goxel, blockbench, blender, tools, export, 
 > - Project palette loaded in every tool; role slots fixed.
 > - Reference cube scale tested for each tool's exporter.
 >
-> Read more (17 KB note): ## 1. What each tool actually produces · ## 3. MagicaVoxel pipeline · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~210 tok · whole note ~4.3k tok. Read more: ## 1. What each tool actually produces · ## 3. MagicaVoxel pipeline · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Three free tools dominate hand-made blocky art: **MagicaVoxel** (a dedicated voxel editor with a path-traced renderer), **Goxel** (an open-source voxel editor with an unbounded scene) and **Blockbench** (a box modeller with per-face UVs and pixel textures, which is not a voxel editor at all, though its output looks blocky). They produce very different data, and that difference decides your whole Roblox pipeline: how colour reaches the mesh, how many triangles you ship, whether you need Blender in the middle, and whether a model can be rigged. [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] introduces MagicaVoxel and Blockbench in a paragraph each. This note compares all three side by side, walks one model through each pipeline, and covers the Roblox-side settings that make or break blocky textures, in particular texture filtering, which most tutorials miss.

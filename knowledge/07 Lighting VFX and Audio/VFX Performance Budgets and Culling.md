@@ -12,7 +12,7 @@ tags: [vfx, performance, budgets, culling, particles, mobile, optimization]
 > - Cost estimation script run on every template; worst offenders listed.
 > - Gameplay effects flagged; never skipped, only simplified.
 >
-> Read more (24 KB note): ## 2. Budget units that actually work · ## 4. Culling and degrading: the governor · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~200 tok · whole note ~6.2k tok. Read more: ## 2. Budget units that actually work · ## 4. Culling and degrading: the governor · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[VFX Design Playbook]] tells you how to make an effect look good, and [[Particle Emitters In Depth]] covers the emitter properties and their traps. This note is about the other half of the job: keeping the frame rate when eight players fire their best effects at once on a mid-range phone. It covers where VFX cost actually goes, how to turn "it lags in big fights" into budgets you can count, how to cull and degrade effects by distance, view and importance, and how to measure all of it. The working code is a small client-side **governor** that decides, per effect, whether to play it in full, reduced or not at all.

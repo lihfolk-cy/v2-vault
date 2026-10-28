@@ -24,6 +24,10 @@ After that, Roblox tasks automatically use the knowledge base. You also get:
 | **Council** | Blind, anonymised multi-agent review for objective verdicts: Quick, Standard or Full tier (`/lihfolk:council`) |
 | **Blender modelling** | Roblox-ready modelling with an automatic quality gate and correct export (no 100x scale, no lost bevels) |
 | **Trend games** | The 2025-2026 trend-game playbook with the new Roblox rules (`/lihfolk:trend-game`) |
+| **Systems library** | 19 drop-in typed Luau modules: validated remotes, session-locked data, idempotent purchases, shop, eggs with 2026 odds rules, codes, daily rewards, rebirth, quests, leaderboards (`/lihfolk:new-system`) |
+| **Code checks** | A hook scans every Luau file the AI writes for 17 known Roblox mistakes and makes it fix them; `/lihfolk:audit` reviews a whole project |
+| **LihFolk UI** | Original cartoon/simulator menu kit with Luau components |
+| **2025-2026 knowledge** | What changed on Roblox since most models were trained, and what AI models get wrong |
 | **Specialist skills** | Secure remotes, DataStore safety, UI, performance, debugging, anti-exploit, monetisation compliance, asset import, system builder |
 
 ### Other AI tools (Cursor, Codex, ChatGPT and others)

@@ -10,7 +10,7 @@ tags: [core-concept, input, game-feel, combat, controls]
 > - Buffer one action, latest wins (usually).
 > - Some actions should not buffer. Interacting with the wrong target or opening a menu after a fight are worse than a missed press.
 >
-> Read more (3 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~120 tok · whole note ~850 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Input buffering** remembers a button press for a short window and performs it as soon as the action becomes possible. If a player presses attack 80 ms before the current swing ends, a buffered system fires the next swing on the first allowed frame instead of ignoring the press.

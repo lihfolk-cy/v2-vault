@@ -12,7 +12,7 @@ tags: [authoring, craft, creatures, enemies, quadrupeds, flyers, telegraphs]
 > - Cycle speed matches scale (about 1 / sqrt(scale) for scaled copies)
 > - Every attack has a unique telegraph of 0.45 s or more (0.5 s for bosses), with `Tele` and `Hit` markers
 >
-> Read more (17 KB note): ## 3. Body plans · ## 6. Roblox traps that hit creature clips · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.2k tok. Read more: ## 3. Body plans · ## 6. Roblox traps that hit creature clips · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Enemies are animated for the *other side* of the fight: the player has to read them, predict them and punish them. A monster animation succeeds when its weight is believable, its intent is unmistakable, and its timing gives the player fair windows. This note covers weight and scale, the main body plans (bipeds, quadrupeds, crawlers, flyers, floaters), telegraphs and fairness, shared clip sets, and the Roblox-specific traps that hit creature clips hardest (root poses, import axes, ground clipping, scale).

@@ -12,7 +12,7 @@ tags: [mcp, agents, world-building, terrain, workflow]
 > - Snapshot or Version History save done; terrain region copied if terrain will change.
 > - Placement table on disk; reviewed for one zone.
 >
-> Read more (14 KB note): ## 3. Placing props: grounding and overlaps · ## 4. Terrain through an agent · ## 8. Common mistakes · ## 9. Checklist for an agent world-building pass
+> Cost: TL;DR ~140 tok · whole note ~3.5k tok. Read more: ## 3. Placing props: grounding and overlaps · ## 4. Terrain through an agent · ## 8. Common mistakes · ## 9. Checklist for an agent world-building pass
 <!-- tldr:end -->
 
 An AI agent connected to Studio through MCP can place thousands of props, sculpt terrain, dress zones and restyle a hub in an afternoon. It can also bury half your props under the ground, flood a map with terrain water that stalls joining, mirror a model into a broken mess, or overwrite another person's terrain with one bad write. This note is the working method for world building through MCP: how to structure the work, how to verify it without trusting screenshots, and the engine traps that agents hit.

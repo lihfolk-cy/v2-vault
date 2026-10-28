@@ -12,7 +12,7 @@ tags: [game-design, rng, rarity, drops, pacing, math, balancing, collection, luc
 > - Median, p90 and p99 waits computed for every tier, in hours, per play phase.
 > - Next unreached tier has a median wait of one to two sessions at each stage.
 >
-> Read more (18 KB note): ## 3. From odds to hours: pacing over a player's life · ## 5. Luck inflation: how ladders collapse · ## 9. Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.7k tok. Read more: ## 3. From odds to hours: pacing over a player's life · ## 5. Luck inflation: how ladders collapse · ## 9. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A rarity ladder is a schedule disguised as a lottery. When you write "Mythic: 1 in 3,125" you are really deciding *how many hours into the game the typical player first sees a Mythic, how long the unlucky tenth waits, and how many Mythics the veteran owns by week three*. This note gives the maths to set those numbers on purpose: geometric ladders, the distribution of waiting times, how roll speed and luck change pacing over a player's life, collection completion, variance in drop-based crafting, and how luck inflation quietly collapses a ladder. Everything is ordinary probability; the value is in applying it before launch instead of discovering it in reviews.

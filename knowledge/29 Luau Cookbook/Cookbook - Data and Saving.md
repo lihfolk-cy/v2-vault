@@ -12,7 +12,7 @@ tags: [luau, cookbook, datastore, saving, persistence, recipes]
 > - Data carries a `version` and a migration chain.
 > - Saves use `UpdateAsync` and respect ownership.
 >
-> Read more (20 KB note): ## 3. Save with UpdateAsync, not SetAsync · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~120 tok · whole note ~5.1k tok. Read more: ## 3. Save with UpdateAsync, not SetAsync · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Recipes for loading and saving player data with `DataStoreService` without losing or duplicating it. They are small on purpose: a real game should combine them into one data module or use a session-locking library ([[Session Locking and Profile Libraries]]). Read [[DataStore Fundamentals]], [[Saving Correctly - Autosave and BindToClose]] and [[Data Loss Prevention and Recovery]] for the reasoning. Code is `--!strict` Luau, reviewed, not run.

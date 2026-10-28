@@ -13,7 +13,7 @@ tags: [case-study, top-games, simulator, pets, rng, trading, live-ops, monetizat
 > - Title skeleton fixed; one bracketed tag rotates per update.
 > - Release slot fixed and announced.
 >
-> Read more (16 KB note): ## Snapshot · ## Click-through: thumbnail, icon and title · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.0k tok. Read more: ## Snapshot · ## Click-through: thumbnail, icon and title · ## Checklist
 <!-- tldr:end -->
 
 Pet Simulator 99 (PS99) is the third major Pet Simulator game from BIG Games: pets break coins, coins buy eggs and zones, eggs hatch stronger pets, and a trading economy built around rare "Huge" pets keeps the top end alive. It is the reference for three things on Roblox: launching a sequel that carries a franchise's players and items forward, running a weekly update machine for years, and building a store around paid luck. The first two are worth studying closely. The third needs care.

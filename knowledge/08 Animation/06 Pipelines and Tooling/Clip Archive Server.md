@@ -9,7 +9,7 @@ tags: [pipeline, tooling, archive, http, rbxm]
 > - Avoid: Running the server from a terminal that gets closed.
 > - Avoid: Archive folder outside the backup set. Symptom: a disk failure loses every original.
 >
-> Read more (16 KB note): ## The Studio side · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~4.2k tok. Read more: ## The Studio side · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 A 120-line local HTTP server that one project used to keep the **originals of baked clips out of the place**: one `.rbxm` file per KeyframeSequence on disk, written and read by Studio tools over localhost. It is what made it safe to delete hundreds of thousands of Pose instances ([[Baked Clip Stubs and Archiving]]) while keeping every original one call away. The pattern works for any "export this instance, get it back later" need.

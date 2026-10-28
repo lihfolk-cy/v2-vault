@@ -9,7 +9,7 @@ tags: [authoring, craft, weapons, swords, two-handed, arcs]
 > - Avoid: Flat leads the cut -> edge = plane axis x blade direction
 > - Avoid: Overhead straight to drive -> add a chop key over the front
 >
-> Read more (16 KB note): ## 1. Conventions you must fix before animating · ## 9. Long pommels · ## 14. Common mistakes
+> Cost: TL;DR ~90 tok · whole note ~4.0k tok. Read more: ## 1. Conventions you must fix before animating · ## 9. Long pommels · ## 14. Common mistakes
 <!-- tldr:end -->
 
 A sword swing is a body motion that happens to end in a blade. This note covers how to design swings that read and feel right on a Roblox character: cut planes and edge alignment, the kinetic chain, why the arm and not the wrist aims the blade, one-handed vs two-handed mechanics, long pommels, thrusts, overheads, spins, staffs and scythes, and the specific failures that automatic QA caught in one production game.

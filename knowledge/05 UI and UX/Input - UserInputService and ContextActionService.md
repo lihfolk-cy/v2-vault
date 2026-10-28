@@ -12,7 +12,7 @@ tags: [input, userinputservice, contextactionservice, input-action-system, touch
 > - Every `UserInputService` gameplay handler checks `gameProcessedEvent`.
 > - Actions have keyboard, gamepad and touch bindings.
 >
-> Read more (15 KB note): ## 4. ContextActionService · ## 5. The Input Action System · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.9k tok. Read more: ## 4. ContextActionService · ## 5. The Input Action System · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox has three generations of input API living side by side: `UserInputService` (raw events and device state), `ContextActionService` (named actions bound to inputs while a context is active, with automatic touch buttons), and the newer **Input Action System** (`InputContext`, `InputAction`, `InputBinding` instances configured at edit time). This note explains what each is for, how input flows between UI and the game, how to show the right prompt for the player's device, and the production traps (typing in chat triggers abilities, a held key stuck after a menu opens, touch buttons stacking on top of each other).

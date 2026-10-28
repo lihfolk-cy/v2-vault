@@ -10,7 +10,7 @@ tags: [fundamentals, replication, networking, ownership]
 > - If the Animator is not under a player's character, tracks must be loaded and started on the server to replicate.
 > - Remote viewers see the same clip a little later, by roughly the owner-to-server-to-viewer latency.
 >
-> Read more (11 KB note): ## The documented rules · ## Architecture 3: server writes state, every client animates (scales)
+> Cost: TL;DR ~140 tok · whole note ~2.7k tok. Read more: ## The documented rules · ## Architecture 3: server writes state, every client animates (scales)
 <!-- tldr:end -->
 
 Who plays an animation decides who sees it, how late they see it, how much bandwidth it costs, and whether the server can trust its timing. This note covers the Animator's replication rules (documented), what does and does not replicate (including the parts the docs leave implicit), how ownership interacts with it, and the three architectures that scale: owner-plays, server-plays, and server-writes-state with client playback. Asset ownership (whether a clip is *allowed* to load at all) is a separate topic: see [[Animation Asset Permissions and Groups]].

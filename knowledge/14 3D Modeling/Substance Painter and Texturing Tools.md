@@ -12,7 +12,7 @@ tags: [modeling, texturing, substance-painter, tools, export, pbr]
 > - Untinted RGB preserved under alpha 0 for TintMask.
 > - Final judgement under Studio lighting, not in Painter's viewport.
 >
-> Read more (12 KB note): ## 3. Export presets for Roblox · ## 6. Alternatives · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.2k tok. Read more: ## 3. Export presets for Roblox · ## 6. Alternatives · ## Checklist
 <!-- tldr:end -->
 
 Adobe Substance 3D Painter is the industry-standard tool for painting PBR textures on 3D meshes, and it is widely used for Roblox assets, UGC especially. It is also not required: Blender alone, free tools and procedural scripts can produce everything a `SurfaceAppearance` needs. This note covers setting Painter up correctly for Roblox (the settings that silently break assets), export presets and a custom template for every Roblox alpha mode, and how the alternatives compare. Roblox specs are from the Creator Hub, checked October 2026; product details are as of October 2026 and change often, so verify in your version.

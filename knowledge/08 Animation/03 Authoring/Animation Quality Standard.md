@@ -10,7 +10,7 @@ tags: [authoring, quality, arms, standard, qa, metrics]
 > - Backhand winds and two-handed low guards put the forearm across the chest.
 > - R15, scaled 1.6x, about 9 studs tall.
 >
-> Read more (19 KB note): ## 1. Joint ranges [QA][BAKE] · ## 10. What "weird" looks like: the catalogue
+> Cost: TL;DR ~110 tok · whole note ~4.9k tok. Read more: ## 1. Joint ranges [QA][BAKE] · ## 10. What "weird" looks like: the catalogue
 <!-- tldr:end -->
 
 A measurable standard for character attack animation: arms that read as human, blades that stay out of the body, motion without pops. Every rule here can be checked by a script, which means a whole library can be scored, sorted and repaired automatically. It was built for one live action game (the reference project) and is reproduced here with all its thresholds, because the numbers are the useful part.

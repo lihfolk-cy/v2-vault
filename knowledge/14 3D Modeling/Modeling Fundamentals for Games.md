@@ -12,7 +12,7 @@ tags: [modeling, 3d, fundamentals, meshes, budgets, topology]
 > - Blockout at final scale beside a character proxy, checked in Studio.
 > - Silhouette readable as a filled black shape.
 >
-> Read more (19 KB note): ## 1. What a mesh is to the engine · ## 3. Budgets that shipped · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.7k tok. Read more: ## 1. What a mesh is to the engine · ## 3. Budgets that shipped · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A game model is not a sculpture. It is a set of triangles that a phone GPU must draw 30 to 60 times a second, next to hundreds of other models, under a camera that is usually 20 to 200 studs away. Everything in this section follows from that sentence: why triangle counts matter more than polygon counts, why a silhouette beats surface detail, why a pivot in the wrong place costs a programmer a day, and why "it looks fine in Blender" is not a test.

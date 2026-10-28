@@ -12,7 +12,7 @@ tags: [case-study, ui, mobile, phone, responsive, testing, production]
 > - Every screen has a phone arrangement or an explicit "fits as is" mark.
 > - Desktop values stored and restored exactly.
 >
-> Read more (13 KB note): ## Approach 3: real phone layouts (the following days) · ## Bugs the checker found · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~120 tok · whole note ~3.2k tok. Read more: ## Approach 3: real phone layouts (the following days) · ## Bugs the checker found · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most Roblox players are on phones, and most Roblox UI is designed on a desktop monitor. This case study follows one live action game (the reference project) from "the desktop UI, scaled down" to real phone layouts for every screen, with automated checks that prove nothing overlaps and every button is big enough to tap. It covers the three approaches tried, why the first two were not enough, the framework that worked, the bugs it found, and the numbers.

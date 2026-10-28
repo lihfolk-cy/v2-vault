@@ -12,7 +12,7 @@ tags: [pipelines, studio, tooling, batch, plugins, command-bar, http, automation
 > - Return data, not prints
 > - Sliced work under about 1 s per call; no background loops
 >
-> Read more (16 KB note): ## Rule 2: slice long work under the call budget · ## Moving data: local HTTP servers · ## Failure modes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.2k tok. Read more: ## Rule 2: slice long work under the call budget · ## Moving data: local HTTP servers · ## Failure modes · ## Checklist
 <!-- tldr:end -->
 
 Sooner or later every game needs to change thousands of things at once: re-texture every rock, re-level every sound, re-bake every clip, delete every leftover backup, audit every screen. Doing that by hand is impossible; doing it with one giant command-bar script freezes Studio, cannot be undone safely and leaves no record. This note is how to build **batch tools that run inside Studio in Edit mode**: where they live, how they slice work so Studio stays responsive, how they move data in and out through local HTTP, how they stay reversible, and the gates they run. It is drawn from one production game that ran dozens of such tools, several at once, with people and AI agents sharing the same place. Background: [[Command Bar and Studio Scripting]], [[Plugins - Using and Writing]], [[Studio Plugins and Local HTTP Bridges]], [[Studio Tooling Architecture]].

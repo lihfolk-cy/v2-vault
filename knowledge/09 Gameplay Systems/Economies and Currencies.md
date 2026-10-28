@@ -12,7 +12,7 @@ tags: [gameplay, economy, currency, sinks, faucets, inflation, analytics]
 > - Prices and rewards derived from an income model.
 > - All transactions server-side, validated, non-yielding, logged.
 >
-> Read more (14 KB note): ## 2. Faucets and sinks · ## 3. Transactions on the server · ## 8. Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.5k tok. Read more: ## 2. Faucets and sinks · ## 3. Transactions on the server · ## 8. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 An in-game economy is a set of currencies, the **faucets** that create them, the **sinks** that destroy them, and the prices that connect the two to progression. A good one keeps every player near a meaningful purchase, survives a million-fold growth in income, resists duplication exploits, and can be rebalanced without wiping saves. This note covers currency design, faucet/sink accounting, exponential economies, server-side transactions, analytics and the rebalancing lessons of one production game whose cash went from thousands to hundreds of millions per gate.

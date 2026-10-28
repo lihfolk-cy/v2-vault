@@ -10,7 +10,7 @@ tags: [core-concept, networking, replication, architecture]
 > - Streaming changes "replicated" into "replicated if near".
 > - Remote arguments are copies, not references.
 >
-> Read more (4 KB note): ## What crosses, in short · ## The nuance most people miss
+> Cost: TL;DR ~120 tok · whole note ~1.0k tok. Read more: ## What crosses, in short · ## The nuance most people miss
 <!-- tldr:end -->
 
 The **replication boundary** is the line between what the server sends to every client automatically and what stays local to one machine. Changes the server makes to replicated instances (in Workspace, ReplicatedStorage and similar containers) flow down to clients. Changes a client makes stay on that client, with a short list of exceptions. Everything else crosses only through remotes you write.

@@ -13,7 +13,7 @@ tags: [case-study, top-games, survival, horror, co-op, live-ops, retention, mone
 > - Do co-op roles give friends a reason to play together?
 > - Is premium currency also earnable in play?
 >
-> Read more (17 KB note): ## 4. Core loop and retention · ## 6. What to copy and what not to copy · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.3k tok. Read more: ## 4. Core loop and retention · ## 6. What to copy and what not to copy · ## Checklist
 <!-- tldr:end -->
 
 99 Nights in the Forest is a co-op survival game with a horror mascot. A small group lands in a dark forest, keeps a campfire burning, chops wood, crafts gear, fights wolves and cultists, rescues four lost children, and tries to survive 99 nights while a giant deer-headed creature hunts anyone who strays from the light. It reached about 14 million concurrent players, the third game in Roblox history to pass that level, with a team of five people. Of the three breakout hits of 2025 covered in this section, it is the one built most like a traditional game, and it has held its audience far better than the idle hits.

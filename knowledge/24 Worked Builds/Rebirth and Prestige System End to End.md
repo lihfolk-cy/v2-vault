@@ -12,7 +12,7 @@ tags: [worked-build, rebirth, prestige, progression, economy, datastore, ui, lua
 > - Bulk "max" computed on the server; counts validated for NaN, fractions, bounds and type
 > - No yield between affordability check and reset
 >
-> Read more (34 KB note): ## 4. Server modules: PlayerStore and RateLimit · ## 5. RebirthService (server) · ## 10. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~150 tok · whole note ~8.7k tok. Read more: ## 4. Server modules: PlayerStore and RateLimit · ## 5. RebirthService (server) · ## 10. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 This note builds a two-layer reset system from an empty place: coins you earn, **rebirths** that reset coins for a permanent income multiplier (with single, x5 and "max" bulk buys computed in closed form), and **prestige**, which resets rebirths for a bigger multiplier and a token currency. It includes shared math used by both client and server, number formatting that never lies about affordability, a confirmation dialog, safe saving at the moments that matter, and a pacing worked example that shows why most rebirth curves hit a wall.

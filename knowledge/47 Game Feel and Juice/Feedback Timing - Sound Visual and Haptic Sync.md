@@ -12,7 +12,7 @@ tags: [game-feel, juice, audio, haptics, timing, latency, sync, feedback, luau]
 > - Scheduled sounds start early by their peak; reactive sounds are trimmed or skip their lead-in.
 > - Combat sounds are preloaded and pooled.
 >
-> Read more (19 KB note): ## 2. The hidden delays on a Roblox client · ## 4. One clock for all channels · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~4.9k tok. Read more: ## 2. The hidden delays on a Roblox client · ## 4. One clock for all channels · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 An impact is three signals: a picture, a sound and (on some devices) a vibration. When they arrive together the brain fuses them into one event with weight. When they drift apart by more than a few tens of milliseconds the same assets feel cheap, "floaty" or laggy, and nobody can say why. [[Combat Sound Design and Feedback]] covers which sounds play for which outcome and who plays them over the network; [[Captions and Audio Accessibility]] introduces haptics as an accessibility channel. This note is about **time**: how far apart the channels can drift before it shows, where the hidden delays come from on a Roblox client, how to schedule all three from one clock, and how to measure the result.

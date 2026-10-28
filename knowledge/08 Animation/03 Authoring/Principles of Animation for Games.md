@@ -10,7 +10,7 @@ tags: [authoring, craft, principles, game-animation]
 > - Film: volumes deform to show speed, impact and flexibility.
 > - Film: a preparatory move tells the audience something is coming.
 >
-> Read more (15 KB note): ## 2. Anticipation · ## Game-only principles
+> Cost: TL;DR ~110 tok · whole note ~3.8k tok. Read more: ## 2. Anticipation · ## Game-only principles
 <!-- tldr:end -->
 
 The twelve principles of animation (Thomas and Johnston, *The Illusion of Life*) were written for film, where the animator controls every frame the audience sees. In a game the player controls timing, the camera moves, clips blend into each other, and the same attack is seen by the attacker, the target and bystanders at different distances and with network delay. Every principle still applies, but several change meaning.

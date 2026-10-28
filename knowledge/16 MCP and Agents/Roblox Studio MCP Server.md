@@ -12,7 +12,7 @@ tags: [mcp, studio, ai, agents, tooling]
 > - `list_roblox_studios` called; correct place id chosen.
 > - `get_studio_state` says Edit.
 >
-> Read more (18 KB note): ## 1. History: from a plugin bridge to a built-in server · ## 3. The tool set · ## 7. Common mistakes · ## 8. Checklist before an agent session in Studio
+> Cost: TL;DR ~130 tok · whole note ~4.5k tok. Read more: ## 1. History: from a plugin bridge to a built-in server · ## 3. The tool set · ## 7. Common mistakes · ## 8. Checklist before an agent session in Studio
 <!-- tldr:end -->
 
 Roblox Studio ships with a built-in MCP server. Turn it on, point an MCP client at it, and an AI agent can explore your data model, read and edit scripts, run Luau in Edit, Server or Client contexts, start and stop play tests, read the Output, take screenshots, simulate player input, search and insert Creator Store assets, upload images and call Roblox's generative tools. This note covers how to enable it, what each tool does, how it behaves in practice, and the gotchas the reference project hit while building a whole game through it.

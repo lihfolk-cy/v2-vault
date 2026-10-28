@@ -12,7 +12,7 @@ tags: [mcp, python, typescript, plugins, tooling, agents]
 > - Whitelisted job kinds; no generic eval unless you truly need it.
 > - Size limits on request bodies; timeouts on every wait.
 >
-> Read more (22 KB note): ## 3. The Python server · ## 4. The plugin side · ## 8. Security checklist · ## 9. Common mistakes
+> Cost: TL;DR ~150 tok · whole note ~5.5k tok. Read more: ## 3. The Python server · ## 4. The plugin side · ## 8. Security checklist · ## 9. Common mistakes
 <!-- tldr:end -->
 
 The official [[Roblox Studio MCP Server]] gives agents general tools: run Luau, read scripts, capture the screen. Your project has operations that deserve their own tools: "install this weapon", "run the QA suite on zone 4", "bake these clips", "report instance counts per folder". Wrapping those in a small MCP server makes them one well-described call instead of a fragile paragraph of instructions, and lets any MCP host use them.

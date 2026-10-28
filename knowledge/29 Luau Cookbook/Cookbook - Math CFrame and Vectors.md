@@ -12,7 +12,7 @@ tags: [luau, cookbook, math, cframe, vector3, recipes]
 > - Smoothing uses `1 - exp(-k * dt)` or a spring.
 > - Field of view checks compare against a precomputed cosine.
 >
-> Read more (18 KB note): ## 10. Launch a projectile to hit a point in a given time · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~120 tok · whole note ~4.7k tok. Read more: ## 10. Launch a projectile to hit a point in a given time · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Recipes for the geometry questions that come up weekly: facing things, measuring angles, checking cones, smoothing motion, orbiting, random points, projectile arcs and grid snapping. Each recipe is a small pure function you can drop into a shared `MathUtil` module. Code is `--!strict` Luau, reviewed, not run. The theory (spaces, composition order, Euler angles, float precision) is in [[Math Vectors and CFrames]] and [[Motor6D Math and CFrame Composition]]; motion smoothing in depth is in [[Springs Damping and Smoothing]].

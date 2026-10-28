@@ -12,7 +12,7 @@ tags: [ai, verification, prompting, testing, qa]
 > - Each change verified to a named rung; the rung is reported.
 > - Live-only dependencies tested in a live or team-test server.
 >
-> Read more (13 KB note): ## 1. How AI-written Roblox code fails · ## 3. Verifying: the ladder · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.4k tok. Read more: ## 1. How AI-written Roblox code fails · ## 3. Verifying: the ladder · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 AI output fails in a specific way: it looks finished. Wrong code compiles, a wrong mesh renders, a wrong explanation reads fluently, and an agent's report says "done". This note is about the two halves of working with that: asking in a way that makes errors less likely and easier to see, and verifying in a way that catches the errors that remain.

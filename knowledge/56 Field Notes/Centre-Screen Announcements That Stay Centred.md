@@ -12,7 +12,7 @@ tags: [field-notes, ui, announcements, layout, queue, notifications, luau]
 > - Parent is a full-screen frame in its own `ScreenGui`.
 > - Vertical position clears the top bar on phones.
 >
-> Read more (6 KB note): ## 1. Centre by scale, never by a width measured elsewhere · ## 2. One centre slot, one queue · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~1.6k tok. Read more: ## 1. Centre by scale, never by a width measured elsewhere · ## 2. One centre slot, one queue · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Big centre-screen messages ("Boss defeated", "Level up", "Zone unlocked") are the loudest UI a game has, so two failures are very visible: the message sits a little right of centre on some screens, and two messages arrive at once and draw on top of each other. Both have simple fixes: position by scale, and send every announcement through one centre slot with a queue. Toast systems for smaller messages are in [[Notification and Toast Systems]]; layout rules in [[Layout - Scale Offset and Constraints]].

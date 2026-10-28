@@ -12,7 +12,7 @@ tags: [ui, text, fonts, fontface, richtext, textservice, uistroke]
 > - A written type scale with roles; two families at most.
 > - Variable-length text uses `AutomaticSize`; any `TextScaled` has a `UITextSizeConstraint`.
 >
-> Read more (17 KB note): ## 1. Font versus Enum.Font · ## 2. Three ways to size text · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.5k tok. Read more: ## 1. Font versus Enum.Font · ## 2. Three ways to size text · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Text is the UI element players read most and the one most likely to break on another device or in another language. This note covers the `Font` data type and why the old `Enum.Font` names are a trap (Gotham is gone), the three ways to size text and which to choose, measuring text with `TextService`, rich text tags and their limits, text outlines with `UIStroke`, and the lessons from a production font sweep that had to be partly reverted.

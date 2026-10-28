@@ -10,7 +10,7 @@ tags: [core-concept, economy, game-design, balancing]
 > - Faucets scale with progress unless you stop them.
 > - Good sinks feel like rewards. Spending on a cosmetic, an upgrade or a gamble the player chose feels good.
 >
-> Read more (3 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~890 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 A **faucet** is any way currency or items enter the economy (enemy drops, quest rewards, daily chests, purchases). A **sink** is any way they leave (shop purchases, upgrade costs, repair fees, trading taxes, consumables). The balance between them over time decides whether prices hold, rise or collapse.

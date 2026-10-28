@@ -12,7 +12,7 @@ tags: [gameplay, ai, npc, state-machine, behaviour-tree, utility-ai, architectur
 > - Global interrupts (death, stagger, leash, zone change) handled once, above states.
 > - Every state or action releases what it acquired on exit, halt, death and despawn.
 >
-> Read more (23 KB note): ## 2. State machines that do not rot · ## 3. Behaviour trees, honestly · ## 8. Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.8k tok. Read more: ## 2. State machines that do not rot · ## 3. Behaviour trees, honestly · ## 8. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[NPC AI and Behaviour]] covers the whole enemy stack (perception, decision, action, presentation) and recommends "state machine first". This note goes one level down into the **decision layer**: how finite state machines, hierarchical state machines, behaviour trees and utility scoring actually differ, what each costs to author and debug, how each one fails, and how to combine them on a Roblox server that runs hundreds of brains at 10 Hz. The goal is not to pick the most impressive technique. It is to pick the cheapest one that still lets a designer say "make the archer back off when cornered" and get it done in one config change.

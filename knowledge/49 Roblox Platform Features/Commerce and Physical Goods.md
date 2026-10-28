@@ -12,7 +12,7 @@ tags: [platform-features, commerce, merchandise, shopify, commerceservice, polic
 > - Shopify products complete: description, returns, origin, metafield accordions
 > - Merch tab visible only to eligible players; prices from `DisplayPrice`
 >
-> Read more (19 KB note): ## 2. Who can sell, where, and to whom · ## 3. The in-game API · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~190 tok · whole note ~5.0k tok. Read more: ## 2. Who can sell, where, and to whom · ## 3. The in-game API · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Roblox now lets eligible creators sell **real-world products** (shirts, plushies, posters) inside their games, paid in real money and fulfilled through a Shopify store, optionally bundled with a digital item. It is a narrow feature with strict eligibility, a US-only buyer base and real-world obligations (shipping, returns, product claims) that do not exist for Robux products. This note explains the system end to end, where it fits and where it does not, and the "digital merch" route most creators actually use: selling avatar items in game for a commission. For Robux products see [[Developer Products and ProcessReceipt]] and [[Game Passes]]; for UGC pricing see [[UGC Pricing Limiteds and Marketplace Rules]].

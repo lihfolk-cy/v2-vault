@@ -12,7 +12,7 @@ tags: [platform-features, subscriptions, monetization, recurring-revenue, market
 > - Cycle grant keyed on `CycleStartTime`, saved with the profile
 > - Refresh on join, on `UserSubscriptionStatusChanged` and every 15 minutes
 >
-> Read more (22 KB note): ## 1. The state machine · ## 2. Per-cycle grants instead of per-day guesses · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.7k tok. Read more: ## 1. The state machine · ## 2. Per-cycle grants instead of per-day guesses · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 [[Subscriptions and Premium Payouts]] covers what experience subscriptions are, how they pay, the platform rules, the basic status check and Roblox Plus. This note goes underneath: the subscription **state machine** and its grace period, granting benefits per **paid cycle** rather than per day, the arithmetic of churn and lifetime value, benefit design that does not trap you on a content treadmill, honest cancellation, webhooks, and the edge cases (refunds, lapses, region and platform eligibility, price changes, replacing a pass) that decide whether a subscription earns trust or support tickets.

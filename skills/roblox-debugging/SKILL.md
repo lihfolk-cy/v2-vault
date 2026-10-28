@@ -1,6 +1,6 @@
 ---
 name: roblox-debugging
-description: 'LihFolk: Debug Roblox games with a fixed method (reproduce, isolate, bisect, explain, verify, guard) instead of guessing. Covers reading Luau errors, client-server desync, race conditions and yield order, physics ownership, UI input, DataStore problems and live servers. Use when the user says "bug", "broken", "not working", "error in output", "works in Studio but not live", "attempt to index nil", "infinite yield", "rubber-banding", or "random failures".'
+description: 'LihFolk: fixed debugging method (reproduce, isolate, bisect, verify, guard) for Luau errors, desync, races, physics ownership, UI input and live-only bugs. Use on "broken", errors, infinite yield, rubber-banding.'
 ---
 # LihFolk Debugging
 

@@ -12,7 +12,7 @@ tags: [2d, editableimage, pixel-buffer, procedural, buffers, rendering, performa
 > - Creation wrapped in `pcall`, `nil` handled, and a fallback path exists.
 > - Framebuffers at native pixel resolution (well under 1024), scaled up with `Pixelated`.
 >
-> Read more (23 KB note): ## 1. The API as documented · ## 4. A framebuffer you can build on · ## 6. Fallbacks and failure modes · ## 9. Checklist
+> Cost: TL;DR ~140 tok · whole note ~6.0k tok. Read more: ## 1. The API as documented · ## 4. A framebuffer you can build on · ## 6. Fallbacks and failure modes · ## 9. Checklist
 <!-- tldr:end -->
 
 `EditableImage` lets a script create an image at runtime and write pixels into it. For 2D games that opens doors that ImageLabels alone cannot: a real framebuffer you draw into, destructible terrain masks, fog of war, paint and drawing tools, procedural backgrounds and effects, runtime palette swaps, and minimaps drawn from data. It also has sharp edges: a client memory budget that makes creation return `nil`, a permission toggle that is off by default in published games, a display path that only refreshes one image per frame, and policy questions as soon as players can draw things other players see. This note covers the current API as documented, the budgets, a working framebuffer, and when to avoid the whole thing.

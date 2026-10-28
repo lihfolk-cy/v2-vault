@@ -12,7 +12,7 @@ tags: [fundamentals, markers, events, combat, timing]
 > - Listeners connect once per track and disconnect on `Ended`.
 > - Upper-body copies are marked so cosmetic listeners skip them.
 >
-> Read more (16 KB note): ## Exactly when a marker fires · ## Nuances and edge cases · ## Checklist · ## Common mistakes in production
+> Cost: TL;DR ~160 tok · whole note ~4.0k tok. Read more: ## Exactly when a marker fires · ## Nuances and edge cases · ## Checklist · ## Common mistakes in production
 <!-- tldr:end -->
 
 Markers are how a clip tells code "now": the frame the blade connects, a footstep, the moment a trail should start, the instant a projectile leaves the hand. They are the bridge between animation and gameplay, and in a combat game they carry most of the timing. This note covers the three event mechanisms, exactly when markers fire (and when they silently do not), how to keep server timing honest, and the data-driven patterns that kept one game's 350 markers consistent across bakes, upper-body copies and network relays.

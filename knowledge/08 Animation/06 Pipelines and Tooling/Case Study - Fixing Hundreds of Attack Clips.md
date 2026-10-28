@@ -10,7 +10,7 @@ tags: [case-study, pipeline, arms, qa, ik]
 > - The wrist aiming the blade. Where the arm could not reach the required blade direction, the solver bent the wrist.
 > - The request was short: "arms in weird positions, especially in the Moves preview." The Moves preview plays each ability on a...
 >
-> Read more (13 KB note): ## Step 1: write the standard, then measure · ## Step 5: scale out, and what broke
+> Cost: TL;DR ~160 tok · whole note ~3.3k tok. Read more: ## Step 1: write the standard, then measure · ## Step 5: scale out, and what broke
 <!-- tldr:end -->
 
 How one live action game took its whole library of ability clips (several hundred moves across roughly a hundred weapon kits, built by several generations of tools) from "93% visibly broken arms" to zero criticals on everything it touched, without re-authoring the choreography. This is the story and the lessons; the workflow is [[Pipeline - Arm IK Baking and QA]], the algorithms [[Arm Baker Internals]], the metrics [[Arm QA Metrics Reference]].

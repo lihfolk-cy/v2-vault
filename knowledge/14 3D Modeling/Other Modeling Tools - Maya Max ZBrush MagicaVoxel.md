@@ -12,7 +12,7 @@ tags: [modeling, tools, maya, 3ds-max, zbrush, magicavoxel, blockbench, pipeline
 > - Reference cube and arrow imported into Studio from each tool's preset.
 > - Units, axes and pivots normalised (often via Blender) before the final export.
 >
-> Read more (14 KB note): ## 2. Getting any tool's output into Roblox · ## 6. MagicaVoxel · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.6k tok. Read more: ## 2. Getting any tool's output into Roblox · ## 6. MagicaVoxel · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Blender is the default for Roblox creators, but it is not the only tool, and on many teams not the best one for every job. Studios hire artists who already know Maya or 3ds Max; sculptors live in ZBrush; voxel artists work faster in MagicaVoxel than any general tool; Blockbench is often the quickest route for blocky low-poly models. This note explains what each tool is good at, how its output gets into Roblox, the unit and axis traps for each, and how to mix tools in one pipeline without losing scale, pivots or normals on every hand-off.

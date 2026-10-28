@@ -12,7 +12,7 @@ tags: [testing, playtesting, multi-client, devices, qa, protocol, bug-reports]
 > - Studio rehearsal with Server & Clients, Device Simulator and Network Simulator done.
 > - Test place published; test data reset; build label visible.
 >
-> Read more (15 KB note): ## 2. Preparation · ## 3. The device matrix · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.8k tok. Read more: ## 2. Preparation · ## 3. The device matrix · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Multi-Client and Live Testing]] covers Studio's test modes, the multiplayer scenario matrix, gated cheat tools and where to test live. This note turns that into a repeatable procedure: how to prepare a session, who does what during it, which devices to cover, how to script the scenarios so they are actually run, and how to turn a chaotic hour of play into a short list of reproducible bugs. A playtest without a protocol mostly produces "it felt laggy" and "something was weird with the shop".

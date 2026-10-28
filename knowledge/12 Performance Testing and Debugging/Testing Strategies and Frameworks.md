@@ -12,7 +12,7 @@ tags: [testing, testez, jest-lua, ci, dry-run, qa, static-analysis]
 > - Pure modules for money, drops, curves, migrations and validation, with specs.
 > - Randomness injected and seeded in tests.
 >
-> Read more (17 KB note): ## 4. TestEZ · ## 5. Jest-Lua · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.4k tok. Read more: ## 4. TestEZ · ## 5. Jest-Lua · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox games are stateful, networked, visual and full of engine behaviour you do not control. That makes them hard to test from the outside, and many teams respond by testing nothing except "I played it and it seemed fine". This note lays out a layered strategy that works: static checks on every script, unit tests for pure logic (with TestEZ and Jest-Lua examples), Edit-mode dry runs and harnesses for things that touch instances, play tests for runtime behaviour, and an honest vocabulary ("Edit-tested", "not play-tested") so nobody mistakes one level of proof for another.

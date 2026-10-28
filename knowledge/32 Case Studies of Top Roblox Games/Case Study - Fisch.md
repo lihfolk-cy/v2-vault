@@ -13,7 +13,7 @@ tags: [case-study, top-games, fishing, collection, rng, minigame, live-ops, thum
 > - How-to-play lines in the store description.
 > - Passes sell convenience ("anywhere") before power.
 >
-> Read more (14 KB note): ## Snapshot · ## Click-through: thumbnail, icon and title · ## Checklist
+> Cost: TL;DR ~110 tok · whole note ~3.6k tok. Read more: ## Snapshot · ## Click-through: thumbnail, icon and title · ## Checklist
 <!-- tldr:end -->
 
 Fisch is a fishing game: cast, wait, play a short reel minigame, catch one of hundreds of species with random size and mutation, sell or keep it, buy a better rod, travel to a new island. It took a genre most people think of as filler and made it one of the most played games on Roblox in its first year. It is also a cautionary tale: a big expansion in 2025 split the player base, and the developers ended up polling players and removing it. Both halves are worth learning from.

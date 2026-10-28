@@ -9,7 +9,7 @@ tags: [blender, trees, low-poly, foliage, environment]
 > - Avoid: Origin at the canopy centre. Symptom: scattered trees float or sink because the scatter tool places pivots on the ground.
 > - Avoid: Washed-out greens. Symptom: in-game greens look grey compared with the reference render.
 >
-> Read more (8 KB note): ## The recipe, applied · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~130 tok · whole note ~2.0k tok. Read more: ## The recipe, applied · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 ![[p45_low_poly_trees.png]]

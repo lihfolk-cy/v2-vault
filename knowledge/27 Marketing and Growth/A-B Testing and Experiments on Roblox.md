@@ -12,7 +12,7 @@ tags: [marketing, growth, experiments, ab-testing, configservice, analytics, sta
 > - MDE checked on the dashboard before starting; change bold enough to detect
 > - `GetConfigForPlayerAsync` + `GetValue` only at the moment of exposure
 >
-> Read more (17 KB note): ## 2. Configs and experiments: how they work (Roblox docs, as of October 2026) · ## 3. Wiring an experiment in strict Luau · ## 8. Failure modes · ## 9. Checklist
+> Cost: TL;DR ~200 tok · whole note ~4.4k tok. Read more: ## 2. Configs and experiments: how they work (Roblox docs, as of October 2026) · ## 3. Wiring an experiment in strict Luau · ## 8. Failure modes · ## 9. Checklist
 <!-- tldr:end -->
 
 An A-B test shows two versions of something to two random groups of players and measures which one does better. It is the only reliable way to know whether a change caused an effect, because everything else (school holidays, a competitor's update, a viral clip) hits both groups equally. Roblox now has a built-in experiments system tied to Configs, plus several narrower tools that run their own tests (thumbnail personalisation, price optimisation, ad placement experiments). This note covers how the built-in system works, how to wire it in strict Luau, the statistics that decide whether a small game can test at all, how to build your own split when the built-in one does not fit, and the mistakes that produce confident wrong answers.

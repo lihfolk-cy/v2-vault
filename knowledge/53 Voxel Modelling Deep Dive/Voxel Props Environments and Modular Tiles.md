@@ -12,7 +12,7 @@ tags: [modeling, voxel, environment, props, modular, tiles, autotiling, kits, in
 > - Edge profile table written before building pieces.
 > - Decoration one cell inside the footprint; AO self-only.
 >
-> Read more (16 KB note): ## 3. Autotiling: picking edge and corner pieces automatically · ## 6. Cost of a tiled voxel world · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~200 tok · whole note ~4.2k tok. Read more: ## 3. Autotiling: picking edge and corner pieces automatically · ## 6. Cost of a tiled voxel world · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Characters get the attention, but in a blocky game most of the triangles, instances and art hours go into the world: ground, cliffs, paths, buildings, trees, fences, crates, lamps. Building that world voxel by voxel does not scale. What scales is a small set of tiles and props, built on one grid, that snap together and repeat hundreds of times without the repetition showing. [[Modular Environment Kits]] covers modular kits in general and [[Grid Placement and Player Building Systems]] covers grid placement code. This note is the voxel-specific version: tile sizes that agree with Roblox's own grids, edge rules that make tiles join seamlessly, autotiling (choosing the right edge or corner piece automatically), variation without new assets, prop design at environment scale, and the instance, memory and streaming costs of a tiled voxel world.

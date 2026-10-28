@@ -12,7 +12,7 @@ tags: [game-design, genre, horror, story, narrative, tension, cutscenes]
 > - Tension curve planned with explicit release beats.
 > - Monster rules learnable; signature sound; telegraphs.
 >
-> Read more (15 KB note): ## 4. Monster design · ## 10. A tension director (sketch) · ## 12. Common mistakes · ## 13. Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.8k tok. Read more: ## 4. Monster design · ## 10. A tension director (sketch) · ## 12. Common mistakes · ## 13. Checklist
 <!-- tldr:end -->
 
 Horror and story games are Roblox's "event" genres: a group of friends enters a chapter, gets chased, screams, and comes out with a story to tell. Story games (escape, break-in, chapter adventures) share the same structure without (or with less) fear. Both are built around **authored moments** rather than systems, which makes them expensive per minute of content and extremely strong at producing clips, word of mouth and co-play. This playbook covers why the genres work on Roblox, tension design, monster design, round and chapter structures, narrative in short sessions, replay value, maturity and safety considerations, and a small "tension director" you can build on.

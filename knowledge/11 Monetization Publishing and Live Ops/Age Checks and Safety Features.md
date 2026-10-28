@@ -12,7 +12,7 @@ tags: [safety, age-checks, chat, textchatservice, filtering, compliance, luau]
 > - Private channels only for users allowed by `CanUsersDirectChatAsync`
 > - All user-authored text filtered server-side for the right audience
 >
-> Read more (13 KB note): ## 2. Age groups and chat · ## 3. Code: chat and text the compliant way · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.4k tok. Read more: ## 2. Age groups and chat · ## 3. Code: chat and text the compliant way · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Between January and July 2026 Roblox moved from self-declared ages to **age checks** (facial age estimation or ID) as the basis for chat, social links, content access, publishing and collaboration. Players are split into **Roblox Kids (5 to 8)**, **Roblox Select (9 to 15)** and **Roblox (16+)** audiences. For developers this changes who can play your game, who can talk to whom inside it, what you may show, and what your own team needs to publish. This note collects what changed, what your code must do (chat through `TextChatService`, text filtering, direct-chat eligibility), and how to design for mixed-age servers. Facts verified against Creator Hub pages and official announcements **as of October 2026**; this area is still moving, so re-check dates and thresholds.

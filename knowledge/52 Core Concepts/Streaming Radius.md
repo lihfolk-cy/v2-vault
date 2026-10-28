@@ -10,7 +10,7 @@ tags: [core-concept, streaming, performance, networking, world-building]
 > - Bigger radius is not "safer". It raises memory and network cost on every device.
 > - Model streaming modes change the unit of streaming.
 >
-> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~110 tok · whole note ~940 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 With **instance streaming** (`Workspace.StreamingEnabled`), the client only receives the parts of the world near its focus point. The **streaming radius** settings decide how near: `StreamingTargetRadius` is how far the engine tries to keep content loaded, and `StreamingMinRadius` is the area it treats as most important to load first (Roblox docs, "Instance streaming", as of October 2026; defaults are 1024 and 64 studs).

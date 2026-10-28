@@ -12,7 +12,7 @@ tags: [fundamentals, publishing, permissions, groups, assets]
 > - No temporary (registered) ids anywhere in scripts or data.
 > - No ids copied from free models without a grant.
 >
-> Read more (14 KB note): ## How animation permissions work now · ## Nuances and edge cases · ## Checklist before a release or transfer · ## Common mistakes in production
+> Cost: TL;DR ~160 tok · whole note ~3.7k tok. Read more: ## How animation permissions work now · ## Nuances and edge cases · ## Checklist before a release or transfer · ## Common mistakes in production
 <!-- tldr:end -->
 
 An animation asset only plays in an experience that is **allowed** to use it. When it is not, nothing errors in a live server: the track's `Length` stays 0 and the character stands still. This is the single most common reason a working animation "stops working" after a game moves to a group, after a collaborator uploads clips, or after someone pastes an id from a free model. This note explains the current rules (verified against the docs and Roblox announcements as of October 2026), how group ownership works, how to grant access instead of re-uploading, and a pipeline that avoids the whole class of bug.

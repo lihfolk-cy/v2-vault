@@ -12,7 +12,7 @@ tags: [field-notes, streaming, loading-screen, joins, network-ownership, replica
 > - Spawns stand on solid ground and stream in first.
 > - Loading screen teardown is one idempotent function.
 >
-> Read more (6 KB note): ## 1. Frozen players in a fall pose are not a bug · ## 2. A loading screen that always goes away · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~1.6k tok. Read more: ## 1. Frozen players in a fall pose are not a bug · ## 2. A loading screen that always goes away · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Two join-time behaviours generate a steady stream of false bug reports and bad fixes in a streaming-enabled game. Other players appear frozen mid-air in a falling pose for a few seconds after they spawn; that is normal, and "fixing" it with anchoring creates real bugs. And custom loading screens occasionally never go away, leaving a player staring at a logo over a working game; that needs an idempotent teardown and a watchdog. Streaming itself is in [[Instance Streaming]]; join optimisation in [[Case Study - Fast Join and Deferred Loading]].

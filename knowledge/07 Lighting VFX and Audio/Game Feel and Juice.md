@@ -12,7 +12,7 @@ tags: [game-feel, juice, feedback, ui, vfx, audio, combat]
 > - Every reward: motion, number, payoff pop.
 > - Big moments: anticipation then reveal.
 >
-> Read more (17 KB note): ## 2. UI juice · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.4k tok. Read more: ## 2. UI juice · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Game feel is the sense that the game responds to you: a click that pops, a hit that lands, a reward that pays out. "Juice" is the pile of small, cheap feedback that creates it: scale pops, flashes, particles, sounds, numbers that count up, a tiny shake. On Roblox, where a new player decides in the first minute whether to stay, juice is not polish to add at the end; it is part of the core loop ([[Core Loops and Session Design]]).

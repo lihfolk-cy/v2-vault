@@ -9,7 +9,7 @@ tags: [procedural, look-at, aim, head, neck, turret, axes, luau]
 > - Head whips shoulder to shoulder: target crossing directly behind -> lose interest behind; hysteresis; unwrap
 > - Head jitters while the character runs: measuring in last frame's part CFrames -> FK this frame, or measure in the root's frame
 >
-> Read more (13 KB note): ## The core maths · ## A head tracker · ## Common mistakes
+> Cost: TL;DR ~130 tok · whole note ~3.2k tok. Read more: ## The core maths · ## A head tracker · ## Common mistakes
 <!-- tldr:end -->
 
 A head that turns toward the player who just walked up is the cheapest "this character is alive" trick in the book. Aim (a torso and arms pointing a weapon, a turret swinging onto a target) is the same maths with stricter accuracy. Neither is really IK: you are not reaching a point with an end effector, you are *rotating* one or more joints so an axis points somewhere. That makes it simpler, more stable and easier to clamp than IK, but it has its own traps, nearly all of them about axes and angle order.

@@ -12,7 +12,7 @@ tags: [procedural, generation, seeds, determinism, random, hashing, testing, lua
 > - Coordinates are hash-combined, not added.
 > - `Random` streams are bounded to one job and seeded from a hash.
 >
-> Read more (20 KB note): ## The Hash module · ## Versioning generators · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~5.0k tok. Read more: ## The Hash module · ## Versioning generators · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Procedural World Generation]] gives the first rule of procedural work: use `Random.new(seed)`, one generator per purpose, and derive chunk seeds from coordinates. That rule gets you started. This note is about everything that breaks once a generator is real: seeds that collide, output that changes when you add one feature, dictionaries that iterate in a different order, floats that disagree between machines, saved worlds that no longer match after an update, and seeds that leak loot to exploiters. Every other note in this section builds on the small `Hash` module written here.

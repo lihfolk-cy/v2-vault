@@ -9,7 +9,7 @@ tags: [systems, ui, gui, tweenservice, game-feel, accessibility, code]
 > - List jiggles during a pop: Tweening `Size` in a layout -> `UIScale`
 > - Phone gets hot in menus: Per-frame loops while hidden -> Loops only while visible
 >
-> Read more (18 KB note): ## Pattern 1: the pop · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~4.5k tok. Read more: ## Pattern 1: the pop · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 UI animation is the part of game animation players touch most directly: every button press, reward, toast and menu. Done well it makes a game feel expensive; done badly it makes menus slow and phones hot. This note covers the Roblox tools (TweenService, `UIScale`, `UIGradient`, `CanvasGroup`, flipbooks, hand-written springs), patterns with concrete numbers from one production game's UI passes (the reference project), performance rules and reduced motion. World-object tweens (doors, lids) are in [[Tween and CFrame Animation of Objects]].

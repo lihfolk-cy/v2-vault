@@ -10,7 +10,7 @@ tags: [core-concept, game-feel, combat, animation]
 > - Clock-timed systems drift during a stop.
 > - Frame rate quantises the stop. At 30 fps a 50 ms stop is one or two frames depending on timing, so light stops flicker between...
 >
-> Read more (3 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~880 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Hit-stop** (also hit-pause or freeze frames) briefly freezes or slows the attacker and target at the moment of impact, typically for 30 to 120 ms (rule of thumb). The pause makes the hit read as contact with something solid instead of a weapon passing through air.

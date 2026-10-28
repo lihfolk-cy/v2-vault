@@ -12,7 +12,7 @@ tags: [audio, music, adaptive-audio, ambience, crossfade, licensing]
 > - Two-deck crossfades; fade-in on join; silences between tracks.
 > - Context switches with priorities; pause and resume where sensible.
 >
-> Read more (17 KB note): ## 2. Playlists and crossfades · ## 5. Ambience · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.4k tok. Read more: ## 2. Playlists and crossfades · ## 5. Ambience · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Music tells players how to feel; ambience tells them where they are. Both run for the whole session, so mistakes in them are heard for an hour: a track that loops with a click every 90 seconds, shop music that cuts in at full volume, a zone bed that masks the cue you need to hear. Adaptive audio means the soundtrack responds to the game: context switches (shop, combat, boss), intensity layers, stingers on events, and ambience that follows the player through zones.

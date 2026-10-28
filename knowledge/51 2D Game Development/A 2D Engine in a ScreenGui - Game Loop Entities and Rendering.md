@@ -12,7 +12,7 @@ tags: [2d, screengui, game-loop, fixed-timestep, entities, rendering, object-poo
 > - Fixed timestep with accumulator, frame clamp, max steps per frame, and interpolation alpha.
 > - `prevX/prevY` copied at the start of every step; teleports set both.
 >
-> Read more (23 KB note): ## 2. The fixed-timestep loop · ## 5. Rendering: pooled views with dirty checks · ## 9. Common mistakes · ## 10. Checklist
+> Cost: TL;DR ~190 tok · whole note ~5.9k tok. Read more: ## 2. The fixed-timestep loop · ## 5. Rendering: pooled views with dirty checks · ## 9. Common mistakes · ## 10. Checklist
 <!-- tldr:end -->
 
 If you chose the GUI route in [[Choosing GUI 2D or Locked-Camera 2.5D]], you are building a small engine. This note is the skeleton of that engine: a fixed-timestep loop with interpolation, entities stored as plain data, a renderer that maps data onto pooled `ImageLabel`s, a camera, layers, culling and pixel snapping. Collision and movement are in [[2D Collision Physics and Platformer Movement]], sprite animation in [[Sprite Sheets and Frame Animation with ImageRectOffset]], levels and parallax in [[Tilemaps Cameras and Parallax for 2D Levels]].

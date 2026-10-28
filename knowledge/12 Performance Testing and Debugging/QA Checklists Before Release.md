@@ -9,7 +9,7 @@ tags: [qa, release, checklist, testing, performance, live-ops]
 > - Avoid: Ticks without evidence.
 > - Avoid: Testing only on the developer's PC.
 >
-> Read more (12 KB note): ## 8. G. Performance budgets ([[Performance Fundamentals]]) · ## 11. The "not play-tested" discipline · ## 12. One-page release checklist · ## Common mistakes
+> Cost: TL;DR ~90 tok · whole note ~3.1k tok. Read more: ## 8. G. Performance budgets ([[Performance Fundamentals]]) · ## 11. The "not play-tested" discipline · ## 12. One-page release checklist · ## Common mistakes
 <!-- tldr:end -->
 
 A release checklist is not bureaucracy; it is the memory of every bug that already shipped once. This note gives a tiered release process (hotfix, regular update, big launch), the gates each tier must pass, and the full checklists: code health, gameplay, multiplayer, data, monetisation, UI and devices, performance budgets, content hygiene, and the first hour after publishing. It ends with the "not play-tested" discipline that makes the checklists honest.

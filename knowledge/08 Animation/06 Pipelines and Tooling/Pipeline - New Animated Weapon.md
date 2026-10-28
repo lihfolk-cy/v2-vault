@@ -12,7 +12,7 @@ tags: [pipeline, weapons, rigging, kits, workflow]
 > - Kit sources pass size, reserved-name, forbidden-id and order checks.
 > - Each move STAGED; kit installed; folder under 2,500.
 >
-> Read more (18 KB note): ## Step 1: offline generation · ## Step 5: design the kit · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.5k tok. Read more: ## Step 1: offline generation · ## Step 5: design the kit · ## Checklist
 <!-- tldr:end -->
 
 How one live action game took a modelled weapon (a GLB plus a setup script describing its hinges, materials and effects) to a held, animated weapon with an ability kit, in about 1-1.5 hours, most of it creative work. It ran dozens of times; the steps below are the version that survived. The weapon's own rig is covered in depth in [[Weapon Design Rig Builder]], its runtime in [[Weapon Rig Player]], the arm pass in [[Pipeline - Arm IK Baking and QA]].

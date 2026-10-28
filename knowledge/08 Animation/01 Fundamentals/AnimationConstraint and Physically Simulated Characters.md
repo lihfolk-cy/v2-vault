@@ -12,7 +12,7 @@ tags: [fundamentals, animationconstraint, physics, ragdoll, avatar-joint-upgrade
 > - No per-frame C0 writes on characters; procedural layers write `Transform` in `PreSimulation` and skip throttled frames.
 > - No server-side pose writes; inputs replicate, clients compute.
 >
-> Read more (15 KB note): ## What breaks in old code · ## Nuances and edge cases · ## Checklist for a codebase · ## Common mistakes in production
+> Cost: TL;DR ~150 tok · whole note ~3.8k tok. Read more: ## What breaks in old code · ## Nuances and edge cases · ## Checklist for a codebase · ## Common mistakes in production
 <!-- tldr:end -->
 
 `AnimationConstraint` is the joint that replaces `Motor6D` on R15 player characters under the **Avatar Joint Upgrade** (AJU). In its default kinematic mode it behaves like a Motor6D: the Animator writes `Transform` and the child part follows exactly. In simulated mode it pulls the child toward the animated pose with bounded forces, which is what makes physics-blended characters and ragdolls possible without swapping joints. This note covers the class, the rollout timeline, what breaks in old code, how to migrate, and how to use simulation deliberately.

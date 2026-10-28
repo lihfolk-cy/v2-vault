@@ -12,7 +12,7 @@ tags: [luau, cookbook, players, characters, humanoid, recipes]
 > - Every `CharacterAdded` handler also handles an existing character.
 > - Every `WaitForChild` that may never resolve has a timeout.
 >
-> Read more (21 KB note): ## 3. Keep per-player state and clean it up on leave · ## Nuances and edge cases · ## Common mistakes across these recipes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.3k tok. Read more: ## 3. Keep per-player state and clean it up on leave · ## Nuances and edge cases · ## Common mistakes across these recipes · ## Checklist
 <!-- tldr:end -->
 
 Short, self-contained recipes for the player and character code every game writes. Each recipe gives the problem, the code, why it works, and the pitfall that bites people. All code is `--!strict` Luau using modern APIs (`task.*`, `PivotTo`, attributes). It is reviewed, not run: paste it into a fresh place and test it before you build on it. For the reasoning behind these patterns read [[Characters and Humanoids]], [[Humanoid States and Animation]], [[Custom Characters and StarterCharacter]] and [[Events Signals and Connections]].

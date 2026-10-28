@@ -12,7 +12,7 @@ tags: [networking, combat, prediction, latency, reconciliation, server-authority
 > - Rejections roll back quietly; rejection rates are measured.
 > - Rules (costs, cooldowns, shapes) live in one shared module.
 >
-> Read more (21 KB note): ## 3. Sequence numbers: the backbone of reconciliation · ## 9. The engine's server authority model · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.5k tok. Read more: ## 3. Sequence numbers: the backbone of reconciliation · ## 9. The engine's server authority model · ## Checklist
 <!-- tldr:end -->
 
 Every combat game on Roblox lives with a round trip of roughly 50 to 300 ms between a player's input and the server's verdict. If the client waits for the server before showing anything, combat feels like wading through mud. If the client decides everything, exploiters decide everything. Prediction is the middle path: the client **shows** the likely result immediately, the server **decides** the real one, and reconciliation makes the two agree without the player noticing.

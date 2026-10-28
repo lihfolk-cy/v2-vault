@@ -12,7 +12,7 @@ tags: [marketing, growth, competitor-analysis, research, game-design, benchmarks
 > - Watchlist set up in Creator Hub (up to nine games)
 > - Teardown template filled in live, on phone and PC, fresh account
 >
-> Read more (14 KB note): ## 3. Data sources and how far to trust them · ## 4. The play-through teardown · ## 9. Common mistakes · ## 10. Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.7k tok. Read more: ## 3. Data sources and how far to trust them · ## 4. The play-through teardown · ## 9. Common mistakes · ## 10. Checklist
 <!-- tldr:end -->
 
 Every Roblox genre has a few games that set what players expect: how fast the first reward comes, what the shop looks like, how often updates land, what the thumbnail promises. Studying them is how a small team avoids building a game that is already behind on day one. Studying them badly is how teams end up cloning a top game's surface, missing why it works, and competing head-on with a game that has years of content.

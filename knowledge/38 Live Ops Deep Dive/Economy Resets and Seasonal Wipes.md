@@ -12,7 +12,7 @@ tags: [live-ops, economy, seasons, wipes, datastore, leaderboards, trust, luau]
 > - Problem measured, not felt
 > - Profile split into permanent and seasonal parts
 >
-> Read more (17 KB note): ## 4. Data design: make resets cheap before you need them · ## 6. Currency resets and compensation · ## 8. Edge cases and failure modes · ## 10. Checklist
+> Cost: TL;DR ~180 tok · whole note ~4.2k tok. Read more: ## 4. Data design: make resets cheap before you need them · ## 6. Currency resets and compensation · ## 8. Edge cases and failure modes · ## 10. Checklist
 <!-- tldr:end -->
 
 Sooner or later a live economy needs a reset. Currency has inflated so far that new players can never catch up, a leaderboard has been frozen for months by the same ten names, a dupe exploit flooded the market, or a rebalance makes old progress meaningless. A reset can renew a game, or it can be the update that loses your most loyal players in a week. The difference is almost entirely in what you keep, what you give back, and how you say it.

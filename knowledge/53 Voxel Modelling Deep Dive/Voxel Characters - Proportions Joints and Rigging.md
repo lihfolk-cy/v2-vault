@@ -12,7 +12,7 @@ tags: [modeling, voxel, characters, proportions, rigging, motor6d, r15, joints, 
 > - Face at least 6, ideally 8 or more cells across; limbs 2 or more cells thick.
 > - Joint shape chosen per joint; rotation limits noted for animators.
 >
-> Read more (18 KB note): ## 2. Joint shapes that hide the gap · ## 5. Getting joints from Blender to Studio · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~210 tok · whole note ~4.5k tok. Read more: ## 2. Joint shapes that hide the gap · ## 5. Getting joints from Blender to Studio · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A voxel character has to solve a problem that smooth characters do not: cubes do not bend. Every joint is a place where two blocks rotate against each other, and every rotation either opens a gap, pushes one block through another, or does both. Good voxel characters are designed around their joints from the first cell. They also have to choose a rigging route early, because Roblox offers three (a part rig with Motor6Ds, the 15-part R15 layout, or a single skinned mesh with bones) and each one suits voxels differently. [[Voxel and Blocky Modeling]] lists archetype proportions for enemies and companions; [[Modeling Characters for R15 and Custom Rigs]] and [[Rigging in Blender]] cover rigging in general. This note joins them for blocky characters specifically: head-to-body ratios that read at Roblox distances, joint shapes that hide gaps, where to put pivots on a grid, which rig route to pick, and a worked example built to R15 so the default animations work.

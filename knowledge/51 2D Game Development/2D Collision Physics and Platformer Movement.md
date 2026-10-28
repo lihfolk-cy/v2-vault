@@ -12,7 +12,7 @@ tags: [2d, collision, physics, platformer, movement, tilemap, aabb, coyote-time,
 > - Move X then Y, one pixel at a time; zero remainder on block.
 > - Out-of-bounds policy decided (walls, sky, pit).
 >
-> Read more (23 KB note): ## 3. Moving: one axis, one pixel at a time · ## 5. The controller · ## 11. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~140 tok · whole note ~5.8k tok. Read more: ## 3. Moving: one axis, one pixel at a time · ## 5. The controller · ## 11. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 A GUI 2D game has no physics engine. Every floor you stand on, every wall you slide along and every jump arc is your code. The good news is that 2D platformer physics is a solved problem with a small, robust core: axis-aligned boxes, a tile grid, movement one axis at a time, and a handful of tuning numbers derived from how the jump should feel. This note gives that core in strict Luau, explains why it is built that way, and covers the parts that usually go wrong: tunnelling, corner snags, one-way platforms, slopes, moving platforms, stomps, and the tuning math.

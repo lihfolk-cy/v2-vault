@@ -1,3 +1,8 @@
+---
+tags: [field-notes, characters, movement, watchdog, telemetry, datastore, debugging, luau]
+---
+# A Stuck Player Watchdog That Logs the Cause
+
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - Watchdog unfreezes stunned players: Intended holds not excluded -> One shared intended-hold list
@@ -7,13 +12,8 @@
 > - Server re-checks state itself and rate-limits reports.
 > - Anchored root, WalkSpeed, PlatformStand, controls and stale locks handled.
 >
-> Read more (8 KB note): ## 1. Detect on the client, decide on the server · ## 2. Free the common causes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~2.1k tok. Read more: ## 1. Detect on the client, decide on the server · ## 2. Free the common causes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
----
-tags: [field-notes, characters, movement, watchdog, telemetry, datastore, debugging, luau]
----
-# A Stuck Player Watchdog That Logs the Cause
 
 In a large game many systems can stop a character moving: stuns, cutscenes, menus, mounts, attacks that root you, anti-cheat, loading code. Each one sets something and is supposed to clear it. Sooner or later one does not, and a player is stuck: pressing keys, going nowhere, and leaving. A watchdog that notices "trying to move but not moving", frees the common causes, and **records which cause it found** turns an unfixable "sometimes people get stuck" report into a ranked list of bugs. Related: [[Debugging Live Servers]], [[Telemetry Events]].
 

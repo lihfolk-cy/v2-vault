@@ -10,7 +10,7 @@ tags: [pipeline, ik, arms, qa, baking, advanced]
 > - Studio calls under 1.5 s: two moves per write call, four clips per play call.
 > - `--all` on kits with an appended shared move that has no clip stops at that slot; bake per move instead.
 >
-> Read more (14 KB note): ## The pipeline · ## Pose lessons (what makes criticals, and how authors avoid them)
+> Cost: TL;DR ~130 tok · whole note ~3.6k tok. Read more: ## The pipeline · ## Pose lessons (what makes criticals, and how authors avoid them)
 <!-- tldr:end -->
 
 The end-to-end workflow one live action game used to repair the arms of several hundred ability clips: measure every clip on the real Animator, re-solve only the arms offline with exact IK, fit the result back into sparse Roblox keys within an instance budget, verify the written clip on the Animator again, and install it with a rollback path.

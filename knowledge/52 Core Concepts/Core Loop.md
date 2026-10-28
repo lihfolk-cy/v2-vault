@@ -10,7 +10,7 @@ tags: [core-concept, game-design, retention, progression]
 > - Every loop needs a visible "next". The player should always see the next upgrade, zone or item and roughly how far away it is.
 > - Feedback is part of the loop, not decoration.
 >
-> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~920 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 The **core loop** is the shortest repeating cycle of actions the player performs most of the time: in a simulator, *click, earn, upgrade, click faster*; in a shooter, *find, fight, loot*; in a tycoon, *build, earn, expand*. Everything else in the game (quests, events, shops, social features) either feeds this loop or wraps around it.

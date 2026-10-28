@@ -1,6 +1,6 @@
 ---
 name: lihfolk-ui
-description: LihFolk UI, LihFolk's own cartoon and simulator design system for Roblox, with a typed Luau kit (theme tokens, components, controller, icon registry) and one example per menu. Use when making or fixing Roblox menus, HUD or buttons, especially a shop, codes, rebirth, settings or daily rewards menu, claim / claimed / locked / skip buttons, currency or price buttons, progress bars, toggles or reward cards, or when the user says "make a menu", "make a shop", "add a codes menu", "rebirth screen", "daily rewards UI", "simulator UI", "make the buttons pop", "UI looks broken on phone", "buttons too small on mobile" or "use LihFolk UI".
+description: 'LihFolk: house cartoon/simulator UI kit (Luau components) for shop, codes, rebirth, settings, daily rewards, HUD, buttons, progress bars; also "UI broken on phone" / "buttons too small".'
 ---
 
 # LihFolk UI

@@ -12,7 +12,7 @@ tags: [animation, pipeline, blender, r15, keyframe, export, qa, lihfolk]
 > - Overlap offsets on head, off-arm and forearm
 > - Feet on `FootTrack`; slide under 0.02 studs
 >
-> Read more (8 KB note): ## 2. Authoring · ## 3. Automatic QA (written into each clip's JSON) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~2.0k tok. Read more: ## 2. Authoring · ## 3. Automatic QA (written into each clip's JSON) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 How LihFolk authors original R15 animations in Blender by script, checks them automatically, and exports them for Roblox. It exists because hand-wired AI keyframing tends to produce stiff, clipping "slop". Every guard below catches a specific failure seen in real test clips.

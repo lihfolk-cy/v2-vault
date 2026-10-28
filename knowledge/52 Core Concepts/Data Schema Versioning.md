@@ -10,7 +10,7 @@ tags: [core-concept, data, persistence, migrations]
 > - Never edit a shipped migration. If migration 4 to 5 had a bug, add migration 5 to 6 that repairs it.
 > - Old servers meet new data. During a rolling update, an old server can load a record that a new server already upgraded.
 >
-> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~150 tok · whole note ~940 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Data schema versioning** stores a version number inside every saved record and keeps a chain of migration functions that upgrade old records step by step to the current shape. A record saved at version 3 is run through migrations 3 to 4, 4 to 5 and so on when it is loaded.

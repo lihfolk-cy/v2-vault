@@ -12,7 +12,7 @@ tags: [architecture, networking, client-server, fundamentals, security]
 > - No secrets in ReplicatedStorage, ReplicatedFirst, Workspace, StarterGui or StarterPlayer.
 > - Every remote handler validates type, value, context and rate before acting.
 >
-> Read more (19 KB note): ## Latency: the other half of the model · ## A minimal correct round trip · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~4.9k tok. Read more: ## Latency: the other half of the model · ## A minimal correct round trip · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Every Roblox experience is a distributed program. One **server** runs the authoritative copy of the game; every player runs a **client** with a partial, delayed copy. Almost every hard bug in a multiplayer Roblox game (duplicated items, enemies that "teleport", effects only one player sees, a shop that gives free items) comes from code that forgot which side it was on, or trusted the wrong side. This note is the map: what runs where, what each side can see and change, what the latency looks like, and how to decide where a piece of logic belongs.

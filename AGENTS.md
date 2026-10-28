@@ -10,4 +10,6 @@ For Roblox work (Luau, Studio, remotes, DataStores, UI, worldbuilding, modelling
 6. **Trust labels:** prefer `Roblox docs` and `Measured`; verify `Unverified` claims; never invent APIs or asset ids.
 7. **Quality bar:** for generated assets and systems, score against `skills/quality-score/rubrics/<type>.md`. Hard gates must pass, and the minimum is 8.5/10. Don't grade your own work alone; get an independent review.
 
+**Accuracy over savings (non-negotiable):** the TL;DR is a pointer, not a substitute. For high-stakes work (player data and DataStores, purchases and receipts, paid random items and policy, remotes and security, anything that ships to live players), always read the note's full `## Common mistakes` and `## Checklist` sections, and the section that holds the exact numbers or API rules you are about to use. Also read further whenever the TL;DR leaves any doubt. Never cite a number you only saw in a TL;DR without opening its section.
+
 Deeper workflows (Blender modelling, trend games, council review) are in `skills/*/SKILL.md`; any agent can follow them as plain instructions.

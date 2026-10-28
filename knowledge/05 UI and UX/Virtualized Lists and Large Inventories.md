@@ -12,7 +12,7 @@ tags: [ui, inventory, scrollingframe, virtualization, performance, pooling, sear
 > - Under ~100 entries: plain layout. Over ~300 or growing: virtualised.
 > - View array built by filter then sort, with a unique tiebreaker.
 >
-> Read more (23 KB note): ## 3. A grid virtualiser that rebinds only what changed · ## 4. Search, filter and sort at scale · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~6.0k tok. Read more: ## 3. A grid virtualiser that rebinds only what changed · ## 4. Search, filter and sort at scale · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Inventories grow. A collection game that starts with 30 items at launch has 400 after six months of updates, and a dedicated player owns 2,000 entries. The UI that was fine at 30 (build a card per item inside a `UIGridLayout`) becomes the slowest screen in the game: it takes a second to open, it hitches when an item is added, and on a low-end phone it eats memory that the world needed.

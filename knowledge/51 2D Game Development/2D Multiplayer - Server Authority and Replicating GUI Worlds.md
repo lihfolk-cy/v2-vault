@@ -12,7 +12,7 @@ tags: [2d, multiplayer, networking, server-authority, replication, snapshots, pr
 > - Shared step module: fixed `dt`, seeded `Random`, arrays not dictionary order, no clock reads.
 > - Server loop on `Heartbeat` with accumulator; one input per player per tick; queue capped.
 >
-> Read more (29 KB note): ## 3. The server match loop · ## 4. Packing data into buffers · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~170 tok · whole note ~7.5k tok. Read more: ## 3. The server match loop · ## 4. Packing data into buffers · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 A GUI-rendered 2D world does not exist on the network. The `ImageLabel` that is your player was created by a LocalScript inside a `PlayerGui`, the server never heard of it, and no other client can see it. In a 2.5D game the engine replicates characters, physics and parts for you; in a GUI game you are writing netcode for every moving thing. This note is the plan for doing that well: which of three architectures fits your game, how to keep a shared deterministic simulation, how to pack inputs and snapshots into buffers that fit the remote limits, how other players are interpolated, how your own player is predicted and corrected, and how to stop the obvious cheats.

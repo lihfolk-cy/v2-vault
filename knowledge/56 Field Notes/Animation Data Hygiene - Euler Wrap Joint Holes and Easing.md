@@ -1,3 +1,8 @@
+---
+tags: [field-notes, animation, keyframes, euler, interpolation, easing, procedural, luau]
+---
+# Animation Data Hygiene - Euler Wrap Joint Holes and Easing
+
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - One-frame forearm spin mid-swing: Euler lerp across the 180-degree boundary -> Wrapped delta, or convert to CFrame and `Lerp`
@@ -7,13 +12,8 @@
 > - Every key complete after a load-time hole fill.
 > - Large short arcs avoid cubic ease-in or have a mid key.
 >
-> Read more (6 KB note): ## 1. Euler channels across plus or minus 180 degrees · ## 2. A joint missing from one key snaps to rest · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~1.6k tok. Read more: ## 1. Euler channels across plus or minus 180 degrees · ## 2. A joint missing from one key snaps to rest · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
----
-tags: [field-notes, animation, keyframes, euler, interpolation, easing, procedural, luau]
----
-# Animation Data Hygiene - Euler Wrap Joint Holes and Easing
 
 A custom keyframe player (a Luau module that samples poses and writes `Motor6D.Transform`, or a procedural layer that blends authored keys) inherits every flaw of its data. Three flaws caused most of the visible glitches in a shipped melee game: Euler angles blended the long way round across 180 degrees, joints missing from some keys snapping to rest, and a cubic ease-in that crammed a huge swing into two frames. None of them throws an error; all of them look like "the animation is broken". Player internals are in [[Lua Keyframe Player Internals]]; interpolation theory in [[Keyframes, Easing and Interpolation]] and [[Rotations Angles and Quaternions]].
 

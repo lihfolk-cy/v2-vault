@@ -12,7 +12,7 @@ tags: [performance, scripting, luau, script-profiler, runservice, scheduling]
 > - Every per-frame loop has an idle gate (hidden, off-screen, far).
 > - Non-critical updates moved to a cadence scheduler with random phase.
 >
-> Read more (15 KB note): ## 1. Finding script cost · ## 3. The patterns that win · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.8k tok. Read more: ## 1. Finding script cost · ## 3. The patterns that win · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most Roblox games that run badly are not slowed by one expensive script. They are slowed by **many cheap things that run when they do not need to**: a UI animation loop for a hidden menu, a healthbar updating every frame for an enemy 400 studs away, a quest timer rewriting the same text sixty times a second. This note covers how to find script cost (Script Profiler, MicroProfiler labels), which frame event to use, and the patterns that cut script time: gating, cadence, distance tiers, write-on-change, time-slicing, and when Parallel Luau and native codegen are worth it.

@@ -12,7 +12,7 @@ tags: [gameplay, physics, movers, linearvelocity, alignposition, controllermanag
 > - Player movers run on the player's client; NPC movers on the server with server ownership.
 > - Dashes use Plane mode and agree with the Humanoid.
 >
-> Read more (19 KB note): ## 2. LinearVelocity · ## 7. ControllerManager: the physics character controller · ## 9. Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.0k tok. Read more: ## 2. LinearVelocity · ## 7. ControllerManager: the physics character controller · ## 9. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Mover constraints are how you push, pull, steer and hold assemblies without fighting the solver. Dashes, knockback, grabs, hover, homing projectiles and server-driven NPC movement are all built from the same seven constraints. The physics character controller (`ControllerManager`) is the same idea packaged for characters. This note covers what each mover does, the properties that matter, the patterns that held up in a production combat game, and the traps.

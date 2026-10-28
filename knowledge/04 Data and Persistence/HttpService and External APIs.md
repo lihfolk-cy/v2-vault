@@ -12,7 +12,7 @@ tags: [data, httpservice, web, secrets, json, rate-limits, external-services]
 > - Secrets in the secrets store with tight domains; local secrets for Studio.
 > - One helper with `pcall`, status checks, retry on 429/5xx only, backoff, `retry-after`.
 >
-> Read more (18 KB note): ## A reliable request helper · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.5k tok. Read more: ## A reliable request helper · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 `HttpService` lets game servers talk to the outside world: your own backend, analytics and error trackers, Discord-style webhooks for moderation alerts, and a growing set of Roblox Open Cloud endpoints. It also hosts the JSON and GUID helpers every Roblox codebase uses. This note covers enabling it, the request API, the limits (500 requests per minute per server, a separate 2,500 per minute for Open Cloud), the secrets store, JSON edge cases, security, and patterns for reliable outbound calls. Open Cloud from outside Roblox is in [[Open Cloud APIs]].

@@ -12,7 +12,7 @@ tags: [modeling, weapons, props, grip, pivots, blender, tools, conventions]
 > - Proportions checked against the character proxy; pommel clears the body.
 > - Parts split by role (Handle, Guard, Blade, Glow) and by motion (one object per moving piece).
 >
-> Read more (16 KB note): ## 1. The weapon contract · ## 3. Building a sword, step by step · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.2k tok. Read more: ## 1. The weapon contract · ## 3. Building a sword, step by step · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A weapon is the most-looked-at model in a combat game: it is in the player's hand on every frame, in every icon, every trade, every inspect screen. It also has the strictest technical contract of any static model, because animators, VFX artists and programmers all build on its axes: where the grip is, which way the blade points, where the edge faces, where the trail starts and ends. A sword with a beautiful blade and an arbitrary pivot costs the team more than an ugly sword with the right one.

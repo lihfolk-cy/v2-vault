@@ -12,7 +12,7 @@ tags: [gameplay, pathfinding, navigation, npc, ai]
 > - Costs table includes danger labels and link labels.
 > - Follower has per-waypoint timeouts, stuck handling and blocked recompute.
 >
-> Read more (18 KB note): ## 3. A robust follower · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.5k tok. Read more: ## 3. A robust follower · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 `PathfindingService` computes walkable routes over a navigation mesh that Roblox builds from your world. It handles stairs, ramps, jumps, gaps and (with links) ladders, boats and teleporters. It is also slower, more failure-prone and more limited than people expect: a path can be blocked a moment after you compute it, the agent shape must be described honestly, long paths fail, and following waypoints with a Humanoid needs care. This note covers the API, costs, modifiers and links, a robust follower, when not to use pathfinding at all, and debugging.

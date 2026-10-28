@@ -12,7 +12,7 @@ tags: [monetization, ads, rewarded-video, adservice, ads-manager, luau]
 > - Reward product is deterministic, not Robux, not random, not inflationary
 > - Availability checked right before offering; one check per play
 >
-> Read more (14 KB note): ## 2. The flow · ## 3. Rules for rewards and placements (Docs) · ## 7. Failure modes · ## 8. Checklist
+> Cost: TL;DR ~190 tok · whole note ~3.5k tok. Read more: ## 2. The flow · ## 3. Rules for rewards and placements (Docs) · ## 7. Failure modes · ## 8. Checklist
 <!-- tldr:end -->
 
 Ads touch a Roblox game in two directions:

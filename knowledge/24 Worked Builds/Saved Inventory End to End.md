@@ -12,7 +12,7 @@ tags: [worked-build, inventory, datastore, session-locking, remotes, ui, luau, s
 > - Only `PlayerData` touches the player data store
 > - Every remote payload type-checked, length-capped, rate-limited
 >
-> Read more (42 KB note): ## 4. The data layer · ## 5. The inventory itself · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~10.8k tok. Read more: ## 4. The data layer · ## 5. The inventory itself · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 This build starts from an empty place and ends with a saved, session-locked inventory: stackable items (potions, ores) and unique items (a sword with its own level), a coin balance, equip and sell actions over a validated remote, a grid UI, and a tool that appears in the player's hand when they equip a weapon. It is also the **foundation build** for this folder: the data layer, the remote helper and the rate limiter written here are reused by [[Daily Rewards System End to End]], [[Shop with Game Passes and Developer Products End to End]], [[Codes Redemption System End to End]] and [[Global Leaderboards End to End]]. Build this one first.

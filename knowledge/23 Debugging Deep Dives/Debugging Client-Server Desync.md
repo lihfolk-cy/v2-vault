@@ -12,7 +12,7 @@ tags: [debugging, networking, replication, desync, attributes, remotes]
 > - Both sides inspected (Client/Server toggle or inspector tool).
 > - Server-owned state is read-only on the client, with a check that flags violations.
 >
-> Read more (18 KB note): ## 2. Replication facts that cause desync · ## 4. A desync inspector · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.6k tok. Read more: ## 2. Replication facts that cause desync · ## 4. A desync inspector · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A desync is any bug where the client and the server disagree about the state of the game: the client shows 1,500 coins and the server has 1,200; a door is open for one player and closed for another; an enemy is dead on the server and still walking on a client. Desyncs are hard because each side, looked at alone, seems fine. This note gives a classification of desyncs, the replication facts that cause each kind, a debug tool that compares both sides directly, and fixes that remove whole families of the bug.

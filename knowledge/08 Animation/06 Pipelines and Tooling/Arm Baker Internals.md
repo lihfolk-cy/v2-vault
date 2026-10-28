@@ -10,7 +10,7 @@ tags: [pipeline, ik, arms, baking, algorithms, advanced]
 > - Spans are at most 0.4 s long and must turn less than 120 deg (the Animator's interpolation becomes ambiguous for big turns).
 > - Sometimes the best fix is to steer the solve: edit arm CFrames over time windows in a copy of the clip dump, then bake with...
 >
-> Read more (30 KB note): ## Stage 2: target shaping · ## Stage 3: the candidate grid
+> Cost: TL;DR ~160 tok · whole note ~7.6k tok. Read more: ## Stage 2: target shaping · ## Stage 3: the candidate grid
 <!-- tldr:end -->
 
 The algorithms inside the offline arm baker ("posebaker") of one live action game, at the level of detail you need to rebuild it: how targets are derived, how importance is computed, how the body clearance push works, the candidate grid, every unary and transition cost, the Viterbi pass, smoothing, the off-hand contexts, the flip guard, key fitting, body thinning, instance budgets, repair rounds, re-keyed sources and outputs. Workflow and pass rules: [[Pipeline - Arm IK Baking and QA]]. The metrics it optimises for: [[Arm QA Metrics Reference]].

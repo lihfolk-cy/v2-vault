@@ -12,7 +12,7 @@ tags: [field-notes, combat, melee, prediction, latency, networking, game-feel, l
 > - Damage, numbers and status effects only from the server.
 > - Server echo suppressed per target within a short window.
 >
-> Read more (6 KB note): ## Why the hit feels late · ## Suppress the server echo per target · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~1.6k tok. Read more: ## Why the hit feels late · ## Suppress the server echo per target · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A melee hit that only plays its flash, hit-stop and sound when the server confirms it will feel late on every connection, and players describe it precisely: "the hit lands at the end of the animation". This note explains where that delay comes from, and how to play the *feel* of the hit on the attacker's client at the hit frame while keeping damage and outcomes on the server. The general model is in [[Client Prediction and Reconciliation for Combat]]; hit detection in [[Hitboxes and Hit Detection]].

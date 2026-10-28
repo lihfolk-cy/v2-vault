@@ -12,7 +12,7 @@ tags: [world-building, terrain, materials, materialvariant, water, shorelines, p
 > - Material list per zone; no base material recoloured or overridden for a single zone.
 > - Expanded Terrain decision made before heavy painting (it restarts the place).
 >
-> Read more (25 KB note): ## 2. Materials: what is global and what is not · ## 3. Water · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~6.4k tok. Read more: ## 2. Materials: what is global and what is not · ## 3. Water · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Terrain Tools and Terrain API]] covers the voxel model, the editing tools, the fill and voxel APIs, and a set of measured quirks (the rendered surface sitting about 2 studs above the voxel top, blocky materials, one write per call). This note goes one level down into the three areas where terrain decisions bite late in a project: **materials** (what is global, what can be overridden, and what Expanded Terrain changes), **water** (shorelines, the liquid channel, swimming and underwater effects, fake versus real), and **performance** (rendering, memory, place size, streaming, physics, and the hidden cost of runtime edits).

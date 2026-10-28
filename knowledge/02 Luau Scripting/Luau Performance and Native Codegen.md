@@ -12,7 +12,7 @@ tags: [luau, performance, native-codegen, optimization, profiling]
 > - Per-frame code: no new tables, closures, threads or strings per object.
 > - Systems run at the lowest frequency that feels right, staggered.
 >
-> Read more (16 KB note): ## 3. Patterns that matter · ## 4. Native code generation · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.0k tok. Read more: ## 3. Patterns that matter · ## 4. Native code generation · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most Roblox lag is not Luau's fault: it is rendering, physics, replication, or doing the wrong amount of work. When it is Luau, the cause is usually **algorithmic** (doing per-frame what should be per-event, scanning all instances, O(n^2) loops) or **allocation churn** (tables, closures, threads and strings created every frame). Micro-optimizations come last. This note explains how the Luau VM makes code fast, what defeats those optimizations, the patterns that keep per-frame work cheap, native code generation (`--!native` / `@native`), and how to measure. System-level profiling lives in [[Script Performance]] and [[MicroProfiler Guide]].

@@ -13,7 +13,7 @@ studied: 2026-10-26
 > - Avoid: Treating the AI design as the spec. Symptom: widgets that look right but have no hover, pressed, disabled or gamepad-selected...
 > - Avoid: Tweening slider fill while dragging. Symptom: fill lags behind the knob.
 >
-> Read more (11 KB note): ## Bringing it to life in Roblox (vault patterns) · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~120 tok · whole note ~2.8k tok. Read more: ## Bringing it to life in Roblox (vault patterns) · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 A 15-second TikTok by **lasse (@las.rcd)**, posted 2026-10-17. The video was filmed on a phone pointed at a monitor. It shows a finished **Roblox-style Settings menu** open in a Figma prototype in the browser. The tab title reads roughly "Anime Settings UI - Purple - Figma". The on-screen caption says it was "all made with Claude with Figma UI Roblox skill". A second caption says the skill will be released at 1k likes. The post's tags are #claude #clauderoblox #roblox #robloxstudio.

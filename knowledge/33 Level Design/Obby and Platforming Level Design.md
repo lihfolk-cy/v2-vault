@@ -12,7 +12,7 @@ tags: [level-design, obby, platforming, jump-math, difficulty, stage-design, val
 > - Every stage raises one dial; difficulty attribute set.
 > - Chains longer than 5 or 6 jumps split by a checkpoint.
 >
-> Read more (20 KB note): ## 1. The jump arc, worked out · ## 3. The obstacle vocabulary · ## 9. Common mistakes · ## 10. Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.1k tok. Read more: ## 1. The jump arc, worked out · ## 3. The obstacle vocabulary · ## 9. Common mistakes · ## 10. Checklist
 <!-- tldr:end -->
 
 [[Genre Playbook - Obbies and Platformers]] covers the genre: variants, why obbies work on Roblox, the default movement numbers, teach-test-twist, checkpoint code, mobile fairness, moving platforms, towers and monetisation. This note is the level designer's companion to it. It works out the jump arc from first principles so you can design gaps on paper, builds an obstacle vocabulary with the variables that make each one hard, treats difficulty as a set of dials instead of a feeling, covers the camera and depth-perception problems peculiar to a third-person platformer, and ends with a validator script that catches impossible and trivial jumps before a playtester does.

@@ -9,7 +9,7 @@ tags: [fundamentals, math, cframe, motor6d, fk]
 > - Avoid: Assuming R15 axes on R6 or imported rigs.
 > - Avoid: World-space joint math in huge maps. Symptom: limb jitter far from the origin.
 >
-> Read more (18 KB note): ## Forward kinematics for a whole rig · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~4.6k tok. Read more: ## Forward kinematics for a whole rig · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 Every animation system, procedural layer, IK solver and offline tool in Roblox comes down to one equation per joint. If you can read and invert it in your head, you can write look-at code, IK, ragdoll hand-offs, retargeting and QA tools; if you cannot, you will multiply in the wrong order and get limbs that rotate about the wrong pivot or in the wrong space. This note derives the equation for all three joint types, shows how to solve it for what you want, and lists the composition rules and numeric traps.

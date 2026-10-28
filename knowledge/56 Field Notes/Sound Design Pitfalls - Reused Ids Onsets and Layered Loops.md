@@ -1,3 +1,8 @@
+---
+tags: [field-notes, audio, sound, sound-design, combat, asset-audit, marketplace]
+---
+# Sound Design Pitfalls - Reused Ids Onsets and Layered Loops
+
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - A "chime" sounds like a weapon: Id reused by name, never checked -> Audit ids with `GetProductInfoAsync`, use role keys
@@ -7,13 +12,8 @@
 > - Code asks for roles, not raw ids.
 > - Trimmed sounds keep their swell; each trimmed swing auditioned.
 >
-> Read more (7 KB note): ## 1. Audit reused ids by what they are, not what they are called · ## 2. Onset trimming that removes the attack · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~1.7k tok. Read more: ## 1. Audit reused ids by what they are, not what they are called · ## 2. Onset trimming that removes the attack · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
----
-tags: [field-notes, audio, sound, sound-design, combat, asset-audit, marketplace]
----
-# Sound Design Pitfalls - Reused Ids Onsets and Layered Loops
 
 Most combat audio problems in a large Roblox game are not about choosing good sounds. They are about bookkeeping: an id reused in places nobody remembers, an automated trim that cut the part of the sound that mattered, two copies of a swing playing on top of each other, and a loop that cannot be partly turned down. This note collects five such pitfalls from a shipped action game and the fixes. Fundamentals are in [[Sound Design for Games]] and [[Combat Sound Design and Feedback]]; the import side in [[Audio Pipeline]].
 

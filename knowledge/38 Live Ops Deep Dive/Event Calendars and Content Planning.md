@@ -12,7 +12,7 @@ tags: [live-ops, events, calendar, planning, content, production, scheduling, lu
 > - Throughput measured; maintenance share estimated
 > - Mostly config, rotation and reskin events; one mechanic or content event per month at most
 >
-> Read more (18 KB note): ## 2. Throughput first, calendar second · ## 5. The calendar as data · ## 9. Common mistakes · ## 10. Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.7k tok. Read more: ## 2. Throughput first, calendar second · ## 5. The calendar as data · ## 9. Common mistakes · ## 10. Checklist
 <!-- tldr:end -->
 
 A live game runs on two clocks. The **player clock** is what players see: a weekend boost every other Friday, a holiday event, a new season on the first of the month. The **production clock** is what the team can actually build: how many assets, maps and systems fit into a week once bugs and support are paid for. An event calendar is the document that makes those two clocks agree months in advance. Without one, small teams either promise more than they can ship or go quiet for weeks, and both show up in the retention curve.

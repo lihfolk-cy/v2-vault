@@ -12,7 +12,7 @@ tags: [ai, luau, scripting, code-assistants, tooling]
 > - Project memory file with hard rules and checks.
 > - Docs access (llms.txt, `.md` reference pages, `http_get`) and an instruction to use it.
 >
-> Read more (15 KB note): ## 2. Set the project up for AI · ## 3. What AI gets wrong in Luau specifically · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.9k tok. Read more: ## 2. Set the project up for AI · ## 3. What AI gets wrong in Luau specifically · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 This note covers using AI to write Luau: which kinds of tools exist, how to set up a project so they work well, what they get wrong about Luau and Roblox specifically, and the checks that catch those errors. The verification method is expanded in [[Prompting and Verifying AI Output]]; agent setups in [[AI Agents and Autonomous Workflows]].

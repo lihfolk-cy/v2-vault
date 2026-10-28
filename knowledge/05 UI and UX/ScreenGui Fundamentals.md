@@ -12,7 +12,7 @@ tags: [ui, screengui, playergui, zindex, displayorder, fundamentals]
 > - A written `DisplayOrder` band plan; tutorial layers on top.
 > - New screens use `ZIndexBehavior.Sibling`.
 >
-> Read more (21 KB note): ## 6. The GuiObject basics you will use every day · ## 10. A minimal, robust screen controller · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.4k tok. Read more: ## 6. The GuiObject basics you will use every day · ## 10. A minimal, robust screen controller · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Every piece of 2D interface a player sees on their screen lives inside a `ScreenGui`. This note explains how that container actually behaves at runtime: where it comes from, when it is destroyed and re-created, how several of them stack, how draw order works inside one, and how input passes through it. Most "my UI disappeared", "my button is behind the frame" and "my menu reset when I died" bugs come from misunderstanding one of these rules, not from layout maths.

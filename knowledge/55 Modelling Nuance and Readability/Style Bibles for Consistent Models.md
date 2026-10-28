@@ -9,7 +9,7 @@ tags: [modeling, style-bible, style-guide, art-direction, consistency, pipeline,
 > - Nobody reads it: 30-plus pages of prose -> 4 to 8 pages, tables and do/don't pairs
 > - Reviews turn into taste arguments: No golden assets -> Pick 3 to 5 golden assets; review side by side
 >
-> Read more (16 KB note): ## What a modelling style bible contains · ## Enforcing the bible automatically · ## 12. A checklist the reviewer runs · ## Common mistakes
+> Cost: TL;DR ~120 tok · whole note ~4.0k tok. Read more: ## What a modelling style bible contains · ## Enforcing the bible automatically · ## 12. A checklist the reviewer runs · ## Common mistakes
 <!-- tldr:end -->
 
 [[Environment Art Styles]] explains how to write a style down in ten sections (core rules, anatomy, shape grammar, materials, palette, tiers, motion, build steps, QA, mistakes). That is the art-direction view. This note is the modeller's view: what a style bible needs so that a new modeller, a contractor, a procedural script or an AI generator produces models that sit next to existing ones without anyone noticing a seam. The difference is precision. "Chunky with soft edges" is a mood. "Outer bevel 0.08 studs, 2 segments, on props under 3 studs" is a rule someone can follow and someone else can check.

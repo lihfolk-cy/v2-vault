@@ -12,7 +12,7 @@ tags: [tooling, rojo, wally, selene, stylua, luau-lsp, darklua, script-sync]
 > - `rokit.toml`, `wally.toml`, `wally.lock`, `selene.toml`, `stylua.toml`, `.luaurc` committed.
 > - Rojo maps code only; world protected; `servePlaceIds` set.
 >
-> Read more (16 KB note): ## 1. Script Sync or Rojo? · ## 3. Rojo · ## 11. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.1k tok. Read more: ## 1. Script Sync or Rojo? · ## 3. Rojo · ## 11. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 Studio stores your project in the cloud. External tools put it, or part of it, on disk, so you can use a real editor, Git, code review, linters, formatters, type checking in CI and package managers. Roblox's docs describe this as a syncing problem: files on disk, instances in Studio, and conflicts when both change (Docs). This note explains the options (Studio's built-in **Script Sync** versus **Rojo**), then each tool in the standard community toolchain with working config: Rokit, Rojo, Wally, Selene, StyLua, Luau Language Server and darklua. Versions are current as of October 2026; pin what you have tested.

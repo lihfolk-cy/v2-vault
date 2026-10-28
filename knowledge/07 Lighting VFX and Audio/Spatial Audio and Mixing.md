@@ -12,7 +12,7 @@ tags: [audio, spatial, mixing, attenuation, loudness, buses, performance]
 > - Listener position chosen deliberately for the camera style.
 > - Every sound measured and levelled to a category target.
 >
-> Read more (13 KB note): ## 1. Attenuation · ## 5. Voice limits and throttles · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~3.4k tok. Read more: ## 1. Attenuation · ## 5. Voice limits and throttles · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Spatial audio decides **where** a sound seems to be and **how loud it is from here**. Mixing decides **how loud each sound is relative to everything else**, and what gets dropped when too much happens at once. In a multiplayer game these two problems meet: thirty players casting abilities in one plaza is a spatial problem (who is close?) and a mixing problem (which of these 200 sounds matter?).

@@ -12,7 +12,7 @@ tags: [debugging, live-ops, developer-console, logservice, telemetry, open-cloud
 > - Gated admin commands: teleport to job, fetch server log, dump system state, raise log level temporarily.
 > - Every system registers a state dump.
 >
-> Read more (16 KB note): ## 3. In-server tools · ## 4. Shipping logs off the server · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.0k tok. Read more: ## 3. In-server tools · ## 4. Shipping logs off the server · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Some bugs only exist in live servers: they need real latency, 30 players, a server that has been up for nine hours, a device you do not own, or real purchases and teleports. You cannot put a breakpoint on a live server. What you can do is see its output, ask it questions through tools you built in advance, ship its logs somewhere you can search, and change its behaviour with flags. This note is about that toolkit and how to use it during an investigation.

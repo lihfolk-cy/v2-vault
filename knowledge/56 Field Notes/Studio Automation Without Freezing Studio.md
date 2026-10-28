@@ -12,7 +12,7 @@ tags: [field-notes, studio, command-bar, mcp, automation, patterns, scripts, per
 > - Long jobs yield and are paged across calls.
 > - Source length checked against the cap before writing.
 >
-> Read more (7 KB note): ## 1. Patterns that backtrack catastrophically · ## 4. Compile-check before saving · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~1.8k tok. Read more: ## 1. Patterns that backtrack catastrophically · ## 4. Compile-check before saving · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Bulk work through the command bar or an MCP `execute_luau` call (search every script, patch a pattern, rebuild a folder) runs on Studio's main thread. A slow call does not just take a while; it freezes the editor for everyone connected, and a pathological one can freeze it for most of an hour. This note collects the rules that came out of running large automated edits on a big place: pattern traps, chunking, the script size cap, compile checks, and the AutoRecovery trap. Basics are in [[Command Bar and Studio Scripting]] and [[Batch Processing Tools in Studio]]; agent rules in [[Safety Rules for AI Agents in Studio]].

@@ -12,7 +12,7 @@ tags: [modeling, normal-maps, baking, tangent-space, blender, surfaceappearance]
 > - Hard edges are UV seams; triangulated low-poly; smoothing final.
 > - Exploded bake for close parts; cage when one extrusion cannot fit all.
 >
-> Read more (16 KB note): ## 5. Baking a normal map in Blender, step by step · ## 9. Diagnosing artefacts · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.2k tok. Read more: ## 5. Baking a normal map in Blender, step by step · ## 9. Diagnosing artefacts · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A normal map lets a 2,000-triangle low-poly mesh shade like a 200,000-triangle sculpt by storing, per texel, which way the surface "really" faces. On Roblox, where every mesh is capped at 20,000 triangles and avatar items at 4,000 (Creator Hub, checked October 2026), normal maps are how detailed armour, weapons and creatures stay inside budget. They are also the map most often broken by invisible technical mismatches: wrong convention, wrong tangent basis, wrong smoothing, wrong bake distance. This note explains the mechanism, the Roblox convention, the Blender bake in detail, and how to diagnose every common artefact.

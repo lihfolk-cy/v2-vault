@@ -12,7 +12,7 @@ tags: [agents, mcp, guardrails, review, hooks, permissions, verification, claude
 > - Permissions: deny banned tools, ask on broad writes, allow read-only.
 > - PreToolUse hook on code execution: undo, play control, unbounded loops, bulk deletes; exits 2; logs blocks.
 >
-> Read more (24 KB note): ## 3. Hooks: deterministic checks on content · ## 5. Review loops that work · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~6.2k tok. Read more: ## 3. Hooks: deterministic checks on content · ## 5. Review loops that work · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Safety Rules for AI Agents in Studio]] lists the rules an agent working in Roblox Studio should follow: Edit mode only, short calls, no undo, snapshot first, the save gate, honest reporting. This note is about **making those rules hold** when nobody is watching every call. Rules written in an instructions file are requests; a tired model at hour three of a long session, or a model that has compacted its context, can drop them. The fix is layered guardrails that do not depend on the model remembering, plus review loops that catch what slips through.

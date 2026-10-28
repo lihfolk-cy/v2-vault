@@ -12,7 +12,7 @@ tags: [pipeline, tooling, studio, http, architecture]
 > - Writes are idempotent, size-checked, compiled, scanned, verified by clone-require, with one safety copy.
 > - Writes derived from a dump verify a fingerprint.
 >
-> Read more (18 KB note): ## The split · ## Measuring truth: playing a clip on the real Animator · ## Checklist for a new tool
+> Cost: TL;DR ~130 tok · whole note ~4.6k tok. Read more: ## The split · ## Measuring truth: playing a clip on the real Animator · ## Checklist for a new tool
 <!-- tldr:end -->
 
 How to build heavy animation tooling (IK baking, QA scoring, clip compression, archiving) around Roblox Studio without freezing it, corrupting shared scripts, or trusting stale data. Everything here was run in production on one live action game with several hundred attack clips, well over a thousand enemy clips and several hundred weapon-part clips, and most rules exist because the obvious approach broke first.

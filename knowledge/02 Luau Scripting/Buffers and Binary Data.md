@@ -12,7 +12,7 @@ tags: [luau, buffer, binary, serialization, networking, compression]
 > - Writer and reader live together and mirror each other.
 > - Field precision and ranges are documented and clamped.
 >
-> Read more (19 KB note): ## 2. A typed writer and reader · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.8k tok. Read more: ## 2. A typed writer and reader · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 `buffer` is a Luau type for a fixed-size, mutable block of raw bytes, with functions to read and write integers, floats, strings and bit fields at byte offsets. It replaces most uses of `string.pack`/`string.unpack` and of hand-rolled string encodings. Use it to make network payloads and saved data compact, to implement binary formats, and to give hot numeric code a dense, native-friendly memory layout. This note covers the API and its exact semantics, a typed reader/writer, quantization techniques, buffers across remotes, attributes and DataStores, `EncodingService` (base64, compression, hashing), and a production case where a binary clip format cut animation data to a fraction of its instance size.

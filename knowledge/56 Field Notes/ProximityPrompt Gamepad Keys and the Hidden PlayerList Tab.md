@@ -1,3 +1,8 @@
+---
+tags: [field-notes, input, gamepad, proximityprompt, coregui, playerlist, console]
+---
+# ProximityPrompt Gamepad Keys and the Hidden PlayerList Tab
+
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - Ability press opens a nearby shop on console: Prompt default `ButtonX` shared with an ability -> Remap every prompt's `GamepadKeyCode`
@@ -7,13 +12,8 @@
 > - Remap applied on start, on `DescendantAdded` and on `PromptShown`.
 > - Deliberate exceptions marked with an attribute.
 >
-> Read more (6 KB note): ## 1. Prompt keys collide with ability binds · ## 2. Hiding the player list kills Tab · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~1.5k tok. Read more: ## 1. Prompt keys collide with ability binds · ## 2. Hiding the player list kills Tab · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
----
-tags: [field-notes, input, gamepad, proximityprompt, coregui, playerlist, console]
----
-# ProximityPrompt Gamepad Keys and the Hidden PlayerList Tab
 
 Two small defaults that bite games with a full controller layout. First, every `ProximityPrompt` uses `ButtonX` on gamepad by default, which is also a natural ability or attack button, so walking past a chest while pressing your ability does both. Second, hiding the CoreGui player list also removes the Tab key's toggle, and PC players lose a feature they use constantly. Both are one-time fixes; both are easy to forget. Controller design in general is in [[Gamepad and Console UX]]; remapping for accessibility in [[Input Remapping and One-Handed Play]].
 

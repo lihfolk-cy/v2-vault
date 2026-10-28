@@ -10,7 +10,7 @@ tags: [fundamentals, playback, priority, blending, layering]
 > - `Play(fadeTime)`: weight ramps linearly from its current value to the target over `fadeTime`.
 > - `Play(_, _, speed)` or `AdjustSpeed(s)`: duration becomes `Length / speed`.
 >
-> Read more (11 KB note): ## How weight is distributed (measured) · ## Layering patterns that held up in production
+> Cost: TL;DR ~120 tok · whole note ~2.9k tok. Read more: ## How weight is distributed (measured) · ## Layering patterns that held up in production
 <!-- tldr:end -->
 
 When several tracks play on one rig, the Animator has to decide, for every joint, how much of each track to show. It does that with two numbers per track: **priority** (which layer it is on) and **weight** (how strongly it contributes within and below that layer). This note explains the exact rules (including the measured weight distribution, which the docs only hint at), the fade and speed behaviour, and the layering patterns that hold up in a real combat game.

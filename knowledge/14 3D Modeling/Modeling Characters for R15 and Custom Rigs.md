@@ -12,7 +12,7 @@ tags: [modeling, characters, r15, avatar, custom-rigs, proportions, blender, pyt
 > - R15 proxy in the scene at the right scale; character faces -Y.
 > - Joint geometry centred on R15 pivots (inner-top shoulder, hips, knees, elbows).
 >
-> Read more (16 KB note): ## 2. R15 proportions and pivots (measured) · ## 3. A Blender proxy that matches R15 · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.2k tok. Read more: ## 2. R15 proportions and pivots (measured) · ## 3. A Blender proxy that matches R15 · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A character model on Roblox is never just a mesh. It has to match a rig contract: the R15 skeleton that the default Animate script, emotes, accessories, layered clothing and most community animations assume, or a custom rig that your own code drives. Modelling a character without knowing which contract it targets is the most expensive mistake in character art: the result either cannot use any existing animation, or cannot wear any accessory, or does not fit the hit boxes the game was balanced around.

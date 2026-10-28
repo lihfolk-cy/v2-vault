@@ -12,7 +12,7 @@ tags: [game-design, genre, combat, rpg, enemies, bosses, ttk, abilities]
 > - Every attack telegraphed; roles distinct in silhouette.
 > - Bosses short, open, retryable, with a recommended power number.
 >
-> Read more (16 KB note): ## 2. Time to kill (TTK) is the master number · ## 3. Readable enemies · ## 12. Common mistakes · ## 13. Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.0k tok. Read more: ## 2. Time to kill (TTK) is the master number · ## 3. Readable enemies · ## 12. Common mistakes · ## 13. Checklist
 <!-- tldr:end -->
 
 Combat games on Roblox range from simulator-style "click the enemy" fighting to anime ability RPGs, dungeon crawlers, open-world quest games and arena PvP. They have the highest production cost of the common genres (animation, VFX, AI, hit detection, networking) and the deepest long loops (builds, gear, mastery). This playbook covers the combat design numbers that matter (time to kill, damage budgets, telegraphs), enemy and boss design, RPG progression (levels, gear, abilities, builds), mobile combat, PvP, and the funnel risks that come with failure states. Most numbers come from one live action game, labelled as such.

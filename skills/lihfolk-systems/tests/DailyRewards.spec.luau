@@ -1,0 +1,46 @@
+--!nonstrict
+-- LihFolk Systems spec: DailyRewards. TestEZ-style; run with tests/Runner or TestEZ.
+-- Pure logic only: no DataStores, no purchases. Written for Studio, NOT yet run.
+local ServerScriptService = game:GetService("ServerScriptService")
+local Server = ServerScriptService:WaitForChild("LihFolk")
+
+local DailyRewards = require(Server.DailyRewards)
+
+local MONDAY = 1792972800 -- 2026-10-26 00:00:00 UTC
+
+return function()
+	describe("DailyRewards day maths", function()
+		it("changes day exactly at the reset time", function()
+			local d = DailyRewards.dayIndex(MONDAY, 0)
+			expect(DailyRewards.dayIndex(MONDAY - 1, 0)).to.equal(d - 1)
+			expect(DailyRewards.dayIndex(MONDAY + 8 * 3600 - 1, 8)).to.equal(d - 1)
+			expect(DailyRewards.dayIndex(MONDAY + 8 * 3600, 8)).to.equal(d)
+		end)
+		it("counts down to the next reset", function()
+			expect(DailyRewards.secondsUntilReset(MONDAY + 3600, 0)).to.equal(23 * 3600)
+		end)
+	end)
+	describe("DailyRewards.evaluate", function()
+		it("first claim starts at day 1", function()
+			local can, streak, index = DailyRewards.evaluate(-1, 0, 100, 0, 7)
+			expect(can).to.equal(true)
+			expect(streak).to.equal(1)
+			expect(index).to.equal(1)
+		end)
+		it("consecutive days advance and loop after the track", function()
+			local _, streak, index = DailyRewards.evaluate(99, 7, 100, 0, 7)
+			expect(streak).to.equal(8)
+			expect(index).to.equal(1)
+		end)
+		it("a missed day resets unless grace covers it", function()
+			local _, s1 = DailyRewards.evaluate(98, 3, 100, 0, 7)
+			expect(s1).to.equal(1)
+			local _, s2 = DailyRewards.evaluate(98, 3, 100, 1, 7)
+			expect(s2).to.equal(4)
+		end)
+		it("refuses a second claim the same day or when the clock goes back", function()
+			expect((DailyRewards.evaluate(100, 3, 100, 0, 7))).to.equal(false)
+			expect((DailyRewards.evaluate(101, 3, 100, 0, 7))).to.equal(false)
+		end)
+	end)
+end

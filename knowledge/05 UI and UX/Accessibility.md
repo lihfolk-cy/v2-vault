@@ -12,7 +12,7 @@ tags: [ui, accessibility, reduced-motion, text-size, contrast, colour-blindness]
 > - Every screen tested at `Largest` text size.
 > - Contrast at least 4.5:1 for body text (or outlined text on art).
 >
-> Read more (13 KB note): ## 1. The three platform preferences · ## 2. Contrast · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.4k tok. Read more: ## 1. The three platform preferences · ## 2. Contrast · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Accessible UI is UI more players can use: players with low vision, colour blindness, motion sensitivity, hearing loss, limited dexterity, or simply a small phone in bright sunlight. Docs cite that over 26% of people have some type of disability and over 5% have some form of colour blindness. On Roblox there is also a platform side: players set **Text Size**, **Background Transparency** and **Reduce Motion** in Roblox's settings, and your UI is expected to honour them. This note covers those three settings and their exact engine behaviour, contrast and colour rules, motion and flashing, input accessibility, and the reference project's reduced-motion implementation.

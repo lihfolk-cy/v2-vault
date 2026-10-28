@@ -12,7 +12,7 @@ tags: [field-notes, luau, ipairs, tables, cleanup, memory-leaks, sound]
 > - Cleanup helpers have an `add` that ignores `nil`.
 > - Varargs with possible holes use `select("#", ...)` or `table.pack`.
 >
-> Read more (6 KB note): ## Fixes that cannot skip · ## Where this hides in Roblox code · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~1.5k tok. Read more: ## Fixes that cannot skip · ## Where this hides in Roblox code · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 `ipairs` walks `t[1]`, `t[2]`, `t[3]` and stops at the first `nil`. Everyone knows that, and it still causes leaks, because the `nil` usually arrives later, from an optional value that was never `nil` when the code was written. This note shows the pattern that bit a shipped game, why the length operator does not save you, and the cleanup shapes that cannot skip items. Table basics are in [[Tables Metatables and OOP]]; leak hunting in [[Hunting Memory Leaks Step by Step]].

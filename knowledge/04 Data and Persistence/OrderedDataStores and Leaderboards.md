@@ -12,7 +12,7 @@ tags: [data, ordereddatastore, leaderboards, memorystore, ranking]
 > - Writes on an interval and on leave, only for loaded profiles, only when changed.
 > - Reads cached per server, staggered, with a fallback display.
 >
-> Read more (17 KB note): ## Writing scores · ## Nuances and edge cases · ## Checklist · ## Common mistakes
+> Cost: TL;DR ~170 tok · whole note ~4.5k tok. Read more: ## Writing scores · ## Nuances and edge cases · ## Checklist · ## Common mistakes
 <!-- tldr:end -->
 
 A global leaderboard looks trivial ("sort everyone by coins") and is one of the easiest ways to throttle your whole experience. This note covers `OrderedDataStore` exactly as it behaves in October 2026 (integers only, no versioning, small per-server write budgets, 100-entry pages), the read and write patterns that scale, periodic boards (daily, weekly), when a MemoryStore sorted map is the better tool, how to show a player's own rank, big-number scores for simulators, and what one production game's hub leaderboards did.

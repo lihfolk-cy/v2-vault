@@ -12,7 +12,7 @@ tags: [snippets, luau, keyframe-player, runtime, sampling, blending]
 > - Markers: every marker fires exactly once per pass, including at time 0 and at the clip's end, and on loop wrap.
 > - Stop during a fade, Play during a fade, Play while playing (restart), AdjustWeight while fading.
 >
-> Read more (33 KB note): ## 1. The module · ## Nuances and edge cases · ## Checklist before trusting your own player · ## Common mistakes
+> Cost: TL;DR ~200 tok · whole note ~8.3k tok. Read more: ## 1. The module · ## Nuances and edge cases · ## Checklist before trusting your own player · ## Common mistakes
 <!-- tldr:end -->
 
 A self-contained Lua player for `KeyframeSequence`s: it parses a clip, samples it the way the engine Animator does, mixes several tracks by priority and weight the way the Animator does, fires markers, and writes joint `Transform`s once per frame for every rig, with distance LOD. Tracks expose the familiar `AnimationTrack` surface (`Play`, `Stop`, `AdjustSpeed`, `AdjustWeight`, `GetMarkerReachedSignal`, `Stopped`, `Ended`, `DidLoop`, `TimePosition`, `WeightCurrent`...).

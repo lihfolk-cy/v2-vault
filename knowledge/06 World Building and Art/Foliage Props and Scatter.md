@@ -12,7 +12,7 @@ tags: [world-building, foliage, trees, props, scatter, placement, wind]
 > - Tree pivots at trunk base; canopies non-colliding.
 > - Scatter seeded, Poisson-spaced, long-tail scaled, layered.
 >
-> Read more (19 KB note): ## Scatter: placing many props naturally · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.8k tok. Read more: ## Scatter: placing many props naturally · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Foliage and props are most of what makes a world feel inhabited, and most of its instance count. This note covers how to build trees and plants for Roblox, how to place hundreds of props so they look natural instead of stamped, how to ground them reliably, how to animate wind cheaply, and how to keep it all inside performance budgets. The production numbers come from one production game that dressed a ten-zone realm and a hub with several thousand props.

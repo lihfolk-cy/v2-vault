@@ -12,7 +12,7 @@ tags: [pipelines, characters, creatures, enemies, pets, armor, voxel, manifests]
 > - Design scripts share style helpers and palette tables
 > - Previews and a contact sheet for review
 >
-> Read more (17 KB note): ## The look-swap pipeline (enemies) · ## Armour and wearables: fit without touching joints · ## Failure modes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.4k tok. Read more: ## The look-swap pipeline (enemies) · ## Armour and wearables: fit without touching joints · ## Failure modes · ## Checklist
 <!-- tldr:end -->
 
 Characters are the hardest assets to pipeline because they are three things glued together: a **look** (meshes, materials), a **skeleton** (bones or Motor6Ds, pivots, root height) and **behaviour data** (clips, hitboxes, AI role, stats). Change any one carelessly and the other two break: a new mesh with a different root height floats; a re-exported skeleton breaks every clip; a resized creature keeps its old hitbox.

@@ -1,6 +1,6 @@
 ---
 name: roblox-datastore-safety
-description: 'LihFolk: Write or review Roblox player-data code so progress is never lost or duplicated: session locking, retries, autosave, BindToClose, schema migrations, purchase receipts and idempotency. Use when touching DataStoreService, profiles, saving or loading, or when the user says "save data", "data loss", "rollback", "duplicated items", "migrate the data", or "review my DataStore code".'
+description: 'LihFolk: player data that never loses or dupes progress (session locks, retries, autosave, BindToClose, migrations, receipts). Use when touching DataStores/profiles or on data loss, rollback, duped items.'
 ---
 # LihFolk DataStore Safety
 

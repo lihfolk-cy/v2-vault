@@ -12,7 +12,7 @@ tags: [luau, functions, closures, upvalues, scope]
 > - Handlers read current state, not state captured at script start.
 > - No closures or threads created per object per frame.
 >
-> Read more (19 KB note): ## 3. Closures and upvalues · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.9k tok. Read more: ## 3. Closures and upvalues · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Functions in Luau are values. They can be stored in tables, passed to other functions, returned, and they **capture** the local variables around them (upvalues). Almost every Roblox system is built from closures: event handlers, tween callbacks, ability kits, UI bindings. Understanding exactly what a closure captures, when it is allocated, and what keeps it alive explains a large share of real bugs: stale state, handlers that fire for the wrong object, memory that never frees, and the compile-time limits on upvalues.

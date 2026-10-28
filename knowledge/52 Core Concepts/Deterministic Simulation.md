@@ -10,7 +10,7 @@ tags: [core-concept, networking, procedural, math, testing]
 > - One `Random` object per stream. If combat and loot draw from the same generator, adding one extra combat roll shifts every...
 > - Sort before iterating. When iterating a dictionary matters for the result, collect keys into an array and sort them first.
 >
-> Read more (4 KB note): ## What is and is not deterministic on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~160 tok · whole note ~970 tok. Read more: ## What is and is not deterministic on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 A simulation is **deterministic** when the same starting state and the same inputs always produce exactly the same result. If two machines run a deterministic simulation from the same seed with the same inputs, they stay in sync without sending the results to each other.

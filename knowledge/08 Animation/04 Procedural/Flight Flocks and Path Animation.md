@@ -9,7 +9,7 @@ tags: [procedural, flight, splines, b-spline, banking, flocks, boids, creatures,
 > - Bank snaps at every control point: C1 curve (Catmull-Rom, arcs) -> uniform cubic B-spline
 > - Speeds up and slows down for no reason: moving `u` at a constant rate -> arc-length table
 >
-> Read more (16 KB note): ## The maths · ## Flocks · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~4.2k tok. Read more: ## The maths · ## Flocks · ## Common mistakes
 <!-- tldr:end -->
 
 Flying creatures are judged on two things: the path (does it move like something with mass and wings?) and the attitude along it (does it bank into turns, pitch into dives, flap when it climbs?). A dragon that slides along straight segments, turning flat like a cursor, reads as broken no matter how good its wing clip is. This note builds flight from the path up, using the system one production game (the reference project) wrote after its owner said its sky creatures' flying "looked really bad": closed cubic B-spline paths, arc-length speed control, physically motivated banking, and dt-based flap-and-glide wing motion. Then flocks.

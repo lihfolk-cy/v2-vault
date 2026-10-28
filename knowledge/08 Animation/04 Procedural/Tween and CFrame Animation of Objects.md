@@ -9,7 +9,7 @@ tags: [procedural, tweenservice, cframe, props, bulkmoveto, pivots, performance,
 > - Door stops halfway: a second tween on the same property cancelled the first -> one controller per property; check `Completed` state
 > - Lid clips into the base on close: Back / Elastic overshoot not checked -> sample `GetValue` over the curve, check the range against geometry
 >
-> Read more (19 KB note): ## TweenService essentials · ## The Anim_ pattern: decorative animation as data · ## Common mistakes
+> Cost: TL;DR ~130 tok · whole note ~4.8k tok. Read more: ## TweenService essentials · ## The Anim_ pattern: decorative animation as data · ## Common mistakes
 <!-- tldr:end -->
 
 Most moving things in a Roblox world are not characters: doors, chests, lids, spinning crystals, floating rocks, rotating rings, swaying foliage, gates and portals. They do not need rigs, Animators or clips. They need a pivot, a formula or a tween, and a sensible update budget. This note covers TweenService properly, moving whole models, a worked hinge example with the overshoot checked, a data-driven pattern for hundreds of decorative animations, and `BulkMoveTo` for mass movement.

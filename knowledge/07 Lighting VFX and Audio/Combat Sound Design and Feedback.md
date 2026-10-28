@@ -12,7 +12,7 @@ tags: [audio, combat, sound-design, feedback, networking, mixing, game-feel]
 > - Neutral contact predicted on the attacker; meaning waits for the server.
 > - Kill and hurt confirms 2D and personal; never predicted.
 >
-> Read more (22 KB note): ## 3. Who plays what, and when: the network problem · ## 6. Priority, voice limits and stealing · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.6k tok. Read more: ## 3. Who plays what, and when: the network problem · ## 6. Priority, voice limits and stealing · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Sound Design for Games]] covers the general craft: layering, landing the peak on the beat, variation bags, weapon voices and cue rate limits. This note goes deeper into the one place where sound is gameplay, not decoration: combat. It covers what each combat **outcome** should sound like and why, the network question nobody asks until it hurts (who plays which sound, and when, on a 120 ms connection), how hit-stop and sound interact, telegraphs that players can actually react to, priority and voice stealing when twenty enemies die at once, ducking the rest of the mix around impacts, and a test protocol.

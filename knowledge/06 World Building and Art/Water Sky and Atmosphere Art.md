@@ -12,7 +12,7 @@ tags: [world-building, art, water, sky, skybox, atmosphere, clouds, environment]
 > - Fake water: depth gradient, scrolling ripples, foam, buried edges.
 > - Waterfalls: sheet mesh, streak beams, foam, mist, distance sleep.
 >
-> Read more (16 KB note): ## Water · ## Atmosphere and clouds · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.2k tok. Read more: ## Water · ## Atmosphere and clouds · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Water, sky and air are the largest things on screen and the cheapest way to set mood. This note is the **art** side: choosing between terrain water and fake water, building waterfalls and rivers that read on phones, picking or painting skyboxes, and using `Atmosphere` and `Clouds` to tie a world's colours together. The lighting engine itself (technologies, post-processing, time of day) is covered in [[Lighting Technologies and Settings]], [[Atmosphere Sky Clouds and Post-Processing]] and [[Lighting Mood and Time of Day]]; this note links there instead of repeating it.

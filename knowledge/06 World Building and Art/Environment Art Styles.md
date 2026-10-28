@@ -12,7 +12,7 @@ tags: [world-building, art-direction, style, palette, stylised, voxel, pbr]
 > - Palette derived systematically; sampled under game lighting.
 > - Silhouette test passed for key assets at 30 to 40 px.
 >
-> Read more (13 KB note): ## Writing a style down · ## Palettes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.2k tok. Read more: ## Writing a style down · ## Palettes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 An art style is a set of rules that every asset obeys: shape language, palette, materials, texture density, lighting, and how much detail goes where. On Roblox the style must also survive a phone screen, the default camera distance, low graphics settings and dozens of assets from different hands. This note describes the common Roblox style families, how to write a style down so a team (or a script) can reproduce it, how to derive palettes, and the style lessons from one production game whose owner rejected several "technically fine" versions of its hub before landing on one that worked.

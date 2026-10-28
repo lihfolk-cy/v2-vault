@@ -12,7 +12,7 @@ tags: [lighting, mood, day-night, weather, zones, environment]
 > - Mood keyframes for at least dawn, noon, dusk, midnight.
 > - Night readable on a dim phone screen.
 >
-> Read more (18 KB note): ## 1. The clock · ## 2. Mood keyframes across the day · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.7k tok. Read more: ## 1. The clock · ## 2. Mood keyframes across the day · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A day/night cycle looks like a one-liner (`Lighting.ClockTime += dt`) and turns into a system as soon as the game has zones, weather, cutscenes, indoor areas and players on phones. This note covers the clock itself (who owns it and how it reaches clients), mood keyframes across the day, zone and weather overrides, handing control to cutscenes, and the readability rules that keep a beautiful night from becoming an unplayable one.

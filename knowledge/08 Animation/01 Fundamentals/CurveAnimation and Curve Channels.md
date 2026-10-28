@@ -9,7 +9,7 @@ tags: [fundamentals, api, reference, curveanimation, curves]
 > - Avoid: Setting `RightTangent` on a Linear key (Runtime error)
 > - Avoid: Assuming tangents are per frame (Overshoot 30x or 60x too large or small; test the unit)
 >
-> Read more (16 KB note): ## Curve classes · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~4.2k tok. Read more: ## Curve classes · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 `CurveAnimation` is Roblox's second clip format. Instead of whole-rig snapshots at keyframe times (a [[KeyframeSequence Keyframe and Pose Reference|KeyframeSequence]]), it stores **one independent curve per channel**: a position curve and a rotation curve per joint, a float curve per face control, and a marker curve for events. The Animation Editor's curve editor produces it, it publishes like any other animation, and it is the natural format for tangent-level polish and facial animation.

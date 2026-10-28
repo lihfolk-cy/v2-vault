@@ -12,7 +12,7 @@ tags: [community, groups, social, invites, live-ops, luau]
 > - Invite button using `CanSendGameInviteAsync` and launch data; reward after real play
 > - Group perk, re-checkable mid-session; prompt gated and capped
 >
-> Read more (13 KB note): ## 2. Friends and co-play in-game · ## 3. Groups · ## 9. Common mistakes · ## 10. Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.4k tok. Read more: ## 2. Friends and co-play in-game · ## 3. Groups · ## 9. Common mistakes · ## 10. Checklist
 <!-- tldr:end -->
 
 A community is the set of players who care about your game beyond one session: group members, friends who play together, people who read your update notes, report bugs and suggest features. On Roblox the community is also measurable value: co-play days are a recommendation signal, share links feed Creator Rewards' Audience Expansion, and group members are reachable on your group page. This note covers the in-game social features that grow a community, groups, invites and share links, the 2026 limits on external links, and how to run feedback without letting the loudest voices drive the game. Platform facts are marked with their source and were checked **as of October 2026**; strategy is rule of thumb.

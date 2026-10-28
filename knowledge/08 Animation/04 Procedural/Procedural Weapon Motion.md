@@ -9,7 +9,7 @@ tags: [procedural, weapons, grip, spin, toss, physics, flourish, luau]
 > - Spin ends with the edge backwards: turns not an integer or ramps ignored -> solve `W` so the integral is whole turns
 > - Toss rockets up and slams down: `workspace.Gravity` -> gravity scaled to the avatar
 >
-> Read more (16 KB note): ## Spins with cosine ramps · ## The toss · ## Common mistakes
+> Cost: TL;DR ~130 tok · whole note ~4.1k tok. Read more: ## Spins with cosine ramps · ## The toss · ## Common mistakes
 <!-- tldr:end -->
 
 Body clips can swing an arm; they cannot easily spin a blade six times around the grip, throw it into the air on a real parabola and catch it with a wrist that gives under the spin. Those motions are better computed: exact, cheap, identical on every client, and tunable by numbers instead of by re-keying. This note covers the grip joint, spins, tosses, the catch, regrips and hand roll, using the system one live action game (the reference project) shipped for its equip flourishes.

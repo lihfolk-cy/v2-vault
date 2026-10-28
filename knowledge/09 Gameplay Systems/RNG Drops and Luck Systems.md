@@ -12,7 +12,7 @@ tags: [gameplay, rng, luck, drops, loot, pity, rolling]
 > - One documented luck definition, capped stacking, total shown to the player.
 > - Pity or deterministic progress for every rare chase.
 >
-> Read more (13 KB note): ## 3. Luck multipliers · ## 4. Bad luck protection: pity and guarantees · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.4k tok. Read more: ## 3. Luck multipliers · ## 4. Bad luck protection: pity and guarantees · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Random rewards drive whole genres on Roblox: rolling games where you pull items with "1 in 5,000,000" odds, loot drops from enemies, egg hatching, crates. The code for a weighted pick is ten lines. Everything around it is where games succeed or fail: how luck multipliers actually change odds, how to stop bad streaks with pity and guarantees, how to keep the maths on the server, how to show odds honestly, and how to keep a luck economy from inflating until everything is common. This note covers the mechanics with numbers from one production rolling game.

@@ -12,7 +12,7 @@ tags: [multiplayer, parties, teleport, socialservice, reserved-servers, messagin
 > - One reservation per gather; code stored server-side only.
 > - Gather record with short TTL; message plus manual rejoin for reliability.
 >
-> Read more (23 KB note): ## 5. The code · ## 6. The destination: an arrival barrier · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.9k tok. Read more: ## 5. The code · ## 6. The destination: an arrival barrier · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Friends who arrive together and get split by a teleport stop playing together, and players who stop playing together stop playing. Keeping a group whole across servers and places is one of the highest-value multiplayer features you can build, and one of the easiest to get subtly wrong: one member is in another server, one is mid-teleport, one has a flaky connection, the destination fills up, the leader leaves. This note covers Roblox's own party data (`Player.PartyId` and `SocialService`), when to run your own party system instead, the exact behaviour of group teleports, gathering a party spread over several servers, the arrival barrier on the destination, and every failure path, with strict Luau.

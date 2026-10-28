@@ -12,7 +12,7 @@ tags: [architecture, ecs, data-oriented, performance, npc]
 > - Systems run in one explicit order and never yield.
 > - Each component is classified for replication; late joiners get a snapshot.
 >
-> Read more (18 KB note): ## A small ECS in Luau · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.7k tok. Read more: ## A small ECS in Luau · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 An **Entity Component System** (ECS) organises game state as data rather than objects. An **entity** is just an id. **Components** are plain data attached to entities (`Position`, `Health`, `Target`, `Burning`). **Systems** are functions that run every frame over all entities that have a given set of components ("for every entity with `Velocity` and `Position`, move it"). On Roblox, an ECS can make large simulations (hundreds of NPCs, thousands of projectiles, crops, units) faster, simpler to reason about and easier to replicate. It can also add a layer of indirection a ten-object game never needed. This note explains the model, how it maps to Roblox instances, when to use it, a small working ECS in Luau, how to replicate ECS state, and how the libraries (Matter, jecs) fit.

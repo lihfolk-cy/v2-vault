@@ -9,7 +9,7 @@ tags: [procedural, locomotion, gait, feet, cadence, foot-slide, luau]
 > - Feet pedal frantically: cadence tied linearly to speed -> cap the cadence; lengthen the stride instead
 > - Legs pop when walk blends to run: clips out of phase -> shared phase, same contact timing in all cycles
 >
-> Read more (16 KB note): ## The shipped procedural gait · ## The foot-plant layer: authored style, planted feet · ## Common mistakes
+> Cost: TL;DR ~120 tok · whole note ~4.0k tok. Read more: ## The shipped procedural gait · ## The foot-plant layer: authored style, planted feet · ## Common mistakes
 <!-- tldr:end -->
 
 Foot slide is the most visible locomotion bug in Roblox games: the character runs at 64 studs/s while its feet pedal at the speed the clip was authored for. Rate-matching the clip helps until the rate is clamped; authoring more clips helps until the character changes size. A procedural gait solves it from first principles: decide when each foot is on the ground, keep it exactly still in the world while it is, and swing it to the next spot while it is not. This note derives the maths, gives the formulas one production game shipped (the reference project), and shows the middle path that keeps authored style: a legs-only foot-plant layer over authored clips.

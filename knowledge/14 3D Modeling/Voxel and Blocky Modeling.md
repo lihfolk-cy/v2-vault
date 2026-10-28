@@ -12,7 +12,7 @@ tags: [modeling, voxel, blocky, studs, outlines, palette, art-style, blender, lu
 > - One grid; cell size set; smallest details 1/40-1/60 of the longest dimension.
 > - Three tones per material; one main hue; one glow colour.
 >
-> Read more (22 KB note): ## 3. Style B: outlined studded voxels ("toy-box heroes") · ## 5. Building voxels: Parts in Studio or meshes from Blender · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.6k tok. Read more: ## 3. Style B: outlined studded voxels ("toy-box heroes") · ## 5. Building voxels: Parts in Studio or meshes from Blender · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Blocky art is Roblox's native language: the platform grew up on studded bricks, and players read cubes as "made for this world". A modern voxel style is not lazy art, though. The good ones follow strict rules (one grid, three tones per material, one glow colour, studs or outlines applied everywhere) and those rules are what make ten unrelated models look like one game. This note teaches three production voxel styles studied for the reference project (dark-and-neon tiered showpieces, outlined studded "toy-box" enemies, and cute pastel companions), the shared grammar behind them, how to build voxels as Parts in Studio or as meshes from Blender, and what they really cost. The reference project rebuilt all 49 of its first-realm enemies in the outlined studded style, so the numbers here are real.

@@ -12,7 +12,7 @@ tags: [business, hiring, freelancers, revenue-share, payouts, groups, contracts,
 > - Fixed pay for contractors; shares only for core members, from a set pool.
 > - Paid trial task.
 >
-> Read more (15 KB note): ## 2. Finding people · ## 5. Revenue shares in depth · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~120 tok · whole note ~3.8k tok. Read more: ## 2. Finding people · ## 5. Revenue shares in depth · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 > **Not advice.** General information for game owners who hire help. It is not legal, tax or financial advice, and rules differ by country (employment status, contractor rules, tax reporting, consumer and contract law). Ask a qualified professional before committing to large payments or long revenue shares. **Minors** (anyone under 18) need a parent or guardian to approve any agreement and to handle payment; plan for that when you hire young developers, and when you are young yourself.

@@ -12,7 +12,7 @@ tags: [pipeline, import, enemies, blender, gltf]
 > - `SetIds` (with or without ids): model stored, clip sources moved out, definition patched, Tele / Hit present on every attack.
 > - Axis fix applied (clip attribute shows fixed or wrapped); facing checked against the root's LookVector in a test spawn.
 >
-> Read more (12 KB note): ## 1. Build in Blender (conventions that make import boring) · ## 3. Prepare (one idempotent function per enemy) · ## Checklist per new enemy
+> Cost: TL;DR ~170 tok · whole note ~3.2k tok. Read more: ## 1. Build in Blender (conventions that make import boring) · ## 3. Prepare (one idempotent function per enemy) · ## Checklist per new enemy
 <!-- tldr:end -->
 
 The route one production game used to bring a roster of Blender-built creatures (about 20 rigs and 350 clips in the first wave, later dozens of kits and well over a thousand clips) into Roblox with working markers, correct facing, ground contact and a small runtime footprint. It is a chain of small, idempotent tools around one manual step (the import). The single most important link, the axis fix, has its own note: [[Enemy Import Axis Fix]]. Ground contact: [[Ground Fitting Pipeline]]. Rig authoring conventions: [[Creature Rig Conventions]].

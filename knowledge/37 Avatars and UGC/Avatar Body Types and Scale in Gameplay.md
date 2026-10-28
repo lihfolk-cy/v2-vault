@@ -12,7 +12,7 @@ tags: [avatars, scale, body-types, collision, hitboxes, avatar-settings, gamepla
 > - Collision mode chosen; touch detection target decided for Single Collider.
 > - Character metrics measured on spawn, cached, used by camera and UI.
 >
-> Read more (17 KB note): ## 2. Avatar Settings: the engine-level controls · ## 4. Hitboxes: separate gameplay from visuals · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.4k tok. Read more: ## 2. Avatar Settings: the engine-level controls · ## 4. Hitboxes: separate gameplay from visuals · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Players arrive in your game with very different bodies: a classic blocky avatar about 5 studs tall, a realistic-proportion body about 6 to 6.5 studs (docs), slender and wide builds, tiny heads, huge heads, layered coats that double their visual width, and wings that fill a doorway. For a hangout that variety is the point. For a shooter, an obby or a fighting game it is a fairness and level-design problem: small avatars are harder to hit, tall avatars see over cover, and a 6-stud doorway built for a 5-stud avatar feels cramped for some and roomy for others.

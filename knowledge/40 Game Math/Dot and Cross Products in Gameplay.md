@@ -12,7 +12,7 @@ tags: [math, game-math, vectors, dot-product, cross-product, gameplay, combat, m
 > - Angle thresholds are precomputed cosines; no `acos` in hot paths.
 > - Signed angles use `atan2(cross, dot)`.
 >
-> Read more (23 KB note): ## 2. Backstabs, flanks and front-only blocks · ## 5. Lap progress and gate crossing · ## 10. Edge cases and failure modes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~6.0k tok. Read more: ## 2. Backstabs, flanks and front-only blocks · ## 5. Lap progress and gate crossing · ## 10. Edge cases and failure modes · ## Checklist
 <!-- tldr:end -->
 
 Two small operations answer a surprising share of gameplay questions. The dot product answers "how much of this points along that?", and the cross product answers "which way is perpendicular, and which side am I on?". The basics (the cone check, signed yaw, projection onto a plane, reflection) are already in [[Math Vectors and CFrames]] and [[Cookbook - Math CFrame and Vectors]]. This note goes further: backstabs and flanking, steering without jitter, closing speed for homing and aggro, lap progress and gate crossing, wall-running tangents, building stable frames, bounce pads with friction, and aim assist scoring. Each section shows the gameplay first, then the maths, then the way it breaks.

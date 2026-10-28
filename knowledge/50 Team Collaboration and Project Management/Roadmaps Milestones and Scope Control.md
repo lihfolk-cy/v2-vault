@@ -12,7 +12,7 @@ tags: [team, production, roadmap, milestones, scope, estimation, planning, live-
 > - Roadmap in Now, Next, Later; only Now has dates.
 > - Each milestone has exit criteria someone else can check.
 >
-> Read more (18 KB note): ## 2. Milestones with exit criteria · ## 3. Estimating in ranges · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.5k tok. Read more: ## 2. Milestones with exit criteria · ## 3. Estimating in ranges · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Planning and Scoping a Roblox Game]] covers what a plan has to answer, counting content, phases with gates, scope reversals and budgets, with the reference project's real reversals. [[Scoping and Roles for Small Teams]] covers capacity, team shapes, decision rights and cutting by layer. This note is the machinery that keeps a plan honest over months: the layers of a roadmap and who reads each, milestones with exit criteria you can measure, estimation methods that produce ranges instead of wishes, the arithmetic of buffers, the mechanisms that actually stop scope creep (a change budget, a kill list, freeze dates), the Roblox-specific steps that need to appear on a roadmap, and how the roadmap changes once the game is live.

@@ -12,7 +12,7 @@ tags: [mcp, setup, claude, cursor, vscode, agents]
 > - Config added via Quick connect or JSON with the right key name.
 > - Host fully restarted.
 >
-> Read more (14 KB note): ## 3. Claude Code · ## 11. A sensible starting setup for a small Roblox team · ## 12. Common mistakes · ## 13. Checklist
+> Cost: TL;DR ~110 tok · whole note ~3.5k tok. Read more: ## 3. Claude Code · ## 11. A sensible starting setup for a small Roblox team · ## 12. Common mistakes · ## 13. Checklist
 <!-- tldr:end -->
 
 An MCP server does nothing until a client (host application) is configured to start or connect to it. Every host stores that configuration a little differently, and most "it does not work" reports come from a missing comma, the wrong key name, a path the host cannot resolve, or forgetting to restart. This note gives working configurations for the common hosts, using the [[Roblox Studio MCP Server]] and [[Blender MCP]] as examples, then covers permissions, scopes, Windows quirks, and how to debug a server that will not connect.

@@ -1,0 +1,17 @@
+{
+  "description": "LihFolk Roblox check: scans every .lua/.luau file Claude writes or edits for well-known Roblox mistakes (deprecated APIs, unvalidated remotes, unsafe DataStore and ProcessReceipt code, leaks, client-owned currency) and feeds the findings back so Claude fixes them. One command line runs the POSIX sh engine under bash/sh and the PowerShell engine under PowerShell; see hooks/README.md.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo `# <#` >/dev/null; sh \"${CLAUDE_PLUGIN_ROOT}/hooks/scripts/lihfolk-check.sh\"; exit $? #> >$null; powershell -NoProfile -NonInteractive -ExecutionPolicy Bypass -File \"${CLAUDE_PLUGIN_ROOT}/hooks/scripts/lihfolk-check.ps1\"; exit $LASTEXITCODE",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -12,7 +12,7 @@ tags: [ai, 3d, meshy, tripo, rodin, blender, retopology]
 > - Transforms applied, origin set, scale and facing correct.
 > - Under 20,000 triangles per mesh and within your own budget.
 >
-> Read more (13 KB note): ## 1. The tools · ## 3. Cleanup pipeline (Blender) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.4k tok. Read more: ## 1. The tools · ## 3. Cleanup pipeline (Blender) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Outside Roblox, a crowded market of tools turns text or images into 3D models: Meshy, Tripo, Hyper3D Rodin, and open-weight models such as Roblox's own Cube 3D. Their output is impressive in a turntable video and awkward in a game: dense triangulated surfaces, baked-in lighting, messy UVs, no LODs, and sizes that mean nothing. This note covers what these tools actually output, the licence traps, and a concrete cleanup pipeline to turn a generated model into a Roblox-ready MeshPart, plus the reference project's reasons for banning generated meshes from its shipping art.

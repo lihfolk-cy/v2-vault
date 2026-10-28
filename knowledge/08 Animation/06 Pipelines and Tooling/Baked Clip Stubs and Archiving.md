@@ -12,7 +12,7 @@ tags: [pipeline, performance, memory, keyframesequence, baking]
 > - `Run`, then `Verify`: zero bad.
 > - Instance counts before and after recorded.
 >
-> Read more (12 KB note): ## Anatomy of a stub · ## Three bakers, three subtleties · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.1k tok. Read more: ## Anatomy of a stub · ## Three bakers, three subtleties · ## Checklist
 <!-- tldr:end -->
 
 How one live action game removed almost every Pose instance from its place without losing a single clip: each KeyframeSequence becomes a **stub** (no Poses, the motion stored as a compact binary buffer in an attribute), the original is **archived to disk** as an `.rbxm`, and a Lua player reads the buffer. Numbers and the story: [[Case Study - Cutting a Million Instances]]. Buffer layout: [[Clip Buffer Format]]. The disk archive: [[Clip Archive Server]].

@@ -12,7 +12,7 @@ tags: [ai, materials, textures, materialvariant, surfaceappearance]
 > - Studs Per Tile checked at close, gameplay and far distance.
 > - Variants named for the project and stored where scripts expect them.
 >
-> Read more (14 KB note): ## 2. Texture Generator · ## 3. Production experience: the reference project · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.5k tok. Read more: ## 2. Texture Generator · ## 3. Production experience: the reference project · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox has two AI surface tools that are easy to confuse:

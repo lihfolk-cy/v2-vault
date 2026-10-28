@@ -12,7 +12,7 @@ tags: [plugins, http, tooling, studio, bridges, mcp]
 > - Receiver validates paths and sizes.
 > - Loader uses cache busting and readable chunk names.
 >
-> Read more (17 KB note): ## 3. Pattern B: the receiver (post results out) · ## Nuances and edge cases · ## 9. Checklist · ## More common mistakes
+> Cost: TL;DR ~150 tok · whole note ~4.5k tok. Read more: ## 3. Pattern B: the receiver (post results out) · ## Nuances and edge cases · ## 9. Checklist · ## More common mistakes
 <!-- tldr:end -->
 
 Long before MCP, developers connected Roblox Studio to the outside world with a simple trick: Studio can make HTTP requests to a server on your own machine. A plugin or the command bar fetches code and data from `http://127.0.0.1`, and posts results back. Rojo works this way. Roblox's original MCP reference server worked this way. And even with the built-in [[Roblox Studio MCP Server]], the reference project relied on local HTTP every day, because MCP tool calls are the wrong pipe for megabytes of source, images and baked data.

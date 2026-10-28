@@ -12,7 +12,7 @@ tags: [genre-system, tower-defense, worked-build, waves, placement, networking, 
 > - Place on the path, outside bounds, on an untagged roof, overlapping another tower, with no cash, past the cap: each returns...
 > - Fire `TDPlace` with NaN, a huge vector, a number instead of a string, and a tower not in the loadout.
 >
-> Read more (36 KB note): ## 4. The server: MatchService · ## 5. The client: TDClient · ## 6. Common mistakes · ## 8. Test checklist
+> Cost: TL;DR ~220 tok · whole note ~9.2k tok. Read more: ## 4. The server: MatchService · ## 5. The client: TDClient · ## 6. Common mistakes · ## 8. Test checklist
 <!-- tldr:end -->
 
 This note builds the match half of a tower defense game: a wave scheduler driven by data, enemies that exist on the server only as numbers, a batched event stream that lets every client draw the same enemies without CFrame replication, server-side targeting at a fixed rate, a placement remote that checks eight things in a fixed order, upgrades and selling, a skip-wave vote, and a match result written into the player's profile exactly once. [[Genre Playbook - Tower Defense]] explains why the data-driven enemy pattern is necessary and gives the `PathMath` module; this note builds the full system around that module and covers the parts the playbook leaves as bullet points: tick ordering, what to batch, how corrections work in practice, and how placement validation fails.

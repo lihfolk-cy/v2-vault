@@ -12,7 +12,7 @@ tags: [accessibility, text, typography, ui-scale, readability, ui, localization,
 > - One `UIScale` controller combines device base and player preference, clamped to fit.
 > - No content text uses `TextScaled`; constraints on body text are generous.
 >
-> Read more (20 KB note): ## 2. Three scales that multiply · ## 6. An automated text audit · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.1k tok. Read more: ## 2. Three scales that multiply · ## 6. An automated text audit · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Accessibility]] explains how `GuiService.PreferredTextSize` changes text and which text setups ignore it. [[Responsive UI for Phone Tablet Console and PC]] covers device classes and the shipped phone rules. This note sits between them: how big text actually needs to be on each device in physical terms, how the engine's text scaling, your device `UIScale` and a player "UI size" slider stack (and where they fight), layouts that grow instead of clipping, type choices that help low-vision and dyslexic players, world-space text, and an automated audit that finds clipped labels before players do.

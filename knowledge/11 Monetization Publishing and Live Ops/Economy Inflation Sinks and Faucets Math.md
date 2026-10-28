@@ -12,7 +12,7 @@ tags: [economy, inflation, sinks, faucets, balancing, live-ops, math, luau]
 > - Income and price growth per zone known; `p / g` checked.
 > - Maximum payer gap declared; all multipliers stack by a defined rule.
 >
-> Read more (17 KB note): ## 1. The one number that matters: time to afford · ## 4. Measuring inflation instead of guessing · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.5k tok. Read more: ## 1. The one number that matters: time to afford · ## 4. Measuring inflation instead of guessing · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Economies and Currencies]] explains what faucets and sinks are and how to write transactions safely. This note is the arithmetic underneath: how to model time-to-afford across an exponential progression, how multipliers stack into a payer gap, how to tell real inflation from healthy growth, how item supply works in RNG games, and how to simulate a live change before you ship it. Every formula comes with a worked example and the failure it predicts.

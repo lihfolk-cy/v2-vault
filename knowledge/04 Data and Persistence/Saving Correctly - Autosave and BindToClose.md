@@ -12,7 +12,7 @@ tags: [data, datastore, autosave, bindtoclose, retries, shutdown]
 > - Autosave interval below the lease.
 > - No save path exists for a profile that failed to load.
 >
-> Read more (17 KB note): ## When to write · ## The loader: wiring it all together · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.3k tok. Read more: ## When to write · ## The loader: wiring it all together · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Loading is one call at the start of a session. Saving is where data actually gets lost: on a server crash, during a shutdown with 30 players, in a throttled minute, or because a save ran before the load finished. This note gives the timing rules (with official numbers and the values one production game settled on), a retry helper that knows which errors are worth retrying, and a complete loader script that wires load, autosave, "save soon", leave-saves and `BindToClose` together on top of the module from [[Session Locking and Profile Libraries]].

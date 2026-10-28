@@ -12,7 +12,7 @@ tags: [materials, materialservice, materialvariant, custom-materials, terrain, p
 > - Every variant's base chosen for physics and sound behaviour.
 > - Maps downscaled: 1024 for part variants, 512 for terrain; unused maps left blank.
 >
-> Read more (22 KB note): ## 3. Building a variant from a CC0 set · ## 5. Theme swaps: same names, different maps · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.6k tok. Read more: ## 3. Building a variant from a CC0 set · ## 5. Theme swaps: same names, different maps · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Materials MaterialVariants and SurfaceAppearance]] explains the three layers of surface appearance (built-in `Material`, `MaterialVariant`, `SurfaceAppearance`) and the override-slot trap that hurt one production game. This note assumes you know that and goes one level down: how `MaterialService` actually resolves a custom material, how to build and maintain a library of custom materials as a project asset (with the vault's own CC0 textures in [[CC0 Texture and HDRI Library]] as the raw material), how to swap whole material themes at runtime, what each variant really costs, and the failure modes you only meet once a place has a few hundred thousand parts.

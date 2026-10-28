@@ -9,7 +9,7 @@ tags: [procedural, ik, arms, legs, math, hub]
 > - Arm fully straight then "pops": target beyond reach; `acos` of a value > 1 -> clamp the distance to `[abs(a-b)+e, a+b-e]`
 > - Hand is exactly on target but the arm looks broken: elbow solved as a ball joint -> solve the elbow as a hinge about its own axis
 >
-> Read more (11 KB note): ## What makes IK look right (the short version) · ## Seeing what the solver sees · ## Common mistakes
+> Cost: TL;DR ~150 tok · whole note ~2.9k tok. Read more: ## What makes IK look right (the short version) · ## Seeing what the solver sees · ## Common mistakes
 <!-- tldr:end -->
 
 Forward kinematics (FK) answers "given these joint angles, where is the hand?" Inverse kinematics answers the reverse: "where must the shoulder, elbow and wrist turn so the hand lands *here*, facing *that way*?" FK has exactly one answer. IK usually has infinitely many (an arm can reach the same point with the elbow up, down or out), sometimes none (the target is out of reach), and picking the *right* one is where all the craft lives.

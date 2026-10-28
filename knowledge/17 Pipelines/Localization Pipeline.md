@@ -12,7 +12,7 @@ tags: [pipelines, localization, translation, text, ui, csv]
 > - Context on ambiguous strings; plural variants as keys
 > - Source CSV generated from code and data, kept in Git
 >
-> Read more (19 KB note): ## Stage 1: write text for translation · ## Nuances and edge cases · ## Checklist · ## Common mistakes
+> Cost: TL;DR ~170 tok · whole note ~4.8k tok. Read more: ## Stage 1: write text for translation · ## Nuances and edge cases · ## Checklist · ## Common mistakes
 <!-- tldr:end -->
 
 Roblox has a large non-English audience, and the platform does a lot of translation work for you: it can capture in-game text automatically, translate it automatically for supported languages, and swap it at runtime. That makes it tempting to treat localization as "turn it on and forget it". In practice the automatic layer only works well when the game's text is **built for it**: stable keys, no text glued together in code, placeholders instead of concatenation, UI that survives longer strings, and a review loop for the strings that matter. This note is the pipeline that gets there. Concepts and APIs are introduced in [[Localization]]; text rendering in [[Text Fonts and Rich Text]]; UI sizing in [[UI Asset Pipeline]] and [[Responsive UI for Phone Tablet Console and PC]].

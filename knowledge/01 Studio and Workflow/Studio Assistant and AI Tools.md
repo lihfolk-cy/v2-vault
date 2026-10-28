@@ -12,7 +12,7 @@ tags: [studio, assistant, ai, mcp, code-assist, generation, workflow]
 > - Planning Mode for multi-system work.
 > - Snapshot and named save before AI-driven bulk changes.
 >
-> Read more (14 KB note): ## 2. Assistant · ## 5. The Studio MCP server · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.5k tok. Read more: ## 2. Assistant · ## 5. The Studio MCP server · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Studio now ships several AI features: **Assistant** (a chat agent that reads and edits your place), **Code Assist** (inline code completion), the **Material Generator** and **Texture Generator**, mesh and procedural model generation, and a built-in **MCP server** that lets external AI coding tools drive Studio. These tools are fast at the boring 80% and confidently wrong in the interesting 20%. Every action they take is a real edit to your data model, which in a shared place reaches everyone. This note documents what each tool does and its limits as of October 2026 (all of this changes quickly; re-check the docs), then the guardrails that keep AI-driven edits as safe as human ones. For team process around AI assistants, see [[Working with AI Assistants in Studio]].

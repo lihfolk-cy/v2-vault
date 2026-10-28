@@ -12,7 +12,7 @@ tags: [architecture, project-structure, bootstrapping, modules, workflow]
 > - Deterministic two-phase bootstrap with error isolation and timing.
 > - Remotes created by the server and published after all systems registered.
 >
-> Read more (20 KB note): ## Server bootstrap: two phases · ## Production lessons that shape structure · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~5.1k tok. Read more: ## Server bootstrap: two phases · ## Production lessons that shape structure · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A Roblox game that survives a year of development has a small number of entry points, one obvious home for every piece of code, a deterministic start-up order, and remotes treated as a typed API. A game without those has hundreds of loose Scripts racing each other at join, systems that only work if another script happened to run first, and a 200,000 character file nobody dares to touch. This note gives the layout, the two-phase bootstrap for server and client, how to register remotes and config, how to load fast, and the production lessons (source size limits, require caching, reserved names, test flags, sandboxed checks) that shape structure in practice.

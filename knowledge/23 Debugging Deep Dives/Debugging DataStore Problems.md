@@ -12,7 +12,7 @@ tags: [debugging, datastores, persistence, throttling, session-locking, open-clo
 > - Budget logged periodically and before bursts.
 > - Autosaves staggered; leaderboards and counters batched.
 >
-> Read more (19 KB note): ## 2. Throttling and budgets · ## 3. Stuck session locks · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.7k tok. Read more: ## 2. Throttling and budgets · ## 3. Stuck session locks · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 DataStore bugs are the most expensive bugs in a Roblox game: they lose progress, duplicate items, and generate support tickets you cannot answer. They are also hard to debug because the evidence (what is actually stored) lives in a cloud service, the failure often happened on a server that no longer exists, and Studio behaves differently from live. This note is a diagnostic guide: how to read throttling and budget problems, how to tell a stuck session lock from a real outage, how to look at the actual saved data safely, and how Studio access changes what you see.

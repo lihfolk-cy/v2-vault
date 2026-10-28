@@ -12,7 +12,7 @@ tags: [monetization, pricing, managed-pricing, regional-pricing, shop, store-des
 > - Price-level gate on gifts and trades of paid items
 > - Ladder of 3 to 5 rungs per category; value per Robux increases with size
 >
-> Read more (16 KB note): ## 1. The price a player sees is not your price · ## 3. Setting prices · ## 6. Common mistakes · ## 7. Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.0k tok. Read more: ## 1. The price a player sees is not your price · ## 3. Setting prices · ## 6. Common mistakes · ## 7. Checklist
 <!-- tldr:end -->
 
 How to price Roblox products, how Roblox now changes your prices for you (managed pricing: regional pricing plus price optimization), how to display prices so they are correct for every player, and how to lay out a store that converts without tricking anyone. Platform facts verified against the Creator Hub "Managed pricing", "Regional pricing", "Price optimization" and "Roblox Plus" pages **as of October 2026**. Design advice is rule of thumb unless marked, with examples from the reference project's shop history.

@@ -3,7 +3,7 @@ tags: [ai, agents, ai-skill, research, workflow]
 ---
 # Skill - Roblox Vault Research
 
-**Skill file:** [skills/roblox-vault-research/SKILL.md](../skills/roblox-vault-research/SKILL.md) (folder name `roblox-vault-research`)
+**Skill file:** merged into the router, [skills/lihfolk/SKILL.md](../skills/lihfolk/SKILL.md), in V2 2.1 to avoid loading two lookup skills (see [[Token Cost Benchmarks]]).
 
 ## What it does
 

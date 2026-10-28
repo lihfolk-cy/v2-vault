@@ -12,7 +12,7 @@ tags: [modeling, bevel, chamfer, edge-highlight, normals, vertex-colors, untextu
 > - Segment count matches the shading style (chamfer for faceted, 2 for smooth).
 > - Bevel widths match the style bible's size bands.
 >
-> Read more (18 KB note): ## Roblox lighting and materials: what survives · ## Worked example: edge-highlighted rocks without textures · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~4.5k tok. Read more: ## Roblox lighting and materials: what survives · ## Worked example: edge-highlighted rocks without textures · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Hand-painted art paints a light line along every edge so shapes read. Untextured art has no paint, so the edge highlight must come from geometry, normals, vertex colour or lighting. [[Hard-Surface Modeling]] already covers the bevel-and-weighted-normal workflow: bevel widths as a percentage of object size, segment counts, and the Weighted Normal modifier. This note goes deeper into the part that matters for non-hand-painted styles: **why** a bevel catches light, how to size bevels for the distance an asset is seen from, what Roblox's materials and lighting do to that highlight, how to add edge brightening with vertex colour when geometry is too expensive, and the outline tricks that stand in for edge lines.

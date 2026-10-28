@@ -12,7 +12,7 @@ tags: [fundamentals, api, reference, keyframesequence, data]
 > - No key-to-key turn near 180 degrees; ideally under 120.
 > - Markers carry gameplay events; Keyframe names left as "Keyframe" unless a legacy listener needs them.
 >
-> Read more (15 KB note): ## Class reference · ## Semantics the reference does not spell out · ## Checklist for a clean KeyframeSequence
+> Cost: TL;DR ~160 tok · whole note ~3.9k tok. Read more: ## Class reference · ## Semantics the reference does not spell out · ## Checklist for a clean KeyframeSequence
 <!-- tldr:end -->
 
 `KeyframeSequence` is the classic clip format: what the Animation Editor saves, what the 3D importer writes, what most code-built clips use, and what gets uploaded when you publish. This note documents every class in the format (`KeyframeSequence`, `Keyframe`, `PoseBase`, `Pose`, `NumberPose`, `KeyframeMarker`) and the services around it (`KeyframeSequenceProvider`, `AnimationClipProvider`), then explains the semantics the reference pages leave out: what counts as a key, where easing lives, why the root pose is ignored, and how instance counts explode.

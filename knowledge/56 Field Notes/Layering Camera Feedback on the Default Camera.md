@@ -1,3 +1,8 @@
+---
+tags: [field-notes, camera, bindtorenderstep, fov, game-feel, playermodule, luau]
+---
+# Layering Camera Feedback on the Default Camera
+
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - Effect never visible: Step bound before or at `Camera` priority -> Bind at `Camera.Value + 1`
@@ -7,13 +12,8 @@
 > - FOV contribution tracked and replaced, never accumulated.
 > - Other scripts' FOV writes detected by comparing with the last written value.
 >
-> Read more (7 KB note): ## 1. Run after the camera, every frame · ## 2. FOV is absolute, so additive punches accumulate · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~1.9k tok. Read more: ## 1. Run after the camera, every frame · ## 2. FOV is absolute, so additive punches accumulate · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
----
-tags: [field-notes, camera, bindtorenderstep, fov, game-feel, playermodule, luau]
----
-# Layering Camera Feedback on the Default Camera
 
 Roll on a dash, an FOV punch on a heavy hit, a tilt into a turn: most action games want these on top of Roblox's default follow camera, not a replacement for it. Layering them is easy to get almost right and hard to get exactly right, because you share the camera with a script that runs every frame and does not know you exist. This note gives the ordering, the bookkeeping that stops values drifting, and when to stand down. Trauma shake and kicks are in [[Camera Shake and Camera FX]]; tuning numbers in [[Hit-Stop and Screen Shake Tuning by Numbers]].
 

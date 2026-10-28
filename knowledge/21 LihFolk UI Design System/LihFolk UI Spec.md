@@ -12,7 +12,7 @@ tags: [ui, design-system, lihfolk-ui, tokens, spec, motion, accessibility]
 > - Text meets the contrast column above; bright slabs keep the ink stroke.
 > - Tap targets are at least 52 units (44 px drawn) with at least 8 px between them.
 >
-> Read more (10 KB note): ## 7. Components · ## 8. Motion · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~2.6k tok. Read more: ## 7. Components · ## 8. Motion · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The numbers behind [[LihFolk UI Design System]]. The source of truth is `skills/lihfolk-ui/src/LihFolkUITheme.luau`. If this note and the module ever disagree, the module wins, and this note should be fixed.

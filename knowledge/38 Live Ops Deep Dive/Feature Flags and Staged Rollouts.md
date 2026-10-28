@@ -12,7 +12,7 @@ tags: [live-ops, feature-flags, rollout, configservice, release, kill-switch, lu
 > - Release flags default off; kill switches default on
 > - Sticky bucketing with a per-flag salt; uniformity checked once
 >
-> Read more (18 KB note): ## 4. Stable percentage rollouts · ## 5. Planning a staged rollout · ## 9. Common mistakes · ## 10. Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.5k tok. Read more: ## 4. Stable percentage rollouts · ## 5. Planning a staged rollout · ## 9. Common mistakes · ## 10. Checklist
 <!-- tldr:end -->
 
 A feature flag is a value, read at runtime, that decides whether a piece of code runs. A staged rollout uses flags to turn a feature on for a small group first, watch it, and widen it step by step. Together they separate **deploying** code (publishing a place) from **releasing** a feature (players getting it), which is the most useful idea in live operations: a publish becomes routine, and a release becomes a dial you can turn back.

@@ -12,7 +12,7 @@ tags: [ui, layout, udim2, uiscale, constraints, responsive]
 > - Panels are authored at one design resolution with one device `UIScale`.
 > - Clamp floor computed from the smallest authored text (12 px drawn minimum).
 >
-> Read more (16 KB note): ## 4. Design resolution plus UIScale · ## 6. The constraints · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.2k tok. Read more: ## 4. Design resolution plus UIScale · ## 6. The constraints · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox UI is laid out with one data type, `UDim2`, and a handful of modifier objects that sit as children of the thing they modify. This note covers the maths of `UDim2`, when to use Scale and when Offset, the design-resolution approach with `UIScale`, and every size constraint, including the cases where they silently override each other. Layout objects that arrange many children (lists, grids, pages, flex) are in [[UI Layout Objects - Lists Grids and Pages]]. Per-device strategy is in [[Responsive UI for Phone Tablet Console and PC]].

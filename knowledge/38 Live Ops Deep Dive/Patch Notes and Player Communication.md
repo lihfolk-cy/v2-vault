@@ -12,7 +12,7 @@ tags: [live-ops, communication, patch-notes, community, updates, trust, luau]
 > - Panel shows once per version, skips brand-new players, never blocks play
 > - Notes stored as versioned config data, with translations if the game is localised
 >
-> Read more (17 KB note): ## 3. Hard messages · ## 4. An in-game What's New panel that respects players · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.3k tok. Read more: ## 3. Hard messages · ## 4. An in-game What's New panel that respects players · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Players do not experience your update; they experience what they notice of it. A balance change nobody explained feels like a stealth nerf. A fixed bug nobody mentioned is invisible. An outage with no message feels like the game died. Patch notes and the other player-facing messages around an update are how a live game turns changes into trust, and on Roblox the channels are narrower and stricter than on other platforms: 60-character announcements, personalised-only notifications, and limits on pointing players off-platform.

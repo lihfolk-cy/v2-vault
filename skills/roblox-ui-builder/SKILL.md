@@ -1,6 +1,6 @@
 ---
 name: roblox-ui-builder
-description: 'LihFolk: Build or review Roblox UI that fits every screen, using LihFolk Vault V2 - responsive layout, safe areas, motion timing, accessibility, and the house cartoon/simulator menu style from the lihfolk-ui skill. Use when making a ScreenGui, HUD, shop, settings, codes, rebirth or daily rewards menu, or when the user says "make a menu", "UI looks broken on phone", "buttons under the notch", "animate this panel", "simulator style menu", or "review my UI".'
+description: 'LihFolk: responsive Roblox UI review and build (layout, safe areas, motion, accessibility). Use for any ScreenGui/HUD/menu work or "UI broken on phone", "buttons under the notch".'
 ---
 # LihFolk UI Builder
 

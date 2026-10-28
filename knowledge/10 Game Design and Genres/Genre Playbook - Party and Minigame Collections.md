@@ -12,7 +12,7 @@ tags: [game-design, genre, party, minigames, rounds, lobby, social, replayabilit
 > - 10 or more minigames; recent-repeat avoidance in the picker.
 > - 100-round soak test in Studio: memory and connection count stable.
 >
-> Read more (14 KB note): ## 3. The framework you must build · ## 4. Minigame design · ## 9. Common mistakes · ## 10. Launch checklist
+> Cost: TL;DR ~160 tok · whole note ~3.6k tok. Read more: ## 3. The framework you must build · ## 4. Minigame design · ## 9. Common mistakes · ## 10. Launch checklist
 <!-- tldr:end -->
 
 A party game runs short rounds of different minigames for a whole server: a lobby, a vote or random pick, a 1 to 3 minute minigame, winners rewarded, back to the lobby. Variants include classic minigame rotations, elimination shows (last player standing across escalating rounds), "survive the disaster" rounds, hide and seek, tag variants, and social deduction (one hidden role among the players). The genre is native to Roblox: free-to-play friends joining a server together, short attention spans and a young audience all fit it.

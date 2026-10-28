@@ -12,7 +12,7 @@ tags: [physics, destruction, fracture, csg, geometryservice, explosions, perform
 > - Cosmetic breaks are client-only with pooled debris.
 > - Structural breaks: server-owned, pre-fractured or queued runtime fracture, connectivity checked.
 >
-> Read more (17 KB note): ## 3. Technique B: pre-fractured models · ## 4. Technique C: runtime fracture with GeometryService · ## 9. Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.4k tok. Read more: ## 3. Technique B: pre-fractured models · ## 4. Technique C: runtime fracture with GeometryService · ## 9. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Breaking things is one of the most satisfying verbs in a game and one of the easiest ways to wreck a Roblox server. Every new fragment is an instance that must replicate to every client, every unanchored fragment is a physics body, and every client's frame rate pays for the debris it can see. This note covers the five ways to make things break (swap models, pre-fractured welds, runtime fracture with `GeometryService`, explosions, terrain and voxel destruction), how to decide what breaks on the server, the budgets that keep it running on phones, debris lifecycles, rebuilding, and the exploits destruction invites.

@@ -12,7 +12,7 @@ tags: [animation, authoring, locomotion, gait, combat, melee, timing, hit-stop, 
 > - Run lift 0.3-0.45 studs; pelvis pitch 8° or less; lean in the chest
 > - Light attack: hit on f6-8, ComboWindow ~f15 of 24
 >
-> Read more (6 KB note): ## 2. Locomotion targets · ## 3. Melee timing (30 fps) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~1.5k tok. Read more: ## 2. Locomotion targets · ## 3. Melee timing (30 fps) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The numbers to start from when keying a walk, run, sprint, jump or sword attack for a default-scale R15 character, and what they become at 30 fps. Gait biomechanics and fighting-game frame data say what real bodies and good games do. The R15 conversion covers what changes on a 5.5-stud character with short legs. Full citations are in `D:\LihFolk Build\research\animation-references.md`.

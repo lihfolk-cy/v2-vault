@@ -12,7 +12,7 @@ tags: [game-design, ethics, dark-patterns, monetization, odds, child-safety, tru
 > - Is every price shown in Robux (or with a Robux equivalent)?
 > - Are any odds shown as real percentages computed from the code, updated for active boosts?
 >
-> Read more (14 KB note): ## 3. Dark patterns and honest alternatives · ## 6. Onboarding and purchase timing · ## 9. Feature review checklist · ## 10. Common mistakes
+> Cost: TL;DR ~150 tok · whole note ~3.6k tok. Read more: ## 3. Dark patterns and honest alternatives · ## 6. Onboarding and purchase timing · ## 9. Feature review checklist · ## 10. Common mistakes
 <!-- tldr:end -->
 
 Roblox's audience is young, and many players spend money that belongs to their parents. Every technique in this folder (hooks, streaks, timers, RNG, status, offers) can be used to make a game better or to pressure children into playing and spending more than is good for them. This note sets out the rules Roblox itself enforces, the dark patterns researchers have documented in Roblox games, honest alternatives for each, and a review checklist for any feature that touches time, money or randomness. It is opinionated on purpose: trust is the one resource a game cannot buy back.

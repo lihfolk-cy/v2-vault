@@ -12,7 +12,7 @@ tags: [studio, plugins, selection, bulk-editing, tooling, building]
 > - Locked parts skipped and counted; packages detected.
 > - Models moved by pivot; operations choose roots or parts deliberately.
 >
-> Read more (21 KB note): ## 2. Normalising a selection: the step everyone skips · ## 7. Three bulk operations done properly · ## 9. Common mistakes · ## 10. Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.3k tok. Read more: ## 2. Normalising a selection: the step everyone skips · ## 7. Three bulk operations done properly · ## 9. Common mistakes · ## 10. Checklist
 <!-- tldr:end -->
 
 Most useful plugins are some version of "do X to everything I selected": align, distribute, randomise rotation, replace with a prefab, set a property across hundreds of parts, snap to ground, rename by pattern. The `Selection` service makes the first version of such a tool a ten-line script. Making it correct is harder, because a selection is a messy thing: it mixes models and their own children, contains locked and anchored and welded things, includes instances inside packages, can be fifty thousand items long, and changes while your tool is running.

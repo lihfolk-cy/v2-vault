@@ -10,7 +10,7 @@ tags: [core-concept, marketing, art, thumbnails, ui]
 > - Value contrast beats colour. Two different hues of the same brightness blur together, especially for colour-blind viewers.
 > - One subject, big. A character or object filling 50 to 70 percent of the frame (rule of thumb from studying top games) reads; a...
 >
-> Read more (3 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~150 tok · whole note ~860 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Thumbnail contrast** is how strongly the subject of an icon or thumbnail separates from its background and from neighbouring tiles: value contrast (light against dark), colour contrast (complementary hues), and shape contrast (a clear silhouette). It decides whether a tile can be read at a glance at small size.

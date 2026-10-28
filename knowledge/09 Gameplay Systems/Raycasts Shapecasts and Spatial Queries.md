@@ -12,7 +12,7 @@ tags: [gameplay, raycast, spatial-query, overlapparams, shapecast, physics]
 > - New code uses `ExcludeInstances`/`IncludeInstances`.
 > - Broad phase (bounds) then narrow phase (exact or distance).
 >
-> Read more (14 KB note): ## 2. Filtering: RaycastParams and OverlapParams · ## 3. Patterns · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.5k tok. Read more: ## 2. Filtering: RaycastParams and OverlapParams · ## 3. Patterns · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Spatial queries answer "what is there?" without waiting for physics contact. Hit detection, ground checks, line of sight, aiming, prop placement, AI perception and zone membership all use them. Roblox has two families: **casts** (move a shape along a direction and report the first hit) and **overlaps** (list everything inside a volume right now). Choosing the right one, filtering correctly and knowing the edge cases (parts you start inside, bounding boxes on rotated meshes, terrain) is most of the work.

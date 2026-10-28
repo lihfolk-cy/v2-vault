@@ -12,7 +12,7 @@ tags: [field-notes, status-effects, stun, freeze, server-authority, attributes, 
 > - Overlaps merge with `max`; immunity starts at the end of the freeze.
 > - Released on death; cleared naturally on respawn.
 >
-> Read more (7 KB note): ## 1. A timestamp attribute, not a flag · ## 4. Clients read the same value · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~1.7k tok. Read more: ## 1. A timestamp attribute, not a flag · ## 4. Clients read the same value · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A freeze or stun implemented as "set `Frozen = true`, then `task.delay(2, unfreeze)`" works until the delayed function errors, the character respawns in between, a second freeze overlaps the first, or a message to the client is lost. Then someone is frozen forever. Storing the *end time* instead of a flag removes the whole class of bug: the status expires on its own, overlapping freezes merge with `max`, and clients can read the same value and lock their own input. Stacking rules in general are in [[Status Effects Buffs and Stacking Rules]]; authority in [[Server Authority]].

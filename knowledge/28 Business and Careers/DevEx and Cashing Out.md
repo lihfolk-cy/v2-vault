@@ -12,7 +12,7 @@ tags: [business, devex, payouts, robux, earnings, taxes, careers, minors]
 > - Verified email; legal name matches what you will use on the form.
 > - Tax form type known (W-9 or W-8); a tax professional consulted where needed.
 >
-> Read more (17 KB note): ## 2. The numbers (Roblox docs, as of October 2026) · ## 4. Eligibility and the request flow · ## 9. Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~4.3k tok. Read more: ## 2. The numbers (Roblox docs, as of October 2026) · ## 4. Eligibility and the request flow · ## 9. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 > **Not advice.** This note is general information about how the Developer Exchange works and how developers usually plan around it. It is not tax, legal or financial advice. Tax and contract rules differ by country (and often by state or province). The only binding rules are Roblox's own **Developer Exchange Terms of Use** and the DevEx page on the Creator Hub (Creator Hub, Docs, Monetization, Developer Exchange). Read them on the day you cash out; rates and requirements change.

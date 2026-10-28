@@ -10,7 +10,7 @@ tags: [authoring, review, checklist, qa]
 > - Something moves on the input frame for player actions.
 > - Secondary motion on dangling parts and the free hand.
 >
-> Read more (11 KB note): ## 3. Craft (should-fix) · ## 4. Technical safety (blockers)
+> Cost: TL;DR ~130 tok · whole note ~2.9k tok. Read more: ## 3. Craft (should-fix) · ## 4. Technical safety (blockers)
 <!-- tldr:end -->
 
 A review pass catches problems before players do. This checklist collects every check from the authoring notes into one place, ordered the way a review actually goes: first "does it work in the game", then "does it read", then "is it well made", then "is it technically safe", then "is it shippable". Thresholds come from the reference project (one live action game) where marked; adjust distances if your character is a different size.

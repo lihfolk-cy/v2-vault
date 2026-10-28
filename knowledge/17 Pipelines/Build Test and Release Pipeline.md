@@ -12,7 +12,7 @@ tags: [pipelines, release, testing, qa, publishing, rollback, environments]
 > - Change list with tags, owners and honest statuses
 > - Shipping state checked: previews off, test flags cleared
 >
-> Read more (14 KB note): ## Stage 3: static checks · ## Stage 8: publish · ## Failure modes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.6k tok. Read more: ## Stage 3: static checks · ## Stage 8: publish · ## Failure modes · ## Checklist
 <!-- tldr:end -->
 
 Every other pipeline in this section ends with content in a place. This one takes the place to players: assembling a build, proving it works, publishing it, watching it, and rolling it back if it does not. On Roblox the moment of release is brutally simple (Publish, and new servers run the new version) which is exactly why the process around it matters. This note is a release pipeline for a small team, with the gates one production game used and the honesty rules it learned. Related: [[Release Process and Rollbacks]] (production view), [[QA Checklists Before Release]], [[Testing Strategies and Frameworks]], [[Multi-Client and Live Testing]], [[Server Lifecycle and Shutdown]], [[Publishing an Experience]].

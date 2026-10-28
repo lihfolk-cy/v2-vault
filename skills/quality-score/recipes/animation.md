@@ -30,6 +30,8 @@
 | IK unreachable on gait contact | Shorter stance travel (stride x duty under ~2.6 studs) or lower the pelvis 0.04 studs on contact |
 | Foot skate on dash/jump | Feet airborne until the root stops; `root_in_measure = True`; take off with a toe pivot |
 | Thighs crossing in a staggered stance | Widen foot x to about +-0.75 |
+| Arm re-twists inside a swing (gate) | `Clip.cut()` + `twist_dp` per-frame replan; windup posed so the roll is one-way (proven on Heavy, Light1, Light2, Light3, Dash: reversals to 0) |
+| Head into the off shoulder at contact | Head yaw no more than 36 deg from the chest (Dash: Head/LeftUpperArm 0.058 -> 0.012) |
 
 ## Rubric note
 The rubric gate "`wrist_clamped_deg` under 5" is now `qa.wrist.blade_err_max_deg` under 5 on authored keys. The solver never forces the wrist; this is how far the blade lands from the request. Auto-breakdown keys are reported separately (`breakdown_blade_err_max_deg`).
@@ -37,5 +39,14 @@ The rubric gate "`wrist_clamped_deg` under 5" is now `qa.wrist.blade_err_max_deg
 ## Twist (added 2026-10-28, user: "the arm does a lot of random twists")
 - Per-key independent wrist/elbow solves re-twist the arm between keys (measured 42-73 deg/frame, 4-7 reversals per swing). Use continuity costs + `Clip.cut()` planned monotonic forearm twist and upper-arm roll, and `_sword.lead(c)` (chest +1, arm +2 frames).
 - Measure roll as the intrinsic angular velocity about the bone axis (`qa.arm_twist`), not swing-twist angles.
-- Fewer arm keys inside the 3-5 frame strike: each extra key is a chance for a counter-roll. Open problem: Light1/Light2/Light3/Dash still show 1-6 reversals after planning.
+- Fewer arm keys inside the 3-5 frame strike: each extra key is a chance for a counter-roll.
 - Keep a copy of every previous sheet/MP4/module before rebuilding (`Animations/_compare/_vN/`) so before/after comparisons stay possible.
+
+## Twist, solved (2026-10-28, v4): plan the roll per frame, not per key
+- Per-key planning is not enough: Blender interpolates each joint's quaternion separately, so counter-rolls appear BETWEEN keys. `lihanim/twist_dp.py` runs after baking (automatic when the clip declares `Clip.cut()`). It keeps the wrist path and blade direction of every frame and re-plans only the elbow swivel (rigid rotation about the shoulder-wrist line) and the forearm pronation. Each is a Viterbi path over states, one roll direction per segment (windup->contact->follow-through, then recovery). Wrist dev/flex come in closed form from the pronation, and the arm is keyed on every frame. Result: 0 reversals in swing on all 5 cuts (were 1-6) and right-arm reversals total 1-2 (were 6-9).
+- A windup that rolls the forearm against the strike can't pass the gate. Pose the windup like SwordHeavy (hand forward of the shoulder, `rhl=(1.95,4.4,-0.9)`, `rpole=(1,-0.4,-0.2)`, blade `(0.2,0.6,0.77)`) so the swing pronates or supinates one way.
+- Blade directions are in character space. When the body leans (dash crouch -20..-28 deg), rotate the authored blade by the same pitch or the wrist leaves its cone (Dash key 4: blade_err 10.7 -> 4.2).
+- Contact blades that cross the body or point down (`y < -0.1` at chest height) hit the dev -38 / pro -85 limits (blade_err 7-10). Keep contact blades within about 20 deg of forward and get the diagonal from the hand path and the torso turn.
+- Diagnose with the per-key line `blade_err0 + replan_blade_dev / pro, dev, flex`: a key at a limit (pro -85, dev -38/+20, flex -60) is the one to re-pose. Tuning knobs: `clip.twist_w_swivel` (0.004 = let the elbow swing more; 0.03 default), `clip.twist_dirs`.
+- `qa.lowest_body_point` of -0.2..-0.4 on staggered stances is the rear shin box's ankle-end corner, not the knee (`qa.knee_min_height_studs` >= 0.8). Reviewers read it as a knee in the floor, so point them at the knee field.
+- Blind reviewers (sheet + JSON only) score about 2 points below the earlier maker-assisted scores. All 11 v4 clips land 5.3-7.0. Recurring misses: contact pose not extended at chest height (sword), the follow-through not continuing the arc, locomotion too subtle (no lateral hip shift, no visible flight frame), and arms covering the torso in side view.

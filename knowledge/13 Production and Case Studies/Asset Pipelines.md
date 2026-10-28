@@ -12,7 +12,7 @@ tags: [production, pipeline, blender, import, icons, audio, tooling, case-study]
 > - Axis and scale conventions are written down and applied in code.
 > - Every upload writes an id map to disk.
 >
-> Read more (19 KB note): ## Blender to Roblox: the conventions that bite · ## Install scripts: dry run, idempotent, reversible · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.8k tok. Read more: ## Blender to Roblox: the conventions that bite · ## Install scripts: dry run, idempotent, reversible · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 An asset pipeline is the repeatable path from a source file (a Blender scene, a sound take, a design spec) to a finished, wired, budget-checked thing in the game. Without one, every model is a hand job: import, fix the axis, fix the scale, guess the collision, place it, forget to record what you did. With one, adding the 150th weapon costs about the same as adding the 15th, and anybody on the team can do it.

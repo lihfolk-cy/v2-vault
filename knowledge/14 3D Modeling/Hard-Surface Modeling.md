@@ -12,7 +12,7 @@ tags: [modeling, hard-surface, blender, bevel, booleans, normals, props]
 > - Scale applied before bevelling; bevel width 1-6 percent of form size.
 > - Bevel segments 1-2 except silhouette curves.
 >
-> Read more (17 KB note): ## 2. Workflow A: mid-poly with bevels, step by step · ## 5. Hard-surface shape design · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.4k tok. Read more: ## 2. Workflow A: mid-poly with bevels, step by step · ## 5. Hard-surface shape design · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Hard-surface means man-made, rigid things: armour, weapons, machines, crates, buildings, vehicles, sci-fi panels. The craft is making flat faces look flat, edges look manufactured, and curves look intentional, at a triangle count a phone can draw. Most hard-surface failures in Roblox are not modelling failures but **shading** failures: a good shape with bad normals reads as cheap plastic. This note covers the three workflows that ship, how to choose between them, the shading recipe that makes low-poly look expensive, booleans without the mess, and the measured numbers from one production game's armour, weapons and hub props.

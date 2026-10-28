@@ -12,7 +12,7 @@ tags: [performance, fundamentals, profiling, budgets, frame-time]
 > - A reproducible scenario exists with production-like load.
 > - Baseline numbers recorded (frame ms, memory MB by category, join seconds) on a real low-end device.
 >
-> Read more (17 KB note): ## 2. What a frame is · ## 6. Budgets · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.3k tok. Read more: ## 2. What a frame is · ## 6. Budgets · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Performance work on Roblox fails in two predictable ways. Either people optimise by superstition ("unions are slow", "never use `FindFirstChild`") without measuring, or they measure the wrong machine (a fast PC in Studio) and ship a game that runs at 20 fps on a three-year-old phone. This note gives the mental model the rest of the section builds on: what a frame is, where its time goes, what the three kinds of performance problem are, which tool answers which question, and the discipline that keeps a large game fast for its whole life.

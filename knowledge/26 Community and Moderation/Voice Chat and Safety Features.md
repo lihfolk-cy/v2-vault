@@ -12,7 +12,7 @@ tags: [community, moderation, voice-chat, safety, audio-api, luau]
 > - Place max players at or below 100 if voice is on
 > - Routing restricts only; nothing creates private channels between strangers
 >
-> Read more (14 KB note): ## 2. What the platform does (Roblox docs, as of October 2026) · ## 4. Routing voices with the audio API · ## 9. Common mistakes · ## 10. Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.7k tok. Read more: ## 2. What the platform does (Roblox docs, as of October 2026) · ## 4. Routing voices with the audio API · ## 9. Common mistakes · ## 10. Checklist
 <!-- tldr:end -->
 
 Voice turns a game into a place: callouts in a shooter, laughter in a hangout, panic in a horror game. It is also the hardest communication channel to moderate, because speech is fast, ephemeral and hard to filter. This note covers what Roblox controls (eligibility, moderation, reporting), what you control (whether voice is on, who hears whom, how voices sound), the audio API patterns for team, radio and non-spatial voice, and the design work that keeps a voice game fair for the many players who will never use a microphone. It builds on [[The Audio API - Players Emitters Wires and Effects]] (section 7, voice and speech) and [[Age Checks and Safety Features]].

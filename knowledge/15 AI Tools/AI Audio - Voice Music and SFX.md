@@ -12,7 +12,7 @@ tags: [ai, audio, tts, music, sfx, licensing]
 > - Every uploaded id recorded by script; none invented.
 > - Loudness measured; every id has a levelling entry.
 >
-> Read more (14 KB note): ## 1. Roblox's own speech APIs · ## 2. External AI audio tools · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.5k tok. Read more: ## 1. Roblox's own speech APIs · ## 2. External AI audio tools · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 AI audio covers three different jobs: speech (text-to-speech and voice conversion), music, and sound effects. Roblox now has its own runtime speech APIs, and a large market of external tools generates all three. The technical part is easy. The hard parts are licensing, loudness consistency, and fitting generated sound into a mix. This note covers Roblox's speech APIs, external tools and their licensing traps, Roblox's upload rules, and how the reference project got 22 new weapon sound banks without any generative model at all.

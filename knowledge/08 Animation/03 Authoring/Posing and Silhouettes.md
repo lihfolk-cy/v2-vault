@@ -12,7 +12,7 @@ tags: [authoring, craft, posing, silhouette, r15]
 > - Centre of mass over the base of support (unless falling)
 > - No twinning
 >
-> Read more (12 KB note): ## What makes a pose read · ## Proportions and the R15 rig · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.2k tok. Read more: ## What makes a pose read · ## Proportions and the R15 rig · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A pose is the unit of readability. Players read your animation as a sequence of shapes, mostly from behind, mostly small, often half hidden by effects. If the key poses read as clear silhouettes, the motion between them almost takes care of itself; if they do not, no amount of polish saves the clip.

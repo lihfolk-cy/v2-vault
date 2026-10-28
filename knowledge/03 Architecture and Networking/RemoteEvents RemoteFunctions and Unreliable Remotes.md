@@ -12,7 +12,7 @@ tags: [architecture, networking, remotes, security, performance]
 > - No `InvokeClient` anywhere.
 > - Every handler: type, value (NaN, inf, length), context, rate limit, then act.
 >
-> Read more (21 KB note): ## The three types · ## Organising remotes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.5k tok. Read more: ## The three types · ## Organising remotes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Remotes are the explicit messages you send across the client-server boundary. Roblox has three kinds, each with different delivery promises, limits and failure modes. Choosing the wrong one gives you either lag (reliable traffic for data nobody needs), lost events (unreliable traffic for things that must happen), or a server thread that hangs forever (`InvokeClient`). This note covers the guarantees exactly as documented, the argument rules, the throttling and size limits, the RemoteFunction pitfalls, how to organise remotes in a project, and the production patterns that hold up: server-validated relays, request/response with timeouts, sequenced unreliable streams and honeypots.

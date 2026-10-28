@@ -12,7 +12,7 @@ tags: [blender, weapons, sword, stylized, materials]
 > - Point shape from the profile curves.
 > - Guard and pommel from extruded, bevelled silhouettes; ornament as relief, not floating tubes.
 >
-> Read more (9 KB note): ## What the rebuild did · ## Nuances and edge cases · ## Checklist for stylised weapons · ## Common mistakes
+> Cost: TL;DR ~160 tok · whole note ~2.3k tok. Read more: ## What the rebuild did · ## Nuances and edge cases · ## Checklist for stylised weapons · ## Common mistakes
 <!-- tldr:end -->
 
 A painted concept showed a wide curved falchion: a black blade full of stars, a glowing purple edge, magenta and green flame licks off the spine, an ornate silver guard with a spiked hook quillon, a purple wrapped grip and a silver pommel. The first build was rejected as "looks really bad". The second, rebuilt from proper forged forms, worked. The difference is the lesson.

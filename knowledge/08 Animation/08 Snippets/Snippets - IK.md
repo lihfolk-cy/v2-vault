@@ -9,7 +9,7 @@ tags: [snippets, luau, ik, procedural]
 > - Avoid: Targets past full reach (snaps and flips at the singular straight pose).
 > - Avoid: A pole on the limb line (undefined bend plane).
 >
-> Read more (27 KB note): ## 1. IKControl setups · ## 5. Foot IK during locomotion (pelvis drop, ground normal, blend) · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~7.0k tok. Read more: ## 1. IKControl setups · ## 5. Foot IK during locomotion (pelvis drop, ground normal, blend) · ## Common mistakes
 <!-- tldr:end -->
 
 Two ways to do inverse kinematics on Roblox rigs, with working code for each:

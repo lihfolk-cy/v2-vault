@@ -12,7 +12,7 @@ tags: [blender, python, vfx, eevee, r15, animation, rendering, bloom, video]
 > - Anticipation, short action, long follow-through
 > - One additive material type; fades keyed on a Value node
 >
-> Read more (14 KB note): ## The glow material · ## Light, camera and shadows · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.6k tok. Read more: ## The glow material · ## Light, camera and shadows · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 ![[p45_dash_burst.png]]

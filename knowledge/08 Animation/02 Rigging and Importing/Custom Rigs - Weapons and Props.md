@@ -12,7 +12,7 @@ tags: [rigging, weapons, props, motor6d, hinge-rigs]
 > - Joint frames from a manifest (world- or body-aligned), not from mesh orientation.
 > - Weapon parts massless, non-colliding, unanchored (template root anchored only in storage).
 >
-> Read more (16 KB note): ## 2. The weapon Design rig · ## 3. Holding the weapon · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.0k tok. Read more: ## 2. The weapon Design rig · ## 3. Holding the weapon · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Animated weapons (blades that unfold, rings that orbit, energy that ignites, chains that swing), pets, bosses built from static meshes, and moving world props are all rigs of their own. Most of them do not need a skeleton from Blender at all: they need the right **joint frames**, the right **writer** for each joint, and a rig that survives being cloned onto every player's hand. This note covers the patterns one live action game used across roughly 150 animated weapons, a pet roster, two bosses and its hub props, with the measured pitfalls.

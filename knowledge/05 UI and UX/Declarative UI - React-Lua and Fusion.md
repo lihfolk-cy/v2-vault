@@ -12,7 +12,7 @@ tags: [ui, declarative, react-lua, fusion, vide, state, architecture]
 > - Server-replicated data feeds one client store.
 > - Each property has exactly one owner.
 >
-> Read more (14 KB note): ## 2. React-Lua · ## 3. Fusion 0.3 · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~110 tok · whole note ~3.6k tok. Read more: ## 2. React-Lua · ## 3. Fusion 0.3 · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Imperative UI code says "when the gem count changes, find the label and set its text". Declarative UI code says "the label's text is the gem count", and a library keeps the instances in sync with your state. On Roblox the declarative options are community libraries, mainly **React-Lua** (a Luau port of React), **Fusion** (reactive state objects) and **Vide** (a smaller reactive library). This note explains how each works, when declarative UI is worth it and when it is not, how to combine it with Studio-authored art, and the performance traps.

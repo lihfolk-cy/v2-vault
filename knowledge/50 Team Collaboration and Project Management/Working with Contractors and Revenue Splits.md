@@ -12,7 +12,7 @@ tags: [team, contractors, revenue-share, payouts, groups, intake, security, luau
 > - Change orders for every addition; mirrored in the scope ledger.
 > - Least access: file delivery, or a sandbox experience with per-game permissions.
 >
-> Read more (22 KB note): ## 5. Intake: scan every delivered model · ## 7. Split designs for several contributors · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.5k tok. Read more: ## 5. Intake: scan every delivered model · ## 7. Split designs for several contributors · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 > **Not advice.** General information for Roblox teams. It is not legal, tax or financial advice. Contract, employment and tax rules differ by country. Anyone under 18 needs a parent or guardian to approve agreements and payments.

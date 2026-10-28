@@ -10,7 +10,7 @@ tags: [import, studio, reference, 3d-importer]
 > - The importer page above does not list animation options.
 > - When a mesh object has the same name as a bone in the connected armature, the importer turns that bone into a Motor6D joining...
 >
-> Read more (12 KB note): ## 2. File General · ## 6. Animation import options
+> Cost: TL;DR ~140 tok · whole note ~2.9k tok. Read more: ## 2. File General · ## 6. Animation import options
 <!-- tldr:end -->
 
 Every option of Studio's 3D Importer (File > Import 3D), what it really does to an animated asset, and what to pick for each kind of import. Option names and defaults are from the Roblox Creator Hub importer page (checked October 2026). Behaviour notes marked "measured" come from one production game; anything from community threads is marked as such. Studio changes this dialog often: when a name here does not match your Studio, trust your Studio and update this note.

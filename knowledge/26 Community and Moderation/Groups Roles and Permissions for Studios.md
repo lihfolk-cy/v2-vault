@@ -12,7 +12,7 @@ tags: [community, groups, permissions, studio, team, security, moderation, luau]
 > - Dedicated owner account with 2SV and offline backup codes
 > - Role ladder written down; each role's permissions reviewed against the risk table
 >
-> Read more (16 KB note): ## 4. The permission list, grouped by risk · ## 5. A role ladder for a small studio · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.0k tok. Read more: ## 4. The permission list, grouped by risk · ## 5. A role ladder for a small studio · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 A Roblox group (shown as a "community" in parts of the 2025 and 2026 interface) is three things at once: the legal-ish container that owns your games, assets and revenue; the permission system for your team; and the public home of your players. Most small studios set it up once in an afternoon and then live with an owner account that holds every key, five people with "edit everything", and contractors who still have access a year later. This note is about doing it deliberately: a role ladder that matches how a studio actually works, the exact permissions to give each role, the ones that need two-step verification, moderators and the 18+ chat permission, revenue splits, audit logs, and the failure cases (lost owner, rogue member, leaked API key). For player-facing group features (perks, join prompts) see [[Community Building]]; for Team Create mechanics see [[Team Create and Collaboration]].

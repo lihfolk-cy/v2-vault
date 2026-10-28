@@ -12,7 +12,7 @@ tags: [performance, physics, collision, humanoids, network-ownership, bulkmoveto
 > - Collision fidelity audited; no precise fidelity on small or distant meshes.
 > - Large complex meshes use simple invisible colliders.
 >
-> Read more (15 KB note): ## 3. Collision: fidelity and flags · ## 6. Moving many parts: `BulkMoveTo` · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.8k tok. Read more: ## 3. Collision: fidelity and flags · ## 6. Moving many parts: `BulkMoveTo` · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Physics cost on Roblox is rarely about one heavy simulation. It is about **how many things the engine thinks it has to simulate, collide or query**: thousands of decorative parts left unanchored, precise collision on every rock, Humanoids on statues, ownership ping-ponging between players, and scripts that move hundreds of parts one property set at a time. This note explains what the physics engine actually spends time on, the switches that remove work (anchoring, collision flags, fidelity, stepping method, Humanoid states), network ownership costs, moving many parts cheaply with `BulkMoveTo`, and how to diagnose physics load.

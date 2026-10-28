@@ -12,7 +12,7 @@ tags: [publishing, thumbnails, icons, store-page, marketing, discovery]
 > - 2 to 5 custom 16:9 thumbnails at 1920x1080, under 3 MB
 > - Nothing critical in the bottom area
 >
-> Read more (13 KB note): ## 1. Specs (Docs, Oct 2026) · ## 3. What makes a thumbnail work (rule of thumb) · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.2k tok. Read more: ## 1. Specs (Docs, Oct 2026) · ## 3. What makes a thumbnail work (rule of thumb) · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 The icon, thumbnails, title and description are your game's storefront. They decide **play-through rate**, which the Creator Hub calls the most important signal for Recommended for You ([[Discovery and the Algorithm]]). This note gives the specs, the moderation rules, thumbnail personalisation, and how to make and test art that earns clicks without misleading anyone. Specs and rules verified against the Creator Hub "Thumbnails" and "Experience icons" pages **as of October 2026**; design guidance is rule of thumb.

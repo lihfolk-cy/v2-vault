@@ -12,7 +12,7 @@ tags: [gameplay, combat, hitbox, hit-detection, latency, server-authority]
 > - Server hit time derived from the animation markers, enforced by a test.
 > - Reach validation with logged distances and latency tolerance.
 >
-> Read more (15 KB note): ## 3. Server hit timing from data · ## 5. Enemy attacks on players: telegraphs and shapes · ## 8. Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.9k tok. Read more: ## 3. Server hit timing from data · ## 5. Enemy attacks on players: telegraphs and shapes · ## 8. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Hit detection decides whether a swing, shot or spell touched something. On Roblox it is shaped by one hard fact: the attacker, the victim and the server all see slightly different worlds, because each player's character is simulated on their own client and arrives at others 100 to 300 ms late. Every design is a trade between **feel** (the attacker's screen is right), **fairness** (the victim's screen is right) and **security** (the server's view is right). This note lays out the techniques, how to time hits on the server, how to handle latency, and how one production game did melee for players and telegraphed attacks for enemies.

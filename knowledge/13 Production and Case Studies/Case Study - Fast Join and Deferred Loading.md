@@ -12,7 +12,7 @@ tags: [case-study, performance, join-time, loading, replication, streaming, prod
 > - ReplicatedStorage instance count tracked; top folders known.
 > - Dense data baked to compact forms.
 >
-> Read more (15 KB note): ## Step 0: measure join time from the client · ## Step 3: defer what is not needed at join · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.9k tok. Read more: ## Step 0: measure join time from the client · ## Step 3: defer what is not needed at join · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Players decide in seconds. A long join (black screen, then a loading bar, then a menu, then the world popping in) loses players before they see your game. This case study follows one live action game (the reference project) as it discovered why its joins were slow, measured them, and moved non-essential content out of the join path: baking heavy data, tightening streaming, moving a main-menu kit out of ReplicatedStorage, and loading armour, pets and loot models only when needed.

@@ -12,7 +12,7 @@ tags: [marketing, growth, ads-manager, sponsored-ads, user-acquisition, roas, ma
 > - Objective, audience and budget type chosen deliberately (they cannot change later)
 > - Launch data tags whitelisted and logged as an analytics field
 >
-> Read more (16 KB note): ## 1. The platform, as documented (Roblox docs, as of October 2026) · ## 7. Measuring ad cohorts in your own analytics · ## 8. Failure modes · ## 11. Checklist
+> Cost: TL;DR ~230 tok · whole note ~4.2k tok. Read more: ## 1. The platform, as documented (Roblox docs, as of October 2026) · ## 7. Measuring ad cohorts in your own analytics · ## 8. Failure modes · ## 11. Checklist
 <!-- tldr:end -->
 
 Paid user acquisition on Roblox means Ads Manager: your game's tile shown as a sponsored placement on Home and in search, with Roblox's auto-bidder spending a budget you set. The interface is simple. The decisions are not: who to target, how much a player is worth to you, how long to wait before judging, and what the ads can and cannot do for organic ranking.

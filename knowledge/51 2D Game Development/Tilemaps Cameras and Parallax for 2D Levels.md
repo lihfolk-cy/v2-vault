@@ -12,7 +12,7 @@ tags: [2d, 2.5d, tilemap, level-design, camera, parallax, chunks, tiled, renderi
 > - Levels converted at build time to Luau data; versioned; tile ids append-only.
 > - Tiled GID flags cleared; flipped variants pre-baked.
 >
-> Read more (28 KB note): ## 3. Rendering tiles in a GUI: three strategies · ## 4. Cameras that frame the level · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~150 tok · whole note ~7.1k tok. Read more: ## 3. Rendering tiles in a GUI: three strategies · ## 4. Cameras that frame the level · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Most 2D levels are grids. A tilemap stores a level as a few arrays of small numbers, which makes it cheap to save, cheap to collide against, cheap to send to the server, and easy to author in a dedicated editor. The hard parts are elsewhere: drawing thousands of tiles without thousands of property writes, hiding seams between tiles, a camera that frames the level well instead of just following the player, and parallax backgrounds that stay crisp. This note covers all four for the GUI route, and how the same data builds a level in the 2.5D route.

@@ -12,7 +12,7 @@ tags: [game-feel, juice, rewards, celebrations, ui, rng, pacing, ethics, luau]
 > - Reward animation time measured per hour of play, under about 10%.
 > - Server decides results before animation; reels show only reachable items; tells derive from the result.
 >
-> Read more (19 KB note): ## 3. Honest suspense · ## 5. A queue that waits for safe moments · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~210 tok · whole note ~4.8k tok. Read more: ## 3. Honest suspense · ## 5. A queue that waits for safe moments · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A reward moment is the few seconds between "something good is coming" and "it is mine". Done well, it is the emotional peak of a session and the moment players clip and share. Done badly, it is a forced cutscene the hundredth time, a banner that covers the boss, or a reveal that lies. [[Game Feel and Juice]] gives the basic sequence (anticipation, reveal, payoff, settle) and the reference project's gating of popups; [[Notification and Toast Systems]] covers small, frequent messages. This note covers the big ones: how long each tier should take and what that costs over a session, honest suspense, manual versus automatic modes, a queue that waits for safe moments without starving, count-ups, social celebrations, and the accessibility rules that apply to flashing, full-screen moments.

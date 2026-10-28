@@ -12,7 +12,7 @@ tags: [marketing, growth, live-ops, updates, cadence, events, retention]
 > - Feature freeze at T-10; event public at T-7; featuring submitted if eligible
 > - Publish before go-live; content gated by server time
 >
-> Read more (13 KB note): ## 2. Choosing a cadence · ## 3. Building anticipation honestly · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.5k tok. Read more: ## 2. Choosing a cadence · ## 3. Building anticipation honestly · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Roblox players expect games to change. A game that updates on a predictable rhythm trains players to come back on update day, gives the recommendation system fresh reasons to see returning players (play days on days 2 to 7 and 8 to 28 are ranking signals; see [[Discovery and the Algorithm]]), and gives your page, notifications and videos something true to say. A game that updates in random bursts, or that promises an update and misses it, burns the same goodwill.

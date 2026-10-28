@@ -12,7 +12,7 @@ tags: [ai, studio, assistant, mcp, workflow]
 > - Planning Mode for anything that touches more than one script.
 > - Snapshot before risky edits; no undo in shared places.
 >
-> Read more (16 KB note): ## 3. Slash commands and tools · ## 5. Using Assistant well · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.0k tok. Read more: ## 3. Slash commands and tools · ## 5. Using Assistant well · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox Assistant is the AI helper built into Roblox Studio. Roblox's own guide describes it as something that "helps you build games faster by answering questions, generating content, and performing actions directly in Studio". It is a large language model joined to a set of tools that act on your open place: reading and writing scripts, creating and deleting instances, inserting assets, generating meshes and materials, capturing the viewport and, in beta, play-testing.

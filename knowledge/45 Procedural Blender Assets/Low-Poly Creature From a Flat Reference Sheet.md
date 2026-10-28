@@ -9,7 +9,7 @@ tags: [blender, python, bmesh, creature, quadruped, low-poly, palette, rigging, 
 > - Avoid: Linear texture interpolation on a palette.
 > - Avoid: Degenerate UVs. Symptom: importer warnings or broken tangents.
 >
-> Read more (16 KB note): ## Flat colour from a palette atlas · ## Rig and skinning · ## Common mistakes
+> Cost: TL;DR ~80 tok · whole note ~4.0k tok. Read more: ## Flat colour from a palette atlas · ## Rig and skinning · ## Common mistakes
 <!-- tldr:end -->
 
 ![[p45_wolf_side.png]]

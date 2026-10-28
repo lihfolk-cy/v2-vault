@@ -9,7 +9,7 @@ tags: [procedural, springs, damping, smoothing, math, frame-rate, luau]
 > - Spring explodes after a lag spike: explicit or semi-implicit step with a large `dt` -> clamp `dt`, substep, or exact update
 > - Spring "dies" at 30 fps, lively at 144: implicit Euler's numerical damping -> exact update
 >
-> Read more (13 KB note): ## Stepping a spring: four integrators · ## First-order smoothing: the `lerp` fix · ## Common mistakes
+> Cost: TL;DR ~120 tok · whole note ~3.3k tok. Read more: ## Stepping a spring: four integrators · ## First-order smoothing: the `lerp` fix · ## Common mistakes
 <!-- tldr:end -->
 
 Almost every procedural motion that feels alive is a spring underneath: a head that settles on its target, a recoil that kicks and returns, a cape that lags, a camera that eases, a wrist that "gives" when it catches a spinning blade. This note derives the damped spring, compares the ways to step it (and which ones break at low frame rates), gives an exact frame-rate-independent implementation, and covers the simpler first-order smoothing that most code should be using instead of `lerp(x, target, 0.1)`.

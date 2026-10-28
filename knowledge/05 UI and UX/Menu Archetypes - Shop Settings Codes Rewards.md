@@ -12,7 +12,7 @@ tags: [ui, menus, shop, settings, codes, daily-rewards, quests, archetypes]
 > - Claim/buy buttons implement claim, claimed, locked and pending.
 > - All grants and validations on the server; claims marked before paying.
 >
-> Read more (15 KB note): ## 2. The button state triad · ## 5. Codes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.9k tok. Read more: ## 2. The button state triad · ## 5. Codes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most Roblox games, whatever their genre, ship the same half-dozen menus: a shop, settings, a codes box, daily or playtime rewards, a quest board and often a rebirth or prestige screen. Players have learned what these look like from the most popular games, so following the archetype makes your menu instantly usable, and breaking it costs players time. This note describes each archetype's anatomy, the server/client split behind its buttons, the numbers that worked in production, and the mistakes that turn a menu into a support ticket.

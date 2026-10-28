@@ -1,0 +1,104 @@
+---
+tags: [ai, tokens, cost, benchmarks, plugin, router, lihfolk]
+---
+# Token Cost Benchmarks
+
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Reading `INDEX.md` or `INDEX_SLIM.md` whole (37-54k tok) instead of grepping it.
+> - Avoid: Reading the router for one quick question.
+> - Avoid: Opening whole notes (median 4k tok) when the TL;DR plus one section answers it.
+> - Grep `INDEX_SLIM.md`; check the `~tok` cost before opening a note
+> - TL;DR first, then only the sections you need
+> - High-stakes topic? Read full Common mistakes + Checklist + the numbers section
+>
+> Cost: TL;DR ~150 tok · whole note ~1.3k tok. Read more: ## 3. Lookup benchmarks (8 typical tasks) · ## 4. Accuracy comes first · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
+verified: 2026-10-28
+
+What LihFolk Vault V2 costs an AI to use, measured on the vault itself, and how to read it cheaply **without losing accuracy**. Every number below is **Measured** on this repo with `knowledge/_tools/build_index.py --measure` and direct file sizes. Tokens are estimated as **bytes ÷ 4**: English Markdown runs at about 3.5-4.5 bytes per token, so treat every figure as ±15%.
+
+## 1. Fixed cost per session (always loaded)
+
+Claude Code loads every skill's `description` into context at session start, whether the skill is used or not.
+
+| Item | Before (V2 2.0) | After (V2 2.1) | Change |
+|---|---:|---:|---:|
+| 16 skill descriptions | ~1,750 tok | ~740 tok (15 skills) | -58% |
+| Duplicate lookup skill (`roblox-vault-research`) | loaded | merged into the `lihfolk` router | -1 skill |
+| Commands + agents descriptions | ~185 tok | ~185 tok | 0 |
+
+Rule of thumb: every new skill should earn its always-on cost. Keep descriptions to triggers (what and when), and put detail in the body, which only loads when the skill fires.
+
+## 2. Size of each thing an agent might read
+
+| File | Tokens | Read it? |
+|---|---:|---|
+| `ROUTER.md` | ~1,250 | Once, only in long multi-topic sessions |
+| `INDEX_SLIM.md` | ~36,800 | **Never whole.** Grep it (a match is ~25-40 tok per line) |
+| `INDEX.md` | ~54,200 | **Never whole.** Grep only when you need the first sentence |
+| One note, median | ~4,000 | Rarely whole |
+| One note, 90th percentile | ~5,700 | Rarely whole |
+| Largest note | ~12,400 | Never whole; read sections |
+| One TL;DR block, median | ~170 | Yes, first |
+| One TL;DR block, 90th percentile | ~200 | Yes, first |
+| Whole vault (849 notes) | ~3.1 M | Impossible in one context, which is why the index exists |
+
+Every index row and every TL;DR now shows its own cost (`~5.4k tok`), so an agent can decide before opening a note.
+
+## 3. Lookup benchmarks (8 typical tasks)
+
+Old protocol: grep `INDEX.md`, read Common mistakes + Checklist of 2 notes, read 1 section. New: grep `INDEX_SLIM.md`, read the TL;DR of 2 notes, read the same section.
+
+| Task | Old | New (router already read) | Saved |
+|---|---:|---:|---:|
+| Secure a RemoteEvent for buying | 1,227 | 866 | 30% |
+| DataStore session locking | 1,914 | 1,262 | 35% |
+| ProcessReceipt | 1,965 | 1,507 | 24% |
+| Mobile-safe ScreenGui | 1,452 | 957 | 35% |
+| Slash VFX | 1,986 | 1,412 | 29% |
+| Hitbox | 1,141 | 830 | 28% |
+| Memory leak | 1,972 | 1,491 | 25% |
+| Blender export scale | 1,726 | 1,052 | 40% |
+| **Total** | **13,385** | **9,379** | **30%** |
+
+- **Whole session** (all 8 tasks, router read once): 13,385 → 10,634 tok (**21% saved**). When the router names the notes directly: 8,861 tok (**34% saved**).
+- **Notes alone** (Common mistakes + Checklist vs TL;DR, 16 notes): 5,629 → 2,807 tok (**51% saved**).
+- **Router trap:** reading `ROUTER.md` for a *single* quick lookup costs **more** than not reading it (-31% to -82% per task). Use it only in long sessions.
+
+## 4. Accuracy comes first
+
+Savings never justify a wrong answer. TL;DR blocks are **extractive**: their bullets are taken from the note's own Common mistakes and Checklist lines, not rewritten, so they can't introduce new claims. But they drop detail. So:
+
+- **High-stakes topics always get the full sections:** player data, purchases and receipts, paid random items and policy, remotes and security, anything shipping to live players. For these, read `## Common mistakes` + `## Checklist` + the section with the exact numbers. That means the benchmark savings above apply mainly to low-stakes lookups (UI, VFX, modelling, debugging hints). High-stakes lookups cost the old amount on purpose.
+- **Never cite a number** seen only in a TL;DR; open its section.
+- **Read further** whenever the TL;DR leaves doubt.
+
+**Unverified:** whether TL;DR-first reading changes the *quality* of AI output. A with/without-plugin A/B test, scored blind, is prepared (`D:\LihFolk Build\eval\run_ab.ps1`) but hasn't been run yet. Until it has, this note proves cost, not quality.
+
+## Common mistakes
+
+- Reading `INDEX.md` or `INDEX_SLIM.md` whole (37-54k tok) instead of grepping it.
+- Reading the router for one quick question.
+- Opening whole notes (median 4k tok) when the TL;DR plus one section answers it.
+- Applying TL;DR-only reading to data, money or security code.
+- Adding a new skill with a long description: you pay for it in every session.
+
+## Checklist
+
+- [ ] Grep `INDEX_SLIM.md`; check the `~tok` cost before opening a note
+- [ ] TL;DR first, then only the sections you need
+- [ ] High-stakes topic? Read full Common mistakes + Checklist + the numbers section
+- [ ] Router only for long, multi-topic sessions
+- [ ] Re-run `py knowledge/_tools/build_index.py --measure` after big vault changes and update this note
+
+## See also
+
+- [[AI Skills Start Here]]
+- [[Skill - Roblox Vault Research]]
+- [[What AI Models Get Wrong in Roblox]]
+
+## Connected notes
+
+[[AI in Roblox Development Overview]] · [[Prompting and Verifying AI Output]]

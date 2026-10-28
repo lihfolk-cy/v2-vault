@@ -12,7 +12,7 @@ tags: [architecture, frameworks, libraries, knit, ecs, networking]
 > - Every dependency is pinned, reviewed and actively maintained (or small enough to own).
 > - The client-server boundary is visible in names, and every exposed method passes middleware.
 >
-> Read more (14 KB note): ## Small utility libraries worth knowing · ## A framework-free core in one page · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~3.5k tok. Read more: ## Small utility libraries worth knowing · ## A framework-free core in one page · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox has no official game framework. The community has produced several, plus many small libraries that solve one problem well (signals, promises, cleanup, networking, state, UI). Choosing among them is mostly a question of what problem you have, how big the team is, and how long you will maintain the game. This note explains what frameworks actually give you, the main options and their status as of October 2026, when a framework hurts, and how to get the same benefits with plain modules.

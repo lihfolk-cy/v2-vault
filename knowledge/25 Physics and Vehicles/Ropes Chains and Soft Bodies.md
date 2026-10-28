@@ -12,7 +12,7 @@ tags: [physics, constraints, ropes, chains, soft-bodies, verlet, bones, procedur
 > - RopeConstraint uses: restitution chosen, winch force above weight, explicit ownership.
 > - Physical chains: few fat links, matched masses, no self-collision, limits on.
 >
-> Read more (18 KB note): ## 4. Client-side verlet: ropes and cloth for free · ## 7. Worked example: a grappling hook · ## 8. Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.7k tok. Read more: ## 4. Client-side verlet: ropes and cloth for free · ## 7. Worked example: a grappling hook · ## 8. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox has a `RopeConstraint`, and it is not a rope. It is a maximum-distance limit between two attachments with a visual line drawn between them. That is exactly what you want for a grappling hook or a tethered balloon, and exactly wrong for a rope that drapes over a branch, a chain that swings links against a wall, a flag, a jiggly slime or a bridge that sags under players. This note covers what the built-in rope does and does not do, physical chains built from parts, client-side verlet ropes and cloth that cost almost nothing, bone-driven soft bodies on skinned meshes, the grappling hook as a worked example, and which approach to pick for each job.

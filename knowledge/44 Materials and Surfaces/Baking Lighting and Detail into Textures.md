@@ -12,7 +12,7 @@ tags: [materials, baking, lighting, ambient-occlusion, blender, textures, styliz
 > - AO strength chosen per target lighting with a minimum floor.
 > - Directional light baked only in fully controlled scenes.
 >
-> Read more (16 KB note): ## 3. Ambient occlusion into the colour map · ## 6. Full lighting bakes: when and how · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.1k tok. Read more: ## 3. Ambient occlusion into the colour map · ## 6. Full lighting bakes: when and how · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The Roblox PBR guide says the colour map "shouldn't contain baked-in lighting or shading" (Roblox docs, as of October 2026), and [[Texturing and PBR Baking]] teaches the correct default: bake colour with **Color only** so real lights do the lighting. This note is about the deliberate exceptions. Roblox gives you no lightmaps, no custom shaders, no AO slot and, on many phones, coarse lighting. So almost every good-looking Roblox game bakes *something* into its textures or vertices: ambient occlusion, edge wear, gradients, contact shadows, sometimes whole rooms of light. The skill is knowing which kinds of baked light survive a dynamic engine and which ones break the moment a player turns around.

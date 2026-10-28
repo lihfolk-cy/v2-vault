@@ -47,7 +47,7 @@ The skills never edit vault notes. They read the vault and act on your game.
 
 | Skill (folder) | Use it for | Human note |
 |---|---|---|
-| `roblox-vault-research` | Answering any Roblox question from the vault with citations | [[Skill - Roblox Vault Research]] |
+| `lihfolk` (router; replaces `roblox-vault-research`) | Answering any Roblox question from the vault with citations, at the lowest token cost | [[Skill - Roblox Vault Research]] |
 | `roblox-secure-remotes` | Writing and reviewing RemoteEvents, UnreliableRemoteEvents and RemoteFunctions | [[Skill - Roblox Secure Remotes]] |
 | `roblox-anti-exploit-review` | Defensive audit: threat model, detection, fair enforcement | [[Skill - Roblox Anti-Exploit Review]] |
 | `roblox-datastore-safety` | Session locking, retries, BindToClose, migrations, receipts | [[Skill - Roblox DataStore Safety]] |

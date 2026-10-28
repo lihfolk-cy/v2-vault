@@ -12,7 +12,7 @@ tags: [studio, plugins, creator-store, publishing, monetization, versioning]
 > - For selling: Stripe seller account approved, 2-step verification on, individually owned asset.
 > - Price within $4.99 to $249.99; store page with video, images in both themes, changelog.
 >
-> Read more (18 KB note): ## 2. Selling: who can, and how money moves · ## 4. Versioning: what "a version" means for a plugin · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.7k tok. Read more: ## 2. Selling: who can, and how money moves · ## 4. Versioning: what "a version" means for a plugin · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Shipping a plugin is the start of a maintenance relationship. Once other people install it, every update you publish lands in their Studio, in their places, often automatically, and anything your plugin ever wrote into their places (attributes, tags, helper folders, settings keys) becomes a format you must keep reading forever. If you sell it, you also take on payouts through a third party, refunds, chargebacks and moderation risk.

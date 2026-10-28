@@ -12,7 +12,7 @@ tags: [community, creators, influencers, marketing, safety, live-ops, luau]
 > - Creator fit checked: genre, audience age, conduct
 > - Written agreement with disclosure, honesty, payment and guardian terms
 >
-> Read more (15 KB note): ## 1. Safety first · ## 5. Deals and agreements · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.8k tok. Read more: ## 1. Safety first · ## 5. Deals and agreements · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 Video creators (long-form, short-form and live streamers) are the biggest single source of sudden traffic for Roblox games. One video can bring more players in an afternoon than a month of sponsored ads. Working with them well is part craft (making the game filmable), part relationship (finding the right creators and treating them fairly), part logistics (surviving the surge) and part ethics: their audiences are mostly children, and paid promotion aimed at children carries obligations. This note covers all four, plus how to measure what a collaboration did. The marketing side is expanded in [[Short-Form Video Marketing]] and [[Launch Strategy - The First Two Weeks]]; in-game social features in [[Community Building]].

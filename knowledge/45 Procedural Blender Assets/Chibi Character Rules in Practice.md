@@ -12,7 +12,7 @@ tags: [blender, chibi, cute, character, stylized]
 > - Eyes below the middle, big, with iris depth and two catchlights.
 > - Bottom-heavy silhouette; one exaggerated feature (the face).
 >
-> Read more (8 KB note): ## Version 2: what made the difference · ## Nuances and edge cases · ## Checklist · ## Common mistakes
+> Cost: TL;DR ~160 tok · whole note ~2.1k tok. Read more: ## Version 2: what made the difference · ## Nuances and edge cases · ## Checklist · ## Common mistakes
 <!-- tldr:end -->
 
 ![[p45_chicken_faceted_v1.png]]

@@ -1,0 +1,68 @@
+--!nonstrict
+-- LihFolk Systems spec: Signal. TestEZ-style; run with tests/Runner or TestEZ.
+-- Pure logic only: no DataStores, no purchases. Written for Studio, NOT yet run.
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Shared = ReplicatedStorage:WaitForChild("LihFolk")
+
+local Signal = require(Shared.Signal)
+
+return function()
+	describe("Signal", function()
+		it("delivers arguments to every handler", function()
+			local s = Signal.new()
+			local got = {}
+			s:Connect(function(a, b)
+				table.insert(got, a + b)
+			end)
+			s:Connect(function(a, b)
+				table.insert(got, a * b)
+			end)
+			s:Fire(2, 3)
+			expect(#got).to.equal(2)
+			expect(got[1] + got[2]).to.equal(11)
+		end)
+		it("stops after Disconnect and fires Once only once", function()
+			local s = Signal.new()
+			local count, onceCount = 0, 0
+			local c = s:Connect(function()
+				count += 1
+			end)
+			s:Once(function()
+				onceCount += 1
+			end)
+			s:Fire()
+			c:Disconnect()
+			s:Fire()
+			expect(count).to.equal(1)
+			expect(onceCount).to.equal(1)
+			expect(c.Connected).to.equal(false)
+		end)
+		it("isolates an erroring handler", function()
+			local s = Signal.new()
+			local reached = false
+			s:Connect(function()
+				error("boom")
+			end)
+			s:Connect(function()
+				reached = true
+			end)
+			s:Fire()
+			expect(reached).to.equal(true)
+		end)
+		it("Wait times out with false", function()
+			local s = Signal.new()
+			local ok = s:Wait(0.05)
+			expect(ok).to.equal(false)
+		end)
+		it("Wait returns fired values", function()
+			local s = Signal.new()
+			task.delay(0.05, function()
+				s:Fire("x", 7)
+			end)
+			local ok, a, b = s:Wait(2)
+			expect(ok).to.equal(true)
+			expect(a).to.equal("x")
+			expect(b).to.equal(7)
+		end)
+	end)
+end

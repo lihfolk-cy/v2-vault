@@ -12,7 +12,7 @@ tags: [worked-build, monetization, game-passes, developer-products, processrecei
 > - `PurchaseId` and grant saved together; acknowledged only after save
 > - Grants cannot fail half-way (fallback to coins)
 >
-> Read more (26 KB note): ## 4. Server · ## 5. Client and UI · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~6.7k tok. Read more: ## 4. Server · ## 5. Client and UI · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A working in-game shop from an empty place: two game passes (VIP and Double Coins) whose benefits are derived from ownership, three coin packs and a starter pack sold as developer products and granted through one idempotent `ProcessReceipt`, prices read live for each player, and a shop window that refuses to sell while the player's data is not loaded. It is built on the foundation from [[Saved Inventory End to End]] (`PlayerData`, `Net`, `InventoryService`) and uses the `Receipts` field already in its `DataTemplate`.

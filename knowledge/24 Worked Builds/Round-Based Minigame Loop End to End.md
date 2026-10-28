@@ -12,7 +12,7 @@ tags: [worked-build, rounds, minigames, game-loop, server-authority, datastore, 
 > - Every map has `Spawns` (enough parts) and, for Lava Rise, a `Lava` part
 > - `RoundGui.ResetOnSpawn = false`
 >
-> Read more (35 KB note): ## 4. Saving wins: PlayerStore · ## 6. The round loop: RoundService · ## 10. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~160 tok · whole note ~8.9k tok. Read more: ## 4. Saving wins: PlayerStore · ## 6. The round loop: RoundService · ## 10. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 This note builds a complete round loop from an empty place: a lobby, an intermission timer, a map vote, a minigame played on a cloned map, elimination tracking, winners, saved win counts, and cleanup back to the lobby. The example minigame is "Lava Rise" (survive while lava climbs), but the loop is written so each minigame is one ModuleScript that plugs into the same contract.

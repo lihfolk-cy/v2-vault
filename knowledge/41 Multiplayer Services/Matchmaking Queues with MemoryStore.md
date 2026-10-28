@@ -12,7 +12,7 @@ tags: [multiplayer, matchmaking, memorystore, queues, lobby, reserved-servers, t
 > - Party is one ticket; party rating rule chosen.
 > - One leader per queue via a lease; ownership re-checked before reserving.
 >
-> Read more (30 KB note): ## 1. First question: do you need a queue at all? · ## 6. The code · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~7.6k tok. Read more: ## 1. First question: do you need a queue at all? · ## 6. The code · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A "Play Ranked" button looks like one feature. Behind it sit five problems that each fail in their own way: deciding whether you need your own queue at all, describing a player (or a party) as a ticket, letting exactly one server do the matching, handing the result back to the right lobby servers, and surviving every crash in between without matching a player twice or losing them forever. This note goes past the starter queue in [[MemoryStore Service]] and the four-step sketch in [[Teleporting and Multi-Place Games]]. It covers the built-in custom matchmaking option first (because it removes the need for a queue in many games), then a full queue-based matchmaker in strict Luau with leader election, ticket cancellation, widening skill windows, budget maths and failure paths.

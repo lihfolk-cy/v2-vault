@@ -12,7 +12,7 @@ tags: [physics, vehicles, constraints, cars, suspension, network-ownership]
 > - One corner built and mirrored; constraint axes checked with visualisation.
 > - Spring stiffness, damping and free length computed from mass, frequency and damping ratio.
 >
-> Read more (25 KB note): ## 3. Suspension: compute it, do not guess · ## 4. Drive and steering from player input · ## 10. Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~6.4k tok. Read more: ## 3. Suspension: compute it, do not guess · ## 4. Drive and steering from player input · ## 10. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A drivable car on Roblox can be built with almost no code: a chassis, four wheels on hinges, springs and a `VehicleSeat`. It will also flip on the first bump, slide sideways like soap, stutter for passengers and let an exploiter drive it at 900 studs per second. This note goes past "attach a HingeConstraint" into the decisions that make a car feel good and stay fair: which constraint layout to use, how to compute spring numbers instead of guessing, how to drive and steer from player input, why the centre of mass matters more than the engine, who should simulate the car, and when to throw the physical wheels away and use raycast suspension.

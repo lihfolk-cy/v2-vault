@@ -22,12 +22,16 @@ Curve maths (pure Python + mathutils; points are Vector or tuples, 2D or 3D):
 Mesh builders (one watertight mesh, quads + fan-triangle caps, no n-gons, one UV map in 0-1):
     lc.sweep(name, path, profile, radius, twist, ...)   tubes, horns, cables, blades, leaves, ribbons
     lc.lathe(name, profile_rz, steps)                   vases, bottles, pillars, mushrooms
-    lc.extrude_outline(name, outline2d, depth, bevel)    signs, badges, logos, flat blades
+    lc.extrude_outline(name, outline2d, depth, bevel)    signs, badges, logos, flat blades (bevel clamped, no looped insets)
+    lc.mirror_outline(right_half)                         symmetric outlines: author half, mirror (shields, badges)
+    lc.is_simple_polygon(pts), lc.max_inset(pts)          outline checks used by extrude_outline
     lc.estimate_sweep_tris / lc.adaptive_stations        budget before you build
     lc.join(name, objs), lc.deform(ob, fn), lc.set_color(ob, rgb)
+    lc.paint(ob, fn), lc.vertex_color_material(ob), lc.hex_rgb   vertex-colour palettes (one white material)
     lc.curve_object(...), lc.measure_curve_tris(ob)       editable Blender curves and their mesh cost
 
-Tested by D:/LihFolk Build/tools/curves/test_lihfolk_curves.py (16 maths/budget checks + 7 gated assets).
+Tested by D:/LihFolk Build/tools/curves/test_lihfolk_curves.py (maths/budget checks, extrude outline cases,
+symmetry/alignment checks + 7 gated assets).
 
 Every builder takes cls= (a lihfolk_bpy.BUDGETS key). It estimates triangles first and, with
 auto_fit=True (default), coarsens the station spacing until the estimate fits the class ceiling,
@@ -740,17 +744,148 @@ def _signed_area(pts):
     return 0.5 * sum(pts[i - 1].x * pts[i].y - pts[i].x * pts[i - 1].y for i in range(len(pts)))
 
 
+def _seg_cross(a, b, c, d):
+    """Proper 2D segment intersection (shared end points excluded)."""
+    def orient(p, q, r):
+        return (q.x - p.x) * (r.y - p.y) - (q.y - p.y) * (r.x - p.x)
+    o1, o2, o3, o4 = orient(a, b, c), orient(a, b, d), orient(c, d, a), orient(c, d, b)
+    return (o1 > 0) != (o2 > 0) and (o3 > 0) != (o4 > 0) and abs(o1) > 1e-12 and abs(o2) > 1e-12 \
+        and abs(o3) > 1e-12 and abs(o4) > 1e-12
+
+
+def is_simple_polygon(pts):
+    """True when a closed 2D outline does not cross itself (O(n^2); fine for outlines)."""
+    P = [Vector((p[0], p[1])) for p in pts]
+    n = len(P)
+    for i in range(n):
+        a, b = P[i], P[(i + 1) % n]
+        for j in range(i + 2, n):
+            if i == 0 and j == n - 1:
+                continue
+            if _seg_cross(a, b, P[j], P[(j + 1) % n]):
+                return False
+    return True
+
+
+def max_inset(pts):
+    """Largest inset distance before an edge of a closed CCW outline collapses or flips.
+    An inset by d shortens each edge by d * (tan(ta/2) + tan(tb/2)) where ta, tb are the signed turning
+    angles at its ends (convex > 0, reflex < 0); the edge reverses when that exceeds its length."""
+    P = [Vector((p[0], p[1])) for p in pts]
+    n = len(P)
+    t = []
+    for i in range(n):
+        e0, e1 = (P[i] - P[i - 1]), (P[(i + 1) % n] - P[i])
+        ang = math.atan2(e0.x * e1.y - e0.y * e1.x, e0.dot(e1))
+        t.append(math.tan(max(min(ang, math.radians(170)), math.radians(-170)) / 2))
+    best = float("inf")
+    for i in range(n):
+        L = (P[(i + 1) % n] - P[i]).length
+        k = t[i] + t[(i + 1) % n]
+        if k > 1e-9:
+            best = min(best, L / k)
+    return best
+
+
+def ear_clip(pts):
+    """Triangulate a simple 2D polygon (any winding, concave OK) by ear clipping, always cutting the ear with
+    the largest smallest-angle (fewer slivers). Returns index triples, wound like the input."""
+    P = [Vector((p[0], p[1])) for p in pts]
+    idx = list(range(len(P)))
+    if _signed_area(P) < 0:
+        idx.reverse(); rev = True
+    else:
+        rev = False
+
+    def cross(o, a, b):
+        return (a.x - o.x) * (b.y - o.y) - (a.y - o.y) * (b.x - o.x)
+
+    def inside(p, a, b, c):
+        return cross(a, b, p) >= -1e-12 and cross(b, c, p) >= -1e-12 and cross(c, a, p) >= -1e-12
+
+    def min_angle(a, b, c):
+        def ang(o, p, q):
+            u, v = p - o, q - o
+            if u.length < 1e-12 or v.length < 1e-12:
+                return 0.0
+            return u.angle(v, 0.0)
+        return min(ang(a, b, c), ang(b, c, a), ang(c, a, b))
+    tris = []
+    while len(idx) > 3:
+        best = None
+        m = len(idx)
+        for k in range(m):
+            i0, i1, i2 = idx[k - 1], idx[k], idx[(k + 1) % m]
+            a, b, c = P[i0], P[i1], P[i2]
+            if cross(a, b, c) <= 1e-14:
+                continue
+            if any(inside(P[j], a, b, c) for j in idx if j not in (i0, i1, i2)
+                   and (P[j] - a).length > 1e-9 and (P[j] - b).length > 1e-9 and (P[j] - c).length > 1e-9):
+                continue
+            q = min_angle(a, b, c)
+            if best is None or q > best[0]:
+                best = (q, k)
+        if best is None:          # numerically stuck (collinear run): cut the flattest vertex
+            k = min(range(m), key=lambda k: abs(cross(P[idx[k - 1]], P[idx[k]], P[idx[(k + 1) % m]])))
+        else:
+            k = best[1]
+        tris.append((idx[k - 1], idx[k], idx[(k + 1) % m]))
+        idx.pop(k)
+    tris.append(tuple(idx))
+    return [(c, b, a) for a, b, c in tris] if rev else tris
+
+
+def mirror_outline(half, axis_x=0.0):
+    """Author a symmetric outline as its RIGHT half, listed from the top point on the mirror line down to the
+    bottom point on the mirror line (both get x = axis_x). Returns the full closed outline: exact mirror
+    symmetry, the point at bottom centre. Never draw both halves by hand."""
+    H = [Vector((p[0], p[1])) for p in half]
+    H[0].x = axis_x; H[-1].x = axis_x
+    left = [Vector((2 * axis_x - p.x, p.y)) for p in reversed(H[1:-1])]
+    return H + left
+
+
+def hex_rgb(h):
+    """'#E0A530' -> (r, g, b) floats 0-1 in sRGB."""
+    h = h.lstrip("#")
+    return tuple(int(h[i:i + 2], 16) / 255.0 for i in (0, 2, 4))
+
+
 def extrude_outline(name, outline, depth, bevel=0.1, bevel_segs=1, cls="small", color=None, report=None):
     """Thick slab from a closed 2D outline (XY), centred on Z, with chamfer (segs=1) or round bevel.
-    Caps are triangulated (beauty), no n-gons. UVs: planar XY into 0-1. Keep bevel < half the thinnest part."""
+    Caps are triangulated (beauty), no n-gons. UVs: planar XY into 0-1.
+    The bevel is clamped to what the outline allows (max_inset: no edge may collapse or flip at the corners
+    of stars, crosses, crescents, gears) and every inset ring is checked to be a simple polygon; a looping
+    inset fills the cap with overlapping triangles (a visible 'square patch'). report gets bevel_used."""
     pts = [Vector((p[0], p[1])) for p in outline]
     if _signed_area(pts) < 0:
         pts = pts[::-1]
+    # drop near-duplicate and collinear points (rounding nearly straight corners makes clusters of them);
+    # they give sliver cap triangles that cleanup later dissolves into n-gons
+    span0 = max(max(p.x for p in pts) - min(p.x for p in pts), max(p.y for p in pts) - min(p.y for p in pts)) or 1.0
+    keep = []
+    for i, p in enumerate(pts):
+        a, c = pts[i - 1], pts[(i + 1) % len(pts)]
+        e0, e1 = p - a, c - p
+        if e0.length < 2e-3 * span0:
+            continue
+        if e1.length > 1e-12 and e0.length > 1e-12 and e0.angle(e1, 0.0) < math.radians(0.5):
+            continue
+        keep.append(p)
+    pts = keep if len(keep) >= 3 else pts
+    if not is_simple_polygon(pts):
+        raise ValueError(f"{name}: outline crosses itself")
     n = len(pts)
     h = depth / 2.0
     b = min(bevel, h * 0.999) if bevel > 0 else 0.0
-    layers = []  # (inset, z)
     if b > 0:
+        b = min(b, 0.8 * max_inset(pts))
+        for _ in range(8):   # miter clamping can still loop a ring: shrink until the ring is simple
+            if is_simple_polygon(_offset_polygon(pts, b)):
+                break
+            b *= 0.6
+    layers = []  # (inset, z)
+    if b > 1e-5:
         for j in range(bevel_segs + 1):
             ph = (math.pi / 2) * j / bevel_segs
             layers.append((b - b * math.cos(ph), h - b + b * math.sin(ph)))
@@ -760,6 +895,7 @@ def extrude_outline(name, outline, depth, bevel=0.1, bevel_segs=1, cls="small", 
             back = back[:-1]
         layers = back + front
     else:
+        b = 0.0
         layers = [(0.0, -h), (0.0, h)]
     est = 2 * n * (len(layers) - 1) + 2 * (n - 2)
     if est > _ceiling(cls):
@@ -779,18 +915,17 @@ def extrude_outline(name, outline, depth, bevel=0.1, bevel_segs=1, cls="small", 
             j2 = (j + 1) % n
             f = bm.faces.new((A[j], A[j2], B[j2], B[j]))
             _uv_face(f, uvl, [uv(v) for v in f.verts])
-    caps = []
-    try:
-        caps.append(bm.faces.new(rings[-1]))
-        caps.append(bm.faces.new(list(reversed(rings[0]))))
-    except ValueError:
-        pass
-    res = bmesh.ops.triangulate(bm, faces=caps, quad_method="BEAUTY", ngon_method="BEAUTY")
-    for f in res["faces"]:
-        _uv_face(f, uvl, [uv(v) for v in f.verts])
+    # caps: ear clipping on the 2D ring (bmesh's BEAUTY ngon fill produced triangles outside concave
+    # outlines - they crossed the bevel faces and showed as a square patch on star emblems)
+    for ring, flip in ((rings[-1], False), (rings[0], True)):
+        for a, b_, c in ear_clip([v.co.to_2d() for v in ring]):
+            tri = (ring[a], ring[b_], ring[c]) if not flip else (ring[c], ring[b_], ring[a])
+            f = bm.faces.new(tri)
+            _uv_face(f, uvl, [uv(v) for v in f.verts])
+    bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-6)
     ob = _new_object(name, bm, color)
     if report is not None:
-        report.update({"tris_estimate": est, "layers": len(layers), "outline_pts": n})
+        report.update({"tris_estimate": est, "layers": len(layers), "outline_pts": n, "bevel_used": round(b, 5)})
     return ob
 
 
@@ -823,6 +958,59 @@ def deform(ob, fn):
         v.co = fn(v.co.copy())
     ob.data.update()
     return ob
+
+
+def paint(ob, fn, per="face", name="Col"):
+    """Vertex colours (face-corner, byte sRGB) for stylised kits: one material, crisp colour regions.
+    fn(info) -> (r, g, b) sRGB 0-1 or '#RRGGBB'. info has: center (face centre, object space), normal,
+    uv (face-average UV: sweeps v = position along the path, u = around the profile; lathe v = along
+    the profile), index; with per="corner" also co (this corner's vertex) and luv (this corner's UV),
+    so colours can blend along a sweep. Repainting replaces the attribute. Pair with vertex_color_material."""
+    from types import SimpleNamespace
+    me = ob.data
+    if name in me.color_attributes:
+        me.color_attributes.remove(me.color_attributes[name])
+    att = me.color_attributes.new(name, "BYTE_COLOR", "CORNER")
+    uvl = me.uv_layers.active
+    for p in me.polygons:
+        luvs = [uvl.data[li].uv.copy() for li in p.loop_indices] if uvl else [Vector((0, 0))] * p.loop_total
+        info = SimpleNamespace(center=p.center.copy(), normal=p.normal.copy(), index=p.index,
+                               uv=sum(luvs, Vector((0, 0))) / len(luvs))
+        col = None if per == "corner" else fn(info)
+        for k, li in enumerate(p.loop_indices):
+            if per == "corner":
+                info.co = me.vertices[me.loops[li].vertex_index].co.copy(); info.luv = luvs[k]
+                col = fn(info)
+            c = hex_rgb(col) if isinstance(col, str) else col
+            att.data[li].color_srgb = (c[0], c[1], c[2], 1.0)
+    me.color_attributes.active_color = att
+    me.color_attributes.render_color_index = me.color_attributes.active_color_index
+    return att
+
+
+def vertex_color_material(ob, name="LF_VertexColor", attr="Col"):
+    """One white material whose Base Color reads the colour attribute, so glTF exports COLOR_0 and Roblox
+    shows the vertex colours (set MeshPart.Color to white in Studio)."""
+    mat = bpy.data.materials.get(name) or bpy.data.materials.new(name)
+    mat.diffuse_color = (1, 1, 1, 1)
+    mat.use_backface_culling = True     # glTF doubleSided=false: closed meshes must not import as DoubleSided
+    try:
+        mat.use_nodes = True
+    except Exception:
+        pass
+    nt = mat.node_tree
+    if nt is not None and not any(n.type == "VERTEX_COLOR" for n in nt.nodes):
+        bsdf = next((n for n in nt.nodes if n.type == "BSDF_PRINCIPLED"), None)
+        if bsdf is None:
+            bsdf = nt.nodes.new("ShaderNodeBsdfPrincipled")
+            out = next((n for n in nt.nodes if n.type == "OUTPUT_MATERIAL"), None) or nt.nodes.new("ShaderNodeOutputMaterial")
+            nt.links.new(bsdf.outputs[0], out.inputs[0])
+        vc = nt.nodes.new("ShaderNodeVertexColor"); vc.layer_name = attr
+        nt.links.new(vc.outputs["Color"], bsdf.inputs["Base Color"])
+        if "Roughness" in bsdf.inputs:
+            bsdf.inputs["Roughness"].default_value = 0.6
+    ob.data.materials.clear(); ob.data.materials.append(mat)
+    return mat
 
 
 def curve_object(name, path, bevel_depth=0.1, bevel_resolution=1, resolution_u=6, poly=True):

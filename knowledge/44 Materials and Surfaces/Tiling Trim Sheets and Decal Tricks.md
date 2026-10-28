@@ -12,7 +12,7 @@ tags: [materials, textures, decals, tiling, trim-sheet, world-building, performa
 > - Repetition handled at micro, meso and macro scale.
 > - Floor and wall parts snapped to tile sizes or offsets aligned by script.
 >
-> Read more (18 KB note): ## 5. Pulling one trim strip onto a plain Part · ## 6. Decal tricks that are cheap · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.6k tok. Read more: ## 5. Pulling one trim strip onto a plain Part · ## 6. Decal tricks that are cheap · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Trim Sheets Atlases and Vertex Colors]] covers trim sheets as a modelling technique: layouts, TintMask, palettes and vertex colours for meshes. [[Textures Decals and Texture Memory]] covers what Decals and Textures are and how image memory works. This note sits between them and is about **surfaces built from parts and flat faces**: making a texture that truly tiles, hiding repetition at three scales, aligning tiling across neighbouring parts, pulling single trim strips onto plain Parts with `Texture`, and the decal tricks that the current `Decal` API makes possible (UV transforms, rotation, ordering and PBR maps). Most Roblox worlds are still mostly Parts. These are the tools that make those Parts look authored.

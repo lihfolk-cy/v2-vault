@@ -12,7 +12,7 @@ tags: [ai, agents, mcp, automation, workflow, production]
 > - Ownership map for every agent session.
 > - Snapshot and rollback path for every risky change.
 >
-> Read more (15 KB note): ## 3. The working rules that made it safe · ## 4. Moving work out of Studio: the bridge pattern · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.8k tok. Read more: ## 3. The working rules that made it safe · ## 4. Moving work out of Studio: the bridge pattern · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 An AI agent is a model in a loop with tools: it reads, acts, checks the result, and decides what to do next, for many steps without a person approving each one. In Roblox development, agents can now read and edit your place through Studio's built-in MCP server, run Blender through a Blender MCP connection, run Python and shell commands on your machine, and play-test through Roblox's playtest subagent. That is enough to build large parts of a game. The reference project did exactly that: most of its code, tooling, animation data, icons and generated sounds were produced by AI coding agents connected to Studio and Blender, coordinated by a lead session, under a strict set of working rules.

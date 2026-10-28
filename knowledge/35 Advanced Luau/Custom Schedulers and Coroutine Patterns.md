@@ -12,7 +12,7 @@ tags: [luau, advanced-luau, coroutines, scheduler, task, timers, time-slicing, c
 > - One engine connection drives each scheduler.
 > - Callbacks run by your scheduler must not yield, and the module says so.
 >
-> Read more (22 KB note): ## 2. A timer queue on a binary heap · ## 4. Cooperative jobs: coroutines as resumable work · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~5.6k tok. Read more: ## 2. A timer queue on a binary heap · ## 4. Cooperative jobs: coroutines as resumable work · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Task Library Coroutines and Yielding]] explains the engine's scheduler: `task.spawn`, `task.defer`, `task.delay`, `task.wait`, what yields, and how to resume threads safely. [[Luau Performance Patterns with Benchmarks]] shows a basic time-sliced loop with a millisecond budget. This note is about the cases where the engine's scheduler is not enough and you build your own on top of it: thousands of timers, pausable and time-scaled game clocks, fixed-step simulation, cooperative jobs that spread work over frames, structured cancellation, and deterministic tests. It also covers the failure modes that only appear once you mix your own resumes with the engine's.

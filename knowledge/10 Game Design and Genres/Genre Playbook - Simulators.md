@@ -12,7 +12,7 @@ tags: [game-design, genre, simulator, multipliers, pets, rebirth]
 > - Collect/sell rhythm measured: seconds to fill, walk share of the cycle.
 > - Multipliers stacked by category with caps; breakdown visible to players.
 >
-> Read more (13 KB note): ## 4. Multiplier stacking · ## 6. Pets and eggs · ## 10. Failure modes · ## 11. Checklist
+> Cost: TL;DR ~170 tok · whole note ~3.4k tok. Read more: ## 4. Multiplier stacking · ## 6. Pets and eggs · ## 10. Failure modes · ## 11. Checklist
 <!-- tldr:end -->
 
 "Simulator" on Roblox does not mean a realistic simulation. It means a **collect, sell, upgrade, expand, rebirth** game: swing a tool (or click, mine, lift, catch, dig), fill a capacity, cash it in, buy a better tool and a bigger bag, open the next area, hatch pets that multiply everything, and eventually reset for a permanent multiplier. The docs list Simulator among Roblox's common genres (Docs, "Design for Roblox"). This playbook explains why the formula works for this audience, the anatomy of a simulator, the multiplier maths that holds it together, and how to stand out in the most crowded genre on the platform.

@@ -1,3 +1,8 @@
+---
+tags: [field-notes, datastore, data, reset, support, versioning, live-ops, luau]
+---
+# Resetting One Player's Data Safely
+
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - Reset did nothing: Player was online; session save wrote the old data back -> Kick, wait for lock release, then remove
@@ -7,13 +12,8 @@
 > - Player kicked from all servers; session lock released.
 > - Current values dumped to disk before removal.
 >
-> Read more (6 KB note): ## 1. Find the exact stores and key formats in code · ## 3. Remove with RemoveAsync, which is recoverable · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~1.6k tok. Read more: ## 1. Find the exact stores and key formats in code · ## 3. Remove with RemoveAsync, which is recoverable · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
----
-tags: [field-notes, datastore, data, reset, support, versioning, live-ops, luau]
----
-# Resetting One Player's Data Safely
 
 "Please reset my data" (or a tester who needs a fresh account, or a corrupted profile) sounds like one `RemoveAsync`. In a real game it is several stores with different key formats, a session system that will happily write the old data back, and purchase records that must not be touched. Done carelessly, the reset either does nothing (the next save restores everything) or does too much (the player is re-granted purchases). This note is the procedure that worked. Foundations: [[DataStore Fundamentals]], [[Session Locking and Profile Libraries]]; deletion requests: [[Player Privacy and Data Deletion]].
 

@@ -9,7 +9,7 @@ tags: [pipeline, runtime, weapons, motor6d, keyframesequence]
 > - Avoid: Chained hinge pose not nested -> nest poses like the joint tree
 > - Avoid: FX module spins a motor that a clip also keys -> one owner per motor: clip or code
 >
-> Read more (12 KB note): ## Usage · ## Clip parsing and the interpolation rule · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~3.1k tok. Read more: ## Usage · ## Clip parsing and the interpolation rule · ## Common mistakes
 <!-- tldr:end -->
 
 A small Lua module ("PoseDriver") that plays a weapon rig's KeyframeSequences by writing `Motor6D.Transform` every frame, built in one production game so that halos, crowns, jaws, folding blades and spinning discs on held weapons animate in **live servers**, not just in Studio. It predates the general player ([[Lua Keyframe Player]]) and shares its measured Animator model, with a few deliberate differences. Rig structure: [[Weapon Design Rig Builder]].

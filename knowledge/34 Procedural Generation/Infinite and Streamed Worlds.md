@@ -12,7 +12,7 @@ tags: [procedural, generation, infinite-worlds, chunks, streaming, parallel-luau
 > - Chunk size a multiple of 4; floored coords; integer keys.
 > - Load and unload radii with hysteresis; union over players.
 >
-> Read more (20 KB note): ## A server chunk manager · ## Interaction with instance streaming · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~5.2k tok. Read more: ## A server chunk manager · ## Interaction with instance streaming · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Procedural World Generation]] sketches runtime generation: a frame-budgeted queue that builds chunks near players. This note is the full system: chunk coordinates and keys, load and unload rings with hysteresis, prioritising what the player will see next, many players on one server, how generation interacts with Roblox instance streaming, Parallel Luau pipelines, saving player changes to an endless world, floating-point trouble far from the origin, and the budgets that decide whether "infinite" is realistic on a phone. Code uses the `Hash` module from [[Seeds Determinism and Reproducible Worlds]] and terrain functions from [[Noise Functions and Terrain Generation]].

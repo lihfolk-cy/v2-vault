@@ -12,7 +12,7 @@ tags: [genre-system, tycoon, worked-build, plots, economy, server-authority, dat
 > - Two clients: each gets a different plot; neither can collect or buy on the other's plot.
 > - Leave and rejoin: base rebuilt in one frame, offline earnings shown, cash and pending intact.
 >
-> Read more (33 KB note): ## 4. The server: TycoonService · ## 6. The client: TycoonController · ## 5. Edge cases and failure modes · ## 9. Test checklist
+> Cost: TL;DR ~190 tok · whole note ~8.5k tok. Read more: ## 4. The server: TycoonService · ## 6. The client: TycoonController · ## 5. Edge cases and failure modes · ## 9. Test checklist
 <!-- tldr:end -->
 
 This note builds the core of a tycoon from an empty place: a row of plots, automatic plot assignment, a button chain defined as data, purchases validated on the server, income that ticks on the server without a single physics part, droppers that are pure client-side decoration, a collector, offline earnings, saving by purchase id, and a rebuild that puts a returning player's whole base back in one frame. It is the code companion to [[Genre Playbook - Tycoons]], which explains why tycoons work, the payback maths and the "dropper trap". This note does not repeat those arguments; it implements them and then deals with the edge cases the playbook only names.

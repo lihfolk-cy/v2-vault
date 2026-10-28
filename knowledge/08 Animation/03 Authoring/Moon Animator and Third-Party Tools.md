@@ -9,7 +9,7 @@ tags: [authoring, plugins, moon-animator, blender, tools]
 > - Avoid: Frame rate assumptions (24 vs 30 vs 60) -> Roblox stores seconds; check key times after import
 > - Avoid: Curves the enum cannot represent -> thin with a tolerance
 >
-> Read more (12 KB note): ## Moon Animator 2 · ## Blender (with or without a bridge) · ## Interop pitfalls between tools
+> Cost: TL;DR ~110 tok · whole note ~3.1k tok. Read more: ## Moon Animator 2 · ## Blender (with or without a bridge) · ## Interop pitfalls between tools
 <!-- tldr:end -->
 
 The built-in editor is not the only way to make Roblox animation. Many studios use a paid Studio plugin (Moon Animator 2 is the best known), Blender with a bridge add-on, or their own code. This note describes what each route is good for, what it hands to the engine, and where the hand-off goes wrong.

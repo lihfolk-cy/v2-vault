@@ -9,7 +9,7 @@ tags: [rigging, blender, armature, axes, bone-roll, conventions]
 > - Avoid: Editing the rest pose after clips exist -> Re-bake clips from world-space targets, or never touch rest after...
 > - Avoid: Assuming glTF +Z front means Roblox +Z front -> Know the measured importer turn; test with the calibration clip
 >
-> Read more (17 KB note): ## 2. The axis chain from Blender to Roblox (measured) · ## 4. The roll convention (project rule, recommended) · ## Common mistakes
+> Cost: TL;DR ~130 tok · whole note ~4.2k tok. Read more: ## 2. The axis chain from Blender to Roblox (measured) · ## 4. The roll convention (project rule, recommended) · ## Common mistakes
 <!-- tldr:end -->
 
 Axis bugs are the most expensive bugs in a Blender to Roblox pipeline, because they look like animation bugs. An arm that lifts sideways instead of forward, a creature that attacks from behind, a shared clip that works on four family members and twists the fifth: all of these are frame conventions, not keys. This note pins down every frame involved, from Blender world space to a Roblox joint's `Transform`, and gives the conventions one production game used to make one clip drive many rigs.

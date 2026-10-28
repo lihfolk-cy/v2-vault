@@ -12,7 +12,7 @@ tags: [lighting, atmosphere, sky, clouds, post-processing, environment]
 > - Density and Offset tuned together; no ghosting at the horizon.
 > - Clouds under Terrain, moved by `GlobalWind`.
 >
-> Read more (16 KB note): ## 1. Atmosphere · ## 4. Post-processing effects · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.1k tok. Read more: ## 1. Atmosphere · ## 4. Post-processing effects · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Global lighting ([[Lighting Technologies and Settings]]) decides how surfaces are shaded. The objects in this note decide what the air, the sky and the camera do: the `Atmosphere` that turns distance into haze, the `Sky` cube with its sun, moon and stars, dynamic `Clouds` under `Terrain`, and the six post-processing effects that tint, blur and bloom the final image. Together they carry most of a scene's mood for very little cost, which is why they are also the first things to be misused: a bloom that turns every white UI-coloured part into a glowing blob, an atmosphere so dense the skybox ghosts through mountains, a red low-health tint that a cutscene grade overwrites.

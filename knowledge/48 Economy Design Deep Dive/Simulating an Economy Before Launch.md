@@ -12,7 +12,7 @@ tags: [economy, simulation, python, agent-based, balancing, testing, design, mat
 > - Explicit spending policy, simple enough to explain.
 > - Churn that depends on being stuck.
 >
-> Read more (26 KB note): ## 3. The script · ## 5. Testing two changes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~6.8k tok. Read more: ## 3. The script · ## 5. Testing two changes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Spreadsheets model the average player. [[Balancing with Spreadsheets and Data]] shows how to lay out a balance sheet, and [[Economy Inflation Sinks and Faucets Math]] section 7 has a twenty-line Luau loop that computes gate times for three multipliers. Both are the right first tools. This note goes the next step: an **agent-based simulation** with a population of different players who join over time, play sessions of random length, spend by simple rules, roll for items, get stuck and quit. It catches problems that averages cannot: who holds the money, which archetype finishes your content in a week, how a sink you add changes item supply, and what a one-number config change does to churn.

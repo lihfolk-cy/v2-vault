@@ -12,7 +12,7 @@ tags: [debugging, debugger, breakpoints, logging, logservice, traceback]
 > - A shared logger with tags, levels and rate limiting.
 > - System boundaries use `xpcall` with traceback, and log failures.
 >
-> Read more (14 KB note): ## 1. The Studio debugger · ## 3. A logger worth keeping · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.6k tok. Read more: ## 1. The Studio debugger · ## 3. A logger worth keeping · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most Roblox debugging is done with `print`, and most of it is done badly: a print added, the game run, the print removed, the bug back next week. Studio has a real debugger (breakpoints, conditional breakpoints, logpoints, watches, call stacks, stepping) that most developers never open, and Luau has structured tools (`debug.traceback`, `debug.info`, `xpcall`) that make logs useful. This note covers the debugger, a logging approach that survives into production, error handling that keeps stack traces, and a method for bugs you cannot reproduce on demand, including client freezes.

@@ -12,7 +12,7 @@ tags: [modeling, optimization, mobile, performance, meshes, draw-calls, blender,
 > - Repeated props are one mesh, cloned in Studio, sharing textures.
 > - Unique detail merged per object; large world pieces split for culling.
 >
-> Read more (22 KB note): ## 6. Worked example: a market stall · ## 7. Audit scripts · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~5.7k tok. Read more: ## 6. Worked example: a market stall · ## 7. Audit scripts · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most Roblox players are on phones, and phones fail differently from PCs: they run out of memory before they run out of triangles, they pay heavily for transparent pixels, and they get hot and throttle after ten minutes. This note is about making meshes that survive that: what a phone actually pays for when it draws your model, per-asset budgets for mid-range phones, when to merge meshes and when to split them, the properties that quietly double a mesh's cost, a full worked optimisation of one prop, and two audit scripts (one in Blender, one in Studio) that find problems before players do.

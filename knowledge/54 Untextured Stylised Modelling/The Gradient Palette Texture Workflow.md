@@ -12,7 +12,7 @@ tags: [modeling, untextured, stylised, gradient-atlas, palette, uv, blender, tex
 > - Each strip has contact shadow, body ramp and highlight, with hue shift.
 > - Flat accent strips, a grey ramp and reserved empty strips included.
 >
-> Read more (18 KB note): ## Designing the layout · ## The UV moves in Blender · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~200 tok · whole note ~4.5k tok. Read more: ## Designing the layout · ## The UV moves in Blender · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A gradient palette texture is one small image made of colour strips, each strip running from a dark to a light version of one colour (or from one hue into another). Every mesh in a kit maps its faces onto those strips: a tree trunk samples the brown strip from its dark end at the root to its lighter end near the crown, a leaf blob samples the green strip so its underside is darker than its top. The result looks shaded and designed, costs one tiny texture for a whole world, and needs no painting at all. This is the workflow behind a large share of mobile low-poly games, Synty-style asset packs (which share one palette texture across hundreds of meshes) and many popular Blender tutorials.

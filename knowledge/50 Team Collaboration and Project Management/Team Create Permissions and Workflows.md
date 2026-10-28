@@ -12,7 +12,7 @@ tags: [team, collaboration, team-create, permissions, drafts, workflow, groups, 
 > - Age-check compatibility confirmed for every collaborator before they are promised Team Create access.
 > - Access matches the project stage table; Publish limited to two leads.
 >
-> Read more (23 KB note): ## 3. Live scripting or drafts: choosing per team, not per person · ## 4. Claiming areas of a place · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.9k tok. Read more: ## 3. Live scripting or drafts: choosing per team, not per person · ## 4. Claiming areas of a place · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Team Create and Collaboration]] explains the features: permission levels, age checks, live scripting, drafts, comments, Script History, and the incidents that taught the reference project its shared-place rules. [[Safe Changes in a Shared Place]] is the playbook for one risky edit. [[Groups Roles and Permissions for Studios]] covers group roles and the permission list. This note sits between them and answers the operational questions a team lead faces every week: who gets which kind of access at which stage of a project, how to give a contractor somewhere to work without handing them the live game, how a team of four chooses and runs live scripting or drafts day to day, how to claim an area of a place so nobody deletes your work, and how to run the access audit that most teams never do.

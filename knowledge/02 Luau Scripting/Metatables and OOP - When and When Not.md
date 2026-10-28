@@ -12,7 +12,7 @@ tags: [luau, metatables, oop, architecture, composition, typing]
 > - Singletons are modules, not classes.
 > - Classes are used for many-instance or resource-owning objects only.
 >
-> Read more (19 KB note): ## 1. Four ways to model a thing · ## 4. Metamethod tricks: clever, and what they cost · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.9k tok. Read more: ## 1. Four ways to model a thing · ## 4. Metamethod tricks: clever, and what they cost · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Tables Metatables and OOP]] teaches the mechanics: metamethods, the class idiom, inheritance, weak tables, and what happens to tables at Roblox boundaries. This note is about judgement. It compares the four ways of modelling "things" in Luau (metatable classes, closure objects, plain data with module functions, and structure-of-arrays or ECS), shows where each one wins and where it hurts, covers the metamethod tricks that look clever and cause bugs (proxies, `__newindex` tracking, operator overloading), and finishes with lifecycle, typing and serialisation, which is where most OOP pain in Roblox games really comes from.

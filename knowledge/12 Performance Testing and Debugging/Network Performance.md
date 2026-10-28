@@ -12,7 +12,7 @@ tags: [performance, networking, replication, remotes, bandwidth, ping]
 > - Data ping close to network ping under load.
 > - No large or frequently changing attributes on Player or broadly replicated instances.
 >
-> Read more (14 KB note): ## 2. Measuring · ## 4. Patterns that cut traffic · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.5k tok. Read more: ## 2. Measuring · ## 4. Patterns that cut traffic · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Network problems look like everything else: "lag", rubber-banding, hits that land late, a server that feels slow although its heartbeat is fine. The cause is usually **replicating more than needed, to more players than needed, more often than needed**. This note covers what goes over the wire, how to measure it, the limits that matter, and the patterns that cut traffic: results instead of simulation, batching, distance filtering, owner-only state, client-side effects, and load-time replication.

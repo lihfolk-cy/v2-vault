@@ -9,7 +9,7 @@ tags: [authoring, code, keyframesequence, luau, baking]
 > - Avoid: Legacy Cubic -> CubicV2
 > - Avoid: Root keyed on HumanoidRootPart -> key LowerTorso; HRP weight 0
 >
-> Read more (22 KB note): ## 2. Construction rules the engine cares about · ## 6. Predicting what the Animator plays (a sampler) · ## 10. Common mistakes
+> Cost: TL;DR ~90 tok · whole note ~5.6k tok. Read more: ## 2. Construction rules the engine cares about · ## 6. Predicting what the Animator plays (a sampler) · ## 10. Common mistakes
 <!-- tldr:end -->
 
 Building `KeyframeSequence`s from data lets you generate hundreds of consistent clips, re-bake them when the rig changes, run IK or physics offline, enforce budgets, and verify the result against the real Animator. The reference project (one live action game) authored almost all of its 600+ ability clips this way.

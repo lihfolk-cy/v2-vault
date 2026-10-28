@@ -12,7 +12,7 @@ tags: [business, legal, ip, copyright, licensing, creator-store, assets, minors]
 > - Licence log for every third-party asset and library.
 > - No non-commercial, share-alike or unknown licences in core content.
 >
-> Read more (16 KB note): ## 3. Using other people's assets · ## 5. Other people's games, brands and characters · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.2k tok. Read more: ## 3. Using other people's assets · ## 5. Other people's games, brands and characters · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 > **Not legal advice.** This note explains general concepts that help Roblox developers ask the right questions. It is not legal advice. Copyright, trademark, contract and consumer law differ by country, and the details matter. For a real dispute, a takedown, a brand deal or a large contract, talk to a qualified lawyer where you live. The binding platform rules are Roblox's Terms of Use, Community Standards, the Creator Store terms and the Developer Exchange Terms of Use; read the current versions. **Minors** usually need a parent or guardian for contracts, licences and any legal process.

@@ -12,7 +12,7 @@ tags: [vfx, particles, particleemitter, flipbooks, performance]
 > - Brightness chosen by screen area; one dark contrast layer per bright stack.
 > - Bursts via `Emit` with your own quality scaling; streams capped.
 >
-> Read more (20 KB note): ## 2. Property reference with traps · ## 5. Motion recipes (studied packs) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.2k tok. Read more: ## 2. Property reference with traps · ## 5. Motion recipes (studied packs) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 `ParticleEmitter` is the workhorse of Roblox VFX: sparks, smoke, slash cards, ground rings, flashes, rain, auras and magic dust are all camera-facing (or velocity-aligned) textured quads with a few curves. It looks simple, and that is the danger: most of its properties have a non-obvious rule (which ones affect live particles, which only new ones, which are world space, which silently cap), and a professional-looking effect is almost always a stack of six to twenty tuned emitters rather than one clever one.

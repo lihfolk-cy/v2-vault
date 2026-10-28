@@ -9,7 +9,7 @@ tags: [authoring, animation-editor, curve-editor, ik, events, studio]
 > - Avoid: Converting with Euler rotation type on a shoulder-heavy clip and getting gimbal wobble that cannot be undone.
 > - Avoid: Running Optimize Keyframes and not re-checking contacts and big turns.
 >
-> Read more (17 KB note): ## 1. The Curve Editor · ## 2. Keyframe optimisation · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~4.3k tok. Read more: ## 1. The Curve Editor · ## 2. Keyframe optimisation · ## Common mistakes
 <!-- tldr:end -->
 
 The features beyond basic posing: the Curve Editor and `CurveAnimation`, keyframe optimisation, IK inside the editor, animation events and named keyframes, imports (including video capture), partial-body clips, and how what you see in the editor differs from what the engine plays. Read [[Animation Editor Workflow]] first.

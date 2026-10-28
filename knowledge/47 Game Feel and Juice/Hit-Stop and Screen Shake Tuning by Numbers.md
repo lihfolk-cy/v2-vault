@@ -12,7 +12,7 @@ tags: [game-feel, juice, hit-stop, camera-shake, tuning, combat, numbers, luau]
 > - Light tier produces no stop and no shake.
 > - One hit-stop per swing; trauma scales with log of target count.
 >
-> Read more (20 KB note): ## 4. What a shake looks like depends on FOV, not resolution · ## 7. A tuning module · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.2k tok. Read more: ## 4. What a shake looks like depends on FOV, not resolution · ## 7. A tuning module · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Hit Reactions Stagger and Hit-Stop]] explains how to build a hit-stop that does not desync from clock-timed effects, and [[Camera Shake and Camera FX]] gives a trauma shake with envelopes and caps. This note assumes both and answers the next question: **what numbers do you actually type in, and how do you know they are right?** It covers frame math at the frame rates Roblox players really run, a strength ladder that ties stop length and trauma to one value, budgets that stop flurries from grinding to a halt, how field of view and screen size change what a shake looks like, the aliasing trap on 30 fps phones, and a tuning workflow you can repeat.

@@ -12,7 +12,7 @@ tags: [pipeline, weapons, rigging, motor6d, import]
 > - Importer joints destroyed; materials restored.
 > - One Motor6D per hinge with C0 and C1 describing the same world frame.
 >
-> Read more (17 KB note): ## Route 1: the setup-script import · ## Route 2: your own Blender model (no setup script) · ## Grip placement gotchas · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.3k tok. Read more: ## Route 1: the setup-script import · ## Route 2: your own Blender model (no setup script) · ## Grip placement gotchas · ## Checklist
 <!-- tldr:end -->
 
 How one live action game turned an imported weapon model into an animatable "Design rig": a Handle-rooted Model with one Motor6D per hinge, everything else welded, and its own Idle and Special clips. Two routes are covered: the **setup-script route** (a GLB plus a script describing hinges, materials and per-frame animation) and the **own-Blender-model route** (meshes uploaded individually, placed from a parts JSON). The surrounding workflow is [[Pipeline - New Animated Weapon]]; the player that animates the result is [[Weapon Rig Player]]; general weapon rigging is in [[Custom Rigs - Weapons and Props]].

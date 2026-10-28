@@ -12,7 +12,7 @@ tags: [luau, modulescript, require, architecture, caching]
 > - No yields at module top level.
 > - No cycles; shared dependencies extracted.
 >
-> Read more (14 KB note): ## 2. Caching: once per VM · ## 7. The Source size limit and splitting modules · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~3.5k tok. Read more: ## 2. Caching: once per VM · ## 7. The Source size limit and splitting modules · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A `ModuleScript` is code that runs when something calls `require` on it and returns exactly one value, usually a table of functions. Modules are how Roblox code is shared and organized: one entry script per side requires a tree of modules. This note explains the caching rules (once per Luau VM, which is not "once per game"), require by instance and by string path, cyclic requires, yielding in modules, initialization order, the 200,000-character Source limit and how to split large modules safely, and how to test edits when `require` hands you a cached copy.

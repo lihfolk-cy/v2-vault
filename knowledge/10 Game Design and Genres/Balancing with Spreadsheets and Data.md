@@ -12,7 +12,7 @@ tags: [game-design, balancing, spreadsheets, economy, simulation, analytics]
 > - Minutes-per-step plotted; spikes flagged automatically.
 > - Prices expressed as minutes of income at the unlocking zone.
 >
-> Read more (17 KB note): ## 4. Odds and rarity maths · ## 7. Simulate the randomness · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.4k tok. Read more: ## 4. Odds and rarity maths · ## 7. Simulate the randomness · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 Balancing is turning design intent ("zone 5 should take about ten minutes", "a Mythic should feel twice as strong as a Legendary") into numbers, then checking those numbers against what real players do. The spreadsheet is where intent becomes numbers; simulation checks the randomness; live analytics checks the players. This note shows how to lay out a balance sheet for a Roblox game, the formulas that matter (curves, time per step, expected value, odds, power fits), how to simulate RNG in Luau, and how to close the loop with live data.

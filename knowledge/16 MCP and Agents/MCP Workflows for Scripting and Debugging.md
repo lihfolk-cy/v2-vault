@@ -12,7 +12,7 @@ tags: [mcp, agents, scripting, debugging, luau, workflow]
 > - One focused edit.
 > - Gate: compile, use-before-definition, size, clone-require.
 >
-> Read more (18 KB note): ## 2. The save gate · ## Nuances and edge cases · ## 8. Common mistakes · ## 9. Checklist for an agent scripting change
+> Cost: TL;DR ~110 tok · whole note ~4.6k tok. Read more: ## 2. The save gate · ## Nuances and edge cases · ## 8. Common mistakes · ## 9. Checklist for an agent scripting change
 <!-- tldr:end -->
 
 Writing Luau is the part of game development AI agents do best, and the part where an agent connected to Studio has the biggest advantage over one that only sees text: it can grep every script in the place, read the real current source before editing, compile its edit, run checks in Edit mode, and read the Output. It can also confidently overwrite another person's change, save a script that compiles but crashes on load, or "verify" a fix against a stale cached module. This note is the method for agent scripting through MCP that kept a large production codebase working.

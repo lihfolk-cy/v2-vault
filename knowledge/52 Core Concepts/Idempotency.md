@@ -10,7 +10,7 @@ tags: [core-concept, data, purchases, reliability, security]
 > - The key must be saved in the same write as the effect.
 > - The ledger must be bounded. A list of every PurchaseId forever grows without limit.
 >
-> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~970 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 An operation is **idempotent** when running it twice has the same effect as running it once. "Grant purchase 7f3a" is idempotent if the second call notices the purchase was already granted and does nothing. "Add 100 gems" is not.

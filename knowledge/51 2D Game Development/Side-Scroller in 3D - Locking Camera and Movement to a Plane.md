@@ -12,7 +12,7 @@ tags: [2d, 2.5d, side-scroller, camera, movement, platformer, physics, constrain
 > - Camera is `Scriptable`, re-asserted after respawn, updated at `RenderPriority.Camera`, and sets `Focus`.
 > - FOV chosen deliberately; distance computed from the visible height; a 4:3 safe column respected.
 >
-> Read more (29 KB note): ## 2. The camera lock · ## 5. Complete setup · ## 9. Common mistakes and how to spot them · ## 10. Checklist
+> Cost: TL;DR ~230 tok · whole note ~7.4k tok. Read more: ## 2. The camera lock · ## 5. Complete setup · ## 9. Common mistakes and how to spot them · ## 10. Checklist
 <!-- tldr:end -->
 
 A 2.5D side-scroller is a normal Roblox 3D place in which the camera looks at the world from the side and every moving thing is kept on one flat slice of the world. You keep almost everything the engine gives you for free: Humanoid physics and animation, avatars, lighting, particles, sound, streaming, replication, and Studio's level editing tools. You give up the guarantee that "nothing moves in depth", and the whole craft of this style is putting that guarantee back. This note covers the three locks you need (camera, input, body), how to choose each one, how they fail, and a complete working setup.

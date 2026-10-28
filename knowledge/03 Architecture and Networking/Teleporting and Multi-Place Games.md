@@ -12,7 +12,7 @@ tags: [architecture, networking, teleport, multi-place, security, matchmaking]
 > - Teleport data contains no value; tickets live in MemoryStore or DataStore.
 > - Destination servers validate `SourcePlaceId`, membership, and default-deny.
 >
-> Read more (19 KB note): ## Teleport data: what you may trust · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.8k tok. Read more: ## Teleport data: what you may trust · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 An experience (universe) can contain many **places**: a lobby, dungeons, arenas, a trading hub, event maps. `TeleportService` moves players between places, between servers of the same place, and into **reserved servers** that only your code can send people to. Multi-place design keeps each server's memory small, lets you build instanced content (a private dungeon run, a ranked match), and separates risky features. It also introduces failure modes that do not exist in a single place: teleports that fail halfway, data that must survive the hop, a client that tells the destination lies, and sub-places that players can enter directly if you configure access wrongly. This note covers all of it with the documented rules.

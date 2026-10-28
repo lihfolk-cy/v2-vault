@@ -9,7 +9,7 @@ tags: [reference, glossary]
 > - Avoid: Calling a stub an animation. Symptom: a stub plays nothing through the engine.
 > - Avoid: Confusing IKControl with a baked IK clip.
 >
-> Read more (12 KB note): ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~3.0k tok. Read more: ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 | Term | Meaning | Read more |

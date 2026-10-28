@@ -12,7 +12,7 @@ tags: [data, datastore, persistence, limits, fundamentals]
 > - Player data is written only through one module, with `UpdateAsync` and a session lock.
 > - Load failure and "new player" are different code paths.
 >
-> Read more (21 KB note): ## UpdateAsync, precisely · ## Limits (Roblox docs, as of October 2026) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.4k tok. Read more: ## UpdateAsync, precisely · ## Limits (Roblox docs, as of October 2026) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 `DataStoreService` is the only durable, cross-server storage built into the engine. Everything a player expects to still exist tomorrow (currency, inventory, settings, purchase history) ends up in a data store. This note explains what a data store actually is, the exact limits and budgets it enforces (as of October 2026), how the 4 second read cache works and bites, how versioning gives you free backups, and which API to call for which job. The rest of this folder builds on it: [[Session Locking and Profile Libraries]], [[Saving Correctly - Autosave and BindToClose]], [[Data Schema Design and Migrations]].

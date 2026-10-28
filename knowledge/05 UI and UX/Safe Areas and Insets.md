@@ -12,7 +12,7 @@ tags: [ui, safe-area, screeninsets, topbar, notch, mobile]
 > - `SafeAreaCompatibility = None` on new guis.
 > - Edge-to-edge art lives in a separate `None` gui, skipped by scalers.
 >
-> Read more (14 KB note): ## 7. Case study: the letterbox that would not reach the edge · ## 9. Aligning your own buttons with the top bar · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.7k tok. Read more: ## 7. Case study: the letterbox that would not reach the edge · ## 9. Aligning your own buttons with the top bar · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A phone screen is not a rectangle you fully own. Camera notches, rounded corners and home indicators cut into it, and on every device Roblox's own top bar (menu, chat and other controls) sits in the top-left. Roblox gives each `ScreenGui` a choice of which of these to avoid. Pick wrong and either your buttons hide under a notch, or your full-screen backgrounds and cinematic bars stop short of the edge with a gap the game world shows through.

@@ -12,7 +12,7 @@ tags: [modeling, blender, workflow, modifiers, export, python]
 > - Character proxy and 1-stud grid in the scene.
 > - Front toward -Y; origin placed per asset type.
 >
-> Read more (22 KB note): ## 1. Scene setup once, saved as your startup file · ## 3. Modifiers: non-destructive modelling · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~5.6k tok. Read more: ## 1. Scene setup once, saved as your startup file · ## 3. Modifiers: non-destructive modelling · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Blender is the default modelling tool for Roblox creators: free, scriptable, and the one Roblox's own guides are written for. This note is a working setup and a modifier-by-modifier guide for building game meshes that arrive in Studio at the right size, facing the right way, with the right pivots and shading. It goes deeper than the overview in [[Modeling in Blender for Roblox]], and it stops at the mesh: unwrapping, texturing and export validation have their own notes ([[UV Unwrapping]], [[Texturing and PBR Baking]], [[Exporting and Validating Models for Roblox]]). Rigging is in the Animation section ([[Rigging in Blender]]).

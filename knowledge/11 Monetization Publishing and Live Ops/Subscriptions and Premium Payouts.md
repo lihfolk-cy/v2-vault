@@ -12,7 +12,7 @@ tags: [monetization, subscriptions, roblox-plus, creator-rewards, premium, luau]
 > - Status cached server-side; `UserSubscriptionStatusChanged` handled
 > - Daily stipend idempotent per UTC day
 >
-> Read more (16 KB note): ## 1. Experience subscriptions · ## 2. Roblox Plus (the platform subscription) · ## 5. Common mistakes · ## 6. Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.0k tok. Read more: ## 1. Experience subscriptions · ## 2. Roblox Plus (the platform subscription) · ## 5. Common mistakes · ## 6. Checklist
 <!-- tldr:end -->
 
 Recurring revenue on Roblox now comes from three different places, and their names are easy to confuse:

@@ -9,7 +9,7 @@ tags: [authoring, code, specs, ik, baking, combat]
 > - Avoid: Overhead straight to drive -> chop key
 > - Avoid: Deep root drops -> y >= -1.0 at scale 1
 >
-> Read more (18 KB note): ## The shared pose library (speclib) · ## The baker · ## Common mistakes
+> Cost: TL;DR ~90 tok · whole note ~4.5k tok. Read more: ## The shared pose library (speclib) · ## The baker · ## Common mistakes
 <!-- tldr:end -->
 
 Instead of keying every joint, describe each move as a handful of **key poses of what matters**: where the sword hand is, which way the blade points and its edge faces, where the off hand goes, where the feet stand, how the root leans and turns, and when the gameplay beats happen. A baker then solves the arms and legs with IK at dense in-between times and fits the result back into a compact `KeyframeSequence`.

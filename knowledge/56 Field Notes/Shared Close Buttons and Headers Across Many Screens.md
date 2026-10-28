@@ -1,3 +1,8 @@
+---
+tags: [field-notes, ui, close-button, layout, clipsdescendants, attributes, design-system]
+---
+# Shared Close Buttons and Headers Across Many Screens
+
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - X sizes vary panel to panel: Built by hand per panel -> One helper, sized from the header
@@ -7,13 +12,8 @@
 > - X is square, about 1.1 times the header height, anchored (1, 1) at the header's bottom-right.
 > - Overhang recomputed when the header resizes.
 >
-> Read more (6 KB note): ## 1. Size and place the X relative to the header · ## 3. One helper, applied everywhere, undoable · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~1.6k tok. Read more: ## 1. Size and place the X relative to the header · ## 3. One helper, applied everywhere, undoable · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
----
-tags: [field-notes, ui, close-button, layout, clipsdescendants, attributes, design-system]
----
-# Shared Close Buttons and Headers Across Many Screens
 
 A game with thirty panels built by different people (and different agents) ends up with thirty close buttons: different sizes, some inside the header, some floating at the corner, some half cut off. Players notice inconsistency in the X more than almost anything else, because they use it on every screen. The fix that held up is one shared helper that builds or normalises the X relative to the header, plus attributes that make the change undoable. Layout rules are in [[Layout - Scale Offset and Constraints]]; design systems in [[UI Design Systems]].
 

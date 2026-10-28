@@ -12,7 +12,7 @@ tags: [field-notes, input, contextactionservice, combat, stamina, gamepad, luau]
 > - Held state cleared on End, Cancel, `WindowFocusReleased`, death and menu open.
 > - Polled button state checked inside the loop.
 >
-> Read more (7 KB note): ## 1. Track held state from Begin and End, loop through the normal gates · ## 2. The stuck-held cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~1.7k tok. Read more: ## 1. Track held state from Begin and End, loop through the normal gates · ## 2. The stuck-held cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Players expect to hold the attack button and keep swinging. Implementing that is a dozen lines; implementing it so the attack never gets stuck "on" after an alt-tab, never bypasses the stamina or pacing rules, and never spams "not enough stamina" twenty times a second takes a little more thought. This note gives a pattern that held up in a shipped melee game. Input APIs are in [[Input - UserInputService and ContextActionService]]; buffering in [[Input Responsiveness Buffering and Coyote Time]].

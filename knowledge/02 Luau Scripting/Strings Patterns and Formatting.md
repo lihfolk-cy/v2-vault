@@ -12,7 +12,7 @@ tags: [luau, strings, patterns, formatting, utf8, text]
 > - Length limits count code points, not bytes, where users see them.
 > - Numbers shown to players go through formatters.
 >
-> Read more (19 KB note): ## 4. Patterns · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~5.0k tok. Read more: ## 4. Patterns · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Strings in Luau are immutable sequences of **bytes**. That one fact explains most string bugs in Roblox games: `#` counts bytes, not letters; `string.sub` can cut an emoji in half; `string.upper` does not know accented letters. This note covers the string library, interpolation and `string.format`, Lua patterns (which are not regular expressions), UTF-8 handling, number and time formatting for UI, building strings efficiently, parsing, and the platform rules around user text.

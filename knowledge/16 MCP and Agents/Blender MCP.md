@@ -12,7 +12,7 @@ tags: [mcp, blender, ai, agents, modeling, pipeline]
 > - Working on a copy of the .blend, or the file is under version control.
 > - The agent inspects before editing and returns dicts.
 >
-> Read more (15 KB note): ## 2. Architecture and why it matters · ## 3. The tools (official server) · ## 7. Failure modes · ## 8. Checklist
+> Cost: TL;DR ~190 tok · whole note ~3.9k tok. Read more: ## 2. Architecture and why it matters · ## 3. The tools (official server) · ## 7. Failure modes · ## 8. Checklist
 <!-- tldr:end -->
 
 A Blender MCP server lets an AI agent inspect and change a running Blender: list collections and objects, read mesh and material details, run `bpy` Python, take screenshots of the window, render thumbnails and viewport images, and search the Blender API and manual. Combined with the [[Roblox Studio MCP Server]] in the same host, one agent can model a prop, render its icon, export it, and wire it into the game, with a human only doing the steps the tools cannot (importing a file into Studio, approving uploads).

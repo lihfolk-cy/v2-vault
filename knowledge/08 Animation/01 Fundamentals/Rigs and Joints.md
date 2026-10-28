@@ -9,7 +9,7 @@ tags: [fundamentals, rigging, motor6d, joints]
 > - Avoid: `IsA("Motor6D")` only -> Accept AnimationConstraint
 > - Avoid: Animating `C0` every frame -> Write `Transform` in PreSimulation
 >
-> Read more (16 KB note): ## The three animatable joints · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~4.1k tok. Read more: ## The three animatable joints · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 An animation never moves parts directly. It writes a local offset into **joints**, and the joints position the parts. So the first question about any rig is: what kind of joints does it have, what are they named, and which part is the parent of which? Get that wrong and clips play silently with nothing moving, or move the wrong limb, or work on your test dummy and break on players.

@@ -12,7 +12,7 @@ tags: [case-study, top-games, dress-up, rounds, voting, collaborations, live-ops
 > - A no-timer Freeplay mode exists.
 > - Item browsing is virtualised and fast on phones.
 >
-> Read more (18 KB note): ## 1. Snapshot · ## 6. What to copy and what not to copy · ## Checklist
+> Cost: TL;DR ~120 tok · whole note ~4.6k tok. Read more: ## 1. Snapshot · ## 6. What to copy and what not to copy · ## Checklist
 <!-- tldr:end -->
 
 Dress to Impress (DTI) took a very old game format (a themed dress-up contest judged by other players) and made it one of the most played experiences on Roblox within a year of launch. It is the best recent proof that a **short, round-based social loop with player voting** can beat bigger, more complex games, and that **story events and brand collaborations** can keep a simple loop fresh. It is also a lesson in volatility: its player count rose fast and fell a long way, so study both halves.

@@ -12,7 +12,7 @@ tags: [pipelines, ui, design-system, automation, audits, mobile]
 > - Painters idempotent (reuse their own children)
 > - Builders bake the static StarterGui copy; layout version attribute
 >
-> Read more (14 KB note): ## Stage 1: tokens · ## Stage 5: automated audits · ## Failure modes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~3.5k tok. Read more: ## Stage 1: tokens · ## Stage 5: automated audits · ## Failure modes · ## Checklist
 <!-- tldr:end -->
 
 Roblox UI is built from instances: ScreenGuis, Frames, ImageLabels, UIStrokes, UIGradients, layout objects. In most games those instances are edited by hand in StarterGui, restyled by hand, and then patched at runtime by scripts that "fix" them. After a few months the saved copy in StarterGui, the runtime copy on a player's screen and the designer's intent are three different things, and every restyle breaks something on phones.

@@ -9,7 +9,7 @@ tags: [snippets, luau, controller, state-machine, architecture]
 > - Avoid: Choosing gaits without hysteresis.
 > - Avoid: `AdjustSpeed` every frame on a replicated character (network noise).
 >
-> Read more (25 KB note): ## 2. The module · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~90 tok · whole note ~6.5k tok. Read more: ## 2. The module · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 A complete, typed animation controller for a character or NPC: locomotion chosen by speed with hysteresis and phase-kept crossfades, playback rate matched to ground speed, idle fidgets that never repeat twice running, fall and land, one-shot actions with priority-based interruption, marker hooks, **step-aside flags** that let other systems take the body without fighting, and full cleanup.

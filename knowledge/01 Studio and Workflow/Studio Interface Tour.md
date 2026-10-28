@@ -12,7 +12,7 @@ tags: [studio, interface, workflow, beginner, layout]
 > - Team custom tab JSON copied into `CustomRibbonTabs`; Reload custom tabs.
 > - Output: Show Context and Show Source on.
 >
-> Read more (18 KB note): ## 2. The top of the window: mezzanine and toolbar · ## 4. The windows you will use every day · ## 9. Common mistakes · ## 10. Checklist: a new machine, ready in fifteen minutes
+> Cost: TL;DR ~170 tok · whole note ~4.5k tok. Read more: ## 2. The top of the window: mezzanine and toolbar · ## 4. The windows you will use every day · ## 9. Common mistakes · ## 10. Checklist: a new machine, ready in fifteen minutes
 <!-- tldr:end -->
 
 Roblox Studio is an editor, a test harness, a collaboration client, an asset browser and a script IDE in one window. This note walks the interface the way a senior developer uses it: what each region is for, which data model you are looking at, how to lay it out for different jobs, and the traps that make experienced people lose work. Menu paths and shortcuts were checked against the official Studio docs as of October 2026. Studio updates weekly, so labels drift; where a feature is beta it says so.

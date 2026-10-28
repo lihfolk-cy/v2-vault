@@ -12,7 +12,7 @@ tags: [gameplay, camera, cutscene, aiming, renderstep]
 > - Additive effects never drift and end at zero.
 > - Cutscenes save and restore type, subject, FOV and GUI, with a watchdog.
 >
-> Read more (14 KB note): ## 2. The frame: where camera code must run · ## 5. Cinematic takeovers · ## 8. Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.5k tok. Read more: ## 2. The frame: where camera code must run · ## 5. Cinematic takeovers · ## 8. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The camera is the player's eyes and the system most likely to make a game feel cheap or nauseating. Roblox gives you a capable default (the `CameraModule` inside `PlayerModule`) and a raw `Camera` object you can take over completely. This note explains how the camera is updated each frame, the API that matters, how to layer effects on the default camera without breaking it, how to build custom cameras (over-the-shoulder, top-down, lock-on) and cinematic takeovers, and the comfort rules.

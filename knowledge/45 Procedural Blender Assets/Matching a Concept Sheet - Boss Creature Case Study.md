@@ -12,7 +12,7 @@ tags: [blender, creature, concept, rigging, case-study, low-poly]
 > - Main mass is one box-modelled surface, not stacked primitives.
 > - Appendages grown out of the mass (extrusion), not floated next to it.
 >
-> Read more (9 KB note): ## What worked: the vault workflow, done in code · ## Nuances and edge cases · ## Transferable checklist · ## Common mistakes
+> Cost: TL;DR ~180 tok · whole note ~2.4k tok. Read more: ## What worked: the vault workflow, done in code · ## Nuances and edge cases · ## Transferable checklist · ## Common mistakes
 <!-- tldr:end -->
 
 ![[p45_void_owl_front.png]]

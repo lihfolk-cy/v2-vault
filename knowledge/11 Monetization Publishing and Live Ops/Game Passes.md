@@ -12,7 +12,7 @@ tags: [monetization, game-passes, marketplaceservice, luau]
 > - One server ownership cache, updated on join and on purchase
 > - Unknown ownership retried, not stored as false
 >
-> Read more (15 KB note): ## 3. Server code · ## 5. Designing a pass lineup · ## 7. Common mistakes · ## 8. Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.9k tok. Read more: ## 3. Server code · ## 5. Designing a pass lineup · ## 7. Common mistakes · ## 8. Checklist
 <!-- tldr:end -->
 
 A pass is a one-time Robux purchase that grants a permanent privilege: a multiplier, an area, a tool, a tag. This note covers how passes work, how to check ownership correctly (including the cases where the obvious check returns the wrong answer), how to grant in-session, and how to design a pass lineup. Facts verified against the Creator Hub "Passes" guide and the `MarketplaceService` reference **as of October 2026**.

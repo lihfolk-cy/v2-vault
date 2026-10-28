@@ -12,7 +12,7 @@ tags: [modeling, shape-language, silhouette, readability, art-direction, blender
 > - One dominant shape family plus one accent family.
 > - Straight against curve on the main masses.
 >
-> Read more (19 KB note): ## Worked example: a silhouette sheet in Blender · ## Worked example: a silhouette mode inside Studio · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~210 tok · whole note ~4.7k tok. Read more: ## Worked example: a silhouette sheet in Blender · ## Worked example: a silhouette mode inside Studio · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Low-Poly and Stylized Modeling]] gives the one-line version of shape language (circles friendly, squares stable, triangles dangerous) and [[Modeling Fundamentals for Games]] gives the black silhouette test. This note goes past both. It covers how to build a shape hierarchy that survives a phone screen, how negative space and tangents make or break a silhouette, why one silhouette test is not enough on Roblox (the camera looks down, not across), how to test a whole roster at once instead of one model at a time, and how to run the test inside Studio under the game's real lighting. The focus is non-hand-painted art, where the silhouette and the big colour shapes are almost the whole look, because there is no painted detail to rescue a weak shape.

@@ -12,7 +12,7 @@ tags: [luau, scripting, language, fundamentals, syntax]
 > - No globals except intentional `_G`/`shared` (and prefer neither).
 > - No deprecated `wait`/`spawn`/`delay`/`tick`.
 >
-> Read more (16 KB note): ## 2. Variables and scope · ## 3. Compiler limits that big scripts hit · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~4.1k tok. Read more: ## 2. Variables and scope · ## 3. Compiler limits that big scripts hit · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Luau is the language every Roblox script is written in. It started as Lua 5.1 and has grown into its own language: gradual types, a faster VM, native code generation, new syntax (compound assignment, `continue`, if-expressions, string interpolation, generalized iteration, floor division, `const`), new libraries (`buffer`, `vector`, extended `math`, `table` and `string`), and a sandbox that removes file and OS access. This note is the language foundation the rest of the section builds on. It covers values, scope, operators, control flow and the compiler limits that bite big codebases, with the cases where Lua habits or "obvious" answers are wrong.

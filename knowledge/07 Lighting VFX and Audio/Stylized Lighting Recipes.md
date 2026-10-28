@@ -12,7 +12,7 @@ tags: [lighting, stylized, recipes, mood, post-processing, atmosphere, art-direc
 > - Each zone has a named recipe stored as data.
 > - Greyscale test passed: characters, enemies, pickups and paths are distinct values.
 >
-> Read more (24 KB note): ## 3. The recipes · ## 4. Recipes as data · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~6.0k tok. Read more: ## 3. The recipes · ## 4. Recipes as data · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The other lighting notes explain the machinery: [[Lighting Technologies and Settings]] for every global property and its trap, [[Atmosphere Sky Clouds and Post-Processing]] for air, sky and screen effects, [[Light Sources and Shadows]] for local lights, and [[Lighting Mood and Time of Day]] for clocks and zone blending. This note is the cookbook: complete, numbered starting points for the stylised looks Roblox games actually ship (bright cartoon, toon arena, golden hour, readable night, neon city, fog horror, underwater, crystal cave, lava, frost, void), the reasoning behind each number, and the ways each recipe breaks.

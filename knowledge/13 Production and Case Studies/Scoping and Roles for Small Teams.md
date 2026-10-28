@@ -12,7 +12,7 @@ tags: [production, scope, team, capacity, payouts, contractors, permissions, pla
 > - Every feature estimated as a range; integration and testing added.
 > - Total compared with capacity; cuts decided and recorded.
 >
-> Read more (16 KB note): ## 1. Capacity: the number nobody writes down · ## 5. Money and access on Roblox · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.0k tok. Read more: ## 1. Capacity: the number nobody writes down · ## 5. Money and access on Roblox · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Planning and Scoping a Roblox Game]] covers counting content, phase gates and scope reversals. [[Team Roles and Workflows]] covers the role table, ownership maps and the daily loop. This note covers what sits between them for teams of one to six people: turning available hours into a scope that fits, the team shapes that work at each size, who decides what, how money and access are handled on Roblox, and how to work with contractors without losing control of your game.

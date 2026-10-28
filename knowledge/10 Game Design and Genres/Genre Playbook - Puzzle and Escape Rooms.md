@@ -12,7 +12,7 @@ tags: [game-design, genre, puzzle, escape-room, co-op, hints, level-design, stat
 > - Answers and puzzle logic only on the server; guesses rate-limited and distance-checked.
 > - Group state synchronised; late joiners receive current state.
 >
-> Read more (14 KB note): ## 3. Puzzle design rules · ## 5. Systems you must build · ## 10. Common mistakes · ## 11. Launch checklist
+> Cost: TL;DR ~150 tok · whole note ~3.7k tok. Read more: ## 3. Puzzle design rules · ## 5. Systems you must build · ## 10. Common mistakes · ## 11. Launch checklist
 <!-- tldr:end -->
 
 Puzzle games on Roblox include escape rooms (find clues, solve locks, open the door before the timer runs out), co-op puzzle adventures (two or more players with separate abilities or separate views), physics puzzles, logic puzzles with a progression map, and story games where puzzles gate the plot. The genre has a smaller audience than simulators or combat, but it is loyal, social and less crowded, and it is one of the few genres where a small team with good ideas can compete with big studios, because the content is ideas rather than assets.

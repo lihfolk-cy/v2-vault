@@ -12,7 +12,7 @@ tags: [careers, portfolio, freelancing, job-search, showcase, minors]
 > - Each piece: context, your role, problem, approach, numbers, media, lessons.
 > - Discipline-specific evidence (budgets, wireframes, code, flows, reels).
 >
-> Read more (13 KB note): ## 2. Format and where to host it · ## 3. By discipline: what to show · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.4k tok. Read more: ## 2. Format and where to host it · ## 3. By discipline: what to show · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 > **Not advice.** General career information. It is not legal or financial advice; job markets, contracts and working-age rules differ by country. If you are under 18, involve a parent or guardian before taking paid work or signing anything, and keep your personal information private.

@@ -12,7 +12,7 @@ tags: [mcp, agents, safety, rules, studio, workflow]
 > - Correct Studio and place id selected.
 > - Studio in Edit; nobody's test interrupted.
 >
-> Read more (13 KB note): ## 1. Edit mode only · ## 9. Assets: never invent, never trust blindly · ## Common mistakes · ## Checklist: start of every agent session
+> Cost: TL;DR ~120 tok · whole note ~3.3k tok. Read more: ## 1. Edit mode only · ## 9. Assets: never invent, never trust blindly · ## Common mistakes · ## Checklist: start of every agent session
 <!-- tldr:end -->
 
 An AI agent with the [[Roblox Studio MCP Server]] has the same power over your place as you do at the command bar, at a much higher speed, with less context about what else is going on. Most agent disasters are not exotic: a long call freezes Studio, an undo rolls back somebody else's afternoon, a "cleanup" deletes something referenced by a string, a stale module makes a broken fix look correct. Every rule below exists because the reference project (a production game built mostly by agents, often several at once in one Studio) hit the failure first.

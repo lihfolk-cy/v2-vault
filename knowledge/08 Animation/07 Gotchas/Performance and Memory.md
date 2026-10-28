@@ -12,7 +12,7 @@ tags: [performance, memory, budgets, gotchas]
 > - Tracks cached per Animator; marker connections bounded.
 > - One shared update loop for Lua players and procedural motion.
 >
-> Read more (14 KB note): ## 1. Instance counts: the hidden cost · ## 3. Per-frame CPU · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.6k tok. Read more: ## 1. Instance counts: the hidden cost · ## 3. Per-frame CPU · ## Checklist
 <!-- tldr:end -->
 
 Animation costs you in three places, and they need different fixes:

@@ -12,7 +12,7 @@ tags: [import, rigging, studio, pipeline, prepare]
 > - Imported clips renamed, moved, axis-fixed, markers added.
 > - Pristine import kept somewhere outside the live hierarchy until verified, then removed.
 >
-> Read more (17 KB note): ## 1. Three routes into Studio · ## 4. The prepare step · ## 7. Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.3k tok. Read more: ## 1. Three routes into Studio · ## 4. The prepare step · ## 7. Checklist
 <!-- tldr:end -->
 
 Getting a model into Studio takes one click. Getting it into a state where it animates, faces the right way, sits on the ground, survives being cloned by a spawner and can be rebuilt next week takes a pipeline. This note is that pipeline: the routes in, how to find what you imported, how to validate it, and the idempotent "prepare" step that turns a raw import into a game-ready rig. Option-by-option importer details are in [[3D Importer Settings Reference]].

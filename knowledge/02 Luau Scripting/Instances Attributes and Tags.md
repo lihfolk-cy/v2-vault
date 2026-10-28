@@ -12,7 +12,7 @@ tags: [luau, instances, attributes, tags, datamodel, replication]
 > - `Destroy` objects you are done with; pools use `Parent = nil` intentionally.
 > - Lookups that expect a class check `IsA`.
 >
-> Read more (15 KB note): ## 2. Finding instances · ## 3. Attributes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.0k tok. Read more: ## 2. Finding instances · ## 3. Attributes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Everything in a Roblox place is an `Instance` in one tree, the DataModel (`game`). Scripts create, find, clone, configure and destroy instances, and they attach their own data with **attributes** (typed key-value pairs) and **tags** (string labels). This note covers the instance lifecycle and lookup methods, the traps in naming and lookup, attributes (types, limits, replication, change signals, when they cause lag), tags, and how to choose between attributes, Value objects, tags and plain Luau tables.

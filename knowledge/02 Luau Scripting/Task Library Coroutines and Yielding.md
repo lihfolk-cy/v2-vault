@@ -12,7 +12,7 @@ tags: [luau, task, coroutines, scheduler, yielding, threads]
 > - Every loop is bounded or yields each iteration.
 > - Per-frame work uses the correct RunService event and is disconnectable.
 >
-> Read more (14 KB note): ## 3. Coroutines · ## 5. Loops that run forever · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.7k tok. Read more: ## 3. Coroutines · ## 5. Loops that run forever · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox runs all Luau on one main thread per VM, cooperatively. A script runs until it **yields** (waits for something) or returns; then the engine's task scheduler resumes some other thread. There is no preemption: a loop that never yields freezes the whole client or server. The `task` library is how you talk to the scheduler; the `coroutine` library is the lower-level primitive underneath. This note explains both, how they interact with the frame, the deprecated globals they replace, how to cancel work, and the freeze and leak failure modes.

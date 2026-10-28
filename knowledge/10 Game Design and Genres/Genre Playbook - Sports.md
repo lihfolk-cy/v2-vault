@@ -12,7 +12,7 @@ tags: [game-design, genre, sports, ball-physics, teams, network-ownership, compe
 > - Two-client tests at 50, 150 and 250 ms for passing, shooting and stealing.
 > - Goal and out-of-bounds decisions server-side; no premature "GOAL" banners.
 >
-> Read more (15 KB note): ## 3. The ball problem · ## 5. Systems you must build · ## 9. Common mistakes · ## 10. Launch checklist
+> Cost: TL;DR ~170 tok · whole note ~3.9k tok. Read more: ## 3. The ball problem · ## 5. Systems you must build · ## 9. Common mistakes · ## 10. Launch checklist
 <!-- tldr:end -->
 
 Sports games on Roblox cover team ball sports (soccer, basketball, volleyball, hockey, American football, dodgeball), individual sports (golf, tennis, bowling, skating), extreme sports (skate parks, parkour), and arcade sports with powers and abilities. They range from casual "kick the ball around" hangouts to competitive leagues with ranked play and community tournaments. The audience is large and social, and the best sports games become places where friends meet to play a game they already know.

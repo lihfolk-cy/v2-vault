@@ -12,7 +12,7 @@ tags: [marketing, growth, video, short-form, share-links, content-creators, capt
 > - UI hide toggle and free camera for clean shots
 > - Hook in the first 1 to 2 seconds; text in the safe middle area
 >
-> Read more (16 KB note): ## 3. Capturing clean footage in Studio · ## 4. Share links and attribution · ## 9. Common mistakes · ## 10. Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.0k tok. Read more: ## 3. Capturing clean footage in Studio · ## 4. Share links and attribution · ## 9. Common mistakes · ## 10. Checklist
 <!-- tldr:end -->
 
 Short vertical video (the 15 to 60 second clips on the big video and social apps) is the cheapest way for a small Roblox team to reach players outside Roblox. It is also the channel with the most ways to go wrong: audiences that skew young, platform rules about children, Roblox's own rules about pointing players off-platform, and a format that rewards exaggeration in ways that hurt a game's real metrics.

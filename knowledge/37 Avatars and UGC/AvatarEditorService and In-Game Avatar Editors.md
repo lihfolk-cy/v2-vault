@@ -12,7 +12,7 @@ tags: [avatars, ugc, avatar-editor, avatareditorservice, humanoiddescription, ca
 > - Every `Async` getter is in `pcall`; every prompt waits on its `*Completed` event.
 > - Inventory permission requested only when needed; declined handled gracefully.
 >
-> Read more (22 KB note): ## 3. Catalog browsing on the client · ## 4. Try-on: the server decides · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.6k tok. Read more: ## 3. Catalog browsing on the client · ## 4. Try-on: the server decides · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 An in-game avatar editor is one of the most requested features in hangout, roleplay and fashion games, and one of the easiest to build badly. The obvious version (a grid of catalog items, click to wear, a "Save" button) hides four separate systems: catalog browsing, server-side try-on, platform saving, and commerce. Each has its own permission model, failure modes and trust boundary. This note goes past the basics in [[UGC Avatar Items and Accessories]] and [[HumanoidDescription and Outfit Systems]] and covers how `AvatarEditorService` actually behaves, how to split work between client and server, and the edge cases that turn a pretty editor into a support queue.

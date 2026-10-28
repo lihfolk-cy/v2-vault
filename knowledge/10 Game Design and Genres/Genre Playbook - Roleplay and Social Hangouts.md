@@ -12,7 +12,7 @@ tags: [game-design, genre, roleplay, hangout, social, expression, safety]
 > - Expression tools: outfits, emotes, props, houses, vehicles, camera mode.
 > - Non-chat communication for everyone.
 >
-> Read more (13 KB note): ## 5. Houses and permissions · ## 7. Safety: the core of the genre · ## 11. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.3k tok. Read more: ## 5. Houses and permissions · ## 7. Safety: the core of the genre · ## 11. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 Roleplay (RP) towns, life games, pet-raising worlds and hangouts are among the most played experiences on Roblox, and they break most rules in this folder: they have weak or no core loops in the usual sense, little progression, and almost no failure. What they offer instead is a **stage**: places, props, outfits, vehicles, houses and roles that players use to make their own stories with friends. The docs list Roleplaying and Customization among the platform's common genres and cite an RP town's hide-the-UI "Creator Cam" as a feature built for content creators (Docs, "Design for Roblox"). This playbook covers what makes a good stage, expression tools, the light systems that support RP, server and performance design, and the safety work these genres demand.

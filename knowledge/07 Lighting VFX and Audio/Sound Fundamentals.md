@@ -12,7 +12,7 @@ tags: [audio, sound, soundgroup, assets, loudness]
 > - Forbidden or removed ids listed.
 > - Bus tree with settings sliders wired to buses.
 >
-> Read more (14 KB note): ## 2. The `Sound` object · ## 6. Measuring loudness · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.6k tok. Read more: ## 2. The `Sound` object · ## 6. Measuring loudness · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox has two audio systems side by side. The classic one is the `Sound` object (with `SoundGroup` mixers and `SoundEffect` children), which every tutorial and most existing games use. The newer one is the modular audio API (`AudioPlayer`, `AudioEmitter`, `AudioListener`, `AudioDeviceOutput`, `Wire` and effect objects), which the docs now recommend: "`Sound`, `SoundGroup`, and `SoundEffect` objects are now discouraged in favor of the more robust functionality of audio objects" (Docs, October 2026). Both work today, and you will meet both.

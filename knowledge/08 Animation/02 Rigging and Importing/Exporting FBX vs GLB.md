@@ -12,7 +12,7 @@ tags: [export, blender, fbx, gltf, glb, import]
 > - Faces -Y, final stud height, feet on Z = 0.
 > - Weights limited to 4 and normalised; no zero-weight vertices.
 >
-> Read more (14 KB note): ## 3. GLB export: settings and the reasons for them · ## 4. FBX export: settings and the reasons for them · ## 7. Pre-export checklist · ## Common mistakes
+> Cost: TL;DR ~140 tok · whole note ~3.6k tok. Read more: ## 3. GLB export: settings and the reasons for them · ## 4. FBX export: settings and the reasons for them · ## 7. Pre-export checklist · ## Common mistakes
 <!-- tldr:end -->
 
 Studio's 3D Importer reads `.fbx`, `.gltf` / `.glb` and `.obj` (Roblox docs). FBX and glTF both carry multiple meshes, PBR textures, cage meshes, rigs, avatar components, animation data and vertex colours. So the choice is not "which one works" but "which one fails in ways you can control". This note compares them as they behave on the Blender to Roblox route, lists the export settings that matter and why, and records what one production game measured.

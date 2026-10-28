@@ -10,7 +10,7 @@ tags: [core-concept, performance, rendering, scripting]
 > - Spikes matter more than averages. A game averaging 10 ms with a 60 ms hitch every second feels worse than a steady 20 ms.
 > - Frame rate is not fixed at 60. Players can raise the frame cap in settings, so a PC may run at 120 or 240 fps (4 to 8 ms per...
 >
-> Read more (3 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~140 tok · whole note ~890 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 The **frame budget** is the time available to produce one frame: 1000 ms divided by the target frame rate. At 60 fps it is about 16.7 ms; at 30 fps, 33.3 ms. Everything that happens in a frame (your scripts, physics, animation, rendering, UI layout) shares that budget. Go over it and the frame rate drops.

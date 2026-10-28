@@ -12,7 +12,7 @@ tags: [monetization, pricing, offers, robux, store, experiments, luau]
 > - Bonus labels computed; ladder validated at boot.
 > - Impulse rung under 100 exists.
 >
-> Read more (18 KB note): ## 2. Building a ladder with real value math · ## 5. An offer engine on the server · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.6k tok. Read more: ## 2. Building a ladder with real value math · ## 5. An offer engine on the server · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Pricing and Store Design]] covers the platform mechanics (managed pricing, showing live prices, store layout). This note goes one level deeper into two questions that decide most of a game's revenue: **which numbers** to put on products, and **which offer** to show **which player** at **which moment**. It includes the arithmetic for value ladders and net revenue, a server-side offer engine in Luau, how to run experiments without fooling yourself, and where offer design turns into a trust problem.

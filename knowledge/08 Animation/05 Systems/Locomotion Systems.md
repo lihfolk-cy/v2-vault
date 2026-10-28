@@ -12,7 +12,7 @@ tags: [systems, locomotion, animate-script, gait, carry-layer]
 > - The most common movement speed has a clip authored at that speed.
 > - For every gait, `[threshold_low, threshold_high]` is inside `[clamp_min, clamp_max] * GroundSpeed`.
 >
-> Read more (20 KB note): ## The universal set (one locomotion for everyone) · ## Gaits that cannot slide · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~5.1k tok. Read more: ## The universal set (one locomotion for everyone) · ## Gaits that cannot slide · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Locomotion is the animation the player sees most: every second they are not attacking, they are idling, walking, running, jumping or landing. It is also where small errors are most visible, because the eye locks onto feet. A swing that is 10% too fast is invisible; feet that skate 10% of their speed read as "cheap" instantly. This note covers how locomotion is built on Roblox, from the stock `Animate` script to a universal custom set with measured numbers from one live action game (the reference project). The design of the controller module itself is in [[Custom Locomotion Controller Design]].

@@ -10,7 +10,7 @@ tags: [core-concept, art, 3d-modeling, performance]
 > - Copies multiply. A 2,000-triangle bush placed 400 times is 800,000 triangles if all are visible.
 > - Silhouette needs triangles; flat faces do not.
 >
-> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~140 tok · whole note ~920 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 A **triangle budget** is the agreed maximum number of triangles for an asset or a scene: "a common enemy is 3,000 triangles", "a weapon is 1,500", "the whole visible scene stays under 300,000 on phones". Budgets turn "is this too heavy?" into a check anyone can run.

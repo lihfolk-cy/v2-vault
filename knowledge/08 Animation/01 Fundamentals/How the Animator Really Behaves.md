@@ -10,7 +10,7 @@ tags: [fundamentals, animator, measured, advanced]
 > - Keys bind by name to joints (Part1 name, or Bone name).
 > - CurveAnimation playback against `RotationCurve` / `FloatCurve` sampling.
 >
-> Read more (11 KB note): ## How the measurements were made · ## 3. Rotation interpolation
+> Cost: TL;DR ~120 tok · whole note ~2.9k tok. Read more: ## How the measurements were made · ## 3. Rotation interpolation
 <!-- tldr:end -->
 
 The official docs describe what the Animator's API does, not how it computes a pose. This note collects what one production project **measured** by playing clips on the real Animator (`Animator:StepAnimations` in Edit mode, reading every joint's `Transform`) and fitting models until a Lua re-implementation matched it. That re-implementation then ran the game's entire animation runtime, so these rules were tested on hundreds of shipped clips, not toy cases.

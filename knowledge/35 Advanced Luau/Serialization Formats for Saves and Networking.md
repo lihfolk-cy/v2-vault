@@ -12,7 +12,7 @@ tags: [luau, advanced-luau, serialization, json, buffer, networking, datastore, 
 > - No NaN, infinity, functions, metatables or Instances reach a serializer; a validation pass runs before saving.
 > - Numeric dictionary keys are converted to strings.
 >
-> Read more (24 KB note): ## 2. JSON edge cases that bite saves · ## 4. A schema-driven codec · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~6.2k tok. Read more: ## 2. JSON edge cases that bite saves · ## 4. A schema-driven codec · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Serialization is the act of turning live Luau values into something that survives a boundary: a DataStore save, a remote call, a MessagingService message, a MemoryStore entry, an HTTP request. [[Buffers and Binary Data]] teaches the `buffer` API and a byte writer; [[Data Schema Design and Migrations]] teaches how to shape a profile and convert engine types. This note sits above both. It is about choosing a format per boundary, building codecs that cannot drift out of sync, surviving rolling updates where old and new servers read each other's data, and knowing which failures are silent.

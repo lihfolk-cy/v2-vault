@@ -12,7 +12,7 @@ tags: [case-study, debugging, keyframesequenceprovider, publishing, runtime]
 > - Every clip either has a published id or plays through a Lua player.
 > - Studio and live share one playback path.
 >
-> Read more (15 KB note): ## Act 2: "abilities don't work in server" · ## Nuances and edge cases · ## Checklist · ## Common mistakes in production
+> Cost: TL;DR ~140 tok · whole note ~3.8k tok. Read more: ## Act 2: "abilities don't work in server" · ## Nuances and edge cases · ## Checklist · ## Common mistakes in production
 <!-- tldr:end -->
 
 Every ability in one live action game looked perfect in Studio play tests and did nothing in live servers. No errors, no warnings: characters simply did not animate their abilities, weapon parts stood still, and marker-driven effects never fired. The cause was one engine call, `KeyframeSequenceProvider:RegisterKeyframeSequence`, used at runtime as a substitute for publishing. The fix grew into a full Lua animation runtime. This note tells the story in order, because the way the bug hid is the useful part.

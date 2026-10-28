@@ -12,7 +12,7 @@ tags: [production, documentation, notes, changelog, knowledge-base, obsidian, ca
 > - The changelog is append-only with tagged, dated entries of a few lines.
 > - Every entry has the request quote, paths, verification level and revert.
 >
-> Read more (14 KB note): ## Four documents, four jobs · ## Generated documentation from the place · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.7k tok. Read more: ## Four documents, four jobs · ## Generated documentation from the place · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A Roblox place does not explain itself. The Explorer shows that `ReplicatedStorage.Enemies.EnemyDefs` exists; it does not say that it replaced an older system, that a flag in the old system's loop skips zones the new one owns, that the old system's script is 300 characters from the Source limit, or that the owner decided bosses do not scale. That knowledge lives in people's heads, in chat, or in notes. Only notes survive a week off, a new teammate, or a parallel workstream that was not in the room.

@@ -9,7 +9,7 @@ tags: [systems, abilities, ultimates, camera, cinematics, networking]
 > - Enemies die during the drag: Damage before pull -> Pull-only first hit
 > - Impact a few frames off the cut: Enemy snap on server time -> Local climax for the caster
 >
-> Read more (15 KB note): ## The anchor contract · ## Layer one: the additive ultimate camera (everyone) · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~3.8k tok. Read more: ## The anchor contract · ## Layer one: the additive ultimate camera (everyone) · ## Common mistakes
 <!-- tldr:end -->
 
 An ultimate is the move players save up for and want to show off. In one live action game (the reference project) every weapon's last move is an ultimate, and every ultimate is a short cutscene for its caster, an additive camera package for everyone, and a choreographed sequence for the enemies it hits. Making those three line up (the enemies are exactly at the centre of the explosion, on the exact frame the camera cuts to it) took an explicit contract between four subsystems. This note documents that contract and the two camera layers, with their numbers.

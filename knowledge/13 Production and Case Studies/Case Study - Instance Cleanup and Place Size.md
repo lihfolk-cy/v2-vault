@@ -12,7 +12,7 @@ tags: [case-study, performance, instances, cleanup, place-size, studio, producti
 > - No backup folders in the place; originals as attributes, copies on disk.
 > - A written deletion policy with the reference-proof procedure.
 >
-> Read more (14 KB note): ## Timeline of cuts · ## Proving something is unreferenced · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.5k tok. Read more: ## Timeline of cuts · ## Proving something is unreferenced · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 This case study is about the place as a file and a working environment: how one live action game (the reference project) grew to millions of instances, what that did to Studio, saves and joins, how the team cut it back, and the policies that decided what could be deleted. The animation-specific techniques (baking keyframe data into compact stubs, the clip archive) are covered in [[Case Study - Cutting a Million Instances]] and [[Baked Clip Stubs and Archiving]]; this note covers the process and the non-animation causes.

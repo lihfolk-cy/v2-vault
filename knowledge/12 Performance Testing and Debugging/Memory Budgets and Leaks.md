@@ -12,7 +12,7 @@ tags: [performance, memory, leaks, luau-heap, pooling, instances]
 > - Soak tests exist for respawn, zone change, menu open/close, equip/unequip.
 > - Every system with connections has a cleanup owner and uses `Destroying`/`PlayerRemoving`.
 >
-> Read more (19 KB note): ## 6. The cleanup discipline · ## 7. Pooling · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.9k tok. Read more: ## 6. The cleanup discipline · ## 7. Pooling · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Memory problems on Roblox look like nothing for a long time and then like everything at once: phones crash after twenty minutes, servers bloat over a six-hour session, the garbage collector starts eating frames. This note covers where memory goes (instances, assets, the Luau heap), what a budget looks like, the leak patterns that cause almost every real-world leak, how to find a leak with the Luau heap tool and a soak test, and the cleanup and pooling patterns that prevent them.

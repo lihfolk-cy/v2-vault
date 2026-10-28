@@ -12,7 +12,7 @@ tags: [ai, policy, compliance, licensing, moderation, ratings]
 > - AI-assisted thumbnails and trailers
 > - NPC chat via `TextGenerator`
 >
-> Read more (13 KB note): ## 2. AI-made assets you upload · ## 3. AI features at runtime · ## 6. A compliance checklist by feature · ## Common mistakes
+> Cost: TL;DR ~120 tok · whole note ~3.4k tok. Read more: ## 2. AI-made assets you upload · ## 3. AI features at runtime · ## 6. A compliance checklist by feature · ## Common mistakes
 <!-- tldr:end -->
 
 This note collects the rules that apply when AI is involved in a Roblox experience: assets made with AI before upload, AI features players interact with at runtime, and the licences of the AI tools themselves. The short version: Roblox treats AI-made content like any other content (you need the rights, it must follow the Community Standards, it must not mislead), and adds specific duties for experiences where players trigger AI responses (disclosure, notices, ratings, filtering).

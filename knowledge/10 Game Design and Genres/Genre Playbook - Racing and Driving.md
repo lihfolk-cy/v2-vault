@@ -12,7 +12,7 @@ tags: [game-design, genre, racing, driving, vehicles, physics, network-ownership
 > - Network ownership set and reset on sit and leave.
 > - Speed, teleport and fly checks with reset responses; tuned against real physics glitches.
 >
-> Read more (14 KB note): ## 4. The technical risks · ## 5. Systems you must build · ## 8. Common mistakes · ## 9. Launch checklist
+> Cost: TL;DR ~160 tok · whole note ~3.5k tok. Read more: ## 4. The technical risks · ## 5. Systems you must build · ## 8. Common mistakes · ## 9. Launch checklist
 <!-- tldr:end -->
 
 Driving games on Roblox come in two broad families. **Racing** games are about competition: laps, checkpoints, times, positions. **Driving** games are about owning and using cars: open-world cruising, car collection, roleplay cities with traffic, delivery jobs, drift parks and car customisation. Many successful games blend both (an open world with races as an activity). The genre is car-collection-driven, attracts a slightly older audience, and rests on one hard technical problem: physics vehicles controlled by players over a network.

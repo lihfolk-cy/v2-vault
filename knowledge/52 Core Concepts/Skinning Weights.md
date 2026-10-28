@@ -10,7 +10,7 @@ tags: [core-concept, animation, rigging, 3d-modeling]
 > - Weights must sum to 1. Unnormalised weights shrink or inflate vertices when bones move.
 > - Joints need edge loops. No weight painting saves a joint with one edge loop at the elbow.
 >
-> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~910 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Skinning weights** say how strongly each bone moves each vertex of a skinned mesh. A vertex on the forearm might be 100 percent forearm bone; a vertex at the elbow might be 50 percent upper arm and 50 percent forearm. The weights are painted or computed in a modelling tool and exported with the mesh.

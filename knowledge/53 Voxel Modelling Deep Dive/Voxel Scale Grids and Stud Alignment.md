@@ -12,7 +12,7 @@ tags: [modeling, voxel, grid, scale, studs, alignment, pivots, export, luau, ble
 > - All cell sizes are binary fractions (1, 0.5, 0.25, 0.125) and each divides the largest.
 > - Module size decided (4 studs if the game uses terrain).
 >
-> Read more (18 KB note): ## 3. How many pixels does one cell cover? · ## 8. Auditing alignment with a script · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~220 tok · whole note ~4.7k tok. Read more: ## 3. How many pixels does one cell cover? · ## 8. Auditing alignment with a script · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Every voxel model starts with one number: how many studs wide a single cube is. Choose it badly and nothing else in this section can save you. Cells that are too small turn into shimmering noise on a phone and multiply your triangle count; cells that are too large make every character look like a placeholder; cells that are not a clean binary fraction of a stud drift off the grid after a few hundred placements and leave hairline cracks between tiles. [[Voxel and Blocky Modeling]] gives the starting grains by object type. This note goes underneath that table: the arithmetic of picking a cell size, how the voxel grid relates to the other grids already in Roblox (the stud, terrain cells, the old voxel lighting grid, Studio's snap increments), where pivots should sit, how scale survives the trip from MagicaVoxel or Blender into Studio, and how to audit a finished model for alignment with a script.

@@ -12,7 +12,7 @@ tags: [game-design, retention, daily-rewards, streaks, quests, live-ops]
 > - Daily reward: server-timed, mark-then-pay, saved at once, throttled, grace considered.
 > - Timers capped per day; AFK policy decided.
 >
-> Read more (19 KB note): ## 3. Daily rewards and streaks · ## 4. Free gifts and playtime timers · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.0k tok. Read more: ## 3. Daily rewards and streaks · ## 4. Free gifts and playtime timers · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 Retention is the share of players who come back. A **return hook** is a designed reason to come back at a particular time: a daily reward, a gift timer, a quest reset, a vault that fills while you are away, an event that starts at 6 pm. Hooks multiply a good loop; they cannot rescue a bad one. This note covers how Roblox measures retention, the main hook families with production numbers, how to implement daily rewards and timers correctly (time zones, streaks, exploits), and where hooks turn into chores or pressure.

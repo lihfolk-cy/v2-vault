@@ -12,7 +12,7 @@ tags: [luau, parallel, actors, multithreading, sharedtable, performance]
 > - Work split by logical unit across many Actors.
 > - Requires at load time; no requires in parallel.
 >
-> Read more (15 KB note): ## 4. Communication · ## 5. Pattern: a worker pool for spatial queries · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.7k tok. Read more: ## 4. Communication · ## 5. Pattern: a worker pool for spatial queries · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 By default all Luau in a Roblox server or client runs on one thread, one piece at a time. **Parallel Luau** lets scripts placed under `Actor` instances run parts of their work simultaneously on several CPU cores. It is powerful for compute-heavy, mostly read-only work (raycasts, spatial queries, NPC sensing, procedural generation, pathfinding maths) and useless or harmful for work that mainly writes to Instances. This note explains the execution model, thread safety levels, communication (messages, SharedTable, the DataModel), how modules behave per Actor, a worker-pool pattern, and how to tell whether it helped.

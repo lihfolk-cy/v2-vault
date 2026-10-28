@@ -12,7 +12,7 @@ tags: [gameplay, characters, humanoid, spawning, health, states]
 > - Movement-state edits happen on the owning machine.
 > - Character scale decided before ranges are tuned.
 >
-> Read more (17 KB note): ## 2. Movement properties and their defaults · ## 6. Keeping players in the world (production guards) · ## 9. Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.3k tok. Read more: ## 2. Movement properties and their defaults · ## 6. Keeping players in the world (production guards) · ## 9. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The `Humanoid` is the most used and least understood object in Roblox. It is a movement controller, a state machine, a health container, an appearance applier and a network-ownership anchor in one. Most "my character does something weird" bugs come from not knowing which of those jobs is running, on which machine. This note covers the character model, the Humanoid's properties and states, health and death, spawning and respawning, scaling, and the production failure modes (wall-jump exploits, players stuck in geometry, falling through the world).

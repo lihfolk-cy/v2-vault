@@ -12,7 +12,7 @@ tags: [studio, packages, assets, reuse, workflow, versioning]
 > - Single objects wrapped in a Model before converting.
 > - Per-copy differences only through root attributes.
 >
-> Read more (13 KB note): ## 2. Workflow · ## 7. Auditing packages in a place · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.4k tok. Read more: ## 2. Workflow · ## 7. Auditing packages in a place · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Packages are Roblox's built-in way to reuse an object hierarchy across places and games while keeping every copy linked to a versioned source. Change the package once, publish, and every copy can update. They are excellent for world-building kits, shared UI pieces, and anything placed many times. They are a poor fit for code libraries that change daily, and they have sharp edges: modifying a copy silently switches off auto-update, nested packages must be published inside-out, ownership can never be transferred, and mass updates save places without publishing them. This note covers the full workflow from the docs (as of October 2026) and the decision of when to use packages versus Wally, Rojo, `ServerStorage` templates or runtime asset loading.

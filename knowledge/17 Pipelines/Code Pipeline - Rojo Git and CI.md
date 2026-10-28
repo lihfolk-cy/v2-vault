@@ -12,7 +12,7 @@ tags: [pipelines, code, rojo, git, ci, github-actions, open-cloud, testing]
 > - Tools pinned with Rokit; Wally for packages
 > - StyLua, Selene, luau-lsp, Rojo build in CI on every PR
 >
-> Read more (18 KB note): ## Stage 4: local checks before commit · ## Stage 5: tests in CI with Open Cloud Luau execution · ## Failure modes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.6k tok. Read more: ## Stage 4: local checks before commit · ## Stage 5: tests in CI with Open Cloud Luau execution · ## Failure modes · ## Checklist
 <!-- tldr:end -->
 
 Code is the content type with the best tooling outside Roblox and the worst inside it. Studio's script editor has no branches, no review and no diff between yesterday and today, and in Team Create two people can overwrite each other's script without a warning. The fix the community settled on is to keep code in files and sync it into Studio with **Rojo**, version it with **Git**, and check it with **CI**. This note is the full recipe, from repo layout to an automated publish, plus what to do when you cannot (yet) move to files. Tool introductions are in [[External Tooling - Rojo Wally Selene StyLua]] and [[Git and Source Control for Roblox]]; project structure in [[Project Structure and Bootstrapping]] and [[Module Scripts and Requiring]].

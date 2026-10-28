@@ -12,7 +12,7 @@ tags: [marketing, growth, launch, soft-launch, retention, discovery, live-ops]
 > - Onboarding funnel to minute 10, shop funnel, economy events live
 > - 2 to 5 distinct thumbnails, icon tested small, honest title and description
 >
-> Read more (16 KB note): ## 2. Pre-launch: T minus 14 to T minus 1 · ## 3. Day by day · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.1k tok. Read more: ## 2. Pre-launch: T minus 14 to T minus 1 · ## 3. Day by day · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 A Roblox launch is not one moment. It is a two-week window in which the recommendation system, the Kids and Select evaluation, your error budget and your own team's stamina are all tested at once. Most games that "flop" did not fail on launch day; they failed on days 2 to 5, when the first wave of players met a broken first session, nobody was watching the funnel, and the team spent the window adding content instead of fixing the leak.

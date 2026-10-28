@@ -1,6 +1,6 @@
 ---
 name: roblox-blender-modeling
-description: 'LihFolk: Make professional, Roblox-ready 3D models in Blender (via Blender MCP or headless bpy) and reject anything below top quality. Use automatically whenever a model, prop, weapon, building, rock, tree, creature, kit or mesh is made, fixed, optimized or exported for Roblox, or when the user says "model", "make a mesh", "Blender", "low poly", "stylized", "export to Roblox", "imports huge", "looks bad", "too many triangles".'
+description: 'LihFolk: make Roblox-ready models in Blender with an automatic quality gate (symmetry, caps, budgets, export). Use whenever a prop, weapon, building, rock, tree, creature or kit is modelled, fixed or exported.'
 ---
 
 # LihFolk Blender Modeling for Roblox
@@ -29,8 +29,8 @@ Headless: `blender -b --factory-startup --python my_script.py`. Never modify the
 5. **Colour**: vertex colours or one shared palette atlas for stylized kits; SurfaceAppearance PBR (OpenGL normal, separate grayscale roughness/metalness) for realistic. One material per exported object.
 6. **UVs** (if textured): smart_project -> pack_islands, single UV map, all in 0-1.
 7. **Origin**: `lf.set_origin(ob, "bottom")` floor props, `"back"` wall props, `"corner"` modular pieces.
-8. **Gate**: `passed, fails, report = lf.gate(ob, cls)`. Any fail = fix and re-run. Never ship a fail.
-9. **Visual rubric**: render with `lf.render_review`, LOOK at all four images, score V1-V9 (below). Accept only >= 14/18 with no zero. Otherwise iterate.
+8. **Gate**: `passed, fails, report = lf.gate(ob, cls, symmetric="X", align=..., seats=...)`. Any fail = fix and re-run. Never ship a fail. Besides A1-A10 it checks A15 symmetry (`lf.symmetry_error`; author symmetric shapes as half + `lc.mirror_outline`), A16 centring/seating (`lf.alignment_report`, `lf.seated`, computed on the parts before joining), A17 self-intersecting shells and A18 overlapping cap triangles / flipped faces.
+9. **Visual rubric**: render with `lf.render_review(ob, dir, features=[(name, centre, radius), ...])` (adds studio + flat close-ups of each child feature, where small cap artifacts show), LOOK at every image, then have a blind reviewer score V1-V9 (rubric review order: correctness, then artifacts, then style). Accept only >= 14/18 with no zero. Otherwise iterate. Colour stylised kits with `lc.paint` + `lc.vertex_color_material` (one white material, vertex colours).
 10. **Export**: `lf.export_glb(ob, path)` (preferred; modifiers applied, vertex colours kept, 1 unit = 1 stud). FBX only via `lf.export_fbx` (prevents the 100x scale bug).
 11. **Studio setup** (tell the user or do it via Studio MCP): MeshPart.Color = white when using vertex colours; CollisionFidelity Box/Hull (Precise only when needed); CanCollide/CanTouch/CanQuery off for decoration; CastShadow off on tiny props; DoubleSided only for foliage cards; Anchored for static.
 

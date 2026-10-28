@@ -12,7 +12,7 @@ tags: [world-building, procedural, generation, noise, terrain, seeds, tooling]
 > - Noise layered and masked; gameplay areas flat enough.
 > - Materials from rules; global terrain colours respected.
 >
-> Read more (18 KB note): ## Runtime generation · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.5k tok. Read more: ## Runtime generation · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Procedural generation on Roblox comes in two very different forms:

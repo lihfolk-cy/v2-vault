@@ -12,7 +12,7 @@ tags: [case-study, top-games, action-rpg, grinding, rng, trading, live-ops, mone
 > - A rare power item chase sits on top of levels.
 > - One shared, timed stock rotation for all servers, with a countdown.
 >
-> Read more (19 KB note): ## 1. Snapshot · ## 6. What to copy and what not to copy · ## Checklist
+> Cost: TL;DR ~120 tok · whole note ~4.8k tok. Read more: ## 1. Snapshot · ## 6. What to copy and what not to copy · ## Checklist
 <!-- tldr:end -->
 
 Blox Fruits is the long-running king of the Roblox grind RPG: an anime-inspired open sea with islands, quests, bosses and a level cap in the thousands, where the main chase is a randomly appearing "fruit" that grants a power set. It has been live since January 2019, has passed 65 billion visits, and set a platform concurrency record in December 2024 off a single rework update. Study it for three things: how a **level ladder plus a power-item chase** creates years of goals, how **timed, shared stock rotations** create daily habits and trading demand, and how a studio uses **big numbered updates and reworks** to bring millions back at once. Study the risks too: reworking items players paid for is a reliable way to anger your best customers.

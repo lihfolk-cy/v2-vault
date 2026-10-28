@@ -13,7 +13,7 @@ tags: [case-study, top-games, simulator, idle, farming, live-ops, retention, mon
 > - Are status items visible to other players?
 > - Is anything you sell allowed to harm another player?
 >
-> Read more (20 KB note): ## 2. Click-through: title, icon and thumbnails · ## 6. What to copy and what not to copy · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.0k tok. Read more: ## 2. Click-through: title, icon and thumbnails · ## 6. What to copy and what not to copy · ## Checklist
 <!-- tldr:end -->
 
 Grow a Garden is the game that showed the whole industry how big a Roblox experience can get. It is a farming idle game: plant seeds on your plot, wait, harvest, sell, buy better seeds. In its first summer it broke the concurrent player record for any video game, then lost almost all of that audience within about a year. Both halves of that story are worth studying. This note is about the lessons you can build, not about copying the game.

@@ -12,7 +12,7 @@ tags: [worked-build, pets, eggs, rng, inventory, datastore, ui, luau, simulators
 > - Every pet Kind in odds tables has a model in `ReplicatedStorage.PetModels`
 > - Odds labels come from `PetConfig.OddsPercent`
 >
-> Read more (42 KB note): ## 4. Server modules: PlayerStore and RateLimit · ## 5. PetService (server) · ## 10. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~160 tok · whole note ~10.7k tok. Read more: ## 4. Server modules: PlayerStore and RateLimit · ## 5. PetService (server) · ## 10. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 This note builds the pet system that most simulators and collection games share, from an empty place: eggs in the world with odds shown above them, server-side hatching with weighted random rolls, a saved pet inventory with unique ids, equip and unequip with a cap, an "equip best" button, a passive income boost from equipped pets, and pets that follow every player smoothly, rendered on each client so the server never simulates them.

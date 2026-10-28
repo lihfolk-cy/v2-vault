@@ -12,7 +12,7 @@ tags: [pipelines, audio, sound, loudness, mixing, automation]
 > - Offline prep: trimmed, faded, normalised, named by role
 > - Id map JSON per upload batch
 >
-> Read more (16 KB note): ## Stage 2: prepare offline · ## Stage 4: measure loudness in Studio · ## Failure modes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.2k tok. Read more: ## Stage 2: prepare offline · ## Stage 4: measure loudness in Studio · ## Failure modes · ## Checklist
 <!-- tldr:end -->
 
 Audio is the asset type where "it worked on my machine" is most literally true. Sounds come from many sources at wildly different loudness, they are uploaded one by one, players hear them through phone speakers and headphones, and nobody notices a badly levelled sound until fifty of them play at once. A good audio pipeline makes loudness a **measured number** rather than a slider somebody nudged, keeps a single table of every sound the game may play, and makes it impossible to ship a sound that is banned, unlevelled or missing.

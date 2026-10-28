@@ -9,7 +9,7 @@ tags: [systems, camera, cutscene, cinematics, ui]
 > - HUD missing after a cutscene: No restore on an error path -> Watchdog and restore on every exit
 > - Camera stuck Scriptable after death: Restore not hooked to Died / CharacterRemoving -> Hook both
 >
-> Read more (16 KB note): ## Cutscenes · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~120 tok · whole note ~4.2k tok. Read more: ## Cutscenes · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 The camera is part of the animation. A swing with a 3-frame camera kick reads twice as heavy; an ultimate shot from a low three-quarter angle reads twice as big. But the camera is also the player's main tool for playing the game, so every camera effect is a negotiation over who owns it. This note covers the two ownership models (additive and Scriptable), how to build a cutscene system that always gives the camera back, framing rules, and the Studio gotchas. Shake and short effects are in [[Camera Shake and Camera FX]]; ultimates in [[Cinematic Ultimates]]. Numbers come from one live action game (the reference project).

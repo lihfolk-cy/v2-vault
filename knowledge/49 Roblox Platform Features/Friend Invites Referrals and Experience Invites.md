@@ -12,7 +12,7 @@ tags: [platform-features, invites, referrals, share-links, socialservice, growth
 > - Invite placed at moments that benefit from company, behind the pop-up gate
 > - Notification string includes `{experienceName}`; prompt message short
 >
-> Read more (20 KB note): ## 1. The four mechanisms · ## 4. Designing referral rewards · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.2k tok. Read more: ## 1. The four mechanisms · ## 4. Designing referral rewards · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Roblox gives you four different ways for one player to bring another into your game, and they behave differently in ways that matter for rewards, attribution and abuse. This note separates them, explains the join data each one produces, and builds a referral reward system that survives the hard parts: the inviter is offline or in another server, launch data arrives late, the invitee may be an alt account, and you cannot see who was invited. The older notes [[Social Design and Multiplayer Play]] and [[Community Building]] cover *why* invites matter and the basic invite button; this note is the system behind it.

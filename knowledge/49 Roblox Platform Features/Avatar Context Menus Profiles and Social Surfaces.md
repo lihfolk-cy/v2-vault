@@ -12,7 +12,7 @@ tags: [platform-features, social, avatar-context-menu, inspect-menu, profiles, f
 > - ACM closed and options removed when leaving the zone
 > - Inspect menu mode chosen deliberately (profile, current outfit or disabled)
 >
-> Read more (21 KB note): ## 1. The Avatar Context Menu · ## 5. Building your own interaction surface · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.5k tok. Read more: ## 1. The Avatar Context Menu · ## 5. Building your own interaction surface · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 "Social surfaces" are the places where one player learns about, and acts on, another: clicking someone's avatar, opening their profile card, seeing that a friend is here, sending a friend request, blocking a nuisance, trying on the outfit someone is wearing. Roblox supplies several of these as built-in menus you can switch on, restyle or replace: the **Avatar Context Menu** (ACM), the **Avatar Inspect Menu**, and a family of `StarterGui:SetCore` prompts. This note covers what each one does, when to use the built-in version and when to build your own, the friends and profile APIs behind custom cards, and the rules that keep these surfaces safe: respect blocks, validate every action on the server, and never show more about a player than they chose to share. [[Social Design and Multiplayer Play]] explains why visible social signals matter; this note is the toolkit.

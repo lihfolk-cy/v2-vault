@@ -10,7 +10,7 @@ tags: [case-study, mcp, agents, production, workflow]
 > - Keep a map of the place in the instructions.
 > - Studio is for I/O and truth; compute elsewhere.
 >
-> Read more (13 KB note): ## 4. A real agent pipeline: adding a weapon · ## 6. What went wrong
+> Cost: TL;DR ~110 tok · whole note ~3.2k tok. Read more: ## 4. A real agent pipeline: adding a weapon · ## 6. What went wrong
 <!-- tldr:end -->
 
 This is the story of the reference project used throughout this vault: a live action game on Roblox built with heavy use of AI coding agents (Claude Code sessions) connected to Roblox Studio and Blender through MCP. It covers what the game contained, how the work was organised, a real end-to-end agent pipeline (adding a new weapon), the numbers, what went wrong, and the lessons that generalise. Names, ids and people are left out; the numbers are real.

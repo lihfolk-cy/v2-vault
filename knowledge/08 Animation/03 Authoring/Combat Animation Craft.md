@@ -12,7 +12,7 @@ tags: [authoring, craft, combat, hit-stop, latency, markers]
 > - Anticipation 2 to 6 frames (light) / 6 to 15 (heavy); direction obvious
 > - Strike 1 to 3 frames with dense in-betweens and a trail window
 >
-> Read more (17 KB note): ## 4. The hit frame and markers · ## 6. Recovery and cancel windows · ## 11. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.3k tok. Read more: ## 4. The hit frame and markers · ## 6. Recovery and cancel windows · ## 11. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 Combat animation is where craft meets frame data. An attack must feel instant to the attacker, be readable to the target and bystanders, line up exactly with damage, survive network delay, and chain into the next action. This note covers the anatomy of an attack (anticipation, active frames, recovery), smears and trails, the hit frame and markers, hit-stop, cancel windows and combos, readability for other players, latency, and layering attacks on movement.

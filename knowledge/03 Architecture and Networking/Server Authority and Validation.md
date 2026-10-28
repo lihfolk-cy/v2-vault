@@ -12,7 +12,7 @@ tags: [architecture, security, validation, server-authority, combat]
 > - Every numeric argument is checked for NaN, infinity, range and integrality.
 > - Every Instance argument is checked for type, location, ownership and distance.
 >
-> Read more (19 KB note): ## A reusable validation module · ## Pattern: KitGuard-style ability validation · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.0k tok. Read more: ## A reusable validation module · ## Pattern: KitGuard-style ability validation · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 **Server authority** means the server holds the true game state and decides every outcome that matters; clients render, predict and request. **Validation** is how the server turns untrusted requests into safe decisions. Together they are the only real security a Roblox game has: client-side checks can always be removed by an exploiter (Roblox docs, "Security and cheat mitigation tactics").

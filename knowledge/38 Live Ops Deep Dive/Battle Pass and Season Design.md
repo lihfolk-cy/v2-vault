@@ -12,7 +12,7 @@ tags: [live-ops, battle-pass, season-pass, seasons, progression, monetization, l
 > - Target player defined; XP budget sheet with 15 to 20 percent slack
 > - Free track has an instant tier 1 claim and its own capstone
 >
-> Read more (23 KB note): ## 3. The arithmetic of a completable season · ## 6. The server model · ## 8. Edge cases and failure modes · ## 9. Checklist
+> Cost: TL;DR ~220 tok · whole note ~5.8k tok. Read more: ## 3. The arithmetic of a completable season · ## 6. The server model · ## 8. Edge cases and failure modes · ## 9. Checklist
 <!-- tldr:end -->
 
 A battle pass (Roblox's docs call it a **season pass**) is a time-limited progression track: players earn season XP from missions, climb tiers, and claim rewards before the season ends. A free track is open to everyone; a paid premium track adds more missions and better rewards. Done well it gives every session a goal, gives your content team a fixed rhythm, and earns money from engaged players rather than from pressure. Done badly it becomes a second job that players resent, a source of refund requests, and a data model you cannot change once money has gone through it.

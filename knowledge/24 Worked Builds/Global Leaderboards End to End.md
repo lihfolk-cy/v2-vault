@@ -12,7 +12,7 @@ tags: [worked-build, leaderboards, ordered-datastore, datastore, budgets, ui, lu
 > - Write and list budgets computed for the worst server size
 > - Writes staggered, only on change, never lowering monotonic scores
 >
-> Read more (25 KB note): ## 4. Server · ## 5. Client and UI · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~6.5k tok. Read more: ## 4. Server · ## 5. Client and UI · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Two cross-server leaderboards from an empty place: an all-time "most coins earned" board and a weekly board that resets every week without deleting anything. Scores come only from server-side profile stats, are written to ordered data stores on a budgeted schedule, read back once per board every two minutes per server, resolved to display names in batches, pushed to every client, and drawn both on a board in the world and as a player's own rank. It uses the foundation from [[Saved Inventory End to End]], whose `InventoryService.AddCoins` already maintains `Stats.CoinsEarned` and `Weekly`.

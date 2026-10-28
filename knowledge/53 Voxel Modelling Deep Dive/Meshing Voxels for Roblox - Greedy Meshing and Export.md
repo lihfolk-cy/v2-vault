@@ -12,7 +12,7 @@ tags: [modeling, voxel, meshing, greedy-meshing, blender, python, export, glb, t
 > - Faces merge only when colour, material and baked values match.
 > - T-junction strategy chosen for large or grazing-angle meshes.
 >
-> Read more (18 KB note): ## 3. A greedy mesher in Blender Python · ## 7. In Studio: collision and render fidelity · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~4.7k tok. Read more: ## 3. A greedy mesher in Blender Python · ## 7. In Studio: collision and render fidelity · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A voxel model is data: a set of filled cells, each with a colour. Before Roblox can draw it, that data has to become a mesh, and the way you build the mesh decides the triangle count, the number of MeshParts, whether textures tile, whether cracks appear between faces, and how the model collides. [[Voxel and Blocky Modeling]] shows a Blender script that emits only exposed faces, one mesh per colour. This note takes the next steps: greedy meshing (merging coplanar faces into big rectangles), the T-junction problem it creates, how to keep tiling stud textures working on merged faces, the export settings that keep voxels flat-shaded, and the Roblox-side settings (collision fidelity, render fidelity) that quietly change how voxel meshes look and behave.

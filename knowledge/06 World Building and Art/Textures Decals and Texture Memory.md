@@ -12,7 +12,7 @@ tags: [world-building, art, textures, decals, memory, performance, images]
 > - PBR sets trimmed to the maps that matter.
 > - Kits share trim sheets or atlases; tints instead of duplicate textures.
 >
-> Read more (16 KB note): ## Decal versus Texture · ## How texture memory works · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.1k tok. Read more: ## Decal versus Texture · ## How texture memory works · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Images reach the 3D world in five ways: **Decals**, **Textures**, a **MeshPart's `TextureID`**, **SurfaceAppearance** maps (see [[Materials MaterialVariants and SurfaceAppearance]]) and **MaterialVariant** maps. They also appear in UI, particles and beams, which share the same memory pool. This note covers the two face-projected image objects (Decal and Texture), how image memory really works, and how to keep a world sharp on desktop without blowing the memory budget on phones.

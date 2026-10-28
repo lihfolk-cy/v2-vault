@@ -12,7 +12,7 @@ tags: [2d, game-design, architecture, screengui, camera, side-scroller, decision
 > - Answered: is pixel exactness part of the art identity or rules?
 > - Listed what the game must do that the chosen route does not give for free (particles, physics toys, netcode, level editor) and...
 >
-> Read more (20 KB note): ## 5. The awkward middle: what each route cannot do well · ## 7. Screen size: the GUI route's hidden tax · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.2k tok. Read more: ## 5. The awkward middle: what each route cannot do well · ## 7. Screen size: the GUI route's hidden tax · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 Roblox is a 3D engine with a strong 2D UI system bolted on. That gives you two honest ways to build a 2D game, and one hybrid that is often the right answer:

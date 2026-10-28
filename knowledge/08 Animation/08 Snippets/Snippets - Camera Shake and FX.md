@@ -9,7 +9,7 @@ tags: [snippets, luau, camera, fx, game-feel]
 > - Avoid: Switching to `Scriptable` for gameplay shake.
 > - Avoid: Random per-frame jitter instead of noise.
 >
-> Read more (20 KB note): ## 2. The module · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~90 tok · whole note ~5.2k tok. Read more: ## 2. The module · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 A camera effects module built from **timed envelopes** that are summed, capped, applied after the camera scripts and **removed before them** the next frame, so effects never accumulate into drift. Includes trauma-based shake with noise, FOV punches, roll, camera-space kicks, blur and colour flashes, distance falloff for world events, reduced-motion handling, presets measured in one production game, and a letterbox that sits correctly on phones.

@@ -11,7 +11,7 @@ tags: [pipeline, import, gltf, math, cframe, enemies, debugging]
 > - forward travel mirrored on one rig
 > - one limb occasionally swings the long way
 >
-> Read more (14 KB note): ## The code · ## How it was proven · ## Symptoms checklist
+> Cost: TL;DR ~100 tok · whole note ~3.5k tok. Read more: ## The code · ## How it was proven · ## Symptoms checklist
 <!-- tldr:end -->
 
 A whole roster of imported creatures "attacked from behind": their bodies played turned 180 deg away from the HumanoidRootPart, and all root motion (spawn rises, intro drops, leaps) was missing. Server logic was right (it used the root's LookVector), so enemies dealt damage in front of them while visibly facing away. This note derives the fix from first principles, shows the code, explains how it was proven, and generalises the method so you can debug the next importer convention yourself. Context: [[Pipeline - Importing Animated Enemies]].

@@ -12,7 +12,7 @@ tags: [math, game-math, numbers, precision, floating-point, big-numbers, formatt
 > - No timestamps, IDs or big values pass through `Vector3`, `CFrame` or other float32 containers.
 > - Moving things far from the origin compute position from time, not per-frame steps.
 >
-> Read more (20 KB note): ## 4. When doubles run out in a simulator · ## 8. Formatting for players · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~210 tok · whole note ~5.2k tok. Read more: ## 4. When doubles run out in a simulator · ## 8. Formatting for players · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Simulators and idle games push numbers to 10^30 and beyond. Open worlds push positions to tens of thousands of studs. Timers run for hours. Each of these meets a different precision limit, and each limit shows up as a gameplay bug: income that stops increasing, a conveyor that stops moving far from spawn, a countdown that jumps in 128-second steps, a leaderboard that cannot store the top player's score, a counter that shows "1000K". [[Math Vectors and CFrames]] states the basic float rules (no `==` on computed floats, NaN, integers exact to 2^53). [[Strings Patterns and Formatting]] has a basic number abbreviator. This note maps every number type you will meet in Roblox to its limits, shows which gameplay bug each limit causes, and builds the tools for big values: correct abbreviation at boundaries, a mantissa-exponent number for games that outgrow doubles, order-preserving leaderboard encodings, and integer-safe currency.

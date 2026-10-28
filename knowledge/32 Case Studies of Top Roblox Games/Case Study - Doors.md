@@ -13,7 +13,7 @@ tags: [case-study, top-games, horror, roguelite, co-op, lobby, matchmaking, live
 > - Store has at most a handful of products, each tied to one moment.
 > - Free revives exist and are easy to get.
 >
-> Read more (16 KB note): ## Snapshot · ## Click-through: thumbnail, icon and title · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.0k tok. Read more: ## Snapshot · ## Click-through: thumbnail, icon and title · ## Checklist
 <!-- tldr:end -->
 
 Doors is a first-person co-op horror run: you and a few friends ride an elevator into a hotel, open numbered doors one at a time, and try to reach door 100 while entities hunt you. It is the clearest example on Roblox of a small team building a premium-feeling horror game with short, replayable runs, a tiny monetization surface and a brand strong enough that Roblox picks it for platform events. This note is a teardown for developers: what is visible from outside, what it teaches, and which parts are dangerous to copy.

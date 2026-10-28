@@ -10,7 +10,7 @@ tags: [fundamentals, api, animator, reference]
 > - Translation offsets scale with `Model:GetScale()`.
 > - `track.Length` stays 0: the asset never loaded.
 >
-> Read more (15 KB note): ## Complete member list · ## StepAnimations: the Edit-mode workhorse
+> Cost: TL;DR ~130 tok · whole note ~4.0k tok. Read more: ## Complete member list · ## StepAnimations: the Edit-mode workhorse
 <!-- tldr:end -->
 
 The `Animator` is the engine object that owns playback for one rig: it creates tracks, evaluates them each frame, mixes them, writes joint transforms and replicates what is playing. This note is the complete member reference plus everything the reference does not tell you. For measured numerical behaviour (interpolation, weights, fades) see [[How the Animator Really Behaves]]; for track members see [[AnimationTrack Reference]].

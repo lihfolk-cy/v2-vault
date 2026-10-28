@@ -12,7 +12,7 @@ tags: [modeling, untextured, stylised, normals, weighted-normals, bevel, shading
 > - Bevels sized to at least 2 to 3 px at the usual viewing distance; Harden Normals on.
 > - Weighted Normal last in the stack, Face Area, Keep Sharp, Threshold 0.01.
 >
-> Read more (15 KB note): ## Technique 2: bevel with Harden Normals · ## Technique 4: normal transfer for soft volumes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~200 tok · whole note ~3.8k tok. Read more: ## Technique 2: bevel with Harden Normals · ## Technique 4: normal transfer for soft volumes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Untextured stylised art has nowhere to hide shading errors. On a painted asset, a smudgy gradient across a flat face disappears under brush strokes; on a flat-coloured SmoothPlastic prop, it is the most visible thing on screen. "Clean" stylised shading means flat faces look flat, curved faces look curved, edges catch a crisp highlight, and big soft forms (tree canopies, clouds, cartoon heads) shade like one smooth volume instead of a pile of lumps. Almost all of that is controlled by **normals**, not by geometry or colour.

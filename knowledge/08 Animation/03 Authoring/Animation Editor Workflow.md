@@ -12,7 +12,7 @@ tags: [authoring, animation-editor, studio, workflow]
 > - Planned beats with times; gameplay hit time known
 > - Blocked in Constant; poses read in silhouette from the game camera
 >
-> Read more (20 KB note): ## Preparing the rig · ## A blocking-to-polish workflow · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.0k tok. Read more: ## Preparing the rig · ## A blocking-to-polish workflow · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The built-in Animation Editor is the default way to hand-key clips in Roblox Studio. It is good enough for most character work, it writes exactly the data the engine plays (`KeyframeSequence`, or `CurveAnimation` if you use the curve editor), and it is the tool every other pipeline eventually has to agree with. This note is the day-to-day workflow: setting up a rig, blocking, splining, saving, looping and exporting, plus the traps that cost real projects time. Advanced features (curve editor, IK, events, keyframe optimisation, capture) are in [[Animation Editor Advanced]].

@@ -10,7 +10,7 @@ tags: [core-concept, security, networking, remotes, datastore]
 > - A token bucket beats a cooldown. A cooldown ("one per 0.5 s") rejects an honest double-tap.
 > - Gameplay cooldowns and abuse limits are different layers.
 >
-> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~100 tok · whole note ~1000 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Rate limiting** caps how often something may happen per unit of time: how many times a player may fire a remote, how many DataStore requests a server may make, how many messages a player may send. Requests over the cap are dropped, queued or slowed.

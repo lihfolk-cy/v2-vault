@@ -12,7 +12,7 @@ tags: [studio, settings, shortcuts, workflow, productivity]
 > - Output context and source on.
 > - One formatter, matching indent settings.
 >
-> Read more (13 KB note): ## 2. Settings that actually matter · ## 3. Shortcuts worth memorising · ## 5. Common mistakes · ## 6. Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.3k tok. Read more: ## 2. Settings that actually matter · ## 3. Shortcuts worth memorising · ## 5. Common mistakes · ## 6. Checklist
 <!-- tldr:end -->
 
 Studio has hundreds of settings and a long shortcut list. Most can stay at their defaults. A handful decide whether you lose work after a crash, whether plugins can reach the network, whether your edits during a test survive, and whether a long command freezes the editor. This note picks those out, gives the exact setting names (from the `Studio` settings class reference as of October 2026), and collects the shortcuts worth memorising, grouped by job. It ends with how to standardise a team's setup, because settings are per machine.

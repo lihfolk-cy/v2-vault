@@ -12,7 +12,7 @@ tags: [worked-build, codes, live-ops, rate-limiting, datastore, remotes, ui, lua
 > - Input normalised (case, whitespace, length, characters)
 > - Rate limit plus failure lockout
 >
-> Read more (27 KB note): ## 4. Server · ## 5. Client and UI · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~7.0k tok. Read more: ## 4. Server · ## 5. Client and UI · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A codes box from an empty place: the player types a code, the server normalises it, checks it against a server-only list plus live codes you can add without a shutdown, enforces expiry, eligibility, per-player single use and an optional global use limit, grants the reward, and answers with a clear message. Wrong guesses are rate-limited and locked out so the box cannot be used to brute-force unreleased codes. It sits on the foundation from [[Saved Inventory End to End]] (`PlayerData`, `Net`, `RateLimiter`, `InventoryService`); the profile already has a `RedeemedCodes` map.

@@ -12,7 +12,7 @@ tags: [production, planning, scope, roadmap, budgets, case-study]
 > - The content unit is defined and counted; the launch set is a number.
 > - Shared parts (rigs, kits, materials) are identified before production.
 >
-> Read more (18 KB note): ## Count the content before you build it · ## Phases with gates · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.7k tok. Read more: ## Count the content before you build it · ## Phases with gates · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most Roblox projects do not fail because a system is hard to build. They fail because the project keeps changing what it is: the map is rebuilt three times, the progression model is replaced twice, and the content that already exists has to be dragged through every change. This note is about the planning layer above the code: how to decide what the game is, how big it is, what "done" means for each piece, and how to change your mind cheaply when (not if) you do.

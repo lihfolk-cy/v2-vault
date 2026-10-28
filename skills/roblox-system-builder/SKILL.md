@@ -1,6 +1,6 @@
 ---
 name: roblox-system-builder
-description: 'LihFolk: Build a complete Roblox gameplay feature end to end the way the Worked Builds in LihFolk Vault V2 do: decisions, folder layout, shared config, server module, client controller, remotes, saving, UI and tests. Use when the user asks to add a feature or system such as an inventory, shop, daily rewards, codes, quests, pets, rounds, combat or leaderboards, or says "build me a system", "add a feature", "make this end to end", or "how should I structure this".'
+description: 'LihFolk: build a gameplay feature end to end (config, server, client, remotes, saving, UI, tests). Use for "add a system/feature": inventory, shop, quests, pets, rounds, combat, leaderboards.'
 ---
 # LihFolk System Builder
 

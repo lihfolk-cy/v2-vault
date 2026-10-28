@@ -12,7 +12,7 @@ tags: [narrative, naming, items, zones, abilities, rarity, worldbuilding, conten
 > - Rarity tiers ordered and visible in UI; invented tier names tested on players.
 > - Zones have a name, a short form, a number if progression is linear, and matching art.
 >
-> Read more (21 KB note): ## 3. Names as a rarity ladder · ## 10. A name validator · ## 12. Common mistakes · ## 13. Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.5k tok. Read more: ## 3. Names as a rarity ladder · ## 10. A name validator · ## 12. Common mistakes · ## 13. Checklist
 <!-- tldr:end -->
 
 Names are the narrative text every player reads. A player who skips every line of dialogue still reads the name of the sword they just rolled, the zone they just entered and the button they press forty times a minute. Names carry tone, rarity, lore and function in two or three words, they become the vocabulary players use in chat, trades, videos and wikis, and once players have learned them they are expensive to change. This note covers what a name has to do, naming patterns that scale to catalogues of hundreds of items, rarity ladders expressed through names, zone and ability naming, length and distinctness budgets, the technical side (display names versus ids versus instance names), real-world names and legal risk, and a validator that catches problems before they ship.

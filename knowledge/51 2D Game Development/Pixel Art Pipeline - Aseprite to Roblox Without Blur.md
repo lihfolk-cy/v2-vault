@@ -12,7 +12,7 @@ tags: [2d, pixel-art, aseprite, sprites, atlas, textures, ui, resampling, modera
 > - Hard alpha, exact palette, tags and frame durations in the Aseprite source.
 > - Export with spacing and extrusion; JSON converted to a typed Luau module; no pre-scaling for GUI art.
 >
-> Read more (22 KB note): ## 4. Atlas packing without bleeding · ## 5. Integer scaling on every screen · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~200 tok · whole note ~5.6k tok. Read more: ## 4. Atlas packing without bleeding · ## 5. Integer scaling on every screen · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 Pixel art fails on Roblox in a predictable way: you draw a crisp 16 by 16 sprite, upload it, put it in an ImageLabel, and it shows up as a soft smudge with a faint halo, or it looks sharp in Studio and shimmers on a phone. None of this is mysterious. Blur comes from four places: the resampling filter, non-integer scale, sub-pixel placement, and the engine choosing a lower quality version of the texture. Halos and bleeding come from the atlas layout. This note walks the whole path from the Aseprite file to a sharp sprite on every device, and covers the parts people forget: upload limits, moderation, atlas metadata, and 3D surfaces that have no pixel filter at all.

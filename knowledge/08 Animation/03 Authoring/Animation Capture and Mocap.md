@@ -12,7 +12,7 @@ tags: [authoring, mocap, animation-capture, video, face]
 > - Skeleton errors and flips fixed
 > - Jitter filtered, contacts protected
 >
-> Read more (13 KB note): ## 1. Studio's Animation Capture · ## 2. External mocap · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.3k tok. Read more: ## 1. Studio's Animation Capture · ## 2. External mocap · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Motion capture records real movement and turns it into keys. On Roblox you have Studio's built-in **Animation Capture** (body from video, face from webcam), external mocap (video AI services, inertial suits, optical studios) brought in through Blender, and the humble option that every good game animator uses daily: **video reference** that you count frame by frame and key by hand.

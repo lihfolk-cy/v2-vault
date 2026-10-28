@@ -12,7 +12,7 @@ tags: [studio, command-bar, tooling, edit-mode, workflow, gotchas]
 > - Reads shared modules with clone-require.
 > - Resolves targets by path, tag or attribute, never Selection.
 >
-> Read more (15 KB note): ## 7. Never use undo in a shared place · ## 8. Editing script sources safely · ## 10. Common mistakes · ## 11. Checklist for a new Studio tool
+> Cost: TL;DR ~130 tok · whole note ~3.9k tok. Read more: ## 7. Never use undo in a shared place · ## 8. Editing script sources safely · ## 10. Common mistakes · ## 11. Checklist for a new Studio tool
 <!-- tldr:end -->
 
 The Command Bar runs Luau against the place you have open, with more permissions than game scripts. It is how senior developers do bulk edits, audits, generators, installers and one-off fixes without writing a plugin. It is also the place where a single line can damage hours of other people's work. This note covers the bar itself, the security context, and the patterns that make Studio scripting safe and repeatable: stale `require` and the clone-require fix, HTTP loaders for large tools, budgeted resumable loops, safe edits to script sources (including the 200,000 character `Source` limit), and why you never use undo in a shared place.

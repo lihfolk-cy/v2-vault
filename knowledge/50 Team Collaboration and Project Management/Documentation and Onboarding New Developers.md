@@ -12,7 +12,7 @@ tags: [team, onboarding, documentation, knowledge-base, docs-as-code, luau, work
 > - Access (age check, group role, 2SV, sandbox, repo, chat) requested a week before day one.
 > - One-command setup, tested on a clean machine recently.
 >
-> Read more (18 KB note): ## 6. Documentation that lives next to the code · ## 7. A generated index of remotes and modules · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.7k tok. Read more: ## 6. Documentation that lives next to the code · ## 7. A generated index of remotes and modules · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Documentation and Knowledge Bases]] explains the four documents a team needs (project map, running changelog, decisions log, systems notes), how documentation rots, honest verification labels, and generated docs, using the reference project's real files. This note uses those documents for one specific job: getting a new person productive and safe in a Roblox project quickly. It covers what to prepare before their first day, a day-one document that fits on two screens, a first-two-weeks plan with a measurable goal, how to pick starter tasks, code-level documentation that lives next to the code (module headers, doc comments, architecture decision records), a generated index of remotes and modules, onboarding builders and artists who never open a script, and how to keep the onboarding path from rotting between hires.

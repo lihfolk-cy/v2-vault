@@ -12,7 +12,7 @@ tags: [pipelines, live-ops, events, live-config, open-cloud, changelog, document
 > - Live config document with schema, revision and defaults in the build
 > - Server validation, clamps and forward-only revisions
 >
-> Read more (16 KB note): ## Stage 1: the live config document · ## Stage 3: pushing changes from outside the game · ## Failure modes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~4.2k tok. Read more: ## Stage 1: the live config document · ## Stage 3: pushing changes from outside the game · ## Failure modes · ## Checklist
 <!-- tldr:end -->
 
 A live game changes between publishes: a weekend event starts, the shop rotates, a promo code goes live, a broken feature is switched off, a bonus is announced to every server. If each of those needs a code change and a publish, live operations become slow and risky. This note is the pipeline for **content that changes while the game is running**: what can be live and what must ship in a build, how to push data to running servers safely with Open Cloud, how to schedule events, and the record keeping (changelogs, decision logs, notes) that lets a small team run a live game without losing track. Design of events is in [[Live Ops Events and Updates]]; the runtime config mechanism is in [[Global State and Live Config]]; cross-server messaging in [[Cross-Server Messaging]] and [[MemoryStore Service]].

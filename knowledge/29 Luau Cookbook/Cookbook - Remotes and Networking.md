@@ -12,7 +12,7 @@ tags: [luau, cookbook, remotes, networking, security, recipes]
 > - Every handler: rate limit, type checks, range checks, then logic.
 > - No client-supplied numbers that change economy or combat outcomes.
 >
-> Read more (21 KB note): ## 3. Rate limit per player with a token bucket · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~5.5k tok. Read more: ## 3. Rate limit per player with a token bucket · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Recipes for talking between server and client without opening holes. The rule behind all of them: the client is a request, never a fact. Every value that arrives at `OnServerEvent` or `OnServerInvoke` is typed `unknown` here on purpose, because an exploiter can send any type, any size, at any rate. Code is `--!strict` Luau, reviewed, not run. The why lives in [[RemoteEvents RemoteFunctions and Unreliable Remotes]], [[Server Authority and Validation]], [[Remote Abuse Patterns and Rate Limiting in Practice]] and [[How Exploits Work - The Client Boundary]].

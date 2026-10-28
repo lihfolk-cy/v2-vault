@@ -12,7 +12,7 @@ tags: [debugging, ui, layout, input, gamepad, zindex, automaticsize]
 > - DisplayOrder bands written down and assigned to every ScreenGui.
 > - Rotated or rounded clipping uses CanvasGroup, sparingly.
 >
-> Read more (19 KB note): ## 1. See what the engine sees · ## 4. AutomaticSize problems · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.8k tok. Read more: ## 1. See what the engine sees · ## 4. AutomaticSize problems · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 UI bugs are reported vaguely ("the button does not work on my phone", "the shop looks broken") and caused precisely: a transparent frame on top eating clicks, a `ZIndex` that only applies among siblings, a `ClipsDescendants` that does not clip rotated children, an `AutomaticSize` that feeds back into itself, two `UIScale` objects multiplying, a gamepad selection that lands on an invisible button. This note gives the tools to see what the engine sees and a cause list for each family of symptom.

@@ -12,7 +12,7 @@ tags: [world-building, art-direction, zones, biomes, palette, lighting, atmosphe
 > - Silhouette, colour and light tests pass against neighbouring zones.
 > - Chain strip reviewed: one accent per zone, warm and cool alternate, value range widens.
 >
-> Read more (21 KB note): ## 3. Colour across the chain · ## 5. Lighting, air, sky and sound per zone · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.4k tok. Read more: ## 3. Colour across the chain · ## 5. Lighting, air, sky and sound per zone · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most Roblox games with progression are a chain of zones: forest, then crystal caves, then lava fields, then ice peaks, then something cosmic. Players judge the whole game by how different and how desirable the next zone looks. A zone that looks like a recoloured copy of the last one kills the pull of progression; a chain where every zone is maximally loud reads as noise, and nothing feels like an upgrade.

@@ -9,7 +9,7 @@ tags: [pipeline, data-format, buffer, compression, keyframesequence]
 > - Avoid: Decoding on every play. Symptom: hitches on first play of each move, repeated.
 > - Avoid: Base64 decoding with a hand-written Luau function.
 >
-> Read more (17 KB note): ## Layout · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~90 tok · whole note ~4.4k tok. Read more: ## Layout · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 The byte-level format ("v2") one production game used to store KeyframeSequence motion compactly: in a base64 attribute on Pose-less stubs ([[Baked Clip Stubs and Archiving]]), and as the payload streamed from server to clients for enemy kits ([[Lua Keyframe Player]]). It is designed around the Roblox `buffer` type, decodes in plain Luau, and plays back within 0.03 deg / 0.002 studs of the original clip in the player that reads it. This note documents every field, the easing codes, the thinning that decides which keys are written, and smallest-three quaternion packing, with a worked hex example.

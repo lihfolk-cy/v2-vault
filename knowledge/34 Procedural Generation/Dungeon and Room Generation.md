@@ -12,7 +12,7 @@ tags: [procedural, generation, dungeons, roguelike, rooms, graphs, level-design,
 > - Description generated separately from building.
 > - Loops added; critical path measured and within targets.
 >
-> Read more (17 KB note): ## Grid scatter plus graph: a complete generator · ## Building it in Roblox · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.3k tok. Read more: ## Grid scatter plus graph: a complete generator · ## Building it in Roblox · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Procedural World Generation]] shows one dungeon method: grow a layout by snapping prefab rooms together at connector attachments, rejecting overlaps. That method is a good default for hand-built room kits. This note covers the rest of the toolbox and, more importantly, what separates a generated dungeon players enjoy from a random maze: graph structure, loops, pacing by distance, locks and keys, validation, and building the result in Roblox without blowing the part budget or breaking pathfinding.

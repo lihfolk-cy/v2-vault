@@ -13,7 +13,7 @@ tags: [case-study, top-games, thumbnails, icons, titles, marketing, discovery, c
 > - Icon is a face, readable at 50 pixels.
 > - Thumbnails share one template; key text is clear of the bottom edge.
 >
-> Read more (16 KB note): ## The snapshot · ## Pattern 1: the title is a fixed skeleton with one moving part · ## Common mistakes this comparison exposes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~4.2k tok. Read more: ## The snapshot · ## Pattern 1: the title is a fixed skeleton with one moving part · ## Common mistakes this comparison exposes · ## Checklist
 <!-- tldr:end -->
 
 This note compares how the games in this section present themselves on a Roblox card: the title string, the square icon and the 16:9 thumbnails. Everything was captured on the same day, 27 October 2026, from Roblox's public games and thumbnails APIs, which return the current title and the first three active thumbnails for each game. That week was unusual: Roblox's platform Halloween event, The Hollow, had started on 22 or 23 October 2026 depending on time zone (Press, Katadata, 21 October 2026), and most games were in Halloween dress. That makes the snapshot a good look at seasonal habits and a poor look at everyday art. Treat it as one frame of a moving picture.

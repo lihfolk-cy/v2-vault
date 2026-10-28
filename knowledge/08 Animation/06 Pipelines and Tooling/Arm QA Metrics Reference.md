@@ -10,7 +10,7 @@ tags: [pipeline, qa, arms, metrics, reference]
 > - Note the deliberate gap: the baker clamps wrists to 70 / 30 / 85 deg while QA flags at 75 / 40 / 95.
 > - Every issue has a severity clamped to 0..1, a worst time, and a human-readable detail.
 >
-> Read more (18 KB note): ## The metrics · ## The score
+> Cost: TL;DR ~140 tok · whole note ~4.7k tok. Read more: ## The metrics · ## The score
 <!-- tldr:end -->
 
 The complete metric set of the arm QA scorer ("armcheck") used in one live action game: every metric, how it is measured, its threshold, its severity formula, its score weight, which ones are critical, the score formula, and the rules a re-baked clip must pass before install. Workflow context: [[Pipeline - Arm IK Baking and QA]]. Solver that targets these metrics: [[Arm Baker Internals]].

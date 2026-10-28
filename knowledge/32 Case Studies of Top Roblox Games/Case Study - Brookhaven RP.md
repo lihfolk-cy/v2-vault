@@ -12,7 +12,7 @@ tags: [case-study, top-games, roleplay, life-sim, social, private-servers, monet
 > - Props and vehicles are capped per player and per server.
 > - Private servers have real admin tools.
 >
-> Read more (19 KB note): ## 4. Core loop and retention · ## 6. What to copy and what not to copy · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.9k tok. Read more: ## 4. Core loop and retention · ## 6. What to copy and what not to copy · ## Checklist
 <!-- tldr:end -->
 
 Brookhaven RP is the most visited experience on Roblox and the purest example of the "stage, not game" design: no levels, no combat, no currency grind, almost no failure. It hands players a small town full of free houses, cars, outfits and props and lets them make their own stories. Every system in it exists to make pretend play smoother. If you want to understand why roleplay towns dominate Roblox and what it takes to run one, this is the case to study. If you want to copy it, read the "do not copy" section first: the genre is crowded, and Brookhaven's lead comes from years of updates and network effects you cannot buy.

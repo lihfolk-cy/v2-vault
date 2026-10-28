@@ -12,7 +12,7 @@ tags: [audio, sound-design, combat, layering, variation, ui-sounds]
 > - Peaks aligned to visual beats from measured data.
 > - Variation by bags, pitch and recombination; choke on rapid repeats.
 >
-> Read more (13 KB note): ## 2. Timing: the peak lands on the beat · ## 5. Physics-driven and state-driven sounds · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.4k tok. Read more: ## 2. Timing: the peak lands on the beat · ## 5. Physics-driven and state-driven sounds · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Sound design is deciding what every action sounds like, then making it sound like that every time without becoming repetitive, without arriving late, and without drowning everything else. On Roblox you rarely record your own foley; you assemble sounds from licensed library takes and your own uploads, slice them, layer them, pitch them, level them and trigger them precisely. This note is the craft side: layering, timing to the visual beat, variation, character and weapon voices, enemy sound profiles, physics-driven sounds, UI kits, cues as gameplay information, and the governance that keeps a sound library sane.

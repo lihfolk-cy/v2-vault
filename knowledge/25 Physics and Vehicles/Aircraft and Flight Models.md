@@ -12,7 +12,7 @@ tags: [physics, vehicles, aircraft, flight, aerodynamics, network-ownership]
 > - Arcade: bank, speed-pitch trade, auto-level.
 > - Tier 2: `K` from cruise speed, stall speed computed, tail stability, damping, assists.
 >
-> Read more (20 KB note): ## 2. Tier 1: arcade flight · ## 3. Tier 2: simple aerodynamic model · ## 10. Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.2k tok. Read more: ## 2. Tier 1: arcade flight · ## 3. Tier 2: simple aerodynamic model · ## 10. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Flying is the vehicle type where "realistic" and "fun" disagree the most. A real flight model stalls, needs runways, and punishes a thumb on a phone screen. An arcade model that ignores physics feels like a floating camera. Good Roblox aircraft sit in between, and the choice of where is a design decision before it is a code decision. This note covers the three flight-model tiers (arcade, simple aerodynamic, engine fluid forces), the lift and drag maths you need for the middle tier, helicopters and hover craft, controls for keyboard, gamepad and touch, cameras, ownership, anti-cheat for things that legitimately fly, and the performance and streaming problems that only appear when players move very fast over a large map.

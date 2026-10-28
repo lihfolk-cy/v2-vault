@@ -12,7 +12,7 @@ tags: [modeling, organic, creatures, sculpting, blender, enemies, rigging-prep]
 > - Modelled at final stud size, facing -Y, root at the origin.
 > - One exaggerated feature; silhouette reads as a filled shape.
 >
-> Read more (16 KB note): ## 1. The first decision: skinned or segmented · ## 2. Three ways to build an organic form · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.2k tok. Read more: ## 1. The first decision: skinned or segmented · ## 2. Three ways to build an organic form · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Organic modelling covers anything grown rather than built: creatures, monsters, faces, hands, trees, roots, tentacles, rocks with soft forms. In a game the organic model has a second job beyond looking right: it must **move**. That makes the first decision in every creature project a rigging decision, not a sculpting one: will this creature be one skinned mesh that bends, or a set of rigid pieces on joints? The answer changes how you model the shoulders, where the polygons go, how many meshes you export and how much the creature costs.

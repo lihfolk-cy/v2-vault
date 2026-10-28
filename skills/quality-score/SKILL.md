@@ -1,6 +1,6 @@
 ---
 name: quality-score
-description: 'LihFolk: Quality system - every generated Roblox asset or system (3D model, animation, UI, game system/code, world/zone, VFX) is scored 0-10 against a fixed rubric and must reach at least 8.5 before it is called done. Learns from a ledger of past attempts so first drafts score higher instead of regenerating. Use whenever you generate or finish one of those, or when the user asks for a score, quality bar or "make it an 8.5" / "make it a 9".'
+description: 'LihFolk: score any generated model, animation, UI, system, world or VFX 0-10 on fixed rubrics (min 8.5, hard gates) and learn from a ledger. Use when generating or finishing one, or asked for a score.'
 ---
 
 # LihFolk Quality Score

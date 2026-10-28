@@ -12,7 +12,7 @@ tags: [production, safety, backups, undo, terrain, workflow, case-study]
 > - Terrain snapshot before any bulk write; owner OK for area regeneration.
 > - One change at a time, verified and recorded.
 >
-> Read more (16 KB note): ## 2. Record the original before you change it · ## 3. Terrain: snapshot, then ask · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.0k tok. Read more: ## 2. Record the original before you change it · ## 3. Terrain: snapshot, then ask · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A Roblox place is a shared, mutable database with a weak undo. When several people (or several automated sessions) edit it at once, every change can break someone else's, and the obvious recovery tools (Ctrl+Z, a backup folder, "I'll just regenerate it") each have a trap. This note collects the rules for changing a shared place safely: how to make every change reversible, how to back up without bloating the place, and how to avoid the specific disasters that one production game (the reference project) actually had.

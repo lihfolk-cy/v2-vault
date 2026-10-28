@@ -10,7 +10,7 @@ tags: [core-concept, data, datastore, persistence]
 > - Locks need expiry. A server that crashes never releases.
 > - Expiry has a trade-off. Too short and a slow but alive server loses its lock mid-session (a duplicate source).
 >
-> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~950 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 A **session lock** is a marker in a player's saved data that says "server X owns this profile right now". Only the owning server may write the profile; other servers wait, retry or refuse until the lock is released or expires.

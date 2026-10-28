@@ -12,7 +12,7 @@ tags: [studio, version-history, backups, recovery, rbxm, workflow]
 > - Surgical snapshot (attributes, JSON, TerrainRegion, `.lua`) for the specific change.
 > - Removed content exported to disk, verified, listed in a manifest.
 >
-> Read more (13 KB note): ## 1. Version History · ## 6. Exporting `.rbxm` safely · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.2k tok. Read more: ## 1. Version History · ## 6. Exporting `.rbxm` safely · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Roblox keeps every saved and published version of every place in the cloud, which makes it tempting to think backups are solved. They are not. Version History restores a **whole place** to a point in time, which also throws away everything else that happened since; it does not cover player data, packages' other copies, configs or assets; and in a busy shared place the version you want is buried among auto-saves. A working backup strategy has layers: cloud versions for disasters, targeted snapshots for individual changes, local exports for anything you remove, and source control for code. This note covers the official tools (as of October 2026) and the layered strategy, including why backups must not live inside the place.

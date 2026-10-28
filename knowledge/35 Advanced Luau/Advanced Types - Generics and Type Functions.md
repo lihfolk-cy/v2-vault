@@ -12,7 +12,7 @@ tags: [luau, advanced-luau, types, generics, type-functions, strict-mode, valida
 > - Generic helpers take capabilities (callbacks) instead of needing bounds.
 > - Generic containers have a public method type and a private field type, with one audited cast.
 >
-> Read more (20 KB note): ## 5. Runtime validators that produce typed values · ## 6. Type functions for real game types · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~5.2k tok. Read more: ## 5. Runtime validators that produce typed values · ## 6. Type functions for real game types · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Luau Type System and Strict Mode]] covers the daily syntax: annotations, refinements, a first generic `map`, the `Result<T>` tagged union, `keyof`, and a `Partial` type function. This note goes past that, into the places where generic code either pays off or turns into a fight with the checker: how inference picks type arguments, variance, typing classes and containers generically, exhaustive unions, runtime validators that produce typed values, and type functions that compute real game types. It also says when to stop.

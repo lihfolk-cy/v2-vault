@@ -12,7 +12,7 @@ tags: [economy, rng, drops, loot-tables, rarity, pity, probability, luau, design
 > - Expected drops per evaluation computed in tests and diffed on every change.
 > - Weighted picks and independent chances kept in separate fields; nesting depth guarded.
 >
-> Read more (22 KB note): ## 1. Drop tables are data · ## 4. The exact effective rate of any pity ramp · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.5k tok. Read more: ## 1. Drop tables are data · ## 4. The exact effective rate of any pity ramp · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The vault already covers the basics of random rewards from several sides. [[RNG Drops and Luck Systems]] has the weighted pick, luck multipliers, a soft pity ramp and the list of protection systems. [[Rarity Ladders and Drop Pacing Math]] turns odds into hours and covers hard pity's effect on the mean. [[Paid Random Items and Odds Disclosure in Practice]] flattens tiered rolls for disclosure and gives the hard-pity effective rate. [[Probability and Statistics for Designers]] covers streaks, pseudo-random distribution and testing rates.

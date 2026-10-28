@@ -12,7 +12,7 @@ tags: [modeling, uv, unwrapping, texturing, blender, texel-density]
 > - Seams on hard edges, hidden sides, material boundaries.
 > - No visible stretch (Display Stretch overlay).
 >
-> Read more (21 KB note): ## 2. Roblox rules that constrain your UVs · ## 5. Texel density · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~5.3k tok. Read more: ## 2. Roblox rules that constrain your UVs · ## 5. Texel density · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A UV map tells the engine which pixel of a texture lands on which point of a mesh. Every textured MeshPart in Roblox depends on one: a `TextureID`, a `SurfaceAppearance`, a trim sheet, a palette atlas, a baked VFX gradient. Bad UVs are the most common reason a good model looks cheap in game: blurry patches next to sharp ones, visible seams, stretched stripes, colour bleeding from the neighbouring island. This note covers how unwrapping works, the Roblox-specific rules (Creator Hub, checked October 2026), how to plan seams, pick a texel density, pack islands with the right margins, and how to diagnose UV problems you only see in Studio.

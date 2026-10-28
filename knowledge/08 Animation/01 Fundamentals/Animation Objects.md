@@ -9,7 +9,7 @@ tags: [fundamentals, api, overview]
 > - Avoid: Creating an Animator on the client for a character -> Use the server-created Animator
 > - Avoid: Loading the same Animation every time you play it -> Cache one track per Animator per clip
 >
-> Read more (14 KB note): ## Every class, by role · ## The lifecycle of a clip, end to end · ## Common mistakes
+> Cost: TL;DR ~120 tok · whole note ~3.6k tok. Read more: ## Every class, by role · ## The lifecycle of a clip, end to end · ## Common mistakes
 <!-- tldr:end -->
 
 This is the map of every object Roblox uses to store, load and play animation, and how they connect. Each object has its own deep reference note; this note is about the relationships, the lifecycle and the choices you make between them. If you only read one fundamentals note, read this one and [[Animator Deep Dive]].

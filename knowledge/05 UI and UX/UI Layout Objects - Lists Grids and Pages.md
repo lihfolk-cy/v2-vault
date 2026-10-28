@@ -12,7 +12,7 @@ tags: [ui, layout, uilistlayout, flex, uigridlayout, uipagelayout, scrollingfram
 > - Laid-out slots are static; animation happens on inner faces.
 > - Tab bars use flex `Fill`; card rows with uneven content use `Stretch`.
 >
-> Read more (17 KB note): ## 3. Flex layouts · ## 7. ScrollingFrame with layouts · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.3k tok. Read more: ## 3. Flex layouts · ## 7. ScrollingFrame with layouts · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Layout objects arrange the siblings they sit next to. Insert a `UIListLayout` into a frame and every other `GuiObject` child of that frame is positioned (and possibly sized) by the layout instead of by its own `Position`. This note covers `UIListLayout` (including wrapping and flex), `UIFlexItem`, `UIGridLayout`, `UIPageLayout`, `UITableLayout` and `ScrollingFrame` with automatic canvas size, plus the performance and ordering traps that show up in shops and inventories with hundreds of entries.

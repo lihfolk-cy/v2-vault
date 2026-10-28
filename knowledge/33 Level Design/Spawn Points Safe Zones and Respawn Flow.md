@@ -12,7 +12,7 @@ tags: [level-design, spawning, respawn, safe-zones, fall-recovery, streaming, se
 > - Respawn time chosen for the genre, not left at the default by accident.
 > - Contexts defined; context recorded at death on the server.
 >
-> Read more (26 KB note): ## 6. Fall recovery · ## 8. A complete respawn service · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~140 tok · whole note ~6.6k tok. Read more: ## 6. Fall recovery · ## 8. A complete respawn service · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 [[Spawning Teams and Rounds]] covers the building blocks: `SpawnLocation` properties, teams, moving a character in `CharacterAdded`, the different respawn contexts in one production game, and round loops. This note treats spawning as a **flow** the player lives through, from the moment of death to the moment they can act again, and as a set of **places** a level designer has to build: spawn spots that make sense, safe zones that cannot be abused, and fall recovery that catches every way out of the map. It ends with a complete server-side respawn service.

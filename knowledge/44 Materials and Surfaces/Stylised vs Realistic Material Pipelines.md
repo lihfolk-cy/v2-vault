@@ -12,7 +12,7 @@ tags: [materials, art-direction, pipeline, stylized, realistic, pbr, production]
 > - Maps per asset class, texel density band and metal rules defined.
 > - Lighting settings (style, ambient, environment scales) part of the material spec.
 >
-> Read more (16 KB note): ## 2. What realism costs on Roblox specifically · ## 5. Turning realistic CC0 sets into stylised materials · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.2k tok. Read more: ## 2. What realism costs on Roblox specifically · ## 5. Turning realistic CC0 sets into stylised materials · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Every Roblox project picks a material pipeline, usually by accident: the first asset someone imports sets the direction, and six months later the game has photoscanned cobbles next to SmoothPlastic trees. [[Environment Art Styles]] covers style families and palettes, and [[Hand-Painted and Stylized Texturing]] covers how to paint stylised textures. This note compares the **whole material pipelines** end to end: what each costs to produce and to run, what lighting each needs, how they behave on phones, how to convert the vault's realistic CC0 sets into stylised ones, the hybrid that most successful games actually ship, and how to switch direction mid-project without redoing everything.

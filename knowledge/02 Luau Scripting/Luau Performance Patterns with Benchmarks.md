@@ -12,7 +12,7 @@ tags: [luau, performance, benchmarking, optimization, profiling, gc]
 > - Benchmarks use warm-up, several rounds, a median, a sink and a heap delta.
 > - Per-frame cost computed as cost x count x rate, on the target device.
 >
-> Read more (21 KB note): ## 3. Micro patterns: what to expect · ## 4. Structural patterns that actually move the needle · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.5k tok. Read more: ## 3. Micro patterns: what to expect · ## 4. Structural patterns that actually move the needle · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Luau Performance and Native Codegen]] explains how the Luau VM makes code fast and when to reach for `@native`. This note is the practical companion: how to write a benchmark that does not lie, how to turn microseconds into a frame budget, and a catalogue of the patterns people argue about (iteration styles, appends, string building, method caching, property reads, `pcall` in loops, closures) with the result you should expect and why. It ends with the structural patterns (time slicing, spatial hashing, ring buffers) that matter far more than any of the micro ones.

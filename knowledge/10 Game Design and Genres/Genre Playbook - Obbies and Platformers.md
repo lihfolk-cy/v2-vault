@@ -12,7 +12,7 @@ tags: [game-design, genre, obby, platformer, checkpoints, difficulty]
 > - Teach, test, twist for every new obstacle type.
 > - Sawtooth difficulty with breather stages.
 >
-> Read more (15 KB note): ## 4. Stage design · ## 5. Checkpoints and saving · ## 11. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.8k tok. Read more: ## 4. Stage design · ## 5. Checkpoints and saving · ## 11. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 The **obby** (obstacle course) is Roblox's oldest native genre and still one of its biggest: jump across platforms, avoid kill bricks, reach the next checkpoint. It needs no text, no tutorial and no economy, which makes it perfect for a young, mobile, international audience, and brutally competitive because thousands exist. The docs list Obby among the platform's common genres (Docs, "Design for Roblox"). This playbook covers the variants, stage and difficulty design, the movement numbers you design against, checkpoints and saving, mobile fairness, moving platforms (a classic engine trap), anti-cheat for timed runs, and monetisation that does not ruin the challenge.

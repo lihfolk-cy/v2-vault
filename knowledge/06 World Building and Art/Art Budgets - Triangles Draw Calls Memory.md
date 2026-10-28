@@ -12,7 +12,7 @@ tags: [world-building, art, performance, budgets, draw-calls, triangles, memory,
 > - Budgets written per prop, zone and hub.
 > - Unique mesh count tracked; copies are clones.
 >
-> Read more (16 KB note): ## Measuring: an art audit script · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.0k tok. Read more: ## Measuring: an art audit script · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 An art budget is a limit you set before building, so the game runs on the weakest device you care about. Roblox does not publish hard per-scene budgets; it publishes **mechanisms** (instancing rules, texture memory rules, shadow costs) and leaves the numbers to you. This note explains what actually costs frame time and memory for world art, gives starting budgets (marked as rules of thumb), and shows how to measure. Deep profiling technique lives in [[Rendering Performance]], [[MicroProfiler Guide]] and [[Memory Budgets and Leaks]].
