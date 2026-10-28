@@ -3,6 +3,18 @@ tags: [blender, weapons, sword, stylized, materials]
 ---
 # Stylised Weapons From a Concept
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Tubes and balls for crafted parts. Symptom: guards look like wire, grips look like springs.
+> - Avoid: Glow outlines instead of glow bevels. Symptom: the blade reads as a lightsaber outline.
+> - Avoid: Black that is not black. Symptom: a "void" blade renders lavender.
+> - Blade from a cross-section loop, with the bevel as its own material band.
+> - Point shape from the profile curves.
+> - Guard and pommel from extruded, bevelled silhouettes; ornament as relief, not floating tubes.
+>
+> Read more (9 KB note): ## What the rebuild did · ## Nuances and edge cases · ## Checklist for stylised weapons · ## Common mistakes
+<!-- tldr:end -->
+
 A painted concept showed a wide curved falchion: a black blade full of stars, a glowing purple edge, magenta and green flame licks off the spine, an ornate silver guard with a spiked hook quillon, a purple wrapped grip and a silver pommel. The first build was rejected as "looks really bad". The second, rebuilt from proper forged forms, worked. The difference is the lesson.
 
 ## Why the first version looked bad

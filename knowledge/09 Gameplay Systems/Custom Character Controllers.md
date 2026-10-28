@@ -3,6 +3,18 @@ tags: [gameplay, character-controller, movement, stamina, dash, input]
 ---
 # Custom Character Controllers
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Asking the server before moving -> Act on client, validate on server
+> - Avoid: Forked PlayerModule -> Layer on top
+> - Avoid: Direct WalkSpeed writes from many systems -> Multiplier stack
+> - Controller states explicit; `Locked` absorbs external control.
+> - Stamina has regen delay and exhausted lockout; bar always readable.
+> - Coyote time and jump buffer present.
+>
+> Read more (16 KB note): ## 4. Sprint and stamina · ## 7. Server validation that does not punish lag · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 "Custom character controller" covers a wide range: a sprint key with stamina on top of the default Humanoid, a full move set (double jump, wall jump, dash, slide, ground slam), or a complete replacement of Humanoid movement with a `ControllerManager`. This note is about building the movement layer players feel every second: how to structure it, where it runs, how to keep it responsive and still cheat-resistant, and the game-feel details (coyote time, jump buffering, stamina regen delay) that separate good controllers from stiff ones.
 
 Physics primitives: [[Mover Constraints and Physics Controllers]]. Humanoid basics: [[Characters and Humanoids]]. Animation of the result: [[Custom Locomotion Controller Design]] and [[Locomotion Systems]].

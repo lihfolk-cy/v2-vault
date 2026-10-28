@@ -4,6 +4,18 @@ tags: [case-study, top-games, simulator, idle, farming, live-ops, retention, mon
 
 # Case Study - Grow a Garden
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Can a new player complete buy, plant, collect, upgrade within two minutes with no tutorial screen?
+> - Does leaving the game earn the player something they will see on return?
+> - Is there a shared, visible timer that creates moments players gather for?
+> - Is randomness layered on top of a dependable base loop, with multipliers shown in game?
+> - Are status items visible to other players?
+> - Is anything you sell allowed to harm another player?
+>
+> Read more (20 KB note): ## 2. Click-through: title, icon and thumbnails · ## 6. What to copy and what not to copy · ## Checklist
+<!-- tldr:end -->
+
 Grow a Garden is the game that showed the whole industry how big a Roblox experience can get. It is a farming idle game: plant seeds on your plot, wait, harvest, sell, buy better seeds. In its first summer it broke the concurrent player record for any video game, then lost almost all of that audience within about a year. Both halves of that story are worth studying. This note is about the lessons you can build, not about copying the game.
 
 How to read the labels in this note:

@@ -3,6 +3,18 @@ tags: [physics, destruction, fracture, csg, geometryservice, explosions, perform
 ---
 # Destruction and Fracture
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Server-side debris for cosmetic breaks -> Client-only debris (technique A)
+> - Avoid: One welded assembly for the whole building -> Anchored chunks + adjacency graph
+> - Avoid: Default explosion joint breaking -> `DestroyJointRadiusPercent = 0`, server damage
+> - Each breakable classified: cosmetic, structural, terrain or sandbox.
+> - Cosmetic breaks are client-only with pooled debris.
+> - Structural breaks: server-owned, pre-fractured or queued runtime fracture, connectivity checked.
+>
+> Read more (17 KB note): ## 3. Technique B: pre-fractured models · ## 4. Technique C: runtime fracture with GeometryService · ## 9. Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Breaking things is one of the most satisfying verbs in a game and one of the easiest ways to wreck a Roblox server. Every new fragment is an instance that must replicate to every client, every unanchored fragment is a physics body, and every client's frame rate pays for the debris it can see. This note covers the five ways to make things break (swap models, pre-fractured welds, runtime fracture with `GeometryService`, explosions, terrain and voxel destruction), how to decide what breaks on the server, the budgets that keep it running on phones, debris lifecycles, rebuilding, and the exploits destruction invites.
 
 Prerequisites: [[Physics Assemblies and Constraints]] (assemblies, welds, collision groups), [[Physics Performance]], [[Collision and Physics Geometry]].

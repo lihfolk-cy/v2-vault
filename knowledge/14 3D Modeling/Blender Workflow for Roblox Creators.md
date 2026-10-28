@@ -3,6 +3,18 @@ tags: [modeling, blender, workflow, modifiers, export, python]
 ---
 # Blender Workflow for Roblox Creators
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Mixing FBX scale methods -> One method: FBX Unit Scale, or use GLB
+> - Avoid: Front modelled toward +Y -> Front toward -Y
+> - Avoid: Mirror without Clipping -> Clipping + Merge on
+> - Units set (None, or Metric with 1 m = 1 stud) and never changed mid-project.
+> - Character proxy and 1-stud grid in the scene.
+> - Front toward -Y; origin placed per asset type.
+>
+> Read more (22 KB note): ## 1. Scene setup once, saved as your startup file · ## 3. Modifiers: non-destructive modelling · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Blender is the default modelling tool for Roblox creators: free, scriptable, and the one Roblox's own guides are written for. This note is a working setup and a modifier-by-modifier guide for building game meshes that arrive in Studio at the right size, facing the right way, with the right pivots and shading. It goes deeper than the overview in [[Modeling in Blender for Roblox]], and it stops at the mesh: unwrapping, texturing and export validation have their own notes ([[UV Unwrapping]], [[Texturing and PBR Baking]], [[Exporting and Validating Models for Roblox]]). Rigging is in the Animation section ([[Rigging in Blender]]).
 
 Blender facts below were checked against the Blender manual (a recent 4.x/5.x edition); Roblox facts against the Creator Hub, as of October 2026. Menu locations move between Blender versions; operator names are more stable, so the Python is given too.

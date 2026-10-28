@@ -3,6 +3,18 @@ tags: [modeling, 3d, fundamentals, meshes, budgets, topology]
 ---
 # Modeling Fundamentals for Games
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Budgeting faces instead of triangles -> Read the triangle count
+> - Avoid: One mesh over 20,000 triangles -> Split by material or body part, or decimate
+> - Avoid: Unapplied scale -> Apply rotation and scale before export
+> - Brief written: camera distance, count on screen, animated or not, triangle budget.
+> - Blockout at final scale beside a character proxy, checked in Studio.
+> - Silhouette readable as a filled black shape.
+>
+> Read more (19 KB note): ## 1. What a mesh is to the engine · ## 3. Budgets that shipped · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A game model is not a sculpture. It is a set of triangles that a phone GPU must draw 30 to 60 times a second, next to hundreds of other models, under a camera that is usually 20 to 200 studs away. Everything in this section follows from that sentence: why triangle counts matter more than polygon counts, why a silhouette beats surface detail, why a pivot in the wrong place costs a programmer a day, and why "it looks fine in Blender" is not a test.
 
 This note is the foundation for the rest of `14 3D Modeling`. It explains what a mesh is to the engine, the hard limits Roblox puts on meshes, the budgets one production game actually shipped with, and the order of work that keeps you from redoing models. Tool steps live in [[Blender Workflow for Roblox Creators]]; style choices in [[Low-Poly and Stylized Modeling]], [[Hard-Surface Modeling]] and [[Organic and Creature Modeling]].

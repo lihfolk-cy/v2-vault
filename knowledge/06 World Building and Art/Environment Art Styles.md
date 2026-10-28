@@ -3,6 +3,18 @@ tags: [world-building, art-direction, style, palette, stylised, voxel, pbr]
 ---
 # Environment Art Styles
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Mixing Toolbox assets of different styles -> One style guide, own kit
+> - Avoid: Picking colours in a picker -> Sample under game lighting
+> - Avoid: Too much glow -> Keep glow coverage in budget
+> - Style guide written (core rules, slots, palette, ladder, QA).
+> - Palette derived systematically; sampled under game lighting.
+> - Silhouette test passed for key assets at 30 to 40 px.
+>
+> Read more (13 KB note): ## Writing a style down · ## Palettes · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 An art style is a set of rules that every asset obeys: shape language, palette, materials, texture density, lighting, and how much detail goes where. On Roblox the style must also survive a phone screen, the default camera distance, low graphics settings and dozens of assets from different hands. This note describes the common Roblox style families, how to write a style down so a team (or a script) can reproduce it, how to derive palettes, and the style lessons from one production game whose owner rejected several "technically fine" versions of its hub before landing on one that worked.
 
 ## Why style consistency beats fidelity

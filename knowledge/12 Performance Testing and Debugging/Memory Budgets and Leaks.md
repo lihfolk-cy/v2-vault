@@ -3,6 +3,18 @@ tags: [performance, memory, leaks, luau-heap, pooling, instances]
 ---
 # Memory Budgets and Leaks
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Trusting `Destroy()` to clean up connections made on other objects.
+> - Avoid: Per-player tables with no `PlayerRemoving` cleanup.
+> - Avoid: Spawning infinite loops per object.
+> - Client and server memory baselines recorded per release, by category.
+> - Soak tests exist for respawn, zone change, menu open/close, equip/unequip.
+> - Every system with connections has a cleanup owner and uses `Destroying`/`PlayerRemoving`.
+>
+> Read more (19 KB note): ## 6. The cleanup discipline · ## 7. Pooling · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Memory problems on Roblox look like nothing for a long time and then like everything at once: phones crash after twenty minutes, servers bloat over a six-hour session, the garbage collector starts eating frames. This note covers where memory goes (instances, assets, the Luau heap), what a budget looks like, the leak patterns that cause almost every real-world leak, how to find a leak with the Luau heap tool and a soak test, and the cleanup and pooling patterns that prevent them.
 
 Source labels: **Docs** (Creator Hub, as of October 2026), **Measured** (the reference project), **Rule of thumb**.

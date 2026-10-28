@@ -3,6 +3,18 @@ tags: [narrative, quests, writing, hooks, objectives, retention, ui-text]
 ---
 # Quest Writing and Hooks
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Witty objective lines -> Verb, count, target, place
+> - Avoid: Names that do not match the world -> Same name on tracker, nameplate and sign
+> - Avoid: Verb mismatch -> Verb matches the counting rule
+> - Every quest has a distinct 2 to 4 word title.
+> - Hook names one primary motivation and matches the task.
+> - Objective line follows verb, count, target, place, under 40 characters.
+>
+> Read more (19 KB note): ## 3. Objective lines · ## 4. The three-beat quest · ## 11. Common mistakes · ## 12. Checklist
+<!-- tldr:end -->
+
 A quest is a mechanic (a counter, a condition, a reward) wrapped in words. The machinery is covered in [[Quests and Objectives]] and built in full in [[Quest Chain System End to End]]. This note is about the words: the hook that makes a player accept, the objective line that tells them exactly what to do, the tracker text they glance at mid-fight, the turn-in that pays off, and the cliffhanger that brings them back tomorrow. Quest text is the most-read narrative text in most Roblox games, because players need it to play. That makes it the best place to put story and the worst place to put a wall of text.
 
 Labels: **Roblox docs (as of October 2026)**, **measured in the reference project**, **rule of thumb**.

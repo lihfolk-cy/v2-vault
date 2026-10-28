@@ -3,6 +3,18 @@ tags: [luau, types, strict-mode, type-checking, generics]
 ---
 # Luau Type System and Strict Mode
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Trusting typed remote handlers. Symptom: server errors or exploits from wrong argument types despite "typed" code.
+> - Avoid: Casting to silence errors. Symptom: a renamed child breaks at runtime with no warning.
+> - Avoid: Strict modules on top of untyped foundations.
+> - `--!strict` on every new file; team agrees on the solver per place.
+> - Remote handlers take `unknown` and narrow; no trust in annotations.
+> - `IsA` before `::`; no `:: any ::` chains.
+>
+> Read more (20 KB note): ## 1. Modes · ## Nuances and edge cases · ## Checklist · ## Common mistakes
+<!-- tldr:end -->
+
 Luau has a gradual, structural type system. Types are checked by Studio's analyzer (and by external tools such as luau-lsp) **while you edit**; at runtime they are erased and do nothing, except that native code generation uses argument annotations as optimization hints ([[Luau Performance and Native Codegen]]). The value of types is catching the bug classes that dominate Roblox error logs: indexing `nil`, wrong payload shapes, typo'd properties, and calling functions that do not exist yet.
 
 This note covers the modes, the two solvers, the syntax you use daily, refinements, generics, OOP typing, type functions, and the patterns that make `--!strict` pleasant rather than a fight. The playbook sections follow a strict-typing house style used in production Roblox codebases.

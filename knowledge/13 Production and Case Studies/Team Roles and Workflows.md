@@ -3,6 +3,18 @@ tags: [production, team, workflow, ownership, collaboration, case-study]
 ---
 # Team Roles and Workflows
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: No ownership map. Two people "improve" the same folder in the same hour.
+> - Avoid: Contracts in chat, not in notes. The second half of the feature is built against a misremembered interface.
+> - Avoid: Play-testing in the shared session while others build.
+> - Roles are named, even if one person holds several.
+> - An ownership map exists, by path, and is kept current.
+> - Shared hot files have a written edit protocol.
+>
+> Read more (14 KB note): ## The ownership map · ## The daily loop · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A Roblox game is usually made by a small group: an owner who decides taste and holds the account, one or more builders and scripters, sometimes an artist or animator, and testers who are often friends or the owner. Studio makes it easy for all of them to work in the same place at the same time ([[Team Create and Collaboration]]). It does not make it easy for them to avoid stepping on each other. This note is about roles, ownership and the daily loop that keeps several people (or several parallel workstreams) productive in one place.
 
 Examples come from one production game (the reference project), where up to five parallel workstreams edited the same Studio place at once, sharing terrain, the undo stack, config modules and the owner's attention. Most of the rules below were written after something went wrong.

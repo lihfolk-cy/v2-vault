@@ -3,6 +3,15 @@ tags: [procedural, ik, math, two-bone, arms, legs, luau]
 ---
 # Two-Bone IK Math
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Rig parts vanish (NaN): `acos` of a value outside [-1, 1] -> clamp the distance and the cosine
+> - Forearm rolls as the arm bends: bones treated as straight sticks on slanted R15 bones -> solve the hinge in the elbow's own frame (section 4)
+> - Elbow bends backwards: wrong branch sign, or a ball-joint solve -> pick `s` per joint, clamp to the hinge range
+>
+> Read more (18 KB note): ## 2. The bend plane · ## 4. Slanted R15 bones and the pure-hinge elbow · ## Common mistakes
+<!-- tldr:end -->
+
 Two-bone IK is the workhorse: shoulder, elbow, wrist; hip, knee, ankle. It has an exact closed-form answer, runs in constant time, and (done right) can never bend an elbow backwards. This note derives it from the law of cosines, adds the bend plane (pole or swivel), shows how to turn solved geometry into Roblox joint `Transform`s, and then handles the two things textbook versions ignore: **R15 bones are slanted** (the joint pivots are not on a straight line along each part) and **an elbow is a pure hinge**, not a ball joint.
 
 ## 1. The triangle

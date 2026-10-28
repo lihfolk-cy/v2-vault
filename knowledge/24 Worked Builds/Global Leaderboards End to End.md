@@ -3,6 +3,18 @@ tags: [worked-build, leaderboards, ordered-datastore, datastore, budgets, ui, lu
 ---
 # Global Leaderboards End to End
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Writing on every coin gain: the ordered write budget is gone in seconds on a busy server.
+> - Avoid: Resetting a weekly board by deleting keys from a single store, racing players who are still writing.
+> - Avoid: Different week formulas in different scripts.
+> - Scores sourced from profile stats only
+> - Write and list budgets computed for the worst server size
+> - Writes staggered, only on change, never lowering monotonic scores
+>
+> Read more (25 KB note): ## 4. Server · ## 5. Client and UI · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Two cross-server leaderboards from an empty place: an all-time "most coins earned" board and a weekly board that resets every week without deleting anything. Scores come only from server-side profile stats, are written to ordered data stores on a budgeted schedule, read back once per board every two minutes per server, resolved to display names in batches, pushed to every client, and drawn both on a board in the world and as a player's own rank. It uses the foundation from [[Saved Inventory End to End]], whose `InventoryService.AddCoins` already maintains `Stats.CoinsEarned` and `Weekly`.
 
 All code is **reviewed, not run**: strict Luau against the documented APIs (Roblox docs, as of October 2026), not executed in this form. Test as section 7 describes.

@@ -3,6 +3,18 @@ tags: [performance, networking, bandwidth, budgets, remotes, replication, measur
 ---
 # Network Bandwidth Budgets and Measuring Them
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Trusting the "50 KB/s per client" folklore as a hard limit.
+> - Avoid: Measuring with 2 clients and shipping to 30-player servers.
+> - Avoid: Looking for per-remote stats in the Developer Console Network tab (it shows web calls).
+> - A per-player budget per category, each row with an owner.
+> - Fan-out arithmetic done for every broadcast at full server size.
+> - Top talkers measured (A/B or instrumented remotes).
+>
+> Read more (18 KB note): ## 3. The fan-out arithmetic · ## 4. Measuring per system · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Network Performance]] lists the tools and the traffic-cutting patterns. This note is about numbers: how to set a bandwidth budget per player, how to find out what each system actually costs, and how to keep the total inside the budget as the game grows. The theme is that you cannot manage what you only feel. "The game is laggy on phones" becomes fixable when you can say "combat sends 38 kbps per player at 20 players, and the budget is 25".
 
 ---

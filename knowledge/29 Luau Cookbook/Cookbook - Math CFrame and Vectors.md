@@ -3,6 +3,18 @@ tags: [luau, cookbook, math, cframe, vector3, recipes]
 ---
 # Cookbook - Math CFrame and Vectors
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: `.Unit` on a zero vector, `acos` without clamping: NaN that spreads.
+> - Avoid: Positive Z used as forward.
+> - Avoid: Fixed lerp alphas per frame.
+> - Every function guards zero-length vectors.
+> - Smoothing uses `1 - exp(-k * dt)` or a spring.
+> - Field of view checks compare against a precomputed cosine.
+>
+> Read more (18 KB note): ## 10. Launch a projectile to hit a point in a given time · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Recipes for the geometry questions that come up weekly: facing things, measuring angles, checking cones, smoothing motion, orbiting, random points, projectile arcs and grid snapping. Each recipe is a small pure function you can drop into a shared `MathUtil` module. Code is `--!strict` Luau, reviewed, not run. The theory (spaces, composition order, Euler angles, float precision) is in [[Math Vectors and CFrames]] and [[Motor6D Math and CFrame Composition]]; motion smoothing in depth is in [[Springs Damping and Smoothing]].
 
 Conventions used below: Roblox is Y-up, and a `CFrame`'s `LookVector` is its negative Z axis (Roblox docs (as of October 2026)).

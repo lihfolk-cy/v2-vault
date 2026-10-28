@@ -3,6 +3,18 @@ tags: [2d, pixel-art, aseprite, sprites, atlas, textures, ui, resampling, modera
 ---
 # Pixel Art Pipeline - Aseprite to Roblox Without Blur
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Sprite soft everywhere: `ResampleMode` left at Default -> Property on the ImageLabel itself, not a parent
+> - Uneven pixel columns, wobble while walking: Non-integer scale or Scale-based sizing -> Every size is `fromOffset(w * scale, ...)`, no UIScale above
+> - One-pixel line from the next frame: No spacing or extrusion -> Re-export with `--shape-padding 2 --extrude`
+> - One base pixel size and one virtual resolution decided and written down.
+> - Hard alpha, exact palette, tags and frame durations in the Aseprite source.
+> - Export with spacing and extrusion; JSON converted to a typed Luau module; no pre-scaling for GUI art.
+>
+> Read more (22 KB note): ## 4. Atlas packing without bleeding · ## 5. Integer scaling on every screen · ## 10. Common mistakes · ## 11. Checklist
+<!-- tldr:end -->
+
 Pixel art fails on Roblox in a predictable way: you draw a crisp 16 by 16 sprite, upload it, put it in an ImageLabel, and it shows up as a soft smudge with a faint halo, or it looks sharp in Studio and shimmers on a phone. None of this is mysterious. Blur comes from four places: the resampling filter, non-integer scale, sub-pixel placement, and the engine choosing a lower quality version of the texture. Halos and bleeding come from the atlas layout. This note walks the whole path from the Aseprite file to a sharp sprite on every device, and covers the parts people forget: upload limits, moderation, atlas metadata, and 3D surfaces that have no pixel filter at all.
 
 Related: [[Sprite Sheets and Frame Animation with ImageRectOffset]] for animation playback, [[Textures Decals and Texture Memory]] for memory, [[UI Asset Pipeline]] for the general UI art workflow, and [[EditableImage for Pixel Buffers and Procedural 2D]] for drawing pixels at runtime.

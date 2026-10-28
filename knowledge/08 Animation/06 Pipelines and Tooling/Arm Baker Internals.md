@@ -3,6 +3,16 @@ tags: [pipeline, ik, arms, baking, algorithms, advanced]
 ---
 # Arm Baker Internals
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - One shared set of key times per arm (all three joints of a side keyed together: each key costs 3 Poses, and separate times...
+> - Tolerance: shoulder 1.0, elbow 1.2, wrist 1.5 deg, times a tolerance scale.
+> - Spans are at most 0.4 s long and must turn less than 120 deg (the Animator's interpolation becomes ambiguous for big turns).
+> - Sometimes the best fix is to steer the solve: edit arm CFrames over time windows in a copy of the clip dump, then bake with...
+>
+> Read more (30 KB note): ## Stage 2: target shaping · ## Stage 3: the candidate grid
+<!-- tldr:end -->
+
 The algorithms inside the offline arm baker ("posebaker") of one live action game, at the level of detail you need to rebuild it: how targets are derived, how importance is computed, how the body clearance push works, the candidate grid, every unary and transition cost, the Viterbi pass, smoothing, the off-hand contexts, the flip guard, key fitting, body thinning, instance budgets, repair rounds, re-keyed sources and outputs. Workflow and pass rules: [[Pipeline - Arm IK Baking and QA]]. The metrics it optimises for: [[Arm QA Metrics Reference]].
 
 All constants are the production values. Space is HumanoidRootPart space of a 1.6x R15 rig (+X right, +Y up, -Z forward); the solve runs on a dense **60 Hz** grid of `F = round(length * 60) + 1` frames.

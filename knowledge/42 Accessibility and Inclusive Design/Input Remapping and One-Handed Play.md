@@ -3,6 +3,18 @@ tags: [accessibility, input, remapping, keybinds, one-handed, motor, gamepad, to
 ---
 # Input Remapping and One-Handed Play
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Labels from `KeyCode.Name`, wrong on non-QWERTY keyboards.
+> - Avoid: Saved bindings trusted by the server without sanitising.
+> - Avoid: Saving full binding tables, so new actions never get defaults.
+> - Stable action ids; defaults in code; saves store only differences.
+> - Remap screen with capture, cancel, swap on conflict, reset per action and all.
+> - Reserved keys cannot be bound; settings key always reachable.
+>
+> Read more (25 KB note): ## 3. Designing the remap model · ## 5. The client remap controller · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Input - UserInputService and ContextActionService]] covers the three input APIs and when to use each. [[Gamepad and Console UX]] covers controller menus and selection. [[Accessibility]] lists the motor basics (big targets, no rapid tapping). This note is the motor-accessibility layer on top: a full remapping system with capture, conflict handling, reserved keys, keyboard-layout-aware labels and server-validated saving; hold-versus-toggle and repeat options; one-handed presets for keyboard, gamepad and touch; a movable touch layout; and timing assists.
 
 Sources: **Roblox docs (as of October 2026)** for `ContextActionService`, `UserInputService`, and the Input Action System classes; **rule of thumb** for design choices and numbers.

@@ -3,6 +3,18 @@ tags: [production, ai-assistants, automation, verification, collaboration, case-
 ---
 # Working with AI Assistants in Studio
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Trusting a confident summary. Verify with numbers.
+> - Avoid: Letting an assistant press Play in a shared session.
+> - Avoid: Using undo to fix a mistake. In a shared place it undoes other people's work.
+> - Edit only; Play is the owner's or tester's.
+> - Pre-save gate: compile, scan, size, clone-require, harness.
+> - Numbers over screenshots for verification.
+>
+> Read more (15 KB note): ## Verification discipline · ## Parallel sessions sharing one place · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 AI coding assistants can now drive Roblox Studio directly: read the Explorer tree, read and edit scripts, run Luau in the Edit data model, capture the viewport, and call offline tools (Blender, Python, local servers) around it. Used well, they turn an owner with ideas into a small studio. Used badly, they produce a place full of half-verified changes, backups nobody can find, and work that overwrites other work.
 
 This note is vendor-neutral. It describes the practices that made AI-assisted development work in one production game (the reference project), where the owner ran several assistant sessions in parallel against one Studio place for about a month and wrote down every rule that an incident produced. The same rules apply to human teams; assistants just hit them faster, because they work faster and do not remember yesterday unless something tells them. For the built-in Studio tools specifically, see [[Studio Assistant and AI Tools]].

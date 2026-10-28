@@ -3,6 +3,18 @@ tags: [testing, qa, studio, tools]
 ---
 # Testing Animations in Studio
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Clip stepped in Edit on a correctly scaled dummy with real joints (Motor6D and AnimationConstraint variants).
+> - Lua models A/B'd against the Animator on originals, not stubs.
+> - Filmstrip and marker contact sheet reviewed.
+> - Static lint clean; dynamic QA within thresholds.
+> - Two-client test with late join and simulated lag.
+> - Published test place run for any clip or system that could use Studio-only ids.
+>
+> Read more (17 KB note): ## 3. Test dummies that actually animate · ## 6. Automated QA ideas · ## Checklist
+<!-- tldr:end -->
+
 Animation testing in Roblox is split between two worlds that behave differently. **Edit mode** has no physics and no animation step, but it is where tools can freeze time, step the real Animator frame by frame, and read exact joint values. **Play mode** has everything running, but you cannot single-step it and normal scripts cannot call the Animator's stepping API. A good test setup uses Edit for exact, repeatable measurement and Play (including multi-client tests) for behaviour, timing and replication.
 
 This note covers both, plus the traps that made "Edit-verified" mean less than people thought in the reference project (one live action game).

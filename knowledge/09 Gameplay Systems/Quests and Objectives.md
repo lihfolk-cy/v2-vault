@@ -3,6 +3,18 @@ tags: [gameplay, quests, objectives, dailies, tutorial, story]
 ---
 # Quests and Objectives
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Quest code inside combat code -> Signal bus
+> - Avoid: Rewards computed at claim -> Freeze at deal
+> - Avoid: Client time for resets -> Server UTC keys
+> - Definitions in data with permanent ids; kinds driven by a signal bus.
+> - Rewards frozen at deal; scale with progress.
+> - UTC period keys; rerolls and a weekly track.
+>
+> Read more (14 KB note): ## 2. Driving progress: a signal bus · ## 3. Dealing dailies and weeklies · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Quests turn a sandbox into a sequence of goals. On Roblox they come in three shapes: **onboarding steps** (a scripted sequence for new players), **story beats** (one-off objectives tied to the world: talk to this NPC, defeat this boss, open this gate) and **repeatable quests** (dailies and weeklies that bring players back). All three share the same machinery: a definition, progress counters driven by game events, a completion check, a reward, and UI that says what to do next. This note covers that machinery, the data design that keeps it maintainable, and the production lessons from one game's daily/weekly system and tutorial rewrites.
 
 Related: [[Progression Levels and Unlocks]], [[Economies and Currencies]], [[First-Time User Experience and Onboarding]], [[Retention and Return Hooks]], [[HUD Design]].

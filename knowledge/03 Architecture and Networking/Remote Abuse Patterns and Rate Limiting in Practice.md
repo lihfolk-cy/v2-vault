@@ -3,6 +3,18 @@ tags: [security, remotes, rate-limiting, validation, exploits, networking]
 ---
 # Remote Abuse Patterns and Rate Limiting in Practice
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Expensive lookup before the rate limit -> Rate limit first
+> - Avoid: Range check without NaN check -> `x == x`
+> - Avoid: Payload `userId` used as identity -> Use the injected sender
+> - Every remote goes through one guard: rate, shape, bounds, lock, act, score.
+> - Numbers: finite, integral where needed, ranged.
+> - Strings: length cap, valid UTF-8, membership in fixed sets for keys.
+>
+> Read more (20 KB note): ## 2. Abuse patterns by payload · ## 3. Abuse patterns by behaviour · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Rate Limiting and Abuse Prevention]] gives the algorithms (token bucket, sliding window, budgets) and production limits. [[Exploits and Anti-Cheat]] gives the threat model and the consequence ladder. [[Server Authority and Validation]] gives the validation layers. This note is the field guide that sits between them: the concrete shapes remote abuse takes, payload by payload, and a single guard layer that handles them in the right order. It also covers cost-weighted limits, re-entrancy (the race that validated code still loses), amplification, log flooding, shadow-mode tuning, and how to fuzz your own remotes before someone else does.
 
 Engine facts are from the Roblox docs (as of October 2026). Everything marked rule of thumb is production practice.

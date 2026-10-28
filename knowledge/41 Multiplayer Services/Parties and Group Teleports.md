@@ -3,6 +3,18 @@ tags: [multiplayer, parties, teleport, socialservice, reserved-servers, messagin
 ---
 # Parties and Group Teleports
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Assuming one `TeleportAsync` moves the whole party -> It moves only players in this server; gather the rest
+> - Avoid: Two servers teleporting the same party to a public place without... -> Reserve, or reunite first then teleport once
+> - Avoid: Trusting teleport data for party membership -> Gather record in MemoryStore
+> - `PartyId` read on the server; changes handled between rounds.
+> - One reservation per gather; code stored server-side only.
+> - Gather record with short TTL; message plus manual rejoin for reliability.
+>
+> Read more (23 KB note): ## 5. The code · ## 6. The destination: an arrival barrier · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Friends who arrive together and get split by a teleport stop playing together, and players who stop playing together stop playing. Keeping a group whole across servers and places is one of the highest-value multiplayer features you can build, and one of the easiest to get subtly wrong: one member is in another server, one is mid-teleport, one has a flaky connection, the destination fills up, the leader leaves. This note covers Roblox's own party data (`Player.PartyId` and `SocialService`), when to run your own party system instead, the exact behaviour of group teleports, gathering a party spread over several servers, the arrival barrier on the destination, and every failure path, with strict Luau.
 
 Prerequisites: [[Teleporting and Multi-Place Games]] (TeleportAsync, TeleportOptions, `TeleportInitFailed`, arrival validation), [[Cross-Server Messaging]] (MessagingService limits). Related: [[Matchmaking Queues with MemoryStore]] (a party is one ticket), [[Session State Across Places]] (what the party carries), [[Social Design and Multiplayer Play]] (why groups matter).

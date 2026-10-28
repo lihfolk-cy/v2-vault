@@ -3,6 +3,18 @@ tags: [accessibility, text, typography, ui-scale, readability, ui, localization,
 ---
 # Readable Text and UI Scale
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: `TextScaled` for content, so the player's text size does nothing.
+> - Avoid: Fixed-height text boxes that clip at `Largest`.
+> - Avoid: Tight `MaxTextSize` constraints on body text.
+> - Rendered body text meets the minimums for each device class, measured, not assumed.
+> - One `UIScale` controller combines device base and player preference, clamped to fit.
+> - No content text uses `TextScaled`; constraints on body text are generous.
+>
+> Read more (20 KB note): ## 2. Three scales that multiply · ## 6. An automated text audit · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Accessibility]] explains how `GuiService.PreferredTextSize` changes text and which text setups ignore it. [[Responsive UI for Phone Tablet Console and PC]] covers device classes and the shipped phone rules. This note sits between them: how big text actually needs to be on each device in physical terms, how the engine's text scaling, your device `UIScale` and a player "UI size" slider stack (and where they fight), layouts that grow instead of clipping, type choices that help low-vision and dyslexic players, world-space text, and an automated audit that finds clipped labels before players do.
 
 Sources: **Roblox docs (as of October 2026)** for engine behaviour (`GuiService`, `TextLabel`, `TextService`, `UIScale`), **measured in the reference project** where noted (anonymised), and **rule of thumb** for sizes and thresholds.

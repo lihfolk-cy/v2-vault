@@ -3,6 +3,18 @@ tags: [ai, materials, textures, materialvariant, surfaceappearance]
 ---
 # AI Material and Texture Generation
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Using Texture Generator for a floor (it targets one mesh) or Material Generator for a character.
+> - Avoid: Generating a variant per colour instead of one grayscale variant tinted by `Color`.
+> - Avoid: Changing `Material` on palette-textured MeshParts and seeing no change.
+> - Style decided before generating.
+> - Studs Per Tile checked at close, gameplay and far distance.
+> - Variants named for the project and stored where scripts expect them.
+>
+> Read more (14 KB note): ## 2. Texture Generator · ## 3. Production experience: the reference project · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Roblox has two AI surface tools that are easy to confuse:
 
 - **Material Generator** makes a seamless, tiling material from a text prompt and saves it as a `MaterialVariant`. Use it for surfaces that repeat: floors, walls, rock, fabric.

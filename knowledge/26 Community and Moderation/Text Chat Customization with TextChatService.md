@@ -3,6 +3,18 @@ tags: [community, moderation, chat, textchatservice, safety, luau, ui]
 ---
 # Text Chat Customization with TextChatService
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Tags or colours vanish after adding a module: Two scripts assigned the same callback slot
+> - Some players "never answer": They cannot see each other's chat because of age groups; design for it
+> - Admin command works in Studio, fails live: Rank check against the wrong group id, or `GetRankInGroup` failing...
+> - No player text travels through remotes; all chat via `TextChatService`
+> - No code reads, logs or reacts to message text (except `TextChatCommand`)
+> - Each callback owned by exactly one module; no yields inside
+>
+> Read more (20 KB note): ## 2. Platform-integrated chat (Announcement and Roblox docs, October 2026) · ## 3. The object model · ## 11. Common mistakes and how to spot them · ## 12. Checklist
+<!-- tldr:end -->
+
 Text chat is where players talk to each other, which makes it the single most safety-sensitive feature in most games. This note goes past the basics in [[Age Checks and Safety Features]] (all player text through `TextChatService`, filtering, direct-chat eligibility) and covers what you can actually customize: channels, delivery rules, chat tags, commands, bubbles, system messages, and the October 2026 change called **platform-integrated chat**, which removes your code's access to message text and will be required for every game in 2027. If you are designing a chat feature today, read section 2 before you write a line, because some popular customizations are on a deprecation clock.
 
 Facts are labelled "Roblox docs (as of October 2026)", "Announcement (October 2026)", "measured in the reference project" or "rule of thumb". This area is moving monthly; re-check the dates.

@@ -3,6 +3,18 @@ tags: [world-building, art, parts, csg, unions, meshparts, geometry]
 ---
 # Parts Unions and MeshParts
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Unions for repeated props -> Model once, import, clone
+> - Avoid: Rebuilding a union instead of duplicating it -> Duplicate finished unions
+> - Avoid: Setting `RenderFidelity = Precise` everywhere -> `Automatic`
+> - Blockout in Parts with names and pivots that the final meshes can map onto.
+> - Repeated objects are one mesh asset, cloned.
+> - No mesh over 20,000 triangles; heavy objects split.
+>
+> Read more (20 KB note): ## Unions and solid modeling (CSG) · ## MeshParts · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Everything you see in a Roblox world is one of four kinds of geometry: **primitive Parts** (Block, Ball, Cylinder, Wedge, CornerWedge), **solid-model operations** (Unions, Intersects, Negates, all `PartOperation`s), **MeshParts** (imported triangle meshes) and **Terrain** (voxels, see [[Terrain Tools and Terrain API]]). Each has a different cost profile for rendering, physics, memory, place size and iteration speed. Picking the wrong one is the most common reason a map that looked fine in Studio stutters on a phone, or a build that looked "pro" in Blender looks cheap once it is in the game.
 
 This note explains what each kind really is under the hood, when each one wins, the failure modes, and the patterns one production game settled on after building a hub three times and a 49-model enemy roster once.

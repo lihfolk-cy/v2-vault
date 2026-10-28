@@ -3,6 +3,18 @@ tags: [modeling, curves, bezier, splines, catmull-rom, b-spline, nurbs, continui
 ---
 # Bezier Curves and Splines for Modellers
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Stepping `t` evenly -> Resample by arc length
+> - Avoid: Uniform Catmull-Rom on uneven points -> Centripetal (`alpha = 0.5`)
+> - Avoid: Catmull-Rom for a hero sweep -> B-spline (C2), or more evenly spaced points
+> - Each main silhouette line has a planned number of inflections (0 or 1 for props).
+> - The tightest curvature sits where the eye should go.
+> - Hero curves are G2 (B-spline or G2 blends); pipes and mechanical parts may stay G1 arcs.
+>
+> Read more (20 KB note): ## 2. Splines: chains of curves with rules · ## 3. Continuity: G and C, and why it shows · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Curves are how a modeller says "this shape flows": a blade edge, a horn spiral, a pipe run, a logo, the S of a character's pose, the ease of a keyframe. This note is the theory a modeller actually uses: what a Bezier curve is and why its handles behave as they do, how Catmull-Rom, B-splines, NURBS and Hermite curves differ, what G0/G1/G2 continuity means and why it shows in highlights, how to read curvature and spot kinks, and how the same maths drives Blender's F-curves. The Blender build side is in [[Curve-Based Modelling in Blender for Roblox]]; the Luau side is in [[Curves in Luau - Paths Beams and Motion]]; the gameplay-maths view (easing, arc-length tables) is in [[Interpolation Easing and Curves Math]].
 
 Trust labels: **Measured** (run in headless Blender 5.2 with `lihfolk_curves.py`, October 2026), **Docs** (Blender or Roblox documentation), **Source** (paper or reference named in Sources), **Rule of thumb**, **Unverified**.

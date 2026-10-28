@@ -3,6 +3,18 @@ tags: [systems, combat, combo, input, networking, timing]
 ---
 # Combat Combo Systems
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Clicks get "eaten": Early presses dropped -> One-press buffer of 0.1 to 0.2 s
+> - Two swings blur together: Fading the new swing over a still-playing old one -> Stop the old (0.06), start the new from the link pose (0.04)
+> - Snap when the player stops clicking: End pose not the class rest -> Re-key the last frame to the rest
+> - Hit times stored per step (from markers), divided by playback speed.
+> - Min gap per class; later-hit rule applied.
+> - One-press buffer; combo window resets the step.
+>
+> Read more (17 KB note): ## Server-authoritative hits · ## A buffered combo controller · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A click combo is the most-played animation system in any melee game. It is three or four short clips, a counter and a timer, and it is surprisingly easy to make feel bad: dropped inputs, swings that blend into mush, hits that land before or after the blade arrives, server damage that disagrees with what the player saw. This note covers the design: chain structure, input buffering, combo windows, pose continuity, and server-authoritative hit timing with latency. Numbers are from one live action game (the reference project) unless marked otherwise. Swing craft (how to pose and time a single swing) is in [[Weapon Swing Design]] and [[Combat Animation Craft]].
 
 ## Anatomy of a chain

@@ -3,6 +3,18 @@ tags: [business, hiring, freelancers, revenue-share, payouts, groups, contracts,
 ---
 # Hiring Freelancers and Revenue Shares
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Revenue shares for bounded work.
+> - Avoid: Shares with no vesting, contribution rule or exit.
+> - Avoid: Giving away more total share than the game can carry after costs.
+> - Work is bounded and briefable; review time budgeted.
+> - Fixed pay for contractors; shares only for core members, from a set pool.
+> - Paid trial task.
+>
+> Read more (15 KB note): ## 2. Finding people · ## 5. Revenue shares in depth · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 > **Not advice.** General information for game owners who hire help. It is not legal, tax or financial advice, and rules differ by country (employment status, contractor rules, tax reporting, consumer and contract law). Ask a qualified professional before committing to large payments or long revenue shares. **Minors** (anyone under 18) need a parent or guardian to approve any agreement and to handle payment; plan for that when you hire young developers, and when you are young yourself.
 
 [[Scoping and Roles for Small Teams]] introduced group payouts, contractor briefs and access rules. [[Commissions Pricing and Contracts]] is the freelancer's side. This note is the owner's side in depth: deciding whether to hire, finding and testing people, choosing between fixed pay and revenue shares, the maths of shares, and how to protect the game while outsiders work on it.

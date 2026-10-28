@@ -3,6 +3,16 @@ tags: [core-concept, animation, ui, game-feel, math]
 ---
 # Tween vs Spring
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - `TweenService` makes tweens one line, so most Roblox UI uses them for everything.
+> - Springs must be stepped with `dt` and stay stable at low frame rates.
+> - A spring's "duration" is a consequence. Designers think in seconds; expose frequency (how fast) and damping ratio (1 = no...
+> - Tweens on the server replicate every step.
+>
+> Read more (4 KB note): ## The decision · ## The nuance most people miss
+<!-- tldr:end -->
+
 A **tween** moves a value from A to B over a fixed duration along an easing curve. A **spring** moves a value toward a target by simulating stiffness and damping each frame; it has no fixed duration, only a feel. Both animate the same things (UI positions, camera offsets, props), but they answer different questions.
 
 ## Why it matters on Roblox

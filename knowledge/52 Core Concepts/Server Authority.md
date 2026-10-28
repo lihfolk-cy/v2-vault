@@ -3,6 +3,16 @@ tags: [core-concept, architecture, security, networking, server-authority]
 ---
 # Server Authority
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Every client runs code the player controls.
+> - Authority is per piece of state, not per game.
+> - Authority does not mean the client waits.
+> - Display copies are not inputs. The client may hold a copy of prices or odds for the UI, but the server must never read those...
+>
+> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+<!-- tldr:end -->
+
 **Server authority** is the rule that the server owns every piece of state that matters (currency, inventory, damage, cooldowns that gate power, round results) and decides every outcome. Clients render, predict and *ask*; the server checks the request and either applies it or ignores it.
 
 ## Why it matters on Roblox

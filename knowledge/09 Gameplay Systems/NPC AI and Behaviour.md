@@ -3,6 +3,18 @@ tags: [gameplay, ai, npc, enemies, aggro, behaviour, bosses]
 ---
 # NPC AI and Behaviour
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Brains every frame for all enemies -> 10 Hz, distance gating, staggering
+> - Avoid: No zone or leash rule -> Same-zone and leash checks
+> - Avoid: No attack tokens -> 2 attackers per target
+> - Perception ranges in config, with zone and leash rules.
+> - State machine with explicit return-home.
+> - Tokens limit simultaneous attackers and are always returned.
+>
+> Read more (14 KB note): ## 4. Decision: state machine first · ## 5. Group behaviour: fights that read · ## 10. Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Good enemy AI on Roblox is rarely clever. It is readable, cheap, fair and tunable: enemies notice you at a predictable range, announce it, take turns attacking, telegraph every blow, keep out of each other's way, give up when you leave their area, and do all of that for hundreds of enemies on one server without hurting frame time. This note describes the architecture (perception, decision, action, presentation), the scheduling that keeps it cheap, and the group behaviours that make fights feel designed. Numbers come from one production combat game's enemy system, which ran a data-driven "kit" brain for roughly 90 enemy kinds plus elites and bosses.
 
 Related: [[Pathfinding]], [[Combat Systems Architecture]], [[Hitboxes and Hit Detection]], [[Spawning Teams and Rounds]]. Animation side: [[Enemy and NPC Animation]], [[Enemy Animation State Protocol]], [[Boss Animation and Phases]], [[Animating Creatures and Monsters]].

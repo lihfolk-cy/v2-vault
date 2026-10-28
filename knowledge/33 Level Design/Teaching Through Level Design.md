@@ -3,6 +3,18 @@ tags: [level-design, onboarding, teaching, affordances, tutorial, analytics, way
 ---
 # Teaching Through Level Design
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Danger cue used as decoration -> Audit script; one cue, one meaning
+> - Avoid: Try space with a way around -> Close the try space so only the mechanic exits
+> - Avoid: Death in the try space -> Soft floor, instant retry
+> - Visual language written down: one cue per meaning; audit scripts run after art passes.
+> - Each new mechanic has show, try, test and combine spaces.
+> - Demonstrations framed in the direction of travel, triggered on arrival.
+>
+> Read more (19 KB note): ## 2. Build a visual language and never break it · ## 8. Measure what the space taught · ## 11. Common mistakes · ## 12. Checklist
+<!-- tldr:end -->
+
 [[First-Time User Experience and Onboarding]] covers the first minutes as a product problem: the funnel, starter items, tutorial gating, the HUD reveal, five versions of one real tutorial and a server-side onboarding state machine. This note covers the part that lives in the world itself: how a space teaches a mechanic without a text box, how to build a visual language players learn once and trust forever, where to let players fail safely, when geometry should gate progress instead of UI, and how to measure what a space actually taught by putting trigger volumes on the map.
 
 Labels: **Roblox docs (as of October 2026)**, **measured in the reference project**, **rule of thumb**.

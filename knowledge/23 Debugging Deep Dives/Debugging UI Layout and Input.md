@@ -3,6 +3,18 @@ tags: [debugging, ui, layout, input, gamepad, zindex, automaticsize]
 ---
 # Debugging UI Layout and Input
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Debugging layout in Edit mode instead of the device emulator in a play test.
+> - Avoid: Raising `ZIndex` on a child when its ancestor is the problem.
+> - Avoid: Trusting `ClipsDescendants` with rotated children.
+> - Studio debug tools: object-at-pointer, outline toggle, absolute size chain, selection logger.
+> - DisplayOrder bands written down and assigned to every ScreenGui.
+> - Rotated or rounded clipping uses CanvasGroup, sparingly.
+>
+> Read more (19 KB note): ## 1. See what the engine sees · ## 4. AutomaticSize problems · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 UI bugs are reported vaguely ("the button does not work on my phone", "the shop looks broken") and caused precisely: a transparent frame on top eating clicks, a `ZIndex` that only applies among siblings, a `ClipsDescendants` that does not clip rotated children, an `AutomaticSize` that feeds back into itself, two `UIScale` objects multiplying, a gamepad selection that lands on an invisible button. This note gives the tools to see what the engine sees and a cause list for each family of symptom.
 
 Layout fundamentals are in [[Layout - Scale Offset and Constraints]] and [[UI Layout Objects - Lists Grids and Pages]]; input APIs in [[Input - UserInputService and ContextActionService]]; gamepad design in [[Gamepad and Console UX]]; device testing in [[Responsive UI for Phone Tablet Console and PC]] and [[Multi-Client and Device Playtesting Protocols]].

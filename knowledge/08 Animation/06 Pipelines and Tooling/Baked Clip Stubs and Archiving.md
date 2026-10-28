@@ -3,6 +3,18 @@ tags: [pipeline, performance, memory, keyframesequence, baking]
 ---
 # Baked Clip Stubs and Archiving
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - All consumers of the clips read through the Lua player (or only read markers / names / length).
+> - No `RegisterKeyframeSequence` on these clips anywhere.
+> - Archive server running; `Ping` ok.
+> - `Run({ dry = true })` first: skipped list reviewed (duplicates, errors over 0.25).
+> - `Run`, then `Verify`: zero bad.
+> - Instance counts before and after recorded.
+>
+> Read more (12 KB note): ## Anatomy of a stub · ## Three bakers, three subtleties · ## Checklist
+<!-- tldr:end -->
+
 How one live action game removed almost every Pose instance from its place without losing a single clip: each KeyframeSequence becomes a **stub** (no Poses, the motion stored as a compact binary buffer in an attribute), the original is **archived to disk** as an `.rbxm`, and a Lua player reads the buffer. Numbers and the story: [[Case Study - Cutting a Million Instances]]. Buffer layout: [[Clip Buffer Format]]. The disk archive: [[Clip Archive Server]].
 
 ## The problem: Poses are instances

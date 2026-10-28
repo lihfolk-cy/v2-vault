@@ -3,6 +3,18 @@ tags: [multiplayer, reserved-servers, private-servers, teleport, monetization, d
 ---
 # Reserved and Private Servers in Practice
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Treating `PrivateServerId ~= ""` as "player-owned" -> Check `PrivateServerOwnerId` too
+> - Avoid: Owner check on the client -> Server check every call
+> - Avoid: Keying room state by `JobId` -> Key by `PrivateServerId`
+> - One `ServerKind` module; no ad-hoc checks.
+> - Private server price chosen with "permanent" in mind; free option considered.
+> - Owner and co-owner powers validated server-side, keyed by `PrivateServerId`.
+>
+> Read more (21 KB note): ## 2. Private servers as a product · ## 3. Reserved servers as a building block · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Roblox has two kinds of server that matchmaking never fills: **private servers** that players buy or get for free from your game page, and **reserved servers** that your code creates with `TeleportService:ReserveServerAsync`. Both report a non-empty `game.PrivateServerId`, both can run many server instances over their lifetime, and both change what your game should do: who has admin powers, whether rewards should be limited, whether a match that already ended may restart, how a player-shared "room code" maps to a real server. This note is the practical layer on top of the reserved-server basics in [[Teleporting and Multi-Place Games]] and the social framing in [[Social Design and Multiplayer Play]].
 
 Related in this section: [[Matchmaking Queues with MemoryStore]], [[Parties and Group Teleports]], [[Server Browsers and Server Lists]], [[Server Shutdowns Soft Updates and Migration]].

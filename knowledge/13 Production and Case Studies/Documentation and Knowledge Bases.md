@@ -3,6 +3,18 @@ tags: [production, documentation, notes, changelog, knowledge-base, obsidian, ca
 ---
 # Documentation and Knowledge Bases
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: One document doing four jobs. The map fills with history and nobody can find anything.
+> - Avoid: Long change entries. Nobody reads them; put depth in systems notes.
+> - Avoid: No revert line. The change cannot be undone by anyone but its author.
+> - A project map exists, is short, and is edited in place.
+> - The changelog is append-only with tagged, dated entries of a few lines.
+> - Every entry has the request quote, paths, verification level and revert.
+>
+> Read more (14 KB note): ## Four documents, four jobs · ## Generated documentation from the place · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A Roblox place does not explain itself. The Explorer shows that `ReplicatedStorage.Enemies.EnemyDefs` exists; it does not say that it replaced an older system, that a flag in the old system's loop skips zones the new one owns, that the old system's script is 300 characters from the Source limit, or that the owner decided bosses do not scale. That knowledge lives in people's heads, in chat, or in notes. Only notes survive a week off, a new teammate, or a parallel workstream that was not in the room.
 
 This note covers what to document, in what shape, and how to keep it true. It draws on one production game (the reference project), which grew a 300 KB running notes file, a 290 KB history file, a per-day changelog and a linked Obsidian vault of several hundred notes in about four weeks, and learned what each of those is good and bad at.

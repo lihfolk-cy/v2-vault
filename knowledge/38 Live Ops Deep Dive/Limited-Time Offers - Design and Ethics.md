@@ -3,6 +3,18 @@ tags: [live-ops, monetization, offers, ethics, dark-patterns, pricing, luau]
 ---
 # Limited-Time Offers - Design and Ethics
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Countdown from the client clock or GUI open time -> Server-stored `endsAt`, shown with server time
+> - Avoid: Personal timer started on join for every offer -> Start on first actual view
+> - Avoid: Profile save failed, timer re-armed -> Reliable saving; check in QA
+> - Every time limit is literally true; every "never returns" claim is a promise you will keep
+> - End times stored on the server; personal timers fixed on first view; never re-armed
+> - Client countdowns use server time and never restart themselves
+>
+> Read more (18 KB note): ## 3. Kinds of LTO and their specific traps · ## 4. Building timers that cannot lie · ## 8. Common mistakes · ## 9. Checklist
+<!-- tldr:end -->
+
 A limited-time offer (LTO) is anything sold with a time or quantity limit: a holiday bundle, a weekly rotating item, a starter pack that disappears after three days, a flash discount. LTOs work because scarcity is real information ("this will not be sold again") and because events give players a reason to buy now. They are also the single easiest place in a Roblox game to cross from good design into manipulation of children, and Roblox's own monetization guidance draws specific lines around them.
 
 [[Robux Price Points and Offer Design]] covers price ladders, offer types and an offer engine; [[Ethical Design and Player Trust]] covers dark patterns across the whole game. This note is narrower and deeper: what makes a time limit honest, the exact rules Roblox states, how to build timers and discounts that cannot lie by accident, how to measure LTOs without fooling yourself, and when not to use them.

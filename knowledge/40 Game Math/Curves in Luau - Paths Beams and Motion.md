@@ -3,6 +3,18 @@ tags: [math, game-math, curves, bezier, catmull-rom, splines, beams, path2d, rai
 ---
 # Curves in Luau - Paths Beams and Motion
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Uniform Catmull-Rom on uneven points -> Centripetal (`ALPHA = 0.5`)
+> - Avoid: One piece per `t` step -> `sampleEven` by arc length
+> - Avoid: `CFrame.lookAt` with world up on a 3D track -> Rotation-minimising up vectors
+> - Designer paths use centripetal Catmull-Rom converted to Bezier segments.
+> - Anything placed along a path is spaced by arc length.
+> - Orientations along 3D paths come from rotation-minimising frames, banking added on purpose.
+>
+> Read more (21 KB note): ## 2. Centripetal Catmull-Rom, as Bezier segments · ## 5. Beams are cubic Beziers: driving them from paths · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Interpolation Easing and Curves Math]] already gives the basic Luau building blocks: a cubic Bezier with its tangent, uniform Catmull-Rom, an arc-length table for constant speed, and Hermite retargeting. This note is what you build on top of them: a centripetal Catmull-Rom path that converts straight into Roblox `Beam` segments, rails and fences laid out with evenly spaced pieces that never flip upside down, a hanging cable as a single Beam, a beam that draws itself along its own curve, curved projectile paths the server can check, and the UI side through `Path2D`. The modelling theory behind all of it (handles, continuity, curvature) is in [[Bezier Curves and Splines for Modellers]].
 
 Trust labels: **Roblox docs** (create.roblox.com, October 2026), **API dump** (robloxapi.github.io reference generated from the engine), **Derived** (worked out in this note; the algebra is shown), **Rule of thumb**, **Unverified**. The Luau snippets were written for this note and checked against the same maths that `lihfolk_curves.py` tests in Blender; they have not been run in a live Studio session, so test them in your place before shipping.

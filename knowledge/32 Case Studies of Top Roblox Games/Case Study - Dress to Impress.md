@@ -3,6 +3,18 @@ tags: [case-study, top-games, dress-up, rounds, voting, collaborations, live-ops
 ---
 # Case Study - Dress to Impress
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Every round has a theme and a visible timer.
+> - The full loop is shown within the first round (under 8 minutes).
+> - Every participant gets a payout; the top three get a podium.
+> - Votes are validated, weighted and rate limited on the server.
+> - A no-timer Freeplay mode exists.
+> - Item browsing is virtualised and fast on phones.
+>
+> Read more (18 KB note): ## 1. Snapshot · ## 6. What to copy and what not to copy · ## Checklist
+<!-- tldr:end -->
+
 Dress to Impress (DTI) took a very old game format (a themed dress-up contest judged by other players) and made it one of the most played experiences on Roblox within a year of launch. It is the best recent proof that a **short, round-based social loop with player voting** can beat bigger, more complex games, and that **story events and brand collaborations** can keep a simple loop fresh. It is also a lesson in volatility: its player count rose fast and fell a long way, so study both halves.
 
 Source labels used below: **Observed in the live game (October 2026)** means the public Roblox store page and public web API (games, votes, game passes, media, thumbnails) read on 27 October 2026, with no login and no play session. **Public stats site** means third party trackers. **Studio statement** means the group's own store text. **Press** means named outlets and guides. Roblox does not publish click-through rate or revenue for other creators' games; anything about clicks is reasoning from visible assets.

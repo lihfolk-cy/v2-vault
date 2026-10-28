@@ -3,6 +3,15 @@ tags: [authoring, plugins, moon-animator, blender, tools]
 ---
 # Moon Animator and Third-Party Tools
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: A tool writes legacy `Cubic` with TweenService meanings -> rewrite to CubicV2 (keep the intended direction)
+> - Avoid: Frame rate assumptions (24 vs 30 vs 60) -> Roblox stores seconds; check key times after import
+> - Avoid: Curves the enum cannot represent -> thin with a tolerance
+>
+> Read more (12 KB note): ## Moon Animator 2 · ## Blender (with or without a bridge) · ## Interop pitfalls between tools
+<!-- tldr:end -->
+
 The built-in editor is not the only way to make Roblox animation. Many studios use a paid Studio plugin (Moon Animator 2 is the best known), Blender with a bridge add-on, or their own code. This note describes what each route is good for, what it hands to the engine, and where the hand-off goes wrong.
 
 **Honesty note.** Third-party tools change without notice and most of them do not have official documentation. Everything below is labelled:

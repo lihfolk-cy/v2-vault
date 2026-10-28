@@ -3,6 +3,18 @@ tags: [studio, plugins, creator-store, publishing, monetization, versioning]
 ---
 # Publishing Selling and Updating Plugins
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Publishing each update as a new asset -> Publish over the same asset
+> - Avoid: Selling from a group account -> Individual ownership
+> - Avoid: Changing seller bank details just before a payout -> Change just after a payout
+> - Account verified (age check or ID); quota planned.
+> - For selling: Stripe seller account approved, 2-step verification on, individually owned asset.
+> - Price within $4.99 to $249.99; store page with video, images in both themes, changelog.
+>
+> Read more (18 KB note): ## 2. Selling: who can, and how money moves · ## 4. Versioning: what "a version" means for a plugin · ## 8. Common mistakes · ## 9. Checklist
+<!-- tldr:end -->
+
 Shipping a plugin is the start of a maintenance relationship. Once other people install it, every update you publish lands in their Studio, in their places, often automatically, and anything your plugin ever wrote into their places (attributes, tags, helper folders, settings keys) becomes a format you must keep reading forever. If you sell it, you also take on payouts through a third party, refunds, chargebacks and moderation risk.
 
 This note covers the publishing flow and its limits, the Creator Store seller rules and money flow as documented (as of October 2026), pricing and positioning, versioning and update strategy, backward compatibility with data in users' places, and support. Basic publishing steps are in [[Plugins - Using and Writing]]; seller eligibility in brief is in [[Creator Store and Toolbox Safety]]. This note goes into the consequences.

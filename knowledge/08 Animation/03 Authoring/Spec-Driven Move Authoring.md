@@ -3,6 +3,15 @@ tags: [authoring, code, specs, ik, baking, combat]
 ---
 # Spec-Driven Move Authoring
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Easing written as "into" -> the key's easing shapes the segment leaving it
+> - Avoid: Overhead straight to drive -> chop key
+> - Avoid: Deep root drops -> y >= -1.0 at scale 1
+>
+> Read more (18 KB note): ## The shared pose library (speclib) · ## The baker · ## Common mistakes
+<!-- tldr:end -->
+
 Instead of keying every joint, describe each move as a handful of **key poses of what matters**: where the sword hand is, which way the blade points and its edge faces, where the off hand goes, where the feet stand, how the root leans and turns, and when the gameplay beats happen. A baker then solves the arms and legs with IK at dense in-between times and fits the result back into a compact `KeyframeSequence`.
 
 This is how the reference project (one live action game) produced hundreds of consistent attack clips across dozens of weapon kits. This note documents its spec format, the shared pose library, the easing and lag conventions, the baker, and the hard-won choreography lessons. The output rules (placeholders, easing placement, fitting) are in [[Authoring Clips in Code]]; arm re-solving and QA are in [[Pipeline - Arm IK Baking and QA]] and [[Animation Quality Standard]].

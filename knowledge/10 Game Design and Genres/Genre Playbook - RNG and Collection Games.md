@@ -3,6 +3,18 @@ tags: [game-design, genre, rng, rolling, luck, odds, rarity, collection, pity]
 ---
 # Genre Playbook - RNG and Collection Games
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Hand-typed "1 in N" that do not match the algorithm -> Derive displayed odds from the rolling code
+> - Avoid: Luck semantics undefined -> Document which tiers luck affects and how
+> - Avoid: No cap on rollable tier -> Progress-scaled caps
+> - Rolling algorithm chosen; real probabilities computed from it.
+> - Luck defined, stacked, capped and tested at maximum.
+> - Expected minutes per tier and p99 checked by simulation.
+>
+> Read more (19 KB note): ## 3. Odds maths: two implementations, two sets of real odds · ## 4. Code: a roll table that can also report its true odds · ## 11. Common mistakes · ## 12. Checklist
+<!-- tldr:end -->
+
 In an **RNG game** the core verb is a roll: press a button, watch a reveal, get an item whose rarity is shown as "1 in N". Luck multipliers, auto-rolling, rarity tiers with colours and banners, a collection index and server-wide announcements turn that one verb into a long loop. Collection games (pets, cards, auras, weapons) share the structure with different presentation. This playbook covers why the genre works, the anatomy of a roll, the odds maths (including two common implementations that give **different** real probabilities for the same "1 in N" labels), luck, pity, presentation, duplicates, and the disclosure rules Roblox applies to anything random that money touches. Most production numbers come from one RNG sword game built around rolling weapons.
 
 Labels: **Docs** (create.roblox.com, checked October 2026), **Reference project** (one production RNG combat game, anonymised), **Rule of thumb**.

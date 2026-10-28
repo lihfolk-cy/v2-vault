@@ -3,6 +3,18 @@ tags: [physics, vehicles, constraints, cars, suspension, network-ownership]
 ---
 # Cars with Constraints - Suspension Steering and Drive
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Mesh tyre with Hull collision -> Plain cylinder collider, mesh as massless visual
+> - Avoid: Body panels with mass -> `Massless = true` on all visuals, mass in a low root
+> - Avoid: Spring numbers guessed -> Compute from frequency and damping ratio (section 3)
+> - Chosen family (constraint or raycast) for a stated reason.
+> - One corner built and mirrored; constraint axes checked with visualisation.
+> - Spring stiffness, damping and free length computed from mass, frequency and damping ratio.
+>
+> Read more (25 KB note): ## 3. Suspension: compute it, do not guess · ## 4. Drive and steering from player input · ## 10. Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A drivable car on Roblox can be built with almost no code: a chassis, four wheels on hinges, springs and a `VehicleSeat`. It will also flip on the first bump, slide sideways like soap, stutter for passengers and let an exploiter drive it at 900 studs per second. This note goes past "attach a HingeConstraint" into the decisions that make a car feel good and stay fair: which constraint layout to use, how to compute spring numbers instead of guessing, how to drive and steer from player input, why the centre of mass matters more than the engine, who should simulate the car, and when to throw the physical wheels away and use raycast suspension.
 
 Read [[Physics Assemblies and Constraints]] and [[Mover Constraints and Physics Controllers]] first; this note assumes you know what an assembly is and what a force limit does. Ownership basics live in [[Network Ownership]].

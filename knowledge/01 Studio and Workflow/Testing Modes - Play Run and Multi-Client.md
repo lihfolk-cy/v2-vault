@@ -3,6 +3,18 @@ tags: [studio, testing, playtest, multiplayer, emulation, workflow]
 ---
 # Testing Modes - Play Run and Multi-Client
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Testing only in solo Test -> Server & Clients for every multiplayer feature
+> - Avoid: Tuning during a test -> Copy, Stop, paste, or tune attributes in Edit
+> - Avoid: Assuming Pause freezes everything -> Know which RunService events pause
+> - Each new feature tested in Run, Test (both sides), and Server & Clients.
+> - Network Simulator pass at 3G for anything latency-sensitive.
+> - Device Simulator pass for every UI change.
+>
+> Read more (15 KB note): ## 1. The modes · ## 6. What Studio tests do not tell you · ## 10. Common mistakes · ## 11. Checklist
+<!-- tldr:end -->
+
 Studio can run your game in several ways: one player with a local server, a server with no player, a real server with up to eight clients, a shared test with teammates, and with emulated devices and bad networks. Each mode answers a different question, and each lies to you in specific ways. This note maps the modes to the questions, lists what behaves differently in Studio than in a live server, and adds the scripted testing services that let a plugin or pipeline drive tests. Mode names changed in recent Studio versions: the old **Play / Play Here** are now **Test / Test Here** in the mezzanine dropdown (Docs, October 2026).
 
 Source labels: **Docs**, **Measured** (reference project), **Rule of thumb**.

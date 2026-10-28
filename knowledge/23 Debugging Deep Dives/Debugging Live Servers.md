@@ -3,6 +3,18 @@ tags: [debugging, live-ops, developer-console, logservice, telemetry, open-cloud
 ---
 # Debugging Live Servers
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: No job id or version in logs, so live reports cannot be matched to a server.
+> - Avoid: Relying only on the Error Report for bugs that are not errors.
+> - Avoid: Debug tooling added during the incident instead of before it.
+> - Job tag and version logged at start, in every event, and visible in a menu.
+> - Gated admin commands: teleport to job, fetch server log, dump system state, raise log level temporarily.
+> - Every system registers a state dump.
+>
+> Read more (16 KB note): ## 3. In-server tools · ## 4. Shipping logs off the server · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Some bugs only exist in live servers: they need real latency, 30 players, a server that has been up for nine hours, a device you do not own, or real purchases and teleports. You cannot put a breakpoint on a live server. What you can do is see its output, ask it questions through tools you built in advance, ship its logs somewhere you can search, and change its behaviour with flags. This note is about that toolkit and how to use it during an investigation.
 
 What the Developer Console shows is covered in [[Developer Console and Stats]]; the Error Report, crash rates and an error pipeline in [[Crash and Error Telemetry]]; live test protocols in [[Multi-Client and Live Testing]]; incident handling in [[Live Incident Response and Post-Mortems]]. This note is the investigation layer between them.

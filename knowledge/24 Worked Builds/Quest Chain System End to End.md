@@ -3,6 +3,18 @@ tags: [worked-build, quests, objectives, progression, datastore, ui, luau, serve
 ---
 # Quest Chain System End to End
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Saving the quest index. It breaks on the first content update.
+> - Avoid: Client-side progress counting "because the server also checks later".
+> - Avoid: One giant `if kind == ... elseif` per quest.
+> - Template includes `Quests = { Completed = {}, Active = { Id = "", Count = 0 } }`
+> - Every quest id is unique; ids are never renamed without an alias
+> - No client remote can add progress
+>
+> Read more (38 KB note): ## 4. Server modules: PlayerStore and RateLimit · ## 5. QuestService (server module) · ## 10. Common mistakes · ## 12. Checklist
+<!-- tldr:end -->
+
 This note builds a linear quest chain from an empty place: quests defined as data, progress reported only by server systems (collect, defeat, talk), a claim button with rewards, saved progress that survives reordering and new quests, a tracker UI with a waypoint beam, per-player collectibles, and enemies that credit the player who last hit them.
 
 The design theory (why chains, how long each step should be, branching vs linear) is in [[Quests and Objectives]] and [[Progression and Pacing Design]]. Onboarding chains specifically are covered in [[First-Time User Experience and Onboarding]]. This note is the build. Other builds: [[Worked Builds Start Here]].

@@ -3,6 +3,18 @@ tags: [monetization, ads, rewarded-video, adservice, ads-manager, luau]
 ---
 # Ads and Rewarded Video
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Button never shows: Not eligible (questionnaire pending, traffic below 2,000/month)... -> Check the Eligibility page; Serving toggle
+> - Ad plays, no reward: Receipt handler does not know the reward product -> Add it to the grant table
+> - Reward granted twice: Granted after `ShowRewardedVideoAdAsync` *and* in `ProcessReceipt` -> Grant only in the receipt
+> - Eligibility met: creator ID + 2SV, game public, approved questionnaire, 2,000+ monthly visitors
+> - Reward product is deterministic, not Robux, not random, not inflationary
+> - Availability checked right before offering; one check per play
+>
+> Read more (14 KB note): ## 2. The flow · ## 3. Rules for rewards and placements (Docs) · ## 7. Failure modes · ## 8. Checklist
+<!-- tldr:end -->
+
 Ads touch a Roblox game in two directions:
 - **Earning from ads** shown in your game: rewarded video (the player opts in to watch a short ad for a reward) and immersive ads (ad units placed in your world).
 - **Spending on ads** to bring players to your game: Ads Manager campaigns (sponsored placements and search ads).

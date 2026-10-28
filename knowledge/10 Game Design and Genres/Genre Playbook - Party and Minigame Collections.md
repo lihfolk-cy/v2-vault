@@ -3,6 +3,18 @@ tags: [game-design, genre, party, minigames, rounds, lobby, social, replayabilit
 ---
 # Genre Playbook - Party and Minigame Collections
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Long intermissions -> 10 to 20 s, with things to do
+> - Avoid: Eliminated players with nothing to do -> Spectator activities or ghost roles
+> - Avoid: Minigames hand-wired into the round loop -> One contract, one module per minigame
+> - Every minigame implements the contract; the manager handles teleports, rewards and saving.
+> - 10 or more minigames; recent-repeat avoidance in the picker.
+> - 100-round soak test in Studio: memory and connection count stable.
+>
+> Read more (14 KB note): ## 3. The framework you must build · ## 4. Minigame design · ## 9. Common mistakes · ## 10. Launch checklist
+<!-- tldr:end -->
+
 A party game runs short rounds of different minigames for a whole server: a lobby, a vote or random pick, a 1 to 3 minute minigame, winners rewarded, back to the lobby. Variants include classic minigame rotations, elimination shows (last player standing across escalating rounds), "survive the disaster" rounds, hide and seek, tag variants, and social deduction (one hidden role among the players). The genre is native to Roblox: free-to-play friends joining a server together, short attention spans and a young audience all fit it.
 
 It is also deceptively expensive. Each minigame is a small game with its own rules, map, edge cases and balance. This note covers the loop, round timing, monetisation, the framework you must build so minigames are cheap to add, the Roblox-specific risks, the patterns successful party games share, and a launch checklist. For the round engine itself, see [[Round-Based Minigame Loop End to End]] and [[Spawning Teams and Rounds]].

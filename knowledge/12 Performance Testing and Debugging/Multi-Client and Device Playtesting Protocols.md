@@ -3,6 +3,18 @@ tags: [testing, playtesting, multi-client, devices, qa, protocol, bug-reports]
 ---
 # Multi-Client and Device Playtesting Protocols
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Running a live session for bugs Studio's eight-client test would have found.
+> - Avoid: Mixing verification, exploration and first-impression goals in one session.
+> - Avoid: No build label, so reports describe an old build.
+> - Session type chosen (verification, exploratory or experience).
+> - Studio rehearsal with Server & Clients, Device Simulator and Network Simulator done.
+> - Test place published; test data reset; build label visible.
+>
+> Read more (15 KB note): ## 2. Preparation · ## 3. The device matrix · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Multi-Client and Live Testing]] covers Studio's test modes, the multiplayer scenario matrix, gated cheat tools and where to test live. This note turns that into a repeatable procedure: how to prepare a session, who does what during it, which devices to cover, how to script the scenarios so they are actually run, and how to turn a chaotic hour of play into a short list of reproducible bugs. A playtest without a protocol mostly produces "it felt laggy" and "something was weird with the shop".
 
 ---

@@ -3,6 +3,18 @@ tags: [luau, cookbook, tables, strings, time, recipes]
 ---
 # Cookbook - Tables Strings and Time
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Assignment instead of copy; shallow copy where a deep copy was needed.
+> - Avoid: Random comparators in `table.sort`.
+> - Avoid: Forward iteration with `table.remove`.
+> - Config tables are deep-frozen.
+> - Random picks run on the server with `Random` objects.
+> - Number formatting truncates near tier boundaries.
+>
+> Read more (19 KB note): ## 11. Pick the right clock · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Recipes for the utility code every project ends up writing: copying and shuffling tables, weighted picks, safe removal while iterating, number and duration formatting, splitting and trimming text, and the clocks you should use for cooldowns, countdowns and daily resets. Code is `--!strict` Luau, reviewed, not run. The background is in [[Tables Metatables and OOP]], [[Strings Patterns and Formatting]], [[Task Library Coroutines and Yielding]] and [[Luau Performance Patterns with Benchmarks]].
 
 ---

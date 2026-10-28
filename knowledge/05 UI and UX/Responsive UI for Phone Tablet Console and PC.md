@@ -3,6 +3,18 @@ tags: [ui, responsive, mobile, phone, tablet, console, cross-platform]
 ---
 # Responsive UI for Phone Tablet Console and PC
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: `TouchEnabled` used as "is a phone".
+> - Avoid: One global `UIScale` with no floor; phone text at 6 px.
+> - Avoid: Zoom-and-pan instead of real phone layouts.
+> - Device profile separates layout family from input.
+> - Five viewports plus a notched phone in every test pass.
+> - Numbers enforced: 12 px text, 44 px taps, 8 px gaps, 0 overlaps.
+>
+> Read more (16 KB note): ## 1. Classify by capability, not by guessing the device · ## 4. Four strategies for small screens, ranked by what survived · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Roblox players arrive on 4.7 inch phones, tablets, laptops, ultrawide monitors and living-room TVs, and the same player may switch device between sessions. Mobile is a large share of the audience, so a UI signed off only at Studio's default desktop window is broken for many of your players. This note is about strategy: how to classify devices without guessing, which viewports to test, the measurable rules (text size, tap size, gaps, overlaps) that define "fits", and why the reference project ended up building real phone layouts instead of shrinking or zooming desktop ones.
 
 Sources: **Docs** ("Cross-platform development", `GuiService.ViewportDisplaySize`, `UserInputService.PreferredInput`, styling queries; October 2026), the **reference project** (one production game whose phone UI was rebuilt screen by screen; numbers measured there), and **rule of thumb**.

@@ -3,6 +3,18 @@ tags: [genre-system, rounds, minigames, teams, spectating, worked-build, matchma
 ---
 # Arena Rounds with Teams and Spectating End to End
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: One `task.delay` without a round id (section 4.1).
+> - Avoid: Per-round connections never disconnected.
+> - Avoid: Letting alive players leave via the menu.
+> - Two arenas, four test clients: both arenas run rounds at the same time; ending one does not affect the other.
+> - Leave during countdown: countdown cancels when the queue drops below the requirement.
+> - Leave mid-round as the last player on a team: the other team wins; no rewards if under 20 s.
+>
+> Read more (29 KB note): ## 4. The server: ArenaService · ## 5. The client: spectating and status · ## 6. Common mistakes · ## 9. Test checklist
+<!-- tldr:end -->
+
 This note builds the round loop that comes after the single global loop: several arenas running independent rounds in one server, a queue per arena, teams balanced by a saved rating, late joiners routed into spectating or into the round, a spectator camera that follows only valid targets, leavers and AFK players handled without stalling a round, and results that update wins and rating without rewarding alt-account farming. It is the "several arenas per server" and "spectating" extension that [[Round-Based Minigame Loop End to End]] lists in its own extension section, built out in full.
 
 **Why this title.** The section brief proposed "Round-Based Minigame Loop End to End", but that title already exists in [[Worked Builds Start Here]] and covers the single global lobby, intermission, map vote and one pluggable minigame. Rather than repeat it, this note takes the next step: per-arena runners, teams, rating and spectating. Read that note first for the basic loop, the minigame contract and the `GetServerTimeNow` countdown pattern; they are not repeated here.

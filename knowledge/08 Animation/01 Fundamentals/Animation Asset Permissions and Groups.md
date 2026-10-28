@@ -3,6 +3,18 @@ tags: [fundamentals, publishing, permissions, groups, assets]
 ---
 # Animation Asset Permissions and Groups
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Staging universe with no grants. Symptom: everything frozen in staging while production works.
+> - Avoid: Uploading clips the morning of a release.
+> - Avoid: Personal uploads by contractors. Symptom: clips stop being fixable when the contract ends.
+> - Every clip id in the manifest is owned by the experience owner or explicitly granted.
+> - No temporary (registered) ids anywhere in scripts or data.
+> - No ids copied from free models without a grant.
+>
+> Read more (14 KB note): ## How animation permissions work now · ## Nuances and edge cases · ## Checklist before a release or transfer · ## Common mistakes in production
+<!-- tldr:end -->
+
 An animation asset only plays in an experience that is **allowed** to use it. When it is not, nothing errors in a live server: the track's `Length` stays 0 and the character stands still. This is the single most common reason a working animation "stops working" after a game moves to a group, after a collaborator uploads clips, or after someone pastes an id from a free model. This note explains the current rules (verified against the docs and Roblox announcements as of October 2026), how group ownership works, how to grant access instead of re-uploading, and a pipeline that avoids the whole class of bug.
 
 Separate topic: *replication* (whether other players see a track) is in [[Replication and Ownership]]. Temporary Studio-only ids are in [[Publishing Animations]].

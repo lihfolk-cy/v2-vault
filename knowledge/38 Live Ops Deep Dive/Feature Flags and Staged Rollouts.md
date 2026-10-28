@@ -3,6 +3,18 @@ tags: [live-ops, feature-flags, rollout, configservice, release, kill-switch, lu
 ---
 # Feature Flags and Staged Rollouts
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: `math.random` to decide inclusion -> Deterministic hash with per-flag salt
+> - Avoid: Same salt for every flag -> Flag name in the hash input
+> - Avoid: Release flag defaults on -> Default off, in code
+> - Every flag has a kind, an owner, a safe default and (for release flags) a removal date
+> - Release flags default off; kill switches default on
+> - Sticky bucketing with a per-flag salt; uniformity checked once
+>
+> Read more (18 KB note): ## 4. Stable percentage rollouts · ## 5. Planning a staged rollout · ## 9. Common mistakes · ## 10. Checklist
+<!-- tldr:end -->
+
 A feature flag is a value, read at runtime, that decides whether a piece of code runs. A staged rollout uses flags to turn a feature on for a small group first, watch it, and widen it step by step. Together they separate **deploying** code (publishing a place) from **releasing** a feature (players getting it), which is the most useful idea in live operations: a publish becomes routine, and a release becomes a dial you can turn back.
 
 [[Global State and Live Config]] explains experience configs (`ConfigService`), a typed wrapper with defaults, refresh policy and kill switches. [[Release Process and Rollbacks]] covers publishing and the rollback ladder. This note goes deeper into the flag system itself: the kinds of flags and their lifecycles, percentage and allowlist targeting with stable bucketing, rollout plans with abort criteria, the parts of a feature a flag cannot roll back (data), the small-game statistics problem, and flag debt.

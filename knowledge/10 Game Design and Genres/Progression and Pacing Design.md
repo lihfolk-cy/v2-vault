@@ -3,6 +3,18 @@ tags: [game-design, progression, pacing, curves, rebirth, prestige, math]
 ---
 # Progression and Pacing Design
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Matching cost and reward multipliers exactly -> Let T rise slowly, then drop at milestones
+> - Avoid: Tuning curves only in the first 10 steps -> Check the end of every ladder; anchor and solve for the base
+> - Avoid: Linear rebirth multiplier against exponential rebirth cost -> Geometric multiplier slightly below the cost growth
+> - T(n) plotted for the whole ladder, sawtooth confirmed.
+> - Each curve anchored to a design target and solved, not guessed.
+> - Rebirth time per rebirth rises gently, with new multiplier sources planned.
+>
+> Read more (20 KB note): ## 3. A worked zone ladder (reference project) · ## 5. Rebirth and prestige maths · ## 10. Common mistakes · ## 11. Checklist
+<!-- tldr:end -->
+
 Progression is the shape of a player's growth over time; pacing is how that growth **feels** minute by minute. On Roblox the standard tools are exponential cost curves, zone or gate ladders, power numbers, and a reset loop (rebirth or prestige) that turns the late game into a faster replay of the early game. This note gives the maths, the reasons each curve behaves as it does, the production numbers from one game's zone ladder, and the traps (compounding sensitivity, number overflow, rebirths that get slower forever).
 
 Labels: **Docs** (create.roblox.com, checked October 2026), **Reference project** (one production RNG combat game, anonymised), **Rule of thumb**.

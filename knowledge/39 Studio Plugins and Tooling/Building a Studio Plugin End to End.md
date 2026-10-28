@@ -3,6 +3,18 @@ tags: [studio, plugins, tooling, luau, workflow, architecture]
 ---
 # Building a Studio Plugin End to End
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: No `IsEdit` guard -> Return before creating anything outside Edit
+> - Avoid: Helpers parented to Workspace -> `CoreGui` for visuals; tagged and cleaned otherwise
+> - Avoid: Connections not cleaned -> One Janitor, cleaned on `Unloading`
+> - Top-level script is a guard plus one `require`; logic in modules that receive `plugin`.
+> - `RunService:IsEdit()` guard before any UI is created.
+> - One Janitor owns every long-lived connection and instance; cleaned on `Unloading`.
+>
+> Read more (22 KB note): ## 5. Settings with a schema · ## 8. Worked example: Duplicate Name Linter · ## 10. Common mistakes · ## 11. Checklist
+<!-- tldr:end -->
+
 [[Plugins - Using and Writing]] shows the anatomy of a plugin and one small example. This note is the next step: how to build a plugin you will still be happy to maintain a year from now. It covers the plugin lifecycle (when your code runs, how many copies run, and in which data models), a project layout that survives growth, a disciplined cleanup pattern, settings with a schema version, actions and shortcuts, error handling, and a complete worked plugin, a **Duplicate Name Linter**, that ties all of it together.
 
 Labels used: **Roblox docs (as of October 2026)**, **measured in the reference project**, **rule of thumb**. Things that could not be confirmed are marked **unverified**.

@@ -3,6 +3,18 @@ tags: [blender, chibi, cute, character, stylized]
 ---
 # Chibi Character Rules in Practice
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Eyes above centre. Symptom: the character looks like a regular adult animal with big eyes.
+> - Avoid: Solid black eyes with no highlight. Symptom: the pet reads as a stuffed toy with buttons.
+> - Avoid: Anything pointing up. Symptom: combs, ears or tail plumes read as horns, so the pet looks aggressive.
+> - Smooth stylised, round shape language, no neck.
+> - Eyes below the middle, big, with iris depth and two catchlights.
+> - Bottom-heavy silhouette; one exaggerated feature (the face).
+>
+> Read more (8 KB note): ## Version 2: what made the difference · ## Nuances and edge cases · ## Checklist · ## Common mistakes
+<!-- tldr:end -->
+
 ![[p45_chicken_faceted_v1.png]]
 ![[p45_chibi_chicken.png]]
 

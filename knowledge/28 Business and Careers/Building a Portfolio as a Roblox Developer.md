@@ -3,6 +3,18 @@ tags: [careers, portfolio, freelancing, job-search, showcase, minors]
 ---
 # Building a Portfolio as a Roblox Developer
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Forty pieces of uneven quality instead of six strong ones.
+> - Avoid: Renders without in-game views; maps without gameplay camera shots.
+> - Avoid: Systems shown only as screenshots; no explanation of how they work.
+> - One hub page; best three pieces first.
+> - Each piece: context, your role, problem, approach, numbers, media, lessons.
+> - Discipline-specific evidence (budgets, wireframes, code, flows, reels).
+>
+> Read more (13 KB note): ## 2. Format and where to host it · ## 3. By discipline: what to show · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 > **Not advice.** General career information. It is not legal or financial advice; job markets, contracts and working-age rules differ by country. If you are under 18, involve a parent or guardian before taking paid work or signing anything, and keep your personal information private.
 
 A portfolio is the evidence that you can do the job. On Roblox, where most hiring happens through forums, Discord servers and referrals rather than formal applications, it often *is* the application. This note covers what to put in one for each discipline, how to show work you cannot share, how to present systems that are invisible in screenshots, and how to avoid the mistakes that make good developers look weak.

@@ -3,6 +3,18 @@ tags: [testing, multiplayer, multi-client, live-testing, cheat-tools, network-si
 ---
 # Multi-Client and Live Testing
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Only ever testing as the first player in the server.
+> - Avoid: No snapshot path for late joiners.
+> - Avoid: Testing timing-sensitive features with zero latency.
+> - Two-client test with join order both ways for every multiplayer feature.
+> - Leave and rejoin mid-interaction tested.
+> - Network Simulator on for timing features.
+>
+> Read more (13 KB note): ## 2. The multiplayer test matrix · ## 3. Gated cheat tooling · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A solo play test in Studio proves that a feature works for one player, on one fast machine, with zero latency, joining first. Real players join late, leave mid-trade, lag, run on phones and share a server with thirty strangers. Most shipped multiplayer bugs live in that gap. This note covers Studio's multi-client and network simulation tools, the multiplayer test matrix (join order, leave and rejoin, streaming), gated cheat tooling to reach states fast, testing in real servers, and the hazards of testing inside a place other people are also working in.
 
 Source labels: **Docs** (Creator Hub, as of October 2026), **Measured** (the reference project), **Rule of thumb**.

@@ -3,6 +3,15 @@ tags: [rigging, characters, startercharacter, humanoid, r15]
 ---
 # Custom Characters and StarterCharacter
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Non-R15 StarterCharacter with the default Animate -> Own `Animate` in StarterCharacterScripts
+> - Avoid: Wrong HipHeight -> Compute from the rest model
+> - Avoid: Anchored or unjoined parts -> Joint everything to the root; nothing anchored
+>
+> Read more (12 KB note): ## 1. Five ways to customise a character · ## 4. HipHeight · ## Common mistakes
+<!-- tldr:end -->
+
 "Give the player a custom character" covers five very different jobs, from swapping a hat to replacing the whole skeleton. Each choice decides which built-in systems keep working (the default Animate script, emotes, layered clothing, avatar accessories, the Animation Editor's R15 tools) and which ones you must rebuild. This note maps the options, then covers the mechanics that trip people up: Humanoid requirements, `HipHeight`, scale, the Animate script and testing.
 
 ## 1. Five ways to customise a character

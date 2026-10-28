@@ -3,6 +3,18 @@ tags: [debugging, networking, replication, desync, attributes, remotes]
 ---
 # Debugging Client-Server Desync
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Debugging one side only. Always look at both.
+> - Avoid: Sending state as events (late joiners and re-streams break).
+> - Avoid: Client code writing replicated server state "just for display".
+> - Desync classified: missing, stale, divergent or out of order.
+> - Both sides inspected (Client/Server toggle or inspector tool).
+> - Server-owned state is read-only on the client, with a check that flags violations.
+>
+> Read more (18 KB note): ## 2. Replication facts that cause desync · ## 4. A desync inspector · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A desync is any bug where the client and the server disagree about the state of the game: the client shows 1,500 coins and the server has 1,200; a door is open for one player and closed for another; an enemy is dead on the server and still walking on a client. Desyncs are hard because each side, looked at alone, seems fine. This note gives a classification of desyncs, the replication facts that cause each kind, a debug tool that compares both sides directly, and fixes that remove whole families of the bug.
 
 The rules of what replicates and when are in [[Replication Rules]] and [[Client-Server Model]]. Prediction for combat (where some desync is intended) is in [[Client Prediction and Reconciliation for Combat]]. Physics-specific desync (positions, ownership) is in [[Debugging Physics and Network Ownership]].

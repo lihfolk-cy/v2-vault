@@ -3,6 +3,18 @@ tags: [mcp, agents, safety, rules, studio, workflow]
 ---
 # Safety Rules for AI Agents in Studio
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Trusting instructions alone for rules a host permission could enforce.
+> - Avoid: Letting each agent invent its own backup scheme.
+> - Avoid: "Quick" undo to fix an agent mistake.
+> - Instructions file loaded (rules, place map, owned areas).
+> - Correct Studio and place id selected.
+> - Studio in Edit; nobody's test interrupted.
+>
+> Read more (13 KB note): ## 1. Edit mode only · ## 9. Assets: never invent, never trust blindly · ## Common mistakes · ## Checklist: start of every agent session
+<!-- tldr:end -->
+
 An AI agent with the [[Roblox Studio MCP Server]] has the same power over your place as you do at the command bar, at a much higher speed, with less context about what else is going on. Most agent disasters are not exotic: a long call freezes Studio, an undo rolls back somebody else's afternoon, a "cleanup" deletes something referenced by a string, a stale module makes a broken fix look correct. Every rule below exists because the reference project (a production game built mostly by agents, often several at once in one Studio) hit the failure first.
 
 The rules are written so you can paste them into your agent's project instructions file (for example `CLAUDE.md` for Claude Code). Each has the rule, why, and how to enforce it. **Measured** marks incidents and numbers from the reference project; **Roblox docs** marks official facts; **Rule of thumb** marks experience.

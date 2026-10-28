@@ -3,6 +3,18 @@ tags: [performance, fundamentals, profiling, budgets, frame-time]
 ---
 # Performance Fundamentals
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Optimising in Studio and declaring victory.
+> - Avoid: Reading fps instead of milliseconds, and averages instead of worst frames.
+> - Avoid: Ignoring the server because "my fps is fine".
+> - The problem is named: compute, memory, or load time; client, server, or both.
+> - A reproducible scenario exists with production-like load.
+> - Baseline numbers recorded (frame ms, memory MB by category, join seconds) on a real low-end device.
+>
+> Read more (17 KB note): ## 2. What a frame is · ## 6. Budgets · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Performance work on Roblox fails in two predictable ways. Either people optimise by superstition ("unions are slow", "never use `FindFirstChild`") without measuring, or they measure the wrong machine (a fast PC in Studio) and ship a game that runs at 20 fps on a three-year-old phone. This note gives the mental model the rest of the section builds on: what a frame is, where its time goes, what the three kinds of performance problem are, which tool answers which question, and the discipline that keeps a large game fast for its whole life.
 
 Source labels:

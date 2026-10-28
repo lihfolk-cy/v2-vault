@@ -3,6 +3,18 @@ tags: [worked-build, pets, eggs, rng, inventory, datastore, ui, luau, simulators
 ---
 # Pet Hatching and Following End to End
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Server-side pet models with `AlignPosition`.
+> - Avoid: Storing pets as an array of kinds. "Delete the third Dog" is ambiguous.
+> - Avoid: Numeric table keys in saved data. A sparse numeric table (`{[1]=..., [5]=...}`) does not survive JSON the way you expect.
+> - Egg model names match `PetConfig.Eggs` keys; each egg has a ProximityPrompt and a PrimaryPart
+> - Every pet Kind in odds tables has a model in `ReplicatedStorage.PetModels`
+> - Odds labels come from `PetConfig.OddsPercent`
+>
+> Read more (42 KB note): ## 4. Server modules: PlayerStore and RateLimit · ## 5. PetService (server) · ## 10. Common mistakes · ## 12. Checklist
+<!-- tldr:end -->
+
 This note builds the pet system that most simulators and collection games share, from an empty place: eggs in the world with odds shown above them, server-side hatching with weighted random rolls, a saved pet inventory with unique ids, equip and unequip with a cap, an "equip best" button, a passive income boost from equipped pets, and pets that follow every player smoothly, rendered on each client so the server never simulates them.
 
 Theory lives elsewhere: [[RNG Drops and Luck Systems]] and [[Rarity Ladders and Drop Pacing Math]] for the odds, [[Genre Playbook - Simulators]] and [[Simulator and RNG Genre Teardown]] for why pets matter, [[Tools and Inventory Systems]] for inventory design. This note is the wiring. See [[Worked Builds Start Here]] for the rest of the folder, and [[Saved Inventory End to End]] for a general item inventory.

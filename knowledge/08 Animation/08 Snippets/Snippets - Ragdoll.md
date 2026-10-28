@@ -3,6 +3,15 @@ tags: [snippets, luau, ragdoll, physics, humanoid]
 ---
 # Snippets: Ragdoll
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Changing a player character's Humanoid state from the server.
+> - Avoid: Leaving the Animator playing locomotion during the ragdoll (limbs fight physics or the body slides).
+> - Avoid: Editing the R15 rig attachments to set socket axes (create your own).
+>
+> Read more (20 KB note): ## 3. Server module · ## Nuances and edge cases · ## Common mistakes
+<!-- tldr:end -->
+
 Turning an animated R15 character (or NPC) into a physics ragdoll and back: prebuilt ball-socket constraints with per-joint limits, disabling `Motor6D` **or** `AnimationConstraint` joints, the Humanoid state and ownership rules that decide where each step must run, carrying the animation's momentum into the fall, death ragdolls, getting up without a pop, and a note on physically driven ("active") ragdolls with `AnimationConstraint`.
 
 Background: [[Ragdolls and Physics-Based Animation]], [[AnimationConstraint and Physically Simulated Characters]], [[Humanoid States and Animation]], [[Procedural Death Knockdown and Hit Reactions]].

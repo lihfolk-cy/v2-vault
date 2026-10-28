@@ -3,6 +3,18 @@ tags: [gameplay, physics, movers, linearvelocity, alignposition, controllermanag
 ---
 # Mover Constraints and Physics Controllers
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: No force limit -> `ForceLimitsEnabled` + mass-scaled `MaxForce`
+> - Avoid: Vector-mode dash -> Plane mode, Y free
+> - Avoid: Mover without attachment -> Assert `Attachment0` exists and is parented
+> - Every mover has an attachment, a force limit and a guaranteed cleanup path (timer, death, unequip).
+> - Player movers run on the player's client; NPC movers on the server with server ownership.
+> - Dashes use Plane mode and agree with the Humanoid.
+>
+> Read more (19 KB note): ## 2. LinearVelocity · ## 7. ControllerManager: the physics character controller · ## 9. Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Mover constraints are how you push, pull, steer and hold assemblies without fighting the solver. Dashes, knockback, grabs, hover, homing projectiles and server-driven NPC movement are all built from the same seven constraints. The physics character controller (`ControllerManager`) is the same idea packaged for characters. This note covers what each mover does, the properties that matter, the patterns that held up in a production combat game, and the traps.
 
 Background on assemblies and ownership: [[Physics Assemblies and Constraints]]. Character-specific behaviour: [[Characters and Humanoids]] and [[Custom Character Controllers]].

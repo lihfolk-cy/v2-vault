@@ -3,6 +3,18 @@ tags: [debugging, luau, errors, stack-trace, traceback, debug-info]
 ---
 # Reading Luau Errors and Stack Traces
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Reading the top frame and fixing the line that crashed instead of the caller that passed nil.
+> - Avoid: Treating "Infinite yield possible" as harmless without checking for an earlier error.
+> - Avoid: Fixing the 20th consequence error instead of the first one.
+> - I read the whole message and identified which expression was nil or wrong.
+> - I checked the frame below the top for where the bad value came from.
+> - I scrolled to the first error in the Output.
+>
+> Read more (19 KB note): ## 2. The common messages, decoded · ## 4. `debug.traceback` and `debug.info` as tools · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Most error messages tell you exactly what went wrong, and most developers read only the first five words. This note decodes the messages you will actually see in Roblox, explains what each one usually means in practice (which is often not what it literally says), and shows how to read a stack trace, including the cases where the trace points at the wrong place. It finishes with `debug.traceback` and `debug.info` used as tools, not just for logging.
 
 Logging, `xpcall` and the error-level argument of `error()` are already covered in [[Debugger Breakpoints and Logging]] and [[Error Handling and Retries]]; patterns for structured error handling are in [[Error Handling - pcall xpcall and Promise Patterns]]. This note is about reading.

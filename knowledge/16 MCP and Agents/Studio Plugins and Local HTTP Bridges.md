@@ -3,6 +3,18 @@ tags: [plugins, http, tooling, studio, bridges, mcp]
 ---
 # Studio Plugins and Local HTTP Bridges
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: No token on a state-changing endpoint. Symptom: unexpected jobs or edits, possibly triggered from a browser tab.
+> - Avoid: Polling without back-off when the server is down.
+> - Avoid: Leaving HTTP enabled in the live place. Symptom: an audit finds outbound requests from game scripts you did not write.
+> - Servers bound to 127.0.0.1; ports recorded.
+> - Receiver validates paths and sizes.
+> - Loader uses cache busting and readable chunk names.
+>
+> Read more (17 KB note): ## 3. Pattern B: the receiver (post results out) · ## Nuances and edge cases · ## 9. Checklist · ## More common mistakes
+<!-- tldr:end -->
+
 Long before MCP, developers connected Roblox Studio to the outside world with a simple trick: Studio can make HTTP requests to a server on your own machine. A plugin or the command bar fetches code and data from `http://127.0.0.1`, and posts results back. Rojo works this way. Roblox's original MCP reference server worked this way. And even with the built-in [[Roblox Studio MCP Server]], the reference project relied on local HTTP every day, because MCP tool calls are the wrong pipe for megabytes of source, images and baked data.
 
 This note covers the four bridge patterns (loader, receiver, polling plugin, file server for uploads), their limits, and working code for each. **Measured** marks the reference project; **Roblox docs** marks the official reference; **Rule of thumb** marks experience.

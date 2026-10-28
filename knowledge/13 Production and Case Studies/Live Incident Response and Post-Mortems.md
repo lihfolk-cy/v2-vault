@@ -3,6 +3,18 @@ tags: [production, live-ops, incidents, rollback, post-mortem, kill-switch, data
 ---
 # Live Incident Response and Post-Mortems
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Hunting the bug while the bug keeps corrupting data.
+> - Avoid: No kill switches, so the only containment is a full rollback.
+> - Avoid: Fixing forward with an untested hot fix instead of rolling back.
+> - Severity assigned in the first five minutes; data and Robux issues start at SEV1.
+> - Containment applied (flag, read-only saves, prompts off, rollback, restart).
+> - Timeline started immediately with incident start time.
+>
+> Read more (19 KB note): ## 3. Containment: stop the bleeding before you understand it · ## 7. The post-mortem · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Something is wrong in the live game: players say their coins vanished, the shop takes Robux and gives nothing, a boss cannot be damaged, servers crash every ten minutes. [[Release Process and Rollbacks]] lists the rollback tools and [[Crash and Error Telemetry]] shows how to see errors. This note is about the hour when you need them: how to judge severity, contain the damage before you understand it, fix it, talk to players, and then learn from it with a post-mortem that changes something.
 
 The order matters. Teams lose the most when they skip straight to "find the bug" while the bug keeps doing damage.

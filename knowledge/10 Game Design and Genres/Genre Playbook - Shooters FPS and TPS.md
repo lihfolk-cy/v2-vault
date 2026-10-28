@@ -3,6 +3,18 @@ tags: [game-design, genre, shooter, fps, tps, hitscan, netcode, matchmaking, ant
 ---
 # Genre Playbook - Shooters FPS and TPS
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Trusting the client's "I hit X" -> Server validation with capped rewind
+> - Avoid: Server-only raycasts at current positions -> Rewind by ping, capped
+> - Avoid: Damage computed on the client -> Server computes from weapon data
+> - TTK-by-range chart for every weapon; each class owns a range band.
+> - Hit validation with rewind, line of sight, fire rate and ammo on the server; abuse-tested.
+> - Two-client tests at 50, 150 and 250 ms simulated latency.
+>
+> Read more (17 KB note): ## 3. Weapons · ## 4. Hit registration: the core technical decision · ## 10. Common mistakes · ## 11. Launch checklist
+<!-- tldr:end -->
+
 Shooters on Roblox range from casual team deathmatch with blocky guns to tactical round-based games with recoil patterns, attachments and ranked play, and from first-person (FPS) to over-the-shoulder third-person (TPS). The genre has a large, loyal, older-skewing audience on Roblox, unusually high expectations (players compare you with console shooters), and the hardest anti-cheat problem on the platform: aimbots and wallhacks run entirely on the client, where you cannot see them.
 
 This playbook covers the loops and modes, session pacing, monetisation that keeps the game fair, the systems you must build (weapons, hit registration, cameras, matchmaking), the Roblox-specific technical risks, the patterns successful shooters share, and a launch checklist.

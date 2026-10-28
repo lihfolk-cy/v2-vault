@@ -3,6 +3,18 @@ tags: [architecture, networking, teleport, multi-place, security, matchmaking]
 ---
 # Teleporting and Multi-Place Games
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Client-side `Teleport()` -> Remote, validate, `TeleportAsync` on the server
+> - Avoid: Currency or rewards in teleport data -> Stores; teleport data for hints only
+> - Avoid: Access Control left Fully open with gated places -> Secure within universe only
+> - All teleports are server-initiated through one `safeTeleport` helper.
+> - Teleport data contains no value; tickets live in MemoryStore or DataStore.
+> - Destination servers validate `SourcePlaceId`, membership, and default-deny.
+>
+> Read more (19 KB note): ## Teleport data: what you may trust · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 An experience (universe) can contain many **places**: a lobby, dungeons, arenas, a trading hub, event maps. `TeleportService` moves players between places, between servers of the same place, and into **reserved servers** that only your code can send people to. Multi-place design keeps each server's memory small, lets you build instanced content (a private dungeon run, a ranked match), and separates risky features. It also introduces failure modes that do not exist in a single place: teleports that fail halfway, data that must survive the hop, a client that tells the destination lies, and sub-places that players can enter directly if you configure access wrongly. This note covers all of it with the documented rules.
 
 Related: [[Places Universes and Experience Settings]], [[Session Locking and Profile Libraries]], [[MemoryStore Service]], [[Cross-Server Messaging]].

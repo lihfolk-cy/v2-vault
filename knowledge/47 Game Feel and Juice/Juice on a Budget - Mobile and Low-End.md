@@ -3,6 +3,18 @@ tags: [game-feel, juice, performance, mobile, low-end, pooling, budgets, luau]
 ---
 # Juice on a Budget - Mobile and Low-End
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Random hitches seconds after big moments: Instances created and destroyed per effect; GC catches up later -> Pools, pre-warmed, bounded
+> - Phone drops frames on rewards only: Full-screen glows and post-processing -> Substitutes on low tiers; smaller, more opaque effects
+> - Quality flickers between tiers: No hysteresis -> Slow to rise, quick to fall, ignore spikes
+> - Each juice effect classified by cost bucket and tagged `info` or `decor`.
+> - Tier from the player's setting as a ceiling, adjusted by measured frame time with hysteresis.
+> - Per-frame spawn and per-second particle budgets enforced by one governor.
+>
+> Read more (20 KB note): ## 1. Where juice costs go · ## 3. A juice governor · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Most Roblox players are on phones, many of them old, hot or both. Juice that is cheap on a developer's PC can be what pushes a phone from 40 fps into the twenties, and a stutter at the moment of a hit or a reward undoes the very feeling the juice was meant to create. [[Mobile and Low-End Optimization]] covers phones in general (quality presets, memory, what to cut first); [[VFX Performance Budgets and Culling]] covers combat effects. This note is narrower and deeper: what each kind of juice actually costs, a governor that adapts juice to the device in real time, pooling and spawn budgets, cheap substitutes for expensive effects, and the rule that keeps degraded juice fair. All code is full strict Luau.
 
 Source labels: **Roblox docs (as of October 2026)**, **measured in the reference project**, **rule of thumb**.

@@ -3,6 +3,18 @@ tags: [modeling, weapons, props, grip, pivots, blender, tools, conventions]
 ---
 # Modeling Weapons and Props
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Origin at the pommel or bounding-box centre -> Origin at the grip centre
+> - Avoid: Blade modelled along Y or X in Blender -> Blade along +Z
+> - Avoid: Edge facing an undefined side -> Edge toward -Y, documented
+> - Origin at the grip centre; blade along +Z; edge toward -Y; scale applied.
+> - Proportions checked against the character proxy; pommel clears the body.
+> - Parts split by role (Handle, Guard, Blade, Glow) and by motion (one object per moving piece).
+>
+> Read more (16 KB note): ## 1. The weapon contract · ## 3. Building a sword, step by step · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A weapon is the most-looked-at model in a combat game: it is in the player's hand on every frame, in every icon, every trade, every inspect screen. It also has the strictest technical contract of any static model, because animators, VFX artists and programmers all build on its axes: where the grip is, which way the blade points, where the edge faces, where the trail starts and ends. A sword with a beautiful blade and an arbitrary pivot costs the team more than an ugly sword with the right one.
 
 This note gives the axis and pivot conventions that one live action game (the reference project, about 150 animated weapons) used and that the Animation section's rigs, IK and QA tools depend on, then covers how to model blades, hafts, guards and moving parts, budgets, and the same discipline for interactive props (chests, doors, wheels, stations).

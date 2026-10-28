@@ -3,6 +3,18 @@ tags: [luau, modulescript, require, architecture, caching]
 ---
 # Module Scripts and Requiring
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Edits to a module have no effect in a test: Cached require in the same VM or a separate command-bar VM -> Clone-require; restart the test
+> - Server and client "share" a module table but values differ: Each side runs its own copy -> Use remotes or attributes
+> - Boot hangs on the client: Module top level yields on a missing instance -> No yields at load; `start()` phase
+> - One entry Script per side; modules with `init`/`start`.
+> - No yields at module top level.
+> - No cycles; shared dependencies extracted.
+>
+> Read more (14 KB note): ## 2. Caching: once per VM · ## 7. The Source size limit and splitting modules · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A `ModuleScript` is code that runs when something calls `require` on it and returns exactly one value, usually a table of functions. Modules are how Roblox code is shared and organized: one entry script per side requires a tree of modules. This note explains the caching rules (once per Luau VM, which is not "once per game"), require by instance and by string path, cyclic requires, yielding in modules, initialization order, the 200,000-character Source limit and how to split large modules safely, and how to test edits when `require` hands you a cached copy.
 
 ---

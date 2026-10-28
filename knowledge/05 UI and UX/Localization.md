@@ -3,6 +3,18 @@ tags: [ui, localization, translation, localizationservice, translator, i18n]
 ---
 # Localization
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Dynamic labels with `AutoLocalize` on: tables full of "Gems: 1,240".
+> - Avoid: String concatenation for sentences with numbers.
+> - Avoid: Rich text tags in translatable strings (stripped in translation).
+> - Source and supported languages set; translated content enabled.
+> - `AutoLocalize = false` on names, numbers and script-filled labels.
+> - Parameters and format specifiers instead of concatenation.
+>
+> Read more (15 KB note): ## 3. Layout for other languages · ## 5. Scripted localization · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Roblox players speak many languages, and Roblox will translate your game's text for some of them even if you do nothing: every user has an **Automatic Translations** account setting, and Docs state that if it is on, "all game names, game descriptions, and in-game text will be translated for them, even if you have not explicitly enabled translation". That is a free audience boost and a source of layout bugs at the same time. This note covers how automatic translation and capture work, what you must keep out of translation, scripted localization with `LocalizationService` and `Translator`, parameters and formatting, layout for text expansion, and the interactions with rich text and fonts.
 
 Sources: **Docs** (the "Localization", "Automatic translation", "Translate dynamic content", "Localize with scripting" guides; `LocalizationService`, `LocalizationTable`, `Translator`, `GuiBase2d.AutoLocalize`; October 2026), the **reference project** (one production game, mostly English, with UI conventions that affect localization), and **rule of thumb**. Policies and quotas change: everything here is as of October 2026.

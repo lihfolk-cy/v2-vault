@@ -3,6 +3,16 @@ tags: [pipeline, ik, arms, qa, baking, advanced]
 ---
 # Pipeline: Arm IK Baking and QA
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - These came out of reading hundreds of failing strips.
+> - At most two baker processes per worker, single-threaded math libraries; no background simulations in Studio (a pile-up of...
+> - Studio calls under 1.5 s: two moves per write call, four clips per play call.
+> - `--all` on kits with an appended shared move that has no clip stops at that slot; bake per move instead.
+>
+> Read more (14 KB note): ## The pipeline · ## Pose lessons (what makes criticals, and how authors avoid them)
+<!-- tldr:end -->
+
 The end-to-end workflow one live action game used to repair the arms of several hundred ability clips: measure every clip on the real Animator, re-solve only the arms offline with exact IK, fit the result back into sparse Roblox keys within an instance budget, verify the written clip on the Animator again, and install it with a rollback path.
 
 This note is the **workflow** (what to run, in what order, what to look at, when to stop). The algorithms are in [[Arm Baker Internals]]; every QA metric and threshold is in [[Arm QA Metrics Reference]]; the before-and-after story is [[Case Study - Fixing Hundreds of Attack Clips]].

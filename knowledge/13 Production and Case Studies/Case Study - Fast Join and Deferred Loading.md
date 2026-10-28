@@ -3,6 +3,18 @@ tags: [case-study, performance, join-time, loading, replication, streaming, prod
 ---
 # Case Study: Fast Join and Deferred Loading
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Putting every model the client might ever need in ReplicatedStorage.
+> - Avoid: Building a fancy loading screen and calling the join fixed.
+> - Avoid: Waiting for `WaitForChild` on a large deferred folder and assuming its contents are complete.
+> - Join telemetry: loaded, ready, play, by device.
+> - ReplicatedStorage instance count tracked; top folders known.
+> - Dense data baked to compact forms.
+>
+> Read more (15 KB note): ## Step 0: measure join time from the client · ## Step 3: defer what is not needed at join · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Players decide in seconds. A long join (black screen, then a loading bar, then a menu, then the world popping in) loses players before they see your game. This case study follows one live action game (the reference project) as it discovered why its joins were slow, measured them, and moved non-essential content out of the join path: baking heavy data, tightening streaming, moving a main-menu kit out of ReplicatedStorage, and loading armour, pets and loot models only when needed.
 
 General background: [[Instance Streaming]], [[Replication Rules]], [[Mobile and Low-End Optimization]], [[Network Performance]].

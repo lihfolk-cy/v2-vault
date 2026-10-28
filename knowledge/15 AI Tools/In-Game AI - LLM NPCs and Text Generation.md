@@ -3,6 +3,18 @@ tags: [ai, llm, npc, textgenerator, httpservice, safety, moderation]
 ---
 # In-Game AI - LLM NPCs and Text Generation
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Calling the API from the client, or putting an API key in a script.
+> - Avoid: Showing unfiltered model output.
+> - Avoid: Broadcasting one player's AI conversation to the whole server.
+> - Server-only generation; input validated, length-capped and filtered.
+> - Output filtered and sent to the interacting player only (or filtered for broadcast on purpose).
+> - AI notice visible at the start and throughout.
+>
+> Read more (17 KB note): ## 1. Route A: `TextGenerator` · ## 2. Route B: a third-party LLM through `HttpService` · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 An NPC that answers anything a player says is the most requested AI feature in Roblox and the one with the most obligations attached. You can build it two ways: Roblox's own `TextGenerator` (an engine API with built-in moderation and a free baseline during its beta) or a third-party LLM called through `HttpService` (your model choice, your bill, your responsibility for every word). Either way you must filter text, disclose AI use, rate the experience correctly, protect minors, and survive latency, failures and abuse.
 
 This note covers both routes with working server code, the rules as of October 2026, and the design patterns that make LLM NPCs fun rather than a liability. Classic NPC behaviour (state machines, pathing) is in [[NPC AI and Behaviour]]. External calls in general: [[HttpService and External APIs]]. Rules: [[Roblox Policies on AI-Generated Content]].

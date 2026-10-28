@@ -3,6 +3,18 @@ tags: [art-direction, untextured, stylised, colour, value, palette, colour-scrip
 ---
 # Colour Scripts and Value Structure for Untextured Art
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Zone looks muddy though each colour is pretty: No value structure; everything mid-value -> Plan 3 to 5 value bands; check in greyscale
+> - Players cannot find the chest or the exit: Interactables share a value band with scenery -> Reserve the lightest band or a saturation spike for interactables
+> - Second zone feels like more of the first: Neighbouring zones share hue, value key and saturation -> Change at least two of the three; check the colour script row
+> - Colour script row made: one thumbnail per zone, in play order, with key light, shadow hue, dominant, accent, value key.
+> - Neighbouring zones differ in at least two of hue, value key, saturation; the hub is distinct.
+> - Each zone has 3 to 5 value bands with roles assigned; about 60/30/10 by area.
+>
+> Read more (15 KB note): ## Value first, hue second · ## Building a colour script for a Roblox game · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 When art has no painted texture, its colour choices are its entire surface. A flat-coloured world lives or dies on two things: **value structure** (how light or dark each thing is relative to everything else) and **colour planning across the game** (how palettes change from zone to zone so the journey feels designed). Film studios plan the second with a **colour script**: a strip of small, rough images showing the colour and light of every sequence in order. Pixar's colour scripts, published in "The Art of Pixar" and discussed by production designer Lou Romano in public interviews, exist mostly to set "the emotional tone of each scene" with abstract shapes and colour rather than detail. Game zones are sequences too.
 
 [[Environment Art Styles]] gives a palette derivation table, [[Zone and Biome Art Direction]] covers per-zone art direction, and [[Stylized Lighting Recipes]] gives the lighting side. This note is the planning layer for untextured art specifically: value groups and what to put in each, how Roblox lighting moves values after you pick them, building a colour script for a multi-zone Roblox game, palette sizes, and a Studio greyscale workflow with a Luau value audit.

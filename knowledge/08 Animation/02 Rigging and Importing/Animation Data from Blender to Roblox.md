@@ -3,6 +3,15 @@ tags: [blender, export, keyframesequence, python, pipeline, clips]
 ---
 # Animation Data from Blender to Roblox
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Reading `matrix_basis` when constraints drive the rig -> Use evaluated `pose_bone.matrix` as in the exporter
+> - Avoid: Root travel keyed on the top pose -> Key the first child
+> - Avoid: Axis map applied twice, or not at all -> Calibration clip; one conversion in one place
+>
+> Read more (19 KB note): ## 3. The Blender exporter · ## 4. The Studio builder · ## Common mistakes
+<!-- tldr:end -->
+
 There are three ways to get motion authored in Blender into a Roblox clip: let the 3D Importer bring the animations, import a file in the Animation Editor, or export the transforms yourself and build the KeyframeSequence (or a compact buffer) in Studio. The first two are quick and come with quirks you cannot control. The third is more work once and then gives you exact markers, names, partial clips, thinning, easing and root handling for every clip after. This note covers all three, with a complete exporter and builder, the maths that makes them correct, and the measured pitfalls from one production game.
 
 ## 1. The three routes

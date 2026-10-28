@@ -3,6 +3,18 @@ tags: [gameplay, camera, cutscene, aiming, renderstep]
 ---
 # Camera Systems
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Shake written into `CFrame` without removal -> Apply at Camera+1, remove at Camera-1
+> - Avoid: Several systems tween FOV -> One FOV owner summing effects
+> - Avoid: Server tries to set the camera -> Remote to the client
+> - Camera code only on the client; bound at the right RenderStep priority.
+> - Additive effects never drift and end at zero.
+> - Cutscenes save and restore type, subject, FOV and GUI, with a watchdog.
+>
+> Read more (14 KB note): ## 2. The frame: where camera code must run · ## 5. Cinematic takeovers · ## 8. Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 The camera is the player's eyes and the system most likely to make a game feel cheap or nauseating. Roblox gives you a capable default (the `CameraModule` inside `PlayerModule`) and a raw `Camera` object you can take over completely. This note explains how the camera is updated each frame, the API that matters, how to layer effects on the default camera without breaking it, how to build custom cameras (over-the-shoulder, top-down, lock-on) and cinematic takeovers, and the comfort rules.
 
 Shake and cinematic craft in depth: [[Camera Shake and Camera FX]], [[Cameras and Cutscenes]], [[Cinematic Ultimates]]. Frame order: [[Frame Order and RunService Timing]].

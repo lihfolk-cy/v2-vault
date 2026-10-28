@@ -3,6 +3,18 @@ tags: [architecture, networking, remotes, security, performance]
 ---
 # RemoteEvents RemoteFunctions and Unreliable Remotes
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: `InvokeClient` for anything -> Event plus reply event with timeout
+> - Avoid: Relaying raw client arguments with `FireAllClients` -> Validate, rate-limit, relay server-built values
+> - Avoid: Reliable remote fired per frame -> Unreliable at 10 to 20 Hz, or send on change
+> - All remotes created by the server, in one folder, from one list.
+> - No `InvokeClient` anywhere.
+> - Every handler: type, value (NaN, inf, length), context, rate limit, then act.
+>
+> Read more (21 KB note): ## The three types · ## Organising remotes · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Remotes are the explicit messages you send across the client-server boundary. Roblox has three kinds, each with different delivery promises, limits and failure modes. Choosing the wrong one gives you either lag (reliable traffic for data nobody needs), lost events (unreliable traffic for things that must happen), or a server thread that hangs forever (`InvokeClient`). This note covers the guarantees exactly as documented, the argument rules, the throttling and size limits, the RemoteFunction pitfalls, how to organise remotes in a project, and the production patterns that hold up: server-validated relays, request/response with timeouts, sequenced unreliable streams and honeypots.
 
 Validation of what arrives is covered in [[Server Authority and Validation]] and rate limits in [[Rate Limiting and Abuse Prevention]]. This note focuses on the transport.

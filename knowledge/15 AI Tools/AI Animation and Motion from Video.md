@@ -3,6 +3,18 @@ tags: [ai, animation, mocap, video, animation-capture]
 ---
 # AI Animation and Motion from Video
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Feet out of frame in the source video.
+> - Avoid: Shipping captured clips without key reduction (hundreds of keys per second).
+> - Avoid: Captured combat swings with no designed contact frame.
+> - Video: under 15 s, one person, full body, stable camera, neutral start and end.
+> - Cleanup: jitter filtered, feet locked, root handled, wrists unrolled.
+> - Keys reduced with an error bound; no segment over about 120 degrees; none at 180.
+>
+> Read more (13 KB note): ## 1. Roblox Animation Capture · ## 6. How the reference project used AI for animation (without capture) · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 AI can now turn a phone video into keyframes. Roblox has this built into the Animation Editor (Animation Capture), and several external services do the same with more control. For emotes, idles, dances and social animation this is a real shortcut. For combat, where contact frames, weapon arcs and timing are the whole design, video capture is at best reference. This note covers Roblox's capture tools, external options, the cleanup that video motion always needs, Roblox-specific pitfalls when importing it, and how the reference project used AI agents for animation without any motion capture at all.
 
 Deeper animation background lives in the Animation section: [[Animation Capture and Mocap]], [[Retargeting Animations Between Rigs]], [[Animation Data from Blender to Roblox]], [[How the Animator Really Behaves]], [[Animation Quality Standard]].

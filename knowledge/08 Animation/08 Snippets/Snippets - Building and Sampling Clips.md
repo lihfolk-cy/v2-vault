@@ -3,6 +3,15 @@ tags: [snippets, luau, keyframesequence, fk, sampling, easing]
 ---
 # Snippets: Building and Sampling Clips
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Sampling with `CFrame:Lerp` and trusting it on big turns.
+> - Avoid: Putting easing on the destination key.
+> - Avoid: Keying the top-level root pose.
+>
+> Read more (31 KB note): ## 4. Building a KeyframeSequence from a table · ## 6. Sampling a KeyframeSequence like the Animator · ## Common mistakes
+<!-- tldr:end -->
+
 Code for working with clip data directly: forward kinematics over any rig, pose helpers, building a `KeyframeSequence` from a table, sampling a `KeyframeSequence` at any time **the way the Animator does** (rotation vectors or nlerp, the measured easing curves including reversed legacy Cubic), posing an anchored mannequin for filmstrips, Studio stepping, and the compact binary encoding used for clip stubs.
 
 The measured behaviour these samplers reproduce is described in [[How the Animator Really Behaves]] and [[Keyframes, Easing and Interpolation]]; conflicts between measurements are in [[Open Questions]]. Where code follows one production game's measurements (the reference project), comments say "measured".

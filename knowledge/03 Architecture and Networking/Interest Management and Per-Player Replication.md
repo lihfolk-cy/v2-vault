@@ -3,6 +3,18 @@ tags: [networking, replication, streaming, interest-management, bandwidth, priva
 ---
 # Interest Management and Per-Player Replication
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Entities flicker in and out at range: Single radius -> Enter/leave hysteresis
+> - Ghost entities that never disappear: Despawn sent unreliably, or lost on teleport -> Reliable enter/leave; recompute after teleports
+> - Bandwidth grows with players squared: Broadcast inside a per-player loop -> Per-player batches of relevant entities only
+> - Each data kind has a channel chosen deliberately: streaming, owner-only, remote per player, or broadcast.
+> - Bandwidth estimated as entities x rate x bytes per relevant player, against a low tens of kbps target.
+> - Relevance sets use hysteresis; enter carries a snapshot; enter/leave are reliable.
+>
+> Read more (20 KB note): ## 1. What the engine gives you · ## 4. Building a relevance layer · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Interest management means deciding, **per player**, what that player's client needs to know, how often, and at what detail. By default Roblox replicates the server's DataModel to everyone, filtered only by Instance Streaming distance and a few owner-only containers. That default is fine for small games and wasteful or leaky for large ones: 40 enemies across a 4 km map do not all need 20 updates per second to every player, and one player's hidden loot table should never reach anyone else.
 
 This note covers what the engine gives you for per-player replication, what it does not, how to build an interest layer for remote-driven data (relevance sets, distance tiers, priority accumulation, hysteresis), the bandwidth arithmetic that justifies it, hidden information, and the failure modes. It builds on [[Replication Rules]], [[Instance Streaming]] and [[Network Performance]].

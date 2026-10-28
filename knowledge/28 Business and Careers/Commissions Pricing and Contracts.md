@@ -3,6 +3,18 @@ tags: [business, commissions, freelancing, pricing, contracts, careers, minors]
 ---
 # Commissions Pricing and Contracts
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Starting work on a message like "make me a combat system" with no written scope.
+> - Avoid: No "excludes" list.
+> - Avoid: Quoting Robux without computing its real-money value after DevEx.
+> - Rate computed from your own target and billable hours.
+> - Scope with includes, excludes, testing bar and revisions.
+> - Price, currency and milestone schedule written.
+>
+> Read more (17 KB note): ## 1. Pricing: three models and when each fails · ## 3. The contract: short, written, agreed · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 > **Not advice.** General information for developers who take paid work. It is not legal, tax or financial advice. Contract law, consumer law and tax rules differ by country. For anything large, or anything you are unsure about, ask a qualified professional where you live. Anyone under 18 needs a parent or guardian to agree to contracts and handle payment; in many places a contract with a minor can be cancelled by the minor, so clients should expect the parent or guardian to sign or approve.
 
 This note is for the **seller**: a scripter, builder, modeller, UI artist, animator or VFX artist taking commissions. The other side of the same deal (finding and managing freelancers, revenue shares) is in [[Hiring Freelancers and Revenue Shares]]. Owning and running a team is in [[Running a Small Studio as a Business]].

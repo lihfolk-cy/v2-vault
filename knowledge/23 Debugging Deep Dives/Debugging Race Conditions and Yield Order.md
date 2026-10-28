@@ -3,6 +3,18 @@ tags: [debugging, race-conditions, task-library, yielding, characters, players]
 ---
 # Debugging Race Conditions and Yield Order
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: `task.wait(n)` as a fix for load order.
+> - Avoid: Connecting `PlayerAdded` or `CharacterAdded` after a yield, without handling players or characters already present.
+> - Avoid: Holding a character reference across a yield without re-checking it is still current.
+> - Every "on added" subscription uses connect, then iterate existing, with a double-init guard.
+> - Character bindings clean up on respawn and re-check `player.Character == character` after waits.
+> - Server handlers change state before yielding, or hold a per-player busy flag.
+>
+> Read more (18 KB note): ## 5. Character load order · ## 8. Tools for catching races · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Luau in Roblox runs one thread at a time per Luau VM (outside Parallel Luau), so people often assume races cannot happen. They happen constantly. A race in Roblox is not two threads writing the same memory at the same instant; it is **two pieces of code whose relative order is not fixed**, where one order works and the other does not. The order changes with network latency, device speed, streaming, deferred signals and which script the engine happens to start first. That is why race bugs show up on phones and in live servers and hide in Studio.
 
 This note is about finding and fixing them. The `task` library itself and the basic ordering of `spawn` and `defer` are covered in [[Task Library Coroutines and Yielding]]; signal behaviour in [[Events Signals and Connections]].

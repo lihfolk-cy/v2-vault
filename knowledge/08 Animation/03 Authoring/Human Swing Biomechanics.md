@@ -3,6 +3,18 @@ tags: [animation, authoring, combat, sword, biomechanics, kinematic-chain, prona
 ---
 # Human Swing Biomechanics
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Solving each key's wrist and elbow independently.
+> - Avoid: Measuring "twist" with swing-twist decomposition.
+> - Avoid: Putting all the rotation into the arm with the hips square.
+> - Hips lead the chest by ~1 frame and the arm by ~2 frames
+> - 35-60 deg hip-shoulder separation at the top of the windup
+> - `Clip.cut()` declared for every swing
+>
+> Read more (5 KB note): ## 1. What the data says · ## 2. Rules at 30 fps · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Measured strikes (kendo, batting, tennis, golf) agree on one pattern: a swing is a proximal-to-distal wave. The hips turn first, then the trunk, upper arm, elbow, wrist, and last the forearm twist. Each segment twists **once, in one direction**. Keyed swings that re-twist the arm between poses read as "the arm randomly twisting", even when every single pose looks fine. This note turns the published numbers into keyframe rules and QA gates. Full citations are in `D:\LihFolk Build\research\animation-references.md`.
 
 ## 1. What the data says

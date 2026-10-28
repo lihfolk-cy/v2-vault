@@ -3,6 +3,18 @@ tags: [luau, scripts, runcontext, localscript, client-server, containers]
 ---
 # Script Types and Run Context
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - LocalScript does nothing: In Workspace or ReplicatedStorage -> Starter containers, or a Client-context Script in ReplicatedStorage
+> - Client code runs twice: Client-context `Script` in a Starter container -> LocalScript there, or move to ReplicatedStorage
+> - Input handlers multiply after respawns: Character/GUI scripts re-run; old connections leaked -> Disconnect on removal; `ResetOnSpawn = false` for persistent UI
+> - One server entry Script, one client entry; everything else in modules.
+> - No scripts inside Workspace models unless they are distributed assets with explicit `RunContext`.
+> - Starter containers contain only LocalScripts.
+>
+> Read more (15 KB note): ## 2. RunContext (Docs) · ## 3. The recommended layout (Docs) · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Whether your code runs at all, and where, depends on three things: the script's **class** (`Script`, `LocalScript`, `ModuleScript`), its **location** in the Explorer, and, for `Script`, its **`RunContext`**. Roblox's own docs call this "the fundamental challenge of adapting to Roblox scripting" (Docs: script types and locations). This note is the reference for those rules, the recommended layout, script lifecycle (enable, disable, destroy, respawn), the source and local limits that bite large scripts, and the traps: scripts that run twice, never run, or run with stale state.
 
 ---

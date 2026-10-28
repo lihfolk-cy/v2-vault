@@ -3,6 +3,18 @@ tags: [ai, studio, assistant, mcp, workflow]
 ---
 # Roblox Studio Assistant
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Starting every task in the same long chat.
+> - Avoid: Accepting a plan without reading which scripts it touches.
+> - Avoid: Letting Assistant insert Creator Store assets without inspecting their scripts.
+> - New chat for a new task, with a conventions brief.
+> - Planning Mode for anything that touches more than one script.
+> - Snapshot before risky edits; no undo in shared places.
+>
+> Read more (16 KB note): ## 3. Slash commands and tools · ## 5. Using Assistant well · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Roblox Assistant is the AI helper built into Roblox Studio. Roblox's own guide describes it as something that "helps you build games faster by answering questions, generating content, and performing actions directly in Studio". It is a large language model joined to a set of tools that act on your open place: reading and writing scripts, creating and deleting instances, inserting assets, generating meshes and materials, capturing the viewport and, in beta, play-testing.
 
 This note covers what Assistant can do as of October 2026, how it works underneath, how to use it well, and where it fails. For the general overview of Studio's AI features see [[Studio Assistant and AI Tools]]; for using external AI clients against the same tools, see [[Roblox Studio MCP Server]].

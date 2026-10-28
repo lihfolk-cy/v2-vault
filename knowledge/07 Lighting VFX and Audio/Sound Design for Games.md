@@ -3,6 +3,18 @@ tags: [audio, sound-design, combat, layering, variation, ui-sounds]
 ---
 # Sound Design for Games
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Hits feel late: Sound started on the beat, peak later -> Start at beat minus peak.
+> - Machine-gun repetition: One take, no variation -> Bags, pitch variance, layer recombination.
+> - Big creature roar sounds slow and blurry: Pitched down with PlaybackSpeed -> Pitch shifter or a lower take.
+> - Each core action layered (transient, body, air, sweetener).
+> - Peaks aligned to visual beats from measured data.
+> - Variation by bags, pitch and recombination; choke on rapid repeats.
+>
+> Read more (13 KB note): ## 2. Timing: the peak lands on the beat · ## 5. Physics-driven and state-driven sounds · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Sound design is deciding what every action sounds like, then making it sound like that every time without becoming repetitive, without arriving late, and without drowning everything else. On Roblox you rarely record your own foley; you assemble sounds from licensed library takes and your own uploads, slice them, layer them, pitch them, level them and trigger them precisely. This note is the craft side: layering, timing to the visual beat, variation, character and weapon voices, enemy sound profiles, physics-driven sounds, UI kits, cues as gameplay information, and the governance that keeps a sound library sane.
 
 Mechanics are in [[Sound Fundamentals]], [[The Audio API - Players Emitters Wires and Effects]] and [[Spatial Audio and Mixing]].

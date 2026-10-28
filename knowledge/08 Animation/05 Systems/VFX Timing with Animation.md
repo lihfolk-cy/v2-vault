@@ -3,6 +3,15 @@ tags: [systems, vfx, markers, trails, timing, audio, performance]
 ---
 # VFX Timing with Animation
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Sparks before the blade arrives after hit-stops: Plain freeze plus wall-clock effects -> Catch-up hit-stop
+> - Sheet of trail under the blade: Trail on through the wind-up -> Trail window on markers, or crescents
+> - Streak across the body when a trail enables: Trail not cleared -> `Trail:Clear()` before enabling
+>
+> Read more (12 KB note): ## Three clocks · ## Layered hits · ## Common mistakes
+<!-- tldr:end -->
+
 Visual effects sell an animation only when they land on the right frame. A slash crescent one frame late reads as lag; a trail left on through the wind-up draws a sheet of colour under the blade; an explosion that fires twice reads as a bug. This note covers how to time VFX (and sound) to animation in Roblox: markers as the shared clock, the three clocks that drift apart, trail windows, slash crescents, afterimages, juice beats, layered hits and readability budgets. Numbers come from one live action game (the reference project). Building the effects themselves (particles, beams, meshes) is a separate craft; this note is about **when**.
 
 ## One source of truth: markers

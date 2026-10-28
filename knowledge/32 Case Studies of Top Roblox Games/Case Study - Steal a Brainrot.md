@@ -4,6 +4,18 @@ tags: [case-study, top-games, simulator, tycoon, idle, pvp, live-ops, monetizati
 
 # Case Study - Steal a Brainrot
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Does your title contain the core verb?
+> - Is the main shop visible to every player at once, so rare items create races?
+> - Do you show income as a rate?
+> - Is there a risk mechanic with a clear, visible timer and counterplay?
+> - Are new players protected from much richer players for their first sessions?
+> - Are all steals and purchases validated on the server?
+>
+> Read more (17 KB note): ## 2. Click-through: title, icon and thumbnails · ## 6. What to copy and what not to copy · ## Checklist
+<!-- tldr:end -->
+
 Steal a Brainrot holds the record for the most concurrent players any single game has ever had. It mixes three familiar ideas: an idle tycoon (things on your base earn money every second), a shop that scrolls past on a conveyor belt, and capture the flag (you can run into another player's base, grab their best unit and carry it home). The theme is "Italian brainrot", a family of absurd AI-generated meme characters that were already viral on TikTok when the game launched.
 
 How to read the labels:

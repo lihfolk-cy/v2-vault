@@ -3,6 +3,18 @@ tags: [luau, parallel, actors, multithreading, sharedtable, performance]
 ---
 # Parallel Luau and Actors
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - No speed-up: All scripts in one Actor, or no `desynchronize` -> Many Actors; `ConnectParallel`
+> - "not safe in parallel" errors: Writing instances in a parallel phase -> `task.synchronize()` first
+> - Registry empty inside workers: Per-Actor module copies -> DataModel lookups, SharedTable, or messages
+> - Profiled first; the hot spot is compute or queries, not instance writes.
+> - Work split by logical unit across many Actors.
+> - Requires at load time; no requires in parallel.
+>
+> Read more (15 KB note): ## 4. Communication · ## 5. Pattern: a worker pool for spatial queries · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 By default all Luau in a Roblox server or client runs on one thread, one piece at a time. **Parallel Luau** lets scripts placed under `Actor` instances run parts of their work simultaneously on several CPU cores. It is powerful for compute-heavy, mostly read-only work (raycasts, spatial queries, NPC sensing, procedural generation, pathfinding maths) and useless or harmful for work that mainly writes to Instances. This note explains the execution model, thread safety levels, communication (messages, SharedTable, the DataModel), how modules behave per Actor, a worker-pool pattern, and how to tell whether it helped.
 
 All facts below are from the Roblox Parallel Luau guide and API reference (Docs) unless marked.

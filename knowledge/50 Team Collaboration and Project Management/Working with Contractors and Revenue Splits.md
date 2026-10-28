@@ -3,6 +3,18 @@ tags: [team, contractors, revenue-share, payouts, groups, intake, security, luau
 ---
 # Working with Contractors and Revenue Splits
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Vague acceptance criteria -> Numbered, checkable criteria
+> - Avoid: No review window -> Fixed window, then accepted by default
+> - Avoid: Unpaid change requests -> Change orders
+> - Statement of work with numbered, checkable acceptance criteria and a review window.
+> - Change orders for every addition; mirrored in the scope ledger.
+> - Least access: file delivery, or a sandbox experience with per-game permissions.
+>
+> Read more (22 KB note): ## 5. Intake: scan every delivered model · ## 7. Split designs for several contributors · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 > **Not advice.** General information for Roblox teams. It is not legal, tax or financial advice. Contract, employment and tax rules differ by country. Anyone under 18 needs a parent or guardian to approve agreements and payments.
 
 The vault already covers the decisions: whether to hire, fixed pay versus revenue share, vesting and exit rules, finding people, paid trials and young developers ([[Hiring Freelancers and Revenue Shares]]); the freelancer's side of pricing and contracts ([[Commissions Pricing and Contracts]]); a contractor brief and payout basics ([[Scoping and Roles for Small Teams]]); and the group permission ladder ([[Groups Roles and Permissions for Studios]]). This note is the operating manual once you have decided to work with someone: the lifecycle of one engagement from statement of work to offboarding, acceptance criteria that cannot be argued about, change orders, a Luau intake scanner for delivered models, the exact mechanics of Roblox group payouts and how splits cascade, split designs for teams with several contributors (including a points system with code), and the operational failure modes that turn good contractors into disputes.

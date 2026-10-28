@@ -3,6 +3,18 @@ tags: [avatars, humanoiddescription, outfits, characters, data, npc, luau]
 ---
 # HumanoidDescription and Outfit Systems
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Starting from `Instance.new("HumanoidDescription")` -> Start from `GetAppliedDescription()`
+> - Avoid: Mixing manual accessory edits with diff applies -> One owner, or `ApplyDescriptionResetAsync`
+> - Avoid: `SetAccessories(layered, true)` -> Read all, modify, write back
+> - One system owns appearance; others are additive or go through it.
+> - Edits start from `GetAppliedDescription()`.
+> - Reset variant used after other systems touched the character.
+>
+> Read more (19 KB note): ## 1. The mental model: target state plus a cache · ## 5. Storing outfits as data · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 `HumanoidDescription` is the declarative recipe for how a Humanoid character looks: body part ids, colours, scales, accessories, classic clothing, animations and emotes. You build a description, apply it, and the engine works out what to add, remove and resize. Almost every avatar feature in a game (uniforms, saved outfits, NPC crowds, morphs, disguises, loading screens with the player's avatar) is a description operation underneath. This note covers the mechanics the API reference does not spell out: the cached "applied" description, diff versus reset, merging a game uniform over a player's own look, storing outfits as data, and building many NPCs cheaply.
 
 For the in-game editor UI and catalog side, see [[AvatarEditorService and In-Game Avatar Editors]]. For how the character itself works (states, health, spawning), see [[Characters and Humanoids]].

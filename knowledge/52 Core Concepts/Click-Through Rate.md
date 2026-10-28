@@ -3,6 +3,16 @@ tags: [core-concept, marketing, discovery, analytics, thumbnails]
 ---
 # Click-Through Rate
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Discovery is a competition for attention on a small tile: an icon or thumbnail, a title and a few stats.
+> - CTR is only half the funnel. A misleading thumbnail can raise CTR and then lose players in the first minute, which hurts more...
+> - CTR depends on placement. The same icon gets a different CTR in search (players looking for it) than in a recommendation row...
+> - Small differences need large samples. A change from 4.0 to 4.3 percent needs many thousands of impressions per variant before...
+>
+> Read more (3 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+<!-- tldr:end -->
+
 **Click-through rate (CTR)** is the share of people who saw something and clicked it: clicks divided by impressions. On Roblox it most often means how many players who saw your experience's tile in discovery (home sort, search, recommendations) opened or played it. It also applies to ads, in-game prompts and shop buttons.
 
 ## Why it matters on Roblox

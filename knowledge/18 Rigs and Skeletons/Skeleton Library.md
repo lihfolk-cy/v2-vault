@@ -3,6 +3,15 @@ tags: [rigs, skeletons, animation, assets]
 ---
 # Skeleton Library
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Renaming R15 bones. Symptom: the importer does not build a Humanoid, and catalog animations do nothing.
+> - Avoid: Scaling the armature object instead of applying it.
+> - Avoid: Joint orientation flipped on one side. Symptom: a mirrored animation bends the left knee the wrong way.
+>
+> Read more (8 KB note): ## The rigs · ## Nuances and edge cases · ## Common mistakes
+<!-- tldr:end -->
+
 Nine starter rigs you can import, animate and reskin. Each folder in this section holds the same rig three ways:
 
 | File | Use it for |

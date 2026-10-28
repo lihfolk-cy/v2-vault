@@ -3,6 +3,18 @@ tags: [luau, buffer, binary, serialization, networking, compression]
 ---
 # Buffers and Binary Data
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - "out of bounds" errors: Offsets start at 0; wrong size; writer did not grow -> Growable writer; size checks
+> - Values garbled after a format change: No version byte -> Version first; branch on read
+> - Positions jitter or snap: Quantization step too coarse, or overflow at map edges -> Choose scale per range; clamp
+> - Every format starts with a version byte and has a round-trip test.
+> - Writer and reader live together and mirror each other.
+> - Field precision and ranges are documented and clamped.
+>
+> Read more (19 KB note): ## 2. A typed writer and reader · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 `buffer` is a Luau type for a fixed-size, mutable block of raw bytes, with functions to read and write integers, floats, strings and bit fields at byte offsets. It replaces most uses of `string.pack`/`string.unpack` and of hand-rolled string encodings. Use it to make network payloads and saved data compact, to implement binary formats, and to give hot numeric code a dense, native-friendly memory layout. This note covers the API and its exact semantics, a typed reader/writer, quantization techniques, buffers across remotes, attributes and DataStores, `EncodingService` (base64, compression, hashing), and a production case where a binary clip format cut animation data to a fraction of its instance size.
 
 ---

@@ -3,6 +3,18 @@ tags: [gameplay, ai, npc, state-machine, behaviour-tree, utility-ai, architectur
 ---
 # Behaviour Trees Utility AI and State Machines for NPCs
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Interrupts duplicated in every state -> Global transitions in a parent
+> - Avoid: No `exit` / `halt` clean-up -> Release everything acquired, on every exit path
+> - Avoid: `task.wait` inside a state or leaf -> Timestamps and per-tick checks
+> - Each NPC type mapped to the cheapest technique that expresses its design.
+> - Global interrupts (death, stagger, leash, zone change) handled once, above states.
+> - Every state or action releases what it acquired on exit, halt, death and despawn.
+>
+> Read more (23 KB note): ## 2. State machines that do not rot · ## 3. Behaviour trees, honestly · ## 8. Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[NPC AI and Behaviour]] covers the whole enemy stack (perception, decision, action, presentation) and recommends "state machine first". This note goes one level down into the **decision layer**: how finite state machines, hierarchical state machines, behaviour trees and utility scoring actually differ, what each costs to author and debug, how each one fails, and how to combine them on a Roblox server that runs hundreds of brains at 10 Hz. The goal is not to pick the most impressive technique. It is to pick the cheapest one that still lets a designer say "make the archer back off when cornered" and get it done in one config change.
 
 Related: [[NPC AI and Behaviour]], [[Pathfinding Edge Cases and Fallbacks]], [[Boss Fight Design Patterns]], [[Combat Systems Architecture]], [[Status Effects Buffs and Stacking Rules]], [[Entity Component Systems]], [[Enemy Animation State Protocol]].

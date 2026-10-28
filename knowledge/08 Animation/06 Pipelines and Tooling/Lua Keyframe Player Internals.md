@@ -3,6 +3,16 @@ tags: [pipeline, runtime, keyframesequence, internals, interpolation, advanced]
 ---
 # Lua Keyframe Player Internals
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Rotations are stored as rotation vectors (`axis * angle`, from `CFrame:ToAxisAngle()`), not quaternions or CFrames, because...
+> - `CubicV2`: code `4 + direction` (In 0, Out 1, InOut 2): TweenService directions.
+> - `SampleCFrame(clip, joint, t, scale)` wraps this and returns a CFrame; it is how tools and procedural systems read clips...
+> - Track state: `TimePosition`, `Speed`, `Length`, `Looped`, `Priority` (and a numeric rank), `IsPlaying`, `WeightCurrent`...
+>
+> Read more (19 KB note): ## 1. The clip table · ## 3. Sampling one joint
+<!-- tldr:end -->
+
 How the general Lua keyframe player ("KeyframePlayer") of one production game works inside: parsing, the interpolation dispatch, easing codes, sampling at the ends, the weight and priority mixer, fades and time, marker delivery, level of detail, replication, `Compose`, and the API. Read [[Lua Keyframe Player]] first for the why. Every behaviour below was matched against `Animator:StepAnimations` in Edit; where the code encodes a measurement, it says so. Copyable core: [[Snippets - Lua Keyframe Player Core]].
 
 ## 1. The clip table

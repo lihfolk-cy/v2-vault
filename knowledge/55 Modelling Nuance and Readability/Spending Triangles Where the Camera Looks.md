@@ -3,6 +3,18 @@ tags: [modeling, triangles, budgets, optimization, camera, lod, silhouette, blen
 ---
 # Spending Triangles Where the Camera Looks
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Budget met but model looks plain: Triangles spread evenly, none on silhouette or focal feature -> Move triangles to the top silhouette and one focal feature
+> - Same segment count everywhere: Style rule written as one number -> Scale segments by radius and distance (sagitta table)
+> - Spiky features vanish at range: Generated lower RenderFidelity levels dropped thin parts -> Thicken key features; check at 250 and 500 studs
+> - Viewing distance and most-seen angles noted for the asset.
+> - Cylinder and sphere segments chosen from radius and distance.
+> - Bottom, touching, interior and against-wall faces deleted where safe.
+>
+> Read more (15 KB note): ## Segment counts from distance: the sagitta rule · ## Scene-level spending · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A triangle budget says how many triangles an asset may have. It does not say where they should go. Two crates with 600 triangles each can look completely different: one spends its triangles on a rounded silhouette and chunky handles the player sees from the high follow camera, the other spends them on a detailed underside nobody ever sees. [[Art Budgets - Triangles Draw Calls Memory]] sets the totals and [[Environment Art Styles]] lists which places in a world deserve detail. This note is about the distribution **inside** each model and across a scene: how to calculate segment counts from viewing distance, which faces the Roblox camera actually sees, where to delete, where to add, and how to check the spend with a script.
 
 ## The principle: triangles are only worth what they change on screen

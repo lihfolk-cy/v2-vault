@@ -3,6 +3,18 @@ tags: [studio, plugins, security, permissions, supply-chain, tooling]
 ---
 # Plugin Security and Permissions
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Treating permission prompts as a sandbox -> Choose plugins carefully; audit
+> - Avoid: Approving a domain without asking why -> Approve only documented domains
+> - Avoid: Granting script injection to building plugins -> Code tools only
+> - Every installed plugin is on the approved list with permissions noted.
+> - New plugins are audited in an empty place before installation.
+> - Script injection only for code tools; HTTP domains documented.
+>
+> Read more (17 KB note): ## 4. Auditing a plugin before you trust it · ## 7. Writing a plugin that deserves trust · ## 8. Common mistakes · ## 9. Checklist
+<!-- tldr:end -->
+
 A plugin runs inside Studio with access no game script ever gets: it can read and rewrite every script in every place you open, make web requests, prompt you to open files, and do all of it every time Studio starts, in every project, updated silently by its author. That makes plugins the largest supply-chain risk in Roblox development, larger than free models, because a model only runs inside the game it was inserted into while a plugin touches everything you work on.
 
 [[Creator Store and Toolbox Safety]] covers backdoors in models and gives a place audit script. This note is about plugins specifically, from both sides: as a **user** (what the permission model actually protects, how to audit a plugin, how to run a team policy) and as an **author** (least privilege, secrets, local bridges, and not becoming the vector yourself).

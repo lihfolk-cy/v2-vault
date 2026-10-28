@@ -3,6 +3,18 @@ tags: [materials, art-direction, pipeline, stylized, realistic, pbr, production]
 ---
 # Stylised vs Realistic Material Pipelines
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Direction set by the first imported asset -> Write the pipeline down before importing
+> - Avoid: Realistic metal with environment specular 0 -> Configure environment lighting
+> - Avoid: Realistic scene judged on desktop only -> Test on low-end devices early
+> - Pipeline chosen and written down: flat, stylised PBR or realistic, with the reason.
+> - Maps per asset class, texel density band and metal rules defined.
+> - Lighting settings (style, ambient, environment scales) part of the material spec.
+>
+> Read more (16 KB note): ## 2. What realism costs on Roblox specifically · ## 5. Turning realistic CC0 sets into stylised materials · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Every Roblox project picks a material pipeline, usually by accident: the first asset someone imports sets the direction, and six months later the game has photoscanned cobbles next to SmoothPlastic trees. [[Environment Art Styles]] covers style families and palettes, and [[Hand-Painted and Stylized Texturing]] covers how to paint stylised textures. This note compares the **whole material pipelines** end to end: what each costs to produce and to run, what lighting each needs, how they behave on phones, how to convert the vault's realistic CC0 sets into stylised ones, the hybrid that most successful games actually ship, and how to switch direction mid-project without redoing everything.
 
 ## 1. Three pipelines, not two

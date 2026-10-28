@@ -3,6 +3,18 @@ tags: [platform-features, badges, achievements, badgeservice, progression, reten
 ---
 # Badges and Achievement Design
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Awarding from a LocalScript -> Award on the server
+> - Avoid: Awarding as the player teleports out -> Ledger first, pending retries on next join
+> - Avoid: `UserHasBadgeAsync` per badge on every join -> One `GetUserBadgesAsync` batch, then trust the ledger
+> - Ledger in saved data is the source of truth; badges are a mirror
+> - Every award is server-side and preceded by validation of the feat
+> - Pending awards retried with backoff and on next join
+>
+> Read more (22 KB note): ## 1. What the platform gives you · ## 4. An award pipeline that does not lose badges · ## 8. Common mistakes · ## 9. Checklist
+<!-- tldr:end -->
+
 Badges are the one piece of your progression that leaves your game. A badge lands in the player's Roblox inventory, shows on their profile and stays there after they stop playing. That makes badges powerful (they are a public trophy and a reason to come back) and awkward (they cost money past a daily allowance, you cannot take them back, and the API that awards them has rules that bite at the worst moment). This note covers the platform facts, a two-layer model that separates badges from in-game achievements, rarity design, an award pipeline that never loses or double-awards a badge, and the failure modes that show up in live games.
 
 Platform facts below are labelled **Roblox docs (as of October 2026)** and were checked against the BadgeService reference and the Badges guide on create.roblox.com. Design advice is labelled rule of thumb.

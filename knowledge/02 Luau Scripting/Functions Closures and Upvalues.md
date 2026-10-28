@@ -3,6 +3,18 @@ tags: [luau, functions, closures, upvalues, scope]
 ---
 # Functions Closures and Upvalues
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Recursive function errors "attempt to call a nil value (global ...)": `local f = function` used for recursion -> `local function f`
+> - Every button prints the same name: Shared outer variable captured -> Per-iteration local
+> - Input handler does nothing after respawn: Captured old character -> Read `player.Character` at call time
+> - Recursive functions use `local function`.
+> - Handlers read current state, not state captured at script start.
+> - No closures or threads created per object per frame.
+>
+> Read more (19 KB note): ## 3. Closures and upvalues · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Functions in Luau are values. They can be stored in tables, passed to other functions, returned, and they **capture** the local variables around them (upvalues). Almost every Roblox system is built from closures: event handlers, tween callbacks, ability kits, UI bindings. Understanding exactly what a closure captures, when it is allocated, and what keeps it alive explains a large share of real bugs: stale state, handlers that fire for the wrong object, memory that never frees, and the compile-time limits on upvalues.
 
 ---

@@ -3,6 +3,15 @@ tags: [fundamentals, humanoid, states, locomotion]
 ---
 # Humanoid States and Animation
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Treating `Jumping(false)` as landing -> `StateChanged` to Landed
+> - Avoid: Choosing walk vs idle by state -> Speed thresholds with hysteresis
+> - Avoid: `SetStateEnabled` on the server for a player -> Run it on the client
+>
+> Read more (12 KB note): ## The states · ## Building animation on states: patterns that work · ## Common mistakes
+<!-- tldr:end -->
+
 The `Humanoid` runs a state machine (running, jumping, falling, climbing, swimming, seated and so on) and fires events as it changes state. Character animation is mostly a function of that state plus speed: the default Animate script is little more than a state-to-clip table (see [[The Default Animate Script]]), and most custom locomotion systems start the same way. This note documents every state, every state event with its real semantics, the ownership rules that decide where state code must run, and the traps that make animations lag, stick or fire twice.
 
 ## The states

@@ -3,6 +3,16 @@ tags: [case-study, mcp, agents, production, workflow]
 ---
 # Case Study - Building a Game with AI Agents
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - The rules in Safety Rules for AI Agents in Studio were not designed up front.
+> - Write the rules down, with numbers. "Under 1.5 s" works; "be careful" does not.
+> - Keep a map of the place in the instructions.
+> - Studio is for I/O and truth; compute elsewhere.
+>
+> Read more (13 KB note): ## 4. A real agent pipeline: adding a weapon · ## 6. What went wrong
+<!-- tldr:end -->
+
 This is the story of the reference project used throughout this vault: a live action game on Roblox built with heavy use of AI coding agents (Claude Code sessions) connected to Roblox Studio and Blender through MCP. It covers what the game contained, how the work was organised, a real end-to-end agent pipeline (adding a new weapon), the numbers, what went wrong, and the lessons that generalise. Names, ids and people are left out; the numbers are real.
 
 For the mechanics behind each part see [[Roblox Studio MCP Server]], [[Blender MCP]], [[Studio Plugins and Local HTTP Bridges]], [[Safety Rules for AI Agents in Studio]] and [[Multiple Agents in One Studio]]. For the game-design side of the same project see [[Post-Mortem - Building a Melee Action Game]].

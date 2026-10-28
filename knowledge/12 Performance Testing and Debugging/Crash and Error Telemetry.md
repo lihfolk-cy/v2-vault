@@ -3,6 +3,18 @@ tags: [telemetry, errors, crashes, monitoring, scriptcontext, logservice, live-o
 ---
 # Crash and Error Telemetry
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Relying only on player reports to learn about errors.
+> - Avoid: Messages with ids and numbers in them.
+> - Avoid: Treating client-reported errors as trustworthy.
+> - Error Report reviewed after each release, filtered to new errors.
+> - Ignore and Group rules maintained.
+> - Error messages stable, variable data excluded.
+>
+> Read more (17 KB note): ## 1. What Roblox gives you · ## 3. A small error pipeline · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Once a game is live, you cannot attach a debugger to it. Thousands of servers and devices run your code in combinations you never tested, and the only way to know what breaks is telemetry: the built-in Creator Dashboard reports, plus whatever your own scripts collect. This note covers what Roblox gives you (Error Report, Performance dashboard), what it does not (client crash causes), how to capture script errors yourself with `ScriptContext.Error` and `LogService`, how to aggregate and rate-limit them so telemetry does not become the outage, and how to use all of it in release triage.
 
 Source labels: **Docs** (Creator Hub, as of October 2026), **Measured** (the reference project), **Rule of thumb**.

@@ -3,6 +3,18 @@ tags: [game-design, ethics, dark-patterns, monetization, odds, child-safety, tru
 ---
 # Ethical Design and Player Trust
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: "Everyone does it" as the justification -> The parent test
+> - Avoid: Odds typed by hand -> Odds computed from the rolling code
+> - Avoid: Timers on permanent prices -> Real end dates only
+> - Can a player see exactly what they get, in plain words, before paying?
+> - Is every price shown in Robux (or with a Robux equivalent)?
+> - Are any odds shown as real percentages computed from the code, updated for active boosts?
+>
+> Read more (14 KB note): ## 3. Dark patterns and honest alternatives · ## 6. Onboarding and purchase timing · ## 9. Feature review checklist · ## 10. Common mistakes
+<!-- tldr:end -->
+
 Roblox's audience is young, and many players spend money that belongs to their parents. Every technique in this folder (hooks, streaks, timers, RNG, status, offers) can be used to make a game better or to pressure children into playing and spending more than is good for them. This note sets out the rules Roblox itself enforces, the dark patterns researchers have documented in Roblox games, honest alternatives for each, and a review checklist for any feature that touches time, money or randomness. It is opinionated on purpose: trust is the one resource a game cannot buy back.
 
 Labels: **Docs** (create.roblox.com and Roblox help pages, checked October 2026), **Research** (external studies, cited), **Reference project** (one production RNG combat game, anonymised), **Rule of thumb**.

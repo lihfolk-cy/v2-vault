@@ -3,6 +3,15 @@ tags: [gotchas, debugging, animator, engine]
 ---
 # Engine Gotchas
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Treating "works in Studio" as "works". It means "works with Studio-only ids and Studio-only timing".
+> - Avoid: Calling `LoadAnimation` per use.
+> - Avoid: Using `Stopped` for cleanup of things that are still visible.
+>
+> Read more (23 KB note): ## 1. Loading, assets and ids · ## 3. Interpolation and easing · ## Common mistakes (short list)
+<!-- tldr:end -->
+
 This note collects the Roblox engine behaviours that surprise people who already know animation. Each entry says what you see, why the engine does it, and what to do instead. Most of these cost the reference project (one live action game) hours or days. Where a fact was measured in that project rather than documented, it says so. Where docs and measurements disagree, both are given, and the conflict is tracked in [[Open Questions]].
 
 For a quick lookup by symptom, use the [[Troubleshooting Table]]. For a method to find causes you have not seen before, use [[Debugging Animation Problems]].

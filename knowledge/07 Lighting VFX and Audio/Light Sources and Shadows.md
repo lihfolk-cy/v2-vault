@@ -3,6 +3,18 @@ tags: [lighting, lights, shadows, performance, vfx]
 ---
 # Light Sources and Shadows
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Light does not reach far enough: Range too low; Brightness does not extend it -> Raise Range (max 120).
+> - Light seems not to exist: Parented to something that is not an Attachment or BasePart, or... -> Parent correctly.
+> - Lamp casts a black shadow from its own shade: Light inside geometry with Shadows on -> Move it out, or CastShadow off on the shade.
+> - Each light has a job; decoration lights have Shadows off.
+> - Shadow-casting lights limited to a few hero lights per view.
+> - VFX parts have CastShadow off; VFX lights have Shadows off and expire.
+>
+> Read more (13 KB note): ## 2. Shadows: sun versus local lights · ## 5. Managing many lights in code · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Local lights are where lighting stops being global and starts telling the player things: the lantern on the safe path, the glow under a charging ability, the red alarm strobe, the flicker that says "this corridor is wrong". They are also the lighting feature that most often ruins frame rate, because each one is cheap until there are forty of them overlapping the camera with shadows on.
 
 This note covers the three light classes, what they share, how shadows work for the sun and for local lights, how to fake light that you cannot afford, and how to budget and manage lights from code. Global settings are in [[Lighting Technologies and Settings]].

@@ -3,6 +3,18 @@ tags: [game-design, genre, sports, ball-physics, teams, network-ownership, compe
 ---
 # Genre Playbook - Sports
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: A plain unanchored ball, owned by whoever touched it last -> Possession model with server-decided flight
+> - Avoid: Replicating the ball's CFrame every frame -> One launch message per flight segment
+> - Avoid: 11v11 and 90-minute matches -> 3v3 to 6v6, 3 to 8 minutes
+> - Ball model chosen; contested touches decided on the server with fair grace windows.
+> - Two-client tests at 50, 150 and 250 ms for passing, shooting and stealing.
+> - Goal and out-of-bounds decisions server-side; no premature "GOAL" banners.
+>
+> Read more (15 KB note): ## 3. The ball problem · ## 5. Systems you must build · ## 9. Common mistakes · ## 10. Launch checklist
+<!-- tldr:end -->
+
 Sports games on Roblox cover team ball sports (soccer, basketball, volleyball, hockey, American football, dodgeball), individual sports (golf, tennis, bowling, skating), extreme sports (skate parks, parkour), and arcade sports with powers and abilities. They range from casual "kick the ball around" hangouts to competitive leagues with ranked play and community tournaments. The audience is large and social, and the best sports games become places where friends meet to play a game they already know.
 
 The genre has one defining technical problem: **a shared physics object (the ball) that every player wants to control instantly, over a network where every player sees it at a different time.** Get the ball right and almost everything else is design; get it wrong and no amount of content saves the game.

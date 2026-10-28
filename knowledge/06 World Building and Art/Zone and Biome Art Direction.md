@@ -3,6 +3,18 @@ tags: [world-building, art-direction, zones, biomes, palette, lighting, atmosphe
 ---
 # Zone and Biome Art Direction
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Zone soup: every zone uses the full palette -> One accent hue per zone; "not this" list
+> - Avoid: Recolour-only zones -> Vary scale, tilt and shape bias per zone
+> - Avoid: Global lighting for all zones -> Client-side profiles per zone
+> - One-page brief per zone with identity sentence, three reads, landmark and "not this" list.
+> - Silhouette, colour and light tests pass against neighbouring zones.
+> - Chain strip reviewed: one accent per zone, warm and cool alternate, value range widens.
+>
+> Read more (21 KB note): ## 3. Colour across the chain · ## 5. Lighting, air, sky and sound per zone · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Most Roblox games with progression are a chain of zones: forest, then crystal caves, then lava fields, then ice peaks, then something cosmic. Players judge the whole game by how different and how desirable the next zone looks. A zone that looks like a recoloured copy of the last one kills the pull of progression; a chain where every zone is maximally loud reads as noise, and nothing feels like an upgrade.
 
 [[Environment Art Styles]] covers how to define one style for the game (palettes, shape language, detail density). [[Level Design for Roblox]] covers layout, zone chains, sight lines and bounds. This note sits between them: how to give each zone a strong identity **inside** one style, how to make the sequence of zones feel like a journey and a ladder of value, how to switch lighting, air, audio and ambience per zone at runtime, and how to keep a dozen zones consistent when several people build them.

@@ -3,6 +3,18 @@ tags: [vfx, design, playbook, combat, particles, beams, budgets]
 ---
 # VFX Design Playbook
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Effect is a white blob: All additive, no dark layer, big sprites too bright -> Dark contrast layer; brightness by area.
+> - Effect feels slow or floaty: Phases too long -> Cut every phase; hot frame under 0.1 s.
+> - Sparks look random: Radial sparks on a directional hit -> Sparks along the swing direction.
+> - Layer table written before building; six phases considered.
+> - White core, colour edge, dark rim; one dark layer per bright stack.
+> - Tier ladder written and audited.
+>
+> Read more (16 KB note): ## 1. Design before Studio · ## 5. Budgets and architecture · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 This is the method for designing effects that look professional in Roblox, distilled from decoding several open-source effect packs (slashes, glass combos, lightning hand charges, water explosions, staggered beam slashes, auras) and from shipping hundreds of ability effects in one live action game (the reference project). The individual tools are covered elsewhere: [[Particle Emitters In Depth]], [[Beams and Trails]], [[Highlights and Selection Effects]], [[Light Sources and Shadows]]. Timing against animation is in [[VFX Timing with Animation]]. This note is about **design**: how to decide what layers an effect needs, what numbers make them read, how to scale effects by importance, and how to keep a fight readable and fast.
 
 Source labels: **Docs**, **Reference project** (production game and its studies), **Rule of thumb**.

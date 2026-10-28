@@ -3,6 +3,18 @@ tags: [pipeline, tooling, studio, http, architecture]
 ---
 # Studio Tooling Architecture
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Studio side does only dump, play or write.
+> - Every loop has a time budget and returns a resume index.
+> - One POST per batch; HttpService budget respected.
+> - Shared modules read with clone-require.
+> - Writes are idempotent, size-checked, compiled, scanned, verified by clone-require, with one safety copy.
+> - Writes derived from a dump verify a fingerprint.
+>
+> Read more (18 KB note): ## The split · ## Measuring truth: playing a clip on the real Animator · ## Checklist for a new tool
+<!-- tldr:end -->
+
 How to build heavy animation tooling (IK baking, QA scoring, clip compression, archiving) around Roblox Studio without freezing it, corrupting shared scripts, or trusting stale data. Everything here was run in production on one live action game with several hundred attack clips, well over a thousand enemy clips and several hundred weapon-part clips, and most rules exist because the obvious approach broke first.
 
 The short version: **Studio is an I/O device and a ground-truth oracle. The maths lives outside it.**

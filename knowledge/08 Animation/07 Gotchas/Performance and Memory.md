@@ -3,6 +3,18 @@ tags: [performance, memory, budgets, gotchas]
 ---
 # Performance and Memory
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - No `RBX_ANIMSAVES`, `AnimSaves` or backup clip folders shipped.
+> - Kit folders under budget (2,500 used); per-move instance counts known.
+> - Keys thinned; placeholders pruned; marker keyframes kept.
+> - Clips that are not edited this week are stubbed or published.
+> - Tracks cached per Animator; marker connections bounded.
+> - One shared update loop for Lua players and procedural motion.
+>
+> Read more (14 KB note): ## 1. Instance counts: the hidden cost · ## 3. Per-frame CPU · ## Checklist
+<!-- tldr:end -->
+
 Animation costs you in three places, and they need different fixes:
 
 1. **Instances** (load time and memory): every `Keyframe`, `Pose` and `KeyframeMarker` is an Instance. Clips stored as `KeyframeSequence`s in ReplicatedStorage are downloaded by every client at join.

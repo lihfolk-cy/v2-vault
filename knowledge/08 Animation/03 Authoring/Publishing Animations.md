@@ -3,6 +3,18 @@ tags: [authoring, publishing, release, assets, permissions]
 ---
 # Publishing Animations
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Publishing to your account for a group game -> publish under the group, or grant the experience permission
+> - Avoid: Shipping Studio-only ids -> publish, or a Lua player
+> - Avoid: Ids hard-coded in many scripts -> one data table or attributes
+> - No shipped code path uses `RegisterKeyframeSequence` / `RegisterActiveKeyframeSequence`
+> - Every clip slot has a published id (scan for empty `*Id` attributes and placeholder ids)
+> - Assets owned by the experience's owner (user or group), or permission granted
+>
+> Read more (14 KB note): ## 3. Ownership and permissions · ## 5. Keep ids as data, not in code · ## 10. Release checklist · ## Common mistakes
+<!-- tldr:end -->
+
 A clip in your place is just data. For the engine's Animator to play it in a live server, it must be **published as an animation asset** owned by (or shared with) the experience, and referenced by its asset id. This note covers why, the current publishing flow, ownership and permissions, bulk publishing, how to store and load ids, preloading, verification in live servers, and the alternative of not publishing at all.
 
 Labels: "Roblox docs" = official pages (Animation Editor, KeyframeSequenceProvider, Asset privacy, Open Cloud Assets usage), checked October 2026. "Reference project" = one live action game.

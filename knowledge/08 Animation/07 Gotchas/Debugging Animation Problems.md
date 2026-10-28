@@ -3,6 +3,18 @@ tags: [gotchas, debugging, method, tools]
 ---
 # Debugging Animation Problems
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Observation sentence written with rig, mode, viewer, clip, symptom, time.
+> - Track id printed; `Length > 0` confirmed.
+> - `GetPlayingAnimationTracks` report captured at the moment of the bug.
+> - Clip soloed (other tracks and Animate off).
+> - Clip tried on a known-good rig.
+> - Owner, other client and server compared.
+>
+> Read more (18 KB note): ## Step 2: isolate the track · ## The power tools · ## Checklist
+<!-- tldr:end -->
+
 Animation bugs are hard because the evidence is visual and fleeting, and because six different systems sit between "I called Play" and "the arm moved": the asset service, the Animator's mixer, the joints, your own procedural code, replication, and the frame scheduler. This note is a method for narrowing a bug down to one of those quickly, plus the tools that make each step cheap. For known symptoms go straight to the [[Troubleshooting Table]]; for the engine behaviours behind them, see [[Engine Gotchas]].
 
 ---

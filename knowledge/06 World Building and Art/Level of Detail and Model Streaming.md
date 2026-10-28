@@ -3,6 +3,18 @@ tags: [world-building, lod, streaming, slim, renderfidelity, performance]
 ---
 # Level of Detail and Model Streaming
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Huge streaming radius -> Defaults or smaller; Opportunistic
+> - Avoid: Moving players without streaming ahead -> `RequestStreamAroundAsync` before moving
+> - Avoid: Nonatomic buildings -> Atomic
+> - Streaming settings chosen deliberately and documented.
+> - Every server move streams the destination first.
+> - Buildings Atomic; essentials Persistent; nothing else Persistent.
+>
+> Read more (18 KB note): ## Layer 2: instance streaming · ## Layer 3: Model.LevelOfDetail · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Large Roblox worlds stay fast by not drawing (or not even loading) what is far away. Roblox gives you four layers of distance management: **mesh RenderFidelity** (per MeshPart detail), **instance streaming** (what exists on the client), **Model.LevelOfDetail** (what a streamed-out model looks like: nothing, a coarse imposter, or a SLIM composite) and **your own scripted LOD** (swapping models, sleeping effects). This note covers the art side of all four. Networking details of streaming (replication foci, scripts and `WaitForChild` patterns) are in [[Instance Streaming]].
 
 ## Layer 1: RenderFidelity on meshes

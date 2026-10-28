@@ -3,6 +3,18 @@ tags: [ai, overview, workflow, production]
 ---
 # AI in Roblox Development Overview
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - What will it produce, and what is the concrete check that proves each output is right?
+> - Does its licence allow commercial use in a Roblox experience on the plan you will use?
+> - Does using it change your content maturity questionnaire answers?
+> - If it touches Studio: can it break other people's work in a shared place?
+> - Who has final say on taste (art, audio, feel), and when do they look?
+> - Is every claim of "done" labelled with how it was verified?
+>
+> Read more (15 KB note): ## 1. The families · ## 5. Choosing a tool: a decision table · ## Checklist before adopting any AI tool
+<!-- tldr:end -->
+
 This note is the map of the AI section. It sorts every kind of AI a Roblox creator meets into a few families, says what each is actually good for, where each one fails, and which note goes deeper. It is written as of October 2026. AI products change monthly; every product claim in this section was checked against official pages at that date, and anything that could not be checked says "unverified".
 
 The reference project (one live action game) was built with heavy use of AI coding agents connected to Roblox Studio and Blender through MCP. Its working rules, failures and wins are used throughout. The short version of its experience: AI agents were very productive at code, data plumbing, tooling and offline maths, and unreliable at anything that needed taste or a moderation pass to succeed (generated meshes, generated materials). The people who owned the game kept the final say on art and always did the play-test.

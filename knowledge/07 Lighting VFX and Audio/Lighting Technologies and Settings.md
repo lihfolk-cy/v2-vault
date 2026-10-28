@@ -3,6 +3,18 @@ tags: [lighting, rendering, environment, settings, performance]
 ---
 # Lighting Technologies and Settings
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Fog settings do nothing: An `Atmosphere` is in `Lighting` (fog properties are hidden and... -> Use `Atmosphere.Density`/`Haze` instead, or remove the Atmosphere.
+> - Indoors is as bright as outdoors: `GlobalShadows` off, or `Ambient` channels above `OutdoorAmbient` -> Turn shadows on; keep `Ambient` at or below `OutdoorAmbient` per...
+> - Light leaks through walls: Voxel-style path with walls under 4 studs thick -> Thicker or doubled walls, or a shadow-map path.
+> - `LightingStyle` and `PrioritizeLightingQuality` chosen deliberately, not inherited from a template.
+> - `GlobalShadows` on unless the art style needs it off; interiors sealed and thick enough.
+> - `Ambient` at or below `OutdoorAmbient` in every channel.
+>
+> Read more (19 KB note): ## 1. Technology is deprecated: what replaced it · ## 3. The global properties, one by one · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 The `Lighting` service decides how every pixel of your world is shaded: which shading path the renderer uses, how bright the sun is, what colour the shadows take, how far players can see when their device is struggling, and what "indoors" means. Most lighting problems people bring to a forum ("my game looks flat", "light leaks through the wall", "it looks great in Studio and grey on my phone", "shadows vanished") come from four or five properties and one deprecated setting that still appears in every old tutorial.
 
 This note covers the lighting system as a whole: the old `Technology` modes and what replaced them, every global `Lighting` property and its trap, how quality scaling changes what players see, and how to manage lighting safely from code. The look itself (atmosphere, sky, clouds, post-processing) is in [[Atmosphere Sky Clouds and Post-Processing]]; local lights in [[Light Sources and Shadows]]; time of day and zone moods in [[Lighting Mood and Time of Day]].

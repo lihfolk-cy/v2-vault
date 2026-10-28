@@ -3,6 +3,15 @@ tags: [blender, python, bmesh, creature, quadruped, low-poly, palette, rigging, 
 ---
 # Low-Poly Creature From a Flat Reference Sheet
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Colouring by face index range after a join.
+> - Avoid: Linear texture interpolation on a palette.
+> - Avoid: Degenerate UVs. Symptom: importer warnings or broken tangents.
+>
+> Read more (16 KB note): ## Flat colour from a palette atlas · ## Rig and skinning · ## Common mistakes
+<!-- tldr:end -->
+
 ![[p45_wolf_side.png]]
 
 A grey wolf built entirely from one Python script run in background Blender, starting from a flat three-view sheet (side, front, back) drawn in a cel-shaded style. The result is one carved, faceted mesh of about 5,000 triangles, coloured flat per face from an 11-colour palette atlas, on a quadruped rig with a 24-frame walk cycle, exported as GLB. The script is `scripts/build_wolf_v3.py`; it is the third full attempt, and the two failures before it taught most of what is in this note.

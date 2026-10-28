@@ -3,6 +3,18 @@ tags: [luau, tables, metatables, oop, data-structures]
 ---
 # Tables Metatables and OOP
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - `#list` wrong after removal: `list[i] = nil` created a hole -> `table.remove` or swap-remove
+> - `invalid order function for sorting` live only: Comparator uses `<=` or no tie-break -> Strict comparator with tie-breaker
+> - Config values change mid-game: Shared table mutated through a reference -> Freeze config; clone before modifying
+> - Arrays have no holes; dictionaries are iterated, not measured.
+> - Sort comparators are strict with explicit tie-breaks.
+> - Shared config is deep-frozen.
+>
+> Read more (18 KB note): ## 5. Classes · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Tables are Luau's only built-in data structure. Arrays, dictionaries, sets, objects, classes, modules and configuration are all tables. Metatables let a table customize indexing, arithmetic, comparison, calling and iteration, which is how classes are built. This note covers how tables behave (including the length operator and holes), the `table` library, copying and freezing, metatables, class patterns with inheritance and composition, weak tables, and what happens to tables when they cross Roblox boundaries.
 
 ---

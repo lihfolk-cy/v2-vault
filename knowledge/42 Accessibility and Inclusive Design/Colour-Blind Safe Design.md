@@ -3,6 +3,18 @@ tags: [accessibility, colour-blindness, color, palette, ui, vfx, design-tokens, 
 ---
 # Colour-Blind Safe Design
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Red/green for ally/enemy, ready/locked or heal/damage with no second channel.
+> - Avoid: Rarity tiers that differ only in hue, with the name hidden on small cards.
+> - Avoid: Status effects shown as small coloured pips.
+> - Every information-carrying colour has a second channel (shape, icon, text, pattern, lightness).
+> - Critical pairs pass the audit under normal, protan, deutan and tritan, with lightness checked.
+> - Two-team games use blue/orange (or similar) plus emblems.
+>
+> Read more (24 KB note): ## 3. Measuring a palette instead of eyeballing it · ## 4. Palette modes at runtime · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Accessibility]] already sets the rule: never let colour be the only signal. This note is the engineering behind that rule. It covers what colour vision deficiency actually does to a game palette, how to test a palette with numbers instead of by eye, how to build palette modes that swap cleanly at runtime, why a screen filter cannot fix the problem on Roblox, and where colour failures hide in 3D (telegraphs on grass, team outlines, particles under coloured lighting). It ends with a palette audit script you can run over your design tokens.
 
 Sources: **Roblox docs (as of October 2026)** for engine behaviour (`ColorCorrectionEffect`, `Highlight`, accessibility guidelines), published colour science for the simulation and perceptual-distance formulas (cited inline), and **rule of thumb** for thresholds and design choices.

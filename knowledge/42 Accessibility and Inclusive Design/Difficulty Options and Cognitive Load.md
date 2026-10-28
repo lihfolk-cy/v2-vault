@@ -3,6 +3,18 @@ tags: [accessibility, difficulty, assist-modes, cognitive-load, game-design, ser
 ---
 # Difficulty Options and Cognitive Load
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: One "Easy / Hard" toggle that bundles unrelated changes.
+> - Avoid: Client-trusted multipliers that become god mode.
+> - Avoid: Assists that can be toggled mid-fight to dodge a hit.
+> - Difficulty split into named assists, with presets for players who do not configure.
+> - Each assist classified: personal, personal with fairness impact, or world-level (instanced only).
+> - Assists stored and enforced on the server, sanitised, rate-limited, locked in combat where needed.
+>
+> Read more (19 KB note): ## 3. Server-authoritative assists · ## 6. Cognitive load: what it is and how to cut it · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Some players cannot finish a game not because of their eyes, ears or hands, but because the game asks for too much at once: too many timers, too many systems, too little room for a mistake, too much to remember between sessions. [[Accessibility]] lists the basics (one objective at a time, consistent placement, clear feedback). This note goes into the design and the engineering: granular assist options instead of "Easy / Normal / Hard", how assists work in a multiplayer, server-authoritative Roblox game, how to keep leaderboards fair, adaptive help that does not patronise, and how to measure and cut cognitive load.
 
 Sources: **rule of thumb** for most design numbers (difficulty and cognitive load are design fields more than engine facts), **measured in the reference project** where noted, and **Roblox docs (as of October 2026)** for the few engine facts used.

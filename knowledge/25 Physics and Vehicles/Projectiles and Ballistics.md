@@ -3,6 +3,18 @@ tags: [physics, projectiles, ballistics, combat, networking, raycast, anti-cheat
 ---
 # Projectiles and Ballistics
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Unanchored part plus `Touched` for bullets -> Simulated point with swept casts
+> - Avoid: Client tells the server who it hit, no checks -> Validate origin, time, line of sight, plausibility
+> - Avoid: Server-only hit decision for fast bullets -> Lag compensation with a cap, or checked client claims
+> - Fast projectiles are simulated points with swept casts.
+> - Closed-form motion from launch data; one shared module for client and server.
+> - Shooter predicts; server validates and decides damage; others replay cosmetically.
+>
+> Read more (19 KB note): ## 2. Motion maths · ## 3. The simulation loop that never misses · ## 10. Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Every shooter, bow, fireball and thrown grenade is a projectile system, and every projectile system answers the same four questions: what moves (a physical part, or a mathematical point), who simulates it (server, shooter, everyone), who decides the hit, and how other players see it. Getting the answers wrong produces the familiar failures: bullets that pass through walls, hits that "should have landed", rockets that lag behind the launcher, and exploiters hitting everyone on the map. This note covers the motion maths (gravity drop, drag, aiming with drop, leading a moving target), the simulation loop that never misses thin walls, the standard network architecture with its trade-offs, server validation, ricochet and penetration, homing, and the budgets that keep hundreds of projectiles cheap.
 
 Hit detection for melee and the basics of casting are in [[Hitboxes and Hit Detection]] and [[Raycasts Shapecasts and Spatial Queries]]. Latency and prediction in general are in [[Client Prediction and Reconciliation for Combat]].

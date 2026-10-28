@@ -3,6 +3,18 @@ tags: [modeling, bevel, chamfer, edge-highlight, normals, vertex-colors, untextu
 ---
 # Bevels Chamfers and Edge Highlights Without Textures
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Bevels visible in Blender, invisible in game: Width under 2 pixels at play distance -> Size from the distance table; double for landmarks
+> - Gradients across big flat faces: Smooth shading without normal fix -> Weighted Normal or Harden Normals (see Hard-Surface Modeling)
+> - Stepped strips on a faceted model: 3-segment round bevel with flat shading -> 1-segment chamfer
+> - Bevel width taken as the larger of the size rule and the distance rule.
+> - Segment count matches the shading style (chamfer for faceted, 2 for smooth).
+> - Bevel widths match the style bible's size bands.
+>
+> Read more (18 KB note): ## Roblox lighting and materials: what survives · ## Worked example: edge-highlighted rocks without textures · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Hand-painted art paints a light line along every edge so shapes read. Untextured art has no paint, so the edge highlight must come from geometry, normals, vertex colour or lighting. [[Hard-Surface Modeling]] already covers the bevel-and-weighted-normal workflow: bevel widths as a percentage of object size, segment counts, and the Weighted Normal modifier. This note goes deeper into the part that matters for non-hand-painted styles: **why** a bevel catches light, how to size bevels for the distance an asset is seen from, what Roblox's materials and lighting do to that highlight, how to add edge brightening with vertex colour when geometry is too expensive, and the outline tricks that stand in for edge lines.
 
 ## Why a sharp edge looks wrong

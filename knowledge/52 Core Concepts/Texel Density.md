@@ -3,6 +3,16 @@ tags: [core-concept, art, texturing, 3d-modeling, performance]
 ---
 # Texel Density
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Roblox's texture specifications page says textures up to 4096 by 4096 are supported, while the same page describes texture...
+> - Pick a target per asset class, not one number for everything.
+> - Big surfaces should tile. A 200-stud wall cannot get good density from one unique texture, even a 4K one.
+> - Scaling a mesh in Studio scales its density down.
+>
+> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+<!-- tldr:end -->
+
 **Texel density** is how many texture pixels (texels) cover one unit of surface in the world, for example 256 texels per stud. Consistent texel density means a crate, a wall and a sword all look equally sharp at the same viewing distance; inconsistent density makes some objects crisp and others blurry side by side.
 
 ## Why it matters on Roblox

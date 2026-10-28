@@ -3,6 +3,18 @@ tags: [economy, inflation, sinks, faucets, balancing, live-ops, math, luau]
 ---
 # Economy Inflation Sinks and Faucets Math
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Prices tuned one by one -> Derive all prices from one income model
+> - Avoid: `p < g` -> Raise `p` for new content
+> - Avoid: Unbounded multiplicative stacking -> Additive buckets, declared max gap
+> - Target time-to-afford bands written down per purchase type.
+> - Income and price growth per zone known; `p / g` checked.
+> - Maximum payer gap declared; all multipliers stack by a defined rule.
+>
+> Read more (17 KB note): ## 1. The one number that matters: time to afford · ## 4. Measuring inflation instead of guessing · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Economies and Currencies]] explains what faucets and sinks are and how to write transactions safely. This note is the arithmetic underneath: how to model time-to-afford across an exponential progression, how multipliers stack into a payer gap, how to tell real inflation from healthy growth, how item supply works in RNG games, and how to simulate a live change before you ship it. Every formula comes with a worked example and the failure it predicts.
 
 Source labels: **Roblox docs (as of October 2026)**, **measured in the reference project**, **rule of thumb**. The maths is standard; the target numbers are rules of thumb unless labelled.

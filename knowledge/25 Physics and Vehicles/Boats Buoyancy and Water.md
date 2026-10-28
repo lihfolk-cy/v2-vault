@@ -3,6 +3,18 @@ tags: [physics, vehicles, boats, buoyancy, water, terrain, network-ownership]
 ---
 # Boats Buoyancy and Water
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Light hull in terrain water plus float points -> Make the hull sink on its own, or drop the float points
+> - Avoid: Same drag in all directions -> Side drag 10 to 20 times forward drag
+> - Avoid: No depth clamp -> `maxDepth` clamp
+> - Chosen engine buoyancy or float points per boat type, with a reason.
+> - `k` computed from mass, gravity, point count and draft; bob frequency checked.
+> - Damping ratio 0.5 to 0.7; depth clamp set.
+>
+> Read more (20 KB note): ## 3. The float-point model · ## 5. Players on a moving deck · ## 9. Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Boats look like the easy vehicle: drop a light hull into terrain water and it floats. The trouble starts when you want waves that move the boat, a ship players can walk around on, a hull that turns instead of sliding sideways, or water that is not terrain at all. This note covers the two ways to float things on Roblox (engine buoyancy in terrain water, and your own float-point model), how to calibrate buoyancy so a hull sits at the draft you want, why a boat needs different drag forward and sideways, deterministic waves that every client agrees on, propulsion and steering, the "players slide off the moving ship" problem, and the ownership and security choices.
 
 Prerequisites: [[Physics Assemblies and Constraints]] for mass and density, [[Mover Constraints and Physics Controllers]] for `VectorForce` and `AlignOrientation`, and [[Terrain Deep Dive - Materials Water and Performance]] for terrain water itself (shorelines, materials, swim state).

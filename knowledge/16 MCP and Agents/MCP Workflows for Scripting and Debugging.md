@@ -3,6 +3,18 @@ tags: [mcp, agents, scripting, debugging, luau, workflow]
 ---
 # MCP Workflows for Scripting and Debugging
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Editing from memory instead of a fresh `script_read`.
+> - Avoid: Saving without compiling.
+> - Avoid: "Testing" with a cached `require`.
+> - Fresh read of the target and its callers.
+> - One focused edit.
+> - Gate: compile, use-before-definition, size, clone-require.
+>
+> Read more (18 KB note): ## 2. The save gate · ## Nuances and edge cases · ## 8. Common mistakes · ## 9. Checklist for an agent scripting change
+<!-- tldr:end -->
+
 Writing Luau is the part of game development AI agents do best, and the part where an agent connected to Studio has the biggest advantage over one that only sees text: it can grep every script in the place, read the real current source before editing, compile its edit, run checks in Edit mode, and read the Output. It can also confidently overwrite another person's change, save a script that compiles but crashes on load, or "verify" a fix against a stale cached module. This note is the method for agent scripting through MCP that kept a large production codebase working.
 
 Tools are from [[Roblox Studio MCP Server]]. **Measured** marks facts from the reference project (a game of several hundred scripts, some near the 200,000-character limit, written almost entirely by agents). **Rule of thumb** marks experience.

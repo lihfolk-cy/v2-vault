@@ -3,6 +3,18 @@ tags: [animation, authoring, locomotion, gait, combat, melee, timing, hit-stop, 
 ---
 # Locomotion and Melee Reference Numbers
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Authoring the default-speed locomotion as a walk: it slides at 16 studs/s.
+> - Avoid: Copying real running knee angles onto R15 boxes: the shin enters the pelvis.
+> - Avoid: Light attacks shorter than 8 f of startup in PvP: nobody can react to them.
+> - Ground speed in the clip JSON matches the `WalkSpeed` it's played at (foot slide 0)
+> - Run lift 0.3-0.45 studs; pelvis pitch 8° or less; lean in the chest
+> - Light attack: hit on f6-8, ComboWindow ~f15 of 24
+>
+> Read more (6 KB note): ## 2. Locomotion targets · ## 3. Melee timing (30 fps) · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 The numbers to start from when keying a walk, run, sprint, jump or sword attack for a default-scale R15 character, and what they become at 30 fps. Gait biomechanics and fighting-game frame data say what real bodies and good games do. The R15 conversion covers what changes on a 5.5-stud character with short legs. Full citations are in `D:\LihFolk Build\research\animation-references.md`.
 
 ## 1. R15 proportions change the gaits

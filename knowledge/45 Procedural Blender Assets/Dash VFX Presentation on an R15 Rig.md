@@ -3,6 +3,18 @@ tags: [blender, python, vfx, eevee, r15, animation, rendering, bloom, video]
 ---
 # Dash VFX Presentation on an R15 Rig
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Empty renders after opening a rig file. Cause: the collection is excluded or unlinked.
+> - Avoid: Ghosts in the wrong place. Cause: offsetting a world-space bake by the absolute path position.
+> - Avoid: Dark shapes under the effects. Cause: FX casting shadows.
+> - Rig collection linked and un-excluded; old lights and cameras removed
+> - Anticipation, short action, long follow-through
+> - One additive material type; fades keyed on a Value node
+>
+> Read more (14 KB note): ## The glow material · ## Light, camera and shadows · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 ![[p45_dash_burst.png]]
 
 A two-second presentation of a dash ability, rendered from one Python script: a blocky R15 character crouches, bursts forward 17 studs in five frames and lands. Around it: five fading afterimages, energy ribbons along the path, speed lines, a launch burst (ring, shards and dust), a ground streak, sparkles, a travelling point light and a hit of camera shake, all finished with bloom and written to an MP4. The character is the vault's `R15_Blocky` rig from [[Skeleton Library]]. The script is `scripts/build_dash.py`.

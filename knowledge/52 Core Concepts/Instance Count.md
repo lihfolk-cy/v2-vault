@@ -3,6 +3,16 @@ tags: [core-concept, performance, memory, world-building]
 ---
 # Instance Count
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Instances are cheap individually and expensive in bulk.
+> - Invisible instances count. Welds, Attachments, empty Folders, disabled scripts, unused Values and hidden UI templates add up.
+> - Copies multiply everything. A tree model with 30 parts placed 500 times is 15,000 instances.
+> - Streaming reduces what the client holds, not what the server holds.
+>
+> Read more (3 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+<!-- tldr:end -->
+
 **Instance count** is the number of objects in the DataModel: every Part, Attachment, Weld, Script, Sound, GuiObject, Value and Folder. Each one costs memory, adds to replication and join time, and is a candidate for engine work (property change tracking, physics, rendering, layout).
 
 ## Why it matters on Roblox

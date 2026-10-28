@@ -3,6 +3,18 @@ tags: [lighting, untextured, stylised, flat-colour, materials, look-dev, roblox,
 ---
 # Lighting Untextured Art in Roblox
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Everything looks like flat cut-outs: Ambient too bright relative to the sun -> Lower ambient or raise `Brightness`; target lit faces 1.5 to 2.5...
+> - Dark props vanish on phones: Ambient too dark, dark palette colours -> Lift ambient, colourful (not grey) shadows, avoid near-black colours
+> - Shadows look grey and lifeless: No hue difference between lit and shadow light -> Warm `ColorShift_Top`, cool ambient
+> - SmoothPlastic as default material; Neon budgeted; patterned materials only by rule.
+> - Sun 30 to 50 degrees up at the chosen time; lit faces about 1.5 to 2.5 times shadow faces.
+> - Warm top tint and cool ambient (or the zone's equivalent) set.
+>
+> Read more (16 KB note): ## Choosing a built-in material under flat colour · ## Building a look-dev room · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Painted textures carry their own light: an artist paints the highlight on the top of a barrel and the shadow under its rim, and the barrel reads even in dull light. Untextured art (flat colour, gradient atlases, vertex colour) carries little or none. Every bit of form a player sees on a flat-coloured MeshPart comes from three sources: the mesh's normals, any gradient baked into its colour, and Roblox's lighting. That makes lighting a much bigger share of the look than in a textured game, and it makes untextured art sensitive to things textured art shrugs off: ambient balance, sun angle, material choice, and how the game degrades on low graphics settings.
 
 [[Stylized Lighting Recipes]] gives full property sets for common moods, and [[Lighting Technologies and Settings]] explains what each `Lighting` property does. This note is about the interaction with untextured surfaces specifically: which built-in materials to use under flat colour, how to set the sun-to-ambient balance so forms read, how to make art that survives phones and low quality levels, and how to build a look-dev room that tells the truth.

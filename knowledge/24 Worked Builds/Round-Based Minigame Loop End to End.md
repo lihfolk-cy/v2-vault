@@ -3,6 +3,18 @@ tags: [worked-build, rounds, minigames, game-loop, server-authority, datastore, 
 ---
 # Round-Based Minigame Loop End to End
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Counting down with one remote per second.
+> - Avoid: Using `wait()` and `spawn()`. Deprecated and throttled; the code uses `task.wait`, `task.spawn` (see Task Library Coroutines...
+> - Avoid: Storing maps in `ReplicatedStorage`. Every client downloads every map at join.
+> - `ServerStorage.Maps` children match `RoundConfig.MapNames` exactly
+> - Every map has `Spawns` (enough parts) and, for Lava Rise, a `Lava` part
+> - `RoundGui.ResetOnSpawn = false`
+>
+> Read more (35 KB note): ## 4. Saving wins: PlayerStore · ## 6. The round loop: RoundService · ## 10. Common mistakes · ## 12. Checklist
+<!-- tldr:end -->
+
 This note builds a complete round loop from an empty place: a lobby, an intermission timer, a map vote, a minigame played on a cloned map, elimination tracking, winners, saved win counts, and cleanup back to the lobby. The example minigame is "Lava Rise" (survive while lava climbs), but the loop is written so each minigame is one ModuleScript that plugs into the same contract.
 
 It is the practical companion to [[Spawning Teams and Rounds]] (which explains the built-in objects and round theory) and [[Genre Playbook - Obbies and Platformers]] / [[Social Design and Multiplayer Play]] (why short rounds work). Start at [[Worked Builds Start Here]] for the other builds in this folder.

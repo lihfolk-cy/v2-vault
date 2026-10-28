@@ -3,6 +3,18 @@ tags: [production, scope, team, capacity, payouts, contractors, permissions, pla
 ---
 # Scoping and Roles for Small Teams
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Planning with raw hours instead of productive hours.
+> - Avoid: Estimating the first unit of a content type like the hundredth.
+> - Avoid: No hours for integration, testing or data safety.
+> - Productive hours per week written down, per person.
+> - Every feature estimated as a range; integration and testing added.
+> - Total compared with capacity; cuts decided and recorded.
+>
+> Read more (16 KB note): ## 1. Capacity: the number nobody writes down · ## 5. Money and access on Roblox · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Planning and Scoping a Roblox Game]] covers counting content, phase gates and scope reversals. [[Team Roles and Workflows]] covers the role table, ownership maps and the daily loop. This note covers what sits between them for teams of one to six people: turning available hours into a scope that fits, the team shapes that work at each size, who decides what, how money and access are handled on Roblox, and how to work with contractors without losing control of your game.
 
 The core idea: on a small team, **scope is a function of capacity, and capacity is smaller than everyone thinks**.

@@ -3,6 +3,18 @@ tags: [case-study, ui, mobile, phone, responsive, testing, production]
 ---
 # Case Study: Phone UI Overhaul
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Testing on one mock viewport only.
+> - Avoid: Pixel offsets inside scale-sized frames.
+> - Avoid: Forgetting the top bar inset.
+> - One phone definition (touch plus short side) and one scale rule.
+> - Every screen has a phone arrangement or an explicit "fits as is" mark.
+> - Desktop values stored and restored exactly.
+>
+> Read more (13 KB note): ## Approach 3: real phone layouts (the following days) · ## Bugs the checker found · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Most Roblox players are on phones, and most Roblox UI is designed on a desktop monitor. This case study follows one live action game (the reference project) from "the desktop UI, scaled down" to real phone layouts for every screen, with automated checks that prove nothing overlaps and every button is big enough to tap. It covers the three approaches tried, why the first two were not enough, the framework that worked, the bugs it found, and the numbers.
 
 General technique lives in [[Responsive UI for Phone Tablet Console and PC]], [[Layout - Scale Offset and Constraints]] and [[Safe Areas and Insets]]. This note is about the production path.

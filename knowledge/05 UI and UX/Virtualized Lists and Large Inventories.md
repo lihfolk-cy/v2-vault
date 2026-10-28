@@ -3,6 +3,18 @@ tags: [ui, inventory, scrollingframe, virtualization, performance, pooling, sear
 ---
 # Virtualized Lists and Large Inventories
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Rebuilding all cards on any change -> Rebind only the affected index
+> - Avoid: State stored on the cell -> Store state by item key; apply in `bind`
+> - Avoid: Connecting events inside `bind` -> Connect once at creation; read an attribute
+> - Items stacked where possible; unique-item cap designed and shown in UI.
+> - Under ~100 entries: plain layout. Over ~300 or growing: virtualised.
+> - View array built by filter then sort, with a unique tiebreaker.
+>
+> Read more (23 KB note): ## 3. A grid virtualiser that rebinds only what changed · ## 4. Search, filter and sort at scale · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Inventories grow. A collection game that starts with 30 items at launch has 400 after six months of updates, and a dedicated player owns 2,000 entries. The UI that was fine at 30 (build a card per item inside a `UIGridLayout`) becomes the slowest screen in the game: it takes a second to open, it hitches when an item is added, and on a low-end phone it eats memory that the world needed.
 
 [[UI Layout Objects - Lists Grids and Pages]] (section 8) gives the thresholds and a minimal vertical virtualiser. This note goes further: a grid virtualiser that only rebinds cells that changed, the data model behind it, search and sort at scale, gamepad selection in recycled cells, how to get the inventory to the client without a giant payload, and when virtualisation is the wrong answer.

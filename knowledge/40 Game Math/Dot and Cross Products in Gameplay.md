@@ -3,6 +3,18 @@ tags: [math, game-math, vectors, dot-product, cross-product, gameplay, combat, m
 ---
 # Dot and Cross Products in Gameplay
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Backstabs register as side hits on slopes or jumps: Vertical component in the offset -> Flatten before the dot
+> - NPC shivers when facing its target: Turning by sign only, overshooting -> `atan2(cross, dot)` and clamp the step
+> - Missile circles the target forever: Turning circle larger than the miss distance -> Stop steering when range rate turns positive, or raise turn rate
+> - Facing tests are done from the victim's frame and flattened for ground combat.
+> - Angle thresholds are precomputed cosines; no `acos` in hot paths.
+> - Signed angles use `atan2(cross, dot)`.
+>
+> Read more (23 KB note): ## 2. Backstabs, flanks and front-only blocks · ## 5. Lap progress and gate crossing · ## 10. Edge cases and failure modes · ## Checklist
+<!-- tldr:end -->
+
 Two small operations answer a surprising share of gameplay questions. The dot product answers "how much of this points along that?", and the cross product answers "which way is perpendicular, and which side am I on?". The basics (the cone check, signed yaw, projection onto a plane, reflection) are already in [[Math Vectors and CFrames]] and [[Cookbook - Math CFrame and Vectors]]. This note goes further: backstabs and flanking, steering without jitter, closing speed for homing and aggro, lap progress and gate crossing, wall-running tangents, building stable frames, bounce pads with friction, and aim assist scoring. Each section shows the gameplay first, then the maths, then the way it breaks.
 
 Conventions: Roblox is Y up, right-handed, and a `CFrame`'s `LookVector` is its negative Z axis (Roblox docs (as of October 2026)). `Vector3.xAxis:Cross(Vector3.yAxis)` is `Vector3.zAxis`, the usual right-handed rule.

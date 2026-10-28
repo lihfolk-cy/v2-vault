@@ -3,6 +3,18 @@ tags: [multiplayer, matchmaking, memorystore, queues, lobby, reserved-servers, t
 ---
 # Matchmaking Queues with MemoryStore
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Every lobby runs the matcher -> Lease election
+> - Avoid: Cancel by trying to delete from the queue -> State in a hash map, validate on read
+> - Avoid: Remove batch before re-adding leftovers -> Re-add first, remove last
+> - Decided between built-in custom matchmaking and a queue, and wrote down why.
+> - Party is one ticket; party rating rule chosen.
+> - One leader per queue via a lease; ownership re-checked before reserving.
+>
+> Read more (30 KB note): ## 1. First question: do you need a queue at all? · ## 6. The code · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A "Play Ranked" button looks like one feature. Behind it sit five problems that each fail in their own way: deciding whether you need your own queue at all, describing a player (or a party) as a ticket, letting exactly one server do the matching, handing the result back to the right lobby servers, and surviving every crash in between without matching a player twice or losing them forever. This note goes past the starter queue in [[MemoryStore Service]] and the four-step sketch in [[Teleporting and Multi-Place Games]]. It covers the built-in custom matchmaking option first (because it removes the need for a queue in many games), then a full queue-based matchmaker in strict Luau with leader election, ticket cancellation, widening skill windows, budget maths and failure paths.
 
 Prerequisites: [[MemoryStore Service]] (structures, quotas, error codes), [[Cross-Server Messaging]] (MessagingService limits), [[Teleporting and Multi-Place Games]] (reserved servers, arrival validation). Related in this section: [[Parties and Group Teleports]], [[Reserved and Private Servers in Practice]], [[Session State Across Places]].

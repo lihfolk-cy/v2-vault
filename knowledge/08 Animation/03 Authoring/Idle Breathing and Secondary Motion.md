@@ -3,6 +3,15 @@ tags: [authoring, craft, idle, breathing, secondary-motion, overlap]
 ---
 # Idle Breathing and Secondary Motion
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Statue idle -> breathing and weight shift; no dead holds over 0.3 s
+> - Avoid: Panting idle -> 1 to 3 degrees, 3 to 5 s cycle
+> - Avoid: Idle pose far from attack start poses -> keep the idle near the class rest; re-check clip entries if the...
+>
+> Read more (14 KB note): ## 4. Fidgets and variety · ## 7. Adding procedural layers without fighting the Animator · ## Common mistakes
+<!-- tldr:end -->
+
 The idle is the animation players look at the longest. It plays in menus, between fights, while chatting, and under every upper-body clip. Secondary motion (overlap, drag, small reactions of parts that are not the main action) is what separates "moving" from "alive". This note covers idle design, breathing and weight shifts, fidget systems, overlap and successive breaking, secondary motion on attachments, and how to add these procedurally on Roblox without fighting the Animator.
 
 Labels: "reference project" = one live action game; "Roblox docs" = official API pages; "rule of thumb" = practice.

@@ -3,6 +3,18 @@ tags: [game-design, combat, bosses, encounters, phases, telegraphs, multiplayer,
 ---
 # Boss Fight Design Patterns
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Fixed boss health -> Scale to group damage; target TTK
+> - Avoid: Tracking attacks that never lock -> Commit at least 0.45 s before the hit
+> - Avoid: Burst skips phases -> Health floors at each threshold
+> - One sentence each: what the fight tests, teaches and gates.
+> - Every attack has a tell, a commit point and a punish window meeting minimums.
+> - Attacks drawn from phase pattern bags, filtered by range and cooldown, no repeats.
+>
+> Read more (20 KB note): ## 2. Attack vocabulary: tell, commit, punish · ## 3. Phases · ## 9. Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A boss is a test the game has been preparing the player for. On Roblox it is also a test taken by a random group of strangers, many on phones, with no voice chat, joining and leaving mid-fight, holding wildly different gear. Patterns that work in a single-player action game (precise dodges, long learning by death, a fixed health pool) break here unless they are adapted. This note is the design side: how to structure a fight, how to time and teach attacks, how to scale health and damage to groups, how to reward losers as well as winners, and how to test a fight before players do.
 
 The animation side (intros, clip sets, telegraph clips, dodge windows, rigs for large creatures) is in [[Boss Animation and Phases]]. The brain side is in [[NPC AI and Behaviour]] section 8 and [[Behaviour Trees Utility AI and State Machines for NPCs]].

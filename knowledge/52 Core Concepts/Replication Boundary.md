@@ -3,6 +3,16 @@ tags: [core-concept, networking, replication, architecture]
 ---
 # Replication Boundary
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Most "works in Studio, breaks live" bugs are a value on the wrong side of this line: a LocalScript sets an attribute and the...
+> - (Roblox docs, "Replication" and "Network ownership", as of October 2026.)
+> - Streaming changes "replicated" into "replicated if near".
+> - Remote arguments are copies, not references.
+>
+> Read more (4 KB note): ## What crosses, in short · ## The nuance most people miss
+<!-- tldr:end -->
+
 The **replication boundary** is the line between what the server sends to every client automatically and what stays local to one machine. Changes the server makes to replicated instances (in Workspace, ReplicatedStorage and similar containers) flow down to clients. Changes a client makes stay on that client, with a short list of exceptions. Everything else crosses only through remotes you write.
 
 ## Why it matters on Roblox

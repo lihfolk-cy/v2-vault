@@ -3,6 +3,15 @@ tags: [rigging, facial, dynamic-heads, facs, facecontrols, blender]
 ---
 # Facial Animation and Dynamic Heads
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Frame 0 not neutral, or Animation Offset not 0 on import -> Neutral at frame 0; offset 0
+> - Avoid: Same FACS name on two frames -> One frame per pose
+> - Avoid: Corrective with 4 names -> At most 3 names
+>
+> Read more (12 KB note): ## 1. How a dynamic head works · ## 2. Building a dynamic head in Blender (Roblox's process) · ## Common mistakes
+<!-- tldr:end -->
+
 Roblox faces come in two very different technologies. **Dynamic heads** are skinned head meshes driven by a standard set of FACS controls through a `FaceControls` instance; they work with the Animation Editor's face tools, camera-based capture and avatar systems. **Custom faces** on your own rigs are just bones or parts (a jaw hinge, eyelids, swapped decals) animated like any other joint. This note covers both, with the Roblox specifications (Creator Hub, checked October 2026) and the craft choices behind them.
 
 ## 1. How a dynamic head works

@@ -3,6 +3,18 @@ tags: [debugging, method, bisect, repro, minimal-repro, process]
 ---
 # The Debugging Method - Reproduce Isolate Bisect
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Starting to change code before having a repro.
+> - Avoid: Fixing the visible wrong value instead of the first wrong value.
+> - Avoid: Bisecting in a shared place and breaking other people's tests.
+> - Repro written down with start state, steps, expected, actual and a rate.
+> - Cheat service, test profiles and seeded RNG exist, Studio-gated.
+> - Server or client answered first.
+>
+> Read more (18 KB note): ## 2. Reproduce · ## 4. Bisect · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Debugger Breakpoints and Logging]] gives a five-step outline (reproduce, locate, explain, fix, verify). This note goes deeper into the part where most time is lost: getting from "it sometimes breaks" to "this line, with this value, in this order". The core moves are the same in every engine. The Roblox-specific parts are how you get a repeatable state, how you cut a place down to the smallest thing that still breaks, and how you bisect when the bug lives in a 400-script place that several people edit.
 
 Source labels: **Docs** (Creator Hub, as of October 2026), **Measured** (the reference project), **Rule of thumb**.

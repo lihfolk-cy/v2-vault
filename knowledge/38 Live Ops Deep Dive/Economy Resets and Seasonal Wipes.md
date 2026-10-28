@@ -3,6 +3,18 @@ tags: [live-ops, economy, seasons, wipes, datastore, leaderboards, trust, luau]
 ---
 # Economy Resets and Seasonal Wipes
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Some players rolled over twice, lost new-season progress: Rollover keyed on a timestamp or flag that was reset, not season id -> Idempotent on season id
+> - Players wiped a day early: Season config mistyped; no "never roll early" guard -> Guard on `startsAt`; validate configs
+> - Old-season servers keep granting old-season currency after the...: Cached season id; outdated build -> Refresh at boundary; restart servers
+> - Reset type chosen from the least damaging that solves the problem
+> - Problem measured, not felt
+> - Profile split into permanent and seasonal parts
+>
+> Read more (17 KB note): ## 4. Data design: make resets cheap before you need them · ## 6. Currency resets and compensation · ## 8. Edge cases and failure modes · ## 10. Checklist
+<!-- tldr:end -->
+
 Sooner or later a live economy needs a reset. Currency has inflated so far that new players can never catch up, a leaderboard has been frozen for months by the same ten names, a dupe exploit flooded the market, or a rebalance makes old progress meaningless. A reset can renew a game, or it can be the update that loses your most loyal players in a week. The difference is almost entirely in what you keep, what you give back, and how you say it.
 
 [[Economy Inflation Sinks and Faucets Math]] covers measuring inflation and fixing it gently, with a short section on fixing a live inflated economy. [[Data Schema Design and Migrations]] tells the story of development-time wipes in one production game. This note is about **deliberate, player-facing resets in a live game**: the kinds of reset, choosing one, the data mechanics (season-scoped data, lazy rollover, leaderboards), the boundary problems, compensation, and when a reset is the wrong tool.

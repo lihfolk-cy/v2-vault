@@ -3,6 +3,18 @@ tags: [worked-build, inventory, datastore, session-locking, remotes, ui, luau, s
 ---
 # Saved Inventory End to End
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Granting with `PlayerData.Get(player)` returning nil and not checking it: the grant silently does nothing.
+> - Avoid: Yielding (a `task.wait`, a data store call, `GetProductInfoAsync`) between "check the player owns it" and "remove it".
+> - Avoid: Saving inside every action. Writes are budgeted; save on the autosave and after purchases only.
+> - Studio API access on, Studio keys separate from live keys
+> - Only `PlayerData` touches the player data store
+> - Every remote payload type-checked, length-capped, rate-limited
+>
+> Read more (42 KB note): ## 4. The data layer · ## 5. The inventory itself · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 This build starts from an empty place and ends with a saved, session-locked inventory: stackable items (potions, ores) and unique items (a sword with its own level), a coin balance, equip and sell actions over a validated remote, a grid UI, and a tool that appears in the player's hand when they equip a weapon. It is also the **foundation build** for this folder: the data layer, the remote helper and the rate limiter written here are reused by [[Daily Rewards System End to End]], [[Shop with Game Passes and Developer Products End to End]], [[Codes Redemption System End to End]] and [[Global Leaderboards End to End]]. Build this one first.
 
 All code below is **reviewed, not run**. It is written in strict Luau against the APIs as documented on create.roblox.com (as of October 2026), but nobody has pressed Play on this exact text. Expect a typo-level fix or two, and test it the way the testing section describes before trusting it with real players.

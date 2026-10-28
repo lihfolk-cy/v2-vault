@@ -3,6 +3,18 @@ tags: [game-design, ftue, onboarding, tutorial, funnel, retention]
 ---
 # First-Time User Experience and Onboarding
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Text walls ("Welcome to the world of...") -> One line, one target, one pointer
+> - Avoid: Teaching every system up front -> Teach the core loop; teach the rest just in time
+> - Avoid: Combat in the first 20 seconds with full-strength enemies -> Weakened, owned tutorial enemies, or no combat until the loop is clear
+> - Control within about 10 s of join; no unskippable cutscene.
+> - First verb by 30 s, first big reward by 40 s.
+> - Core loop closed three or more times in 5 minutes.
+>
+> Read more (21 KB note): ## 6. Case study: five versions of one tutorial · ## 7. Implementation: a server-side onboarding state machine · ## 9. Common mistakes · ## 10. Checklist
+<!-- tldr:end -->
+
 The **first-time user experience (FTUE)** is everything a new player sees from the moment the game starts loading to the moment they understand the core loop and want more. On Roblox it is the single highest-leverage piece of design: discovery measures it directly, and a player who bounces in minute one never sees your best content. This note covers the first 60 seconds, the first 5 minutes, tutorial gating and HUD reveals, the techniques Roblox recommends, and a long case study of one production game's tutorial going through five versions.
 
 Labels: **Docs** (create.roblox.com, checked October 2026), **Reference project** (one production RNG combat game, anonymised), **Rule of thumb**.

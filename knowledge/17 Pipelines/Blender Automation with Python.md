@@ -3,6 +3,18 @@ tags: [pipelines, blender, python, automation, voxel, export, headless]
 ---
 # Blender Automation with Python
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Building in the artist's open session. Symptom: a teammate's scene is reset or overwritten.
+> - Avoid: Hard-coded absolute paths. Symptom: the script works on one machine only.
+> - Avoid: No validation step. Symptom: an asset over budget is discovered in Studio after upload.
+> - Headless runs with `-b --factory-startup`; scripts exit non-zero on failure
+> - Short paths on Windows; drivers do not stop on stderr
+> - Shared helpers and palette tables carry the style
+>
+> Read more (21 KB note): ## Pattern 3: a voxel builder · ## Nuances and edge cases · ## Checklist · ## Common mistakes
+<!-- tldr:end -->
+
 Blender ships with a full Python API (`bpy`) and runs without a window (`blender -b`). That turns it from a modelling app into a **build tool**: a script can create a model from parameters, enforce a style, validate budgets, export a GLB, render previews and icons, and do it again identically for 150 items. One production game built almost every asset this way (weapons, armour, enemies, pets, eggs, hub hero pieces, station kits, wall rebuilds) and could restyle whole sets by editing a palette table and re-running. This note covers the setup, the patterns that make scripts reliable, a working voxel builder, export, batch drivers and the traps. Modelling technique is in [[Blender Workflow for Roblox Creators]]; the art pipeline around these scripts is in [[Art Pipeline - Concept to In-Game Asset]]; interactive AI-driven Blender work is in [[Blender MCP]].
 
 ## Why script models at all

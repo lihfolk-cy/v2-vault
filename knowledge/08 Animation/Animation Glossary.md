@@ -3,6 +3,15 @@ tags: [reference, glossary]
 ---
 # Animation Glossary
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Reading "Core" as the top priority. Symptom: sorting priorities by enum value puts Core last.
+> - Avoid: Calling a stub an animation. Symptom: a stub plays nothing through the engine.
+> - Avoid: Confusing IKControl with a baked IK clip.
+>
+> Read more (12 KB note): ## Nuances and edge cases · ## Common mistakes
+<!-- tldr:end -->
+
 | Term | Meaning | Read more |
 |---|---|---|
 | **A/B (Animator vs model)** | Playing the same clip through the real Animator and an offline or Lua model and diffing joint rotations | [[Testing Animations in Studio]] |

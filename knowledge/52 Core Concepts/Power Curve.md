@@ -3,6 +3,16 @@ tags: [core-concept, progression, economy, balancing, math]
 ---
 # Power Curve
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Roblox games, especially simulators, RPGs and tycoons, are built on visible numbers going up.
+> - Time to next step is the real number. Cost divided by income gives seconds to the next upgrade.
+> - Exponential income demands exponential costs.
+> - Walls are a design choice. A deliberate steepening before a rebirth or a new zone tells the player "change strategy".
+>
+> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+<!-- tldr:end -->
+
 A **power curve** describes how a player's strength (damage, income, speed) grows as they progress, usually plotted against level, time played or currency spent. It is always paired with a **cost curve**: how much each next step costs. The relationship between the two decides pacing.
 
 ## Why it matters on Roblox

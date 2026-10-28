@@ -3,6 +3,18 @@ tags: [lighting, mood, day-night, weather, zones, environment]
 ---
 # Lighting Mood and Time of Day
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Time differs between players: Each client ran its own timer from join -> Derive from server time and a published epoch.
+> - Night looks like dim day: Only ClockTime changes -> Mood keyframes for ambient, shifts, atmosphere.
+> - Night unplayable on phones: Ambient near black -> Tinted ambient, outlines on enemies.
+> - Server publishes epoch, cycle and day share; clients compute time.
+> - Mood keyframes for at least dawn, noon, dusk, midnight.
+> - Night readable on a dim phone screen.
+>
+> Read more (18 KB note): ## 1. The clock · ## 2. Mood keyframes across the day · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A day/night cycle looks like a one-liner (`Lighting.ClockTime += dt`) and turns into a system as soon as the game has zones, weather, cutscenes, indoor areas and players on phones. This note covers the clock itself (who owns it and how it reaches clients), mood keyframes across the day, zone and weather overrides, handing control to cutscenes, and the readability rules that keep a beautiful night from becoming an unplayable one.
 
 Property details are in [[Lighting Technologies and Settings]] and [[Atmosphere Sky Clouds and Post-Processing]].

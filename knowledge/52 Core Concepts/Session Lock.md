@@ -3,6 +3,16 @@ tags: [core-concept, data, datastore, persistence]
 ---
 # Session Lock
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - A player can be in two servers at once for a few seconds: teleporting between places, rejoining quickly after a crash, or...
+> - The lock is only as good as the write that takes it.
+> - Locks need expiry. A server that crashes never releases.
+> - Expiry has a trade-off. Too short and a slow but alive server loses its lock mid-session (a duplicate source).
+>
+> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+<!-- tldr:end -->
+
 A **session lock** is a marker in a player's saved data that says "server X owns this profile right now". Only the owning server may write the profile; other servers wait, retry or refuse until the lock is released or expires.
 
 ## Why it matters on Roblox

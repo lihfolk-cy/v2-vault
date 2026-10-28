@@ -3,6 +3,15 @@ tags: [rigging, accessories, armor, welds, attachments]
 ---
 # Accessories and Armor That Follow Animation
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Re-rigging the character to add gear (new joints, moved attachments) -> Weld gear; never touch joints
+> - Avoid: A rigid plate spanning a joint -> Split at the joint; overlap shapes
+> - Avoid: Gear with mass or collision -> Massless, no collide, query or touch
+>
+> Read more (13 KB note): ## 1. Joint options for attached things · ## 3. The animation-safe armour fit (reference project) · ## Common mistakes
+<!-- tldr:end -->
+
 Anything rigidly attached to a body part follows that part's animation for free: the Animator moves the parts, and welded pieces ride along. So the real questions are which part to attach to, which joint type to use, how to fit pieces to bodies of different sizes, and how to do it **without touching anything the animation system owns**. This note covers Roblox's accessory mechanism, the joint options, and the animation-safe armour fit one production game shipped (dozens of armour sets on arbitrary player avatars, with no animation changes).
 
 ## 1. Joint options for attached things

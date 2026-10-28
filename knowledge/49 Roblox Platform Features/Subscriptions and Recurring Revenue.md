@@ -3,6 +3,18 @@ tags: [platform-features, subscriptions, monetization, recurring-revenue, market
 ---
 # Subscriptions and Recurring Revenue
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Granting the monthly bundle on `IsSubscribed` -> Grant on a paid cycle from payment history
+> - Avoid: Revoking perks during renewal processing -> Access follows `IsSubscribed`, which stays true in grace
+> - Avoid: Granting on `PromptSubscriptionPurchaseFinished` -> Wait for status change or recheck later
+> - Access gate (`IsSubscribed`) and delivery gate (paid cycle) are separate
+> - Cycle grant keyed on `CycleStartTime`, saved with the profile
+> - Refresh on join, on `UserSubscriptionStatusChanged` and every 15 minutes
+>
+> Read more (22 KB note): ## 1. The state machine · ## 2. Per-cycle grants instead of per-day guesses · ## 10. Common mistakes · ## 11. Checklist
+<!-- tldr:end -->
+
 [[Subscriptions and Premium Payouts]] covers what experience subscriptions are, how they pay, the platform rules, the basic status check and Roblox Plus. This note goes underneath: the subscription **state machine** and its grace period, granting benefits per **paid cycle** rather than per day, the arithmetic of churn and lifetime value, benefit design that does not trap you on a content treadmill, honest cancellation, webhooks, and the edge cases (refunds, lapses, region and platform eligibility, price changes, replacing a pass) that decide whether a subscription earns trust or support tickets.
 
 Platform facts are labelled **Roblox docs (as of October 2026)** and were checked against the Subscriptions guide, the Subscription design guide, the MarketplaceService, PolicyService and enum references, and the Webhook notifications guide on create.roblox.com. Revenue arithmetic uses documented payout rules with **hypothetical** retention numbers; label them as such when you reuse them.

@@ -3,6 +3,18 @@ tags: [community, discord, moderation, safety, live-ops, social]
 ---
 # Discord Servers for Roblox Games
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: "Join our Discord" text in game UI (not allowed).
+> - Avoid: Codes only on Discord.
+> - Avoid: Teen moderators with ban powers and no oversight.
+> - Decided whether a public server is needed; staffed by adults if it is
+> - No links or handles in game; links on game and community pages only
+> - Codes and news mirrored on-platform
+>
+> Read more (14 KB note): ## 1. Safety first · ## 5. Security and anti-raid settings · ## 10. Common mistakes · ## 11. Checklist
+<!-- tldr:end -->
+
 For a decade the Discord server was the default "community" for a Roblox game: codes, leaks, update notes, bug reports, trading, fan art. In 2026 that changed. In-game external links are gone, social links on game and community pages are visible only to age-checked 16+ users, and Discord itself made every account teen-by-default. A Discord server is still valuable, but it now reaches an older, more engaged slice of your players, and it is a space Roblox does not moderate: you do. This note covers whether you need one, how to reach it legitimately, how to structure and secure it, the scams and safety risks specific to Roblox communities, and how to staff it. In-game community features live in [[Community Building]].
 
 Facts are labelled "Announcement" (Roblox or Discord), "Roblox docs (as of October 2026)", or "rule of thumb". Discord changes its settings and names often; check menu names against the current Discord help pages.

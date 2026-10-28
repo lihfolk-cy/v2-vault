@@ -3,6 +3,15 @@ tags: [procedural, hit-reaction, death, knockdown, springs, combat, enemies, lua
 ---
 # Procedural Death Knockdown and Hit Reactions
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Hits feel weightless: no hit-stop, no flash -> 40-90 ms freeze and a 0.1 s flash
+> - Every hit looks identical: one flinch clip -> directional clips, or springs with noise
+> - Reactions stack into jitter: flinches during stuns and knockups -> skip the flinch while a stronger reaction owns the body
+>
+> Read more (14 KB note): ## 1. Hit reactions · ## 2. Knockdowns and deaths · ## Common mistakes
+<!-- tldr:end -->
+
 Reactions are where combat feels fair or cheap. A hit with no visible effect on the target reads as a miss; a death that clips into a hill reads as a bug; a knockback that ignores where the blow came from reads as canned. Reactions are also where clips struggle most, because they depend on things a clip cannot know: the direction of the hit, how hard, what the target was doing, the slope under it, the moment another player's ultimate peaks. This note covers three families and the numbers one live action game (the reference project) used for each:
 
 1. **Hit reactions** that layer over whatever the target is doing.

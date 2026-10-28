@@ -3,6 +3,18 @@ tags: [rigging, blender, enemies, creatures, conventions, families]
 ---
 # Creature Rig Conventions (Blender to Roblox)
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: A member's roll differs from the family -> Rebuild roll by the family script
+> - Avoid: Deleting unused family bones -> Keep them unweighted; Keep Zero Influence Bones on import
+> - Avoid: Root translation not retargeted -> Scale translation by the height ratio
+> - Build the family armature at its reference height with the names above; save one rig file with a proxy mesh.
+> - Author the shared clips on the proxy (12-13 clips, markers included); export a test GLB, import it into a scratch place, and...
+> - For each enemy: duplicate the armature, edit rest bone lengths only, model at true stud height, bind, paint the atlas...
+>
+> Read more (14 KB note): ## 2. Conventions shared by all families · ## 3. The five families · ## 9. Blender start checklist (per family) · ## Common mistakes
+<!-- tldr:end -->
+
 A convention sheet for building a **roster** of creature rigs that share clips, import cleanly and can be driven by generic code. It is distilled from one production game that planned its enemies as five rig families: every regular in a family uses the same bone names and hierarchy, the family's locomotion and reaction clips are shared, and each enemy only adds its own mesh, rest proportions and attack clips. The plan cut a realm's clip count from about 300 one-off clips to roughly 150 (about 61 shared, 66 own, 22 boss).
 
 ## 1. Why families pay off

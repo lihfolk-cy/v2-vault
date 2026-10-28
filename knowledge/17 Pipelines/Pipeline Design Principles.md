@@ -3,6 +3,18 @@ tags: [pipelines, production, tooling, automation, workflow]
 ---
 # Pipeline Design Principles
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Editing the output instead of the source.
+> - Avoid: Installs that create duplicates on re-run.
+> - Avoid: Ids typed by hand. One wrong digit plays someone else's sound.
+> - Source of truth named for every content type
+> - Stable id scheme used in files, attributes and config
+> - Every install idempotent and marked with attributes
+>
+> Read more (21 KB note): ## Principle 1: one source of truth per thing, and it is not the place · ## Principle 2: every install is idempotent · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A pipeline is the path a piece of content travels from "someone had an idea" to "it is live in a published place and we can change it again safely". Every Roblox game has pipelines whether or not anyone designed them: a modeller exporting a mesh, a designer pasting numbers into a ModuleScript, a scripter syncing files with Rojo. The difference between a team that ships weekly and a team that is scared of its own place is almost never talent. It is whether those paths are **repeatable, checkable and reversible**.
 
 This note is the shared vocabulary for the rest of the section. Each later note ([[Art Pipeline - Concept to In-Game Asset]], [[Audio Pipeline]], [[Code Pipeline - Rojo Git and CI]] and so on) is a concrete recipe built on these rules. The overview of asset pipelines in production lives in [[Asset Pipelines]]; the animation-specific pipelines live in the Animation section ([[Pipeline - New Animated Weapon]], [[Pipeline - Importing Animated Enemies]], [[Pipeline - Arm IK Baking and QA]], [[Studio Tooling Architecture]]) and are not repeated here.

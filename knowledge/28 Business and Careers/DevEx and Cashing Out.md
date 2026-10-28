@@ -3,6 +3,18 @@ tags: [business, devex, payouts, robux, earnings, taxes, careers, minors]
 ---
 # DevEx and Cashing Out
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Counting purchased Robux as income. Robux you bought is not exchangeable.
+> - Avoid: Assuming the headline rate. Legacy balances, mixed rates and dashboard lag all change the figure.
+> - Avoid: Submitting with the minimum exactly. A late adjustment or lag drops you below 30,000 and the request fails.
+> - Read the current DevEx Terms of Use and the DevEx page on the Creator Hub.
+> - Verified email; legal name matches what you will use on the form.
+> - Tax form type known (W-9 or W-8); a tax professional consulted where needed.
+>
+> Read more (17 KB note): ## 2. The numbers (Roblox docs, as of October 2026) · ## 4. Eligibility and the request flow · ## 9. Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 > **Not advice.** This note is general information about how the Developer Exchange works and how developers usually plan around it. It is not tax, legal or financial advice. Tax and contract rules differ by country (and often by state or province). The only binding rules are Roblox's own **Developer Exchange Terms of Use** and the DevEx page on the Creator Hub (Creator Hub, Docs, Monetization, Developer Exchange). Read them on the day you cash out; rates and requirements change.
 
 [[Monetization Overview]] explains where Robux comes from. [[Subscriptions and Premium Payouts]] covers subscription and engagement income. This note covers the last step: turning Earned Robux into money in a bank account, what the numbers really are, what slows or blocks a payout, and how to plan a team's money around the program's rules.

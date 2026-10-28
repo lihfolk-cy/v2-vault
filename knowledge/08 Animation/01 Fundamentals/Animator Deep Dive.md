@@ -3,6 +3,16 @@ tags: [fundamentals, api, animator, reference]
 ---
 # Animator Deep Dive
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Joints are matched by name. A Pose (or curve folder) binds to the joint whose `Part1` has that name (for Bones, the bone's name).
+> - The top-level pose is never applied. The first Pose under each Keyframe (`HumanoidRootPart`, or a bone rig's `Root`) does nothing.
+> - Translation offsets scale with `Model:GetScale()`.
+> - `track.Length` stays 0: the asset never loaded.
+>
+> Read more (15 KB note): ## Complete member list · ## StepAnimations: the Edit-mode workhorse
+<!-- tldr:end -->
+
 The `Animator` is the engine object that owns playback for one rig: it creates tracks, evaluates them each frame, mixes them, writes joint transforms and replicates what is playing. This note is the complete member reference plus everything the reference does not tell you. For measured numerical behaviour (interpolation, weights, fades) see [[How the Animator Really Behaves]]; for track members see [[AnimationTrack Reference]].
 
 ## Where an Animator lives

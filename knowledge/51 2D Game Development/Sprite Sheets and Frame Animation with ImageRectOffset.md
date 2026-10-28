@@ -3,6 +3,18 @@ tags: [2d, sprites, sprite-sheet, animation, imagelabel, imagerectoffset, pixel-
 ---
 # Sprite Sheets and Frame Animation with ImageRectOffset
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Per-frame `Image` swaps. Symptom: blank or flickering frames the first time each animation plays.
+> - Avoid: Sheets over the size limit. Symptom: every frame is offset or shows parts of its neighbours after upload, though the source...
+> - Avoid: Rectangles in GUI pixels instead of image pixels.
+> - One sheet per character (or per animation group), at or below 1024 x 1024, tightly packed.
+> - 1 to 2 pixels of padding or extrusion between frames.
+> - Frame data imported from the art tool, converted to a committed Luau module, validated (no zero sizes).
+>
+> Read more (22 KB note): ## 6. Importing frame data · ## 7. The animation player · ## 10. Common mistakes · ## 11. Checklist
+<!-- tldr:end -->
+
 A 2D character is a sequence of drawings shown one after another. On Roblox, the efficient way to show them is one uploaded image that contains every frame (a **sprite sheet** or **atlas**), displayed through an `ImageLabel` that shows only one rectangle of it at a time. Changing the rectangle changes the frame. This note covers how the rectangle properties really behave, how to lay out sheets so frames do not bleed or blur, mirroring, importing frame data from an art tool, a frame-accurate animation player driven by the game loop, gameplay events on frames, and the mistakes that cost the most time.
 
 It plugs into the renderer in [[A 2D Engine in a ScreenGui - Game Loop Entities and Rendering]] (the `Sprites.apply` call there is defined below). Getting the art itself out of an editor cleanly is in [[Pixel Art Pipeline - Aseprite to Roblox Without Blur]]; general UI animation with tweens is in [[UI and GUI Animation]].

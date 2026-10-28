@@ -3,6 +3,18 @@ tags: [level-design, flow, sightlines, landmarks, wayfinding, readability, camer
 ---
 # Level Design Principles - Flow Sightlines and Landmarks
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: The brightest object is decoration -> Lower decoration brightness; light the objective
+> - Avoid: Guidance by text only -> Add light, motion or an opening
+> - Avoid: Landmarks too small -> Raise them, move them closer, or add a far stand-in
+> - Each space audited for light, motion, skyline and openings; all four point the same way.
+> - Critical path marked in the blockout; most first-time testers find it without UI.
+> - Optional content branches off and rejoins the critical path.
+>
+> Read more (20 KB note): ## 2. Flow: making the intended route the easy one · ## 3. Sightlines: what the player actually sees · ## 8. Common mistakes · ## 9. Checklist
+<!-- tldr:end -->
+
 [[Level Design for Roblox]] covers the practical basics: measure the character, block out first, time the walks, give every zone one colour and one landmark, test for sight-line leaks into locked zones. This note goes a level deeper into the three ideas underneath all of that: **flow** (how players move through a space without being told), **sightlines** (what they can see from where they stand, and why it changes on every device), and **landmarks** (what they use to build a mental map). It ends with tools to measure all three instead of guessing.
 
 Labels used: **Roblox docs (as of October 2026)**, **measured in the reference project** (one live action game with a hub and multi-zone realms), **rule of thumb** (general level design practice, not Roblox-specific).

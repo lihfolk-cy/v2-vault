@@ -3,6 +3,18 @@ tags: [procedural, generation, noise, terrain, biomes, voxels, luau]
 ---
 # Noise Functions and Terrain Generation
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Thresholds on raw noise values -> Calibrate thresholds by percentile
+> - Avoid: Huge seed offsets -> Hash to moderate offsets
+> - Avoid: Per-biome height functions with no blending -> Shared base, border fade or weighted blend
+> - Noise sampled off-lattice with hashed, moderate offsets.
+> - Thresholds expressed as percentages and calibrated.
+> - Height shaped by a designer-editable curve.
+>
+> Read more (18 KB note): ## Shaping: from noise to designed terrain · ## Cellular noise for biomes · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Procedural World Generation]] shows the standard fractal noise (fbm) height function, ridged noise, terracing and a rule-based material picker. This note goes underneath that: what `math.noise` actually returns and why raw thresholds go wrong, how to shape noise into terrain designers can control, cellular (Voronoi) noise for biomes and how to blend biome borders without seams, caves from 3D noise, writing smooth terrain with fractional occupancy, and what all of this costs. Code here uses the `Hash` module from [[Seeds Determinism and Reproducible Worlds]].
 
 ## What math.noise gives you

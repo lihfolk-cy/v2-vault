@@ -3,6 +3,18 @@ tags: [performance, networking, replication, remotes, bandwidth, ping]
 ---
 # Network Performance
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Large values in attributes on the Player or on Workspace objects that change often.
+> - Avoid: `FireAllClients` for effects only nearby players can see.
+> - Avoid: Firing remotes on mouse move, RenderStepped or Heartbeat without throttling.
+> - Outgoing kbps per player measured with a multi-client test during combat and menus.
+> - Data ping close to network ping under load.
+> - No large or frequently changing attributes on Player or broadly replicated instances.
+>
+> Read more (14 KB note): ## 2. Measuring · ## 4. Patterns that cut traffic · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Network problems look like everything else: "lag", rubber-banding, hits that land late, a server that feels slow although its heartbeat is fine. The cause is usually **replicating more than needed, to more players than needed, more often than needed**. This note covers what goes over the wire, how to measure it, the limits that matter, and the patterns that cut traffic: results instead of simulation, batching, distance filtering, owner-only state, client-side effects, and load-time replication.
 
 Source labels: **Docs** (Creator Hub, as of October 2026), **Measured** (the reference project), **Rule of thumb**.

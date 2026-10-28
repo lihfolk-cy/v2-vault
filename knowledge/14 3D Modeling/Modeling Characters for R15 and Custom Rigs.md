@@ -3,6 +3,18 @@ tags: [modeling, characters, r15, avatar, custom-rigs, proportions, blender, pyt
 ---
 # Modeling Characters for R15 and Custom Rigs
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: No R15 proxy while modelling -> Build the proxy; model on its pivots
+> - Avoid: Shoulder geometry centred on the arm's centre -> Cap centred on the inner-top shoulder pivot
+> - Avoid: Modelling 15 parts separately -> Model one body, then cut and cap
+> - Route chosen: A (avatar body), B (R15-compatible), or C (custom rig).
+> - R15 proxy in the scene at the right scale; character faces -Y.
+> - Joint geometry centred on R15 pivots (inner-top shoulder, hips, knees, elbows).
+>
+> Read more (16 KB note): ## 2. R15 proportions and pivots (measured) · ## 3. A Blender proxy that matches R15 · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A character model on Roblox is never just a mesh. It has to match a rig contract: the R15 skeleton that the default Animate script, emotes, accessories, layered clothing and most community animations assume, or a custom rig that your own code drives. Modelling a character without knowing which contract it targets is the most expensive mistake in character art: the result either cannot use any existing animation, or cannot wear any accessory, or does not fit the hit boxes the game was balanced around.
 
 This note covers the three routes (a marketplace-grade R15 body, an R15-compatible game character, and a custom rig), the R15 proportions and pivots measured from a real rig, how to set up a proxy in Blender so your model lands on those pivots, how to model armour and outfits that fit every body, and the reference project's characters, NPCs and pets as examples. Rigging and weights are in the Animation section ([[Rigging in Blender]], [[Weight Painting and Skinning for Roblox]]); this note stops at the mesh.

@@ -3,6 +3,18 @@ tags: [luau, metatables, oop, architecture, composition, typing]
 ---
 # Metatables and OOP - When and When Not
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Methods missing after a save/load or remote: Metatable dropped -> Plain data at boundaries; rebuild objects
+> - Subclass explosion: Inheritance for variation -> Composition + data rows
+> - Change events miss nested writes: `__newindex` proxy only sees top level -> Explicit mutation functions
+> - Saved and networked state is plain data, not class instances.
+> - Singletons are modules, not classes.
+> - Classes are used for many-instance or resource-owning objects only.
+>
+> Read more (19 KB note): ## 1. Four ways to model a thing · ## 4. Metamethod tricks: clever, and what they cost · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Tables Metatables and OOP]] teaches the mechanics: metamethods, the class idiom, inheritance, weak tables, and what happens to tables at Roblox boundaries. This note is about judgement. It compares the four ways of modelling "things" in Luau (metatable classes, closure objects, plain data with module functions, and structure-of-arrays or ECS), shows where each one wins and where it hurts, covers the metamethod tricks that look clever and cause bugs (proxies, `__newindex` tracking, operator overloading), and finishes with lifecycle, typing and serialisation, which is where most OOP pain in Roblox games really comes from.
 
 Performance statements come from the Luau performance page (luau.org, as of October 2026). Everything else is rule of thumb from production Roblox code, including one production game referred to as the reference project.

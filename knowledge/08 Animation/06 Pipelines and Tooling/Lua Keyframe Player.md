@@ -3,6 +3,16 @@ tags: [pipeline, runtime, keyframesequence, architecture, advanced]
 ---
 # Lua Keyframe Player
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - It is not free. You take on correctness (every Animator behaviour you rely on must be re-implemented and tested), CPU cost...
+> - Enemies and other non-player rigs first (the initial goal: no published ids for 1,500 enemy clips).
+> - AnimationTrack-compatible tracks. Tracks expose `Play(fade, weight, speed)`, `Stop(fade)`, `AdjustSpeed`...
+> - Measured in Edit against `Animator:StepAnimations` (details and numbers in How the Animator Really Behaves and Lua Keyframe...
+>
+> Read more (14 KB note): ## Architecture · ## The Animator model it reproduces
+<!-- tldr:end -->
+
 An advanced pattern with a big payoff: instead of publishing every clip as an Animation asset and letting the Animator play it, a Lua module **reads KeyframeSequence data and writes joint `Transform`s itself**, every frame, reproducing the Animator's measured behaviour. One production game moved all of its animation (players, about 1,500 enemy clips, several hundred weapon-part clips) onto two such players: a general one ("KeyframePlayer", this note) and a small one for weapon rigs ("PoseDriver", [[Weapon Rig Player]]). The mechanism in full detail: [[Lua Keyframe Player Internals]]. Copyable core: [[Snippets - Lua Keyframe Player Core]].
 
 ## Why you would ever do this

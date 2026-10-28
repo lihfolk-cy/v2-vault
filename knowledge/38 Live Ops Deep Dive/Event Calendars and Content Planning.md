@@ -3,6 +3,18 @@ tags: [live-ops, events, calendar, planning, content, production, scheduling, lu
 ---
 # Event Calendars and Content Planning
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Calendar drawn before measuring throughput -> Plan from the last six weeks' output
+> - Avoid: No slack -> One buffer week per month
+> - Avoid: Multiplier every weekend -> Space them; measure weekdays
+> - Roadmap, calendar and work plan are separate documents
+> - Throughput measured; maintenance share estimated
+> - Mostly config, rotation and reskin events; one mechanic or content event per month at most
+>
+> Read more (18 KB note): ## 2. Throughput first, calendar second · ## 5. The calendar as data · ## 9. Common mistakes · ## 10. Checklist
+<!-- tldr:end -->
+
 A live game runs on two clocks. The **player clock** is what players see: a weekend boost every other Friday, a holiday event, a new season on the first of the month. The **production clock** is what the team can actually build: how many assets, maps and systems fit into a week once bugs and support are paid for. An event calendar is the document that makes those two clocks agree months in advance. Without one, small teams either promise more than they can ship or go quiet for weeks, and both show up in the retention curve.
 
 [[Live Ops Events and Updates]] gives a sample four-week calendar and the platform tools; [[Update Cadence and Hype Cycles]] covers choosing a release rhythm and building anticipation. This note goes further: planning horizons, sizing content against team throughput, the taxonomy of event types and how they combine, the calendar as data your servers read, validation that catches clashes before players do, and the review loop that makes next quarter's plan better than this one's.

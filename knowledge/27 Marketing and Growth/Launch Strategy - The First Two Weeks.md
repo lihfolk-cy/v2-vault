@@ -3,6 +3,18 @@ tags: [marketing, growth, launch, soft-launch, retention, discovery, live-ops]
 ---
 # Launch Strategy - The First Two Weeks
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Launching on a Friday evening with nobody around on Saturday.
+> - Avoid: Treating day 1 CCU as the verdict instead of the funnel.
+> - Avoid: Shipping new content in week 1 while the onboarding leak is still open.
+> - First session played by outsiders on a phone; join time measured
+> - Onboarding funnel to minute 10, shop funnel, economy events live
+> - 2 to 5 distinct thumbnails, icon tested small, honest title and description
+>
+> Read more (16 KB note): ## 2. Pre-launch: T minus 14 to T minus 1 · ## 3. Day by day · ## 8. Common mistakes · ## 9. Checklist
+<!-- tldr:end -->
+
 A Roblox launch is not one moment. It is a two-week window in which the recommendation system, the Kids and Select evaluation, your error budget and your own team's stamina are all tested at once. Most games that "flop" did not fail on launch day; they failed on days 2 to 5, when the first wave of players met a broken first session, nobody was watching the funnel, and the team spent the window adding content instead of fixing the leak.
 
 This note is a day-by-day plan for those two weeks: what to have ready before you open the doors, what to watch each day, when to spend money, when to patch, and when to admit the game needs a rework rather than a push. It builds on [[Discovery and the Algorithm]] (how traffic is allocated), [[Publishing an Experience]] (the release gates) and [[Analytics and Funnels]] (the instruments). Platform facts are labelled "Roblox docs (as of October 2026)"; everything else is rule of thumb from shipping games and should be adapted to your genre.

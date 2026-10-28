@@ -3,6 +3,15 @@ tags: [systems, combat, weapons, abilities, hub]
 ---
 # Weapon and Combat Animation
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Weapon clip has no effect: Weld grip, or keys for joints with no Motor6D -> Motor6D grip; check joint names
+> - Weapon parts animate in Studio only: Runtime-registered clip ids -> Publish, or play through a Lua player
+> - Arm sticks straight out over custom poses: Animate's tool-hold -> Fade it to 0.001
+>
+> Read more (13 KB note): ## How the weapon is held · ## Arm quality: what makes swings look broken · ## Common mistakes
+<!-- tldr:end -->
+
 This is the hub for everything a weapon does on a character: how it is held, how classes of weapon differ, how swings, guards, abilities, flourishes and deaths fit together, and which priorities and attributes keep them from fighting. Each big topic has its own note; this one gives the system map, the rules that span all of them, and the measured numbers from one live action game (the reference project).
 
 | Topic | Note |

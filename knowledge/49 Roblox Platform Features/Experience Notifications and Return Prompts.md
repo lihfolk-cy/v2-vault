@@ -3,6 +3,18 @@ tags: [platform-features, notifications, retention, open-cloud, events, memoryst
 ---
 # Experience Notifications and Return Prompts
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Opt-in prompt on join -> Prompt after a delayed-payoff action
+> - Avoid: Generic "come back" notifications -> Personal and actionable only
+> - Avoid: Several notifications queued per user per day -> One slot per user, keep the best
+> - Game meets eligibility (100 visits); strings created per use case, under 99 characters
+> - Opt-in prompt only after a delayed-payoff action, with a context line first
+> - At most one queued notification per user; priority rules decide which
+>
+> Read more (22 KB note): ## 2. Experience notifications · ## 5. The scheduling problem · ## 9. Common mistakes · ## 10. Checklist
+<!-- tldr:end -->
+
 A player who closes your game is unreachable unless they gave you a way back in. Roblox offers three on-platform channels for that: **experience notifications** (personal, one per player per day), **update announcements** (broadcast to everyone who follows the game) and **event notifications** (for players who tapped "Notify Me" on an event). Each has its own eligibility, limits and failure modes. This note covers all three, the scheduling problem nobody mentions (the event you want to notify about usually happens while no server is running for that player), and copy that survives the spam filter. [[Retention and Return Hooks]] lists notifications as one hook among many; this note is the implementation.
 
 Platform facts are labelled **Roblox docs (as of October 2026)** and were checked against the Experience notifications guide, the Open Cloud User notifications guide, the ExperienceNotificationService and SocialService references, the Open Cloud API reference and the Experience events and updates guide on create.roblox.com. Strategy is rule of thumb.

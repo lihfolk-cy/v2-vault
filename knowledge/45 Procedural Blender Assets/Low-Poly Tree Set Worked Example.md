@@ -3,6 +3,15 @@ tags: [blender, trees, low-poly, foliage, environment]
 ---
 # Low-Poly Tree Set Worked Example
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Canopy left collidable. Symptom: players get stuck on invisible bumps when jumping near trees, and pathfinding agents route...
+> - Avoid: Origin at the canopy centre. Symptom: scattered trees float or sink because the scatter tool places pivots on the ground.
+> - Avoid: Washed-out greens. Symptom: in-game greens look grey compared with the reference render.
+>
+> Read more (8 KB note): ## The recipe, applied · ## Nuances and edge cases · ## Common mistakes
+<!-- tldr:end -->
+
 ![[p45_low_poly_trees.png]]
 
 Three trees built from one script, following the tree recipe in [[Low-Poly and Stylized Modeling]]: an oak, a pine and an autumn birch. Each exports as its own FBX with the origin at the trunk base, ready to scatter ([[Foliage Props and Scatter]]).

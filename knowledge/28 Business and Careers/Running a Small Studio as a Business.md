@@ -3,6 +3,18 @@ tags: [business, studio, finance, budgeting, groups, operations, careers, minors
 ---
 # Running a Small Studio as a Business
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Treating one good month as a salary.
+> - Avoid: No reserve while paying fixed costs.
+> - Avoid: Owner account without two-step verification, or shared.
+> - Games and assets owned by a group; owner account secured; ownership recorded.
+> - Monthly budget in Robux and money, from three-month averages.
+> - Reserve covering at least three months of fixed costs before adding more.
+>
+> Read more (15 KB note): ## 1. Two layers: the Roblox group and the legal business · ## 3. Budgeting · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 > **Not advice.** General information on running a small Roblox team as a business. It is not tax, legal or financial advice. Whether you need to register a business, what structure fits, how income is taxed and what records the law requires all depend on your country (and often your state or province). Speak to a qualified accountant or lawyer before registering anything, signing long agreements or paying people outside Roblox. **Minors** cannot usually own or sign for a business alone; a parent or guardian must be involved in contracts, bank accounts and payouts.
 
 A "studio" on Roblox can be one person with a group and two contractors, or twenty people with several live games. This note is for the small end: one to about ten people, one or two games, revenue that is starting to matter. It covers the business layer around the game: structure, money, budgets, risk and the habits that separate studios that last from teams that break up after one hit or one flop.

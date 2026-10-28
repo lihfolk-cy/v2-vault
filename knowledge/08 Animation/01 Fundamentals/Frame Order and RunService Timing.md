@@ -3,6 +3,15 @@ tags: [fundamentals, runservice, timing, frame-order, procedural]
 ---
 # Frame Order and RunService Timing
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Procedural `Transform` write in `PreRender` / `RenderStepped` -> PreSimulation
+> - Avoid: Writing in `Heartbeat` -> PreSimulation
+> - Avoid: Composing onto unkeyed joints -> Assign from your own base
+>
+> Read more (15 KB note): ## What to do where · ## Nuances and edge cases · ## Common mistakes
+<!-- tldr:end -->
+
 Procedural animation in Roblox is a race against the Animator: it overwrites joint transforms every frame, so where in the frame your code runs decides whether your layer sticks, flickers, lags a frame, or accumulates. This note lays out the frame pipeline as documented, says what to do in each slot, and covers the less obvious parts: one-frame latency, reading part positions mid-frame, deferred events, Edit mode, the server, and fixed-rate simulation.
 
 ## The frame

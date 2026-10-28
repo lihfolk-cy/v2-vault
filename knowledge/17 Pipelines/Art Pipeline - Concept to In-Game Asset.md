@@ -3,6 +3,18 @@ tags: [pipelines, art, blender, meshes, assets, import]
 ---
 # Art Pipeline - Concept to In-Game Asset
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Asset imports 100x too big or rotated 90 degrees: unit or axis mismatch -> test cube, fix exporter settings once, encode in script
+> - Upload fails or mesh is split: over 20,000 tris in one mesh -> split by material or decimate (Retopology and Decimation)
+> - Part invisible in game: 0-tri mesh, flipped normals, or fully transparent material -> validation gate in stage 4
+> - Brief with budget, size in studs and style rules
+> - Blockout measured in place, numbers written down
+> - Built by a script from a shared helper library
+>
+> Read more (17 KB note): ## Stage 3: build from a script, not by hand · ## Stage 7: install with an idempotent script · ## Failure modes · ## Checklist
+<!-- tldr:end -->
+
 This is the end-to-end recipe for a static 3D asset (a prop, a weapon mesh, a station, a hero piece of scenery) from the first idea to a MeshPart in a published place that you can rebuild, re-texture or roll back. It assumes Blender, because that is what most Roblox creators use, but every stage maps to Maya or other tools. The principles behind it are in [[Pipeline Design Principles]]; the overview of production asset pipelines is [[Asset Pipelines]]; modelling technique is in [[Blender Workflow for Roblox Creators]] and [[Modeling Weapons and Props]]. Animated assets branch off at stage 6: see [[Character and Creature Pipeline]] and the Animation section's [[Pipeline - New Animated Weapon]].
 
 ## The stages at a glance

@@ -3,6 +3,18 @@ tags: [modeling, voxel, magicavoxel, goxel, blockbench, blender, tools, export, 
 ---
 # MagicaVoxel Goxel and Blockbench Workflows Compared
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Blockbench pixel art looks blurry in game: Bilinear filtering on `TextureID` -> SurfaceAppearance ColorMap with `ResampleMode = Pixelated`
+> - Voxel model colours shift at a distance: Mipmaps averaging adjacent 1-pixel palette swatches -> Expand swatches to 8 x 8 blocks, or split by colour
+> - MagicaVoxel glow voxels are dull in Studio: Emit material does not export -> Separate the glow colour group; give it Neon or an emissive...
+> - Colour route chosen (palette texture, per-colour meshes, vertex colours or painted texture) before picking the tool.
+> - Project palette loaded in every tool; role slots fixed.
+> - Reference cube scale tested for each tool's exporter.
+>
+> Read more (17 KB note): ## 1. What each tool actually produces · ## 3. MagicaVoxel pipeline · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Three free tools dominate hand-made blocky art: **MagicaVoxel** (a dedicated voxel editor with a path-traced renderer), **Goxel** (an open-source voxel editor with an unbounded scene) and **Blockbench** (a box modeller with per-face UVs and pixel textures, which is not a voxel editor at all, though its output looks blocky). They produce very different data, and that difference decides your whole Roblox pipeline: how colour reaches the mesh, how many triangles you ship, whether you need Blender in the middle, and whether a model can be rigged. [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] introduces MagicaVoxel and Blockbench in a paragraph each. This note compares all three side by side, walks one model through each pipeline, and covers the Roblox-side settings that make or break blocky textures, in particular texture filtering, which most tutorials miss.
 
 Product details change between releases. Facts below are labelled "tool docs" where they come from each project's own pages, and are as of October 2026. MagicaVoxel's official site did not render readable text when checked, so its limits are taken from its published file-format specification and long-standing community documentation and are marked as such.

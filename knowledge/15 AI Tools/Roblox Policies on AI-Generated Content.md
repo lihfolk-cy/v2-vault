@@ -3,6 +3,18 @@ tags: [ai, policy, compliance, licensing, moderation, ratings]
 ---
 # Roblox Policies on AI-Generated Content
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Assuming that because an AI made it, nobody owns it and anyone may use it.
+> - Avoid: Free-plan output in a monetised game.
+> - Avoid: AI thumbnails showing scenes the game does not contain.
+> - AI-made art, audio or code in the game
+> - AI-assisted thumbnails and trailers
+> - NPC chat via `TextGenerator`
+>
+> Read more (13 KB note): ## 2. AI-made assets you upload · ## 3. AI features at runtime · ## 6. A compliance checklist by feature · ## Common mistakes
+<!-- tldr:end -->
+
 This note collects the rules that apply when AI is involved in a Roblox experience: assets made with AI before upload, AI features players interact with at runtime, and the licences of the AI tools themselves. The short version: Roblox treats AI-made content like any other content (you need the rights, it must follow the Community Standards, it must not mislead), and adds specific duties for experiences where players trigger AI responses (disclosure, notices, ratings, filtering).
 
 Everything here was checked against Roblox's Creator Hub ("Games with Generative AI", the AI overview, audio assets, thumbnails, secrets) and DevForum announcements in October 2026. Policies change; Roblox revised its Terms of Use in 2026. This note is a working summary, not legal advice. For the full compliance picture see [[Roblox Policies Ratings and Compliance]] and [[Age Checks and Safety Features]].

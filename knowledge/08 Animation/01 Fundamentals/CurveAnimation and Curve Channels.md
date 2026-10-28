@@ -3,6 +3,15 @@ tags: [fundamentals, api, reference, curveanimation, curves]
 ---
 # CurveAnimation and Curve Channels
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Calling `X()` on a read-only inspection pass (Creates empty FloatCurves inside clips you meant only to read)
+> - Avoid: Setting `RightTangent` on a Linear key (Runtime error)
+> - Avoid: Assuming tangents are per frame (Overshoot 30x or 60x too large or small; test the unit)
+>
+> Read more (16 KB note): ## Curve classes · ## Nuances and edge cases · ## Common mistakes
+<!-- tldr:end -->
+
 `CurveAnimation` is Roblox's second clip format. Instead of whole-rig snapshots at keyframe times (a [[KeyframeSequence Keyframe and Pose Reference|KeyframeSequence]]), it stores **one independent curve per channel**: a position curve and a rotation curve per joint, a float curve per face control, and a marker curve for events. The Animation Editor's curve editor produces it, it publishes like any other animation, and it is the natural format for tangent-level polish and facial animation.
 
 This note is the full reference for `CurveAnimation`, `FloatCurve`, `RotationCurve`, `EulerRotationCurve`, `Vector3Curve`, `MarkerCurve` and the key datatypes, plus guidance on when the format is worth it. Verified against the engine API dump and class pages (October 2026). Where the docs are silent (tangent units, angle units in Euler curves) this note says so instead of guessing.

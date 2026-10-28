@@ -3,6 +3,18 @@ tags: [level-design, obby, platforming, jump-math, difficulty, stage-design, val
 ---
 # Obby and Platforming Level Design
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Designed for JumpHeight, place uses JumpPower (or the reverse) -> Check `CharacterUseJumpPower`; redo the reach table
+> - Avoid: Raised a platform for looks -> Lower it or shorten the gap
+> - Avoid: Long chains with no rest -> Mid-stage checkpoint or split the chain
+> - Jump mode (height or power) written down; reach table computed and calibrated.
+> - Every stage raises one dial; difficulty attribute set.
+> - Chains longer than 5 or 6 jumps split by a checkpoint.
+>
+> Read more (20 KB note): ## 1. The jump arc, worked out · ## 3. The obstacle vocabulary · ## 9. Common mistakes · ## 10. Checklist
+<!-- tldr:end -->
+
 [[Genre Playbook - Obbies and Platformers]] covers the genre: variants, why obbies work on Roblox, the default movement numbers, teach-test-twist, checkpoint code, mobile fairness, moving platforms, towers and monetisation. This note is the level designer's companion to it. It works out the jump arc from first principles so you can design gaps on paper, builds an obstacle vocabulary with the variables that make each one hard, treats difficulty as a set of dials instead of a feeling, covers the camera and depth-perception problems peculiar to a third-person platformer, and ends with a validator script that catches impossible and trivial jumps before a playtester does.
 
 Labels: **Roblox docs (as of October 2026)**, **computed** (worked from the documented defaults; confirm in your place), **rule of thumb**.

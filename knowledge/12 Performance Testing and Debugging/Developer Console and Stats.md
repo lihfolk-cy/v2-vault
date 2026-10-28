@@ -3,6 +3,18 @@ tags: [performance, developer-console, stats, memory, overlays, debugging]
 ---
 # Developer Console and Stats
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Reading memory in Studio and trusting it.
+> - Avoid: Treating high memory as a bug. Docs: high usage alone is not necessarily a problem; investigate if the crash rate exceeds 2 to...
+> - Avoid: Looking only at the client. The server view needs owner or edit permission; ask the owner to check.
+> - The team knows how to open the console on every platform, including the menu route on phones.
+> - Server output is checked in a live server after every release.
+> - Baseline memory per category recorded per release (client on a mid phone, server at full load).
+>
+> Read more (18 KB note): ## 3. Memory categories · ## 6. A gated debug overlay · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 The Developer Console is the only debugging window that exists in a **live** game, on any device, including the server side of a real server. The `Stats` service is the scripting side of the same numbers. Together they let you answer "how much memory, in which category, how fast is the server ticking, what errors are firing" on a phone in a real server with real players, which Studio can never fully reproduce. This note covers the console's tools, the memory categories and what each means, the on-screen stat overlays, the `Stats` service API, and how to build your own gated debug overlay.
 
 Source labels: **Docs** (Creator Hub, as of October 2026), **Measured** (the reference project), **Rule of thumb**.

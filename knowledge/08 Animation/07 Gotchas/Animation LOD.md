@@ -3,6 +3,18 @@ tags: [performance, lod, runtime, design]
 ---
 # Animation LOD
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Skipping the whole update for far rigs, including time and events.
+> - Avoid: Updating every Nth frame but advancing by one frame's dt (slow motion at range).
+> - Avoid: All rigs re-tiering on the same frame (periodic spike).
+> - Time and gameplay events advance for every rig every frame.
+> - Skipped frames accumulate dt.
+> - Tiers re-evaluated on a staggered schedule, with hysteresis.
+>
+> Read more (13 KB note): ## 3. LOD for Lua players and procedural rigs · ## 5. A scheduler that respects time and events · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Level of detail for animation means spending evaluation time where the player can see the result, and almost none where they cannot. Done well it is invisible and cuts animation CPU by 3 to 10 times in crowded scenes. Done badly it causes the most confusing bugs in a game: hits that land without a swing, markers that never fire, enemies that teleport into a pose as you approach, and gameplay that differs by distance.
 
 The central rule, learned in one live action game:

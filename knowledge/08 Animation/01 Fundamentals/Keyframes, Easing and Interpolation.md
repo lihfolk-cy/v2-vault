@@ -3,6 +3,15 @@ tags: [fundamentals, keyframes, easing, interpolation]
 ---
 # Keyframes, Easing and Interpolation
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Easing set on the arriving key -> Put it on the leaving key
+> - Avoid: Legacy `Cubic` -> `CubicV2`
+> - Avoid: Key-to-key turns near 180 deg -> Mid keys; stay under 120
+>
+> Read more (12 KB note): ## Easing styles and their real shapes · ## Rotation interpolation: not slerp · ## Common mistakes
+<!-- tldr:end -->
+
 Between two keys, the Animator has to invent every frame. How it does that (which key's easing applies, what shape each easing has, how rotations are blended) decides whether your clip plays the way you authored it. Most of this is undocumented or documented wrongly, and one of the rules (rotation interpolation) changes depending on how your keyframes are spaced. This note is the practical guide; the raw measurements and the model code are in [[How the Animator Really Behaves]].
 
 ## The segment rule

@@ -3,6 +3,18 @@ tags: [architecture, security, validation, server-authority, combat]
 ---
 # Server Authority and Validation
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Validating only type, not value -> Add finiteness, range, integrality, length
+> - Avoid: Trusting Tool attributes or names from the client's copy -> Look up by id in server state
+> - Avoid: Yield between check and write -> Mark first; plan-then-apply; busy flags
+> - Every remote handler starts with rate limit and `Guard.args`.
+> - Every numeric argument is checked for NaN, infinity, range and integrality.
+> - Every Instance argument is checked for type, location, ownership and distance.
+>
+> Read more (19 KB note): ## A reusable validation module · ## Pattern: KitGuard-style ability validation · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 **Server authority** means the server holds the true game state and decides every outcome that matters; clients render, predict and request. **Validation** is how the server turns untrusted requests into safe decisions. Together they are the only real security a Roblox game has: client-side checks can always be removed by an exploiter (Roblox docs, "Security and cheat mitigation tactics").
 
 This note gives the layered validation model, a reusable validation module, the race conditions that cause most duplication bugs, a production-style ability validator ("KitGuard" pattern), data-driven hit validation, idempotent purchases and claims, and where the new server authority engine model fits. Exploit-specific defences are in [[Exploits and Anti-Cheat]]; rate limiting in [[Rate Limiting and Abuse Prevention]].

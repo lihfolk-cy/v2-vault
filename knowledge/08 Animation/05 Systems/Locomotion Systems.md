@@ -3,6 +3,18 @@ tags: [systems, locomotion, animate-script, gait, carry-layer]
 ---
 # Locomotion Systems
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Feet skate at top speed: Rate clamp below `speed / GroundSpeed` -> Author a gait for that speed, or widen the band check above
+> - Legs scissor on walk to run: Gaits start at time 0, or authored with different lead foot -> Phase-preserving swap, one foot-order convention
+> - Stumble on every bunny-hop: Land plays while moving -> Land only standing
+> - Each gait's authored GroundSpeed stored as data, read by the controller.
+> - The most common movement speed has a clip authored at that speed.
+> - For every gait, `[threshold_low, threshold_high]` is inside `[clamp_min, clamp_max] * GroundSpeed`.
+>
+> Read more (20 KB note): ## The universal set (one locomotion for everyone) · ## Gaits that cannot slide · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Locomotion is the animation the player sees most: every second they are not attacking, they are idling, walking, running, jumping or landing. It is also where small errors are most visible, because the eye locks onto feet. A swing that is 10% too fast is invisible; feet that skate 10% of their speed read as "cheap" instantly. This note covers how locomotion is built on Roblox, from the stock `Animate` script to a universal custom set with measured numbers from one live action game (the reference project). The design of the controller module itself is in [[Custom Locomotion Controller Design]].
 
 ## The three ways to own locomotion

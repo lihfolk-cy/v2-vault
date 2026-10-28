@@ -3,6 +3,15 @@ tags: [core-concept, performance, memory, vfx, scripting]
 ---
 # Object Pooling
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Creating an instance, parenting it into the world and later destroying it costs CPU, memory churn and, on the server...
+> - Pool on the client for visuals. Most pooled things (tracers, hit sparks, damage numbers) should exist only on the client.
+> - Reset everything on reuse. A pooled part keeps its old Transparency, Color, attached emitters' state and attributes.
+>
+> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+<!-- tldr:end -->
+
 **Object pooling** keeps a supply of pre-made instances (bullets, damage numbers, effect parts, list rows) and reuses them instead of creating and destroying new ones each time. "Spawn" takes one from the pool and positions it; "despawn" hides it and returns it.
 
 ## Why it matters on Roblox

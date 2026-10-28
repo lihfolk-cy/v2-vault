@@ -3,6 +3,18 @@ tags: [input, userinputservice, contextactionservice, input-action-system, touch
 ---
 # Input - UserInputService and ContextActionService
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Gameplay handlers that ignore `gameProcessedEvent`.
+> - Avoid: `MouseButton1Click` instead of `Activated`.
+> - Avoid: CAS bindings never unbound when the context ends.
+> - All UI actions use `Activated`.
+> - Every `UserInputService` gameplay handler checks `gameProcessedEvent`.
+> - Actions have keyboard, gamepad and touch bindings.
+>
+> Read more (15 KB note): ## 4. ContextActionService · ## 5. The Input Action System · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Roblox has three generations of input API living side by side: `UserInputService` (raw events and device state), `ContextActionService` (named actions bound to inputs while a context is active, with automatic touch buttons), and the newer **Input Action System** (`InputContext`, `InputAction`, `InputBinding` instances configured at edit time). This note explains what each is for, how input flows between UI and the game, how to show the right prompt for the player's device, and the production traps (typing in chat triggers abilities, a held key stuck after a menu opens, touch buttons stacking on top of each other).
 
 Sources: **Docs** (UserInputService, ContextActionService, GuiObject, GuiButton, the "Input Action System", "Input" and "Cross-platform" guides; October 2026), the **reference project** (one production game), and **rule of thumb**.

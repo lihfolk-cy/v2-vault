@@ -3,6 +3,18 @@ tags: [data, trading, duplication, transactions, security, economy, luau]
 ---
 # Trading Systems Without Duplication
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Client sends the offer list at confirm -> Server-owned offers, intents only
+> - Avoid: No version counter -> Version on every edit; ready and confirm carry it
+> - Avoid: Trade lock not checked by fusion or sell -> One inventory consume function checks the lock
+> - Scope chosen; premium currency not tradeable.
+> - Server-owned offers; edits bump a version; ready and confirm carry it.
+> - Countdown before confirm; any edit cancels it.
+>
+> Read more (20 KB note): ## 3. The state machine and the server-owned offer · ## 5. Committing across two profiles · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Player-to-player trading is the feature most likely to destroy an economy. A single duplication bug turns your rarest item into the most common one in a weekend, and every trade after that spreads the copies. The cause is almost never exotic: a trade changes **two** player profiles, Roblox data stores have no multi-key transaction, and the gap between "player A saved" and "player B saved" is where items are born or lost.
 
 This note builds a same-server trade system that is correct under crashes, disconnects, exploit clients and rolling updates. It covers the state machine, the commit protocol (a small write-ahead journal with a single decision record), anti-scam UI rules, policy gates, and how to find duplicates that already exist.

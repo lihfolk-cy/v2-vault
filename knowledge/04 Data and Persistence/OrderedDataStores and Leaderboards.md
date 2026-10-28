@@ -3,6 +3,18 @@ tags: [data, ordereddatastore, leaderboards, memorystore, ranking]
 ---
 # OrderedDataStores and Leaderboards
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Writing on every score change. Symptom: throttling warnings and dropped writes at peak.
+> - Avoid: Using the board as the source of truth. Symptom: scores cannot be corrected after an exploit or rollback.
+> - Avoid: Storing huge numbers directly. Symptom: errors or wrong ordering for big values.
+> - Ordered stores are indexes; the profile is the truth.
+> - Writes on an interval and on leave, only for loaded profiles, only when changed.
+> - Reads cached per server, staggered, with a fallback display.
+>
+> Read more (17 KB note): ## Writing scores · ## Nuances and edge cases · ## Checklist · ## Common mistakes
+<!-- tldr:end -->
+
 A global leaderboard looks trivial ("sort everyone by coins") and is one of the easiest ways to throttle your whole experience. This note covers `OrderedDataStore` exactly as it behaves in October 2026 (integers only, no versioning, small per-server write budgets, 100-entry pages), the read and write patterns that scale, periodic boards (daily, weekly), when a MemoryStore sorted map is the better tool, how to show a player's own rank, big-number scores for simulators, and what one production game's hub leaderboards did.
 
 Prerequisite: [[DataStore Fundamentals]].

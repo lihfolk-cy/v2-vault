@@ -3,6 +3,18 @@ tags: [world-building, terrain, voxels, api, materials, tools]
 ---
 # Terrain Tools and Terrain API
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Recolouring a material for one area -> Use a different material
+> - Avoid: Using Studio undo to recover terrain -> Snapshot with CopyRegion first
+> - Avoid: Regenerating a whole area to fix a corner -> Edit the smallest region; snapshot
+> - Floor material list per zone documented; no shared material recoloured.
+> - Snapshot (CopyRegion) taken and named before every edit.
+> - Writes chunked, read back, verified.
+>
+> Read more (17 KB note): ## The scripting API · ## Recipes · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Roblox Terrain is a voxel field: the world is divided into **4 x 4 x 4 stud cells**, each with a **material** and an **occupancy** between 0 and 1 (Roblox docs). The engine builds a smooth surface from those numbers, renders it with its own LOD, and collides against it. Terrain is the cheapest way to cover large ground areas, make caves and cliffs, and fill water bodies; it is also global, hard to undo, and full of measured quirks. This note covers the Studio tools briefly, the scripting API in depth, and the hard lessons of one production game that lost and rebuilt its terrain.
 
 ## When to use Terrain (and when not)

@@ -3,6 +3,18 @@ tags: [luau, advanced-luau, coroutines, scheduler, task, timers, time-slicing, c
 ---
 # Custom Schedulers and Coroutine Patterns
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - All timers stall for seconds: A callback yielded inside the inline `pcall` -> Callbacks never yield; spawn their slow work
+> - Job runs twice through the same code, or skips: An engine-yielded thread was resumed manually -> Yield token check; never resume engine-yielded threads
+> - Server freezes under load: Fixed-step loop without a step cap -> Clamp steps per frame, drop backlog
+> - There is a written reason (count, pause, ordering, tests) for each custom scheduler.
+> - One engine connection drives each scheduler.
+> - Callbacks run by your scheduler must not yield, and the module says so.
+>
+> Read more (22 KB note): ## 2. A timer queue on a binary heap · ## 4. Cooperative jobs: coroutines as resumable work · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Task Library Coroutines and Yielding]] explains the engine's scheduler: `task.spawn`, `task.defer`, `task.delay`, `task.wait`, what yields, and how to resume threads safely. [[Luau Performance Patterns with Benchmarks]] shows a basic time-sliced loop with a millisecond budget. This note is about the cases where the engine's scheduler is not enough and you build your own on top of it: thousands of timers, pausable and time-scaled game clocks, fixed-step simulation, cooperative jobs that spread work over frames, structured cancellation, and deterministic tests. It also covers the failure modes that only appear once you mix your own resumes with the engine's.
 
 The rule underneath all of it: **the engine owns time; you own order.** A custom scheduler is a data structure that decides which of your callbacks runs next, driven by one engine event per frame.

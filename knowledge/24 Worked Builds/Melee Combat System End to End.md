@@ -3,6 +3,18 @@ tags: [worked-build, combat, melee, hitboxes, server-authority, anti-exploit, lu
 ---
 # Melee Combat System End to End
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Damage in a `Touched` handler on the blade.
+> - Avoid: Sending damage from the client. `Attack:FireServer(target, 50)` is an invitation.
+> - Avoid: Scripts inside the Tool. Every player gets a copy; fixes need to touch every copy; checks get duplicated and drift.
+> - Tool has no scripts; Tool name matches a `CombatConfig.Weapons` key
+> - Animations are owned by you or your group and set to Action priority
+> - Client sends only "attack" and "block(bool)"
+>
+> Read more (31 KB note): ## 5. CombatService (server) · ## 6. CombatClient (client) · ## 10. Common mistakes · ## 12. Checklist
+<!-- tldr:end -->
+
 This note builds a server-authoritative sword combat system from an empty place: a `Tool` with no scripts inside it, a three-hit combo with a windup, server-side box hitboxes with line-of-sight checks, blocking that only works from the front, hit stun, knockback that respects network ownership, kill credit for quests, and client feedback (animations, hit sound, damage numbers). It is deliberately the simplest design that is safe; section 9 explains where and how to go further.
 
 Background reading: [[Combat Systems Architecture]] (the big picture), [[Hitboxes and Hit Detection]] (every hitbox technique), [[Client Prediction and Reconciliation for Combat]] (the latency problem), [[Combat Combo Systems]] and [[Weapon Swing Design]] (feel), and [[Detecting Combat Exploits - Reach Rate and Aim]] (what cheaters try). Other builds: [[Worked Builds Start Here]].

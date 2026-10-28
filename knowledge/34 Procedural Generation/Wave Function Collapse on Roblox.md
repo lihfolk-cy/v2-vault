@@ -3,6 +3,18 @@ tags: [procedural, generation, wfc, wave-function-collapse, tiles, constraints, 
 ---
 # Wave Function Collapse on Roblox
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Missing filler tile for a socket -> Add a straight-through or filler tile
+> - Avoid: Duplicate rotations kept -> Dedupe rotations by socket signature
+> - Avoid: Asymmetric sockets matched as equal -> Directed socket pairs
+> - Sockets named by what crosses the edge; asymmetric ones directed.
+> - Every socket has a filler tile; tile count fits the solver.
+> - Rotations generated and deduplicated.
+>
+> Read more (19 KB note): ## Designing a tile set · ## A complete solver in strict Luau · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Wave function collapse (WFC) is a constraint solver dressed up with a physics name. You give it a set of tiles and rules about which tiles may sit next to which; it fills a grid so every rule holds. It is excellent at **local coherence** (roads connect, walls meet, rivers flow into rivers) and poor at **global structure** (a town with a centre, a dungeon with a boss at the end). This note explains the algorithm, gives a complete strict Luau implementation with bitmask domains, and covers the Roblox-specific parts: tile kits, rotations, performance, combining it with other generators, and when it is the wrong tool. It assumes the seed discipline of [[Seeds Determinism and Reproducible Worlds]].
 
 ## The algorithm in plain terms

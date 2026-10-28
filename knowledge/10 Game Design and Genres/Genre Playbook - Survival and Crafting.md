@@ -3,6 +3,18 @@ tags: [game-design, genre, survival, crafting, building, resources, inventory, p
 ---
 # Genre Playbook - Survival and Crafting
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Persistent shared world as a first project -> Run-based or per-player bases first
+> - Avoid: World-space saved coordinates -> Plot-relative, grid-snapped, versioned
+> - Avoid: Loading a whole base in one frame -> Batched, nearest first
+> - Persistence model chosen and explained in-game ("your base saves; the world resets").
+> - Base save and load tested at the maximum piece count, including version migration.
+> - Load time and server memory measured with a full server of large bases.
+>
+> Read more (15 KB note): ## 1. Core loop · ## 2. Session length and persistence model · ## 9. Common mistakes · ## 10. Launch checklist
+<!-- tldr:end -->
+
 Survival games put players in a hostile world with needs (hunger, thirst, temperature, health) and let them gather resources, craft tools, build shelter and push into more dangerous areas. On Roblox the genre spans several shapes: short-session co-op survival (survive a set number of nights), persistent-world sandbox survival with bases that save, PvP survival where other players are the main threat, and "survive the disaster" party variants. They share one engine: **gather, craft, build, survive, expand**.
 
 The genre has deep retention when it works, because players invest hours in a base they care about. It also has the most dangerous technical profile on Roblox: thousands of player-placed parts, saving and loading those parts, item duplication bugs and griefing.

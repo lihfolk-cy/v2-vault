@@ -3,6 +3,16 @@ tags: [core-concept, performance, rendering, art]
 ---
 # Draw Calls
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Phones are the bottleneck. A mid-range phone that draws a million triangles comfortably can stall at a few hundred unbatched...
+> - Unique meshes and unique textures break batching.
+> - Colour changes are usually cheap; texture changes are not.
+> - Transparency costs extra. Transparent and semi-transparent surfaces are sorted and drawn separately, often unbatched, and...
+>
+> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+<!-- tldr:end -->
+
 A **draw call** is one request from the engine to the GPU to draw a batch of geometry with one set of material and texture state. The cost of a scene often depends more on how many draw calls it needs than on how many triangles it has, because each call carries CPU overhead on the render thread.
 
 ## Why it matters on Roblox

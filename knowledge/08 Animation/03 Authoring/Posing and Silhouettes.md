@@ -3,6 +3,18 @@ tags: [authoring, craft, posing, silhouette, r15]
 ---
 # Posing and Silhouettes
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Posing only in the side view -> check every key pose from the gameplay camera
+> - Avoid: Symmetric arms and legs -> break symmetry everywhere
+> - Avoid: Weapon inside the silhouette -> move the weapon outside the body outline
+> - Clear line of action in every key pose
+> - Centre of mass over the base of support (unless falling)
+> - No twinning
+>
+> Read more (12 KB note): ## What makes a pose read · ## Proportions and the R15 rig · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A pose is the unit of readability. Players read your animation as a sequence of shapes, mostly from behind, mostly small, often half hidden by effects. If the key poses read as clear silhouettes, the motion between them almost takes care of itself; if they do not, no amount of polish saves the clip.
 
 This note covers line of action, balance, asymmetry, silhouette testing in Studio, and the limits of the R15 rig that turn good drawings into bad poses. Numbers are from the reference project (one live action game) where marked, otherwise rules of thumb.

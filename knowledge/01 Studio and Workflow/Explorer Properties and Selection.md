@@ -3,6 +3,18 @@ tags: [studio, explorer, properties, selection, attributes, workflow]
 ---
 # Explorer Properties and Selection
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: `Ctrl V` expecting paste into selection -> `Ctrl Shift V`
+> - Avoid: Increment naming on while code uses names -> Turn it off, or look up by tag
+> - Avoid: Multi-select edit across mixed classes -> Search with `is:` first, then select all matches
+> - Know `Ctrl Shift X` (search) and `Ctrl Shift P` (property filter).
+> - Use `is:`, `tag:` and `.` queries before writing a script.
+> - Review a bulk selection in Properties before typing a value.
+>
+> Read more (15 KB note): ## 3. Properties · ## 6. Safe bulk edits: the Pre-attribute pattern · ## 8. Common mistakes · ## 9. Checklist
+<!-- tldr:end -->
+
 The Explorer and Properties windows are where you spend most of your non-coding time in Studio. Used well, they replace dozens of throwaway scripts: the Explorer search language can find "every unanchored MeshPart under the map with CastShadow on" in one query, and Properties can edit all of them at once. Used carelessly, selection-driven edits are the most common way to damage a shared place. This note covers both windows in depth, the `Selection` service for scripts, and the reversible bulk-edit pattern the reference project used for every large pass. Facts are from the Studio docs as of October 2026 unless marked.
 
 Source labels: **Docs** (official docs), **Measured** (reference project), **Rule of thumb**.

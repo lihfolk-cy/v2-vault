@@ -3,6 +3,18 @@ tags: [genre-system, racing, vehicles, checkpoints, worked-build, anti-cheat, ti
 ---
 # Racing Laps and Checkpoints End to End
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Client-reported lap times. Never.
+> - Touch-based gates at high speed (section 1).
+> - Gates facing backwards. The start-up assert catches it.
+> - Solo race: countdown, car cannot move before GO, three laps counted, finish time shown, best lap saved.
+> - Drive backwards over the start line: no lap.
+> - Drive at full speed through a tight chicane: no missed gates (lower `TickHz` to 10 to stress it).
+>
+> Read more (30 KB note): ## 4. The server: RaceService · ## 5. The client: RaceClient · ## 6. Edge cases and failure modes · ## 9. Test checklist
+<!-- tldr:end -->
+
 This note builds the race layer around a car: a grid, a countdown that cannot be jumped, gate crossing detected by swept segments so cars at 200 studs per second never tunnel through a checkpoint, crossing times interpolated between server frames, laps and finish order, live race positions, wrong-way detection, resets to the last gate, plausibility checks against the car's real top speed, ghost collisions between racers, a DNF timer, and best laps saved only for clean laps. The car itself is out of scope; build it with [[Cars with Constraints - Suspension Steering and Drive]]. [[Genre Playbook - Racing and Driving]] explains network ownership and why lap times must not come from the client; this note implements the server-side timing it describes and covers the geometry and timing details that decide whether close finishes are fair.
 
 > **All code is reviewed, not run.** Strict Luau against Roblox docs (as of October 2026), checked by reading. Use the checklist in section 9.

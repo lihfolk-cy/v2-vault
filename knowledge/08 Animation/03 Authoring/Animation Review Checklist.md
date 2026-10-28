@@ -3,6 +3,16 @@ tags: [authoring, review, checklist, qa]
 ---
 # Animation Review Checklist
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Watch it in context first. On the real character, with the real weapon, at the real speed and priority, over the real idle and...
+> - Hit frames land when design says. `Hit` markers sit on the contact frame; data tables (server hit times) match the markers.
+> - Something moves on the input frame for player actions.
+> - Secondary motion on dangling parts and the free hand.
+>
+> Read more (11 KB note): ## 3. Craft (should-fix) · ## 4. Technical safety (blockers)
+<!-- tldr:end -->
+
 A review pass catches problems before players do. This checklist collects every check from the authoring notes into one place, ordered the way a review actually goes: first "does it work in the game", then "does it read", then "is it well made", then "is it technically safe", then "is it shippable". Thresholds come from the reference project (one live action game) where marked; adjust distances if your character is a different size.
 
 Use it as a gate. A clip with any **blocker** does not ship; **should-fix** items need a reason to stay; **polish** items are judgement.

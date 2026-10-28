@@ -3,6 +3,18 @@ tags: [accessibility, motion-sickness, reduced-motion, camera, fov, flashing, ph
 ---
 # Motion Sensitivity and Camera Comfort
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Camera roll on hits, landings or dizziness effects.
+> - Avoid: Head bob on by default with no off switch.
+> - Avoid: Several systems tweening FOV independently.
+> - One comfort module combines `ReducedMotionEnabled` with saved player overrides and fires a change signal.
+> - FOV slider (about 60 to 100), one FOV owner, effect contributions scaled and clamped.
+> - Camera shake scalable to zero; no gameplay roll.
+>
+> Read more (21 KB note): ## 3. A comfort settings module · ## 5. Camera motion budget · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Accessibility]] covers `GuiService.ReducedMotionEnabled` for UI tweens. [[Camera Shake and Camera FX]] covers how shake is built and how the reference project scaled it under reduced motion. [[Camera Systems]] covers the camera itself. This note is about the player's body: why some players get sick or get headaches in Roblox games, which camera and effect choices cause it, a comfort settings module that ties the platform preference to game-specific controls, a horizon-locked vehicle camera, a speed vignette, and a flash limiter that keeps impact frames and rarity reveals under the photosensitivity guideline.
 
 Sources: **Roblox docs (as of October 2026)** for engine facts (`Camera`, `GuiService`, `UserGameSettings`), the public **WCAG 2.x** guideline for flash thresholds, and **rule of thumb** for comfort numbers (the research on simulator sickness is broad; the numbers here are design defaults, not medical limits).

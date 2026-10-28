@@ -3,6 +3,18 @@ tags: [ai, generative, mesh, cube, generationservice, 3d]
 ---
 # Roblox Generative AI - Cube Mesh and Texture Generation
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Placing a generated mesh at whatever size it arrived.
+> - Avoid: Firing many generation jobs in parallel and reading "Too Many Requests" as a bug.
+> - Avoid: Using anatomy words in prompts for a stylised or horror set and wondering why everything fails.
+> - Raw size and proportions checked after every generation.
+> - Jobs queued, a few at a time.
+> - Collision and render fidelity set; triangles within budget.
+>
+> Read more (16 KB note): ## 2. The Studio-side tools · ## 3. `GenerationService`: generation at runtime · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Roblox runs its own generative 3D system, called Cube. In Studio it shows up as mesh generation, procedural models, mesh segmentation and the Texture Generator. At runtime it shows up as `GenerationService`, which lets your servers (and so your players) generate objects during play. This note covers what each piece produces, what it is good for, the limits that are published, and the failure modes seen in production. For material and texture generation in depth see [[AI Material and Texture Generation]]; for 3D generators outside Roblox see [[AI 3D Model Generation Outside Roblox]].
 
 Status: as of October 2026, verified against the Roblox Creator Hub (Assistant guide, Texture Generator, model generation guide, `GenerationService` reference, "Accelerated workflows" AI overview) and Roblox's March 2025 newsroom post "Introducing Roblox Cube". Several of these features are labelled beta or "early preview". Limits change.

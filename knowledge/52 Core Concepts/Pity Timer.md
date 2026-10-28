@@ -3,6 +3,16 @@ tags: [core-concept, economy, rng, monetization, game-design]
 ---
 # Pity Timer
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Collection and RNG games live on rolls, eggs and drops.
+> - Pity changes the real odds. With a hard guarantee at 90 and a base 1 percent chance, the effective rate is noticeably higher...
+> - Hard pity versus soft pity. Hard pity is a guarantee at roll N.
+> - The counter must be saved. A pity counter held only in server memory resets when the player rejoins, which players notice and...
+>
+> Read more (3 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+<!-- tldr:end -->
+
 A **pity timer** (or pity system) guarantees a rare outcome after a set number of failures: "a legendary within 90 rolls", or a chance that rises with each miss until it hits. It caps the worst-case bad luck without changing the average much.
 
 ## Why it matters on Roblox

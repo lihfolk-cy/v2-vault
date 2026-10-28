@@ -3,6 +3,18 @@ tags: [modeling, voxel, shading, ambient-occlusion, vertex-colors, lighting, bev
 ---
 # Voxel Shading - Baked AO Edges and Lighting
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Diamond-shaped dark patches on faces: Wrong triangulation diagonal for the AO values -> Split along the diagonal joining the darker pair; triangulate yourself
+> - Inside corners only partly dark: Missing the "both sides filled" rule -> AO level 0 when both side cells are filled
+> - Baked AO blotchy on big faces: AO baked to vertex colours on greedy rectangles -> Texture AO for greedy meshes, or per-cell quads near occluders
+> - Decided per asset: vertex AO, texture AO, or none.
+> - AO computed with the both-sides rule and triangulated along the correct diagonal.
+> - Merging limited to faces with matching AO, or AO moved to a texture.
+>
+> Read more (18 KB note): ## 2. Per-corner voxel ambient occlusion · ## 3. Baking voxel AO into vertex colours in Blender · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A voxel model with flat colours and no shading looks like a diagram. What makes good voxel art look solid is shading at the scale of the cells: darker corners where cubes meet, a soft gradient down into crevices, a lighter rim on outside edges, and lighting that separates the top, sides and underside. Some of that the engine provides, much of it it does not, and on low-end phones it provides even less. This note covers the three tools you control: **baked ambient occlusion** per voxel corner (the classic "smooth lighting" of block games), **edge treatments** (bevels, rim colour, normal-mapped bevels), and **lighting setup** in Roblox for blocky art, including what each lighting style does to small voxels. It builds on the shading section of [[Voxel and Blocky Modeling]] (three tones per material) and on [[Baking Lighting and Detail into Textures]], which covers baking into textures in general.
 
 ## 1. What the engine gives you and what it does not

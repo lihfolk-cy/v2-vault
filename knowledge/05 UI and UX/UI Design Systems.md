@@ -3,6 +3,18 @@ tags: [ui, design-system, tokens, theming, styling, components, audit]
 ---
 # UI Design Systems
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Colours picked per screen instead of by role.
+> - Avoid: A design rule naming a removed font (Gotham).
+> - Avoid: Per-panel skins fighting the theme.
+> - Tokens for colour roles, type, spacing, radius, stroke, motion.
+> - Component builders or style rules; screens never hard-code values.
+> - Exceptions are attributes that every pass respects.
+>
+> Read more (17 KB note): ## 3. Theme module: one source of truth in code · ## 4. The engine option: UI styling · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A design system is the set of decisions that make forty screens look like one game: a palette with roles, a type scale, spacing and radius steps, a handful of components with defined states, and motion rules. On Roblox it can live in a theme ModuleScript, in the engine's own UI styling system (`StyleSheet`, tokens, themes, queries), or both. This note covers what to put in a system, how to enforce it, the cartoon "simulator" style in concrete numbers, and the tooling that took one production game's 92 screens to a measured 10/10 for positioning and sizing.
 
 Sources: **Docs** ("UI styling", "UI appearance modifiers", `UIStroke`, `UICorner`, `UIGradient`, `CanvasGroup`; October 2026), the **reference project** (one production game), LihFolk's own [[LihFolk UI Spec]], and **rule of thumb**.

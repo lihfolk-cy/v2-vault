@@ -3,6 +3,18 @@ tags: [architecture, networking, physics, ownership, security]
 ---
 # Network Ownership
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Leaving boss NPCs on automatic ownership -> `SetNetworkOwner(nil)` after spawn
+> - Avoid: Prompts and ClickDetectors on unanchored parts -> Anchor them or server-own them; server distance check
+> - Avoid: Awarding from client-owned Touched -> Server proximity check or server queries
+> - Every gameplay-critical unanchored object has a deliberate owner.
+> - No valuable interaction relies on client-owned Touched or prompt position alone.
+> - Vehicles assign the driver and reset on exit.
+>
+> Read more (16 KB note): ## When to set ownership manually · ## Security: what owned physics lets an exploiter do · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Roblox physics is **distributed**: each unanchored assembly is simulated by one machine, its **network owner**, and that machine's results are replicated to everyone else. Owner can be the server or any one client. Ownership is why your character feels instant, why a ball you kick responds immediately, and also why exploiters can fly, teleport, fling other players and fire Touched events from across the map. This note covers the documented rules, how automatic ownership behaves in practice, when and how to set ownership yourself, the security model, and the diagnosis tools.
 
 Related: [[Physics Assemblies and Constraints]] (what an assembly is), [[Replication and Ownership]] (animation and ownership), [[Exploits and Anti-Cheat]] (movement validation).

@@ -3,6 +3,18 @@ tags: [modeling, texturing, pbr, baking, blender, cycles, surfaceappearance]
 ---
 # Texturing and PBR Baking
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Baking colour with lighting contributions -> Color only
+> - Avoid: Data maps in sRGB -> Non-Color everywhere
+> - Avoid: Image node not active before bake -> Select and activate the node in each material
+> - Metalness workflow; spec/gloss converted.
+> - Colour map sRGB, all other maps Non-Color, verified pixel values.
+> - Metalness binary except transitions; dielectric albedo within range.
+>
+> Read more (20 KB note): ## 1. The SurfaceAppearance maps · ## 4. Baking in Blender with Cycles · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Roblox renders custom-textured meshes through `SurfaceAppearance`, a metalness-workflow PBR material with five maps. This note explains what each map means to the renderer, which colour space each must be authored in, how to bake them in Blender with Cycles (including selected-to-active baking with a cage), the roughness and metalness conventions that make assets look right under Roblox lighting, and what a texture set costs. Specs are from the Creator Hub (checked October 2026); "measured" items come from one production game, the reference project.
 
 Prerequisites: a clean unwrap ([[UV Unwrapping]]). For normal maps specifically, see [[Normal Maps and Detail Baking]]. For the tool side, see [[Substance Painter and Texturing Tools]].

@@ -3,6 +3,18 @@ tags: [world-building, art, materials, materialvariant, materialservice, surface
 ---
 # Materials MaterialVariants and SurfaceAppearance
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - TextureID wins over Material. A MeshPart with a TextureID ignores Material changes until the TextureID is cleared (measured).
+> - Overrides are global, and so are terrain colours.
+> - Dark colours kill textures. Keep albedo colours above about 0.06 to 0.085 luminance if the texture must read.
+> - `Use2022Materials` confirmed for the place; colours matched under that set.
+> - Override slots planned and documented; terrain materials chosen with global colours in mind.
+> - MaterialVariants live in MaterialService with a stable naming convention.
+>
+> Read more (16 KB note): ## MaterialService and MaterialVariant · ## SurfaceAppearance · ## Gotchas collected · ## Checklist
+<!-- tldr:end -->
+
 Roblox has three layers of surface appearance, and mixing them up is the cause of most "why won't this change colour / texture" bugs:
 
 1. **`BasePart.Material`**: the built-in material enum (Plastic, Wood, Slate, Neon, Glass...). It sets a tiling texture **and** physical properties (density, friction, elasticity) and footstep sounds.
