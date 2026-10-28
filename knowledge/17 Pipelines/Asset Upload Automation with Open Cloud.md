@@ -1,0 +1,277 @@
+---
+tags: [pipelines, open-cloud, upload, automation, assets, publishing, python]
+---
+# Asset Upload Automation with Open Cloud
+
+Uploading is the stage that most often stays manual, and it is the one that hurts most at scale: 150 icons, 40 meshes, 80 sound takes, each dragged into Studio, each id copied by hand into a config. **Open Cloud** is Roblox's set of HTTP APIs authenticated with API keys or OAuth; its Assets API uploads files and returns asset ids, and its Place Publishing API pushes place files. With them, uploads become a script that writes an id map, and the id map feeds every install step. This note is the end-to-end recipe, with the verified API facts as of October 2026. The broader Open Cloud surface (DataStores, MessagingService, users, groups) is in [[Open Cloud APIs]]; place publishing in a release context is in [[Build Test and Release Pipeline]].
+
+## The upload routes compared
+
+| Route | Automatable | Good for | Limits |
+|---|---|---|---|
+| Studio 3D Importer / Asset Manager | no | one-off imports, rigs, importer options | manual |
+| Roblox's Blender add-on | partly (drive it with a queue) | many meshes from Blender | needs an interactive signed-in Blender session |
+| **Open Cloud Assets API** | fully | CI, batch images, audio, models | quotas per type; one asset per call |
+| Plugin / MCP image upload from a URL | partly | images while working in Studio | needs the file reachable over HTTP |
+
+One production game used the Blender add-on for meshes (a queue script fed it object by object and wrote `upq_ids_<tag>.json`), a Studio-side image upload fed from a local HTTP server for icons, and the licensed library for most sounds. Open Cloud replaces all three with one scripted path when you want CI or batch uploads without anyone sitting at Studio.
+
+## The Assets API (verified facts)
+
+From the Roblox docs (as of October 2026; the Assets endpoints are marked **Beta**):
+
+| Operation | Endpoint |
+|---|---|
+| Create | `POST https://apis.roblox.com/assets/v1/assets` |
+| Get operation result | `GET https://apis.roblox.com/assets/v1/operations/{operationId}` |
+| Get asset | `GET https://apis.roblox.com/assets/v1/assets/{assetId}` |
+| Update | `PATCH https://apis.roblox.com/assets/v1/assets/{assetId}` |
+| List versions / get version | `GET .../assets/{assetId}/versions`, `.../versions/{versionNumber}` |
+| Roll back | `POST .../assets/{assetId}/versions:rollback` |
+| Archive / restore | `POST .../assets/{assetId}:archive`, `POST .../assets/{assetId}:restore` |
+
+Request format for create: **multipart form data** with
+
+- a `request` field holding JSON: `assetType`, `displayName`, `description`, and `creationContext.creator` with either `userId` or `groupId`;
+- a `fileContent` field with the file and its content type (the docs' example uses `type=model/fbx`).
+
+The create call returns `{ "path": "operations/{operationId}" }`. You then poll the operation until `done` is true; the finished `response` holds the `assetId`, `revisionId`, `assetType` and `moderationResult.moderationState`.
+
+Authentication: an API key in the `x-api-key` header, or OAuth 2.0 with the `asset:read` and `asset:write` scopes.
+
+Supported types (Roblox docs):
+
+| assetType | Formats | Notes |
+|---|---|---|
+| Audio | `.mp3`, `.ogg`, `.wav`, `.flac` | up to 7 minutes; **100 uploads per month if ID-verified, 10 if not**; not updatable |
+| Decal (images) | `.png`, `.jpeg`, `.bmp`, `.tga` | smaller than 8000 x 8000 px; not updatable |
+| Model | `.fbx`, `.gltf`, `.glb`, `.rbxm`, `.rbxmx` | uploads as a Model container of MeshParts, as a package |
+| Animation | `.rbxm`, `.rbxmx` | files edited outside Studio might not upload or work |
+| Mesh | only content downloaded from the Asset Delivery API | not updatable |
+| Video | `.mp4`, `.mov` | up to 5 minutes, 4096 x 2160; 20 per day if 13+ and ID-verified |
+
+General limits: one asset per call; the docs state file content up to 20 MB for create and update (the same page lists 3.75 GB for video without reconciling the two). **Update** only replaces content for `.fbx` model files; metadata-only updates are not subject to content limits. Rate limits for these endpoints are not stated on the guide page, so design for HTTP 429 with backoff.
+
+Two consequences for pipelines:
+
+- **Most types cannot be updated in place.** A re-rendered icon or a re-mixed sound is a **new asset id**. Your install step must rewrite references, which is why the id map matters.
+- **Quotas are the real limit for audio.** 100 audio uploads a month is generous for hand-picked sounds and tight for synthesised banks. Design banks to reuse takes (see [[Audio Pipeline]]).
+
+## The API key
+
+Create the key on the Creator Hub (Open Cloud > API Keys):
+
+- add the **Assets** API with read and write;
+- choose the creator the assets belong to (your user or the group that owns the game; assets for a group game should be uploaded to the group, or the game may not be allowed to use them);
+- restrict by IP address where your CI runners allow it, set an expiry;
+- store it as a secret in CI or in an environment variable locally, never in the repo, never printed.
+
+One key per purpose: an upload key, a test-place publish key, a live publish key. If one leaks, you revoke one capability.
+
+## The uploader script
+
+A production uploader needs more than one POST: a manifest of what to upload, content types, polling, retries with backoff on 429 and 5xx, an id map written **as it goes** (so a crash halfway does not lose ids or re-upload), and a skip for files already uploaded with the same content hash.
+
+```python
+# tools/upload_assets.py
+# Usage: RBX_API_KEY=... py -I tools/upload_assets.py manifest.json ids.json
+# manifest.json: [{"file": "out/icons/sword_iron.png", "type": "Decal", "name": "sword_iron_icon"}, ...]
+import hashlib, json, mimetypes, os, sys, time, pathlib, requests
+
+API = "https://apis.roblox.com/assets/v1"
+KEY = os.environ["RBX_API_KEY"]
+CREATOR = {"groupId": os.environ["RBX_GROUP_ID"]} if os.environ.get("RBX_GROUP_ID") else {"userId": os.environ["RBX_USER_ID"]}
+
+CONTENT_TYPES = {  # common MIME types; check the docs' table if an upload is rejected
+    ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".bmp": "image/bmp", ".tga": "image/tga",
+    ".mp3": "audio/mpeg", ".ogg": "audio/ogg", ".wav": "audio/wav", ".flac": "audio/flac",
+    ".fbx": "model/fbx", ".glb": "model/gltf-binary", ".gltf": "model/gltf+json",
+    ".rbxm": "model/x-rbxm", ".rbxmx": "model/x-rbxmx",
+}
+
+def sha(path):
+    return hashlib.sha256(pathlib.Path(path).read_bytes()).hexdigest()[:16]
+
+def call(method, url, **kw):
+    for attempt in range(8):
+        r = requests.request(method, url, headers={"x-api-key": KEY}, timeout=120, **kw)
+        if r.status_code == 429 or r.status_code >= 500:
+            wait = float(r.headers.get("Retry-After", 0)) or min(60, 2 ** attempt)
+            print(f"  {r.status_code}, retry in {wait:.0f}s"); time.sleep(wait); continue
+        if not r.ok:
+            raise RuntimeError(f"{r.status_code} {r.text[:500]}")
+        return r.json()
+    raise RuntimeError("gave up after retries")
+
+def upload(item):
+    path = pathlib.Path(item["file"])
+    ctype = CONTENT_TYPES.get(path.suffix.lower()) or mimetypes.guess_type(path.name)[0]
+    request = {
+        "assetType": item["type"],
+        "displayName": item["name"][:50],
+        "description": item.get("description", ""),
+        "creationContext": {"creator": CREATOR},
+    }
+    with open(path, "rb") as f:
+        op = call("POST", f"{API}/assets",
+                  files={"request": (None, json.dumps(request), "application/json"),
+                         "fileContent": (path.name, f, ctype)})
+    op_id = op["path"].split("/")[-1]
+    for _ in range(120):                       # poll up to about 4 minutes
+        res = call("GET", f"{API}/operations/{op_id}")
+        if res.get("done"):
+            if "error" in res:
+                raise RuntimeError(json.dumps(res["error"]))
+            return res["response"]
+        time.sleep(2)
+    raise RuntimeError("operation did not finish")
+
+def main(manifest_path, ids_path):
+    manifest = json.load(open(manifest_path, encoding="utf-8"))
+    ids = json.load(open(ids_path, encoding="utf-8")) if os.path.exists(ids_path) else {}
+    for item in manifest:
+        h = sha(item["file"])
+        prev = ids.get(item["name"])
+        if prev and prev.get("sha") == h:
+            continue                           # same content already uploaded
+        print("upload", item["name"])
+        resp = upload(item)
+        ids[item["name"]] = {
+            "assetId": int(resp["assetId"]), "sha": h, "type": item["type"],
+            "moderation": resp.get("moderationResult", {}).get("moderationState"),
+            "previous": prev["assetId"] if prev else None,      # keep the old id for rollback
+            "uploaded": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        }
+        json.dump(ids, open(ids_path, "w", encoding="utf-8"), indent=1, sort_keys=True)  # write as we go
+    print(len(ids), "ids in", ids_path)
+
+if __name__ == "__main__":
+    main(sys.argv[1], sys.argv[2])
+```
+
+Design notes:
+
+- **The id map is the product.** `ids.json` keyed by your stable item name, holding the asset id, the content hash, the type, the moderation state, the previous id and a timestamp. Commit it. Installers read it; nobody types an id.
+- **Hash-based skip** makes the uploader idempotent: run it after every build and it only uploads what changed.
+- **`previous`** gives you a one-step rollback for non-updatable types: point the config back at the old id.
+- **Display names** are capped (the script trims to 50 characters as a safe default; check current limits). Use names that tell you the item and version.
+
+## Models and packages
+
+Uploading a `.glb` or `.fbx` as `Model` gives you a Model of MeshParts as a package. That suits the "one id per character or prop" approach in [[Character and Creature Pipeline]]. For `.fbx` models you can also **update** content in place with `PATCH`, keeping the same asset id; that is the one case where you do not need to rewrite references. Test the import result once per exporter setting: axis, scale and pivot rules are the same as for the Studio importer ([[Exporting and Validating Models for Roblox]], [[3D Importer Settings Reference]]).
+
+## Wiring ids into the game
+
+The install side reads the id map. Two patterns:
+
+1. **Generated module** (preferred with Rojo): a script turns `ids.json` into `AssetIds.luau` (`return { sword_iron_icon = "rbxassetid://...", ... }`), committed and synced. Config rows refer to names, not numbers: `icon = Assets.sword_iron_icon`.
+2. **Gated config edit** (Studio-first teams): an install stage reads the map (fetched from a local HTTP server or pasted) and makes **one** edit to the config module with backup, compile, scan and clone-require ([[Data and Config Pipeline - Spreadsheets to Game]]).
+
+Either way, validate in the game that every referenced id is in the map and every map id is still referenced (orphans are wasted quota and clutter).
+
+Freshly uploaded images can fail `ContentProvider:PreloadAsync` for 20 to 60 seconds while processing (measured in one production game). An install that preloads to verify should retry after a delay instead of failing.
+
+## Publishing places from scripts
+
+The Place Publishing API (Roblox docs):
+
+- `POST https://apis.roblox.com/universes/v1/{universeId}/places/{placeId}/versions?versionType=Published`
+- body: the place file; `Content-Type: application/octet-stream` for `.rbxl`, `application/xml` for `.rbxlx`
+- header `x-api-key`; key permission **universe-places** with **Write** for the experience
+- response: `{ "versionNumber": N }`
+- limitation: it does **not** update instances of type EditableImage, EditableMesh, PartOperation, SurfaceAppearance or BaseWrap; the docs say to publish from Studio after modifying those.
+
+```python
+# tools/publish_place.py : py -I tools/publish_place.py build.rbxl <universeId> <placeId> [Saved|Published]
+import os, sys, requests
+
+path, universe, place = sys.argv[1], sys.argv[2], sys.argv[3]
+version_type = sys.argv[4] if len(sys.argv) > 4 else "Saved"     # default to Saved: safer
+ctype = "application/xml" if path.endswith(".rbxlx") else "application/octet-stream"
+with open(path, "rb") as f:
+    r = requests.post(
+        f"https://apis.roblox.com/universes/v1/{universe}/places/{place}/versions",
+        params={"versionType": version_type},
+        headers={"x-api-key": os.environ["RBX_PLACE_KEY"], "Content-Type": ctype},
+        data=f, timeout=300)
+if not r.ok:
+    sys.exit(f"publish failed: {r.status_code} {r.text[:500]}")
+print(version_type, "version", r.json()["versionNumber"])
+```
+
+Default the script to `Saved` so a mistyped command never ships to players; publishing live is a separate, deliberate step with its own key ([[Build Test and Release Pipeline]]).
+
+## Asset hygiene: archive, version, roll back
+
+The beta endpoints for listing versions, rolling back and archiving assets let you manage assets as data:
+
+- **Roll back** a model asset to a previous version when a bad `.fbx` update ships.
+- **Archive** assets that are no longer referenced (after your orphan check), keeping the creator's inventory clean. Archive is reversible with restore; treat it as such and keep the id map entry with a status.
+- **List versions** in audits to confirm what is live.
+
+Because these are beta, wrap them in your own small module so endpoint changes touch one file.
+
+## Failure modes
+
+| Symptom | Cause | Fix |
+|---|---|---|
+| 401 / 403 | key lacks the Assets permission, wrong creator, IP restriction | check the key's API list and creator; CI IPs |
+| 400 on create | wrong content type or malformed `request` JSON | content type table; `request` as a JSON string part |
+| Upload succeeds, game cannot use the asset | uploaded to a user, game owned by a group | upload with `groupId` |
+| Re-run uploads everything again | no hash check | hash-based skip and an id map written as it goes |
+| Ids lost after a crash | id map written at the end | write after each item |
+| Audio uploads stop mid-month | quota reached | plan banks; check verification status |
+| Published place lost unions or SurfaceAppearance | Place Publishing API limitation | publish such places from Studio |
+| Image blank right after install | asset processing | retry preload after 20 to 60 s |
+
+## Checklist
+
+- [ ] API keys per purpose, minimum permissions, secrets only, IP-restricted
+- [ ] Upload manifest generated by the build, not written by hand
+- [ ] Uploader: content types, polling, backoff on 429/5xx, hash skip
+- [ ] Id map written per item with hash, type, moderation, previous id
+- [ ] Ids reach the game through a generated module or one gated config edit
+- [ ] Orphan and missing-id checks
+- [ ] Place publishing defaults to Saved; live publish separate
+- [ ] Group-owned games upload to the group
+
+## See also
+
+[[Open Cloud APIs]] · [[HttpService and External APIs]] · [[Art Pipeline - Concept to In-Game Asset]] · [[Icon and Thumbnail Rendering Pipeline]] · [[Audio Pipeline]] · [[Code Pipeline - Rojo Git and CI]] · [[Build Test and Release Pipeline]] · [[Packages and Asset Reuse]] · [[Pipeline Design Principles]]
+
+## Nuances and edge cases
+
+1. **Beta APIs change.** The Assets endpoints are marked Beta in the Roblox docs (as of October 2026). Field names, limits and supported types can change with little notice. Keep all request building in one module, log full error bodies, and re-read the docs page before relying on a limit. Scripts that ran fine for months can start failing after a change, so treat a sudden 400 as "check the docs" before "check my code".
+2. **Moderation is asynchronous and can reverse.** An upload that finishes is not necessarily approved. Images and audio can be moderated after the fact, and a rejected asset shows as blank or silent in game. Read `moderationResult` from the operation, record it in the id map, and keep a re-check job for recently uploaded assets before a release.
+3. **Ownership decides usability.** Assets uploaded to a user account may not be usable by a game owned by a group, and moving ownership later is awkward. For team projects, upload to the group from day one, with a key created for that group.
+4. **Quotas shape design.** Audio uploads are capped per month (100 for ID-verified accounts, 10 otherwise; Roblox docs, as of October 2026). A pipeline that re-uploads every sound on each tweak burns the quota in days. Hash files, skip unchanged ones, and review sounds locally before upload.
+5. **Rate limits are not documented for these endpoints.** Design for HTTP 429: exponential backoff with jitter, a cap on concurrent uploads (a handful at a time), and resumable runs that write the id map after every success. A batch of 150 icons should survive being killed halfway and continue where it stopped.
+6. **Security of keys at scale.** A key with Assets write and place publish rights can deface or replace a live game. One person with one key is manageable; a team with CI needs separate keys per purpose, IP restrictions where the runners have stable addresses, expiry dates, and a habit of revoking keys when someone leaves.
+7. **New ids ripple through config.** Because most assets cannot be updated in place, a re-rendered icon gets a new id. If the id is hard-coded in ten scripts, the update touches ten files. The id map, read by generated config, keeps that to one change. Old ids still exist; archive them so the inventory does not fill with duplicates.
+8. **Place publishing differences.** Publishing places from scripts is great for test places and CI, but the note above lists content that may not survive that route. Keep live publishes on a path you have verified for your place's content, and keep a known-good version to roll back to.
+
+## Common mistakes
+
+1. **API key in the repository.** Symptom: a leaked key, sometimes found by automated scanners within hours. Fix: environment variables or CI secrets, rotate immediately if leaked.
+2. **Polling the operation without a limit.** Symptom: a script hangs forever on a stuck operation. Fix: poll with backoff and a maximum wait, then record the asset as pending.
+3. **Writing the id map only at the end.** Symptom: a crash loses every id from that run and the re-run uploads duplicates. Fix: write after each success.
+4. **Names that collide.** Symptom: several assets called "icon" that nobody can tell apart in the inventory. Fix: unique display names from the manifest, including the item id.
+5. **Uploading under the wrong creator.** Symptom: the game cannot load assets that uploaded fine. Fix: check the key's creator matches the game owner.
+6. **Ignoring moderation state.** Symptom: blank images in the shop on release day. Fix: check moderation before wiring ids into config.
+7. **One key for everything.** Symptom: a leak means rotating keys used by every tool at once. Fix: one key per purpose.
+
+## Related decisions
+
+- [[Plugin Security and Permissions]]: the Studio-side counterpart of key hygiene.
+- [[Release Process and Rollbacks]]: when published places need to go back.
+- [[Links - Image uploading and moderation]]: official links on moderation and image upload rules.
+- [[Legal Basics - IP Licenses and Assets]]: making sure uploaded files are yours to upload.
+- [[Groups Roles and Permissions for Studios]]: group ownership and who can create keys.
+- [[Packages and Shared Assets Across Places]]: reusing uploaded models across places.
+- [[Data and Config Pipeline - Spreadsheets to Game]]: where the id map feeds generated config.
+- [[Live Incident Response and Post-Mortems]]: what to do when a key leaks.
+
+## Connected notes
+<!-- auto-links:start -->
+[[Animation Asset Permissions and Groups]] · [[Places Universes and Experience Settings]] · [[Publishing Animations]] · [[Studio Plugins and Local HTTP Bridges]] · [[Asset Pipelines]] · [[Git and Source Control for Roblox]]
+<!-- auto-links:end -->

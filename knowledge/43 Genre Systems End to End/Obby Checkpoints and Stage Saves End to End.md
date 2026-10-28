@@ -1,0 +1,557 @@
+---
+tags: [genre-system, obby, worked-build, checkpoints, datastore, anti-cheat, streaming, luau]
+---
+# Obby Checkpoints and Stage Saves End to End
+
+This note builds the progression spine of a stage obby: checkpoint pads that advance a player only one stage at a time and only when they are really there, a separation between the stage a player is on and the furthest stage they have reached, stage travel back and forth over a validated remote, skip credits bought with a developer product and spent through the server, server-timed splits that can feed a leaderboard, client-side kill bricks that keep working with streaming, respawning at the right checkpoint without falling through an unloaded map, and saving that does not hammer the data store on every stage. [[Genre Playbook - Obbies and Platformers]] gives the short version of the checkpoint pad and the reasons behind it; this note goes past it into the cases that break a real obby with 100 or more stages.
+
+> **All code is reviewed, not run.** Strict Luau against Roblox docs (as of October 2026), checked by reading. Use the checklist in section 9.
+
+Labels used: **Roblox docs (as of October 2026)**, **rule of thumb**.
+
+---
+
+## 1. What changes when an obby gets big
+
+A ten-stage obby can save one number and be fine. At 100 stages with skips, a "return to stage" menu, timed runs and a leaderboard, four separate questions appear that a single `Stage` number cannot answer:
+
+| Question | Field | Why it must be separate |
+|---|---|---|
+| Where do I respawn? | `Current` | Players revisit earlier stages for fun, badges or friends |
+| How far have I proven I can get? | `Furthest` | Never decreases; gates "travel to stage" |
+| Did I get here honestly for the leaderboard? | `Clean` (no skips this run) and server splits | Skips are legitimate purchases, but a skipped run is not a speedrun |
+| What did I buy and not use yet? | `SkipCredits` | A purchase must survive a crash between buying and using |
+
+The trap is merging `Current` and `Furthest`. Once a player can go back to stage 12 to help a friend, a single number either drops them back permanently (they lose 80 stages of progress and leave a furious review) or never lets them go back at all.
+
+### When not to use this design
+- **Round-based tower obbies** with a fresh tower every round do not save stages at all; progress is per round. Use [[Arena Rounds with Teams and Spectating End to End]] or [[Round-Based Minigame Loop End to End]] instead.
+- **Open-world platformers** with collectibles rather than a linear chain need a set of collected ids, not a stage number. The validation idea (prove presence, server-side timing) still applies.
+
+---
+
+## 2. Folder layout
+
+```
+ReplicatedStorage
+  Shared (Folder)
+    Net (ModuleScript)           -- from Saved Inventory End to End
+    ObbyConfig (ModuleScript)
+ServerScriptService
+  Server (Folder)
+    Main (Script)                -- add "ObbyService" to ORDER
+    PlayerData, DataTemplate, RateLimiter (ModuleScripts)
+    Services (Folder)
+      ObbyService (ModuleScript)
+Workspace
+  Stages (Folder)
+    Stage001 (Model)
+      Checkpoint (Part, tagged "Checkpoint", attribute Stage = 1, attribute MinSeconds = 0)
+      ... obstacles, kill parts tagged "Kill"
+    Stage002 (Model) ...
+StarterPlayer/StarterPlayerScripts/Client
+  ObbyClient (LocalScript)
+```
+
+Each `Checkpoint` part is the spawn pad of its stage. Its `CFrame` decides where the character appears and which way it faces: point the pad's front face (`LookVector`) at the next obstacle. Players who respawn facing a wall waste two seconds per death and it adds up across a hard stage.
+
+`MinSeconds` on a pad is the fastest legitimate time from the previous checkpoint to this one, taken from your own best runs minus a margin (rule of thumb: 20 percent below your best). Set it to 0 for stages you have not measured yet; the check is skipped.
+
+---
+
+## 3. Data
+
+### 3.1 ObbyConfig
+
+```lua
+--!strict
+-- ReplicatedStorage/Shared/ObbyConfig (ModuleScript). Reviewed, not run.
+local ObbyConfig = {}
+
+ObbyConfig.StageCount = 100
+ObbyConfig.SkipProductId = 0 -- your developer product id (rbxassetid-style placeholder)
+ObbyConfig.TouchMargin = 6 -- studs: how far the root may be from the pad when it "touches"
+ObbyConfig.SaveEveryStages = 5 -- force a save every N new furthest stages
+ObbyConfig.MinSaveGapSeconds = 30
+
+-- Stage numbers that changed meaning after launch: old number -> new number.
+-- Used when stages were inserted or removed (section 6.3).
+ObbyConfig.StageRemap = {} :: { [number]: number }
+ObbyConfig.MapVersion = 1
+
+return ObbyConfig
+```
+
+### 3.2 Profile fields
+
+```lua
+-- In DataTemplate (Saved Inventory End to End): add to the Data type
+	Obby: {
+		Current: number,
+		Furthest: number,
+		SkipCredits: number,
+		BestRunSeconds: number,   -- 0 = no clean finish yet
+		Completions: number,
+		MapVersion: number,
+	},
+-- and to DataTemplate.new()
+		Obby = { Current = 1, Furthest = 1, SkipCredits = 0, BestRunSeconds = 0, Completions = 0, MapVersion = 1 },
+```
+
+The run timer and the "clean" flag are **not** saved. A run is one continuous session from stage 1 to the end; a run that spans a disconnect is not a timed run. That is a design decision, and the honest one: saving a run timer across sessions invites "pause by leaving".
+
+---
+
+## 4. The server: ObbyService
+
+```lua
+--!strict
+-- ServerScriptService/Server/Services/ObbyService (ModuleScript). Reviewed, not run.
+local CollectionService = game:GetService("CollectionService")
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local Net = require(ReplicatedStorage.Shared.Net)
+local ObbyConfig = require(ReplicatedStorage.Shared.ObbyConfig)
+local PlayerData = require(script.Parent.Parent.PlayerData)
+local RateLimiter = require(script.Parent.Parent.RateLimiter)
+
+type Run = {
+	StageReachedAt: number,  -- os.clock() when Current last advanced
+	RunStartedAt: number?,   -- set when leaving stage 1
+	Clean: boolean,
+	NewSinceSave: number,
+	LastSaveAt: number,
+}
+
+local ObbyService = {}
+
+local pads: { [number]: BasePart } = {}
+local runs: { [Player]: Run } = {}
+local allowTravel = RateLimiter.new(3, 0.5)
+local allowSkip = RateLimiter.new(2, 0.5)
+
+local function obbyOf(player: Player)
+	local profile = PlayerData.Get(player)
+	return if profile then profile.Data.Obby else nil
+end
+
+local function publish(player: Player)
+	local obby = obbyOf(player)
+	if not obby then
+		return
+	end
+	player:SetAttribute("Stage", obby.Current)
+	player:SetAttribute("Furthest", obby.Furthest)
+	player:SetAttribute("SkipCredits", obby.SkipCredits)
+	local leaderstats = player:FindFirstChild("leaderstats")
+	local stageValue = leaderstats and leaderstats:FindFirstChild("Stage")
+	if stageValue and stageValue:IsA("IntValue") then
+		stageValue.Value = obby.Furthest
+	end
+end
+
+local function maybeSave(player: Player, run: Run)
+	-- Saving on every stage would hit the per-key write spacing on fast stages.
+	-- Save on milestones, never more often than MinSaveGapSeconds.
+	if run.NewSinceSave >= ObbyConfig.SaveEveryStages and os.clock() - run.LastSaveAt >= ObbyConfig.MinSaveGapSeconds then
+		run.NewSinceSave = 0
+		run.LastSaveAt = os.clock()
+		task.spawn(PlayerData.SaveNowAsync, player)
+	end
+end
+
+local function sendToStage(player: Player, stage: number)
+	local character = player.Character
+	local pad = pads[stage]
+	if not character or not pad then
+		return
+	end
+	local target = pad.CFrame * CFrame.new(0, 3 + pad.Size.Y / 2, 0)
+	-- With streaming on, the client may not have this stage loaded yet. Ask first, then move.
+	local ok = pcall(function()
+		player:RequestStreamAroundAsync(target.Position, 3)
+	end)
+	if not ok then
+		-- Streaming request failed; moving anyway is better than leaving them in the void.
+		warn("[Obby] stream request failed")
+	end
+	if player.Character == character and character.Parent then
+		character:PivotTo(target)
+	end
+end
+
+local function finishRun(player: Player, run: Run)
+	local obby = obbyOf(player)
+	if not obby then
+		return
+	end
+	obby.Completions += 1
+	if run.Clean and run.RunStartedAt then
+		local seconds = os.clock() - run.RunStartedAt
+		if obby.BestRunSeconds == 0 or seconds < obby.BestRunSeconds then
+			obby.BestRunSeconds = seconds
+			-- Leaderboard hook: push to an ordered store from here (Global Leaderboards End to End).
+		end
+	end
+	run.NewSinceSave = ObbyConfig.SaveEveryStages -- force the next maybeSave
+	maybeSave(player, run)
+end
+
+local function onPadTouched(pad: BasePart, stage: number, hit: BasePart)
+	local character = hit:FindFirstAncestorOfClass("Model")
+	local player = character and Players:GetPlayerFromCharacter(character)
+	if not character or not player then
+		return
+	end
+	local humanoid = character:FindFirstChildOfClass("Humanoid")
+	local root = character:FindFirstChild("HumanoidRootPart")
+	local obby = obbyOf(player)
+	local run = runs[player]
+	if not humanoid or humanoid.Health <= 0 or not root or not root:IsA("BasePart") or not obby or not run then
+		return
+	end
+	if stage ~= obby.Current + 1 then
+		-- Touching your current pad, an old pad, or a pad further ahead: no progress.
+		return
+	end
+	-- Presence: a touch can be faked from the client; the server-side root position cannot lie as easily.
+	local relative = pad.CFrame:PointToObjectSpace(root.Position)
+	local half = pad.Size / 2 + Vector3.new(ObbyConfig.TouchMargin, ObbyConfig.TouchMargin, ObbyConfig.TouchMargin)
+	if math.abs(relative.X) > half.X or math.abs(relative.Y) > half.Y or math.abs(relative.Z) > half.Z then
+		return
+	end
+	-- Plausibility: faster than the measured minimum means a teleport or speed hack, or a bad minimum.
+	local minSeconds = pad:GetAttribute("MinSeconds")
+	local elapsed = os.clock() - run.StageReachedAt
+	if type(minSeconds) == "number" and minSeconds > 0 and elapsed < minSeconds then
+		run.Clean = false
+		-- Log, do not punish: a wrong minimum or a physics fling also lands here.
+		warn(`[Obby] {player.UserId} reached {stage} in {elapsed}s (min {minSeconds})`)
+		return
+	end
+
+	if obby.Current == 1 and not run.RunStartedAt then
+		run.RunStartedAt = run.StageReachedAt
+	end
+	obby.Current = stage
+	run.StageReachedAt = os.clock()
+	if stage > obby.Furthest then
+		obby.Furthest = stage
+		run.NewSinceSave += 1
+	end
+	publish(player)
+	if stage == ObbyConfig.StageCount then
+		finishRun(player, run)
+	else
+		maybeSave(player, run)
+	end
+end
+
+local function migrate(obby: any)
+	if obby.MapVersion == ObbyConfig.MapVersion then
+		return
+	end
+	obby.Current = ObbyConfig.StageRemap[obby.Current] or obby.Current
+	obby.Furthest = ObbyConfig.StageRemap[obby.Furthest] or obby.Furthest
+	obby.Current = math.clamp(obby.Current, 1, ObbyConfig.StageCount)
+	obby.Furthest = math.clamp(obby.Furthest, obby.Current, ObbyConfig.StageCount)
+	obby.MapVersion = ObbyConfig.MapVersion
+end
+
+-- Called by the shop's ProcessReceipt handler when the skip product is granted.
+-- It only adds a credit; using the credit is a separate, validated request.
+function ObbyService.GrantSkipCredit(player: Player): boolean
+	local obby = obbyOf(player)
+	if not obby then
+		return false -- the shop handler must return NotProcessedYet so Roblox retries later
+	end
+	obby.SkipCredits += 1
+	publish(player)
+	return true
+end
+
+function ObbyService.Start()
+	for _, pad in CollectionService:GetTagged("Checkpoint") do
+		local stage = pad:GetAttribute("Stage")
+		if pad:IsA("BasePart") and type(stage) == "number" then
+			assert(pads[stage] == nil, `two pads for stage {stage}`)
+			pads[stage] = pad
+			pad.Touched:Connect(function(hit: BasePart)
+				onPadTouched(pad, stage, hit)
+			end)
+		end
+	end
+	for i = 1, ObbyConfig.StageCount do
+		assert(pads[i], `missing checkpoint for stage {i}`)
+	end
+
+	Net.Event("ObbyTravel").OnServerEvent:Connect(function(player: Player, target: unknown)
+		local obby = obbyOf(player)
+		local run = runs[player]
+		if type(target) ~= "number" or target ~= math.floor(target) or not obby or not run then
+			return
+		end
+		if not allowTravel(player) or target < 1 or target > obby.Furthest then
+			return
+		end
+		obby.Current = target
+		run.StageReachedAt = os.clock()
+		run.RunStartedAt = nil -- travelling ends a timed run
+		run.Clean = target == 1
+		publish(player)
+		sendToStage(player, target)
+	end)
+
+	Net.Event("ObbySkip").OnServerEvent:Connect(function(player: Player)
+		local obby = obbyOf(player)
+		local run = runs[player]
+		if not obby or not run or not allowSkip(player) then
+			return
+		end
+		-- Skip only from your furthest stage, never the final stage, only with a credit.
+		if obby.SkipCredits < 1 or obby.Current ~= obby.Furthest or obby.Current >= ObbyConfig.StageCount - 1 then
+			return
+		end
+		obby.SkipCredits -= 1
+		obby.Current += 1
+		obby.Furthest = obby.Current
+		run.Clean = false
+		run.StageReachedAt = os.clock()
+		run.NewSinceSave = ObbyConfig.SaveEveryStages -- a spent purchase is worth a save
+		publish(player)
+		maybeSave(player, run)
+		sendToStage(player, obby.Current)
+	end)
+
+	PlayerData.OnLoaded(function(profile)
+		local player = profile.Player
+		migrate(profile.Data.Obby)
+		runs[player] = { StageReachedAt = os.clock(), RunStartedAt = nil, Clean = profile.Data.Obby.Current == 1, NewSinceSave = 0, LastSaveAt = os.clock() }
+
+		local leaderstats = Instance.new("Folder")
+		leaderstats.Name = "leaderstats"
+		local stageValue = Instance.new("IntValue")
+		stageValue.Name = "Stage"
+		stageValue.Parent = leaderstats
+		leaderstats.Parent = player
+
+		player.CharacterAdded:Connect(function(character: Model)
+			character:WaitForChild("HumanoidRootPart", 10)
+			local obby = obbyOf(player)
+			if obby then
+				sendToStage(player, obby.Current)
+			end
+		end)
+		publish(player)
+		if player.Character then
+			sendToStage(player, profile.Data.Obby.Current)
+		end
+	end)
+
+	Players.PlayerRemoving:Connect(function(player: Player)
+		runs[player] = nil
+	end)
+end
+
+return ObbyService
+```
+
+### 4.1 What each check is for
+
+**Sequential only.** `stage == Current + 1` blocks the cheapest exploit: teleport to the last pad. It also blocks a legitimate case: a player who falls from stage 40 onto the stage 37 pad does not regress, because touching an earlier pad does nothing. That is the right behaviour; travel backwards is an explicit menu action.
+
+**Presence.** `Touched` on the server fires when the physics engine reports contact, and for a client-owned character that report starts on the client. Exploit tools can produce touch reports for parts the character is nowhere near. Comparing the server's view of the root position against the pad's box (plus a margin for latency, since the server sees the character slightly late) closes that gap. The margin of 6 studs is a rule of thumb: at a walk speed of 16 studs per second, 6 studs is about 375 ms of lag.
+
+**Plausibility, logged not punished.** A stage time below `MinSeconds` marks the run unclean and refuses the advance. It does not kick. Real players get flung by physics glitches and moving platforms; a wrong `MinSeconds` would otherwise kick your fastest honest players. Look at the warnings in your logs ([[Crash and Error Telemetry]]) and tune. Stronger movement checks live in [[Detecting Movement Exploits - Speed Fly Noclip Teleport]].
+
+**Skip from the furthest stage only.** Without that rule, a player on stage 3 with a credit would skip to stage 4 and waste their purchase, then ask for a refund. With it, a credit is only spendable where it is useful, and the client can grey out the button with the same rule.
+
+**`GrantSkipCredit` returns false when no profile is loaded.** The shop's `ProcessReceipt` must then return `NotProcessedYet` so Roblox retries the receipt later (Roblox docs (as of October 2026), `MarketplaceService.ProcessReceipt`). Granting into nothing and returning `PurchaseGranted` loses the purchase. The idempotency side (never granting the same `PurchaseId` twice) is handled by the shop in [[Shop with Game Passes and Developer Products End to End]].
+
+---
+
+## 5. The client: ObbyClient
+
+```lua
+--!strict
+-- StarterPlayer/StarterPlayerScripts/Client/ObbyClient (LocalScript). Reviewed, not run.
+local CollectionService = game:GetService("CollectionService")
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local Net = require(ReplicatedStorage.Shared.Net)
+
+local player = Players.LocalPlayer
+local travelRemote = Net.Event("ObbyTravel")
+local skipRemote = Net.Event("ObbySkip")
+
+-- Kill parts: handled on the client for instant, lag-free feedback.
+-- With streaming, kill parts arrive and leave over time, so listen for the tag, not a one-time scan.
+local connections: { [Instance]: RBXScriptConnection } = {}
+
+local function onKillPart(part: Instance)
+	if not part:IsA("BasePart") or connections[part] then
+		return
+	end
+	connections[part] = part.Touched:Connect(function(hit: BasePart)
+		local character = player.Character
+		if character and hit:IsDescendantOf(character) then
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+			if humanoid and humanoid.Health > 0 then
+				humanoid.Health = 0
+			end
+		end
+	end)
+end
+
+local function onKillPartRemoved(part: Instance)
+	local connection = connections[part]
+	if connection then
+		connection:Disconnect()
+		connections[part] = nil
+	end
+end
+
+for _, part in CollectionService:GetTagged("Kill") do
+	onKillPart(part)
+end
+CollectionService:GetInstanceAddedSignal("Kill"):Connect(onKillPart)
+CollectionService:GetInstanceRemovedSignal("Kill"):Connect(onKillPartRemoved)
+
+-- HUD: stage, travel, skip.
+local gui = Instance.new("ScreenGui")
+gui.Name = "ObbyHud"
+gui.ResetOnSpawn = false
+gui.Parent = player:WaitForChild("PlayerGui")
+
+local function button(text: string, x: number): TextButton
+	local b = Instance.new("TextButton")
+	b.Size = UDim2.fromScale(0.12, 0.07)
+	b.Position = UDim2.fromScale(x, 0.88)
+	b.TextScaled = true
+	b.Text = text
+	b.Parent = gui
+	return b
+end
+
+local label = Instance.new("TextLabel")
+label.Size = UDim2.fromScale(0.3, 0.06)
+label.Position = UDim2.fromScale(0.35, 0.02)
+label.TextScaled = true
+label.Parent = gui
+
+local back = button("< Stage", 0.3)
+local forward = button("Stage >", 0.43)
+local skip = button("Skip", 0.56)
+
+local function refresh()
+	local stage = (player:GetAttribute("Stage") :: number?) or 1
+	local furthest = (player:GetAttribute("Furthest") :: number?) or 1
+	local credits = (player:GetAttribute("SkipCredits") :: number?) or 0
+	label.Text = `Stage {stage} / best {furthest}`
+	forward.Visible = stage < furthest
+	back.Visible = stage > 1
+	-- Same rule the server enforces; this is only a hint.
+	skip.Visible = credits > 0 and stage == furthest
+	skip.Text = `Skip ({credits})`
+end
+for _, name in { "Stage", "Furthest", "SkipCredits" } do
+	player:GetAttributeChangedSignal(name):Connect(refresh)
+end
+refresh()
+
+back.Activated:Connect(function()
+	local stage = (player:GetAttribute("Stage") :: number?) or 1
+	travelRemote:FireServer(stage - 1)
+end)
+forward.Activated:Connect(function()
+	local stage = (player:GetAttribute("Stage") :: number?) or 1
+	travelRemote:FireServer(stage + 1)
+end)
+skip.Activated:Connect(function()
+	skipRemote:FireServer()
+end)
+```
+
+### 5.1 Why kill bricks are client-side here
+
+The character is simulated by its owner. When the client sees the foot touch lava, it kills the character on the same frame; the death replicates. A server-side kill brick reacts to the server's slightly older picture of the character, so players die after clearing a jump on their screen, or survive touching lava because the server never saw the contact. For an obby the client-side version is the better trade: an exploiter who disables kill bricks still has to touch every checkpoint pad in order, in plausible time, which the server checks. Setting `Humanoid.Health = 0` from the owning client is the widely used pattern for this (rule of thumb; it relies on the owner's humanoid state replicating, which current docs do not spell out for this case).
+
+### 5.2 Why the tag signals matter with streaming
+
+With [[Instance Streaming]] enabled, a stage's parts are not on the client until the player is near. A one-time `GetTagged("Kill")` at startup finds only the first few stages, and every later lava floor is harmless. Listening to `GetInstanceAddedSignal` catches parts as they stream in, and `GetInstanceRemovedSignal` disconnects when they stream out, so the connection table does not grow forever ([[CollectionService Patterns]], [[Hunting Memory Leaks Step by Step]]).
+
+---
+
+## 6. Edge cases and failure modes
+
+### 6.1 Respawn into an unloaded stage
+`sendToStage` calls `Player:RequestStreamAroundAsync(position, timeOut)` before moving the character (Roblox docs (as of October 2026): it yields and takes a timeout). Without it, a player who rejoins at stage 80 spawns over empty space, falls, dies, respawns over empty space, and loops. The 3-second timeout is a rule of thumb; on a slow phone connection the area may still arrive late, which is why each `Checkpoint` part should sit on a small anchored platform that is part of a persistent model, or why some obbies set `ModelStreamingMode` to `Persistent` on the checkpoint platforms ([[Level of Detail and Model Streaming]]).
+
+### 6.2 SpawnLocations instead of custom respawn
+The simpler alternative is a `SpawnLocation` per stage and setting `Player.RespawnLocation` (Roblox docs (as of October 2026): the property exists and takes a `SpawnLocation`). It respawns without any `CharacterAdded` code. The trade-offs: spawn locations are also used for initial spawns and team spawns, so 100 of them need `Neutral` and `Enabled` set with care; you lose control of facing and of the stream request; and you still need every check in section 4.1 for progress. For under about 30 stages, it is fine. For large obbies, the custom path is easier to reason about.
+
+### 6.3 Changing stages after launch
+Inserting a new stage 25 shifts every later number. A player saved at "stage 60" would now be placed on what used to be stage 59. Options, in order of preference:
+1. **Append only.** New stages go at the end. Easiest and safest.
+2. **Remap.** Bump `MapVersion` and fill `StageRemap` for every shifted number (`[25] = 26, [26] = 27, ...`, generated by a script, not by hand). `migrate` applies it once per profile.
+3. **Stable ids.** Save `"lava_bridge"` instead of `60`. Most robust, but `Furthest` comparisons need an ordered list, and every stage needs a unique id forever.
+
+Never reduce `StageCount` without a remap: `math.clamp` will pull players back, and nothing will tell them why.
+
+### 6.4 Data store pacing
+With `SaveEveryStages = 5` and a 30-second gap, a fast player on short stages saves at most twice a minute, well inside the per-key write spacing the profile module enforces. The cost is that a server crash can lose up to five stages of progress since the last save. If that is too much for your audience, lower it to 3; do not save on every stage. See [[Saving Correctly - Autosave and BindToClose]] and [[DataStore Fundamentals]].
+
+### 6.5 Common mistakes
+- **Trusting a client "I reached stage N" remote.** The single most exploited pattern in obbies. Progress only comes from server-validated pad touches.
+- **Forgetting the dead-player filter.** A ragdolled body sliding onto the next pad advances a dead player; the `Health > 0` check stops it.
+- **Kill bricks connected once at startup** with streaming on (section 5.2).
+- **Resetting `Furthest` on travel.** Travel changes `Current` only.
+- **Timing runs on the client.** A client timer can be paused, slowed or set. The server uses `os.clock()` between its own events.
+
+---
+
+## 7. Numbers worth knowing
+
+| Quantity | Value | Source |
+|---|---|---|
+| Default walk speed | 16 studs/s | Long-standing Roblox default; the current class page did not state it when checked, so treat as rule of thumb |
+| Touch margin | 6 studs | Rule of thumb: about 375 ms of walking |
+| Stream request timeout | 3 s | Rule of thumb |
+| Saves per player | at most 2 per minute from progress, plus autosave | Configured above |
+| Skip pricing | Kept low and never required | See [[Genre Playbook - Obbies and Platformers]] on the ethics of selling skips |
+
+---
+
+## 8. Extending it
+
+- **Per-stage best times.** Store a map of stage to best split, but only for splits recorded on a clean run; split boards are a cheap way to make a short obby replayable.
+- **Badges** at milestone stages: award from the same code path that sets `Furthest`, never from a client event ([[Quests and Objectives]]).
+- **Difficulty bands and colours** for the HUD come from `ObbyConfig`, so the stage counter can say "Hard" before players arrive at the band.
+- **A speedrun leaderboard.** Push `BestRunSeconds` to an ordered store, inverted so lower is better, and only from `finishRun` with a clean run ([[Global Leaderboards End to End]]).
+
+---
+
+## 9. Test checklist
+
+- [ ] Fresh player: spawns on stage 1, touches pad 2, `Stage` and `Furthest` become 2.
+- [ ] Touch pad 4 from stage 2 (teleport in Studio with the command bar): no progress.
+- [ ] Set `MinSeconds` on a pad to 999, then reach it: refused, warning logged, no kick.
+- [ ] Travel back to stage 1, then forward to furthest: works; forward past furthest refused.
+- [ ] Buy a skip in Studio test purchase mode, leave before using it, rejoin: the credit is still there.
+- [ ] Use a skip on stage `StageCount - 1`: refused.
+- [ ] Streaming on: rejoin at a far stage on an emulated slow connection; you land on a platform, not in the void.
+- [ ] Kill parts deep in the course kill you after they stream in.
+- [ ] Insert a test stage with a `StageRemap`, load an old save: placed correctly.
+- [ ] Fuzz `ObbyTravel` with 0, -1, 1.5, NaN, a string and a huge number ([[Testing Your Own Remotes - Fuzzing and Abuse Tests]]).
+
+## See also
+- [[Genre Playbook - Obbies and Platformers]], [[Obby and Platforming Level Design]], [[Genre Systems Start Here]]
+- [[Saved Inventory End to End]], [[Shop with Game Passes and Developer Products End to End]], [[Developer Products and ProcessReceipt]]
+- [[Instance Streaming]], [[Detecting Movement Exploits - Speed Fly Noclip Teleport]], [[Exploits and Anti-Cheat]]
+
+## Connected notes
+<!-- auto-links:start -->
+[[Links - Checkpoints and spawning]] · [[Spawn Points Safe Zones and Respawn Flow]] · [[Purchase Data and Receipts]] · [[Racing Laps and Checkpoints End to End]] · [[Cookbook - Players and Characters]] · [[Level Design Start Here]]
+<!-- auto-links:end -->

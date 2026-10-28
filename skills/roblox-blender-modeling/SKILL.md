@@ -1,0 +1,76 @@
+---
+name: roblox-blender-modeling
+description: Make professional, Roblox-ready 3D models in Blender (via Blender MCP or headless bpy) and reject anything below top quality. Use automatically whenever a model, prop, weapon, building, rock, tree, creature, kit or mesh is made, fixed, optimized or exported for Roblox, or when the user says "model", "make a mesh", "Blender", "low poly", "stylized", "export to Roblox", "imports huge", "looks bad", "too many triangles".
+---
+
+# Roblox Blender Modeling (LihFolk)
+
+Goal: every model ships at top-tier quality, correctly scaled, within budget, and imports cleanly into Roblox Studio. A model that fails the gate or scores below the rubric is not finished.
+
+Sources: `references/quality-research.md` (sourced, labelled research: Roblox docs, measured Blender 5.2 behaviour, expert practice). Helpers: `scripts/lihfolk_bpy.py` (tested on Blender 5.2).
+
+## Load the helpers
+
+In Blender MCP `execute_blender_code` or a headless script:
+```python
+import sys; sys.path.append(r"<this skill dir>/scripts")
+import importlib, lihfolk_bpy as lf; importlib.reload(lf)
+lf.setup_scene()   # 1 Blender unit = 1 stud
+```
+Headless: `blender -b --factory-startup --python my_script.py`. Never modify the user's open scene destructively; build in a new collection or a temporary scene and confirm before deleting anything that existed.
+
+## Pipeline (do every step)
+
+1. **Brief**: object class (budget key below), style, palette (2-3 colours + 1 accent), real size in studs (R15 avatar ~5 studs tall; door ~7-8 studs), where its origin goes.
+2. **Blockout big -> medium -> small**. Check the silhouette before any detail: `lf.render_review(ob, dir)` and look at `_silhouette.png`. If it doesn't read at thumbnail size, fix shapes, not details.
+3. **Proportion pass**: exaggerate. Chunky, tapered, confident shapes beat accurate stiff primitives.
+4. **Edge treatment**: `lf.finish(ob, style="soft")` (1-segment bevel + harden normals + weighted normals, the stylized default), `"faceted"` (deliberate flat low-poly) or `"smooth"` (organics). More than 2 bevel segments on small props is a mistake (1 seg = 3.7x tris, 2 = 9x on a box, measured).
+5. **Colour**: vertex colours or one shared palette atlas for stylized kits; SurfaceAppearance PBR (OpenGL normal, separate grayscale roughness/metalness) for realistic. One material per exported object.
+6. **UVs** (if textured): smart_project -> pack_islands, single UV map, all in 0-1.
+7. **Origin**: `lf.set_origin(ob, "bottom")` floor props, `"back"` wall props, `"corner"` modular pieces.
+8. **Gate**: `passed, fails, report = lf.gate(ob, cls)`. Any fail = fix and re-run. Never ship a fail.
+9. **Visual rubric**: render with `lf.render_review`, LOOK at all four images, score V1-V9 (below). Accept only >= 14/18 with no zero. Otherwise iterate.
+10. **Export**: `lf.export_glb(ob, path)` (preferred; modifiers applied, vertex colours kept, 1 unit = 1 stud). FBX only via `lf.export_fbx` (prevents the 100x scale bug).
+11. **Studio setup** (tell the user or do it via Studio MCP): MeshPart.Color = white when using vertex colours; CollisionFidelity Box/Hull (Precise only when needed); CanCollide/CanTouch/CanQuery off for decoration; CastShadow off on tiny props; DoubleSided only for foliage cards; Anchored for static.
+
+## Triangle budgets (`lf.BUDGETS`, target / ceiling)
+
+tiny 150/300 · small 600/1,500 · medium 2,000/4,000 · rock 400/1,000 · tree 2,000/5,000 · weapon 2,500/4,000 · module 800/2,000 · building 6,000/10,000 (split into modules above) · creature 5,000/10,742 · hero 10,000/20,000. Hard Roblox limit: 20,000 per mesh. Over target needs a stated reason. These budgets are proposed defaults inside sourced ranges; tune per game.
+
+## Visual rubric (0-2 each, accept >= 14/18, no zeros)
+
+V1 silhouette reads as solid black at 64 px from every angle · V2 clear big/medium/small hierarchy · V3 confident stylized proportions · V4 consistent bevels catching light · V5 clean shading, no gradients/artifacts on flat faces · V6 2-3 dominant colours with value contrast · V7 geometry only where silhouette/shading needs it (if the wireframe looks solid, too dense) · V8 matches the kit (texel density, bevel size, palette) · V9 Studio-ready (scale, pivot, collision, flags).
+
+Score honestly from the renders. For hero assets, or when your score is borderline (14-15), run a **Quick** `council` (Art Director lens) with the four renders as evidence. Kits: review one representative piece, not every piece.
+
+## Styles
+
+| Style | How |
+|---|---|
+| Stylized low-poly | Primitives -> exaggerate -> `finish("soft")` or `"faceted"`; organics: Decimate Collapse ~0.1-0.15 for rocks/trees; icosphere foliage clusters; vertex colours |
+| Untextured stylized | Split by colour region or vertex colour; MeshPart.Color + Material in Studio |
+| Palette atlas | One small palette PNG shared by the whole kit; UVs snapped to cells, closest filtering |
+| Hand-painted | Clean UVs, bake AO, paint flat colours plus subtle light/shadow; ColorMap only |
+| Realistic PBR | High->low bake, OpenGL normal, separate R/M maps, trim sheets for architecture; Future lighting |
+| Voxel | MagicaVoxel -> greedy meshing -> vertex colours; never thousands of Parts |
+
+Kits: build modular pieces on a stud grid (multiples of 1, 2 or 4 studs), shared bevel width, shared palette, origin at the grid corner, so they snap in Studio.
+
+## Known traps (measured or documented)
+
+- glTF `export_apply=False` (the default) silently drops bevels and weighted normals. `lf.export_glb` handles this.
+- glTF drops vertex colours unless exported as ACTIVE. Handled.
+- FBX default scale imports 100x too big. `lf.export_fbx` uses FBX_SCALE_UNITS.
+- `mesh.use_auto_smooth` no longer exists (Blender 4.1+); use `shade_auto_smooth` / `finish("smooth")`.
+- AO bakes come out black when other objects occlude the target; hide others from render first.
+- Roblox wants separate grayscale roughness/metalness maps, not packed ORM.
+- Don't hand-author LODs: Roblox auto-generates them, and RenderFidelity is being removed.
+- AI/scan meshes ("triangle soup"): retopo or decimate, then rebake; never ship raw.
+
+## Reusing the LihFolk Asset Pack
+
+If the pack is installed (`LIHFOLK_ASSETS` env var or `~/LihFolk-Assets`), check its original LihFolk models and materials before modelling from scratch; pack assets already passed this gate. See `../../assets/README.md`.
+
+## Open questions (verify in Studio before relying on them)
+
+Whether custom normals survive import, glTF double-sided flag handling, FBX forward axis. See `references/quality-research.md` section 7.

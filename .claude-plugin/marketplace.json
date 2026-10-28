@@ -1,0 +1,12 @@
+﻿{
+  "name": "lihfolk",
+  "owner": { "name": "LihFolk" },
+  "metadata": { "description": "LihFolk: a full Roblox game studio for Claude Code." },
+  "plugins": [
+    {
+      "name": "lihfolk",
+      "source": "./",
+      "description": "Full Roblox game studio for Claude Code: knowledge, references, systems, agents and hooks."
+    }
+  ]
+}

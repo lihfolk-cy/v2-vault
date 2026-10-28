@@ -1,0 +1,8 @@
+.obsidian/workspace*.json
+.obsidian/cache
+.trash/
+__pycache__/
+*.pyc
+.lihfolk/
+.DS_Store
+Thumbs.db

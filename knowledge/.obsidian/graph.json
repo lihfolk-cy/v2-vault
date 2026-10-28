@@ -1,0 +1,86 @@
+{
+    "collapse-filter":  true,
+    "search":  "-path:\"46 Resource Library/\"",
+    "showTags":  false,
+    "showAttachments":  false,
+    "hideUnresolved":  true,
+    "showOrphans":  false,
+    "collapse-color-groups":  false,
+    "colorGroups":  [
+                        {
+                            "query":  "tag:#hub OR file:\"Start Here\" OR file:\"000 Home\" OR file:INDEX",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16777215
+                                      }
+                        },
+                        {
+                            "query":  "path:\"01 Studio and Workflow/\" OR path:\"02 Luau Scripting/\" OR path:\"03 Architecture and Networking/\" OR path:\"29 Luau Cookbook/\" OR path:\"35 Advanced Luau/\" OR path:\"39 Studio Plugins and Tooling/\" OR path:\"40 Game Math/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  2282478
+                                      }
+                        },
+                        {
+                            "query":  "path:\"04 Data and Persistence/\" OR path:\"22 Anti-Exploit and Security/\" OR path:\"41 Multiplayer Services/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  3462041
+                                      }
+                        },
+                        {
+                            "query":  "path:\"05 UI and UX/\" OR path:\"21 Check-UI Design System/\" OR path:\"42 Accessibility and Inclusive Design/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16020150
+                                      }
+                        },
+                        {
+                            "query":  "path:\"06 World Building and Art/\" OR path:\"14 3D Modeling/\" OR path:\"19 Concept Sheets/\" OR path:\"33 Level Design/\" OR path:\"34 Procedural Generation/\" OR path:\"36 Narrative and Worldbuilding/\" OR path:\"37 Avatars and UGC/\" OR path:\"44 Materials and Surfaces/\" OR path:\"45 Procedural Blender Assets/\" OR path:\"53 Voxel Modelling Deep Dive/\" OR path:\"54 Untextured Stylised Modelling/\" OR path:\"55 Modelling Nuance and Readability/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16498468
+                                      }
+                        },
+                        {
+                            "query":  "path:\"07 Lighting VFX and Audio/\" OR path:\"08 Animation/\" OR path:\"18 Rigs and Skeletons/\" OR path:\"47 Game Feel and Juice/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  10980346
+                                      }
+                        },
+                        {
+                            "query":  "path:\"09 Gameplay Systems/\" OR path:\"10 Game Design and Genres/\" OR path:\"25 Physics and Vehicles/\" OR path:\"43 Genre Systems End to End/\" OR path:\"48 Economy Design Deep Dive/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16486972
+                                      }
+                        },
+                        {
+                            "query":  "path:\"11 Monetization Publishing and Live Ops/\" OR path:\"13 Production and Case Studies/\" OR path:\"26 Community and Moderation/\" OR path:\"27 Marketing and Growth/\" OR path:\"28 Business and Careers/\" OR path:\"32 Case Studies of Top Roblox Games/\" OR path:\"38 Live Ops Deep Dive/\" OR path:\"49 Roblox Platform Features/\" OR path:\"50 Team Collaboration and Project Management/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  10741301
+                                      }
+                        },
+                        {
+                            "query":  "path:\"12 Performance Testing and Debugging/\" OR path:\"15 AI Tools/\" OR path:\"16 MCP and Agents/\" OR path:\"17 Pipelines/\" OR path:\"23 Debugging Deep Dives/\" OR path:\"24 Worked Builds/\" OR path:\"46 Resource Library/\" OR path:\"51 2D Game Development/\" OR path:\"52 Core Concepts/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  6333946
+                                      }
+                        }
+                    ],
+    "collapse-display":  true,
+    "showArrow":  false,
+    "textFadeMultiplier":  -1.2,
+    "nodeSizeMultiplier":  1.25,
+    "lineSizeMultiplier":  0.45,
+    "collapse-forces":  true,
+    "centerStrength":  0.55,
+    "repelStrength":  16,
+    "linkStrength":  0.7,
+    "linkDistance":  210,
+    "scale":  0.35,
+    "close":  true
+}
