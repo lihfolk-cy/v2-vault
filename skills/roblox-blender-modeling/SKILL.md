@@ -23,6 +23,7 @@ Headless: `blender -b --factory-startup --python my_script.py`. Never modify the
 
 1. **Brief**: object class (budget key below), style, palette (2-3 colours + 1 accent), real size in studs (R15 avatar ~5 studs tall; door ~7-8 studs), where its origin goes.
 2. **Blockout big -> medium -> small**. Check the silhouette before any detail: `lf.render_review(ob, dir)` and look at `_silhouette.png`. If it doesn't read at thumbnail size, fix shapes, not details.
+2b. **Symmetry and alignment first.** If the object is symmetric by design (shields, badges, swords, bottles, doors, most props and creatures), model one half and mirror it. Centre every feature (emblems, gems, handles, guards) on the parent's axis with bounding-box maths, never by eye, and seat it on its surface (no floating, no burying). The gate checks this (`symmetric=`); a lopsided shield is an automatic fail, however clean its mesh.
 3. **Proportion pass**: exaggerate. Chunky, tapered, confident shapes beat accurate stiff primitives.
 4. **Edge treatment**: `lf.finish(ob, style="soft")` (1-segment bevel + harden normals + weighted normals, the stylized default), `"faceted"` (deliberate flat low-poly) or `"smooth"` (organics). More than 2 bevel segments on small props is a mistake (1 seg = 3.7x tris, 2 = 9x on a box, measured).
 5. **Colour**: vertex colours or one shared palette atlas for stylized kits; SurfaceAppearance PBR (OpenGL normal, separate grayscale roughness/metalness) for realistic. One material per exported object.

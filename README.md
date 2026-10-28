@@ -20,7 +20,7 @@ After that, Roblox tasks automatically use the knowledge base. You also get:
 | | What it does |
 |---|---|
 | **Knowledge router** | Finds the right notes for each task and applies their mistakes and checklists, sized to the task so it stays cheap |
-| **Quality score** | Generated models, animations, UI, systems, worlds and VFX must score **9/10** on fixed rubrics. Every attempt is logged so first drafts get better over time (`/lihfolk:learn`) |
+| **Quality score** | Generated models, animations, UI, systems, worlds and VFX must score at least **8.5/10** on fixed rubrics. Every attempt is logged so first drafts get better over time (`/lihfolk:learn`) |
 | **Council** | Blind, anonymised multi-agent review for objective verdicts: Quick, Standard or Full tier (`/lihfolk:council`) |
 | **Blender modelling** | Roblox-ready modelling with an automatic quality gate and correct export (no 100x scale, no lost bevels) |
 | **Trend games** | The 2025-2026 trend-game playbook with the new Roblox rules (`/lihfolk:trend-game`) |

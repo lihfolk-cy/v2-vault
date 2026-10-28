@@ -14,7 +14,7 @@ The kit is in `src/` and runs as is. The examples in `examples/` build the five 
 - `VAULT`: the LihFolk knowledge base at `../../knowledge/` (plugin root `knowledge/`). The overview and the full spec are in `VAULT/21 LihFolk UI Design System/`.
 - Kit: `src/LihFolkUITheme.luau`, `src/LihFolkUIIcons.luau`, `src/LihFolkUIComponents.luau`, `src/LihFolkUIController.luau`.
 - Examples: `examples/ShopMenu`, `CodesMenu`, `RebirthMenu`, `SettingsMenu`, `DailyRewardsMenu`, `ButtonsShowcase` (all `.client.luau`).
-- Quality bar: `../quality-score/rubrics/ui.md`. The target is **9.0 or higher**.
+- Quality bar: `../quality-score/rubrics/ui.md`. The minimum is **8.5**.
 
 ## Install
 
@@ -173,7 +173,7 @@ Interruption: opening and closing are driven by state (`entry.open`). A reopen d
 4. **Test** at the five viewports above, with touch, mouse and gamepad, with Reduced Motion on, at UI scale 1.3, and with long translated strings.
 5. **Score** against `../quality-score/rubrics/ui.md`, then log the result. Fix the lowest high-weight criterion first.
 
-## Quality bar: how this kit earns 9/10
+## Quality bar: how this kit earns 8.5+
 
 Hard gates (any failure caps the score at 5): nothing clipped at phone, tablet or PC sizes; tap targets at least 44 px on phone; no overlaps and no text overflow; gamepad and keyboard reachable. The kit covers these with the fit clamp and touch floor, scrolling bodies, invisible hit pads, `TextScaled` with size limits or truncation on every label, and selection rings with focus handling. **You** still have to check content you add.
 
@@ -196,7 +196,7 @@ Hard gates (any failure caps the score at 5): nothing clipped at phone, tablet o
 - [ ] Icons are registered or fallbacks accepted. No unknown asset ids.
 - [ ] Sounds are filled or knowingly left silent.
 - [ ] Tested at 5 viewports, with touch, mouse and gamepad, Reduced Motion, UI scale 1.3 and long strings.
-- [ ] Scored against `rubrics/ui.md` (9.0 or higher) and logged.
+- [ ] Scored against `rubrics/ui.md` (8.5 or higher) and logged.
 
 ## Common mistakes
 

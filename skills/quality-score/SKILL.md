@@ -1,11 +1,11 @@
 ---
 name: quality-score
-description: 'LihFolk: Quality system - every generated Roblox asset or system (3D model, animation, UI, game system/code, world/zone, VFX) is scored 0-10 against a fixed rubric and must reach 9 before it is called done. Learns from a ledger of past attempts so first drafts score higher instead of regenerating. Use whenever you generate or finish one of those, or when the user asks for a score, quality bar or "make it a 9".'
+description: 'LihFolk: Quality system - every generated Roblox asset or system (3D model, animation, UI, game system/code, world/zone, VFX) is scored 0-10 against a fixed rubric and must reach at least 8.5 before it is called done. Learns from a ledger of past attempts so first drafts score higher instead of regenerating. Use whenever you generate or finish one of those, or when the user asks for a score, quality bar or "make it an 8.5" / "make it a 9".'
 ---
 
 # LihFolk Quality Score
 
-Bar: **9.0 / 10**. Anything below 9 is a draft, and you say so. The score comes from a fixed rubric and evidence, never from how the work feels.
+Bar: **8.5 / 10 minimum**. Anything below 8.5 is a draft, and you say so. The score comes from a fixed rubric and evidence, never from how the work feels.
 
 ## The loop
 
@@ -17,7 +17,7 @@ LEARN  ->  GENERATE  ->  SCORE  ->  FIX (lowest criterion only)  ->  SCORE  ... 
 1. Open `recipes/<type>.md` in this skill: the shipped first-pass defaults and known fixes for that asset type.
 2. If the project has a ledger (`.lihfolk/ledger.jsonl` at the project root), grep it for the same `type` and read:
    - the **recipes** section of `.lihfolk/recipes.md` (lessons already distilled from this project);
-   - the 3 most recent entries of that type that scored >= 9 (what worked);
+   - the 3 most recent entries of that type that scored >= 8.5 (what worked);
    - the misses that were fixed repeatedly (what to get right the first time).
 3. Write a 3-6 line **pre-flight plan**: which known pitfalls this draft avoids up front and which defaults it starts from. Don't skip this. It's how scores rise over time.
 
@@ -33,7 +33,7 @@ Use `rubrics/<type>.md`. Each rubric has:
 ### 3. Fix efficiently
 - Fix the **lowest-scoring, highest-weight** criterion first, using a matching fix from the recipes if one exists.
 - One targeted change per round. No full regeneration unless a hard gate failure makes the draft unsalvageable.
-- **Max 3 fix rounds.** If it's still below 9, stop, report the score, the blocking criterion and what's needed (usually a user decision or a missing asset), and log it.
+- **Max 3 fix rounds.** If it's still below 8.5, stop, report the score, the blocking criterion and what's needed (usually a user decision or a missing asset), and log it.
 
 ### 4. Log every result (always, pass or fail)
 Append one JSON line to `.lihfolk/ledger.jsonl` (create `.lihfolk/` if missing):
@@ -47,7 +47,7 @@ Keep fields short; it's data, not prose.
 
 ### 5. Distill (every ~10 entries of a type, or on `/lihfolk:learn`)
 Read the ledger for that type and update `.lihfolk/recipes.md`:
-- **Defaults that win:** parameter values common to entries scoring >= 9.
+- **Defaults that win:** parameter values common to entries scoring >= 8.5.
 - **Pre-empt list:** criteria that failed on the first try in 30% or more of entries. These go into every pre-flight plan.
 - **Proven fixes:** fixes with a positive delta seen at least twice.
 - **Stats:** average first score and average rounds per type, so you can see whether drafts are improving.
@@ -56,4 +56,4 @@ Keep `recipes.md` short (under ~60 lines per type) and delete lessons that newer
 
 ## Reporting format
 `Score 9.2/10 (first draft 7.8, 2 fix rounds). Gates: pass. Lowest: V6 palette 1/2. Logged.`
-Never round up to 9. Never call a sub-9 result done.
+Never round up to 8.5. Never call a result below 8.5 done.

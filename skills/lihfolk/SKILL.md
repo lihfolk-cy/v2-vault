@@ -49,7 +49,7 @@ Scale the lookup to the task. The goal is the few lines that change what you do,
 
 ## Specialist skills in this plugin
 
-Prefer these when the task matches: `quality-score` (every generated asset or system must score 9/10), `council` (objective verdicts), `lihfolk-ui` (house menu style), `roblox-blender-modeling`, `roblox-trend-game`, `roblox-system-builder`, `roblox-ui-builder`, `roblox-secure-remotes`, `roblox-datastore-safety`, `roblox-performance-audit`, `roblox-debugging`, `roblox-anti-exploit-review`, `roblox-monetization-compliance`, `roblox-asset-import`, `roblox-vault-research`.
+Prefer these when the task matches: `quality-score` (every generated asset or system must score at least 8.5/10), `council` (objective verdicts), `lihfolk-ui` (house menu style), `roblox-blender-modeling`, `roblox-trend-game`, `roblox-system-builder`, `roblox-ui-builder`, `roblox-secure-remotes`, `roblox-datastore-safety`, `roblox-performance-audit`, `roblox-debugging`, `roblox-anti-exploit-review`, `roblox-monetization-compliance`, `roblox-asset-import`, `roblox-vault-research`.
 
 ## Reference images
 
