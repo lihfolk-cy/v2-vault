@@ -1,4 +1,4 @@
-# LihFolk: Roblox game dev knowledge for humans and AI
+# LihFolk Vault V2: Roblox game dev knowledge for humans and AI
 
 **Read it as a vault. Install it as a plugin.** 800+ expert notes on making Roblox games, written so both you and your AI can use them. Each note has trust labels, common mistakes and checklists.
 
@@ -7,7 +7,7 @@
 ### 1. Obsidian vault (read and browse)
 1. Download this repo (green **Code** button, then **Download ZIP**, or `git clone`).
 2. In Obsidian: **Open folder as vault**, then pick the `knowledge` folder.
-3. Start at **000 Home**. The theme and graph colours load automatically. If they don't show, turn on the `lihfolk` CSS snippet under Settings, Appearance.
+3. Start at **000 Home**. The Celestial Vault theme and graph colours load automatically. If Obsidian asks, turn on community plugins to enable the bundled Celestial Vault plugin (starfield welcome tab, journal banners, moon calendar).
 
 ### 2. Claude Code plugin (your AI builds like a pro)
 In Claude Code:
@@ -38,6 +38,6 @@ Every claim is marked **Roblox docs** (official), **Measured** (tested in a real
 - `.claude-plugin/`: plugin and marketplace manifests
 
 ## License
-Notes, images and scripts: **CC BY 4.0**. Credit "LihFolk" and link back. Code snippets inside notes may be used in your games without attribution. See [LICENSE.md](LICENSE.md).
+Notes, images and scripts: **CC BY 4.0**. Credit "LihFolk Vault V2" and link back. Code snippets inside notes may be used in your games without attribution. See [LICENSE.md](LICENSE.md).
 
 Not affiliated with or endorsed by Roblox Corporation.

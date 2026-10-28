@@ -1,1 +1,8 @@
-{ "showInlineTitle": true, "readableLineLength": true, "userIgnoreFilters": [], "alwaysUpdateLinks": true, "newFileLocation": "root" }
+{
+    "userIgnoreFilters":  [
+
+                          ],
+    "showUnsupportedFiles":  false,
+    "showInlineTitle":  false,
+    "propertiesInDocument":  "hidden"
+}

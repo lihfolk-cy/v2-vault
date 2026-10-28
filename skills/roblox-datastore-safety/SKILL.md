@@ -1,14 +1,14 @@
-﻿---
-name: roblox-datastore-safety
-description: Write or review Roblox player-data code so progress is never lost or duplicated: session locking, retries, autosave, BindToClose, schema migrations, purchase receipts and idempotency. Use when touching DataStoreService, profiles, saving or loading, or when the user says "save data", "data loss", "rollback", "duplicated items", "migrate the data", or "review my DataStore code".
 ---
-# Roblox DataStore Safety
+name: roblox-datastore-safety
+description: 'LihFolk: Write or review Roblox player-data code so progress is never lost or duplicated: session locking, retries, autosave, BindToClose, schema migrations, purchase receipts and idempotency. Use when touching DataStoreService, profiles, saving or loading, or when the user says "save data", "data loss", "rollback", "duplicated items", "migrate the data", or "review my DataStore code".'
+---
+# LihFolk DataStore Safety
 
 Player data lives in server memory during a session and is written back periodically. That is only safe if one server at a time owns each player's data, if a failed load can never save over real data, and if every grant happens at most once. Build or review against those three guarantees.
 
 ## Inputs
 
-- `VAULT`: the LihFolk knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
+- `VAULT`: LihFolk Vault V2, the knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
 - The data module(s), the receipt handler, and any other code that writes to data stores.
 
 ## Procedure

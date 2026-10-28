@@ -197,7 +197,7 @@ local function effectiveScale(g: Instance): number
 end
 ```
 
-**Measured note.** The reference project's first phone pass put one `UIScale` on every ScreenGui so a 1920 x 1080 layout fitted the screen. It "worked" on the single mock viewport it was checked on, but a 14 px label drew at about 5 px on a 390-pixel-tall phone and a 40 px button became about 15 px. When "text is too small on phones" is the bug, compute the effective scale (above) and the resulting pixel size before touching fonts: the answer is often a layout that needs a real phone variant, not a bigger number ([[Case Study - Phone UI Overhaul]], [[Check-UI Design System]]).
+**Measured note.** The reference project's first phone pass put one `UIScale` on every ScreenGui so a 1920 x 1080 layout fitted the screen. It "worked" on the single mock viewport it was checked on, but a 14 px label drew at about 5 px on a 390-pixel-tall phone and a 40 px button became about 15 px. When "text is too small on phones" is the bug, compute the effective scale (above) and the resulting pixel size before touching fonts: the answer is often a layout that needs a real phone variant, not a bigger number ([[Case Study - Phone UI Overhaul]], [[LihFolk UI Design System]]).
 
 ---
 

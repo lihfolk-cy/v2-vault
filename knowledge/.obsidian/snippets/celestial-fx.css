@@ -1,0 +1,76 @@
+/* Celestial FX: the cool layer on top of celestial-lite. A faint drifting starfield behind every note,
+   gradient starlight headings, glowing links and tags, glass callouts, code and tables, a living active-tab
+   underline and a glowing file explorer. Pure CSS; respects "reduce motion". Toggle in Appearance > CSS snippets. */
+
+/* ---------- starfield behind every note ---------- */
+.theme-dark .workspace-leaf-content[data-type="markdown"] .view-content { position: relative; overflow: hidden; }
+.theme-dark .workspace-leaf-content[data-type="markdown"] .view-content::before {
+	content: ""; position: absolute; inset: -40% -40% 0 0; pointer-events: none; z-index: 0; opacity: .35;
+	background-image:
+		radial-gradient(1px 1px at 8% 12%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 23% 64%, #e9e2ff 50%, transparent 51%),
+		radial-gradient(1.4px 1.4px at 41% 28%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 57% 81%, #cfe0ff 50%, transparent 51%),
+		radial-gradient(1px 1px at 69% 9%, #ffd9f3 50%, transparent 51%), radial-gradient(1.4px 1.4px at 83% 47%, #fff 50%, transparent 51%),
+		radial-gradient(1px 1px at 94% 73%, #e9e2ff 50%, transparent 51%), radial-gradient(1px 1px at 15% 92%, #fff 50%, transparent 51%),
+		radial-gradient(ellipse 35% 25% at 85% 10%, rgba(140, 90, 255, .07), transparent 70%),
+		radial-gradient(ellipse 30% 22% at 10% 90%, rgba(255, 95, 180, .05), transparent 70%);
+	background-size: 560px 560px, 560px 560px, 560px 560px, 560px 560px, 560px 560px, 560px 560px, 560px 560px, 560px 560px, 1600px 1200px, 1600px 1200px;
+	animation: cvfx-drift 240s linear infinite;
+}
+@keyframes cvfx-drift { to { transform: translate(280px, 140px); } }
+.theme-dark .workspace-leaf-content[data-type="markdown"] .view-content > * { position: relative; z-index: 1; }
+
+/* ---------- headings: starlight gradients ---------- */
+.theme-dark .inline-title, .theme-dark .markdown-rendered h1, .theme-dark .HyperMD-header-1 .cm-header-1 {
+	background: linear-gradient(100deg, #f4efff 10%, #c9b3ff 45%, #ff9ad8 75%, #8fd8ff 100%);
+	-webkit-background-clip: text; background-clip: text; color: transparent !important;
+	filter: drop-shadow(0 0 14px rgba(170, 130, 255, .25)); background-size: 200% 100%;
+	animation: cvfx-sheen 14s ease-in-out infinite alternate;
+}
+@keyframes cvfx-sheen { to { background-position: 100% 0; } }
+.theme-dark .markdown-rendered h2::before { content: "\2726  "; color: #b89cff; text-shadow: 0 0 10px rgba(184, 156, 255, .8); font-size: .8em; }
+.theme-dark .markdown-rendered h2 { border-bottom: none !important; padding-bottom: .25em;
+	background-image: linear-gradient(90deg, rgba(155, 123, 255, .55), rgba(255, 95, 180, .25) 40%, transparent 75%);
+	background-size: 100% 1px; background-position: bottom; background-repeat: no-repeat; }
+.theme-dark .markdown-rendered h3 { color: #c9b8ff; }
+
+/* ---------- links and tags ---------- */
+.theme-dark .markdown-rendered a.internal-link, .theme-dark .cm-hmd-internal-link { color: #c4b0ff; text-decoration: none;
+	background-image: linear-gradient(90deg, #9b7bff, #ff8be0); background-size: 0% 1px; background-position: 0 100%; background-repeat: no-repeat;
+	transition: background-size .35s ease, text-shadow .35s ease, color .35s ease; }
+.theme-dark .markdown-rendered a.internal-link:hover { background-size: 100% 1px; color: #ffffff; text-shadow: 0 0 12px rgba(184, 156, 255, .7); }
+.theme-dark .markdown-rendered a.external-link { color: #8fd8ff; }
+.theme-dark .markdown-rendered a.external-link:hover { text-shadow: 0 0 12px rgba(143, 216, 255, .6); }
+.theme-dark a.tag { border-radius: 999px; box-shadow: 0 0 0 1px rgba(155, 123, 255, .25), 0 0 12px rgba(155, 123, 255, .12); transition: box-shadow .3s; }
+.theme-dark a.tag:hover { box-shadow: 0 0 0 1px rgba(255, 139, 224, .6), 0 0 16px rgba(255, 139, 224, .35); }
+
+/* ---------- glass blocks ---------- */
+.theme-dark .callout { background: linear-gradient(135deg, rgba(40, 28, 72, .55), rgba(18, 13, 32, .55)) !important; backdrop-filter: blur(4px);
+	border: 1px solid rgba(155, 123, 255, .25) !important; box-shadow: 0 0 24px rgba(120, 80, 255, .08) inset, 0 8px 30px rgba(0, 0, 0, .35); }
+.theme-dark .markdown-rendered pre { background: rgba(14, 11, 24, .85) !important; border: 1px solid #241d3a; border-left: 3px solid #9b7bff;
+	border-radius: 10px; box-shadow: 0 0 22px rgba(155, 123, 255, .07); }
+.theme-dark .markdown-rendered table { box-shadow: 0 0 26px rgba(120, 80, 255, .06); }
+.theme-dark .markdown-rendered thead tr { background: linear-gradient(90deg, rgba(155, 123, 255, .18), rgba(255, 95, 180, .08)); }
+.theme-dark .markdown-rendered tbody tr { transition: background .2s; }
+.theme-dark .markdown-rendered tbody tr:hover { background: rgba(155, 123, 255, .07); }
+.theme-dark .markdown-rendered img { border-radius: 10px; box-shadow: 0 10px 40px rgba(0, 0, 0, .55), 0 0 0 1px rgba(155, 123, 255, .15); }
+.theme-dark .markdown-rendered blockquote { border-left: 2px solid transparent;
+	border-image: linear-gradient(180deg, #9b7bff, #ff8be0) 1; }
+
+/* ---------- tabs and explorer ---------- */
+.theme-dark .workspace-tab-header.is-active { position: relative; }
+.theme-dark .workspace-tab-header.is-active::after { content: ""; position: absolute; left: 12%; right: 12%; bottom: 0; height: 2px; border-radius: 2px;
+	background: linear-gradient(90deg, #9b7bff, #ff8be0, #8fd8ff, #9b7bff); background-size: 300% 100%;
+	box-shadow: 0 0 10px rgba(184, 156, 255, .7); animation: cvfx-flow 6s linear infinite; }
+@keyframes cvfx-flow { to { background-position: 300% 0; } }
+.theme-dark .nav-file-title.is-active { background: linear-gradient(90deg, rgba(155, 123, 255, .25), rgba(155, 123, 255, .04)) !important;
+	box-shadow: inset 2px 0 0 #b89cff, 0 0 14px rgba(155, 123, 255, .12); color: #fff !important; }
+.theme-dark .nav-file-title:hover { text-shadow: 0 0 10px rgba(184, 156, 255, .45); }
+.theme-dark .status-bar { background: linear-gradient(90deg, transparent, rgba(155, 123, 255, .08)) !important; color: #8f86ad; }
+.theme-dark ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #3a2d63, #2a2148) !important; }
+.theme-dark ::selection { background: rgba(255, 139, 224, .25); }
+.theme-dark .markdown-rendered input[type="checkbox"]:checked { box-shadow: 0 0 10px rgba(155, 123, 255, .6); }
+
+@media (prefers-reduced-motion: reduce) {
+	.theme-dark .workspace-leaf-content[data-type="markdown"] .view-content::before, .theme-dark .inline-title, .theme-dark .markdown-rendered h1,
+	.theme-dark .workspace-tab-header.is-active::after { animation: none !important; }
+}

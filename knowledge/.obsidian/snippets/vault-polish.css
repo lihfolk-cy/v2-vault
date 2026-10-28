@@ -1,0 +1,151 @@
+/* Vault polish: hub pages as card grids, "Connected notes" and "Related" as chips, a banner title on
+   hubs, and calmer reading width. Hubs opt in with `cssclasses: [vault-hub]` in their front matter.
+   Toggle in Settings > Appearance > CSS snippets (vault-polish). */
+
+/* ---------- hub pages ---------- */
+.vault-hub {
+	--vh-card: rgba(28, 21, 48, .55);
+	--vh-card-hover: rgba(52, 38, 92, .7);
+	--vh-edge: rgba(155, 123, 255, .22);
+}
+.vault-hub .inline-title, .vault-hub .markdown-rendered h1:first-of-type, .vault-hub.markdown-rendered h1:first-of-type {
+	font-size: 2.6em; line-height: 1.1; letter-spacing: -.01em; padding: .35em 0 .15em;
+	background: linear-gradient(100deg, #ffffff 0%, #d9c9ff 30%, #ff9ed8 65%, #8fd3ff 100%) !important;
+	-webkit-background-clip: text !important; background-clip: text !important; -webkit-text-fill-color: transparent !important;
+	filter: drop-shadow(0 0 18px rgba(155, 123, 255, .35));
+}
+/* hubs: no raw properties panel, a glowing rule under the title instead */
+.vault-hub .metadata-container { display: none !important; }
+.theme-dark .vault-hub .inline-title { margin-bottom: .1em; }
+.vault-hub .inline-title::after, .vault-hub h1:first-of-type::after {
+	content: ""; display: block; height: 2px; width: 140px; margin-top: .35em; border-radius: 2px;
+	background: linear-gradient(90deg, #9b7bff, #ff8be0, transparent); -webkit-text-fill-color: initial;
+}
+/* keep helper folders out of the file explorer */
+.nav-folder:has(> .nav-folder-title[data-path="_tools"]) { display: none; }
+
+/* bullet lists of links become a card grid */
+.vault-hub .markdown-rendered ul:has(> li > a.internal-link),
+.vault-hub.markdown-rendered ul:has(> li > a.internal-link) {
+	display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px;
+	padding-left: 0 !important; margin: .6em 0 1.4em;
+}
+.vault-hub ul:has(> li > a.internal-link) > li {
+	list-style: none; margin: 0 !important; padding: 9px 12px 9px 14px; border-radius: 10px;
+	background: var(--vh-card); border: 1px solid var(--vh-edge);
+	box-shadow: inset 3px 0 0 rgba(155, 123, 255, .55);
+	transition: transform .16s ease, background .16s ease, box-shadow .16s ease;
+	line-height: 1.3; font-size: .93em;
+}
+.vault-hub ul:has(> li > a.internal-link) > li::marker { content: none; }
+.vault-hub ul:has(> li > a.internal-link) > li .list-bullet { display: none; }
+.vault-hub ul:has(> li > a.internal-link) > li:hover {
+	transform: translateY(-2px); background: var(--vh-card-hover);
+	box-shadow: inset 3px 0 0 #ff8be0, 0 6px 22px -10px rgba(155, 123, 255, .9);
+}
+.vault-hub ul:has(> li > a.internal-link) > li a.internal-link { color: #efe8ff; background-image: none !important; }
+
+/* section headings on hubs read as group labels */
+.vault-hub .markdown-rendered h3, .vault-hub.markdown-rendered h3 {
+	margin-top: 1.8em; padding: .35em .7em; border-radius: 8px; font-size: 1.05em; letter-spacing: .02em;
+	background: linear-gradient(90deg, rgba(155, 123, 255, .18), transparent 70%);
+	border-left: 3px solid #9b7bff;
+}
+
+/* ---------- every note: Connected notes and Related as chips ---------- */
+:is(.el-h2:has(h2[data-heading="Connected notes"]) ~ .el-p, .el-h2:has(h2[data-heading="Related"]) + .el-p, .el-h2:has(h2[data-heading="Related"]) + div + .el-p) p {
+	font-size: 0; line-height: 0; /* hides the " · " separators between links */
+}
+:is(.el-h2:has(h2[data-heading="Connected notes"]) ~ .el-p, .el-h2:has(h2[data-heading="Related"]) + .el-p, .el-h2:has(h2[data-heading="Related"]) + div + .el-p) a.internal-link,
+.el-h2:has(h2[data-heading="Related"]) + .el-ul li > a.internal-link {
+	display: inline-block; font-size: 13.5px; line-height: 1.35; margin: 0 6px 7px 0; padding: 4px 12px; border-radius: 999px;
+	background: rgba(155, 123, 255, .12); border: 1px solid rgba(155, 123, 255, .3);
+	color: #dcd0ff; background-image: none !important; text-shadow: none; transition: background .15s, border-color .15s, transform .15s;
+}
+:is(.el-h2:has(h2[data-heading="Connected notes"]) ~ .el-p) a.internal-link {
+	background: rgba(90, 200, 255, .08); border-color: rgba(120, 200, 255, .25); color: #cfeaff;
+}
+:is(.el-h2:has(h2[data-heading="Connected notes"]) ~ .el-p, .el-h2:has(h2[data-heading="Related"]) + .el-p, .el-h2:has(h2[data-heading="Related"]) + div + .el-p) a.internal-link:hover,
+.el-h2:has(h2[data-heading="Related"]) + .el-ul li > a.internal-link:hover {
+	background: rgba(255, 139, 224, .18); border-color: rgba(255, 139, 224, .6); color: #fff; transform: translateY(-1px);
+}
+.markdown-rendered h2[data-heading="Connected notes"],
+.markdown-rendered h2[data-heading="Related"] {
+	font-size: .82em; text-transform: uppercase; letter-spacing: .14em; color: #9f92c4 !important; margin-top: 2.4em;
+}
+
+/* ---------- reading comfort ---------- */
+body { --file-line-width: 820px; }
+.vault-hub { --file-line-width: 1100px; }
+.markdown-rendered p, .markdown-rendered li { line-height: 1.68; }
+.markdown-rendered table { font-size: .92em; }
+.markdown-rendered strong { letter-spacing: .005em; }
+
+@media (prefers-reduced-motion: reduce) {
+	.vault-hub ul:has(> li > a.internal-link) > li { transition: none; }
+	.vault-hub ul:has(> li > a.internal-link) > li:hover { transform: none; }
+}
+
+/* ---------- generated: section colours on the Start Here map ---------- */
+.vault-hub div:has(> h3) { --vh-acc: #9b7bff; }
+.vault-hub h3 { border-left-color: var(--vh-acc, #9b7bff) !important; background: linear-gradient(90deg, color-mix(in srgb, var(--vh-acc, #9b7bff) 22%, transparent), transparent 70%) !important; }
+.vault-hub ul:has(> li > a.internal-link) > li { box-shadow: inset 3px 0 0 var(--vh-acc, rgba(155,123,255,.55)); border-color: color-mix(in srgb, var(--vh-acc, #9b7bff) 26%, transparent); }
+.vault-hub ul:has(> li > a.internal-link) > li:hover { box-shadow: inset 3px 0 0 var(--vh-acc, #ff8be0), 0 6px 22px -10px var(--vh-acc, #9b7bff); background: color-mix(in srgb, var(--vh-acc, #9b7bff) 18%, rgba(20,15,36,.8)); }
+/* reading paths: each 'Label:' paragraph becomes a card */
+.vault-hub p:has(> strong:first-child) { padding: 12px 16px; border-radius: 12px; background: rgba(28,21,48,.45); border: 1px solid rgba(155,123,255,.18); box-shadow: inset 3px 0 0 #ff8be0; }
+.vault-hub p:has(> strong:first-child) > strong:first-child { display: block; font-size: .8em; letter-spacing: .12em; text-transform: uppercase; color: #ffb8e6; margin-bottom: .3em; }
+.vault-hub div:has(> h3[data-heading^="01 "]), .vault-hub div:has(> h3[data-heading^="01 "]) + div, .vault-hub div:has(> h3[data-heading^="01 "]) + div + div { --vh-acc: #492fee; }
+.vault-hub div:has(> h3[data-heading^="02 "]), .vault-hub div:has(> h3[data-heading^="02 "]) + div, .vault-hub div:has(> h3[data-heading^="02 "]) + div + div { --vh-acc: #2aa3f4; }
+.vault-hub div:has(> h3[data-heading^="03 "]), .vault-hub div:has(> h3[data-heading^="03 "]) + div, .vault-hub div:has(> h3[data-heading^="03 "]) + div + div { --vh-acc: #3fa0f5; }
+.vault-hub div:has(> h3[data-heading^="04 "]), .vault-hub div:has(> h3[data-heading^="04 "]) + div, .vault-hub div:has(> h3[data-heading^="04 "]) + div + div { --vh-acc: #35e9dd; }
+.vault-hub div:has(> h3[data-heading^="05 "]), .vault-hub div:has(> h3[data-heading^="05 "]) + div, .vault-hub div:has(> h3[data-heading^="05 "]) + div + div { --vh-acc: #ee2faf; }
+.vault-hub div:has(> h3[data-heading^="06 "]), .vault-hub div:has(> h3[data-heading^="06 "]) + div, .vault-hub div:has(> h3[data-heading^="06 "]) + div + div { --vh-acc: #f66628; }
+.vault-hub div:has(> h3[data-heading^="07 "]), .vault-hub div:has(> h3[data-heading^="07 "]) + div, .vault-hub div:has(> h3[data-heading^="07 "]) + div + div { --vh-acc: #ee2f6f; }
+.vault-hub div:has(> h3[data-heading^="08 "]), .vault-hub div:has(> h3[data-heading^="08 "]) + div, .vault-hub div:has(> h3[data-heading^="08 "]) + div + div { --vh-acc: #9d3be3; }
+.vault-hub div:has(> h3[data-heading^="09 "]), .vault-hub div:has(> h3[data-heading^="09 "]) + div, .vault-hub div:has(> h3[data-heading^="09 "]) + div + div { --vh-acc: #40dd5a; }
+.vault-hub div:has(> h3[data-heading^="10 "]), .vault-hub div:has(> h3[data-heading^="10 "]) + div, .vault-hub div:has(> h3[data-heading^="10 "]) + div + div { --vh-acc: #4ee06d; }
+.vault-hub div:has(> h3[data-heading^="11 "]), .vault-hub div:has(> h3[data-heading^="11 "]) + div, .vault-hub div:has(> h3[data-heading^="11 "]) + div + div { --vh-acc: #f9a424; }
+.vault-hub div:has(> h3[data-heading^="12 "]), .vault-hub div:has(> h3[data-heading^="12 "]) + div, .vault-hub div:has(> h3[data-heading^="12 "]) + div + div { --vh-acc: #9adcf4; }
+.vault-hub div:has(> h3[data-heading^="13 "]), .vault-hub div:has(> h3[data-heading^="13 "]) + div, .vault-hub div:has(> h3[data-heading^="13 "]) + div + div { --vh-acc: #e9353b; }
+.vault-hub div:has(> h3[data-heading^="14 "]), .vault-hub div:has(> h3[data-heading^="14 "]) + div, .vault-hub div:has(> h3[data-heading^="14 "]) + div + div { --vh-acc: #f67432; }
+.vault-hub div:has(> h3[data-heading^="15 "]), .vault-hub div:has(> h3[data-heading^="15 "]) + div, .vault-hub div:has(> h3[data-heading^="15 "]) + div + div { --vh-acc: #2fee9f; }
+.vault-hub div:has(> h3[data-heading^="16 "]), .vault-hub div:has(> h3[data-heading^="16 "]) + div, .vault-hub div:has(> h3[data-heading^="16 "]) + div + div { --vh-acc: #63f2cf; }
+.vault-hub div:has(> h3[data-heading^="17 "]), .vault-hub div:has(> h3[data-heading^="17 "]) + div, .vault-hub div:has(> h3[data-heading^="17 "]) + div + div { --vh-acc: #7952f1; }
+.vault-hub div:has(> h3[data-heading^="18 "]), .vault-hub div:has(> h3[data-heading^="18 "]) + div, .vault-hub div:has(> h3[data-heading^="18 "]) + div + div { --vh-acc: #f7813d; }
+.vault-hub div:has(> h3[data-heading^="19 "]), .vault-hub div:has(> h3[data-heading^="19 "]) + div, .vault-hub div:has(> h3[data-heading^="19 "]) + div + div { --vh-acc: #f78e48; }
+.vault-hub div:has(> h3[data-heading^="20 "]), .vault-hub div:has(> h3[data-heading^="20 "]) + div, .vault-hub div:has(> h3[data-heading^="20 "]) + div + div { --vh-acc: #f89a53; }
+.vault-hub div:has(> h3[data-heading^="21 "]), .vault-hub div:has(> h3[data-heading^="21 "]) + div, .vault-hub div:has(> h3[data-heading^="21 "]) + div + div { --vh-acc: #f263ab; }
+.vault-hub div:has(> h3[data-heading^="22 "]), .vault-hub div:has(> h3[data-heading^="22 "]) + div, .vault-hub div:has(> h3[data-heading^="22 "]) + div + div { --vh-acc: #57e6ec; }
+.vault-hub div:has(> h3[data-heading^="23 "]), .vault-hub div:has(> h3[data-heading^="23 "]) + div, .vault-hub div:has(> h3[data-heading^="23 "]) + div + div { --vh-acc: #78ddf0; }
+.vault-hub div:has(> h3[data-heading^="24 "]), .vault-hub div:has(> h3[data-heading^="24 "]) + div, .vault-hub div:has(> h3[data-heading^="24 "]) + div + div { --vh-acc: #ee7968; }
+.vault-hub div:has(> h3[data-heading^="25 "]), .vault-hub div:has(> h3[data-heading^="25 "]) + div, .vault-hub div:has(> h3[data-heading^="25 "]) + div + div { --vh-acc: #5ce27f; }
+.vault-hub div:has(> h3[data-heading^="26 "]), .vault-hub div:has(> h3[data-heading^="26 "]) + div, .vault-hub div:has(> h3[data-heading^="26 "]) + div + div { --vh-acc: #fab736; }
+.vault-hub div:has(> h3[data-heading^="27 "]), .vault-hub div:has(> h3[data-heading^="27 "]) + div, .vault-hub div:has(> h3[data-heading^="27 "]) + div + div { --vh-acc: #fac749; }
+.vault-hub div:has(> h3[data-heading^="28 "]), .vault-hub div:has(> h3[data-heading^="28 "]) + div, .vault-hub div:has(> h3[data-heading^="28 "]) + div + div { --vh-acc: #fbd55b; }
+.vault-hub div:has(> h3[data-heading^="29 "]), .vault-hub div:has(> h3[data-heading^="29 "]) + div, .vault-hub div:has(> h3[data-heading^="29 "]) + div + div { --vh-acc: #54a0f6; }
+.vault-hub div:has(> h3[data-heading^="30 "]), .vault-hub div:has(> h3[data-heading^="30 "]) + div, .vault-hub div:has(> h3[data-heading^="30 "]) + div + div { --vh-acc: #f8a65d; }
+.vault-hub div:has(> h3[data-heading^="31 "]), .vault-hub div:has(> h3[data-heading^="31 "]) + div, .vault-hub div:has(> h3[data-heading^="31 "]) + div + div { --vh-acc: #97f7ef; }
+.vault-hub div:has(> h3[data-heading^="32 "]), .vault-hub div:has(> h3[data-heading^="32 "]) + div, .vault-hub div:has(> h3[data-heading^="32 "]) + div + div { --vh-acc: #f4b59a; }
+.vault-hub div:has(> h3[data-heading^="33 "]), .vault-hub div:has(> h3[data-heading^="33 "]) + div, .vault-hub div:has(> h3[data-heading^="33 "]) + div + div { --vh-acc: #69e58f; }
+.vault-hub div:has(> h3[data-heading^="34 "]), .vault-hub div:has(> h3[data-heading^="34 "]) + div, .vault-hub div:has(> h3[data-heading^="34 "]) + div + div { --vh-acc: #77e79f; }
+.vault-hub div:has(> h3[data-heading^="35 "]), .vault-hub div:has(> h3[data-heading^="35 "]) + div, .vault-hub div:has(> h3[data-heading^="35 "]) + div + div { --vh-acc: #6aa2f7; }
+.vault-hub div:has(> h3[data-heading^="36 "]), .vault-hub div:has(> h3[data-heading^="36 "]) + div, .vault-hub div:has(> h3[data-heading^="36 "]) + div + div { --vh-acc: #84e9ad; }
+.vault-hub div:has(> h3[data-heading^="37 "]), .vault-hub div:has(> h3[data-heading^="37 "]) + div, .vault-hub div:has(> h3[data-heading^="37 "]) + div + div { --vh-acc: #ea9df1; }
+.vault-hub div:has(> h3[data-heading^="38 "]), .vault-hub div:has(> h3[data-heading^="38 "]) + div, .vault-hub div:has(> h3[data-heading^="38 "]) + div + div { --vh-acc: #fbe26d; }
+.vault-hub div:has(> h3[data-heading^="39 "]), .vault-hub div:has(> h3[data-heading^="39 "]) + div, .vault-hub div:has(> h3[data-heading^="39 "]) + div + div { --vh-acc: #a275f4; }
+.vault-hub div:has(> h3[data-heading^="40 "]), .vault-hub div:has(> h3[data-heading^="40 "]) + div, .vault-hub div:has(> h3[data-heading^="40 "]) + div + div { --vh-acc: #7fa7f8; }
+.vault-hub div:has(> h3[data-heading^="41 "]), .vault-hub div:has(> h3[data-heading^="41 "]) + div, .vault-hub div:has(> h3[data-heading^="41 "]) + div + div { --vh-acc: #94aff9; }
+.vault-hub div:has(> h3[data-heading^="42 "]), .vault-hub div:has(> h3[data-heading^="42 "]) + div, .vault-hub div:has(> h3[data-heading^="42 "]) + div + div { --vh-acc: #f797b7; }
+.vault-hub div:has(> h3[data-heading^="43 "]), .vault-hub div:has(> h3[data-heading^="43 "]) + div, .vault-hub div:has(> h3[data-heading^="43 "]) + div + div { --vh-acc: #92ecbb; }
+.vault-hub div:has(> h3[data-heading^="44 "]), .vault-hub div:has(> h3[data-heading^="44 "]) + div, .vault-hub div:has(> h3[data-heading^="44 "]) + div + div { --vh-acc: #f9b068; }
+.vault-hub div:has(> h3[data-heading^="45 "]), .vault-hub div:has(> h3[data-heading^="45 "]) + div, .vault-hub div:has(> h3[data-heading^="45 "]) + div + div { --vh-acc: #f9bb73; }
+.vault-hub div:has(> h3[data-heading^="46 "]), .vault-hub div:has(> h3[data-heading^="46 "]) + div, .vault-hub div:has(> h3[data-heading^="46 "]) + div + div { --vh-acc: #8a90a8; }
+.vault-hub div:has(> h3[data-heading^="47 "]), .vault-hub div:has(> h3[data-heading^="47 "]) + div, .vault-hub div:has(> h3[data-heading^="47 "]) + div + div { --vh-acc: #f79797; }
+.vault-hub div:has(> h3[data-heading^="48 "]), .vault-hub div:has(> h3[data-heading^="48 "]) + div, .vault-hub div:has(> h3[data-heading^="48 "]) + div + div { --vh-acc: #fced7f; }
+.vault-hub div:has(> h3[data-heading^="49 "]), .vault-hub div:has(> h3[data-heading^="49 "]) + div, .vault-hub div:has(> h3[data-heading^="49 "]) + div + div { --vh-acc: #fcf592; }
+.vault-hub div:has(> h3[data-heading^="50 "]), .vault-hub div:has(> h3[data-heading^="50 "]) + div, .vault-hub div:has(> h3[data-heading^="50 "]) + div + div { --vh-acc: #c497f7; }
+.vault-hub div:has(> h3[data-heading^="51 "]), .vault-hub div:has(> h3[data-heading^="51 "]) + div, .vault-hub div:has(> h3[data-heading^="51 "]) + div + div { --vh-acc: #a0eec7; }
+.vault-hub div:has(> h3[data-heading^="52 "]), .vault-hub div:has(> h3[data-heading^="52 "]) + div, .vault-hub div:has(> h3[data-heading^="52 "]) + div + div { --vh-acc: #f2efff; }
+.vault-hub div:has(> h3[data-heading^="53 "]), .vault-hub div:has(> h3[data-heading^="53 "]) + div, .vault-hub div:has(> h3[data-heading^="53 "]) + div + div { --vh-acc: #fac47e; }
+.vault-hub div:has(> h3[data-heading^="54 "]), .vault-hub div:has(> h3[data-heading^="54 "]) + div, .vault-hub div:has(> h3[data-heading^="54 "]) + div + div { --vh-acc: #facd89; }
+.vault-hub div:has(> h3[data-heading^="55 "]), .vault-hub div:has(> h3[data-heading^="55 "]) + div, .vault-hub div:has(> h3[data-heading^="55 "]) + div + div { --vh-acc: #fbd593; }

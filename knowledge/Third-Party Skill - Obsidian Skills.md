@@ -3,7 +3,7 @@ tags: [ai, agents, ai-skill, obsidian, third-party]
 ---
 # Third-Party Skill - Obsidian Skills
 
-**Source:** [github.com/kepano/obsidian-skills](https://github.com/kepano/obsidian-skills) by Steph Ango, MIT licence, version 1.0.1 as of October 2026. Not written for this vault. The files are included unchanged in the vault's hidden `.claude/skills/` folder, with the licence as `.claude/skills/LICENSE-obsidian-skills.txt`.
+**Source:** [github.com/kepano/obsidian-skills](https://github.com/kepano/obsidian-skills) by Steph Ango, MIT licence, version 1.0.1 as of October 2026. Not written for this vault and not shipped with it: install it from the link above if you want it.
 
 ## What it does
 
@@ -53,5 +53,5 @@ Other agents: copy the `skills` folder into the tool's skills path (Codex uses `
 
 ## Connected notes
 <!-- auto-links:start -->
-[[LICENSE]] · [[Skill - Roblox Debugging]] · [[Check-UI Design System]] · [[Studio Assistant and AI Tools]] · [[Setting Up MCP Clients]] · [[CHANGELOG]]
+[[LICENSE]] · [[Skill - Roblox Debugging]] · [[LihFolk UI Design System]] · [[Studio Assistant and AI Tools]] · [[Setting Up MCP Clients]] · [[CHANGELOG]]
 <!-- auto-links:end -->

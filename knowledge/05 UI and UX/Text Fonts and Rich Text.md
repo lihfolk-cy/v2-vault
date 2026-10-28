@@ -319,5 +319,5 @@ See also: [[UI Design Systems]], [[Localization]], [[Accessibility]], [[Layout -
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Readable Text and UI Scale]] · [[Check-UI Design System]] · [[UI Asset Pipeline]] · [[Strings Patterns and Formatting]] · [[Links - UI elements]] · [[Accessibility Contrast]]
+[[Readable Text and UI Scale]] · [[LihFolk UI Design System]] · [[UI Asset Pipeline]] · [[Strings Patterns and Formatting]] · [[Links - UI elements]] · [[Accessibility Contrast]]
 <!-- auto-links:end -->

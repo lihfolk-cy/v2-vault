@@ -1,9 +1,9 @@
 ---
 name: roblox-trend-game
-description: Design, build, launch and operate fast trend Roblox games (brainrot / "Steal a ___", "Grow a ___", meme simulators, collect-upgrade-steal loops) in days with AI, at a quality that retains players and complies with 2026 Roblox rules. Use when the user wants a trend game, a viral/simulator game fast, "what's trending", a clone-with-a-twist, or asks about discovery, retention, thumbnails, luck boosts, admin abuse events or live ops for such games. Also invoked by /lihfolk:trend-game.
+description: 'LihFolk: Design, build, launch and operate fast trend Roblox games (brainrot / "Steal a ___", "Grow a ___", meme simulators, collect-upgrade-steal loops) in days with AI, at a quality that retains players and complies with 2026 Roblox rules. Use when the user wants a trend game, a viral/simulator game fast, "what''s trending", a clone-with-a-twist, or asks about discovery, retention, thumbnails, luck boosts, admin abuse events or live ops for such games. Also invoked by /lihfolk:trend-game.'
 ---
 
-# Trend Game (LihFolk)
+# LihFolk Trend Game
 
 Full sourced research: `references/trend-games-research.md` (labels: Roblox docs / Reported / Expert practice / Derived / Unverified). Read the **Executive summary**, **section 0 (platform context)** and the section for the current step before acting. Never quote a number from it without its label.
 

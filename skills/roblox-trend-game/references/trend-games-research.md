@@ -462,7 +462,7 @@ Check this on the **server** before showing or processing any paid random purcha
 "We prohibit both simulated and actual gambling." No Robux or items of value in connection with gambling. Content maturity allows only *unplayable* gambling content. [Roblox docs (Community Standards; Content Maturity)] Coin flips or wagers of units between players are high risk. [Derived]
 
 ### 8.3 Misleading and duplicative content, metadata, thumbnails
-- Prohibited: "Deceptive, sensational, duplicative, or otherwise misleading content or metadata" used to drive discoverability, monetization or engagement, and "Repeatedly uploading content identical or nearly identical to existing content." [Roblox docs (Community Standards)]
+- Prohibited: "Deceptive, sensational, duplicative, or otherwise misleading content or metadata" used to drive discoverability, monetization or engagement, and repeated uploads of content that is the same as, or almost the same as, something already on the platform. [Roblox docs (Community Standards)]
 - Discovery deprioritizes giveaway-led titles, mismatched metadata, and near-duplicate metadata or place files. [Roblox docs (discovery)]
 - Ads: no deceptive claims, no "free Robux." [Roblox docs (Advertising Standards)]
 

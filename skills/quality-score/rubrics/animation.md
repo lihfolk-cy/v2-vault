@@ -9,6 +9,7 @@ Source: knowledge notes `LihFolk R15 Keyframe Pipeline`, `Blade Grip and Wrist L
 - No body overlap deeper than 0.05 studs (limbs through torso or head), if the overlap check exists
 - `wrist_clamped_deg` under 5 on every blade key (weapon clips)
 - Loop clips: first frame equals last frame; priority set
+- Arm twist (weapon clips, `qa.arm_twist`): sword-arm roll rate 25 deg/frame or less outside the contact frames (Hit -1 to Hit +2), and `right_arm_reversals_in_swing` = 0 (sign changes of the roll rate about the segment's own axis inside TrailOn-3 .. TrailOff). Source: Human Swing Biomechanics.
 
 ## Criteria (0 / 1 / 2)
 | # | Criterion | W | 0 | 1 | 2 |

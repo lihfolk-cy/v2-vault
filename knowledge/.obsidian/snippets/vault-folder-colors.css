@@ -1,0 +1,74 @@
+/* Vault folder colours: generated from the same palette as the graph colour groups, so a section
+   looks the same in the file explorer and the graph. Sections are grouped into colour families. */
+.nav-folder-title[data-path]:not([data-path*="/"]) {
+  font-weight: 600; border-radius: 6px; margin: 1px 0; padding-left: 10px !important;
+  color: color-mix(in srgb, var(--vf-accent, var(--text-normal)) 85%, white);
+  box-shadow: inset 3px 0 0 var(--vf-accent, transparent);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--vf-accent, transparent) 16%, transparent), transparent 80%);
+  transition: background .18s ease, box-shadow .18s ease;
+}
+.nav-folder-title[data-path]:not([data-path*="/"]):hover {
+  box-shadow: inset 4px 0 0 var(--vf-accent, transparent), 0 0 14px -6px var(--vf-accent, transparent);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--vf-accent, transparent) 30%, transparent), transparent 92%);
+}
+.nav-folder-title[data-path]:not([data-path*="/"])::before {
+  content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%;
+  background: var(--vf-accent, transparent); box-shadow: 0 0 8px var(--vf-accent, transparent); flex: none;
+}
+.nav-file-title[data-path="00 Start Here.md"] { color: #ffffff; font-weight: 700; text-shadow: 0 0 10px rgba(185,162,255,.7); }
+.nav-file-title[data-path$="Start Here.md"] { font-weight: 650; color: #f2ecff; }
+.nav-folder-title[data-path="01 Studio and Workflow"] { --vf-accent: #492fee; }
+.nav-folder-title[data-path="02 Luau Scripting"] { --vf-accent: #2aa3f4; }
+.nav-folder-title[data-path="03 Architecture and Networking"] { --vf-accent: #3fa0f5; }
+.nav-folder-title[data-path="04 Data and Persistence"] { --vf-accent: #35e9dd; }
+.nav-folder-title[data-path="05 UI and UX"] { --vf-accent: #ee2faf; }
+.nav-folder-title[data-path="06 World Building and Art"] { --vf-accent: #f66628; }
+.nav-folder-title[data-path="07 Lighting VFX and Audio"] { --vf-accent: #ee2f6f; }
+.nav-folder-title[data-path="08 Animation"] { --vf-accent: #9d3be3; }
+.nav-folder-title[data-path="09 Gameplay Systems"] { --vf-accent: #40dd5a; }
+.nav-folder-title[data-path="10 Game Design and Genres"] { --vf-accent: #4ee06d; }
+.nav-folder-title[data-path="11 Monetization Publishing and Live Ops"] { --vf-accent: #f9a424; }
+.nav-folder-title[data-path="12 Performance Testing and Debugging"] { --vf-accent: #9adcf4; }
+.nav-folder-title[data-path="13 Production and Case Studies"] { --vf-accent: #e9353b; }
+.nav-folder-title[data-path="14 3D Modeling"] { --vf-accent: #f67432; }
+.nav-folder-title[data-path="15 AI Tools"] { --vf-accent: #2fee9f; }
+.nav-folder-title[data-path="16 MCP and Agents"] { --vf-accent: #63f2cf; }
+.nav-folder-title[data-path="17 Pipelines"] { --vf-accent: #7952f1; }
+.nav-folder-title[data-path="18 Rigs and Skeletons"] { --vf-accent: #f7813d; }
+.nav-folder-title[data-path="19 Concept Sheets"] { --vf-accent: #f78e48; }
+.nav-folder-title[data-path="20 CC0 Library"] { --vf-accent: #f89a53; }
+.nav-folder-title[data-path="21 Check-UI Design System"] { --vf-accent: #f263ab; }
+.nav-folder-title[data-path="22 Anti-Exploit and Security"] { --vf-accent: #57e6ec; }
+.nav-folder-title[data-path="23 Debugging Deep Dives"] { --vf-accent: #78ddf0; }
+.nav-folder-title[data-path="24 Worked Builds"] { --vf-accent: #ee7968; }
+.nav-folder-title[data-path="25 Physics and Vehicles"] { --vf-accent: #5ce27f; }
+.nav-folder-title[data-path="26 Community and Moderation"] { --vf-accent: #fab736; }
+.nav-folder-title[data-path="27 Marketing and Growth"] { --vf-accent: #fac749; }
+.nav-folder-title[data-path="28 Business and Careers"] { --vf-accent: #fbd55b; }
+.nav-folder-title[data-path="29 Luau Cookbook"] { --vf-accent: #54a0f6; }
+.nav-folder-title[data-path="30 Models and Environment Kits"] { --vf-accent: #f8a65d; }
+.nav-folder-title[data-path="31 AI Skills for Roblox"] { --vf-accent: #97f7ef; }
+.nav-folder-title[data-path="32 Case Studies of Top Roblox Games"] { --vf-accent: #f4b59a; }
+.nav-folder-title[data-path="33 Level Design"] { --vf-accent: #69e58f; }
+.nav-folder-title[data-path="34 Procedural Generation"] { --vf-accent: #77e79f; }
+.nav-folder-title[data-path="35 Advanced Luau"] { --vf-accent: #6aa2f7; }
+.nav-folder-title[data-path="36 Narrative and Worldbuilding"] { --vf-accent: #84e9ad; }
+.nav-folder-title[data-path="37 Avatars and UGC"] { --vf-accent: #ea9df1; }
+.nav-folder-title[data-path="38 Live Ops Deep Dive"] { --vf-accent: #fbe26d; }
+.nav-folder-title[data-path="39 Studio Plugins and Tooling"] { --vf-accent: #a275f4; }
+.nav-folder-title[data-path="40 Game Math"] { --vf-accent: #7fa7f8; }
+.nav-folder-title[data-path="41 Multiplayer Services"] { --vf-accent: #94aff9; }
+.nav-folder-title[data-path="42 Accessibility and Inclusive Design"] { --vf-accent: #f797b7; }
+.nav-folder-title[data-path="43 Genre Systems End to End"] { --vf-accent: #92ecbb; }
+.nav-folder-title[data-path="44 Materials and Surfaces"] { --vf-accent: #f9b068; }
+.nav-folder-title[data-path="45 Procedural Blender Assets"] { --vf-accent: #f9bb73; }
+.nav-folder-title[data-path="46 Resource Library"] { --vf-accent: #8a90a8; }
+.nav-folder-title[data-path="47 Game Feel and Juice"] { --vf-accent: #f79797; }
+.nav-folder-title[data-path="48 Economy Design Deep Dive"] { --vf-accent: #fced7f; }
+.nav-folder-title[data-path="49 Roblox Platform Features"] { --vf-accent: #fcf592; }
+.nav-folder-title[data-path="50 Team Collaboration and Project Management"] { --vf-accent: #c497f7; }
+.nav-folder-title[data-path="51 2D Game Development"] { --vf-accent: #a0eec7; }
+.nav-folder-title[data-path="52 Core Concepts"] { --vf-accent: #f2efff; }
+.nav-folder-title[data-path="53 Voxel Modelling Deep Dive"] { --vf-accent: #fac47e; }
+.nav-folder-title[data-path="54 Untextured Stylised Modelling"] { --vf-accent: #facd89; }
+.nav-folder-title[data-path="55 Modelling Nuance and Readability"] { --vf-accent: #fbd593; }

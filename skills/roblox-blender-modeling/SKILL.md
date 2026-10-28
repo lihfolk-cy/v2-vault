@@ -1,9 +1,9 @@
 ---
 name: roblox-blender-modeling
-description: Make professional, Roblox-ready 3D models in Blender (via Blender MCP or headless bpy) and reject anything below top quality. Use automatically whenever a model, prop, weapon, building, rock, tree, creature, kit or mesh is made, fixed, optimized or exported for Roblox, or when the user says "model", "make a mesh", "Blender", "low poly", "stylized", "export to Roblox", "imports huge", "looks bad", "too many triangles".
+description: 'LihFolk: Make professional, Roblox-ready 3D models in Blender (via Blender MCP or headless bpy) and reject anything below top quality. Use automatically whenever a model, prop, weapon, building, rock, tree, creature, kit or mesh is made, fixed, optimized or exported for Roblox, or when the user says "model", "make a mesh", "Blender", "low poly", "stylized", "export to Roblox", "imports huge", "looks bad", "too many triangles".'
 ---
 
-# Roblox Blender Modeling (LihFolk)
+# LihFolk Blender Modeling for Roblox
 
 Goal: every model ships at top-tier quality, correctly scaled, within budget, and imports cleanly into Roblox Studio. A model that fails the gate or scores below the rubric is not finished.
 

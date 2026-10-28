@@ -1,14 +1,14 @@
-﻿---
-name: roblox-performance-audit
-description: Find and fix performance problems in a Roblox game with measurements instead of guesses: MicroProfiler, memory leaks, network bandwidth, instance counts and mobile budgets. Use when the user says "lag", "low fps", "frame spikes", "memory keeps growing", "phones crash", "slow join", "place is too big", "optimize this", or asks for a performance review.
 ---
-# Roblox Performance Audit
+name: roblox-performance-audit
+description: 'LihFolk: Find and fix performance problems in a Roblox game with measurements instead of guesses: MicroProfiler, memory leaks, network bandwidth, instance counts and mobile budgets. Use when the user says "lag", "low fps", "frame spikes", "memory keeps growing", "phones crash", "slow join", "place is too big", "optimize this", or asks for a performance review.'
+---
+# LihFolk Performance Audit
 
 Performance work is a loop: name the problem, measure on the right device, fix the biggest item, measure again, leave a guard. Never optimise a suspected cause without a profile; the MicroProfiler usually disagrees with intuition.
 
 ## Inputs
 
-- `VAULT`: the LihFolk knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
+- `VAULT`: LihFolk Vault V2, the knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
 - The symptom, where it happens (client, server, both; which device), and access to the place or scripts.
 
 ## Procedure

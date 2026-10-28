@@ -1,6 +1,6 @@
 # Rubric: UI screen / HUD
 
-Sources: skill `roblox-ui-builder`, Check-UI notes, Accessibility notes. Evidence: screenshots at phone (about 375 px wide), tablet and PC sizes via Studio MCP.
+Sources: skills `roblox-ui-builder` and `lihfolk-ui`, Accessibility notes. Evidence: screenshots at phone (about 375 px wide), tablet and PC sizes via Studio MCP.
 
 ## Hard gates
 - Nothing clipped or off-screen at phone, tablet and PC sizes; respects safe areas and the notch

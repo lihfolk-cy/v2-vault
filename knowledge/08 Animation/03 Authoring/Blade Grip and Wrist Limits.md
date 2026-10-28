@@ -1,76 +1,93 @@
 ---
-tags: [animation, weapons, sword, grip, wrist, authoring, r15, blender]
+tags: [animation, weapons, sword, grip, wrist, authoring, r15, blender, tool-grip]
 ---
 # Blade Grip and Wrist Limits
 
-A sword clip looks wrong long before anyone can say why: the blade passes through the head, points back along the forearm, or snaps 120 degrees between two frames. Almost always the cause is the same. The animator (or the AI) keyed **where the blade should point** and let a solver rotate the hand by whatever amount got it there. Real wrists can't do that. This note gives the grip point, the wrist range, and a solve that respects both.
+A sword clip looks wrong long before anyone can say why. The blade comes out of the fist at an odd angle, the crossguard points the wrong way, the wrist snaps 120 degrees between two frames, or the forearm passes through the chest. Almost always the cause is the same: the animator (or the AI) keyed **where the blade should point** and let a solver turn the hand by whatever amount got it there. This note gives the real grip geometry, the Roblox numbers that reproduce it, the wrist ranges, and the solve the LihFolk pipeline uses. Sources are in `D:\LihFolk Build\research\animation-references.md`.
 
-## 1. Where the weapon sits
+## 1. How a one-handed sword actually sits in the fist
 
-- **Grip point.** Roblox welds a Tool's `Handle` to the hand at `RightGripAttachment`, which sits on the **bottom face of the hand**. On the default R15 rig at scale 1 that is the hand centre minus half the hand height: y = 2.3265 - 0.3158/2 = 2.1686 studs in rig space (**Measured**, block R15, scale 1). Put the handle's centre there, not at the hand's centre. A handle at the hand centre floats about 0.16 studs above the fist and reads as "pasted on".
-- **Rest direction.** With the arm hanging, the blade points **forward** (character -Z) and lies roughly perpendicular to the forearm. That is the standard Roblox tool grip (**Roblox docs**, Tool grip convention) and the frame every wrist rotation below is measured from.
-- **Guard placement.** The guard should sit just in front of the knuckles; the fist covers the handle. If the guard clips into the fist, slide the mesh along the blade axis, never move the grip attachment.
+- **Grips.** *Hammer grip*: the whole fist closes, the thumb wraps over the index finger. *Handshake grip*: the thumb lies along the back of the grip, so the point projects further forward (**Expert practice**, HEMA and messer teaching).
+- **Handle angle.** The handle crosses the palm diagonally, from the base of the index finger to the heel of the hand. Measured from the forearm's distal axis (elbow to wrist and on) to the blade, a neutral fist holds the blade at about **65 +- 7 degrees** (**Source-backed**, Young et al. 2013, 31 people; handgun grips are 18-22 degrees off perpendicular, the same geometry). A handshake grip sits lower. LihFolk uses **60 degrees**, between the two.
+- **Edge.** The true edge faces the same way as the **middle knuckles** (the second row); the false edge faces the thumb web (**Expert practice**). With the arm hanging, the blade points forward and slightly down and the true edge faces down.
+- **Crossguard.** The quillons lie in the blade's plane, so they point the same way as the edges, not across the flat. A guard that looks "rotated 90 degrees" in a preview usually means the edge, not the guard, is wrong.
 
-## 2. What a wrist can actually do
+## 2. The Roblox numbers
 
-In a fist grip the blade is about 90 degrees from the forearm. The hand reaches every blade direction with two motions:
-
-| Motion | Anatomy | Range to allow | Label |
-|---|---|---|---|
-| Forearm twist | Pronation / supination | Large: about 160-180 degrees total | Rule of thumb (anatomy references) |
-| Wrist bend | Flexion / extension / radial-ulnar deviation | About **+-50 degrees** from perpendicular | Rule of thumb (stylised: real deviation is smaller, flexion larger) |
-
-So a held blade can point anywhere **inside a cone 40-140 degrees from the forearm axis**, at any angle around it. A blade pointing back along the forearm (angle under 40 degrees) or straight out of the fist like a lance (over 140 degrees) needs a different **arm** pose, not more wrist.
-
-## 3. The solve (twist, then bend, then clamp)
-
-For each blade key:
-1. Read the forearm axis `fa` (elbow to wrist) and the current blade direction `v` with no hand rotation.
-2. **Clamp** the target `d` into the cone: if the angle between `fa` and `d` is outside [40, 140] degrees, rotate `d` toward the nearest edge of the cone, keeping its direction around `fa`. Record how many degrees were clamped.
-3. **Twist** `v` about `fa` until its azimuth matches `d` (that's pronation, done by the forearm).
-4. **Bend** the twisted blade onto `d` (the remaining small rotation, done by the wrist).
-5. Key the hand with `bend x twist`, Bezier-eased like every other joint.
-
-The LihFolk pipeline implements this in `lihanim/clip.py` (`Clip.blade_aim` + `_blade_pass`) and writes the clamped degrees per key into the clip's JSON (`qa.wrist_clamped_deg`). **Measured:** the first SwordSlash draft asked for up to 33 degrees beyond the cone in its guard and follow-through poses. Those were exactly the frames that looked broken. After retargeting, the worst key clamps 1.7 degrees.
-
-**A clamp is a bug report, not a fix.** Anything above about 5 degrees means the key pose asks the wrist to do the arm's job. Change the shoulder or elbow (or rotate the torso into the swing) and re-run until clamps are near zero.
-
-## 4. Choosing blade directions per key
-
-| Key | Blade should | Why |
+| Item | Value | Label |
 |---|---|---|
-| Guard / ready | Point forward and up, angled **outward** to the weapon side (e.g. character-space (0.45, 0.45, -0.77) for a right-hand blade) | Vertical blades in front of the face clip the head in three-quarter view |
-| Windup | Cocked high behind the weapon shoulder, tip up and back | Long silhouette = readable anticipation |
-| Mid-swing (1-2 frames) | Pass through vertical or horizontal on a clean arc | Breaking the arc reads as a teleport |
-| Contact | Along the cut, slightly ahead of the hand | Edge leads the swing |
-| Follow-through | Low and across, still **in front** of the body (e.g. (-0.6, -0.5, -0.6)) | A blade that ends behind the body vanishes from camera and kills the read |
+| `RightGripAttachment` on the R15 RightHand | Position (0, -0.162, 0), Orientation (-90, 0, 0) | **Measured** (block R15, scale 1; DevForum confirms -90,0,0 is standard) |
+| Weld | `Handle.CFrame = RightHand.CFrame * RightGripAttachment.CFrame * Tool.Grip:Inverse()` | **DevForum** (community-confirmed) |
+| Default `Tool.Grip` | Identity: a blade modelled along Handle +Y sticks out of the fist at 90 degrees to the forearm | **Roblox docs** (API dump defaults) |
+| LihFolk `Tool.Grip` | `CFrame.Angles(math.rad(30), 0, 0)`: blade 60 degrees from the forearm, true edge on Handle -Z | **Rule of thumb** (derived; check once in Studio) |
+| UGC packages with grip (90, 178.6, 0) | Hold weapons backwards; reset the attachment on load | **DevForum** |
 
-Rotate the **torso** into the swing so the arm never has to cross the chest. In the SwordSlash clip the chest turns about 46 degrees left at follow-through, so the arm stays forward in torso space and nothing interpenetrates.
+Model the sword with the **blade along Handle +Y** and the **true edge along Handle -Z**. The pipeline's preview sword uses exactly that frame, so a clip that looks right in the preview looks right in game with that `Tool.Grip`.
+
+## 3. What a wrist can do
+
+| Motion | Clinical normal | Functional | LihFolk solver limit |
+|---|---|---|---|
+| Flexion / extension | 80 / 70 (AAOS) | 54 / 60 (Ryu 1991) | 65 / 60 |
+| Radial / ulnar deviation | 20 / 30-35 | 17 / 40 | 20 / 38 |
+| Pronation / supination | ~80 / ~80 | 50 / 50 (Morrey 1981) | 80 / 85 |
+
+What each motion does to a held blade (hammer-type grip):
+- **Deviation tilts the blade toward or away from the forearm line.** Ulnar deviation brings it toward in-line, radial deviation stands it up. From the 60-degree grip the blade can sit about **22 to 80 degrees from the forearm axis**. It can never continue the forearm in a straight line, and it can't point back past perpendicular.
+- **Forearm twist swings the blade around the forearm**, which is how a cut changes plane.
+- **Flexion and extension mostly roll the edge**, because the blade lies close to the flexion axis.
+- Cuts follow the "dart-thrower" arc: radial deviation plus extension in the raise, ulnar deviation plus slight flexion through and after contact (**Source-backed** for hammering and throwing; **Rule of thumb** for swords).
+
+## 4. The solve (lihanim/sword.py)
+
+Keys are written as `Clip.skey(frame, ease, lt_p, lt_r, ut, head, rh or rhl, blade, edge, lh or lhl, ...)`: torso pose, wrist target, blade direction and (optionally) edge direction. For each key the solver:
+1. Searches the **elbow swivel** (24 positions around the shoulder-wrist line) and small **wrist-target nudges** (up to 0.45 studs).
+2. For each candidate, solves the **wrist** (twist, deviation, flexion) inside the limits above. The cost puts blade direction first, edge second, a neutral wrist third.
+3. Rejects arms whose upper arm, forearm, hand, blade or pommel enter the chest, belly or head (oriented-box test), or whose elbow rises above the shoulder.
+4. Points the **edge along the blade's direction of travel** (taken from the neighbouring keys) unless an edge is given. Hold keys keep the edge they arrived with.
+5. Checks every gap at 1/3, 1/2 and 2/3. Where the in-between would pass through the body, it inserts a **breakdown key** with the hand pushed clear.
+
+The QA block reports `wrist.blade_err_max_deg`: the gap between the authored blade direction and the one the anatomical wrist reaches. The wrist itself is never forced past its limits, so that number replaces the old `wrist_clamped_deg`. Keep it **under 5** on authored keys.
+
+## 5. Choosing blade directions per key
+
+The blade must sit **25 to 75 degrees off the shoulder-to-hand line, on the thumb side**. Most bad keys break this rule.
+
+| Key | Hand (torso space) | Blade | Why |
+|---|---|---|---|
+| Guard | In front of the hip, arm about 45 degrees bent | Forward, 35 degrees up, slightly inward | Blade above the arm line: neutral wrist |
+| Wind-up over the shoulder | Out to the side at ear height, 1.2+ studs from the shoulder | Up and back | A hand closer than ~1 stud folds the elbow and the R15 hand box hits the upper arm |
+| Contact, falling diagonal | Arm extended forward-left (the torso has turned) | Straight at the target, *right of and above* the arm line | Hand leads, blade lags, ulnar deviation snaps it in |
+| Follow-through | Low and forward-left, 1.4+ studs out | Forward-low, not along the arm | A blade in line with the arm is unreachable |
+| Backhand contact | Arm forward-right | Forward-right, left of the arm line | Edge leading needs supination; accept the false edge if it can't |
+
+**The torso aims the cut and the arm keeps its shape.** A backhand wind-up turns the chest ~58 degrees left, so the hand stays in front of the right chest instead of crossing it.
 
 ## Common mistakes
 
-- Solving the hand with the minimal rotation from rest to target. It ignores anatomy and produces wrist flips and blades through the head.
-- Placing the handle at the hand's centre instead of the grip attachment.
-- Keying a vertical guard blade in front of the face.
-- Letting the follow-through blade end behind the body, where the camera can't see it.
-- Treating clamped degrees as solved. Fix the arm pose instead.
-- Making the arm cross the chest to reach the far side instead of turning the torso.
+- Solving the hand as the minimal rotation from rest to target: wrist flips, blades through the head.
+- Using a fixed "+-50 degree cone from perpendicular" (the old LihFolk rule). It allows blades pointing back at the elbow, which no grip can do, and it ignores the 20-30 degree handle lean.
+- Asking for a blade in line with the forearm (thrust or contact keys). The hammer grip can't do it, so lower the arm instead.
+- Hands closer than about 1 stud to their own shoulder. The 1-stud R15 boxes fold into each other.
+- Head yaw beyond ~40 degrees relative to the chest. The block head's corner enters the shoulder cap.
+- Leaving `Tool.Grip` at identity. The blade then stands at 90 degrees, 25 degrees stiffer than the preview.
 
 ## Checklist
 
-- [ ] Handle centre at `RightGripAttachment` (bottom face of the hand)
-- [ ] Blade keys stay 40-140 degrees from the forearm; `qa.wrist_clamped_deg` under 5 on every key
-- [ ] Guard blade angled outward, clear of the head in three-quarter view
-- [ ] Torso rotates into the swing; arms never pass through the chest
-- [ ] Follow-through blade visible in front of the body
-- [ ] `Hit`, `TrailOn`, `TrailOff` markers on the contact and swing frames
+- [ ] Sword modelled with the blade on Handle +Y and the true edge on Handle -Z; `Tool.Grip = CFrame.Angles(math.rad(30), 0, 0)`
+- [ ] Keys authored with `skey` (hand target + blade), never a raw hand rotation
+- [ ] `qa.wrist.blade_err_max_deg` under 5; breakdown keys reviewed
+- [ ] Wind-up hands 1.2+ studs from the shoulder; follow-through hands 1.4+ studs out
+- [ ] `qa.body_overlap.blade_max_studs` and `body_max_studs` under 0.05
+- [ ] Edge leads the cut on contact keys (watch `edge_err` on the contact key)
 
 ## See also
 
 - [[Weapon Swing Design]]
 - [[Custom Rigs - Weapons and Props]]
 - [[LihFolk R15 Keyframe Pipeline]]
+- [[Locomotion and Melee Reference Numbers]]
 
 ## Connected notes
 
-[[Animation Start Here]] · [[Weapon Swing Design]] · [[Custom Rigs - Weapons and Props]]
+[[Animation Start Here]] · [[Weapon Swing Design]] · [[Custom Rigs - Weapons and Props]] · [[Locomotion and Melee Reference Numbers]]

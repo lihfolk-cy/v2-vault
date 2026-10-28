@@ -1,0 +1,265 @@
+/* Celestial Lite: the vault's dark violet theme and animated welcome tab, as one CSS snippet.
+   Loads automatically, no plugin or trust prompt. The full Celestial Vault plugin (journal, calendar)
+   is included but off; turn it on in Settings > Community plugins if you want it. */
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap');
+/* Celestial Vault: the whole look ships in this one file (theme + components + sky). */
+/* Celestial: near-black night sky, violet accent, book serif, card-style sidebar panes.
+   Pairs with the Celestial Vault plugin (welcome tab, daily banners, calendar, streak planet). */
+
+.theme-dark {
+	--cv-serif: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
+	--cv-bg0: #09080d;
+	--cv-bg1: #0e0c14;
+	--cv-bg2: #15121e;
+	--cv-line: #211c2d;
+	--cv-violet: #9b7bff;
+
+	--accent-h: 256; --accent-s: 100%; --accent-l: 74%;
+	--color-accent: var(--cv-violet);
+	--color-accent-1: #ac92ff;
+	--color-accent-2: #c4b0ff;
+	--interactive-accent: #7b5ee8;
+	--interactive-accent-hover: #8f75f0;
+	--text-accent: #b9a2ff;
+	--text-accent-hover: #d6c9ff;
+	--text-selection: rgba(155, 123, 255, .28);
+
+	--background-primary: var(--cv-bg0);
+	--background-primary-alt: var(--cv-bg1);
+	--background-secondary: var(--cv-bg1);
+	--background-secondary-alt: var(--cv-bg0);
+	--background-modifier-border: var(--cv-line);
+	--background-modifier-border-hover: #2f2842;
+	--background-modifier-border-focus: #4a3d78;
+	--background-modifier-hover: rgba(155, 123, 255, .07);
+	--background-modifier-active-hover: rgba(155, 123, 255, .14);
+	--background-modifier-form-field: #110f18;
+	--titlebar-background: var(--cv-bg0);
+	--titlebar-background-focused: var(--cv-bg0);
+	--tab-container-background: var(--cv-bg0);
+	--ribbon-background: var(--cv-bg0);
+	--status-bar-background: var(--cv-bg0);
+	--status-bar-border-color: transparent;
+	--divider-color: transparent;
+
+	--text-normal: #e2dcec;
+	--text-muted: #958da9;
+	--text-faint: #5c556e;
+
+	--font-text-theme: var(--cv-serif);
+	--font-interface-theme: var(--cv-serif);
+	--h1-font: var(--cv-serif); --h2-font: var(--cv-serif); --h3-font: var(--cv-serif);
+	--inline-title-font: var(--cv-serif);
+	--inline-title-weight: 600;
+	--h1-weight: 600; --h2-weight: 600; --h3-weight: 600;
+	--h1-color: #f1ebfb; --h2-color: #d9cdf8; --h3-color: #c4b2f2; --h4-color: #b09edc;
+	--bold-color: #f3eefc;
+	--italic-color: #d8cfe9;
+	--link-color: #b9a2ff; --link-unresolved-color: #6f6690;
+	--blockquote-border-color: #6b52c9;
+	--hr-color: var(--cv-line);
+	--code-background: #110f18;
+	--table-border-color: var(--cv-line);
+	--table-header-background: #110f18;
+	--checkbox-color: #7b5ee8;
+	--tag-background: rgba(155, 123, 255, .1);
+	--tag-color: #b9a2ff;
+	--tag-border-color: rgba(155, 123, 255, .25);
+	--graph-node: #8a80a8; --graph-node-focused: #b89cff; --graph-line: #2a2340;
+	--modal-background: #0e0c14;
+	--modal-border-color: #2a2340;
+	--radius-m: 8px;
+}
+
+/* faint nebula behind every page */
+.theme-dark .workspace-split.mod-root .view-content {
+	background:
+		radial-gradient(ellipse 60% 40% at 80% 0%, rgba(110, 70, 220, .06), transparent 70%),
+		radial-gradient(ellipse 50% 40% at 0% 100%, rgba(220, 90, 170, .04), transparent 70%),
+		var(--background-primary);
+}
+
+/* tabs */
+.theme-dark .workspace-tab-header-container { border-bottom: 1px solid var(--cv-line); }
+.theme-dark .workspace-tab-header.is-active { background: var(--cv-bg2); border-radius: 6px 6px 0 0; }
+.theme-dark .workspace-tab-header.is-active .workspace-tab-header-inner-title { color: #efe9fb; }
+
+/* sidebars: every pane is a rounded card, like a little observatory window */
+.theme-dark .workspace-split.mod-left-split,
+.theme-dark .workspace-split.mod-right-split { background: var(--cv-bg0); }
+.theme-dark .mod-sidedock > .workspace-tabs,
+.theme-dark .mod-sidedock .workspace-split > .workspace-tabs {
+	margin: 5px; border: 1px solid var(--cv-line); border-radius: 10px; overflow: hidden; background: var(--cv-bg1);
+}
+.theme-dark .mod-sidedock .workspace-leaf-resize-handle { background: transparent; }
+.theme-dark .nav-file-title, .theme-dark .nav-folder-title { border-radius: 5px; }
+.theme-dark .nav-file-title.is-active { background: rgba(155, 123, 255, .14); color: #efe9fb; }
+
+/* headings: soft starlight */
+.theme-dark .markdown-rendered h1, .theme-dark .HyperMD-header-1, .theme-dark .inline-title { text-shadow: 0 0 24px rgba(170, 130, 255, .18); }
+.theme-dark .markdown-rendered h2 { border-bottom: 1px solid var(--cv-line); padding-bottom: .2em; }
+.theme-dark .markdown-rendered hr, .theme-dark .cm-line.hr {
+	border: none; height: 1px; background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--cv-day, #9b7bff) 55%, transparent), transparent);
+}
+.theme-dark .markdown-rendered ul > li::marker { color: color-mix(in srgb, var(--cv-day, #9b7bff) 80%, white); }
+
+/* blockquotes + callouts as glassy cards */
+.theme-dark .markdown-rendered blockquote { background: rgba(155, 123, 255, .04); border-radius: 0 8px 8px 0; padding: .4em 1em; }
+.theme-dark .callout { border: 1px solid var(--cv-line); border-radius: 10px; background: rgba(20, 16, 32, .6); }
+
+/* tables */
+.theme-dark .markdown-rendered table { border-radius: 8px; overflow: hidden; border: 1px solid var(--cv-line); }
+.theme-dark .markdown-rendered th { font-weight: 600; color: #d9cdf8; }
+
+/* modals + prompts */
+.theme-dark .modal, .theme-dark .prompt { border: 1px solid #2a2340; box-shadow: 0 20px 70px rgba(0, 0, 0, .7), 0 0 0 1px rgba(155, 123, 255, .06); }
+.theme-dark .suggestion-item.is-selected { background: rgba(155, 123, 255, .14); }
+
+/* scrollbar */
+.theme-dark ::-webkit-scrollbar-thumb { background: #241e33; border-radius: 6px; }
+
+
+/* ================================================================== CSS-only welcome tab
+   Animated starfield, drifting nebula, floating planet and a glowing greeting on every empty tab.
+   Pure CSS: no plugin, no "trust" prompt. Obsidian's own buttons stay and become pills. */
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .view-content { position: relative; overflow: hidden;
+	background: radial-gradient(ellipse at 50% 42%, rgba(98, 60, 200, .14), transparent 60%), var(--background-primary) !important; }
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .view-content::before,
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .view-content::after { content: ""; position: absolute; inset: -50% -50% 0 0; pointer-events: none; }
+/* far layer: small stars, slow drift */
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .view-content::before {
+	background-image:
+		radial-gradient(1.7px 1.7px at 13.4% 84.7%, #cfe0ff 50%, transparent 51%),
+		radial-gradient(1.4px 1.4px at 11.8% 76.1%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(0.9px 0.9px at 78.9% 9.4%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(0.8px 0.8px at 43.3% 76.2%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(1.5px 1.5px at 26.6% 80.2%, #ffffff 50%, transparent 51%),
+		radial-gradient(0.9px 0.9px at 90.1% 3.1%, #ffffff 50%, transparent 51%),
+		radial-gradient(1.1px 1.1px at 93.9% 38.1%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(1.7px 1.7px at 72.6% 52.8%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(1.6px 1.6px at 55.3% 34.6%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(1.3px 1.3px at 95.2% 92.7%, #ffffff 50%, transparent 51%),
+		radial-gradient(1.8px 1.8px at 18.6% 99.3%, #ffffff 50%, transparent 51%),
+		radial-gradient(1.9px 1.9px at 74.3% 89.6%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(1.1px 1.1px at 50.8% 91.0%, #cfe0ff 50%, transparent 51%),
+		radial-gradient(1.8px 1.8px at 58.8% 88.2%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(1.1px 1.1px at 58.9% 3.5%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(1.5px 1.5px at 41.4% 17.3%, #cfe0ff 50%, transparent 51%),
+		radial-gradient(1.0px 1.0px at 8.6% 66.4%, #e9e2ff 50%, transparent 51%),
+		radial-gradient(1.4px 1.4px at 52.1% 39.3%, #ffffff 50%, transparent 51%),
+		radial-gradient(1.8px 1.8px at 46.9% 30.9%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(1.1px 1.1px at 64.7% 16.9%, #ffffff 50%, transparent 51%),
+		radial-gradient(1.8px 1.8px at 77.1% 54.0%, #e9e2ff 50%, transparent 51%),
+		radial-gradient(1.8px 1.8px at 40.4% 34.4%, #cfe0ff 50%, transparent 51%),
+		radial-gradient(1.5px 1.5px at 45.9% 26.9%, #ffffff 50%, transparent 51%),
+		radial-gradient(1.9px 1.9px at 38.4% 85.7%, #e9e2ff 50%, transparent 51%),
+		radial-gradient(1.3px 1.3px at 51.9% 56.1%, #ffffff 50%, transparent 51%),
+		radial-gradient(1.5px 1.5px at 48.1% 36.5%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(1.2px 1.2px at 48.5% 35.7%, #cfe0ff 50%, transparent 51%),
+		radial-gradient(1.1px 1.1px at 45.8% 2.8%, #e9e2ff 50%, transparent 51%),
+		radial-gradient(0.9px 0.9px at 55.1% 18.1%, #cfe0ff 50%, transparent 51%),
+		radial-gradient(0.9px 0.9px at 3.2% 94.4%, #ffffff 50%, transparent 51%),
+		radial-gradient(1.2px 1.2px at 45.3% 75.4%, #cfe0ff 50%, transparent 51%),
+		radial-gradient(1.2px 1.2px at 10.9% 62.5%, #ffffff 50%, transparent 51%),
+		radial-gradient(1.9px 1.9px at 16.7% 25.5%, #cfe0ff 50%, transparent 51%),
+		radial-gradient(1.6px 1.6px at 64.8% 29.4%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(1.3px 1.3px at 47.4% 2.4%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(1.1px 1.1px at 79.6% 25.8%, #e9e2ff 50%, transparent 51%),
+		radial-gradient(1.9px 1.9px at 96.6% 43.2%, #e9e2ff 50%, transparent 51%),
+		radial-gradient(1.6px 1.6px at 1.8% 14.6%, #e9e2ff 50%, transparent 51%),
+		radial-gradient(1.3px 1.3px at 44.6% 50.6%, #e9e2ff 50%, transparent 51%),
+		radial-gradient(1.6px 1.6px at 97.7% 63.1%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(1.3px 1.3px at 22.3% 64.9%, #cfe0ff 50%, transparent 51%),
+		radial-gradient(1.7px 1.7px at 66.0% 42.6%, #e9e2ff 50%, transparent 51%),
+		radial-gradient(1.2px 1.2px at 96.8% 87.6%, #ffffff 50%, transparent 51%),
+		radial-gradient(1.7px 1.7px at 31.0% 93.9%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(1.5px 1.5px at 56.5% 13.0%, #ffffff 50%, transparent 51%),
+		radial-gradient(1.8px 1.8px at 59.1% 21.8%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(1.9px 1.9px at 17.2% 86.8%, #ffffff 50%, transparent 51%),
+		radial-gradient(1.1px 1.1px at 37.8% 34.7%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(1.9px 1.9px at 59.1% 49.2%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(1.2px 1.2px at 29.6% 50.0%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(1.1px 1.1px at 90.0% 1.8%, #cfe0ff 50%, transparent 51%),
+		radial-gradient(1.0px 1.0px at 81.1% 56.3%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(1.8px 1.8px at 21.3% 67.4%, #cfe0ff 50%, transparent 51%),
+		radial-gradient(1.4px 1.4px at 91.4% 83.8%, #e9e2ff 50%, transparent 51%),
+		radial-gradient(1.0px 1.0px at 6.5% 4.0%, #e9e2ff 50%, transparent 51%),
+		radial-gradient(1.7px 1.7px at 91.1% 21.3%, #cfe0ff 50%, transparent 51%),
+		radial-gradient(1.2px 1.2px at 36.8% 34.0%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(1.0px 1.0px at 13.5% 55.1%, #ffffff 50%, transparent 51%),
+		radial-gradient(2.0px 2.0px at 40.7% 38.0%, #e9e2ff 50%, transparent 51%),
+		radial-gradient(1.5px 1.5px at 82.9% 34.1%, #ffd9f3 50%, transparent 51%);
+	background-size: 700px 700px; opacity: .75;
+	animation: cvl-drift-far 160s linear infinite, cvl-twinkle 5s ease-in-out infinite alternate; }
+/* near layer: bigger stars, faster drift, opposite twinkle */
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .view-content::after {
+	background-image:
+		radial-gradient(1.5px 1.5px at 95.6% 94.8%, #ffffff 50%, transparent 51%),
+		radial-gradient(3.0px 3.0px at 36.1% 16.9%, #cfe0ff 50%, transparent 51%),
+		radial-gradient(1.5px 1.5px at 25.2% 21.2%, #e9e2ff 50%, transparent 51%),
+		radial-gradient(3.0px 3.0px at 100.0% 63.8%, #cfe0ff 50%, transparent 51%),
+		radial-gradient(2.0px 2.0px at 54.4% 44.5%, #ffffff 50%, transparent 51%),
+		radial-gradient(3.2px 3.2px at 87.1% 36.4%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(1.8px 1.8px at 42.4% 88.4%, #e9e2ff 50%, transparent 51%),
+		radial-gradient(2.1px 2.1px at 23.6% 2.4%, #e9e2ff 50%, transparent 51%),
+		radial-gradient(2.4px 2.4px at 51.0% 36.0%, #e9e2ff 50%, transparent 51%),
+		radial-gradient(2.2px 2.2px at 99.5% 44.6%, #cfe0ff 50%, transparent 51%),
+		radial-gradient(3.3px 3.3px at 79.0% 35.4%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(2.8px 2.8px at 16.1% 75.4%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(2.0px 2.0px at 65.5% 25.0%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(2.1px 2.1px at 50.1% 83.2%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(2.5px 2.5px at 90.0% 46.1%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(2.1px 2.1px at 48.7% 22.2%, #e9e2ff 50%, transparent 51%),
+		radial-gradient(2.9px 2.9px at 87.7% 61.6%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(2.8px 2.8px at 31.0% 95.7%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(2.4px 2.4px at 31.2% 20.8%, #ffffff 50%, transparent 51%),
+		radial-gradient(1.5px 1.5px at 78.4% 34.1%, #e9e2ff 50%, transparent 51%),
+		radial-gradient(2.5px 2.5px at 99.7% 10.6%, #ffffff 50%, transparent 51%),
+		radial-gradient(3.1px 3.1px at 27.3% 22.7%, #ffffff 50%, transparent 51%),
+		radial-gradient(ellipse 30% 22% at 30% 40%, rgba(150, 90, 255, .10), transparent 70%),
+		radial-gradient(ellipse 28% 20% at 70% 65%, rgba(255, 95, 180, .07), transparent 70%);
+	background-size: 520px 520px, 520px 520px, 520px 520px, 520px 520px, 520px 520px, 520px 520px, 520px 520px, 520px 520px,
+		520px 520px, 520px 520px, 520px 520px, 520px 520px, 520px 520px, 520px 520px, 520px 520px, 520px 520px, 520px 520px,
+		520px 520px, 520px 520px, 520px 520px, 520px 520px, 520px 520px, 1400px 1000px, 1400px 1000px;
+	animation: cvl-drift-near 90s linear infinite, cvl-twinkle 3.6s ease-in-out infinite alternate-reverse; }
+@keyframes cvl-drift-far { to { transform: translate(350px, 175px); } }
+@keyframes cvl-drift-near { to { transform: translate(520px, 260px); } }
+@keyframes cvl-twinkle { from { opacity: .45; } to { opacity: 1; } }
+
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state { position: relative; z-index: 1; background: transparent !important; }
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-container { display: flex; flex-direction: column; align-items: center; animation: cvl-rise .9s ease-out both; }
+@keyframes cvl-rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+/* the planet */
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-container::before {
+	content: ""; width: 150px; height: 150px; margin-bottom: 4px;
+	background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E %3CradialGradient id='cvHalo'%3E%3Cstop offset='0' stop-color='%23b06bff' stop-opacity='.55'/%3E%3Cstop offset='.55' stop-color='%235b3bd0' stop-opacity='.18'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='0'/%3E%3C/radialGradient%3E %3CradialGradient id='cvBody' cx='.38' cy='.34' r='.75'%3E%3Cstop offset='0' stop-color='%236f8dff'/%3E%3Cstop offset='.45' stop-color='%234b33c9'/%3E%3Cstop offset='1' stop-color='%231a0f45'/%3E%3C/radialGradient%3E %3ClinearGradient id='cvRing' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23ff5fb4'/%3E%3Cstop offset='.5' stop-color='%23b15cff'/%3E%3Cstop offset='1' stop-color='%23ffc9f0'/%3E%3C/linearGradient%3E %3ClinearGradient id='cvGold' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffe1a0'/%3E%3Cstop offset='1' stop-color='%23d79a4e'/%3E%3C/linearGradient%3E %3Cfilter id='cvGlow' x='-50%25' y='-50%25' width='200%25' height='200%25'%3E%3CfeGaussianBlur stdDeviation='3.2' result='b'/%3E%3CfeMerge%3E%3CfeMergeNode in='b'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='98' fill='url(%23cvHalo)'/%3E%3Cg transform='rotate(-38 100 100)' filter='url(%23cvGlow)'%3E %3Cpath d='M18 100 A82 24 0 0 1 182 100' fill='none' stroke='url(%23cvRing)' stroke-width='7' stroke-linecap='round' opacity='.85'/%3E%3C/g%3E%3Ccircle cx='100' cy='100' r='44' fill='url(%23cvBody)' filter='url(%23cvGlow)'/%3E%3Ccircle cx='100' cy='100' r='25' fill='none' stroke='url(%23cvGold)' stroke-width='5'/%3E%3Ccircle cx='100' cy='100' r='17' fill='%230d0820' opacity='.8'/%3E%3Cg transform='rotate(-38 100 100)' filter='url(%23cvGlow)'%3E %3Cpath d='M182 100 A82 24 0 0 1 18 100' fill='none' stroke='url(%23cvRing)' stroke-width='8' stroke-linecap='round'/%3E%3C/g%3E%3Ccircle cx='170' cy='44' r='2.2' fill='%23fff'/%3E%3Ccircle cx='34' cy='150' r='1.6' fill='%23ffd9f3'/%3E%3C/svg%3E") center / contain no-repeat;
+	animation: cvl-float 7s ease-in-out infinite, cvl-halo 4.5s ease-in-out infinite; }
+@keyframes cvl-float { 0%, 100% { transform: translate(0, 0) rotate(-1deg); } 25% { transform: translate(4px, -7px) rotate(1.5deg); }
+	50% { transform: translate(0, -11px) rotate(3deg); } 75% { transform: translate(-4px, -6px) rotate(.5deg); } }
+@keyframes cvl-halo { 0%, 100% { filter: drop-shadow(0 0 12px rgba(176, 107, 255, .3)); } 50% { filter: drop-shadow(0 0 26px rgba(176, 107, 255, .55)) brightness(1.12); } }
+/* the greeting replaces "No file is open" */
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-title { font-size: 0 !important; margin: 0; }
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-title::before {
+	content: "Welcome, Traveler."; display: block; font-size: 42px; font-family: var(--cv-serif); font-weight: 600; color: #efe9fb;
+	text-shadow: 0 0 22px rgba(170, 130, 255, .25); animation: cvl-breathe 5s ease-in-out infinite; }
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-title::after {
+	content: "\2726   R O B L O X   G A M E   D E V   V A U L T   \2726"; display: block; margin-top: 6px; font-size: 11px; white-space: pre;
+	color: #6f6690; font-family: var(--cv-serif); animation: cvl-shimmer 6s ease-in-out infinite; }
+@keyframes cvl-breathe { 50% { text-shadow: 0 0 34px rgba(190, 150, 255, .5), 0 0 6px rgba(255, 200, 240, .25); } }
+@keyframes cvl-shimmer { 50% { color: #a99be0; } }
+/* Obsidian's own actions as pills */
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-action-list { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 26px; }
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-action {
+	padding: 6px 14px; border-radius: 999px; border: 1px solid #2a2340; background: rgba(20, 16, 32, .75);
+	color: #a79fc0 !important; font-size: .85em; animation: cvl-rise .9s ease-out both; }
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-action:nth-child(1) { animation-delay: .5s; }
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-action:nth-child(2) { animation-delay: .65s; }
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-action:nth-child(3) { animation-delay: .8s; }
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-action:nth-child(4) { animation-delay: .95s; }
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-action:hover { border-color: #5b4a96; color: #e2dbf5 !important; }
+
+@media (prefers-reduced-motion: reduce) {
+	body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] *, body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .view-content::before,
+	body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .view-content::after,
+	body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-container::before { animation: none !important; }
+}

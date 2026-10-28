@@ -3,10 +3,12 @@ cssclasses: [lf-home]
 tags: [hub]
 ---
 
-> [!lf-hero] LIHFOLK
-> **The Roblox game studio in a vault.** 800+ expert notes, written for builders and for AI agents.
+![[lihfolk_banner.png|banner]]
+
+> [!lf-hero] LIHFOLK V2
+> **The Roblox game studio in a vault.** 800+ original expert notes, written for builders and for AI agents.
 >
-> `818 notes` · `52 sections` · `15 AI skills` · `council review` · `Blender pipeline` · `trend-game playbook`
+> `800+ notes` · `52 sections` · `16 AI skills` · `9/10 quality bar` · `anti-bias council` · `Blender pipeline` · `LihFolk UI kit` · `trend-game playbook`
 
 > [!lf-strip] Start in 60 seconds
 > **New to Roblox** → [[Studio Interface Tour]] · [[Luau Language Essentials]] · [[Client-Server Model]] · [[Publishing an Experience]]
@@ -22,7 +24,7 @@ tags: [hub]
 > > [[DataStore Fundamentals|DataStores]] · [[Anti-Exploit Start Here|Anti-Exploit]] · [[Multiplayer Services Start Here|Multiplayer Services]] · [[Server Authority and Validation|Server Authority]]
 >
 > > [!lf-ui] Interface
-> > [[ScreenGui Fundamentals|UI & UX]] · [[Check-UI Design System|Check-UI]] · [[Accessibility Start Here|Accessibility]]
+> > [[ScreenGui Fundamentals|UI & UX]] · [[LihFolk UI Design System|LihFolk UI]] · [[Accessibility Start Here|Accessibility]]
 >
 > > [!lf-world] World & Art
 > > [[Environment Art Styles|World Building]] · [[Level Design Start Here|Level Design]] · [[Procedural Generation Start Here|Procedural]] · [[Narrative Start Here|Narrative]] · [[Modeling Fundamentals for Games|3D Modeling]] · [[Materials and Surfaces Start Here|Materials]] · [[Voxel Modelling Start Here|Voxel]] · [[Untextured Stylised Modelling Start Here|Stylised]] · [[Modelling Nuance Start Here|Readability]] · [[Procedural Blender Assets Start Here|Blender Assets]] · [[Concept Sheets]] · [[Avatars and UGC Start Here|Avatars & UGC]]

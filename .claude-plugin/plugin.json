@@ -1,7 +1,7 @@
 {
   "name": "lihfolk",
-  "version": "0.1.0",
-  "description": "LihFolk: a full Roblox game studio for Claude Code. 800+ expert notes, style bibles, reference images, asset catalogue, drop-in Luau systems, specialist agents and safety hooks for building professional Roblox games end to end.",
+  "version": "2.0.0",
+  "description": "LihFolk Vault V2: a full Roblox game studio for Claude Code. 800+ expert notes, a knowledge router, 9/10 quality scoring that learns, an anti-bias council, Blender modelling with a quality gate, a trend-game playbook and specialist Roblox skills.",
   "author": { "name": "LihFolk" },
   "keywords": ["roblox", "luau", "game-development", "worldbuilding", "modeling", "studio"]
 }

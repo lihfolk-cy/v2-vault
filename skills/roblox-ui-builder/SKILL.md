@@ -1,16 +1,16 @@
-﻿---
-name: roblox-ui-builder
-description: Build or review Roblox UI that fits every screen: responsive layout, safe areas, motion timing, the Check-UI design system for cartoon and simulator menus, and accessibility. Use when making a ScreenGui, HUD, shop, settings, codes, rebirth or daily rewards menu, or when the user says "make a menu", "UI looks broken on phone", "buttons under the notch", "animate this panel", "use Check-UI", or "review my UI".
 ---
-# Roblox UI Builder
+name: roblox-ui-builder
+description: 'LihFolk: Build or review Roblox UI that fits every screen, using LihFolk Vault V2 - responsive layout, safe areas, motion timing, accessibility, and the house cartoon/simulator menu style from the lihfolk-ui skill. Use when making a ScreenGui, HUD, shop, settings, codes, rebirth or daily rewards menu, or when the user says "make a menu", "UI looks broken on phone", "buttons under the notch", "animate this panel", "simulator style menu", or "review my UI".'
+---
+# LihFolk UI Builder
 
 UI is done when it passes measured rules on every target screen, not when it looks right on the developer's monitor. Define "fits" as numbers, build to them, and check them at fixed viewports.
 
 ## Inputs
 
-- `VAULT`: the LihFolk knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
+- `VAULT`: LihFolk Vault V2, the knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
 - What to build (screen, menu archetype, HUD element) and the target platforms.
-- Whether the game uses the Check-UI style (cartoon and simulator look) or its own design system.
+- Whether the game uses the LihFolk house style (the `lihfolk-ui` skill, for a cartoon or simulator look) or its own design system.
 
 ## Procedure
 
@@ -46,15 +46,15 @@ UI is done when it passes measured rules on every target screen, not when it loo
    - Staggers total at most about 0.4 s. Pops tween a `UIScale`, not `Size`. Idle loops pause when hidden.
    - Accept input from the first visible frame; never lock input until an entrance ends.
 
-5. **Check-UI style (when the game uses it).** The vault's section 21 holds an MIT design system for cartoon and simulator menus with five archetypes: Shop, Codes, Rebirth, Settings and Daily Rewards. Follow its spec note for exact sizes and colours. Its ship checks:
-   - Buttons have a 3 to 4 px bottom bevel and a dark shadow edge; no flat buttons.
-   - State colours: lime for CLAIM, BUY, REDEEM; silver for CLAIMED and DISABLED; crimson for LOCKED; gold for SKIP.
-   - Hover 1.06 and press 0.94, scaled from the centre (`AnchorPoint` 0.5, 0.5 with a child `UIScale`).
-   - The close button is the same 38 x 38 bevelled square on every menu.
-   - Icons from its icon registry at their own aspect ratio, never stretched.
-   - Sunbursts stop rotating while the menu is hidden.
-   - The menu fits a phone (scale about 0.52) and a large desktop (about 1.18).
-   - Font: the system specifies `GothamBlack`, but Roblox removed the Gotham fonts and they now draw as Montserrat (Roblox docs, as of October 2026). Use `BuilderSansExtraBold` or a heavy `FontFace` such as Fredoka One instead.
+5. **House menu style (cartoon and simulator games).** LihFolk's own design system is the `lihfolk-ui` skill. Use it for the five common menu archetypes (Shop, Codes, Rebirth, Settings, Daily Rewards) and take exact sizes, colours, fonts and icons from it rather than from memory. Whatever style the game uses, a menu ships only when:
+   - Buttons look pressable (a raised edge or shadow), never flat rectangles.
+   - Each button state (available, done, locked, skip or premium) has its own colour and also a word or icon, so colour is never the only signal.
+   - Hover and press feedback scale from the centre (`AnchorPoint` 0.5, 0.5 with a child `UIScale`), small enough that the layout never jumps.
+   - Every menu uses the same close button, in the same corner, at the same size.
+   - Icons come from one registry and keep their own aspect ratio.
+   - Decorative idle animation (spinning rays, shimmer) stops while the menu is hidden.
+   - The menu fits both the smallest phone and a large desktop at the clamped device scale.
+   - Fonts: do not use the Gotham family; Roblox retired it and it now renders as Montserrat (Roblox docs, as of October 2026). Pick a heavy `FontFace` such as `BuilderSansExtraBold`.
    - Every price comes from `GetProductInfoAsync`; paid random items show odds before purchase (see `roblox-monetization-compliance`).
 
 6. **Accessibility.**
@@ -96,8 +96,7 @@ UI is done when it passes measured rules on every target screen, not when it loo
 - `05 UI and UX/UI Design Systems.md`
 - `05 UI and UX/Virtualized Lists and Large Inventories.md`
 - `05 UI and UX/Gamepad and Console UX.md`
-- `21 Check-UI Design System/Check-UI Design System.md`
-- `21 Check-UI Design System/Check-UI Design System Spec.md`
+- The `lihfolk-ui` skill (house menu style, sizes, colours, icons)
 - `23 Debugging Deep Dives/Debugging UI Layout and Input.md`
 - `29 Luau Cookbook/Cookbook - UI.md`
 - `13 Production and Case Studies/Case Study - Phone UI Overhaul.md`

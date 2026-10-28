@@ -1,14 +1,14 @@
-﻿---
-name: roblox-system-builder
-description: Build a complete Roblox gameplay feature end to end the way the vault's Worked Builds do: decisions, folder layout, shared config, server module, client controller, remotes, saving, UI and tests. Use when the user asks to add a feature or system such as an inventory, shop, daily rewards, codes, quests, pets, rounds, combat or leaderboards, or says "build me a system", "add a feature", "make this end to end", or "how should I structure this".
 ---
-# Roblox System Builder
+name: roblox-system-builder
+description: 'LihFolk: Build a complete Roblox gameplay feature end to end the way the Worked Builds in LihFolk Vault V2 do: decisions, folder layout, shared config, server module, client controller, remotes, saving, UI and tests. Use when the user asks to add a feature or system such as an inventory, shop, daily rewards, codes, quests, pets, rounds, combat or leaderboards, or says "build me a system", "add a feature", "make this end to end", or "how should I structure this".'
+---
+# LihFolk System Builder
 
 A feature is finished when its decisions are written down, the server owns every outcome, its data survives crashes and server hops, the client only displays and requests, and it has been tested with persistence, failure, two clients and spam. Follow the same shape every time so features fit together.
 
 ## Inputs
 
-- `VAULT`: the LihFolk knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
+- `VAULT`: LihFolk Vault V2, the knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
 - The feature request and the existing project layout (if any).
 - Whether the project already has a data layer, remote helper and rate limiter (the Saved Inventory build provides all three).
 

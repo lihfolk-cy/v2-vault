@@ -54,7 +54,7 @@ The skills never edit vault notes. They read the vault and act on your game.
 | `roblox-monetization-compliance` | Products, passes, ProcessReceipt, prices, odds disclosure, PolicyService | [[Skill - Roblox Monetization Compliance]] |
 | `roblox-performance-audit` | MicroProfiler, memory leaks, bandwidth, instance counts, mobile | [[Skill - Roblox Performance Audit]] |
 | `roblox-debugging` | Reproduce, isolate, bisect; errors, desync, races, live servers | [[Skill - Roblox Debugging]] |
-| `roblox-ui-builder` | Responsive UI, safe areas, motion, Check-UI, accessibility | [[Skill - Roblox UI Builder]] |
+| `roblox-ui-builder` | Responsive UI, safe areas, motion, LihFolk UI, accessibility | [[Skill - Roblox UI Builder]] |
 | `roblox-asset-import` | Models, rigs, kits, scale, triangle budgets, collision, PBR textures | [[Skill - Roblox Asset Import]] |
 | `roblox-system-builder` | Building a full feature the way the Worked Builds do | [[Skill - Roblox System Builder]] |
 
@@ -69,7 +69,7 @@ The skills never edit vault notes. They read the vault and act on your game.
 
 Skills make an agent more consistent, not infallible. Keep the habits from [[Safety Rules for AI Agents in Studio]]: work in Edit mode, snapshot before bulk changes, never let an agent touch live data stores from Studio, and review what it changed. Ask the agent to end each task with the notes it used and what it could not verify. For the wider picture, see [[AI in Roblox Development Overview]], [[AI Code Assistants for Luau]], [[Prompting and Verifying AI Output]], [[Agent Review Loops and Guardrails in Practice]] and [[Working with AI Assistants in Studio]].
 
-The Check-UI design system in section 21 ships its own agent instructions, kept unchanged in [[Check-UI AI Skill]]. `roblox-ui-builder` defers to it for exact sizes and colours and adds the vault's layout, motion and accessibility rules on top.
+The LihFolk UI design system in section 21 has its own skill, `lihfolk-ui`, with exact sizes, colours, components and motion. `roblox-ui-builder` defers to it for those values and adds the vault's layout, motion and accessibility rules on top.
 
 ## Third-party skills
 
@@ -81,5 +81,5 @@ Copy the shape of any skill here: a `description` that names the task and the ph
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Check-UI Design System]] · [[Studio Assistant and AI Tools]] · [[CHANGELOG]] · [[LICENSE]] · [[Case Study - Building a Game with AI Agents]] · [[Setting Up MCP Clients]]
+[[LihFolk UI Design System]] · [[Studio Assistant and AI Tools]] · [[CHANGELOG]] · [[LICENSE]] · [[Case Study - Building a Game with AI Agents]] · [[Setting Up MCP Clients]]
 <!-- auto-links:end -->

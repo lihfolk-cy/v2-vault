@@ -2,11 +2,11 @@
 cssclasses: [vault-hub]
 tags: [index, start]
 ---
-# Roblox Game Development Vault
+# LihFolk Vault V2: Start Here
 
 A field guide to **every aspect of making games in Roblox Studio**, written at senior-developer depth: Studio and workflow, Luau, architecture and networking, data, UI, world building, lighting/VFX/audio, animation, gameplay systems, game design, monetization and live ops, performance and testing, production, 3D modeling, AI tools, MCP and AI agents, and pipelines.
 
-About 810 notes and 1,835,000 words (roughly fifteen thick textbooks), plus an asset library: 9 skeleton rigs, 10 concept sheets, 869 CC0 PBR texture sets, 997 CC0 HDRIs, 50 CC0 low-poly kits and 520 CC0 models, and 10 ready-to-install AI skills.
+About 800 notes (roughly fifteen thick textbooks of original LihFolk writing), plus 9 skeleton rigs, 10 concept sheets, procedural Blender assets, and the LihFolk Claude Code plugin with 15+ AI skills. The visual home page is [[000 Home]].
 
 ## How to read the labels
 - **Roblox docs**: the official engine reference and Creator Hub guides, checked in October 2026. Roblox changes fast, so anything marked "as of October 2026" (prices, payouts, policies, betas) is worth rechecking.
@@ -392,11 +392,8 @@ Start at [[Animation Start Here]] (reading paths and full map) and [[Animation G
 ### 19 Concept Sheets (10 sheets, 4K PNG)
 - [[Concept Sheets]]
 
-### 20 CC0 Library (869 texture sets, 997 HDRIs)
-- [[CC0 Texture and HDRI Library]]
-
-### 21 Check-UI Design System (MIT, Luau components + 1,022 icons)
-- [[Check-UI Design System]]
+### 21 LihFolk UI Design System
+- [[LihFolk UI Design System]]
 
 ### 22 Anti-Exploit and Security (9 notes)
 - [[Anti-Exploit Start Here]]
@@ -478,10 +475,7 @@ Start at [[Animation Start Here]] (reading paths and full map) and [[Animation G
 - [[Cookbook - UI]]
 - [[Luau Cookbook Start Here]]
 
-### 30 Models and Environment Kits (1 notes)
-- [[Models and Environment Kits Start Here]]
-
-### 31 AI Skills for Roblox (11 notes)
+### 31 LihFolk AI Skills (11 notes)
 - [[AI Skills Start Here]]
 - [[Skill - Roblox Anti-Exploit Review]]
 - [[Skill - Roblox Asset Import]]

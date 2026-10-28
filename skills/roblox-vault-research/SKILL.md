@@ -1,14 +1,14 @@
-﻿---
-name: roblox-vault-research
-description: Consult the Roblox Game Development Vault automatically, without being asked, whenever you work on anything Roblox (Luau scripts, Studio, remotes, DataStores, UI, physics, animation, VFX, monetization, publishing, performance, anti-exploit, Blender assets for Roblox, game design). Before writing, reviewing or debugging Roblox code or answering a Roblox question, grep the vault index for the APIs and topics involved and apply what the matching notes say. Also use when the user says "check the vault" or "look it up in my notes".
 ---
-# Roblox Vault Research
+name: roblox-vault-research
+description: 'LihFolk: Consult LihFolk Vault V2 (the LihFolk Roblox knowledge base) automatically, without being asked, whenever you work on anything Roblox (Luau scripts, Studio, remotes, DataStores, UI, physics, animation, VFX, monetization, publishing, performance, anti-exploit, Blender assets for Roblox, game design). Before writing, reviewing or debugging Roblox code or answering a Roblox question, grep the vault index for the APIs and topics involved and apply what the matching notes say. Also use when the user says "check the vault" or "look it up in my notes".'
+---
+# LihFolk Vault Research
 
-The vault is a folder of Markdown notes about every part of making Roblox games. Each note labels its facts as "Roblox docs" (checked October 2026), "measured in the reference project" (one production game), "rule of thumb", or "unverified". Your job is to find the right notes fast, answer from them, and say exactly where the answer came from.
+LihFolk Vault V2 is a folder of Markdown notes about every part of making Roblox games. Each note labels its facts as "Roblox docs" (checked October 2026), "measured in the reference project" (one production game), "rule of thumb", or "unverified". Your job is to find the right notes fast, answer from them, and say exactly where the answer came from.
 
 ## Inputs
 
-- `VAULT`: the LihFolk knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
+- `VAULT`: LihFolk Vault V2, the knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
 - The question or task.
 
 ## When to use it (no prompt needed)
@@ -29,7 +29,7 @@ Do not wait to be asked. Any Roblox task is a trigger: a new feature, a bug, a r
    - `27 Marketing and Growth/Marketing and Growth Start Here.md`
    - `28 Business and Careers/Business and Careers Start Here.md`
    - `29 Luau Cookbook/Luau Cookbook Start Here.md`
-   - `21 Check-UI Design System/Check-UI Design System.md`
+   - For the house cartoon/simulator menu style, use the `lihfolk-ui` skill instead of a hub note.
    - `AI Skills Start Here.md`
    For sections without a hub, list the folder; note titles are descriptive.
 

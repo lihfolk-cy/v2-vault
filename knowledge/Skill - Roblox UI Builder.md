@@ -1,5 +1,5 @@
 ---
-tags: [ai, agents, ai-skill, ui, check-ui, accessibility]
+tags: [ai, agents, ai-skill, ui, lihfolk-ui, accessibility]
 ---
 # Skill - Roblox UI Builder
 
@@ -13,7 +13,7 @@ This skill makes an agent build UI to measured rules rather than "looks fine on 
 - **Layout**: one design resolution with one clamped device `UIScale`, square things kept square with constraints, `AutomaticSize` for variable text and never with `TextScaled`, pop scales on a child `UIScale`.
 - **Input**: `Activated` everywhere, `gameProcessedEvent` respected, gamepad selection set as a menu opens, one menu at a time.
 - **Motion**: one motion module with named tokens, durations by perception band, duration scaled with the square root of screen distance, faster exits, interruption-safe hides, staggers capped at about 0.4 s.
-- **Check-UI**: when the game uses the [[Check-UI Design System]] (the vault's MIT cartoon and simulator style with Shop, Codes, Rebirth, Settings and Daily Rewards menus), the agent follows its spec and its ship checks: bevelled buttons, state colours, 1.06 hover and 0.94 press from the centre, the shared 38 x 38 close button, and phone and desktop scale checks. It swaps the removed Gotham font for a heavy alternative.
+- **LihFolk UI**: when the game uses the [[LihFolk UI Design System]] (LihFolk's own cartoon and simulator style with Shop, Codes, Rebirth, Settings and Daily Rewards menus), the agent follows the `lihfolk-ui` skill's spec and ship checks for exact sizes, colours, motion and scaling.
 - **Accessibility**: the three `GuiService` preferences, `Largest` text tests, 4.5:1 contrast, no colour-only signals, at most three flashes per second, 44 px taps with 8 px gaps.
 - **Testing**: seven fixed viewports from 1920 x 1080 down to 667 x 375, a notched phone in both orientations, TV with a gamepad, and pass criteria of 12 px text, 44 px taps, 8 px gaps and zero overlaps. Then a real phone.
 
@@ -27,12 +27,11 @@ The docs allow `MinTextSize` down to 9, while the reference project's floor is 1
 
 ## Notes behind it
 
-[[ScreenGui Fundamentals]], [[Layout - Scale Offset and Constraints]], [[Responsive UI for Phone Tablet Console and PC]], [[Safe Areas and Insets]], [[UI Motion Language and Timing]], [[Accessibility]], [[Menu Archetypes - Shop Settings Codes Rewards]], [[UI Design Systems]], [[Virtualized Lists and Large Inventories]], [[Gamepad and Console UX]], [[Check-UI Design System Spec]], [[Debugging UI Layout and Input]], [[Cookbook - UI]], [[Case Study - Phone UI Overhaul]].
+[[ScreenGui Fundamentals]], [[Layout - Scale Offset and Constraints]], [[Responsive UI for Phone Tablet Console and PC]], [[Safe Areas and Insets]], [[UI Motion Language and Timing]], [[Accessibility]], [[Menu Archetypes - Shop Settings Codes Rewards]], [[UI Design Systems]], [[Virtualized Lists and Large Inventories]], [[Gamepad and Console UX]], [[LihFolk UI Spec]], [[Debugging UI Layout and Input]], [[Cookbook - UI]], [[Case Study - Phone UI Overhaul]].
 
 ## Related
 
 - [[AI Skills Start Here]]
-- [[Check-UI AI Skill]] (the design system's own agent instructions, kept unchanged in section 21)
 - [[Skill - Roblox Monetization Compliance]] for prices and odds on shop screens
 
 ## Connected notes

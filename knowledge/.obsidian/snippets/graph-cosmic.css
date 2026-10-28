@@ -1,0 +1,60 @@
+/* Cosmic graph: node, link and label colours for the graph view (global and local), a deep-space
+   backdrop with nebula glow, and a vignette. With the Celestial Vault sky on, the animated stars show
+   through behind the graph. Toggle in Settings > Appearance > CSS snippets (graph-cosmic). */
+
+.graph-view.color-fill { color: #9fd8ff; }                 /* notes: icy cyan stars */
+.graph-view.color-fill-focused { color: #ffffff; }         /* hovered / active note */
+.graph-view.color-fill-highlight { color: #ff8be0; }       /* neighbours of the hovered note */
+.graph-view.color-fill-tag { color: #ff5fb4; }             /* tag nodes: magenta */
+.graph-view.color-fill-attachment { color: #ffd27a; }      /* images and files: gold dust */
+.graph-view.color-fill-unresolved { color: #4a3f6b; }
+.graph-view.color-circle { color: #b89cff; }               /* ring around the focused node */
+.graph-view.color-line { color: rgba(150, 120, 255, 0.22); }
+.graph-view.color-line-highlight { color: #ff8be0; }
+.graph-view.color-text { color: #e6defc; }
+.graph-view.color-arrow { color: #b89cff; }
+
+/* deep-space backdrop behind the graph canvas */
+.workspace-leaf-content[data-type="graph"] .view-content,
+.workspace-leaf-content[data-type="localgraph"] .view-content {
+	position: relative; overflow: hidden;
+	background:
+		radial-gradient(ellipse at 22% 30%, rgba(120, 70, 230, 0.20), transparent 42%),
+		radial-gradient(ellipse at 78% 68%, rgba(255, 90, 180, 0.13), transparent 45%),
+		radial-gradient(ellipse at 55% 10%, rgba(80, 150, 255, 0.12), transparent 40%),
+		radial-gradient(ellipse at 50% 50%, #0f0a1f, #06040d 75%) !important;
+}
+/* slow drifting nebula layer */
+.workspace-leaf-content[data-type="graph"] .view-content::before,
+.workspace-leaf-content[data-type="localgraph"] .view-content::before {
+	content: ""; position: absolute; inset: -25%; pointer-events: none; z-index: 0;
+	background:
+		radial-gradient(ellipse at 35% 45%, rgba(176, 107, 255, 0.10), transparent 35%),
+		radial-gradient(ellipse at 65% 55%, rgba(90, 200, 255, 0.07), transparent 35%);
+	animation: cv-graph-nebula 40s ease-in-out infinite alternate;
+}
+@keyframes cv-graph-nebula { to { transform: translate(5%, -4%) rotate(12deg) scale(1.12); } }
+/* static pin-prick stars (cheap CSS, no canvas) */
+.workspace-leaf-content[data-type="graph"] .view-content::after {
+	content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0; opacity: 0.55;
+	background-image:
+		radial-gradient(1px 1px at 12% 18%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 37% 72%, #e9e2ff 50%, transparent 51%),
+		radial-gradient(1.5px 1.5px at 68% 24%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 84% 81%, #ffd9f3 50%, transparent 51%),
+		radial-gradient(1px 1px at 52% 46%, #cfe0ff 50%, transparent 51%), radial-gradient(1.5px 1.5px at 91% 12%, #fff 50%, transparent 51%),
+		radial-gradient(1px 1px at 6% 62%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 25% 90%, #e9e2ff 50%, transparent 51%);
+	background-size: 420px 420px;
+	animation: cv-graph-twinkle 6s ease-in-out infinite alternate;
+	box-shadow: inset 0 0 160px 40px rgba(3, 2, 8, 0.85);   /* vignette */
+}
+@keyframes cv-graph-twinkle { to { opacity: 0.25; } }
+.workspace-leaf-content[data-type="graph"] .view-content canvas,
+.workspace-leaf-content[data-type="localgraph"] .view-content canvas { position: relative; z-index: 1; }
+
+/* graph controls panel: glassy */
+.graph-controls { background: rgba(18, 13, 32, 0.78) !important; border: 1px solid #2c2348 !important; backdrop-filter: blur(6px); border-radius: 12px; }
+.graph-controls .setting-item-name, .graph-controls .tree-item-inner { color: #c9bcff; }
+
+@media (prefers-reduced-motion: reduce) {
+	.workspace-leaf-content[data-type="graph"] .view-content::before,
+	.workspace-leaf-content[data-type="graph"] .view-content::after { animation: none; }
+}

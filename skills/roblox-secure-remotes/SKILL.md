@@ -1,14 +1,14 @@
-﻿---
-name: roblox-secure-remotes
-description: Design, write or review RemoteEvents, UnreliableRemoteEvents and RemoteFunctions so the server stays authoritative. Use when adding a remote, writing a remote handler, reviewing networking code, or when the user says "secure this remote", "validate this", "can this be exploited", "add a rate limit", or "review my remotes".
 ---
-# Roblox Secure Remotes
+name: roblox-secure-remotes
+description: 'LihFolk: Design, write or review RemoteEvents, UnreliableRemoteEvents and RemoteFunctions so the server stays authoritative. Use when adding a remote, writing a remote handler, reviewing networking code, or when the user says "secure this remote", "validate this", "can this be exploited", "add a rate limit", or "review my remotes".'
+---
+# LihFolk Secure Remotes
 
 Every remote is a public API that any modified client can call with any arguments, at any rate, in any order. Treat every argument as hostile. The client sends intent ("I want to swing", "buy item 3"); the server decides what happens.
 
 ## Inputs
 
-- `VAULT`: the LihFolk knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
+- `VAULT`: LihFolk Vault V2, the knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
 - The code that creates remotes and the handlers to write or review.
 
 ## Procedure for a new remote

@@ -1,1 +1,13 @@
-{ "theme": "obsidian", "cssTheme": "", "accentColor": "#8b7bff", "enabledCssSnippets": ["lihfolk"], "baseFontSize": 16 }
+{
+    "enabledCssSnippets":  [
+                               "celestial-lite",
+                               "celestial-fx",
+                               "vault-folder-colors",
+                               "graph-cosmic",
+                               "vault-polish",
+                               "lihfolk-home"
+                           ],
+    "theme":  "obsidian",
+    "cssTheme":  "",
+    "accentColor":  "#9b7bff"
+}

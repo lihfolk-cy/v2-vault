@@ -12,7 +12,7 @@ This skill teaches an AI coding agent to answer Roblox questions from this vault
 The agent is told to:
 
 1. Start at [[00 Start Here]] and pick the matching section or reading path.
-2. Read the section hub before individual notes: [[Anti-Exploit Start Here]], [[Debugging Start Here]], [[Animation Start Here]], [[Luau Cookbook Start Here]], [[Check-UI Design System]] and the others.
+2. Read the section hub before individual notes: [[Anti-Exploit Start Here]], [[Debugging Start Here]], [[Animation Start Here]], [[Luau Cookbook Start Here]], [[LihFolk UI Design System]] and the others.
 3. Search by note title first (titles are unique and descriptive), then grep for exact API names such as `ProcessReceipt` or `UpdateAsync`, then by front matter tags.
 4. Read headings, then the relevant sections, with the "Common mistakes" and "Checklist" sections as the fastest route to the rules.
 5. Rank sources the way the vault labels them: Roblox docs for platform facts, measured numbers from the reference project for practice, rules of thumb as advice, and unverified claims repeated as unverified.

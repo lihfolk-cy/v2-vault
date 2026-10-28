@@ -1,0 +1,47 @@
+/* LihFolk Vault V2 home page (000 Home): layout only. Colours come from the Celestial theme variables. */
+.lf-home { --file-line-width: 1180px; }
+.lf-home .inline-title, .lf-home .metadata-container { display: none; }
+
+/* Banner */
+.lf-home img[alt="banner"] {
+  width: 100%; border-radius: 18px; display: block; margin: 0 0 -48px 0;
+  -webkit-mask-image: linear-gradient(180deg, #000 65%, transparent 100%);
+          mask-image: linear-gradient(180deg, #000 65%, transparent 100%);
+}
+
+/* Hero */
+.lf-home .callout[data-callout="lf-hero"] { --callout-icon: lucide-sparkles; padding: 28px 30px; border-radius: 16px; }
+.lf-home .callout[data-callout="lf-hero"] .callout-icon { display: none; }
+.lf-home .callout[data-callout="lf-hero"] .callout-title-inner { font-size: 3em; font-weight: 800; letter-spacing: .12em; }
+.lf-home .callout[data-callout="lf-hero"] .callout-content { font-size: 1.1em; }
+
+/* Domain card grid */
+.lf-home .callout[data-callout="lf-grid"] { background: transparent; border: none; box-shadow: none; padding: 0; }
+.lf-home .callout[data-callout="lf-grid"] > .callout-title { display: none; }
+.lf-home .callout[data-callout="lf-grid"] > .callout-content {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; padding: 0;
+}
+.lf-home .callout[data-callout="lf-grid"] > .callout-content > p { display: none; }
+.lf-home .callout[data-callout="lf-grid"] .callout {
+  margin: 0; border-radius: 14px; border-top: 3px solid rgb(var(--callout-color));
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.lf-home .callout[data-callout="lf-grid"] .callout:hover { transform: translateY(-3px); box-shadow: 0 0 22px rgba(var(--callout-color), .35); }
+.lf-home .callout[data-callout="lf-grid"] .callout .callout-content { line-height: 1.9; }
+
+.lf-home .callout { border-radius: 14px; }
+.lf-home .callout[data-callout="lf-ai"], .lf-home .callout[data-callout="lf-legend"] { margin-top: 18px; }
+
+/* Card colours and icons per domain */
+.callout[data-callout="lf-strip"]    { --callout-color: 155, 123, 255; --callout-icon: lucide-zap; }
+.callout[data-callout="lf-hero"]     { --callout-color: 155, 123, 255; }
+.callout[data-callout="lf-code"]     { --callout-color: 34, 211, 238;  --callout-icon: lucide-code-2; }
+.callout[data-callout="lf-data"]     { --callout-color: 52, 211, 153;  --callout-icon: lucide-shield-check; }
+.callout[data-callout="lf-ui"]       { --callout-color: 244, 114, 182; --callout-icon: lucide-layout-dashboard; }
+.callout[data-callout="lf-world"]    { --callout-color: 251, 191, 36;  --callout-icon: lucide-mountain-snow; }
+.callout[data-callout="lf-motion"]   { --callout-color: 167, 139, 250; --callout-icon: lucide-sparkles; }
+.callout[data-callout="lf-systems"]  { --callout-color: 251, 146, 60;  --callout-icon: lucide-swords; }
+.callout[data-callout="lf-business"] { --callout-color: 163, 230, 53;  --callout-icon: lucide-rocket; }
+.callout[data-callout="lf-pipeline"] { --callout-color: 96, 165, 250;  --callout-icon: lucide-bot; }
+.callout[data-callout="lf-ai"]       { --callout-color: 155, 123, 255; --callout-icon: lucide-brain-circuit; }
+.callout[data-callout="lf-legend"]   { --callout-color: 133, 146, 184; --callout-icon: lucide-badge-check; }

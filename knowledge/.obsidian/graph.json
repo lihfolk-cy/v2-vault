@@ -1,86 +1,394 @@
 {
-    "collapse-filter":  true,
-    "search":  "-path:\"46 Resource Library/\"",
-    "showTags":  false,
-    "showAttachments":  false,
+    "collapse-filter":  false,
+    "search":  "",
+    "showTags":  true,
+    "showAttachments":  true,
     "hideUnresolved":  true,
-    "showOrphans":  false,
+    "showOrphans":  true,
     "collapse-color-groups":  false,
     "colorGroups":  [
                         {
-                            "query":  "tag:#hub OR file:\"Start Here\" OR file:\"000 Home\" OR file:INDEX",
+                            "query":  "file:\"Start Here\" OR tag:#hub",
                             "color":  {
                                           "a":  1,
                                           "rgb":  16777215
                                       }
                         },
                         {
-                            "query":  "path:\"01 Studio and Workflow/\" OR path:\"02 Luau Scripting/\" OR path:\"03 Architecture and Networking/\" OR path:\"29 Luau Cookbook/\" OR path:\"35 Advanced Luau/\" OR path:\"39 Studio Plugins and Tooling/\" OR path:\"40 Game Math/\"",
+                            "query":  "path:\"01 Studio and Workflow/\"",
                             "color":  {
                                           "a":  1,
-                                          "rgb":  2282478
+                                          "rgb":  4796398
                                       }
                         },
                         {
-                            "query":  "path:\"04 Data and Persistence/\" OR path:\"22 Anti-Exploit and Security/\" OR path:\"41 Multiplayer Services/\"",
+                            "query":  "path:\"02 Luau Scripting/\"",
                             "color":  {
                                           "a":  1,
-                                          "rgb":  3462041
+                                          "rgb":  2794484
                                       }
                         },
                         {
-                            "query":  "path:\"05 UI and UX/\" OR path:\"21 Check-UI Design System/\" OR path:\"42 Accessibility and Inclusive Design/\"",
+                            "query":  "path:\"03 Architecture and Networking/\"",
                             "color":  {
                                           "a":  1,
-                                          "rgb":  16020150
+                                          "rgb":  4169973
                                       }
                         },
                         {
-                            "query":  "path:\"06 World Building and Art/\" OR path:\"14 3D Modeling/\" OR path:\"19 Concept Sheets/\" OR path:\"33 Level Design/\" OR path:\"34 Procedural Generation/\" OR path:\"36 Narrative and Worldbuilding/\" OR path:\"37 Avatars and UGC/\" OR path:\"44 Materials and Surfaces/\" OR path:\"45 Procedural Blender Assets/\" OR path:\"53 Voxel Modelling Deep Dive/\" OR path:\"54 Untextured Stylised Modelling/\" OR path:\"55 Modelling Nuance and Readability/\"",
+                            "query":  "path:\"04 Data and Persistence/\"",
                             "color":  {
                                           "a":  1,
-                                          "rgb":  16498468
+                                          "rgb":  3533277
                                       }
                         },
                         {
-                            "query":  "path:\"07 Lighting VFX and Audio/\" OR path:\"08 Animation/\" OR path:\"18 Rigs and Skeletons/\" OR path:\"47 Game Feel and Juice/\"",
+                            "query":  "path:\"05 UI and UX/\"",
                             "color":  {
                                           "a":  1,
-                                          "rgb":  10980346
+                                          "rgb":  15609775
                                       }
                         },
                         {
-                            "query":  "path:\"09 Gameplay Systems/\" OR path:\"10 Game Design and Genres/\" OR path:\"25 Physics and Vehicles/\" OR path:\"43 Genre Systems End to End/\" OR path:\"48 Economy Design Deep Dive/\"",
+                            "query":  "path:\"06 World Building and Art/\"",
                             "color":  {
                                           "a":  1,
-                                          "rgb":  16486972
+                                          "rgb":  16148008
                                       }
                         },
                         {
-                            "query":  "path:\"11 Monetization Publishing and Live Ops/\" OR path:\"13 Production and Case Studies/\" OR path:\"26 Community and Moderation/\" OR path:\"27 Marketing and Growth/\" OR path:\"28 Business and Careers/\" OR path:\"32 Case Studies of Top Roblox Games/\" OR path:\"38 Live Ops Deep Dive/\" OR path:\"49 Roblox Platform Features/\" OR path:\"50 Team Collaboration and Project Management/\"",
+                            "query":  "path:\"07 Lighting VFX and Audio/\"",
                             "color":  {
                                           "a":  1,
-                                          "rgb":  10741301
+                                          "rgb":  15609711
                                       }
                         },
                         {
-                            "query":  "path:\"12 Performance Testing and Debugging/\" OR path:\"15 AI Tools/\" OR path:\"16 MCP and Agents/\" OR path:\"17 Pipelines/\" OR path:\"23 Debugging Deep Dives/\" OR path:\"24 Worked Builds/\" OR path:\"46 Resource Library/\" OR path:\"51 2D Game Development/\" OR path:\"52 Core Concepts/\"",
+                            "query":  "path:\"08 Animation/\"",
                             "color":  {
                                           "a":  1,
-                                          "rgb":  6333946
+                                          "rgb":  10304483
+                                      }
+                        },
+                        {
+                            "query":  "path:\"09 Gameplay Systems/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  4250970
+                                      }
+                        },
+                        {
+                            "query":  "path:\"10 Game Design and Genres/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  5169261
+                                      }
+                        },
+                        {
+                            "query":  "path:\"11 Monetization Publishing and Live Ops/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16360484
+                                      }
+                        },
+                        {
+                            "query":  "path:\"12 Performance Testing and Debugging/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  10149108
+                                      }
+                        },
+                        {
+                            "query":  "path:\"13 Production and Case Studies/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  15283515
+                                      }
+                        },
+                        {
+                            "query":  "path:\"14 3D Modeling/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16151602
+                                      }
+                        },
+                        {
+                            "query":  "path:\"15 AI Tools/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  3141279
+                                      }
+                        },
+                        {
+                            "query":  "path:\"16 MCP and Agents/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  6550223
+                                      }
+                        },
+                        {
+                            "query":  "path:\"17 Pipelines/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  7951089
+                                      }
+                        },
+                        {
+                            "query":  "path:\"18 Rigs and Skeletons/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16220477
+                                      }
+                        },
+                        {
+                            "query":  "path:\"19 Concept Sheets/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16223816
+                                      }
+                        },
+                        {
+                            "query":  "path:\"21 LihFolk UI Design System/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  15885227
+                                      }
+                        },
+                        {
+                            "query":  "path:\"22 Anti-Exploit and Security/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  5760748
+                                      }
+                        },
+                        {
+                            "query":  "path:\"23 Debugging Deep Dives/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  7921136
+                                      }
+                        },
+                        {
+                            "query":  "path:\"24 Worked Builds/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  15628648
+                                      }
+                        },
+                        {
+                            "query":  "path:\"25 Physics and Vehicles/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  6087295
+                                      }
+                        },
+                        {
+                            "query":  "path:\"26 Community and Moderation/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16430902
+                                      }
+                        },
+                        {
+                            "query":  "path:\"27 Marketing and Growth/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16435017
+                                      }
+                        },
+                        {
+                            "query":  "path:\"28 Business and Careers/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16504155
+                                      }
+                        },
+                        {
+                            "query":  "path:\"29 Luau Cookbook/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  5546230
+                                      }
+                        },
+                        {
+                            "query":  "path:\"32 Case Studies of Top Roblox Games/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16037274
+                                      }
+                        },
+                        {
+                            "query":  "path:\"33 Level Design/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  6940047
+                                      }
+                        },
+                        {
+                            "query":  "path:\"34 Procedural Generation/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  7858079
+                                      }
+                        },
+                        {
+                            "query":  "path:\"35 Advanced Luau/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  6988535
+                                      }
+                        },
+                        {
+                            "query":  "path:\"36 Narrative and Worldbuilding/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  8710573
+                                      }
+                        },
+                        {
+                            "query":  "path:\"37 Avatars and UGC/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  15375857
+                                      }
+                        },
+                        {
+                            "query":  "path:\"38 Live Ops Deep Dive/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16507501
+                                      }
+                        },
+                        {
+                            "query":  "path:\"39 Studio Plugins and Tooling/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  10647028
+                                      }
+                        },
+                        {
+                            "query":  "path:\"40 Game Math/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  8366072
+                                      }
+                        },
+                        {
+                            "query":  "path:\"41 Multiplayer Services/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  9744377
+                                      }
+                        },
+                        {
+                            "query":  "path:\"42 Accessibility and Inclusive Design/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16226231
+                                      }
+                        },
+                        {
+                            "query":  "path:\"43 Genre Systems End to End/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  9628859
+                                      }
+                        },
+                        {
+                            "query":  "path:\"44 Materials and Surfaces/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16363624
+                                      }
+                        },
+                        {
+                            "query":  "path:\"45 Procedural Blender Assets/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16366451
+                                      }
+                        },
+                        {
+                            "query":  "path:\"46 Resource Library/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  9081000
+                                      }
+                        },
+                        {
+                            "query":  "path:\"47 Game Feel and Juice/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16226199
+                                      }
+                        },
+                        {
+                            "query":  "path:\"48 Economy Design Deep Dive/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16575871
+                                      }
+                        },
+                        {
+                            "query":  "path:\"49 Roblox Platform Features/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16577938
+                                      }
+                        },
+                        {
+                            "query":  "path:\"50 Team Collaboration and Project Management/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  12883959
+                                      }
+                        },
+                        {
+                            "query":  "path:\"51 2D Game Development/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  10546887
+                                      }
+                        },
+                        {
+                            "query":  "path:\"52 Core Concepts/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  15921151
+                                      }
+                        },
+                        {
+                            "query":  "path:\"53 Voxel Modelling Deep Dive/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16434302
+                                      }
+                        },
+                        {
+                            "query":  "path:\"54 Untextured Stylised Modelling/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16436617
+                                      }
+                        },
+                        {
+                            "query":  "path:\"55 Modelling Nuance and Readability/\"",
+                            "color":  {
+                                          "a":  1,
+                                          "rgb":  16504211
                                       }
                         }
                     ],
-    "collapse-display":  true,
+    "collapse-display":  false,
     "showArrow":  false,
-    "textFadeMultiplier":  -1.2,
-    "nodeSizeMultiplier":  1.25,
-    "lineSizeMultiplier":  0.45,
-    "collapse-forces":  true,
-    "centerStrength":  0.55,
-    "repelStrength":  16,
-    "linkStrength":  0.7,
-    "linkDistance":  210,
-    "scale":  0.35,
+    "textFadeMultiplier":  -1.6,
+    "nodeSizeMultiplier":  0.9,
+    "lineSizeMultiplier":  0.35,
+    "collapse-forces":  false,
+    "centerStrength":  0.42,
+    "repelStrength":  13,
+    "linkStrength":  0.85,
+    "linkDistance":  170,
+    "scale":  0.020408244486560027,
     "close":  true
 }

@@ -278,5 +278,5 @@ See also: [[UI Design Systems]], [[HUD Design]], [[Pricing and Store Design]], [
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Check-UI Design System]] · [[Check-UI README]] · [[Check-UI Design System Spec]] · [[Daily Rewards System End to End]] · [[Skill - Roblox UI Builder]] · [[Reference - Purple Anime Settings UI (Claude + Figma)]]
+[[LihFolk UI Design System]] · [[LihFolk UI Spec]] · [[Daily Rewards System End to End]] · [[Skill - Roblox UI Builder]] · [[Reference - Purple Anime Settings UI (Claude + Figma)]]
 <!-- auto-links:end -->

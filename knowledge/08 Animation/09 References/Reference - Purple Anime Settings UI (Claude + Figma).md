@@ -127,5 +127,5 @@ Rebuilding a static design like this in Roblox is where the real decisions are. 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[UI Design Systems]] · [[UI Motion Language and Timing]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[Check-UI Design System Spec]] · [[Debugging UI Layout and Input]] · [[UI Layout Objects - Lists Grids and Pages]] · [[Animation Start Here]]
+[[UI Design Systems]] · [[UI Motion Language and Timing]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[LihFolk UI Spec]] · [[Debugging UI Layout and Input]] · [[UI Layout Objects - Lists Grids and Pages]] · [[Animation Start Here]]
 <!-- auto-links:end -->

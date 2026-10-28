@@ -18,7 +18,16 @@ How LihFolk authors original R15 animations in Blender by script, checks them au
 - **Limbs aim, not rotate.** `aim(direction, twist)` swings an upper arm or leg to point along a direction in its parent's frame, which is far easier to pose well than raw Euler angles.
 - **Overlap.** `offset(joints, n)` delays the head, off-arm or forearm by 1-3 frames so the motion leads from the torso.
 - **Feet.** `FootTrack` keys ankle targets with heel and toe roll and lift arcs. An analytic two-bone IK bakes the legs per frame, so planted feet don't slide.
-- **Blades.** `blade_aim({frame: direction})` solves the hand with forearm twist plus a wrist bend capped at +-50 degrees (see [[Blade Grip and Wrist Limits]]).
+- **Arms by target.** `body(..., rh=/rhl=, lh=/lhl=)` solves each arm with two-bone IK to a wrist target in character space or torso space (`arm_ik`). Torso-space targets keep the arm shape when the hips drop or the chest turns.
+- **Swords.** `skey(frame, ease, torso pose, hand target, blade=, edge=)` hands the whole sword arm to `lihanim/sword.py`, which:
+  - searches the elbow swivel and small hand nudges;
+  - solves an anatomical wrist (forearm twist, deviation, flexion inside measured limits);
+  - points the edge along the cut;
+  - rejects arm, blade and pommel positions inside the torso or head;
+  - inserts breakdown keys where an in-between would pass through the body.
+  
+  The grip is `Tool.Grip = CFrame.Angles(math.rad(30), 0, 0)`, blade on Handle +Y, true edge on Handle -Z. See [[Blade Grip and Wrist Limits]].
+- **Locomotion.** `clips/_loco.py` + `lihanim/gait.py` build in-place cycles whose planted foot moves back at exactly the ground speed. See [[Locomotion and Melee Reference Numbers]].
 - **Markers.** `marker(frame, name, value)` becomes real `KeyframeMarker`s (`Hit`, `ComboWindow`, `TrailOn`, `TrailOff`, `Footstep`).
 
 ## 3. Automatic QA (written into each clip's JSON)
@@ -28,10 +37,16 @@ How LihFolk authors original R15 animations in Blender by script, checks them au
 | `foot_slide_studs` | Skating feet on planted frames | under 0.02 (Measured walk 0.0001, run 0.000) |
 | `lowest_body_point_studs` | Body parts sinking through the floor | above -0.05. Many clips still read -0.1 to -0.4 on the shin; **Unverified** whether that is the block preview's box corner or real penetration |
 | `ik_unreachable_max_studs` | Foot targets the leg can't reach (hyper-extension) | 0 |
-| `wrist_clamped_deg` | Blade targets beyond anatomical wrist range | under 5 per key |
+| `wrist.blade_err_max_deg` | Blade keys the anatomical wrist can't reach (the wrist is never forced) | under 5 on authored keys |
+| `body_overlap.body_max_studs` | Limb boxes through the torso, head or other limbs (oriented-box test, every frame, non-adjacent pairs, beyond the rest-pose contact + 0.02) | under 0.05 |
+| `body_overlap.blade_max_studs` | Preview blade or pommel through the body | under 0.05 |
+| `body_overlap.hip_region_max_studs` | Thigh top corners in the chest / crotch (joint region of the block rig, hidden) | report only |
 | `motor6d_fk_check_max_err_studs` | Export mismatch between Blender and Roblox joint maths | 0 |
 
-Planned, not built yet: a **body-overlap check** (limb boxes through the torso or head). It is the main remaining cause of "broken" poses.
+**Overlap check details (Measured).**
+- Leg boxes are checked between their joint pivots. The thigh's 0.21 studs above the hip and the shin's 0.24 above the knee sit inside the neighbouring part.
+- The two thighs are compared on their lower 60%.
+- `worst_pairs` lists the deepest pairs as `depth@frame`, so you know which key to fix.
 
 ## 4. Exports per clip
 
@@ -55,7 +70,9 @@ A clip ships only when:
 - it reads correctly from three-quarter and side views;
 - for anything shipped publicly, the council grades it A.
 
-Honest status: walk, jump, hit react and SwordSlash are near the bar. Run, idle, slam, death and the 3-hit combo need another pass.
+Previews show three views for sword clips: three-quarter from the front-left (the side cuts finish toward), front, and side. The block hand is swapped for a preview-only fist around the handle; the exported rig stays standard R15.
+
+**Status (2026-10-28).** The rebuilt set passes every automated gate: Idle, Walk, Run (16 studs/s), Sprint (26), Jump, SwordIdle, SwordLight1-3, SwordHeavy, SwordDashSlash and SwordParry. Their judged scores are in the quality ledger (`Animations/.lihfolk/ledger.jsonl`). The older SwordSlash, SwordCombo3, GroundSlam, DodgeRoll, Death, HitReact and DanceGroove predate the overlap check and the new grip, so treat them as drafts.
 
 ## Common mistakes
 
@@ -65,13 +82,16 @@ Honest status: walk, jump, hit react and SwordSlash are near the bar. Run, idle,
 - Solving weapon hands with unconstrained rotations: wrist flips.
 - Judging a clip from one camera angle.
 - Assuming an FBX import worked without checking it on the rig in Studio.
+- Forgetting that dropping the hips lowers the shoulders. A hand target written in character space then ends up above the shoulder line. Use torso-space targets (`rhl`).
+- Hands closer than about 1 stud to their own shoulder. The 1-stud R15 boxes fold into each other.
+- Pitching the pelvis forward for lean. Lean with the chest; a pitched pelvis drops onto the swing knee.
 
 ## Checklist
 
 - [ ] Clip built from strong key poses with mixed eases
 - [ ] Overlap offsets on head, off-arm and forearm
 - [ ] Feet on `FootTrack`; slide under 0.02 studs
-- [ ] `wrist_clamped_deg` under 5; no limbs through the body on the sheet
+- [ ] `wrist.blade_err_max_deg` under 5; `body_overlap` body and blade under 0.05
 - [ ] `.rbxmx` + `.json` + preview exported; markers present
 - [ ] Imported and played once in Studio before calling it done
 
@@ -80,6 +100,7 @@ Honest status: walk, jump, hit react and SwordSlash are near the bar. Run, idle,
 - [[Blade Grip and Wrist Limits]]
 - [[Weapon Swing Design]]
 - [[Custom Rigs - Weapons and Props]]
+- [[Locomotion and Melee Reference Numbers]]
 
 ## Connected notes
 

@@ -51,5 +51,5 @@ Related concepts: [[Accessibility Contrast]], [[Onboarding Funnel]], [[Thumbnail
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Cookbook - UI]] · [[Links - Scale vs offset and responsive design]] · [[ScreenGui Fundamentals]] · [[UI Asset Pipeline]] · [[Accessibility Start Here]] · [[Check-UI Design System]] · [[Core Concepts Start Here]]
+[[Cookbook - UI]] · [[Links - Scale vs offset and responsive design]] · [[ScreenGui Fundamentals]] · [[UI Asset Pipeline]] · [[Accessibility Start Here]] · [[LihFolk UI Design System]] · [[Core Concepts Start Here]]
 <!-- auto-links:end -->

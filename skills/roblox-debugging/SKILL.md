@@ -1,14 +1,14 @@
-﻿---
-name: roblox-debugging
-description: Debug Roblox games with a fixed method (reproduce, isolate, bisect, explain, verify, guard) instead of guessing. Covers reading Luau errors, client-server desync, race conditions and yield order, physics ownership, UI input, DataStore problems and live servers. Use when the user says "bug", "broken", "not working", "error in output", "works in Studio but not live", "attempt to index nil", "infinite yield", "rubber-banding", or "random failures".
 ---
-# Roblox Debugging
+name: roblox-debugging
+description: 'LihFolk: Debug Roblox games with a fixed method (reproduce, isolate, bisect, explain, verify, guard) instead of guessing. Covers reading Luau errors, client-server desync, race conditions and yield order, physics ownership, UI input, DataStore problems and live servers. Use when the user says "bug", "broken", "not working", "error in output", "works in Studio but not live", "attempt to index nil", "infinite yield", "rubber-banding", or "random failures".'
+---
+# LihFolk Debugging
 
 A fix without a reproduction is a guess. A `task.wait` or a silent `pcall` is not an explanation. Follow the method even when the cause looks obvious.
 
 ## Inputs
 
-- `VAULT`: the LihFolk knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
+- `VAULT`: LihFolk Vault V2, the knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
 - The symptom, the error text if any, and where it happens (Studio, live, which device, how often).
 
 ## Procedure

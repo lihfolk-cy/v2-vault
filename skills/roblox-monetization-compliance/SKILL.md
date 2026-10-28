@@ -1,14 +1,14 @@
-﻿---
-name: roblox-monetization-compliance
-description: Build or audit game passes, developer products, ProcessReceipt, shop prices, paid random items (eggs, crates, luck boosts) and PolicyService gating so purchases are reliable and follow Roblox policy. Use when adding a product or pass, building a shop, adding an egg or gacha or luck boost, or when the user says "monetization review", "is this compliant", "odds disclosure", "prices are wrong", or "players paid and got nothing".
 ---
-# Roblox Monetization Compliance
+name: roblox-monetization-compliance
+description: 'LihFolk: Build or audit game passes, developer products, ProcessReceipt, shop prices, paid random items (eggs, crates, luck boosts) and PolicyService gating so purchases are reliable and follow Roblox policy. Use when adding a product or pass, building a shop, adding an egg or gacha or luck boost, or when the user says "monetization review", "is this compliant", "odds disclosure", "prices are wrong", or "players paid and got nothing".'
+---
+# LihFolk Monetization Compliance
 
 Two goals: every Robux spent produces exactly one grant that survives crashes, and every purchase surface follows Roblox's rules on prices, paid random items and restricted players. Policies change; treat every policy fact here as "as of October 2026" and tell the user to recheck the official pages before shipping.
 
 ## Inputs
 
-- `VAULT`: the LihFolk knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
+- `VAULT`: LihFolk Vault V2, the knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
 - The receipt handler, pass ownership code, shop UI, any random-outcome systems, and the product and pass list from the Creator Dashboard if the user can provide it.
 
 ## Procedure

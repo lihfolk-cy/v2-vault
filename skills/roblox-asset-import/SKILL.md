@@ -1,14 +1,14 @@
-﻿---
-name: roblox-asset-import
-description: Import 3D models, rigs, kits and PBR textures into Roblox Studio at the right scale, within triangle and texture budgets, with correct pivots, collision fidelity and SurfaceAppearance setup. Use when bringing in an FBX, GLB or OBJ, using the vault's skeleton rigs, environment kits or CC0 textures, or when the user says "import this model", "model is the wrong size", "pivot is off", "set up textures", "invisible walls", or "too many triangles".
 ---
-# Roblox Asset Import
+name: roblox-asset-import
+description: 'LihFolk: Import 3D models, rigs, kits and PBR textures into Roblox Studio at the right scale, within triangle and texture budgets, with correct pivots, collision fidelity and SurfaceAppearance setup. Use when bringing in an FBX, GLB or OBJ, using the LihFolk Vault V2 skeleton rigs, the LihFolk Asset Pack, or outside kits and CC0 textures, or when the user says "import this model", "model is the wrong size", "pivot is off", "set up textures", "invisible walls", or "too many triangles".'
+---
+# LihFolk Asset Import
 
 Most import problems are decided before the file reaches Studio: units, applied transforms, origins and triangle counts. Fix them at export, not by scaling in Studio. Then import with the right settings, reset pivots, set collision on purpose, and audit.
 
 ## Inputs
 
-- `VAULT`: the LihFolk knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
+- `VAULT`: LihFolk Vault V2, the knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
 - The source file(s) and what they are for (prop, kit piece, character, weapon, terrain material).
 - The target device class (assume mid-range phones unless told otherwise).
 
@@ -64,10 +64,11 @@ Most import problems are decided before the file reaches Studio: units, applied 
    - For parts and terrain, use a `MaterialVariant` in `MaterialService` with a stable naming convention.
    - Clone `SurfaceAppearance`s and meshes from one source; re-imported copies break instancing.
 
-8. **Use the vault's libraries.**
+8. **Use the LihFolk libraries.**
    - Section 18 has nine skeleton rigs (R6, R15, quadruped, bird, spider, serpent, sword, bow, flail) built at 1 unit = 1 stud. Characters face -Y in Blender, which is forward in Roblox. Keep bone names: the R15 rig must keep exact R15 names for the importer's Humanoid setup. Weapons use `Handle` as root and grip. These rigs were exported and checked by name and size but not yet test-imported into Studio, so test one first.
-   - Section 20 has CC0 PBR texture sets at 2K and HDRIs. Downscale to 1024 before upload. HDRIs become skies by converting to six 1024 px cube faces for the `Sky` object.
-   - Section 30 holds CC0 low-poly environment kits with FBX, GLB and OBJ versions plus a licence file per kit. Prefer the GLB versions, import kits with Merge Meshes off, and keep each kit's licence file with the source.
+   - The LihFolk Asset Pack (optional download, see `../../assets/README.md`) holds original LihFolk models, kits, materials and skies. Check it before importing from elsewhere.
+   - Outside texture sets and HDRIs (for example CC0 libraries the user downloads): downscale 2K sets to 1024 before upload. An HDRI becomes a sky by converting it to six 1024 px cube faces for the `Sky` object.
+   - Outside environment kits: prefer the GLB version when a kit ships several formats, import with Merge Meshes off, and keep the kit's licence file and source URL next to the source files.
 
 9. **Audit after import.** Run a Studio audit: triangle and unique mesh counts, texture sizes, collision flags, transparent colliders, pivots. Do a ray-grid before and after test on every art pass and walk every gate and doorway.
 

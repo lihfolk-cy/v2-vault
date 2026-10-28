@@ -421,5 +421,5 @@ end
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Safe Area]] · [[Skill - Roblox UI Builder]] · [[Links - UI elements]] · [[Check-UI Design System]] · [[Plugin UI with DockWidgets]] · [[UI and GUI Animation]]
+[[Safe Area]] · [[Skill - Roblox UI Builder]] · [[Links - UI elements]] · [[LihFolk UI Design System]] · [[Plugin UI with DockWidgets]] · [[UI and GUI Animation]]
 <!-- auto-links:end -->

@@ -1,4 +1,4 @@
-# VAULT_INDEX
+# LihFolk Vault V2 Index
 
 Machine-friendly index of every note: `title | path | tags | first sentence`. Built for AI agents: grep this file for an API name,
 topic or tag, then open only the notes you need. Regenerate after adding notes. Asset folders (20, 30) are not indexed.
@@ -142,7 +142,9 @@ topic or tag, then open only the notes you need. Regenerate after adding notes. 
 
 ## 08 Animation
 
-- Blade Grip and Wrist Limits | 08 Animation/03 Authoring/Blade Grip and Wrist Limits.md | animation, weapons, sword, grip, wrist, authoring, r15 | A sword clip looks wrong long before anyone can say why: the blade passes through the head, points back along the forearm, or snaps between frames.
+- Blade Grip and Wrist Limits | 08 Animation/03 Authoring/Blade Grip and Wrist Limits.md | animation, weapons, sword, grip, wrist, authoring, r15, tool-grip | A sword clip looks wrong long before anyone can say why.
+- Human Swing Biomechanics | 08 Animation/03 Authoring/Human Swing Biomechanics.md | animation, authoring, combat, sword, biomechanics, kinematic-chain, pronation, twist, qa | Measured strikes (kendo, batting, tennis, golf) agree on one pattern: a swing is a proximal-to-distal wave.
+- Locomotion and Melee Reference Numbers | 08 Animation/03 Authoring/Locomotion and Melee Reference Numbers.md | animation, authoring, locomotion, gait, combat, melee, timing, hit-stop, parry, r15, reference | The numbers to start from when keying a walk, run, sprint, jump or sword attack for a default-scale R15 character, and what they become at 30 fps.
 - LihFolk R15 Keyframe Pipeline | 08 Animation/06 Pipelines and Tooling/LihFolk R15 Keyframe Pipeline.md | animation, pipeline, blender, r15, keyframe, export, qa | How LihFolk authors original R15 animations in Blender by script, checks them automatically, and exports them for Roblox.
 - Animation Glossary | 08 Animation/Animation Glossary.md | reference, glossary | See Animation Start Here.
 - Animation Start Here | 08 Animation/Animation Start Here.md | index, start | A field guide to everything about animation in Roblox: how the engine really plays clips, rigging and importing from Blender, the craft of animating for games, procedural motion and IK, the systems th
@@ -376,7 +378,9 @@ topic or tag, then open only the notes you need. Regenerate after adding notes. 
 
 ## 14 3D Modeling
 
+- Bezier Curves and Splines for Modellers | 14 3D Modeling/Bezier Curves and Splines for Modellers.md | modeling, curves, bezier, splines, catmull-rom, b-spline, nurbs, continuity, curvature, silhouette, blender, animation | Curves are how a modeller says "this shape flows": a blade edge, a horn spiral, a pipe run, a logo, the S of a character's pose, the ease of a keyframe.
 - Blender Workflow for Roblox Creators | 14 3D Modeling/Blender Workflow for Roblox Creators.md | modeling, blender, workflow, modifiers, export, python | Blender is the default modelling tool for Roblox creators: free, scriptable, and the one Roblox's own guides are written for.
+- Curve-Based Modelling in Blender for Roblox | 14 3D Modeling/Curve-Based Modelling in Blender for Roblox.md | modeling, blender, curves, bezier, sweep, lathe, geometry-nodes, python, budgets, triangles, roblox, props, weapons, vfx | Many of the best-looking stylised props are a curve with a cross-section: a sword blade, a horn, a pipe run, a cable, a tentacle, a branch, a VFX swirl, a lathed potion bottle, a bevelled badge.
 - Exporting and Validating Models for Roblox | 14 3D Modeling/Exporting and Validating Models for Roblox.md | modeling, export, import, validation, pivots, collision, meshpart | The last mile from Blender to a working MeshPart is where good models go wrong: the wrong scale, a pivot floating 12 studs above a tree, a sword that faces sideways, a collider that blocks a doorway, 
 - Hand-Painted and Stylized Texturing | 14 3D Modeling/Hand-Painted and Stylized Texturing.md | modeling, texturing, stylized, hand-painted, toon, blender | Most successful Roblox games are stylised: chunky shapes, readable colours, painted or flat-shaded surfaces.
 - Hard-Surface Modeling | 14 3D Modeling/Hard-Surface Modeling.md | modeling, hard-surface, blender, bevel, booleans, normals, props | Hard-surface means man-made, rigid things: armour, weapons, machines, crates, buildings, vehicles, sci-fi panels.
@@ -456,13 +460,10 @@ topic or tag, then open only the notes you need. Regenerate after adding notes. 
 
 - Concept Sheets | 19 Concept Sheets/Concept Sheets.md | concept-art, reference, rigs | 4K (3840 x 2160) reference sheets for the Skeleton Library.
 
-## 21 Check-UI Design System
+## 21 LihFolk UI Design System
 
-- Check-UI AI Skill | 21 Check-UI Design System/Check-UI AI Skill.md |  | Check-UI is the definitive design system standard for modern Roblox cartoon, simulator, and tycoon games (inspired by top-tier titles like Pet Simulator 99, Anime Champions, and Blade Ball).
-- Check-UI Design System Spec | 21 Check-UI Design System/Check-UI Design System Spec.md |  | > The definitive design specification and component architecture for high-engagement, non-generic Roblox cartoon, simulator, and tycoon interfaces.
-- Check-UI Design System | 21 Check-UI Design System/Check-UI Design System.md | ui, design-system, luau, ai-skill, check-ui | A ready-made design system and Luau component library for cartoon and simulator UI in Roblox: chunky 3D buttons, a signature close button, headers with two-tier shadows, a checkerboard fade, rotating 
-- Check-UI README | 21 Check-UI Design System/Check-UI README.md |  | [![Design System](https://img.shields.io/badge/Roblox-UI%20Design%20System-blue.svg)](https://roblox.com) [![Typography](https://img.shields.io/badge/Font-GothamBlack-black.svg)]() [![Responsive](http
-- Check-UI Release Notes | 21 Check-UI Design System/Check-UI Release Notes.md |  | 🎉 Premier release officiel du Design System & Skill Check-UI pour Roblox Studio.
+- LihFolk UI Design System | 21 LihFolk UI Design System/LihFolk UI Design System.md | ui, design-system, lihfolk-ui, simulator, cartoon, menus, hud | LihFolk's own cartoon and simulator UI kit ("Ink and Candy"): Luau components, themes and examples for Shop, Codes, Rebirth, Settings and Daily Rewards menus.
+- LihFolk UI Spec | 21 LihFolk UI Design System/LihFolk UI Spec.md | ui, design-system, lihfolk-ui, tokens, spec, motion, accessibility | The numbers behind [[LihFolk UI Design System]].
 
 ## 22 Anti-Exploit and Security
 
@@ -563,7 +564,7 @@ topic or tag, then open only the notes you need. Regenerate after adding notes. 
 - Skill - Roblox Performance Audit | Skill - Roblox Performance Audit.md | ai, agents, ai-skill, performance, profiling | Skill file: [skills/roblox-performance-audit/SKILL.md](../skills/roblox-performance-audit/SKILL.md) (folder name roblox-performance-audit)
 - Skill - Roblox Secure Remotes | Skill - Roblox Secure Remotes.md | ai, agents, ai-skill, security, remotes, networking | Skill file: [skills/roblox-secure-remotes/SKILL.md](../skills/roblox-secure-remotes/SKILL.md) (folder name roblox-secure-remotes)
 - Skill - Roblox System Builder | Skill - Roblox System Builder.md | ai, agents, ai-skill, architecture, luau, worked-build | Skill file: [skills/roblox-system-builder/SKILL.md](../skills/roblox-system-builder/SKILL.md) (folder name roblox-system-builder)
-- Skill - Roblox UI Builder | Skill - Roblox UI Builder.md | ai, agents, ai-skill, ui, check-ui, accessibility | Skill file: [skills/roblox-ui-builder/SKILL.md](../skills/roblox-ui-builder/SKILL.md) (folder name roblox-ui-builder)
+- Skill - Roblox UI Builder | Skill - Roblox UI Builder.md | ai, agents, ai-skill, ui, lihfolk-ui, accessibility | Skill file: [skills/roblox-ui-builder/SKILL.md](../skills/roblox-ui-builder/SKILL.md) (folder name roblox-ui-builder)
 - Skill - Roblox Vault Research | Skill - Roblox Vault Research.md | ai, agents, ai-skill, research, workflow | Skill file: [skills/roblox-vault-research/SKILL.md](../skills/roblox-vault-research/SKILL.md) (folder name roblox-vault-research)
 - Third-Party Skill - Caveman Token Saver | Third-Party Skill - Caveman Token Saver.md | ai, agents, ai-skill, tokens, third-party | Source: [github.com/JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman) (Apache-2.0, by Julius Brussee).
 - Third-Party Skill - Obsidian Skills | Third-Party Skill - Obsidian Skills.md | ai, agents, ai-skill, obsidian, third-party | Source: [github.com/kepano/obsidian-skills](https://github.com/kepano/obsidian-skills) by Steph Ango, MIT licence, version 1.0.1 as of October 2026.
@@ -656,6 +657,7 @@ topic or tag, then open only the notes you need. Regenerate after adding notes. 
 ## 40 Game Math
 
 - Big Numbers Precision and Formatting | 40 Game Math/Big Numbers Precision and Formatting.md | math, game-math, numbers, precision, floating-point, big-numbers, formatting, simulators, leaderboards, datastores, luau | Simulators and idle games push numbers to 10^30 and beyond.
+- Curves in Luau - Paths Beams and Motion | 40 Game Math/Curves in Luau - Paths Beams and Motion.md | math, game-math, curves, bezier, catmull-rom, splines, beams, path2d, rails, cables, projectiles, ui, luau | Interpolation Easing and Curves Math already gives the basic Luau building blocks: a cubic Bezier with its tangent, uniform Catmull-Rom, an arc-length table for constant speed, and Hermite retargeting.
 - Dot and Cross Products in Gameplay | 40 Game Math/Dot and Cross Products in Gameplay.md | math, game-math, vectors, dot-product, cross-product, gameplay, combat, movement, luau | Two small operations answer a surprising share of gameplay questions.
 - Game Math Start Here | 40 Game Math/Game Math Start Here.md | math, game-math, hub, vectors, rotations, probability, collision, numbers | This section is the maths behind gameplay, taught through gameplay.
 - Interpolation Easing and Curves Math | 40 Game Math/Interpolation Easing and Curves Math.md | math, game-math, interpolation, easing, curves, bezier, splines, tweening, ui, camera, luau | Interpolation is how a game turns "from here to there" into motion, colour, damage falloff and difficulty ramps.

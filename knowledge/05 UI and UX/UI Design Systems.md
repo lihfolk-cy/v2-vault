@@ -5,7 +5,7 @@ tags: [ui, design-system, tokens, theming, styling, components, audit]
 
 A design system is the set of decisions that make forty screens look like one game: a palette with roles, a type scale, spacing and radius steps, a handful of components with defined states, and motion rules. On Roblox it can live in a theme ModuleScript, in the engine's own UI styling system (`StyleSheet`, tokens, themes, queries), or both. This note covers what to put in a system, how to enforce it, the cartoon "simulator" style in concrete numbers, and the tooling that took one production game's 92 screens to a measured 10/10 for positioning and sizing.
 
-Sources: **Docs** ("UI styling", "UI appearance modifiers", `UIStroke`, `UICorner`, `UIGradient`, `CanvasGroup`; October 2026), the **reference project** (one production game), a **cartoon simulator UI kit standard** distilled from top simulator games (numbers quoted as that kit's rules), and **rule of thumb**.
+Sources: **Docs** ("UI styling", "UI appearance modifiers", `UIStroke`, `UICorner`, `UIGradient`, `CanvasGroup`; October 2026), the **reference project** (one production game), LihFolk's own [[LihFolk UI Spec]], and **rule of thumb**.
 
 ---
 
@@ -13,7 +13,7 @@ Sources: **Docs** ("UI styling", "UI appearance modifiers", `UIStroke`, `UICorne
 
 | Layer | Contents | Example values |
 |---|---|---|
-| Colour tokens | Surfaces, text, strokes, and **roles** (primary, secondary, premium, danger, gift, disabled) | `canvas #3B5866`, `stroke #181E22`, `primary lime` |
+| Colour tokens | Surfaces, text, strokes, and **roles** (primary, secondary, premium, danger, gift, disabled) | `surface`, `stroke`, `primary`, `premium` (one named token per role) |
 | Type scale | Families, weights, sizes per role | title 38, section 24, button 26, body 15 |
 | Spacing | A step scale for padding and gaps | 4, 8, 12, 16, 24, 32 |
 | Radii | Corner steps | 4 (cards), 12 (buttons), 18 (cards in a softer look), 0.5 scale (pills) |
@@ -29,36 +29,20 @@ The rule that makes it a system rather than a style guide: **screens never hard-
 
 ## 2. A cartoon simulator style, in numbers
 
-The "chunky cartoon" look common in top simulator games is very specific, which makes it a good example of how concrete a system must be. One widely used kit standard defines (values from that kit):
+The "chunky cartoon" look common in top simulator games only works when it is specified this concretely. LihFolk's own version is in [[LihFolk UI Spec]] (palette, button roles, header themes, type scale, motion, scaling). Whatever kit you use, it must pin down:
 
-**Window.** Solid, opaque slate canvas (`59, 88, 102`, `#3B5866`); never semi-transparent. `UICorner` 4 px, outer `UIStroke` 3.5 px in near-black `#181E22` with `ApplyStrokeMode.Border`.
+- **Window:** one opaque surface colour, a small corner radius, and a dark outer `UIStroke` (`ApplyStrokeMode.Border`). No semi-transparent windows over busy gameplay.
+- **Header:** a fixed height, its own colour identity per menu type, and a clear divider so the content area reads as separate.
+- **Close button:** one shared component with its own centred `UIScale`, sized for thumbs (see the 72 px lesson below).
+- **Buttons:** a role per meaning (go, neutral, premium, danger, done or claimed, locked), each with a face, a darker lip for depth, and every state defined.
+- **Type:** one heavy display face for titles and buttons with an outline, plus a readable body face; a fixed size per role.
+- **Motion:** centre-anchored elements (`AnchorPoint (0.5, 0.5)`) with a child `UIScale` for hover and press, short ease-outs, and decorative loops that pause when hidden.
+- **Responsive:** one `UIScale` per window from a baseline resolution, clamped, with a minimum drawn text size.
 
-**Header.** 60 px tall, a vertical two-stop gradient per menu type (shop magenta to crimson, codes cyan to blue, settings white to silver, rebirth violet, daily rewards lime), a faint checkerboard texture fading in with a transparency sequence `1 -> 0.82 -> 0.35 -> 0.10` so there is no hard cut, and a **two-tier divider** under it: a 3 px dark accent bar plus a 3 px black bar.
+Two corrections that apply to many older kits:
 
-**Close button.** A 38 x 38 square: dark burgundy base (`#730010`) visible as a 4 px bottom bevel, a face lifted 4 px with a pink-to-red gradient, a 1.2 px pastel inner highlight, a heavy "X" with a 3 px stroke, and its own centred `UIScale` for hover and press.
-
-**Buttons (state triad plus extras).**
-
-| State | Gradient | Bevel |
-|---|---|---|
-| Claim / Buy (primary) | lime `(180,255,25)` to `(105,225,0)` | dark green |
-| Claimed / disabled | silver `(216,222,228)` to `(148,160,176)` | dark slate |
-| Locked / destructive | crimson `(255,32,80)` to `(208,0,32)` | burgundy |
-| Skip / premium | amber `(255,208,0)` to `(255,140,0)` | dark amber |
-
-Iconless buttons are 176 x 55: 3 px dark outer stroke, 90 degree gradient, a faint black checkerboard (tile 19 px, transparency `0.91 -> 0.62`), three inner highlight rims inset 2, 4 and 6 px at transparencies 0.25, 0.45 and 0.80, and a white caption lifted 1 px for optical centring.
-
-**Type.** One heavy display family for everything, white with black outline, sizes 38 (title), 24 (section, card amounts), 26 (primary action), 20 (state button), 13 to 14 (subtitles).
-
-**Motion.** Every interactive element is centre-anchored (`AnchorPoint (0.5, 0.5)`) with a child `UIScale`: hover to 1.05 in 0.08 s (Quad Out), press to 0.94 in 0.05 s, release to 1.05 in 0.12 s with Back Out. Decorative sunbursts rotate at 20 degrees per second and pause when hidden.
-
-**Responsive.** One `UIScale` per window from a 1050 x 620 baseline, clamped to `[0.52, 1.18]`.
-
-Two corrections to apply if you adopt such a kit today:
-
-- It specifies `Enum.Font.GothamBlack`. Gotham has been removed from Roblox and maps to Montserrat (Docs). Use `Font.fromName("Montserrat", Enum.FontWeight.Heavy)` or another explicit heavy face. See [[Text Fonts and Rich Text]].
-- Its 0.52 scale floor draws 14 px subtitles at 7.3 px on small phones. Pair it with phone layouts and a 12 px drawn minimum ([[Responsive UI for Phone Tablet Console and PC]]).
-
+- Kits that specify `Enum.Font.GothamBlack` need updating. Gotham has been removed from Roblox and maps to Montserrat (Docs). Use `Font.fromName("Montserrat", Enum.FontWeight.Heavy)` or another explicit heavy face. See [[Text Fonts and Rich Text]].
+- A low scale floor (around 0.5) draws 14 px subtitles at about 7 px on small phones. Pair scaling with phone layouts and a 12 px drawn minimum ([[Responsive UI for Phone Tablet Console and PC]]).
 ### How the reference project adapted it
 
 The reference project adopted this look, then changed the numbers where its own screens demanded:
@@ -325,5 +309,5 @@ See also: [[Menu Archetypes - Shop Settings Codes Rewards]], [[HUD Design]], [[T
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Check-UI AI Skill]] · [[Check-UI README]] · [[UI Asset Pipeline]] · [[Check-UI Design System Spec]] · [[Reference - Purple Anime Settings UI (Claude + Figma)]] · [[Check-UI Design System]]
+[[UI Asset Pipeline]] · [[LihFolk UI Spec]] · [[Reference - Purple Anime Settings UI (Claude + Figma)]] · [[LihFolk UI Design System]]
 <!-- auto-links:end -->
