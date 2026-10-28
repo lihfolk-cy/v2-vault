@@ -3,6 +3,16 @@ tags: [core-concept, accessibility, ui, art]
 ---
 # Accessibility Contrast
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Roblox players read UI on small phone screens, outdoors, at low brightness, on TVs across a room, and with all kinds of vision.
+> - Busy 3D backgrounds break any ratio. HUD text floats over a world that changes every second: sky, snow, lava.
+> - Colour is not contrast. Red on green can have nearly the same brightness and becomes invisible for many colour-blind players.
+> - Never carry meaning by colour alone. Rarity, team and status need a second cue: a shape, an icon, a label or a pattern.
+>
+> Read more (3 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+<!-- tldr:end -->
+
 **Accessibility contrast** is the difference in brightness between text (or an important icon) and what is behind it, measured as a contrast ratio from 1:1 (identical) to 21:1 (black on white). The common web standard, WCAG, asks for at least 4.5:1 for normal text and 3:1 for large text and essential graphics (WCAG 2.x, an external standard, not a Roblox rule).
 
 ## Why it matters on Roblox

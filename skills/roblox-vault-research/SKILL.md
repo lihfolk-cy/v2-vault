@@ -8,7 +8,7 @@ LihFolk Vault V2 is a folder of Markdown notes about every part of making Roblox
 
 ## Inputs
 
-- `VAULT`: LihFolk Vault V2, the knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
+- `VAULT`: LihFolk Vault V2, the knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Grep `VAULT/INDEX_SLIM.md` first to find notes fast; `VAULT/ROUTER.md` only for long multi-topic sessions or an ambiguous grep.
 - The question or task.
 
 ## When to use it (no prompt needed)
@@ -17,9 +17,9 @@ Do not wait to be asked. Any Roblox task is a trigger: a new feature, a bug, a r
 
 ## Procedure
 
-0. **Skim the index first.** Grep `VAULT/INDEX.md` for the API names, services and topic words in the task (for example `ProcessReceipt`, `UpdateAsync`, `remote`, `hitbox`, `ScreenGui`). Each line is `title | path | tags | first sentence`. Open the two or three best matches only. If nothing matches, fall back to the steps below.
+0. **Index first, router when it pays.** Grep `VAULT/INDEX_SLIM.md` (`title | path | tags`) for the API names, services and topic words in the task (for example `ProcessReceipt`, `UpdateAsync`, `remote`, `hitbox`, `ScreenGui`); `VAULT/INDEX.md` has the same lines plus a first sentence. Open the two or three best matches only, TL;DR first (step 4). If nothing matches, fall back to the steps below.
 
-1. **Open the map first.** Read `00 Start Here.md`. It lists the sections and reading paths (new developer, programmer, artist, designer, AI tools, shipping, case studies). Pick the section or path that matches the question before you search.
+1. **Open the map.** If the router and index did not settle it, read `00 Start Here.md`. It lists the sections and reading paths (new developer, programmer, artist, designer, AI tools, shipping, case studies). Pick the section or path that matches the question before you search.
 
 2. **Use the section hubs.** Several sections have a hub note that lists every note in reading order and gives a symptom or task finder. Read the hub before reading individual notes:
    - `08 Animation/Animation Start Here.md`
@@ -39,7 +39,7 @@ Do not wait to be asked. Any Roblox task is a trigger: a new feature, a bug, a r
    - Grep front matter tags: every note starts with `tags: [...]`. Common tags include `luau`, `performance`, `ui`, `security`, `networking`, `datastore`, `remotes`, `monetization`, `debugging`, `testing`.
    - Skip the plugin's `skills/` folder when grepping prose: it holds agent instructions, not explanations.
 
-4. **Read the right parts.** Notes run 2,000 to 5,000 words. Read the headings first (`## ` lines), then the sections that answer the question. Almost every note ends with "Common mistakes" and "Checklist" sections: these are the fastest way to get the rules. Follow `[[links]]` in "See also" only when the first note does not answer the question.
+4. **Read the right parts.** Notes run 2,000 to 5,000 words; never read a whole large note. Every prose note opens with a TL;DR block between `<!-- tldr:start -->` and `<!-- tldr:end -->`: 3-6 rules distilled from its "Common mistakes" and "Checklist", then `Read more: ## <sections>`. Read that first: `Grep pattern="tldr:start" glob="**/<note title>.md" output_mode=content -A 10` (or `Read` with `limit: 20`). Only if it is not enough, grep the note's `## ` headings with line numbers and read just the section that answers the question (the full "Common mistakes" and "Checklist" sections have the fixes and the rest of the rules). Per-section one-line summaries are in `_maps/<section> - Map.md`. Follow `[[links]]` in "See also" only when the first note does not answer the question.
 
 5. **Rank sources.** When notes disagree or the question is about platform facts (limits, prices, policies, API members):
    1. Facts labelled "Roblox docs" win for how the engine and platform work.
@@ -76,7 +76,7 @@ Labels: <which facts were Roblox docs / measured / rule of thumb / unverified>
 
 ## Checks before finishing
 
-- [ ] Started from `00 Start Here.md` or a section hub.
+- [ ] Started from `ROUTER.md`, `00 Start Here.md` or a section hub, and read TL;DRs before full sections.
 - [ ] Every number in the answer appears in a note you read, with its label.
 - [ ] Open Questions checked for the topic.
 - [ ] Time-sensitive facts flagged as "as of October 2026".

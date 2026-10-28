@@ -3,6 +3,18 @@ tags: [studio, team-create, collaboration, drafts, workflow, shared-place]
 ---
 # Team Create and Collaboration
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Experimenting in the shared place -> Sandbox place
+> - Avoid: Reverting while others are editing -> Disable Team Create, then revert
+> - Avoid: Drafts on one PC, working from another -> Commit before switching machines
+> - Game owned by a group with role-based edit rights.
+> - Age-check and trusted-friend requirements checked for every collaborator.
+> - Ownership table and test-object naming agreed.
+>
+> Read more (13 KB note): ## 4. Scripts: live scripting or drafts · ## 6. What a shared place really means · ## 9. Common mistakes · ## 10. Checklist
+<!-- tldr:end -->
+
 Team Create turns a place into a live shared document: everyone with edit access works in the same data model at the same time, and Studio saves it to the cloud continuously. That is wonderful for small teams and dangerous for any team that does not agree on rules, because a shared place has no branches, no private working copy for anything except script drafts, and one wrong bulk operation reaches everyone instantly. This note covers the official features (permissions, age checks, live scripting, drafts, comments, script history) as of October 2026, then the operating rules that a production team needs, most of them learned in the reference project where several people and automated tools edited one place simultaneously.
 
 Labels: **Docs**, **Measured**, **Rule of thumb**.

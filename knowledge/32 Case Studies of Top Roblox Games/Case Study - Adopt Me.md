@@ -3,6 +3,18 @@ tags: [case-study, top-games, pet-care, roleplay, trading, live-ops, monetizatio
 ---
 # Case Study - Adopt Me
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - First need scripted to succeed within 20 seconds, with the required item handed over.
+> - First random roll has only good outcomes.
+> - Duplicates feed a fusion or upgrade ladder.
+> - Progress is visible on the item itself (age, stage, glow).
+> - Event currency is event-only; any multiplier pass is cheap and expires with the event.
+> - Retired items or passes are announced before they leave.
+>
+> Read more (20 KB note): ## 1. Snapshot · ## 6. What to copy and what not to copy · ## Checklist
+<!-- tldr:end -->
+
 Adopt Me is the clearest example on Roblox of a game that turned a light roleplay toy (adopt a baby, decorate a house) into a collection and trading economy, then kept that economy alive for years with a strict event calendar. It is not a game you should clone. It is a game you should study for three things: how a care loop makes cute objects feel earned, how a trade layer turns a single player collection into a social status system, and how a studio ships a seasonal event almost every few weeks without breaking the economy that pays for everything.
 
 Source labels used below: **Observed in the live game (October 2026)** means the public Roblox store page and the public Roblox web API (games, votes, game passes, media, thumbnails endpoints) read on 27 October 2026, with no login and no play session. **Public stats site** means third party trackers. **Studio statement** means the studio's own press release or store text. **Press** means named outlets. Roblox does not publish click-through rate (CTR) or revenue for other people's games, so anything about clicks below is reasoning from what is visible, not measured data.

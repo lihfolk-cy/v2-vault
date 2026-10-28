@@ -3,6 +3,16 @@ tags: [authoring, quality, arms, standard, qa, metrics]
 ---
 # Animation Quality Standard
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Arms behind the body: sprint, surf and "load" poses.
+> - Sprint into thrust or cross-cut lead-ins drive the forearm into the torso; use a flat wind-up.
+> - Backhand winds and two-handed low guards put the forearm across the chest.
+> - R15, scaled 1.6x, about 9 studs tall.
+>
+> Read more (19 KB note): ## 1. Joint ranges [QA][BAKE] · ## 10. What "weird" looks like: the catalogue
+<!-- tldr:end -->
+
 A measurable standard for character attack animation: arms that read as human, blades that stay out of the body, motion without pops. Every rule here can be checked by a script, which means a whole library can be scored, sorted and repaired automatically. It was built for one live action game (the reference project) and is reproduced here with all its thresholds, because the numbers are the useful part.
 
 How it performed: at the first audit, **about 93%** of attack clips were "bad", with a median score of **31/100** (issues: arms in body in about 84% of clips, pops in 83%, wrist problems in 97%, blade through body in 82%). After re-solving the arms of about two thirds of the clips with an IK baker (see [[Pipeline - Arm IK Baking and QA]]), the targeted clips passed with **zero criticals**; typical moves went from scores of 1.7 to 81, 3.3 to 84, 10.6 to 83 and 7 to 86.

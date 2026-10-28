@@ -3,6 +3,18 @@ tags: [pipelines, config, data, spreadsheets, balancing, codegen, validation]
 ---
 # Data and Config Pipeline - Spreadsheets to Game
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Display names as keys. Renaming "Iron Sword" to "Iron Blade" orphans every saved inventory.
+> - Avoid: Hand edits in Studio to generated modules.
+> - Avoid: Floats formatted differently each run. Noisy diffs hide real changes.
+> - Sheet with stable ids and typed columns, exported as UTF-8 CSV into Git
+> - Schema validation plus cross-table references in CI
+> - Derived stats computed by tested code, overrides explicit
+>
+> Read more (20 KB note): ## Stage 2: validate before anything touches the game · ## Stage 5: install · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Most of a game's content is numbers: item stats, drop odds, prices, enemy health, quest rewards, cooldowns. Designers want to edit them in a spreadsheet where they can sort, chart and compare; the game wants them in a ModuleScript it can `require`. The gap between the two is where balance bugs, typos and lost edits live. This note is a pipeline that closes it: **sheet, validate, generate, install safely, read back**. The balancing method itself is in [[Balancing with Spreadsheets and Data]]; schema design in [[Data Schema Design and Migrations]]; changing values on live servers without a publish in [[Global State and Live Config]].
 
 ## Config in a Roblox game: what goes where

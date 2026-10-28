@@ -3,6 +3,18 @@ tags: [studio, places, universe, settings, environments, publishing]
 ---
 # Places Universes and Experience Settings
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Studio API access on in the live universe -> Dev universe, or isolated keys
+> - Avoid: Code assumes `PlaceId ~= 0` -> Handle 0 explicitly
+> - Avoid: Publishing over the start place with plain Publish when changing... -> Publish As, choose the current start place
+> - Dev universe exists and mirrors the live place structure.
+> - Studio API access on only where data is disposable.
+> - Environment module for ids; no ids scattered in scripts.
+>
+> Read more (13 KB note): ## 2. Creating and managing places · ## 5. Environments: dev, staging, live · ## 8. Common mistakes · ## 9. Checklist
+<!-- tldr:end -->
+
 A Roblox "game" (the docs also say experience) is a **universe** containing one or more **places**. Players enter through the **start place**; other places are reached only by teleport. Settings live at three levels: the universe (name, access, monetization, security toggles), each place (its data model, server size, version history), and the Creator Hub (audience, configs, server management). Getting this structure right early decides how you separate development from live, how you test risky changes, and how you ship without breaking players. Facts are from the docs as of October 2026.
 
 Labels: **Docs**, **Measured**, **Rule of thumb**.

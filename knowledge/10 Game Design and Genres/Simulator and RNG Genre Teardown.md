@@ -3,6 +3,15 @@ tags: [game-design, genre, simulator, rng, teardown, analysis, pacing, monetisat
 ---
 # Simulator and RNG Genre Teardown
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Copying features without measuring clocks -> Stopwatch log first, feature list second
+> - Avoid: Tearing down only on PC -> Phone first; most of the audience is there
+> - Avoid: Judging monetisation by price alone -> Map where each prompt sits in the loop and whether it interrupts
+>
+> Read more (19 KB note): ## 4. Number architecture · ## 5. Worked teardown: a combat-RNG hybrid · ## 8. Common mistakes
+<!-- tldr:end -->
+
 The playbooks ([[Genre Playbook - Simulators]], [[Genre Playbook - RNG and Collection Games]]) say what the parts of these genres are. This note is about **taking them apart**: how to tear down a competitor (or your own game) with a stopwatch and a spreadsheet, what the loops' clocks look like when they work, how the number architecture holds together or fails, and a worked teardown of one production hybrid (combat plus rolling plus simulator structure) with what changed after real feedback. The aim is to replace "this game is popular, let's copy it" with "this game pays out a reward every 22 seconds, an upgrade every 3 minutes and a new zone every 25, and its prices grow 2.6x per zone against income growing 2.4x" (illustrative numbers).
 
 Related: [[Core Loops and Session Design]], [[Progression and Pacing Design]], [[Rarity Ladders and Drop Pacing Math]], [[Balancing with Spreadsheets and Data]], [[Retention and Return Hooks]], [[Monetization Overview]], [[Ethical Design and Player Trust]].

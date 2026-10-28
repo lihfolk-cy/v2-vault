@@ -3,6 +3,18 @@ tags: [rigging, blender, skinning, weights, deformation]
 ---
 # Weight Painting and Skinning for Roblox
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: More than 4 influences -> Limit Total 4, Normalize All, re-export
+> - Avoid: Unnormalised weights -> Normalize All; paint with Auto Normalize
+> - Avoid: Weights on the root bone -> Move influence to the hips or body bone
+> - ROM action covers every joint's extremes.
+> - Preserve Volume off while judging.
+> - Clean, Limit Total 4, Normalize All.
+>
+> Read more (14 KB note): ## 4. Painting workflow in Blender · ## 7. Making joints deform well without correctives · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Skinning decides whether a perfectly keyed animation looks good. A clean clip on bad weights reads as rubber elbows, collapsing wrists and shoulders that cave in; the animator gets blamed. This note covers what Roblox does with your weights, the hard limits, how to paint and generate weights in Blender, how to make joints deform well without the corrective machinery Roblox lacks, and how to test.
 
 ## 1. What Roblox does with weights

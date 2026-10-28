@@ -3,6 +3,18 @@ tags: [monetization, robux, overview, business, live-ops]
 ---
 # Monetization Overview
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Granting in `PromptProductPurchaseFinished`.
+> - Avoid: Hard-coded prices. Break regional pricing, price optimization and Plus discounts (Docs).
+> - Avoid: No purchase log. Roblox does not record per-user purchase history for you (Docs).
+> - Monetization plan written per the build order above
+> - Every product and pass created on the dashboard; no id 0 left visible as purchasable
+> - One server script owns `ProcessReceipt`, idempotent and data-store backed
+>
+> Read more (15 KB note): ## 1. The money map (October 2026) · ## 4. What the reference project sold · ## 7. Common mistakes · ## 8. Checklist
+<!-- tldr:end -->
+
 This note maps every way a Roblox experience can earn, explains how each one actually pays, and gives a decision framework for choosing between them. It is the entry point for the folder. Each mechanism has its own deep note; this one is about the whole system and the trade-offs between parts.
 
 Everything in this folder is time-sensitive. Roblox changed its subscription, payout and publishing rules several times in 2025 and 2026. Facts below were checked against the official Creator Hub docs (create.roblox.com/docs) **as of October 2026**. Where docs and announcements disagree, both are given. When you read this later, re-check anything with a number in it.

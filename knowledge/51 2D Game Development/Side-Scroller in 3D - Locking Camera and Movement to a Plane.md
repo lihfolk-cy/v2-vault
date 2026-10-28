@@ -3,6 +3,18 @@ tags: [2d, 2.5d, side-scroller, camera, movement, platformer, physics, constrain
 ---
 # Side-Scroller in 3D - Locking Camera and Movement to a Plane
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Player slowly ends up behind the level after bumping into others: No body lock, only camera and input locks -> Add `PlaneConstraint` on the root
+> - Character turns to face the screen and walks into a wall when the...: Default camera relative controls still active -> Disable default controls, drive `Move` with...
+> - Camera judders while running: Camera updated in `Heartbeat` or with frame dependent lerp -> Bind at `RenderPriority.Camera`, use `1 - exp(-k * dt)`
+> - One plane constant (`PLANE_Z`) in shared config, used by server, client and level tools.
+> - Camera is `Scriptable`, re-asserted after respawn, updated at `RenderPriority.Camera`, and sets `Focus`.
+> - FOV chosen deliberately; distance computed from the visible height; a 4:3 safe column respected.
+>
+> Read more (29 KB note): ## 2. The camera lock · ## 5. Complete setup · ## 9. Common mistakes and how to spot them · ## 10. Checklist
+<!-- tldr:end -->
+
 A 2.5D side-scroller is a normal Roblox 3D place in which the camera looks at the world from the side and every moving thing is kept on one flat slice of the world. You keep almost everything the engine gives you for free: Humanoid physics and animation, avatars, lighting, particles, sound, streaming, replication, and Studio's level editing tools. You give up the guarantee that "nothing moves in depth", and the whole craft of this style is putting that guarantee back. This note covers the three locks you need (camera, input, body), how to choose each one, how they fail, and a complete working setup.
 
 If you have not yet decided between a GUI-rendered 2D game and this approach, read [[Choosing GUI 2D or Locked-Camera 2.5D]] first. For a pure GUI playfield see [[A 2D Engine in a ScreenGui - Game Loop Entities and Rendering]]; for tile layouts and parallax in both styles see [[Tilemaps Cameras and Parallax for 2D Levels]].

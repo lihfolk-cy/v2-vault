@@ -3,6 +3,18 @@ tags: [luau, advanced-luau, types, generics, type-functions, strict-mode, valida
 ---
 # Advanced Types - Generics and Type Functions
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - "Type is too wide" after filling an empty table: Unannotated `{}` literal -> Annotate at creation
+> - `{ Sword }` rejected where `{ Item }` expected: Mutable containers are invariant -> Generic parameter plus projection, or read-only contract
+> - Generic result is `unknown`: Nothing to infer `T` from -> Annotate the argument, or pass an explicit typed value
+> - Empty tables that will be filled are annotated at creation.
+> - Generic helpers take capabilities (callbacks) instead of needing bounds.
+> - Generic containers have a public method type and a private field type, with one audited cast.
+>
+> Read more (20 KB note): ## 5. Runtime validators that produce typed values · ## 6. Type functions for real game types · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Luau Type System and Strict Mode]] covers the daily syntax: annotations, refinements, a first generic `map`, the `Result<T>` tagged union, `keyof`, and a `Partial` type function. This note goes past that, into the places where generic code either pays off or turns into a fight with the checker: how inference picks type arguments, variance, typing classes and containers generically, exhaustive unions, runtime validators that produce typed values, and type functions that compute real game types. It also says when to stop.
 
 A caution that applies to everything here. As of October 2026 Luau has two type solvers. The new solver is what type functions, read-only properties and most of the precise behaviour in this note depend on, and the Roblox release notes show it still receiving fixes release by release. Where behaviour differs between solvers, this note says so; where it could not be confirmed, it says that too. Check which solver your Studio uses before debugging a surprising error.

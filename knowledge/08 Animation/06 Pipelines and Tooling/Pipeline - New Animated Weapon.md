@@ -3,6 +3,18 @@ tags: [pipeline, weapons, rigging, kits, workflow]
 ---
 # Pipeline: New Animated Weapon
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Import by a human: Merge Meshes OFF, Rig none; found by name.
+> - Rig built: Handle root, one Motor6D per hinge, chain links welded, clips thinned, Animator present.
+> - FX module compiles and runs on the rig.
+> - Config, voice, sheath inserted through the safe-edit helper.
+> - Kit sources pass size, reserved-name, forbidden-id and order checks.
+> - Each move STAGED; kit installed; folder under 2,500.
+>
+> Read more (18 KB note): ## Step 1: offline generation · ## Step 5: design the kit · ## Checklist
+<!-- tldr:end -->
+
 How one live action game took a modelled weapon (a GLB plus a setup script describing its hinges, materials and effects) to a held, animated weapon with an ability kit, in about 1-1.5 hours, most of it creative work. It ran dozens of times; the steps below are the version that survived. The weapon's own rig is covered in depth in [[Weapon Design Rig Builder]], its runtime in [[Weapon Rig Player]], the arm pass in [[Pipeline - Arm IK Baking and QA]].
 
 ## What "a weapon" is in this pipeline

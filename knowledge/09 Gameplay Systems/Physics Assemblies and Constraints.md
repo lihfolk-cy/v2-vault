@@ -3,6 +3,18 @@ tags: [gameplay, physics, assemblies, constraints, collision, network-ownership]
 ---
 # Physics Assemblies and Constraints
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Anchoring two parts of a welded prop -> Anchor only the root
+> - Avoid: Large welded prop on a character -> `Massless = true` on the prop or raise `RootPriority` on the root
+> - Avoid: Setting `Position` on welded children -> `PivotTo` the model
+> - Every moving gameplay object has a known owner, and the owner is the server when the outcome matters.
+> - Props welded to characters are Massless.
+> - Collision groups registered once at startup, under 32 per world, with a written group matrix.
+>
+> Read more (20 KB note): ## 4. Network ownership: who simulates what · ## 6. Collisions: CanCollide, CanTouch, CanQuery and collision groups · ## 9. Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Roblox physics looks simple from the Properties window (tick Anchored, set Velocity, add a weld) and behaves in ways that surprise people as soon as a game has many players, moving NPCs and knockback. This note explains the unit the solver actually works on (the **assembly**), how the root part is chosen, how ownership decides *which computer* simulates an assembly, how rigid and mechanical constraints fit together, and how collision filtering works. Movers (LinearVelocity, AlignPosition and friends) and the physics character controller have their own note: [[Mover Constraints and Physics Controllers]].
 
 Source labels: **Docs** (official engine reference and guides, checked October 2026), **Measured** (the reference project, one live action game), **Rule of thumb** (experience, not a hard limit).

@@ -3,6 +3,18 @@ tags: [materials, surfaceappearance, pbr, workflow, pipeline, textures, meshpart
 ---
 # SurfaceAppearance PBR Workflow
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Re-importing a mesh per scene -> Import once; copy MeshParts; clone templates
+> - Avoid: Mesh exported without tangents -> Re-export with tangents
+> - Avoid: Judging assets in an unlit or default room -> Look-dev room with game lighting
+> - Texel budget and map list decided per asset class before painting.
+> - One suffix scheme; normal maps OpenGL; meshes exported with tangents.
+> - Import checked: every SurfaceAppearance has the expected maps.
+>
+> Read more (20 KB note): ## 4. Import: let the importer do the wiring · ## 7. Runtime cases · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 The map-by-map facts about `SurfaceAppearance` (what each map means, colour spaces, AlphaMode, baking in Blender) are already in [[Texturing and PBR Baking]] and [[Materials MaterialVariants and SurfaceAppearance]]. This note is about the **workflow around them**: how to size a texture set before you paint it, how assets travel from the texturing tool into Studio without hand-pasting ids, how to keep one source of truth so instancing works, how to build a look-development room that tells the truth, how to audit a place full of PBR meshes, and how to handle the runtime cases (generated looks, pixel art, tint-driven variants). It is written for a small team that will import hundreds of assets, not one hero prop.
 
 ## 1. The shape of the pipeline

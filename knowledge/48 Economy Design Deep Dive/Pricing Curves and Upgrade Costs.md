@@ -3,6 +3,18 @@ tags: [economy, pricing, upgrades, curves, progression, math, balancing, luau]
 ---
 # Pricing Curves and Upgrade Costs
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Cost curve tuned without the benefit curve -> Compare benefit per coin on the greedy path
+> - Avoid: Multiplicative income upgrade with low `r` -> `r` well above the per-level multiplier; count it in stacking
+> - Avoid: Polynomial cost on an uncapped track -> Exponential cost or a cap
+> - Every track has a cost curve and a benefit curve, both written down.
+> - Payback time per level computed; natural cap `L*` known per zone.
+> - Multiplicative tracks checked against stacking rules and payer gap.
+>
+> Read more (19 KB note): ## 3. Payback: the number that decides when players stop · ## 6. Buy-max and bulk purchases · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Economy Inflation Sinks and Faucets Math]] prices zone gates from an income model and checks the ratio of price growth to income growth. [[Progression and Pacing Design]] and [[Balancing with Spreadsheets and Data]] set the pacing targets. This note goes one level down, to the **per-level upgrade track**: the "level 37 of 100, next level costs 4.2K" button that most Roblox games have several of. It covers which curve family to use and what each one does to the player over time, the payback period that decides when players stop buying, how several tracks compete for the same coins, buy-max arithmetic, rounding prices to readable numbers without breaking the curve, refunds and respecs, and how to put all of this on the server.
 
 Source labels: **Roblox docs (as of October 2026)**, **measured in the reference project**, **rule of thumb**. The maths is standard. Code is strict Luau, reviewed by reading, not run; the numeric tables were computed with a short script.

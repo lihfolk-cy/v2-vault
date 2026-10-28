@@ -3,6 +3,18 @@ tags: [architecture, networking, replication, attributes, fundamentals]
 ---
 # Replication Rules
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Client sets an attribute expecting the server to read it -> Remote request; server sets it
+> - Avoid: "Send current state on join" code duplicated per system -> Use attributes; late joiners get them automatically
+> - Avoid: Per-frame attribute writes -> Write on change, quantise, or use an unreliable remote
+> - Every client-to-server path is one of the exceptions above, and each has validation.
+> - Each piece of shared state has exactly one channel.
+> - Late joiners see correct state with no extra code (attributes, not one-off remotes, for persistent state).
+>
+> Read more (17 KB note): ## Attributes as a replication channel · ## Pattern: attribute-driven client presentation · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Replication is the engine process that keeps every client's copy of the DataModel close to the server's. You do not call it; it happens whenever the server creates, destroys, reparents or changes an instance in a replicated container. Understanding exactly what replicates, in which direction, and in what order lets you move most client-server communication out of hand-written remotes and into plain property and attribute writes, which are cheaper, simpler and automatically correct for late joiners.
 
 This note covers the direction rules, the exceptions that flow from client to server, ordering guarantees (and the lack of them), attributes as a replication channel, the "attribute-driven presentation" pattern used in production, and how to diagnose replication bugs. For the containers that never replicate, see [[Client-Server Model]]. For streaming (which changes *when* Workspace content reaches a client), see [[Instance Streaming]].

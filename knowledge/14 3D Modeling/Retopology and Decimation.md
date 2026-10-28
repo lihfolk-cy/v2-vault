@@ -3,6 +3,18 @@ tags: [modeling, retopology, decimation, remesh, lod, optimization, blender, pyt
 ---
 # Retopology and Decimation
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Decimating a character that must deform -> Retopologise
+> - Avoid: Remeshing a UV-mapped model -> Decimate, or redo UVs
+> - Avoid: Decimate without symmetry -> Symmetry on
+> - Method picked by whether the mesh deforms and whether UVs exist.
+> - Source kept hidden; work on a duplicate.
+> - Merge by distance before decimating; symmetry on.
+>
+> Read more (14 KB note): ## 2. Decimation in Blender · ## 5. Level of detail on Roblox · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Sooner or later every model has too many triangles: a sculpt with two million, a boolean-heavy prop with 60,000, an AI-generated or scanned mesh with a triangle soup, a kit piece that needs a cheaper far version. There are three ways down, and they produce very different meshes:
 
 - **Decimation**: an algorithm removes edges while keeping the shape. Fast, automatic, keeps UVs mostly intact, makes triangle soup topology.

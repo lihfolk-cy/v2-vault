@@ -3,6 +3,18 @@ tags: [authoring, animation-editor, studio, workflow]
 ---
 # Animation Editor Workflow
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Keys inserted off by a frame -> insert at the scrubber position you want, check with frame stepping
+> - Avoid: Legacy Cubic easing in an old clip -> convert to CubicV2 with the direction flipped
+> - Avoid: Only some tracks keyed on a key pose -> key all tracks on key poses during blocking
+> - Rig: correct assembly root, only the root anchored, game proportions, weapon on a Motor6D
+> - Planned beats with times; gameplay hit time known
+> - Blocked in Constant; poses read in silhouette from the game camera
+>
+> Read more (20 KB note): ## Preparing the rig · ## A blocking-to-polish workflow · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 The built-in Animation Editor is the default way to hand-key clips in Roblox Studio. It is good enough for most character work, it writes exactly the data the engine plays (`KeyframeSequence`, or `CurveAnimation` if you use the curve editor), and it is the tool every other pipeline eventually has to agree with. This note is the day-to-day workflow: setting up a rig, blocking, splining, saving, looping and exporting, plus the traps that cost real projects time. Advanced features (curve editor, IK, events, keyframe optimisation, capture) are in [[Animation Editor Advanced]].
 
 Facts marked "Roblox docs" were checked against the official Animation Editor page (last updated October 2026). Facts marked "measured" come from one live action game (the reference project). Everything else is labelled as a rule of thumb.

@@ -3,6 +3,18 @@ tags: [ai, evaluation, rubric, tools, process, cost, licensing, verification]
 ---
 # Evaluating AI Tools - A Practical Rubric
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Evaluating on toy tasks -> Backlog tasks across difficulty
+> - Avoid: Counting generation time only -> Time to accepted result
+> - Avoid: No baseline -> Time the same tasks your usual way
+> - 8 to 12 real backlog tasks chosen, across difficulty.
+> - Acceptance criteria written before the trial.
+> - Every task logged: attempts, generation, verification, fix, integration, outcome.
+>
+> Read more (19 KB note): ## 2. The rubric · ## 3. The trial protocol · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 New AI tools for game development appear every month, each with a demo video that looks like it will replace a job. Most of them do not survive contact with a real Roblox project. This note is a method for deciding, with evidence instead of vibes, whether a tool earns a place in your pipeline: the questions that matter, a weighted scoring rubric, a two-week trial protocol built on tasks from your own backlog, how to measure the cost of verification (the hidden cost that sinks most tools), kill criteria, and how to re-evaluate when the tool changes under you.
 
 The landscape itself (which tools exist, what Roblox's own AI features do) is in [[AI in Roblox Development Overview]] and the notes it links. This note is deliberately tool-neutral: products change monthly, the method does not. Any product facts are labelled "as of October 2026". Source labels: **Roblox docs**, **measured in the reference project** (one production game built with heavy use of AI coding agents connected to Roblox Studio and Blender), **rule of thumb**.

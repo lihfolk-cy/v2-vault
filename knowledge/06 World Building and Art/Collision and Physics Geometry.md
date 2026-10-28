@@ -3,6 +3,18 @@ tags: [world-building, collision, physics, collisionfidelity, colliders, collisi
 ---
 # Collision and Physics Geometry
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Visual mesh used as floor -> Primitive colliders
+> - Avoid: PCD on every mesh -> PCD only where walkable detail matters
+> - Avoid: Trying to set CollisionFidelity in game code -> Studio, or CreateMeshPartAsync + ApplyMesh
+> - Visual art non-colliding; colliders are simple invisible Parts.
+> - Decoration CanTouch / CanQuery off.
+> - Mesh fidelity: Box for small, Hull for convex, PCD only where needed.
+>
+> Read more (18 KB note): ## Mesh CollisionFidelity · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 What players see and what they collide with should be two different problems. Visual geometry is detailed, irregular and full of tiny parts; good collision geometry is simple, smooth, predictable and cheap. This note covers the collision flags every part has, mesh `CollisionFidelity`, the visual/collider split, collision groups, invisible floors for AI, and how to test collision after an art pass. Physics simulation itself (assemblies, constraints, ownership) is in [[Physics Assemblies and Constraints]] and [[Physics Performance]].
 
 ## The four flags

@@ -3,6 +3,18 @@ tags: [ai, luau, scripting, code-assistants, tooling]
 ---
 # AI Code Assistants for Luau
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Accepting inline completions for member names without reading them.
+> - Avoid: Asking a chat model for a system without telling it where code runs and what it trusts.
+> - Avoid: Letting an agent rewrite whole files that others also edit.
+> - Code in files with Git, or a disciplined local-copy-and-compare habit.
+> - Project memory file with hard rules and checks.
+> - Docs access (llms.txt, `.md` reference pages, `http_get`) and an instruction to use it.
+>
+> Read more (15 KB note): ## 2. Set the project up for AI · ## 3. What AI gets wrong in Luau specifically · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 This note covers using AI to write Luau: which kinds of tools exist, how to set up a project so they work well, what they get wrong about Luau and Roblox specifically, and the checks that catch those errors. The verification method is expanded in [[Prompting and Verifying AI Output]]; agent setups in [[AI Agents and Autonomous Workflows]].
 
 Products named here are as of October 2026. Features and plans change monthly; prices are deliberately not listed because they change too often to be useful in a shared vault. Check vendor pages.

@@ -3,6 +3,18 @@ tags: [production, pipeline, blender, import, icons, audio, tooling, case-study]
 ---
 # Asset Pipelines
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Hand-fixing imports. The next import needs the same fix; put it in the installer.
+> - Avoid: No id map. Ids get lost, invented or confused with someone else's.
+> - Avoid: Installing straight into the world. Install to a library, place from the library.
+> - Each asset family has a source script, an exporter, an installer, a placer and a verifier.
+> - Axis and scale conventions are written down and applied in code.
+> - Every upload writes an id map to disk.
+>
+> Read more (19 KB note): ## Blender to Roblox: the conventions that bite · ## Install scripts: dry run, idempotent, reversible · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 An asset pipeline is the repeatable path from a source file (a Blender scene, a sound take, a design spec) to a finished, wired, budget-checked thing in the game. Without one, every model is a hand job: import, fix the axis, fix the scale, guess the collision, place it, forget to record what you did. With one, adding the 150th weapon costs about the same as adding the 15th, and anybody on the team can do it.
 
 This note describes pipeline design in general and shows the pipelines one production game (the reference project) ended up with: Blender to GLB to install scripts for maps, enemies, armour and weapons; a rendered icon pipeline; and a measured audio pipeline. The animation side of the same pipelines is covered in depth in [[Pipeline - New Animated Weapon]], [[Pipeline - Importing Animated Enemies]] and [[Animation Data from Blender to Roblox]].

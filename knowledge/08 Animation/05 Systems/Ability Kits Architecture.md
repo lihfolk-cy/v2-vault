@@ -3,6 +3,18 @@ tags: [systems, abilities, kits, architecture, networking, priorities]
 ---
 # Ability Kits Architecture
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Move names checked against the reserved list.
+> - Clips installed, each with markers that survived the bake (`Hit` or beat names, `Open` and a climax marker on ultimates).
+> - Upper copies for non-cinematic moves, tagged.
+> - Server hit table with `t = marker - 0.06`; guard wired (three lines: create, origin clamp, cast check).
+> - Registry entry (moves, labels, cooldowns) and Info descriptions; icons.
+> - Beat table entries for non-standard marker names; travel list.
+>
+> Read more (16 KB note): ## The registry · ## Playing a move · ## Registering a kit (checklist)
+<!-- tldr:end -->
+
 An "ability kit" is the set of special moves bound to one weapon: two to six moves, the last one an ultimate, each with a body clip, optional weapon-part clips, client movement and VFX, and server hit data. The reference project (one live action game) shipped more than a hundred kits and over 400 moves on one shared architecture. This note describes that architecture: the registry, the per-kit folder, the reserved names, priorities and fades, upper-body copies, full-body control, beat tables, preloading and validation, with the failure stories that shaped each rule.
 
 ## The big picture

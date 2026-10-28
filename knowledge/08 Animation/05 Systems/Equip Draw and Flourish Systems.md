@@ -3,6 +3,15 @@ tags: [systems, equip, flourish, weapons, networking, procedural]
 ---
 # Equip Draw and Flourish Systems
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Flourish cancelled immediately on equip: A carry or other non-action layer at Action2+ -> Keep non-actions below Action2
+> - Wrist snaps at the end: Flourish end pose differs from the hold -> One shared end pose (blade over shoulder)
+> - Toss looks too heavy: `workspace.Gravity` used -> Gravity scaled to character height
+>
+> Read more (13 KB note): ## Choosing and starting a flourish · ## The blade: procedural maths · ## Common mistakes
+<!-- tldr:end -->
+
 An equip flourish is the short show-off a character performs when a weapon comes into the hand: a spin, a toss and catch, a salute, a katana draw. It is pure presentation, it runs constantly (every equip, every respawn), and every other player sees it, so it touches more systems than its size suggests: networking, priorities, cancel rules, procedural weapon motion, audio sync and energy-blade ignition. This note documents the system as built and iterated in one live action game (the reference project), through four versions.
 
 ## What a flourish is made of

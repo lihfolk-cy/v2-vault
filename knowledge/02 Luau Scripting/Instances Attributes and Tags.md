@@ -3,6 +3,18 @@ tags: [luau, instances, attributes, tags, datamodel, replication]
 ---
 # Instances Attributes and Tags
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - A system silently stops working after content is added: Name collision found the wrong child -> Separate folders; `IsA` checks; reserved-name list
+> - `Size is not a valid member` style confusion: Child named like a property -> `FindFirstChild`
+> - "Infinite yield possible" on client: Wrong name, never created, or streamed out -> Fix the path; timeout; streaming-aware design
+> - Configure, then parent.
+> - `Destroy` objects you are done with; pools use `Parent = nil` intentionally.
+> - Lookups that expect a class check `IsA`.
+>
+> Read more (15 KB note): ## 2. Finding instances · ## 3. Attributes · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Everything in a Roblox place is an `Instance` in one tree, the DataModel (`game`). Scripts create, find, clone, configure and destroy instances, and they attach their own data with **attributes** (typed key-value pairs) and **tags** (string labels). This note covers the instance lifecycle and lookup methods, the traps in naming and lookup, attributes (types, limits, replication, change signals, when they cause lag), tags, and how to choose between attributes, Value objects, tags and plain Luau tables.
 
 ---

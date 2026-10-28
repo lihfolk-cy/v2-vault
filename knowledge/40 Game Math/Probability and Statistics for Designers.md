@@ -3,6 +3,18 @@ tags: [math, game-math, probability, statistics, rng, balancing, analytics, desi
 ---
 # Probability and Statistics for Designers
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Treating 1 in N as "within N tries" -> Plan with the 90th and 99th percentile tries; add pity
+> - Avoid: Additive stacking without a cap -> Cap and show the cap, or switch to independent stacking
+> - Avoid: "+20%" meaning relative -> Word as x1.2 or show final values
+> - Every chance in config has its "90 percent of players by try N" number written next to it.
+> - Stacking model (additive, independent, relative) is chosen per stat and stated in the UI.
+> - Builds with breakpoints are compared by simulation, not by expected value.
+>
+> Read more (19 KB note): ## 3. Expected value is half the story · ## 4. Streaks at population scale · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Designers set chances and read numbers every day, and both jobs go wrong in predictable ways. A "1 percent chance" is not "once in 100 tries" for the player who is on try 300. A crit build that looks twice as strong on paper is 15 percent stronger in practice. A drop-rate bug that halves a legendary's odds is invisible in a day of test rolls. A dashboard average says a change helped when it hurt most players. This note gives the small set of tools that prevent those mistakes, each tied to a gameplay decision.
 
 What is already covered elsewhere: weighted picks, luck multipliers and pity systems in [[RNG Drops and Luck Systems]]; mean, median and p90 time-to-drop, geometric rarity ladders, collection completion and luck inflation in [[Rarity Ladders and Drop Pacing Math]]; random number generators and seeding in [[Math Vectors and CFrames]]. This note does not repeat them. It covers chance stacking, expected value with variance, streaks at population scale, controlled randomness (pseudo-random distribution and shuffle bags), testing that your rates are right, and reading analytics without fooling yourself.

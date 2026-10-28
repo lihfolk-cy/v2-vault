@@ -3,6 +3,18 @@ tags: [luau, cookbook, remotes, networking, security, recipes]
 ---
 # Cookbook - Remotes and Networking
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Typing remote parameters as concrete types and skipping runtime checks.
+> - Avoid: Sending prices, damage, rewards or durations from the client.
+> - Avoid: Using `InvokeClient` for gameplay.
+> - All remotes listed in one server script.
+> - Every handler: rate limit, type checks, range checks, then logic.
+> - No client-supplied numbers that change economy or combat outcomes.
+>
+> Read more (21 KB note): ## 3. Rate limit per player with a token bucket · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Recipes for talking between server and client without opening holes. The rule behind all of them: the client is a request, never a fact. Every value that arrives at `OnServerEvent` or `OnServerInvoke` is typed `unknown` here on purpose, because an exploiter can send any type, any size, at any rate. Code is `--!strict` Luau, reviewed, not run. The why lives in [[RemoteEvents RemoteFunctions and Unreliable Remotes]], [[Server Authority and Validation]], [[Remote Abuse Patterns and Rate Limiting in Practice]] and [[How Exploits Work - The Client Boundary]].
 
 ---

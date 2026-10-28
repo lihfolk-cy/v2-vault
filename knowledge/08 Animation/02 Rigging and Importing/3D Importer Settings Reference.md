@@ -3,6 +3,16 @@ tags: [import, studio, reference, 3d-importer]
 ---
 # 3D Importer Settings Reference
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Meshes should meet the modeling specifications first (20,000 triangles per mesh, watertight, frozen transforms; see Rigging in...
+> - Dimensions and polycount shown under File Geometry are read-only information.
+> - The importer page above does not list animation options.
+> - When a mesh object has the same name as a bone in the connected armature, the importer turns that bone into a Motor6D joining...
+>
+> Read more (12 KB note): ## 2. File General · ## 6. Animation import options
+<!-- tldr:end -->
+
 Every option of Studio's 3D Importer (File > Import 3D), what it really does to an animated asset, and what to pick for each kind of import. Option names and defaults are from the Roblox Creator Hub importer page (checked October 2026). Behaviour notes marked "measured" come from one production game; anything from community threads is marked as such. Studio changes this dialog often: when a name here does not match your Studio, trust your Studio and update this note.
 
 For the process around the dialog (finding the import, the prepare step, uploads), see [[Importing Models and Rigs]].

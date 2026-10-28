@@ -3,6 +3,18 @@ tags: [rigging, blender, import, workflow, hub]
 ---
 # Rigging in Blender (for Roblox)
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Unapplied object scale -> Ctrl+A > All Transforms on mesh and armature; re-export
+> - Avoid: Root motion on the root bone -> Move translation to the first child bone
+> - Avoid: Inconsistent bone roll -> Recalculate roll with one rule for the whole rig; never hand-roll...
+> - All transforms applied on meshes and armature (scale 1, rotation 0).
+> - Character faces -Y, feet on Z = 0, final stud height.
+> - Root bone at origin, no weights on it, motion on its first child.
+>
+> Read more (16 KB note): ## 1. The three questions to answer before you add a bone · ## 3. Building the armature · ## Checklist before export · ## Common mistakes
+<!-- tldr:end -->
+
 This is the hub note for building rigs in Blender that survive the trip into Roblox and animate correctly once they get there. It covers the decisions you make before the first bone exists, the scene setup that makes every later step predictable, and the rules that one live action game (the "reference project") learned by shipping about 20 creature rigs, 150+ weapon rigs, pets, bosses and an armour kit through this pipeline. The detail lives in the linked notes; this one tells you which decision to make when, and why.
 
 > Sources: "Roblox docs" means the Creator Hub (modeling specifications, Blender guide, avatar specifications). "Measured" or "project" means numbers recorded in the reference project. "Rule of thumb" means experience that is not a hard limit.

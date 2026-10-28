@@ -3,6 +3,18 @@ tags: [architecture, networking, client-server, fundamentals, security]
 ---
 # Client-Server Model
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Client changes `leaderstats` or an attribute and expects the... -> Send a request; the server changes it
+> - Avoid: Server reads a value the client wrote locally -> Keep authoritative values on the server only
+> - Avoid: Client computes damage and sends it -> Server computes damage from server-side stats
+> - Every value that grants power or currency is computed and stored on the server.
+> - No secrets in ReplicatedStorage, ReplicatedFirst, Workspace, StarterGui or StarterPlayer.
+> - Every remote handler validates type, value, context and rate before acting.
+>
+> Read more (19 KB note): ## Latency: the other half of the model · ## A minimal correct round trip · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Every Roblox experience is a distributed program. One **server** runs the authoritative copy of the game; every player runs a **client** with a partial, delayed copy. Almost every hard bug in a multiplayer Roblox game (duplicated items, enemies that "teleport", effects only one player sees, a shop that gives free items) comes from code that forgot which side it was on, or trusted the wrong side. This note is the map: what runs where, what each side can see and change, what the latency looks like, and how to decide where a piece of logic belongs.
 
 The rest of this section builds on it: [[Replication Rules]] (what crosses the boundary on its own), [[RemoteEvents RemoteFunctions and Unreliable Remotes]] (what you send across it), [[Network Ownership]] (who simulates physics), [[Server Authority and Validation]] and [[Exploits and Anti-Cheat]] (what to do about the fact that clients lie).

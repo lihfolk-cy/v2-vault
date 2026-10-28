@@ -3,6 +3,18 @@ tags: [publishing, release, audience, kids-and-select, server-management, live-o
 ---
 # Publishing an Experience
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Launching for "everyone" and being surprised the game is 16+ only during evaluation.
+> - Avoid: Letting an age check or 2SV lapse on the account that publishes.
+> - Avoid: Restarting all servers on every small update (players hate it) or never restarting after a schema change (data loss).
+> - Creator account age-checked; 2SV on; account older than 2 days
+> - Content question answered or full questionnaire completed accurately
+> - Audience decision made (16+ only, or all ages with fee/Plus and evaluation)
+>
+> Read more (13 KB note): ## 3. Release requirements (Docs, Oct 2026) · ## 4. Shipping updates · ## 6. Common mistakes · ## 7. Checklist
+<!-- tldr:end -->
+
 Publishing used to be "File, Publish, set to Public". Since mid 2026 it is a gated release: age checks for the creator, a content question or full questionnaire, separate audiences (Roblox 16+, Roblox Select for ages 9 to 15, Roblox Kids for ages 5 to 8) with their own requirements, and an engagement evaluation before a game reaches younger players. This note walks through the whole path from first publish to shipping updates without hurting live players. Verified against the Creator Hub "Publish games and places", "Kids and Select" and "Release game updates" pages plus the Kids and Select launch announcement **as of October 2026**. The thresholds moved several times during 2026; the docs and the announcement disagree on some of them, and both are given.
 
 ---

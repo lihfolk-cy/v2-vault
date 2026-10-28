@@ -3,6 +3,18 @@ tags: [data, datastore, data-loss, recovery, rollback, versioning, incident]
 ---
 # Data Loss Prevention and Recovery
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Restoring with `SetAsync` while the player is online (Their session overwrites the restore on the next autosave, or the...)
+> - Avoid: Restoring ordered stores from version history (They have none; rebuild from profiles)
+> - Avoid: Waiting weeks to restore (Versions older than 30 days after supersession are gone)
+> - Failed load never leads to a save; "new" only when the read succeeded and returned nil.
+> - Studio access is off on the live game or fully guarded (test key, simulator, side systems obey).
+> - Saves validated; failures alert and keep the last good copy.
+>
+> Read more (15 KB note): ## Guard 3: validate before you write · ## Recovery tool 1: per-key version history · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Players forgive bugs. They rarely forgive losing a week of progress. This note is the defensive layer around everything else in this folder: where loss really comes from (most of it is self-inflicted), the guards that stop it before it happens, how to see it happening in production, and how to restore a player or a whole population from Roblox's built-in version history and snapshots. It ends with an incident runbook.
 
 Prerequisites: [[DataStore Fundamentals]], [[Session Locking and Profile Libraries]], [[Saving Correctly - Autosave and BindToClose]].

@@ -3,6 +3,18 @@ tags: [pipelines, ui, design-system, automation, audits, mobile]
 ---
 # UI Asset Pipeline
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Edit and Play look different: runtime restyling, stale bake -> builders bake; controllers only bind; version attribute
+> - Restyle breaks phones: desktop-only builders -> device arrangements from the same builder, round-trip check
+> - Two looks fight on one panel: per-panel skins over the theme -> painters only; opt-out attributes for deliberate exceptions
+> - Tokens module; no colours, fonts or radii in screens
+> - Painters idempotent (reuse their own children)
+> - Builders bake the static StarterGui copy; layout version attribute
+>
+> Read more (14 KB note): ## Stage 1: tokens · ## Stage 5: automated audits · ## Failure modes · ## Checklist
+<!-- tldr:end -->
+
 Roblox UI is built from instances: ScreenGuis, Frames, ImageLabels, UIStrokes, UIGradients, layout objects. In most games those instances are edited by hand in StarterGui, restyled by hand, and then patched at runtime by scripts that "fix" them. After a few months the saved copy in StarterGui, the runtime copy on a player's screen and the designer's intent are three different things, and every restyle breaks something on phones.
 
 This note is a pipeline that keeps them the same: **tokens and builders in code, a baked static copy, scripted repaint passes with backups, and automated audits on desktop and phone sizes**. It is drawn from one production game that restyled every menu several times in a week and kept a 10/10 audit score across 80 to 97 screen-views (measured in one production game). Design system theory is in [[UI Design Systems]], layout in [[Layout - Scale Offset and Constraints]], phones in [[Responsive UI for Phone Tablet Console and PC]] and [[Safe Areas and Insets]], menu patterns in [[Menu Archetypes - Shop Settings Codes Rewards]], declarative frameworks in [[Declarative UI - React-Lua and Fusion]].

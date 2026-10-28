@@ -3,6 +3,18 @@ tags: [marketing, growth, live-ops, updates, cadence, events, retention]
 ---
 # Update Cadence and Hype Cycles
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Publishing the update and opening it to players at the same moment, with no time to catch release bugs.
+> - Avoid: Countdowns that restart, or "last chance" claims that are not true.
+> - Avoid: Teasing a feature that is not built.
+> - A written cadence: weekly rotation, weekend events, content every 2 to 4 weeks
+> - Feature freeze at T-10; event public at T-7; featuring submitted if eligible
+> - Publish before go-live; content gated by server time
+>
+> Read more (13 KB note): ## 2. Choosing a cadence · ## 3. Building anticipation honestly · ## 8. Common mistakes · ## 9. Checklist
+<!-- tldr:end -->
+
 Roblox players expect games to change. A game that updates on a predictable rhythm trains players to come back on update day, gives the recommendation system fresh reasons to see returning players (play days on days 2 to 7 and 8 to 28 are ranking signals; see [[Discovery and the Algorithm]]), and gives your page, notifications and videos something true to say. A game that updates in random bursts, or that promises an update and misses it, burns the same goodwill.
 
 [[Live Ops Events and Updates]] covers the platform tools (Experience Events, update announcements, notifications) and how to code timed content. This note is about the *shape over time*: how big and how often, how to build anticipation honestly, what the spike after an update looks like and how to read it, how to keep a small team from burning out on a content treadmill, and what to do when an update slips. Platform facts are labelled "Roblox docs (as of October 2026)"; the rest is rule of thumb.

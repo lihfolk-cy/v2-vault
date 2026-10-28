@@ -3,6 +3,15 @@ tags: [authoring, code, keyframesequence, luau, baking]
 ---
 # Authoring Clips in Code
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Easing written on the wrong key -> convert "into" to "leaving" on write
+> - Avoid: Legacy Cubic -> CubicV2
+> - Avoid: Root keyed on HumanoidRootPart -> key LowerTorso; HRP weight 0
+>
+> Read more (22 KB note): ## 2. Construction rules the engine cares about · ## 6. Predicting what the Animator plays (a sampler) · ## 10. Common mistakes
+<!-- tldr:end -->
+
 Building `KeyframeSequence`s from data lets you generate hundreds of consistent clips, re-bake them when the rig changes, run IK or physics offline, enforce budgets, and verify the result against the real Animator. The reference project (one live action game) authored almost all of its 600+ ability clips this way.
 
 This note covers the construction rules that the engine actually cares about, the easing-placement convention, placeholders, markers, key fitting and thinning, previewing in Studio, and a sampler that predicts what the Animator will play. The spec format and pose library that sit on top are in [[Spec-Driven Move Authoring]].

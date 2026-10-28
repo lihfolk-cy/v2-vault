@@ -3,6 +3,18 @@ tags: [modeling, untextured, stylised, normals, weighted-normals, bevel, shading
 ---
 # Clean Stylised Shading - Weighted and Custom Normals
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Flat faces darken toward edges ("inflated" look): Smooth shading averaging across bevels -> Harden Normals or Weighted Normal (Face Area)
+> - Shading fine in Blender, smeared in Studio: Modifiers not applied, or FBX Smoothing set to Face/Edge -> Apply modifiers; FBX Smoothing Normals Only
+> - Lumpy, popcorn tree canopy: Each blob shades as its own sphere -> Data Transfer custom normals from a proxy sphere
+> - Smooth by Angle at 30 to 40 degrees, or deliberate sharp edges.
+> - Bevels sized to at least 2 to 3 px at the usual viewing distance; Harden Normals on.
+> - Weighted Normal last in the stack, Face Area, Keep Sharp, Threshold 0.01.
+>
+> Read more (15 KB note): ## Technique 2: bevel with Harden Normals · ## Technique 4: normal transfer for soft volumes · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Untextured stylised art has nowhere to hide shading errors. On a painted asset, a smudgy gradient across a flat face disappears under brush strokes; on a flat-coloured SmoothPlastic prop, it is the most visible thing on screen. "Clean" stylised shading means flat faces look flat, curved faces look curved, edges catch a crisp highlight, and big soft forms (tree canopies, clouds, cartoon heads) shade like one smooth volume instead of a pile of lumps. Almost all of that is controlled by **normals**, not by geometry or colour.
 
 This note covers the normals toolkit for low and mid-poly stylised meshes: sharp edges, bevels with harden normals, the Weighted Normal modifier, face strength, and normal transfer for foliage and characters. It also covers how those normals survive export into Roblox and what breaks them. The geometric side of bevels (chamfer widths, edge highlight design) is in [[Bevels Chamfers and Edge Highlights Without Textures]] and [[Hard-Surface Modeling]]; faceted styles, where every face is flat on purpose, are in [[Faceted Low-Poly - Flat Normals and Facet Size]].

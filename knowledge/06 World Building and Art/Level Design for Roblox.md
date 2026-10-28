@@ -3,6 +3,18 @@ tags: [world-building, level-design, layout, hubs, zones, blockout, navigation]
 ---
 # Level Design for Roblox
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Building art before the blockout is fun -> Blockout and playtest first
+> - Avoid: Spawn facing a wall -> Spawn facing the centrepiece
+> - Avoid: Long empty walks -> Time walks; add content or shorten
+> - Measurement table (character, jump, speed, camera) written down.
+> - Blockout playtested on PC and phone before art.
+> - Walk times measured and compared with a space players like.
+>
+> Read more (14 KB note): ## Hub design · ## Zones and progression spaces · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Level design on Roblox is shaped by things most engines do not have: players join mid-session on phones and controllers, the default camera floats behind the character, characters jump about 7 studs high and run 16 studs/s by default, maps stream in around the player, and a single place often holds a hub plus every zone of the game. This note covers measurement, the blockout process, hub and zone layout, sight lines and gating, combat spaces, and the production lessons of one production game that built and rebuilt a hub and a ten-zone realm several times.
 
 ## Know your measurements first

@@ -3,6 +3,18 @@ tags: [narrative, dialogue, worked-build, luau, strict, server-authority, locali
 ---
 # Dialogue System End to End
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Tree in `ReplicatedStorage` -> Server-only data, one screen at a time
+> - Avoid: Generic greeting listed before the specific one -> Order start entries from specific to general
+> - Avoid: Paying effect without a flag -> Set a flag in the same choice; validator warns
+> - Trees in `ServerStorage`; only `DialogueShared` replicates.
+> - Every line and choice is a key plus an English default; CSV generated from trees.
+> - Start entries ordered from specific to general.
+>
+> Read more (48 KB note): ## 5. Server: DialogueService · ## 7. Client: DialogueController · ## 11. Common mistakes and extensions · ## 12. Checklist
+<!-- tldr:end -->
+
 This note builds a complete NPC dialogue system from an empty place: conversations written as data, a server that owns every decision (which greeting you get, which choices you see, what a choice does), a client that only displays and reports clicks, conditions and effects that other systems plug into, text that is sent as keys and translated on each player's own client, a typewriter that does not break translation or accessibility, and a validator that catches broken trees before players do.
 
 The writing craft lives in [[Writing Dialogue for Roblox Players]]. The theory of quest objectives is in [[Quests and Objectives]], and a full quest build is in [[Quest Chain System End to End]]; this system plugs into that kind of quest service through one effect. Translation plumbing (automatic capture, the cloud table, format specifiers) is covered in [[Localization]] and [[Localization Pipeline]]; this note only uses it.

@@ -3,6 +3,18 @@ tags: [ai, verification, prompting, testing, qa]
 ---
 # Prompting and Verifying AI Output
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Asking "does it work?" and accepting "yes".
+> - Avoid: Verifying in Studio and shipping features that depend on live-only behaviour.
+> - Avoid: Relying on screenshots an agent says it took, when the capture may have been black.
+> - Prompt states context, rules, API era and what done means.
+> - Each change verified to a named rung; the rung is reported.
+> - Live-only dependencies tested in a live or team-test server.
+>
+> Read more (13 KB note): ## 1. How AI-written Roblox code fails · ## 3. Verifying: the ladder · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 AI output fails in a specific way: it looks finished. Wrong code compiles, a wrong mesh renders, a wrong explanation reads fluently, and an agent's report says "done". This note is about the two halves of working with that: asking in a way that makes errors less likely and easier to see, and verifying in a way that catches the errors that remain.
 
 It draws heavily on the reference project, which was built largely by AI coding agents and learned its verification rules from real regressions. The Luau-specific error catalogue is in [[AI Code Assistants for Luau]]; testing in general is in [[Testing Strategies and Frameworks]].

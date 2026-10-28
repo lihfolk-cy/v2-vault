@@ -3,6 +3,18 @@ tags: [monetization, developer-products, processreceipt, datastore, idempotency,
 ---
 # Developer Products and ProcessReceipt
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Granting in `PromptProductPurchaseFinished` -> Grant in `ProcessReceipt` only
+> - Avoid: Returning `PurchaseGranted` before saving -> Save, then acknowledge
+> - Avoid: Receipt marker in a different store than the grant -> Same document
+> - Exactly one `ProcessReceipt` assignment in the codebase (grep it)
+> - Every configured product has a grant; startup assert
+> - Grant and receipt marker in the same saved document
+>
+> Read more (23 KB note): ## 2. The receipt contract · ## 3. A correct implementation · ## 8. Common mistakes · ## 9. Checklist
+<!-- tldr:end -->
+
 Developer products are repeatable purchases: currency packs, boosts, revives, bundles, starter packs. Every one of them is delivered through a single server callback, `MarketplaceService.ProcessReceipt`. Getting that callback right is the most important piece of monetization code in a Roblox game, because mistakes cost real money: players charged with nothing granted, or items granted twice.
 
 This note covers the receipt contract, a correct idempotent data-store-backed implementation, the failure modes that break the obvious implementations, and product design. Verified against the Developer Products guide and the `MarketplaceService` reference **as of October 2026**. The storage side (receipt logs, auditing, recovery) is covered in [[Purchase Data and Receipts]].

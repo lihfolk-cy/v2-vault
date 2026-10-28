@@ -3,6 +3,18 @@ tags: [procedural, runservice, motor6d, animationconstraint, transform, timing, 
 ---
 # Procedural Animation
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Procedural head turn does nothing on a character: write happens in `PreRender` or `Heartbeat` -> move it to `PreSimulation`
+> - Works on an R6/old rig, does nothing on new avatars: code searches for `Motor6D` -> accept `AnimationConstraint` too
+> - Head slowly spins away, worse when far from camera: compounding `Transform = Transform * R` on a joint nothing rewrites -> restore in `PreAnimation`, or compute from...
+> - Joint lookup accepts `Motor6D`, `AnimationConstraint` and `Bone`.
+> - Writes to animated joints happen in `PreSimulation`.
+> - Overlays compose with the animated value (`R * A` or `A * R`) and cannot compound.
+>
+> Read more (17 KB note): ## What code can write · ## Composing with the Animator · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Procedural animation is motion computed by code every frame instead of read from a stored clip. In Roblox it is the layer that makes clips react: a head that follows the player, feet that stay planted on a slope, a blade that spins in the hand, a body that recoils from a hit, a dragon that banks into its turn. This note is the hub for the whole `04 Procedural` folder. It covers the part every technique shares and that most bugs come from: **where you write, when you write it, and how your write composes with the Animator's.**
 
 If you only remember one thing: on an animated joint, write `Transform` in `RunService.PreSimulation`, compose it with what the Animator wrote, and never let your own write feed back into next frame's input.

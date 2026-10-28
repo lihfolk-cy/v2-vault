@@ -3,6 +3,18 @@ tags: [lighting, atmosphere, sky, clouds, post-processing, environment]
 ---
 # Atmosphere Sky Clouds and Post-Processing
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Fog stopped working: An `Atmosphere` was added -> Use Atmosphere density and haze.
+> - Skybox visible through mountains: `Offset` too low for the `Density` -> Raise `Offset`.
+> - Glare or Decay does nothing: `Haze` is 0 (and Glare 0 for Decay) -> Raise Haze first.
+> - Atmosphere or fog, not both.
+> - Density and Offset tuned together; no ghosting at the horizon.
+> - Clouds under Terrain, moved by `GlobalWind`.
+>
+> Read more (16 KB note): ## 1. Atmosphere · ## 4. Post-processing effects · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Global lighting ([[Lighting Technologies and Settings]]) decides how surfaces are shaded. The objects in this note decide what the air, the sky and the camera do: the `Atmosphere` that turns distance into haze, the `Sky` cube with its sun, moon and stars, dynamic `Clouds` under `Terrain`, and the six post-processing effects that tint, blur and bloom the final image. Together they carry most of a scene's mood for very little cost, which is why they are also the first things to be misused: a bloom that turns every white UI-coloured part into a glowing blob, an atmosphere so dense the skybox ghosts through mountains, a red low-health tint that a cutscene grade overwrites.
 
 Source labels: **Docs** = official reference and guides (October 2026). **API dump** = engine defaults. **Reference project** = one production game. **Rule of thumb** = experience.

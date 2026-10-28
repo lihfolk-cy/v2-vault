@@ -3,6 +3,18 @@ tags: [data, privacy, gdpr, rtbf, right-to-erasure, compliance, webhooks]
 ---
 # Player Privacy and Data Deletion
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: No templates and nobody reads the daily message (Requests pile up unprocessed; compliance risk)
+> - Avoid: Templates for the main store only (Leaderboards, settings, old `_vN` stores still hold the data)
+> - Avoid: Webhook without a secret (Anyone can trigger deletions)
+> - Inventory of every store, key pattern and external system that holds user ids.
+> - Deletion templates for every standard and ordered key pattern, including old stores.
+> - Templates tested end to end with a dummy account.
+>
+> Read more (13 KB note): ## Mechanism 1: automated deletion templates · ## Mechanism 2: the Right to Erasure webhook · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 If your game stores anything keyed by user id, you hold personal data, and global privacy laws (GDPR, CCPA, LGPD, PIPA and others) give users the right to have it deleted. Roblox passes those requests to you, and you are responsible for completing them. As of October 2026 Roblox offers three mechanisms: a daily message listing requests, **automated data store deletion templates**, and a **Right to Erasure webhook** for custom automation. This note explains what counts as personal data in a Roblox game, how each mechanism works, how to design keys so deletion is automatic, and the edge cases (scopes, ordered boards, period stores, backups, external services) that templates miss.
 
 This is engineering guidance, not legal advice. For policy context see [[Roblox Policies Ratings and Compliance]].

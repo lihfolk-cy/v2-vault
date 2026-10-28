@@ -3,6 +3,18 @@ tags: [vfx, particles, particleemitter, flipbooks, performance]
 ---
 # Particle Emitters In Depth
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Effect dark in caves, grey in shade: `LightInfluence` 1 (Studio insert default) -> Set 0 explicitly.
+> - Emitter built in code looks different from the Studio template: Different `LightInfluence` defaults between insert paths -> Set every property explicitly in code or...
+> - Sphere/Cylinder shape looks wrong: Emitter on an Attachment -> Put it on a part.
+> - `LightInfluence` set explicitly on every VFX emitter (usually 0).
+> - Brightness chosen by screen area; one dark contrast layer per bright stack.
+> - Bursts via `Emit` with your own quality scaling; streams capped.
+>
+> Read more (20 KB note): ## 2. Property reference with traps · ## 5. Motion recipes (studied packs) · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 `ParticleEmitter` is the workhorse of Roblox VFX: sparks, smoke, slash cards, ground rings, flashes, rain, auras and magic dust are all camera-facing (or velocity-aligned) textured quads with a few curves. It looks simple, and that is the danger: most of its properties have a non-obvious rule (which ones affect live particles, which only new ones, which are world space, which silently cap), and a professional-looking effect is almost always a stack of six to twenty tuned emitters rather than one clever one.
 
 This note goes property by property with the traps, then covers bursts versus streams, flipbooks, performance budgets, pooling and testing. Design method and recipes are in [[VFX Design Playbook]]; timing to animation is in [[VFX Timing with Animation]].

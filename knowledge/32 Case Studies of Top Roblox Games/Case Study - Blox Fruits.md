@@ -3,6 +3,18 @@ tags: [case-study, top-games, action-rpg, grinding, rng, trading, live-ops, mone
 ---
 # Case Study - Blox Fruits
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Faction or identity choice in the first 10 seconds.
+> - First quest and first level up within two minutes.
+> - Stat points let players make a build choice early.
+> - Each island has a level band, quests and a boss.
+> - A rare power item chase sits on top of levels.
+> - One shared, timed stock rotation for all servers, with a countdown.
+>
+> Read more (19 KB note): ## 1. Snapshot · ## 6. What to copy and what not to copy · ## Checklist
+<!-- tldr:end -->
+
 Blox Fruits is the long-running king of the Roblox grind RPG: an anime-inspired open sea with islands, quests, bosses and a level cap in the thousands, where the main chase is a randomly appearing "fruit" that grants a power set. It has been live since January 2019, has passed 65 billion visits, and set a platform concurrency record in December 2024 off a single rework update. Study it for three things: how a **level ladder plus a power-item chase** creates years of goals, how **timed, shared stock rotations** create daily habits and trading demand, and how a studio uses **big numbered updates and reworks** to bring millions back at once. Study the risks too: reworking items players paid for is a reliable way to anger your best customers.
 
 Source labels used below: **Observed in the live game (October 2026)** means the public Roblox store page and public web API (games, votes, game passes, media, thumbnails) read on 27 October 2026, with no login and no play session. **Public stats site** means third party trackers. **Studio statement** means the studio's store text. **Press** means named outlets and guides. Roblox does not publish click-through rate or revenue for other creators' games; anything about clicks is reasoning from what is visible.

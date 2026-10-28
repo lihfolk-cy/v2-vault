@@ -3,6 +3,18 @@ tags: [blender, python, props, stylised, low-poly, environment, awning, export]
 ---
 # Stylised Shop Stand Worked Example
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Hand-typed awning angle. Symptom: the awning floats or cuts through posts when a post height changes.
+> - Avoid: Diagonal braces sized by eye. Symptom: ends poke through the side panels.
+> - Avoid: Hex colours used as linear values. Symptom: washed-out wood and fabric.
+> - Seed set; all sizes in studs; faces -Y
+> - Every hard part bevelled with an angle limit
+> - Repeats varied in width and tone; small tilts everywhere
+>
+> Read more (13 KB note): ## The awning: the focal feature · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 ![[p45_shop_stand.png]]
 
 A cartoon market stand built from one Python script: a wooden counter with varied planks and crossed braces, four posts, a red and cream striped awning with a scalloped edge, a hanging sign with extruded text, and goods on the counter (an apple crate, potions, coin stacks, a price tag), plus a lantern and a barrel. It comes out at about 10k triangles in 110 parts, faces -Y, and is built in studs. The script is `scripts/build_shop_stand.py`.

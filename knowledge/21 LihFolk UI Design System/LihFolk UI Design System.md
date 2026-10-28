@@ -3,6 +3,18 @@ tags: [ui, design-system, lihfolk-ui, simulator, cartoon, menus, hud]
 ---
 # LihFolk UI Design System
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Treating the kit as a style to imitate by hand instead of calling the components.
+> - Avoid: Adding a second green button to a screen.
+> - Avoid: Removing the ink stroke from captions on bright slabs.
+> - Modules in `ReplicatedStorage/LihFolkUI`; one LocalScript per menu; `Controller.start()` and `register` called.
+> - Each window has a theme, an icon, one `go` action and a `defaultSelection`.
+> - Server owns every outcome; placeholders replaced.
+>
+> Read more (7 KB note): ## 1. The look: Ink and Candy · ## 3. How to use it · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 **LihFolk UI** is LihFolk's own design system for cartoon and simulator Roblox games. It comes with a typed Luau kit: theme tokens, components, a window controller and an icon registry. There are ready examples for the five menus every simulator needs (Shop, Codes, Rebirth, Settings, Daily Rewards) plus a buttons showcase. The skill that applies it is `skills/lihfolk-ui/` in the plugin. The exact numbers are in [[LihFolk UI Spec]].
 
 ---

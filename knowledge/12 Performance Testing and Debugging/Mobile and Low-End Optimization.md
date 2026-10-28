@@ -3,6 +3,18 @@ tags: [performance, mobile, low-end, graphics-quality, device-testing, memory]
 ---
 # Mobile and Low-End Optimization
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Testing phones only in the Device Simulator.
+> - Avoid: Effects designed on high and "scaled down" by just lowering rate, leaving overdraw-heavy layers in.
+> - Avoid: Gameplay information that disappears on low quality.
+> - Baseline device chosen and kept in the office (low Android, older iOS).
+> - 15-minute soak on a real phone each release, numbers recorded.
+> - In-game graphics preset with a sensible default and live switching.
+>
+> Read more (13 KB note): ## 3. An in-game graphics preset · ## 9. Joins and first-use stutter on phones · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 On most Roblox games, a large share of sessions are on phones and tablets (check your own analytics; the split varies by genre and audience). A game that is smooth on a developer's PC can be unplayable on a three-year-old phone: it runs hot after ten minutes, drops to 20 fps in combat, and crashes when a big menu opens. This note covers why low-end devices fail differently, how to detect and respect graphics quality, an in-game graphics preset system, memory on phones, touch-sized UI checks, and how to test on real devices instead of trusting the Studio Device Simulator.
 
 Source labels: **Docs** (Creator Hub, as of October 2026), **Measured** (the reference project), **Rule of thumb**.

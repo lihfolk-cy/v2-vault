@@ -3,6 +3,15 @@ tags: [snippets, luau, camera, fx, game-feel]
 ---
 # Snippets: Camera Shake and FX
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Writing `Camera.CFrame` additively without removing it (camera drifts).
+> - Avoid: Switching to `Scriptable` for gameplay shake.
+> - Avoid: Random per-frame jitter instead of noise.
+>
+> Read more (20 KB note): ## 2. The module · ## Nuances and edge cases · ## Common mistakes
+<!-- tldr:end -->
+
 A camera effects module built from **timed envelopes** that are summed, capped, applied after the camera scripts and **removed before them** the next frame, so effects never accumulate into drift. Includes trauma-based shake with noise, FOV punches, roll, camera-space kicks, blur and colour flashes, distance falloff for world events, reduced-motion handling, presets measured in one production game, and a letterbox that sits correctly on phones.
 
 Design discussion is in [[Camera Shake and Camera FX]], [[Cameras and Cutscenes]] and [[Cinematic Ultimates]]. Timing effects to animation markers is covered in [[VFX Timing with Animation]].

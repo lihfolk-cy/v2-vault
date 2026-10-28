@@ -3,6 +3,18 @@ tags: [gameplay, rng, luck, drops, loot, pity, rolling]
 ---
 # RNG Drops and Luck Systems
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Rolling on the client -> Server rolls only
+> - Avoid: Displayed odds from a different table -> One data source
+> - Avoid: Unbounded multiplicative luck -> Additive or capped stacking
+> - Server-side rolls with dedicated `Random` objects.
+> - One documented luck definition, capped stacking, total shown to the player.
+> - Pity or deterministic progress for every rare chase.
+>
+> Read more (13 KB note): ## 3. Luck multipliers · ## 4. Bad luck protection: pity and guarantees · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Random rewards drive whole genres on Roblox: rolling games where you pull items with "1 in 5,000,000" odds, loot drops from enemies, egg hatching, crates. The code for a weighted pick is ten lines. Everything around it is where games succeed or fail: how luck multipliers actually change odds, how to stop bad streaks with pity and guarantees, how to keep the maths on the server, how to show odds honestly, and how to keep a luck economy from inflating until everything is common. This note covers the mechanics with numbers from one production rolling game.
 
 Design and ethics: [[Genre Playbook - RNG and Collection Games]], [[Ethical Design and Player Trust]]. Policy: [[Roblox Policies Ratings and Compliance]].

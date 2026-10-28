@@ -3,6 +3,15 @@ tags: [procedural, ik, feet, ground, slopes, stairs, raycast, luau]
 ---
 # Foot Placement and Ground IK
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Feet glued to the ground during a jump: no contact weight, or IK not disabled in air -> weight by animated foot height; disable on air states
+> - Whole body floats on slopes: hips never lowered -> drop the pelvis by the lowest foot's deficit
+> - Body bobs up and down climbing stairs: pelvis offset unsmoothed -> asymmetric rates or a spring
+>
+> Read more (14 KB note): ## The algorithm (per frame, after the Animator) · ## Bodies on the ground: the ground-fit clamp · ## Common mistakes
+<!-- tldr:end -->
+
 Every walk, idle and attack clip is authored on a flat floor. The world is not flat. On a slope one foot floats and the other sinks; on stairs feet hang in the air over step edges; a corpse on a hillside lies half underground. Ground IK fixes this at runtime: find the real ground under each foot, lower the hips so the low foot can reach, bend the knees, and tilt the feet to the surface. This note covers the live-character version and the "body on the ground" version the reference project used for deaths.
 
 ## The model: what the clip assumes

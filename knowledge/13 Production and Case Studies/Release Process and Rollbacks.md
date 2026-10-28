@@ -3,6 +3,18 @@ tags: [production, release, publishing, rollback, kill-switch, datastore, live-o
 ---
 # Release Process and Rollbacks
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Publishing without a pre-release grep for Studio-only features.
+> - Avoid: Forgetting that old servers keep running old code.
+> - Avoid: No kill switch on a feature that replaces old behaviour.
+> - No runtime-registered keyframe clips in gameplay code
+> - Animations are published to the experience owner
+> - Product and pass ids are real
+>
+> Read more (14 KB note): ## Kill switches · ## Data releases: versioned stores · ## Pre-release checklist · ## Common mistakes
+<!-- tldr:end -->
+
 Editing a place in Studio changes nothing for players. A change reaches players only when the place is published and running servers move to the new version. Between "it works in Studio" and "it works for players" sit several steps that small teams skip: a pre-release check, a publish, a server restart decision, a watch period, and a ready way back. This note covers that path and the rollback tools that make releasing often safe.
 
 The examples come from one production game (the reference project), whose notes end almost every entry with "Edit only, publish to ship". That phrase is the subject of this note: a growing pile of Edit-only changes is a release that has not been planned.

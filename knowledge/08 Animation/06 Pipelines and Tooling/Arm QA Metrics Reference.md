@@ -3,6 +3,16 @@ tags: [pipeline, qa, arms, metrics, reference]
 ---
 # Arm QA Metrics Reference
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - A verifier samples the baker's own after-dump through the offline Animator model at the truth rate and compares it, joint by...
+> - "Does this swing look right?" does not scale to several hundred clips.
+> - Note the deliberate gap: the baker clamps wrists to 70 / 30 / 85 deg while QA flags at 75 / 40 / 95.
+> - Every issue has a severity clamped to 0..1, a worst time, and a human-readable detail.
+>
+> Read more (18 KB note): ## The metrics · ## The score
+<!-- tldr:end -->
+
 The complete metric set of the arm QA scorer ("armcheck") used in one live action game: every metric, how it is measured, its threshold, its severity formula, its score weight, which ones are critical, the score formula, and the rules a re-baked clip must pass before install. Workflow context: [[Pipeline - Arm IK Baking and QA]]. Solver that targets these metrics: [[Arm Baker Internals]].
 
 Everything is in HumanoidRootPart space of a 1.6x R15 rig (studs), times in seconds, angles in degrees, sampled at **60 Hz**. The input is a set of joint Transforms per frame, either from the real Animator's playback ("truth") or from the offline Animator model.

@@ -3,6 +3,16 @@ tags: [authoring, craft, timing, spacing, frames]
 ---
 # Timing Spacing and Frame Charts
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Between two keys the Animator computes `alpha = easing(u)` where `u` runs 0 to 1 over the segment, then blends the two poses...
+> - Mark the gameplay frames first (hit, cancel window, end).
+> - Mark which segments must be fast (strike) and which slow (anticipation build, settle).
+> - Note where in-betweens should be denser (fast arcs need more samples; the reference project's baker sampled strike segments...
+>
+> Read more (13 KB note): ## Spacing: what easing does between two keys · ## Frame charts for common game actions
+<!-- tldr:end -->
+
 **Timing** is how many frames an action takes. **Spacing** is how far things move from one frame to the next within that time. Two clips with identical timing (same key times) can feel completely different because of spacing (easing, breakdowns). Game animators reason in frames; Roblox stores seconds and plays at whatever frame rate the client runs. This note gives the conversions, the spacing maths of Roblox's easing styles, frame charts for typical game actions, and the Roblox-specific details that affect timing.
 
 ## Frames, seconds and what Roblox actually stores

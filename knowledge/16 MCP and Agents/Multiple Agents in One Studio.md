@@ -3,6 +3,18 @@ tags: [mcp, agents, coordination, studio, workflow, collaboration]
 ---
 # Multiple Agents in One Studio
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: No ownership table; agents discover each other by collision.
+> - Avoid: Agents with their own backup habits filling the place.
+> - Avoid: A spawned agent briefed without its boundaries.
+> - Area assigned and recorded in the ownership table.
+> - WIP folder, test spot, port and log prefix assigned.
+> - Rules file read; reserved names known.
+>
+> Read more (12 KB note): ## 2. Organisation: a lead and owned areas · ## 3. Shared modules: the one-insert protocol · ## 9. Common mistakes · ## 10. Checklist for adding an agent to a shared Studio
+<!-- tldr:end -->
+
 One agent working in Studio is a power tool. Several agents working in the same Studio at once (one rebuilding zones, one baking animations, one restyling UI, one fixing combat) is a small team that never sleeps, never talks unless you make it, and shares one main thread, one undo stack and one request budget. The reference project ran this way for weeks: a lead session orchestrating a dozen specialist agents, plus several independent long-running sessions, all connected to one Studio window on one place, with the human play-testing in between. This note is what made that work and what broke when it did not.
 
 Read [[Safety Rules for AI Agents in Studio]] first; this note assumes those rules. **Measured** marks the reference project; **Rule of thumb** marks experience.

@@ -3,6 +3,15 @@ tags: [procedural, ragdoll, physics, humanoid, ballsocketconstraint, animationco
 ---
 # Ragdolls and Physics-Based Animation
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Living player dies the instant the ragdoll starts: neck joint disabled with `RequiresNeck = true` -> set it false first
+> - Body falls apart into loose parts on death: `BreakJointsOnDeath = true` -> set false before death and build sockets
+> - Ragdoll stands back up or slides around: Humanoid still in a normal state -> `Physics` state on the owner, or `EvaluateStateMachine = false`
+>
+> Read more (17 KB note): ## The Humanoid gets a vote · ## Building a ragdoll · ## Common mistakes
+<!-- tldr:end -->
+
 A ragdoll hands a character's body from the Animator to the physics engine: joints stop following clips and become limited sockets, and gravity and collisions do the animating. Done well it gives deaths, knockdowns and explosions that never repeat. Done badly it gives bodies that explode, jitter, sink through floors, kill living players, or look completely different on every client. This note covers the Humanoid side, building the constraints, network ownership, physically simulated `AnimationConstraint` joints, getting back up, and when not to ragdoll at all.
 
 ## The Humanoid gets a vote

@@ -3,6 +3,16 @@ tags: [core-concept, architecture, luau, testing, modules]
 ---
 # Dependency Injection in Luau
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Roblox code tends to reach straight for globals: `DataStoreService:GetDataStore(...)` inside the inventory module, `os.time()`...
+> - DI in Luau needs no framework. A function parameter is enough.
+> - Inject what varies or what is slow. Time, randomness, persistence, HTTP and remotes are the usual candidates.
+> - Defaults keep call sites simple. Accept an optional dependency table and fall back to the real services, so production code...
+>
+> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+<!-- tldr:end -->
+
 **Dependency injection (DI)** means a module receives the things it depends on (a data store wrapper, a clock, a random generator, another service) from outside, instead of fetching them itself with `require` or `game:GetService`. In Luau that usually just means passing a table of dependencies into a constructor or an `init` function.
 
 ## Why it matters on Roblox

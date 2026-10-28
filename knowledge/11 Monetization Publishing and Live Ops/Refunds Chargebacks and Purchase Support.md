@@ -3,6 +3,18 @@ tags: [monetization, refunds, chargebacks, support, webhooks, purchases, live-op
 ---
 # Refunds Chargebacks and Purchase Support
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: No purchase log -> Log every processed receipt with real Robux spent
+> - Avoid: Using the webhook Robux amount as revenue lost -> Use the logged amount
+> - Avoid: Webhook handler does the work before replying -> Verify, queue, reply, then process
+> - Purchase log with purchase id, product key, real Robux spent, grant contents, time.
+> - Boot assertion: every product has a supported grant.
+> - Transaction Refunded (and Subscription Refunded if relevant) webhooks configured with a secret.
+>
+> Read more (20 KB note): ## 2. Receiving refund notifications · ## 5. Purchase support: the tickets you will get · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Every game that sells things eventually has to answer three kinds of message: "I paid and got nothing", "my child bought this without asking", and, from Roblox, "this transaction was refunded". This note covers what Roblox does on its side when a purchase is refunded, what it leaves to you, how to receive refund notifications reliably, how to claw back developer product grants without punishing the wrong person, and how to run purchase support with the tools and logs that make it answerable.
 
 Prerequisites: [[Developer Products and ProcessReceipt]], [[Purchase Data and Receipts]], [[Open Cloud APIs]].

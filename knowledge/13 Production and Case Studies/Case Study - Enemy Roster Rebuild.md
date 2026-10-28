@@ -3,6 +3,18 @@ tags: [case-study, enemies, ai, combat, migration, art-pipeline, production]
 ---
 # Case Study: Enemy Roster Rebuild
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Building new features into a script at the size limit.
+> - Avoid: A big-bang swap from old to new AI.
+> - Avoid: Scaling every enemy by the same factor regardless of design.
+> - Roles and telegraph language defined before modelling.
+> - Enemy data, models and clips independent of level geometry.
+> - Zone-by-zone ownership flags; old path intact until the new one is play-tested.
+>
+> Read more (15 KB note): ## Migration: the strangler pattern · ## Tuning: size, density, damage, tempo · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Enemies are where combat, AI, art, animation, economy and performance meet, so rebuilding them touches everything. This case study follows one live action game through a complete replacement of its enemy roster: from an old data-driven system living inside one oversized combat script, to a new enemy service with roles and telegraphs, migrated zone by zone while the game kept working, then tuned (size, density, damage, tempo) and finally given an entirely new look in one day without touching the AI.
 
 Related depth: [[NPC AI and Behaviour]], [[Combat Systems Architecture]], [[Hitboxes and Hit Detection]], [[Enemy and NPC Animation]], [[Enemy Animation State Protocol]], [[Boss Animation and Phases]].

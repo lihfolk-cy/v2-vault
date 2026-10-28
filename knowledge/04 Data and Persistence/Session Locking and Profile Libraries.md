@@ -3,6 +3,18 @@ tags: [data, datastore, session-locking, profiles, profilestore, dupes]
 ---
 # Session Locking and Profile Libraries
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Items duplicated after teleports: No lease, or saves not fenced -> Search for `SetAsync` / unfenced `UpdateAsync` on player keys
+> - "Progress saved on another server" messages in normal play: Two servers both loaded the key (version-only guard) -> Add a lease
+> - Players cannot rejoin for ~1 to 5 minutes after a server crash: Lease length -> Expected; shorten the lease or show a countdown
+> - Lease written and checked inside the same `UpdateAsync` as the data.
+> - Every save is fenced by a per-session token; "lost" stops all writes.
+> - Autosave interval is shorter than the lease and renews it.
+>
+> Read more (25 KB note): ## A complete session-locked profile module · ## Exposing the profile to the rest of the game (the bridge) · ## Failure modes and diagnosis · ## Checklist
+<!-- tldr:end -->
+
 Every serious Roblox game keeps a player's data **in server memory** for the session and writes it back periodically. That design is only safe if **one server at a time** owns a given player's data. Session locking is the mechanism that guarantees it. This note explains why it is needed (with the exact failure sequences), how to build a lease-based lock on `UpdateAsync` correctly, the production lessons from one shipped game (including a 90 second lease that blocked Studio test loads), and how the common libraries (ProfileStore, ProfileService, Roblox's sample) compare.
 
 Prerequisites: [[DataStore Fundamentals]]. Follow-ups: [[Saving Correctly - Autosave and BindToClose]], [[Data Schema Design and Migrations]], [[Purchase Data and Receipts]].

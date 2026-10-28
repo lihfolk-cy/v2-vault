@@ -3,6 +3,16 @@ tags: [core-concept, math, economy, rng, balancing]
 ---
 # Expected Value
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Almost every reward on Roblox is random: drops, eggs, crates, spins, fishing, crits.
+> - EV is what the economy feels; variance is what the player feels.
+> - EV of what? "Value" must be one unit: coins, power, or time saved.
+> - Luck boosts rarely double EV. A "2x luck" that doubles the chance of the top tier only raises EV by that tier's share of the...
+>
+> Read more (3 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+<!-- tldr:end -->
+
 **Expected value (EV)** is the average outcome of a random event over many repetitions: each outcome's value multiplied by its probability, summed. A chest with a 90 percent chance of 10 coins and a 10 percent chance of 200 coins has an EV of 0.9 x 10 + 0.1 x 200 = 29 coins.
 
 ## Why it matters on Roblox

@@ -3,6 +3,18 @@ tags: [performance, rendering, draw-calls, lod, particles, highlights, shadows]
 ---
 # Rendering Performance
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Judging render cost on a desktop GPU.
+> - Avoid: Breaking instancing by importing whole scenes or re-uploading assets.
+> - Avoid: Precise render fidelity everywhere.
+> - Draw calls and triangles checked in the busiest view on a mid phone.
+> - Repeated meshes share ids and appearance so they instance.
+> - `RenderFidelity` Automatic or Performance except where justified.
+>
+> Read more (14 KB note): ## 6. Effects budgets · ## 8. Sleep ambient effects by distance and quality · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Rendering is usually the largest slice of a client frame, and it is the slice you control least directly: you cannot write the renderer, you can only decide what you ask it to draw. This note covers what makes Roblox rendering expensive (draw calls, geometry complexity, overdraw, lights and shadows, effects, UI), how instancing works, the engine's level-of-detail options and when to switch them off, effect budgets with real production numbers, the Highlight limit, and gating ambient effects by distance and graphics quality.
 
 Source labels: **Docs** (Creator Hub, as of October 2026), **Measured** (the reference project), **Rule of thumb**.

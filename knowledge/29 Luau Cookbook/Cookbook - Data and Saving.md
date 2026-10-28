@@ -3,6 +3,18 @@ tags: [luau, cookbook, datastore, saving, persistence, recipes]
 ---
 # Cookbook - Data and Saving
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: `SetAsync` for player saves.
+> - Avoid: Treating `nil` from `GetAsync` as a load failure, or a thrown error as a new player.
+> - Avoid: Saving after a failed load.
+> - Every DataStore call is in `pcall` with bounded retries.
+> - Data carries a `version` and a migration chain.
+> - Saves use `UpdateAsync` and respect ownership.
+>
+> Read more (20 KB note): ## 3. Save with UpdateAsync, not SetAsync · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Recipes for loading and saving player data with `DataStoreService` without losing or duplicating it. They are small on purpose: a real game should combine them into one data module or use a session-locking library ([[Session Locking and Profile Libraries]]). Read [[DataStore Fundamentals]], [[Saving Correctly - Autosave and BindToClose]] and [[Data Loss Prevention and Recovery]] for the reasoning. Code is `--!strict` Luau, reviewed, not run.
 
 To test DataStores in Studio you must enable "Enable Studio Access to API Services" in Game Settings, and the place must be published (Roblox docs (as of October 2026)). Studio then reads and writes the live data of that experience, which is why recipe 11 exists.

@@ -3,6 +3,15 @@ tags: [pipeline, enemies, ground, ik, procedural, death]
 ---
 # Ground Fitting Pipeline
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Lifting the whole body to fix one limb. The body floats by exactly the limb's depth.
+> - Avoid: Deciding fold direction per frame. A leg folds one way, then the other: a pop.
+> - Avoid: Fixing poses without smoothing the corrections.
+>
+> Read more (14 KB note): ## Part 1: the clip fitter · ## Part 2: the runtime clamp · ## Common mistakes
+<!-- tldr:end -->
+
 How one production game stopped its creatures sinking into the floor: an **offline-style clip fitter** that rewrites keyframes so nothing goes under a flat floor at any time (folding limbs, draping bodies that are down, raising the body only as a last resort), plus a **runtime clamp** that handles slopes and raised floors the fitter cannot know about. It took the worst death-clip penetration from -9.37 studs to at or above 0, then fitted 205 more clips. Related: [[Foot Placement and Ground IK]], [[Procedural Death Knockdown and Hit Reactions]], [[Pipeline - Importing Animated Enemies]].
 
 ## The problem, measured

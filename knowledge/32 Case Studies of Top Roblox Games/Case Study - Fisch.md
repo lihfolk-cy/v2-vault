@@ -4,6 +4,18 @@ tags: [case-study, top-games, fishing, collection, rng, minigame, live-ops, thum
 
 # Case Study - Fisch
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - First catch (first reward) in under a minute.
+> - Minigame adds skill to a luck-based reward.
+> - Each zone has a finite collection goal.
+> - Some rewards depend on time, weather or season.
+> - How-to-play lines in the store description.
+> - Passes sell convenience ("anywhere") before power.
+>
+> Read more (14 KB note): ## Snapshot · ## Click-through: thumbnail, icon and title · ## Checklist
+<!-- tldr:end -->
+
 Fisch is a fishing game: cast, wait, play a short reel minigame, catch one of hundreds of species with random size and mutation, sell or keep it, buy a better rod, travel to a new island. It took a genre most people think of as filler and made it one of the most played games on Roblox in its first year. It is also a cautionary tale: a big expansion in 2025 split the player base, and the developers ended up polling players and removing it. Both halves are worth learning from.
 
 Source labels used below: **Public stats** (Roblox's public APIs or a stats site, with the date checked), **Observed on the store page** (the public experience page, thumbnails and pass list, October 2026; nothing was played or logged into), **Press** (news and guide sites, with dates), **Community wiki** (fan wikis, lower confidence; flagged where used).

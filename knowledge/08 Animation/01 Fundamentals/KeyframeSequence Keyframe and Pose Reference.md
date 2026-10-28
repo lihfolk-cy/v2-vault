@@ -3,6 +3,18 @@ tags: [fundamentals, api, reference, keyframesequence, data]
 ---
 # KeyframeSequence, Keyframe and Pose Reference
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Top-level pose is `HumanoidRootPart` (or the rig's root) at Weight 0; motion starts on its child.
+> - Every Pose name matches a Part1 (or Bone) name on the target rig.
+> - Placeholders are Weight 0; real keys are Weight 1.
+> - Easing written on the key that starts each segment; no legacy `Cubic`.
+> - No key-to-key turn near 180 degrees; ideally under 120.
+> - Markers carry gameplay events; Keyframe names left as "Keyframe" unless a legacy listener needs them.
+>
+> Read more (15 KB note): ## Class reference · ## Semantics the reference does not spell out · ## Checklist for a clean KeyframeSequence
+<!-- tldr:end -->
+
 `KeyframeSequence` is the classic clip format: what the Animation Editor saves, what the 3D importer writes, what most code-built clips use, and what gets uploaded when you publish. This note documents every class in the format (`KeyframeSequence`, `Keyframe`, `PoseBase`, `Pose`, `NumberPose`, `KeyframeMarker`) and the services around it (`KeyframeSequenceProvider`, `AnimationClipProvider`), then explains the semantics the reference pages leave out: what counts as a key, where easing lives, why the root pose is ignored, and how instance counts explode.
 
 Member lists verified against the engine API dump and class pages (October 2026).

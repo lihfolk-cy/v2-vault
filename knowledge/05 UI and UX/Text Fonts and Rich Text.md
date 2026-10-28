@@ -3,6 +3,18 @@ tags: [ui, text, fonts, fontface, richtext, textservice, uistroke]
 ---
 # Text Fonts and Rich Text
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: `GothamBlack` in new code (renders Montserrat).
+> - Avoid: `TextScaled` everywhere: inconsistent sizes and no response to the player's text size setting.
+> - Avoid: Untrusted text in rich text strings without escaping.
+> - All text uses `FontFace` with explicit family and weight.
+> - A written type scale with roles; two families at most.
+> - Variable-length text uses `AutomaticSize`; any `TextScaled` has a `UITextSizeConstraint`.
+>
+> Read more (17 KB note): ## 1. Font versus Enum.Font · ## 2. Three ways to size text · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Text is the UI element players read most and the one most likely to break on another device or in another language. This note covers the `Font` data type and why the old `Enum.Font` names are a trap (Gotham is gone), the three ways to size text and which to choose, measuring text with `TextService`, rich text tags and their limits, text outlines with `UIStroke`, and the lessons from a production font sweep that had to be partly reverted.
 
 Sources: **Docs** (TextLabel, TextService, `Font` data type, `Enum.Font`, "Rich text markup", "UI appearance modifiers"; October 2026), the **reference project** (one production game), and **rule of thumb**.

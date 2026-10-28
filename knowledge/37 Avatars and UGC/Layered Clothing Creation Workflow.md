@@ -3,6 +3,18 @@ tags: [avatars, ugc, layered-clothing, cages, blender, skinning, wraplayer, work
 ---
 # Layered Clothing Creation Workflow
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Rebuilding cages from scratch -> Start from official templates
+> - Avoid: Outer cage identical to inner -> Move outer cage where the garment is
+> - Avoid: Decimate or merge on cage -> Only move vertices
+> - Template cages and mannequin from the official resources.
+> - Outer cage duplicated from inner at the start; inner locked.
+> - Garment under 4,000 triangles, watertight, clear of the body.
+>
+> Read more (18 KB note): ## 4. Edit the outer cage · ## 7. Debug the fit in Studio before any upload · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[UGC Avatar Items and Accessories]] lists the layered clothing specification (one mesh, 4,000 triangles, inner and outer cages, R15 skinning, 2048 textures) and [[Layered Clothing Cages and Animation]] explains how garments deform in motion. This note is the production workflow between those two: the order of operations in Blender, how to edit the outer cage without breaking it, the two skinning routes and when each wins, how to debug a bad fit in Studio with the WrapLayer debug modes, and garment-specific problems (hoods, skirts, shoes, bulky coats). The goal is to get a garment that passes validation the first time, because every re-upload of a published item costs the upload fee again.
 
 Facts marked "docs" are **Roblox docs (as of October 2026)**. Blender steps are **rule of thumb** from common practice; menu names drift between Blender versions.

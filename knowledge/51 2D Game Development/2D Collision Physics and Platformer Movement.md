@@ -3,6 +3,18 @@ tags: [2d, collision, physics, platformer, movement, tilemap, aabb, coyote-time,
 ---
 # 2D Collision Physics and Platformer Movement
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Resolving both axes at once. Symptom: snagging on seams between floor tiles; random wall-sticking.
+> - Avoid: `x + w` instead of `x + w - 1` in tile ranges.
+> - Avoid: Float positions without a remainder model.
+> - AABB colliders, tile grid, integer positions with remainders.
+> - Move X then Y, one pixel at a time; zero remainder on block.
+> - Out-of-bounds policy decided (walls, sky, pit).
+>
+> Read more (23 KB note): ## 3. Moving: one axis, one pixel at a time · ## 5. The controller · ## 11. Common mistakes · ## 12. Checklist
+<!-- tldr:end -->
+
 A GUI 2D game has no physics engine. Every floor you stand on, every wall you slide along and every jump arc is your code. The good news is that 2D platformer physics is a solved problem with a small, robust core: axis-aligned boxes, a tile grid, movement one axis at a time, and a handful of tuning numbers derived from how the jump should feel. This note gives that core in strict Luau, explains why it is built that way, and covers the parts that usually go wrong: tunnelling, corner snags, one-way platforms, slopes, moving platforms, stomps, and the tuning math.
 
 It assumes the loop and data layout from [[A 2D Engine in a ScreenGui - Game Loop Entities and Rendering]] (fixed 60 Hz step, logical pixels, Y grows downward). General intersection math (segment tests, swept boxes, SAT) is in [[Intersection and Collision Math]]; the feel layer (buffering and coyote time in depth) is in [[Input Responsiveness Buffering and Coyote Time]]. If you chose the 2.5D route, section 9 maps the same tuning onto Roblox physics.

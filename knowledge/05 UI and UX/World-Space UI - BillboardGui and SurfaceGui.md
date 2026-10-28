@@ -3,6 +3,18 @@ tags: [ui, billboardgui, surfacegui, world-space, nameplates, damage-numbers, pe
 ---
 # World-Space UI - BillboardGui and SurfaceGui
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Billboard sized in Scale when you wanted constant on-screen size (or the reverse).
+> - Avoid: No `MaxDistance`: hundreds of labels rendering across the map.
+> - Avoid: Hard-coded Y offsets that float above small enemies and sink into big ones.
+> - Size choice (studs or pixels) deliberate per element.
+> - Every billboard and surface gui has `MaxDistance`.
+> - Anchored to attachments or extents, not fixed offsets.
+>
+> Read more (16 KB note): ## 1. BillboardGui · ## 3. Patterns · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Some UI belongs in the world rather than on the screen: names over heads, enemy health bars, damage numbers, shop signs, interactive screens on a wall, a leaderboard on a pillar. Roblox offers two containers for this. A `BillboardGui` always faces the camera and follows a part or attachment. A `SurfaceGui` is painted onto a face of a part. Both use ordinary `GuiObject`s inside, so everything you know about layout applies, but their sizing, lighting, input and performance rules are different and are the source of most "my nameplate is giant", "my sign is blurry" and "the server lags with 200 enemies" problems.
 
 Sources: **Docs** (BillboardGui, SurfaceGui, SurfaceGuiBase, LayerCollector; "In-experience UI containers"; October 2026), the **reference project** (one production game), and **rule of thumb**.

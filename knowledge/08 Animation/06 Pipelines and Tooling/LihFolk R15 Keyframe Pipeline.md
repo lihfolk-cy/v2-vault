@@ -3,6 +3,18 @@ tags: [animation, pipeline, blender, r15, keyframe, export, qa, lihfolk]
 ---
 # LihFolk R15 Keyframe Pipeline
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Linear interpolation or every key on the same ease: robotic timing.
+> - Avoid: Keying every joint on the same frame: no overlap, so the motion looks stiff.
+> - Avoid: Animating feet with FK: foot sliding.
+> - Clip built from strong key poses with mixed eases
+> - Overlap offsets on head, off-arm and forearm
+> - Feet on `FootTrack`; slide under 0.02 studs
+>
+> Read more (8 KB note): ## 2. Authoring · ## 3. Automatic QA (written into each clip's JSON) · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 How LihFolk authors original R15 animations in Blender by script, checks them automatically, and exports them for Roblox. It exists because hand-wired AI keyframing tends to produce stiff, clipping "slop". Every guard below catches a specific failure seen in real test clips.
 
 ## 1. The rig

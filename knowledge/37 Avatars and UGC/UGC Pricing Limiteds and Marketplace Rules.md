@@ -3,6 +3,18 @@ tags: [ugc, marketplace, pricing, limiteds, monetization, economy, policy]
 ---
 # UGC Pricing Limiteds and Marketplace Rules
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Pricing at the floor by default -> Start at 1.5x to 2x
+> - Avoid: No Do Not Price Below -> Set a minimum
+> - Avoid: Enabling resale casually -> Decide before publishing
+> - Price set as floor offset plus a Do Not Price Below minimum.
+> - Revenue-share tier chosen deliberately (1.5x to 2x for unknown items).
+> - Advance break-even sales count written down and believable.
+>
+> Read more (17 KB note): ## 4. Limiteds: when they are the right product · ## 5. Selling UGC inside your experience · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[UGC Avatar Items and Accessories]] records the fee schedule: upload fees, publishing advances by item type, the revenue-share curve, Limited splits and publishing limits. This note is about using those numbers: how price-floor pricing really works, the arithmetic of advances and rebates, when a Limited is the right product and when it is a trap, what the irreversible switches are, how a game developer should sell UGC inside an experience, and the policy lines that cost creators their items. Numbers repeated from the older note are there only where a calculation needs them.
 
 Everything here is **time-sensitive**. Facts are **Roblox docs (as of October 2026)** unless marked otherwise; re-read the Creator Hub fees and publishing pages on the day you publish. Worked examples use hypothetical price floors because the real floors are shown per item type in the Creator Dashboard, not in the docs.

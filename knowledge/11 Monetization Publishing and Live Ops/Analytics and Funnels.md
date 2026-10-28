@@ -3,6 +3,18 @@ tags: [analytics, analyticsservice, funnels, economy, custom-events, live-ops, l
 ---
 # Analytics and Funnels
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Logging from the client or testing in Studio and concluding "analytics is broken".
+> - Avoid: User ids, timestamps or free text in custom fields (cardinality).
+> - Avoid: One event name per item instead of one name with a field.
+> - One analytics module, server-only, all calls in `pcall`
+> - All currency changes through one function that logs economy events
+> - Onboarding funnel from join to 10 minutes
+>
+> Read more (15 KB note): ## 3. A typed analytics module · ## 5. Funnels · ## 7. Common mistakes · ## 8. Checklist
+<!-- tldr:end -->
+
 Creator Analytics gives every game standard dashboards (retention, engagement, monetization, acquisition) for free. `AnalyticsService` adds your own data: **economy events** (currency sources and sinks), **funnel events** (where players drop out of a sequence), **progression events** and **custom events** (anything else). This note covers what each dashboard tells you, how to instrument a game correctly in Luau, the limits that silently break instrumentation, and how to turn charts into decisions. Verified against the Creator Hub analytics pages and the `AnalyticsService` reference **as of October 2026**.
 
 ---

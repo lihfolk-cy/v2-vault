@@ -3,6 +3,18 @@ tags: [ui, layout, udim2, uiscale, constraints, responsive]
 ---
 # Layout - Scale Offset and Constraints
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Square icons sized with Scale on both axes (stretched everywhere but the design screen).
+> - Avoid: One global `UIScale` with no lower clamp, making phone text unreadable.
+> - Avoid: Two `UIScale`s on the same object (device scale and pop scale fighting).
+> - Every object's Scale or Offset choice is deliberate (table in section 2).
+> - Panels are authored at one design resolution with one device `UIScale`.
+> - Clamp floor computed from the smallest authored text (12 px drawn minimum).
+>
+> Read more (16 KB note): ## 4. Design resolution plus UIScale · ## 6. The constraints · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Roblox UI is laid out with one data type, `UDim2`, and a handful of modifier objects that sit as children of the thing they modify. This note covers the maths of `UDim2`, when to use Scale and when Offset, the design-resolution approach with `UIScale`, and every size constraint, including the cases where they silently override each other. Layout objects that arrange many children (lists, grids, pages, flex) are in [[UI Layout Objects - Lists Grids and Pages]]. Per-device strategy is in [[Responsive UI for Phone Tablet Console and PC]].
 
 Sources: **Docs** (engine reference and the "Size modifiers and constraints" and "Position and size" guides, October 2026), the **reference project** (one production game, measured), and **rule of thumb**.

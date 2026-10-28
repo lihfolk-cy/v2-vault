@@ -3,6 +3,18 @@ tags: [economy, currency, soft-currency, premium-currency, event-currency, walle
 ---
 # Currency Architecture - Soft Hard and Event Currencies
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Two currencies with the same sources and sinks -> Merge; convert old balances once
+> - Avoid: Fixed-price cosmetics in an exponential currency -> Move them to a flat currency
+> - Avoid: Pack sizes not on the price unit -> Common price unit; re-size packs
+> - Every currency has one job, one distinct faucet and one distinct sink.
+> - Scale decided (flat or exponential); fixed-price content lives in a flat currency.
+> - Premium anchor fixed; every price and pack a multiple of a common unit.
+>
+> Read more (23 KB note): ## 3. Premium currency: the decisions that are hard to undo · ## 5. A wallet module with buckets, idempotency and analytics · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Economies and Currencies]] lists the kinds of currency a Roblox game can have and how to write a safe server transaction. [[Economy Inflation Sinks and Faucets Math]] gives the arithmetic of faucets, sinks and the premium currency anchor. [[Big Numbers Precision and Formatting]] covers doubles, integer limits and number formatting. This note sits between them and answers the architecture questions: how many currencies, what each one is for, how they convert, how an event currency is born and dies, how a wallet stores paid and free units separately, and how the whole set maps onto analytics before you log your first event.
 
 Source labels: **Roblox docs (as of October 2026)**, **measured in the reference project**, **rule of thumb**. Code is strict Luau, reviewed by reading, not run.

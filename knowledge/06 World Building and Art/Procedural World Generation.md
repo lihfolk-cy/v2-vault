@@ -3,6 +3,18 @@ tags: [world-building, procedural, generation, noise, terrain, seeds, tooling]
 ---
 # Procedural World Generation
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: `math.random` in generators -> `Random.new(seed)` per purpose
+> - Avoid: Noise sampled at integer coordinates -> Scale by non-integer frequency, offset by seed
+> - Avoid: Regenerating everything to fix one corner -> Regional regeneration, snapshots
+> - Seeded, per-purpose Random; chunk sub-seeds from coordinates.
+> - Noise layered and masked; gameplay areas flat enough.
+> - Materials from rules; global terrain colours respected.
+>
+> Read more (18 KB note): ## Runtime generation · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Procedural generation on Roblox comes in two very different forms:
 
 1. **Edit-time generation:** scripts in Studio (command bar, plugins, external tools) that build terrain, place props or assemble kits, after which the result is saved in the place and hand-edited. Most "procedural" Roblox maps are this.

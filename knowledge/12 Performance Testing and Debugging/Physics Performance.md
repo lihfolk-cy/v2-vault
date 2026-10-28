@@ -3,6 +3,18 @@ tags: [performance, physics, collision, humanoids, network-ownership, bulkmoveto
 ---
 # Physics Performance
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Unanchored decoration. Check with a script: count unanchored parts not in characters.
+> - Avoid: `PreciseConvexDecomposition` by default on imported meshes.
+> - Avoid: Leaving `CanQuery` and `CanTouch` on visual geometry.
+> - All static geometry anchored; visual-only parts have `CanCollide`, `CanTouch`, `CanQuery` off.
+> - Collision fidelity audited; no precise fidelity on small or distant meshes.
+> - Large complex meshes use simple invisible colliders.
+>
+> Read more (15 KB note): ## 3. Collision: fidelity and flags · ## 6. Moving many parts: `BulkMoveTo` · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Physics cost on Roblox is rarely about one heavy simulation. It is about **how many things the engine thinks it has to simulate, collide or query**: thousands of decorative parts left unanchored, precise collision on every rock, Humanoids on statues, ownership ping-ponging between players, and scripts that move hundreds of parts one property set at a time. This note explains what the physics engine actually spends time on, the switches that remove work (anchoring, collision flags, fidelity, stepping method, Humanoid states), network ownership costs, moving many parts cheaply with `BulkMoveTo`, and how to diagnose physics load.
 
 Source labels: **Docs** (Creator Hub, as of October 2026), **Measured** (the reference project), **Rule of thumb**.

@@ -3,6 +3,18 @@ tags: [testing, testez, jest-lua, ci, open-cloud, test-doubles, automation]
 ---
 # Automated Testing with TestEZ and Jest-Lua
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Testing glue code and UI instead of economy, odds and data.
+> - Avoid: Calling `os.clock()`, `tick()` or `math.random` inside logic that tests need to control.
+> - Avoid: Mocking everything, so tests break on refactors and prove nothing.
+> - Economy formulas, odds, migrations, remote validators and config invariants have specs.
+> - Clock and randomness injected; no waits in unit tests.
+> - Fakes for DataStore and other services, able to simulate failures.
+>
+> Read more (19 KB note): ## 3. Test patterns that pay off · ## 4. Where tests run · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Testing Strategies and Frameworks]] introduces both frameworks, shows a first spec in each and compares them. This note is the next step: how to make a Roblox codebase testable, which tests actually pay for themselves in a game, how to write test doubles for engine services, and how to run the suite automatically, including on Roblox's own servers through Open Cloud. If you have never written a spec, read that note first.
 
 ---

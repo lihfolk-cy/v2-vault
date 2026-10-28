@@ -3,6 +3,18 @@ tags: [luau, advanced-luau, signals, events, coroutines, library-design, testing
 ---
 # Building a Signal Library
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Handler runs after `Disconnect`: Deferred call queued before disconnect, not re-checked -> Check `Connected` when the deferred call runs
+> - New listener fires in the same event that created it: In-place append during iteration -> Copy-on-write or snapshot
+> - One erroring handler stops all others: Inline dispatch -> Runner thread or `task.spawn`
+> - Handler order is guaranteed and documented.
+> - Disconnect and connect during fire have defined, tested behaviour.
+> - Handlers run isolated from each other's errors and yields without allocating per call in the common case.
+>
+> Read more (21 KB note): ## 2. Where handlers run: the runner thread · ## 4. The library · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Events Signals and Connections]] explains engine signals, Immediate versus Deferred handlers, connection leaks, and gives a compact pure-Luau signal that spawns a thread per handler. That signal is correct and fine for most uses. This note builds a production-grade one from first principles, and more importantly explains each design decision a signal library has to make, because those decisions are where custom signals cause bugs: what happens when a handler disconnects during a fire, connects during a fire, errors, or yields; what order handlers run in; how much each fire allocates; and how deferred mode differs. By the end you will have a typed library, a test list for it, and an observable value built on top.
 
 Popular community signal libraries (for example GoodSignal by stravant, and the signal implementations bundled with frameworks) solve the same problems. Reading one after this note is a good exercise; the design here deliberately differs in one choice (handler storage) so the trade-off is visible.

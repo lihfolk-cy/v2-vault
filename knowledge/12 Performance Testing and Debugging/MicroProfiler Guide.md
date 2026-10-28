@@ -3,6 +3,18 @@ tags: [performance, microprofiler, profiling, debug-profilebegin, frame-time]
 ---
 # MicroProfiler Guide
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Studio skews the picture. Server and client share the process in a solo test, and Studio has its own UI cost.
+> - The profiler has overhead. Capturing, especially at many frames or with X-Ray, costs time.
+> - One frame is an anecdote. Look at 30 to 90 frames; use Timers for totals.
+> - Profiled on the device class with the problem, not only in Studio.
+> - Captured enough frames to see the pattern (30 to 90), and looked at Timers mode.
+> - Identified the family: script, physics, render, network, UI.
+>
+> Read more (16 KB note): ## 3. The labels that matter · ## 4. Your own labels · ## 7. Gotchas · ## Checklist
+<!-- tldr:end -->
+
 The MicroProfiler is the one tool that shows **where inside a frame** the time goes: which engine job, which script event, which of your own labelled functions. Everything else (fps counters, Script Profiler totals, memory charts) tells you *that* something is slow; the MicroProfiler tells you *what* and *when*. This note covers opening it everywhere (Studio, desktop, phone, live server), reading it, the labels that matter, adding your own labels with `debug.profilebegin`/`debug.profileend`, and the diagnosis recipes that come up again and again.
 
 Source labels: **Docs** (Creator Hub, as of October 2026), **Measured** (the reference project), **Rule of thumb**.

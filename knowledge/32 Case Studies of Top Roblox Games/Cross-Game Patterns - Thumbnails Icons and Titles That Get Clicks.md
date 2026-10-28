@@ -4,6 +4,18 @@ tags: [case-study, top-games, thumbnails, icons, titles, marketing, discovery, c
 
 # Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Changing the brand part of the title for each update, so returning players no longer recognise the game.
+> - Avoid: Long text on art that becomes unreadable at phone size, or sits under the player-count overlay at the bottom.
+> - Avoid: Illustrated art that promises a look the game does not have; allowed for images, not for video thumbnails, and costly in...
+> - Title has a fixed brand and exactly one changing slot, with a dated change log.
+> - Icon is a face, readable at 50 pixels.
+> - Thumbnails share one template; key text is clear of the bottom edge.
+>
+> Read more (16 KB note): ## The snapshot · ## Pattern 1: the title is a fixed skeleton with one moving part · ## Common mistakes this comparison exposes · ## Checklist
+<!-- tldr:end -->
+
 This note compares how the games in this section present themselves on a Roblox card: the title string, the square icon and the 16:9 thumbnails. Everything was captured on the same day, 27 October 2026, from Roblox's public games and thumbnails APIs, which return the current title and the first three active thumbnails for each game. That week was unusual: Roblox's platform Halloween event, The Hollow, had started on 22 or 23 October 2026 depending on time zone (Press, Katadata, 21 October 2026), and most games were in Halloween dress. That makes the snapshot a good look at seasonal habits and a poor look at everyday art. Treat it as one frame of a moving picture.
 
 Ground rules first. **Roblox does not publish click-through rates for other people's games.** No tracker can see impressions. What Roblox does tell you is what it measures for your own game: with 2 to 5 thumbnails active, personalization shows each to random users, measures qualified play-through rate (QPTR: qualified plays divided by home page impressions) per user group, then gives more impressions to the winner in each group; Roblox reported an average +8.5% QPTR in testing, with some games up 50% (Roblox docs, "Experience thumbnails", as of October 2026). So the art you see on a card is the art that is currently winning for someone like you, which also means other players may be seeing different cards. Everything below is reasoning from what is visible, labelled "Observed (27 October 2026)".

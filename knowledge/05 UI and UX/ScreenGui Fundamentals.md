@@ -3,6 +3,18 @@ tags: [ui, screengui, playergui, zindex, displayorder, fundamentals]
 ---
 # ScreenGui Fundamentals
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Screens organised into folders in `StarterGui`, which silently re-enables reset on spawn.
+> - Avoid: Using `ZIndex` to put one screen above another.
+> - Avoid: A modal backdrop made of a plain `Frame`: clicks pass straight through to the world.
+> - Every persistent screen: `ResetOnSpawn = false`, direct child of `StarterGui`.
+> - A written `DisplayOrder` band plan; tutorial layers on top.
+> - New screens use `ZIndexBehavior.Sibling`.
+>
+> Read more (21 KB note): ## 6. The GuiObject basics you will use every day · ## 10. A minimal, robust screen controller · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Every piece of 2D interface a player sees on their screen lives inside a `ScreenGui`. This note explains how that container actually behaves at runtime: where it comes from, when it is destroyed and re-created, how several of them stack, how draw order works inside one, and how input passes through it. Most "my UI disappeared", "my button is behind the frame" and "my menu reset when I died" bugs come from misunderstanding one of these rules, not from layout maths.
 
 Sources used below:

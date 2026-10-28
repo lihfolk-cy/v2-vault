@@ -3,6 +3,18 @@ tags: [architecture, networking, streaming, performance, memory]
 ---
 # Instance Streaming
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Turning streaming off "to fix bugs" -> Fix the client code; non-streamed big worlds crash phones
+> - Avoid: Persistent on many models -> Atomic for most; Persistent only for tiny essentials
+> - Avoid: Expecting Atomic in ReplicatedStorage -> Streaming settings apply to Workspace only
+> - Streaming on; properties chosen deliberately (radius, StreamOutBehavior, integrity mode, Improved behaviour).
+> - Interactable models set to Atomic; Persistent only where justified.
+> - No LocalScript indexes Workspace parts directly without a wait or a tag.
+>
+> Read more (18 KB note): ## Per-model streaming: `ModelStreamingMode` · ## Writing streaming-safe client code · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 With **instance streaming** (`Workspace.StreamingEnabled`), the server sends each client only the part of the Workspace near that player, and the client drops distant parts again when it needs memory. It is enabled by default for new places (Roblox docs, "Instance streaming"), and for any world bigger than a single arena it is the difference between a 10 second join and a 60 second join, and between a phone that runs the game and one that crashes. The cost is that **client code can no longer assume any Workspace instance exists**. This note covers the exact streaming rules, every property and per-model mode, how to write client code that survives streaming, how to move players safely with `RequestStreamAroundAsync`, and a production example of tuning a big world.
 
 Related: [[Level of Detail and Model Streaming]] (visual LOD and SLIM), [[Case Study - Fast Join and Deferred Loading]], [[Memory Budgets and Leaks]].

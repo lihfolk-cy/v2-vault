@@ -3,6 +3,18 @@ tags: [modeling, optimization, mobile, performance, meshes, draw-calls, blender,
 ---
 # Mesh Optimization for Mobile
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - FPS dies looking at foliage: Overlapping alpha cards, `DoubleSided` transparency -> Geometry clumps, opaque styles, fewer overlaps
+> - Phones crash or textures go blurry: Too many unique large textures -> Shared trim sheets and palettes; 512 and under
+> - Low triangles, still slow: Draw calls from unique meshes and textures -> Reuse meshes and SurfaceAppearances; clone, do not re-import
+> - Budget per asset class written down, phone first.
+> - Repeated props are one mesh, cloned in Studio, sharing textures.
+> - Unique detail merged per object; large world pieces split for culling.
+>
+> Read more (22 KB note): ## 6. Worked example: a market stall · ## 7. Audit scripts · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Most Roblox players are on phones, and phones fail differently from PCs: they run out of memory before they run out of triangles, they pay heavily for transparent pixels, and they get hot and throttle after ten minutes. This note is about making meshes that survive that: what a phone actually pays for when it draws your model, per-asset budgets for mid-range phones, when to merge meshes and when to split them, the properties that quietly double a mesh's cost, a full worked optimisation of one prop, and two audit scripts (one in Blender, one in Studio) that find problems before players do.
 
 What a mesh is to the engine (GPU vertices, vertex splits at seams and hard edges, normals) is already in [[Modeling Fundamentals for Games]]. Decimation and retopology techniques are in [[Retopology and Decimation]]; export and import settings in [[Exporting and Validating Models for Roblox]]; scene-wide budgets in [[Art Budgets - Triangles Draw Calls Memory]]. This note links to them rather than repeating them.

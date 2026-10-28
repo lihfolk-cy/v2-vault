@@ -3,6 +3,18 @@ tags: [performance, scripting, luau, script-profiler, runservice, scheduling]
 ---
 # Script Performance
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Heavy work in `PreRender`/`RenderStepped`.
+> - Avoid: One connection per object instead of one loop over a list.
+> - Avoid: Loops that keep running while their UI or object is hidden.
+> - Script Profiler run on client and server under realistic load; top 5 functions known.
+> - Every per-frame loop has an idle gate (hidden, off-screen, far).
+> - Non-critical updates moved to a cadence scheduler with random phase.
+>
+> Read more (15 KB note): ## 1. Finding script cost · ## 3. The patterns that win · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Most Roblox games that run badly are not slowed by one expensive script. They are slowed by **many cheap things that run when they do not need to**: a UI animation loop for a hidden menu, a healthbar updating every frame for an enemy 400 studs away, a quest timer rewriting the same text sixty times a second. This note covers how to find script cost (Script Profiler, MicroProfiler labels), which frame event to use, and the patterns that cut script time: gating, cadence, distance tiers, write-on-change, time-slicing, and when Parallel Luau and native codegen are worth it.
 
 Source labels: **Docs** (Creator Hub, as of October 2026), **Measured** (the reference project), **Rule of thumb**.

@@ -3,6 +3,18 @@ tags: [architecture, server, lifecycle, shutdown, bindtoclose, live-ops]
 ---
 # Server Lifecycle and Shutdown
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: One sequential save loop in `BindToClose` -> Parallel saves with a deadline
+> - Avoid: `BindToClose` and `PlayerRemoving` saving the same profile... -> Per-player save serialisation; idempotent saves
+> - Avoid: Relying on soft-shutdown teleports to protect data -> Save first; teleports can be disabled
+> - One `BindToClose` handler saves everyone in parallel and waits for in-flight saves, with a deadline under 30 s.
+> - Per-player saves are serialised and idempotent; profiles are session-locked.
+> - `ServerRestartScheduled` warns players and triggers early saves.
+>
+> Read more (15 KB note): ## BindToClose: the rules · ## The soft-shutdown pattern (and when you still need it) · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A Roblox game server is born when matchmaking needs one, lives while players are in it, and dies when it empties, when you restart servers for an update, when Roblox does maintenance, when it runs out of memory, or when the experience is moderated. Most data loss and most "the update kicked everyone and lost their last ten minutes" incidents happen at the end of that life. This note covers the stages of a server's life, the exact shutdown rules (`BindToClose`, `CloseReason`, the 30 second window), restarting servers for updates (`ServerRestartScheduled`, bleed-off, Roblox's automatic migration), the soft-shutdown pattern, and long-running server health.
 
 Data-specific saving is covered in depth in [[Saving Correctly - Autosave and BindToClose]]; this note is the server-side frame around it.

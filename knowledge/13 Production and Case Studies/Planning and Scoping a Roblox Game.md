@@ -3,6 +3,18 @@ tags: [production, planning, scope, roadmap, budgets, case-study]
 ---
 # Planning and Scoping a Roblox Game
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Planning content without a content unit.
+> - Avoid: Building volume before the style gate. Hundreds of assets in a rejected style.
+> - Avoid: Deleting the old version before the new one is approved.
+> - The 30-second, 5-minute and session loops are written in one paragraph each.
+> - The content unit is defined and counted; the launch set is a number.
+> - Shared parts (rigs, kits, materials) are identified before production.
+>
+> Read more (18 KB note): ## Count the content before you build it · ## Phases with gates · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Most Roblox projects do not fail because a system is hard to build. They fail because the project keeps changing what it is: the map is rebuilt three times, the progression model is replaced twice, and the content that already exists has to be dragged through every change. This note is about the planning layer above the code: how to decide what the game is, how big it is, what "done" means for each piece, and how to change your mind cheaply when (not if) you do.
 
 The examples come from one production game (the reference project): a live action game with zones of enemies, gear upgrades and bosses. It was built over a few weeks of very fast iteration, and its history is a near-complete catalogue of scoping mistakes and recoveries. Numbers are labelled "measured in the reference project", "Roblox docs" or "rule of thumb".

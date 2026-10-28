@@ -3,6 +3,18 @@ tags: [math, game-math, collision, intersection, hit-detection, raycast, zones, 
 ---
 # Intersection and Collision Math
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Zone does not notice a player who stood still: `Touched` for zones -> Poll point-in-shape tests
+> - Cursor flies to the horizon: Ray almost parallel to the plane -> Cap distance; ignore near-parallel rays
+> - Rays through box faces miss randomly: `0 * inf` NaN in the slab test -> Explicit parallel branch
+> - Each collision check names its shape (point, sphere, cylinder, box, capsule, polygon) and uses the matching test.
+> - Zones are polled with containment tests, not `Touched`.
+> - Ray tests handle parallel rays and origins inside the shape.
+>
+> Read more (21 KB note): ## 3. Rays against simple shapes · ## 4. Capsules: the right shape for characters · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Roblox gives you a physics engine and fast spatial queries, so why do the maths yourself? Because a lot of gameplay collision is not about parts at all. A safe zone drawn as a polygon, a hitbox that exists only for one server tick, a lag-compensated capsule around where a player was 120 ms ago, a building cursor projected onto a floor plane, a turret leading a moving target, a thousand bullets in a bullet-hell mode: none of those need an `Instance`, and several cannot use one. Pure geometry is deterministic, runs in parallel Luau, costs nothing in replication and is easy to test.
 
 [[Raycasts Shapecasts and Spatial Queries]] covers the engine's query APIs, filtering and performance. [[Cookbook - Math CFrame and Vectors]] has the closest point on a segment. This note covers the geometry itself: point containment, ray tests against planes, spheres and boxes, capsules from segment-to-segment distance, swept tests that cannot tunnel, intercept courses, a spatial hash for many objects, and the numeric traps in each.

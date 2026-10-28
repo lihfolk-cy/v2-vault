@@ -3,6 +3,18 @@ tags: [ui, gamepad, console, selection, guiservice, ten-foot]
 ---
 # Gamepad and Console UX
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: No initial selection when a menu opens.
+> - Avoid: Selection escaping from a panel into the HUD behind it.
+> - Avoid: Selection lost or stuck in UI after a panel closes.
+> - Every panel: initial selection, trapped navigation, B closes, focus restored.
+> - Shoulder buttons switch tabs; key HUD actions mapped.
+> - Selection visual equals hover visual plus a strong ring.
+>
+> Read more (14 KB note): ## 3. A focus manager · ## 8. Diagnosing selection problems · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 On a console, or on a PC or tablet with a controller, there is no cursor. The player moves a **selection** between UI objects with the d-pad or thumbstick and presses A to activate. Roblox's selection engine does a lot automatically, but games that rely on the defaults alone end up with menus where the selection starts nowhere, jumps to the wrong button, escapes into the HUD behind the panel, or vanishes after a panel closes. This note covers the selection API, a focus manager pattern, ten-foot (TV) design rules, and the console polish the reference project added.
 
 Sources: **Docs** (GuiService, GuiObject, GuiBase2d, UIPageLayout, the "Gamepad input" and "Cross-platform" guides; October 2026), the **reference project** (one production game), and **rule of thumb**. General input is in [[Input - UserInputService and ContextActionService]].

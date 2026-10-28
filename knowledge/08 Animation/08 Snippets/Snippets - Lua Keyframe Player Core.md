@@ -3,6 +3,18 @@ tags: [snippets, luau, keyframe-player, runtime, sampling, blending]
 ---
 # Snippets: Lua Keyframe Player Core
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Writing `Transform` from `RenderStepped`.
+> - Avoid: Firing markers inside the mixer loop. Symptom: a handler that starts a track corrupts the iteration, random missing poses.
+> - Avoid: No cleanup when a rig is destroyed. Symptom: memory climbs per respawn, errors on parented-nil joints.
+> - A/B against `Animator:StepAnimations` on a few clips: uneven and evenly keyed, Linear and eased, big turns far from rest, two...
+> - Markers: every marker fires exactly once per pass, including at time 0 and at the clip's end, and on loop wrap.
+> - Stop during a fade, Play during a fade, Play while playing (restart), AdjustWeight while fading.
+>
+> Read more (33 KB note): ## 1. The module · ## Nuances and edge cases · ## Checklist before trusting your own player · ## Common mistakes
+<!-- tldr:end -->
+
 A self-contained Lua player for `KeyframeSequence`s: it parses a clip, samples it the way the engine Animator does, mixes several tracks by priority and weight the way the Animator does, fires markers, and writes joint `Transform`s once per frame for every rig, with distance LOD. Tracks expose the familiar `AnimationTrack` surface (`Play`, `Stop`, `AdjustSpeed`, `AdjustWeight`, `GetMarkerReachedSignal`, `Stopped`, `Ended`, `DidLoop`, `TimePosition`, `WeightCurrent`...).
 
 Why you would want one: clips registered with `KeyframeSequenceProvider` only play in Studio (Docs: the ids "cannot be used outside of Studio"), publishing every clip is slow, and a Lua player lets Studio and live run the same code path. The reference project (one live action game) moved every player, weapon and enemy clip onto such a player. Its full version, with relays and stubs, is described in [[Lua Keyframe Player]] and [[Lua Keyframe Player Internals]]; this note is the compact core you can read in one sitting and extend.

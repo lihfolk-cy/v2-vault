@@ -3,6 +3,18 @@ tags: [blender, creature, concept, rigging, case-study, low-poly]
 ---
 # Matching a Concept Sheet - Boss Creature Case Study
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Assembling from primitives. Symptom: the model looks like a collection of parts rather than a creature.
+> - Avoid: Many small repeated parts first. Symptom: hours spent on feathers while the silhouette is still wrong.
+> - Avoid: Glow marks as meshes. Symptom: marks at different sizes, hidden behind other geometry, extra triangles.
+> - Brief written: style, shape language, exaggerated feature, budget, size, facing.
+> - Main mass is one box-modelled surface, not stacked primitives.
+> - Appendages grown out of the mass (extrusion), not floated next to it.
+>
+> Read more (9 KB note): ## What worked: the vault workflow, done in code · ## Nuances and edge cases · ## Transferable checklist · ## Common mistakes
+<!-- tldr:end -->
+
 ![[p45_void_owl_front.png]]
 ![[p45_void_owl_silhouette.png]]
 ![[p45_void_owl_posed.png]]

@@ -3,6 +3,16 @@ tags: [core-concept, economy, game-design, balancing]
 ---
 # Faucets and Sinks
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Roblox games run for months or years with players who play many hours a day.
+> - Measure per player-hour, not in total. Total coins in the world always grows with the player count.
+> - Faucets scale with progress unless you stop them.
+> - Good sinks feel like rewards. Spending on a cosmetic, an upgrade or a gamble the player chose feels good.
+>
+> Read more (3 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+<!-- tldr:end -->
+
 A **faucet** is any way currency or items enter the economy (enemy drops, quest rewards, daily chests, purchases). A **sink** is any way they leave (shop purchases, upgrade costs, repair fees, trading taxes, consumables). The balance between them over time decides whether prices hold, rise or collapse.
 
 ## Why it matters on Roblox

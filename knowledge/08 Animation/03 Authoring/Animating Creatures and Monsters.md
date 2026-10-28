@@ -3,6 +3,18 @@ tags: [authoring, craft, creatures, enemies, quadrupeds, flyers, telegraphs]
 ---
 # Animating Creatures and Monsters
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Making big creatures slow by playing clips slowly -> author slow; never play below 1x
+> - Avoid: Lift on the top-level root -> key the first child bone
+> - Avoid: Imported clips not axis-fixed -> apply the 180-degree data fix
+> - Weight reads through anticipation, impact settle and follow-through, not slow playback
+> - Cycle speed matches scale (about 1 / sqrt(scale) for scaled copies)
+> - Every attack has a unique telegraph of 0.45 s or more (0.5 s for bosses), with `Tele` and `Hit` markers
+>
+> Read more (17 KB note): ## 3. Body plans · ## 6. Roblox traps that hit creature clips · ## 8. Common mistakes · ## 9. Checklist
+<!-- tldr:end -->
+
 Enemies are animated for the *other side* of the fight: the player has to read them, predict them and punish them. A monster animation succeeds when its weight is believable, its intent is unmistakable, and its timing gives the player fair windows. This note covers weight and scale, the main body plans (bipeds, quadrupeds, crawlers, flyers, floaters), telegraphs and fairness, shared clip sets, and the Roblox-specific traps that hit creature clips hardest (root poses, import axes, ground clipping, scale).
 
 Rig building is in [[Creature Rig Conventions]]; the runtime side is in [[Enemy and NPC Animation]], [[Enemy Animation State Protocol]] and [[Boss Animation and Phases]].

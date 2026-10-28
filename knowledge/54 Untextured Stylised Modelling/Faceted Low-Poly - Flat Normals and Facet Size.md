@@ -3,6 +3,18 @@ tags: [modeling, untextured, low-poly, faceted, flat-shading, normals, facet-siz
 ---
 # Faceted Low-Poly - Flat Normals and Facet Size
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Faceted rock looks smooth and blobby in Studio: Normals not exported or recalculated -> FBX Smoothing "Normals Only" or glTF Normals on; Shade Flat before...
+> - Rocks look like random noise blobs: Facets too small for the viewing distance, all the same size -> Size facets by on-screen pixels; big planes plus small edge facets
+> - Mountains look like fine static: Same facet size in studs as small props -> Scale facets with object size and distance
+> - Distance players usually see each asset class written down, and target facet size in studs derived from it.
+> - 5 to 12 facets across the silhouette; bigger on planes, smaller on curvature.
+> - Shade Flat (or deliberate sharp edges), triangulated, modifiers applied, normals exported.
+>
+> Read more (14 KB note): ## Facet size: measure it in pixels, not studs · ## Building a faceted rock, step by step · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Faceted low-poly is the style where every triangle or polygon is a visible flat plane: gem-like rocks, origami trees, crystal mountains, polygon animals. With no texture detail, the facets *are* the surface detail, so two decisions carry the whole look: how the normals are set (every face flat, or a deliberate mix), and how big each facet is on screen. [[Low-Poly and Stylized Modeling]] introduces the style and its segment counts. This note goes deeper into flat normals as data (what they cost, how they survive export and import), facet size measured in on-screen pixels for the Roblox camera, how to distribute facets so a model reads as designed rather than random, and the cases where faceting is the wrong call.
 
 ## What flat shading actually is

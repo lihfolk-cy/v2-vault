@@ -3,6 +3,18 @@ tags: [luau, events, signals, connections, deferred-events, memory]
 ---
 # Events Signals and Connections
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Memory grows per round or per spawn: Short-lived object connected to a long-lived signal -> Disconnect on teardown; cleanup bag
+> - Handler runs for a destroyed object: Deferred events queued before destroy -> Validate at the top of handlers
+> - One-shot logic runs twice: `Connect` + self-disconnect under Deferred -> `Once`
+> - The place runs with `SignalBehavior = Deferred` during development.
+> - Every connection to a signal that outlives its owner is stored and disconnected.
+> - Systems handle existing state, then subscribe.
+>
+> Read more (21 KB note): ## 4. Connection lifetime and leaks · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Roblox is event driven. The engine exposes thousands of signals (`RBXScriptSignal`): `Touched`, `Changed`, `PlayerAdded`, `Heartbeat`, `ChildAdded`, `Activated`. Your code connects functions to them and gets back an `RBXScriptConnection`. Getting connections right means three things: run handlers at the right time (immediate vs deferred), avoid races, and disconnect what you connect. Leaked connections are the most common cause of memory growth and "ghost" behaviour in long-running servers.
 
 ---

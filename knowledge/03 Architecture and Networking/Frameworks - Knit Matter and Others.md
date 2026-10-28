@@ -3,6 +3,18 @@ tags: [architecture, frameworks, libraries, knit, ecs, networking]
 ---
 # Frameworks - Knit Matter and Others
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Starting a new game on an archived framework -> Plain modules or a maintained option
+> - Avoid: Treating framework client methods as safe -> Middleware: validation and rate limits on every exposed method
+> - Avoid: Mixing frameworks and loose scripts -> Pick one structure and migrate fully
+> - The project has a written structure convention and one exemplar system.
+> - Every dependency is pinned, reviewed and actively maintained (or small enough to own).
+> - The client-server boundary is visible in names, and every exposed method passes middleware.
+>
+> Read more (14 KB note): ## Small utility libraries worth knowing · ## A framework-free core in one page · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Roblox has no official game framework. The community has produced several, plus many small libraries that solve one problem well (signals, promises, cleanup, networking, state, UI). Choosing among them is mostly a question of what problem you have, how big the team is, and how long you will maintain the game. This note explains what frameworks actually give you, the main options and their status as of October 2026, when a framework hurts, and how to get the same benefits with plain modules.
 
 Library status changes quickly. Facts marked "verified" were checked against the project's public repository in October 2026; everything else is a description of the library's purpose, and you should check its repository before adopting it.

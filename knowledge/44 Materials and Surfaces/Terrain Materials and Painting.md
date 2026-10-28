@@ -3,6 +3,18 @@ tags: [terrain, materials, painting, materialvariant, terraindetail, procedural,
 ---
 # Terrain Materials and Painting
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Too many materials per view -> Three to five per view
+> - Avoid: Hard straight material borders -> Wobble edges, interleave dabs
+> - Avoid: Brick or WoodPlanks on slopes -> Smooth materials on slopes
+> - Ground roles defined: path, play space, edges, hazards, landmarks.
+> - Three to five materials per view; path lighter than surroundings in grayscale.
+> - Natural terrain uses a TerrainDetail override (top and side) where possible.
+>
+> Read more (20 KB note): ## 2. Let the material paint slopes: TerrainDetail · ## 4. Procedural painting by slope, height and noise · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 The vault already covers terrain's data model and API ([[Terrain Tools and Terrain API]]), and what is global versus local about terrain materials, water, Expanded Terrain limits and performance ([[Terrain Deep Dive - Materials Water and Performance]]). This note is about **the craft of painting**: choosing a small palette of ground materials that reads well, letting `TerrainDetail` do slope painting for you, painting by hand without the result looking like a paint program, painting procedurally by slope, height and noise with a correct and chunked script, importing a colormap, and dressing terrain with the vault's own CC0 textures. The goal is ground that tells the player where to walk, not ground that shows off how many materials exist.
 
 ## 1. Paint for gameplay first

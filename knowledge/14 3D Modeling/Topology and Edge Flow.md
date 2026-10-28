@@ -3,6 +3,18 @@ tags: [modeling, topology, edge-flow, deformation, rigging-prep, blender]
 ---
 # Topology and Edge Flow
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Obsessing over topology on static props -> Shading and triangle count are what matter there
+> - Avoid: Even density everywhere -> Dense at bends, sparse on flats
+> - Avoid: Poles on joints and face corners -> Move poles to flat, rigid areas
+> - Purpose decided: static, rigid segmented, or skinned.
+> - Skinned: 3+ loops at hinges, 5+ at shoulders and hips, rings around eyes and mouth.
+> - Poles on flat, rigid areas.
+>
+> Read more (13 KB note): ## 3. Loops for deformation: joint by joint · ## 6. Blender tools for topology work · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Topology is how the faces of a mesh are connected: which vertices share edges, where the loops run, where triangles and poles sit. Two meshes with the same silhouette can behave completely differently: one bends cleanly at the elbow and shades smoothly, the other collapses into a crease and shows streaks. Edge flow is the direction those loops travel across the surface, and for anything that deforms it should follow the way the surface moves.
 
 This note explains when topology matters (and when it does not, which is more often than tutorials admit for Roblox), the rules for quads, triangles and poles, loop layouts for each kind of joint on a Roblox character or creature, face topology, and Blender tools and scripts to find and fix problems.

@@ -3,6 +3,18 @@ tags: [data, datastore, autosave, bindtoclose, retries, shutdown]
 ---
 # Saving Correctly - Autosave and BindToClose
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: No `BindToClose` (Every update or shutdown loses up to one autosave interval for...)
+> - Avoid: Saving players one by one in `BindToClose` (Large servers time out; the last players lose data)
+> - Avoid: Not waiting for `PlayerRemoving` saves in `BindToClose` (Last player in an emptying server loses progress)
+> - Save on: autosave (staggered), leave (with release), shutdown (parallel, with a deadline), purchases.
+> - Autosave interval below the lease.
+> - No save path exists for a profile that failed to load.
+>
+> Read more (17 KB note): ## When to write · ## The loader: wiring it all together · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Loading is one call at the start of a session. Saving is where data actually gets lost: on a server crash, during a shutdown with 30 players, in a throttled minute, or because a save ran before the load finished. This note gives the timing rules (with official numbers and the values one production game settled on), a retry helper that knows which errors are worth retrying, and a complete loader script that wires load, autosave, "save soon", leave-saves and `BindToClose` together on top of the module from [[Session Locking and Profile Libraries]].
 
 ## When to write

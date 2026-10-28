@@ -3,6 +3,18 @@ tags: [genre-system, tycoon, worked-build, plots, economy, server-authority, dat
 ---
 # Tycoon Plots and Droppers End to End
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Fire `TycoonBuy` with another plot's button id (Ids are global, purchase only affects the caller's own data and plot)
+> - Avoid: Fire `TycoonBuy` 1,000 times per second (Rate limited to a burst of 6; each call is cheap anyway)
+> - Avoid: Teleport onto another player's collector (`toucher ~= player` check)
+> - Solo Play: plot assigned, character moved, first pad free, buy it, income starts, collector pays.
+> - Two clients: each gets a different plot; neither can collect or buy on the other's plot.
+> - Leave and rejoin: base rebuilt in one frame, offline earnings shown, cash and pending intact.
+>
+> Read more (33 KB note): ## 4. The server: TycoonService · ## 6. The client: TycoonController · ## 5. Edge cases and failure modes · ## 9. Test checklist
+<!-- tldr:end -->
+
 This note builds the core of a tycoon from an empty place: a row of plots, automatic plot assignment, a button chain defined as data, purchases validated on the server, income that ticks on the server without a single physics part, droppers that are pure client-side decoration, a collector, offline earnings, saving by purchase id, and a rebuild that puts a returning player's whole base back in one frame. It is the code companion to [[Genre Playbook - Tycoons]], which explains why tycoons work, the payback maths and the "dropper trap". This note does not repeat those arguments; it implements them and then deals with the edge cases the playbook only names.
 
 > **All code is reviewed, not run.** It is strict Luau written against Roblox docs (as of October 2026) and checked by reading. Run the test checklist in section 9 before you trust it with players.

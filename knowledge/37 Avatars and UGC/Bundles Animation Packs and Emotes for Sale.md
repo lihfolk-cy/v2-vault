@@ -3,6 +3,18 @@ tags: [ugc, bundles, emotes, animation-packs, marketplace, animation, avatars]
 ---
 # Bundles Animation Packs and Emotes for Sale
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Travelling emote -> Keep root near start
+> - Avoid: Root pops between frames -> Spread snaps over frames
+> - Avoid: Uploading a KeyframeSequence -> Convert first
+> - Product type chosen with eligibility checked (packs need pilot access to sell).
+> - Emote: under 10 s, root near origin, no frame pops, CurveAnimation, standard R15.
+> - Emote tested on several bodies and with bulky layered clothing.
+>
+> Read more (15 KB note): ## 3. Emotes · ## 5. Games and emotes: three integration levels · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Single accessories are only part of the avatar Marketplace. Bodies, dynamic heads, shoes and animation packs are sold as **bundles**, and emotes are sold as single animation assets that players equip into an eight-slot wheel. These products sit where modelling, animation and game code meet: an emote has to pass a validator that measures root motion, an animation pack has to work inside every game's Animate script, and a game that sells either has to cooperate with the default emote menu or replace it. This note covers what each product is, the creation rules that matter, who can sell what (as of October 2026), and how games integrate them.
 
 The craft of emotes (timing, readability, synchronised social moments) is in [[Emotes and Social Animation]]; fees and advances are in [[UGC Avatar Items and Accessories]]; pricing strategy in [[UGC Pricing Limiteds and Marketplace Rules]]. Facts marked "docs" are **Roblox docs (as of October 2026)**.

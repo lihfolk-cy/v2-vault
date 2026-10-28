@@ -3,6 +3,18 @@ tags: [game-design, genre, battlegrounds, fighting, pvp, combos, netcode, arena]
 ---
 # Genre Playbook - Battlegrounds and Arena Fighters
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Server-only hit decision with no rewind -> Lag-compensated server checks, capped
+> - Avoid: Client-trusted hits -> Validate range, cooldown, state and target count
+> - Avoid: Infinite combos -> Hitstun decay, combo time cap, get-up invulnerability, breaker
+> - Every move defined in data with frame data, hitbox and damage.
+> - Two-client test with simulated latency (100 and 250 ms) for every character's combos.
+> - Hit validation and rate limits on every combat remote; fuzzed.
+>
+> Read more (16 KB note): ## 1. Core loop · ## 3. Fairness under latency · ## 8. Common mistakes · ## 9. Launch checklist
+<!-- tldr:end -->
+
 A "battlegrounds" game drops a server of players into one open arena, each picking a character with a fixed move set (usually four abilities plus a basic attack chain and an ultimate that charges in combat), and lets them fight freely. Arena fighters are the tighter cousin: one-on-one or small-team rounds, often ranked. Both are pure PvP skill games built on the moment-to-moment feel of hits, which makes them the most netcode-sensitive genre on Roblox and the one where exploiters do the most visible damage.
 
 This note goes beyond [[Genre Playbook - Combat and RPG]] (which focuses on PvE: enemies, bosses, gear) into what a PvP move-set fighter needs: the combat grammar, fairness under latency, counterplay, servers full of strangers, monetisation that does not sell power, and the patterns successful fighters share.

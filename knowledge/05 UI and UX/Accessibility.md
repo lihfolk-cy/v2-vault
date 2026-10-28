@@ -3,6 +3,18 @@ tags: [ui, accessibility, reduced-motion, text-size, contrast, colour-blindness]
 ---
 # Accessibility
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: `TextScaled` everywhere, ignoring the player's text size.
+> - Avoid: Fixed boxes that clip at `Largest`.
+> - Avoid: Glass panels that ignore `PreferredTransparency`.
+> - All three `GuiService` preferences honoured and listened to.
+> - Every screen tested at `Largest` text size.
+> - Contrast at least 4.5:1 for body text (or outlined text on art).
+>
+> Read more (13 KB note): ## 1. The three platform preferences · ## 2. Contrast · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Accessible UI is UI more players can use: players with low vision, colour blindness, motion sensitivity, hearing loss, limited dexterity, or simply a small phone in bright sunlight. Docs cite that over 26% of people have some type of disability and over 5% have some form of colour blindness. On Roblox there is also a platform side: players set **Text Size**, **Background Transparency** and **Reduce Motion** in Roblox's settings, and your UI is expected to honour them. This note covers those three settings and their exact engine behaviour, contrast and colour rules, motion and flashing, input accessibility, and the reference project's reduced-motion implementation.
 
 Sources: **Docs** ("Accessibility guidelines", `GuiService.PreferredTextSize`, `PreferredTransparency`, `ReducedMotionEnabled`, `TextService`; October 2026), **WCAG 2.x** for contrast ratios (public standard), the **reference project** (one production game), and **rule of thumb**.

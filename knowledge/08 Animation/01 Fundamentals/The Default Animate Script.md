@@ -3,6 +3,15 @@ tags: [fundamentals, animate-script, locomotion, emotes, tools]
 ---
 # The Default Animate Script
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Setting ids before `CharacterAppearanceLoaded` -> Set after appearance loads
+> - Avoid: Not stopping playing tracks after swapping ids -> `Stop(0)` the playing tracks
+> - Avoid: Stopping all tracks every frame -> Stop only your own tracks, by reference
+>
+> Read more (13 KB note): ## How the script reacts to changes · ## Walk and run blending (the part people get wrong) · ## Common mistakes
+<!-- tldr:end -->
+
 Every player character gets a LocalScript named `Animate`. It is Roblox's whole default animation system: it listens to Humanoid state events, picks clips from a set of `StringValue` folders, blends walk and run by speed, plays the tool hold, and handles emotes. Most games either customise it (swap ids), replace it (their own controller), or run their own system **on top of it** and hand rare states back. Whichever you do, you need to know what it does, because it keeps running and keeps playing tracks underneath yours.
 
 The internals below are from the R15 Animate script as it ships to characters (structure and constants read from a recent copy; Roblox updates the script occasionally and gates some behaviour behind feature flags, so read your own copy: press Play, find `Workspace.<YourCharacter>.Animate`, copy it). The R6 script is a different, simpler script with the same broad structure.

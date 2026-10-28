@@ -3,6 +3,18 @@ tags: [live-ops, battle-pass, season-pass, seasons, progression, monetization, l
 ---
 # Battle Pass and Season Design
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - "I bought premium and got nothing" at season end: Receipt arrived after `endsAt` and was refused or parked -> Every receipt resolves; boundary rule decided in advance
+> - Rewards for tiers 1 to 7 missing after a mid-season upgrade: Premium only enabled future claims -> Retroactive by design: claimability depends on reached tier, not...
+> - XP counted twice for one mission: Mission completion granted on two servers or replayed after a teleport -> Mission completion keyed by `dayNumber:missionId` in the...
+> - Retention and content capacity justify a pass (section 2)
+> - Target player defined; XP budget sheet with 15 to 20 percent slack
+> - Free track has an instant tier 1 claim and its own capstone
+>
+> Read more (23 KB note): ## 3. The arithmetic of a completable season · ## 6. The server model · ## 8. Edge cases and failure modes · ## 9. Checklist
+<!-- tldr:end -->
+
 A battle pass (Roblox's docs call it a **season pass**) is a time-limited progression track: players earn season XP from missions, climb tiers, and claim rewards before the season ends. A free track is open to everyone; a paid premium track adds more missions and better rewards. Done well it gives every session a goal, gives your content team a fixed rhythm, and earns money from engaged players rather than from pressure. Done badly it becomes a second job that players resent, a source of refund requests, and a data model you cannot change once money has gone through it.
 
 [[Live Ops Events and Updates]] lists "battle pass season" as one row of a cadence table. This note is the deep version: the numbers that decide whether a season is completable, the free and premium split, mission design, the server model and its edge cases (purchases near the deadline, mid-season upgrades, seasons that slip), and when not to build one at all. Price ladders in general are in [[Robux Price Points and Offer Design]]; the ethics of time pressure are in [[Limited-Time Offers - Design and Ethics]].

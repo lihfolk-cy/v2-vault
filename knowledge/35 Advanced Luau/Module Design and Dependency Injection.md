@@ -3,6 +3,18 @@ tags: [luau, advanced-luau, architecture, modules, dependency-injection, testing
 ---
 # Module Design and Dependency Injection
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Tests need Play mode and real DataStores: Services reach out for engine services -> Inject narrow adapters
+> - Daily reward bugs only appear at midnight: `os.time()` called directly -> Inject `now`
+> - "Requested module was required recursively" or a hang: Top-level require cycle -> Container with cycle report, events, or extraction
+> - Utilities and config are required directly; services get dependencies injected.
+> - Each consumer depends on a narrow type with only the functions it calls.
+> - Time, randomness and engine services are injected where logic depends on them.
+>
+> Read more (18 KB note): ## 3. Depend on a type, not a module · ## 5. Wiring: a tiny container with a dependency graph · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Module Scripts and Requiring]] covers how `require` works: caching per VM, cyclic requires, not yielding at load, module shapes. [[Project Structure and Bootstrapping]] covers where modules live and the two-phase server start. [[Frameworks - Knit Matter and Others]] compares frameworks. This note is about the design question underneath all three: **how a module gets the other modules it needs**, and how to shape a module's public surface so it can be changed, tested and reasoned about. Dependency injection (DI) is the name for passing dependencies in instead of reaching out for them. In Roblox code it is usually a light pattern, not a framework, and it solves three very practical problems: cyclic requires, untestable code, and hidden initialisation order.
 
 ---

@@ -3,6 +3,18 @@ tags: [audio, sound, soundgroup, assets, loudness]
 ---
 # Sound Fundamentals
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Sound silent in the live game only: Experience lacks permission to the asset -> Upload under the experience owner; test live.
+> - First impact sound late: Not preloaded -> Preload with the owner.
+> - Mix wildly uneven: Volumes set by ear per file -> Measure and level.
+> - Assets uploaded under the experience owner and verified in a live server.
+> - Forbidden or removed ids listed.
+> - Bus tree with settings sliders wired to buses.
+>
+> Read more (14 KB note): ## 2. The `Sound` object · ## 6. Measuring loudness · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Roblox has two audio systems side by side. The classic one is the `Sound` object (with `SoundGroup` mixers and `SoundEffect` children), which every tutorial and most existing games use. The newer one is the modular audio API (`AudioPlayer`, `AudioEmitter`, `AudioListener`, `AudioDeviceOutput`, `Wire` and effect objects), which the docs now recommend: "`Sound`, `SoundGroup`, and `SoundEffect` objects are now discouraged in favor of the more robust functionality of audio objects" (Docs, October 2026). Both work today, and you will meet both.
 
 This note covers what is common to both: audio assets (formats, limits, permissions, moderation), the classic `Sound` object in depth, `SoundGroup` mixing, replication, preloading and first-play delay, and measuring loudness so sounds can be levelled. The new API is in [[The Audio API - Players Emitters Wires and Effects]]; 3D behaviour and mixing in [[Spatial Audio and Mixing]].

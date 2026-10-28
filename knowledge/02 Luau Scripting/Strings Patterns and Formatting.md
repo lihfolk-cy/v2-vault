@@ -3,6 +3,18 @@ tags: [luau, strings, patterns, formatting, utf8, text]
 ---
 # Strings Patterns and Formatting
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Search fails on names with `.` or `-`: Pattern magic -> `find(s, text, 1, true)`
+> - Garbled last character: `sub` cut a multi-byte character -> `utf8.offset`
+> - `0.30000000000000004` on screen: Raw `tostring` -> `string.format` / formatter
+> - Literal searches use plain mode.
+> - Length limits count code points, not bytes, where users see them.
+> - Numbers shown to players go through formatters.
+>
+> Read more (19 KB note): ## 4. Patterns · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Strings in Luau are immutable sequences of **bytes**. That one fact explains most string bugs in Roblox games: `#` counts bytes, not letters; `string.sub` can cut an emoji in half; `string.upper` does not know accented letters. This note covers the string library, interpolation and `string.format`, Lua patterns (which are not regular expressions), UTF-8 handling, number and time formatting for UI, building strings efficiently, parsing, and the platform rules around user text.
 
 ---

@@ -3,6 +3,15 @@ tags: [procedural, ik, fabrik, ccd, tails, tentacles, spines, chains, luau]
 ---
 # Multi-Bone IK - FABRIK and CCD
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Tail corkscrews when it passes vertical: `CFrame.lookAt` with a world up vector per segment -> minimal rotation from the rest direction, root first
+> - Chain slowly stretches: lengths taken from the current pose, or drift from float error -> lengths from the rig, re-measured on scale change
+> - Chain jitters on a still target: not enough iterations, tight cone limits fighting the passes -> more iterations, looser limits, early-out
+>
+> Read more (15 KB note): ## FABRIK · ## CCD · ## Common mistakes
+<!-- tldr:end -->
+
 Two-bone IK has a closed form. Chains of three or more joints (tails, tentacles, necks, spines, whips, flexible blades, ropes) do not: there are infinitely many poses that reach a target and no formula picks one. The two standard iterative answers are **FABRIK** (Forward And Backward Reaching IK) and **CCD** (Cyclic Coordinate Descent). This note explains both, adds joint limits, shows how to turn a solved chain into Roblox `Transform`s without twist flips, and covers the non-IK alternatives (springs, waves, verlet) that are often the better choice for creatures.
 
 ## When you need a chain solver at all

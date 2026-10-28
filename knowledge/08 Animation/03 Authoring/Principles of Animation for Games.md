@@ -3,6 +3,16 @@ tags: [authoring, craft, principles, game-animation]
 ---
 # Principles of Animation for Games
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - These do not appear in the classic twelve but decide whether game animation works.
+> - Responsiveness: the time from the player's input to the result.
+> - Film: volumes deform to show speed, impact and flexibility.
+> - Film: a preparatory move tells the audience something is coming.
+>
+> Read more (15 KB note): ## 2. Anticipation · ## Game-only principles
+<!-- tldr:end -->
+
 The twelve principles of animation (Thomas and Johnston, *The Illusion of Life*) were written for film, where the animator controls every frame the audience sees. In a game the player controls timing, the camera moves, clips blend into each other, and the same attack is seen by the attacker, the target and bystanders at different distances and with network delay. Every principle still applies, but several change meaning.
 
 This note goes through the twelve with their game translation and the Roblox-specific consequences, then adds the principles that only exist in games. Numbers are labelled: "reference project" means measured or standardised in one live action game; "rule of thumb" means common practice, not a law.

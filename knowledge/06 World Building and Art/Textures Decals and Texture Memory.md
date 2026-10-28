@@ -3,6 +3,18 @@ tags: [world-building, art, textures, decals, memory, performance, images]
 ---
 # Textures Decals and Texture Memory
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Uploading 1024 (or larger) for everything "to be safe".
+> - Avoid: A unique texture per prop instead of an atlas or trim sheet.
+> - Avoid: Decals for dirt and wear on every wall: more draw calls and overdraw than a baked map.
+> - Most props at 512 or below; 1024 only for shared sheets and hero surfaces.
+> - PBR sets trimmed to the maps that matter.
+> - Kits share trim sheets or atlases; tints instead of duplicate textures.
+>
+> Read more (16 KB note): ## Decal versus Texture · ## How texture memory works · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Images reach the 3D world in five ways: **Decals**, **Textures**, a **MeshPart's `TextureID`**, **SurfaceAppearance** maps (see [[Materials MaterialVariants and SurfaceAppearance]]) and **MaterialVariant** maps. They also appear in UI, particles and beams, which share the same memory pool. This note covers the two face-projected image objects (Decal and Texture), how image memory really works, and how to keep a world sharp on desktop without blowing the memory budget on phones.
 
 ## Decal versus Texture

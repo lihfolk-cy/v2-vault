@@ -3,6 +3,18 @@ tags: [marketing, growth, ads-manager, sponsored-ads, user-acquisition, roas, ma
 ---
 # Sponsored Ads and Campaign Math
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - CPP far higher than expected: Weak creative; narrow targeting; Engagement objective (higher by... -> Test new concepts; widen audience; separate budgets per objective
+> - Low CPP, terrible D1 for ad players: Creative over-promises, or the ad audience is broad and casual -> Change creative to show the real loop; check onboarding for ad...
+> - Organic traffic fell during a campaign: Coincidence, or the campaign attracted players whose bad... -> Ads do not affect ranking (docs); look for a release or funnel...
+> - Clear goal per campaign: measurement, thumbnail test, reactivation, eligibility, or profit
+> - Objective, audience and budget type chosen deliberately (they cannot change later)
+> - Launch data tags whitelisted and logged as an analytics field
+>
+> Read more (16 KB note): ## 1. The platform, as documented (Roblox docs, as of October 2026) · ## 7. Measuring ad cohorts in your own analytics · ## 8. Failure modes · ## 11. Checklist
+<!-- tldr:end -->
+
 Paid user acquisition on Roblox means Ads Manager: your game's tile shown as a sponsored placement on Home and in search, with Roblox's auto-bidder spending a budget you set. The interface is simple. The decisions are not: who to target, how much a player is worth to you, how long to wait before judging, and what the ads can and cannot do for organic ranking.
 
 This note covers the platform mechanics (Roblox docs, as of October 2026), the maths of cost per play, payback and return on ad spend, a worked campaign plan, and the failure modes that make most first campaigns lose money. [[Ads and Rewarded Video]] covers the other direction (earning from ads in your game) and gives a short introduction to buying; this note is the deep version of the buying side.

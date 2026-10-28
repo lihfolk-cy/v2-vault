@@ -3,6 +3,15 @@ tags: [fundamentals, api, reference, animationtrack]
 ---
 # AnimationTrack Reference
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: `Play()` every frame -> Check `IsPlaying`
+> - Avoid: Setting `TimePosition` before `Play` -> Play first
+> - Avoid: Using `Length` right after loading -> Wait, preload, or use data
+>
+> Read more (14 KB note): ## Properties · ## Behaviour you need to know · ## Common mistakes
+<!-- tldr:end -->
+
 An `AnimationTrack` is one loaded instance of a clip on one [[Animator Deep Dive|Animator]]. You never create it with `Instance.new`; `Animator:LoadAnimation(animation)` returns a fresh one every call. This note lists every member with its exact signature and default, then covers the behaviour you only learn by shipping: restart rules, time semantics, the difference between `Stopped` and `Ended`, and what to do while the asset is still loading.
 
 Member list verified against the engine API dump and the class page (October 2026).

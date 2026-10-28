@@ -3,6 +3,18 @@ tags: [gameplay, pathfinding, navigation, npc, ai, fallbacks, debugging]
 ---
 # Pathfinding Edge Cases and Fallbacks
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Pathing to the player's root position -> Goal resolver: project down, last grounded position, ring samples
+> - Avoid: Agent radius equal to the body -> Widest collidable part plus 0.5 to 1 stud
+> - Avoid: Velocity-only stuck detection -> Progress over a window
+> - Goals and starts resolved onto the floor; airborne targets use last grounded position.
+> - Agent parameters measured from the widest collidable part, with margin, per size class.
+> - Doors have `PassThrough` modifiers; spawned barriers trigger delayed recomputes.
+>
+> Read more (20 KB note): ## 2. Bad endpoints: resolve the goal before asking · ## 5. Follower edge cases · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Pathfinding]] covers the `PathfindingService` API, costs, modifiers, links and a robust follower. This note is about what happens after the happy path: the goal is in the air, the start is inside a wall, the door just closed, the client has not streamed the target in, the NPC grinds against a corner for nine seconds, forty enemies ask for a path on the same frame. Every one of these looks to players like "the AI is broken", and every one has a cheap fallback. The rule this note is built around: **an NPC must always be doing something sensible, even when no path exists.**
 
 Related: [[Pathfinding]], [[NPC AI and Behaviour]], [[Behaviour Trees Utility AI and State Machines for NPCs]], [[Characters and Humanoids]], [[Raycasts Shapecasts and Spatial Queries]], [[Instance Streaming]], [[Collision and Physics Geometry]].

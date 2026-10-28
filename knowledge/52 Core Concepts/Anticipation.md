@@ -3,6 +3,16 @@ tags: [core-concept, animation, game-feel, combat, ui]
 ---
 # Anticipation
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - In games anticipation does two jobs. For the player's own actions it adds feel, but every frame of wind-up is input delay.
+> - Player anticipation must be short. Rule of thumb: keep wind-up on player attacks under about 100 ms for light actions; longer...
+> - Anticipation can hide latency. Start the wind-up on the client the instant the player presses, and send the request at the...
+> - Enemy telegraphs must outlast latency plus reaction time.
+>
+> Read more (3 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+<!-- tldr:end -->
+
 **Anticipation** is the small movement before the main action that prepares the viewer for it: the wind-up before a punch, the crouch before a jump, the button shrinking slightly before it pops. It is one of the classic principles of animation and one of the main tools for making actions readable.
 
 ## Why it matters on Roblox

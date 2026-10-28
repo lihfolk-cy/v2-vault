@@ -3,6 +3,16 @@ tags: [core-concept, input, game-feel, combat, controls]
 ---
 # Input Buffering
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Players press early, especially in combos and platforming.
+> - The buffer window must be short enough never to surprise.
+> - Buffer one action, latest wins (usually).
+> - Some actions should not buffer. Interacting with the wrong target or opening a menu after a fight are worse than a missed press.
+>
+> Read more (3 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+<!-- tldr:end -->
+
 **Input buffering** remembers a button press for a short window and performs it as soon as the action becomes possible. If a player presses attack 80 ms before the current swing ends, a buffered system fires the next swing on the first allowed frame instead of ignoring the press.
 
 ## Why it matters on Roblox

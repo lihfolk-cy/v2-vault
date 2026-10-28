@@ -3,6 +3,18 @@ tags: [data, schema, migrations, versioning, rollback, case-study, luau]
 ---
 # Schema Migrations - Worked Case Studies
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Step reads a nested field without checking the parent exists -> `MigrateUtil.tbl` everywhere; fixture profiles with missing fields
+> - Avoid: Date-based condition inside a step -> Gate on schema only
+> - Avoid: Delete before copy when splitting keys -> Copy first, delete in a later release
+> - Every step pure, non-yielding, total over all historical shapes.
+> - Anything taken away leaves a `MigrationLog` entry.
+> - Paid value never shrinks in a migration.
+>
+> Read more (23 KB note): ## Case 2: splitting one key into two · ## Case 6: migrations that survive a rollback · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Data Schema Design and Migrations]] gives you the framework: a `Schema` integer on every profile, an ordered chain of migration steps, a refusal of newer data, and `reconcile` for additive fields. This note is the next level down. It walks through seven migrations of the kind every live game eventually ships, each with the trap that makes the obvious version wrong, working Luau, and the way to tell from production data whether it went well.
 
 Prerequisites: [[DataStore Fundamentals]], [[Session Locking and Profile Libraries]], [[Saving Correctly - Autosave and BindToClose]].

@@ -4,6 +4,18 @@ tags: [case-study, top-games, simulator, pets, rng, trading, live-ops, monetizat
 
 # Case Study - Pet Simulator 99
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - The core verb pays out in the first ten seconds; first hatch within two minutes.
+> - One long-term currency, plus per-world soft currencies if you have worlds.
+> - Rebirths unlock features rather than only resetting numbers.
+> - Trading opens only after a progress milestone.
+> - Title skeleton fixed; one bracketed tag rotates per update.
+> - Release slot fixed and announced.
+>
+> Read more (16 KB note): ## Snapshot · ## Click-through: thumbnail, icon and title · ## Checklist
+<!-- tldr:end -->
+
 Pet Simulator 99 (PS99) is the third major Pet Simulator game from BIG Games: pets break coins, coins buy eggs and zones, eggs hatch stronger pets, and a trading economy built around rare "Huge" pets keeps the top end alive. It is the reference for three things on Roblox: launching a sequel that carries a franchise's players and items forward, running a weekly update machine for years, and building a store around paid luck. The first two are worth studying closely. The third needs care.
 
 Source labels used below: **Public stats** (Roblox's public APIs or a stats site, with the date checked), **Observed on the store page** (the public experience page, thumbnails and pass list, October 2026; nothing was played or logged into), **Press** (news and guide sites, with their dates), **Studio statement**.

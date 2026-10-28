@@ -3,6 +3,18 @@ tags: [game-design, balancing, spreadsheets, economy, simulation, analytics]
 ---
 # Balancing with Spreadsheets and Data
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Typing derived numbers by hand -> Formulas from inputs; only inputs are typed
+> - Avoid: Balancing on averages for random rewards -> Percentiles from simulation
+> - Avoid: Tables whose probabilities do not sum to 1 -> A check column; for paid items, displayed % must total 100%
+> - One sheet with Inputs, Ladder, Items, Rarity, Sources and Sinks, Scenarios.
+> - Minutes-per-step plotted; spikes flagged automatically.
+> - Prices expressed as minutes of income at the unlocking zone.
+>
+> Read more (17 KB note): ## 4. Odds and rarity maths · ## 7. Simulate the randomness · ## 10. Common mistakes · ## 11. Checklist
+<!-- tldr:end -->
+
 Balancing is turning design intent ("zone 5 should take about ten minutes", "a Mythic should feel twice as strong as a Legendary") into numbers, then checking those numbers against what real players do. The spreadsheet is where intent becomes numbers; simulation checks the randomness; live analytics checks the players. This note shows how to lay out a balance sheet for a Roblox game, the formulas that matter (curves, time per step, expected value, odds, power fits), how to simulate RNG in Luau, and how to close the loop with live data.
 
 Labels: **Docs** (create.roblox.com, checked October 2026), **Reference project** (one production RNG combat game, anonymised), **Rule of thumb**.

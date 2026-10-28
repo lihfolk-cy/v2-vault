@@ -3,6 +3,18 @@ tags: [genre-system, horror, npc-ai, pathfinding, worked-build, server-authority
 ---
 # Horror Monster Chase AI End to End
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Entering a locker while the monster watches.
+> - Two players, one locker. The `Occupied` attribute prevents it.
+> - Leaving the game while hiding. The attribute signal does not run for a player who has left, so the `Occupied` flag would stay...
+> - Solo: monster patrols in order; walking past behind it is safe; sprinting nearby draws it to investigate.
+> - Enter its sight cone: chase starts; break line of sight and wait: it goes to your last position, searches, returns.
+> - Hide in a locker out of sight: safe. Hide while being chased in view: refused.
+>
+> Read more (32 KB note): ## 4. The server: MonsterService · ## 5. The client: MonsterClient · ## 6. Edge cases and failure modes · ## 9. Test checklist
+<!-- tldr:end -->
+
 This note builds a complete horror monster: a server-owned NPC with a five-state machine (patrol, investigate, chase, search, return), sight and hearing that the server computes from its own view of the world, a memory that lets players escape, pathfinding that recomputes on a budget and recovers when stuck, hiding spots that are fair in both directions, a catch that cannot chain-kill a group, client-side dread cues (music, heartbeat, an accessible screen-edge warning, a jumpscare), and save hooks for deaths and escapes. [[Genre Playbook - Horror and Story]] gives the design principles (fair senses, memory that decays, speed at or below sprint) and a tension director sketch; this note turns those principles into a working system and adds the failure modes that make monsters feel broken in practice.
 
 > **All code is reviewed, not run.** Strict Luau against Roblox docs (as of October 2026), checked by reading. Run section 9 before you trust it.

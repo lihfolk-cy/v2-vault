@@ -3,6 +3,18 @@ tags: [monetization, subscriptions, roblox-plus, creator-rewards, premium, luau]
 ---
 # Subscriptions and Premium Payouts
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Planning revenue around Premium playtime payouts (gone since July 2025).
+> - Avoid: Granting a Plus thank-you reward on `PromptRobloxSubscriptionPurchaseFinished` (it only says they tried).
+> - Avoid: Bronze/Silver/Gold experience subscriptions (not supported; all can be owned at once).
+> - Subscription benefits distinct from passes; same on every platform
+> - Status cached server-side; `UserSubscriptionStatusChanged` handled
+> - Daily stipend idempotent per UTC day
+>
+> Read more (16 KB note): ## 1. Experience subscriptions · ## 2. Roblox Plus (the platform subscription) · ## 5. Common mistakes · ## 6. Checklist
+<!-- tldr:end -->
+
 Recurring revenue on Roblox now comes from three different places, and their names are easy to confuse:
 
 1. **Experience subscriptions**: *your* monthly product, sold inside your game.

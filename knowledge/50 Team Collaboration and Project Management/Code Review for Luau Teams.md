@@ -3,6 +3,18 @@ tags: [team, code-review, luau, quality, security, git, workflow, strict-mode]
 ---
 # Code Review for Luau Teams
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Reviewing top to bottom -> Risk order: trust, data, yields, lifecycle, types, contracts, style
+> - Avoid: Remote parameters typed as concrete types -> Type as `unknown`, narrow at runtime
+> - Avoid: Huge pull requests -> Size limit, contract-first splits
+> - Checks (StyLua, Selene, luau-lsp, tests) pass before anyone reviews.
+> - Reviewer reads in risk order and asks "what if this runs twice?" for every grant.
+> - Every remote argument typed `unknown` and validated; rate limits present.
+>
+> Read more (18 KB note): ## 2. The review order · ## 3. Luau smells with fixes · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Code review on Roblox teams is usually either absent ("we all edit live, it's fine") or a rubber stamp on a pull request nobody reads. Neither catches what actually breaks Roblox games: a remote handler that trusts the client, a save that yields inside `PlayerRemoving` and is lost on shutdown, a connection that leaks once per round, a `::` cast that hides a nil. This note is a working review practice for small Luau teams: what to review in what order, the Luau-specific smells with before and after code, how to review when your code lives only in Studio, what to automate so humans do not argue about formatting, how to review AI-generated code, and how to keep review fast enough that people do not route around it.
 
 It builds on the repository and CI setup in [[Code Pipeline - Rojo Git and CI]] and [[Git and Source Control for Roblox]] (which has a short review checklist), the tool configuration in [[External Tooling - Rojo Wally Selene StyLua]], and the rubric and independent-judge practice in [[Team Roles and Workflows]].

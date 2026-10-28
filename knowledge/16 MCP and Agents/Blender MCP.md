@@ -3,6 +3,18 @@ tags: [mcp, blender, ai, agents, modeling, pipeline]
 ---
 # Blender MCP
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Every tool fails to connect: Add-on server not started, wrong port, Blender closed -> Start the server in add-on preferences; restart the client
+> - Call times out: Blender busy (render, modal operator, dialog) -> Wait; cancel the modal; move heavy work to `blender -b`
+> - Code "failed" but the scene changed: Non-dict result reported as error after running -> Re-inspect; return dicts
+> - Official server, Blender 5.1+, add-on enabled, server started.
+> - Working on a copy of the .blend, or the file is under version control.
+> - The agent inspects before editing and returns dicts.
+>
+> Read more (15 KB note): ## 2. Architecture and why it matters · ## 3. The tools (official server) · ## 7. Failure modes · ## 8. Checklist
+<!-- tldr:end -->
+
 A Blender MCP server lets an AI agent inspect and change a running Blender: list collections and objects, read mesh and material details, run `bpy` Python, take screenshots of the window, render thumbnails and viewport images, and search the Blender API and manual. Combined with the [[Roblox Studio MCP Server]] in the same host, one agent can model a prop, render its icon, export it, and wire it into the game, with a human only doing the steps the tools cannot (importing a file into Studio, approving uploads).
 
 This note covers the official Blender Lab server, the older community server, the tools, how to use them well for Roblox assets, and the rules the reference project used. Facts are **as of October 2026**.

@@ -3,6 +3,18 @@ tags: [business, legal, ip, copyright, licensing, creator-store, assets, minors]
 ---
 # Legal Basics - IP Licenses and Assets
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Treating anything public as free to use.
+> - Avoid: Assuming Creator Store assets are always clean.
+> - Avoid: Non-commercial licences in games with paid items.
+> - All game assets uploaded to the owning group, with source files kept.
+> - Licence log for every third-party asset and library.
+> - No non-commercial, share-alike or unknown licences in core content.
+>
+> Read more (16 KB note): ## 3. Using other people's assets · ## 5. Other people's games, brands and characters · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 > **Not legal advice.** This note explains general concepts that help Roblox developers ask the right questions. It is not legal advice. Copyright, trademark, contract and consumer law differ by country, and the details matter. For a real dispute, a takedown, a brand deal or a large contract, talk to a qualified lawyer where you live. The binding platform rules are Roblox's Terms of Use, Community Standards, the Creator Store terms and the Developer Exchange Terms of Use; read the current versions. **Minors** usually need a parent or guardian for contracts, licences and any legal process.
 
 Every Roblox game is built from pieces: your code, your art, assets from the Creator Store, fonts, music, libraries from the community, ideas from other games. Each piece has an owner and a set of rules for who may use it. This note covers the concepts (copyright, trademarks, licences), how Roblox's own systems (asset permissions, the Creator Store, Rights Manager, License Manager) fit around them, and practical rules for keeping a game clean.

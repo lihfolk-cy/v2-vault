@@ -3,6 +3,15 @@ tags: [case-study, performance, memory, instances, baking]
 ---
 # Case Study: Cutting a Million Instances
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Deleting before measuring by folder. Symptom: weeks of work on small folders while one huge folder remains.
+> - Avoid: Cleaning without a reader audit. Symptom: features silently break because a script walked the deleted Poses.
+> - Avoid: Assuming streaming solves ReplicatedStorage bloat.
+>
+> Read more (14 KB note): ## Step 5: stubs and buffers · ## Nuances and edge cases · ## Common mistakes in production
+<!-- tldr:end -->
+
 One live action game's place grew to about **2.36 million instances**, most of them animation data, and Studio crawled at about 15 fps. Over a few weeks a series of passes took it below a million, cut ReplicatedStorage (what every client downloads) by hundreds of thousands of instances, and did it without losing a single clip. This is the order of operations, the techniques, the numbers, and the rules that kept it safe. Mechanisms: [[Baked Clip Stubs and Archiving]], [[Clip Buffer Format]], [[Clip Archive Server]].
 
 ## Why instances, specifically

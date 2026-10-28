@@ -3,6 +3,18 @@ tags: [systems, enemies, boss, phases, telegraph, dodge]
 ---
 # Boss Animation and Phases
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Intro once per player, skippable after 2 s, untouchable, restores on every exit.
+> - Phase shift clips untouchable, their hits still land; hazards start after the clip.
+> - `(Hit - Tele) / speed >= 0.5` for every attack in every phase.
+> - Following markers lock 0.45 s before the blow; fast shot markers last until arrival.
+> - Only the last combo link gold.
+> - Root motion on a child joint; orbit pieces in code.
+>
+> Read more (10 KB note): ## Intros · ## Rigs for big creatures · ## Checklist
+<!-- tldr:end -->
+
 A boss is an enemy whose animation carries the fight's structure: an intro that introduces it, telegraphs players must read and dodge, phase shifts that change its behaviour, and a death that pays off. Bosses are also physically large, so every rig, scale and camera problem gets bigger. This note covers boss intros, untouchable clips, phases, telegraphs and dodge windows, rigs for big creatures and the camera lanes they need. Numbers come from one live action game (the reference project). The general enemy protocol is in [[Enemy Animation State Protocol]].
 
 ## The boss clip set

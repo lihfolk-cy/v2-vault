@@ -3,6 +3,18 @@ tags: [modeling, organic, creatures, sculpting, blender, enemies, rigging-prep]
 ---
 # Organic and Creature Modeling
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Choosing skinned vs segmented after modelling -> Decide first, in the brief
+> - Avoid: Flat cuts between rigid pieces -> Ball-and-socket or overlapping sleeves
+> - Avoid: Modelling in a relaxed, arms-down pose -> A-pose or T-pose
+> - Skinned, segmented or mixed decided before modelling.
+> - Modelled at final stud size, facing -Y, root at the origin.
+> - One exaggerated feature; silhouette reads as a filled shape.
+>
+> Read more (16 KB note): ## 1. The first decision: skinned or segmented · ## 2. Three ways to build an organic form · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Organic modelling covers anything grown rather than built: creatures, monsters, faces, hands, trees, roots, tentacles, rocks with soft forms. In a game the organic model has a second job beyond looking right: it must **move**. That makes the first decision in every creature project a rigging decision, not a sculpting one: will this creature be one skinned mesh that bends, or a set of rigid pieces on joints? The answer changes how you model the shoulders, where the polygons go, how many meshes you export and how much the creature costs.
 
 This note covers that decision, the three ways to build an organic form (box modelling, the Skin modifier, sculpt then retopologise), proportion and anatomy for readable game creatures, faces, and the reference project's creature pipeline with its real numbers. Topology for deformation has its own note ([[Topology and Edge Flow]]), as do rig conventions ([[Creature Rig Conventions]]) and retopology ([[Retopology and Decimation]]).

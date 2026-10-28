@@ -3,6 +3,18 @@ tags: [team, packages, assets, asset-privacy, multi-place, versioning, workflow,
 ---
 # Packages and Shared Assets Across Places
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Expecting a package publish to be live -> Publish each place, restart servers
+> - Avoid: Granting a package but not its restricted meshes -> Grant the assets to that experience, knowing it is permanent
+> - Avoid: Builders publishing kit changes during an event -> Dev and stable package pairs
+> - Every shared thing assigned to a layer: asset id, package, or code.
+> - Private assets granted only to experiences the group will always own.
+> - Packages with restricted contents: the assets are granted to every experience that uses the package.
+>
+> Read more (19 KB note): ## 1. Three layers, three sharing models · ## 6. When the package owner leaves · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Packages and Asset Reuse]] documents the package workflow itself: creating, inserting, publishing, configuration attributes, nested packages, mass update, comparing versions, and a read-only report of package copies in one place. This note is about the team problem that sits on top of it: a game with several places (a lobby, match places, a test place), sometimes several games sharing one art kit, and several people publishing shared things. The questions are how a change travels from one person's edit to every live server, how to avoid one teammate's package publish breaking another place, how asset permissions differ from package permissions, what to do when the person who owns the packages leaves, and how to see drift across places that you cannot open at the same time.
 
 Labels: **Roblox docs (as of October 2026)**, **measured in the reference project**, **rule of thumb**.

@@ -3,6 +3,18 @@ tags: [luau, errors, pcall, retries, reliability, logging]
 ---
 # Error Handling and Retries
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Player data wiped after an outage: Load failure treated as "new player" -> Distinguish failure from empty; kick or retry
+> - Bugs never appear in logs: Broad `pcall` around logic -> Wrap only fallible calls; log failures
+> - DataStore throttling cascades: Immediate retries in a loop -> Backoff with jitter; attempt cap
+> - Every web-backed call is wrapped and its failure has a defined outcome.
+> - Retries: capped, exponential, jittered, idempotent, re-validated after waits.
+> - No broad `pcall` around game logic; bugs fail loudly.
+>
+> Read more (15 KB note): ## 5. Retry with exponential backoff and jitter · ## 10. Failure policy by situation · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Roblox code fails in two very different ways. **Bugs** (indexing `nil`, wrong types, missing instances) should fail loudly and early so you find them. **Expected failures** (DataStore throttling, HTTP timeouts, a player leaving mid-teleport, a purchase prompt failing) must be caught, retried or handled, because they will happen in production every day. This note covers how errors propagate in Roblox's threaded model, `error`/`pcall`/`xpcall`/`assert`, tracebacks, retry with backoff and jitter, timeouts, result types, and the pre-save checks that keep whole classes of bugs out of live servers.
 
 ---

@@ -3,6 +3,18 @@ tags: [luau, math, vector3, cframe, random, geometry]
 ---
 # Math Vectors and CFrames
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Part disappears / huge coordinates: NaN from `.Unit` of zero or divide by zero -> Guard magnitude; validate inputs
+> - Rotation off by a lot: Degrees passed where radians expected -> `math.rad`
+> - Object spins around the wrong axis: Multiplication order (local vs world) -> `cf * rot` local; rebuild for world
+> - Angles in radians in code; degrees only at the UI/config boundary.
+> - Every normalization guards against zero length.
+> - Per-frame smoothing uses `dt`.
+>
+> Read more (20 KB note): ## 4. CFrame fundamentals · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Game code is mostly arithmetic on numbers, `Vector3`s and `CFrame`s. This note covers the `math` library (including the newer `lerp`, `map`, `isnan` family and constants), randomness with `Random`, `Vector3` and the native `vector` library, `CFrame` construction, composition and space conversion, the recipes you need every week (look-at, facing angles, projections, frame-rate independent smoothing), and the numeric traps: float precision, NaN, Euler angles and the far-from-origin problem. Character joints and CFrame composition for rigs are covered in depth in [[Motor6D Math and CFrame Composition]].
 
 ---

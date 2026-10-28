@@ -3,6 +3,18 @@ tags: [game-design, genre, tower-defense, waves, co-op, units, economy, performa
 ---
 # Genre Playbook - Tower Defense
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Humanoid NPC enemies -> Data-driven enemies, client-rendered
+> - Avoid: One remote per enemy per frame -> Batched spawn/death events plus unreliable corrections
+> - Avoid: Scaling enemy *count* with players -> Scale *health*; keep count flat
+> - Match loop playable start to finish on a phone, with touch placement that is precise (snap, preview, confirm).
+> - Worst wave of the hardest mode measured: server frame time, bandwidth per player, client memory on a low-end device.
+> - Placement remote validates loadout, cash, caps, bounds, footprint and surface; fuzzed with bad inputs.
+>
+> Read more (19 KB note): ## 3. Systems you must build · ## 5. The technical risk: enemy count · ## 8. Common mistakes · ## 9. Launch checklist
+<!-- tldr:end -->
+
 Tower defense (TD) on Roblox means a team of one to four players placing units ("towers") beside a fixed path while waves of enemies walk it toward a base. It sits between a strategy game and a collection game: the match is a puzzle about placement and money, and the meta-game around it is usually a unit roster you pull, upgrade and evolve. That combination gives TD some of the longest sessions on the platform and some of the hardest technical problems, because a late wave can put hundreds of moving enemies and dozens of firing towers into one server at once.
 
 This playbook covers the two loops, match and session length, monetisation that fits, the systems you must build, the Roblox-specific technical risks (above all, enemy count), the patterns successful TD games share, and a launch checklist. It goes deeper than the general notes on [[Core Loops and Session Design]] and [[Genre Playbook - RNG and Collection Games]].

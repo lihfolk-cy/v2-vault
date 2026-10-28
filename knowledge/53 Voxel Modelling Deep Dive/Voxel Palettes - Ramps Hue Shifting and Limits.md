@@ -3,6 +3,18 @@ tags: [modeling, voxel, palette, colour, ramps, hue-shifting, oklab, luau, art-d
 ---
 # Voxel Palettes - Ramps Hue Shifting and Limits
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Shadows look grey and dirty: Ramp mixed straight towards black -> Rotate shadow hue towards blue or violet; keep or raise saturation
+> - Highlights look chalky: Mixed straight towards white -> Rotate towards yellow; drop saturation only slightly
+> - Shadows look purple in game: Palette shift doubled by a blue ambient or sky -> Smaller shift (about 10 degrees) for that lighting
+> - Game value plan written: ground, characters, interactables, sky, glow.
+> - Three steps per material by default; four only on large close surfaces.
+> - Hue shift tuned to each zone's lighting; tested at low and high quality on a phone.
+>
+> Read more (17 KB note): ## 7. Laying out the palette for cheap recolours · ## 9. Snapping a messy build onto a palette (OKLab quantiser) · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 In voxel art the palette is the texture. There are no painted details to hide a weak colour choice behind: every cell is one flat colour, and the only things that turn those flat colours into form are the steps between them and the engine's lighting. [[Voxel and Blocky Modeling]] gives a three-tone ramp (shadow, body, lit top) built by plain mixing. This note goes further: why straight mixing towards black and white gives dull ramps, how hue shifting fixes it and how far to push it under Roblox lighting, how many colours a game palette should have and why exact colour equality matters for merging, how to lay a palette out so recolours are cheap, and a Luau quantiser that snaps a messy build onto a palette using perceptual distance.
 
 ## 1. What a ramp has to do

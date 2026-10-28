@@ -3,6 +3,18 @@ tags: [marketing, growth, competitor-analysis, research, game-design, benchmarks
 ---
 # Competitor Analysis Method
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Studying only the genre leader and copying its scale.
+> - Avoid: Reading a competitor's success into one feature while ignoring their years of content and audience.
+> - Avoid: Using an old account with progress or personalisation, so the first session is not representative.
+> - Three tiers chosen: 1 to 2 leaders, 2 to 4 peers, 1 to 2 adjacent
+> - Watchlist set up in Creator Hub (up to nine games)
+> - Teardown template filled in live, on phone and PC, fresh account
+>
+> Read more (14 KB note): ## 3. Data sources and how far to trust them · ## 4. The play-through teardown · ## 9. Common mistakes · ## 10. Checklist
+<!-- tldr:end -->
+
 Every Roblox genre has a few games that set what players expect: how fast the first reward comes, what the shop looks like, how often updates land, what the thumbnail promises. Studying them is how a small team avoids building a game that is already behind on day one. Studying them badly is how teams end up cloning a top game's surface, missing why it works, and competing head-on with a game that has years of content.
 
 This note gives a repeatable method: choosing who to study, what data you can get (official and unofficial, and how far to trust each), a structured play-through teardown with a stopwatch, a store and economy teardown, tracking a competitor's updates over time, and turning all of it into decisions. It ends with the ethical and legal lines, because "study" and "copy" are different things under both Roblox's Community Standards and copyright law. Platform facts are labelled "Roblox docs (as of October 2026)"; the rest is rule of thumb.

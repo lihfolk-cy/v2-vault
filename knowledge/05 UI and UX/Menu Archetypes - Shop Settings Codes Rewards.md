@@ -3,6 +3,18 @@ tags: [ui, menus, shop, settings, codes, daily-rewards, quests, archetypes]
 ---
 # Menu Archetypes - Shop Settings Codes Rewards
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: No pending state on claim and buy buttons (double requests).
+> - Avoid: Granting purchases from client prompt callbacks.
+> - Avoid: Code lists shipped to the client.
+> - One presenter, one open panel, large close in the top-right, gamepad B closes.
+> - Claim/buy buttons implement claim, claimed, locked and pending.
+> - All grants and validations on the server; claims marked before paying.
+>
+> Read more (15 KB note): ## 2. The button state triad · ## 5. Codes · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Most Roblox games, whatever their genre, ship the same half-dozen menus: a shop, settings, a codes box, daily or playtime rewards, a quest board and often a rebirth or prestige screen. Players have learned what these look like from the most popular games, so following the archetype makes your menu instantly usable, and breaking it costs players time. This note describes each archetype's anatomy, the server/client split behind its buttons, the numbers that worked in production, and the mistakes that turn a menu into a support ticket.
 
 Sources: **Docs** (MarketplaceService, TextBox, GuiButton; October 2026), the **reference project** (one production game: quest board, free gifts, shop, settings and backpack rebuilds), a **cartoon simulator UI kit standard** (menu specs quoted as that kit's rules), and **rule of thumb**. Visual components are in [[UI Design Systems]]; purchases in [[Developer Products and ProcessReceipt]] and [[Game Passes]].

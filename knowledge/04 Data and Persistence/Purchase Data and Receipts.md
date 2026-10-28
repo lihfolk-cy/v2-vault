@@ -3,6 +3,18 @@ tags: [data, monetization, processreceipt, idempotency, purchases, receipts]
 ---
 # Purchase Data and Receipts
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Returning `PurchaseGranted` before saving (Paid items lost on crash or failed save)
+> - Avoid: Granting without checking `PurchaseId` (Double grants on retries and concurrent servers)
+> - Avoid: Grant and id saved in different writes or keys (A crash keeps one without the other)
+> - Exactly one `ProcessReceipt`, covering every product id.
+> - Waits for the profile; refuses when it cannot save.
+> - Grant and `PurchaseId` recorded together, synchronously, in the same key.
+>
+> Read more (16 KB note): ## The handler · ## Two-layer design for gifts (production lesson) · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A developer product purchase is the one write in your game where a bug costs a player real money or costs you a refund dispute. The rules come from two places: the exact guarantees `MarketplaceService.ProcessReceipt` gives (and does not give), and the data store's failure modes. This note covers both, then gives a complete idempotent receipt handler built on a session-locked profile, the extra ledger needed for gifting, and the production lessons from one game that sold boosts, bundles, gifts and one-time packs. The monetization side (pricing, product design) lives in [[Developer Products and ProcessReceipt]] and [[Monetization Overview]]; this note is about getting the data right.
 
 Prerequisites: [[Session Locking and Profile Libraries]], [[Saving Correctly - Autosave and BindToClose]].

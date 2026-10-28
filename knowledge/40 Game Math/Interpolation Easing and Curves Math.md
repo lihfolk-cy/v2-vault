@@ -3,6 +3,18 @@ tags: [math, game-math, interpolation, easing, curves, bezier, splines, tweening
 ---
 # Interpolation Easing and Curves Math
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Damage negative past max range: Unclamped remap -> Clamp `t` before shaping
+> - Button press feels laggy: In or InOut easing on a response -> Out easing for player-triggered motion
+> - Long slides overshoot badly: Back overshoot scales with distance -> Smaller overshoot or a spring
+> - Every tunable curve is `invLerp, clamp, shape, lerp`, with its shape named in config.
+> - Engine easing is sampled with `TweenService:GetValue` before you rely on its exact shape.
+> - Out easing for responses, In for exits, InOut only for unchained moves.
+>
+> Read more (23 KB note): ## 2. Easing functions are just shapes of t · ## 5. Curves through space: Bezier and Catmull-Rom · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Interpolation is how a game turns "from here to there" into motion, colour, damage falloff and difficulty ramps. [[Math Vectors and CFrames]] covers `math.lerp`, `math.map`, `CFrame:Lerp` and frame-rate independent exponential smoothing; [[Springs Damping and Smoothing]] covers springs; [[Keyframes, Easing and Interpolation]] covers how the Animator eases between poses, including its measured quirks. This note is the maths underneath and the gameplay uses on top: the three building blocks (lerp, inverse lerp, remap), easing functions as formulas you can reason about, overshoot budgets, envelopes, Bezier and Catmull-Rom curves, constant-speed travel along a curve, retargeting a motion mid-flight without a jolt, and interpolating things that are not plain numbers (angles, colours, scales).
 
 ---

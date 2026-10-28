@@ -3,6 +3,18 @@ tags: [modeling, proportion, exaggeration, readability, scale, stylised, distanc
 ---
 # Proportion Exaggeration and Gameplay Distance
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Trims vanish or flicker at distance: Real-world thickness -> Size from the distance table; at least `d / 170` studs
+> - World looks inconsistent: Different multipliers per artist -> Write multipliers into the style bible; use a scale reference set
+> - Big avatars stuck in doors: Door sized for the classic 5-stud figure -> Size for the largest allowed avatar plus margin
+> - Asset assigned to a distance band; band written in the brief.
+> - Smallest feature checked against the distance table.
+> - Exaggeration done in pairs (one feature up, a neighbour down).
+>
+> Read more (14 KB note): ## Exaggeration is a function of distance · ## What to exaggerate, and by how much · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Stylised Roblox art exaggerates: big heads, thick rims, oversized doors, chunky weapons. [[Low-Poly and Stylized Modeling]] says "exaggerate scale contrast" and "thick everything". This note answers the harder questions: exaggerate by how much, for which distance, and where exaggeration breaks gameplay (a door the player cannot fit through, a weapon that clips the camera, a prop so big it hides a path). The core idea is that the right proportions are not fixed. They depend on the distance the object is usually seen from, its gameplay role, and the scale of the avatar standing next to it.
 
 ## Exaggeration is a function of distance

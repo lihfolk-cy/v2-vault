@@ -3,6 +3,18 @@ tags: [vfx, beams, trails, slashes, bezier]
 ---
 # Beams and Trails
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Solid coloured slab instead of the texture: Texture not loaded (or invalid id) -> Preload; new uploads need about a minute.
+> - Beam missing: One attachment missing, same attachment twice, or not in Workspace -> Two distinct attachments in Workspace.
+> - Gradient looks stepped: Too few segments for the keypoints -> Segments at least keypoints - 1, more for curves.
+> - All beam and trail textures preloaded with the owning item.
+> - Arcs built with 4/3 r handles and enough segments.
+> - VFX ribbons at LightInfluence 0 with appropriate LightEmission.
+>
+> Read more (16 KB note): ## 1. Beam fundamentals · ## 2. Slash crescents with beams · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Particles are points; beams and trails are ribbons. A `Beam` draws a textured ribbon along a cubic Bézier curve between two attachments: lasers, lightning arcs, waterfalls, force-field skins, slash crescents, tractor beams, tutorial guide lines. A `Trail` records where two attachments have been and fills the space between: sword trails, dash streaks, limb afterimages, tyre marks. Both are cheap, both are easy to make ugly, and both have a handful of rules that explain nearly every bug.
 
 Source labels: **Docs** (October 2026), **API dump** (defaults), **Reference project** (one live action game and its studied VFX packs), **Rule of thumb**.

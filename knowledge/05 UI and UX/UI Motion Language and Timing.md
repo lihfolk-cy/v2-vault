@@ -3,6 +3,18 @@ tags: [ui, motion, animation, tweenservice, timing, easing, springs, reduced-mot
 ---
 # UI Motion Language and Timing
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Hiding on `Completed` without checking state -> Check `Enum.PlaybackState.Completed` and current intent
+> - Avoid: Back In on exits -> Quad or Quint In
+> - Avoid: Input disabled until entrance ends -> Accept input from first visible frame
+> - All UI tweens go through one module with named tokens.
+> - Exits are faster than entrances and use In easing without overshoot.
+> - Moves scale duration with screen-space distance, clamped.
+>
+> Read more (24 KB note): ## 5. Interruption: where most UI motion breaks · ## 8. A motion module that enforces the language · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A motion language is the small set of rules that decides how every piece of UI moves: which direction things come from, how long they take, which easing they use, what happens when the player interrupts them, and what all of it collapses to when the player asks for reduced motion. Without one, every panel gets tuned by whoever built it, and the game ends up with 40 different "open" animations that feel like 40 different products.
 
 This note goes past the button numbers already listed in [[UI Design Systems]] and [[Game Feel and Juice]], and the pattern catalogue in [[UI and GUI Animation]]. It is about the decisions behind the numbers: timing that scales with distance, interruption, choreography, what property to animate, and the failure modes that only show up when real players mash buttons on a phone at 30 fps.

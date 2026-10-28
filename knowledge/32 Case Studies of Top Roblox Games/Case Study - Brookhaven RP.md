@@ -3,6 +3,18 @@ tags: [case-study, top-games, roleplay, life-sim, social, private-servers, monet
 ---
 # Case Study - Brookhaven RP
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - A new player owns a house or vehicle within 30 seconds, with no tutorial gate.
+> - One menu, phone friendly, covers houses, vehicles, avatar and settings.
+> - Every building implies a role and a scene.
+> - Passes sell scale, control and expression; nothing sold is power.
+> - Props and vehicles are capped per player and per server.
+> - Private servers have real admin tools.
+>
+> Read more (19 KB note): ## 4. Core loop and retention · ## 6. What to copy and what not to copy · ## Checklist
+<!-- tldr:end -->
+
 Brookhaven RP is the most visited experience on Roblox and the purest example of the "stage, not game" design: no levels, no combat, no currency grind, almost no failure. It hands players a small town full of free houses, cars, outfits and props and lets them make their own stories. Every system in it exists to make pretend play smoother. If you want to understand why roleplay towns dominate Roblox and what it takes to run one, this is the case to study. If you want to copy it, read the "do not copy" section first: the genre is crowded, and Brookhaven's lead comes from years of updates and network effects you cannot buy.
 
 Source labels used below: **Observed in the live game (October 2026)** means the public Roblox store page and public web API (games, votes, game passes, media, thumbnails) read on 27 October 2026, with no login and no play session. **Public stats site** means third party trackers. **Studio statement** means the owner's press release or store text. **Press** means named outlets and guides. Roblox does not publish click-through rate or revenue for other creators' games, so everything about clicks is reasoning from what is visible.

@@ -3,6 +3,18 @@ tags: [lighting, stylized, recipes, mood, post-processing, atmosphere, art-direc
 ---
 # Stylized Lighting Recipes
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Looks great on PC, flat on phone: Look depends on shadows; phones below quality 4 have none -> Contrast in colour shifts and ambient tint
+> - Night unplayable: Ambient lowered instead of hue shifted -> Blue hue, less saturation, ambient around a third
+> - White walls glow: Bloom threshold under 1 -> Threshold 1.2 to 2; let effects exceed it
+> - `LightingStyle` and material style chosen before tuning.
+> - Each zone has a named recipe stored as data.
+> - Greyscale test passed: characters, enemies, pickups and paths are distinct values.
+>
+> Read more (24 KB note): ## 3. The recipes · ## 4. Recipes as data · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 The other lighting notes explain the machinery: [[Lighting Technologies and Settings]] for every global property and its trap, [[Atmosphere Sky Clouds and Post-Processing]] for air, sky and screen effects, [[Light Sources and Shadows]] for local lights, and [[Lighting Mood and Time of Day]] for clocks and zone blending. This note is the cookbook: complete, numbered starting points for the stylised looks Roblox games actually ship (bright cartoon, toon arena, golden hour, readable night, neon city, fog horror, underwater, crystal cave, lava, frost, void), the reasoning behind each number, and the ways each recipe breaks.
 
 Every number here is a **rule of thumb** starting point unless labelled otherwise. Lighting is relative: your materials, colours and camera change the result, so treat each recipe as the first draft you then tune by eye on a phone and a PC. Source labels: **Roblox docs (as of October 2026)**, **measured in the reference project**, **rule of thumb**.

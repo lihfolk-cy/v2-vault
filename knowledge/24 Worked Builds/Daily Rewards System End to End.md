@@ -3,6 +3,18 @@ tags: [worked-build, daily-rewards, retention, time, remotes, ui, luau, strict]
 ---
 # Daily Rewards System End to End
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Comparing timestamps instead of day indexes, then debugging "claimed 23 hours 59 minutes ago".
+> - Avoid: Using the client's `os.time()` or `DateTime.now()` for anything except display.
+> - Avoid: Marking the day claimed before the grant can fail.
+> - Day boundary is a server-side integer from UTC time with an explicit offset
+> - Missed-day policy decided and written down
+> - Claim takes no arguments, is rate-limited, never yields between check and mark
+>
+> Read more (23 KB note): ## 4. Server · ## 5. Client and UI · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A seven-day reward track with a streak: the player claims once per UTC day, consecutive days advance the track, a missed day resets it, and day 7 pays a bigger prize before the track loops. The server decides everything from its own clock; the client only displays state and asks to claim. This note builds it from an empty place on top of the foundation in [[Saved Inventory End to End]] (the `PlayerData`, `Net`, `RateLimiter` and `InventoryService` modules), and shows the UI, the tests, the attacks and the extensions.
 
 All code is **reviewed, not run**: strict Luau written against the documented APIs (Roblox docs, as of October 2026) but not executed in this exact form. Test it as described in section 7 before release.

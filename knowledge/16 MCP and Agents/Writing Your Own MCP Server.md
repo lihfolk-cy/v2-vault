@@ -3,6 +3,18 @@ tags: [mcp, python, typescript, plugins, tooling, agents]
 ---
 # Writing Your Own MCP Server
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: `print()` in a stdio server.
+> - Avoid: A tool that blocks the event loop while waiting for Studio.
+> - Avoid: A plugin loop with no back-off when the server is down (it spins errors into the Output).
+> - HTTP bound to 127.0.0.1; token required; token from environment, never printed.
+> - Whitelisted job kinds; no generic eval unless you truly need it.
+> - Size limits on request bodies; timeouts on every wait.
+>
+> Read more (22 KB note): ## 3. The Python server · ## 4. The plugin side · ## 8. Security checklist · ## 9. Common mistakes
+<!-- tldr:end -->
+
 The official [[Roblox Studio MCP Server]] gives agents general tools: run Luau, read scripts, capture the screen. Your project has operations that deserve their own tools: "install this weapon", "run the QA suite on zone 4", "bake these clips", "report instance counts per folder". Wrapping those in a small MCP server makes them one well-described call instead of a fragile paragraph of instructions, and lets any MCP host use them.
 
 This note builds a complete small server in Python that talks to a Studio plugin over local HTTP (the same architecture as Roblox's original open-source reference server), shows the equivalent TypeScript skeleton, and covers tool design, testing and security. Read [[What Is MCP]] first for the protocol and [[Studio Plugins and Local HTTP Bridges]] for the plugin side in depth.

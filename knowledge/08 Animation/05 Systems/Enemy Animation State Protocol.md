@@ -3,6 +3,15 @@ tags: [systems, enemies, networking, attributes, protocol, code]
 ---
 # Enemy Animation State Protocol
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Same attack twice in a row plays once: Listening to `Anim` only -> Always rewrite and listen to `AnimT`
+> - Wrong speed on first frames: Client read `Anim` before `AnimSpeed` -> Write `AnimT` last, react to it
+> - Late joiners see attacks restart: No offset -> `TimePosition = offset * speed`
+>
+> Read more (13 KB note): ## The attributes · ## Joining late · ## Common mistakes
+<!-- tldr:end -->
+
 This note specifies a server-to-client protocol for enemy animation: the server writes a handful of replicated attributes with server timestamps; every client plays clips locally, joins late correctly, layers partial clips, detaches parts and fires marker effects. It is the protocol used for the enemy runtime of one live action game (the reference project), generalised. The attribute names below drop that project's prefix (it used `SixAnim`, `SixHurt` and so on); keep a prefix in your own game so attributes from different systems never collide.
 
 ## Why a protocol

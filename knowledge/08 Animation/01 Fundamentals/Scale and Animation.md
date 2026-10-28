@@ -3,6 +3,18 @@ tags: [fundamentals, scale, locomotion, rigs]
 ---
 # Scale and Animation
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Hard-coded hip height. Symptom: custom avatars float or sink after a ground-fit or IK pass.
+> - Avoid: Camera offsets tuned on one avatar. Symptom: tall avatars get the camera inside their head in cinematics.
+> - Avoid: Growth mechanic with cached locomotion rate.
+> - Know whether your characters are body-scaled or `ScaleTo`-scaled; author translations to match.
+> - Root drops and lifts tested at the real in-game size.
+> - Locomotion rate divides by authored ground speed times scale.
+>
+> Read more (14 KB note): ## Locomotion at scale · ## Nuances and edge cases · ## Checklist · ## Common mistakes in production
+<!-- tldr:end -->
+
 Rotations do not care about size: a 90 degree elbow bend is 90 degrees on a tiny pet and on a 30-stud boss. Everything else does: root offsets, stride lengths, playback rates, IK lengths, camera distances, toss arcs, ground clearance. Roblox has two different ways to scale a character, and the Animator treats them differently, which is the source of the most confusing scale bugs ("the crouch works on the dummy and floats on players"). This note explains both mechanisms, what the Animator scales and what it does not, and how to keep motion believable at any size.
 
 ## Two ways to scale a character

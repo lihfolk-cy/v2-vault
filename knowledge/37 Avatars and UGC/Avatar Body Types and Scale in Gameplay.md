@@ -3,6 +3,18 @@ tags: [avatars, scale, body-types, collision, hitboxes, avatar-settings, gamepla
 ---
 # Avatar Body Types and Scale in Gameplay
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Hardcoding 5-stud heights -> Measure; cache per character
+> - Avoid: Using `GetExtentsSize` for body height -> Use head and hip maths
+> - Avoid: Raycasts hitting accessories -> Filter accessories or use hurtbox parts
+> - Policy chosen per game type; Avatar Settings set and written down.
+> - Collision mode chosen; touch detection target decided for Single Collider.
+> - Character metrics measured on spawn, cached, used by camera and UI.
+>
+> Read more (17 KB note): ## 2. Avatar Settings: the engine-level controls · ## 4. Hitboxes: separate gameplay from visuals · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Players arrive in your game with very different bodies: a classic blocky avatar about 5 studs tall, a realistic-proportion body about 6 to 6.5 studs (docs), slender and wide builds, tiny heads, huge heads, layered coats that double their visual width, and wings that fill a doorway. For a hangout that variety is the point. For a shooter, an obby or a fighting game it is a fairness and level-design problem: small avatars are harder to hit, tall avatars see over cover, and a 6-stud doorway built for a 5-stud avatar feels cramped for some and roomy for others.
 
 This note covers the tools for handling that: Avatar Settings (the engine-level controls), measuring a character's real size in code, separating gameplay hitboxes from visuals, and level and camera design that tolerates variety. How scale affects animation playback is in [[Scale and Animation]]; the custom-character route is in [[Custom Characters and StarterCharacter]]. Facts marked "docs" are **Roblox docs (as of October 2026)**.

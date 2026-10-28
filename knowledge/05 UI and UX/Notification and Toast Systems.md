@@ -3,6 +3,18 @@ tags: [ui, notifications, toasts, hud, popups, remotes, localization, accessibil
 ---
 # Notification and Toast Systems
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Errors shown as corner toasts -> Inline feedback at the control that failed
+> - Avoid: Actionable info in a toast that expires -> Persistent badge or inbox entry
+> - Avoid: Server sends formatted English strings -> Send kind and parameters; format on client
+> - Every message has a chosen channel; errors are inline where possible.
+> - Notification kinds defined as data with priority, merge rule and lifetime.
+> - Server sends kind and parameters; client localises and formats.
+>
+> Read more (24 KB note): ## 4. A controller you can build on · ## 6. Platform channels · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Every game ends up telling the player things: "+250 coins", "Quest complete", "Your friend joined", "Inventory full", "Double XP starts in 5 minutes", "Someone just rolled a Mythic". The first version is always a `TextLabel` that some script makes visible for three seconds. By the tenth notification type, they overlap, cover the jump button, play during cutscenes, and players start ignoring all of them, including the one that mattered.
 
 A notification system is a small piece of architecture: a single entry point, a taxonomy of channels, rules for priority, merging and rate, and renderers that respect the HUD. [[HUD Design]] (section 3) covers the popup gate and the centre-stage queue for celebrations. This note covers the rest: choosing the right channel, the toast queue itself, merging, server design, the platform channels (CoreGui notifications, chat system messages, out-of-experience notifications), and how the whole thing fails under load.

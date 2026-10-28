@@ -3,6 +3,18 @@ tags: [modeling, modular, kits, environment, grid, pivots, blender, luau, level-
 ---
 # Modular Environment Kits
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: No fixed grid -> Grid chosen and documented first
+> - Avoid: Mixed pivot rules -> One pivot rule per kit, validated
+> - Avoid: Bevels on contact edges -> Flat contact faces; detail inside the footprint
+> - Grid, wall height, thickness and door size written down.
+> - One pivot rule; origins on the ground; fronts toward -Y in Blender.
+> - Piece list with variants; seams hidden by pillars, trims or overlaps.
+>
+> Read more (16 KB note): ## 4. Modelling pieces in Blender · ## 6. Placing pieces · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A modular kit is a small set of pieces (walls, corners, floors, stairs, pillars, trims, props) designed to snap together on a grid, so a large world can be built from a few dozen meshes. On Roblox, kits are the single biggest lever for both production speed and performance: one artist builds 40 pieces, level designers (or scripts) build 40 zones, and the engine loads 40 meshes instead of 4,000 unique ones. The reference project built its second realm's canyon walls from **3 wall meshes placed 194 times**, and one hub from a **149-mesh package** placed by data exported from Blender.
 
 The craft is in rules that are boring to follow and expensive to break: grid size, pivot placement, dimensions, seams, texel density, naming. This note sets those rules, shows how to model and validate pieces in Blender, and how to place them in Studio by hand or by script.

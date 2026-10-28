@@ -3,6 +3,18 @@ tags: [studio, plugins, undo, changehistoryservice, tooling, safety]
 ---
 # Undo and ChangeHistoryService Done Right
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Using `SetWaypoint` in new code -> Recordings
+> - Avoid: Returning early on error without finishing -> `Cancel` on every failure path
+> - Avoid: Yielding (HTTP, `task.wait`, `WaitForChild`) inside a recording -> Compute first, then a synchronous write block
+> - All writes go through one helper that begins, commits, and cancels on error.
+> - `recoverStale` runs at startup.
+> - No yields inside recordings; computation happens first.
+>
+> Read more (20 KB note): ## 3. The recording helper every plugin should have · ## 4. Live edits: drags, sliders and brushes · ## 10. Common mistakes · ## 11. Checklist
+<!-- tldr:end -->
+
 Users judge a Studio tool by one test before any other: press `Ctrl Z` after using it. If the change comes back cleanly in one step, the tool feels native. If undo takes forty presses, or reverts half the change, or reverts something the user did before the tool ran, the tool is uninstalled. `ChangeHistoryService` is the API behind that test. The docs are short, and the parts they leave out are where plugins go wrong.
 
 This note covers the recording model, every member and what it really does, crash-safe recordings, live drags with `Append`, resyncing your UI on undo and redo, what recordings do not capture, and why a good team tool also needs a revert path that does not depend on undo at all. It builds on the short treatment in [[Plugins - Using and Writing]] and the shared-place warning in [[Command Bar and Studio Scripting]].

@@ -3,6 +3,15 @@ tags: [blender, vfx, meshes, textures, roblox]
 ---
 # Mesh VFX Packs Built in Blender
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Merge Meshes left on at import. Symptom: every layer arrives as one mesh, so layers cannot fade or scale separately.
+> - Avoid: Meshes collidable or queryable. Symptom: slashes block players, trip hitbox raycasts or shift physics.
+> - Avoid: Destroying and recreating per hit. Symptom: frame spikes during busy fights and growing memory.
+>
+> Read more (8 KB note): ## The parts that made each effect · ## Nuances and edge cases · ## Common mistakes
+<!-- tldr:end -->
+
 ![[p45_mesh_vfx_pack.png]]
 
 A first VFX preview built in Studio from Parts and ParticleEmitters was called "incredibly weak". The rebuild made the effects as meshes in Blender with painted alpha textures, the way most good Roblox VFX are made (meshes animated with transparency and scale tweens, see [[VFX Design Playbook]]). Four effects were built: a crescent slash, an impact burst, a fire aura and a lightning strike.

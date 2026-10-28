@@ -3,6 +3,18 @@ tags: [gameplay, spawning, teams, rounds, zones, gates, enemies]
 ---
 # Spawning Teams and Rounds
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Relying on random SpawnLocation choice -> Place in `CharacterAdded`
+> - Avoid: Countdown sent every second -> Publish end time, use server time
+> - Avoid: No late-join handling -> Explicit lobby/spectate state
+> - Respawn rules per context (realm, PvP, tutorial).
+> - Teams with unique colours; friendly fire in the damage core.
+> - Round loop is a server state machine publishing end times.
+>
+> Read more (18 KB note): ## 4. Enemy spawning: tables, caps and waking · ## 5. Zone gates · ## 6. Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Three related problems: where **players** appear (spawn points, teams, respawn after death), how a **match** is structured (rounds, intermission, win conditions), and where **enemies** appear (spawn tables, caps, waking areas near players). Plus the glue that most progression games need: **zone gates** that decide which areas a player may enter. This note covers the built-in objects, server-driven round loops, data-driven enemy spawners, and gate enforcement, with numbers from one production game.
 
 Related: [[Characters and Humanoids]] (respawning), [[NPC AI and Behaviour]], [[Progression Levels and Unlocks]] (what gates cost), [[Teleporting and Multi-Place Games]].

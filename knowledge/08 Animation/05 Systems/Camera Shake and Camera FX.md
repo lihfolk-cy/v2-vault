@@ -3,6 +3,15 @@ tags: [systems, camera, shake, game-feel, accessibility, code]
 ---
 # Camera Shake and Camera FX
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - FOV ends up a degree off after a session: Exponential decays never reach 0 -> Finite envelopes ending at exactly 0
+> - Effects fight sprint FOV: Two writers of FieldOfView -> One owner adds the stack's delta
+> - Camera turns slightly after every dash: Look rotated in the offset, not undone -> Translation and roll only; undo before the module
+>
+> Read more (16 KB note): ## The envelope model · ## Trauma-based shake · ## Common mistakes
+<!-- tldr:end -->
+
 Short camera effects (a FOV punch on a dash, a dip on landing, a shake on a heavy hit, impact frames, a letterbox) are animation for the viewer. They multiply the weight of body animation for almost no cost, and they are the fastest way to make a game nauseating. This note gives a design that composes many effects safely, the measured numbers from one live action game (the reference project), trauma-based shake, reduced-motion rules, and the letterbox fix. Ownership of the camera (additive vs Scriptable) is in [[Cameras and Cutscenes]].
 
 ## The envelope model

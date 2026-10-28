@@ -3,6 +3,18 @@ tags: [gameplay, combat, architecture, damage, knockback, guard, parry, server-a
 ---
 # Combat Systems Architecture
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Damage computed on the client -> Server computes from server stats
+> - Avoid: Several damage paths -> One core, one `hurt`
+> - Avoid: Multipliers applied in random order -> Fixed, tested order
+> - Intents in, results out; every remote validated and rate-limited.
+> - One damage core and one player-damage entry point.
+> - Reactions have immunity windows after hard control.
+>
+> Read more (15 KB note): ## 3. The damage pipeline · ## 4. Reactions: stagger, knockback, guard break · ## 8. Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A combat system is not a damage function. It is a pipeline that starts with a button press on one client, produces instant feedback there, is validated and resolved on the server, changes state on several bodies, and ends with reactions, rewards, quests and analytics on many clients. When the pipeline is not explicit, every new feature (a shield, a crit, a dodge, a tutorial safety rule) is bolted onto whichever script was nearest, and the game ends up with three damage paths that disagree. This note describes a structure that held up in one live action game, with its real numbers, and the failure modes it ran into.
 
 Detail notes: [[Hitboxes and Hit Detection]], [[NPC AI and Behaviour]], [[Custom Character Controllers]]. Animation side: [[Weapon and Combat Animation]], [[Combat Combo Systems]], [[Hit Reactions Stagger and Hit-Stop]], [[Ability Kits Architecture]].

@@ -3,6 +3,18 @@ tags: [pipelines, audio, sound, loudness, mixing, automation]
 ---
 # Audio Pipeline
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - One sound far louder than the rest: not in the loudness table -> gate: unlevelled ids
+> - Sounds feel late: silence before the onset -> trim offline or start before the measured onset
+> - Levels jump after a re-measure: different measuring method -> one method per table, conversion factor documented
+> - Source and rights recorded per id
+> - Offline prep: trimmed, faded, normalised, named by role
+> - Id map JSON per upload batch
+>
+> Read more (16 KB note): ## Stage 2: prepare offline · ## Stage 4: measure loudness in Studio · ## Failure modes · ## Checklist
+<!-- tldr:end -->
+
 Audio is the asset type where "it worked on my machine" is most literally true. Sounds come from many sources at wildly different loudness, they are uploaded one by one, players hear them through phone speakers and headphones, and nobody notices a badly levelled sound until fifty of them play at once. A good audio pipeline makes loudness a **measured number** rather than a slider somebody nudged, keeps a single table of every sound the game may play, and makes it impossible to ship a sound that is banned, unlevelled or missing.
 
 The craft of sound design is in [[Sound Design for Games]], the engine in [[Sound Fundamentals]] and [[The Audio API - Players Emitters Wires and Effects]], mixing in [[Spatial Audio and Mixing]], music in [[Music and Adaptive Audio]], and AI audio tools in [[AI Audio - Voice Music and SFX]]. This note is the production path.

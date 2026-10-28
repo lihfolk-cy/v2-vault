@@ -3,6 +3,18 @@ tags: [gameplay, tools, inventory, backpack, equip, items]
 ---
 # Tools and Inventory Systems
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Inventory as Tools in Backpack -> Data inventory, Tool only for equipped
+> - Avoid: Client sends stats or rewards -> Server catalogue
+> - Avoid: Yield between check and apply -> Plan then apply, no yields
+> - Tool used only for holding; inventory lives in the profile.
+> - Every action validated, rate-limited, idempotent, non-yielding during mutation.
+> - Protection rules shared by every bulk action.
+>
+> Read more (13 KB note): ## 1. The Tool object · ## 4. Server-authoritative inventory actions · ## 8. Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Roblox has a built-in item model: `Tool` objects that live in a player's `Backpack`, appear in the default hotbar, and are held in the right hand when equipped. It is perfect for a sword-fighting place in 2010 and a poor fit for a game where players own 300 weapons with stats, stars and upgrade levels. Most modern games keep the Tool for **holding** (it gives you equip events, the grip, and compatibility with other systems) and build their own **inventory** as server data. This note covers the Tool API, its traps, and the design of a server-authoritative inventory that scales.
 
 Related: [[Combat Systems Architecture]], [[Data Schema Design and Migrations]], [[Economies and Currencies]], [[Equip Draw and Flourish Systems]], [[Custom Rigs - Weapons and Props]].

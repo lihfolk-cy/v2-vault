@@ -3,6 +3,18 @@ tags: [studio, plugins, tooling, security, workflow]
 ---
 # Plugins - Using and Writing
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Using deprecated `CreateDockWidgetPluginGui` -> `CreateDockWidgetPluginGuiAsync`
+> - Avoid: Recording never finished on error -> Finish with Cancel in the error path
+> - Avoid: Editing the original script after Save as Local Plugin -> Delete it, edit in `PluginDebugService`
+> - Plugin debugging on; dev loop through `PluginDebugService`.
+> - Async widget API, correct `DockWidgetPluginGuiInfo` order.
+> - Every change in a recording that always finishes.
+>
+> Read more (18 KB note): ## 4. Anatomy of a correct plugin · ## 5. A complete example: Reversible Bulk Anchor · ## 7. Common mistakes · ## 8. Checklist
+<!-- tldr:end -->
+
 A plugin is Luau that runs inside Studio with access to the editor: the selection, the undo history, script sources, the file pickers, widgets docked beside the Explorer. Community plugins cover building, animation, UI and terrain; your own plugins turn repeated Command Bar snippets into buttons the whole team can use. Plugins also have enough power to rewrite every script in your place, which makes installing one a security decision. This note covers choosing and managing plugins safely, then writing them properly with the current APIs (as of October 2026: `CreateDockWidgetPluginGuiAsync`, `ChangeHistoryService` recordings, `ScriptEditorService`).
 
 Labels: **Docs**, **Measured** (reference project), **Rule of thumb**.

@@ -3,6 +3,18 @@ tags: [data, datastore, persistence, limits, fundamentals]
 ---
 # DataStore Fundamentals
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: `GetAsync` then `SetAsync` for player data -> `UpdateAsync` plus session locking
+> - Avoid: Treating a `nil` load result after an error as "new player" -> Distinguish "no data" from "call failed" (Data Loss Prevention and...
+> - Avoid: Yielding inside the transform -> Compute everything before calling `UpdateAsync`
+> - Every data store call is in `pcall`, with transient-error retry and backoff.
+> - Player data is written only through one module, with `UpdateAsync` and a session lock.
+> - Load failure and "new player" are different code paths.
+>
+> Read more (21 KB note): ## UpdateAsync, precisely · ## Limits (Roblox docs, as of October 2026) · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 `DataStoreService` is the only durable, cross-server storage built into the engine. Everything a player expects to still exist tomorrow (currency, inventory, settings, purchase history) ends up in a data store. This note explains what a data store actually is, the exact limits and budgets it enforces (as of October 2026), how the 4 second read cache works and bites, how versioning gives you free backups, and which API to call for which job. The rest of this folder builds on it: [[Session Locking and Profile Libraries]], [[Saving Correctly - Autosave and BindToClose]], [[Data Schema Design and Migrations]].
 
 ## The mental model

@@ -3,6 +3,18 @@ tags: [debugging, datastores, persistence, throttling, session-locking, open-clo
 ---
 # Debugging DataStore Problems
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Verifying a save with a cached `GetAsync`.
+> - Avoid: Debugging on the real key, or testing migrations in Studio against live stores.
+> - Avoid: Retrying throttled requests immediately in a loop (makes throttling worse).
+> - Symptom classified; uncached read done before anything else.
+> - Budget logged periodically and before bursts.
+> - Autosaves staggered; leaderboards and counters batched.
+>
+> Read more (19 KB note): ## 2. Throttling and budgets · ## 3. Stuck session locks · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 DataStore bugs are the most expensive bugs in a Roblox game: they lose progress, duplicate items, and generate support tickets you cannot answer. They are also hard to debug because the evidence (what is actually stored) lives in a cloud service, the failure often happened on a server that no longer exists, and Studio behaves differently from live. This note is a diagnostic guide: how to read throttling and budget problems, how to tell a stuck session lock from a real outage, how to look at the actual saved data safely, and how Studio access changes what you see.
 
 The limits, error codes and caching rules are in [[DataStore Fundamentals]]; leases and fencing in [[Session Locking and Profile Libraries]]; correct save flow in [[Saving Correctly - Autosave and BindToClose]]; recovery in [[Data Loss Prevention and Recovery]]. This note links to them rather than repeating the tables.

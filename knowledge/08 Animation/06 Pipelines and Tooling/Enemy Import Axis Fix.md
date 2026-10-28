@@ -3,6 +3,17 @@ tags: [pipeline, import, gltf, math, cframe, enemies, debugging]
 ---
 # Enemy Import Axis Fix
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - body faces backwards but hits land in front
+> - body faces backwards and hits land behind
+> - root never rises, leaps happen in place
+> - forward travel mirrored on one rig
+> - one limb occasionally swings the long way
+>
+> Read more (14 KB note): ## The code · ## How it was proven · ## Symptoms checklist
+<!-- tldr:end -->
+
 A whole roster of imported creatures "attacked from behind": their bodies played turned 180 deg away from the HumanoidRootPart, and all root motion (spawn rises, intro drops, leaps) was missing. Server logic was right (it used the root's LookVector), so enemies dealt damage in front of them while visibly facing away. This note derives the fix from first principles, shows the code, explains how it was proven, and generalises the method so you can debug the next importer convention yourself. Context: [[Pipeline - Importing Animated Enemies]].
 
 > **Scope.** The convention below is a model of what Studio's 3D importer wrote for skinned GLB rigs in one production game (autumn 2026), reconstructed from the data and proven against the source files (343 of 348 clips matched it). Importers change. Treat the method as the durable part and re-verify the convention on your own imports.

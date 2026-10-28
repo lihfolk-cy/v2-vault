@@ -3,6 +3,18 @@ tags: [narrative, dialogue, writing, npc, ux, onboarding, voice]
 ---
 # Writing Dialogue for Roblox Players
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Wall of text on first meeting -> Split, cut the opener, move backstory to optional choices
+> - Avoid: Critical instruction only in dialogue -> Repeat it in the tracker and waypoint
+> - Avoid: Every NPC sounds the same -> Voice cards with one trait each
+> - Every screen is 18 words or fewer; no more than 3 screens before the player acts.
+> - First conversation with any NPC is under about 50 words.
+> - Every critical instruction is also in the tracker or world guidance.
+>
+> Read more (21 KB note): ## 3. Line craft · ## 7. Barks: the dialogue most players actually hear · ## 11. Common mistakes · ## 12. Checklist
+<!-- tldr:end -->
+
 Most dialogue advice comes from novels, films and long single-player RPGs, where the audience chose to sit down for a story. Roblox dialogue is read by a different audience in a different situation: many players are children or young teens, many are reading in their second language (or reading a machine translation), most are on a phone, often in a noisy room, and almost all of them arrived to play, not to read. Roblox's own onboarding guidance puts it bluntly: players often skip text (Roblox docs, "Onboarding techniques", as of October 2026). This note is about writing lines that survive that: how long a line can be, how to give a character a voice in eight words, how to write choices that are real, how to keep branching affordable, and how to edit a scene down until players actually read it.
 
 The system that displays these lines is built in [[Dialogue System End to End]]. Making the text translate well is in [[Localization-Ready Writing]]. Story outside of dialogue (environment, items, collectibles) is in [[Lore Delivery Without Walls of Text]]. The broader genre view of story games is in [[Genre Playbook - Horror and Story]].

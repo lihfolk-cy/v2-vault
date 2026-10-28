@@ -3,6 +3,18 @@ tags: [multiplayer, teleport, session, memorystore, datastore, session-locking, 
 ---
 # Session State Across Places
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Carrying rewards or currency in teleport data -> Write them to the profile before leaving
+> - Avoid: Teleporting before the save committed -> `saveAndRelease` must succeed first
+> - Avoid: No reclaim path -> A failed teleport leaves the player with no profile loaded
+> - Every piece of carried state assigned to durable, transit or hint, in writing.
+> - Teleport data carries only a nonce and harmless hints.
+> - Source writes the envelope, saves and releases, then teleports.
+>
+> Read more (25 KB note): ## 4. Source side · ## 5. Destination bootstrap · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 When a player teleports, their server-side world ends. Their character, their in-memory tables, the round they were in and the buff they just drank exist only on the server they left. The destination starts from nothing and has to rebuild "who is this player and what were they doing" from three sources of very different trust: the durable profile, a short-lived transit record, and the teleport data the client carried. Most multi-place bugs are a piece of state in the wrong one of those three, or a hop that half failed. This note gives a complete, server-authoritative handoff protocol in strict Luau: what goes where, how the source hands over, how the destination claims, and what happens on every failure path.
 
 Prerequisites: [[Teleporting and Multi-Place Games]] (trust levels of teleport data, `GetJoinData`, the save race), [[Session Locking and Profile Libraries]] (one owner per profile), [[MemoryStore Service]]. Related in this section: [[Parties and Group Teleports]], [[Matchmaking Queues with MemoryStore]], [[Server Shutdowns Soft Updates and Migration]] (versioned payloads).

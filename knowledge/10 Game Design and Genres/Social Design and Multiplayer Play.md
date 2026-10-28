@@ -3,6 +3,18 @@ tags: [game-design, social, multiplayer, trading, pvp, friends, safety]
 ---
 # Social Design and Multiplayer Play
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Social features that need 10 players in a server of 3 -> Design for low density first; scale up with events
+> - Avoid: Last-hit takes all -> Credit every meaningful contributor
+> - Avoid: PvP everywhere by default -> Opt-in arena, normalised damage
+> - At least three rungs of the social ladder.
+> - Rare moments visible to the whole server.
+> - Hub designed as the social centre; density checked.
+>
+> Read more (17 KB note): ## 4. Friends · ## 5. Cooperation · ## 11. Common mistakes · ## 12. Checklist
+<!-- tldr:end -->
+
 Every Roblox game is multiplayer by default: players share a server, see each other's avatars, and usually arrived with or because of friends. Social design is deciding **what other players mean to you** in that shared space: scenery, audience, helpers, rivals, trading partners. Done well, it is the strongest retention force on the platform and an explicit discovery signal. Done badly, it produces griefing, scams and empty-feeling servers. This note covers the forms of social play, the features that make other players matter, trading and PvP design, and the safety rules that are not optional on a platform with young players.
 
 Labels: **Docs** (create.roblox.com, checked October 2026), **Reference project** (one production RNG combat game, anonymised), **Rule of thumb**.

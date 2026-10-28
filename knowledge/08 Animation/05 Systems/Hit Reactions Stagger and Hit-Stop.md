@@ -3,6 +3,15 @@ tags: [systems, combat, hit-reaction, stagger, hit-stop, game-feel]
 ---
 # Hit Reactions Stagger and Hit-Stop
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Sword arrives after its sparks in flurries: Plain freeze hit-stop with clock-timed VFX -> Catch-up hit-stop
+> - Enemy twitches while held or stunned: Flinch not skipped in higher states -> Ladder skip rules
+> - Stagger feels like lag: Attack clips slowed -> Only slow the stagger clip
+>
+> Read more (13 KB note): ## Directional flinches · ## Hit-stop · ## Common mistakes
+<!-- tldr:end -->
+
 A hit is not one event on screen; it is a short stack of reactions on both bodies, layered over a tenth of a second: the attacker's motion catches, the target flashes, flinches in the direction of the blow, maybe staggers, the camera kicks, a spark and a sound land. Getting each layer's timing and priority right is most of what players call "impact". This note covers the reaction ladder, directional flinches, stagger and poise, parry and guard, and hit-stop done in a way that survives networked, clock-timed effects. Numbers are from one live action game (the reference project) unless marked as rules of thumb. Procedural (physics) reactions are in [[Procedural Death Knockdown and Hit Reactions]] and [[Ragdolls and Physics-Based Animation]].
 
 ## The reaction ladder

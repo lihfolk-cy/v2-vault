@@ -3,6 +3,18 @@ tags: [luau, advanced-luau, serialization, json, buffer, networking, datastore, 
 ---
 # Serialization Formats for Saves and Networking
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Items in slot 3 vanish after rejoin: Sparse numeric keys changed shape through JSON -> String keys or dense arrays only
+> - Dictionary keyed by UserId loses entries: Numeric keys on a boundary -> `tostring(userId)` keys
+> - Balance stops increasing at a large value: `f32` or a value past 2^53 -> `f64`, or a big-number representation
+> - Every table crossing a boundary is either a dense array or a string-keyed record.
+> - No NaN, infinity, functions, metatables or Instances reach a serializer; a validation pass runs before saving.
+> - Numeric dictionary keys are converted to strings.
+>
+> Read more (24 KB note): ## 2. JSON edge cases that bite saves · ## 4. A schema-driven codec · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Serialization is the act of turning live Luau values into something that survives a boundary: a DataStore save, a remote call, a MessagingService message, a MemoryStore entry, an HTTP request. [[Buffers and Binary Data]] teaches the `buffer` API and a byte writer; [[Data Schema Design and Migrations]] teaches how to shape a profile and convert engine types. This note sits above both. It is about choosing a format per boundary, building codecs that cannot drift out of sync, surviving rolling updates where old and new servers read each other's data, and knowing which failures are silent.
 
 The short version: every boundary has its own serializer with its own rules, and almost every serialization bug is a value that one side wrote and the other side read differently without an error.

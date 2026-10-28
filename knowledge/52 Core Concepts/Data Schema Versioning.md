@@ -3,6 +3,16 @@ tags: [core-concept, data, persistence, migrations]
 ---
 # Data Schema Versioning
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Player data lives for years, and players come back after long breaks.
+> - Migrations run on load, forever. You cannot migrate every record in advance (there is no practical way to iterate all players'...
+> - Never edit a shipped migration. If migration 4 to 5 had a bug, add migration 5 to 6 that repairs it.
+> - Old servers meet new data. During a rolling update, an old server can load a record that a new server already upgraded.
+>
+> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+<!-- tldr:end -->
+
 **Data schema versioning** stores a version number inside every saved record and keeps a chain of migration functions that upgrade old records step by step to the current shape. A record saved at version 3 is run through migrations 3 to 4, 4 to 5 and so on when it is loaded.
 
 ## Why it matters on Roblox

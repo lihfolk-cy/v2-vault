@@ -3,6 +3,18 @@ tags: [modeling, untextured, stylised, gradient-atlas, palette, uv, blender, tex
 ---
 # The Gradient Palette Texture Workflow
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Faint lines of a neighbour's colour on distant faces: Strips too narrow for the mip in use -> 16 px strips for far assets; order strips so neighbours are similar
+> - Hard colour seam on one face: UVs placed on a strip border -> Keep UVs 2 px inside the strip
+> - Every mesh broke after a palette update: A strip was moved or resized -> Fixed layout, reserved strips, version the layout
+> - One strip direction for the whole image; strips 8 px minimum, 16 px for distant assets.
+> - Each strip has contact shadow, body ramp and highlight, with hue shift.
+> - Flat accent strips, a grey ramp and reserved empty strips included.
+>
+> Read more (18 KB note): ## Designing the layout · ## The UV moves in Blender · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A gradient palette texture is one small image made of colour strips, each strip running from a dark to a light version of one colour (or from one hue into another). Every mesh in a kit maps its faces onto those strips: a tree trunk samples the brown strip from its dark end at the root to its lighter end near the crown, a leaf blob samples the green strip so its underside is darker than its top. The result looks shaded and designed, costs one tiny texture for a whole world, and needs no painting at all. This is the workflow behind a large share of mobile low-poly games, Synty-style asset packs (which share one palette texture across hundreds of meshes) and many popular Blender tutorials.
 
 [[Trim Sheets Atlases and Vertex Colors]] introduces palette and gradient atlases in a few paragraphs. This note is the full workflow: designing the layout, the UV moves that make it fast, the filtering and mip traps that decide how wide your strips must be, swapping palettes per zone in Roblox, and how to keep a layout stable across a team for a year.

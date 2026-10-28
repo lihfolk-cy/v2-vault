@@ -3,6 +3,18 @@ tags: [audio, spatial, mixing, attenuation, loudness, buses, performance]
 ---
 # Spatial Audio and Mixing
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Distant fights audible everywhere: Default 10,000-stud max distance -> Per-category distances.
+> - Sound cuts off abruptly: Inverse/Linear with a low max distance -> InverseTapered or a custom curve.
+> - Own footsteps sound far away: Listener at the third-person camera -> 2D own sounds or a closer listener.
+> - Attenuation set per category; no defaults left on positional sounds.
+> - Listener position chosen deliberately for the camera style.
+> - Every sound measured and levelled to a category target.
+>
+> Read more (13 KB note): ## 1. Attenuation · ## 5. Voice limits and throttles · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Spatial audio decides **where** a sound seems to be and **how loud it is from here**. Mixing decides **how loud each sound is relative to everything else**, and what gets dropped when too much happens at once. In a multiplayer game these two problems meet: thirty players casting abilities in one plaza is a spatial problem (who is close?) and a mixing problem (which of these 200 sounds matter?).
 
 This note covers attenuation in both audio systems, the listener's position, Doppler and volumetric sounds, acoustic simulation, then mixing: loudness targets, buses, ducking, voice caps and throttles, onlooker rules and testing.

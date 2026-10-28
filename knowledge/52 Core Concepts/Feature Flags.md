@@ -3,6 +3,16 @@ tags: [core-concept, live-ops, release, architecture]
 ---
 # Feature Flags
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Publishing a Roblox update means servers restart or migrate, and rolling back means publishing again.
+> - Flags must be read by the server and pushed to clients.
+> - Decide the bucket deterministically. For "10 percent of players", hash the UserId with the flag name so a player stays in the...
+> - Changes arrive at different times. Servers poll separately, so for a minute some servers have the flag on and others off.
+>
+> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+<!-- tldr:end -->
+
 A **feature flag** is a named switch, read at runtime, that turns a feature or behaviour on or off without publishing a new version of the game. Flags can be global ("new shop on"), per percentage of servers or players ("new shop for 10 percent"), or per group ("testers only").
 
 ## Why it matters on Roblox

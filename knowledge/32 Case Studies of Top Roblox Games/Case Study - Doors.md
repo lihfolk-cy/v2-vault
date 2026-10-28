@@ -4,6 +4,18 @@ tags: [case-study, top-games, horror, roguelite, co-op, lobby, matchmaking, live
 
 # Case Study - Doors
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Every death shows a one-line cause and counter.
+> - Lobby place with parties, separate small run servers.
+> - Runs have fixed anchors and randomised filler.
+> - Each threat has one tell and one counter, testable on a ten-year-old.
+> - Store has at most a handful of products, each tied to one moment.
+> - Free revives exist and are easy to get.
+>
+> Read more (16 KB note): ## Snapshot · ## Click-through: thumbnail, icon and title · ## Checklist
+<!-- tldr:end -->
+
 Doors is a first-person co-op horror run: you and a few friends ride an elevator into a hotel, open numbered doors one at a time, and try to reach door 100 while entities hunt you. It is the clearest example on Roblox of a small team building a premium-feeling horror game with short, replayable runs, a tiny monetization surface and a brand strong enough that Roblox picks it for platform events. This note is a teardown for developers: what is visible from outside, what it teaches, and which parts are dangerous to copy.
 
 Source labels used below: **Public stats** (Roblox's public games API or a stats site, with the date checked), **Observed on the store page** (the public experience page, thumbnails and pass list, October 2026; nothing was played or logged into), **Press** (news or guide sites, with their date), **Community wiki** (fan wikis, lower confidence).

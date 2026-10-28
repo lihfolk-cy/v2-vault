@@ -3,6 +3,18 @@ tags: [modeling, blender, curves, bezier, sweep, lathe, geometry-nodes, python, 
 ---
 # Curve-Based Modelling in Blender for Roblox
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: High Resolution U on long straights -> Split segments or resample adaptively
+> - Avoid: Bevel Resolution 4 "for smoothness" -> 0 to 1 for distant tubes, 2 for hand-held
+> - Avoid: Frenet or Z-Up twist on a 3D path -> Minimum twist / rotation-minimising frames
+> - The path is checked with `fairness()`: no unplanned kinks, jumps or extra inflections.
+> - Profile point count matches viewing distance (6 / 8 / 12 / 16).
+> - Rings follow curvature; straights carry one ring at each end.
+>
+> Read more (19 KB note): ## 6. The LihFolk helper module · ## 7. Worked samples (measured) · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Many of the best-looking stylised props are a curve with a cross-section: a sword blade, a horn, a pipe run, a cable, a tentacle, a branch, a VFX swirl, a lathed potion bottle, a bevelled badge. Blender offers four ways to build them (curve objects, Geometry Nodes, modelling tools like Spin and Screw, and Python), and every one of them can quietly spend thousands of triangles on straight sections nobody looks at. This note covers each route, what it costs in triangles (measured), how to keep the result inside Roblox budgets, and the LihFolk helper module `lihfolk_curves.py` that builds these shapes from a script and checks them against the house gate. The underlying maths (Bezier handles, splines, continuity, curvature) is in [[Bezier Curves and Splines for Modellers]].
 
 Trust labels: **Measured** (headless Blender 5.2, October 2026, `tools/curves/test_lihfolk_curves.py`), **Docs** (Blender 5.2 manual), **Rule of thumb**, **Unverified**.

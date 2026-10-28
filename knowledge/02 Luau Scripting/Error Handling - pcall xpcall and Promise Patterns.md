@@ -3,6 +3,18 @@ tags: [luau, errors, pcall, xpcall, promises, async, reliability]
 ---
 # Error Handling - pcall xpcall and Promise Patterns
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - `pcall` returned true but an error printed: Error in a spawned thread or handler -> Report back from the thread
+> - Tracebacks point at the logging code: Trace taken after unwinding -> `xpcall` with a trace handler
+> - Messages with stacked `Script:line:` prefixes: Rethrow with default level -> `error(err, 0)` or wrap in a structured error
+> - Errors from spawned threads are reported back, not assumed caught.
+> - `xpcall` with a small, non-yielding trace handler at every catching boundary.
+> - Rethrows use level 0 or structured errors with `cause`.
+>
+> Read more (22 KB note): ## 4. Boundaries: where error handling belongs · ## 6. Promises: when they earn their place · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Error Handling and Retries]] covers the foundations: how errors propagate per thread, which Roblox APIs fail at runtime, retry with backoff, timeouts, result types and a circuit breaker. This note goes one level deeper. It covers the details of `pcall` and `xpcall` that bite in production (what they catch and what they do not, rethrowing without losing the trace, structured error values), error handling at system boundaries (module loading, remote handlers, per-entity loops), how to fingerprint errors so telemetry stays readable, and when a Promise library earns its place versus plain Luau coroutines.
 
 Facts about the Promise library come from its published API reference (eryn.io/roblox-lua-promise, as of October 2026). Facts about Luau come from the Luau and Roblox docs. Patterns without a source are rules of thumb.

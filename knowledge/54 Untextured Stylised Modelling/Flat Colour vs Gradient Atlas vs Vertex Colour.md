@@ -3,6 +3,18 @@ tags: [modeling, untextured, stylised, flat-colour, gradient-atlas, vertex-colou
 ---
 # Flat Colour vs Gradient Atlas vs Vertex Colour
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Vertex-coloured kit looks dark and muddy in Studio: `Color` left at default grey, which multiplies -> Set `Color` to white on import
+> - Imported mesh is plain grey though it was coloured in Blender: glTF exporter did not write the colour attribute -> Set the exporter's vertex colour option to write...
+> - Patchy triangle streaks that no `Color` or `Material` change removes: Unwanted generator vertex colours multiplying -> Ignore Vertex Colors on import, or paint white...
+> - One colouring method chosen per kit, written in the style sheet, with the reason.
+> - Colour regions per prop counted and instance totals estimated before modelling.
+> - Recolour needs (zones, seasons, teams) known, and the method supports them.
+>
+> Read more (18 KB note): ## How each method reaches the screen in Roblox · ## Costs in numbers · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Low-Poly and Stylized Modeling]] lists three ways to colour a stylised mesh without a unique texture, and [[Trim Sheets Atlases and Vertex Colors]] explains each one technically. This note is the decision layer on top of them: how each method actually reaches the screen in Roblox, what it costs, which Roblox properties it collides with, and how to pick one per kit instead of per asset. It assumes the art is "non-hand-painted": the look comes from geometry, flat or gradient colour, vertex colour and lighting, never from painted texture detail.
 
 The short version: **flat colour** (one `MeshPart.Color` per mesh, no texture) is the most flexible and the most instance-hungry; a **gradient atlas** (one small shared texture, UVs snapped into colour strips) is the most consistent and the best for whole kits; **vertex colour** (colour stored in the mesh) is the cheapest in memory and the hardest to change later. Most good projects use two of the three, on purpose, with a written rule for which asset gets which.

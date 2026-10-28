@@ -3,6 +3,18 @@ tags: [studio, toolbox, creator-store, security, backdoors, assets]
 ---
 # Creator Store and Toolbox Safety
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Inserting directly into the live place -> Scratch place first
+> - Avoid: Trusting a model because it has many likes -> Read the scripts
+> - Avoid: Deleting the model and assuming it is gone -> Audit the whole place
+> - Insert unknown assets only into a scratch place with scripts disabled.
+> - Read every script in an inserted asset.
+> - Run the audit script before every release and after installing a new plugin.
+>
+> Read more (13 KB note): ## 6. An audit script · ## 7. Licensing, ownership and permissions · ## 9. Common mistakes · ## 10. Checklist
+<!-- tldr:end -->
+
 The Creator Store holds millions of free and paid models, meshes, images, audio, plugins, fonts and videos, browsable on the web and inside Studio's Toolbox. Used carefully it saves weeks. Used carelessly it is the main way malicious code enters Roblox games: a free model with a hidden script that `require`s a remote module, grants an attacker admin, or injects obfuscated code into your other scripts. This note covers how the store works (as of October 2026), the store's own rules about unsafe code, how to inspect and quarantine assets, how backdoors look in practice, and licensing and permission traps. It ends with a command-bar audit script you can run on any place.
 
 Labels: **Docs**, **Measured**, **Rule of thumb**.

@@ -3,6 +3,18 @@ tags: [game-design, core-loop, sessions, retention, roblox-audience]
 ---
 # Core Loops and Session Design
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Designing systems before the verb feels good -> Prototype the verb alone first
+> - Avoid: Long intro cutscene -> The reference project disabled its 27 s intro; start with the verb
+> - Avoid: One currency for everything -> One primary currency per loop layer (cash, gems, materials)
+> - The loop fits in one sentence with real verbs.
+> - The first reward lands within 30 seconds of control.
+> - Every output has at least one sink that changes the verb.
+>
+> Read more (21 KB note): ## 3. Fit the loop to the Roblox audience · ## 5. Session design · ## 9. Common mistakes · ## 10. Checklist
+<!-- tldr:end -->
+
 A Roblox game lives or dies on one question a player answers in their first few minutes: "what do I do here, and why do it again?" The **core loop** is the answer. This note explains how to design loops in layers, how to fit them to the Roblox audience (young, mostly on phones, playing with friends, arriving from a recommendation feed), how to shape a single session so it ends with a reason to come back, and how to tell when a loop is broken.
 
 Source labels used in this section:

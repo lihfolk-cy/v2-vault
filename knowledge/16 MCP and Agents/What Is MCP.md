@@ -3,6 +3,18 @@ tags: [mcp, ai, agents, protocol, tooling]
 ---
 # What Is MCP
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Printing to stdout in a stdio server. Breaks the connection, often silently.
+> - Avoid: Editing the config and not restarting the host.
+> - Avoid: One giant tool that does everything. The model chooses poorly between modes hidden in one string argument.
+> - Who publishes it? Official (Roblox, Blender Lab) or community?
+> - Which transport? If HTTP, is it bound to localhost?
+> - List its tools. Which ones write, delete, publish, upload or spend money?
+>
+> Read more (18 KB note): ## 4. Server features: tools, resources, prompts · ## 5. Transports: stdio and Streamable HTTP · ## 9. Common mistakes · ## 10. Checklist: understanding a new MCP server before you use it
+<!-- tldr:end -->
+
 The Model Context Protocol (MCP) is an open protocol that lets an AI application (Claude Desktop, Claude Code, Cursor, VS Code, Codex CLI, Gemini CLI and many others) talk to external programs in a standard way. Those external programs are called **MCP servers**. A server can be Roblox Studio itself, Blender, a database, a file system, or a 60-line Python script you wrote this afternoon. Once a server speaks MCP, every MCP-capable AI client can use it without custom glue.
 
 For a Roblox developer, MCP is the difference between "the AI writes code and I paste it into Studio" and "the AI reads my place, runs Luau in Edit mode, greps every script, takes a screenshot, and checks its own work". This note explains the protocol itself, at the level you need to use it well, debug it when it breaks, and write your own servers. The Roblox-specific servers are in [[Roblox Studio MCP Server]] and [[Blender MCP]]; client setup is in [[Setting Up MCP Clients]].

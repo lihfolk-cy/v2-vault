@@ -3,6 +3,15 @@ tags: [systems, abilities, stance, charge, iai, state-machine]
 ---
 # Stance and Charge Moves
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Strike plays seconds late the first time: Clip not loaded -> Preload on kit load; cast at once without a clip
+> - Dash fires off the visual cut: Clips retimed, marker table stale -> Regenerate the table from clips
+> - Sheath inside the thigh: Sheath fitted to the idle -> Fit to the stance pose
+>
+> Read more (16 KB note): ## A charge move controller · ## Nuances and edge cases · ## Common mistakes
+<!-- tldr:end -->
+
 A stance move has the player hold a pose to build power, then release into a strike: the iaido quick-draw, a charged overhead, a bow draw, a sprinter's crouch. Animation-wise it is two or three clips stitched by a state machine whose timing is partly authored (the release) and partly player-driven (how long they hold). This note uses the shared "iai strike" of one live action game (the reference project) as the worked example: one ability on every weapon kit, with a stance, a charge, a release clip and a lightning dash through the target.
 
 ## The state machine

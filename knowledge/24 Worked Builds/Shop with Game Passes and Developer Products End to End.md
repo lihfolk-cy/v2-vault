@@ -3,6 +3,18 @@ tags: [worked-build, monetization, game-passes, developer-products, processrecei
 ---
 # Shop with Game Passes and Developer Products End to End
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Two scripts assigning `ProcessReceipt`: one system silently never gets receipts.
+> - Avoid: Granting in `PromptProductPurchaseFinished` (the docs say it does not confirm a purchase).
+> - Avoid: Returning `PurchaseGranted` before the save.
+> - One `ProcessReceipt`, wrapped in `pcall`, returns `NotProcessedYet` on any doubt
+> - `PurchaseId` and grant saved together; acknowledged only after save
+> - Grants cannot fail half-way (fallback to coins)
+>
+> Read more (26 KB note): ## 4. Server · ## 5. Client and UI · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A working in-game shop from an empty place: two game passes (VIP and Double Coins) whose benefits are derived from ownership, three coin packs and a starter pack sold as developer products and granted through one idempotent `ProcessReceipt`, prices read live for each player, and a shop window that refuses to sell while the player's data is not loaded. It is built on the foundation from [[Saved Inventory End to End]] (`PlayerData`, `Net`, `InventoryService`) and uses the `Receipts` field already in its `DataTemplate`.
 
 All code is **reviewed, not run**: strict Luau written against the `MarketplaceService` reference and the Passes and Developer Products guides (Roblox docs, as of October 2026). Run the Studio tests in section 7 before shipping. Money code deserves more testing than anything else in your game.

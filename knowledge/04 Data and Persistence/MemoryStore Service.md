@@ -3,6 +3,18 @@ tags: [data, memorystore, matchmaking, queues, sorted-map, hash-map, cross-serve
 ---
 # MemoryStore Service
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Treating it as durable (Data vanishes at TTL or on flush)
+> - Avoid: Long TTLs "just in case" (Memory quota exhausted; every write that adds data fails, possibly...)
+> - Avoid: Reading big ranges often from every server (Request quota gone in seconds)
+> - Every write has the shortest sensible expiration.
+> - Processed items are explicitly removed.
+> - Reads are cached per server and staggered.
+>
+> Read more (14 KB note): ## Quotas and request units (Roblox docs, October 2026) · ## Patterns · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 `MemoryStoreService` is Roblox's shared, fast, **expiring** storage: every server of an experience can read and write the same queues, sorted maps and hash maps with low latency, and every item disappears after its time to live (at most 45 days). It is the right tool for matchmaking, cross-server auctions and trading boards, live event leaderboards, server registries, and as a cache in front of data stores. It is the wrong tool for anything that must survive. This note lists the three structures, their exact quotas (October 2026), how request units are counted, sharding, failure codes, and working patterns.
 
 Prerequisites: [[DataStore Fundamentals]]. Related: [[Cross-Server Messaging]], [[OrderedDataStores and Leaderboards]].

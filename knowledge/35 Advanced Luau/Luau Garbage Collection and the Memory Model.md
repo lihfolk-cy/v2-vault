@@ -3,6 +3,18 @@ tags: [luau, advanced-luau, memory, garbage-collection, gc, weak-tables, perform
 ---
 # Luau Garbage Collection and the Memory Model
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Memory bottoms rise each round: References held after objects end -> Remove entries on end-of-life events
+> - Weak cache never empties: Value references key (no ephemerons) -> Store ids, pass keys in
+> - Leak disappears after a fixed delay: Timers or delayed threads holding closures -> Owner-scoped cancellation
+> - Hot loops avoid creating tables, closures, strings and CFrames per item.
+> - Every module-level table keyed by players or instances has a removal path.
+> - No weak-table value references its key.
+>
+> Read more (19 KB note): ## 1. What lives on the heap · ## 4. What Luau leaves out, and why it matters · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 The vault already says what leaks look like and how to hunt them ([[Memory Budgets and Leaks]], [[Hunting Memory Leaks Step by Step]]) and that allocation churn costs frame time ([[Luau Performance and Native Codegen]], [[Luau Performance Patterns with Benchmarks]]). This note explains the machinery underneath: which Luau values live on the heap and which do not, how the collector decides when to run and what it does in each phase, what Luau deliberately leaves out compared with other Lua versions, how Roblox Instances add a second lifetime on top, and how those facts turn into concrete rules. If you understand this model, most memory advice stops being folklore.
 
 Facts about the collector are from luau.org (performance and compatibility pages, as of October 2026). Roblox-specific behaviour is labelled either Roblox docs or rule of thumb.

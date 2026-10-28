@@ -3,6 +3,18 @@ tags: [studio, plugins, ui, dockwidget, theme, tooling]
 ---
 # Plugin UI with DockWidgets
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Changing the widget id between versions -> Keep ids permanent; change once on purpose
+> - Avoid: Override flag true with `initialEnabled = true` -> Respect restore unless you have a reason
+> - Avoid: Hard-coded colours -> Style guide colours, role attributes, one watcher
+> - `CreateDockWidgetPluginGuiAsync`, permanent prefixed id, restore respected.
+> - Toolbar button synced to `Enabled` through the property signal.
+> - Every object themed by role; one `ThemeChanged` connection.
+>
+> Read more (19 KB note): ## 1. What a dock widget is, mechanically · ## 3. Theming that actually works · ## 10. Common mistakes · ## 11. Checklist
+<!-- tldr:end -->
+
 Almost every plugin that outlives its first week grows a panel. A `DockWidgetPluginGui` is that panel: a Studio window you fill with ordinary `GuiObject`s, which users can dock beside the Explorer, float, resize and close. Building one is easy. Building one that opens where the user left it, reads well in both themes, stays responsive with ten thousand rows, never fights the user for keyboard focus, and costs nothing when hidden takes knowledge the basic examples skip. This note covers that knowledge.
 
 It assumes the lifecycle and project layout from [[Building a Studio Plugin End to End]]. Labels: **Roblox docs (as of October 2026)**, **measured in the reference project**, **rule of thumb**.

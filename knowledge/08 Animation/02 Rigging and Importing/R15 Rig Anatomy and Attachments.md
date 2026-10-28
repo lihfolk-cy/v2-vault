@@ -3,6 +3,15 @@ tags: [rigging, r15, humanoid, attachments, reference]
 ---
 # R15 Rig Anatomy and Attachments
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Code looks for Motor6D only -> Accept AnimationConstraint too
+> - Avoid: IK uses part centres or vertical arm length -> Use RigAttachment positions (slanted upper arm)
+> - Avoid: Root motion keyed on HumanoidRootPart -> Key LowerTorso
+>
+> Read more (15 KB note): ## 2. The joints · ## 3. Accessory and grip attachments · ## Common mistakes
+<!-- tldr:end -->
+
 The R15 rig is the contract that the default Animate script, emotes, layered clothing, accessories, the Animation Editor and most community tooling assume. Knowing its exact parts, joints and attachment offsets lets you build IK that hits the real pivots, write procedural code that works on any body, import custom bodies that animate, and diagnose "why is my arm offset" problems in minutes.
 
 All positions below were **measured in Studio (October 2026)** on a rig made by `Players:CreateHumanoidModelFromDescription` from a default `HumanoidDescription` (blocky body, default scales). Other bodies (Rthro, custom bundles) have different sizes and offsets but the same names, hierarchy and conventions.

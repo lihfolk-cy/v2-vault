@@ -3,6 +3,15 @@ tags: [production, post-mortem, case-study, combat, rng, retrospective]
 ---
 # Post-Mortem: Building a Melee Action Game
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Obtain weapons of rising rarity, with luck multipliers stacking from several sources.
+> - Week 1: a vertical slice and a play-test cadence.
+> - The reference project shipped an enormous amount of content quickly because its pipelines were good and its verification was...
+>
+> Read more (12 KB note): ## What went right · ## What went wrong
+<!-- tldr:end -->
+
 This is a post-mortem in the classic format (what went right, what went wrong, the numbers) for one live action game on Roblox: a melee game with collectible weapons of rising rarity, zones of enemies, crafting and bosses. The project is anonymised; it is called "the reference project" elsewhere in this vault. All figures are measured from the project's own notes unless marked otherwise.
 
 The project is unusual in one way: it was built very fast, by an owner directing several parallel workstreams (most of them AI-assisted) in one shared Studio place. That speed makes it a good case study, because a few weeks contained the kind of scope swings, technical debt and recoveries that usually take a year.

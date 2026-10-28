@@ -3,6 +3,18 @@ tags: [genre-system, tower-defense, worked-build, waves, placement, networking, 
 ---
 # Tower Defense Waves and Placement End to End
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Trusting the client's ground position. Without check 8, an exploiter places a tower floating over the path at Y = 1000 with a...
+> - Avoid: No NaN check. `NaN < limit` is false and `NaN > limit` is false, so a NaN position passes many naive "is it too far" checks.
+> - Avoid: Rewarding in the wave loop and in `PlayerRemoving` without a guard.
+> - Solo match: three waves run, cash increases on kills, lives drop on leaks, match ends with a reward saved once.
+> - Place on the path, outside bounds, on an untagged roof, overlapping another tower, with no cash, past the cap: each returns...
+> - Fire `TDPlace` with NaN, a huge vector, a number instead of a string, and a tower not in the loadout.
+>
+> Read more (36 KB note): ## 4. The server: MatchService · ## 5. The client: TDClient · ## 6. Common mistakes · ## 8. Test checklist
+<!-- tldr:end -->
+
 This note builds the match half of a tower defense game: a wave scheduler driven by data, enemies that exist on the server only as numbers, a batched event stream that lets every client draw the same enemies without CFrame replication, server-side targeting at a fixed rate, a placement remote that checks eight things in a fixed order, upgrades and selling, a skip-wave vote, and a match result written into the player's profile exactly once. [[Genre Playbook - Tower Defense]] explains why the data-driven enemy pattern is necessary and gives the `PathMath` module; this note builds the full system around that module and covers the parts the playbook leaves as bullet points: tick ordering, what to batch, how corrections work in practice, and how placement validation fails.
 
 > **All code is reviewed, not run.** Strict Luau against Roblox docs (as of October 2026), checked by reading. Run section 8 before you trust it.

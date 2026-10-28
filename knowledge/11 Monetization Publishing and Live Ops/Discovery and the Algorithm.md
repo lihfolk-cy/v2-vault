@@ -3,6 +3,18 @@ tags: [discovery, recommendations, algorithm, growth, publishing]
 ---
 # Discovery and the Algorithm
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - First 60 seconds: player acts and gets rewarded without reading
+> - Join time measured on phone
+> - No pop-ups in the first minutes of a first session
+> - Onboarding funnel logged and reviewed weekly
+> - Day 2 to 7 return reasons exist (dailies, streaks, events)
+> - Social co-play rewards
+>
+> Read more (12 KB note): ## 2. Recommended for You: the two-stage model (Docs) · ## 5. What else drives traffic · ## 9. Checklist
+<!-- tldr:end -->
+
 Most Roblox games are found through the Home page, and most of Home is **Recommended for You**, a personalised feed ranked by an algorithm Roblox now documents in some detail. This note explains how that algorithm works according to the Creator Hub "Discovery" page **as of October 2026**, what it measures and what it ignores, and how to turn that into decisions about your first session, your thumbnails, your updates and your marketing. Where the docs are silent, advice is marked rule of thumb.
 
 ---

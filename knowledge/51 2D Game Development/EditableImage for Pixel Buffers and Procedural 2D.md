@@ -3,6 +3,18 @@ tags: [2d, editableimage, pixel-buffer, procedural, buffers, rendering, performa
 ---
 # EditableImage for Pixel Buffers and Procedural 2D
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Creation returns nil. Budget exhausted on this device.
+> - Creation errors in the live game but worked in Studio.
+> - Image shows briefly then stops updating.
+> - Allow Mesh / Image APIs enabled for the published experience; Terms of Use reviewed.
+> - Creation wrapped in `pcall`, `nil` handled, and a fallback path exists.
+> - Framebuffers at native pixel resolution (well under 1024), scaled up with `Pixelated`.
+>
+> Read more (23 KB note): ## 1. The API as documented · ## 4. A framebuffer you can build on · ## 6. Fallbacks and failure modes · ## 9. Checklist
+<!-- tldr:end -->
+
 `EditableImage` lets a script create an image at runtime and write pixels into it. For 2D games that opens doors that ImageLabels alone cannot: a real framebuffer you draw into, destructible terrain masks, fog of war, paint and drawing tools, procedural backgrounds and effects, runtime palette swaps, and minimaps drawn from data. It also has sharp edges: a client memory budget that makes creation return `nil`, a permission toggle that is off by default in published games, a display path that only refreshes one image per frame, and policy questions as soon as players can draw things other players see. This note covers the current API as documented, the budgets, a working framebuffer, and when to avoid the whole thing.
 
 Related: [[Pixel Art Pipeline - Aseprite to Roblox Without Blur]] for sharp display, [[Buffers and Binary Data]] for the `buffer` library, [[A 2D Engine in a ScreenGui - Game Loop Entities and Rendering]] for the ImageLabel approach this competes with.

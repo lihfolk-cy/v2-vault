@@ -3,6 +3,18 @@ tags: [level-design, lobby, hub, social, teleport, proximity-prompt, performance
 ---
 # Lobby and Hub Design
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Built for the impressive jobs first -> Rank the jobs; build spawn and exits first
+> - Avoid: Loiter node on the spawn line -> Move boards and benches off the spawn axis
+> - Avoid: Shop off the return flow -> Put the core spend station on the way out
+> - Hub jobs ranked; spawn and exits designed first.
+> - First-time, return and loiter flows drawn; no crossings at chokes.
+> - Time budgets met: first station under 15 s, exit under 20 s for veterans.
+>
+> Read more (18 KB note): ## 3. Stations and prompts: the hidden collision problem · ## 4. Queue pads, portals and teleports · ## 10. Common mistakes · ## 11. Checklist
+<!-- tldr:end -->
+
 The hub (or lobby) is the space every player sees first and returns to most. [[Level Design for Roblox]] gives the layout patterns (radial plaza, street, courtyard with gates, vertical) and the hub rules that held up in one production game; [[Lobby and Hub Design]] covers how to swap a hub safely with a hook contract and staging copies. This note does neither again. It covers the design questions in between: what a hub is for and in what order, how long each job may take, how many players it must hold, how stations, prompts and queue pads interact, how returning players should flow, and what a hub may cost in performance.
 
 Labels: **Roblox docs (as of October 2026)**, **measured in the reference project**, **rule of thumb**.

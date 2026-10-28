@@ -3,6 +3,18 @@ tags: [vfx, performance, budgets, culling, particles, mobile, optimization]
 ---
 # VFX Performance Budgets and Culling
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Fine alone, lags with a full server: No onlooker share or global cap -> Governor with a global cap; onlookers at half or less
+> - Hitch every few seconds in long fights: Cloning and destroying per hit -> Pools with a cap
+> - Phones lag only when an effect is near the camera: Overdraw from big transparent pieces -> Shrink, raise transparency on the camera line, fewer stacked layers
+> - Budgets written per cast, per caster window and per client, with onlooker share and distances.
+> - Cost estimation script run on every template; worst offenders listed.
+> - Gameplay effects flagged; never skipped, only simplified.
+>
+> Read more (24 KB note): ## 2. Budget units that actually work · ## 4. Culling and degrading: the governor · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[VFX Design Playbook]] tells you how to make an effect look good, and [[Particle Emitters In Depth]] covers the emitter properties and their traps. This note is about the other half of the job: keeping the frame rate when eight players fire their best effects at once on a mid-range phone. It covers where VFX cost actually goes, how to turn "it lags in big fights" into budgets you can count, how to cull and degrade effects by distance, view and importance, and how to measure all of it. The working code is a small client-side **governor** that decides, per effect, whether to play it in full, reduced or not at all.
 
 Source labels: **Roblox docs (as of October 2026)**, **measured in the reference project** (one live action game with hundreds of ability effects), **rule of thumb**.

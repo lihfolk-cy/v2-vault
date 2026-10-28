@@ -3,6 +3,18 @@ tags: [mcp, setup, claude, cursor, vscode, agents]
 ---
 # Setting Up MCP Clients
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Editing config and not restarting the host.
+> - Avoid: `mcpServers` in VS Code, `servers` elsewhere.
+> - Avoid: API keys in `args`.
+> - Server enabled in the app (Studio toggle, Blender add-on).
+> - Config added via Quick connect or JSON with the right key name.
+> - Host fully restarted.
+>
+> Read more (14 KB note): ## 3. Claude Code · ## 11. A sensible starting setup for a small Roblox team · ## 12. Common mistakes · ## 13. Checklist
+<!-- tldr:end -->
+
 An MCP server does nothing until a client (host application) is configured to start or connect to it. Every host stores that configuration a little differently, and most "it does not work" reports come from a missing comma, the wrong key name, a path the host cannot resolve, or forgetting to restart. This note gives working configurations for the common hosts, using the [[Roblox Studio MCP Server]] and [[Blender MCP]] as examples, then covers permissions, scopes, Windows quirks, and how to debug a server that will not connect.
 
 Everything here is **as of October 2026**. Hosts change their settings screens and file locations often; when in doubt, check the host's own MCP documentation. Source labels: **Roblox docs**, **Host docs** (the product's documentation), **Measured** (reference project), **Rule of thumb**.

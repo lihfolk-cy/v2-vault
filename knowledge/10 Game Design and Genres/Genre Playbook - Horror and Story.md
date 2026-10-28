@@ -3,6 +3,18 @@ tags: [game-design, genre, horror, story, narrative, tension, cutscenes]
 ---
 # Genre Playbook - Horror and Story
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Constant jump scares -> Build, spike, release
+> - Avoid: Omniscient monster -> Senses, memory, search, give up
+> - Avoid: Unplayable darkness on phones -> Test at low quality; minimum light
+> - Structure chosen (chapter, round, roguelite, survival).
+> - Tension curve planned with explicit release beats.
+> - Monster rules learnable; signature sound; telegraphs.
+>
+> Read more (15 KB note): ## 4. Monster design · ## 10. A tension director (sketch) · ## 12. Common mistakes · ## 13. Checklist
+<!-- tldr:end -->
+
 Horror and story games are Roblox's "event" genres: a group of friends enters a chapter, gets chased, screams, and comes out with a story to tell. Story games (escape, break-in, chapter adventures) share the same structure without (or with less) fear. Both are built around **authored moments** rather than systems, which makes them expensive per minute of content and extremely strong at producing clips, word of mouth and co-play. This playbook covers why the genres work on Roblox, tension design, monster design, round and chapter structures, narrative in short sessions, replay value, maturity and safety considerations, and a small "tension director" you can build on.
 
 Labels: **Docs** (create.roblox.com, checked October 2026), **Reference project** (one production combat game; used for cutscene and onboarding lessons), **Rule of thumb** (most of this note: horror and story design is craft, not platform rules).

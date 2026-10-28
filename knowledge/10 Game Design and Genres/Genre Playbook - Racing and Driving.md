@@ -3,6 +3,18 @@ tags: [game-design, genre, racing, driving, vehicles, physics, network-ownership
 ---
 # Genre Playbook - Racing and Driving
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Server-owned driven cars -> Driver owns the car; server owns idle cars
+> - Avoid: Detailed mesh collision on roads -> Simple, thick collision
+> - Avoid: Unlimited spawned cars -> One or two per player; despawn abandoned
+> - Driving feels good on keyboard, gamepad and touch; tested on a low-end phone at top speed.
+> - Network ownership set and reset on sit and leave.
+> - Speed, teleport and fly checks with reset responses; tuned against real physics glitches.
+>
+> Read more (14 KB note): ## 4. The technical risks · ## 5. Systems you must build · ## 8. Common mistakes · ## 9. Launch checklist
+<!-- tldr:end -->
+
 Driving games on Roblox come in two broad families. **Racing** games are about competition: laps, checkpoints, times, positions. **Driving** games are about owning and using cars: open-world cruising, car collection, roleplay cities with traffic, delivery jobs, drift parks and car customisation. Many successful games blend both (an open world with races as an activity). The genre is car-collection-driven, attracts a slightly older audience, and rests on one hard technical problem: physics vehicles controlled by players over a network.
 
 This playbook covers the loops, session shapes, monetisation, the systems you must build, the Roblox-specific technical risks (network ownership, physics stability, speed and streaming), the patterns successful driving games share, and a launch checklist. For the physics construction of the car itself, see [[Cars with Constraints - Suspension Steering and Drive]].

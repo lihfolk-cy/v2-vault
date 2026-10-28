@@ -3,6 +3,16 @@ tags: [core-concept, game-design, analytics, retention]
 ---
 # Session Length
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Roblox's recommendation systems consider engagement, and premium payouts are based on Premium members' time in your experience...
+> - Average hides the shape. An average of 15 minutes can be half the players leaving at 1 minute and the other half staying 29.
+> - Length bought with friction is fake. Long walks, slow timers and forced waits raise session length and lower satisfaction and...
+> - Natural stopping points help retention. A game that offers a satisfying place to stop ("quest done, come back tomorrow for the...
+>
+> Read more (3 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+<!-- tldr:end -->
+
 **Session length** is how long a player stays in one visit, from join to leave. Averaged across players it becomes one of the main engagement numbers in the Creator Dashboard (reported as average session time or playtime per user; names change, check your dashboard) (Roblox docs, "Analytics", as of October 2026).
 
 ## Why it matters on Roblox

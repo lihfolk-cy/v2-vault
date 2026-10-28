@@ -3,6 +3,18 @@ tags: [world-building, art, blender, modeling, meshes, pipeline, uv, trim-sheet]
 ---
 # Modeling in Blender for Roblox
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Scene in metres -> 1 unit = 1 stud; Apply Scalings at export
+> - Avoid: Unapplied transforms -> Apply rotation and scale before export
+> - Avoid: Several material slots on one object -> Plan splits deliberately
+> - 1 unit = 1 stud, a 5-stud reference in the file.
+> - Transforms applied; origin where the Studio pivot should be.
+> - Under 20,000 triangles per object; hidden faces removed.
+>
+> Read more (18 KB note): ## Topology for real-time Roblox meshes · ## UVs: texel density, trim sheets and atlases · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Blender is the default modelling tool for Roblox creators: free, scriptable in Python, and supported by Roblox's own export docs and upload add-on. This note covers **static** environment and prop modelling: units, topology, triangle budgets, UVs, trim sheets and atlases, splitting a model into MeshParts, pivots, export, upload and the swap from blockout to final art. Rigging and animated characters live in the Animation section ([[Rigging in Blender]], [[Creature Rig Conventions]], [[Pipeline - Importing Animated Enemies]]); file-format details are in [[Exporting FBX vs GLB]] and importer options in [[3D Importer Settings Reference]].
 
 The production numbers here come from one production game that built a hub (three times), two realms of zone kits, 11 gate models and a 49-model enemy roster in Blender, mostly from Python scripts.

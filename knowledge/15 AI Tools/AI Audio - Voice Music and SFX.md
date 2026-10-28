@@ -3,6 +3,18 @@ tags: [ai, audio, tts, music, sfx, licensing]
 ---
 # AI Audio - Voice Music and SFX
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Free-tier generated music in a monetised game.
+> - Avoid: Assuming a later subscription licenses audio made earlier.
+> - Avoid: Asking an AI for sound ids.
+> - Terms checked for the plan used at generation time; copy saved.
+> - Every uploaded id recorded by script; none invented.
+> - Loudness measured; every id has a levelling entry.
+>
+> Read more (14 KB note): ## 1. Roblox's own speech APIs · ## 2. External AI audio tools · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 AI audio covers three different jobs: speech (text-to-speech and voice conversion), music, and sound effects. Roblox now has its own runtime speech APIs, and a large market of external tools generates all three. The technical part is easy. The hard parts are licensing, loudness consistency, and fitting generated sound into a mix. This note covers Roblox's speech APIs, external tools and their licensing traps, Roblox's upload rules, and how the reference project got 22 new weapon sound banks without any generative model at all.
 
 Engine background: [[Sound Fundamentals]], [[The Audio API - Players Emitters Wires and Effects]], [[Sound Design for Games]], [[Audio Pipeline]]. Products and terms as of October 2026; they change often.

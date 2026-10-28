@@ -3,6 +3,18 @@ tags: [2d, multiplayer, networking, server-authority, replication, snapshots, pr
 ---
 # 2D Multiplayer - Server Authority and Replicating GUI Worlds
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Moving a Frame and expecting others to see it.
+> - Avoid: Sending positions from the client in a competitive game.
+> - Avoid: Consuming every queued input per tick. Symptom: players with spikes surge forward, and speed hacks work.
+> - Architecture chosen (server simulation, client authority with checks, or commands) and written down.
+> - Shared step module: fixed `dt`, seeded `Random`, arrays not dictionary order, no clock reads.
+> - Server loop on `Heartbeat` with accumulator; one input per player per tick; queue capped.
+>
+> Read more (29 KB note): ## 3. The server match loop · ## 4. Packing data into buffers · ## 10. Common mistakes · ## 11. Checklist
+<!-- tldr:end -->
+
 A GUI-rendered 2D world does not exist on the network. The `ImageLabel` that is your player was created by a LocalScript inside a `PlayerGui`, the server never heard of it, and no other client can see it. In a 2.5D game the engine replicates characters, physics and parts for you; in a GUI game you are writing netcode for every moving thing. This note is the plan for doing that well: which of three architectures fits your game, how to keep a shared deterministic simulation, how to pack inputs and snapshots into buffers that fit the remote limits, how other players are interpolated, how your own player is predicted and corrected, and how to stop the obvious cheats.
 
 Read [[A 2D Engine in a ScreenGui - Game Loop Entities and Rendering]] first: everything here assumes its rule that the simulation is plain data in tables and the renderer only draws. If you are still deciding between routes, the multiplayer question in [[Choosing GUI 2D or Locked-Camera 2.5D]] is the one that should decide it. The general theory behind prediction is in [[Client Prediction and Reconciliation for Combat]]; remote basics are in [[RemoteEvents RemoteFunctions and Unreliable Remotes]].

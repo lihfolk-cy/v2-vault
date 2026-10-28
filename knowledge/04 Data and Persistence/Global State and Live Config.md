@@ -3,6 +3,18 @@ tags: [data, configs, configservice, feature-flags, live-ops, global-state, mess
 ---
 # Global State and Live Config
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Every server polling a data store config key every few seconds (Read budget and per-key throughput wasted; the 4 s cache hides...)
+> - Avoid: Relying on MessagingService alone (Servers that miss a message stay wrong forever)
+> - Avoid: `SetAsync` for global records several servers write (Lost updates (two boosts bought, one counted))
+> - Tuning and flags in configs, with defaults in code and type checks.
+> - Kill switches for risky systems.
+> - Refresh policy decided per value (immediate vs boundary).
+>
+> Read more (18 KB note): ## Experience configs (ConfigService) · ## Game-written global state · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Some state belongs to the whole game rather than to a player: a feature flag, a drop-rate multiplier for a weekend event, the start time of a boss raid, a "server luck" boost someone bought for everyone, a kill switch for a broken system, a global counter ("1,000,000 eggs hatched"). Getting that state to every server quickly, safely, and without hammering a single data store key is its own problem. As of October 2026 Roblox has a first-party answer for read-only tuning (**experience configs** via `ConfigService`), and the classic tools (data stores, MessagingService, memory stores) for state the game itself writes. This note covers each, a combined pattern, and the traps.
 
 ## Choose by who writes and how fresh it must be

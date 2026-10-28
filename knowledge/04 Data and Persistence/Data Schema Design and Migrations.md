@@ -3,6 +3,18 @@ tags: [data, schema, migrations, serialization, versioning]
 ---
 # Data Schema Design and Migrations
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Sharing one `DEFAULT` table between players (Every new player edits the same table; data bleeds between players)
+> - Avoid: Array holes or mixed keys (Fields silently dropped or turned into strings)
+> - Avoid: Saving `Vector3`/`CFrame` directly (Write fails with 104 every time)
+> - `Schema` integer on every profile, `CURRENT_SCHEMA` in code.
+> - Ordered, deterministic, non-yielding steps; never edited after release.
+> - Newer schema refused on load.
+>
+> Read more (17 KB note): ## What a data store can hold · ## Versioning: the `Schema` field · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Saved data outlives the code that wrote it. A profile written in week one is still loaded by the release you ship in month six, and during every rollout old and new servers run side by side. This note covers how to shape a profile so it survives that, how JSON serialization actually treats Luau values (the edge cases that silently corrupt data), how to build a migration framework that is safe under rolling updates, and what one production game learned doing roughly a dozen migrations and three account resets.
 
 Prerequisites: [[DataStore Fundamentals]], [[Session Locking and Profile Libraries]].

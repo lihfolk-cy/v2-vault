@@ -3,6 +3,18 @@ tags: [game-design, genre, obby, platformer, checkpoints, difficulty]
 ---
 # Genre Playbook - Obbies and Platformers
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Hard jumps in the first 10 stages -> Comfortable band early; spikes later
+> - Avoid: Long stages without internal checkpoints -> Checkpoint before replaying more than about a minute
+> - Avoid: Kill bricks that look like platforms -> One consistent kill style
+> - Calibration course built; gaps designed in bands.
+> - Teach, test, twist for every new obstacle type.
+> - Sawtooth difficulty with breather stages.
+>
+> Read more (15 KB note): ## 4. Stage design · ## 5. Checkpoints and saving · ## 11. Common mistakes · ## 12. Checklist
+<!-- tldr:end -->
+
 The **obby** (obstacle course) is Roblox's oldest native genre and still one of its biggest: jump across platforms, avoid kill bricks, reach the next checkpoint. It needs no text, no tutorial and no economy, which makes it perfect for a young, mobile, international audience, and brutally competitive because thousands exist. The docs list Obby among the platform's common genres (Docs, "Design for Roblox"). This playbook covers the variants, stage and difficulty design, the movement numbers you design against, checkpoints and saving, mobile fairness, moving platforms (a classic engine trap), anti-cheat for timed runs, and monetisation that does not ruin the challenge.
 
 Labels: **Docs** (create.roblox.com, checked October 2026), **Reference project** (one production combat game; used for funnel and pacing lessons), **Rule of thumb**.

@@ -3,6 +3,18 @@ tags: [modeling, camera, scale, studs, avatar, field-of-view, readability, blend
 ---
 # Modelling to the Roblox Camera and Player Scale
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Model great in Blender, tiny in game: Judged from a close viewport with a wide lens -> Use the matched 70-degree vertical camera at real distances
+> - Unfinished sides visible on phones: Framing tested on 16:9 only -> Test at 2.17 aspect; finish sides within the wider view
+> - Camera keeps clipping indoors: Real-world ceiling heights -> 2 to 3 avatar heights indoors
+> - Avatar proxies (5 and 6.5 studs) in every modelling file.
+> - Blender camera at 70 degrees vertical, phone aspect, real distances.
+> - Key features checked against `d / 260` studs at their usual distance.
+>
+> Read more (15 KB note): ## From studs to pixels · ## Worked example: measuring screen size in Studio · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Most modelling mistakes that show up in Roblox playtests are not modelling mistakes. They are framing mistakes: the model was judged from a Blender viewport at a distance, angle and field of view the player never uses, beside no avatar, at a scale nobody checked. This note gives the numbers that tie a model to how Roblox actually shows it: stud scale, avatar heights, the default camera's field of view and zoom, the formula that turns a size in studs into pixels on a phone, how screen shape changes what the player sees, and how to set up Blender and Studio so you judge models the way players will.
 
 Other notes in this folder use the pixel figures derived here. [[Camera Systems]] covers camera scripting; [[Avatar Body Types and Scale in Gameplay]] covers avatar variety in gameplay; this note is about the modeller's side.

@@ -3,6 +3,18 @@ tags: [2d, game-design, architecture, screengui, camera, side-scroller, decision
 ---
 # Choosing GUI 2D or Locked-Camera 2.5D
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Choosing GUI 2D for a multiplayer action game "because it is simpler".
+> - Avoid: Moving the GUI playfield with `Scale` values.
+> - Avoid: Creating and destroying GuiObjects every frame.
+> - Answered: do other players need to be visible and moving in the world?
+> - Answered: is pixel exactness part of the art identity or rules?
+> - Listed what the game must do that the chosen route does not give for free (particles, physics toys, netcode, level editor) and...
+>
+> Read more (20 KB note): ## 5. The awkward middle: what each route cannot do well · ## 7. Screen size: the GUI route's hidden tax · ## 10. Common mistakes · ## 11. Checklist
+<!-- tldr:end -->
+
 Roblox is a 3D engine with a strong 2D UI system bolted on. That gives you two honest ways to build a 2D game, and one hybrid that is often the right answer:
 
 1. **GUI 2D**: the playfield is a `Frame` inside a `ScreenGui`. Every sprite is an `ImageLabel`, every tile is a `Frame` or an `ImageLabel`, and your own Luau code does movement, collision and rendering.

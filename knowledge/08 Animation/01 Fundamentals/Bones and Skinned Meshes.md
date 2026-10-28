@@ -3,6 +3,15 @@ tags: [fundamentals, bones, skinning, rigging]
 ---
 # Bones and Skinned Meshes
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Root motion on the `Root` bone -> Key the root's child
+> - Avoid: Using `Bone.WorldCFrame` for animated position -> `TransformedWorldCFrame`
+> - Avoid: Relying on MeshPart collision for animated limbs -> Hitbox parts on bones, or data-driven hits
+>
+> Read more (15 KB note): ## Driving bones from code · ## Nuances and edge cases · ## Common mistakes
+<!-- tldr:end -->
+
 A skinned mesh is one mesh whose vertices are deformed by a hierarchy of `Bone` objects, each vertex weighted to a few bones. It is how smooth creatures, tails, capes, tentacles, dragons and modern avatar bodies bend without visible seams. This note covers the `Bone` class, how the Animator drives bones, how skinned rigs differ from part rigs in practice (collision, replication, hit detection, root motion), the limits, and the patterns one production game used for dozens of skinned enemies and bosses.
 
 ## Bone in one paragraph

@@ -3,6 +3,18 @@ tags: [game-design, genre, tycoon, idle, payback, plots]
 ---
 # Genre Playbook - Tycoons
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Physical parts for every drop on the server -> Server income tick; client-only visual drops
+> - Avoid: Ten buttons visible at once -> One to three available, next to the last build
+> - Avoid: Payback rising sharply mid-chain -> Plot wait(k); smooth spikes with spectacle buttons
+> - First input is a free purchase that builds the first income source.
+> - Chain data in one module; prerequisites encode intended order.
+> - wait(k) plotted; early payback 10 to 60 s; spikes smoothed.
+>
+> Read more (13 KB note): ## 2. The button chain · ## 5. Performance: the dropper trap · ## 10. Common mistakes · ## 11. Checklist
+<!-- tldr:end -->
+
 A Roblox **tycoon** gives each player a plot and a growing machine that earns money: droppers drop, conveyors carry, a collector converts, and buy buttons appear one after another to add more machines, walls, floors and decorations until the plot is a finished base, factory, restaurant or theme park. Tycoon is one of the genres the docs list as common on the platform (Docs, "Design for Roblox"). This playbook covers why tycoons work, the button chain as the core design object, payback maths, plot and server design, performance (the genre's classic trap), saving, and how modern tycoons add depth.
 
 Labels: **Docs** (create.roblox.com, checked October 2026), **Reference project** (one production RNG combat game; used here for pacing and economy lessons, not tycoon specifics), **Rule of thumb**.

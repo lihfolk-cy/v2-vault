@@ -3,6 +3,18 @@ tags: [ai, images, icons, thumbnails, concept-art, pipeline]
 ---
 # AI Image Generation for Icons Thumbnails and Concepts
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: AI-generated item icons that do not match the item.
+> - Avoid: Thumbnails showing features, places or graphics the game does not have.
+> - Avoid: Generated text on thumbnails (misspellings, gibberish letters).
+> - Concepts: style references supplied; silhouettes first.
+> - Icons: rendered from real models with one framing standard.
+> - Thumbnails: every gameplay element real; AI only for non-claims.
+>
+> Read more (13 KB note): ## 3. Roblox rules that apply to published images · ## 4. The alternative for item icons: render your real models · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Image generators are the most widely used AI tools among Roblox creators, and the most misused. They are excellent for concept art and mood, decent for backgrounds and marketing composition, and poor for item icons that must match the real in-game object. This note covers where image AI fits, the rules Roblox applies to the images you publish, and the alternative the reference project used for 100+ item icons: an automated Blender render pipeline driven by AI agents, which gave exact likeness and consistent style.
 
 Related: [[Thumbnails Icons and Store Page]] (store presentation), [[Icon and Thumbnail Rendering Pipeline]] (the render pipeline in depth), [[UI Asset Pipeline]].

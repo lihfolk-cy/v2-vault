@@ -3,6 +3,18 @@ tags: [game-design, genre, puzzle, escape-room, co-op, hints, level-design, stat
 ---
 # Genre Playbook - Puzzle and Escape Rooms
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Answers stored on the client -> Answers in server-only storage
+> - Avoid: No guess rate limit -> 5 attempts per 10 s per player
+> - Avoid: Pixel-hunting clues -> Interactables highlighted
+> - Every puzzle has three hint tiers and accepts all valid solutions.
+> - Answers and puzzle logic only on the server; guesses rate-limited and distance-checked.
+> - Group state synchronised; late joiners receive current state.
+>
+> Read more (14 KB note): ## 3. Puzzle design rules · ## 5. Systems you must build · ## 10. Common mistakes · ## 11. Launch checklist
+<!-- tldr:end -->
+
 Puzzle games on Roblox include escape rooms (find clues, solve locks, open the door before the timer runs out), co-op puzzle adventures (two or more players with separate abilities or separate views), physics puzzles, logic puzzles with a progression map, and story games where puzzles gate the plot. The genre has a smaller audience than simulators or combat, but it is loyal, social and less crowded, and it is one of the few genres where a small team with good ideas can compete with big studios, because the content is ideas rather than assets.
 
 Its unique problem: **content is consumed once.** A solved puzzle has no replay value, and solutions leak to video sites within days. This playbook covers the loop, session shapes, monetisation that fits a one-time-content genre, the systems you must build (puzzle state, hints, co-op sync), Roblox-specific risks, patterns successful puzzle games share, and a launch checklist.

@@ -3,6 +3,18 @@ tags: [community, moderation, safety, reports, ban-api, luau, live-ops]
 ---
 # Player Reports and In-Game Moderation
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Report spam -> Weight by distinct reporters and servers; cap per target
+> - Avoid: Moderator abuse -> Weekly log review; remove first, investigate second
+> - Avoid: Kicking for safety issues instead of escalating -> Moderator script: platform report first
+> - Platform report reachable; players told where it is
+> - Rule-report flow with categories, no free text, server-attached context
+> - Reports rate-limited, retained for a fixed window, user ids only
+>
+> Read more (18 KB note): ## 3. An in-game report flow for your rules · ## 4. Moderating what players create · ## 8. Failure modes · ## 10. Checklist
+<!-- tldr:end -->
+
 Roblox moderates its platform; you moderate your game. The two overlap but are not the same job. Roblox handles anything that breaks the Community Standards (harassment, sexual content, grooming, hate, scams, real-world threats) through its report system and moderators. You handle your own game's rules (griefing, spawn-camping, exploiting, trade scams in your economy, abusing a mechanic) and you are responsible for the safety of what your game lets players create and show each other. This note covers where the line sits, the Safety Dashboard, building an in-game report flow that does not collect personal data, moderating user-generated content, staffing moderators, and the tools that act (kick, ban, mute, restrict). For the Ban API itself, evidence and appeals, read [[Logging Bans and Appeals]]; for cheat detection, [[False Positives Lag and Fair Enforcement]].
 
 Facts are labelled "Roblox docs (as of October 2026)", "Help Center", "measured in the reference project" or "rule of thumb".

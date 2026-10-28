@@ -3,6 +3,18 @@ tags: [pipelines, environment, level-design, terrain, manifests, map]
 ---
 # Environment and Level Pipeline
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Resize means rebuild: hand-placed macro layout -> layout formulas
+> - Restyle means re-placing every prop: no placement manifest -> export manifest, re-seat
+> - Players stuck at gates: art colliders, no walk test -> collision layer first, walk-box gate
+> - Layers separated: layout, collision, terrain, kit, props, markers, FX
+> - Macro layout in formulas or a table
+> - Collision built first; art non-colliding
+>
+> Read more (15 KB note): ## Stage 2: collision first, art second · ## Stage 3: terrain by script, with snapshots · ## Failure modes · ## Checklist
+<!-- tldr:end -->
+
 Levels are where pipelines and hand craft meet. A zone needs a designer's eye (sight lines, pacing, where the fight happens), but it also needs hundreds of props placed consistently, terrain that matches the meshes, colliders players can trust, and the ability to restyle or resize the whole thing later without starting over. This note is a recipe for building zones that can be rebuilt. Level design theory is in [[Level Design for Roblox]], kits in [[Modular Environment Kits]], terrain tools in [[Terrain Tools and Terrain API]], streaming in [[Level of Detail and Model Streaming]] and [[Instance Streaming]].
 
 ## The layers of a level

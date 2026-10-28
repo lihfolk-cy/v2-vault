@@ -741,6 +741,9 @@ Start at [[Resource Library Start Here]]: 19 chapters, one note per topic.
 - [[Spending Triangles Where the Camera Looks]]
 - [[Style Bibles for Consistent Models]]
 
+### 56 Field Notes (21 notes)
+Start at [[Field Notes Start Here]]: 20 hard-won lessons from a shipped action RPG (camera, UI, input, animation, audio, data, Studio automation, many-agent workflows).
+
 ### Reference
 - [[Using This Vault in Obsidian]] (search, speed, AI tools)
 - [[Glossary]], [[Animation Glossary]]

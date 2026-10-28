@@ -3,6 +3,16 @@ tags: [core-concept, analytics, retention, live-ops]
 ---
 # Retention Cohorts
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Retention is the clearest signal of whether players like a game, and it compounds: a game that keeps more of each day's new...
+> - Compare cohorts, not totals. Total daily players mixes new and returning players and moves with traffic.
+> - Traffic source changes the cohort. Players from a sponsored ad, a viral video or a front-page placement behave differently.
+> - D1 measures the first session; D7 and D30 measure the game.
+>
+> Read more (3 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+<!-- tldr:end -->
+
 A **cohort** is a group of players who share a starting point, usually the day they first joined. **Retention** is the share of a cohort that comes back after a given time: day-1 (D1) retention is the percentage who return the day after their first play, D7 a week later, D30 a month later. The Creator Dashboard reports these (Roblox docs, "Retention" analytics, as of October 2026).
 
 ## Why it matters on Roblox

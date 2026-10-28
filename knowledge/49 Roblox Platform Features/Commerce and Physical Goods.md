@@ -3,6 +3,18 @@ tags: [platform-features, commerce, merchandise, shopify, commerceservice, polic
 ---
 # Commerce and Physical Goods
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Granting anything on `PromptCommerceProductPurchaseFinished` -> It only means the webview closed; benefits arrive by receipt or...
+> - Avoid: Showing the merch tab to every player -> Gate on `IsEligibleToPurchaseCommerceProduct`
+> - Avoid: Editing Shopify prices during a campaign -> Bundles go off sale until the bundling fee is processed again
+> - Eligibility confirmed for creator, game (public, maturity labels) and audience size
+> - Shopify products complete: description, returns, origin, metafield accordions
+> - Merch tab visible only to eligible players; prices from `DisplayPrice`
+>
+> Read more (19 KB note): ## 2. Who can sell, where, and to whom · ## 3. The in-game API · ## 8. Common mistakes · ## 9. Checklist
+<!-- tldr:end -->
+
 Roblox now lets eligible creators sell **real-world products** (shirts, plushies, posters) inside their games, paid in real money and fulfilled through a Shopify store, optionally bundled with a digital item. It is a narrow feature with strict eligibility, a US-only buyer base and real-world obligations (shipping, returns, product claims) that do not exist for Robux products. This note explains the system end to end, where it fits and where it does not, and the "digital merch" route most creators actually use: selling avatar items in game for a commission. For Robux products see [[Developer Products and ProcessReceipt]] and [[Game Passes]]; for UGC pricing see [[UGC Pricing Limiteds and Marketplace Rules]].
 
 Platform facts are labelled **Roblox docs (as of October 2026)** and were checked against the Commerce products guide, the CommerceService and PolicyService references, the Webhook notifications guide, the Avatar items guide and the Marketplace fees and commissions page on create.roblox.com. The docs state that commerce eligibility requirements are subject to change; check them before planning. Business and legal points are rule of thumb, not legal advice.

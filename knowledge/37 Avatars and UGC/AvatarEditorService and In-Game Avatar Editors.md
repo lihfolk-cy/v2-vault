@@ -3,6 +3,18 @@ tags: [avatars, ugc, avatar-editor, avatareditorservice, humanoiddescription, ca
 ---
 # AvatarEditorService and In-Game Avatar Editors
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Sending a `HumanoidDescription` through a remote -> Send ids; build on server
+> - Avoid: No asset-type check -> `GetProductInfoAsync` allow-list
+> - Avoid: Overlapping applies -> Latest-wins queue
+> - Browse, try-on, save and buy are separate flows with separate UI states.
+> - Every `Async` getter is in `pcall`; every prompt waits on its `*Completed` event.
+> - Inventory permission requested only when needed; declined handled gracefully.
+>
+> Read more (22 KB note): ## 3. Catalog browsing on the client · ## 4. Try-on: the server decides · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 An in-game avatar editor is one of the most requested features in hangout, roleplay and fashion games, and one of the easiest to build badly. The obvious version (a grid of catalog items, click to wear, a "Save" button) hides four separate systems: catalog browsing, server-side try-on, platform saving, and commerce. Each has its own permission model, failure modes and trust boundary. This note goes past the basics in [[UGC Avatar Items and Accessories]] and [[HumanoidDescription and Outfit Systems]] and covers how `AvatarEditorService` actually behaves, how to split work between client and server, and the edge cases that turn a pretty editor into a support queue.
 
 API names and capabilities below are **Roblox docs (as of October 2026)**. Several methods were renamed with an `Async` suffix during 2026; the old names still appear in tutorials and are marked deprecated in the reference.

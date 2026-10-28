@@ -3,6 +3,18 @@ tags: [narrative, lore, worldbuilding, environmental-storytelling, codex, collec
 ---
 # Lore Delivery Without Walls of Text
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Opening lore crawl -> Show the world; put history in optional layers
+> - Avoid: NPC explains the world unprompted -> Move to "What is this place?" style optional choices
+> - Avoid: Disconnected flavour text -> Plan connections in the bible
+> - Each zone has a surface identity (name, landmark, one line) that works with no reading.
+> - Curious layer: item one-liners, optional NPC lines, a few notes per zone.
+> - Obsessed layer: deliberate gaps, rare events, collectible sets (only if the game suits it).
+>
+> Read more (22 KB note): ## 2. Channels other than text · ## 4. Collectibles and a codex · ## 10. Common mistakes · ## 11. Checklist
+<!-- tldr:end -->
+
 Lore is the history, rules and mysteries that make a world feel like it existed before the player arrived. Most Roblox players will never read a paragraph of it, and that is fine: good lore is designed so that a player who reads nothing still feels it (in the names, the ruins, the enemy designs, the music) while a player who goes looking finds more, and a small group of obsessed players finds enough to build a wiki and argue about theories. This note is about that layered delivery: the channels you can use besides text, how much to put in each layer, how to build a codex that rewards exploration without leaking spoilers to exploiters, how to keep lore consistent across a live game, and when to leave lore out entirely.
 
 Dialogue craft is in [[Writing Dialogue for Roblox Players]]. Naming, one of the strongest lore channels, has its own note: [[Naming Items Zones and Abilities]]. The visual side of zones is in [[Zone and Biome Art Direction]] and [[Environment Art Styles]]. Story-first genres are covered in [[Genre Playbook - Horror and Story]].

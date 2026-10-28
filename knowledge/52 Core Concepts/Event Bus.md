@@ -3,6 +3,16 @@ tags: [core-concept, architecture, luau, signals]
 ---
 # Event Bus
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Roblox games grow by adding systems that react to the same moments: a kill updates quests, achievements, analytics, a kill...
+> - Use a pure-Luau signal, not BindableEvents, inside one context.
+> - A bus is not a network. A server-side bus does not reach clients.
+> - Too much indirection hides flow. If everything is an event, nobody can follow what happens when a player buys an item.
+>
+> Read more (4 KB note): ## Why it matters on Roblox · ## The nuance most people miss
+<!-- tldr:end -->
+
 An **event bus** is a shared channel where systems publish named events ("PlayerLevelledUp", "EnemyKilled") and other systems subscribe to them, without either side knowing about the other. The quest system hears "EnemyKilled" without the combat system ever calling the quest system.
 
 ## Why it matters on Roblox

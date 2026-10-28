@@ -3,6 +3,18 @@ tags: [ui, hud, layout, overlap, popups, mobile]
 ---
 # HUD Design
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Hand-positioned HUD elements added feature by feature.
+> - Avoid: Checks with their own copy of positions (they drift from the game).
+> - Avoid: Popups with no queue and no gating (celebrations over death screens).
+> - A zone map agreed before building.
+> - Every stackable element is a slot row; the checker runs the game's placement code.
+> - 0 overlaps at five viewports and every scenario.
+>
+> Read more (14 KB note): ## 2. The overlap problem · ## 3. Popup arbitration · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 The HUD is the UI that is always on: currencies, the main action button, navigation into menus, objectives, boosts, health and the transient things (toasts, reward banners, damage numbers) that compete for the same screen. Unlike a menu, it shares the screen with gameplay, so every pixel it uses is a pixel the player cannot see the world through, and on a phone it shares that space with the player's thumbs. This note covers HUD zones, a slot system that prevents overlaps by construction, popup arbitration, unlock gating, and motion and performance budgets, with the reference project's numbers.
 
 Sources: the **reference project** (one production game whose HUD went through several redesigns with automated overlap checking; numbers measured there), **Docs** where engine behaviour is cited, and **rule of thumb**. Device strategy is in [[Responsive UI for Phone Tablet Console and PC]]; insets in [[Safe Areas and Insets]].

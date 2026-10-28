@@ -3,6 +3,15 @@ tags: [blender, python, bpy, bmesh, headless, gotchas]
 ---
 # Blender 5 Python Gotchas for Headless Builds
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Setting a socket that no longer exists. Symptom: `KeyError: 'bpy_prop_collection[key]: key "Emission" not found'`.
+> - Avoid: Relying on operator context in `-b` mode.
+> - Avoid: Leaving a bmesh unflushed. Symptom: the script runs but the mesh is empty or unchanged on export.
+>
+> Read more (10 KB note): ## Rendering and compositing · ## Nuances and edge cases · ## Common mistakes
+<!-- tldr:end -->
+
 Traps hit while building assets with `blender -b --factory-startup --python build.py` on Blender 5.2 (October 2026). Each cost a render or a crash; most are one-line fixes.
 
 ## Rendering and compositing

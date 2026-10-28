@@ -3,6 +3,18 @@ tags: [gameplay, combat, status-effects, buffs, debuffs, crowd-control, stacking
 ---
 # Status Effects Buffs and Stacking Rules
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Effects write `WalkSpeed` or `Health` directly -> Modifiers plus one owner that recomputes
+> - Avoid: Countdown timers in loops -> Absolute expiry in server time
+> - Avoid: `task.delay` per effect to remove it -> One update loop; compare against current expiry
+> - Every timed modifier uses one effect model with a named stacking policy.
+> - Stat formula order written down: flat, percent sum, independent multipliers, clamps.
+> - Movement speed and other contested properties have exactly one owner.
+>
+> Read more (22 KB note): ## 6. Time, ticks and edge cases · ## 8. A compact effect service · ## 9. Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Burn, poison, slow, freeze, stun, a damage potion, a rally zone, a shield that blocks four hits: status effects are small, and they are where combat code goes to rot. Each one starts as three lines ("set WalkSpeed to 10 for 3 seconds") and then two of them overlap, one expires and restores the wrong speed, a boss gets frozen for its whole phase, a potion keeps ticking while the player is offline, and a debuff survives respawn. This note gives one model for every timed modifier: how effects stack, how their numbers combine, how crowd control is limited, how time is kept, and how it replicates.
 
 Related: [[Combat Systems Architecture]], [[Ability Kits Architecture]], [[Hitboxes and Hit Detection]], [[Characters and Humanoids]], [[Server Authority and Validation]], [[Instances Attributes and Tags]], [[HUD Design]].

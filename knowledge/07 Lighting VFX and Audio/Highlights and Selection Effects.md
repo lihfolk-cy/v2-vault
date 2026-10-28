@@ -3,6 +3,18 @@ tags: [vfx, highlight, outline, selection, readability, feedback]
 ---
 # Highlights and Selection Effects
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - New highlights do not appear: Slot limit reached, often by disabled highlights -> Destroy unused highlights.
+> - Outline stopped showing after a hit flash: A leftover Highlight on the same model -> One arbiter per object, or destroy flashes.
+> - Frame spike on every flash: Creating and destroying Highlights -> Animate transparency of a persistent one.
+> - Every Highlight sets fill, outline and depth mode explicitly.
+> - One owner per highlighted object (arbiter) or one container Highlight per class.
+> - Flashes animate a persistent Highlight; unused Highlights destroyed, not disabled.
+>
+> Read more (13 KB note): ## 1. Highlight properties · ## 2. One Highlight per object, and who owns it · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 A `Highlight` draws an outline around a model or part and an optional tinted fill over it, optionally visible through walls. It is the cheapest way to say "this matters": the interactable chest, the enemy that just aggroed, the teammate behind a wall, the character that took damage, the tutorial target. Because it is so easy to use, games accumulate highlights from five systems that fight over the same character, and on mobile the first one on screen costs real GPU time.
 
 This note covers `Highlight` properties and limits, how several systems can share highlights without conflict, the classic selection adornments (`SelectionBox`, `SelectionSphere`, `SurfaceSelection`), and alternatives such as Neon shells.

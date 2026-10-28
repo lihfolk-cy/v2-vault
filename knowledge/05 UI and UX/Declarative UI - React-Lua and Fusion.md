@@ -3,6 +3,18 @@ tags: [ui, declarative, react-lua, fusion, vide, state, architecture]
 ---
 # Declarative UI - React-Lua and Fusion
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Starting with Roact in new code.
+> - Avoid: Mixing Fusion 0.2 and 0.3 examples.
+> - Avoid: Animating via component state every frame.
+> - Library and version pinned (Wally or packages folder).
+> - Server-replicated data feeds one client store.
+> - Each property has exactly one owner.
+>
+> Read more (14 KB note): ## 2. React-Lua · ## 3. Fusion 0.3 · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Imperative UI code says "when the gem count changes, find the label and set its text". Declarative UI code says "the label's text is the gem count", and a library keeps the instances in sync with your state. On Roblox the declarative options are community libraries, mainly **React-Lua** (a Luau port of React), **Fusion** (reactive state objects) and **Vide** (a smaller reactive library). This note explains how each works, when declarative UI is worth it and when it is not, how to combine it with Studio-authored art, and the performance traps.
 
 Sources: the libraries' own repositories and documentation (versions checked October 2026), **rule of thumb**, and the **reference project** (one production game that stayed imperative, with lessons on where that hurt). Roact, the older Roblox library, is superseded by React-Lua and should not be used for new work.

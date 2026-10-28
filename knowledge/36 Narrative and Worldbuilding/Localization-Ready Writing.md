@@ -3,6 +3,18 @@ tags: [narrative, localization, writing, translation, i18n, strings, ui-text]
 ---
 # Localization-Ready Writing
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Sentences built from fragments -> One key per sentence, named placeholders
+> - Avoid: English plural logic in code -> Label pattern or count-neutral wording
+> - Avoid: Gendered player address -> Describe actions, use other subjects
+> - Every translatable string is a complete sentence or label, one key each.
+> - Placeholders are named and say what they hold.
+> - No English plural logic in code; counts use labels or neutral wording.
+>
+> Read more (22 KB note): ## 8. A style guide and a glossary · ## 9. Linting the source · ## 12. Common mistakes · ## 13. Checklist
+<!-- tldr:end -->
+
 Localization problems are usually blamed on translators or on the translation tool, but most of them are written into the English source long before anyone translates it. A sentence built from three fragments, a label that reuses one word for two meanings, a pun that only works in English, a plural made by adding "s" in code, a line that calls the player "brave hero" in a language where adjectives agree with gender: each of these produces a broken or wrong translation no matter how good the translator is. This note is about writing English that translates well, by human translators and by Roblox's automatic translation alike.
 
 It deliberately does not repeat the platform material. How automatic text capture, automatic translation, the cloud table, format specifiers and `Translator` work is in [[Localization]]. The keys, CSV extraction, placeholder parity checks, pseudo-localization and import process are in [[Localization Pipeline]]. Read those for the plumbing; read this for the words that go through it.

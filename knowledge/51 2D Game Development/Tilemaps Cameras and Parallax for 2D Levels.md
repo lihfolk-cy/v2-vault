@@ -3,6 +3,18 @@ tags: [2d, 2.5d, tilemap, level-design, camera, parallax, chunks, tiled, renderi
 ---
 # Tilemaps Cameras and Parallax for 2D Levels
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Collision derived from visual tiles. Symptom: an artist adds a decorative tile and players get stuck on it.
+> - Avoid: One ImageLabel per tile moved every frame.
+> - Avoid: Chunks positioned from an unsnapped camera.
+> - Collision layer separate from visual layers; objects as a separate list.
+> - Levels converted at build time to Luau data; versioned; tile ids append-only.
+> - Tiled GID flags cleared; flipped variants pre-baked.
+>
+> Read more (28 KB note): ## 3. Rendering tiles in a GUI: three strategies · ## 4. Cameras that frame the level · ## 8. Common mistakes · ## 9. Checklist
+<!-- tldr:end -->
+
 Most 2D levels are grids. A tilemap stores a level as a few arrays of small numbers, which makes it cheap to save, cheap to collide against, cheap to send to the server, and easy to author in a dedicated editor. The hard parts are elsewhere: drawing thousands of tiles without thousands of property writes, hiding seams between tiles, a camera that frames the level well instead of just following the player, and parallax backgrounds that stay crisp. This note covers all four for the GUI route, and how the same data builds a level in the 2.5D route.
 
 It builds on [[A 2D Engine in a ScreenGui - Game Loop Entities and Rendering]] (loop, renderer, coordinates) and uses the `TileMap` shape from [[2D Collision Physics and Platformer Movement]], so collision and drawing read the same data. Tile art and atlas padding come from [[Pixel Art Pipeline - Aseprite to Roblox Without Blur]]; baking tiles into a single texture uses [[EditableImage for Pixel Buffers and Procedural 2D]]. For the craft of laying out the level itself, see [[Obby and Platforming Level Design]] and [[Level Design for Roblox]].

@@ -3,6 +3,18 @@ tags: [community, moderation, voice-chat, safety, audio-api, luau]
 ---
 # Voice Chat and Safety Features
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Place max players above 100 with voice expected (Voice silently absent; players complain it is "broken")
+> - Avoid: Stale team access lists (Players hear the other team after switching)
+> - Avoid: Map-wide radio for everyone (Strangers harass across the map; report rate climbs)
+> - Voice adds a core experience; otherwise disabled
+> - Place max players at or below 100 if voice is on
+> - Routing restricts only; nothing creates private channels between strangers
+>
+> Read more (14 KB note): ## 2. What the platform does (Roblox docs, as of October 2026) · ## 4. Routing voices with the audio API · ## 9. Common mistakes · ## 10. Checklist
+<!-- tldr:end -->
+
 Voice turns a game into a place: callouts in a shooter, laughter in a hangout, panic in a horror game. It is also the hardest communication channel to moderate, because speech is fast, ephemeral and hard to filter. This note covers what Roblox controls (eligibility, moderation, reporting), what you control (whether voice is on, who hears whom, how voices sound), the audio API patterns for team, radio and non-spatial voice, and the design work that keeps a voice game fair for the many players who will never use a microphone. It builds on [[The Audio API - Players Emitters Wires and Effects]] (section 7, voice and speech) and [[Age Checks and Safety Features]].
 
 Facts are labelled "Roblox docs (as of October 2026)", "Announcement", or "rule of thumb". Voice eligibility rules changed several times in 2025 and 2026; re-check before shipping.

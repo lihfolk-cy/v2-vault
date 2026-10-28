@@ -3,6 +3,18 @@ tags: [policy, compliance, maturity, paid-random-items, policyservice, odds, lua
 ---
 # Roblox Policies Ratings and Compliance
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Thinking gem-priced eggs are exempt because gems can be earned.
+> - Avoid: Odds in an (i) icon with no word.
+> - Avoid: Display odds from a different table than the roll.
+> - Questionnaire complete, accurate, resubmitted after content changes
+> - Policy service on the server, fail-closed, attributes for UI
+> - Every paid random item: all outcomes, numerical odds, 100% sum, labelled details button
+>
+> Read more (16 KB note): ## 1. The Maturity & Compliance Questionnaire (Docs) · ## 2. Paid random items (Docs, Oct 2026) · ## 7. Common mistakes · ## 8. Checklist
+<!-- tldr:end -->
+
 Compliance on Roblox has three layers: the **Maturity & Compliance Questionnaire** (which sets your content label and who can see your game), **monetization policies** (paid random items and odds disclosure, paid item trading, subscription, ad and notification rules), and the general **Terms of Use and Community Standards**. Breaking them costs reach, ads eligibility, payouts, or the game. This note explains each layer, the `PolicyService` checks you must implement, and how to build odds disclosure that meets the rules, with code. Verified against the Creator Hub "Content maturity and compliance", "Paid random items" and `PolicyService` pages **as of October 2026**. This is a developer guide, not legal advice; regulations differ by country and change.
 
 ---

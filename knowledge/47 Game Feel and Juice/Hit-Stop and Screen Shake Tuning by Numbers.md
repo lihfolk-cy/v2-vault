@@ -3,6 +3,18 @@ tags: [game-feel, juice, hit-stop, camera-shake, tuning, combat, numbers, luau]
 ---
 # Hit-Stop and Screen Shake Tuning by Numbers
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Light hits feel inconsistent on phones: 50 ms stops are 1 or 2 frames at 30 fps -> Raise important stops to 66 ms or more, or accept and rely on...
+> - Fast weapons feel laggy: Unbudgeted stops add up in flurries -> Rolling window budget with reserve for finishers
+> - Shake turns to jitter on phones: Noise frequency above Nyquist at low fps -> Cap at 0.4 x smoothed fps
+> - Every hit has one strength value; stop, trauma and kick derive from it.
+> - Light tier produces no stop and no shake.
+> - One hit-stop per swing; trauma scales with log of target count.
+>
+> Read more (20 KB note): ## 4. What a shake looks like depends on FOV, not resolution · ## 7. A tuning module · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Hit Reactions Stagger and Hit-Stop]] explains how to build a hit-stop that does not desync from clock-timed effects, and [[Camera Shake and Camera FX]] gives a trauma shake with envelopes and caps. This note assumes both and answers the next question: **what numbers do you actually type in, and how do you know they are right?** It covers frame math at the frame rates Roblox players really run, a strength ladder that ties stop length and trauma to one value, budgets that stop flurries from grinding to a halt, how field of view and screen size change what a shake looks like, the aliasing trap on 30 fps phones, and a tuning workflow you can repeat.
 
 Source labels: **Roblox docs (as of October 2026)**, **measured in the reference project** (one live action game), **rule of thumb**.

@@ -3,6 +3,18 @@ tags: [game-design, genre, combat, rpg, enemies, bosses, ttk, abilities]
 ---
 # Genre Playbook - Combat and RPG
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Tuning damage without a TTK target -> TTK per enemy type per zone in the sheet
+> - Avoid: Health growth with no matching DPS source -> A visible DPS source per zone (gear, forge, upgrades)
+> - Avoid: Attacks without telegraphs -> 0.4 to 0.8 s telegraph, ground markers
+> - TTK targets per enemy type; health and DPS growth matched per zone.
+> - Every attack telegraphed; roles distinct in silhouette.
+> - Bosses short, open, retryable, with a recommended power number.
+>
+> Read more (16 KB note): ## 2. Time to kill (TTK) is the master number · ## 3. Readable enemies · ## 12. Common mistakes · ## 13. Checklist
+<!-- tldr:end -->
+
 Combat games on Roblox range from simulator-style "click the enemy" fighting to anime ability RPGs, dungeon crawlers, open-world quest games and arena PvP. They have the highest production cost of the common genres (animation, VFX, AI, hit detection, networking) and the deepest long loops (builds, gear, mastery). This playbook covers the combat design numbers that matter (time to kill, damage budgets, telegraphs), enemy and boss design, RPG progression (levels, gear, abilities, builds), mobile combat, PvP, and the funnel risks that come with failure states. Most numbers come from one live action game, labelled as such.
 
 Labels: **Docs** (create.roblox.com, checked October 2026), **Reference project** (one live action game, anonymised), **Rule of thumb**.

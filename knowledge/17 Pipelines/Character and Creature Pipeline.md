@@ -3,6 +3,18 @@ tags: [pipelines, characters, creatures, enemies, pets, armor, voxel, manifests]
 ---
 # Character and Creature Pipeline
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Every clip broken after a model update: skeleton re-exported with renamed or re-rolled bones -> keep the manifest; rebuild the look onto it (Blender Armature and...
+> - Creature floats after redesign: root height not re-measured -> measure from the new meshes on install
+> - Pets face sideways: uploader pivot offsets -> clear `PivotOffset` on install
+> - Contract written per character type (skeleton, names, scale)
+> - Design scripts share style helpers and palette tables
+> - Previews and a contact sheet for review
+>
+> Read more (17 KB note): ## The look-swap pipeline (enemies) · ## Armour and wearables: fit without touching joints · ## Failure modes · ## Checklist
+<!-- tldr:end -->
+
 Characters are the hardest assets to pipeline because they are three things glued together: a **look** (meshes, materials), a **skeleton** (bones or Motor6Ds, pivots, root height) and **behaviour data** (clips, hitboxes, AI role, stats). Change any one carelessly and the other two break: a new mesh with a different root height floats; a re-exported skeleton breaks every clip; a resized creature keeps its old hitbox.
 
 The single idea that makes character pipelines manageable is: **keep the skeleton and the data stable, and swap the look**. This note shows that idea applied to enemies, pets, eggs and armour in one production game, with manifest-driven installs. Rigging, skinning and animation import are covered in depth in the Animation section: [[Rigging in Blender]], [[Weight Painting and Skinning for Roblox]], [[Creature Rig Conventions]], [[Pipeline - Importing Animated Enemies]], [[Enemy Import Axis Fix]], [[Ground Fitting Pipeline]]. Modelling is in [[Organic and Creature Modeling]] and [[Modeling Characters for R15 and Custom Rigs]]. This note is about the pipeline around them.

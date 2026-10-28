@@ -3,6 +3,18 @@ tags: [world-building, building, placement, grid, snapping, tycoon, housing, val
 ---
 # Grid Placement and Player Building Systems
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Storing world positions -> Plot-local cells
+> - Avoid: Anchor corner follows the cursor -> Centre the footprint on the cursor
+> - Avoid: Footprint not swapped on rotation -> `rotatedSize` everywhere
+> - Studio kits audited for off-grid pivots and yaw.
+> - Placements stored as (itemId, x, y, z, r) in plot-local cells with a format version.
+> - Footprints rotate correctly; centre follows the cursor.
+>
+> Read more (23 KB note): ## 4. The client: ghost, input, feedback · ## 5. The server: validation and the occupancy grid · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 Grids show up twice in Roblox development. Builders use them in Studio to assemble kits cleanly, and many games hand a grid to the **player**: tycoon plots, housing, base building, farm layouts, furniture placement. The two share the maths, but the runtime version adds everything that makes it hard: a ghost preview that follows a mouse, a finger or a thumbstick, rotation of non-square items, server validation against exploits, saving and loading hundreds of placed items per player, and keeping 20 players' builds inside an instance budget.
 
 [[Modular Environment Kits]] covers the Studio side in depth: choosing the grid unit, pivot rules, the piece list and scripted placement of kit pieces. This note adds a short section on keeping Studio-built kits on grid, then spends the rest on player building systems.

@@ -3,6 +3,18 @@ tags: [pipelines, localization, translation, text, ui, csv]
 ---
 # Localization Pipeline
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Concatenating translated fragments. Symptom: grammatically broken sentences in other languages.
+> - Avoid: Images with baked-in text. Symptom: English text remains on banners and buttons in every language.
+> - Avoid: Translating ids and keys. Symptom: lookups break when a key is translated along with display text.
+> - No player-facing literals in code; keys with named placeholders
+> - Context on ambiguous strings; plural variants as keys
+> - Source CSV generated from code and data, kept in Git
+>
+> Read more (19 KB note): ## Stage 1: write text for translation · ## Nuances and edge cases · ## Checklist · ## Common mistakes
+<!-- tldr:end -->
+
 Roblox has a large non-English audience, and the platform does a lot of translation work for you: it can capture in-game text automatically, translate it automatically for supported languages, and swap it at runtime. That makes it tempting to treat localization as "turn it on and forget it". In practice the automatic layer only works well when the game's text is **built for it**: stable keys, no text glued together in code, placeholders instead of concatenation, UI that survives longer strings, and a review loop for the strings that matter. This note is the pipeline that gets there. Concepts and APIs are introduced in [[Localization]]; text rendering in [[Text Fonts and Rich Text]]; UI sizing in [[UI Asset Pipeline]] and [[Responsive UI for Phone Tablet Console and PC]].
 
 ## The moving parts on Roblox

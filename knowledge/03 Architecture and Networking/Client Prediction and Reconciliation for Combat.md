@@ -3,6 +3,18 @@ tags: [networking, combat, prediction, latency, reconciliation, server-authority
 ---
 # Client Prediction and Reconciliation for Combat
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Own animations, sounds and VFX start on input, never after a round trip.
+> - Every predicted action carries a sequence number; the server answers with the last processed one.
+> - Displayed resources = server value + unconfirmed predictions, recomputed on each answer.
+> - Server cooldowns have a small tolerance; cooldown ends are sent in server time.
+> - Rejections roll back quietly; rejection rates are measured.
+> - Rules (costs, cooldowns, shapes) live in one shared module.
+>
+> Read more (21 KB note): ## 3. Sequence numbers: the backbone of reconciliation · ## 9. The engine's server authority model · ## Checklist
+<!-- tldr:end -->
+
 Every combat game on Roblox lives with a round trip of roughly 50 to 300 ms between a player's input and the server's verdict. If the client waits for the server before showing anything, combat feels like wading through mud. If the client decides everything, exploiters decide everything. Prediction is the middle path: the client **shows** the likely result immediately, the server **decides** the real one, and reconciliation makes the two agree without the player noticing.
 
 This note covers what to predict in melee and ability combat (and what never to predict), the sequence-number pattern that makes reconciliation exact, predicting resources and cooldowns, rejecting gracefully, projectiles, movement abilities, testing under lag, and the engine's own server authority model with prediction and rollback. Hit validation and rewind basics live in [[Hitboxes and Hit Detection]]; the damage pipeline in [[Combat Systems Architecture]].

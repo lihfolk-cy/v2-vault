@@ -3,6 +3,15 @@ tags: [blender, eevee, rendering, presentation, volumetrics, lighting]
 ---
 # Dramatic Showcase Renders in Eevee
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Everything glows. Symptom: the image is a bright haze with no focal point.
+> - Avoid: Fog density too high. Symptom: pink or purple wash over the whole frame.
+> - Avoid: Visible volume box edges. Symptom: straight vertical walls in the gas.
+>
+> Read more (8 KB note): ## Building blocks · ## Nuances and edge cases · ## Common mistakes
+<!-- tldr:end -->
+
 ![[p45_cosmic_sword.png]]
 ![[p45_celestial_gate.png]]
 

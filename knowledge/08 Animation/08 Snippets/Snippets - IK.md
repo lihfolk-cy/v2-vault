@@ -3,6 +3,15 @@ tags: [snippets, luau, ik, procedural]
 ---
 # Snippets: IK
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Reading `Part.CFrame` in `PreSimulation` for the chain parent (one frame behind).
+> - Avoid: Targets past full reach (snaps and flips at the singular straight pose).
+> - Avoid: A pole on the limb line (undefined bend plane).
+>
+> Read more (27 KB note): ## 1. IKControl setups · ## 5. Foot IK during locomotion (pelvis drop, ground normal, blend) · ## Common mistakes
+<!-- tldr:end -->
+
 Two ways to do inverse kinematics on Roblox rigs, with working code for each:
 
 1. **The engine's `IKControl`**: declarative, solved by the engine, smoothing built in. Best for look-at, a hand reaching for a handle, an off-hand on a two-handed grip, and feet on uneven ground while standing.

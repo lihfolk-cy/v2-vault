@@ -3,6 +3,18 @@ tags: [2d, screengui, game-loop, fixed-timestep, entities, rendering, object-poo
 ---
 # A 2D Engine in a ScreenGui - Game Loop Entities and Rendering
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Avoid: Game logic reading `AbsolutePosition`. Results differ per screen.
+> - Avoid: Variable-step physics. Symptom: jump height or speed differs between a 60 fps PC and a 30 fps phone; players on fast machines...
+> - Avoid: No clamp on frame time. Symptom: after alt-tabbing back, the player has fallen through the floor or enemies teleport.
+> - Simulation state lives in tables; no gameplay reads Instance properties.
+> - Fixed timestep with accumulator, frame clamp, max steps per frame, and interpolation alpha.
+> - `prevX/prevY` copied at the start of every step; teleports set both.
+>
+> Read more (23 KB note): ## 2. The fixed-timestep loop · ## 5. Rendering: pooled views with dirty checks · ## 9. Common mistakes · ## 10. Checklist
+<!-- tldr:end -->
+
 If you chose the GUI route in [[Choosing GUI 2D or Locked-Camera 2.5D]], you are building a small engine. This note is the skeleton of that engine: a fixed-timestep loop with interpolation, entities stored as plain data, a renderer that maps data onto pooled `ImageLabel`s, a camera, layers, culling and pixel snapping. Collision and movement are in [[2D Collision Physics and Platformer Movement]], sprite animation in [[Sprite Sheets and Frame Animation with ImageRectOffset]], levels and parallax in [[Tilemaps Cameras and Parallax for 2D Levels]].
 
 The single idea behind everything here: **the simulation never touches Instances, and the renderer never makes gameplay decisions.** Data in, pixels out.

@@ -3,6 +3,18 @@ tags: [luau, performance, benchmarking, optimization, profiling, gc]
 ---
 # Luau Performance Patterns with Benchmarks
 
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - Benchmark shows 0 ns/op: Work optimised away -> Store results in a sink; use the index as input
+> - Results flip between runs: Noise; single run -> Median of several rounds; alternate order
+> - "Optimised" code slower in game than in bench: Bench ignored GC; ran on desktop -> Check heap delta; profile on device
+> - Hot spot found in the MicroProfiler before touching code.
+> - Benchmarks use warm-up, several rounds, a median, a sink and a heap delta.
+> - Per-frame cost computed as cost x count x rate, on the target device.
+>
+> Read more (21 KB note): ## 3. Micro patterns: what to expect · ## 4. Structural patterns that actually move the needle · ## Common mistakes · ## Checklist
+<!-- tldr:end -->
+
 [[Luau Performance and Native Codegen]] explains how the Luau VM makes code fast and when to reach for `@native`. This note is the practical companion: how to write a benchmark that does not lie, how to turn microseconds into a frame budget, and a catalogue of the patterns people argue about (iteration styles, appends, string building, method caching, property reads, `pcall` in loops, closures) with the result you should expect and why. It ends with the structural patterns (time slicing, spatial hashing, ring buffers) that matter far more than any of the micro ones.
 
 A note on the numbers. Statements about what the VM does come from the official Luau performance page (luau.org, as of October 2026). Numbers labelled "measured in the reference project" come from one production game. Relative results in the pattern tables are **expected directions**, not figures run for this note: run the harness below on your own hardware and Studio version before quoting a ratio to your team. Hardware, Studio version, server versus client and native codegen all move the ratios.
