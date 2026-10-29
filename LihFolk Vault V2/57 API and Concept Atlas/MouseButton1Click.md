@@ -3,15 +3,6 @@ tags: [atlas, api, type/atlas, area/ui, area/gameplay, api/MouseButton1Click]
 ---
 # MouseButton1Click
 
-<!-- tldr:start -->
-> [!tldr] TL;DR
-> - `MouseButton1Click` is mouse-specific in name and intent.
-> - Avoid: `MouseButton1Click` instead of `Activated`.
-> - `MouseButton1Click` instead of `Activated`.
->
-> Cost: TL;DR ~80 tok · whole note ~200 tok. Read more: ## In short · ## Key facts
-<!-- tldr:end -->
-
 ## In short
 
 `MouseButton1Click` is mouse-specific in name and intent. (from [[Input - UserInputService and ContextActionService]])
@@ -21,7 +12,6 @@ API snapshot: member of `GuiButton` (`_tools/roblox_api.json`, docs build of 202
 ## Key facts
 
 - Avoid: `MouseButton1Click` instead of `Activated`. ([[Cookbook - UI]])
-- `MouseButton1Click` instead of `Activated`. ([[Input - UserInputService and ContextActionService]])
 
 ## Mentioned in
 

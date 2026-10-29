@@ -136,5 +136,5 @@ Plugins run inside Studio with access to the whole data model. Before installing
 
 <!-- related:start -->
 ## Related
-[[Open Questions]] · [[Snippets - Building and Sampling Clips]] · [[Animation Glossary]] · [[How the Animator Really Behaves]] · [[Timing Spacing and Frame Charts]] · [[Enemy Import Axis Fix]] · [[Importing Models and Rigs]] · [[Animation Objects]]
+[[Open Questions]] · [[Snippets - Building and Sampling Clips]] · [[Animation Glossary]] · [[How the Animator Really Behaves]] · [[Timing Spacing and Frame Charts]] · [[Enemy Import Axis Fix]] · [[Importing Models and Rigs]] · [[Weapon Rig Player]]
 <!-- related:end -->

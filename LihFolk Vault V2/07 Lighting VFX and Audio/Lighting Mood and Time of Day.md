@@ -12,7 +12,7 @@ tags: [lighting, mood, day-night, weather, zones, environment, type/guide, area/
 > - Mood keyframes for at least dawn, noon, dusk, midnight.
 > - Night readable on a dim phone screen.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.8k tok. Read more: ## 1. The clock · ## 2. Mood keyframes across the day · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.9k tok. Read more: ## 1. The clock · ## 2. Mood keyframes across the day · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A day/night cycle looks like a one-liner (`Lighting.ClockTime += dt`) and turns into a system as soon as the game has zones, weather, cutscenes, indoor areas and players on phones. This note covers the clock itself (who owns it and how it reaches clients), mood keyframes across the day, zone and weather overrides, handing control to cutscenes, and the readability rules that keep a beautiful night from becoming an unplayable one.
@@ -279,7 +279,7 @@ See also: [[Lighting Technologies and Settings]], [[Atmosphere Sky Clouds and Po
 
 ## Nuances and edge cases
 
-1. **Lighting is per client, so the clock is shared data.** Only a shared reference time (the server's, replicated once) gives every player the same sky. Clients computing time from their own join moment drift apart by however long they have been in the server. A single server-published start time plus a fixed day length is enough; clients derive the rest.
+1. **Server Lighting writes replicate, but per-frame clock writes are wasteful.** A server setting `ClockTime` every frame sends a stream of property updates for something every client can compute. Publish one shared start time instead (the server's, replicated once) and let each client derive the time, which gives every player the same sky. Clients computing time from their own join moment drift apart by however long they have been in the server. A single server-published start time plus a fixed day length is enough; clients derive the rest.
 2. **Device quality changes the look.** Lower graphics quality levels disable or simplify shadows and some post-processing, so a night scene that relies on point lights and soft shadows reads as flat dark on a phone at low quality. Check every mood keyframe at the lowest quality level a meaningful share of players uses, not just at maximum.
 3. **Lighting technology choice locks in some moods.** Shadow detail and how local lights behave differ between lighting technologies (see [[Lighting Technologies and Settings]]). A cave that looks right with one technology can be pitch black or washed out with another. Pick the technology before tuning moods, and re-tune after any switch.
 4. **Gameplay readability beats realism at night.** Enemies, pickups and paths must be readable at the darkest point of the cycle. Rule of thumb: never let ambient drop to the point where an enemy silhouette disappears against the ground; use rim lights, highlights or emissive accents instead of brighter ambient where you want night to feel dark.

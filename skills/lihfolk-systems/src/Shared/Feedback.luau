@@ -25,6 +25,7 @@ Feedback.Messages = {
 	Unavailable = "This is not available right now.",
 	AlreadyOwned = "You already own this.",
 	AtMaxLuck = "Your luck is already at the maximum.",
+	BoostLimit = "You have the most boosts running at once. Try again when one ends.",
 	NotFound = "That code does not exist.",
 	Expired = "That code has expired.",
 	AlreadyRedeemed = "You already used that code.",

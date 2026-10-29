@@ -230,5 +230,5 @@ Answer these in order; the first strong answer usually decides:
 
 <!-- related:start -->
 ## Related
-[[Texel Density]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Procedural Materials and Skies - Lessons]] · [[Lighting Untextured Art in Roblox]] · [[Substance Painter and Texturing Tools]] · [[Materials MaterialVariants and SurfaceAppearance]]
+[[Texel Density]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Lighting Untextured Art in Roblox]] · [[Procedural Materials and Skies - Lessons]] · [[Substance Painter and Texturing Tools]] · [[Materials MaterialVariants and SurfaceAppearance]]
 <!-- related:end -->

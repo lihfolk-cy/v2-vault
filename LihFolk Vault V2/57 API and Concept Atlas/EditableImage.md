@@ -8,9 +8,9 @@ tags: [atlas, api, type/atlas, area/2d, area/studio, api/EditableImage]
 > - `EditableImage` lets a script create an image at runtime and write pixels into it.
 > - The maximum size is 1024 by 1024, and an EditableImage cannot be resized after creation.
 > - Roblox cannot read Aseprite's palette, but keeping colours exact (no near duplicates) makes runtime recolouring with...
-> - EditableImage for Pixel Buffers and Procedural 2D.
+> - `EditableMesh`/`EditableImage` creation handles `nil`.
 >
-> Cost: TL;DR ~130 tok · whole note ~610 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~640 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -23,8 +23,8 @@ API snapshot: class, inherits `Object`, not creatable with `Instance.new` (`_too
 
 - The maximum size is 1024 by 1024, and an EditableImage cannot be resized after creation. ([[EditableImage for Pixel Buffers and Procedural 2D]])
 - Roblox cannot read Aseprite's palette, but keeping colours exact (no near duplicates) makes runtime recolouring with EditableImage for Pixel Buffers and Procedural 2D reliable, because you can match colours by exact RGB. ([[Pixel Art Pipeline - Aseprite to Roblox Without Blur]])
-- EditableImage for Pixel Buffers and Procedural 2D. ([[Tilemaps Cameras and Parallax for 2D Levels]])
 - `EditableMesh`/`EditableImage` creation handles `nil`. ([[Engine and API Changes 2025-2026]])
+- EditableImage for Pixel Buffers and Procedural 2D: only if the design needs pixels you cannot get from sprites (destructible terrain, painting, fog of war). ([[2D Game Development Start Here]])
 
 ## Mentioned in
 

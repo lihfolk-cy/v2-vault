@@ -8,7 +8,7 @@ Most import problems are decided before the file reaches Studio: units, applied 
 
 ## Inputs
 
-- `VAULT`: LihFolk Vault V2, the knowledge base at `../../LihFolk Vault V2/` relative to this file (plugin root `LihFolk Vault V2/`). Start with `VAULT/INDEX.md` to find notes fast.
+- `VAULT`: LihFolk Vault V2, the knowledge base in the plugin root's `LihFolk Vault V2/` folder: `<base directory>/../../LihFolk Vault V2`, where the base directory is the one Claude Code shows when this skill loads. Resolve it to an absolute path before any Read, Grep or command (the vault is in the plugin, not the user's project). Start with `VAULT/INDEX.md` to find notes fast.
 - The source file(s) and what they are for (prop, kit piece, character, weapon, terrain material).
 - The target device class (assume mid-range phones unless told otherwise).
 
@@ -66,7 +66,7 @@ Most import problems are decided before the file reaches Studio: units, applied 
 
 8. **Use the LihFolk libraries.**
    - Section 18 has nine skeleton rigs (R6, R15, quadruped, bird, spider, serpent, sword, bow, flail) built at 1 unit = 1 stud. Characters face -Y in Blender, which is forward in Roblox. Keep bone names: the R15 rig must keep exact R15 names for the importer's Humanoid setup. Weapons use `Handle` as root and grip. These rigs were exported and checked by name and size but not yet test-imported into Studio, so test one first.
-   - The LihFolk Asset Pack (optional download, see `../../assets/README.md`) holds original LihFolk models, kits, materials and skies. Check it before importing from elsewhere.
+   - The LihFolk Asset Pack (optional download, see `<base directory>/../../assets/README.md` (resolve to an absolute path)) holds original LihFolk models, kits, materials and skies. Check it before importing from elsewhere.
    - Outside texture sets and HDRIs (for example CC0 libraries the user downloads): downscale 2K sets to 1024 before upload. An HDRI becomes a sky by converting it to six 1024 px cube faces for the `Sky` object.
    - Outside environment kits: prefer the GLB version when a kit ships several formats, import with Merge Meshes off, and keep the kit's licence file and source URL next to the source files.
 
@@ -105,6 +105,6 @@ Most import problems are decided before the file reaches Studio: units, applied 
 - `06 World Building and Art/Parts Unions and MeshParts.md`
 - `17 Pipelines/Art Pipeline - Concept to In-Game Asset.md`
 - `18 Rigs and Skeletons/Skeleton Library.md`
-- The LihFolk Asset Pack (original models, materials, skies, animations, VFX) when installed: see `../../assets/README.md`
+- The LihFolk Asset Pack (original models, materials, skies, animations, VFX) when installed: see `<base directory>/../../assets/README.md` (resolve to an absolute path)
 
 Disputed: texture size limits (1024 for UV texture maps versus up to 4096 on another docs page) and Blender unit setup (docs say Unit System None; many guides use Metric with 1 m = 1 stud). See `Open Questions - Whole Vault.md`.

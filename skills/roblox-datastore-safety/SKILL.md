@@ -8,7 +8,7 @@ Player data lives in server memory during a session and is written back periodic
 
 ## Inputs
 
-- `VAULT`: LihFolk Vault V2, the knowledge base at `../../LihFolk Vault V2/` relative to this file (plugin root `LihFolk Vault V2/`). Start with `VAULT/INDEX.md` to find notes fast.
+- `VAULT`: LihFolk Vault V2, the knowledge base in the plugin root's `LihFolk Vault V2/` folder: `<base directory>/../../LihFolk Vault V2`, where the base directory is the one Claude Code shows when this skill loads. Resolve it to an absolute path before any Read, Grep or command (the vault is in the plugin, not the user's project). Start with `VAULT/INDEX.md` to find notes fast.
 - The data module(s), the receipt handler, and any other code that writes to data stores.
 
 ## Procedure

@@ -2,7 +2,10 @@
 # Used on macOS, Linux and Windows Git Bash. lihfolk-check.ps1 is the Windows PowerShell twin;
 # keep both in step (tools/hooks-test/run-tests.sh compares them).
 #
-# Variables (-v): mode=hook|scan  rules=<rules.tsv>  scope=edit|file  maxshow=<n>
+# Variables (-v): mode=hook|scan  rules=<rules.tsv>  scope=edit|file  maxshow=<n>  robloxproj=0|1
+#   robloxproj=1 when the project root holds *.project.json, wally.toml, *.rbxl or *.rbxlx (set by the sh
+#   wrapper). .luau files are always checked; .lua files only when robloxproj=1 or the file itself uses
+#   game:GetService or script.Parent, so plain Lua projects (LOVE, Neovim, ...) are left alone.
 #   hook: stdin is the PostToolUse JSON from Claude Code; prints hook JSON (or nothing).
 #   scan: stdin is a list of .lua/.luau paths, one per line; prints a text report.
 # Portable awk only: no gawk extensions, no regex intervals, no character classes.
@@ -14,6 +17,15 @@ BEGIN {
 	loadRules(rules)
 	split("function if while for do repeat end until break return", kw_, " ")
 	for (k_ in kw_) KW[kw_[k_]] = 1
+	# infinite-loop rule: words before "(" that are not calls, globals that never yield, and library
+	# tables whose functions never yield. Any other call to a function not defined in this file (or any
+	# method call) may yield, so the loop is not reported.
+	split("and or not if elseif while until return in then do function local else repeat for end break", kw_, " ")
+	for (k_ in kw_) LKW[kw_[k_]] = 1
+	split("print warn error assert type typeof tostring tonumber pairs ipairs next select rawget rawset rawequal rawlen setmetatable getmetatable unpack pcall xpcall", kw_, " ")
+	for (k_ in kw_) NOYIELD[kw_[k_]] = 1
+	split("math string table bit32 utf8 buffer os debug vector task coroutine Vector3 Vector2 Vector3int16 Vector2int16 CFrame Color3 UDim UDim2 Instance BrickColor NumberRange NumberSequence NumberSequenceKeypoint ColorSequence ColorSequenceKeypoint TweenInfo Ray Region3 Rect Random DateTime", kw_, " ")
+	for (k_ in kw_) STDLIB[kw_[k_]] = 1
 	SEVRANK["error"] = 3; SEVRANK["warning"] = 2; SEVRANK["info"] = 1
 	if (mode == "hook") hookMain(); else scanMain()
 	exit EXITCODE
@@ -330,6 +342,36 @@ function rangeHas(lo, hi, calls,    i, rest, nm) {
 	return 0
 }
 
+# does CODE line c call something that yields (a same-file yielding function) or may yield (a function
+# not defined in this file, or a method call)? Used by while-true-no-yield.
+function mayYieldCall(c,    rest, off, st, nm, prev, pre, q) {
+	rest = c; off = 0
+	while (match(rest, /[A-Za-z_][A-Za-z0-9_]*[ \t]*\(/)) {
+		st = off + RSTART
+		nm = substr(rest, RSTART, RLENGTH); sub(/[ \t]*\($/, "", nm)
+		off = st + RLENGTH - 1; rest = substr(c, off + 1)
+		prev = (st > 1) ? substr(c, st - 1, 1) : ""
+		if (nm in YN) return 1
+		if ((nm in LKW) || (nm in FNDEF)) continue
+		if (prev == ":") return 1
+		if (prev == ".") {
+			pre = substr(c, 1, st - 2); q = ""
+			if (match(pre, /[A-Za-z_][A-Za-z0-9_]*$/)) q = substr(pre, RSTART, RLENGTH)
+			if (q in STDLIB) continue
+			return 1
+		}
+		if (nm in NOYIELD) continue
+		return 1
+	}
+	return 0
+}
+# is this file in scope? .luau always; .lua only in a Roblox project or when it uses Roblox globals
+function inScope(path,    i) {
+	if (tolower(path) !~ /\.lua$/ || robloxproj == 1) return 1
+	for (i = 1; i <= NL; i++) if (RAW[i] ~ /game[ \t]*:[ \t]*GetService|script[ \t]*\.[ \t]*Parent/) return 1
+	return 0
+}
+
 # ---------------------------------------------------------------- analyse one file
 function resetFile() {
 	split("", RAW); split("", CODE); split("", IGN); split("", IGNF); split("", TOUCH)
@@ -337,7 +379,7 @@ function resetFile() {
 	split("", L_start); split("", L_end); split("", L_inf); split("", L_ok)
 	split("", SK); split("", SI); split("", DSC_ln); split("", DSC_fns); split("", DSC_m)
 	split("", F_id); split("", F_ln); split("", F_lo); split("", F_hi); split("", F_det); split("", F_ev); split("", FSEEN)
-	split("", PREF); split("", REMNAME); split("", RCPNAME); split("", YN); split("", LEAVENAME); split("", WN); split("", WN2)
+	split("", PREF); split("", REMNAME); split("", RCPNAME); split("", YN); split("", LEAVENAME); split("", WN); split("", WN2); split("", FNDEF)
 	FC = 0; FNC = 0; LC = 0; SD = 0; DSC = 0; NL = 0; LXM = ""; LXL = 0; PW = 0; PF = 0; PI = 0
 }
 function addIds(ids, target, isFile,    n, a, j) {
@@ -349,6 +391,7 @@ function analyze(path,    l, i, c, rest, off, st, en, w, prevch, pos, t, s, mkt,
 	while ((getline l < path) > 0) { NL++; sub(/\r$/, "", l); RAW[NL] = l }
 	close(path)
 	if (NL == 0) return 0
+	if (!inScope(path)) return 0
 	ISCLIENT = isClientPath(path)
 	for (i = 1; i <= NL; i++) CODE[i] = lex(RAW[i])
 
@@ -427,19 +470,13 @@ function analyze(path,    l, i, c, rest, off, st, en, w, prevch, pos, t, s, mkt,
 		for (k = 1; k <= n; k++) if (FN_wrap[a[k]] || (FN_name[a[k]] != "" && (FN_name[a[k]] in PREF))) prot = 1
 		if (!prot) addF("datastore-no-pcall", DSC_ln[j], DSC_ln[j], DSC_ln[j], DSC_m[j])
 	}
-	# infinite loops: a call to a same-file function that yields counts as a yield
-	for (k = 1; k <= FNC; k++) if (FN_y[k] && FN_name[k] != "") YN[FN_name[k]] = 1
+	# infinite loops: a call to a same-file function that yields, to a function defined elsewhere, or a
+	# method call counts as a (possible) yield; only loops whose calls are all known not to yield are reported
+	for (k = 1; k <= FNC; k++) if (FN_name[k] != "") { FNDEF[FN_name[k]] = 1; if (FN_y[k]) YN[FN_name[k]] = 1 }
 	for (j = 1; j <= LC; j++) {
 		if (!L_inf[j] || L_ok[j]) continue
 		prot = 0
-		for (i = L_start[j]; i <= L_end[j] && !prot; i++) {
-			rest = CODE[i]
-			while (match(rest, /[A-Za-z_][A-Za-z0-9_]*[ \t]*\(/)) {
-				nm = substr(rest, RSTART, RLENGTH); sub(/[ \t]*\($/, "", nm)
-				if (nm in YN) { prot = 1; break }
-				rest = substr(rest, RSTART + RLENGTH)
-			}
-		}
+		for (i = L_start[j]; i <= L_end[j] && !prot; i++) if (mayYieldCall(CODE[i])) prot = 1
 		if (!prot) addF("while-true-no-yield", L_start[j], L_start[j], L_end[j], "")
 	}
 	# remote handlers and ProcessReceipt (inline or named in this file)

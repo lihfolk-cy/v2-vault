@@ -382,5 +382,5 @@ The `0.999` clamp is a defensive habit: a developer forum report described `GetP
 
 <!-- related:start -->
 ## Related
-[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Dot and Cross Products in Gameplay]] · [[Rides and Attractions - Roller Coasters, Ziplines, Elevators and Cable Cars]] · [[Intersection and Collision Math]] · [[Big Numbers Precision and Formatting]] · [[Probability and Statistics for Designers]]
+[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Dot and Cross Products in Gameplay]] · [[Cookbook - Math CFrame and Vectors]] · [[Intersection and Collision Math]] · [[Big Numbers Precision and Formatting]] · [[Probability and Statistics for Designers]]
 <!-- related:end -->

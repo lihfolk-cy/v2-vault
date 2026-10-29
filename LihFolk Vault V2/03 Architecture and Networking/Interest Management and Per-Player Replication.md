@@ -323,5 +323,5 @@ Remote-driven interest and Instance Streaming run side by side, and they disagre
 
 <!-- related:start -->
 ## Related
-[[Snapshot Interpolation for Custom Replication]] · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]] · [[Replication Boundary]] · [[Entity Component Systems]] · [[Rate Limiting and Abuse Prevention]] · [[Network Ownership]] · [[Cross-Server Messaging]]
+[[Snapshot Interpolation for Custom Replication]] · [[Replication Boundary]] · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]] · [[Entity Component Systems]] · [[Rate Limiting and Abuse Prevention]] · [[Network Ownership]] · [[Cross-Server Messaging]]
 <!-- related:end -->

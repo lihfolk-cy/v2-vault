@@ -7,10 +7,9 @@ tags: [atlas, api, type/atlas, area/ai, area/gameplay, api/ApplyDescription]
 > [!tldr] TL;DR
 > - `ApplyDescription` is a yielding server call that can fail (asset loading); wrap it in `pcall`, and apply only to a fully...
 > - Avoid: `ApplyDescription` without pcall -> pcall, fallback look.
-> - `grep -nE ":(GetProductInfo|PlayerOwnsAsset|AwardBadge|LoadCharacter|IsInGroup|GetRankInGroup|ApplyDescription|ReserveServer)\(...
 > - Wrong: `GetProductInfo`, `PlayerOwnsAsset`, `AwardBadge`, `LoadCharacter`, `IsInGroup`, `GetRankInGroup`, `ApplyDescription`...
 >
-> Cost: TL;DR ~160 tok · whole note ~390 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~350 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -22,7 +21,6 @@ API snapshot: member of `Humanoid`; flagged deprecated (`_tools/roblox_api.json`
 ## Key facts
 
 - Avoid: `ApplyDescription` without pcall -> pcall, fallback look. ([[Character Select and Class Systems with Different Rigs]])
-- `grep -nE ":(GetProductInfo|PlayerOwnsAsset|AwardBadge|LoadCharacter|IsInGroup|GetRankInGroup|ApplyDescription|ReserveServer)\(... ([[Engine and API Changes 2025-2026]])
 - Wrong: `GetProductInfo`, `PlayerOwnsAsset`, `AwardBadge`, `LoadCharacter`, `IsInGroup`, `GetRankInGroup`, `ApplyDescription`, `ReserveServer`, `CreateHumanoidModelFromDescription`. ([[AI Pitfalls - Stale APIs and Luau]])
 
 ## Mentioned in

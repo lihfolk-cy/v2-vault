@@ -146,5 +146,5 @@ The reference project built creature heads with the skull "in anatomical order" 
 
 <!-- related:start -->
 ## Related
-[[Blender Armature and Bone Roll Conventions]] · [[3D Importer Settings Reference]] · [[Creature Rig Conventions]] · [[Bones and Skinned Meshes]] · [[Animation Data from Blender to Roblox]] · [[Accessories and Armor That Follow Animation]] · [[Custom Characters and StarterCharacter]] · [[Importing Models and Rigs]]
+[[Blender Armature and Bone Roll Conventions]] · [[3D Importer Settings Reference]] · [[Creature Rig Conventions]] · [[Bones and Skinned Meshes]] · [[Animation Data from Blender to Roblox]] · [[Custom Characters and StarterCharacter]] · [[Accessories and Armor That Follow Animation]] · [[Importing Models and Rigs]]
 <!-- related:end -->

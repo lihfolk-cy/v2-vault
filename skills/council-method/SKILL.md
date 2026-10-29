@@ -1,5 +1,5 @@
 ---
-name: council
+name: council-method
 description: 'LihFolk: blind multi-agent verdict (Quick 1 seat / Standard 3 / Full) for high-stakes Roblox decisions, ship-readiness and "be objective" / "second opinion" requests. Not for routine coding.'
 ---
 
@@ -22,6 +22,7 @@ Escalate one tier only when the lower tier comes back split or low-confidence. N
 - Restate the question neutrally. Strip the user's preferred answer, your own leaning and any loaded wording ("isn't X better?" becomes "compare X and Y").
 - Fix a 3-5 point rubric **before** seeing any answer (e.g. player experience, correctness/security, performance, cost to build, fit with the game).
 - Gather evidence once and pass the same pack to every seat: the files, screenshots and Studio state, plus **the 2-3 most relevant note excerpts** (their Common mistakes / Checklist sections), never whole notes or folders. Keep the pack short; every seat pays for it.
+- Start every seat's prompt with `VAULT=<absolute path>`: the plugin root's `LihFolk Vault V2` folder, resolved from this skill's base directory (`<base directory>/../../LihFolk Vault V2`), so seats can open a cited note.
 
 ## Quick
 

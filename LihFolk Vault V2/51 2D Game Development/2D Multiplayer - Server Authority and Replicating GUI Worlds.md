@@ -528,5 +528,5 @@ Never send hidden information (the opponent's hand, the next piece) to a client 
 
 <!-- related:start -->
 ## Related
-[[Snapshot Interpolation for Custom Replication]] · [[Serialization Formats for Saves and Networking]] · [[Debugging Client-Server Desync]] · [[Projectiles and Ballistics]] · [[EditableImage for Pixel Buffers and Procedural 2D]] · [[Client-Server Model]]
+[[Snapshot Interpolation for Custom Replication]] · [[Serialization Formats for Saves and Networking]] · [[Projectiles and Ballistics]] · [[Debugging Client-Server Desync]] · [[EditableImage for Pixel Buffers and Procedural 2D]] · [[Replication Boundary]]
 <!-- related:end -->

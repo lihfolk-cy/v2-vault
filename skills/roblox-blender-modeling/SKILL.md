@@ -52,7 +52,7 @@ tiny 150/300 · small 600/1,500 · medium 2,000/4,000 · rock 400/1,000 · tree 
 
 V1 silhouette reads as solid black at 64 px from every angle · V2 clear big/medium/small hierarchy · V3 confident stylized proportions · V4 consistent bevels catching light · V5 clean shading, no gradients/artifacts on flat faces · V6 2-3 dominant colours with value contrast · V7 geometry only where silhouette/shading needs it (if the wireframe looks solid, too dense) · V8 matches the kit (texel density, bevel size, palette) · V9 Studio-ready (scale, pivot, collision, flags).
 
-Score honestly from the renders. For hero assets, or when your score is borderline (14-15), run a **Quick** `council` (Art Director lens) with the four renders as evidence. Kits: review one representative piece, not every piece.
+Score honestly from the renders. For hero assets, or when your score is borderline (14-15), run a **Quick** `council-method` review (Art Director lens) with the four renders as evidence. Kits: review one representative piece, not every piece.
 
 ## Styles
 
@@ -80,7 +80,7 @@ Kits: build modular pieces on a stud grid (multiples of 1, 2 or 4 studs), shared
 
 ## Reusing the LihFolk Asset Pack
 
-If the pack is installed (`LIHFOLK_ASSETS` env var or `~/LihFolk-Assets`), check its original LihFolk models and materials before modelling from scratch; pack assets already passed this gate. See `../../assets/README.md`.
+If the pack is installed (`LIHFOLK_ASSETS` env var or `~/LihFolk-Assets`), check its original LihFolk models and materials before modelling from scratch; pack assets already passed this gate. See `<base directory>/../../assets/README.md` (resolve to an absolute path).
 
 ## Open questions (verify in Studio before relying on them)
 

@@ -145,5 +145,5 @@ Dark elements break the additive rules because black does not add. What matched 
 
 <!-- related:start -->
 ## Related
-[[Particle Emitters In Depth]] · [[Stylized Lighting Recipes]] · [[Beams and Trails]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Highlights and Selection Effects]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[VFX Performance Budgets and Culling]] · [[Lighting Mood and Time of Day]]
+[[Particle Emitters In Depth]] · [[Stylized Lighting Recipes]] · [[Beams and Trails]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Highlights and Selection Effects]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[VFX Performance Budgets and Culling]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]]
 <!-- related:end -->

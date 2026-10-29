@@ -72,6 +72,39 @@ MEMBER_EXCLUDE = {"PlayerData", "Profile", "Attack", "Idle", "Running", "Data", 
 TYPE_EXCLUDE = {"Axes", "Faces", "Content", "Font", "Enum", "Enums", "Instance", "Random", "Ray", "Region3int16",
                 "Vector3int16", "Vector2int16", "DateTime", "Path2DControlPoint", "SharedTable", "Secret"}
 
+# Hand-checked atlas text for terms whose best vault sentence only makes sense inside its own paragraph.
+# Every entry restates sentences from the cited note; do not add facts here that the note does not hold.
+RN = "RemoteEvents RemoteFunctions and Unreliable Remotes"
+OVERRIDES = {
+    "InvokeClient": {
+        "define": ("`RemoteFunction:InvokeClient` makes the server call one client and yield until that client "
+                   f"returns a value; the vault rules it out for every use (from [[{RN}]]; Roblox docs)."),
+        "facts": [
+            f"If the client throws an error, the server throws too; if it disconnects mid-call, `InvokeClient` errors ([[{RN}]]; Roblox docs).",
+            f"If the client never returns a value, the server yields forever, so an exploiter can leak server threads (and any lock they hold) with an `OnClientInvoke` that never returns ([[{RN}]]).",
+            f"Avoid: `InvokeClient` for anything -> Event plus reply event with timeout. ([[{RN}]])",
+        ],
+    },
+    "AdjustSpeed": {"define": "`AnimationTrack:AdjustSpeed(speed)` sets the playback rate at once (no ramp): positive plays forward, "
+                              "negative backward, 0 pauses (from [[AnimationTrack Reference]])."},
+    "ApplyImpulse": {"define": "`BasePart:ApplyImpulse` applies an impulse to the part's whole assembly; on a server-owned part call it "
+                               "from a server Script, because a client call on a server-owned part does nothing "
+                               "(from [[Physics Assemblies and Constraints]]; Roblox docs)."},
+    "Free Models": {"define": "Free models from the Creator Store save weeks when used carefully, and are the main way malicious code "
+                              "(hidden scripts, backdoors) enters Roblox games (from [[Creator Store and Toolbox Safety]])."},
+    "Plugin": {"define": "A plugin is Luau that runs inside Studio with access to the editor: the selection, the undo history, "
+                         "script sources, file pickers and docked widgets (from [[Plugins - Using and Writing]])."},
+    "RopeConstraint": {"define": "`RopeConstraint` is not a rope: it is a maximum-distance limit between two attachments with a visual "
+                                 "line drawn between them (from [[Ropes Chains and Soft Bodies]])."},
+    "ScrollingFrame": {"define": "A `ScrollingFrame` always clips its contents; with `AutomaticCanvasSize` set, the canvas (not the "
+                                 "frame) grows to fit its children (from [[Shared Close Buttons and Headers Across Many Screens]] and "
+                                 "[[Layout - Scale Offset and Constraints]])."},
+    "Sightlines": {"define": "Sightlines are what the player actually sees from a spot; they also leak locked zones, the map edge and "
+                             "unfinished areas (from [[Level Design Principles - Flow Sightlines and Landmarks]])."},
+    "Thumbnails": {"define": "Roblox thumbnails are seen small, on phones, next to dozens of others, by young players, and are read in "
+                             "under a second (from [[Thumbnails Icons and Store Page]])."},
+}
+
 # (title, regex, case_sensitive). Concepts are matched in prose only. A title that is already a note's title
 # (for example Server Authority in 52 Core Concepts) gets no atlas note: first mentions link to that note instead.
 C = []
@@ -423,6 +456,10 @@ PRONOUN = re.compile(r"^(It|This|That|These|Those|They|But|So|And|Or|Then|Also|H
                      r"Their|He|She|We|You|If so|Same)\b")
 
 
+CONTEXT = re.compile(r"\bthe (?:\w+ )?one\.?$|\((?:see )?(?:below|above)\)|\b(?:works|is|are) here\b|"
+                     r"^[`*]*\w+[`*]*(?: \w+){0,2} also\b|\binstead\.?$")
+
+
 def sentences(n):
     """[(sentence, heading, is_item)] from a note's prose, tables reduced to cells (glossary rows -> Term: meaning)."""
     if "sents" in n:
@@ -477,6 +514,8 @@ def tidy(s):
 
 
 def define(name, spec, ranked, by_title):
+    if name in OVERRIDES and OVERRIDES[name].get("define"):
+        return [OVERRIDES[name]["define"]]
     rx = term_regex(name, spec)
     cands = []
     pool = ranked[:40] + [t for t in ranked[40:] if t.endswith("Glossary")]  # curated glossary rows always count
@@ -507,16 +546,24 @@ def define(name, spec, ranked, by_title):
             sc -= 0 if 50 <= L <= 260 else 5
             if PRONOUN.match(sent):
                 sc -= 4
+            ctx = 6 if CONTEXT.search(sent) else 0  # "the dangerous one", "(below)", "works here", "also"
+            sc -= ctx
             if "?" in sent or sent.rstrip().endswith(":"):
                 sc -= 6
             if re.search(r"(?i)^avoid|\bavoid:|->|→|\|", sent):
                 sc -= 3
             if kind == "item":
                 sc -= 1
-            cands.append((sc, rank, sent, head, t))
-    cands.sort(key=lambda c: (-c[0], c[1], c[2]))
+            cands.append((sc, rank, sent, head, t, ctx))
+    out = pick_defs(cands)
+    # nothing context-free scored well enough: fall back to the old ranking rather than drop the node
+    return out or pick_defs([(c[0] + c[5],) + c[1:] for c in cands])
+
+
+def pick_defs(cands):
+    cands = sorted(cands, key=lambda c: (-c[0], c[1], c[2]))
     out, used = [], set()
-    for sc, _, sent, head, t in cands:
+    for sc, _, sent, head, t, _ctx in cands:
         if sc < (6 if not out else 10) or t in used:
             continue
         lab = label_for(sent, head)
@@ -527,14 +574,49 @@ def define(name, spec, ranked, by_title):
     return out
 
 
-def key_facts(name, spec, ranked, by_title):
+FACT_STOP = {"the", "and", "for", "with", "not", "use", "using", "avoid", "never", "always", "from", "into", "that",
+             "this", "per", "its", "are", "any", "anything", "anywhere", "all", "one", "you", "your", "only", "has"}
+
+
+def fact_key(text, name):
+    """Content words of a fact, without the term itself: two facts with the same key say the same thing."""
+    words = re.findall(r"[a-z0-9]{3,}", text.split(" ([[")[0].lower())
+    return frozenset(w for w in words if w not in FACT_STOP and w != name.lower())
+
+
+def near_dup(a, b):
+    if a <= b or b <= a:  # one says nothing the other does not
+        return True
+    return len(a & b) / max(1, len(a | b)) >= 0.7
+
+
+def add_fact(facts, keys, text, name):
+    """Append unless a near-duplicate is already listed; keep the more specific wording in that slot."""
+    k = fact_key(text, name)
+    for i, old in enumerate(keys):
+        if near_dup(k, old):
+            if len(k) > len(old):
+                facts[i], keys[i] = text, k
+            return False
+    facts.append(text)
+    keys.append(k)
+    return True
+
+
+def key_facts(name, spec, ranked, by_title, merged=None):
+    """Up to 5 facts. `merged` (a list) receives one entry per near-duplicate folded into an earlier fact."""
+    if name in OVERRIDES and OVERRIDES[name].get("facts"):
+        return list(OVERRIDES[name]["facts"])
     rx = term_regex(name, spec)
-    facts, per = [], Counter()
+    facts, keys, per = [], [], Counter()
+    merged = merged if merged is not None else []
     for t in ranked:
         for b in by_title[t]["tldr"]:
             if rx.search(b) and per[t] < 2 and "http" not in b and not any(b in f for f in facts):
-                facts.append(f"{tidy(b)} ([[{t}]])")
-                per[t] += 1
+                if add_fact(facts, keys, f"{tidy(b)} ([[{t}]])", name):
+                    per[t] += 1
+                else:
+                    merged.append(t)
         if len(facts) >= 5:
             return facts
     if len(facts) < 3:  # fill from list items in the most relevant notes
@@ -543,8 +625,10 @@ def key_facts(name, spec, ranked, by_title):
                 if kind != "item" or not rx.search(sent) or per[t] >= 1 or PRONOUN.match(sent) or "http" in sent:
                     continue
                 if 40 <= len(sent) <= 220 and "?" not in sent and not sent.endswith(":"):
-                    facts.append(f"{tidy(sent)} ([[{t}]])")
-                    per[t] += 1
+                    if add_fact(facts, keys, f"{tidy(sent)} ([[{t}]])", name):
+                        per[t] += 1
+                    else:
+                        merged.append(t)
             if len(facts) >= 4:
                 break
     return facts[:5]
@@ -587,11 +671,16 @@ def build_atlas(notes, api):
                 link_targets[name] = (lower_titles[name.lower()], spec)
             continue
         defs = define(name, spec, ranked, by_title)
-        facts = key_facts(name, spec, ranked, by_title)
+        merged = []
+        facts = key_facts(name, spec, ranked, by_title, merged)
         if defs:  # a fact that repeats the definition adds nothing (and would leave the TL;DR short)
             first = defs[0].rsplit(" (from [[", 1)[0]
             facts = [f for f in facts if f.rsplit(" ([[", 1)[0] != first]
-        if not defs or len(facts) < 2:
+            dkey = fact_key(first, name)
+            kept = [f for f in facts if not near_dup(fact_key(f, name), dkey)]
+            if len(kept) >= 2:  # only trim when real facts remain; never leave the section empty
+                facts = kept
+        if not defs or len(facts) + len(merged) < 2:  # merged duplicates still count as support
             continue
         atlas[name] = {"spec": spec, "hits": hits, "ranked": ranked, "defs": defs, "facts": facts, "secs": secs}
     # keep the vault's best-backed 500: concepts and types first, then by number of notes
@@ -662,6 +751,8 @@ def hub_note(atlas):
     for k, a in atlas.items():
         groups[a["spec"]["kind"]].append(k)
     lines = ["---", "tags: [atlas, hub, start-here, type/hub]", "---", f"# {HUB}", "",
+             "> These are index pages: each one points to the full notes, which hold the detail, the code and the "
+             "trust labels. Read the linked note before relying on an atlas line.", "",
              f"{len(atlas)} short nodes, one per Roblox API or core concept that at least 3 notes mention. Each one quotes "
              "the vault's own sentences (with the note it came from), lists key facts from those notes' TL;DRs and links "
              "the most relevant notes. Generated by `_tools/link_builder.py`; do not edit by hand.", ""]

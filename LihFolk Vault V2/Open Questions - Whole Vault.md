@@ -43,8 +43,8 @@ Conflicts the writers found between Roblox's own documentation pages, between th
 | Cyclic require | hangs with no error (reference) | errors "Requested module was required recursively" (guide) | [[Module Scripts and Requiring]] |
 | `Humanoid.MoveDirection`, `ControllerBase.Active` | read-only (description) | ReadWrite (API listing) | [[Characters and Humanoids]] |
 | [[ApplyImpulse]] on player characters | client or server may call it | in practice a server impulse arrives late or is overwritten | [[Mover Constraints and Physics Controllers]] |
-| DataStore experience limits | 300 + CCU x 40 / 20 (limits page) | 250 + CCU x 40 / 20; List 10 + CCU x 2 vs 300 + CCU x 2 (Extended Services) | [[DataStore Fundamentals]] |
-| DataStore storage | 500 MB + 1 MB per lifetime user | 100 MB + 1 MB | [[DataStore Fundamentals]] |
+| DataStore experience limits | 300 + CCU x 40 / 20 (limits page) | 250 + CCU x 40 / 20; List 10 + CCU x 2 (Extended Services). Resolved: these are pre-2026-07-29 figures; 300 is current | [[DataStore Fundamentals]], [[Data and Cloud Changes 2025-2026]] |
+| DataStore storage | 500 MB + 1 MB per lifetime user | 100 MB + 1 MB. Resolved: 100 MB was the pre-2026-07-29 baseline | [[DataStore Fundamentals]], [[Data and Cloud Changes 2025-2026]] |
 | Open Cloud calls from HttpService | don't count toward 500/min | do count | [[HttpService and External APIs]], [[Open Cloud APIs]] |
 | Live config publish speed | ~15 s to 1 min (or 15 min rollout) | "over five minutes" | [[Global State and Live Config]] |
 | DataStore metadata table | "Key-value pairs: 300" | the text says a 300-character total; a RemoveVersionAsync row describes RemoveAsync | [[DataStore Fundamentals]] |

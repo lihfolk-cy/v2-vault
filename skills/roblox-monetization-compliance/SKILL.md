@@ -8,7 +8,7 @@ Two goals: every Robux spent produces exactly one grant that survives crashes, a
 
 ## Inputs
 
-- `VAULT`: LihFolk Vault V2, the knowledge base at `../../LihFolk Vault V2/` relative to this file (plugin root `LihFolk Vault V2/`). Start with `VAULT/INDEX.md` to find notes fast.
+- `VAULT`: LihFolk Vault V2, the knowledge base in the plugin root's `LihFolk Vault V2/` folder: `<base directory>/../../LihFolk Vault V2`, where the base directory is the one Claude Code shows when this skill loads. Resolve it to an absolute path before any Read, Grep or command (the vault is in the plugin, not the user's project). Start with `VAULT/INDEX.md` to find notes fast.
 - The receipt handler, pass ownership code, shop UI, any random-outcome systems, and the product and pass list from the Creator Dashboard if the user can provide it.
 
 ## Procedure

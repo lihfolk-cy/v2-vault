@@ -6,11 +6,11 @@ tags: [atlas, concept, type/atlas, area/gameplay, area/design]
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - Tower Defense Simulator (TDS) is one of Roblox's long-running co-op tower defense games: up to four players place units along...
-> - Tower Defense Waves and Placement End to End.
-> - Genre Playbook - Tower Defense, Genre Systems Start Here, Worked Builds Start Here.
 > - Server-simulated, client-rendered enemies: the server moves lightweight records (position, health, state) and clients render...
+> - Genre Playbook - Tower Defense, Genre Systems Start Here, Worked Builds Start Here.
+> - Flow fields pay off when many agents share few goals, such as tower defense or horde modes.
 >
-> Cost: TL;DR ~140 tok · whole note ~540 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~570 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -19,17 +19,20 @@ Tower Defense Simulator (TDS) is one of Roblox's long-running co-op tower defens
 
 ## Key facts
 
-- Tower Defense Waves and Placement End to End. ([[Case Study - Tower Defense Simulator]])
-- Genre Playbook - Tower Defense, Genre Systems Start Here, Worked Builds Start Here. ([[Tower Defense Waves and Placement End to End]])
 - Server-simulated, client-rendered enemies: the server moves lightweight records (position, health, state) and clients render models, as in TD (Tower Defense Waves and Placement End to End). ([[Genre Playbook - Zombie and Wave Survival Co-op]])
+- Genre Playbook - Tower Defense, Genre Systems Start Here, Worked Builds Start Here. ([[Tower Defense Waves and Placement End to End]])
 - Flow fields pay off when many agents share few goals, such as tower defense or horde modes. ([[Pathfinding]])
+- Tower Defense Waves and Placement End to End: a genre with many similar entities. ([[Entity Component Systems]])
 
 ## Mentioned in
 
-20 notes in 11 sections. The 20 most relevant are linked:
+21 notes in 12 sections. The 21 most relevant are linked:
 
 ### 03 Architecture and Networking
 [[Entity Component Systems]] · [[Snapshot Interpolation for Custom Replication]]
+
+### 05 UI and UX
+[[UI Style Directions - A Visual Vocabulary for Briefs]]
 
 ### 08 Animation
 [[Snippets - Enemy Client Animator]]

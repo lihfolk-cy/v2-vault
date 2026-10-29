@@ -5,17 +5,15 @@ tags: [atlas, api, type/atlas, area/gameplay, area/world, api/ComputeAsync]
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
-> - `ComputeAsync` can also error, so it belongs in a `pcall` (the docs samples wrap it).
+> - `ComputeAsync` is not free: it yields while the engine searches, and many agents recomputing every frame will queue.
 > - `ComputeAsync` yields and can error; wrap it in `pcall`.
 > - MicroProfiler with 8 players: the think loop is a small, steady cost; no `ComputeAsync` spikes every frame.
 > - No yielding in brains. `task.wait`, `ComputeAsync` and any `Async` call inside a brain tick stall it.
 >
-> Cost: TL;DR ~130 tok · whole note ~380 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~350 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
-
-`ComputeAsync` can also error, so it belongs in a `pcall` (the docs samples wrap it). (from [[Pathfinding Edge Cases and Fallbacks]])
 
 `ComputeAsync` is not free: it yields while the engine searches, and many agents recomputing every frame will queue. (from [[Pathfinding]])
 

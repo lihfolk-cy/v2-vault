@@ -41,7 +41,11 @@ export type ProductDef = {
 export type Config = { products: { [string]: ProductDef } }
 
 local Receipts = {}
-Receipts.Granted = Signal.new() -- (player, productKey, receiptInfo): once, after the save
+-- (player, productKey, receiptInfo). Fires at most once per purchase, after the durable save:
+-- not for a redelivered receipt that was already granted ("duplicate"), and not if the server
+-- stops between the save and the fire. Use it for announcements and analytics; anything the
+-- player must keep belongs in the grant itself (it is saved in the same write as the PurchaseId).
+Receipts.Granted = Signal.new()
 
 local products: { [string]: ProductDef } = {}
 local byId: { [number]: string } = {}

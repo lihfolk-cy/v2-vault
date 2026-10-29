@@ -70,5 +70,5 @@ Related concepts: [[Safe Area]], [[Thumbnail Contrast]], [[Easing]].
 
 <!-- related:start -->
 ## Related
-[[Texel Density]] · [[Tween vs Spring]] · [[Draw Calls]] · [[Replication Boundary]] · [[Anticipation]] · [[Triangle Budget]] · [[Click-Through Rate]] · [[Hit-Stop]]
+[[Texel Density]] · [[Tween vs Spring]] · [[Draw Calls]] · [[Anticipation]] · [[Replication Boundary]] · [[Triangle Budget]] · [[Click-Through Rate]] · [[Hit-Stop]]
 <!-- related:end -->

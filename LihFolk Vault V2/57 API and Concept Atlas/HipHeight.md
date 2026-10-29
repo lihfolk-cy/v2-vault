@@ -10,14 +10,12 @@ tags: [atlas, api, type/atlas, area/animation, area/gameplay, api/HipHeight]
 > - Floating or sinking: Clips not ground-fitted; wrong HipHeight -> Fit per clip; set HipHeight; runtime slope clamp.
 > - Wrong standing height: incorrect HipHeight on 17 enemy templates (one rig's legs 1.5 studs into the floor at idle; others...
 >
-> Cost: TL;DR ~140 tok · whole note ~460 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~430 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
 
 HipHeight is not "leg length". It is the distance the Humanoid holds the root above the floor. (from [[Characters and Humanoids]])
-
-`HipHeight` was also wrong on 17 enemy templates, which no IK can fix. (from [[Foot Placement and Ground IK]])
 
 API snapshot: member of `Humanoid` (`_tools/roblox_api.json`, docs build of 2026-10-27).
 

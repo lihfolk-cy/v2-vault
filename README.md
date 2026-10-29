@@ -27,24 +27,24 @@ After that, Roblox tasks automatically use the knowledge base. You also get:
 | **Systems library** | 19 drop-in typed Luau modules: validated remotes, session-locked data, idempotent purchases, shop, eggs with 2026 odds rules, codes, daily rewards, rebirth, quests, leaderboards (`/lihfolk:new-system`) |
 | **Asset pack** | Finds original models, materials, skies, animations and VFX in the separately downloaded LihFolk Asset Pack by catalogue search, shippable rows only, with import steps (`/lihfolk:assets`, set `LIHFOLK_ASSETS`) |
 | **Sound effects** | Layered, varied combat and UI sounds: a pooled Luau module with volume buses and animation-marker sync matched to the VFX presets, sourced only from premium, properly licensed sounds (Roblox-licensed Creator Store audio first, then a library you own) with a quality checklist and editing pipeline (`lihfolk-sfx`) |
-| **Code checks** | A hook scans every Luau file the AI writes for 17 known Roblox mistakes and makes it fix them; `/lihfolk:audit` reviews a whole project |
+| **Code checks** | A hook scans every Luau file the AI writes for 17 known Roblox mistakes and makes it fix them (`.lua` files are checked inside Roblox projects); `/lihfolk:audit` reviews a whole project |
 | **LihFolk UI** | Original cartoon/simulator menu kit with Luau components |
 | **2025-2026 knowledge** | What changed on Roblox since most models were trained, and what AI models get wrong |
-| **Specialist skills** | Secure remotes, DataStore safety, UI, performance, debugging, anti-exploit, monetisation compliance, asset import, system builder |
+| **Specialist skills** | Secure remotes, DataStore safety, UI building (plus the LihFolk house style), performance, debugging, anti-exploit, monetisation compliance, asset import, system builder |
 
 ### Other AI tools (Cursor, Codex, ChatGPT and others)
 Point your tool at this folder. `AGENTS.md` tells any agent how to search the vault and apply the notes.
 
 ## Built to be trusted by AI agents
 
-- **One-call search:** `python "LihFolk Vault V2/_tools/vault.py" "my sword floats away from the hand when I attack"` returns the 3 best notes with their TL;DRs (on Windows use `py` if `python` isn't on your PATH). It understands bugs described in everyday words through `LihFolk Vault V2/SYMPTOMS.md`, which has 250+ symptom → cause → fix lines. On a held-out test set of hand-written tasks, the right note is in the top 3 **93%** of the time, against 57% for grepping the index. The average answer costs about 700 tokens.
-- **No made-up APIs:** every Roblox and Luau API name in the notes is checked against a dated snapshot of the real API, including deprecations. The first run caught a few dozen uses of methods Roblox had renamed to `...Async`, and they are fixed.
+- **One-call search:** from the repo folder, `python "LihFolk Vault V2/_tools/vault.py" "my sword floats away from the hand when I attack"` returns the 3 best notes with their TL;DRs (use `python3` or, on Windows, `py` if that's your launcher). It understands bugs described in everyday words through `LihFolk Vault V2/SYMPTOMS.md`, which has 250+ symptom → cause → fix lines. On a held-out test set of hand-written tasks, the right note is in the top 3 **93%** of the time, against 57% for grepping the index. The average answer costs about 700 tokens.
+- **No made-up APIs:** every Roblox and Luau API name in the notes is checked against a dated snapshot of the real API, including deprecations. Methods Roblox renamed to `...Async` are already updated throughout.
 - **Code that compiles:** all 1,800+ Luau code blocks are compiled with the official Luau compiler on every push.
 - **Notes that agree:** numbers repeated across notes, such as limits, defaults and ratios, are cross-checked, and stale date stamps are flagged.
 - **Checked on every push:** `.github/workflows/vault-checks.yml` runs all of it. Details and numbers are in `LihFolk Vault V2/_tools/README.md`.
 
 ## Trust labels
-Every claim is marked **Roblox docs** (official), **Measured** (tested in a real project), **Rule of thumb** (craft knowledge) or **Unverified** (not confirmed yet). Roblox changes fast, so dated claims say "as of".
+Every claim is marked **Roblox docs** (official), **Measured** (tested in a real project), **Rule of thumb** (craft knowledge) or **Unverified** (awaiting confirmation). Roblox changes fast, so dated claims say "as of".
 
 ## What's inside
 - `LihFolk Vault V2/`: the vault (55 sections, index, home page, theme)

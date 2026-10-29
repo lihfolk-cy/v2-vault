@@ -68,7 +68,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Data Loss Prevention and Recovery | 04 Data and Persistence/Data Loss Prevention and Recovery.md | data, datastore, data-loss, recovery, rollback, versioning, incident | ~4.0k tok
 - Data Schema Design and Migrations | 04 Data and Persistence/Data Schema Design and Migrations.md | data, schema, migrations, serialization, versioning | ~4.4k tok
 - DataStore Fundamentals | 04 Data and Persistence/DataStore Fundamentals.md | data, datastore, persistence, limits, fundamentals | ~5.5k tok
-- Global State and Live Config | 04 Data and Persistence/Global State and Live Config.md | data, configs, configservice, feature-flags, live-ops, global-state, messaging | ~4.7k tok
+- Global State and Live Config | 04 Data and Persistence/Global State and Live Config.md | data, configs, configservice, feature-flags, live-ops, global-state, messaging | ~4.8k tok
 - HttpService and External APIs | 04 Data and Persistence/HttpService and External APIs.md | data, httpservice, web, secrets, json, rate-limits, external-services | ~4.6k tok
 - MemoryStore Service | 04 Data and Persistence/MemoryStore Service.md | data, memorystore, matchmaking, queues, sorted-map, hash-map, cross-server | ~3.8k tok
 - Open Cloud APIs | 04 Data and Persistence/Open Cloud APIs.md | data, open-cloud, api-keys, automation, datastore, messaging, webhooks | ~3.9k tok
@@ -105,6 +105,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - UI Design Systems | 05 UI and UX/UI Design Systems.md | ui, design-system, tokens, theming, styling, components, audit | ~4.5k tok
 - UI Layout Objects - Lists Grids and Pages | 05 UI and UX/UI Layout Objects - Lists Grids and Pages.md | ui, layout, uilistlayout, flex, uigridlayout, uipagelayout, scrollingframe | ~4.4k tok
 - UI Motion Language and Timing | 05 UI and UX/UI Motion Language and Timing.md | ui, motion, animation, tweenservice, timing, easing, springs, reduced-motion, design-system | ~6.4k tok
+- UI Style Directions - A Visual Vocabulary for Briefs | 05 UI and UX/UI Style Directions - A Visual Vocabulary for Briefs.md | ui, art-direction, style, theming, references, ai, prompting, design-system | ~3.5k tok
 - Virtualized Lists and Large Inventories | 05 UI and UX/Virtualized Lists and Large Inventories.md | ui, inventory, scrollingframe, virtualization, performance, pooling, search, gamepad, networking | ~6.1k tok
 - World-Space UI - BillboardGui and SurfaceGui | 05 UI and UX/World-Space UI - BillboardGui and SurfaceGui.md | ui, billboardgui, surfacegui, world-space, nameplates, damage-numbers, performance | ~4.1k tok
 
@@ -117,7 +118,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Grid Placement and Player Building Systems | 06 World Building and Art/Grid Placement and Player Building Systems.md | world-building, building, placement, grid, snapping, tycoon, housing, validation, datastore, luau | ~6.0k tok
 - House Construction Method - Modular Kit Workflow | 06 World Building and Art/House Construction Method - Modular Kit Workflow.md | world-building, building, houses, architecture, modular, kits, roof, walls, interior, blender, lihfolk | ~5.3k tok
 - Level Design for Roblox | 06 World Building and Art/Level Design for Roblox.md | world-building, level-design, layout, hubs, zones, blockout, navigation | ~3.8k tok
-- Level of Detail and Model Streaming | 06 World Building and Art/Level of Detail and Model Streaming.md | world-building, lod, streaming, slim, renderfidelity, performance | ~4.8k tok
+- Level of Detail and Model Streaming | 06 World Building and Art/Level of Detail and Model Streaming.md | world-building, lod, streaming, slim, renderfidelity, performance | ~4.9k tok
 - Materials MaterialVariants and SurfaceAppearance | 06 World Building and Art/Materials MaterialVariants and SurfaceAppearance.md | world-building, art, materials, materialvariant, materialservice, surfaceappearance, pbr | ~4.1k tok
 - Modeling in Blender for Roblox | 06 World Building and Art/Modeling in Blender for Roblox.md | world-building, art, blender, modeling, meshes, pipeline, uv, trim-sheet | ~4.7k tok
 - Parts Unions and MeshParts | 06 World Building and Art/Parts Unions and MeshParts.md | world-building, art, parts, csg, unions, meshparts, geometry | ~5.3k tok
@@ -147,7 +148,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Ice Ball Cast to Explosion - Approved Recipe | 07 Lighting VFX and Audio/Ice Ball Cast to Explosion - Approved Recipe.md | vfx, animation, ice, projectile, explosion, recipe, cast, lihfolk | ~1.3k tok
 - Impact Decals and Material-Aware Hit Sparks | 07 Lighting VFX and Audio/Impact Decals and Material-Aware Hit Sparks.md | vfx, impacts, decals, materials, raycast, pooling, shooters, sparks, performance | ~2.1k tok
 - Light Sources and Shadows | 07 Lighting VFX and Audio/Light Sources and Shadows.md | lighting, lights, shadows, performance, vfx | ~3.5k tok
-- Lighting Mood and Time of Day | 07 Lighting VFX and Audio/Lighting Mood and Time of Day.md | lighting, mood, day-night, weather, zones, environment | ~4.8k tok
+- Lighting Mood and Time of Day | 07 Lighting VFX and Audio/Lighting Mood and Time of Day.md | lighting, mood, day-night, weather, zones, environment | ~4.9k tok
 - Lighting Technologies and Settings | 07 Lighting VFX and Audio/Lighting Technologies and Settings.md | lighting, rendering, environment, settings, performance | ~5.1k tok
 - Lightning Strikes and Thunder - Procedural Bolts and Sound Delay | 07 Lighting VFX and Audio/Lightning Strikes and Thunder - Procedural Bolts and Sound Delay.md | weather, lightning, thunder, vfx, audio, procedural, accessibility, photosensitivity | ~3.0k tok
 - Music Licensing and Audio Upload Rules for 2026 | 07 Lighting VFX and Audio/Music Licensing and Audio Upload Rules for 2026.md | audio, music, licensing, copyright, upload-rules, policy, compliance, 2026 | ~2.3k tok
@@ -385,10 +386,10 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Age Checks and Safety Features | 11 Monetization Publishing and Live Ops/Age Checks and Safety Features.md | safety, age-checks, chat, textchatservice, filtering, compliance, luau | ~3.4k tok
 - Analytics and Funnels | 11 Monetization Publishing and Live Ops/Analytics and Funnels.md | analytics, analyticsservice, funnels, economy, custom-events, live-ops, luau | ~3.9k tok
 - Community Building | 11 Monetization Publishing and Live Ops/Community Building.md | community, groups, social, invites, live-ops, luau | ~3.5k tok
-- Developer Products and ProcessReceipt | 11 Monetization Publishing and Live Ops/Developer Products and ProcessReceipt.md | monetization, developer-products, processreceipt, datastore, idempotency, luau | ~5.9k tok
+- Developer Products and ProcessReceipt | 11 Monetization Publishing and Live Ops/Developer Products and ProcessReceipt.md | monetization, developer-products, processreceipt, datastore, idempotency, luau | ~6.0k tok
 - Discovery and the Algorithm | 11 Monetization Publishing and Live Ops/Discovery and the Algorithm.md | discovery, recommendations, algorithm, growth, publishing | ~3.2k tok
 - Economy Inflation Sinks and Faucets Math | 11 Monetization Publishing and Live Ops/Economy Inflation Sinks and Faucets Math.md | economy, inflation, sinks, faucets, balancing, live-ops, math, luau | ~4.6k tok
-- Game Passes | 11 Monetization Publishing and Live Ops/Game Passes.md | monetization, game-passes, marketplaceservice, luau | ~4.0k tok
+- Game Passes | 11 Monetization Publishing and Live Ops/Game Passes.md | monetization, game-passes, marketplaceservice, luau | ~4.1k tok
 - Live Ops Events and Updates | 11 Monetization Publishing and Live Ops/Live Ops Events and Updates.md | live-ops, events, notifications, updates, scheduling, luau | ~3.4k tok
 - Monetization Overview | 11 Monetization Publishing and Live Ops/Monetization Overview.md | monetization, robux, overview, business, live-ops | ~3.9k tok
 - Paid Random Items and Odds Disclosure in Practice | 11 Monetization Publishing and Live Ops/Paid Random Items and Odds Disclosure in Practice.md | monetization, policy, paid-random-items, odds, rng, compliance, luau | ~5.0k tok
@@ -1165,13 +1166,13 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Animation | 57 API and Concept Atlas/Animation.md | atlas, api | ~650 tok
 - AnimationConstraint | 57 API and Concept Atlas/AnimationConstraint.md | atlas, api | ~720 tok
 - AnimationController | 57 API and Concept Atlas/AnimationController.md | atlas, api | ~630 tok
-- AnimationPriority | 57 API and Concept Atlas/AnimationPriority.md | atlas, api | ~550 tok
+- AnimationPriority | 57 API and Concept Atlas/AnimationPriority.md | atlas, api | ~490 tok
 - AnimationTrack | 57 API and Concept Atlas/AnimationTrack.md | atlas, api | ~740 tok
 - Animator | 57 API and Concept Atlas/Animator.md | atlas, api | ~1.5k tok
 - Anti-Cheat | 57 API and Concept Atlas/Anti-Cheat.md | atlas, concept | ~1.1k tok
-- ApplyDescription | 57 API and Concept Atlas/ApplyDescription.md | atlas, api | ~390 tok
+- ApplyDescription | 57 API and Concept Atlas/ApplyDescription.md | atlas, api | ~350 tok
 - ApplyDescriptionAsync | 57 API and Concept Atlas/ApplyDescriptionAsync.md | atlas, api | ~280 tok
-- ApplyImpulse | 57 API and Concept Atlas/ApplyImpulse.md | atlas, api | ~270 tok
+- ApplyImpulse | 57 API and Concept Atlas/ApplyImpulse.md | atlas, api | ~300 tok
 - AssemblyAngularVelocity | 57 API and Concept Atlas/AssemblyAngularVelocity.md | atlas, api | ~300 tok
 - Atmosphere | 57 API and Concept Atlas/Atmosphere.md | atlas, api | ~990 tok
 - Audio API | 57 API and Concept Atlas/Audio API.md | atlas, concept | ~580 tok
@@ -1179,11 +1180,11 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - AudioEmitter | 57 API and Concept Atlas/AudioEmitter.md | atlas, api | ~330 tok
 - AudioPlayer | 57 API and Concept Atlas/AudioPlayer.md | atlas, api | ~470 tok
 - AutoLocalize | 57 API and Concept Atlas/AutoLocalize.md | atlas, api | ~300 tok
-- AvatarEditorService | 57 API and Concept Atlas/AvatarEditorService.md | atlas, api | ~420 tok
+- AvatarEditorService | 57 API and Concept Atlas/AvatarEditorService.md | atlas, api | ~400 tok
 - Battle Pass | 57 API and Concept Atlas/Battle Pass.md | atlas, concept | ~600 tok
 - Beam | 57 API and Concept Atlas/Beam.md | atlas, api | ~600 tok
 - Behaviour Trees | 57 API and Concept Atlas/Behaviour Trees.md | atlas, concept | ~440 tok
-- Bevels | 57 API and Concept Atlas/Bevels.md | atlas, concept | ~900 tok
+- Bevels | 57 API and Concept Atlas/Bevels.md | atlas, concept | ~910 tok
 - Bezier Curves | 57 API and Concept Atlas/Bezier Curves.md | atlas, concept | ~360 tok
 - BillboardGui | 57 API and Concept Atlas/BillboardGui.md | atlas, api | ~640 tok
 - BindToClose | 57 API and Concept Atlas/BindToClose.md | atlas, api | ~1.3k tok
@@ -1205,7 +1206,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - ColorCorrectionEffect | 57 API and Concept Atlas/ColorCorrectionEffect.md | atlas, api | ~640 tok
 - ColorShift_Bottom | 57 API and Concept Atlas/ColorShift_Bottom.md | atlas, api | ~290 tok
 - Combos | 57 API and Concept Atlas/Combos.md | atlas, concept | ~920 tok
-- ComputeAsync | 57 API and Concept Atlas/ComputeAsync.md | atlas, api | ~380 tok
+- ComputeAsync | 57 API and Concept Atlas/ComputeAsync.md | atlas, api | ~350 tok
 - ConfigService | 57 API and Concept Atlas/ConfigService.md | atlas, api | ~360 tok
 - ContextActionService | 57 API and Concept Atlas/ContextActionService.md | atlas, api | ~890 tok
 - Continuous Integration | 57 API and Concept Atlas/Continuous Integration.md | atlas, concept | ~1000 tok
@@ -1231,7 +1232,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Drop Rates | 57 API and Concept Atlas/Drop Rates.md | atlas, concept | ~500 tok
 - Dynamic Heads | 57 API and Concept Atlas/Dynamic Heads.md | atlas, concept | ~570 tok
 - Edge Flow | 57 API and Concept Atlas/Edge Flow.md | atlas, concept | ~590 tok
-- EditableImage | 57 API and Concept Atlas/EditableImage.md | atlas, api | ~610 tok
+- EditableImage | 57 API and Concept Atlas/EditableImage.md | atlas, api | ~640 tok
 - Entity Component System | 57 API and Concept Atlas/Entity Component System.md | atlas, concept | ~210 tok
 - Exponential Backoff | 57 API and Concept Atlas/Exponential Backoff.md | atlas, concept | ~500 tok
 - FACS | 57 API and Concept Atlas/FACS.md | atlas, concept | ~340 tok
@@ -1242,8 +1243,8 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Fixed Timestep | 57 API and Concept Atlas/Fixed Timestep.md | atlas, concept | ~350 tok
 - FloorMaterial | 57 API and Concept Atlas/FloorMaterial.md | atlas, api | ~560 tok
 - ForceField | 57 API and Concept Atlas/ForceField.md | atlas, api | ~460 tok
-- Frame | 57 API and Concept Atlas/Frame.md | atlas, api | ~710 tok
-- Free Models | 57 API and Concept Atlas/Free Models.md | atlas, concept | ~460 tok
+- Frame | 57 API and Concept Atlas/Frame.md | atlas, api | ~720 tok
+- Free Models | 57 API and Concept Atlas/Free Models.md | atlas, concept | ~480 tok
 - Funnels | 57 API and Concept Atlas/Funnels.md | atlas, concept | ~1.3k tok
 - GetAttributeChangedSignal | 57 API and Concept Atlas/GetAttributeChangedSignal.md | atlas, api | ~680 tok
 - GetImageForKeyCode | 57 API and Concept Atlas/GetImageForKeyCode.md | atlas, api | ~340 tok
@@ -1252,21 +1253,21 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - GetNetworkPing | 57 API and Concept Atlas/GetNetworkPing.md | atlas, api | ~340 tok
 - GetPartBoundsInBox | 57 API and Concept Atlas/GetPartBoundsInBox.md | atlas, api | ~570 tok
 - GetPartsInPart | 57 API and Concept Atlas/GetPartsInPart.md | atlas, api | ~460 tok
-- GetProductInfo | 57 API and Concept Atlas/GetProductInfo.md | atlas, api | ~420 tok
+- GetProductInfo | 57 API and Concept Atlas/GetProductInfo.md | atlas, api | ~380 tok
 - GetProductInfoAsync | 57 API and Concept Atlas/GetProductInfoAsync.md | atlas, api | ~580 tok
 - GetRolesInGroupAsync | 57 API and Concept Atlas/GetRolesInGroupAsync.md | atlas, api | ~470 tok
 - GlobalShadows | 57 API and Concept Atlas/GlobalShadows.md | atlas, api | ~380 tok
 - Greyboxing | 57 API and Concept Atlas/Greyboxing.md | atlas, concept | ~580 tok
 - Haptics | 57 API and Concept Atlas/Haptics.md | atlas, concept | ~570 tok
 - Heartbeat | 57 API and Concept Atlas/Heartbeat.md | atlas, api | ~810 tok
-- HipHeight | 57 API and Concept Atlas/HipHeight.md | atlas, api | ~460 tok
+- HipHeight | 57 API and Concept Atlas/HipHeight.md | atlas, api | ~430 tok
 - Hitboxes | 57 API and Concept Atlas/Hitboxes.md | atlas, concept | ~1.1k tok
 - Honeypots | 57 API and Concept Atlas/Honeypots.md | atlas, concept | ~260 tok
 - HttpService | 57 API and Concept Atlas/HttpService.md | atlas, api | ~1.5k tok
 - Humanoid | 57 API and Concept Atlas/Humanoid.md | atlas, api | ~2.2k tok
 - HumanoidDescription | 57 API and Concept Atlas/HumanoidDescription.md | atlas, api | ~560 tok
 - IKControl | 57 API and Concept Atlas/IKControl.md | atlas, api | ~420 tok
-- ImageRectOffset | 57 API and Concept Atlas/ImageRectOffset.md | atlas, api | ~460 tok
+- ImageRectOffset | 57 API and Concept Atlas/ImageRectOffset.md | atlas, api | ~480 tok
 - Impact Frames | 57 API and Concept Atlas/Impact Frames.md | atlas, concept | ~540 tok
 - IncrementAsync | 57 API and Concept Atlas/IncrementAsync.md | atlas, api | ~350 tok
 - InputAction | 57 API and Concept Atlas/InputAction.md | atlas, api | ~480 tok
@@ -1274,7 +1275,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Instance | 57 API and Concept Atlas/Instance.md | atlas, api | ~3.0k tok
 - IntValue | 57 API and Concept Atlas/IntValue.md | atlas, api | ~360 tok
 - Interpolation | 57 API and Concept Atlas/Interpolation.md | atlas, concept | ~1.6k tok
-- InvokeClient | 57 API and Concept Atlas/InvokeClient.md | atlas, api | ~430 tok
+- InvokeClient | 57 API and Concept Atlas/InvokeClient.md | atlas, api | ~500 tok
 - Item Duplication | 57 API and Concept Atlas/Item Duplication.md | atlas, concept | ~1.1k tok
 - Juice | 57 API and Concept Atlas/Juice.md | atlas, concept | ~1.0k tok
 - KeyframeMarker | 57 API and Concept Atlas/KeyframeMarker.md | atlas, api | ~470 tok
@@ -1310,7 +1311,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Model | 57 API and Concept Atlas/Model.md | atlas, api | ~2.1k tok
 - Modular Kits | 57 API and Concept Atlas/Modular Kits.md | atlas, concept | ~470 tok
 - Motor6D | 57 API and Concept Atlas/Motor6D.md | atlas, api | ~1.1k tok
-- MouseButton1Click | 57 API and Concept Atlas/MouseButton1Click.md | atlas, api | ~200 tok
+- MouseButton1Click | 57 API and Concept Atlas/MouseButton1Click.md | atlas, api | ~170 tok
 - NPCs | 57 API and Concept Atlas/NPCs.md | atlas, concept | ~2.0k tok
 - Noclip | 57 API and Concept Atlas/Noclip.md | atlas, concept | ~840 tok
 - Normal Maps | 57 API and Concept Atlas/Normal Maps.md | atlas, concept | ~630 tok
@@ -1318,18 +1319,18 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Open Cloud | 57 API and Concept Atlas/Open Cloud.md | atlas, concept | ~1.3k tok
 - PBR | 57 API and Concept Atlas/PBR.md | atlas, concept | ~660 tok
 - Paid Random Items | 57 API and Concept Atlas/Paid Random Items.md | atlas, concept | ~1.0k tok
-- Parallax | 57 API and Concept Atlas/Parallax.md | atlas, concept | ~470 tok
+- Parallax | 57 API and Concept Atlas/Parallax.md | atlas, concept | ~480 tok
 - Parallel Luau | 57 API and Concept Atlas/Parallel Luau.md | atlas, concept | ~720 tok
 - Part | 57 API and Concept Atlas/Part.md | atlas, api | ~690 tok
 - Part0 | 57 API and Concept Atlas/Part0.md | atlas, api | ~580 tok
 - Part1 | 57 API and Concept Atlas/Part1.md | atlas, api | ~670 tok
 - ParticleEmitter | 57 API and Concept Atlas/ParticleEmitter.md | atlas, api | ~700 tok
 - PathfindingService | 57 API and Concept Atlas/PathfindingService.md | atlas, api | ~370 tok
-- Pixel Art | 57 API and Concept Atlas/Pixel Art.md | atlas, concept | ~520 tok
+- Pixel Art | 57 API and Concept Atlas/Pixel Art.md | atlas, concept | ~540 tok
 - Player | 57 API and Concept Atlas/Player.md | atlas, api | ~2.8k tok
 - PlayerRemoving | 57 API and Concept Atlas/PlayerRemoving.md | atlas, api | ~910 tok
 - Playtesting | 57 API and Concept Atlas/Playtesting.md | atlas, concept | ~1.3k tok
-- Plugin | 57 API and Concept Atlas/Plugin.md | atlas, api | ~390 tok
+- Plugin | 57 API and Concept Atlas/Plugin.md | atlas, api | ~400 tok
 - PluginGui | 57 API and Concept Atlas/PluginGui.md | atlas, api | ~270 tok
 - PolicyService | 57 API and Concept Atlas/PolicyService.md | atlas, api | ~730 tok
 - Pose | 57 API and Concept Atlas/Pose.md | atlas, api | ~490 tok
@@ -1350,24 +1351,24 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Random Seeds | 57 API and Concept Atlas/Random Seeds.md | atlas, concept | ~1.1k tok
 - Raycast | 57 API and Concept Atlas/Raycast.md | atlas, api | ~860 tok
 - Rebirth | 57 API and Concept Atlas/Rebirth.md | atlas, concept | ~900 tok
-- Reduced Motion | 57 API and Concept Atlas/Reduced Motion.md | atlas, concept | ~650 tok
+- Reduced Motion | 57 API and Concept Atlas/Reduced Motion.md | atlas, concept | ~620 tok
 - RegisterKeyframeSequence | 57 API and Concept Atlas/RegisterKeyframeSequence.md | atlas, api | ~580 tok
 - RemoteEvent | 57 API and Concept Atlas/RemoteEvent.md | atlas, api | ~1.6k tok
 - RemoteFunction | 57 API and Concept Atlas/RemoteFunction.md | atlas, api | ~810 tok
 - RemoveAsync | 57 API and Concept Atlas/RemoveAsync.md | atlas, api | ~400 tok
 - ReplicatedStorage | 57 API and Concept Atlas/ReplicatedStorage.md | atlas, api | ~2.4k tok
 - Replication | 57 API and Concept Atlas/Replication.md | atlas, concept | ~2.2k tok
-- ResampleMode | 57 API and Concept Atlas/ResampleMode.md | atlas, api | ~490 tok
+- ResampleMode | 57 API and Concept Atlas/ResampleMode.md | atlas, api | ~500 tok
 - Retargeting | 57 API and Concept Atlas/Retargeting.md | atlas, concept | ~580 tok
 - Retopology | 57 API and Concept Atlas/Retopology.md | atlas, concept | ~480 tok
 - RigidConstraint | 57 API and Concept Atlas/RigidConstraint.md | atlas, api | ~460 tok
 - Roblox Assistant | 57 API and Concept Atlas/Roblox Assistant.md | atlas, concept | ~300 tok
 - Rojo | 57 API and Concept Atlas/Rojo.md | atlas, concept | ~1.0k tok
-- RopeConstraint | 57 API and Concept Atlas/RopeConstraint.md | atlas, api | ~270 tok
+- RopeConstraint | 57 API and Concept Atlas/RopeConstraint.md | atlas, api | ~310 tok
 - RunService | 57 API and Concept Atlas/RunService.md | atlas, api | ~2.4k tok
 - ScaleTo | 57 API and Concept Atlas/ScaleTo.md | atlas, api | ~530 tok
 - Script | 57 API and Concept Atlas/Script.md | atlas, api | ~970 tok
-- ScrollingFrame | 57 API and Concept Atlas/ScrollingFrame.md | atlas, api | ~470 tok
+- ScrollingFrame | 57 API and Concept Atlas/ScrollingFrame.md | atlas, api | ~530 tok
 - ServerRestartScheduled | 57 API and Concept Atlas/ServerRestartScheduled.md | atlas, api | ~250 tok
 - ServerStorage | 57 API and Concept Atlas/ServerStorage.md | atlas, api | ~1.4k tok
 - SetCore | 57 API and Concept Atlas/SetCore.md | atlas, api | ~430 tok
@@ -1404,21 +1405,21 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Texture | 57 API and Concept Atlas/Texture.md | atlas, api | ~420 tok
 - TextureID | 57 API and Concept Atlas/TextureID.md | atlas, api | ~590 tok
 - Thumbnails | 57 API and Concept Atlas/Thumbnails.md | atlas, concept | ~1.3k tok
-- Tilemaps | 57 API and Concept Atlas/Tilemaps.md | atlas, concept | ~390 tok
+- Tilemaps | 57 API and Concept Atlas/Tilemaps.md | atlas, concept | ~380 tok
 - TimePosition | 57 API and Concept Atlas/TimePosition.md | atlas, api | ~480 tok
 - TintColor | 57 API and Concept Atlas/TintColor.md | atlas, api | ~350 tok
 - Tool | 57 API and Concept Atlas/Tool.md | atlas, api | ~540 tok
 - Topology | 57 API and Concept Atlas/Topology.md | atlas, concept | ~780 tok
 - Touched | 57 API and Concept Atlas/Touched.md | atlas, api | ~760 tok
-- Tower Defense | 57 API and Concept Atlas/Tower Defense.md | atlas, concept | ~540 tok
+- Tower Defense | 57 API and Concept Atlas/Tower Defense.md | atlas, concept | ~570 tok
 - Trim Sheets | 57 API and Concept Atlas/Trim Sheets.md | atlas, concept | ~780 tok
 - TweenService | 57 API and Concept Atlas/TweenService.md | atlas, api | ~870 tok
-- Tycoon | 57 API and Concept Atlas/Tycoon.md | atlas, concept | ~630 tok
+- Tycoon | 57 API and Concept Atlas/Tycoon.md | atlas, concept | ~650 tok
 - UDim2 | 57 API and Concept Atlas/UDim2.md | atlas, api | ~1.0k tok
 - UGC | 57 API and Concept Atlas/UGC.md | atlas, concept | ~810 tok
-- UIScale | 57 API and Concept Atlas/UIScale.md | atlas, api | ~740 tok
-- UIStroke | 57 API and Concept Atlas/UIStroke.md | atlas, api | ~560 tok
-- UnreliableRemoteEvent | 57 API and Concept Atlas/UnreliableRemoteEvent.md | atlas, api | ~780 tok
+- UIScale | 57 API and Concept Atlas/UIScale.md | atlas, api | ~750 tok
+- UIStroke | 57 API and Concept Atlas/UIStroke.md | atlas, api | ~580 tok
+- UnreliableRemoteEvent | 57 API and Concept Atlas/UnreliableRemoteEvent.md | atlas, api | ~790 tok
 - UpdateAsync | 57 API and Concept Atlas/UpdateAsync.md | atlas, api | ~840 tok
 - UserInputService | 57 API and Concept Atlas/UserInputService.md | atlas, api | ~1.2k tok
 - Vector3 | 57 API and Concept Atlas/Vector3.md | atlas, api | ~2.5k tok

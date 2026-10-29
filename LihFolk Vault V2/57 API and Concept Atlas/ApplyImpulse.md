@@ -5,16 +5,16 @@ tags: [atlas, api, type/atlas, area/gameplay, area/physics, api/ApplyImpulse]
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
-> - `ApplyImpulse` works here because the client created the part and owns it.
+> - `BasePart:ApplyImpulse` applies an impulse to the part's whole assembly; on a server-owned part call it from a server Script...
 > - Server `ApplyImpulse` on player characters.
 > - Server-owned NPCs and props: `BasePart:ApplyImpulse(dir * strength * assemblyMass)` on the server.
 >
-> Cost: TL;DR ~100 tok · whole note ~270 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~110 tok · whole note ~300 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
 
-`ApplyImpulse` works here because the client created the part and owns it. (from [[Destruction and Fracture]])
+`BasePart:ApplyImpulse` applies an impulse to the part's whole assembly; on a server-owned part call it from a server Script, because a client call on a server-owned part does nothing (from [[Physics Assemblies and Constraints]]; Roblox docs).
 
 API snapshot: member of `BasePart` (`_tools/roblox_api.json`, docs build of 2026-10-27).
 

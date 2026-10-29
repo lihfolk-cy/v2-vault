@@ -1,6 +1,6 @@
 ---
 name: roblox-ui-builder
-description: 'LihFolk: responsive Roblox UI review and build (layout, safe areas, motion, accessibility). Use for any ScreenGui/HUD/menu work or "UI broken on phone", "buttons under the notch".'
+description: 'LihFolk: responsive Roblox UI review and build (layout, safe areas, motion, accessibility). Use for any ScreenGui/HUD/menu work or "UI broken on phone", "buttons too small", "buttons under the notch". For the LihFolk house menu style, use lihfolk-ui.'
 ---
 # LihFolk UI Builder
 
@@ -8,7 +8,7 @@ UI is done when it passes measured rules on every target screen, not when it loo
 
 ## Inputs
 
-- `VAULT`: LihFolk Vault V2, the knowledge base at `../../LihFolk Vault V2/` relative to this file (plugin root `LihFolk Vault V2/`). Start with `VAULT/INDEX.md` to find notes fast.
+- `VAULT`: LihFolk Vault V2, the knowledge base in the plugin root's `LihFolk Vault V2/` folder: `<base directory>/../../LihFolk Vault V2`, where the base directory is the one Claude Code shows when this skill loads. Resolve it to an absolute path before any Read, Grep or command (the vault is in the plugin, not the user's project). Start with `VAULT/INDEX.md` to find notes fast.
 - What to build (screen, menu archetype, HUD element) and the target platforms.
 - Whether the game uses the LihFolk house style (the `lihfolk-ui` skill, for a cartoon or simulator look) or its own design system.
 

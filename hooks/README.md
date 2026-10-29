@@ -16,6 +16,8 @@ Exit code 2 with stderr would also reach Claude, but JSON lets the hook choose b
 
 Each finding names the line, the rule id, the reason, a fix hint and the LihFolk note to read (`LihFolk Vault V2/...`). Up to 15 findings are listed per edit (`LIHFOLK_HOOK_MAX`), errors first.
 
+**File scope.** `.luau` files are always checked. `.lua` files are checked when the project root (`CLAUDE_PROJECT_DIR`, else the current folder) holds a `*.project.json`, `wally.toml`, `.rbxl` or `.rbxlx`, or when the file itself uses `game:GetService` or `script.Parent`; other Lua projects (LOVE, Neovim configs and similar) are left as they are.
+
 **Edit scope.** After a Write the whole file is reported. After an Edit or MultiEdit only findings on lines the edit produced are reported (file-level findings count when one of their evidence lines was touched), so old code does not nag on every small change. `LIHFOLK_HOOK_SCOPE=file` reports the whole file every time.
 
 ## Runtime choice: no Python, no Node, one command line for every shell
@@ -54,7 +56,7 @@ Severity: **error** = will lose data, money or freeze; **warning** = likely bug 
 | `receipt-grant-before-save` | warning | a `.Value`/attribute/`+=` change in the handler before its first save call (profile-based handlers skipped; heuristic) | 04 .../Purchase Data and Receipts |
 | `paid-random-no-policy` | warning | file uses `MarketplaceService` and `math.random`/`Random.new`/`NextInteger` but never `PolicyService`/`ArePaidRandomItemsRestricted` (heuristic, odds-disclosure rule) | 11 .../Paid Random Items and Odds Disclosure in Practice |
 | `connect-in-loop` | warning | `:Connect(` inside a `while`/`repeat` loop or a Heartbeat/RenderStepped/Stepped handler, unless the connection is stored and the file disconnects (or uses Janitor/Maid/Trove) | 02 Luau Scripting/Events Signals and Connections |
-| `while-true-no-yield` | error | `while true do` / `repeat ... until false` with no yield, `break` or `return` in the loop body (a call to a same-file function that yields counts; a yield inside a spawned function does not) | 02 .../Task Library Coroutines and Yielding |
+| `while-true-no-yield` | error | `while true do` / `repeat ... until false` with no yield, `break` or `return` in the loop body (a call to a same-file function that yields counts, and so does any call to a function defined in another file or any method call `x.y()` / `x:y()`, since those may yield; standard-library calls such as `math.*`, `string.*`, `table.*`, `print` count as non-yielding; a yield inside a spawned function does not) | 02 .../Task Library Coroutines and Yielding |
 | `client-sets-currency` | error | client script (`.client.luau`, StarterPlayerScripts, StarterGui, StarterCharacterScripts, StarterPack, ReplicatedFirst, "LocalScript" in the path) assigns `.Value` on leaderstats or a currency-named object, or `SetAttribute("Coins", ...)` | 22 Anti-Exploit and Security/How Exploits Work - The Client Boundary |
 | `findfirstchild-chain` | info | `:FindFirstChild*(...)` immediately indexed (`.X`, `:M()`, `[k]`) | 02 .../Instances Attributes and Tags |
 

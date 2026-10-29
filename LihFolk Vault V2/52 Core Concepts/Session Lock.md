@@ -68,5 +68,5 @@ Related concepts: [[Idempotency]], [[Data Schema Versioning]], [[Rate Limiting]]
 
 <!-- related:start -->
 ## Related
-[[AI Pitfalls - Data and Monetization]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[Server Authority]] · [[Feature Flags]] · [[Dependency Injection in Luau]] · [[Telemetry Events]] · [[Instance Count]] · [[Streaming Radius]] · [[Pity Timer]] · [[Replication Boundary]]
+[[AI Pitfalls - Data and Monetization]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[Server Authority]] · [[Feature Flags]] · [[Dependency Injection in Luau]] · [[Telemetry Events]] · [[Instance Count]] · [[Streaming Radius]] · [[Pity Timer]] · [[Onboarding Funnel]]
 <!-- related:end -->

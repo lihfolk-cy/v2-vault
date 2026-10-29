@@ -8,8 +8,7 @@
     },
     "ServerScriptService": {
       "LihFolk": { "$path": "src/Server" },
-      "Main": { "$path": "examples/Main.server.luau" },
-      "LihFolkTests": { "$path": "tests" }
+      "Main": { "$path": "examples/Main.server.luau" }
     },
     "ServerStorage": {
       "LihFolkSecrets": { "$path": "src/Config/LihFolkSecrets.luau" }

@@ -66,5 +66,5 @@ Related concepts: [[Accessibility Contrast]], [[Onboarding Funnel]], [[Thumbnail
 
 <!-- related:start -->
 ## Related
-[[Mobile Button Layout Editor]] · [[AI Pitfalls - UI and Input]] · [[Click-Through Rate]] · [[Input Buffering]] · [[Frame Budget]] · [[Instance Count]] · [[Anticipation]] · [[Replication Boundary]] · [[Streaming Radius]] · [[Core Loop]]
+[[Mobile Button Layout Editor]] · [[AI Pitfalls - UI and Input]] · [[Click-Through Rate]] · [[Input Buffering]] · [[Frame Budget]] · [[Instance Count]] · [[Anticipation]] · [[Streaming Radius]] · [[Core Loop]] · [[Replication Boundary]]
 <!-- related:end -->

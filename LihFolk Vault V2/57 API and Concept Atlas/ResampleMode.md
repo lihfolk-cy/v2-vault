@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/2d, area/ui, api/ResampleMode]
 > - Sprite soft everywhere: `ResampleMode` left at Default -> Property on the ImageLabel itself, not a parent.
 > - `ResampleMode = Pixelated` and `ScaleType = Stretch` on sprite labels.
 >
-> Cost: TL;DR ~150 tok · whole note ~490 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~500 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,10 +28,10 @@ API snapshot: member of `Decal`, `ImageButton`, `ImageLabel`, `SurfaceAppearance
 
 ## Mentioned in
 
-11 notes in 7 sections. The 11 most relevant are linked:
+12 notes in 7 sections. The 12 most relevant are linked:
 
 ### 05 UI and UX
-[[Minimap and World Map UI - Projection, Rotation and Fog of War]]
+[[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[UI Style Directions - A Visual Vocabulary for Briefs]]
 
 ### 14 3D Modeling
 [[Texturing and PBR Baking]]

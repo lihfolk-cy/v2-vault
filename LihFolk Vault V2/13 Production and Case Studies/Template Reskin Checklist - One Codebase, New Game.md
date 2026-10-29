@@ -101,5 +101,5 @@ Code that "did not change" still runs against new data and new IDs.
 
 <!-- related:start -->
 ## Related
-[[Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts]] · [[Planning and Scoping a Roblox Game]] · [[Scoping and Roles for Small Teams]] · [[Live Incident Response and Post-Mortems]] · [[Documentation and Knowledge Bases]] · [[Lessons Learned Index]] · [[Asset Pipelines]] · [[Post-Mortem - Building a Melee Action Game]]
+[[Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts]] · [[Planning and Scoping a Roblox Game]] · [[Live Incident Response and Post-Mortems]] · [[Scoping and Roles for Small Teams]] · [[Documentation and Knowledge Bases]] · [[Lessons Learned Index]] · [[Asset Pipelines]] · [[Safe Changes in a Shared Place]]
 <!-- related:end -->

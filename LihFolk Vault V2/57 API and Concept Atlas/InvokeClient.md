@@ -5,26 +5,25 @@ tags: [atlas, api, type/atlas, area/scripting, area/networking, api/InvokeClient
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
-> - `InvokeClient` (server asks a client) is the dangerous one.
-> - No `InvokeClient`. (AI Pitfalls - Networking and Security)
+> - `RemoteFunction:InvokeClient` makes the server call one client and yield until that client returns a value; the vault rules it...
+> - If the client throws an error, the server throws too; if it disconnects mid-call, `InvokeClient` errors (RemoteEvents...
+> - If the client never returns a value, the server yields forever, so an exploiter can leak server threads (and any lock they...
 > - Avoid: `InvokeClient` for anything -> Event plus reply event with timeout.
-> - No `InvokeClient` anywhere. (RemoteEvents RemoteFunctions and Unreliable Remotes)
 >
-> Cost: TL;DR ~110 tok · whole note ~430 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~160 tok · whole note ~500 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
 
-`InvokeClient` (server asks a client) is the dangerous one. (from [[RemoteEvents RemoteFunctions and Unreliable Remotes]])
+`RemoteFunction:InvokeClient` makes the server call one client and yield until that client returns a value; the vault rules it out for every use (from [[RemoteEvents RemoteFunctions and Unreliable Remotes]]; Roblox docs).
 
 API snapshot: member of `RemoteFunction` (`_tools/roblox_api.json`, docs build of 2026-10-27).
 
 ## Key facts
 
-- No `InvokeClient`. ([[AI Pitfalls - Networking and Security]])
+- If the client throws an error, the server throws too; if it disconnects mid-call, `InvokeClient` errors ([[RemoteEvents RemoteFunctions and Unreliable Remotes]]; Roblox docs).
+- If the client never returns a value, the server yields forever, so an exploiter can leak server threads (and any lock they hold) with an `OnClientInvoke` that never returns ([[RemoteEvents RemoteFunctions and Unreliable Remotes]]).
 - Avoid: `InvokeClient` for anything -> Event plus reply event with timeout. ([[RemoteEvents RemoteFunctions and Unreliable Remotes]])
-- No `InvokeClient` anywhere. ([[RemoteEvents RemoteFunctions and Unreliable Remotes]])
-- Avoid: Using `InvokeClient` for gameplay. ([[Cookbook - Remotes and Networking]])
 
 ## Mentioned in
 

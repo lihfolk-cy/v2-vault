@@ -32,7 +32,7 @@ Most "works in Studio, breaks live" bugs are a value on the wrong side of this l
 
 1. **Streaming changes "replicated" into "replicated if near".** With `StreamingEnabled`, a part can exist on the server and be absent on the client. Client code must wait for or tolerate missing instances; see [[Streaming Radius]].
 2. **Remote arguments are copies, not references.** Tables crossing a remote lose metatables, mixed tables lose keys, and non-string dictionary keys are converted or dropped (Roblox docs, "Argument limitations for bindables and remotes"). An Instance argument arrives as `nil` if the receiver cannot see it.
-3. **Ordering is per remote, not global.** Do not assume a property change and a remote fired in the same frame arrive in a fixed order relative to each other.
+3. **Ordering covers reliable remotes only.** Reliable `RemoteEvent`s arrive in order per direction, even across different RemoteEvent instances; `UnreliableRemoteEvent`s are not ordered (Roblox docs, see [[RemoteEvents RemoteFunctions and Unreliable Remotes]]). There is no guaranteed order between property replication and remotes: do not assume a property change and a remote fired in the same frame arrive in a fixed order relative to each other.
 4. **Bandwidth is the hidden cost.** Every replicated property change on a replicated instance is network traffic for every client in range. Spinning a decorative part from the server costs bandwidth per player; spin it on the client instead.
 
 ## Tiny example
@@ -70,5 +70,5 @@ Related concepts: [[Server Authority]], [[Streaming Radius]], [[Event Bus]].
 
 <!-- related:start -->
 ## Related
-[[Event Bus]] · [[Deterministic Simulation]] · [[Instance Count]] · [[Rate Limiting]] · [[Feature Flags]] · [[Data Schema Versioning]] · [[Dependency Injection in Luau]] · [[Object Pooling]]
+[[Event Bus]] · [[Deterministic Simulation]] · [[Rate Limiting]] · [[Instance Count]] · [[Feature Flags]] · [[Data Schema Versioning]] · [[Dependency Injection in Luau]] · [[Object Pooling]]
 <!-- related:end -->

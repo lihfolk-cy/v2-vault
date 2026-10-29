@@ -216,5 +216,5 @@ Run this for every feature that touches money, time or randomness:
 
 <!-- related:start -->
 ## Related
-[[Limited-Time Offers - Design and Ethics]] · [[Robux Price Points and Offer Design]] · [[Genre Playbook - Simulators]] · [[Simulator and RNG Genre Teardown]] · [[Balancing with Spreadsheets and Data]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Tycoons]] · [[Progression and Pacing Design]] · [[Genre Playbook - Social Deduction and Murder Mystery]] · [[Genre Playbook - Tower Defense]]
+[[Limited-Time Offers - Design and Ethics]] · [[Robux Price Points and Offer Design]] · [[Genre Playbook - Simulators]] · [[Simulator and RNG Genre Teardown]] · [[Balancing with Spreadsheets and Data]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Tycoons]] · [[Progression and Pacing Design]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Social Deduction and Murder Mystery]]
 <!-- related:end -->

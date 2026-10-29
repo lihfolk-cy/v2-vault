@@ -290,5 +290,5 @@ Do not use fear to push purchases ("buy a revive NOW" during a chase with a coun
 
 <!-- related:start -->
 ## Related
-[[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Genre Playbook - Obbies and Platformers]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Combat and RPG]] · [[Genre Playbook - Survival and Crafting]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Social Deduction and Murder Mystery]] · [[Core Loops and Session Design]]
+[[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Genre Playbook - Obbies and Platformers]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Combat and RPG]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Survival and Crafting]] · [[Core Loops and Session Design]] · [[Genre Playbook - Social Deduction and Murder Mystery]]
 <!-- related:end -->

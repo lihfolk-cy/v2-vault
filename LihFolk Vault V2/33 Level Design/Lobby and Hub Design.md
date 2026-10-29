@@ -269,5 +269,5 @@ Avoid hiding social nodes in corners: people stand where they can be seen. See [
 
 <!-- related:start -->
 ## Related
-[[Playtest Heatmaps - Position and Death Maps]] · [[Instanced Interiors - Pooled House and Room Copies for Many Players]] · [[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Level of Detail and Model Streaming]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]] · [[ProximityPrompt Gamepad Keys and the Hidden PlayerList Tab]] · [[Obby and Platforming Level Design]]
+[[Playtest Heatmaps - Position and Death Maps]] · [[Instanced Interiors - Pooled House and Room Copies for Many Players]] · [[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]] · [[ProximityPrompt Gamepad Keys and the Hidden PlayerList Tab]] · [[Level of Detail and Model Streaming]] · [[Obby and Platforming Level Design]]
 <!-- related:end -->

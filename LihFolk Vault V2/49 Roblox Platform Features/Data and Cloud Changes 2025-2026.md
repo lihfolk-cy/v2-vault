@@ -41,7 +41,7 @@ Per-experience, per minute (Roblox docs limits page as recorded in [[DataStore F
 - `UpdateAsync` costs one read and one write.
 - **Per key:** value up to 4,194,304 characters serialized; write throughput **4 MB per minute** per key. The old "6 seconds between writes to one key" rule is not on the current limits page. Spacing saves several seconds apart is still sensible.
 - **Storage:** 500 MB + 1 MB x lifetime players for the experience.
-- Per-server defaults (60 + players x 40 for reads, and so on) still exist and can be lowered with `SetRateLimitForRequestType`; they are no longer the binding constraint.
+- Per-server defaults (60 + players x 40 for reads, and so on) still exist and can be lowered with `SetRateLimitForRequestType` (**Unverified** whether it can raise them); they are no longer the binding constraint.
 - **The trap:** an Open Cloud script (migration, support tool, RTBF bot, leaderboard export) now spends the same budget as live servers. A bulk job can throttle every server.
 
 ```lua

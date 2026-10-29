@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/design, area/world]
 > - Roblox games, especially simulators, RPGs and tycoons, are built on visible numbers going up.
 > - Ends a stage with a big reveal (a floor appears, a roof, a vehicle), the tycoon's version of a boss kill.
 >
-> Cost: TL;DR ~140 tok · whole note ~630 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~650 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,10 +26,13 @@ Tycoon is one of the genres the docs list as common on the platform (Docs, "Desi
 
 ## Mentioned in
 
-31 notes in 18 sections. The 25 most relevant are linked:
+32 notes in 19 sections. The 25 most relevant are linked:
 
 ### 03 Architecture and Networking
 [[Frameworks - Knit Matter and Others]]
+
+### 05 UI and UX
+[[UI Style Directions - A Visual Vocabulary for Briefs]]
 
 ### 06 World Building and Art
 [[Environment Art Styles]] · [[Grid Placement and Player Building Systems]]
@@ -47,7 +50,7 @@ Tycoon is one of the genres the docs list as common on the platform (Docs, "Desi
 [[Genre QA Passes - Test Checklists per Game Type]]
 
 ### 27 Marketing and Growth
-[[Experience Description and Search Keywords]] · [[Short-Form Video Marketing]]
+[[Experience Description and Search Keywords]]
 
 ### 32 Case Studies of Top Roblox Games
 [[Case Study - Grow a Garden]] · [[Case Study - Steal a Brainrot]] · [[Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks]]
@@ -70,6 +73,6 @@ Tycoon is one of the genres the docs list as common on the platform (Docs, "Desi
 ### 52 Core Concepts
 [[Core Loop]] · [[Instance Count]] · [[Object Pooling]] · [[Power Curve]]
 
-Also mentioned in (not linked): 00 Start Here · Genre Systems Start Here · Top Games Case Studies Start Here · Tween and CFrame Animation of Objects · Voice Chat and Safety Features · Weekend Build - Survival Gather, Craft and Place
+Also mentioned in (not linked): 00 Start Here · Genre Systems Start Here · Short-Form Video Marketing · Top Games Case Studies Start Here · Tween and CFrame Animation of Objects · Voice Chat and Safety Features · Weekend Build - Survival Gather, Craft and Place
 
 <!-- atlas:generated -->

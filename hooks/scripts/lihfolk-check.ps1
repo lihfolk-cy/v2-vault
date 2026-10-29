@@ -7,6 +7,8 @@
 #   Scan mode:  powershell -NoProfile -ExecutionPolicy Bypass -File lihfolk-check.ps1 -Scan [path ...]  (default ".")
 #               prints "path:line: severity id: message | fix | note"; exit 1 if any error.
 # Environment: LIHFOLK_HOOK=off, LIHFOLK_HOOK_SCOPE=edit|file, LIHFOLK_HOOK_MAX=15.
+# Scope: .luau files always; .lua files only when the project root (CLAUDE_PROJECT_DIR, else the current
+# folder) holds *.project.json, wally.toml, *.rbxl or *.rbxlx, or the file uses game:GetService / script.Parent.
 # This file is ASCII only on purpose (Windows PowerShell 5.1 reads BOM-less scripts as ANSI).
 [CmdletBinding()]
 param([switch]$Scan, [Parameter(ValueFromRemainingArguments = $true)][string[]]$Paths)
@@ -35,6 +37,23 @@ foreach ($l in [IO.File]::ReadAllLines((Join-Path $Here 'rules.tsv'), $Utf8)) {
 $SEVRANK = @{ 'error' = 3; 'warning' = 2; 'info' = 1 }
 $KW = New-Set
 foreach ($k in 'function', 'if', 'while', 'for', 'do', 'repeat', 'end', 'until', 'break', 'return') { [void]$KW.Add($k) }
+# infinite-loop rule: words before "(" that are not calls, globals that never yield, and library
+# tables whose functions never yield. Any other call to a function not defined in this file (or any
+# method call) may yield, so the loop is not reported.
+$LKW = New-Set
+foreach ($k in 'and or not if elseif while until return in then do function local else repeat for end break'.Split(' ')) { [void]$LKW.Add($k) }
+$NOYIELD = New-Set
+foreach ($k in 'print warn error assert type typeof tostring tonumber pairs ipairs next select rawget rawset rawequal rawlen setmetatable getmetatable unpack pcall xpcall'.Split(' ')) { [void]$NOYIELD.Add($k) }
+$STDLIB = New-Set
+foreach ($k in 'math string table bit32 utf8 buffer os debug vector task coroutine Vector3 Vector2 Vector3int16 Vector2int16 CFrame Color3 UDim UDim2 Instance BrickColor NumberRange NumberSequence NumberSequenceKeypoint ColorSequence ColorSequenceKeypoint TweenInfo Ray Region3 Rect Random DateTime'.Split(' ')) { [void]$STDLIB.Add($k) }
+# Roblox project? (.lua files are checked only in one, or when they use game:GetService / script.Parent)
+$RobloxProj = $false
+try {
+	$root = $env:CLAUDE_PROJECT_DIR; if (-not $root) { $root = (Get-Location).ProviderPath }
+	foreach ($pat in '*.project.json', 'wally.toml', '*.rbxl', '*.rbxlx') {
+		if (@([IO.Directory]::GetFiles($root, $pat)).Count -gt 0) { $RobloxProj = $true; break }
+	}
+} catch { }
 
 # ---------------------------------------------------------------- helpers
 function TrivialLine([string]$t) {
@@ -321,6 +340,31 @@ function AddIds([string]$ids, [int]$target, [bool]$isFile) {
 		if ($isFile) { [void]$script:IGNF.Add($x) } else { [void]$script:IGN.Add("$target|$x") }
 	}
 }
+# does CODE line $c call something that yields (a same-file yielding function) or may yield (a function
+# not defined in this file, or a method call)? Used by while-true-no-yield.
+function MayYieldCall([string]$c) {
+	foreach ($m in [regex]::Matches($c, '([A-Za-z_][A-Za-z0-9_]*)[ \t]*\(')) {
+		$nm = $m.Groups[1].Value; $st = $m.Index
+		$prev = ''; if ($st -gt 0) { $prev = $c.Substring($st - 1, 1) }
+		if ($script:YN.Contains($nm)) { return $true }
+		if ($LKW.Contains($nm) -or $script:FNDEF.Contains($nm)) { continue }
+		if ($prev -eq ':') { return $true }
+		if ($prev -eq '.') {
+			$q = [regex]::Match($c.Substring(0, $st - 1), '[A-Za-z_][A-Za-z0-9_]*$').Value
+			if ($STDLIB.Contains($q)) { continue }
+			return $true
+		}
+		if ($NOYIELD.Contains($nm)) { continue }
+		return $true
+	}
+	return $false
+}
+# is this file in scope? .luau always; .lua only in a Roblox project or when it uses Roblox globals
+function InScope([string]$path) {
+	if (-not $path.ToLowerInvariant().EndsWith('.lua') -or $RobloxProj) { return $true }
+	for ($i = 1; $i -le $script:NL; $i++) { if (M $script:RAW[$i] 'game[ \t]*:[ \t]*GetService|script[ \t]*\.[ \t]*Parent') { return $true } }
+	return $false
+}
 function Invoke-Analyze([string]$path) {
 	try { $text = [IO.File]::ReadAllText($path, $Utf8) } catch { return $false }
 	$text = $text.Replace("`r`n", "`n")
@@ -330,6 +374,7 @@ function Invoke-Analyze([string]$path) {
 	$script:NL = $lines.Length
 	$script:RAW = @($null) + $lines
 	for ($i = 1; $i -le $script:NL; $i++) { $script:RAW[$i] = $script:RAW[$i].TrimEnd("`r") }
+	if (-not (InScope $path)) { return $false }
 	$code = $LexRe.Replace(($script:RAW[1..$script:NL] -join "`n"), $LexEval)
 	$script:CODE = @($null) + $code.Split("`n")
 	$script:ISCLIENT = IsClientPath $path
@@ -340,7 +385,7 @@ function Invoke-Analyze([string]$path) {
 	$script:LP = New-Object 'System.Collections.Generic.List[object]'
 	$script:SK = New-Object 'System.Collections.Generic.List[string]'; $script:SI = New-Object 'System.Collections.Generic.List[int]'
 	$script:DSC = New-Object 'System.Collections.Generic.List[object]'
-	$script:PREF = New-Set; $script:REMNAME = New-Set; $script:RCPNAME = New-Set; $script:YN = New-Set
+	$script:PREF = New-Set; $script:REMNAME = New-Set; $script:RCPNAME = New-Set; $script:YN = New-Set; $script:FNDEF = New-Set
 	$script:LEAVENAME = New-Set; $script:WN = New-Set
 	$script:PW = $false; $script:PF = $false; $script:PI = $false
 
@@ -411,13 +456,13 @@ function Invoke-Analyze([string]$path) {
 		foreach ($k in $d.fns) { $g = $script:FN[$k]; if ($g.wrap -or ($g.name -ne '' -and $script:PREF.Contains($g.name))) { $prot = $true } }
 		if (-not $prot) { AddF 'datastore-no-pcall' $d.ln $d.ln $d.ln $d.m '' }
 	}
-	foreach ($g in $script:FN) { if ($g.y -and $g.name -ne '') { [void]$script:YN.Add($g.name) } }
+	# infinite loops: a call to a same-file function that yields, to a function defined elsewhere, or a
+	# method call counts as a (possible) yield; only loops whose calls are all known not to yield are reported
+	foreach ($g in $script:FN) { if ($g.name -ne '') { [void]$script:FNDEF.Add($g.name); if ($g.y) { [void]$script:YN.Add($g.name) } } }
 	foreach ($L in $script:LP) {
 		if (-not $L.inf -or $L.ok) { continue }
 		$prot = $false
-		for ($i = $L.start; $i -le $L.end -and -not $prot; $i++) {
-			foreach ($m in [regex]::Matches($script:CODE[$i], '([A-Za-z_][A-Za-z0-9_]*)[ \t]*\(')) { if ($script:YN.Contains($m.Groups[1].Value)) { $prot = $true; break } }
-		}
+		for ($i = $L.start; $i -le $L.end -and -not $prot; $i++) { if (MayYieldCall $script:CODE[$i]) { $prot = $true } }
 		if (-not $prot) { AddF 'while-true-no-yield' $L.start $L.start $L.end '' '' }
 	}
 	for ($k = 0; $k -lt $script:FN.Count; $k++) {

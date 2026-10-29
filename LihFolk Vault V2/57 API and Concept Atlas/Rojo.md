@@ -24,7 +24,7 @@ Rojo: Tool that syncs files on disk with Studio, enabling Git. (from [[Glossary]
 - Avoid: Mixing Script Sync and Rojo naming -> One convention per repo. ([[External Tooling - Rojo Wally Selene StyLua]])
 - Decision written down: Script Sync or Rojo, and which naming convention. ([[External Tooling - Rojo Wally Selene StyLua]])
 - Changes in Studio vanish: Rojo synced files over Studio edits -> edit code only in files; keep mapped folders code-only. ([[Code Pipeline - Rojo Git and CI]])
-- Code in files, Rojo-mapped folders code-only. ([[Code Pipeline - Rojo Git and CI]])
+- StyLua, Selene, luau-lsp, Rojo build in CI on every PR. ([[Code Pipeline - Rojo Git and CI]])
 - Avoid: Rojo live-sync from a feature branch into the shared place -> Personal dev places per branch. ([[Git and Source Control for Roblox]])
 
 ## Mentioned in

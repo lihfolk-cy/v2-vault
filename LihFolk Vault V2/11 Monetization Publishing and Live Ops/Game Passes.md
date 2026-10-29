@@ -12,7 +12,7 @@ tags: [monetization, game-passes, marketplaceservice, luau, type/guide, area/mon
 > - One server ownership cache, updated on join and on purchase
 > - Unknown ownership retried, not stored as false
 >
-> Cost: TL;DR ~140 tok · whole note ~4.0k tok. Read more: ## 3. Server code · ## 5. Designing a pass lineup · ## 7. Common mistakes · ## 8. Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.1k tok. Read more: ## 3. Server code · ## 5. Designing a pass lineup · ## 7. Common mistakes · ## 8. Checklist
 <!-- tldr:end -->
 
 A pass is a one-time Robux purchase that grants a permanent privilege: a multiplier, an area, a tool, a tag. This note covers how passes work, how to check ownership correctly (including the cases where the obvious check returns the wrong answer), how to grant in-session, and how to design a pass lineup. Facts verified against the Creator Hub "Passes" guide and the `MarketplaceService` reference **as of October 2026**.
@@ -53,7 +53,7 @@ So the pattern is: check on join, set the cache; on `PromptGamePassPurchaseFinis
 
 ### Is `PromptGamePassPurchaseFinished` trustworthy?
 
-It fires on the server with a `wasPurchased` flag (Docs). The Passes guide uses it as the grant point. Unlike developer products there is no receipt to verify. It is not spoofable by clients (it is a server-side event from the engine), but a cautious server can confirm with a single `UserOwnsGamePassAsync` call afterwards and keep the benefit if *either* says yes. Never accept a client remote saying "I bought the pass".
+It fires on the server with a `wasPurchased` flag (Docs). The Passes guide uses it as the grant point. Unlike developer products there is no receipt to verify. The event is raised by the engine, not by a client remote, so a client should not be able to fake it for another purchase (**Unverified**: the reference page does not state a security guarantee). Treat it by tier: grant **session-only** perks (a speed boost, a UI badge) straight from the event; make **persisted or high-value** benefits (saved items, currency, anything written to the profile) depend on `MarketplaceService:UserOwnsGamePassAsync` returning `true`, re-polled a few times with backoff because it can briefly lag a fresh purchase (rule of thumb). Never accept a client remote saying "I bought the pass".
 
 ---
 
@@ -287,5 +287,5 @@ Turn pass effects off where they would break the tutorial. The reference project
 
 <!-- related:start -->
 ## Related
-[[Shop with Game Passes and Developer Products End to End]] · [[Robux Price Points and Offer Design]] · [[Purchase Data and Receipts]] · [[Subscriptions and Premium Payouts]] · [[Roblox Policies Ratings and Compliance]] · [[Refunds Chargebacks and Purchase Support]] · [[Paid Random Items and Odds Disclosure in Practice]] · [[Economy Inflation Sinks and Faucets Math]] · [[Ads and Rewarded Video]] · [[Community Building]]
+[[Shop with Game Passes and Developer Products End to End]] · [[Robux Price Points and Offer Design]] · [[AI Pitfalls - Data and Monetization]] · [[Subscriptions and Premium Payouts]] · [[Roblox Policies Ratings and Compliance]] · [[Refunds Chargebacks and Purchase Support]] · [[Paid Random Items and Odds Disclosure in Practice]] · [[Economy Inflation Sinks and Faucets Math]] · [[Ads and Rewarded Video]] · [[Community Building]]
 <!-- related:end -->

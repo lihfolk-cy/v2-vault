@@ -78,6 +78,9 @@ Receipts.SetPromptCheck("LuckBoost2x", function(player: Player): (boolean, strin
 	if EggHatch.IsAtMaxLuck(player) then
 		return false, "AtMaxLuck" -- never sell a boost that does nothing
 	end
+	if not EggHatch.CanAddTimedBoost(player) then
+		return false, "BoostLimit" -- room check first, so the paid grant never has to merge
+	end
 	return true, nil
 end)
 Receipts.SetCustomGrant("RoyalHatch", function(player: Player): boolean

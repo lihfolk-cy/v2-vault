@@ -94,7 +94,7 @@ Defaults from the API dump (what `Instance.new` gives). **Inserting through Stud
 | Property | Notes (Docs) |
 |---|---|
 | `FlipbookLayout` | `None`, `Grid2x2` (4 frames), `Grid4x4` (16), `Grid8x8` (64), `Custom` (with `FlipbookSizeX/Y`). |
-| `FlipbookMode` | `Loop`, `OneShot` (once across the particle's lifetime: frame rate = lifetime / frame count, `FlipbookFramerate` ignored), `PingPong`, `Random` (random order with crossfades). |
+| `FlipbookMode` | `Loop`, `OneShot` (once across the particle's lifetime: frame rate = frame count / lifetime, `FlipbookFramerate` ignored), `PingPong`, `Random` (random order with crossfades). |
 | `FlipbookFramerate` | Range, **maximum 30 fps**. |
 | `FlipbookStartRandom` | Each particle starts on a random frame. With framerate 0 (studied packs use 0.001), every particle shows one random static frame. |
 | `FlipbookBlendFrames` | Crossfade between frames (default true) or hard swap. |
@@ -334,5 +334,5 @@ See also: [[VFX Design Playbook]], [[Beams and Trails]], [[VFX Timing with Anima
 
 <!-- related:start -->
 ## Related
-[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Slash VFX Recipes - Crescent and Ring]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Atmosphere Sky Clouds and Post-Processing]] · [[VFX Previews in Blender for Roblox - Colour and Framing]]
+[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Slash VFX Recipes - Crescent and Ring]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Atmosphere Sky Clouds and Post-Processing]] · [[VFX Previews in Blender for Roblox - Colour and Framing]]
 <!-- related:end -->

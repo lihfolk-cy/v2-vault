@@ -444,5 +444,5 @@ All of these fit in the 4,194,304 character limit by a wide margin. The real les
 
 <!-- related:start -->
 ## Related
-[[Tables Metatables and OOP]] · [[Big Numbers Precision and Formatting]] · [[Replication Boundary]] · [[Building a Signal Library]] · [[Custom Schedulers and Coroutine Patterns]] · [[Module Design and Dependency Injection]]
+[[Tables Metatables and OOP]] · [[Replication Boundary]] · [[Big Numbers Precision and Formatting]] · [[Building a Signal Library]] · [[Custom Schedulers and Coroutine Patterns]] · [[Module Design and Dependency Injection]]
 <!-- related:end -->

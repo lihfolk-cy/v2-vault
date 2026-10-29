@@ -442,5 +442,5 @@ The reference project's rule was "fades only, no scale or lift" under reduced mo
 
 <!-- related:start -->
 ## Related
-[[Tween vs Spring]] · [[Layout - Scale Offset and Constraints]] · [[Responsive UI for Phone Tablet Console and PC]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[Text Fonts and Rich Text]] · [[Safe Areas and Insets]] · [[World-Space UI - BillboardGui and SurfaceGui]]
+[[Tween vs Spring]] · [[Layout - Scale Offset and Constraints]] · [[Responsive UI for Phone Tablet Console and PC]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Text Fonts and Rich Text]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[Safe Areas and Insets]] · [[World-Space UI - BillboardGui and SurfaceGui]]
 <!-- related:end -->

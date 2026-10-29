@@ -284,5 +284,5 @@ On the client, good candidates are visual-only computations: crowd or flock stee
 
 <!-- related:start -->
 ## Related
-[[Luau Performance Patterns with Benchmarks]] · [[Script Types and Run Context]] · [[Tables Metatables and OOP]] · [[Events Signals and Connections]] · [[Metatables and OOP - When and When Not]] · [[CollectionService Patterns]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Luau Language Essentials]]
+[[Luau Performance Patterns with Benchmarks]] · [[Script Types and Run Context]] · [[Tables Metatables and OOP]] · [[Events Signals and Connections]] · [[Metatables and OOP - When and When Not]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[CollectionService Patterns]] · [[Instances Attributes and Tags]]
 <!-- related:end -->

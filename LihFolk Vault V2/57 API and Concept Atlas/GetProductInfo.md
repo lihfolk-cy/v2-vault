@@ -7,10 +7,10 @@ tags: [atlas, api, type/atlas, area/ai, area/monetization, api/GetProductInfo]
 > [!tldr] TL;DR
 > - `GetProductInfo` is now marked deprecated on the reference page in favour of `GetProductInfoAsync` (Docs, Oct 2026).
 > - Avoid: Writing `GetProductInfo`, `LoadCharacter` or `AwardBadge` in new code.
-> - `grep -nE ":(GetProductInfo|PlayerOwnsAsset|AwardBadge|LoadCharacter|IsInGroup|GetRankInGroup|ApplyDescription|ReserveServer)\(...
 > - Wrong: `GetProductInfo`, `PlayerOwnsAsset`, `AwardBadge`, `LoadCharacter`, `IsInGroup`, `GetRankInGroup`, `ApplyDescription`...
+> - `GetProductInfo`, `LoadCharacter`, `AwardBadge`, `IsInGroup`, `ReserveServer` and 41 others have `Async` names.
 >
-> Cost: TL;DR ~160 tok · whole note ~420 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~380 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -22,7 +22,6 @@ API snapshot: member of `MarketplaceService`; flagged deprecated (`_tools/roblox
 ## Key facts
 
 - Avoid: Writing `GetProductInfo`, `LoadCharacter` or `AwardBadge` in new code. ([[Engine and API Changes 2025-2026]])
-- `grep -nE ":(GetProductInfo|PlayerOwnsAsset|AwardBadge|LoadCharacter|IsInGroup|GetRankInGroup|ApplyDescription|ReserveServer)\(... ([[Engine and API Changes 2025-2026]])
 - Wrong: `GetProductInfo`, `PlayerOwnsAsset`, `AwardBadge`, `LoadCharacter`, `IsInGroup`, `GetRankInGroup`, `ApplyDescription`, `ReserveServer`, `CreateHumanoidModelFromDescription`. ([[AI Pitfalls - Stale APIs and Luau]])
 - `GetProductInfo`, `LoadCharacter`, `AwardBadge`, `IsInGroup`, `ReserveServer` and 41 others have `Async` names. ([[Roblox Changes 2025-2026]])
 

@@ -1,0 +1,18 @@
+{
+  "name": "LihFolkSystemsTest",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "LihFolk": { "$path": "src/Shared" },
+      "LihFolkConfig": { "$path": "src/Config/LihFolkConfig.luau" }
+    },
+    "ServerScriptService": {
+      "LihFolk": { "$path": "src/Server" },
+      "Main": { "$path": "examples/Main.server.luau" },
+      "LihFolkTests": { "$path": "tests" }
+    },
+    "ServerStorage": {
+      "LihFolkSecrets": { "$path": "src/Config/LihFolkSecrets.luau" }
+    }
+  }
+}

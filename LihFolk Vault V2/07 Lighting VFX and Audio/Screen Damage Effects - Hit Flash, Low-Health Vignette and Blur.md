@@ -74,9 +74,11 @@ RunService.RenderStepped:Connect(function()
 			r += p.tint.R * w; g += p.tint.G * w; b += p.tint.B * w
 		end
 	end
-	flash = math.min(flash, 0.6) * ScreenFX.intensityScale -- cap stacked hits
+	-- r, g, b are weighted sums: divide by the raw summed weight to get the average hue.
+	-- Without this, a faint pulse multiplies the colour toward black instead of red.
+	local tint = if flash > 0 then Color3.new(r / flash, g / flash, b / flash) else Color3.new(1, 0.3, 0.3)
+	flash = math.min(flash, 0.6) * ScreenFX.intensityScale -- cap stacked hits (after averaging)
 	local total = flash + lowHealth * 0.35 * ScreenFX.intensityScale
-	local tint = if flash > 0 then Color3.new(r, g, b) else Color3.new(1, 0.3, 0.3)
 	cc.TintColor = Color3.new(1, 1, 1):Lerp(tint, math.min(total, 1))
 	cc.Saturation = -0.5 * lowHealth * ScreenFX.intensityScale
 	blur.Size = 6 * lowHealth * ScreenFX.intensityScale

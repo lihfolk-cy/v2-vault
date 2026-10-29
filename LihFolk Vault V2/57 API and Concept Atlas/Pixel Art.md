@@ -1,5 +1,5 @@
 ---
-tags: [atlas, concept, type/atlas, area/2d, area/materials]
+tags: [atlas, concept, type/atlas, area/2d, area/ui]
 ---
 # Pixel Art
 
@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/2d, area/materials]
 > - Your art is not pixel art. Painted or vector-style art should stay on the default resampling; `Pixelated` makes smooth art...
 > - Competitive and real-time and pixel art: possible in GUI 2D, but you are signing up for everything in 2D Multiplayer - Server...
 >
-> Cost: TL;DR ~170 tok · whole note ~520 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~170 tok · whole note ~540 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,7 +26,10 @@ Pixel art is the identity of the game. Crisp, unfiltered pixels at an integer sc
 
 ## Mentioned in
 
-13 notes in 6 sections. The 13 most relevant are linked:
+14 notes in 7 sections. The 14 most relevant are linked:
+
+### 05 UI and UX
+[[UI Style Directions - A Visual Vocabulary for Briefs]]
 
 ### 44 Materials and Surfaces
 [[SurfaceAppearance PBR Workflow]]

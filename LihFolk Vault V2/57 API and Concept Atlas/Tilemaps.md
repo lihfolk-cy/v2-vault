@@ -6,11 +6,11 @@ tags: [atlas, concept, type/atlas, area/2d]
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - A tilemap stores a level as a few arrays of small numbers, which makes it cheap to save, cheap to collide against, cheap to...
-> - Tilemaps Cameras and Parallax for 2D Levels.
 > - Flatten the camera and you have to fake parallax yourself (see Tilemaps Cameras and Parallax for 2D Levels).
 > - Tilemaps Cameras and Parallax for 2D Levels: load real levels from an editor, add the camera rules, add parallax.
+> - Solidity. The server holds the tilemap (it is data, so this is cheap) and rejects positions inside solid tiles.
 >
-> Cost: TL;DR ~140 tok · whole note ~390 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~160 tok · whole note ~380 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -19,10 +19,9 @@ A tilemap stores a level as a few arrays of small numbers, which makes it cheap 
 
 ## Key facts
 
-- Tilemaps Cameras and Parallax for 2D Levels. ([[A 2D Engine in a ScreenGui - Game Loop Entities and Rendering]])
 - Flatten the camera and you have to fake parallax yourself (see Tilemaps Cameras and Parallax for 2D Levels). ([[Side-Scroller in 3D - Locking Camera and Movement to a Plane]])
 - Tilemaps Cameras and Parallax for 2D Levels: load real levels from an editor, add the camera rules, add parallax. ([[2D Game Development Start Here]])
-- Tilemaps Cameras and Parallax for 2D Levels. ([[2D Collision Physics and Platformer Movement]])
+- Solidity. The server holds the tilemap (it is data, so this is cheap) and rejects positions inside solid tiles. ([[2D Multiplayer - Server Authority and Replicating GUI Worlds]])
 
 ## Mentioned in
 

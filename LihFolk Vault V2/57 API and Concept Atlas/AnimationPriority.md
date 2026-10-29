@@ -6,11 +6,10 @@ tags: [atlas, api, type/atlas, area/animation, area/ai, api/AnimationPriority]
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - `Enum.AnimationPriority` has Core, Idle, Movement, Action, Action2, Action3 and Action4.
-> - `AnimPlay.rank`. `Enum.AnimationPriority` values run Idle 0, Movement 1, Action 2, Action2 3, Action3 4, Action4 5, but `Core`...
 > - Wrong: everything at `Action`; leaving the uploaded clip's priority at `Core`; sorting priorities by...
 > - Load a looped riding pose on the rider's Animator with `Priority = Enum.AnimationPriority.Action` (or Action2 to Action4 if...
 >
-> Cost: TL;DR ~160 tok · whole note ~550 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~490 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -21,7 +20,6 @@ API snapshot: enum `Enum.AnimationPriority` (`_tools/roblox_api.json`, docs buil
 
 ## Key facts
 
-- `AnimPlay.rank`. `Enum.AnimationPriority` values run Idle 0, Movement 1, Action 2, Action2 3, Action3 4, Action4 5, but `Core` is 1000 although it blends as the lowest layer. ([[Snippets - Playing Animations]])
 - Wrong: everything at `Action`; leaving the uploaded clip's priority at `Core`; sorting priorities by `Enum.AnimationPriority.X.Value`; expecting two tracks at weight 1 to each show fully. ([[AI Pitfalls - Physics and Animation]])
 - Load a looped riding pose on the rider's Animator with `Priority = Enum.AnimationPriority.Action` (or Action2 to Action4 if your combat uses Action), played from the rider's client so it replicates. ([[Mounts and Rideable Creatures]])
 

@@ -5,17 +5,17 @@ tags: [atlas, api, type/atlas, area/ui, area/gameplay, api/ScrollingFrame]
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
-> - `ScrollingFrame` uses `AutomaticCanvasSize` instead, which resizes the canvas, not the frame.
+> - A `ScrollingFrame` always clips its contents; with `AutomaticCanvasSize` set, the canvas (not the frame) grows to fit its...
 > - Built-in input can fight your input. Touch swiping a page also scrolls a `ScrollingFrame` inside it; the mouse wheel pages...
 > - A header that never scrolls plus a `ScrollingFrame` that fills the rest: `Size = UDim2.new(1, 0, 1, -headerHeight)`.
 > - For long lists, auto-scroll the `ScrollingFrame` when the ghost is near the top or bottom edge (a few pixels per frame scaled...
 >
-> Cost: TL;DR ~160 tok · whole note ~470 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~170 tok · whole note ~530 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
 
-`ScrollingFrame` uses `AutomaticCanvasSize` instead, which resizes the canvas, not the frame. (from [[Layout - Scale Offset and Constraints]])
+A `ScrollingFrame` always clips its contents; with `AutomaticCanvasSize` set, the canvas (not the frame) grows to fit its children (from [[Shared Close Buttons and Headers Across Many Screens]] and [[Layout - Scale Offset and Constraints]]).
 
 API snapshot: class, inherits `GuiObject` (`_tools/roblox_api.json`, docs build of 2026-10-27).
 
@@ -24,6 +24,7 @@ API snapshot: class, inherits `GuiObject` (`_tools/roblox_api.json`, docs build 
 - Built-in input can fight your input. Touch swiping a page also scrolls a `ScrollingFrame` inside it; the mouse wheel pages when the player meant to scroll a list. ([[UI Layout Objects - Lists Grids and Pages]])
 - A header that never scrolls plus a `ScrollingFrame` that fills the rest: `Size = UDim2.new(1, 0, 1, -headerHeight)`. ([[Plugin UI with DockWidgets]])
 - For long lists, auto-scroll the `ScrollingFrame` when the ghost is near the top or bottom edge (a few pixels per frame scaled by distance into the edge zone). ([[Drag-and-Drop Inventories and Sliders with UIDragDetector]])
+- `ScrollingFrame` uses `AutomaticCanvasSize` instead, which resizes the canvas, not the frame. ([[Layout - Scale Offset and Constraints]])
 
 ## Mentioned in
 

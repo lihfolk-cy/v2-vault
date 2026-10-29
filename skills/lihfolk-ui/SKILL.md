@@ -1,6 +1,6 @@
 ---
 name: lihfolk-ui
-description: 'LihFolk: house cartoon/simulator UI kit (Luau components) for shop, codes, rebirth, settings, daily rewards, HUD, buttons, progress bars; also "UI broken on phone" / "buttons too small".'
+description: 'LihFolk: the LihFolk house menu kit (cartoon/simulator Luau components: shop, codes, rebirth, settings, daily rewards, HUD, buttons, progress bars). Use when the user explicitly asks for the LihFolk UI style, the house menu kit or its components. General responsive UI and layout work goes to roblox-ui-builder.'
 ---
 
 # LihFolk UI
@@ -11,7 +11,7 @@ The kit is in `src/` and runs as is. The examples in `examples/` build the five 
 
 ## Inputs
 
-- `VAULT`: the LihFolk knowledge base at `../../LihFolk Vault V2/` (plugin root `LihFolk Vault V2/`). The overview and the full spec are in `VAULT/21 LihFolk UI Design System/`.
+- `VAULT`: the LihFolk knowledge base in the plugin root's `LihFolk Vault V2/` folder: `<base directory>/../../LihFolk Vault V2`, resolved to an absolute path from the base directory Claude Code shows when this skill loads. The overview and the full spec are in `VAULT/21 LihFolk UI Design System/`.
 - Kit: `src/LihFolkUITheme.luau`, `src/LihFolkUIIcons.luau`, `src/LihFolkUIComponents.luau`, `src/LihFolkUIController.luau`.
 - Examples: `examples/ShopMenu`, `CodesMenu`, `RebirthMenu`, `SettingsMenu`, `DailyRewardsMenu`, `ButtonsShowcase` (all `.client.luau`).
 - Quality bar: `../quality-score/rubrics/ui.md`. The minimum is **8.5**.
@@ -205,7 +205,7 @@ Hard gates (any failure caps the score at 5): nothing clipped at phone, tablet o
 | U5 | Readability (2) | Keep text styles at or above caption size, and keep the ink stroke on bright slabs. |
 | U6 | Performance (1) | Build each window once and update text and state in place. Loops pause while closed. Do not rebuild every frame. |
 
-`score = 10 x sum(weight x points / 2) / 12`. You reach 9.0 only with U1 at 2. Any single weight-2 criterion at 1 still scores 9.2. A weight-3 miss drops the score to 8.8. Clarity and the other judged criteria need a reviewer that is not the maker (a Quick `council` seat). Report the result as `Score x/10 ... Logged.`
+`score = 10 x sum(weight x points / 2) / 12`. You reach 9.0 only with U1 at 2. Any single weight-2 criterion at 1 still scores 9.2. A weight-3 miss drops the score to 8.8. Clarity and the other judged criteria need a reviewer that is not the maker (a Quick `council-method` seat). Report the result as `Score x/10 ... Logged.`
 
 ## Implementation checklist
 

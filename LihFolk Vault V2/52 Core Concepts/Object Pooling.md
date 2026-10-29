@@ -79,5 +79,5 @@ Related concepts: [[Instance Count]], [[Frame Budget]], [[Draw Calls]].
 
 <!-- related:start -->
 ## Related
-[[Streaming Radius]] · [[Core Loop]] · [[Replication Boundary]] · [[Triangle Budget]] · [[Texel Density]] · [[Hit-Stop]] · [[Data Schema Versioning]] · [[Server Authority]]
+[[Streaming Radius]] · [[Core Loop]] · [[Triangle Budget]] · [[Replication Boundary]] · [[Texel Density]] · [[Hit-Stop]] · [[Data Schema Versioning]] · [[Server Authority]]
 <!-- related:end -->

@@ -73,7 +73,7 @@ Blind Reviews" and "Escalation and Grandeur Without Clutter".
 | `...\Dataset\vfx\` | review renders per preset (`rN_strip.png`, `review.json`), calibration anchors, wave-1 before/after |
 | `...\VFX\_src\` | `build_textures.py`, `build_textures_wave2.py`, `build_meshes.py` (`-- --only name`), `vfxtex.py`, `preview.py`, `make_sheets.py` |
 
-Vault note: `../../LihFolk Vault V2/07 Lighting VFX and Audio/Slash VFX Recipes - Crescent and Ring.md`.
+Vault note (path from this skill's base directory, resolve to absolute before reading): `<base directory>/../../LihFolk Vault V2/07 Lighting VFX and Audio/Slash VFX Recipes - Crescent and Ring.md`.
 
 ## Setup (once in Studio)
 1. Upload `VFX/Textures/*.png` (skip `mask_*`). Fresh uploads can fail `PreloadAsync` for 20 to 60 s.

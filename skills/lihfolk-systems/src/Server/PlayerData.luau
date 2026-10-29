@@ -100,6 +100,10 @@ local store: DataStore? = nil
 
 local profiles: { [Player]: Profile } = {}
 local releasingByUser: { [number]: Profile } = {}
+-- Release hooks (PlayerData.OnRelease): final writes other modules make on leave.
+-- BindToClose waits for them with the same deadline as the profile saves.
+local releaseHooks: { (Player, Profile) -> () } = {}
+local pendingReleaseWork = 0
 local waiters: { [Player]: { thread } } = {}
 
 local LEASE = 90
@@ -527,11 +531,23 @@ local function onPlayerAdded(player: Player)
 	PlayerData.Loaded:Fire(player, profile)
 end
 
+local function runReleaseHook(hook: (Player, Profile) -> (), player: Player, profile: Profile)
+	local ok, err = pcall(hook, player, profile)
+	if not ok then
+		warn(`[PlayerData] release hook failed: {err}`)
+	end
+	pendingReleaseWork -= 1
+end
+
 local function release(player: Player, profile: Profile)
 	profiles[player] = nil -- no service can mutate Data after the final snapshot
 	profile.State = "releasing"
 	releasingByUser[profile.UserId] = profile
 	PlayerData.Releasing:Fire(player, profile)
+	for _, hook in releaseHooks do
+		pendingReleaseWork += 1
+		task.spawn(runReleaseHook, hook, player, profile)
+	end
 	writeAsync(profile, true)
 	if releasingByUser[profile.UserId] == profile then
 		releasingByUser[profile.UserId] = nil
@@ -549,6 +565,15 @@ end
 ---------------------------------------------------------------------------
 -- Public API
 ---------------------------------------------------------------------------
+
+-- Registers final work for a leaving player (e.g. a leaderboard write). The hook runs in
+-- its own thread as the profile is released: read the values you need from `profile`
+-- before the first yield, then write. game:BindToClose waits for every running hook,
+-- within the same shutdown deadline as the profile saves.
+function PlayerData.OnRelease(hook: (player: Player, profile: Profile) -> ())
+	assert(type(hook) == "function", "PlayerData.OnRelease expects a function")
+	table.insert(releaseHooks, hook)
+end
 
 function PlayerData.Configure(newConfig: Config)
 	assert(not started, "PlayerData.Configure after Start")
@@ -723,7 +748,7 @@ function PlayerData.Start()
 		-- The server waits at most 30 s for BindToClose (Roblox docs). Studio stop is
 		-- not a shutdown test, so do not hold it open there.
 		local deadline = os.clock() + (if IS_STUDIO then 3 else 26)
-		while next(releasingByUser) ~= nil and os.clock() < deadline do
+		while (next(releasingByUser) ~= nil or pendingReleaseWork > 0) and os.clock() < deadline do
 			task.wait(0.1)
 		end
 	end)

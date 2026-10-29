@@ -244,5 +244,5 @@ Patterns, not copies:
 
 <!-- related:start -->
 ## Related
-[[Weekend Build - Survival Gather, Craft and Place]] · [[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Party and Minigame Collections]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - Horror and Story]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Genre Playbook - Combat and RPG]]
+[[Weekend Build - Survival Gather, Craft and Place]] · [[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Party and Minigame Collections]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - Combat and RPG]] · [[Genre Playbook - Horror and Story]] · [[Genre Playbook - Puzzle and Escape Rooms]]
 <!-- related:end -->

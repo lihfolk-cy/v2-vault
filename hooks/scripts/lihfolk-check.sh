@@ -7,12 +7,21 @@
 #   Scan mode:           lihfolk-check.sh --scan [path ...]   (files or folders, default ".")
 #                        prints "path:line: severity id: message | fix | note"; exit 1 if any error.
 #
+# Scope: .luau files always; .lua files only when the project root (CLAUDE_PROJECT_DIR, else the current
+# folder) holds *.project.json, wally.toml, *.rbxl or *.rbxlx, or the file uses game:GetService / script.Parent.
 # Environment: LIHFOLK_HOOK=off disables the hook; LIHFOLK_HOOK_SCOPE=file reports the whole file
 # on Edit/MultiEdit instead of only the edited lines; LIHFOLK_HOOK_MAX caps findings shown (15).
 
 DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 RULES="$DIR/rules.tsv"
 ENGINE="$DIR/lihfolk-check.awk"
+
+# Roblox project? (.lua files are checked only in one, or when they use game:GetService / script.Parent)
+ROOT=$(printf '%s' "${CLAUDE_PROJECT_DIR:-$(pwd)}" | tr '\\' '/')
+ROBLOXPROJ=0
+for f in "$ROOT"/*.project.json "$ROOT"/wally.toml "$ROOT"/*.rbxl "$ROOT"/*.rbxlx; do
+	[ -e "$f" ] && { ROBLOXPROJ=1; break; }
+done
 
 if [ "$1" = "--scan" ]; then
 	shift
@@ -26,12 +35,12 @@ if [ "$1" = "--scan" ]; then
 		else
 			echo "lihfolk-check: no such file or folder: $p" >&2
 		fi
-	done | LC_ALL=C awk -v mode=scan -v rules="$RULES" -f "$ENGINE"
+	done | LC_ALL=C awk -v mode=scan -v rules="$RULES" -v robloxproj="$ROBLOXPROJ" -f "$ENGINE"
 	exit $?
 fi
 
 # Hook mode: never break the user's session because of the checker itself.
 [ "${LIHFOLK_HOOK:-on}" = "off" ] && { cat >/dev/null; exit 0; }
 command -v awk >/dev/null 2>&1 || { cat >/dev/null; exit 0; }
-LC_ALL=C awk -v mode=hook -v rules="$RULES" -v scope="${LIHFOLK_HOOK_SCOPE:-edit}" -v maxshow="${LIHFOLK_HOOK_MAX:-15}" -f "$ENGINE"
+LC_ALL=C awk -v mode=hook -v rules="$RULES" -v robloxproj="$ROBLOXPROJ" -v scope="${LIHFOLK_HOOK_SCOPE:-edit}" -v maxshow="${LIHFOLK_HOOK_MAX:-15}" -f "$ENGINE"
 exit 0

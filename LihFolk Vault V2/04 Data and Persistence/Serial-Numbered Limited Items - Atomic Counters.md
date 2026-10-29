@@ -53,7 +53,7 @@ local MINT_WINDOW = 200 -- keep recent mint ids for idempotency
 local function claimSerial(itemId: string, mintId: string): (number?, string?)
 	local serial: number? = nil
 	local ok, err = pcall(function()
-		store:UpdateAsync("counter:" .. itemId, function(old: Counter?): Counter?
+		store:UpdateAsync("counter:" .. itemId, function(old: Counter?, keyInfo: DataStoreKeyInfo?)
 			if not old then return nil end -- item must be created by a release script
 			local existing = old.mints[mintId]
 			if existing then
@@ -77,7 +77,8 @@ local function claimSerial(itemId: string, mintId: string): (number?, string?)
 				if lowestId then old.mints[lowestId] = nil end
 			end
 			serial = old.issued
-			return old
+			-- keep the key's metadata (a bare return clears it)
+			return old, if keyInfo then keyInfo:GetUserIds() else nil, if keyInfo then keyInfo:GetMetadata() else nil
 		end)
 	end)
 	if not ok then return nil, tostring(err) end

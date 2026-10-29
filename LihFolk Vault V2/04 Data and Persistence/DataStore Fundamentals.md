@@ -146,7 +146,7 @@ Requests per minute, CCU = concurrent users:
 
 `UpdateAsync` spends one read and one write. Open Cloud scripts (support tools, migrations, RTBF bots) draw from the same pool, so a careless bulk script can throttle live servers. See [[Open Cloud APIs]].
 
-> Contradiction in the docs: the Extended Services pricing table lists default data store limits as 250 + CCU x 40 (get) and 250 + CCU x 20 (set). The limits page says 300. Design for the lower figure.
+> Historical (before 2026-07-29): the base was 250 (250 + CCU x 40 get, 250 + CCU x 20 set), and some pages, such as the Extended Services pricing table, may still show it. Since the 2026-07-29 unification the limits page says **300**; use the table above. See [[Data and Cloud Changes 2025-2026]].
 
 ### Per-server defaults (configurable)
 
@@ -157,7 +157,7 @@ Requests per minute, CCU = concurrent users:
 | List | 5 + players x 2 | 5 + players x 2 |
 | Remove | 60 + players x 40 | 30 + players x 5 |
 
-New servers get a one-time startup burst on top (size not documented). `DataStoreService:GetRequestBudgetForRequestType(Enum.DataStoreRequestType.X)` returns the current budget; `SetRateLimitForRequestType(requestType, baseLimit, perPlayerLimit)` overrides the defaults per server (call once at startup; `UpdateAsync` and `OnUpdate` cannot be configured). The newer enum members are `StandardRead`, `StandardWrite`, `StandardList`, `StandardRemove`, `OrderedRead`, `OrderedWrite`, `OrderedList`, `OrderedRemove`; the legacy ones (`GetAsync`, `SetIncrementAsync`, `UpdateAsync`, `GetSortedAsync`, `SetIncrementSortedAsync`, `ListAsync`, ...) still exist.
+New servers get a one-time startup burst on top (size not documented). `DataStoreService:GetRequestBudgetForRequestType(Enum.DataStoreRequestType.X)` returns the current budget; `SetRateLimitForRequestType(requestType, baseLimit, perPlayerLimit)` can lower these per-server defaults (**Unverified** whether it can raise them above the defaults; call once at startup; `UpdateAsync` and `OnUpdate` cannot be configured). The newer enum members are `StandardRead`, `StandardWrite`, `StandardList`, `StandardRemove`, `OrderedRead`, `OrderedWrite`, `OrderedList`, `OrderedRemove`; the legacy ones (`GetAsync`, `SetIncrementAsync`, `UpdateAsync`, `GetSortedAsync`, `SetIncrementSortedAsync`, `ListAsync`, ...) still exist.
 
 Studio Run mode uses its own static limits, which can be lower. Test rate-limit behaviour in a Team Create session or a live test server, not solo Play.
 
@@ -169,7 +169,7 @@ What it looks like: saves that normally take 0.2 s take 10 to 30 s, then a burst
 
 ### Storage
 
-Per experience: **500 MB + 1 MB x lifetime users** of the latest version of every key, measured **compressed**. Old versions and deleted keys do not count. Roblox compresses for you; do not pre-compress (it wastes CPU and hurts their compression). Going over shows estimated monthly costs in the Data Stores Manager and is billable through Extended Services ($0.12 per GB per month as listed in October 2026; the same pricing page quotes the free allowance as 100 MB + 1 MB per lifetime player, another doc contradiction).
+Per experience: **500 MB + 1 MB x lifetime users** of the latest version of every key, measured **compressed**. Old versions and deleted keys do not count. Roblox compresses for you; do not pre-compress (it wastes CPU and hurts their compression). Going over shows estimated monthly costs in the Data Stores Manager and is billable through Extended Services ($0.12 per GB per month as listed in October 2026). Historical (before 2026-07-29): the free allowance was 100 MB + 1 MB per lifetime player; a page still quoting 100 MB is out of date. See [[Data and Cloud Changes 2025-2026]].
 
 ## The 4 second cache
 

@@ -5,7 +5,7 @@ tags: [atlas, concept, type/atlas, area/world, area/design]
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
-> - Sightlines also leak: players see locked zones, the underside of floating geometry, the map edge, the build area you have not...
+> - Sightlines are what the player actually sees from a spot; they also leak locked zones, the map edge and unfinished areas (from...
 > - If your game supports portrait mode, horizontal view collapses to about a third and almost every lateral sightline breaks.
 > - Sightline parity. Every long sightline should have a matching one.
 > - Sightline length should match the roster: no 400-stud sightlines if there are no long-range weapons.
@@ -15,7 +15,7 @@ tags: [atlas, concept, type/atlas, area/world, area/design]
 
 ## In short
 
-Sightlines also leak: players see locked zones, the underside of floating geometry, the map edge, the build area you have not finished. (from [[Level Design Principles - Flow Sightlines and Landmarks]])
+Sightlines are what the player actually sees from a spot; they also leak locked zones, the map edge and unfinished areas (from [[Level Design Principles - Flow Sightlines and Landmarks]]).
 
 ## Key facts
 

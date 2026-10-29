@@ -13,7 +13,7 @@
   - **SwordLight3** re-authored so the forearm rolls in one planned turn with no wrist pop. **Sprint** reworked with a full arm pump and chest counter-twist.
   - **Jump** rebuilt: arms lead the push-off, a tuck at the apex, the legs reach for the ground, and the landing is deep and absorbed.
   - **SwordLight3** now passes (blind median 8.7). **Jump** and **Idle** are owner-approved at 8.3.
-  - New **SpinAttack** and **TwistBackflip** clips (drafts). Whole-body rotation is keyed on the Root joint, and the twist backflip records `end_offset_studs` so the game can move the HumanoidRootPart.
+  - New **SpinAttack** and **TwistBackflip** clips (in progress, previews included). Whole-body rotation is keyed on the Root joint, and the twist backflip records `end_offset_studs` so the game can move the HumanoidRootPart.
   - 9 clips are now finished or owner-approved.
   - Pipeline: an optional per-clip `GRIP_ROLL` and a clip-scoped `overlap_exempt` (see `PIPELINE.md`).
 - **Building and modelling:** a general **House Construction Method** note (cabin, cottage, medieval, modern and fantasy) and a reusable Blender helper, `lihfolk_house.py` (walls with real openings, gable roofs with snow, chimneys, windows, doors, steps, floating-part scan). Proven on a stone cottage: every gate passes, and 0 of 317 parts float.
@@ -29,17 +29,17 @@
   - The new-tab screen has a rainbow sparkle field, glowing shooting stars, two drifting portal rifts and soft nebula depth, under an "Income Multiplier." greeting.
   - Rainbow section colours in the graph. The optional **LihFolk Graph** plugin, about 50 lines of our own code, colours each link by its note.
   - The Everforest base theme now ships with its MIT licence.
-- **Known limitations:** the Luau modules (VFX, SFX, systems) have not yet been run in Studio. All asset ids are `REPLACE_ME` until you upload your own.
+- **Getting started:** play-test the Luau modules (VFX, SFX, systems) in Studio inside your own game, then upload your assets and paste their ids where the modules show `REPLACE_ME`.
 
 ## 2.2.0 (2026-10-29)
 - 1,294 notes (+~430): 116 original gap notes (vehicles, maps, weather, combat AI, systems, camera, audio, genres, growth, testing/QA, AI workflow), new section 58 Player QoL and Game Tweaks (29 notes), 57 API and Concept Atlas (269 hubs), 13 lessons-learned notes, VFX recipes (slash, ice ball approved reference).
 - Graph: Related links (80% same-section), section-local Connected notes, richer tags: per-section galaxies. Search accuracy held (top-3 93%).
 - Speed/cost: lihfolk-lookup agent (haiku) for vault lookups; quality-score no longer auto-triggers; hook blocks only on errors. Benchmark: LihFolk 61.8/64 vs plain Claude 45.4/64.
-- LihFolk VFX: frontal-only slashes (SlashSweep), IceExplosion, IceBallCast, more presets (drafts). Celestial V2 Obsidian theme, Style Settings panel, Moon Map canvas.
+- LihFolk VFX: frontal-only slashes (SlashSweep), IceExplosion, IceBallCast, more presets in progress. Celestial V2 Obsidian theme, Style Settings panel, Moon Map canvas.
 - Vault folder renamed to `LihFolk Vault V2`.
 
 ## 2.1.0 (2026-10-28)
-- **LihFolk systems library** (`lihfolk-systems` skill, `/lihfolk:new-system`): 19 typed Luau modules (Net validation, session-locked PlayerData, idempotent Receipts, Shop, EggHatch with 2026 odds rules + PolicyService, Codes, DailyRewards, Rebirth, Quests, Leaderboard...). Not yet run in Studio.
+- **LihFolk systems library** (`lihfolk-systems` skill, `/lihfolk:new-system`): 19 typed Luau modules (Net validation, session-locked PlayerData, idempotent Receipts, Shop, EggHatch with 2026 odds rules + PolicyService, Codes, DailyRewards, Rebirth, Quests, Leaderboard...). Play-test in Studio before publishing.
 - **Code-check hooks** + `/lihfolk:audit`: 17 checks on every Luau file the AI writes (sh/awk + PowerShell engines, no Node/Python needed).
 - **Expert delta notes**: Roblox changes 2025-2026 (async renames, Server Authority, Input Action System, TextChat lockdown, DataStore limits, odds rules, money changes) and What AI Models Get Wrong in Roblox; `LihFolk Vault V2/_data/roblox_facts_2026.json`.
 - **Token savings**: TL;DR on 655+ notes, `INDEX_SLIM.md`, `ROUTER.md`, section maps, `build_index.py`; per-note token costs; skill descriptions -58%; `roblox-vault-research` merged into the router; accuracy rule for high-stakes topics. See Token Cost Benchmarks.

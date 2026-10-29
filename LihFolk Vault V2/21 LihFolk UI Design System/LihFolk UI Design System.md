@@ -119,5 +119,5 @@ License: this note is CC BY 4.0 (LihFolk). The LihFolk UI code is free to use an
 
 <!-- related:start -->
 ## Related
-[[UI Asset Pipeline]] · [[Accessibility Contrast]] · [[Glossy Icon Style - Owner Reference]] · [[Cookbook - UI]] · [[HUD Design]] · [[Reference - Purple Anime Settings UI (Claude + Figma)]]
+[[UI Asset Pipeline]] · [[UI Style Directions - A Visual Vocabulary for Briefs]] · [[Accessibility Contrast]] · [[Glossy Icon Style - Owner Reference]] · [[Cookbook - UI]] · [[HUD Design]]
 <!-- related:end -->

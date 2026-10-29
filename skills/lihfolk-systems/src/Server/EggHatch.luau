@@ -338,18 +338,52 @@ function EggHatch.AddLuckSource(name: string, paid: boolean, get: (Player) -> nu
 	table.insert(luckSources, { name = name, paid = paid, get = get })
 end
 
+local MAX_TIMED_BOOSTS = 20 -- keeps the saved list bounded
+
+-- For Receipts.SetPromptCheck on boost products: true while there is room for a new boost entry.
+function EggHatch.CanAddTimedBoost(player: Player): boolean
+	local profile = PlayerData.Get(player)
+	if not profile then
+		return false
+	end
+	return #activeBoosts(profile, os.time()) < MAX_TIMED_BOOSTS
+end
+
 -- Timed personal boost, saved in the profile (expires in real time, also offline).
--- Use from a Receipts custom grant. Synchronous.
+-- Use from a Receipts custom grant. Synchronous. A paid grant always lands: when the
+-- list is full (a purchase that was already in flight), the boost merges into an
+-- existing entry instead: same multiplier and kind -> its time is extended; otherwise
+-- the entry that ends soonest takes the higher multiplier and the extra time.
 function EggHatch.GrantTimedBoost(player: Player, multiplier: number, seconds: number, paid: boolean): boolean
 	local profile = PlayerData.Get(player)
-	if not profile or multiplier <= 1 or seconds <= 0 or multiplier ~= multiplier then
+	if not profile or multiplier <= 1 or seconds <= 0 or multiplier ~= multiplier or multiplier == math.huge then
 		return false
 	end
-	local list: { Boost } = eggState(profile).Boosts
-	if #list >= 20 then
-		return false
+	local now = os.time()
+	local duration = math.floor(seconds)
+	local list = activeBoosts(profile, now)
+	if #list < MAX_TIMED_BOOSTS then
+		table.insert(list, { Mult = multiplier, Expires = now + duration, Paid = paid })
+	else
+		local target: Boost? = nil
+		for _, boost in list do
+			if boost.Mult == multiplier and boost.Paid == paid then
+				target = boost
+				break
+			end
+		end
+		if not target then
+			for _, boost in list do
+				if not target or boost.Expires < (target :: Boost).Expires then
+					target = boost
+				end
+			end
+		end
+		local merged = target :: Boost
+		merged.Mult = math.max(merged.Mult, multiplier)
+		merged.Expires = math.max(merged.Expires, now) + duration
+		merged.Paid = merged.Paid or paid
 	end
-	table.insert(list, { Mult = multiplier, Expires = os.time() + math.floor(seconds), Paid = paid })
 	PlayerData.MarkDirty(profile)
 	return true
 end

@@ -6,11 +6,11 @@ tags: [atlas, concept, type/atlas, area/ui, area/animation]
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - Reduced motion is a three-way choice: Follow Roblox setting, On, Off.
-> - Reduced motion: Follow / On / Off. (Comfort Toggles - Flashes Damage Numbers and Hit-Stop)
 > - Shake 0-100%, applied at the sum point, starts low under reduced motion.
 > - A "flashes" setting is separate from reduced motion.
+> - `Motion.to` returns `nil` when there is nothing to animate (reduced motion with only motion properties).
 >
-> Cost: TL;DR ~120 tok · whole note ~650 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~620 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -21,7 +21,6 @@ Reduced motion is a spectrum. `ReducedMotionEnabled` is binary, but players who 
 
 ## Key facts
 
-- Reduced motion: Follow / On / Off. ([[Comfort Toggles - Flashes Damage Numbers and Hit-Stop]])
 - Shake 0-100%, applied at the sum point, starts low under reduced motion. ([[Camera Settings - FOV Shake Sensitivity and Shift-Lock]])
 - A "flashes" setting is separate from reduced motion. Some players are fine with motion but not flashes, and the reverse. ([[Motion Sensitivity and Camera Comfort]])
 - `Motion.to` returns `nil` when there is nothing to animate (reduced motion with only motion properties). ([[UI Motion Language and Timing]])

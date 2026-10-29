@@ -63,5 +63,5 @@ Related concepts: [[Draw Calls]], [[Texel Density]], [[Skinning Weights]], [[Ins
 
 <!-- related:start -->
 ## Related
-[[Frame Budget]] · [[Streaming Radius]] · [[Thumbnail Contrast]] · [[Object Pooling]] · [[Accessibility Contrast]] · [[Hit-Stop]] · [[Replication Boundary]] · [[Safe Area]]
+[[Frame Budget]] · [[Streaming Radius]] · [[Thumbnail Contrast]] · [[Object Pooling]] · [[Accessibility Contrast]] · [[Hit-Stop]] · [[Safe Area]] · [[Replication Boundary]]
 <!-- related:end -->

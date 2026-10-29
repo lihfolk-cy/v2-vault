@@ -314,5 +314,5 @@ See also: [[Text Fonts and Rich Text]], [[UI Design Systems]], [[Responsive UI f
 
 <!-- related:start -->
 ## Related
-[[Readable Text and UI Scale]] · [[Accessibility Cross-Links for QoL Settings]] · [[Layout - Scale Offset and Constraints]] · [[UI Motion Language and Timing]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[ScreenGui Fundamentals]]
+[[Readable Text and UI Scale]] · [[Accessibility Cross-Links for QoL Settings]] · [[Layout - Scale Offset and Constraints]] · [[UI Motion Language and Timing]] · [[UI Style Directions - A Visual Vocabulary for Briefs]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[ScreenGui Fundamentals]]
 <!-- related:end -->

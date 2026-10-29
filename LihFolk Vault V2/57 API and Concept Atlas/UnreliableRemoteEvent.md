@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/networking, area/animation, api/UnreliableRe
 > - Never send a state change that must arrive (a hit, a purchase, an equip) over an UnreliableRemoteEvent.
 > - Use `UnreliableRemoteEvent` for corrections and reliable remotes for spawn and death.
 >
-> Cost: TL;DR ~140 tok · whole note ~780 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~790 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ API snapshot: class, inherits `BaseRemoteEvent` (`_tools/roblox_api.json`, docs 
 
 ## Mentioned in
 
-34 notes in 20 sections. The 25 most relevant are linked:
+35 notes in 21 sections. The 25 most relevant are linked:
 
 ### 02 Luau Scripting
 [[Events Signals and Connections]]
@@ -78,6 +78,6 @@ API snapshot: class, inherits `BaseRemoteEvent` (`_tools/roblox_api.json`, docs 
 ### 51 2D Game Development
 [[2D Multiplayer - Server Authority and Replicating GUI Worlds]]
 
-Also mentioned in (not linked): Glossary · Links - Remote events and functions · Luau Cookbook Start Here · Open Questions - Whole Vault · Rate Limiting and Abuse Prevention · Replication and Ownership · Serialization Formats for Saves and Networking · Testing Modes - Play Run and Multi-Client · Threat Modeling a Roblox Game
+Also mentioned in (not linked): Glossary · Links - Remote events and functions · Luau Cookbook Start Here · Open Questions - Whole Vault · Rate Limiting and Abuse Prevention · Replication Boundary · Replication and Ownership · Serialization Formats for Saves and Networking · Testing Modes - Play Run and Multi-Client · Threat Modeling a Roblox Game
 
 <!-- atlas:generated -->

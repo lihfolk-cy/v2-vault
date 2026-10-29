@@ -5,17 +5,17 @@ tags: [atlas, api, type/atlas, area/studio, area/scripting, api/Plugin]
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
-> - Plugin Development Start Here, Plugins - Using and Writing, Command Bar and Studio Scripting.
+> - A plugin is Luau that runs inside Studio with access to the editor: the selection, the undo history, script sources, file...
 > - Avoid: Editing the original script after Save as Local Plugin -> Delete it, edit in `PluginDebugService` (Plugins - Using and...
 > - Plugin debugging on; dev loop through `PluginDebugService`.
 > - Plugin runner runs suites sequentially and checks `EditModeActive`.
 >
-> Cost: TL;DR ~130 tok · whole note ~390 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~400 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
 
-Plugin Development Start Here, Plugins - Using and Writing, Command Bar and Studio Scripting. (from [[Building a Studio Plugin End to End]])
+A plugin is Luau that runs inside Studio with access to the editor: the selection, the undo history, script sources, file pickers and docked widgets (from [[Plugins - Using and Writing]]).
 
 API snapshot: class, inherits `Instance`, not creatable with `Instance.new` (`_tools/roblox_api.json`, docs build of 2026-10-27).
 

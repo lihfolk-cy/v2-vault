@@ -12,7 +12,7 @@ tags: [monetization, developer-products, processreceipt, datastore, idempotency,
 > - Every configured product has a grant; startup assert
 > - Grant and receipt marker in the same saved document
 >
-> Cost: TL;DR ~150 tok · whole note ~5.9k tok. Read more: ## 2. The receipt contract · ## 3. A correct implementation · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~150 tok · whole note ~6.0k tok. Read more: ## 2. The receipt contract · ## 3. A correct implementation · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Developer products are repeatable purchases: currency packs, boosts, revives, bundles, starter packs. Every one of them is delivered through a single server callback, `MarketplaceService.ProcessReceipt`. Getting that callback right is the most important piece of monetization code in a Roblox game, because mistakes cost real money: players charged with nothing granted, or items granted twice.
@@ -239,14 +239,15 @@ local store = DataStoreService:GetDataStore("PlayerData_v1")
 -- Returns true when the receipt is durably recorded (granted now or before).
 local function grantAtomically(userId: number, purchaseId: string, grant: (data: any) -> ()): boolean
 	local ok, err = pcall(function()
-		store:UpdateAsync(`Player_{userId}`, function(data)
+		store:UpdateAsync(`Player_{userId}`, function(data: any, keyInfo: DataStoreKeyInfo?)
 			data = data or { Gems = 0, Receipts = {} }
 			if data.Receipts[purchaseId] then
 				return nil -- already granted: cancel the write, nothing to change
 			end
 			grant(data) -- must not yield: we are inside UpdateAsync
 			data.Receipts[purchaseId] = os.time()
-			return data
+			-- pass user ids and metadata through, or the write clears them
+			return data, if keyInfo then keyInfo:GetUserIds() else { userId }, if keyInfo then keyInfo:GetMetadata() else nil
 		end)
 	end)
 	if not ok then

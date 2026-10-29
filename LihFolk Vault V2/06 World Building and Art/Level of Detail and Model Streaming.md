@@ -12,7 +12,7 @@ tags: [world-building, lod, streaming, slim, renderfidelity, performance, type/g
 > - Every server move streams the destination first.
 > - Buildings Atomic; essentials Persistent; nothing else Persistent.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.8k tok. Read more: ## Layer 2: instance streaming · ## Layer 3: Model.LevelOfDetail · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.9k tok. Read more: ## Layer 2: instance streaming · ## Layer 3: Model.LevelOfDetail · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Large Roblox worlds stay fast by not drawing (or not even loading) what is far away. Roblox gives you four layers of distance management: **mesh RenderFidelity** (per MeshPart detail), **instance streaming** (what exists on the client), **Model.LevelOfDetail** (what a streamed-out model looks like: nothing, a coarse imposter, or a SLIM composite) and **your own scripted LOD** (swapping models, sleeping effects). This note covers the art side of all four. Networking details of streaming (replication foci, scripts and `WaitForChild` patterns) are in [[Instance Streaming]].
@@ -28,6 +28,8 @@ Large Roblox worlds stay fast by not drawing (or not even loading) what is far a
 | `Performance` | Always low |
 
 The engine generates the lower levels; you do not author them. Leave `Automatic` on almost everything. Use `Precise` only where a distant silhouette visibly breaks (a thin landmark spire seen across a map), and `Performance` for small props never seen up close. The docs name "too many MeshParts set to Precise" as a common performance problem.
+
+> Caveat (Roblox docs): when `Workspace.MeshStreamingAndImprovedLoDs` is `Enabled`, every mesh uses cloud-generated LoDs and mesh streaming, and `RenderFidelity` is **ignored** (it is planned for removal). Check that property first; with it on, budget triangles at the source instead. See [[Engine and API Changes 2025-2026]].
 
 Hand-authored LOD meshes are still useful for **very large** pieces whose automatic reduction looks bad. One production game exported `_LOD1` versions of its gate stone and dressing meshes alongside the full meshes and swapped them by script.
 

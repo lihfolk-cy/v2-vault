@@ -21,10 +21,10 @@ Units earn passive income -> rarity + mutations multiply value -> shared server 
 ## Workflow (map to the 7-day plan, section 9)
 
 - **Day 0**: verification, template setup (systems from `roblox-system-builder`, UI from `roblox-ui-builder`).
-- **Day 1 - trend + twist**: identify the trend and its decay stage (section 2). Run a **Quick** `council` (one Skeptic seat) on the twist: must be distinct, explainable in one sentence, and visible in the thumbnail.
+- **Day 1 - trend + twist**: identify the trend and its decay stage (section 2). Run a **Quick** `council-method` review (one Skeptic seat) on the twist: must be distinct, explainable in one sentence, and visible in the thumbnail.
 - **Day 2 - core loop playable** in under 60 seconds from spawn.
-- **Day 3 - social mechanic, rarity/mutations, rebirth.** Economy numbers go through a **Standard** `council` (3 seats) once, at the end of the day, not per change; a human tunes them.
-- **Day 4 - theme, art, juice, UI.** Original art via `roblox-blender-modeling`; feel via game-feel notes. This is where AI slop is decided: run a **Quick** `council` with the Art Director lens on one screenshot set; escalate to Standard only if it comes back weak.
+- **Day 3 - social mechanic, rarity/mutations, rebirth.** Economy numbers go through a **Standard** `council-method` review (3 seats) once, at the end of the day, not per change; a human tunes them.
+- **Day 4 - theme, art, juice, UI.** Original art via `roblox-blender-modeling`; feel via game-feel notes. This is where AI slop is decided: run a **Quick** `council-method` review with the Art Director lens on one screenshot set; escalate to Standard only if it comes back weak.
 - **Day 5 - monetization + compliance + live-ops framework** (timers, event scheduler, admin events).
 - **Day 6 - performance (mobile first), QA, metadata, maturity questionnaire.** Use `roblox-performance-audit`, `roblox-secure-remotes`, `roblox-anti-exploit-review`.
 - **Day 7 - launch**, small ads test, watch first-play bounce and D1.

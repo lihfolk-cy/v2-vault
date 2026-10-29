@@ -65,5 +65,5 @@ Related concepts: [[Draw Calls]], [[Frame Budget]], [[Object Pooling]], [[Stream
 
 <!-- related:start -->
 ## Related
-[[Object Pooling]] · [[Replication Boundary]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Core Loop]] · [[Texel Density]] · [[Performance and Memory]]
+[[Object Pooling]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Replication Boundary]] · [[Core Loop]] · [[Texel Density]] · [[Performance and Memory]]
 <!-- related:end -->

@@ -5,17 +5,17 @@ tags: [atlas, concept, type/atlas, area/animation, area/ai]
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
-> - Free models are also a security risk (hidden scripts, backdoors): Creator Store and Toolbox Safety.
+> - Free models from the Creator Store save weeks when used carefully, and are the main way malicious code (hidden scripts...
 > - No ids copied from free models without a grant.
 > - Avoid: Publishing Mixamo or CMU animations as free models or Creator Store packages.
 > - "Free model" means free to insert, not cleared of copyright.
 >
-> Cost: TL;DR ~120 tok · whole note ~460 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~480 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
 
-Free models are also a security risk (hidden scripts, backdoors): Creator Store and Toolbox Safety. (from [[Legal Basics - IP Licenses and Assets]])
+Free models from the Creator Store save weeks when used carefully, and are the main way malicious code (hidden scripts, backdoors) enters Roblox games (from [[Creator Store and Toolbox Safety]]).
 
 ## Key facts
 

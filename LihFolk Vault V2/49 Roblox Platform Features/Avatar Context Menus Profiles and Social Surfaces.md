@@ -364,5 +364,5 @@ Never turn friend presence into pressure ("Your friend is waiting for you!" when
 
 <!-- related:start -->
 ## Related
-[[Block and Mute Respecting Platform Rules]] · [[Joining Friends Parties and Private Servers]] · [[Age Checks and Safety Features]] · [[Community Building]] · [[Notification and Toast Systems]] · [[Engine and API Changes 2025-2026]]
+[[Block and Mute Respecting Platform Rules]] · [[Joining Friends Parties and Private Servers]] · [[Age Checks and Safety Features]] · [[Community Building]] · [[Notification and Toast Systems]] · [[Cookbook - UI]]
 <!-- related:end -->

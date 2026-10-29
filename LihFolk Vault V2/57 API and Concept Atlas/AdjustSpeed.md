@@ -5,17 +5,17 @@ tags: [atlas, api, type/atlas, area/animation, area/gameplay, api/AdjustSpeed]
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
-> - API snapshot: member of `AnimationTrack` (`_tools/roblox_api.json`, docs build of 2026-10-27).
+> - `AnimationTrack:AdjustSpeed(speed)` sets the playback rate at once (no ramp): positive plays forward, negative backward, 0...
 > - Avoid: `AdjustSpeed` every frame on a replicated character (network noise).
 > - Walk at native speed with an AdjustSpeed plan; 16 studs/s = run.
 > - AnimationTrack-compatible tracks. Tracks expose `Play(fade, weight, speed)`, `Stop(fade)`, `AdjustSpeed`...
 >
-> Cost: TL;DR ~130 tok · whole note ~560 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~560 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
 
-`AdjustSpeed` is skipped when the change is under 0.01, which matters if you replicate rate changes yourself (below). (from [[Custom Locomotion Controller Design]])
+`AnimationTrack:AdjustSpeed(speed)` sets the playback rate at once (no ramp): positive plays forward, negative backward, 0 pauses (from [[AnimationTrack Reference]]).
 
 API snapshot: member of `AnimationTrack` (`_tools/roblox_api.json`, docs build of 2026-10-27).
 

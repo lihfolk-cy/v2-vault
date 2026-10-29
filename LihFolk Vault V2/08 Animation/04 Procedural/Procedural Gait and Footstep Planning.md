@@ -225,5 +225,5 @@ Related: [[Locomotion Systems]], [[Custom Locomotion Controller Design]], [[Foot
 
 <!-- related:start -->
 ## Related
-[[R15 Run Cycle Key Poses]] · [[Locomotion and Melee Reference Numbers]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[Inverse Kinematics]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Humanoid States and Animation]] · [[Retargeting Animations Between Rigs]] · [[Procedural Animation]]
+[[R15 Run Cycle Key Poses]] · [[Locomotion and Melee Reference Numbers]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[Inverse Kinematics]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Humanoid States and Animation]] · [[Procedural Animation]] · [[Retargeting Animations Between Rigs]]
 <!-- related:end -->

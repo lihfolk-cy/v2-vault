@@ -75,5 +75,5 @@ Related concepts: [[Event Bus]], [[Feature Flags]], [[Deterministic Simulation]]
 
 <!-- related:start -->
 ## Related
-[[Event Bus]] · [[MCP Workflows for Scripting and Debugging]] · [[Data Schema Versioning]] · [[Replication Boundary]] · [[Session Lock]] · [[Testing Time-Based Features with a Controllable Clock]]
+[[Event Bus]] · [[MCP Workflows for Scripting and Debugging]] · [[Data Schema Versioning]] · [[Session Lock]] · [[Replication Boundary]] · [[Testing Time-Based Features with a Controllable Clock]]
 <!-- related:end -->

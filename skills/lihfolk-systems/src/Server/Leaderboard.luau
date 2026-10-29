@@ -152,12 +152,19 @@ end
 -- Writing
 ---------------------------------------------------------------------------
 
+-- Studio reads and writes `<name>_STUDIO`, like PlayerData, so play tests keep the live boards clean.
+local IS_STUDIO = RunService:IsStudio()
+local function physicalStoreName(def: BoardDef, unix: number): string
+	local name = Leaderboard.storeNameFor(def, unix)
+	return if IS_STUDIO then `{name}_STUDIO` else name
+end
+
 local function budget(requestType: Enum.DataStoreRequestType): number
 	return DataStoreService:GetRequestBudgetForRequestType(requestType)
 end
 
 local function writeAsync(def: BoardDef, userId: number, stored: number): boolean
-	local storeName = Leaderboard.storeNameFor(def, os.time())
+	local storeName = physicalStoreName(def, os.time())
 	local key = tostring(userId)
 	local ok, err = pcall(function()
 		local store = DataStoreService:GetOrderedDataStore(storeName)
@@ -224,7 +231,7 @@ local function refreshBoard(boardId: string, def: BoardDef)
 	if budget(Enum.DataStoreRequestType.GetSortedAsync) < 2 then
 		return
 	end
-	local storeName = Leaderboard.storeNameFor(def, os.time())
+	local storeName = physicalStoreName(def, os.time())
 	local topN = math.clamp(def.topN or 50, 1, 100)
 	local ok, page = pcall(function()
 		local store = DataStoreService:GetOrderedDataStore(storeName)
@@ -295,8 +302,9 @@ function Leaderboard.Init(config: Config)
 		end,
 	})
 
-	-- Final write on leave: read synchronously from the releasing profile.
-	PlayerData.Releasing:Connect(function(player: Player, profile: PlayerData.Profile)
+	-- Final write on leave: read synchronously from the releasing profile. Registered as a
+	-- release hook, so BindToClose waits for these writes before the server closes.
+	PlayerData.OnRelease(function(player: Player, profile: PlayerData.Profile)
 		writePlayer(player, profile, true)
 		lastWritten[player] = nil
 	end)
@@ -326,7 +334,7 @@ function Leaderboard.Init(config: Config)
 
 	-- Periodic reads, staggered so every server does not read in the same second.
 	task.spawn(function()
-		task.wait(math.random() * (if RunService:IsStudio() then 2 else 30))
+		task.wait(math.random() * (if IS_STUDIO then 2 else 30))
 		while true do
 			for boardId, def in boards do
 				refreshBoard(boardId, def)

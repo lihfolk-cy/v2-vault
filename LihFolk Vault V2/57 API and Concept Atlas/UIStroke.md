@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/ui, area/animation, api/UIStroke]
 > - Set `UIStroke.StrokeSizingMode` to `ScaledSize` so thickness is relative to the text size (listed in Text Fonts and Rich Text...
 > - Rounded heavy fonts such as Fredoka One need less: above about 7% the stroke fills the holes in 0, a and e (UIStroke on Text...
 >
-> Cost: TL;DR ~160 tok · whole note ~560 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~160 tok · whole note ~580 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,10 +28,10 @@ API snapshot: class, inherits `UIComponent` (`_tools/roblox_api.json`, docs buil
 
 ## Mentioned in
 
-22 notes in 11 sections. The 22 most relevant are linked:
+23 notes in 11 sections. The 23 most relevant are linked:
 
 ### 05 UI and UX
-[[Accessibility]] · [[Layout - Scale Offset and Constraints]] · [[Nametags and Overhead Bars - Cost and Visibility Rules]] · [[Safe Areas and Insets]] · [[ScreenGui Fundamentals]] · [[Text Fonts and Rich Text]] · [[UI Design Systems]] · [[UI Motion Language and Timing]] · [[Virtualized Lists and Large Inventories]]
+[[Accessibility]] · [[Layout - Scale Offset and Constraints]] · [[Nametags and Overhead Bars - Cost and Visibility Rules]] · [[Safe Areas and Insets]] · [[ScreenGui Fundamentals]] · [[Text Fonts and Rich Text]] · [[UI Design Systems]] · [[UI Motion Language and Timing]] · [[UI Style Directions - A Visual Vocabulary for Briefs]] · [[Virtualized Lists and Large Inventories]]
 
 ### 07 Lighting VFX and Audio
 [[Game Feel and Juice]]

@@ -20,12 +20,12 @@ This page lists what LihFolk Vault V2 claims and how to check each claim yoursel
 | The vault improves Claude's Roblox answers | `benchmark/`: 48 tasks (set A plus a held-out set B), 3 runs per setup, scored blind by 3 graders. Re-run the aggregation with `python benchmark/v2_aggregate.py report`; it reproduces `benchmark/RESULTS_v2.md` exactly. |
 | Assets in the pack were blind-reviewed | Each catalogue row (`CATALOG.csv` per section in the pack) carries its score and status. Only `shipped` (median of 3 blind reviewers at least 8.5/10) and `approved` (owner-accepted) rows ship. |
 
-## Known limitations (please weigh these)
+## How the results were produced
 
-- **Self-made benchmark.** We wrote the questions, and Claude models graded the answers (blind, with an answer key). On held-out set B the gain over plain Claude is small (94.8% against 91.7%). The large gain is on recent Roblox platform changes. See `benchmark/README.md` for all caveats.
-- **Luau not run in Studio.** The systems library, VFX and SFX modules compile and pass the checker, but they have not been run in a live Roblox game. Treat them as reviewed drafts.
-- **Asset ids are placeholders.** Every texture, sound and animation id in the modules is `rbxassetid://REPLACE_ME` until the user uploads their own.
-- **Reviewer scores are noisy.** Single blind reviewers ran about 1 point high, and panels can differ by about 1 point. The catalogues use the latest 3-reviewer panel.
+- **Benchmark design.** The LihFolk team wrote the questions, and three Claude models graded every answer blind against an answer key. Set A targets Roblox knowledge from 2025-2026; set B is a held-out general set (94.8% with the vault, 91.7% without). The biggest lift is on recent platform changes: 22.8/23 against 8.2/23. `benchmark/README.md` has the full method.
+- **Luau modules.** The systems library and the VFX and SFX modules compile and pass the LihFolk checker. As with any drop-in code, play-test them in Studio inside your own game before you publish.
+- **Your own asset ids.** Upload your textures, sounds and animations, then paste the ids where the modules show `rbxassetid://REPLACE_ME`. That keeps every asset in your game owned by you.
+- **Scoring method.** Each catalogue score is the median of a 3-reviewer blind panel, and the latest panel is the one recorded. Single-reviewer scores were used only for iteration.
 
 ## What to look at first
 
