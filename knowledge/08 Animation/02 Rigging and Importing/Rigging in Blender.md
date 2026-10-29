@@ -65,7 +65,7 @@ A hybrid is normal and often best: a skinned body plus rigid props (weapons, shi
 | Character facing | **-Y** (the character looks out of the Front view at you) | With glTF export (+Y up) and the importer's measured 180 degree turn, -Y lands on Roblox's `LookVector` (-Z). See [[Blender Armature and Bone Roll Conventions]]. |
 | Up | +Z in Blender | Converted to +Y on export |
 | Author height | Final in-game stud height | Avoids scale objects in the hierarchy, and root translations in clips are then already in studs |
-| A player reference | A proxy of the player at game scale next to your model | The project's players are 1.6x scale, about 9 studs tall; a default R15 is about 5.2 studs (measured). Size bosses and doorways against it. |
+| A player reference | A proxy of the player at game scale next to your model | The project's players are 1.6x scale, about 9 studs tall; a default R15 is about 5.2 studs as stored and 5.5 once its joints solve (measured). Size bosses and doorways against it. |
 | Frame rate | 30 fps | The Roblox Animation Editor works at 30 fps; clip tables in the project are seconds at 30 fps |
 
 The Roblox Blender guide also documents FBX-specific scale settings (FBX unit scale, or a 0.01 export scale); glTF needs none of them. The full comparison is in [[Exporting FBX vs GLB]].

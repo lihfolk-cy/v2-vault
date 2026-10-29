@@ -54,7 +54,7 @@ Measured in Studio (October 2026) on a default blocky R15 rig, studs, relative t
 
 Key facts for modellers:
 
-- **Height** about 5.2 studs (head top +2.18, soles -3.01 from the root centre); `HipHeight` 2.19.
+- **Height** about 5.2 studs as stored (head top +2.18, soles -3.01 from the root centre), and about 5.5 studs once the joints solve in game (soles -3.19, matching `HipHeight` 2.19). The table above is the stored layout; see [[R15 Rig Anatomy and Attachments]] for the jointed centres.
 - **The shoulder pivot is at the inner top edge of the upper arm** (0.501 studs in from the arm's centre line, 0.419 up), not at the arm's centre. Model shoulder geometry so it rotates cleanly around that point: a rounded deltoid cap centred there, not a square block corner.
 - **Elbow pivot** 0.355 below the upper arm's centre; **knee pivot** 0.449 below the upper leg's centre; **hip pivots** at ±0.5, 0.2 below the LowerTorso centre; **neck** 0.849 above the UpperTorso centre.
 - Blocky legs are short relative to typical game characters, which affects how walk cycles look ([[Locomotion Systems]]).
@@ -84,7 +84,7 @@ Model on top of a proxy built from the measured table so your parts and pivots l
 # Roblox (X, Y, Z) relative to HumanoidRootPart -> Blender (-X, Z, Y), lifted so the soles sit at z = 0.
 import bpy
 
-SOLE = 3.01            # soles are about 3.01 studs below the root centre (measured)
+SOLE = 3.01            # stored layout: soles 3.01 below the root centre (3.19 once jointed in game)
 SCALE = 1.0            # set 1.6 to match a game that scales players 1.6x
 
 R15 = {  # name: (size X, Y, Z), centre X, Y, Z   (Roblox space, studs)

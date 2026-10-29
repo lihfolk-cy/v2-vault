@@ -43,7 +43,7 @@ Blender is Z-up; Roblox is Y-up. Exporters convert this for you:
 
 Save (*File > Defaults > Save Startup File*) a scene containing:
 
-- A **character proxy** in its own collection, disabled for export: the R15 blocky rig at your game's scale (5.2 studs default; the reference project used 1.6x, about 9 studs). See [[R15 Rig Anatomy and Attachments]] for the part sizes.
+- A **character proxy** in its own collection, disabled for export: the R15 blocky rig at your game's scale (5.2 studs as stored, about 5.5 in game; the reference project used 1.6x, about 9 studs). See [[R15 Rig Anatomy and Attachments]] for the part sizes.
 - A **1-stud grid** and snapping set to *Increment* with *Absolute Grid Snap* on (the manual: snaps "to the viewport grid instead of moving by increments of the grid cell size"). Essential for [[Modular Environment Kits]].
 - Statistics overlay on (*Overlays > Statistics*) so the triangle count is always visible.
 - *Face Orientation* overlay one click away: blue = front, red = back. Red visible from outside means flipped normals.

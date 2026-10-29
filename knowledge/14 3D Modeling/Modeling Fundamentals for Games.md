@@ -144,7 +144,7 @@ Game characters are read from above and behind, small, in motion. One feature ex
 
 ### Scale reference
 
-1 Blender unit = 1 stud is the convention in this vault (see [[Blender Workflow for Roblox Creators]]). A default R15 character is about 5.2 studs tall; the reference project scaled players 1.6x to about 9 studs (see [[R15 Rig Anatomy and Attachments]]). Keep a proxy of your game's real character in every Blender file. Doors, stairs, weapon lengths and enemy heights only make sense against it. The reference project sized regular enemies to about 13 studs so they loomed over a 9-stud player.
+1 Blender unit = 1 stud is the convention in this vault (see [[Blender Workflow for Roblox Creators]]). A default R15 character is about 5.2 studs tall as stored and 5.5 in game once its joints solve; the reference project scaled players 1.6x to about 9 studs (see [[R15 Rig Anatomy and Attachments]]). Keep a proxy of your game's real character in every Blender file. Doors, stairs, weapon lengths and enemy heights only make sense against it. The reference project sized regular enemies to about 13 studs so they loomed over a 9-stud player.
 
 ---
 

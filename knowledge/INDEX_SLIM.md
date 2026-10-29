@@ -194,6 +194,7 @@ One line per note: `title | path | tags`. Grep it for an API name, topic or tag;
 - Posing and Silhouettes | 08 Animation/03 Authoring/Posing and Silhouettes.md | authoring, craft, posing, silhouette, r15
 - Principles of Animation for Games | 08 Animation/03 Authoring/Principles of Animation for Games.md | authoring, craft, principles, game-animation
 - Publishing Animations | 08 Animation/03 Authoring/Publishing Animations.md | authoring, publishing, release, assets, permissions
+- R15 Run Cycle Key Poses | 08 Animation/03 Authoring/R15 Run Cycle Key Poses.md | authoring, locomotion, run, run-cycle, r15, key-poses, keyframesequence, swordsman, sprint, foot-sliding
 - Spec-Driven Move Authoring | 08 Animation/03 Authoring/Spec-Driven Move Authoring.md | authoring, code, specs, ik, baking, combat
 - Timing Spacing and Frame Charts | 08 Animation/03 Authoring/Timing Spacing and Frame Charts.md | authoring, craft, timing, spacing, frames
 - Weapon Swing Design | 08 Animation/03 Authoring/Weapon Swing Design.md | authoring, craft, weapons, swords, two-handed, arcs
