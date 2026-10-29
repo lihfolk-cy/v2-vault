@@ -8,26 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "085c16f1465cd399",
+            "id": "e4d269b04ee41947",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "07fd03675813d5a2",
-            "type": "leaf",
-            "state": {
-              "type": "bases",
-              "state": {
-                "file": "Untitled.base",
-                "viewName": "View"
-              },
-              "icon": "lucide-table",
-              "title": "Untitled"
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -192,8 +179,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "085c16f1465cd399",
+  "active": "e4d269b04ee41947",
   "lastOpenFiles": [
-    "Untitled.base"
+    "Untitled.base",
+    "000 Moon Map.canvas"
   ]
 }

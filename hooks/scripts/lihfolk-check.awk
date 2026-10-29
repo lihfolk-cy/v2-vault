@@ -573,6 +573,6 @@ function hookMain(    J, l, path, tool, n, a, i, t, cnt, j, k, text, root, shown
 	}
 	root = ENVIRON["CLAUDE_PLUGIN_ROOT"]
 	if (root != "") text = text "\nLihFolk notes live under " root "/LihFolk Vault V2/ ."
-	if (NE + NW > 0) printf "{\"decision\":\"block\",\"reason\":\"%s\"}\n", jesc(text)
+	if (NE > 0) printf "{\"decision\":\"block\",\"reason\":\"%s\"}\n", jesc(text)
 	else printf "{\"hookSpecificOutput\":{\"hookEventName\":\"PostToolUse\",\"additionalContext\":\"%s\"}}\n", jesc(text)
 }

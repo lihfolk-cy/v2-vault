@@ -8,7 +8,7 @@ Files: `hooks.json` (the hook), `scripts/rules.tsv` (ids, severities, messages, 
 
 Claude Code runs the hook after the Write, Edit or MultiEdit tool succeeds (`"matcher": "Write|Edit|MultiEdit"`) and sends it the event as JSON on stdin: `tool_name`, `tool_input.file_path`, and for edits `tool_input.new_string` (or `edits[].new_string` for MultiEdit). The checker reads the file from disk and prints one JSON object on stdout, exit code 0:
 
-- any **error** or **warning**: `{"decision": "block", "reason": "..."}`. For PostToolUse, `block` does not undo anything (the tool already ran); Claude Code shows the `reason` to Claude next to the tool result.
+- any **error**: `{"decision": "block", "reason": "..."}`. Warnings and info come back as `additionalContext` (no forced extra turn), which keeps edits fast; Claude still sees them. For PostToolUse, `block` does not undo anything (the tool already ran); Claude Code shows the `reason` to Claude next to the tool result.
 - only **info** findings: `{"hookSpecificOutput": {"hookEventName": "PostToolUse", "additionalContext": "..."}}`, a softer note added to Claude's context.
 - nothing found: no output.
 

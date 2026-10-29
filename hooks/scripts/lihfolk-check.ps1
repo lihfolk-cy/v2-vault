@@ -517,7 +517,7 @@ try {
 		$text += "`n- line $($f.ln) [$($SEV[$f.id])] $($f.id)$(DetailOf $f): $($MSG[$f.id])`n  Fix: $($FIX[$f.id])`n  Note: LihFolk Vault V2/$($REF[$f.id])"
 	}
 	if ($env:CLAUDE_PLUGIN_ROOT) { $text += "`nLihFolk notes live under $($env:CLAUDE_PLUGIN_ROOT)/LihFolk Vault V2/ ." }
-	if ($script:NE + $script:NW -gt 0) { [Console]::Out.Write('{"decision":"block","reason":"' + (JEsc $text) + '"}' + "`n") }
+	if ($script:NE -gt 0) { [Console]::Out.Write('{"decision":"block","reason":"' + (JEsc $text) + '"}' + "`n") }
 	else { [Console]::Out.Write('{"hookSpecificOutput":{"hookEventName":"PostToolUse","additionalContext":"' + (JEsc $text) + '"}}' + "`n") }
 	exit 0
 } catch {

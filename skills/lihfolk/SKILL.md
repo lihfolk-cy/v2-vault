@@ -7,6 +7,12 @@ description: 'LihFolk: Roblox knowledge router (800+ notes, also answers "check 
 
 LihFolk Vault V2, the knowledge base, lives in `../../LihFolk Vault V2/` relative to this file (the plugin root's `LihFolk Vault V2/` folder). It contains 800+ notes written for AI agents.
 
+## Fastest path: delegate the lookup (default)
+
+For any Roblox question that needs the vault, spawn the `lihfolk-lookup` agent with the question and use its short answer. It runs on a small model, searches the vault in its own context and returns only the facts, gotchas and note titles, so the main context stays clean and the task finishes faster and cheaper. Do the lookup yourself (steps below) only when you need to quote a long code pattern verbatim or the agent says "not in vault".
+- Don't look things up for work you already know cold (plain Luau, well-known APIs): just do it.
+- One lookup per topic per session; reuse the answer.
+- Don't trigger `quality-score` or `council` for ordinary coding tasks. They're for generated assets/systems the user asked to be scored, and for decisions the user asked to have reviewed.
 ## How to use it (cheap by default)
 
 Scale the lookup to the task. The goal is the few lines that change what you do, not reading notes.
