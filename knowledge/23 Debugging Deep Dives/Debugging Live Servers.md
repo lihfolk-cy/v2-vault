@@ -65,7 +65,7 @@ In Studio `game.JobId` is an empty string; the tag still works.
 
 ### 2.2 Get into that server
 
-If the server is still running, a developer can join it: `TeleportService:TeleportToPlaceInstance(placeId, jobId, player)` from a gated admin command (Docs). Joining a friend who is in it also works. Once inside, the Developer Console's server view shows that server's output if you have edit permission (Docs, [[Developer Console and Stats]]).
+If the server is still running, a developer can join it: `TeleportService:TeleportAsync(placeId, {player}, options)` with `TeleportOptions.ServerInstanceId = jobId` from a gated admin command (Docs). Joining a friend who is in it also works. Once inside, the Developer Console's server view shows that server's output if you have edit permission (Docs, [[Developer Console and Stats]]).
 
 ### 2.3 Old servers are gone
 

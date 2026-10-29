@@ -1,0 +1,13 @@
+# Luau blocks that are deliberate fragments and are not expected to compile on their own.
+# Format: note path | block hash  # reason. Get hashes from _tools/reports/snippets.md.
+03 Architecture and Networking/Remote Abuse Patterns and Rate Limiting in Practice.md | 27e3189391  # excerpt: `...` stands for the handler body
+04 Data and Persistence/Schema Migrations - Worked Case Studies.md | 7899e3fdeb  # excerpt: one entry of the migrations table
+04 Data and Persistence/Schema Migrations - Worked Case Studies.md | b54c2e430b  # excerpt: one entry of the migrations table
+08 Animation/03 Authoring/Spec-Driven Move Authoring.md | e4f04527b0  # a spec shape with type-like placeholders, not code
+08 Animation/05 Systems/Cinematic Ultimates.md | 2f93567318  # excerpt: one keyframe table
+43 Genre Systems End to End/Arena Rounds with Teams and Spectating End to End.md | 776a114c3a  # excerpt: fields to add inside the DataTemplate type
+43 Genre Systems End to End/Horror Monster Chase AI End to End.md | cff1ab2136  # excerpt: fields to add inside the DataTemplate type
+43 Genre Systems End to End/Obby Checkpoints and Stage Saves End to End.md | c9eb85b2a7  # excerpt: fields to add inside the DataTemplate type
+43 Genre Systems End to End/Racing Laps and Checkpoints End to End.md | 040cef3f24  # excerpt: fields to add inside the DataTemplate type
+43 Genre Systems End to End/Tower Defense Waves and Placement End to End.md | b8a7aa63cb  # excerpt: fields to add inside the DataTemplate type
+43 Genre Systems End to End/Tycoon Plots and Droppers End to End.md | 87c84ada82  # excerpt: fields to add inside the DataTemplate type

@@ -151,7 +151,7 @@ Each path cancels the other before resuming, so the waiting thread is resumed ex
 
 ## 4. What yields
 
-Calls that yield include: `task.wait`, `RBXScriptSignal:Wait`, `Instance:WaitForChild`, `RemoteFunction:InvokeServer`/`InvokeClient`, `BindableFunction:Invoke` (if the handler yields), all `DataStore`/`MemoryStore` calls, `HttpService:RequestAsync`/`GetAsync`/`PostAsync`, `MarketplaceService` and `Players` async lookups, `TeleportService`, `ContentProvider:PreloadAsync`, `InsertService:LoadAsset`, `Player:LoadCharacter` (in practice), and `require` of a module that yields. Most methods ending in `Async` yield.
+Calls that yield include: `task.wait`, `RBXScriptSignal:Wait`, `Instance:WaitForChild`, `RemoteFunction:InvokeServer`/`InvokeClient`, `BindableFunction:Invoke` (if the handler yields), all `DataStore`/`MemoryStore` calls, `HttpService:RequestAsync`/`GetAsync`/`PostAsync`, `MarketplaceService` and `Players` async lookups, `TeleportService`, `ContentProvider:PreloadAsync`, `InsertService:LoadAsset`, `Player:LoadCharacterAsync` (in practice), and `require` of a module that yields. Most methods ending in `Async` yield.
 
 `coroutine.isyieldable()` tells you whether the current context may yield. Contexts where yielding is not allowed include metamethods, `table.sort` comparators and `string.gsub` callbacks; yielding there errors ("attempt to yield across metamethod/C-call boundary" style messages).
 

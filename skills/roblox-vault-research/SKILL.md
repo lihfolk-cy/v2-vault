@@ -8,7 +8,7 @@ LihFolk Vault V2 is a folder of Markdown notes about every part of making Roblox
 
 ## Inputs
 
-- `VAULT`: LihFolk Vault V2, the knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Grep `VAULT/INDEX_SLIM.md` first to find notes fast; `VAULT/ROUTER.md` only for long multi-topic sessions or an ambiguous grep.
+- `VAULT`: LihFolk Vault V2, the knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Search it with `python VAULT/_tools/vault.py "<question>"` (best 3 notes + TL;DRs in one call); grep `VAULT/INDEX_SLIM.md` and `VAULT/SYMPTOMS.md` as the fallback; `VAULT/ROUTER.md` only for long multi-topic sessions.
 - The question or task.
 
 ## When to use it (no prompt needed)
@@ -17,7 +17,7 @@ Do not wait to be asked. Any Roblox task is a trigger: a new feature, a bug, a r
 
 ## Procedure
 
-0. **Index first, router when it pays.** Grep `VAULT/INDEX_SLIM.md` (`title | path | tags`) for the API names, services and topic words in the task (for example `ProcessReceipt`, `UpdateAsync`, `remote`, `hitbox`, `ScreenGui`); `VAULT/INDEX.md` has the same lines plus a first sentence. Open the two or three best matches only, TL;DR first (step 4). If nothing matches, fall back to the steps below.
+0. **Search first, router when it pays.** Run `python VAULT/_tools/vault.py "<question in plain words>"`; it returns the best 3 notes with their TL;DRs. If it misses, grep `VAULT/INDEX_SLIM.md` (`title | path | tags`) for the API names, services and topic words in the task (for example `ProcessReceipt`, `UpdateAsync`, `remote`, `hitbox`, `ScreenGui`); `VAULT/INDEX.md` has the same lines plus a first sentence. Open the two or three best matches only, TL;DR first (step 4). If nothing matches, fall back to the steps below.
 
 1. **Open the map.** If the router and index did not settle it, read `00 Start Here.md`. It lists the sections and reading paths (new developer, programmer, artist, designer, AI tools, shipping, case studies). Pick the section or path that matches the question before you search.
 
@@ -76,7 +76,7 @@ Labels: <which facts were Roblox docs / measured / rule of thumb / unverified>
 
 ## Checks before finishing
 
-- [ ] Started from `ROUTER.md`, `00 Start Here.md` or a section hub, and read TL;DRs before full sections.
+- [ ] Started with a `vault.py` search (or `INDEX_SLIM.md` / `SYMPTOMS.md`), and read TL;DRs before full sections.
 - [ ] Every number in the answer appears in a note you read, with its label.
 - [ ] Open Questions checked for the topic.
 - [ ] Time-sensitive facts flagged as "as of October 2026".

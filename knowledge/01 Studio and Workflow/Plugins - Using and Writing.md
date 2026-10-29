@@ -84,7 +84,7 @@ The `plugin` global exists only in the top-level plugin script; pass it to modul
 | Undo support | `ChangeHistoryService:TryBeginRecording(name)` then `FinishRecording(id, Enum.FinishRecordingOperation.Commit)` |
 | Selection | `Selection:Get()`, `Selection.SelectionChanged` |
 | Editing code | `ScriptEditorService:UpdateSourceAsync`, `OpenScriptDocumentAsync` |
-| Current script, user | `StudioService.ActiveScript`, `plugin:GetStudioUserId()` |
+| Current script, user | `StudioService.ActiveScript`, `game:GetService("StudioService"):GetUserId()` |
 | Cleanup | `plugin.Unloading` |
 | Theme | `settings().Studio.Theme:GetColor(Enum.StudioStyleGuideColor.MainBackground)` and `settings().Studio.ThemeChanged` |
 

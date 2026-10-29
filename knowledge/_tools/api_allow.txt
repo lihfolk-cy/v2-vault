@@ -1,0 +1,15 @@
+# Findings from api_check.py that were reviewed and are correct. Format: note path | symbol  # reason
+# Use * as the path to allow a symbol everywhere. Keep every entry justified.
+* | collectgarbage()  # Roblox supports collectgarbage("count") only; the notes use exactly that
+* | Enum.KeyCode.Unknown  # exists at runtime (mouse InputObjects report it) but is hidden from the API dump
+* | debug.loadmodule  # Roblox-only, enabled by a Studio flag for Jest-Lua; not in the public API files
+* | buffer.read  # prose shorthand for the buffer.read* family (readu8, readf32, ...)
+* | CatalogSearchParams.new  # real constructor; the docs file lists only its properties
+01 Studio and Workflow/Creator Store and Toolbox Safety.md | getfenv()  # what to look for in malicious models
+01 Studio and Workflow/Creator Store and Toolbox Safety.md | setfenv()  # same
+01 Studio and Workflow/Creator Store and Toolbox Safety.md | ModuleScript.LinkedSource  # same
+39 Studio Plugins and Tooling/Plugin Security and Permissions.md | ModuleScript.LinkedSource  # audit checklist item
+45 Procedural Blender Assets/Blender 5 Python Gotchas for Headless Builds.md | os.path  # Python, not Luau
+08 Animation/08 Snippets/Snippets - Building and Sampling Clips.md | AnimationConstraint.C0  # listed as a mistake
+08 Animation/01 Fundamentals/The Default Animate Script.md | wait()  # quotes Roblox's own Animate script
+10 Game Design and Genres/Genre Playbook - Tycoons.md | wait()  # a maths formula wait(k), not the Luau global

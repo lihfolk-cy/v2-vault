@@ -157,7 +157,7 @@ Show the result in a small, dismissible banner, then save `lastSeenVersion = VER
 
 ### Checking for updates yourself
 
-For locally installed builds (GitHub releases, Rojo builds) Studio cannot tell users an update exists. A light check: put the latest version string at the start of the published asset's description, and compare it with `MarketplaceService:GetProductInfo(assetId, Enum.InfoType.Asset).Description` at startup, inside `pcall` (a DevForum-described technique used by long-running popular plugins). It needs no HTTP permission and no extra domain. Check at most once per session.
+For locally installed builds (GitHub releases, Rojo builds) Studio cannot tell users an update exists. A light check: put the latest version string at the start of the published asset's description, and compare it with `MarketplaceService:GetProductInfoAsync(assetId, Enum.InfoType.Asset).Description` at startup, inside `pcall` (a DevForum-described technique used by long-running popular plugins). It needs no HTTP permission and no extra domain. Check at most once per session.
 
 ## 5. Backward compatibility: the data in users' places
 

@@ -269,7 +269,7 @@ local function spawnPlayer(player: Player)
 	if player.Parent ~= Players then
 		return -- left the game
 	end
-	player:LoadCharacter()
+	player:LoadCharacterAsync()
 end
 
 Players.PlayerAdded:Connect(function(player: Player)
@@ -386,13 +386,13 @@ local Players = game:GetService("Players")
 
 local function dressAsUser(humanoid: Humanoid, userId: number): boolean
 	local ok, description = pcall(function()
-		return Players:GetHumanoidDescriptionFromUserId(userId)
+		return Players:GetHumanoidDescriptionFromUserIdAsync(userId)
 	end)
 	if not ok or not description then
 		return false
 	end
 	local applied = pcall(function()
-		humanoid:ApplyDescription(description)
+		humanoid:ApplyDescriptionAsync(description)
 	end)
 	return applied
 end

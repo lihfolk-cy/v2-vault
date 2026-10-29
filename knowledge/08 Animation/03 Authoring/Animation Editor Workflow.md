@@ -43,7 +43,7 @@ Rig sources:
 - **Your game's real character**, cloned into Workspace while not playing. Best for anything that has to line up with gameplay (weapon reach, camera, hit boxes).
 - **Imported rigs** from Blender (see [[Importing Models and Rigs]] and [[Custom Characters and StarterCharacter]]).
 
-A trap measured in the reference project: `Players:CreateHumanoidModelFromDescription` in Edit mode returned a rig **without Motor6Ds**, and `Humanoid:BuildRigFromAttachments` failed quietly. Build test dummies from the R15 `*RigAttachment` pairs, or clone a known good rig. Also, live characters in that project used `AnimationConstraint` joints rather than Motor6D (see [[AnimationConstraint and Physically Simulated Characters]]); the editor still works on a Motor6D dummy of the same proportions, and the clip plays on both because clips bind by part names.
+A trap measured in the reference project: `Players:CreateHumanoidModelFromDescriptionAsync` in Edit mode returned a rig **without Motor6Ds**, and `Humanoid:BuildRigFromAttachments` failed quietly. Build test dummies from the R15 `*RigAttachment` pairs, or clone a known good rig. Also, live characters in that project used `AnimationConstraint` joints rather than Motor6D (see [[AnimationConstraint and Physically Simulated Characters]]); the editor still works on a Motor6D dummy of the same proportions, and the clip plays on both because clips bind by part names.
 
 ## The interface in one minute
 

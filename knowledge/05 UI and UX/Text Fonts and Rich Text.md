@@ -12,7 +12,7 @@ tags: [ui, text, fonts, fontface, richtext, textservice, uistroke]
 > - A written type scale with roles; two families at most.
 > - Variable-length text uses `AutomaticSize`; any `TextScaled` has a `UITextSizeConstraint`.
 >
-> Read more (17 KB note): ## 1. Font versus Enum.Font · ## 2. Three ways to size text · ## Common mistakes · ## Checklist
+> Read more (18 KB note): ## 1. Font versus Enum.Font · ## 2. Three ways to size text · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Text is the UI element players read most and the one most likely to break on another device or in another language. This note covers the `Font` data type and why the old `Enum.Font` names are a trap (Gotham is gone), the three ways to size text and which to choose, measuring text with `TextService`, rich text tags and their limits, text outlines with `UIStroke`, and the lessons from a production font sweep that had to be partly reverted.
@@ -239,7 +239,7 @@ The legacy `TextStrokeTransparency` / `TextStrokeColor3` give a thin 1 px outlin
 
 Rules of thumb from production cartoon UI:
 
-- A cartoon kit standard specifies 2.0 to 3.5 px black strokes for 13 to 38 px text (about 8 to 15% of the text size).
+- A cartoon kit standard specifies 2.0 to 3.5 px black strokes for 13 to 38 px text (about 8 to 15% of the text size). Rounded heavy fonts such as Fredoka One need less: above about 7% the stroke fills the holes in 0, a and e ([[UIStroke on Text - Glyph Counters and the Stroke Ratio]]).
 - Another style guide used by the reference project specifies navy strokes at about 11% of the text size.
 - Headers used heavier ratios (a 4.5 px stroke on a 54 px title, 8%).
 

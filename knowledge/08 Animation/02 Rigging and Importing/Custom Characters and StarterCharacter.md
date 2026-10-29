@@ -40,7 +40,7 @@ Put a Model named **`StarterCharacter`** in `StarterPlayer`. Every player then s
 | A correct `HipHeight` (section 4) | Otherwise the character floats or sinks |
 | Visual parts non-colliding except what you mean to collide | Extra colliding parts snag on geometry |
 
-What you lose: the player's avatar appearance (accessories, clothing, body). If the StarterCharacter is R15-compatible you can re-apply a `HumanoidDescription` (for example the player's own, from `Players:GetHumanoidDescriptionFromUserId`) to restore parts of it.
+What you lose: the player's avatar appearance (accessories, clothing, body). If the StarterCharacter is R15-compatible you can re-apply a `HumanoidDescription` (for example the player's own, from `Players:GetHumanoidDescriptionFromUserIdAsync`) to restore parts of it.
 
 A community guide warns that swapping `StarterCharacter` at runtime causes odd bugs; if different players or modes need different bodies, use a custom spawn (approach E) and set `player.Character` yourself.
 
@@ -137,7 +137,7 @@ The client owns its character's physics and its Animator: clips the client plays
 
 ## 9. Testing custom characters in Studio
 
-- `Players:CreateHumanoidModelFromDescription(desc, Enum.HumanoidRigType.R15)` builds test dummies in Edit. In October 2026 its joints were AnimationConstraints, not Motor6Ds (measured); tooling that expects Motor6Ds needs to accept both.
+- `Players:CreateHumanoidModelFromDescriptionAsync(desc, Enum.HumanoidRigType.R15)` builds test dummies in Edit. In October 2026 its joints were AnimationConstraints, not Motor6Ds (measured); tooling that expects Motor6Ds needs to accept both.
 - Edit mode has no physics: `HipHeight` and floor contact can only be checked in Play, or by computing positions.
 - `Animator:StepAnimations(dt)` steps clips in Edit (dt must be greater than 0). See [[Testing Animations in Studio]].
 - Test with **several avatar bodies**, not just the blocky dummy. The reference project's arm QA was calibrated on a blocky dummy and noted that slimmer avatars clear the body more easily than the QA predicted; armour fitting had to scale per part size.
