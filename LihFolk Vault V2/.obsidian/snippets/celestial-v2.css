@@ -69,6 +69,35 @@
 .lf-home img[alt="banner"] { animation: v2-float 12s ease-in-out infinite; }
 @keyframes v2-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
 
+
+/* ---------- V2 welcome (empty tab, no plugin): big ringed planet, orbiting moon, V2 title ---------- */
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-container::before {
+  width: 280px !important; height: 280px !important; margin-bottom: 0 !important;
+  filter: drop-shadow(0 0 30px rgba(155, 123, 255, .45));
+}
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-container { position: relative; }
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-container::after {
+  content: ""; position: absolute; top: 132px; left: 50%; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fff, #7fe3ff 45%, #2b6fd6 100%); box-shadow: 0 0 14px rgba(64, 217, 255, .8);
+  animation: v2-moon 9s linear infinite;
+}
+@keyframes v2-moon { from { transform: rotate(0deg) translateX(165px) rotate(0deg) scaleY(1); } to { transform: rotate(360deg) translateX(165px) rotate(-360deg); } }
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-title::before {
+  content: "Welcome, Traveler."; font-size: 46px;
+  background: linear-gradient(90deg, #efe9fb, #b9a2ff 35%, #7fe3ff 60%, #ffc9f0 85%, #efe9fb); background-size: 200% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent; animation: v2-shift 9s linear infinite;
+}
+body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-title::after {
+  content: "\2726   L I H F O L K   V A U L T   V 2   \2726"; color: #b9a2ff; font-size: 12px; letter-spacing: .5px;
+  text-shadow: 0 0 12px rgba(155, 123, 255, .7);
+}
+
+/* ---------- graph: a glowing crescent moon rising behind the nodes ---------- */
+.workspace-leaf-content[data-type="graph"] .view-content {
+  background-image:
+    radial-gradient(circle at 70% 30%, rgba(5, 4, 14, 1) 0 17vmin, transparent 17.2vmin),
+    radial-gradient(circle at 64% 36%, rgba(235, 228, 255, .16) 0 19vmin, rgba(155, 123, 255, .10) 21vmin, transparent 30vmin);
+}
 @media (prefers-reduced-motion: reduce) {
   .workspace-leaf-content .view-content::before, .workspace-leaf-content .view-content::after,
   .lf-home img[alt="banner"], .lf-home .callout::before, .lf-home .callout-title-inner { animation: none !important; }
