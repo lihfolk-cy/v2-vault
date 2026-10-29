@@ -53,3 +53,17 @@
 | Stair-stepped jaw/muzzle border | Colour by the ring's parametric sector angle, not by face normal: a sector whose normal equals the threshold flips per station |
 | "soft" bevel on lofted creatures | Bevel on poles, thin cone tips and fan caps broke A2/A4/A17 and cost +3k tris; use "smooth" with ONE angle for the whole creature (60 deg); 35 deg left ears hard-faceted next to a soft head (V4) |
 | Plateau at 7.7 (3 blind reviews, V3/V4/V5/V8 = 1) | 20+ overlapping shells read as seams, flat tuft "cards" and stilt legs. For >= 8.5 plan a fused single shell with designed topology (quad cage + subsurf, or remesh -> retopo) from the start; tufts as thick rounded lobes, legs with thigh mass blended into the body |
+
+## Creatures: fused SDF shell (Fox v3, 2026-10-28: blind 7.0 / 6.7 / 7.0 / 7.0, below bar, not shipped)
+Script: `tools/fox/build_fox3.py` (smooth-union SDF in numpy -> surface nets -> weighted Decimate -> keep +X half
+-> level-set colour cuts -> mirror -> custom normals = SDF gradient). Gates were clean every round (A15 0.0, A17 0),
+seams were gone, but the blind score did NOT beat the 22-shell loft build (7.7).
+| Miss | Fix / lesson |
+|---|---|
+| Decimate vertex-group weights inverted the intent (head collapsed to shards, torso kept 53k tris) | Blender: edge cost *= 1 + (2 - w1 - w2) * factor and weight 0 = locked. Use weights 0.4 (protect) .. 1.0 (free), factor 2-5, never 0 and never `invert_vertex_group` |
+| V5 = 1 every round: "lumpy back", "faceted outlines", "crumpled bib" | Workbench WORLD cavity shades the real triangle facets of a decimated mesh even with exact custom normals; at 4-5k tris the close-ups show polygon outlines on paws and ear tips. 7.5k tris did not fix it (blind 6.7, V7 lost too). Decimation is the wrong topology for a smooth creature: next try a designed quad cage + one Catmull-Clark level (even quads, no poles) |
+| Star-shaped highlights on boots | High-valence poles from Decimate. `bmesh.ops.beautify_fill(method="AREA")` on the triangles + tangential relax removed them |
+| Colour borders off sliver faces | Cut the mesh along the analytic level set (snap near verts tangentially, split crossing edges, split faces, re-project), then fair each border chain with a 1-D Laplacian re-projected onto the surface: borders read as smooth curves (zigzag complaints stopped) |
+| Small forms (toe grooves, bib fluff points, brow ridge) at 5k tris | Read as "torn hem", "pinched toes", "lumpy brow" (V5 cap). Only add small forms where the mesh has density for them; otherwise keep the small tier to eyes, glints, nose |
+| Colour shows grey/drab in renders | Workbench uses AgX by default; set `scene.view_settings.view_transform = "Standard"` before `render_review` so renders show the exact vertex-colour hexes Roblox will show |
+| Reviewers disagree on style per round (head size, tufts, tail) | Proportion asks changed every review (bigger head -> "ears fennec-like"); V2/V3 stayed 1 across 7 fox reviews. Lock a reference sheet (side + front) before modelling so proportion is designed, not iterated |

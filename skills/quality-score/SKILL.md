@@ -28,7 +28,7 @@ Use `rubrics/<type>.md`. Each rubric has:
 
 `score = 10 x sum(weight x points/2) / sum(weight)`, rounded to 0.1. Show the table.
 
-**Bias control:** measured criteria use the numbers. Judged criteria (look, feel, clarity) are scored by a reviewer that isn't the maker: a Quick `council` seat given the evidence and the rubric, not your opinion or your score. The maker never grades its own work alone.
+**Bias and noise control:** measured criteria use the numbers. Judged criteria (look, feel, clarity) are scored by reviewers who are not the maker, given only the evidence and the rubric. During fix rounds one blind reviewer is enough (cheap, directional). **The pass/fail decision uses 3 independent blind reviewers and takes the median per criterion**, because one reviewer's taste swings scores by about 1 point. If the 3 disagree by 2+ points on a criterion, record the spread and re-check that criterion against the evidence. Give reviewers calibration anchors when the ledger has them: 1-2 past items of the same type with their final scores (one passing, one failing), so "8.5" means the same thing every time. The maker never grades its own work alone.
 
 ### 3. Fix efficiently
 - Fix the **lowest-scoring, highest-weight** criterion first, using a matching fix from the recipes if one exists.
