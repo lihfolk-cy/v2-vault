@@ -312,7 +312,7 @@
       "query": "path:\"46 Resource Library/\"",
       "color": {
         "a": 1,
-        "rgb": 6963962
+        "rgb": 7321855
       }
     },
     {
@@ -354,7 +354,7 @@
       "query": "path:\"52 Core Concepts/\"",
       "color": {
         "a": 1,
-        "rgb": 14238458
+        "rgb": 16748504
       }
     },
     {
@@ -397,6 +397,34 @@
       "color": {
         "a": 1,
         "rgb": 16401069
+      }
+    },
+    {
+      "query": "path:\"59 Viral and Trend Game Teardowns/\"",
+      "color": {
+        "a": 1,
+        "rgb": 16743080
+      }
+    },
+    {
+      "query": "path:\"60 High-Craft Game Teardowns/\"",
+      "color": {
+        "a": 1,
+        "rgb": 16757596
+      }
+    },
+    {
+      "query": "path:\"61 Thumbnails and CTR/\"",
+      "color": {
+        "a": 1,
+        "rgb": 16769126
+      }
+    },
+    {
+      "query": "path:\"62 Engine Reference Cards/\"",
+      "color": {
+        "a": 1,
+        "rgb": 5111777
       }
     }
   ],
