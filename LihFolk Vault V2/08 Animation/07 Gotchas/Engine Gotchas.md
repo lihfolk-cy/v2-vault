@@ -1,5 +1,5 @@
 ---
-tags: [gotchas, debugging, animator, engine]
+tags: [gotchas, debugging, animator, engine, type/guide, area/animation, level/intermediate, api/Animator, area/debugging, api/LoadAnimation, api/StepAnimations]
 ---
 # Engine Gotchas
 
@@ -9,7 +9,7 @@ tags: [gotchas, debugging, animator, engine]
 > - Avoid: Calling `LoadAnimation` per use.
 > - Avoid: Using `Stopped` for cleanup of things that are still visible.
 >
-> Cost: TL;DR ~100 tok · whole note ~5.9k tok. Read more: ## 1. Loading, assets and ids · ## 3. Interpolation and easing · ## Common mistakes (short list)
+> Cost: TL;DR ~100 tok · whole note ~6.0k tok. Read more: ## 1. Loading, assets and ids · ## 3. Interpolation and easing · ## Common mistakes (short list)
 <!-- tldr:end -->
 
 This note collects the Roblox engine behaviours that surprise people who already know animation. Each entry says what you see, why the engine does it, and what to do instead. Most of these cost the reference project (one live action game) hours or days. Where a fact was measured in that project rather than documented, it says so. Where docs and measurements disagree, both are given, and the conflict is tracked in [[Open Questions]].
@@ -111,7 +111,7 @@ The docs site lists `KeyframeReached` as deprecated in favour of `GetMarkerReach
 ## 3. Interpolation and easing
 
 ### 3.1 Rotations are not slerped
-**Measured.** Between two keys the Animator does **not** slerp quaternions. For most clips it linearly blends **rotation vectors** (axis times angle of each key's Pose CFrame, measured from the joint's rest), choosing the pair of representations (`v` or `v - 2*pi*axis`) that are closest. It uses quaternion nlerp (shortest way) only when every keyframe in the sequence is evenly spaced (a marker-only keyframe off the grid counts) and every key is Linear.
+**Measured.** Between two keys the Animator does **not** [[slerp]] [[quaternions]]. For most clips it linearly blends **rotation vectors** (axis times angle of each key's Pose CFrame, measured from the joint's rest), choosing the pair of representations (`v` or `v - 2*pi*axis`) that are closest. It uses quaternion nlerp (shortest way) only when every keyframe in the sequence is evenly spaced (a marker-only keyframe off the grid counts) and every key is Linear.
 
 **What you see.** Small turns look the same either way. Big key-to-key turns on joints far from rest take a different path from what Blender, Moon Animator previews or a slerp-based tool showed. Measured examples: an off-hand shoulder going overhead was 9 to 12 degrees off a slerp prediction; a slerp model was up to 178 degrees off on some shoulders, while a rotation-vector model matched within 0.24 degrees.
 
@@ -283,5 +283,10 @@ See [[Importing Models and Rigs]] and [[3D Importer Settings Reference]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Snippets - Lua Keyframe Player Core]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Animation Objects]] · [[Weapon Rig Player]] · [[Links - Animation playback]] · [[AI Animation and Motion from Video]] · [[Animation Start Here]]
+[[Snippets - Lua Keyframe Player Core]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Animation Objects]] · [[Weapon Rig Player]] · [[Links - Animation playback]] · AI Animation and Motion from Video · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Authoring Clips in Code]] · [[AI Pitfalls - Physics and Animation]] · [[Animation Data from Blender to Roblox]] · [[Lua Keyframe Player Internals]] · [[Keyframes, Easing and Interpolation]] · [[Animation Glossary]] · [[Animation Editor Workflow]] · [[Animation Editor Advanced]] · [[Moon Animator and Third-Party Tools]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [case-study, top-games, simulator, pets, rng, trading, live-ops, monetization, thumbnails, sequel]
+tags: [case-study, top-games, simulator, pets, rng, trading, live-ops, monetization, thumbnails, sequel, type/case-study, area/design]
 ---
 
 # Case Study - Pet Simulator 99
@@ -13,7 +13,7 @@ tags: [case-study, top-games, simulator, pets, rng, trading, live-ops, monetizat
 > - Title skeleton fixed; one bracketed tag rotates per update.
 > - Release slot fixed and announced.
 >
-> Cost: TL;DR ~130 tok · whole note ~4.0k tok. Read more: ## Snapshot · ## Click-through: thumbnail, icon and title · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.1k tok. Read more: ## Snapshot · ## Click-through: thumbnail, icon and title · ## Checklist
 <!-- tldr:end -->
 
 Pet Simulator 99 (PS99) is the third major Pet Simulator game from BIG Games: pets break coins, coins buy eggs and zones, eggs hatch stronger pets, and a trading economy built around rare "Huge" pets keeps the top end alive. It is the reference for three things on Roblox: launching a sequel that carries a franchise's players and items forward, running a weekly update machine for years, and building a store around paid luck. The first two are worth studying closely. The third needs care.
@@ -150,5 +150,10 @@ Read the table as a design: five of thirteen passes sell luck, three sell capaci
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Case Study - Adopt Me]] · [[Case Study - Fisch]] · [[Case Study - Doors]] · [[Case Study - Steal a Brainrot]] · [[Pet Hatching and Following End to End]] · [[Simulator and RNG Genre Teardown]] · [[Top Games Case Studies Start Here]]
+[[Case Study - Adopt Me]] · [[Case Study - Fisch]] · [[Case Study - Doors]] · [[Case Study - Steal a Brainrot]] · [[Pet Hatching and Following End to End]] · Simulator and RNG Genre Teardown · [[Top Games Case Studies Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Case Study - Blox Fruits]] · [[Case Study - Grow a Garden]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - Brookhaven RP]] · [[Case Study - Dress to Impress]] · [[Case Study - Jailbreak]] · [[Case Study - Murder Mystery 2]] · [[Case Study - Tower Defense Simulator]]
+<!-- related:end -->

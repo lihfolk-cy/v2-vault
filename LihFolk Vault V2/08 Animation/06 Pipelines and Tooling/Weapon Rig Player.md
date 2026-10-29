@@ -1,5 +1,5 @@
 ---
-tags: [pipeline, runtime, weapons, motor6d, keyframesequence]
+tags: [pipeline, runtime, weapons, motor6d, keyframesequence, type/guide, area/animation, level/intermediate, api/Animator, area/gameplay, api/Part0, api/TweenService]
 ---
 # Weapon Rig Player
 
@@ -9,7 +9,7 @@ tags: [pipeline, runtime, weapons, motor6d, keyframesequence]
 > - Avoid: Chained hinge pose not nested -> nest poses like the joint tree
 > - Avoid: FX module spins a motor that a clip also keys -> one owner per motor: clip or code
 >
-> Cost: TL;DR ~110 tok · whole note ~3.1k tok. Read more: ## Usage · ## Clip parsing and the interpolation rule · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~3.3k tok. Read more: ## Usage · ## Clip parsing and the interpolation rule · ## Common mistakes
 <!-- tldr:end -->
 
 A small Lua module ("PoseDriver") that plays a weapon rig's KeyframeSequences by writing `Motor6D.Transform` every frame, built in one production game so that halos, crowns, jaws, folding blades and spinning discs on held weapons animate in **live servers**, not just in Studio. It predates the general player ([[Lua Keyframe Player]]) and shares its measured Animator model, with a few deliberate differences. Rig structure: [[Weapon Design Rig Builder]].
@@ -54,7 +54,7 @@ Each Pose is bound to a motor by the key `parentPoseName .. "\0" .. poseName`, c
 
 Parsing walks every keyframe's poses (weighted poses are keys; weight-0 poses are placeholders), records per joint the times, rotation vectors, positions and easing, and collects events (named keyframes and markers). Then, **per joint**:
 
-- if the joint's own keys are **evenly spaced** (all gaps equal within 1 ms): segments interpolate as quaternion **nlerp**, the second key negated when needed to go the short way;
+- if the joint's own keys are **evenly spaced** (all gaps equal within 1 ms): segments interpolate as [[Quaternions|quaternion]] **nlerp**, the second key negated when needed to go the short way;
 - otherwise: a **linear blend of rotation vectors**, using the pair of representations (`v` or `-(v/|v|) * (2pi - |v|)`) that lie closest together, the plain pair on a near tie.
 
 This was measured on all 80 animated weapon rigs of the reference game: every segment matched exactly one of the two models, consistently per clip, and the player reproduced `Animator:StepAnimations` within **0.001 rad** on every joint through idle, a special's fade-in, the special and its fade-out. The exceptions were frame-to-frame coin flips the Animator itself makes on exact 180 deg blends.
@@ -168,5 +168,10 @@ PoseDriver.Step(rig, 1 / 30)                    -- advance 1/30 s and apply
 
 ## Connected notes
 <!-- auto-links:start -->
-[[KeyframeSequence Keyframe and Pose Reference]] · [[Keyframes, Easing and Interpolation]] · [[Snippets - Lua Keyframe Player Core]] · [[Authoring Clips in Code]] · [[Easing]] · [[Interpolation Easing and Curves Math]] · [[Animation Start Here]]
+[[KeyframeSequence Keyframe and Pose Reference]] · [[Keyframes, Easing and Interpolation]] · [[Snippets - Lua Keyframe Player Core]] · [[Authoring Clips in Code]] · [[Easing]] · Interpolation Easing and Curves Math · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Animation Data from Blender to Roblox]] · [[Snippets - Building and Sampling Clips]] · [[Engine Gotchas]] · [[Animation Glossary]] · [[AnimationTrack Reference]] · [[Animation Editor Workflow]] · [[Animation Editor Advanced]] · [[Publishing Animations]]
+<!-- related:end -->

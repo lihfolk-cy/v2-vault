@@ -1,5 +1,5 @@
 ---
-tags: [2d, sprites, sprite-sheet, animation, imagelabel, imagerectoffset, pixel-art, flipbook, luau]
+tags: [2d, sprites, sprite-sheet, animation, imagelabel, imagerectoffset, pixel-art, flipbook, luau, type/guide, area/2d, level/intermediate]
 ---
 # Sprite Sheets and Frame Animation with ImageRectOffset
 
@@ -12,7 +12,7 @@ tags: [2d, sprites, sprite-sheet, animation, imagelabel, imagerectoffset, pixel-
 > - 1 to 2 pixels of padding or extrusion between frames.
 > - Frame data imported from the art tool, converted to a committed Luau module, validated (no zero sizes).
 >
-> Cost: TL;DR ~180 tok · whole note ~5.7k tok. Read more: ## 6. Importing frame data · ## 7. The animation player · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.8k tok. Read more: ## 6. Importing frame data · ## 7. The animation player · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 A 2D character is a sequence of drawings shown one after another. On Roblox, the efficient way to show them is one uploaded image that contains every frame (a **sprite sheet** or **atlas**), displayed through an `ImageLabel` that shows only one rectangle of it at a time. Changing the rectangle changes the frame. This note covers how the rectangle properties really behave, how to lay out sheets so frames do not bleed or blur, mirroring, importing frame data from an art tool, a frame-accurate animation player driven by the game loop, gameplay events on frames, and the mistakes that cost the most time.
@@ -37,7 +37,7 @@ Consequences that are easy to miss:
 2. **"As stored" means after upload processing.** If the uploaded sheet is larger than the size Roblox keeps, it is downscaled, and every offset you computed from your source file now points at the wrong place. The ceiling is widely reported on the DevForum as 1024 pixels on the longest side, and the vault's existing art notes treat 1024 as the practical ceiling ([[Textures Decals and Texture Memory]]). I could not find the exact upload cap stated on a current official docs page in October 2026, so keep sheets at or below 1024 x 1024 and you never have to care.
 3. **Zero means "whole image".** A frame table with a missing size (nil becomes `Vector2.zero` in some data paths) shows the entire sheet for a frame: the "my character turned into a grid of tiny copies" bug.
 4. **`ScaleType` should be `Stretch`.** The cropped rectangle is then stretched to the label size. `Fit` and `Crop` change the effective area and are rarely what you want for sprites; `Tile` and `Slice` have their own semantics (see [[ScreenGui Fundamentals]]).
-5. **Resampling applies to the cropped area.** With `Default`, a 16 x 16 frame shown at 64 x 64 is bilinear-smoothed and looks blurry; with `Pixelated` it is crisp. For pixel art, `Pixelated` is mandatory.
+5. **Resampling applies to the cropped area.** With `Default`, a 16 x 16 frame shown at 64 x 64 is bilinear-smoothed and looks blurry; with `Pixelated` it is crisp. For [[pixel art]], `Pixelated` is mandatory.
 
 ---
 
@@ -327,7 +327,7 @@ Nuances:
 - **Event on the first frame.** Events fire when a frame is entered by advancing. The first frame of a clip is entered by `play` the first time and by `step` on every loop, so an event on position 1 fires on every loop except the first: a footstep that is silent on the first stride. Either fire position-1 events inside `play` too, or never author events on the first frame (simpler, and the convention in many engines).
 - **Restart rules.** Attack clips restart on every press (`restart = true`); locomotion clips never do. Restarting "run" every step freezes the character on frame 1, a bug that looks like "the run animation is broken".
 - **Speed from velocity.** Setting `state.speed = math.abs(vx) / runSpeed` makes walking feet match ground speed and stops "moonwalking". Clamp it (for example 0.5 to 1.5) so a slow push does not create a slow-motion run.
-- **Frame time units.** Store durations in seconds in the data and keep them per frame. Hand-authored pixel animation almost never uses equal frame times: anticipation frames hold longer, impact frames are short. The timing language for that is in [[Timing Spacing and Frame Charts]].
+- **Frame time units.** Store durations in seconds in the data and keep them per frame. Hand-authored pixel animation almost never uses equal frame times: anticipation frames hold longer, [[impact frames]] are short. The timing language for that is in [[Timing Spacing and Frame Charts]].
 - **Hit-stop.** Freezing a character on impact means `speed = 0` for a few steps, not pausing the global loop. See [[Hit-Stop and Screen Shake Tuning by Numbers]].
 
 ---
@@ -392,5 +392,10 @@ Simple tools beat clever ones: a debug overlay that draws hitboxes as translucen
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Tilemaps Cameras and Parallax for 2D Levels]] · [[Choosing GUI 2D or Locked-Camera 2.5D]] · [[Texel Density]] · [[UV Unwrapping]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Tiling Trim Sheets and Decal Tricks]]
+[[Tilemaps Cameras and Parallax for 2D Levels]] · [[Choosing GUI 2D or Locked-Camera 2.5D]] · [[Texel Density]] · UV Unwrapping · MagicaVoxel Goxel and Blockbench Workflows Compared · Tiling Trim Sheets and Decal Tricks
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[UV Unwrapping]] · [[The Gradient Palette Texture Workflow]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]]
+<!-- related:end -->

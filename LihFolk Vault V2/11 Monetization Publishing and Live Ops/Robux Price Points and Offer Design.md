@@ -1,5 +1,5 @@
 ---
-tags: [monetization, pricing, offers, robux, store, experiments, luau]
+tags: [monetization, pricing, offers, robux, store, experiments, luau, type/guide, area/monetization, level/intermediate, api/ProcessReceipt, area/scripting]
 ---
 # Robux Price Points and Offer Design
 
@@ -12,7 +12,7 @@ tags: [monetization, pricing, offers, robux, store, experiments, luau]
 > - Bonus labels computed; ladder validated at boot.
 > - Impulse rung under 100 exists.
 >
-> Cost: TL;DR ~130 tok · whole note ~4.6k tok. Read more: ## 2. Building a ladder with real value math · ## 5. An offer engine on the server · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.8k tok. Read more: ## 2. Building a ladder with real value math · ## 5. An offer engine on the server · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Pricing and Store Design]] covers the platform mechanics (managed pricing, showing live prices, store layout). This note goes one level deeper into two questions that decide most of a game's revenue: **which numbers** to put on products, and **which offer** to show **which player** at **which moment**. It includes the arithmetic for value ladders and net revenue, a server-side offer engine in Luau, how to run experiments without fooling yourself, and where offer design turns into a trust problem.
@@ -300,5 +300,10 @@ Log each impression and outcome with `AnalyticsService` so funnels can show impr
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Limited-Time Offers - Design and Ethics]] · [[Skill - Roblox Monetization Compliance]] · [[Currency Architecture - Soft Hard and Event Currencies]] · [[Economies and Currencies]] · [[Shop with Game Passes and Developer Products End to End]] · [[Economy Design Start Here]]
+[[Limited-Time Offers - Design and Ethics]] · Skill - Roblox Monetization Compliance · Currency Architecture - Soft Hard and Event Currencies · Economies and Currencies · Shop with Game Passes and Developer Products End to End · Economy Design Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Refunds Chargebacks and Purchase Support]] · [[Discovery and Monetization Changes 2025-2026]] · [[Economies and Currencies]] · [[Ads and Rewarded Video]] · [[Roblox Policies Ratings and Compliance]] · [[Live Ops Events and Updates]] · [[Community Building]] · [[Publishing an Experience]]
+<!-- related:end -->

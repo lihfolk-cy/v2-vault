@@ -1,5 +1,5 @@
 ---
-tags: [ui, notifications, toasts, hud, popups, remotes, localization, accessibility, live-ops]
+tags: [ui, notifications, toasts, hud, popups, remotes, localization, accessibility, live-ops, type/guide, area/ui, level/intermediate]
 ---
 # Notification and Toast Systems
 
@@ -12,7 +12,7 @@ tags: [ui, notifications, toasts, hud, popups, remotes, localization, accessibil
 > - Notification kinds defined as data with priority, merge rule and lifetime.
 > - Server sends kind and parameters; client localises and formats.
 >
-> Cost: TL;DR ~160 tok · whole note ~6.2k tok. Read more: ## 4. A controller you can build on · ## 6. Platform channels · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~6.3k tok. Read more: ## 4. A controller you can build on · ## 6. Platform channels · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Every game ends up telling the player things: "+250 coins", "Quest complete", "Your friend joined", "Inventory full", "Double XP starts in 5 minutes", "Someone just rolled a Mythic". The first version is always a `TextLabel` that some script makes visible for three seconds. By the tenth notification type, they overlap, cover the jump button, play during cutscenes, and players start ignoring all of them, including the one that mattered.
@@ -488,5 +488,10 @@ A cheap habit: keep a debug command that fires every notification kind 10 times 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Experience Notifications and Return Prompts]] · [[Localization Pipeline]] · [[Reward Moments and Celebrations]] · [[Quest Writing and Hooks]] · [[Text Chat Customization with TextChatService]] · [[Age Checks and Safety Features]]
+[[Experience Notifications and Return Prompts]] · Localization Pipeline · Reward Moments and Celebrations · Quest Writing and Hooks · Text Chat Customization with TextChatService · Age Checks and Safety Features
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Notification Queues and Limits]] · [[Localization Pipeline]] · [[Age Checks and Safety Features]] · [[Centre-Screen Announcements That Stay Centred]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[Race HUD - Position, Laps, Splits, Speedometer and Minimap]]
+<!-- related:end -->

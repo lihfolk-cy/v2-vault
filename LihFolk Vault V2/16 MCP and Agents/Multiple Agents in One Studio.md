@@ -1,5 +1,5 @@
 ---
-tags: [mcp, agents, coordination, studio, workflow, collaboration]
+tags: [mcp, agents, coordination, studio, workflow, collaboration, type/guide, area/ai, level/intermediate, area/studio]
 ---
 # Multiple Agents in One Studio
 
@@ -12,7 +12,7 @@ tags: [mcp, agents, coordination, studio, workflow, collaboration]
 > - WIP folder, test spot, port and log prefix assigned.
 > - Rules file read; reserved names known.
 >
-> Cost: TL;DR ~130 tok · whole note ~3.1k tok. Read more: ## 2. Organisation: a lead and owned areas · ## 3. Shared modules: the one-insert protocol · ## 9. Common mistakes · ## 10. Checklist for adding an agent to a shared Studio
+> Cost: TL;DR ~130 tok · whole note ~3.2k tok. Read more: ## 2. Organisation: a lead and owned areas · ## 3. Shared modules: the one-insert protocol · ## 9. Common mistakes · ## 10. Checklist for adding an agent to a shared Studio
 <!-- tldr:end -->
 
 One agent working in Studio is a power tool. Several agents working in the same Studio at once (one rebuilding zones, one baking animations, one restyling UI, one fixing combat) is a small team that never sleeps, never talks unless you make it, and shares one main thread, one undo stack and one request budget. The reference project ran this way for weeks: a lead session orchestrating a dozen specialist agents, plus several independent long-running sessions, all connected to one Studio window on one place, with the human play-testing in between. This note is what made that work and what broke when it did not.
@@ -210,5 +210,10 @@ Rule of thumb: if two briefs mention the same script or folder, they are one job
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Working with AI Assistants in Studio]] · [[MCP Workflows for Building Worlds]] · [[Agent Review Loops and Guardrails in Practice]] · [[Pipeline Design Principles]] · [[Batch Processing Tools in Studio]] · [[Roblox Studio Assistant]]
+[[Working with AI Assistants in Studio]] · [[MCP Workflows for Building Worlds]] · [[Agent Review Loops and Guardrails in Practice]] · Pipeline Design Principles · Batch Processing Tools in Studio · Roblox Studio Assistant
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Running Many AI Agents on One Roblox Place]] · [[MCP Workflows for Scripting and Debugging]] · [[Pipeline Design Principles]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[Studio Plugins and Local HTTP Bridges]] · [[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[What Is MCP]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]] · [[Setting Up MCP Clients]] · [[Blender MCP]]
+<!-- related:end -->

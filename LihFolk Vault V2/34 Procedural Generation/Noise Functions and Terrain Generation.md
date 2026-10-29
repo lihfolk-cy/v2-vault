@@ -1,5 +1,5 @@
 ---
-tags: [procedural, generation, noise, terrain, biomes, voxels, luau]
+tags: [procedural, generation, noise, terrain, biomes, voxels, luau, type/guide, area/procedural, level/intermediate, api/Terrain, area/modeling]
 ---
 # Noise Functions and Terrain Generation
 
@@ -12,7 +12,7 @@ tags: [procedural, generation, noise, terrain, biomes, voxels, luau]
 > - Thresholds expressed as percentages and calibrated.
 > - Height shaped by a designer-editable curve.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.5k tok. Read more: ## Shaping: from noise to designed terrain · ## Cellular noise for biomes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.6k tok. Read more: ## Shaping: from noise to designed terrain · ## Cellular noise for biomes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Procedural World Generation]] shows the standard fractal noise (fbm) height function, ridged noise, terracing and a rule-based material picker. This note goes underneath that: what `math.noise` actually returns and why raw thresholds go wrong, how to shape noise into terrain designers can control, cellular (Voronoi) noise for biomes and how to blend biome borders without seams, caves from 3D noise, writing smooth terrain with fractional occupancy, and what all of this costs. Code here uses the `Hash` module from [[Seeds Determinism and Reproducible Worlds]].
@@ -334,5 +334,10 @@ Most games that "use procedural terrain" do not need it at runtime. Generating o
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Terrain]] · [[Terrain Materials and Painting]] · [[Voxel Props Environments and Modular Tiles]] · [[Wave Function Collapse on Roblox]] · [[Deterministic Simulation]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]]
+[[Links - Terrain]] · Terrain Materials and Painting · Voxel Props Environments and Modular Tiles · [[Wave Function Collapse on Roblox]] · Deterministic Simulation · Meshing Voxels for Roblox - Greedy Meshing and Export
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Terrain Materials and Painting]] · [[Dungeon and Room Generation]] · [[Voxel Props Environments and Modular Tiles]] · [[Procedural Loot and Item Generation]] · [[Environment and Level Pipeline]]
+<!-- related:end -->

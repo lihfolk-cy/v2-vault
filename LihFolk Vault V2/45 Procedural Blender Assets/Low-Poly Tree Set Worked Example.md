@@ -1,5 +1,5 @@
 ---
-tags: [blender, trees, low-poly, foliage, environment]
+tags: [blender, trees, low-poly, foliage, environment, type/guide, area/modeling, level/intermediate]
 ---
 # Low-Poly Tree Set Worked Example
 
@@ -9,7 +9,7 @@ tags: [blender, trees, low-poly, foliage, environment]
 > - Avoid: Origin at the canopy centre. Symptom: scattered trees float or sink because the scatter tool places pivots on the ground.
 > - Avoid: Washed-out greens. Symptom: in-game greens look grey compared with the reference render.
 >
-> Cost: TL;DR ~130 tok · whole note ~2.0k tok. Read more: ## The recipe, applied · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~130 tok · whole note ~2.1k tok. Read more: ## The recipe, applied · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 ![[p45_low_poly_trees.png]]
@@ -84,5 +84,10 @@ Related: [[Foliage Props and Scatter]], [[Procedural Blender Assets Start Here]]
 
 ## Connected notes
 <!-- auto-links:start -->
-[[The Gradient Palette Texture Workflow]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Triangle Budget]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[Voxel Props Environments and Modular Tiles]]
+[[The Gradient Palette Texture Workflow]] · Faceted Low-Poly - Flat Normals and Facet Size · Triangle Budget · Flat Colour vs Gradient Atlas vs Vertex Colour · Clean Stylised Shading - Weighted and Custom Normals · Voxel Props Environments and Modular Tiles
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Stylised Shop Stand Worked Example]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[Dramatic Showcase Renders in Eevee]] · [[Chibi Character Rules in Practice]] · [[Low-Poly Creature From a Flat Reference Sheet]] · [[Blender 5 Python Gotchas for Headless Builds]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[Mesh VFX Packs Built in Blender]] · [[Stylised Weapons From a Concept]]
+<!-- related:end -->

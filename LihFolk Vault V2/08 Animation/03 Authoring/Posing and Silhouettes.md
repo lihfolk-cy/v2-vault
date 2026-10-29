@@ -1,5 +1,5 @@
 ---
-tags: [authoring, craft, posing, silhouette, r15]
+tags: [authoring, craft, posing, silhouette, r15, type/guide, area/animation, level/intermediate]
 ---
 # Posing and Silhouettes
 
@@ -12,7 +12,7 @@ tags: [authoring, craft, posing, silhouette, r15]
 > - Centre of mass over the base of support (unless falling)
 > - No twinning
 >
-> Cost: TL;DR ~130 tok · whole note ~3.2k tok. Read more: ## What makes a pose read · ## Proportions and the R15 rig · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.3k tok. Read more: ## What makes a pose read · ## Proportions and the R15 rig · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A pose is the unit of readability. Players read your animation as a sequence of shapes, mostly from behind, mostly small, often half hidden by effects. If the key poses read as clear silhouettes, the motion between them almost takes care of itself; if they do not, no amount of polish saves the clip.
@@ -170,5 +170,10 @@ See [[Animating Creatures and Monsters]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Pipeline - Arm IK Baking and QA]] · [[Arm QA Metrics Reference]] · [[Weapon and Combat Animation]] · [[Snippets - IK]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Animation Start Here]]
+[[Pipeline - Arm IK Baking and QA]] · [[Arm QA Metrics Reference]] · [[Weapon and Combat Animation]] · [[Snippets - IK]] · [[Voxel Characters - Proportions Joints and Rigging]] · Modeling Characters for R15 and Custom Rigs · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Blade Grip and Wrist Limits]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[R15 Run Cycle Key Poses]] · [[Idle Breathing and Secondary Motion]] · [[Animation Editor Workflow]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[Human Swing Biomechanics]]
+<!-- related:end -->

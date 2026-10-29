@@ -1,5 +1,5 @@
 ---
-tags: [fundamentals, playback, priority, blending, layering]
+tags: [fundamentals, playback, priority, blending, layering, type/guide, area/animation, level/beginner, api/Animator, api/AnimationPriority]
 ---
 # Playback, Priorities and Blending
 
@@ -10,7 +10,7 @@ tags: [fundamentals, playback, priority, blending, layering]
 > - `Play(fadeTime)`: weight ramps linearly from its current value to the target over `fadeTime`.
 > - `Play(_, _, speed)` or `AdjustSpeed(s)`: duration becomes `Length / speed`.
 >
-> Cost: TL;DR ~120 tok · whole note ~2.9k tok. Read more: ## How weight is distributed (measured) · ## Layering patterns that held up in production
+> Cost: TL;DR ~120 tok · whole note ~3.0k tok. Read more: ## How weight is distributed (measured) · ## Layering patterns that held up in production
 <!-- tldr:end -->
 
 When several tracks play on one rig, the Animator has to decide, for every joint, how much of each track to show. It does that with two numbers per track: **priority** (which layer it is on) and **weight** (how strongly it contributes within and below that layer). This note explains the exact rules (including the measured weight distribution, which the docs only hint at), the fade and speed behaviour, and the layering patterns that hold up in a real combat game.
@@ -54,7 +54,7 @@ The docs say equal priorities "blend by weight". The precise rule was measured i
 2. Go from the **highest priority down**. For each priority, sum the weights `S` of its tracks that key this joint.
 3. If `S` fits in what remains (`S <= rem`), each track contributes its own weight `w`, and `rem` drops by `S`.
 4. Otherwise each track contributes `w * rem / min(S, 1)` and nothing remains for lower priorities.
-5. All contributions go into **one weighted quaternion sum** for the joint.
+5. All contributions go into **one weighted [[Quaternions|quaternion]] sum** for the joint.
 6. If the total contributed weight is below 1 and nothing else drives the joint, the result's **rotation vector and offset are scaled by the total** (moving toward the rest pose).
 7. Offsets are distributed the same way, but with each track's weight **capped at 1**.
 
@@ -146,5 +146,10 @@ Real games have several systems playing tracks on one character: locomotion, com
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Custom Locomotion Controller Design]] · [[Engine Gotchas]] · [[Snippets - Playing Animations]] · [[Weapon and Combat Animation]] · [[Links - Animation playback]] · [[AI Animation and Motion from Video]] · [[Animation Start Here]]
+[[Custom Locomotion Controller Design]] · [[Engine Gotchas]] · [[Snippets - Playing Animations]] · [[Weapon and Combat Animation]] · [[Links - Animation playback]] · AI Animation and Motion from Video · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[R15 Run Cycle Key Poses]] · [[Animation Glossary]] · [[Snippets - Lua Keyframe Player Core]] · [[AI Pitfalls - Physics and Animation]] · [[Combat Animation Craft]] · [[Troubleshooting Table]] · [[Lua Keyframe Player]] · [[Animation Objects]] · [[Animator Deep Dive]]
+<!-- related:end -->

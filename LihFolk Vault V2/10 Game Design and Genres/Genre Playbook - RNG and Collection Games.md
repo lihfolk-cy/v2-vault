@@ -1,5 +1,5 @@
 ---
-tags: [game-design, genre, rng, rolling, luck, odds, rarity, collection, pity]
+tags: [game-design, genre, rng, rolling, luck, odds, rarity, collection, pity, type/guide, area/design, level/intermediate]
 ---
 # Genre Playbook - RNG and Collection Games
 
@@ -12,7 +12,7 @@ tags: [game-design, genre, rng, rolling, luck, odds, rarity, collection, pity]
 > - Luck defined, stacked, capped and tested at maximum.
 > - Expected minutes per tier and p99 checked by simulation.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.0k tok. Read more: ## 3. Odds maths: two implementations, two sets of real odds · ## 4. Code: a roll table that can also report its true odds · ## 11. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.1k tok. Read more: ## 3. Odds maths: two implementations, two sets of real odds · ## 4. Code: a roll table that can also report its true odds · ## 11. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 In an **RNG game** the core verb is a roll: press a button, watch a reveal, get an item whose rarity is shown as "1 in N". Luck multipliers, auto-rolling, rarity tiers with colours and banners, a collection index and server-wide announcements turn that one verb into a long loop. Collection games (pets, cards, auras, weapons) share the structure with different presentation. This playbook covers why the genre works, the anatomy of a roll, the odds maths (including two common implementations that give **different** real probabilities for the same "1 in N" labels), luck, pity, presentation, duplicates, and the disclosure rules Roblox applies to anything random that money touches. Most production numbers come from one RNG sword game built around rolling weapons.
@@ -279,7 +279,7 @@ Requirements in summary:
 - Rewards from actions that involve no Robux or Robux-bought currency do not need disclosure (showing odds anyway is good practice).
 
 `PolicyService:GetPolicyInfoForPlayerAsync(player)` returns, among other fields:
-- `ArePaidRandomItemsRestricted`: when true, the player must not be able to use paid random items; the docs list acceptable treatments (an earnable free path, a predetermined disclosed order, direct purchase at expected value, hiding the item, blocking with a message, or keeping the player out of those areas).
+- `ArePaidRandomItemsRestricted`: when true, the player must not be able to use paid random items; the docs list acceptable treatments (an earnable free path, a predetermined disclosed order, direct purchase at [[expected value]], hiding the item, blocking with a message, or keeping the player out of those areas).
 - `IsPaidItemTradingAllowed`: when false, the player must not trade paid items or outcomes of paid random items.
 
 A "1 in N" label alone is not the required format for paid items: show the percentage (you can show "1 in N" next to it). For an RNG game whose shop sells luck passes, server luck boosts, jackpot rolls or bundles, this affects **the main roll button** whenever a paid luck effect is active. Plan the odds panel as a core screen, not an afterthought. Policy details are in [[Roblox Policies Ratings and Compliance]].
@@ -352,5 +352,10 @@ Direct-purchase exclusives (no randomness) are the cleanest monetisation in an R
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Paid Random Items and Odds Disclosure in Practice]] · [[Rarity Ladders and Drop Pacing Math]] · [[Pity Timer]] · [[Drop Tables Rarity and Pity Systems]] · [[Expected Value]] · [[Reward Moments and Celebrations]]
+[[Paid Random Items and Odds Disclosure in Practice]] · [[Rarity Ladders and Drop Pacing Math]] · Pity Timer · Drop Tables Rarity and Pity Systems · Expected Value · Reward Moments and Celebrations
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Pity Timer]] · [[Simulator and RNG Genre Teardown]] · [[Drop Tables Rarity and Pity Systems]] · [[Retention and Return Hooks]] · [[Social Design and Multiplayer Play]] · [[Genre Playbook - Tower Defense]] · [[Core Loops and Session Design]] · [[Genre Playbook - Tycoons]] · [[First-Time User Experience and Onboarding]] · [[Genre Playbook - Zombie and Wave Survival Co-op]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [delta, policy, age-checks, chat, textchatservice, maturity, roblox-kids, roblox-select, paid-random-items, compliance, policyservice]
+tags: [delta, policy, age-checks, chat, textchatservice, maturity, roblox-kids, roblox-select, paid-random-items, compliance, policyservice, type/guide]
 verified: 2026-10-28
 ---
 # Policy and Age Rules 2026
@@ -13,7 +13,7 @@ verified: 2026-10-28
 > - Every paid random item and luck modifier shows numeric odds summing to 100% before purchase.
 > - `ArePaidRandomItemsRestricted` and `IsPaidItemTradingAllowed` honoured server-side.
 >
-> Cost: TL;DR ~180 tok · whole note ~2.6k tok. Read more: ## 4. Paid random items (clarified May 26, 2026) · ## 5. Chat: legacy removed, TextChatService lockdown coming · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~2.7k tok. Read more: ## 4. Paid random items (clarified May 26, 2026) · ## 5. Chat: legacy removed, TextChatService lockdown coming · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Between late 2025 and October 2026 Roblox gated chat behind age checks, split under-16 users into curated account tiers, raised the age floor for several game types, tightened paid random item rules, and announced a lockdown of chat message access for scripts. Most of these change what a game must do, not only what players see. Labels follow [[Roblox Changes 2025-2026]].
@@ -74,7 +74,7 @@ Impact: a game for young players needs a Minimal or Mild label, a verified owner
 - One-time outcomes: update the remaining odds for that player.
 - **Odds-modifying items** (luck boosts, pity, rate-up) must be explained numerically before purchase, and the displayed odds must update while they are active.
 - **Reported** (staff forum reply): a bundle containing a random item makes the whole bundle a paid random item; previewing the next result does not exempt a system whose later results are random.
-- For players where `PolicyService` returns `ArePaidRandomItemsRestricted = true`: offer a free earnable path, a fixed disclosed order, direct purchase at expected value, hide or block the item, or keep the player out of that area. If `IsPaidItemTradingAllowed` is false, block trading of paid outcomes.
+- For players where `PolicyService` returns `ArePaidRandomItemsRestricted = true`: offer a free earnable path, a fixed disclosed order, direct purchase at [[expected value]], hide or block the item, or keep the player out of that area. If `IsPaidItemTradingAllowed` is false, block trading of paid outcomes.
 
 ```lua
 -- Server: one table drives both the roll and the displayed odds (Measured practice)
@@ -152,3 +152,8 @@ end)
 - [[Paid Random Items and Odds Disclosure in Practice]]
 - [[RNG Drops and Luck Systems]]
 - [[AI Pitfalls - Data and Monetization]]
+
+<!-- related:start -->
+## Related
+[[Regional Compliance - Paid Random Items and Country Rules]] · [[Discovery and Monetization Changes 2025-2026]] · [[Data and Cloud Changes 2025-2026]] · [[Engine and API Changes 2025-2026]] · [[Console and VR Release Checklists]] · [[Commerce and Physical Goods]] · [[Server Authority and Input Migration 2026]]
+<!-- related:end -->

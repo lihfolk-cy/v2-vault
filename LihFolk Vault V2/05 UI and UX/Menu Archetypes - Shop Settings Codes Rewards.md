@@ -1,5 +1,5 @@
 ---
-tags: [ui, menus, shop, settings, codes, daily-rewards, quests, archetypes]
+tags: [ui, menus, shop, settings, codes, daily-rewards, quests, archetypes, type/guide, area/ui, level/intermediate, api/ProcessReceipt]
 ---
 # Menu Archetypes - Shop Settings Codes Rewards
 
@@ -12,7 +12,7 @@ tags: [ui, menus, shop, settings, codes, daily-rewards, quests, archetypes]
 > - Claim/buy buttons implement claim, claimed, locked and pending.
 > - All grants and validations on the server; claims marked before paying.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.9k tok. Read more: ## 2. The button state triad · ## 5. Codes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.0k tok. Read more: ## 2. The button state triad · ## 5. Codes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most Roblox games, whatever their genre, ship the same half-dozen menus: a shop, settings, a codes box, daily or playtime rewards, a quest board and often a rebirth or prestige screen. Players have learned what these look like from the most popular games, so following the archetype makes your menu instantly usable, and breaking it costs players time. This note describes each archetype's anatomy, the server/client split behind its buttons, the numbers that worked in production, and the mistakes that turn a menu into a support ticket.
@@ -290,5 +290,10 @@ See also: [[UI Design Systems]], [[HUD Design]], [[Pricing and Store Design]], [
 
 ## Connected notes
 <!-- auto-links:start -->
-[[LihFolk UI Design System]] · [[LihFolk UI Spec]] · [[Daily Rewards System End to End]] · [[Skill - Roblox UI Builder]] · [[Reference - Purple Anime Settings UI (Claude + Figma)]]
+[[LihFolk UI Design System]] · LihFolk UI Spec · Daily Rewards System End to End · Skill - Roblox UI Builder · Reference - Purple Anime Settings UI (Claude + Figma)
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Responsive UI for Phone Tablet Console and PC]] · [[Gamepad and Console UX]] · [[Notification and Toast Systems]] · [[Layout - Scale Offset and Constraints]] · [[UI Motion Language and Timing]] · [[Virtualized Lists and Large Inventories]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]]
+<!-- related:end -->

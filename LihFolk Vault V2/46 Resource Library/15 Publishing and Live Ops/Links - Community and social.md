@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, publishing-live-ops]
+tags: [resources, links, publishing-live-ops, type/reference, area/liveops, level/intermediate]
 ---
 # Links - Community and social
 

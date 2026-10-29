@@ -1,5 +1,5 @@
 ---
-tags: [architecture, networking, streaming, performance, memory]
+tags: [architecture, networking, streaming, performance, memory, type/guide, area/networking, level/intermediate, api/CollectionService, area/performance, api/ProximityPrompt, api/Player]
 ---
 # Instance Streaming
 
@@ -12,7 +12,7 @@ tags: [architecture, networking, streaming, performance, memory]
 > - Interactable models set to Atomic; Persistent only where justified.
 > - No LocalScript indexes Workspace parts directly without a wait or a tag.
 >
-> Cost: TL;DR ~180 tok · whole note ~4.5k tok. Read more: ## Per-model streaming: `ModelStreamingMode` · ## Writing streaming-safe client code · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~4.6k tok. Read more: ## Per-model streaming: `ModelStreamingMode` · ## Writing streaming-safe client code · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 With **instance streaming** (`Workspace.StreamingEnabled`), the server sends each client only the part of the Workspace near that player, and the client drops distant parts again when it needs memory. It is enabled by default for new places (Roblox docs, "Instance streaming"), and for any world bigger than a single arena it is the difference between a 10 second join and a 60 second join, and between a phone that runs the game and one that crashes. The cost is that **client code can no longer assume any Workspace instance exists**. This note covers the exact streaming rules, every property and per-model mode, how to write client code that survives streaming, how to move players safely with `RequestStreamAroundAsync`, and a production example of tuning a big world.
@@ -258,5 +258,10 @@ The security docs suggest streaming as defence in depth ("if feasible, use strea
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Streaming Radius]] · [[Links - StreamingEnabled]] · [[Interest Management and Per-Player Replication]] · [[Infinite and Streamed Worlds]] · [[Network Performance]] · [[Performance and Memory]]
+[[Streaming Radius]] · Links - StreamingEnabled · [[Interest Management and Per-Player Replication]] · Infinite and Streamed Worlds · Network Performance · Performance and Memory
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]] · [[Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver]] · [[Network Performance]] · [[Infinite and Streamed Worlds]] · [[Replication Boundary]] · [[Performance and Memory]]
+<!-- related:end -->

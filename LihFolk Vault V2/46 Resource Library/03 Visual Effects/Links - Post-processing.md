@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, visual-effects]
+tags: [resources, links, visual-effects, type/reference, level/intermediate]
 ---
 # Links - Post-processing
 

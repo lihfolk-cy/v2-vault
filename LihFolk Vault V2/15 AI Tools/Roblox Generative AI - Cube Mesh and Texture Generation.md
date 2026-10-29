@@ -1,5 +1,5 @@
 ---
-tags: [ai, generative, mesh, cube, generationservice, 3d]
+tags: [ai, generative, mesh, cube, generationservice, 3d, type/guide, area/ai, level/intermediate, area/modeling, api/Model]
 ---
 # Roblox Generative AI - Cube Mesh and Texture Generation
 
@@ -12,7 +12,7 @@ tags: [ai, generative, mesh, cube, generationservice, 3d]
 > - Jobs queued, a few at a time.
 > - Collision and render fidelity set; triangles within budget.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.1k tok. Read more: ## 2. The Studio-side tools · ## 3. `GenerationService`: generation at runtime · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.2k tok. Read more: ## 2. The Studio-side tools · ## 3. `GenerationService`: generation at runtime · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox runs its own generative 3D system, called Cube. In Studio it shows up as mesh generation, procedural models, mesh segmentation and the Texture Generator. At runtime it shows up as `GenerationService`, which lets your servers (and so your players) generate objects during play. This note covers what each piece produces, what it is good for, the limits that are published, and the failure modes seen in production. For material and texture generation in depth see [[AI Material and Texture Generation]]; for 3D generators outside Roblox see [[AI 3D Model Generation Outside Roblox]].
@@ -251,5 +251,10 @@ If you keep a generated mesh, treat it like any imported asset ([[Exporting and 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI in Roblox Development Overview]] · [[Studio Assistant and AI Tools]] · [[Triangle Budget]] · [[Roblox Studio MCP Server]] · [[Skill - Roblox Asset Import]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]
+[[AI in Roblox Development Overview]] · [[Studio Assistant and AI Tools]] · Triangle Budget · Roblox Studio MCP Server · Skill - Roblox Asset Import · Other Modeling Tools - Maya Max ZBrush MagicaVoxel
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Roblox Built-In AI Tools Timeline 2023-2026]] · [[AI Pitfalls - Assets and Import]] · [[AI Image Generation for Icons Thumbnails and Concepts]] · [[Who Owns AI-Generated Code and Assets]] · [[Evaluating AI Tools - A Practical Rubric]] · [[AI Audio - Voice Music and SFX]] · [[AI Agents and Autonomous Workflows]]
+<!-- related:end -->

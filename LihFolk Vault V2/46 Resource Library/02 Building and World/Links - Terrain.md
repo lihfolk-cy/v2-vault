@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, building-world]
+tags: [resources, links, building-world, type/reference, area/world, level/intermediate, api/Terrain]
 ---
 # Links - Terrain
 
@@ -87,5 +87,5 @@ Part of [[Resource Library - Building and World]] in the [[Resource Library Star
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Materials and MaterialVariants]] · [[Links - Roblox Studio]] · [[Links - Leaderboards]] · [[Links - Environments]] · [[Terrain Tools and Terrain API]] · [[Terrain Materials and Painting]]
+[[Links - Materials and MaterialVariants]] · [[Links - Roblox Studio]] · [[Links - Leaderboards]] · [[Links - Environments]] · [[Terrain Tools and Terrain API]] · Terrain Materials and Painting
 <!-- auto-links:end -->

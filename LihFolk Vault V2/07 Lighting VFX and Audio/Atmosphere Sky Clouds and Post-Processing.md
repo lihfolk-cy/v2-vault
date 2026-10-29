@@ -1,5 +1,5 @@
 ---
-tags: [lighting, atmosphere, sky, clouds, post-processing, environment]
+tags: [lighting, atmosphere, sky, clouds, post-processing, environment, type/guide, area/vfx, level/intermediate, api/Atmosphere, area/lighting, api/ColorCorrectionEffect]
 ---
 # Atmosphere Sky Clouds and Post-Processing
 
@@ -12,7 +12,7 @@ tags: [lighting, atmosphere, sky, clouds, post-processing, environment]
 > - Density and Offset tuned together; no ghosting at the horizon.
 > - Clouds under Terrain, moved by `GlobalWind`.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.1k tok. Read more: ## 1. Atmosphere · ## 4. Post-processing effects · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.3k tok. Read more: ## 1. Atmosphere · ## 4. Post-processing effects · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Global lighting ([[Lighting Technologies and Settings]]) decides how surfaces are shaded. The objects in this note decide what the air, the sky and the camera do: the `Atmosphere` that turns distance into haze, the `Sky` cube with its sun, moon and stars, dynamic `Clouds` under `Terrain`, and the six post-processing effects that tint, blur and bloom the final image. Together they carry most of a scene's mood for very little cost, which is why they are also the first things to be misused: a bloom that turns every white UI-coloured part into a glowing blob, an atmosphere so dense the skybox ghosts through mountains, a red low-health tint that a cutscene grade overwrites.
@@ -132,7 +132,7 @@ Some effects may not show in Studio at a low **Editor Quality Level**; raise it 
 |---|---|---|
 | `BloomEffect` | `Intensity` 0.4, `Size` 24, `Threshold` 0.95 | Colours brighter than `Threshold` glow. Threshold 1 = only pure white blooms, 0 = everything blooms. `Size` is the radius in pixels; 0 disables the bleed. |
 | `BlurEffect` | `Size` 24 | Gaussian blur of the 3D view, radius in pixels. Menu backgrounds. Does not blur UI. |
-| `ColorCorrectionEffect` | `Brightness` 0, `Contrast` 0, `Saturation` 0, `TintColor` white | Brightness -1 all black to 1 all white. Saturation -1 = greyscale. TintColor multiplies channels (red tint zeroes green and blue). |
+| `ColorCorrectionEffect` | `Brightness` 0, `Contrast` 0, `Saturation` 0, `TintColor` white | Brightness -1 all black to 1 all white. Saturation -1 = greyscale. [[TintColor]] multiplies channels (red tint zeroes green and blue). |
 | `DepthOfFieldEffect` | `FarIntensity` 0.75, `FocusDistance` 0.05, `InFocusRadius` 10, `NearIntensity` 0.75 | Blurs what is out of focus. Distances in studs from the camera. Shop previews, cutscene focus. |
 | `SunRaysEffect` | `Intensity` 0.25, `Spread` 1 | Rays around the sun, shaped by objects between the camera and the sun. `Spread` should stay 0 to 1 (outside is undefined). |
 | `ColorGradingEffect` | `TonemapperPreset` `Default` | How renderer colours map to screen range. `Retro` imitates pre-2019 Roblox (less saturation, less contrast). Must be parented to `Lighting`; only the most recently parented one applies; multiple do not combine. |
@@ -241,7 +241,7 @@ A "mood" is never one property. A useful mood record names every value it touche
 
 | Layer | Fields |
 |---|---|
-| Lighting | Ambient, OutdoorAmbient, Brightness, ColorShift_Top, ColorShift_Bottom, ExposureCompensation |
+| Lighting | Ambient, OutdoorAmbient, Brightness, ColorShift_Top, [[ColorShift_Bottom]], ExposureCompensation |
 | Atmosphere | Density, Offset, Haze, Color, Glare, Decay |
 | Clouds | Cover, Density, Color |
 | Grade (Lighting-level) | ColorCorrection Tint, Saturation, Contrast, Brightness |
@@ -283,5 +283,10 @@ See also: [[Lighting Technologies and Settings]], [[Lighting Mood and Time of Da
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Stylized Lighting Recipes]] · [[Links - Post-processing]] · [[Lighting Untextured Art in Roblox]] · [[Colour-Blind Safe Design]] · [[Environment Art Styles]] · [[Zone and Biome Art Direction]]
+[[Stylized Lighting Recipes]] · [[Links - Post-processing]] · Lighting Untextured Art in Roblox · Colour-Blind Safe Design · Environment Art Styles · Zone and Biome Art Direction
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[Light Sources and Shadows]] · [[Weather System Architecture - State Machine, Transitions and Replication]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Particle Emitters In Depth]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[VFX Performance Budgets and Culling]]
+<!-- related:end -->

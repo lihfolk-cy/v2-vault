@@ -1,5 +1,5 @@
 ---
-tags: [studio, team-create, collaboration, drafts, workflow, shared-place]
+tags: [studio, team-create, collaboration, drafts, workflow, shared-place, type/guide, area/studio, level/intermediate]
 ---
 # Team Create and Collaboration
 
@@ -12,7 +12,7 @@ tags: [studio, team-create, collaboration, drafts, workflow, shared-place]
 > - Age-check and trusted-friend requirements checked for every collaborator.
 > - Ownership table and test-object naming agreed.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.4k tok. Read more: ## 4. Scripts: live scripting or drafts · ## 6. What a shared place really means · ## 9. Common mistakes · ## 10. Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.5k tok. Read more: ## 4. Scripts: live scripting or drafts · ## 6. What a shared place really means · ## 9. Common mistakes · ## 10. Checklist
 <!-- tldr:end -->
 
 Team Create turns a place into a live shared document: everyone with edit access works in the same data model at the same time, and Studio saves it to the cloud continuously. That is wonderful for small teams and dangerous for any team that does not agree on rules, because a shared place has no branches, no private working copy for anything except script drafts, and one wrong bulk operation reaches everyone instantly. This note covers the official features (permissions, age checks, live scripting, drafts, comments, script history) as of October 2026, then the operating rules that a production team needs, most of them learned in the reference project where several people and automated tools edited one place simultaneously.
@@ -187,5 +187,10 @@ These are the reference project's rules, generalised. See also [[Safe Changes in
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Team Create Permissions and Workflows]] · [[Links - Team Create]] · [[Team Collaboration Start Here]] · [[Studio Interface Tour]] · [[Documentation and Onboarding New Developers]] · [[Packages and Shared Assets Across Places]]
+[[Team Create Permissions and Workflows]] · Links - Team Create · Team Collaboration Start Here · [[Studio Interface Tour]] · Documentation and Onboarding New Developers · Packages and Shared Assets Across Places
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Studio Settings and Shortcuts]] · [[Multiple Agents in One Studio]] · [[Packages and Shared Assets Across Places]] · [[Plugins - Using and Writing]] · [[Explorer Properties and Selection]] · [[Studio Assistant and AI Tools]] · [[Creator Store and Toolbox Safety]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [authoring, craft, creatures, enemies, quadrupeds, flyers, telegraphs]
+tags: [authoring, craft, creatures, enemies, quadrupeds, flyers, telegraphs, type/guide, area/animation, level/intermediate, api/Animator]
 ---
 # Animating Creatures and Monsters
 
@@ -12,7 +12,7 @@ tags: [authoring, craft, creatures, enemies, quadrupeds, flyers, telegraphs]
 > - Cycle speed matches scale (about 1 / sqrt(scale) for scaled copies)
 > - Every attack has a unique telegraph of 0.45 s or more (0.5 s for bosses), with `Tele` and `Hit` markers
 >
-> Cost: TL;DR ~170 tok · whole note ~4.2k tok. Read more: ## 3. Body plans · ## 6. Roblox traps that hit creature clips · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.3k tok. Read more: ## 3. Body plans · ## 6. Roblox traps that hit creature clips · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Enemies are animated for the *other side* of the fight: the player has to read them, predict them and punish them. A monster animation succeeds when its weight is believable, its intent is unmistakable, and its timing gives the player fair windows. This note covers weight and scale, the main body plans (bipeds, quadrupeds, crawlers, flyers, floaters), telegraphs and fairness, shared clip sets, and the Roblox-specific traps that hit creature clips hardest (root poses, import axes, ground clipping, scale).
@@ -140,7 +140,7 @@ Measured: a keyframe's top-level pose (the `HumanoidRootPart`, or the top `Root`
 In the reference project, every GLB-imported enemy clip played with the body turned 180 degrees from the root, so enemies visibly "attacked from behind" while server logic (using the root's LookVector) was correct. Cause: the importer rotated the model 180 degrees about Y and wrote non-root poses in a frame that kept that rotation. Fix applied to the data (self-inverse, so it can be undone): non-root poses `P' = Rest^-1 * C * Rest * P * C`, root `P' = P * C`, with `C` = 180 degrees about Y. Turn clips also had their root yaw stripped because the server turns the root. Rule: every new imported enemy clip must go through this fix. See [[Enemy Import Axis Fix]].
 
 ### Ground clipping on death and big moves
-Creatures fall, crouch and lie down on uneven ground. In the reference project, 18 death clips penetrated up to **9.37 studs** below the floor before fitting; a wider pass fitted **205 of 304** clips, moving the worst penetration from **-7.79 to -0.17** studs while keeping loops seamless, and 17 templates had wrong HipHeight. Bone rigs used a runtime adapter: sample ground height on a 3x3 grid, lift the root bone by the deepest bone minus a skin pad, and tilt from the fall. See [[Ground Fitting Pipeline]].
+Creatures fall, crouch and lie down on uneven ground. In the reference project, 18 death clips penetrated up to **9.37 studs** below the floor before fitting; a wider pass fitted **205 of 304** clips, moving the worst penetration from **-7.79 to -0.17** studs while keeping loops seamless, and 17 templates had wrong [[HipHeight]]. Bone rigs used a runtime adapter: sample ground height on a 3x3 grid, lift the root bone by the deepest bone minus a skin pad, and tilt from the fall. See [[Ground Fitting Pipeline]].
 
 ### Exactly 180-degree keys
 Three enemy clips with exactly 180-degree key-to-key rotations were the only parity failures between the reference project's Lua player and the real Animator, because the Animator itself picks a direction arbitrarily. Creature clips with big tail or neck swings hit this often. Split big turns.
@@ -191,5 +191,10 @@ Enemy clip folders reached **323k instances** in ReplicatedStorage when baked wi
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Snippets - Enemy Client Animator]] · [[Procedural Death Knockdown and Hit Reactions]] · [[Retargeting Animations Between Rigs]] · [[Hit Reactions Stagger and Hit-Stop]] · [[Skeleton Library]] · [[Case Study - Enemy Roster Rebuild]] · [[Animation Start Here]]
+[[Snippets - Enemy Client Animator]] · [[Procedural Death Knockdown and Hit Reactions]] · [[Retargeting Animations Between Rigs]] · [[Hit Reactions Stagger and Hit-Stop]] · [[Skeleton Library]] · Case Study - Enemy Roster Rebuild · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Animation Review Checklist]] · [[Principles of Animation for Games]] · [[Posing and Silhouettes]] · [[Animation Capture and Mocap]] · [[Locomotion and Melee Reference Numbers]] · [[Idle Breathing and Secondary Motion]] · [[Scale and Animation]] · [[R15 Run Cycle Key Poses]]
+<!-- related:end -->

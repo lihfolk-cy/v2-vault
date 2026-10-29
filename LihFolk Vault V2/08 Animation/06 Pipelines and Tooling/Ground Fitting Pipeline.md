@@ -1,5 +1,5 @@
 ---
-tags: [pipeline, enemies, ground, ik, procedural, death]
+tags: [pipeline, enemies, ground, ik, procedural, death, type/guide, area/animation, level/advanced, api/HipHeight, area/procedural]
 ---
 # Ground Fitting Pipeline
 
@@ -9,7 +9,7 @@ tags: [pipeline, enemies, ground, ik, procedural, death]
 > - Avoid: Deciding fold direction per frame. A leg folds one way, then the other: a pop.
 > - Avoid: Fixing poses without smoothing the corrections.
 >
-> Cost: TL;DR ~100 tok · whole note ~3.6k tok. Read more: ## Part 1: the clip fitter · ## Part 2: the runtime clamp · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~3.7k tok. Read more: ## Part 1: the clip fitter · ## Part 2: the runtime clamp · ## Common mistakes
 <!-- tldr:end -->
 
 How one production game stopped its creatures sinking into the floor: an **offline-style clip fitter** that rewrites keyframes so nothing goes under a flat floor at any time (folding limbs, draping bodies that are down, raising the body only as a last resort), plus a **runtime clamp** that handles slopes and raised floors the fitter cannot know about. It took the worst death-clip penetration from -9.37 studs to at or above 0, then fitted 205 more clips. Related: [[Foot Placement and Ground IK]], [[Procedural Death Knockdown and Hit Reactions]], [[Pipeline - Importing Animated Enemies]].
@@ -32,7 +32,7 @@ Worst penetration of the raw death clips on flat ground (16-stud enemy):
 Three independent sources of ground error showed up, and each needs its own fix:
 
 1. **Authored clips that dip** (deaths, and later hit reactions, staggers, knockups: 1-4 studs; run cycles up to 2.6). Fix in the data: the fitter.
-2. **Wrong standing height**: incorrect HipHeight on 17 enemy templates (one rig's legs 1.5 studs into the floor at idle; others 0.45-0.9). Fix in the templates: correct HipHeight (old value kept in an attribute).
+2. **Wrong standing height**: incorrect [[HipHeight]] on 17 enemy templates (one rig's legs 1.5 studs into the floor at idle; others 0.45-0.9). Fix in the templates: correct HipHeight (old value kept in an attribute).
 3. **The visible floor is not the logical floor**: a plaza's pavement 1.46 studs above the invisible navigation floor everywhere, aprons and kerbs +0.3 to +1.0, dais stones and mounds +0.5 to +2.7, terrain slopes of 16-34 deg in some zones. Fix at runtime: raycast the visible ground; tag visible floor parts so navigation includes them.
 
 ## Part 1: the clip fitter
@@ -165,5 +165,10 @@ Skinned rigs have no part boxes to test. A bone adapter samples a **3 x 3** grou
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Creature Rig Conventions]] · [[Snippets - IK]] · [[Animating Creatures and Monsters]] · [[Animation Capture and Mocap]] · [[Character and Creature Pipeline]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Animation Start Here]]
+[[Creature Rig Conventions]] · [[Snippets - IK]] · [[Animating Creatures and Monsters]] · [[Animation Capture and Mocap]] · [[Character and Creature Pipeline]] · Modeling Characters for R15 and Custom Rigs · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Bones and Skinned Meshes]] · [[LihFolk R15 Keyframe Pipeline]] · [[Enemy Import Axis Fix]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Arm Baker Internals]] · [[Inverse Kinematics]] · [[Retargeting Animations Between Rigs]]
+<!-- related:end -->

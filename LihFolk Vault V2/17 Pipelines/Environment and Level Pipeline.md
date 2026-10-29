@@ -1,5 +1,5 @@
 ---
-tags: [pipelines, environment, level-design, terrain, manifests, map]
+tags: [pipelines, environment, level-design, terrain, manifests, map, type/guide, area/pipelines, level/intermediate, api/Terrain, area/design, api/Atmosphere]
 ---
 # Environment and Level Pipeline
 
@@ -12,7 +12,7 @@ tags: [pipelines, environment, level-design, terrain, manifests, map]
 > - Macro layout in formulas or a table
 > - Collision built first; art non-colliding
 >
-> Cost: TL;DR ~140 tok · whole note ~3.9k tok. Read more: ## Stage 2: collision first, art second · ## Stage 3: terrain by script, with snapshots · ## Failure modes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.0k tok. Read more: ## Stage 2: collision first, art second · ## Stage 3: terrain by script, with snapshots · ## Failure modes · ## Checklist
 <!-- tldr:end -->
 
 Levels are where pipelines and hand craft meet. A zone needs a designer's eye (sight lines, pacing, where the fight happens), but it also needs hundreds of props placed consistently, terrain that matches the meshes, colliders players can trust, and the ability to restyle or resize the whole thing later without starting over. This note is a recipe for building zones that can be rebuilt. Level design theory is in [[Level Design for Roblox]], kits in [[Modular Environment Kits]], terrain tools in [[Terrain Tools and Terrain API]], streaming in [[Level of Detail and Model Streaming]] and [[Instance Streaming]].
@@ -228,5 +228,10 @@ Edit-mode previews of lighting or weather (setting Atmosphere, Lighting or a zon
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Asset Pipelines]] · [[Voxel Props Environments and Modular Tiles]] · [[Zone and Biome Art Direction]] · [[Character and Creature Pipeline]] · [[Voxel Modelling Start Here]] · [[Parts Unions and MeshParts]]
+[[Asset Pipelines]] · Voxel Props Environments and Modular Tiles · Zone and Biome Art Direction · [[Character and Creature Pipeline]] · Voxel Modelling Start Here · Parts Unions and MeshParts
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Blender Automation with Python]] · [[UI Asset Pipeline]] · [[Asset Upload Automation with Open Cloud]] · [[Icon and Thumbnail Rendering Pipeline]] · [[Build Test and Release Pipeline]] · [[Data and Config Pipeline - Spreadsheets to Game]] · [[Live Content Pipeline]] · [[Code Pipeline - Rojo Git and CI]]
+<!-- related:end -->

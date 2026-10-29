@@ -1,5 +1,5 @@
 ---
-tags: [mcp, agents, scripting, debugging, luau, workflow]
+tags: [mcp, agents, scripting, debugging, luau, workflow, type/guide, area/ai, level/intermediate, area/scripting, api/Script]
 ---
 # MCP Workflows for Scripting and Debugging
 
@@ -12,7 +12,7 @@ tags: [mcp, agents, scripting, debugging, luau, workflow]
 > - One focused edit.
 > - Gate: compile, use-before-definition, size, clone-require.
 >
-> Cost: TL;DR ~110 tok · whole note ~4.6k tok. Read more: ## 2. The save gate · ## Nuances and edge cases · ## 8. Common mistakes · ## 9. Checklist for an agent scripting change
+> Cost: TL;DR ~110 tok · whole note ~4.7k tok. Read more: ## 2. The save gate · ## Nuances and edge cases · ## 8. Common mistakes · ## 9. Checklist for an agent scripting change
 <!-- tldr:end -->
 
 Writing Luau is the part of game development AI agents do best, and the part where an agent connected to Studio has the biggest advantage over one that only sees text: it can grep every script in the place, read the real current source before editing, compile its edit, run checks in Edit mode, and read the Output. It can also confidently overwrite another person's change, save a script that compiles but crashes on load, or "verify" a fix against a stale cached module. This note is the method for agent scripting through MCP that kept a large production codebase working.
@@ -293,5 +293,10 @@ See [[Prompting and Verifying AI Output]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Roblox Studio Assistant]] · [[Agent Review Loops and Guardrails in Practice]] · [[AI Agents and Autonomous Workflows]] · [[Skill - Roblox Debugging]] · [[Pipeline Design Principles]] · [[Batch Processing Tools in Studio]]
+[[Roblox Studio Assistant]] · [[Agent Review Loops and Guardrails in Practice]] · AI Agents and Autonomous Workflows · Skill - Roblox Debugging · Pipeline Design Principles · Batch Processing Tools in Studio
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[AI Agents and Autonomous Workflows]] · [[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]] · [[Writing Your Own MCP Server]] · [[Setting Up MCP Clients]] · [[What Is MCP]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[Blender MCP]]
+<!-- related:end -->

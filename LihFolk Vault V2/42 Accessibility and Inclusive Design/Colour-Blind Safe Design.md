@@ -1,5 +1,5 @@
 ---
-tags: [accessibility, colour-blindness, color, palette, ui, vfx, design-tokens, testing]
+tags: [accessibility, colour-blindness, color, palette, ui, vfx, design-tokens, testing, type/guide, area/accessibility, level/intermediate, api/ColorCorrectionEffect]
 ---
 # Colour-Blind Safe Design
 
@@ -12,7 +12,7 @@ tags: [accessibility, colour-blindness, color, palette, ui, vfx, design-tokens, 
 > - Critical pairs pass the audit under normal, protan, deutan and tritan, with lightness checked.
 > - Two-team games use blue/orange (or similar) plus emblems.
 >
-> Cost: TL;DR ~160 tok · whole note ~6.0k tok. Read more: ## 3. Measuring a palette instead of eyeballing it · ## 4. Palette modes at runtime · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~6.1k tok. Read more: ## 3. Measuring a palette instead of eyeballing it · ## 4. Palette modes at runtime · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Accessibility]] already sets the rule: never let colour be the only signal. This note is the engineering behind that rule. It covers what colour vision deficiency actually does to a game palette, how to test a palette with numbers instead of by eye, how to build palette modes that swap cleanly at runtime, why a screen filter cannot fix the problem on Roblox, and where colour failures hide in 3D (telegraphs on grass, team outlines, particles under coloured lighting). It ends with a palette audit script you can run over your design tokens.
@@ -420,5 +420,10 @@ See also: [[Accessibility Start Here]], [[Accessibility]], [[Readable Text and U
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Voxel Palettes - Ramps Hue Shifting and Limits]] · [[Colour Scripts and Value Structure for Untextured Art]] · [[Accessibility Contrast]] · [[Stylized Lighting Recipes]] · [[Thumbnail Contrast]] · [[Environment Art Styles]]
+[[Voxel Palettes - Ramps Hue Shifting and Limits]] · Colour Scripts and Value Structure for Untextured Art · Accessibility Contrast · Stylized Lighting Recipes · Thumbnail Contrast · Environment Art Styles
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Accessibility Contrast]] · [[Colour Scripts and Value Structure for Untextured Art]] · [[Stylized Lighting Recipes]] · [[Environment Art Styles]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Captions and Audio Accessibility]]
+<!-- related:end -->

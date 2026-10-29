@@ -1,5 +1,5 @@
 ---
-tags: [pipeline, ik, arms, qa, baking, advanced]
+tags: [pipeline, ik, arms, qa, baking, advanced, type/guide, area/animation, level/advanced, api/Animator]
 ---
 # Pipeline: Arm IK Baking and QA
 
@@ -10,7 +10,7 @@ tags: [pipeline, ik, arms, qa, baking, advanced]
 > - Studio calls under 1.5 s: two moves per write call, four clips per play call.
 > - `--all` on kits with an appended shared move that has no clip stops at that slot; bake per move instead.
 >
-> Cost: TL;DR ~130 tok · whole note ~3.6k tok. Read more: ## The pipeline · ## Pose lessons (what makes criticals, and how authors avoid them)
+> Cost: TL;DR ~130 tok · whole note ~3.7k tok. Read more: ## The pipeline · ## Pose lessons (what makes criticals, and how authors avoid them)
 <!-- tldr:end -->
 
 The end-to-end workflow one live action game used to repair the arms of several hundred ability clips: measure every clip on the real Animator, re-solve only the arms offline with exact IK, fit the result back into sparse Roblox keys within an instance budget, verify the written clip on the Animator again, and install it with a rollback path.
@@ -47,7 +47,7 @@ All numbers in this pipeline assume:
 | QA sample rate | 60 Hz (authoring talks in 30 fps frames) |
 | Held blade | along the hand's -Z, edge toward the hand's -X, 9.5 studs long, gripped 20% up from the pommel |
 | Grip point | 0.19 hand-widths below the hand centre along its Y |
-| Joints | AnimationConstraint on R15 rig attachments (FK: `parent * a0 * Transform * a1:Inverse()`) |
+| Joints | [[AnimationConstraint]] on R15 rig attachments (FK: `parent * a0 * Transform * a1:Inverse()`) |
 
 The 20% of blade behind the hand (the pommel) matters more than it sounds: about 1.9 studs of steel that can hit your own hip or chest. A pose that looks fine with a short-hilted sword buries the pommel with a long one.
 
@@ -215,5 +215,10 @@ These came out of reading hundreds of failing strips. They are authoring rules a
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Posing and Silhouettes]] · [[Weapon and Combat Animation]] · [[Inverse Kinematics]] · [[Animation Review Checklist]] · [[AI Animation and Motion from Video]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Animation Start Here]]
+[[Posing and Silhouettes]] · [[Weapon and Combat Animation]] · [[Inverse Kinematics]] · [[Animation Review Checklist]] · [[AI Animation and Motion from Video]] · Voxel Characters - Proportions Joints and Rigging · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Pipeline - New Animated Weapon]] · [[LihFolk R15 Keyframe Pipeline]] · [[Testing Animations in Studio]] · [[Authoring Clips in Code]] · [[Keyframes, Easing and Interpolation]] · [[Animation Data from Blender to Roblox]] · [[Baked Clip Stubs and Archiving]] · [[Blade Grip and Wrist Limits]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [level-design, obby, platforming, jump-math, difficulty, stage-design, validation]
+tags: [level-design, obby, platforming, jump-math, difficulty, stage-design, validation, type/guide, area/world, level/intermediate, api/CollectionService, area/design]
 ---
 # Obby and Platforming Level Design
 
@@ -12,7 +12,7 @@ tags: [level-design, obby, platforming, jump-math, difficulty, stage-design, val
 > - Every stage raises one dial; difficulty attribute set.
 > - Chains longer than 5 or 6 jumps split by a checkpoint.
 >
-> Cost: TL;DR ~160 tok · whole note ~5.1k tok. Read more: ## 1. The jump arc, worked out · ## 3. The obstacle vocabulary · ## 9. Common mistakes · ## 10. Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.2k tok. Read more: ## 1. The jump arc, worked out · ## 3. The obstacle vocabulary · ## 9. Common mistakes · ## 10. Checklist
 <!-- tldr:end -->
 
 [[Genre Playbook - Obbies and Platformers]] covers the genre: variants, why obbies work on Roblox, the default movement numbers, teach-test-twist, checkpoint code, mobile fairness, moving platforms, towers and monetisation. This note is the level designer's companion to it. It works out the jump arc from first principles so you can design gaps on paper, builds an obstacle vocabulary with the variables that make each one hard, treats difficulty as a set of dials instead of a feeling, covers the camera and depth-perception problems peculiar to a third-person platformer, and ends with a validator script that catches impossible and trivial jumps before a playtester does.
@@ -320,5 +320,10 @@ Above the stage, a run of stages has rhythm. The playbook gives the sawtooth (ra
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Obby Checkpoints and Stage Saves End to End]] · [[2D Collision Physics and Platformer Movement]] · [[Input Buffering]] · [[Genre Systems Start Here]] · [[Avatar Body Types and Scale in Gameplay]] · [[Links - Checkpoints and spawning]]
+[[Obby Checkpoints and Stage Saves End to End]] · 2D Collision Physics and Platformer Movement · Input Buffering · Genre Systems Start Here · Avatar Body Types and Scale in Gameplay · Links - Checkpoints and spawning
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]] · [[Combat Arena and Encounter Layout]] · [[Playtest Heatmaps - Position and Death Maps]] · [[Level Design Principles - Flow Sightlines and Landmarks]] · [[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Lobby and Hub Design]]
+<!-- related:end -->

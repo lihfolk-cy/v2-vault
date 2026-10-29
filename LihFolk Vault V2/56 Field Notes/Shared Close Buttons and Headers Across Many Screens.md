@@ -1,5 +1,5 @@
 ---
-tags: [field-notes, ui, close-button, layout, clipsdescendants, attributes, design-system]
+tags: [field-notes, ui, close-button, layout, clipsdescendants, attributes, design-system, type/guide, area/ui, level/intermediate, api/ZIndex, area/design]
 ---
 # Shared Close Buttons and Headers Across Many Screens
 
@@ -12,7 +12,7 @@ tags: [field-notes, ui, close-button, layout, clipsdescendants, attributes, desi
 > - X is square, about 1.1 times the header height, anchored (1, 1) at the header's bottom-right.
 > - Overhang recomputed when the header resizes.
 >
-> Cost: TL;DR ~160 tok · whole note ~1.6k tok. Read more: ## 1. Size and place the X relative to the header · ## 3. One helper, applied everywhere, undoable · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~1.7k tok. Read more: ## 1. Size and place the X relative to the header · ## 3. One helper, applied everywhere, undoable · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A game with thirty panels built by different people (and different agents) ends up with thirty close buttons: different sizes, some inside the header, some floating at the corner, some half cut off. Players notice inconsistency in the X more than almost anything else, because they use it on every screen. The fix that held up is one shared helper that builds or normalises the X relative to the header, plus attributes that make the change undoable. Layout rules are in [[Layout - Scale Offset and Constraints]]; design systems in [[UI Design Systems]].
@@ -116,5 +116,10 @@ end
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Layout - Scale Offset and Constraints]] · [[UI Design Systems]] · [[Debugging UI Layout and Input]] · [[Cookbook - UI]] · [[Centre-Screen Announcements That Stay Centred]] · [[Field Notes Start Here]]
+[[Layout - Scale Offset and Constraints]] · UI Design Systems · Debugging UI Layout and Input · Cookbook - UI · [[Centre-Screen Announcements That Stay Centred]] · [[Field Notes Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[ScreenGui Fundamentals]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[UIStroke on Text - Glyph Counters and the Stroke Ratio]] · [[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[Running Many AI Agents on One Roblox Place]] · [[Shift-Lock Sprint and Gamepad B for Menus]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, live-ops, release, architecture]
+tags: [core-concept, live-ops, release, architecture, type/reference, area/liveops, level/beginner]
 ---
 # Feature Flags
 
@@ -10,7 +10,7 @@ tags: [core-concept, live-ops, release, architecture]
 > - Decide the bucket deterministically. For "10 percent of players", hash the UserId with the flag name so a player stays in the...
 > - Changes arrive at different times. Servers poll separately, so for a minute some servers have the flag on and others off.
 >
-> Cost: TL;DR ~150 tok · whole note ~940 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~150 tok · whole note ~1.0k tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 A **feature flag** is a named switch, read at runtime, that turns a feature or behaviour on or off without publishing a new version of the game. Flags can be global ("new shop on"), per percentage of servers or players ("new shop for 10 percent"), or per group ("testers only").
@@ -59,5 +59,10 @@ Related concepts: [[Telemetry Events]], [[Data Schema Versioning]], [[Dependency
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Live Ops Deep Dive Start Here]] · [[Live Content Pipeline]] · [[Server Shutdowns Soft Updates and Migration]] · [[Debugging Live Servers]] · [[Resource Library - Publishing and Live Ops]] · [[Crash and Error Telemetry]] · [[Core Concepts Start Here]]
+[[Live Ops Deep Dive Start Here]] · Live Content Pipeline · Server Shutdowns Soft Updates and Migration · Debugging Live Servers · Resource Library - Publishing and Live Ops · Crash and Error Telemetry · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Retention Cohorts]] · [[Event Bus]] · [[Rate Limiting]] · [[Replication Boundary]] · [[Onboarding Funnel]] · [[Session Lock]] · [[Server Authority]] · [[Click-Through Rate]]
+<!-- related:end -->

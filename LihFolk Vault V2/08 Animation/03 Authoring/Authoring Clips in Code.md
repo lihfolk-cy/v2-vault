@@ -1,5 +1,5 @@
 ---
-tags: [authoring, code, keyframesequence, luau, baking]
+tags: [authoring, code, keyframesequence, luau, baking, type/guide, area/animation, level/intermediate, api/Animator, area/scripting, api/KeyframeSequence, api/KeyframeMarker]
 ---
 # Authoring Clips in Code
 
@@ -9,7 +9,7 @@ tags: [authoring, code, keyframesequence, luau, baking]
 > - Avoid: Legacy Cubic -> CubicV2
 > - Avoid: Root keyed on HumanoidRootPart -> key LowerTorso; HRP weight 0
 >
-> Cost: TL;DR ~90 tok · whole note ~5.6k tok. Read more: ## 2. Construction rules the engine cares about · ## 6. Predicting what the Animator plays (a sampler) · ## 10. Common mistakes
+> Cost: TL;DR ~90 tok · whole note ~5.7k tok. Read more: ## 2. Construction rules the engine cares about · ## 6. Predicting what the Animator plays (a sampler) · ## 10. Common mistakes
 <!-- tldr:end -->
 
 Building `KeyframeSequence`s from data lets you generate hundreds of consistent clips, re-bake them when the rig changes, run IK or physics offline, enforce budgets, and verify the result against the real Animator. The reference project (one live action game) authored almost all of its 600+ ability clips this way.
@@ -183,7 +183,7 @@ Bakers produce dense samples (every 0.035 to 0.1 s, or every 60 Hz frame). Writi
 
 The tolerance (5 degrees / 0.09 studs) was loose because of a kit-folder budget of **2,500 instances**. A later arm re-solver used tighter per-joint tolerances (shoulder 1.0, elbow 1.2, wrist 1.5 degrees, times a factor stepped up only as far as the budget needed), spans at most 0.4 s and under 120 degrees, splits snapped to existing keyframe times within 2 to 3 frames, and a growth cap of 15% + 30 instances per clip. See [[Pipeline - Arm IK Baking and QA]].
 
-A known flaw worth copying the lesson from: the spec baker's own fit check used `CFrame:Lerp` (a slerp), not the Animator's measured rotation-vector blend, so on big turns far from rest its kept keys played slightly differently than it assumed. **Fit against the model of what the engine actually does.**
+A known flaw worth copying the lesson from: the spec baker's own fit check used `CFrame:Lerp` (a [[slerp]]), not the Animator's measured rotation-vector blend, so on big turns far from rest its kept keys played slightly differently than it assumed. **Fit against the model of what the engine actually does.**
 
 ## 5. Thinning existing clips
 
@@ -203,7 +203,7 @@ Key density benchmarks from the reference project: **22 to 30 keys/s** typical f
 
 To verify clips offline, or to drive your own player, sample them the way the engine does. Measured behaviour:
 - Offsets **lerp linearly**.
-- Rotations: if **every keyframe is evenly spaced (marker-only keyframes count) and every key is Linear**, the Animator nlerps quaternions. **Otherwise** it blends **rotation vectors**: each key's rotation as axis x angle from rest, choosing between each key's two representations (`v` and `v - 2 pi axis`) the pair closest together, then lerping. (A weapon-rig player study found the switch per joint; whether "evenly spaced" is judged per joint or per sequence is an open question.)
+- Rotations: if **every keyframe is evenly spaced (marker-only keyframes count) and every key is Linear**, the Animator nlerps [[quaternions]]. **Otherwise** it blends **rotation vectors**: each key's rotation as axis x angle from rest, choosing between each key's two representations (`v` and `v - 2 pi axis`) the pair closest together, then lerping. (A weapon-rig player study found the switch per joint; whether "evenly spaced" is judged per joint or per sequence is an open question.)
 - The two models agree on small steps and diverge on big turns far from rest (an overhead off-hand shoulder was 9 to 12 degrees off). A slerp model was up to **178 degrees** wrong on some segments; the rotation-vector model matched to **0.24 degrees**.
 
 ```lua
@@ -324,7 +324,7 @@ Written as: a weight-0 root Pose named after the weapon's root part (`Handle`), 
 | Marker on its own keyframe | extra instance; changes the evenly-spaced test | attach to an existing keyframe |
 | Fit checked with slerp | small playback differences on big turns | fit with the rotation-vector model |
 | Thinning across a 150+ degree turn | wrong-way spins | split, keep under 120 |
-| Shipping RegisterKeyframeSequence ids | nothing plays live | publish or use a Lua player |
+| Shipping [[RegisterKeyframeSequence]] ids | nothing plays live | publish or use a Lua player |
 | Stale `require` in Edit | tools use old data | clone-require |
 
 ## See also
@@ -332,5 +332,10 @@ Written as: a weight-0 root Pose named after the weapon's root part (`Handle`), 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animation Data from Blender to Roblox]] · [[Engine Gotchas]] · [[Performance and Memory]] · [[Animation Editor Advanced]] · [[AI Animation and Motion from Video]] · [[Interpolation Easing and Curves Math]] · [[Animation Start Here]]
+[[Animation Data from Blender to Roblox]] · [[Engine Gotchas]] · [[Performance and Memory]] · [[Animation Editor Advanced]] · [[AI Animation and Motion from Video]] · Interpolation Easing and Curves Math · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Animation Editor Workflow]] · [[Animation Glossary]] · [[Snippets - Lua Keyframe Player Core]] · [[Moon Animator and Third-Party Tools]] · [[Pipeline - New Animated Weapon]] · [[Timing Spacing and Frame Charts]] · [[Animation Review Checklist]] · [[R15 Run Cycle Key Poses]]
+<!-- related:end -->

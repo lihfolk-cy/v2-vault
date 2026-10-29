@@ -1,5 +1,5 @@
 ---
-tags: [audio, spatial, mixing, attenuation, loudness, buses, performance]
+tags: [audio, spatial, mixing, attenuation, loudness, buses, performance, type/guide, area/vfx, level/intermediate, area/audio, api/Sound]
 ---
 # Spatial Audio and Mixing
 
@@ -12,7 +12,7 @@ tags: [audio, spatial, mixing, attenuation, loudness, buses, performance]
 > - Listener position chosen deliberately for the camera style.
 > - Every sound measured and levelled to a category target.
 >
-> Cost: TL;DR ~170 tok · whole note ~3.4k tok. Read more: ## 1. Attenuation · ## 5. Voice limits and throttles · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~3.5k tok. Read more: ## 1. Attenuation · ## 5. Voice limits and throttles · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Spatial audio decides **where** a sound seems to be and **how loud it is from here**. Mixing decides **how loud each sound is relative to everything else**, and what gets dropped when too much happens at once. In a multiplayer game these two problems meet: thirty players casting abilities in one plaza is a spatial problem (who is close?) and a mixing problem (which of these 200 sounds matter?).
@@ -257,5 +257,10 @@ See also: [[Sound Fundamentals]], [[The Audio API - Players Emitters Wires and E
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Audio Pipeline]] · [[Combat Sound Design and Feedback]] · [[Links - Spatial audio]] · [[Captions and Audio Accessibility]] · [[Resource Library - Audio]] · [[AI Audio - Voice Music and SFX]]
+[[Audio Pipeline]] · [[Combat Sound Design and Feedback]] · Links - Spatial audio · Captions and Audio Accessibility · Resource Library - Audio · AI Audio - Voice Music and SFX
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Audio Mixer Settings with SoundGroups]] · [[Engine and Tyre Audio Driven by RPM and Slip]] · [[Captions and Audio Accessibility]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[Music Licensing and Audio Upload Rules for 2026]]
+<!-- related:end -->

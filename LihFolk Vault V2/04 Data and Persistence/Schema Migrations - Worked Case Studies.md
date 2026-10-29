@@ -1,5 +1,5 @@
 ---
-tags: [data, schema, migrations, versioning, rollback, case-study, luau]
+tags: [data, schema, migrations, versioning, rollback, case-study, luau, type/case-study, area/data, level/intermediate, api/DataStoreService, area/scripting]
 ---
 # Schema Migrations - Worked Case Studies
 
@@ -12,7 +12,7 @@ tags: [data, schema, migrations, versioning, rollback, case-study, luau]
 > - Anything taken away leaves a `MigrationLog` entry.
 > - Paid value never shrinks in a migration.
 >
-> Cost: TL;DR ~160 tok · whole note ~5.9k tok. Read more: ## Case 2: splitting one key into two · ## Case 6: migrations that survive a rollback · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~6.0k tok. Read more: ## Case 2: splitting one key into two · ## Case 6: migrations that survive a rollback · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Data Schema Design and Migrations]] gives you the framework: a `Schema` integer on every profile, an ordered chain of migration steps, a refusal of newer data, and `reconcile` for additive fields. This note is the next level down. It walks through seven migrations of the kind every live game eventually ships, each with the trap that makes the obvious version wrong, working Luau, and the way to tell from production data whether it went well.
@@ -402,5 +402,10 @@ Then a release-day routine (rule of thumb):
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Data Schema Versioning]] · [[Cookbook - Data and Saving]] · [[Saved Inventory End to End]] · [[Server Shutdowns Soft Updates and Migration]] · [[Refunds Chargebacks and Purchase Support]] · [[Skill - Roblox DataStore Safety]]
+[[Data Schema Versioning]] · Cookbook - Data and Saving · Saved Inventory End to End · Server Shutdowns Soft Updates and Migration · Refunds Chargebacks and Purchase Support · Skill - Roblox DataStore Safety
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Save Migration Tests - Fixture Saves and Golden Files]] · [[Cookbook - Data and Saving]] · [[Purchase Data and Receipts]] · [[Global State and Live Config]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[MemoryStore Service]] · [[HttpService and External APIs]]
+<!-- related:end -->

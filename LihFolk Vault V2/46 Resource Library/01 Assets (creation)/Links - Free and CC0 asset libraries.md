@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, assets-creation]
+tags: [resources, links, assets-creation, type/reference, level/intermediate]
 ---
 # Links - Free and CC0 asset libraries
 
@@ -53,5 +53,5 @@ Part of [[Resource Library - Assets (creation)]] in the [[Resource Library Start
 
 ## Connected notes
 <!-- auto-links:start -->
-[[LICENSE]] · [[Links - Audio creation and uploading]] · [[Resource Library Link Check]] · [[Links - Topology]] · [[CHANGELOG]] · [[Legal Basics - IP Licenses and Assets]]
+[[LICENSE]] · [[Links - Audio creation and uploading]] · [[Resource Library Link Check]] · [[Links - Topology]] · [[CHANGELOG]] · Legal Basics - IP Licenses and Assets
 <!-- auto-links:end -->

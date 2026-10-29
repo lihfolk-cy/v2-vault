@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, maintenance]
+tags: [resources, links, maintenance, type/hub, level/intermediate]
 ---
 # Resource Library Link Check
 

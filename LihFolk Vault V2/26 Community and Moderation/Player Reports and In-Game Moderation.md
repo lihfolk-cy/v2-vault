@@ -1,5 +1,5 @@
 ---
-tags: [community, moderation, safety, reports, ban-api, luau, live-ops]
+tags: [community, moderation, safety, reports, ban-api, luau, live-ops, type/guide, area/community, level/intermediate, api/DataStoreService, area/scripting]
 ---
 # Player Reports and In-Game Moderation
 
@@ -12,7 +12,7 @@ tags: [community, moderation, safety, reports, ban-api, luau, live-ops]
 > - Rule-report flow with categories, no free text, server-attached context
 > - Reports rate-limited, retained for a fixed window, user ids only
 >
-> Cost: TL;DR ~160 tok · whole note ~4.6k tok. Read more: ## 3. An in-game report flow for your rules · ## 4. Moderating what players create · ## 8. Failure modes · ## 10. Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.7k tok. Read more: ## 3. An in-game report flow for your rules · ## 4. Moderating what players create · ## 8. Failure modes · ## 10. Checklist
 <!-- tldr:end -->
 
 Roblox moderates its platform; you moderate your game. The two overlap but are not the same job. Roblox handles anything that breaks the Community Standards (harassment, sexual content, grooming, hate, scams, real-world threats) through its report system and moderators. You handle your own game's rules (griefing, spawn-camping, exploiting, trade scams in your economy, abusing a mechanic) and you are responsible for the safety of what your game lets players create and show each other. This note covers where the line sits, the Safety Dashboard, building an in-game report flow that does not collect personal data, moderating user-generated content, staffing moderators, and the tools that act (kick, ban, mute, restrict). For the Ban API itself, evidence and appeals, read [[Logging Bans and Appeals]]; for cheat detection, [[False Positives Lag and Fair Enforcement]].
@@ -302,5 +302,10 @@ A small obby with no chat-adjacent features, no UGC and no trading needs: defaul
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Discord Servers for Roblox Games]] · [[Anti-Exploit Start Here]] · [[Skill - Roblox Anti-Exploit Review]] · [[Links - Chat and text filtering]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Avatar Context Menus Profiles and Social Surfaces]]
+[[Discord Servers for Roblox Games]] · [[Anti-Exploit Start Here]] · Skill - Roblox Anti-Exploit Review · Links - Chat and text filtering · Genre Playbook - Roleplay and Social Hangouts · Avatar Context Menus Profiles and Social Surfaces
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Admin Commands Done Safely - Permissions and Audit Logs]] · [[Working with Content Creators]] · [[Roblox Communities as Your On-Platform Hub]] · [[Block and Mute Respecting Platform Rules]] · [[In-Game AI - LLM NPCs and Text Generation]] · [[Genre Playbook - Roleplay and Social Hangouts]]
+<!-- related:end -->

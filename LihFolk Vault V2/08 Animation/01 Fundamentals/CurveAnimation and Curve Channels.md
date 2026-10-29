@@ -1,5 +1,5 @@
 ---
-tags: [fundamentals, api, reference, curveanimation, curves]
+tags: [fundamentals, api, reference, curveanimation, curves, type/reference, area/animation, level/beginner, api/CurveAnimation, area/math, api/FaceControls, api/KeyframeSequence]
 ---
 # CurveAnimation and Curve Channels
 
@@ -9,7 +9,7 @@ tags: [fundamentals, api, reference, curveanimation, curves]
 > - Avoid: Setting `RightTangent` on a Linear key (Runtime error)
 > - Avoid: Assuming tangents are per frame (Overshoot 30x or 60x too large or small; test the unit)
 >
-> Cost: TL;DR ~110 tok · whole note ~4.2k tok. Read more: ## Curve classes · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~4.3k tok. Read more: ## Curve classes · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 `CurveAnimation` is Roblox's second clip format. Instead of whole-rig snapshots at keyframe times (a [[KeyframeSequence Keyframe and Pose Reference|KeyframeSequence]]), it stores **one independent curve per channel**: a position curve and a rotation curve per joint, a float curve per face control, and a marker curve for events. The Animation Editor's curve editor produces it, it publishes like any other animation, and it is the natural format for tangent-level polish and facial animation.
@@ -67,7 +67,7 @@ When a key's `LeftTangent` and `RightTangent` differ, the curve has a corner at 
 |---|---|
 | `Time` | Seconds. |
 | `Value` | CFrame; **only the rotation is used**. |
-| `Interpolation` | `Constant` holds; `Linear` is documented as **spherical interpolation (slerp)** between the two rotations; `Cubic` (default) uses a Hermite spline shaped by this key's `RightTangent` and the next key's `LeftTangent`. |
+| `Interpolation` | `Constant` holds; `Linear` is documented as **spherical interpolation ([[slerp]])** between the two rotations; `Cubic` (default) uses a Hermite spline shaped by this key's `RightTangent` and the next key's `LeftTangent`. |
 | `LeftTangent`, `RightTangent` | Scalar slopes (units undocumented). What a scalar tangent means for a rotation is also undocumented: in practice it shapes the progress along the rotation path rather than the axis. |
 
 ### Enum.KeyInterpolationMode
@@ -115,7 +115,7 @@ Three child FloatCurves `X`, `Y`, `Z` (the `X()/Y()/Z()` accessors behave like E
 | `InsertMarkerAtTime(time, marker: string)` | Adds a marker. |
 | `RemoveMarkerAtIndex(start, count = 1)` | Removes markers. |
 
-Markers in a CurveAnimation fire through the same `AnimationTrack:GetMarkerReachedSignal(name)` as KeyframeMarkers.
+Markers in a [[CurveAnimation]] fire through the same `AnimationTrack:GetMarkerReachedSignal(name)` as KeyframeMarkers.
 
 ## Evaluating a CurveAnimation yourself
 
@@ -183,7 +183,7 @@ Per joint, each Pose with `Weight > 0` becomes a key on that joint's curves:
 |---|---|
 | Per-channel keys: animate the head on 3 keys and the hand on 30 without placeholder chains | Fewer community tools, importers and Lua players understand it |
 | Real tangents: overshoot and settles without Elastic/Bounce presets | Euler channels can gimbal-lock and need care around +-180 |
-| Native facial animation through FaceControls FloatCurves | Instance count is still per curve and per key-bearing object; not automatically smaller |
+| Native facial animation through [[FaceControls]] FloatCurves | Instance count is still per curve and per key-bearing object; not automatically smaller |
 | Editor curve view for polish | Behaviour of Animator vs `GetValueAtTime` not independently measured here |
 
 Rule of thumb: hand-polished hero animation and faces are good fits for curves. Generated, baked or tool-processed clips (IK bakes, mocap cleanups, thinning) are easier as KeyframeSequences, because every tool you will write already speaks that format and the measured Animator model is known for it. The reference project deliberately did not use CurveAnimation for that reason.
@@ -206,7 +206,7 @@ Rule of thumb: hand-polished hero animation and faces are good fits for curves. 
 
 1. **Publishing is the same; tooling is not.** Once published, a CurveAnimation plays like any other animation asset through the Animator, with the same permission rules and replication. The difference is entirely on the authoring and tooling side. If your team only uses the Animation Editor and publishes, the format choice barely matters; if you write tools, it matters a lot.
 2. **Mixed libraries.** Many projects end up with both formats: hand-polished clips as curves, generated clips as KeyframeSequences. That is fine for playback, but any tool that walks clips (marker extraction, validation, thinning, retargeting) now needs two code paths. Budget for that, or pick one format for everything tool-processed.
-3. **Facial animation scale.** FaceControls curves add dozens of float channels per clip (one per FACS control used). For a talking NPC that is fine; for 50 players with emote faces animating at once on a phone, face evaluation adds up. Gate facial animation by distance and drop it for characters beyond conversational range.
+3. **Facial animation scale.** FaceControls curves add dozens of float channels per clip (one per [[FACS]] control used). For a talking NPC that is fine; for 50 players with emote faces animating at once on a phone, face evaluation adds up. Gate facial animation by distance and drop it for characters beyond conversational range.
 4. **Tangent units.** As the existing mistakes table notes, tangent units are easy to get wrong. Verify against the Animation Editor's own curve view on one known key before batch-converting a library; a unit error multiplies every overshoot in every clip.
 5. **Euler vs rotation curves.** Euler curves are easier to edit by hand but suffer gimbal lock near 90 degrees on the middle axis and wrapping at plus or minus 180. Rotation curves avoid both but are harder to tweak numerically. For limbs that spin or swing through large arcs (weapon twirls, flips), use rotation curves; for subtle head and spine motion, Euler is acceptable.
 6. **Instance counts are not automatically lower.** Curves avoid placeholder Pose chains, but every curve and every key-bearing object is still an instance. A clip keyed on every channel at every frame can be larger as curves than as a KeyframeSequence. Sparse keys are where curves win.
@@ -234,5 +234,10 @@ Rule of thumb: hand-polished hero animation and faces are good fits for curves. 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Snippets - Building and Sampling Clips]] · [[Authoring Clips in Code]] · [[Animation Glossary]] · [[Animation Data from Blender to Roblox]] · [[Easing]] · [[Game Math Start Here]] · [[Animation Start Here]]
+[[Snippets - Building and Sampling Clips]] · [[Authoring Clips in Code]] · [[Animation Glossary]] · [[Animation Data from Blender to Roblox]] · [[Easing]] · Game Math Start Here · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Animator Deep Dive]] · [[Animation Editor Workflow]] · [[AnimationTrack Reference]] · [[Open Questions]] · [[Motor6D Math and CFrame Composition]] · [[Weapon Rig Player]] · [[Moon Animator and Third-Party Tools]] · [[Clip Buffer Format]]
+<!-- related:end -->

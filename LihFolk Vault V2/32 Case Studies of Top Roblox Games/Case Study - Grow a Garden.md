@@ -1,5 +1,5 @@
 ---
-tags: [case-study, top-games, simulator, idle, farming, live-ops, retention, monetization, marketing]
+tags: [case-study, top-games, simulator, idle, farming, live-ops, retention, monetization, marketing, type/case-study, area/design, level/intermediate]
 ---
 
 # Case Study - Grow a Garden
@@ -13,7 +13,7 @@ tags: [case-study, top-games, simulator, idle, farming, live-ops, retention, mon
 > - Are status items visible to other players?
 > - Is anything you sell allowed to harm another player?
 >
-> Cost: TL;DR ~150 tok · whole note ~5.0k tok. Read more: ## 2. Click-through: title, icon and thumbnails · ## 6. What to copy and what not to copy · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.1k tok. Read more: ## 2. Click-through: title, icon and thumbnails · ## 6. What to copy and what not to copy · ## Checklist
 <!-- tldr:end -->
 
 Grow a Garden is the game that showed the whole industry how big a Roblox experience can get. It is a farming idle game: plant seeds on your plot, wait, harvest, sell, buy better seeds. In its first summer it broke the concurrent player record for any video game, then lost almost all of that audience within about a year. Both halves of that story are worth studying. This note is about the lessons you can build, not about copying the game.
@@ -143,7 +143,7 @@ See [[Developer Products and ProcessReceipt]], [[Paid Random Items and Odds Disc
 ### Copy
 
 1. **Show the whole loop in the first two minutes.** Buy, place, wait briefly, collect, upgrade. Make the first wait under a minute and the first upgrade affordable from the first harvest. Build it with [[First-Time User Experience and Onboarding]] and [[Progression and Pacing Design]].
-2. **Offline progress as the return hook.** Save a server timestamp per plot, compute growth on load with `os.time()` differences, and cap it (for example at 8 or 24 hours) so absence is rewarded but not infinitely. Always compute on the server; the client only displays. [[Retention and Return Hooks]], [[Server Authority and Validation]].
+2. **[[Offline Earnings|Offline progress]] as the return hook.** Save a server timestamp per plot, compute growth on load with `os.time()` differences, and cap it (for example at 8 or 24 hours) so absence is rewarded but not infinitely. Always compute on the server; the client only displays. [[Retention and Return Hooks]], [[Server Authority and Validation]].
 3. **Shared restock timers.** A server-wide shop with a visible countdown turns a shop into an event. Generate the stock on the server from a seeded random roll per restock, broadcast it, and show the timer on the HUD. [[HUD Design]], [[RNG Drops and Luck Systems]].
 4. **Weather as a multiplier layer.** Keep the base loop deterministic and add random, server-wide modifiers that multiply value. Publish multipliers in game so players can plan. [[Rarity Ladders and Drop Pacing Math]], [[Drop Tables Rarity and Pity Systems]].
 5. **Live admin moments.** Plan scheduled global events and announce them in advance. Use [[Cross-Server Messaging]] so every server starts at once, and [[Event Calendars and Content Planning]] to space them.
@@ -201,5 +201,10 @@ Store `plantedAt` with `os.time()` when the server accepts the plant request. On
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Case Study - Steal a Brainrot]] · [[Case Study - 99 Nights in the Forest]] · [[Top Games Case Studies Start Here]] · [[Case Study - Dress to Impress]] · [[Core Loop]] · [[Click-Through Rate]]
+[[Case Study - Steal a Brainrot]] · [[Case Study - 99 Nights in the Forest]] · [[Top Games Case Studies Start Here]] · [[Case Study - Dress to Impress]] · [[Core Loop]] · Click-Through Rate
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Case Study - Adopt Me]] · [[Case Study - Blox Fruits]] · [[Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks]] · [[Case Study - Pet Simulator 99]] · [[Case Study - Doors]] · [[Case Study - Brookhaven RP]] · [[Case Study - Fisch]] · [[Case Study - Dead Rails]]
+<!-- related:end -->

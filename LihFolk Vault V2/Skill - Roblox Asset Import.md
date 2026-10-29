@@ -1,5 +1,5 @@
 ---
-tags: [ai, agents, ai-skill, modeling, blender, world-building]
+tags: [ai, agents, ai-skill, modeling, blender, world-building, type/guide, area/modeling, level/intermediate, area/ai]
 ---
 # Skill - Roblox Asset Import
 
@@ -39,5 +39,5 @@ The skeleton rigs were exported and checked by name and size but not yet test-im
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Materials and Surfaces Start Here]] · [[Links - Importing into Studio]] · [[SurfaceAppearance PBR Workflow]] · [[Modeling in Blender for Roblox]] · [[Triangle Budget]] · [[Exporting FBX vs GLB]]
+[[Materials and Surfaces Start Here]] · Links - Importing into Studio · SurfaceAppearance PBR Workflow · Modeling in Blender for Roblox · Triangle Budget · Exporting FBX vs GLB
 <!-- auto-links:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, hub]
+tags: [resources, links, hub, type/hub, area/physics, level/intermediate]
 ---
 # Resource Library - Physics
 
@@ -15,5 +15,5 @@ Part of [[Resource Library Start Here]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Resource Library - Tools and Workflow]] · [[Resource Library - Characters and Animation]] · [[Resource Library - Audio]] · [[Resource Library - Building and World]] · [[Physics Assemblies and Constraints]] · [[Debugging Physics and Network Ownership]]
+[[Resource Library - Tools and Workflow]] · [[Resource Library - Characters and Animation]] · [[Resource Library - Audio]] · [[Resource Library - Building and World]] · [[Physics Assemblies and Constraints]] · Debugging Physics and Network Ownership
 <!-- auto-links:end -->

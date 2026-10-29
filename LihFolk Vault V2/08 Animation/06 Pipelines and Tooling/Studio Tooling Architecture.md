@@ -1,5 +1,5 @@
 ---
-tags: [pipeline, tooling, studio, http, architecture]
+tags: [pipeline, tooling, studio, http, architecture, type/guide, area/animation, level/intermediate, api/Animator, area/studio, api/HttpService, api/StepAnimations]
 ---
 # Studio Tooling Architecture
 
@@ -12,7 +12,7 @@ tags: [pipeline, tooling, studio, http, architecture]
 > - Writes are idempotent, size-checked, compiled, scanned, verified by clone-require, with one safety copy.
 > - Writes derived from a dump verify a fingerprint.
 >
-> Cost: TL;DR ~130 tok · whole note ~4.6k tok. Read more: ## The split · ## Measuring truth: playing a clip on the real Animator · ## Checklist for a new tool
+> Cost: TL;DR ~130 tok · whole note ~4.7k tok. Read more: ## The split · ## Measuring truth: playing a clip on the real Animator · ## Checklist for a new tool
 <!-- tldr:end -->
 
 How to build heavy animation tooling (IK baking, QA scoring, clip compression, archiving) around Roblox Studio without freezing it, corrupting shared scripts, or trusting stale data. Everything here was run in production on one live action game with several hundred attack clips, well over a thousand enemy clips and several hundred weapon-part clips, and most rules exist because the obvious approach broke first.
@@ -239,7 +239,7 @@ Notes:
 
 - **Always report `loaded`.** A result showing about 117 deg of error and `loaded = false` was simply a freshly registered clip whose track still had `Length = 0`. Waiting for `Length > 0` fixed it.
 - `RegisterKeyframeSequence` is used here only to measure in Studio. Its ids did not play in live servers in the reference project (see [[Case Study - Abilities That Only Worked in Studio]]). Never ship it.
-- **Character rigs may use AnimationConstraint, not Motor6D.** Read whichever joint type the rig has; the dummy here uses AnimationConstraint, whose `Transform` the Animator writes.
+- **Character rigs may use [[AnimationConstraint]], not Motor6D.** Read whichever joint type the rig has; the dummy here uses AnimationConstraint, whose `Transform` the Animator writes.
 - **Scale.** On a model-scaled dummy (`Model:GetScale() = 1.6`) the Animator multiplies clip offsets by the scale; on a body-scaled character it does not. Divide back so dumps are in clip units. See [[Scale and Animation]].
 - **Edit-mode limits.** No physics runs in Edit; `StepAnimations` needs `dt > 0` to advance; `Motor6D.Transform` written by your own code does not move parts until something steps them (see [[Weapon Rig Player]] for the manual-step hook).
 
@@ -279,5 +279,10 @@ Numbers are not enough; every bake is also rendered. The reference toolchain ren
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Batch Processing Tools in Studio]] · [[Command Bar and Studio Scripting]] · [[Studio Plugins and Local HTTP Bridges]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[AI Agents and Autonomous Workflows]] · [[Safety Rules for AI Agents in Studio]] · [[Animation Start Here]]
+[[Batch Processing Tools in Studio]] · Command Bar and Studio Scripting · Studio Plugins and Local HTTP Bridges · [[Case Study - Fixing Hundreds of Attack Clips]] · AI Agents and Autonomous Workflows · Safety Rules for AI Agents in Studio · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Command Bar and Studio Scripting]] · [[Studio Plugins and Local HTTP Bridges]] · [[Pipeline - New Animated Weapon]] · [[Lua Keyframe Player]] · [[Case Study - Cutting a Million Instances]] · [[Authoring Clips in Code]] · [[Enemy Import Axis Fix]] · [[Animation Data from Blender to Roblox]] · [[Troubleshooting Table]] · [[Debugging Animation Problems]]
+<!-- related:end -->

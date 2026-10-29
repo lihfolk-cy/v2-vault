@@ -1,5 +1,5 @@
 ---
-tags: [accessibility, input, remapping, keybinds, one-handed, motor, gamepad, touch, contextactionservice, input-action-system]
+tags: [accessibility, input, remapping, keybinds, one-handed, motor, gamepad, touch, contextactionservice, input-action-system, type/guide, area/accessibility]
 ---
 # Input Remapping and One-Handed Play
 
@@ -12,7 +12,7 @@ tags: [accessibility, input, remapping, keybinds, one-handed, motor, gamepad, to
 > - Remap screen with capture, cancel, swap on conflict, reset per action and all.
 > - Reserved keys cannot be bound; settings key always reachable.
 >
-> Cost: TL;DR ~150 tok · whole note ~6.5k tok. Read more: ## 3. Designing the remap model · ## 5. The client remap controller · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~6.6k tok. Read more: ## 3. Designing the remap model · ## 5. The client remap controller · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Input - UserInputService and ContextActionService]] covers the three input APIs and when to use each. [[Gamepad and Console UX]] covers controller menus and selection. [[Accessibility]] lists the motor basics (big targets, no rapid tapping). This note is the motor-accessibility layer on top: a full remapping system with capture, conflict handling, reserved keys, keyboard-layout-aware labels and server-validated saving; hold-versus-toggle and repeat options; one-handed presets for keyboard, gamepad and touch; a movable touch layout; and timing assists.
@@ -456,7 +456,7 @@ Remapping changes **where** inputs are. The next layer changes **how many** and 
 - **Hold to repeat** for repeated actions: clicking, rolling, mining, attacking. A held button repeats at a fixed rate (for example 5 per second). In clicker and simulator genres this is the single most important motor feature; auto-click and auto-roll features are also accessibility features ([[Accessibility]]).
 - **No mashing requirements.** Replace "tap X quickly to escape" with "hold X" or a fixed timer, at least as an option.
 - **Long holds shortened.** If an interaction requires holding for 2 s, allow a setting to make it a tap (with a confirmation for destructive actions).
-- **Combo input buffers.** Accept the next combo input within a generous window (for example 300 to 400 ms) and queue it, rather than requiring frame-precise timing. A buffer helps everyone and changes balance very little.
+- **Combo [[Input Buffering|input buffers]].** Accept the next combo input within a generous window (for example 300 to 400 ms) and queue it, rather than requiring frame-precise timing. A buffer helps everyone and changes balance very little.
 - **Double-tap alternatives.** Dodge on double-tap should also have a dedicated key.
 - **Aim assist and lock-on.** For players who cannot aim precisely, a lock-on toggle or stronger assist is a motor feature. In competitive modes, consider whether assist is fair against mouse players and, if needed, separate matchmaking or limit assist strength.
 - **Simultaneous inputs.** Any action that needs two buttons at once (modifier plus key) should be bindable to a single key.
@@ -512,5 +512,10 @@ See also: [[Accessibility Start Here]], [[Accessibility]], [[Input - UserInputSe
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Input services]] · [[Links - Devices]] · [[Cookbook - UI]] · [[Input Responsiveness Buffering and Coyote Time]] · [[Safe Area]] · [[Input Buffering]]
+[[Links - Input services]] · Links - Devices · Cookbook - UI · Input Responsiveness Buffering and Coyote Time · Safe Area · Input Buffering
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Rebinding Controls with the Input Action System]] · [[Mobile Button Layout Editor]] · [[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Shift-Lock Sprint and Gamepad B for Menus]] · [[AI Pitfalls - UI and Input]] · [[ProximityPrompt Gamepad Keys and the Hidden PlayerList Tab]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [blender, chibi, cute, character, stylized]
+tags: [blender, chibi, cute, character, stylized, type/guide, area/modeling, level/intermediate]
 ---
 # Chibi Character Rules in Practice
 
@@ -12,7 +12,7 @@ tags: [blender, chibi, cute, character, stylized]
 > - Eyes below the middle, big, with iris depth and two catchlights.
 > - Bottom-heavy silhouette; one exaggerated feature (the face).
 >
-> Cost: TL;DR ~160 tok · whole note ~2.1k tok. Read more: ## Version 2: what made the difference · ## Nuances and edge cases · ## Checklist · ## Common mistakes
+> Cost: TL;DR ~160 tok · whole note ~2.2k tok. Read more: ## Version 2: what made the difference · ## Nuances and edge cases · ## Checklist · ## Common mistakes
 <!-- tldr:end -->
 
 ![[p45_chicken_faceted_v1.png]]
@@ -98,5 +98,10 @@ Related: [[Procedural Blender Assets Start Here]], [[Hand-Painted and Stylized T
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Matching a Concept Sheet - Boss Creature Case Study]] · [[Voxel and Blocky Modeling]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Lighting Untextured Art in Roblox]] · [[Shape Language and Silhouette Testing]]
+[[Matching a Concept Sheet - Boss Creature Case Study]] · [[Voxel and Blocky Modeling]] · Faceted Low-Poly - Flat Normals and Facet Size · Voxel Characters - Proportions Joints and Rigging · Lighting Untextured Art in Roblox · Shape Language and Silhouette Testing
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Low-Poly Creature From a Flat Reference Sheet]] · [[Low-Poly Tree Set Worked Example]] · [[Stylised Weapons From a Concept]] · [[Dramatic Showcase Renders in Eevee]] · [[Stylised Shop Stand Worked Example]] · [[Dash VFX Presentation on an R15 Rig]] · [[Mesh VFX Packs Built in Blender]] · [[Blender 5 Python Gotchas for Headless Builds]]
+<!-- related:end -->

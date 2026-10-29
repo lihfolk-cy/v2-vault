@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, economy, game-design, balancing]
+tags: [core-concept, economy, game-design, balancing, type/reference, area/economy, level/beginner, area/design]
 ---
 # Faucets and Sinks
 
@@ -10,7 +10,7 @@ tags: [core-concept, economy, game-design, balancing]
 > - Faucets scale with progress unless you stop them.
 > - Good sinks feel like rewards. Spending on a cosmetic, an upgrade or a gamble the player chose feels good.
 >
-> Cost: TL;DR ~130 tok · whole note ~890 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~960 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 A **faucet** is any way currency or items enter the economy (enemy drops, quest rewards, daily chests, purchases). A **sink** is any way they leave (shop purchases, upgrade costs, repair fees, trading taxes, consumables). The balance between them over time decides whether prices hold, rise or collapse.
@@ -57,5 +57,10 @@ Related concepts: [[Power Curve]], [[Expected Value]], [[Telemetry Events]], [[C
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Economy Design Start Here]] · [[Progression Levels and Unlocks]] · [[Progression and Pacing Design]] · [[Genre Playbook - Simulators]] · [[Core Loops and Session Design]] · [[Live Ops Deep Dive Start Here]] · [[Core Concepts Start Here]]
+[[Economy Design Start Here]] · Progression Levels and Unlocks · Progression and Pacing Design · Genre Playbook - Simulators · Core Loops and Session Design · Live Ops Deep Dive Start Here · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Expected Value]] · [[Pity Timer]] · [[Data Schema Versioning]] · [[Session Length]] · [[Variance]] · [[Onboarding Funnel]] · [[Server Authority]] · [[Event Bus]]
+<!-- related:end -->

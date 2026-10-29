@@ -1,5 +1,5 @@
 ---
-tags: [rigging, accessories, armor, welds, attachments]
+tags: [rigging, accessories, armor, welds, attachments, type/guide, area/animation, level/intermediate, api/RigidConstraint, api/Part0, api/Part1]
 ---
 # Accessories and Armor That Follow Animation
 
@@ -9,7 +9,7 @@ tags: [rigging, accessories, armor, welds, attachments]
 > - Avoid: A rigid plate spanning a joint -> Split at the joint; overlap shapes
 > - Avoid: Gear with mass or collision -> Massless, no collide, query or touch
 >
-> Cost: TL;DR ~110 tok · whole note ~3.4k tok. Read more: ## 1. Joint options for attached things · ## 3. The animation-safe armour fit (reference project) · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~3.5k tok. Read more: ## 1. Joint options for attached things · ## 3. The animation-safe armour fit (reference project) · ## Common mistakes
 <!-- tldr:end -->
 
 Anything rigidly attached to a body part follows that part's animation for free: the Animator moves the parts, and welded pieces ride along. So the real questions are which part to attach to, which joint type to use, how to fit pieces to bodies of different sizes, and how to do it **without touching anything the animation system owns**. This note covers Roblox's accessory mechanism, the joint options, and the animation-safe armour fit one production game shipped (dozens of armour sets on arbitrary player avatars, with no animation changes).
@@ -48,7 +48,7 @@ The user brief was "build every set and piece in Blender, and ensure you can app
 
 ### The rule
 
-> No joint, Motor6D, AnimationConstraint, Humanoid property or scale value is touched. Armour is only **welded** to body parts.
+> No joint, Motor6D, [[AnimationConstraint]], Humanoid property or scale value is touched. Armour is only **welded** to body parts.
 
 Because the skeleton is untouched, every clip, every procedural layer, IK and the ragdoll behave identically with or without armour. This is the main reason to prefer welds over re-rigging a character for gear.
 
@@ -207,5 +207,10 @@ Make sure the socket bone survived import (enable "Keep Zero Influence Bones" if
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Modeling Characters for R15 and Custom Rigs]] · [[UGC Avatar Items and Accessories]] · [[Character and Creature Pipeline]] · [[Bones and Skinned Meshes]] · [[Physics Assemblies and Constraints]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Animation Start Here]]
+[[Modeling Characters for R15 and Custom Rigs]] · UGC Avatar Items and Accessories · Character and Creature Pipeline · [[Bones and Skinned Meshes]] · Physics Assemblies and Constraints · Voxel Characters - Proportions Joints and Rigging · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Rigging in Blender]] · [[Blender Armature and Bone Roll Conventions]] · [[Importing Models and Rigs]] · [[Weapon Design Rig Builder]] · [[Creature Rig Conventions]] · [[Retargeting Animations Between Rigs]] · [[Snippets - Ragdoll]] · [[Motor6D Math and CFrame Composition]]
+<!-- related:end -->

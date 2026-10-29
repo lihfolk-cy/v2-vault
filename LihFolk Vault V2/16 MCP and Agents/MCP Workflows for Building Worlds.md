@@ -1,5 +1,5 @@
 ---
-tags: [mcp, agents, world-building, terrain, workflow]
+tags: [mcp, agents, world-building, terrain, workflow, type/guide, area/ai, level/intermediate, api/Terrain, area/world, api/HttpService]
 ---
 # MCP Workflows for Building Worlds
 
@@ -12,7 +12,7 @@ tags: [mcp, agents, world-building, terrain, workflow]
 > - Snapshot or Version History save done; terrain region copied if terrain will change.
 > - Placement table on disk; reviewed for one zone.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.5k tok. Read more: ## 3. Placing props: grounding and overlaps · ## 4. Terrain through an agent · ## 8. Common mistakes · ## 9. Checklist for an agent world-building pass
+> Cost: TL;DR ~140 tok · whole note ~3.6k tok. Read more: ## 3. Placing props: grounding and overlaps · ## 4. Terrain through an agent · ## 8. Common mistakes · ## 9. Checklist for an agent world-building pass
 <!-- tldr:end -->
 
 An AI agent connected to Studio through MCP can place thousands of props, sculpt terrain, dress zones and restyle a hub in an afternoon. It can also bury half your props under the ground, flood a map with terrain water that stalls joining, mirror a model into a broken mess, or overwrite another person's terrain with one bad write. This note is the working method for world building through MCP: how to structure the work, how to verify it without trusting screenshots, and the engine traps that agents hit.
@@ -222,5 +222,10 @@ See [[Art Budgets - Triangles Draw Calls Memory]] and [[Level of Detail and Mode
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI Agents and Autonomous Workflows]] · [[Roblox Studio Assistant]] · [[Pipeline Design Principles]] · [[Writing Your Own MCP Server]] · [[Raycasts Shapecasts and Spatial Queries]] · [[Safe Changes in a Shared Place]]
+[[AI Agents and Autonomous Workflows]] · Roblox Studio Assistant · Pipeline Design Principles · [[Writing Your Own MCP Server]] · Raycasts Shapecasts and Spatial Queries · Safe Changes in a Shared Place
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Roblox Studio Assistant]] · [[Agent Review Loops and Guardrails in Practice]] · [[Setting Up MCP Clients]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[What Is MCP]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]]
+<!-- related:end -->

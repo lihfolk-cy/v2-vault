@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, security-moderation]
+tags: [resources, links, security-moderation, type/reference, area/security, level/intermediate]
 ---
 # Links - Moderation compliance
 

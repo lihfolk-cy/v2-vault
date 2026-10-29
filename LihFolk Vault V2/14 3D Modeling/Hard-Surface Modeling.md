@@ -1,5 +1,5 @@
 ---
-tags: [modeling, hard-surface, blender, bevel, booleans, normals, props]
+tags: [modeling, hard-surface, blender, bevel, booleans, normals, props, type/guide, area/modeling, level/intermediate]
 ---
 # Hard-Surface Modeling
 
@@ -12,7 +12,7 @@ tags: [modeling, hard-surface, blender, bevel, booleans, normals, props]
 > - Scale applied before bevelling; bevel width 1-6 percent of form size.
 > - Bevel segments 1-2 except silhouette curves.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.4k tok. Read more: ## 2. Workflow A: mid-poly with bevels, step by step · ## 5. Hard-surface shape design · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.6k tok. Read more: ## 2. Workflow A: mid-poly with bevels, step by step · ## 5. Hard-surface shape design · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Hard-surface means man-made, rigid things: armour, weapons, machines, crates, buildings, vehicles, sci-fi panels. The craft is making flat faces look flat, edges look manufactured, and curves look intentional, at a triangle count a phone can draw. Most hard-surface failures in Roblox are not modelling failures but **shading** failures: a good shape with bad normals reads as cheap plastic. This note covers the three workflows that ship, how to choose between them, the shading recipe that makes low-poly look expensive, booleans without the mess, and the measured numbers from one production game's armour, weapons and hub props.
@@ -25,7 +25,7 @@ For general setup and modifier details see [[Blender Workflow for Roblox Creator
 
 | Workflow | How | Triangles | Texture memory | Best for |
 |---|---|---|---|---|
-| **A. Mid-poly with bevels** ("bevel and weighted normals") | Model the low poly directly, bevel the edges with 1-3 segments, fix shading with custom normals | Medium (bevels cost 2-6x on bevelled edges) | None needed; flat colours or a shared trim sheet | Roblox's default case: stylised props, armour, hub pieces, kits |
+| **A. Mid-poly with bevels** ("bevel and [[weighted normals]]") | Model the low poly directly, bevel the edges with 1-3 segments, fix shading with custom normals | Medium (bevels cost 2-6x on bevelled edges) | None needed; flat colours or a shared trim sheet | Roblox's default case: stylised props, armour, hub pieces, kits |
 | **B. High-to-low bake** | Build a subdivided high poly with support loops, a clean low poly, bake normals | Low in game | One normal map per asset (or per atlas) | Hero weapons, detailed sci-fi panels, realistic styles |
 | **C. Boolean-driven** | Block shapes, cut and join with booleans, bevel the result, clean up | Medium; messy topology | None or trim sheet | Fast concepting, mechanical props that do not deform |
 
@@ -253,5 +253,10 @@ The pattern: props that appear once can run 7-10k; anything worn or repeated sta
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Clean Stylised Shading - Weighted and Custom Normals]] · [[Bevels Chamfers and Edge Highlights Without Textures]] · [[Topology and Edge Flow]] · [[Untextured Stylised Modelling Start Here]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Voxel Shading - Baked AO Edges and Lighting]]
+[[Clean Stylised Shading - Weighted and Custom Normals]] · Bevels Chamfers and Edge Highlights Without Textures · [[Topology and Edge Flow]] · Untextured Stylised Modelling Start Here · Faceted Low-Poly - Flat Normals and Facet Size · Voxel Shading - Baked AO Edges and Lighting
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Bevels Chamfers and Edge Highlights Without Textures]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Retopology and Decimation]] · [[UV Unwrapping]] · [[Hand-Painted and Stylized Texturing]] · [[Procedural Model Kits - Lessons]] · [[Organic and Creature Modeling]] · [[Curve-Based Modelling in Blender for Roblox]] · [[Voxel and Blocky Modeling]] · [[Texturing and PBR Baking]]
+<!-- related:end -->

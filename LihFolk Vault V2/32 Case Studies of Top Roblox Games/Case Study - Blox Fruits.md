@@ -1,5 +1,5 @@
 ---
-tags: [case-study, top-games, action-rpg, grinding, rng, trading, live-ops, monetization, thumbnails]
+tags: [case-study, top-games, action-rpg, grinding, rng, trading, live-ops, monetization, thumbnails, type/case-study, area/design, level/intermediate]
 ---
 # Case Study - Blox Fruits
 
@@ -12,7 +12,7 @@ tags: [case-study, top-games, action-rpg, grinding, rng, trading, live-ops, mone
 > - A rare power item chase sits on top of levels.
 > - One shared, timed stock rotation for all servers, with a countdown.
 >
-> Cost: TL;DR ~120 tok · whole note ~4.8k tok. Read more: ## 1. Snapshot · ## 6. What to copy and what not to copy · ## Checklist
+> Cost: TL;DR ~120 tok · whole note ~4.9k tok. Read more: ## 1. Snapshot · ## 6. What to copy and what not to copy · ## Checklist
 <!-- tldr:end -->
 
 Blox Fruits is the long-running king of the Roblox grind RPG: an anime-inspired open sea with islands, quests, bosses and a level cap in the thousands, where the main chase is a randomly appearing "fruit" that grants a power set. It has been live since January 2019, has passed 65 billion visits, and set a platform concurrency record in December 2024 off a single rework update. Study it for three things: how a **level ladder plus a power-item chase** creates years of goals, how **timed, shared stock rotations** create daily habits and trading demand, and how a studio uses **big numbered updates and reworks** to bring millions back at once. Study the risks too: reworking items players paid for is a reliable way to anger your best customers.
@@ -208,5 +208,10 @@ Two factions, three islands with quest givers and one boss each, a level cap of 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Case Study - Brookhaven RP]] · [[Case Study - Dress to Impress]] · [[Case Study - Grow a Garden]] · [[Case Study - Adopt Me]] · [[Power Curve]] · [[Core Loops and Session Design]] · [[Top Games Case Studies Start Here]]
+[[Case Study - Brookhaven RP]] · [[Case Study - Dress to Impress]] · [[Case Study - Grow a Garden]] · [[Case Study - Adopt Me]] · [[Power Curve]] · Core Loops and Session Design · [[Top Games Case Studies Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Case Study - Fisch]] · [[Case Study - Pet Simulator 99]] · [[Case Study - Steal a Brainrot]] · [[Case Study - Doors]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - The Strongest Battlegrounds]] · [[Case Study - Jailbreak]] · [[Case Study - Dead Rails]]
+<!-- related:end -->

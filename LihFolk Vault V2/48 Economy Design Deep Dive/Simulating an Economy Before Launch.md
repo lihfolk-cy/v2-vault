@@ -1,5 +1,5 @@
 ---
-tags: [economy, simulation, python, agent-based, balancing, testing, design, math]
+tags: [economy, simulation, python, agent-based, balancing, testing, design, math, type/guide, area/economy, level/advanced, area/ai]
 ---
 # Simulating an Economy Before Launch
 
@@ -448,5 +448,10 @@ What not to add: combat simulation, physics, social behaviour. They multiply com
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Faucets and Sinks]] · [[Expected Value]] · [[Economies and Currencies]] · [[Progression and Pacing Design]] · [[Progression Levels and Unlocks]] · [[Variance]]
+[[Faucets and Sinks]] · Expected Value · Economies and Currencies · Progression and Pacing Design · Progression Levels and Unlocks · Variance
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Faucets and Sinks]] · [[Expected Value]] · [[Economies and Currencies]] · [[Power Curve]] · [[Progression and Pacing Design]] · [[Progression Levels and Unlocks]]
+<!-- related:end -->

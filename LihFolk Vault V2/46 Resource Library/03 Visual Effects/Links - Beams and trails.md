@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, visual-effects]
+tags: [resources, links, visual-effects, type/reference, area/vfx, level/intermediate, api/Beam]
 ---
 # Links - Beams and trails
 

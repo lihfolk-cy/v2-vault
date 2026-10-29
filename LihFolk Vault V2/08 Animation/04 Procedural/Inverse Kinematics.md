@@ -1,5 +1,5 @@
 ---
-tags: [procedural, ik, arms, legs, math, hub]
+tags: [procedural, ik, arms, legs, math, hub, type/hub, area/animation, level/advanced, api/IKControl, area/math, api/Animator]
 ---
 # Inverse Kinematics
 
@@ -9,7 +9,7 @@ tags: [procedural, ik, arms, legs, math, hub]
 > - Arm fully straight then "pops": target beyond reach; `acos` of a value > 1 -> clamp the distance to `[abs(a-b)+e, a+b-e]`
 > - Hand is exactly on target but the arm looks broken: elbow solved as a ball joint -> solve the elbow as a hinge about its own axis
 >
-> Cost: TL;DR ~150 tok · whole note ~2.9k tok. Read more: ## What makes IK look right (the short version) · ## Seeing what the solver sees · ## Common mistakes
+> Cost: TL;DR ~150 tok · whole note ~3.0k tok. Read more: ## What makes IK look right (the short version) · ## Seeing what the solver sees · ## Common mistakes
 <!-- tldr:end -->
 
 Forward kinematics (FK) answers "given these joint angles, where is the hand?" Inverse kinematics answers the reverse: "where must the shoulder, elbow and wrist turn so the hand lands *here*, facing *that way*?" FK has exactly one answer. IK usually has infinitely many (an arm can reach the same point with the elbow up, down or out), sometimes none (the target is out of reach), and picking the *right* one is where all the craft lives.
@@ -26,7 +26,7 @@ This note is the map of the IK topic. The maths and code live in the linked note
 
 Plus the engine's own component, `IKControl`, which hides the solver behind properties: [[IKControl Reference]].
 
-Rule of thumb: **use analytic IK for limbs, FABRIK/CCD for long chains, optimisation offline, and IKControl when its constraints and smoothing are enough and you want zero maths.**
+Rule of thumb: **use analytic IK for limbs, FABRIK/CCD for long chains, optimisation offline, and [[IKControl]] when its constraints and smoothing are enough and you want zero maths.**
 
 ## Runtime IK vs baked IK
 
@@ -53,7 +53,7 @@ These come from baking a few hundred clips and scoring them. Each has a dedicate
 3. **Respect the wrist.** A wrist can flex about 70, deviate about 30 and twist about 85 degrees comfortably (the project's bake clamps). "A wrist cannot aim a blade": lining the blade up with the forearm needs about 90 degrees of deviation, so the *arm* must aim it.
 4. **Continuity beats the per-frame optimum.** A solver that picks the best pose each frame independently flickers between equally good solutions. Choose the sequence with the least total change (Viterbi / dynamic programming), or at least start each frame from the previous one.
 5. **Clamp, then re-check.** After clamping joints to limits, the end effector misses. Measure the miss and decide whether that is acceptable (the project accepted "IK hand misses up to about 1.3 studs in a few poses").
-6. **Check against the real Animator.** A baked clip plays through Roblox's interpolation, not yours. The project measured the Animator blending rotation vectors (not slerp) between uneven keys; a slerp model was up to 178 degrees off on big turns. Every bake was played on the real Animator and accepted under about 3 degrees. See [[How the Animator Really Behaves]].
+6. **Check against the real Animator.** A baked clip plays through Roblox's interpolation, not yours. The project measured the Animator blending rotation vectors (not [[slerp]]) between uneven keys; a slerp model was up to 178 degrees off on big turns. Every bake was played on the real Animator and accepted under about 3 degrees. See [[How the Animator Really Behaves]].
 
 ## Choosing what to solve
 
@@ -154,5 +154,10 @@ What to look for: the target jumping (a bad input, not a bad solver), the pole p
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animation Glossary]] · [[Animation Quality Standard]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Links - Inverse kinematics]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[AI Animation and Motion from Video]] · [[Animation Start Here]]
+[[Animation Glossary]] · [[Animation Quality Standard]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Links - Inverse kinematics]] · Voxel Characters - Proportions Joints and Rigging · AI Animation and Motion from Video · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Motor6D Math and CFrame Composition]] · [[Spec-Driven Move Authoring]] · [[Troubleshooting Table]] · [[Animation Editor Advanced]] · [[Posing and Silhouettes]] · [[Retargeting Animations Between Rigs]] · [[Ragdolls and Physics-Based Animation]] · [[Springs Damping and Smoothing]]
+<!-- related:end -->

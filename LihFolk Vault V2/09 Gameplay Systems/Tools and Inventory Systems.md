@@ -1,5 +1,5 @@
 ---
-tags: [gameplay, tools, inventory, backpack, equip, items]
+tags: [gameplay, tools, inventory, backpack, equip, items, type/guide, area/gameplay, level/intermediate, api/HttpService, api/Humanoid, api/Tool]
 ---
 # Tools and Inventory Systems
 
@@ -12,7 +12,7 @@ tags: [gameplay, tools, inventory, backpack, equip, items]
 > - Every action validated, rate-limited, idempotent, non-yielding during mutation.
 > - Protection rules shared by every bulk action.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.4k tok. Read more: ## 1. The Tool object · ## 4. Server-authoritative inventory actions · ## 8. Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.5k tok. Read more: ## 1. The Tool object · ## 4. Server-authoritative inventory actions · ## 8. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox has a built-in item model: `Tool` objects that live in a player's `Backpack`, appear in the default hotbar, and are held in the right hand when equipped. It is perfect for a sword-fighting place in 2010 and a poor fit for a game where players own 300 weapons with stats, stars and upgrade levels. Most modern games keep the Tool for **holding** (it gives you equip events, the grip, and compatibility with other systems) and build their own **inventory** as server data. This note covers the Tool API, its traps, and the design of a server-authoritative inventory that scales.
@@ -240,5 +240,10 @@ Trading multiplies every inventory risk. Minimum rules: both players confirm the
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Trading Systems Without Duplication]] · [[Saved Inventory End to End]] · [[Links - Inventory and items]] · [[Pet Hatching and Following End to End]] · [[Schema Migrations - Worked Case Studies]] · [[Procedural Loot and Item Generation]]
+[[Trading Systems Without Duplication]] · Saved Inventory End to End · Links - Inventory and items · Pet Hatching and Following End to End · Schema Migrations - Worked Case Studies · Procedural Loot and Item Generation
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Quests and Objectives]] · [[Character Select and Class Systems with Different Rigs]] · [[Spawning Teams and Rounds]] · [[Characters and Humanoids]] · [[Status Effects Buffs and Stacking Rules]] · [[Downed, Revive and Bleed-Out States]] · [[Hitboxes and Hit Detection]] · [[Custom Character Controllers]]
+<!-- related:end -->

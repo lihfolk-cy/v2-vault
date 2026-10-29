@@ -1,5 +1,5 @@
 ---
-tags: [luau, math, vector3, cframe, random, geometry]
+tags: [luau, math, vector3, cframe, random, geometry, type/guide, area/scripting, level/intermediate, api/Motor6D, area/math, api/Frame]
 ---
 # Math Vectors and CFrames
 
@@ -12,7 +12,7 @@ tags: [luau, math, vector3, cframe, random, geometry]
 > - Every normalization guards against zero length.
 > - Per-frame smoothing uses `dt`.
 >
-> Cost: TL;DR ~160 tok · whole note ~5.2k tok. Read more: ## 4. CFrame fundamentals · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.3k tok. Read more: ## 4. CFrame fundamentals · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Game code is mostly arithmetic on numbers, `Vector3`s and `CFrame`s. This note covers the `math` library (including the newer `lerp`, `map`, `isnan` family and constants), randomness with `Random`, `Vector3` and the native `vector` library, `CFrame` construction, composition and space conversion, the recipes you need every week (look-at, facing angles, projections, frame-rate independent smoothing), and the numeric traps: float precision, NaN, Euler angles and the far-from-origin problem. Character joints and CFrame composition for rigs are covered in depth in [[Motor6D Math and CFrame Composition]].
@@ -326,5 +326,10 @@ The senior trade-off is readability against cost: CFrame composition reads well 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Cookbook - Math CFrame and Vectors]] · [[Game Math Start Here]] · [[Look-At Aim and Head Tracking]] · [[Snippets - Building and Sampling Clips]] · [[Deterministic Simulation]] · [[Procedural Generation Start Here]]
+[[Cookbook - Math CFrame and Vectors]] · Game Math Start Here · Look-At Aim and Head Tracking · Snippets - Building and Sampling Clips · Deterministic Simulation · Procedural Generation Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Look-At Aim and Head Tracking]] · [[Animation Data Hygiene - Euler Wrap Joint Holes and Easing]] · [[Luau Performance Patterns with Benchmarks]] · [[Luau Language Essentials]] · [[Parallel Luau and Actors]] · [[Strings Patterns and Formatting]] · [[Tables Metatables and OOP]]
+<!-- related:end -->

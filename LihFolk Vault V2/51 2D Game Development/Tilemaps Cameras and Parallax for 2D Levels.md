@@ -1,5 +1,5 @@
 ---
-tags: [2d, 2.5d, tilemap, level-design, camera, parallax, chunks, tiled, rendering, luau]
+tags: [2d, 2.5d, tilemap, level-design, camera, parallax, chunks, tiled, rendering, luau, type/guide, area/2d]
 ---
 # Tilemaps Cameras and Parallax for 2D Levels
 
@@ -12,10 +12,10 @@ tags: [2d, 2.5d, tilemap, level-design, camera, parallax, chunks, tiled, renderi
 > - Levels converted at build time to Luau data; versioned; tile ids append-only.
 > - Tiled GID flags cleared; flipped variants pre-baked.
 >
-> Cost: TL;DR ~150 tok · whole note ~7.1k tok. Read more: ## 3. Rendering tiles in a GUI: three strategies · ## 4. Cameras that frame the level · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~150 tok · whole note ~7.2k tok. Read more: ## 3. Rendering tiles in a GUI: three strategies · ## 4. Cameras that frame the level · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
-Most 2D levels are grids. A tilemap stores a level as a few arrays of small numbers, which makes it cheap to save, cheap to collide against, cheap to send to the server, and easy to author in a dedicated editor. The hard parts are elsewhere: drawing thousands of tiles without thousands of property writes, hiding seams between tiles, a camera that frames the level well instead of just following the player, and parallax backgrounds that stay crisp. This note covers all four for the GUI route, and how the same data builds a level in the 2.5D route.
+Most 2D levels are grids. A [[Tilemaps|tilemap]] stores a level as a few arrays of small numbers, which makes it cheap to save, cheap to collide against, cheap to send to the server, and easy to author in a dedicated editor. The hard parts are elsewhere: drawing thousands of tiles without thousands of property writes, hiding seams between tiles, a camera that frames the level well instead of just following the player, and [[parallax]] backgrounds that stay crisp. This note covers all four for the GUI route, and how the same data builds a level in the 2.5D route.
 
 It builds on [[A 2D Engine in a ScreenGui - Game Loop Entities and Rendering]] (loop, renderer, coordinates) and uses the `TileMap` shape from [[2D Collision Physics and Platformer Movement]], so collision and drawing read the same data. Tile art and atlas padding come from [[Pixel Art Pipeline - Aseprite to Roblox Without Blur]]; baking tiles into a single texture uses [[EditableImage for Pixel Buffers and Procedural 2D]]. For the craft of laying out the level itself, see [[Obby and Platforming Level Design]] and [[Level Design for Roblox]].
 
@@ -249,7 +249,7 @@ The most reported tilemap bug in any engine is a hairline gap or a line of the w
 1. **Fractional positions.** A chunk at x = 103.5 is drawn with its edge between pixels. Snap the camera to integers first, then compute chunk positions from the snapped camera, as the code does.
 2. **Non-integer scale.** If the world's `UIScale` is 2.37, a 16 pixel tile is 37.92 screen pixels. Neighbouring tiles round differently, and the gap moves as you scroll. Use an integer scale (the setup in [[Choosing GUI 2D or Locked-Camera 2.5D]] and [[Pixel Art Pipeline - Aseprite to Roblox Without Blur]] explains how to choose it and letterbox the rest).
 3. **Atlas bleeding.** Even with `Pixelated` resampling, sampling at the very edge of a cell can pick up a neighbour. Pad every atlas cell with a 1 pixel extruded border (copy the edge pixels outward) and point `ImageRectOffset` at the inner tile, as the `padding` field does.
-4. **Downsampled textures.** If the engine serves a lower resolution version of the atlas, cell boundaries no longer land on whole pixels. Keep atlases at or below 1024 by 1024 and uploaded at native size (the pixel art note covers why).
+4. **Downsampled textures.** If the engine serves a lower resolution version of the atlas, cell boundaries no longer land on whole pixels. Keep atlases at or below 1024 by 1024 and uploaded at native size (the [[pixel art]] note covers why).
 
 If a seam appears only on some devices, it is almost always cause 2.
 
@@ -541,5 +541,10 @@ Each rectangle becomes a part sized `w * tileStuds` by `h * tileStuds` on the ga
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Voxel Scale Grids and Stud Alignment]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Voxel Props Environments and Modular Tiles]] · [[Infinite and Streamed Worlds]] · [[Textures Decals and Texture Memory]] · [[Thumbnail Contrast]]
+[[Voxel Scale Grids and Stud Alignment]] · Meshing Voxels for Roblox - Greedy Meshing and Export · Voxel Props Environments and Modular Tiles · Infinite and Streamed Worlds · Textures Decals and Texture Memory · Thumbnail Contrast
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Textures Decals and Texture Memory]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Voxel Props Environments and Modular Tiles]] · [[Modular Environment Kits]] · [[Dungeon and Room Generation]]
+<!-- related:end -->

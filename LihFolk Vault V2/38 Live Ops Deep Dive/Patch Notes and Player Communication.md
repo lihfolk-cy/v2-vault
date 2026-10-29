@@ -1,5 +1,5 @@
 ---
-tags: [live-ops, communication, patch-notes, community, updates, trust, luau]
+tags: [live-ops, communication, patch-notes, community, updates, trust, luau, type/guide, area/liveops, level/advanced, api/ConfigService, area/scripting]
 ---
 # Patch Notes and Player Communication
 
@@ -12,7 +12,7 @@ tags: [live-ops, communication, patch-notes, community, updates, trust, luau]
 > - Panel shows once per version, skips brand-new players, never blocks play
 > - Notes stored as versioned config data, with translations if the game is localised
 >
-> Cost: TL;DR ~160 tok · whole note ~4.3k tok. Read more: ## 3. Hard messages · ## 4. An in-game What's New panel that respects players · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.4k tok. Read more: ## 3. Hard messages · ## 4. An in-game What's New panel that respects players · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Players do not experience your update; they experience what they notice of it. A balance change nobody explained feels like a stealth nerf. A fixed bug nobody mentioned is invisible. An outage with no message feels like the game died. Patch notes and the other player-facing messages around an update are how a live game turns changes into trust, and on Roblox the channels are narrower and stricter than on other platforms: 60-character announcements, personalised-only notifications, and limits on pointing players off-platform.
@@ -279,5 +279,10 @@ Notes are one direction. Players will tell you what they noticed through reviews
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Event Calendars and Content Planning]] · [[Experience Notifications and Return Prompts]] · [[Feature Flags]] · [[Server Shutdowns Soft Updates and Migration]] · [[Discord Servers for Roblox Games]] · [[Live Content Pipeline]]
+[[Event Calendars and Content Planning]] · [[Experience Notifications and Return Prompts]] · Feature Flags · Server Shutdowns Soft Updates and Migration · Discord Servers for Roblox Games · Live Content Pipeline
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Server Shutdowns Soft Updates and Migration]] · [[Discord Servers for Roblox Games]] · [[Limited-Time Offers - Design and Ethics]] · [[Feature Flags]] · [[Battle Pass and Season Design]] · [[Roadmaps Milestones and Scope Control]]
+<!-- related:end -->

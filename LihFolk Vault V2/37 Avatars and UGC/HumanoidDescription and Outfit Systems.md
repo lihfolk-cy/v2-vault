@@ -1,5 +1,5 @@
 ---
-tags: [avatars, humanoiddescription, outfits, characters, data, npc, luau]
+tags: [avatars, humanoiddescription, outfits, characters, data, npc, luau, type/guide, area/avatars, level/intermediate, api/HumanoidDescription, area/data]
 ---
 # HumanoidDescription and Outfit Systems
 
@@ -12,7 +12,7 @@ tags: [avatars, humanoiddescription, outfits, characters, data, npc, luau]
 > - Edits start from `GetAppliedDescription()`.
 > - Reset variant used after other systems touched the character.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.8k tok. Read more: ## 1. The mental model: target state plus a cache · ## 5. Storing outfits as data · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.9k tok. Read more: ## 1. The mental model: target state plus a cache · ## 5. Storing outfits as data · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 `HumanoidDescription` is the declarative recipe for how a Humanoid character looks: body part ids, colours, scales, accessories, classic clothing, animations and emotes. You build a description, apply it, and the engine works out what to add, remove and resize. Almost every avatar feature in a game (uniforms, saved outfits, NPC crowds, morphs, disguises, loading screens with the player's avatar) is a description operation underneath. This note covers the mechanics the API reference does not spell out: the cached "applied" description, diff versus reset, merging a game uniform over a player's own look, storing outfits as data, and building many NPCs cheaply.
@@ -296,5 +296,10 @@ For "statues of top players" or "your friend's avatar", use `GetHumanoidDescript
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Layered Clothing Cages and Animation]] · [[Links - Avatars and UGC]] · [[Links - Custom characters and avatars]] · [[Layered Clothing Creation Workflow]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Emotes and Social Animation]]
+[[Layered Clothing Cages and Animation]] · Links - Avatars and UGC · Links - Custom characters and avatars · [[Layered Clothing Creation Workflow]] · Modeling Characters for R15 and Custom Rigs · Emotes and Social Animation
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Character Select and Class Systems with Different Rigs]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Emotes and Social Animation]] · [[R15 Rig Anatomy and Attachments]] · [[UGC Pricing Limiteds and Marketplace Rules]] · [[Character and Creature Pipeline]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [studio, plugins, creator-store, publishing, monetization, versioning]
+tags: [studio, plugins, creator-store, publishing, monetization, versioning, type/guide, area/studio, level/intermediate, area/monetization]
 ---
 # Publishing Selling and Updating Plugins
 
@@ -12,7 +12,7 @@ tags: [studio, plugins, creator-store, publishing, monetization, versioning]
 > - For selling: Stripe seller account approved, 2-step verification on, individually owned asset.
 > - Price within $4.99 to $249.99; store page with video, images in both themes, changelog.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.7k tok. Read more: ## 2. Selling: who can, and how money moves · ## 4. Versioning: what "a version" means for a plugin · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.8k tok. Read more: ## 2. Selling: who can, and how money moves · ## 4. Versioning: what "a version" means for a plugin · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Shipping a plugin is the start of a maintenance relationship. Once other people install it, every update you publish lands in their Studio, in their places, often automatically, and anything your plugin ever wrote into their places (attributes, tags, helper folders, settings keys) becomes a format you must keep reading forever. If you sell it, you also take on payouts through a third party, refunds, chargebacks and moderation risk.
@@ -238,5 +238,10 @@ With Rojo and CI, the build and the version bump can be scripted; publishing a p
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Business and Careers Start Here]] · [[Hiring Freelancers and Revenue Shares]] · [[Commerce and Physical Goods]] · [[Subscriptions and Premium Payouts]] · [[Links - Plugins and custom tools]] · [[Monetization Overview]]
+[[Business and Careers Start Here]] · Hiring Freelancers and Revenue Shares · Commerce and Physical Goods · Subscriptions and Premium Payouts · Links - Plugins and custom tools · Monetization Overview
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Hiring Freelancers and Revenue Shares]] · [[Discovery and Monetization Changes 2025-2026]] · [[Groups Roles and Permissions for Studios]] · [[Plugin UI with DockWidgets]] · [[Undo and ChangeHistoryService Done Right]] · [[Selection Editing and Bulk Tools]]
+<!-- related:end -->

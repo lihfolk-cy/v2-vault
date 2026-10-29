@@ -1,5 +1,5 @@
 ---
-tags: [narrative, quests, writing, hooks, objectives, retention, ui-text]
+tags: [narrative, quests, writing, hooks, objectives, retention, ui-text, type/guide, area/narrative, level/intermediate, area/ui]
 ---
 # Quest Writing and Hooks
 
@@ -12,7 +12,7 @@ tags: [narrative, quests, writing, hooks, objectives, retention, ui-text]
 > - Hook names one primary motivation and matches the task.
 > - Objective line follows verb, count, target, place, under 40 characters.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.9k tok. Read more: ## 3. Objective lines · ## 4. The three-beat quest · ## 11. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~140 tok · whole note ~5.0k tok. Read more: ## 3. Objective lines · ## 4. The three-beat quest · ## 11. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 A quest is a mechanic (a counter, a condition, a reward) wrapped in words. The machinery is covered in [[Quests and Objectives]] and built in full in [[Quest Chain System End to End]]. This note is about the words: the hook that makes a player accept, the objective line that tells them exactly what to do, the tracker text they glance at mid-fight, the turn-in that pays off, and the cliffhanger that brings them back tomorrow. Quest text is the most-read narrative text in most Roblox games, because players need it to play. That makes it the best place to put story and the worst place to put a wall of text.
@@ -305,5 +305,10 @@ Word count went from 62 to 49 across all pieces, the objective names the exact e
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Quests and progression]] · [[Core Loop]] · [[Teaching Through Level Design]] · [[Links - Menus, HUDs, inventories and shops]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[Experience Notifications and Return Prompts]]
+[[Links - Quests and progression]] · Core Loop · Teaching Through Level Design · Links - Menus, HUDs, inventories and shops · Menu Archetypes - Shop Settings Codes Rewards · Experience Notifications and Return Prompts
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Story State Flags and Chapter Saves]] · [[Update Cadence and Hype Cycles]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[Multiplayer Cutscene Sync - Server Clock, Late Joiners and Skip Votes]] · [[Puzzle Dependency Charts and Hint Systems]]
+<!-- related:end -->

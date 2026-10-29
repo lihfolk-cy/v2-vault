@@ -1,5 +1,5 @@
 ---
-tags: [luau, task, coroutines, scheduler, yielding, threads]
+tags: [luau, task, coroutines, scheduler, yielding, threads, type/guide, area/scripting, level/intermediate, api/Heartbeat]
 ---
 # Task Library Coroutines and Yielding
 
@@ -12,7 +12,7 @@ tags: [luau, task, coroutines, scheduler, yielding, threads]
 > - Every loop is bounded or yields each iteration.
 > - Per-frame work uses the correct RunService event and is disconnectable.
 >
-> Cost: TL;DR ~160 tok · whole note ~3.7k tok. Read more: ## 3. Coroutines · ## 5. Loops that run forever · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.8k tok. Read more: ## 3. Coroutines · ## 5. Loops that run forever · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox runs all Luau on one main thread per VM, cooperatively. A script runs until it **yields** (waits for something) or returns; then the engine's task scheduler resumes some other thread. There is no preemption: a loop that never yields freezes the whole client or server. The `task` library is how you talk to the scheduler; the `coroutine` library is the lower-level primitive underneath. This note explains both, how they interact with the frame, the deprecated globals they replace, how to cancel work, and the freeze and leak failure modes.
@@ -290,5 +290,10 @@ Each connected handler runs in its own thread, so one handler yielding does not 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Custom Schedulers and Coroutine Patterns]] · [[Building a Signal Library]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Links - Coroutines, task library and async]] · [[Debugging Race Conditions and Yield Order]] · [[Reading Luau Errors and Stack Traces]]
+[[Custom Schedulers and Coroutine Patterns]] · Building a Signal Library · [[Error Handling - pcall xpcall and Promise Patterns]] · Links - Coroutines, task library and async · Debugging Race Conditions and Yield Order · Reading Luau Errors and Stack Traces
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Building a Signal Library]] · [[Debugging Race Conditions and Yield Order]] · [[Script Types and Run Context]] · [[Luau Language Essentials]] · [[Tables Metatables and OOP]] · [[Module Scripts and Requiring]] · [[Luau Performance and Native Codegen]] · [[Luau Performance Patterns with Benchmarks]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [2d, 2.5d, side-scroller, camera, movement, platformer, physics, constraints, input, luau]
+tags: [2d, 2.5d, side-scroller, camera, movement, platformer, physics, constraints, input, luau, type/guide, area/2d]
 ---
 # Side-Scroller in 3D - Locking Camera and Movement to a Plane
 
@@ -12,12 +12,12 @@ tags: [2d, 2.5d, side-scroller, camera, movement, platformer, physics, constrain
 > - Camera is `Scriptable`, re-asserted after respawn, updated at `RenderPriority.Camera`, and sets `Focus`.
 > - FOV chosen deliberately; distance computed from the visible height; a 4:3 safe column respected.
 >
-> Cost: TL;DR ~230 tok · whole note ~7.4k tok. Read more: ## 2. The camera lock · ## 5. Complete setup · ## 9. Common mistakes and how to spot them · ## 10. Checklist
+> Cost: TL;DR ~230 tok · whole note ~7.5k tok. Read more: ## 2. The camera lock · ## 5. Complete setup · ## 9. Common mistakes and how to spot them · ## 10. Checklist
 <!-- tldr:end -->
 
 A 2.5D side-scroller is a normal Roblox 3D place in which the camera looks at the world from the side and every moving thing is kept on one flat slice of the world. You keep almost everything the engine gives you for free: Humanoid physics and animation, avatars, lighting, particles, sound, streaming, replication, and Studio's level editing tools. You give up the guarantee that "nothing moves in depth", and the whole craft of this style is putting that guarantee back. This note covers the three locks you need (camera, input, body), how to choose each one, how they fail, and a complete working setup.
 
-If you have not yet decided between a GUI-rendered 2D game and this approach, read [[Choosing GUI 2D or Locked-Camera 2.5D]] first. For a pure GUI playfield see [[A 2D Engine in a ScreenGui - Game Loop Entities and Rendering]]; for tile layouts and parallax in both styles see [[Tilemaps Cameras and Parallax for 2D Levels]].
+If you have not yet decided between a GUI-rendered 2D game and this approach, read [[Choosing GUI 2D or Locked-Camera 2.5D]] first. For a pure GUI playfield see [[A 2D Engine in a ScreenGui - Game Loop Entities and Rendering]]; for tile layouts and [[parallax]] in both styles see [[Tilemaps Cameras and Parallax for 2D Levels]].
 
 ---
 
@@ -477,5 +477,10 @@ The networking side (who owns what, how enemies replicate) is the same as any Ro
 
 ## Connected notes
 <!-- auto-links:start -->
-[[2D Game Development Start Here]] · [[Cameras and Cutscenes]] · [[Cookbook - Math CFrame and Vectors]] · [[Modelling to the Roblox Camera and Player Scale]] · [[Input Buffering]] · [[Dot and Cross Products in Gameplay]]
+[[2D Game Development Start Here]] · [[Cameras and Cutscenes]] · Cookbook - Math CFrame and Vectors · Modelling to the Roblox Camera and Player Scale · Input Buffering · Dot and Cross Products in Gameplay
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Chase Cameras and Speed Effects for Vehicles]] · [[Layering Camera Feedback on the Default Camera]] · [[Modelling to the Roblox Camera and Player Scale]] · [[Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run]] · [[Sprite Sheets and Frame Animation with ImageRectOffset]] · [[EditableImage for Pixel Buffers and Procedural 2D]]
+<!-- related:end -->

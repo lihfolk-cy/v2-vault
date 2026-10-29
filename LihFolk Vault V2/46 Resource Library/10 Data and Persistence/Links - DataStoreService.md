@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, data-persistence]
+tags: [resources, links, data-persistence, type/reference, area/data, level/intermediate, api/DataStoreService, api/PlayerRemoving, api/UpdateAsync]
 ---
 # Links - DataStoreService
 

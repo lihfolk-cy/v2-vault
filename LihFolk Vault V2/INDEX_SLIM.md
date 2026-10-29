@@ -5,462 +5,549 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 
 ## 01 Studio and Workflow
 
-- Command Bar and Studio Scripting | 01 Studio and Workflow/Command Bar and Studio Scripting.md | studio, command-bar, tooling, edit-mode, workflow, gotchas | ~3.9k tok
-- Creator Store and Toolbox Safety | 01 Studio and Workflow/Creator Store and Toolbox Safety.md | studio, toolbox, creator-store, security, backdoors, assets | ~3.2k tok
-- Explorer Properties and Selection | 01 Studio and Workflow/Explorer Properties and Selection.md | studio, explorer, properties, selection, attributes, workflow | ~3.9k tok
-- External Tooling - Rojo Wally Selene StyLua | 01 Studio and Workflow/External Tooling - Rojo Wally Selene StyLua.md | tooling, rojo, wally, selene, stylua, luau-lsp, darklua, script-sync | ~4.1k tok
-- Git and Source Control for Roblox | 01 Studio and Workflow/Git and Source Control for Roblox.md | git, source-control, ci, github-actions, open-cloud, workflow | ~3.8k tok
+- Command Bar and Studio Scripting | 01 Studio and Workflow/Command Bar and Studio Scripting.md | studio, command-bar, tooling, edit-mode, workflow, gotchas | ~4.1k tok
+- Creator Store and Toolbox Safety | 01 Studio and Workflow/Creator Store and Toolbox Safety.md | studio, toolbox, creator-store, security, backdoors, assets | ~3.3k tok
+- Explorer Properties and Selection | 01 Studio and Workflow/Explorer Properties and Selection.md | studio, explorer, properties, selection, attributes, workflow | ~4.1k tok
+- External Tooling - Rojo Wally Selene StyLua | 01 Studio and Workflow/External Tooling - Rojo Wally Selene StyLua.md | tooling, rojo, wally, selene, stylua, luau-lsp, darklua, script-sync | ~4.2k tok
+- Git and Source Control for Roblox | 01 Studio and Workflow/Git and Source Control for Roblox.md | git, source-control, ci, github-actions, open-cloud, workflow | ~3.9k tok
 - Packages and Asset Reuse | 01 Studio and Workflow/Packages and Asset Reuse.md | studio, packages, assets, reuse, workflow, versioning | ~3.4k tok
-- Places Universes and Experience Settings | 01 Studio and Workflow/Places Universes and Experience Settings.md | studio, places, universe, settings, environments, publishing | ~3.3k tok
-- Plugins - Using and Writing | 01 Studio and Workflow/Plugins - Using and Writing.md | studio, plugins, tooling, security, workflow | ~4.7k tok
+- Places Universes and Experience Settings | 01 Studio and Workflow/Places Universes and Experience Settings.md | studio, places, universe, settings, environments, publishing | ~3.4k tok
+- Plugins - Using and Writing | 01 Studio and Workflow/Plugins - Using and Writing.md | studio, plugins, tooling, security, workflow | ~4.8k tok
 - Studio Assistant and AI Tools | 01 Studio and Workflow/Studio Assistant and AI Tools.md | studio, assistant, ai, mcp, code-assist, generation, workflow | ~3.5k tok
-- Studio Interface Tour | 01 Studio and Workflow/Studio Interface Tour.md | studio, interface, workflow, beginner, layout | ~4.5k tok
-- Studio Settings and Shortcuts | 01 Studio and Workflow/Studio Settings and Shortcuts.md | studio, settings, shortcuts, workflow, productivity | ~3.3k tok
-- Team Create and Collaboration | 01 Studio and Workflow/Team Create and Collaboration.md | studio, team-create, collaboration, drafts, workflow, shared-place | ~3.4k tok
-- Testing Modes - Play Run and Multi-Client | 01 Studio and Workflow/Testing Modes - Play Run and Multi-Client.md | studio, testing, playtest, multiplayer, emulation, workflow | ~3.8k tok
-- Version History and Backups | 01 Studio and Workflow/Version History and Backups.md | studio, version-history, backups, recovery, rbxm, workflow | ~3.2k tok
+- Studio Interface Tour | 01 Studio and Workflow/Studio Interface Tour.md | studio, interface, workflow, beginner, layout | ~4.6k tok
+- Studio Settings and Shortcuts | 01 Studio and Workflow/Studio Settings and Shortcuts.md | studio, settings, shortcuts, workflow, productivity | ~3.4k tok
+- Team Create and Collaboration | 01 Studio and Workflow/Team Create and Collaboration.md | studio, team-create, collaboration, drafts, workflow, shared-place | ~3.5k tok
+- Testing Modes - Play Run and Multi-Client | 01 Studio and Workflow/Testing Modes - Play Run and Multi-Client.md | studio, testing, playtest, multiplayer, emulation, workflow | ~3.9k tok
+- Version History and Backups | 01 Studio and Workflow/Version History and Backups.md | studio, version-history, backups, recovery, rbxm, workflow | ~3.4k tok
 
 ## 02 Luau Scripting
 
-- Buffers and Binary Data | 02 Luau Scripting/Buffers and Binary Data.md | luau, buffer, binary, serialization, networking, compression | ~4.8k tok
-- CollectionService Patterns | 02 Luau Scripting/CollectionService Patterns.md | luau, collectionservice, tags, architecture, patterns | ~5.0k tok
-- Error Handling - pcall xpcall and Promise Patterns | 02 Luau Scripting/Error Handling - pcall xpcall and Promise Patterns.md | luau, errors, pcall, xpcall, promises, async, reliability | ~5.5k tok
-- Error Handling and Retries | 02 Luau Scripting/Error Handling and Retries.md | luau, errors, pcall, retries, reliability, logging | ~3.9k tok
-- Events Signals and Connections | 02 Luau Scripting/Events Signals and Connections.md | luau, events, signals, connections, deferred-events, memory | ~5.4k tok
-- Functions Closures and Upvalues | 02 Luau Scripting/Functions Closures and Upvalues.md | luau, functions, closures, upvalues, scope | ~4.9k tok
-- Instances Attributes and Tags | 02 Luau Scripting/Instances Attributes and Tags.md | luau, instances, attributes, tags, datamodel, replication | ~4.0k tok
-- Luau Language Essentials | 02 Luau Scripting/Luau Language Essentials.md | luau, scripting, language, fundamentals, syntax | ~4.1k tok
-- Luau Performance Patterns with Benchmarks | 02 Luau Scripting/Luau Performance Patterns with Benchmarks.md | luau, performance, benchmarking, optimization, profiling, gc | ~5.5k tok
-- Luau Performance and Native Codegen | 02 Luau Scripting/Luau Performance and Native Codegen.md | luau, performance, native-codegen, optimization, profiling | ~4.0k tok
-- Luau Type System and Strict Mode | 02 Luau Scripting/Luau Type System and Strict Mode.md | luau, types, strict-mode, type-checking, generics | ~5.2k tok
-- Math Vectors and CFrames | 02 Luau Scripting/Math Vectors and CFrames.md | luau, math, vector3, cframe, random, geometry | ~5.2k tok
-- Metatables and OOP - When and When Not | 02 Luau Scripting/Metatables and OOP - When and When Not.md | luau, metatables, oop, architecture, composition, typing | ~4.9k tok
-- Module Scripts and Requiring | 02 Luau Scripting/Module Scripts and Requiring.md | luau, modulescript, require, architecture, caching | ~3.5k tok
-- Parallel Luau and Actors | 02 Luau Scripting/Parallel Luau and Actors.md | luau, parallel, actors, multithreading, sharedtable, performance | ~3.7k tok
-- Script Types and Run Context | 02 Luau Scripting/Script Types and Run Context.md | luau, scripts, runcontext, localscript, client-server, containers | ~3.8k tok
-- Strings Patterns and Formatting | 02 Luau Scripting/Strings Patterns and Formatting.md | luau, strings, patterns, formatting, utf8, text | ~5.0k tok
-- Tables Metatables and OOP | 02 Luau Scripting/Tables Metatables and OOP.md | luau, tables, metatables, oop, data-structures | ~4.6k tok
-- Task Library Coroutines and Yielding | 02 Luau Scripting/Task Library Coroutines and Yielding.md | luau, task, coroutines, scheduler, yielding, threads | ~3.7k tok
+- Buffers and Binary Data | 02 Luau Scripting/Buffers and Binary Data.md | luau, buffer, binary, serialization, networking, compression | ~4.9k tok
+- CollectionService Patterns | 02 Luau Scripting/CollectionService Patterns.md | luau, collectionservice, tags, architecture, patterns | ~5.1k tok
+- Error Handling - pcall xpcall and Promise Patterns | 02 Luau Scripting/Error Handling - pcall xpcall and Promise Patterns.md | luau, errors, pcall, xpcall, promises, async, reliability | ~5.6k tok
+- Error Handling and Retries | 02 Luau Scripting/Error Handling and Retries.md | luau, errors, pcall, retries, reliability, logging | ~4.0k tok
+- Events Signals and Connections | 02 Luau Scripting/Events Signals and Connections.md | luau, events, signals, connections, deferred-events, memory | ~5.5k tok
+- Functions Closures and Upvalues | 02 Luau Scripting/Functions Closures and Upvalues.md | luau, functions, closures, upvalues, scope | ~5.0k tok
+- Instances Attributes and Tags | 02 Luau Scripting/Instances Attributes and Tags.md | luau, instances, attributes, tags, datamodel, replication | ~4.1k tok
+- Luau Language Essentials | 02 Luau Scripting/Luau Language Essentials.md | luau, scripting, language, fundamentals, syntax | ~4.2k tok
+- Luau Performance Patterns with Benchmarks | 02 Luau Scripting/Luau Performance Patterns with Benchmarks.md | luau, performance, benchmarking, optimization, profiling, gc | ~5.6k tok
+- Luau Performance and Native Codegen | 02 Luau Scripting/Luau Performance and Native Codegen.md | luau, performance, native-codegen, optimization, profiling | ~4.1k tok
+- Luau Type System and Strict Mode | 02 Luau Scripting/Luau Type System and Strict Mode.md | luau, types, strict-mode, type-checking, generics | ~5.3k tok
+- Math Vectors and CFrames | 02 Luau Scripting/Math Vectors and CFrames.md | luau, math, vector3, cframe, random, geometry | ~5.3k tok
+- Metatables and OOP - When and When Not | 02 Luau Scripting/Metatables and OOP - When and When Not.md | luau, metatables, oop, architecture, composition, typing | ~5.0k tok
+- Module Scripts and Requiring | 02 Luau Scripting/Module Scripts and Requiring.md | luau, modulescript, require, architecture, caching | ~3.6k tok
+- Parallel Luau and Actors | 02 Luau Scripting/Parallel Luau and Actors.md | luau, parallel, actors, multithreading, sharedtable, performance | ~3.9k tok
+- Script Types and Run Context | 02 Luau Scripting/Script Types and Run Context.md | luau, scripts, runcontext, localscript, client-server, containers | ~3.9k tok
+- Strings Patterns and Formatting | 02 Luau Scripting/Strings Patterns and Formatting.md | luau, strings, patterns, formatting, utf8, text | ~5.1k tok
+- Tables Metatables and OOP | 02 Luau Scripting/Tables Metatables and OOP.md | luau, tables, metatables, oop, data-structures | ~4.7k tok
+- Task Library Coroutines and Yielding | 02 Luau Scripting/Task Library Coroutines and Yielding.md | luau, task, coroutines, scheduler, yielding, threads | ~3.8k tok
 
 ## 03 Architecture and Networking
 
-- Client Prediction and Reconciliation for Combat | 03 Architecture and Networking/Client Prediction and Reconciliation for Combat.md | networking, combat, prediction, latency, reconciliation, server-authority | ~5.5k tok
-- Client-Server Model | 03 Architecture and Networking/Client-Server Model.md | architecture, networking, client-server, fundamentals, security | ~4.9k tok
-- Cross-Server Messaging | 03 Architecture and Networking/Cross-Server Messaging.md | architecture, networking, messagingservice, live-ops, cross-server | ~4.5k tok
-- Entity Component Systems | 03 Architecture and Networking/Entity Component Systems.md | architecture, ecs, data-oriented, performance, npc | ~4.7k tok
-- Exploits and Anti-Cheat | 03 Architecture and Networking/Exploits and Anti-Cheat.md | security, anti-cheat, exploits, threat-model, movement | ~5.0k tok
-- Frameworks - Knit Matter and Others | 03 Architecture and Networking/Frameworks - Knit Matter and Others.md | architecture, frameworks, libraries, knit, ecs, networking | ~3.5k tok
-- Instance Streaming | 03 Architecture and Networking/Instance Streaming.md | architecture, networking, streaming, performance, memory | ~4.5k tok
-- Interest Management and Per-Player Replication | 03 Architecture and Networking/Interest Management and Per-Player Replication.md | networking, replication, streaming, interest-management, bandwidth, privacy | ~5.2k tok
-- Network Ownership | 03 Architecture and Networking/Network Ownership.md | architecture, networking, physics, ownership, security | ~4.2k tok
-- Project Structure and Bootstrapping | 03 Architecture and Networking/Project Structure and Bootstrapping.md | architecture, project-structure, bootstrapping, modules, workflow | ~5.1k tok
-- Rate Limiting and Abuse Prevention | 03 Architecture and Networking/Rate Limiting and Abuse Prevention.md | security, rate-limiting, networking, performance, abuse | ~4.4k tok
-- Remote Abuse Patterns and Rate Limiting in Practice | 03 Architecture and Networking/Remote Abuse Patterns and Rate Limiting in Practice.md | security, remotes, rate-limiting, validation, exploits, networking | ~5.2k tok
-- RemoteEvents RemoteFunctions and Unreliable Remotes | 03 Architecture and Networking/RemoteEvents RemoteFunctions and Unreliable Remotes.md | architecture, networking, remotes, security, performance | ~5.5k tok
-- Replication Rules | 03 Architecture and Networking/Replication Rules.md | architecture, networking, replication, attributes, fundamentals | ~4.4k tok
-- Server Authority and Validation | 03 Architecture and Networking/Server Authority and Validation.md | architecture, security, validation, server-authority, combat | ~5.0k tok
-- Server Lifecycle and Shutdown | 03 Architecture and Networking/Server Lifecycle and Shutdown.md | architecture, server, lifecycle, shutdown, bindtoclose, live-ops | ~3.8k tok
-- Teleporting and Multi-Place Games | 03 Architecture and Networking/Teleporting and Multi-Place Games.md | architecture, networking, teleport, multi-place, security, matchmaking | ~4.8k tok
+- Client Prediction and Reconciliation for Combat | 03 Architecture and Networking/Client Prediction and Reconciliation for Combat.md | networking, combat, prediction, latency, reconciliation, server-authority | ~5.6k tok
+- Client-Server Model | 03 Architecture and Networking/Client-Server Model.md | architecture, networking, client-server, fundamentals, security | ~5.0k tok
+- Cross-Server Messaging | 03 Architecture and Networking/Cross-Server Messaging.md | architecture, networking, messagingservice, live-ops, cross-server | ~4.6k tok
+- Entity Component Systems | 03 Architecture and Networking/Entity Component Systems.md | architecture, ecs, data-oriented, performance, npc | ~4.8k tok
+- Exploits and Anti-Cheat | 03 Architecture and Networking/Exploits and Anti-Cheat.md | security, anti-cheat, exploits, threat-model, movement | ~5.1k tok
+- Frameworks - Knit Matter and Others | 03 Architecture and Networking/Frameworks - Knit Matter and Others.md | architecture, frameworks, libraries, knit, ecs, networking | ~3.6k tok
+- Instance Streaming | 03 Architecture and Networking/Instance Streaming.md | architecture, networking, streaming, performance, memory | ~4.6k tok
+- Interest Management and Per-Player Replication | 03 Architecture and Networking/Interest Management and Per-Player Replication.md | networking, replication, streaming, interest-management, bandwidth, privacy | ~5.3k tok
+- Network Ownership | 03 Architecture and Networking/Network Ownership.md | architecture, networking, physics, ownership, security | ~4.3k tok
+- Project Structure and Bootstrapping | 03 Architecture and Networking/Project Structure and Bootstrapping.md | architecture, project-structure, bootstrapping, modules, workflow | ~5.2k tok
+- Rate Limiting and Abuse Prevention | 03 Architecture and Networking/Rate Limiting and Abuse Prevention.md | security, rate-limiting, networking, performance, abuse | ~4.6k tok
+- Remote Abuse Patterns and Rate Limiting in Practice | 03 Architecture and Networking/Remote Abuse Patterns and Rate Limiting in Practice.md | security, remotes, rate-limiting, validation, exploits, networking | ~5.3k tok
+- RemoteEvents RemoteFunctions and Unreliable Remotes | 03 Architecture and Networking/RemoteEvents RemoteFunctions and Unreliable Remotes.md | architecture, networking, remotes, security, performance | ~5.6k tok
+- Replication Rules | 03 Architecture and Networking/Replication Rules.md | architecture, networking, replication, attributes, fundamentals | ~4.5k tok
+- Server Authority and Validation | 03 Architecture and Networking/Server Authority and Validation.md | architecture, security, validation, server-authority, combat | ~5.1k tok
+- Server Lifecycle and Shutdown | 03 Architecture and Networking/Server Lifecycle and Shutdown.md | architecture, server, lifecycle, shutdown, bindtoclose, live-ops | ~3.9k tok
+- Snapshot Interpolation for Custom Replication | 03 Architecture and Networking/Snapshot Interpolation for Custom Replication.md | networking, replication, interpolation, snapshots, extrapolation, unreliable-remotes, buffers, npcs | ~2.4k tok
+- Teleporting and Multi-Place Games | 03 Architecture and Networking/Teleporting and Multi-Place Games.md | architecture, networking, teleport, multi-place, security, matchmaking | ~5.0k tok
 
 ## 04 Data and Persistence
 
-- Data Loss Prevention and Recovery | 04 Data and Persistence/Data Loss Prevention and Recovery.md | data, datastore, data-loss, recovery, rollback, versioning, incident | ~3.9k tok
-- Data Schema Design and Migrations | 04 Data and Persistence/Data Schema Design and Migrations.md | data, schema, migrations, serialization, versioning | ~4.3k tok
-- DataStore Fundamentals | 04 Data and Persistence/DataStore Fundamentals.md | data, datastore, persistence, limits, fundamentals | ~5.4k tok
-- Global State and Live Config | 04 Data and Persistence/Global State and Live Config.md | data, configs, configservice, feature-flags, live-ops, global-state, messaging | ~4.6k tok
-- HttpService and External APIs | 04 Data and Persistence/HttpService and External APIs.md | data, httpservice, web, secrets, json, rate-limits, external-services | ~4.5k tok
-- MemoryStore Service | 04 Data and Persistence/MemoryStore Service.md | data, memorystore, matchmaking, queues, sorted-map, hash-map, cross-server | ~3.6k tok
-- Open Cloud APIs | 04 Data and Persistence/Open Cloud APIs.md | data, open-cloud, api-keys, automation, datastore, messaging, webhooks | ~3.7k tok
-- OrderedDataStores and Leaderboards | 04 Data and Persistence/OrderedDataStores and Leaderboards.md | data, ordereddatastore, leaderboards, memorystore, ranking | ~4.5k tok
-- Player Privacy and Data Deletion | 04 Data and Persistence/Player Privacy and Data Deletion.md | data, privacy, gdpr, rtbf, right-to-erasure, compliance, webhooks | ~3.4k tok
-- Purchase Data and Receipts | 04 Data and Persistence/Purchase Data and Receipts.md | data, monetization, processreceipt, idempotency, purchases, receipts | ~4.1k tok
-- Saving Correctly - Autosave and BindToClose | 04 Data and Persistence/Saving Correctly - Autosave and BindToClose.md | data, datastore, autosave, bindtoclose, retries, shutdown | ~4.3k tok
-- Schema Migrations - Worked Case Studies | 04 Data and Persistence/Schema Migrations - Worked Case Studies.md | data, schema, migrations, versioning, rollback, case-study, luau | ~5.9k tok
-- Session Locking and Profile Libraries | 04 Data and Persistence/Session Locking and Profile Libraries.md | data, datastore, session-locking, profiles, profilestore, dupes | ~6.3k tok
-- Trading Systems Without Duplication | 04 Data and Persistence/Trading Systems Without Duplication.md | data, trading, duplication, transactions, security, economy, luau | ~5.2k tok
+- Data Loss Prevention and Recovery | 04 Data and Persistence/Data Loss Prevention and Recovery.md | data, datastore, data-loss, recovery, rollback, versioning, incident | ~4.0k tok
+- Data Schema Design and Migrations | 04 Data and Persistence/Data Schema Design and Migrations.md | data, schema, migrations, serialization, versioning | ~4.4k tok
+- DataStore Fundamentals | 04 Data and Persistence/DataStore Fundamentals.md | data, datastore, persistence, limits, fundamentals | ~5.5k tok
+- Global State and Live Config | 04 Data and Persistence/Global State and Live Config.md | data, configs, configservice, feature-flags, live-ops, global-state, messaging | ~4.7k tok
+- HttpService and External APIs | 04 Data and Persistence/HttpService and External APIs.md | data, httpservice, web, secrets, json, rate-limits, external-services | ~4.6k tok
+- MemoryStore Service | 04 Data and Persistence/MemoryStore Service.md | data, memorystore, matchmaking, queues, sorted-map, hash-map, cross-server | ~3.8k tok
+- Open Cloud APIs | 04 Data and Persistence/Open Cloud APIs.md | data, open-cloud, api-keys, automation, datastore, messaging, webhooks | ~3.9k tok
+- OrderedDataStores and Leaderboards | 04 Data and Persistence/OrderedDataStores and Leaderboards.md | data, ordereddatastore, leaderboards, memorystore, ranking | ~4.6k tok
+- Player Privacy and Data Deletion | 04 Data and Persistence/Player Privacy and Data Deletion.md | data, privacy, gdpr, rtbf, right-to-erasure, compliance, webhooks | ~3.5k tok
+- Purchase Data and Receipts | 04 Data and Persistence/Purchase Data and Receipts.md | data, monetization, processreceipt, idempotency, purchases, receipts | ~4.2k tok
+- Saving Correctly - Autosave and BindToClose | 04 Data and Persistence/Saving Correctly - Autosave and BindToClose.md | data, datastore, autosave, bindtoclose, retries, shutdown | ~4.4k tok
+- Schema Migrations - Worked Case Studies | 04 Data and Persistence/Schema Migrations - Worked Case Studies.md | data, schema, migrations, versioning, rollback, case-study, luau | ~6.0k tok
+- Serial-Numbered Limited Items - Atomic Counters | 04 Data and Persistence/Serial-Numbered Limited Items - Atomic Counters.md | data, datastores, limited-items, serials, atomic, updateasync, idempotency, economy, dupes | ~2.2k tok
+- Session Locking and Profile Libraries | 04 Data and Persistence/Session Locking and Profile Libraries.md | data, datastore, session-locking, profiles, profilestore, dupes | ~6.4k tok
+- Trading Systems Without Duplication | 04 Data and Persistence/Trading Systems Without Duplication.md | data, trading, duplication, transactions, security, economy, luau | ~5.3k tok
 
 ## 05 UI and UX
 
-- Accessibility | 05 UI and UX/Accessibility.md | ui, accessibility, reduced-motion, text-size, contrast, colour-blindness | ~3.5k tok
-- Declarative UI - React-Lua and Fusion | 05 UI and UX/Declarative UI - React-Lua and Fusion.md | ui, declarative, react-lua, fusion, vide, state, architecture | ~3.6k tok
-- Gamepad and Console UX | 05 UI and UX/Gamepad and Console UX.md | ui, gamepad, console, selection, guiservice, ten-foot | ~3.6k tok
-- HUD Design | 05 UI and UX/HUD Design.md | ui, hud, layout, overlap, popups, mobile | ~3.7k tok
-- Input - UserInputService and ContextActionService | 05 UI and UX/Input - UserInputService and ContextActionService.md | input, userinputservice, contextactionservice, input-action-system, touch, keyboard | ~3.9k tok
-- Layout - Scale Offset and Constraints | 05 UI and UX/Layout - Scale Offset and Constraints.md | ui, layout, udim2, uiscale, constraints, responsive | ~4.2k tok
+- Accessibility | 05 UI and UX/Accessibility.md | ui, accessibility, reduced-motion, text-size, contrast, colour-blindness | ~3.6k tok
+- Declarative UI - React-Lua and Fusion | 05 UI and UX/Declarative UI - React-Lua and Fusion.md | ui, declarative, react-lua, fusion, vide, state, architecture | ~3.7k tok
+- Drag-and-Drop Inventories and Sliders with UIDragDetector | 05 UI and UX/Drag-and-Drop Inventories and Sliders with UIDragDetector.md | ui, drag-and-drop, uidragdetector, inventory, sliders, reordering, input, mobile, gamepad | ~2.5k tok
+- Gamepad and Console UX | 05 UI and UX/Gamepad and Console UX.md | ui, gamepad, console, selection, guiservice, ten-foot | ~3.7k tok
+- HUD Design | 05 UI and UX/HUD Design.md | ui, hud, layout, overlap, popups, mobile | ~3.8k tok
+- Input - UserInputService and ContextActionService | 05 UI and UX/Input - UserInputService and ContextActionService.md | input, userinputservice, contextactionservice, input-action-system, touch, keyboard | ~4.0k tok
+- Layout - Scale Offset and Constraints | 05 UI and UX/Layout - Scale Offset and Constraints.md | ui, layout, udim2, uiscale, constraints, responsive | ~4.3k tok
 - Localization | 05 UI and UX/Localization.md | ui, localization, translation, localizationservice, translator, i18n | ~3.8k tok
-- Menu Archetypes - Shop Settings Codes Rewards | 05 UI and UX/Menu Archetypes - Shop Settings Codes Rewards.md | ui, menus, shop, settings, codes, daily-rewards, quests, archetypes | ~3.9k tok
-- Notification and Toast Systems | 05 UI and UX/Notification and Toast Systems.md | ui, notifications, toasts, hud, popups, remotes, localization, accessibility, live-ops | ~6.2k tok
-- Responsive UI for Phone Tablet Console and PC | 05 UI and UX/Responsive UI for Phone Tablet Console and PC.md | ui, responsive, mobile, phone, tablet, console, cross-platform | ~4.0k tok
-- Safe Areas and Insets | 05 UI and UX/Safe Areas and Insets.md | ui, safe-area, screeninsets, topbar, notch, mobile | ~3.7k tok
-- ScreenGui Fundamentals | 05 UI and UX/ScreenGui Fundamentals.md | ui, screengui, playergui, zindex, displayorder, fundamentals | ~5.4k tok
-- Text Fonts and Rich Text | 05 UI and UX/Text Fonts and Rich Text.md | ui, text, fonts, fontface, richtext, textservice, uistroke | ~4.5k tok
-- UI Design Systems | 05 UI and UX/UI Design Systems.md | ui, design-system, tokens, theming, styling, components, audit | ~4.4k tok
-- UI Layout Objects - Lists Grids and Pages | 05 UI and UX/UI Layout Objects - Lists Grids and Pages.md | ui, layout, uilistlayout, flex, uigridlayout, uipagelayout, scrollingframe | ~4.3k tok
-- UI Motion Language and Timing | 05 UI and UX/UI Motion Language and Timing.md | ui, motion, animation, tweenservice, timing, easing, springs, reduced-motion, design-system | ~6.3k tok
-- Virtualized Lists and Large Inventories | 05 UI and UX/Virtualized Lists and Large Inventories.md | ui, inventory, scrollingframe, virtualization, performance, pooling, search, gamepad, networking | ~6.0k tok
-- World-Space UI - BillboardGui and SurfaceGui | 05 UI and UX/World-Space UI - BillboardGui and SurfaceGui.md | ui, billboardgui, surfacegui, world-space, nameplates, damage-numbers, performance | ~4.0k tok
+- Menu Archetypes - Shop Settings Codes Rewards | 05 UI and UX/Menu Archetypes - Shop Settings Codes Rewards.md | ui, menus, shop, settings, codes, daily-rewards, quests, archetypes | ~4.0k tok
+- Minimap and World Map UI - Projection, Rotation and Fog of War | 05 UI and UX/Minimap and World Map UI - Projection, Rotation and Fog of War.md | ui, minimap, world-map, hud, fog-of-war, editableimage | ~2.5k tok
+- Nametags and Overhead Bars - Cost and Visibility Rules | 05 UI and UX/Nametags and Overhead Bars - Cost and Visibility Rules.md | ui, nametags, overhead, health-bars, billboardgui, visibility, teams, performance | ~2.2k tok
+- Notification and Toast Systems | 05 UI and UX/Notification and Toast Systems.md | ui, notifications, toasts, hud, popups, remotes, localization, accessibility, live-ops | ~6.3k tok
+- Off-Screen Objective Markers and Waypoint Arrows | 05 UI and UX/Off-Screen Objective Markers and Waypoint Arrows.md | ui, hud, waypoints, markers, objectives, camera | ~2.3k tok
+- Race HUD - Position, Laps, Splits, Speedometer and Minimap | 05 UI and UX/Race HUD - Position, Laps, Splits, Speedometer and Minimap.md | ui, hud, racing, vehicles, speedometer, splits, minimap | ~2.2k tok
+- Responsive UI for Phone Tablet Console and PC | 05 UI and UX/Responsive UI for Phone Tablet Console and PC.md | ui, responsive, mobile, phone, tablet, console, cross-platform | ~4.1k tok
+- Safe Areas and Insets | 05 UI and UX/Safe Areas and Insets.md | ui, safe-area, screeninsets, topbar, notch, mobile | ~3.8k tok
+- ScreenGui Fundamentals | 05 UI and UX/ScreenGui Fundamentals.md | ui, screengui, playergui, zindex, displayorder, fundamentals | ~5.5k tok
+- Text Fonts and Rich Text | 05 UI and UX/Text Fonts and Rich Text.md | ui, text, fonts, fontface, richtext, textservice, uistroke | ~4.6k tok
+- Touch Gestures - Pinch, Pan, Swipe and Long Press | 05 UI and UX/Touch Gestures - Pinch, Pan, Swipe and Long Press.md | ui, input, touch, mobile, gestures, pinch, pan, swipe, long-press, maps | ~2.5k tok
+- UI Design Systems | 05 UI and UX/UI Design Systems.md | ui, design-system, tokens, theming, styling, components, audit | ~4.5k tok
+- UI Layout Objects - Lists Grids and Pages | 05 UI and UX/UI Layout Objects - Lists Grids and Pages.md | ui, layout, uilistlayout, flex, uigridlayout, uipagelayout, scrollingframe | ~4.4k tok
+- UI Motion Language and Timing | 05 UI and UX/UI Motion Language and Timing.md | ui, motion, animation, tweenservice, timing, easing, springs, reduced-motion, design-system | ~6.4k tok
+- Virtualized Lists and Large Inventories | 05 UI and UX/Virtualized Lists and Large Inventories.md | ui, inventory, scrollingframe, virtualization, performance, pooling, search, gamepad, networking | ~6.1k tok
+- World-Space UI - BillboardGui and SurfaceGui | 05 UI and UX/World-Space UI - BillboardGui and SurfaceGui.md | ui, billboardgui, surfacegui, world-space, nameplates, damage-numbers, performance | ~4.1k tok
 
 ## 06 World Building and Art
 
-- Art Budgets - Triangles Draw Calls Memory | 06 World Building and Art/Art Budgets - Triangles Draw Calls Memory.md | world-building, art, performance, budgets, draw-calls, triangles, memory, instances | ~4.0k tok
-- Collision and Physics Geometry | 06 World Building and Art/Collision and Physics Geometry.md | world-building, collision, physics, collisionfidelity, colliders, collision-groups | ~4.5k tok
-- Environment Art Styles | 06 World Building and Art/Environment Art Styles.md | world-building, art-direction, style, palette, stylised, voxel, pbr | ~3.2k tok
-- Foliage Props and Scatter | 06 World Building and Art/Foliage Props and Scatter.md | world-building, foliage, trees, props, scatter, placement, wind | ~4.8k tok
-- Grid Placement and Player Building Systems | 06 World Building and Art/Grid Placement and Player Building Systems.md | world-building, building, placement, grid, snapping, tycoon, housing, validation, datastore, luau | ~5.8k tok
-- Level Design for Roblox | 06 World Building and Art/Level Design for Roblox.md | world-building, level-design, layout, hubs, zones, blockout, navigation | ~3.6k tok
-- Level of Detail and Model Streaming | 06 World Building and Art/Level of Detail and Model Streaming.md | world-building, lod, streaming, slim, renderfidelity, performance | ~4.6k tok
-- Materials MaterialVariants and SurfaceAppearance | 06 World Building and Art/Materials MaterialVariants and SurfaceAppearance.md | world-building, art, materials, materialvariant, materialservice, surfaceappearance, pbr | ~4.0k tok
-- Modeling in Blender for Roblox | 06 World Building and Art/Modeling in Blender for Roblox.md | world-building, art, blender, modeling, meshes, pipeline, uv, trim-sheet | ~4.6k tok
-- Parts Unions and MeshParts | 06 World Building and Art/Parts Unions and MeshParts.md | world-building, art, parts, csg, unions, meshparts, geometry | ~5.2k tok
-- Procedural World Generation | 06 World Building and Art/Procedural World Generation.md | world-building, procedural, generation, noise, terrain, seeds, tooling | ~4.5k tok
-- Terrain Deep Dive - Materials Water and Performance | 06 World Building and Art/Terrain Deep Dive - Materials Water and Performance.md | world-building, terrain, materials, materialvariant, water, shorelines, performance, streaming, voxels | ~6.4k tok
-- Terrain Tools and Terrain API | 06 World Building and Art/Terrain Tools and Terrain API.md | world-building, terrain, voxels, api, materials, tools | ~4.4k tok
-- Textures Decals and Texture Memory | 06 World Building and Art/Textures Decals and Texture Memory.md | world-building, art, textures, decals, memory, performance, images | ~4.1k tok
-- Voxel Art - Studs Outlines and Style Kits | 06 World Building and Art/Voxel Art - Studs Outlines and Style Kits.md | world-building, art, voxel, studs, outlines, style-guide, optimisation, reskin | ~3.6k tok
-- Water Sky and Atmosphere Art | 06 World Building and Art/Water Sky and Atmosphere Art.md | world-building, art, water, sky, skybox, atmosphere, clouds, environment | ~4.2k tok
-- Zone and Biome Art Direction | 06 World Building and Art/Zone and Biome Art Direction.md | world-building, art-direction, zones, biomes, palette, lighting, atmosphere, landmarks, progression | ~5.4k tok
+- Art Budgets - Triangles Draw Calls Memory | 06 World Building and Art/Art Budgets - Triangles Draw Calls Memory.md | world-building, art, performance, budgets, draw-calls, triangles, memory, instances | ~4.1k tok
+- Collision and Physics Geometry | 06 World Building and Art/Collision and Physics Geometry.md | world-building, collision, physics, collisionfidelity, colliders, collision-groups | ~4.7k tok
+- Environment Art Styles | 06 World Building and Art/Environment Art Styles.md | world-building, art-direction, style, palette, stylised, voxel, pbr | ~3.3k tok
+- Foliage Props and Scatter | 06 World Building and Art/Foliage Props and Scatter.md | world-building, foliage, trees, props, scatter, placement, wind | ~4.9k tok
+- Grid Placement and Player Building Systems | 06 World Building and Art/Grid Placement and Player Building Systems.md | world-building, building, placement, grid, snapping, tycoon, housing, validation, datastore, luau | ~5.9k tok
+- Level Design for Roblox | 06 World Building and Art/Level Design for Roblox.md | world-building, level-design, layout, hubs, zones, blockout, navigation | ~3.8k tok
+- Level of Detail and Model Streaming | 06 World Building and Art/Level of Detail and Model Streaming.md | world-building, lod, streaming, slim, renderfidelity, performance | ~4.8k tok
+- Materials MaterialVariants and SurfaceAppearance | 06 World Building and Art/Materials MaterialVariants and SurfaceAppearance.md | world-building, art, materials, materialvariant, materialservice, surfaceappearance, pbr | ~4.1k tok
+- Modeling in Blender for Roblox | 06 World Building and Art/Modeling in Blender for Roblox.md | world-building, art, blender, modeling, meshes, pipeline, uv, trim-sheet | ~4.7k tok
+- Parts Unions and MeshParts | 06 World Building and Art/Parts Unions and MeshParts.md | world-building, art, parts, csg, unions, meshparts, geometry | ~5.3k tok
+- Procedural World Generation | 06 World Building and Art/Procedural World Generation.md | world-building, procedural, generation, noise, terrain, seeds, tooling | ~4.6k tok
+- Roads, Rivers and Paths Carved Along Curves in Terrain | 06 World Building and Art/Roads, Rivers and Paths Carved Along Curves in Terrain.md | terrain, roads, rivers, splines, world-building, procedural | ~2.6k tok
+- Terrain Deep Dive - Materials Water and Performance | 06 World Building and Art/Terrain Deep Dive - Materials Water and Performance.md | world-building, terrain, materials, materialvariant, water, shorelines, performance, streaming, voxels | ~6.5k tok
+- Terrain Tools and Terrain API | 06 World Building and Art/Terrain Tools and Terrain API.md | world-building, terrain, voxels, api, materials, tools | ~4.5k tok
+- Textures Decals and Texture Memory | 06 World Building and Art/Textures Decals and Texture Memory.md | world-building, art, textures, decals, memory, performance, images | ~4.2k tok
+- Voxel Art - Studs Outlines and Style Kits | 06 World Building and Art/Voxel Art - Studs Outlines and Style Kits.md | world-building, art, voxel, studs, outlines, style-guide, optimisation, reskin | ~3.7k tok
+- Water Sky and Atmosphere Art | 06 World Building and Art/Water Sky and Atmosphere Art.md | world-building, art, water, sky, skybox, atmosphere, clouds, environment | ~4.3k tok
+- Zone and Biome Art Direction | 06 World Building and Art/Zone and Biome Art Direction.md | world-building, art-direction, zones, biomes, palette, lighting, atmosphere, landmarks, progression | ~5.5k tok
 
 ## 07 Lighting VFX and Audio
 
-- Atmosphere Sky Clouds and Post-Processing | 07 Lighting VFX and Audio/Atmosphere Sky Clouds and Post-Processing.md | lighting, atmosphere, sky, clouds, post-processing, environment | ~4.1k tok
-- Beams and Trails | 07 Lighting VFX and Audio/Beams and Trails.md | vfx, beams, trails, slashes, bezier | ~4.2k tok
-- Combat Sound Design and Feedback | 07 Lighting VFX and Audio/Combat Sound Design and Feedback.md | audio, combat, sound-design, feedback, networking, mixing, game-feel | ~5.6k tok
-- Game Feel and Juice | 07 Lighting VFX and Audio/Game Feel and Juice.md | game-feel, juice, feedback, ui, vfx, audio, combat | ~4.4k tok
-- Highlights and Selection Effects | 07 Lighting VFX and Audio/Highlights and Selection Effects.md | vfx, highlight, outline, selection, readability, feedback | ~3.3k tok
-- Light Sources and Shadows | 07 Lighting VFX and Audio/Light Sources and Shadows.md | lighting, lights, shadows, performance, vfx | ~3.4k tok
-- Lighting Mood and Time of Day | 07 Lighting VFX and Audio/Lighting Mood and Time of Day.md | lighting, mood, day-night, weather, zones, environment | ~4.7k tok
-- Lighting Technologies and Settings | 07 Lighting VFX and Audio/Lighting Technologies and Settings.md | lighting, rendering, environment, settings, performance | ~5.0k tok
-- Music and Adaptive Audio | 07 Lighting VFX and Audio/Music and Adaptive Audio.md | audio, music, adaptive-audio, ambience, crossfade, licensing | ~4.4k tok
-- Particle Emitters In Depth | 07 Lighting VFX and Audio/Particle Emitters In Depth.md | vfx, particles, particleemitter, flipbooks, performance | ~5.2k tok
-- Sound Design for Games | 07 Lighting VFX and Audio/Sound Design for Games.md | audio, sound-design, combat, layering, variation, ui-sounds | ~3.4k tok
-- Sound Fundamentals | 07 Lighting VFX and Audio/Sound Fundamentals.md | audio, sound, soundgroup, assets, loudness | ~3.6k tok
-- Spatial Audio and Mixing | 07 Lighting VFX and Audio/Spatial Audio and Mixing.md | audio, spatial, mixing, attenuation, loudness, buses, performance | ~3.4k tok
-- Stylized Lighting Recipes | 07 Lighting VFX and Audio/Stylized Lighting Recipes.md | lighting, stylized, recipes, mood, post-processing, atmosphere, art-direction | ~6.0k tok
-- The Audio API - Players Emitters Wires and Effects | 07 Lighting VFX and Audio/The Audio API - Players Emitters Wires and Effects.md | audio, audio-api, audioplayer, audioemitter, wire, effects, mixing | ~4.4k tok
-- VFX Design Playbook | 07 Lighting VFX and Audio/VFX Design Playbook.md | vfx, design, playbook, combat, particles, beams, budgets | ~4.0k tok
-- VFX Performance Budgets and Culling | 07 Lighting VFX and Audio/VFX Performance Budgets and Culling.md | vfx, performance, budgets, culling, particles, mobile, optimization | ~6.2k tok
+- Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools | 07 Lighting VFX and Audio/Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools.md | audio, ambience, soundscape, zones, audio-api, crossfade, performance | ~2.4k tok
+- Atmosphere Sky Clouds and Post-Processing | 07 Lighting VFX and Audio/Atmosphere Sky Clouds and Post-Processing.md | lighting, atmosphere, sky, clouds, post-processing, environment | ~4.3k tok
+- Beams and Trails | 07 Lighting VFX and Audio/Beams and Trails.md | vfx, beams, trails, slashes, bezier | ~4.4k tok
+- Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop | 07 Lighting VFX and Audio/Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop.md | vfx, pickups, collectibles, simulator, obby, juice, magnet, particles, ui, client-visuals | ~2.0k tok
+- Combat Sound Design and Feedback | 07 Lighting VFX and Audio/Combat Sound Design and Feedback.md | audio, combat, sound-design, feedback, networking, mixing, game-feel | ~5.7k tok
+- Custom Character Sounds - Replacing Default Footstep and Jump Sounds | 07 Lighting VFX and Audio/Custom Character Sounds - Replacing Default Footstep and Jump Sounds.md | audio, characters, footsteps, rbxcharactersounds, materials, animation-markers | ~2.6k tok
+- Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning | 07 Lighting VFX and Audio/Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning.md | vfx, elements, fire, ice, earth, water, wind, lightning, particles, beams, palettes, recipes | ~2.5k tok
+- Engine and Tyre Audio Driven by RPM and Slip | 07 Lighting VFX and Audio/Engine and Tyre Audio Driven by RPM and Slip.md | audio, vehicles, engine-sound, tyres, skid, rpm, audio-api | ~2.4k tok
+- Game Feel and Juice | 07 Lighting VFX and Audio/Game Feel and Juice.md | game-feel, juice, feedback, ui, vfx, audio, combat | ~4.5k tok
+- Gore Policy and Kid-Friendly Hit Feedback | 07 Lighting VFX and Audio/Gore Policy and Kid-Friendly Hit Feedback.md | vfx, gore, blood, maturity, content-maturity, policy, hit-feedback, combat, settings, compliance | ~2.0k tok
+- Highlights and Selection Effects | 07 Lighting VFX and Audio/Highlights and Selection Effects.md | vfx, highlight, outline, selection, readability, feedback | ~3.4k tok
+- Ice Ball Cast to Explosion - Approved Recipe | 07 Lighting VFX and Audio/Ice Ball Cast to Explosion - Approved Recipe.md | vfx, animation, ice, projectile, explosion, recipe, cast, lihfolk | ~1.3k tok
+- Impact Decals and Material-Aware Hit Sparks | 07 Lighting VFX and Audio/Impact Decals and Material-Aware Hit Sparks.md | vfx, impacts, decals, materials, raycast, pooling, shooters, sparks, performance | ~2.1k tok
+- Light Sources and Shadows | 07 Lighting VFX and Audio/Light Sources and Shadows.md | lighting, lights, shadows, performance, vfx | ~3.5k tok
+- Lighting Mood and Time of Day | 07 Lighting VFX and Audio/Lighting Mood and Time of Day.md | lighting, mood, day-night, weather, zones, environment | ~4.8k tok
+- Lighting Technologies and Settings | 07 Lighting VFX and Audio/Lighting Technologies and Settings.md | lighting, rendering, environment, settings, performance | ~5.1k tok
+- Lightning Strikes and Thunder - Procedural Bolts and Sound Delay | 07 Lighting VFX and Audio/Lightning Strikes and Thunder - Procedural Bolts and Sound Delay.md | weather, lightning, thunder, vfx, audio, procedural, accessibility, photosensitivity | ~3.0k tok
+- Music Licensing and Audio Upload Rules for 2026 | 07 Lighting VFX and Audio/Music Licensing and Audio Upload Rules for 2026.md | audio, music, licensing, copyright, upload-rules, policy, compliance, 2026 | ~2.3k tok
+- Music and Adaptive Audio | 07 Lighting VFX and Audio/Music and Adaptive Audio.md | audio, music, adaptive-audio, ambience, crossfade, licensing | ~4.5k tok
+- Particle Emitters In Depth | 07 Lighting VFX and Audio/Particle Emitters In Depth.md | vfx, particles, particleemitter, flipbooks, performance | ~5.4k tok
+- Rain - Camera-Local Particles, Splashes and Wet Surfaces | 07 Lighting VFX and Audio/Rain - Camera-Local Particles, Splashes and Wet Surfaces.md | weather, rain, particles, vfx, raycast, materials, wetness | ~2.9k tok
+- Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur | 07 Lighting VFX and Audio/Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur.md | vfx, post-processing, damage, vignette, hit-flash, blur, colorcorrection, accessibility, ui | ~2.1k tok
+- Slash VFX Recipes - Crescent and Ring | 07 Lighting VFX and Audio/Slash VFX Recipes - Crescent and Ring.md | vfx, slash, crescent, sweep, thrust, cleave, dash, afterimage, impact, charge, ice, explosion, beams, particles, flipbooks, meshes, timing, markers, recipes | ~4.2k tok
+- Snow, Sandstorm, Blizzard and Ash Recipes | 07 Lighting VFX and Audio/Snow, Sandstorm, Blizzard and Ash Recipes.md | weather, snow, sandstorm, blizzard, ash, particles, atmosphere, recipes | ~2.8k tok
+- Sound Design for Games | 07 Lighting VFX and Audio/Sound Design for Games.md | audio, sound-design, combat, layering, variation, ui-sounds | ~3.5k tok
+- Sound Fundamentals | 07 Lighting VFX and Audio/Sound Fundamentals.md | audio, sound, soundgroup, assets, loudness | ~3.7k tok
+- Spatial Audio and Mixing | 07 Lighting VFX and Audio/Spatial Audio and Mixing.md | audio, spatial, mixing, attenuation, loudness, buses, performance | ~3.5k tok
+- Stylized Lighting Recipes | 07 Lighting VFX and Audio/Stylized Lighting Recipes.md | lighting, stylized, recipes, mood, post-processing, atmosphere, art-direction | ~6.2k tok
+- The Audio API - Players Emitters Wires and Effects | 07 Lighting VFX and Audio/The Audio API - Players Emitters Wires and Effects.md | audio, audio-api, audioplayer, audioemitter, wire, effects, mixing | ~4.5k tok
+- VFX Design Playbook | 07 Lighting VFX and Audio/VFX Design Playbook.md | vfx, design, playbook, combat, particles, beams, budgets | ~4.2k tok
+- VFX Performance Budgets and Culling | 07 Lighting VFX and Audio/VFX Performance Budgets and Culling.md | vfx, performance, budgets, culling, particles, mobile, optimization | ~6.3k tok
+- VFX Previews in Blender for Roblox - Colour and Framing | 07 Lighting VFX and Audio/VFX Previews in Blender for Roblox - Colour and Framing.md | vfx, blender, preview, color, srgb, linear, slash, explosion, review, lihfolk | ~1.4k tok
+- Weather System Architecture - State Machine, Transitions and Replication | 07 Lighting VFX and Audio/Weather System Architecture - State Machine, Transitions and Replication.md | weather, lighting, atmosphere, state-machine, replication, determinism | ~3.6k tok
 
 ## 08 Animation
 
-- Animation Glossary | 08 Animation/Animation Glossary.md | reference, glossary | ~3.0k tok
+- Animation Glossary | 08 Animation/Animation Glossary.md | reference, glossary | ~3.1k tok
 - Animation Start Here | 08 Animation/Animation Start Here.md | index, start | ~2.3k tok
-- Animation Asset Permissions and Groups | 08 Animation/01 Fundamentals/Animation Asset Permissions and Groups.md | fundamentals, publishing, permissions, groups, assets | ~3.7k tok
-- Animation Objects | 08 Animation/01 Fundamentals/Animation Objects.md | fundamentals, api, overview | ~3.6k tok
-- AnimationConstraint and Physically Simulated Characters | 08 Animation/01 Fundamentals/AnimationConstraint and Physically Simulated Characters.md | fundamentals, animationconstraint, physics, ragdoll, avatar-joint-upgrade | ~3.8k tok
-- AnimationTrack Reference | 08 Animation/01 Fundamentals/AnimationTrack Reference.md | fundamentals, api, reference, animationtrack | ~3.5k tok
-- Animator Deep Dive | 08 Animation/01 Fundamentals/Animator Deep Dive.md | fundamentals, api, animator, reference | ~4.0k tok
-- Bones and Skinned Meshes | 08 Animation/01 Fundamentals/Bones and Skinned Meshes.md | fundamentals, bones, skinning, rigging | ~3.9k tok
-- CurveAnimation and Curve Channels | 08 Animation/01 Fundamentals/CurveAnimation and Curve Channels.md | fundamentals, api, reference, curveanimation, curves | ~4.2k tok
-- Frame Order and RunService Timing | 08 Animation/01 Fundamentals/Frame Order and RunService Timing.md | fundamentals, runservice, timing, frame-order, procedural | ~3.9k tok
-- How the Animator Really Behaves | 08 Animation/01 Fundamentals/How the Animator Really Behaves.md | fundamentals, animator, measured, advanced | ~2.9k tok
-- Humanoid States and Animation | 08 Animation/01 Fundamentals/Humanoid States and Animation.md | fundamentals, humanoid, states, locomotion | ~3.0k tok
-- KeyframeSequence Keyframe and Pose Reference | 08 Animation/01 Fundamentals/KeyframeSequence Keyframe and Pose Reference.md | fundamentals, api, reference, keyframesequence, data | ~3.9k tok
-- Keyframes, Easing and Interpolation | 08 Animation/01 Fundamentals/Keyframes, Easing and Interpolation.md | fundamentals, keyframes, easing, interpolation | ~3.0k tok
-- Markers and Events | 08 Animation/01 Fundamentals/Markers and Events.md | fundamentals, markers, events, combat, timing | ~4.0k tok
-- Motor6D Math and CFrame Composition | 08 Animation/01 Fundamentals/Motor6D Math and CFrame Composition.md | fundamentals, math, cframe, motor6d, fk | ~4.6k tok
-- Playback, Priorities and Blending | 08 Animation/01 Fundamentals/Playback, Priorities and Blending.md | fundamentals, playback, priority, blending, layering | ~2.9k tok
-- Replication and Ownership | 08 Animation/01 Fundamentals/Replication and Ownership.md | fundamentals, replication, networking, ownership | ~2.7k tok
-- Rigs and Joints | 08 Animation/01 Fundamentals/Rigs and Joints.md | fundamentals, rigging, motor6d, joints | ~4.1k tok
-- Scale and Animation | 08 Animation/01 Fundamentals/Scale and Animation.md | fundamentals, scale, locomotion, rigs | ~3.6k tok
-- The Default Animate Script | 08 Animation/01 Fundamentals/The Default Animate Script.md | fundamentals, animate-script, locomotion, emotes, tools | ~3.4k tok
-- 3D Importer Settings Reference | 08 Animation/02 Rigging and Importing/3D Importer Settings Reference.md | import, studio, reference, 3d-importer | ~2.9k tok
-- Accessories and Armor That Follow Animation | 08 Animation/02 Rigging and Importing/Accessories and Armor That Follow Animation.md | rigging, accessories, armor, welds, attachments | ~3.4k tok
-- Animation Data from Blender to Roblox | 08 Animation/02 Rigging and Importing/Animation Data from Blender to Roblox.md | blender, export, keyframesequence, python, pipeline, clips | ~4.8k tok
-- Blender Armature and Bone Roll Conventions | 08 Animation/02 Rigging and Importing/Blender Armature and Bone Roll Conventions.md | rigging, blender, armature, axes, bone-roll, conventions | ~4.2k tok
-- Creature Rig Conventions | 08 Animation/02 Rigging and Importing/Creature Rig Conventions.md | rigging, blender, enemies, creatures, conventions, families | ~3.6k tok
-- Custom Characters and StarterCharacter | 08 Animation/02 Rigging and Importing/Custom Characters and StarterCharacter.md | rigging, characters, startercharacter, humanoid, r15 | ~3.1k tok
-- Custom Rigs - Weapons and Props | 08 Animation/02 Rigging and Importing/Custom Rigs - Weapons and Props.md | rigging, weapons, props, motor6d, hinge-rigs | ~4.0k tok
-- Exporting FBX vs GLB | 08 Animation/02 Rigging and Importing/Exporting FBX vs GLB.md | export, blender, fbx, gltf, glb, import | ~3.6k tok
-- Facial Animation and Dynamic Heads | 08 Animation/02 Rigging and Importing/Facial Animation and Dynamic Heads.md | rigging, facial, dynamic-heads, facs, facecontrols, blender | ~3.0k tok
-- Importing Models and Rigs | 08 Animation/02 Rigging and Importing/Importing Models and Rigs.md | import, rigging, studio, pipeline, prepare | ~4.3k tok
-- Layered Clothing Cages and Animation | 08 Animation/02 Rigging and Importing/Layered Clothing Cages and Animation.md | rigging, layered-clothing, cages, wraplayer, avatar | ~2.7k tok
-- R15 Rig Anatomy and Attachments | 08 Animation/02 Rigging and Importing/R15 Rig Anatomy and Attachments.md | rigging, r15, humanoid, attachments, reference | ~4.3k tok
-- Retargeting Animations Between Rigs | 08 Animation/02 Rigging and Importing/Retargeting Animations Between Rigs.md | retargeting, rigging, math, keyframesequence, clips | ~3.5k tok
-- Rigging in Blender | 08 Animation/02 Rigging and Importing/Rigging in Blender.md | rigging, blender, import, workflow, hub | ~4.2k tok
-- Weight Painting and Skinning for Roblox | 08 Animation/02 Rigging and Importing/Weight Painting and Skinning for Roblox.md | rigging, blender, skinning, weights, deformation | ~3.6k tok
-- Animating Creatures and Monsters | 08 Animation/03 Authoring/Animating Creatures and Monsters.md | authoring, craft, creatures, enemies, quadrupeds, flyers, telegraphs | ~4.2k tok
-- Animation Capture and Mocap | 08 Animation/03 Authoring/Animation Capture and Mocap.md | authoring, mocap, animation-capture, video, face | ~3.3k tok
-- Animation Editor Advanced | 08 Animation/03 Authoring/Animation Editor Advanced.md | authoring, animation-editor, curve-editor, ik, events, studio | ~4.3k tok
-- Animation Editor Workflow | 08 Animation/03 Authoring/Animation Editor Workflow.md | authoring, animation-editor, studio, workflow | ~5.0k tok
-- Animation Quality Standard | 08 Animation/03 Authoring/Animation Quality Standard.md | authoring, quality, arms, standard, qa, metrics | ~4.9k tok
-- Animation Review Checklist | 08 Animation/03 Authoring/Animation Review Checklist.md | authoring, review, checklist, qa | ~2.9k tok
-- Authoring Clips in Code | 08 Animation/03 Authoring/Authoring Clips in Code.md | authoring, code, keyframesequence, luau, baking | ~5.6k tok
-- Blade Grip and Wrist Limits | 08 Animation/03 Authoring/Blade Grip and Wrist Limits.md | animation, weapons, sword, grip, wrist, authoring, r15, blender, tool-grip | ~2.1k tok
-- Combat Animation Craft | 08 Animation/03 Authoring/Combat Animation Craft.md | authoring, craft, combat, hit-stop, latency, markers | ~4.3k tok
-- Human Swing Biomechanics | 08 Animation/03 Authoring/Human Swing Biomechanics.md | animation, authoring, combat, sword, biomechanics, kinematic-chain, pronation, twist, qa | ~1.4k tok
-- Idle Breathing and Secondary Motion | 08 Animation/03 Authoring/Idle Breathing and Secondary Motion.md | authoring, craft, idle, breathing, secondary-motion, overlap | ~3.5k tok
-- Locomotion and Melee Reference Numbers | 08 Animation/03 Authoring/Locomotion and Melee Reference Numbers.md | animation, authoring, locomotion, gait, combat, melee, timing, hit-stop, parry, r15, reference | ~1.5k tok
-- Moon Animator and Third-Party Tools | 08 Animation/03 Authoring/Moon Animator and Third-Party Tools.md | authoring, plugins, moon-animator, blender, tools | ~3.1k tok
-- Posing and Silhouettes | 08 Animation/03 Authoring/Posing and Silhouettes.md | authoring, craft, posing, silhouette, r15 | ~3.2k tok
-- Principles of Animation for Games | 08 Animation/03 Authoring/Principles of Animation for Games.md | authoring, craft, principles, game-animation | ~3.8k tok
-- Publishing Animations | 08 Animation/03 Authoring/Publishing Animations.md | authoring, publishing, release, assets, permissions | ~3.5k tok
-- R15 Run Cycle Key Poses | 08 Animation/03 Authoring/R15 Run Cycle Key Poses.md | authoring, locomotion, run, run-cycle, r15, key-poses, keyframesequence, swordsman, sprint, foot-sliding | ~2.3k tok
-- Spec-Driven Move Authoring | 08 Animation/03 Authoring/Spec-Driven Move Authoring.md | authoring, code, specs, ik, baking, combat | ~4.5k tok
-- Timing Spacing and Frame Charts | 08 Animation/03 Authoring/Timing Spacing and Frame Charts.md | authoring, craft, timing, spacing, frames | ~3.3k tok
-- Weapon Swing Design | 08 Animation/03 Authoring/Weapon Swing Design.md | authoring, craft, weapons, swords, two-handed, arcs | ~4.0k tok
-- Elbow Poles Swivel and Joint Limits | 08 Animation/04 Procedural/Elbow Poles Swivel and Joint Limits.md | procedural, ik, arms, wrist, swing-twist, viterbi, limits, quality | ~4.0k tok
+- Animation Asset Permissions and Groups | 08 Animation/01 Fundamentals/Animation Asset Permissions and Groups.md | fundamentals, publishing, permissions, groups, assets | ~3.8k tok
+- Animation Objects | 08 Animation/01 Fundamentals/Animation Objects.md | fundamentals, api, overview | ~3.7k tok
+- AnimationConstraint and Physically Simulated Characters | 08 Animation/01 Fundamentals/AnimationConstraint and Physically Simulated Characters.md | fundamentals, animationconstraint, physics, ragdoll, avatar-joint-upgrade | ~4.0k tok
+- AnimationTrack Reference | 08 Animation/01 Fundamentals/AnimationTrack Reference.md | fundamentals, api, reference, animationtrack | ~3.6k tok
+- Animator Deep Dive | 08 Animation/01 Fundamentals/Animator Deep Dive.md | fundamentals, api, animator, reference | ~4.1k tok
+- Bones and Skinned Meshes | 08 Animation/01 Fundamentals/Bones and Skinned Meshes.md | fundamentals, bones, skinning, rigging | ~4.1k tok
+- CurveAnimation and Curve Channels | 08 Animation/01 Fundamentals/CurveAnimation and Curve Channels.md | fundamentals, api, reference, curveanimation, curves | ~4.3k tok
+- Frame Order and RunService Timing | 08 Animation/01 Fundamentals/Frame Order and RunService Timing.md | fundamentals, runservice, timing, frame-order, procedural | ~4.0k tok
+- How the Animator Really Behaves | 08 Animation/01 Fundamentals/How the Animator Really Behaves.md | fundamentals, animator, measured, advanced | ~3.0k tok
+- Humanoid States and Animation | 08 Animation/01 Fundamentals/Humanoid States and Animation.md | fundamentals, humanoid, states, locomotion | ~3.1k tok
+- KeyframeSequence Keyframe and Pose Reference | 08 Animation/01 Fundamentals/KeyframeSequence Keyframe and Pose Reference.md | fundamentals, api, reference, keyframesequence, data | ~4.0k tok
+- Keyframes, Easing and Interpolation | 08 Animation/01 Fundamentals/Keyframes, Easing and Interpolation.md | fundamentals, keyframes, easing, interpolation | ~3.1k tok
+- Markers and Events | 08 Animation/01 Fundamentals/Markers and Events.md | fundamentals, markers, events, combat, timing | ~4.2k tok
+- Motor6D Math and CFrame Composition | 08 Animation/01 Fundamentals/Motor6D Math and CFrame Composition.md | fundamentals, math, cframe, motor6d, fk | ~4.7k tok
+- Playback, Priorities and Blending | 08 Animation/01 Fundamentals/Playback, Priorities and Blending.md | fundamentals, playback, priority, blending, layering | ~3.0k tok
+- Replication and Ownership | 08 Animation/01 Fundamentals/Replication and Ownership.md | fundamentals, replication, networking, ownership | ~2.8k tok
+- Rigs and Joints | 08 Animation/01 Fundamentals/Rigs and Joints.md | fundamentals, rigging, motor6d, joints | ~4.2k tok
+- Scale and Animation | 08 Animation/01 Fundamentals/Scale and Animation.md | fundamentals, scale, locomotion, rigs | ~3.8k tok
+- The Default Animate Script | 08 Animation/01 Fundamentals/The Default Animate Script.md | fundamentals, animate-script, locomotion, emotes, tools | ~3.5k tok
+- 3D Importer Settings Reference | 08 Animation/02 Rigging and Importing/3D Importer Settings Reference.md | import, studio, reference, 3d-importer | ~3.1k tok
+- Accessories and Armor That Follow Animation | 08 Animation/02 Rigging and Importing/Accessories and Armor That Follow Animation.md | rigging, accessories, armor, welds, attachments | ~3.5k tok
+- Animation Data from Blender to Roblox | 08 Animation/02 Rigging and Importing/Animation Data from Blender to Roblox.md | blender, export, keyframesequence, python, pipeline, clips | ~4.9k tok
+- Blender Armature and Bone Roll Conventions | 08 Animation/02 Rigging and Importing/Blender Armature and Bone Roll Conventions.md | rigging, blender, armature, axes, bone-roll, conventions | ~4.4k tok
+- Creature Rig Conventions | 08 Animation/02 Rigging and Importing/Creature Rig Conventions.md | rigging, blender, enemies, creatures, conventions, families | ~3.7k tok
+- Custom Characters and StarterCharacter | 08 Animation/02 Rigging and Importing/Custom Characters and StarterCharacter.md | rigging, characters, startercharacter, humanoid, r15 | ~3.2k tok
+- Custom Rigs - Weapons and Props | 08 Animation/02 Rigging and Importing/Custom Rigs - Weapons and Props.md | rigging, weapons, props, motor6d, hinge-rigs | ~4.1k tok
+- Exporting FBX vs GLB | 08 Animation/02 Rigging and Importing/Exporting FBX vs GLB.md | export, blender, fbx, gltf, glb, import | ~3.7k tok
+- Facial Animation and Dynamic Heads | 08 Animation/02 Rigging and Importing/Facial Animation and Dynamic Heads.md | rigging, facial, dynamic-heads, facs, facecontrols, blender | ~3.1k tok
+- Importing Models and Rigs | 08 Animation/02 Rigging and Importing/Importing Models and Rigs.md | import, rigging, studio, pipeline, prepare | ~4.4k tok
+- Layered Clothing Cages and Animation | 08 Animation/02 Rigging and Importing/Layered Clothing Cages and Animation.md | rigging, layered-clothing, cages, wraplayer, avatar | ~2.8k tok
+- R15 Rig Anatomy and Attachments | 08 Animation/02 Rigging and Importing/R15 Rig Anatomy and Attachments.md | rigging, r15, humanoid, attachments, reference | ~4.4k tok
+- Retargeting Animations Between Rigs | 08 Animation/02 Rigging and Importing/Retargeting Animations Between Rigs.md | retargeting, rigging, math, keyframesequence, clips | ~3.6k tok
+- Rigging in Blender | 08 Animation/02 Rigging and Importing/Rigging in Blender.md | rigging, blender, import, workflow, hub | ~4.3k tok
+- Weight Painting and Skinning for Roblox | 08 Animation/02 Rigging and Importing/Weight Painting and Skinning for Roblox.md | rigging, blender, skinning, weights, deformation | ~3.7k tok
+- Animating Creatures and Monsters | 08 Animation/03 Authoring/Animating Creatures and Monsters.md | authoring, craft, creatures, enemies, quadrupeds, flyers, telegraphs | ~4.3k tok
+- Animation Capture and Mocap | 08 Animation/03 Authoring/Animation Capture and Mocap.md | authoring, mocap, animation-capture, video, face | ~3.4k tok
+- Animation Editor Advanced | 08 Animation/03 Authoring/Animation Editor Advanced.md | authoring, animation-editor, curve-editor, ik, events, studio | ~4.5k tok
+- Animation Editor Workflow | 08 Animation/03 Authoring/Animation Editor Workflow.md | authoring, animation-editor, studio, workflow | ~5.1k tok
+- Animation Quality Standard | 08 Animation/03 Authoring/Animation Quality Standard.md | authoring, quality, arms, standard, qa, metrics | ~5.0k tok
+- Animation Review Checklist | 08 Animation/03 Authoring/Animation Review Checklist.md | authoring, review, checklist, qa | ~3.0k tok
+- Arm Twist and Grip Roll - Lessons from Baked Sword Clips | 08 Animation/03 Authoring/Arm Twist and Grip Roll - Lessons from Baked Sword Clips.md | animation, r15, sword, arm-twist, pronation, wrist, tool-grip, blender, baking, lihfolk | ~1.6k tok
+- Authoring Clips in Code | 08 Animation/03 Authoring/Authoring Clips in Code.md | authoring, code, keyframesequence, luau, baking | ~5.7k tok
+- Blade Grip and Wrist Limits | 08 Animation/03 Authoring/Blade Grip and Wrist Limits.md | animation, weapons, sword, grip, wrist, authoring, r15, blender, tool-grip | ~2.2k tok
+- Combat Animation Craft | 08 Animation/03 Authoring/Combat Animation Craft.md | authoring, craft, combat, hit-stop, latency, markers | ~4.4k tok
+- Free Mocap and Mixamo Licensing for Roblox | 08 Animation/03 Authoring/Free Mocap and Mixamo Licensing for Roblox.md | animation, mocap, mixamo, licensing, legal, retargeting | ~2.0k tok
+- Human Swing Biomechanics | 08 Animation/03 Authoring/Human Swing Biomechanics.md | animation, authoring, combat, sword, biomechanics, kinematic-chain, pronation, twist, qa | ~1.5k tok
+- Idle Breathing and Secondary Motion | 08 Animation/03 Authoring/Idle Breathing and Secondary Motion.md | authoring, craft, idle, breathing, secondary-motion, overlap | ~3.6k tok
+- Locomotion Readability - Lessons from Blind Panels | 08 Animation/03 Authoring/Locomotion Readability - Lessons from Blind Panels.md | animation, r15, locomotion, walk, run, sprint, idle, review, lihfolk | ~1.4k tok
+- Locomotion and Melee Reference Numbers | 08 Animation/03 Authoring/Locomotion and Melee Reference Numbers.md | animation, authoring, locomotion, gait, combat, melee, timing, hit-stop, parry, r15, reference | ~1.6k tok
+- Moon Animator and Third-Party Tools | 08 Animation/03 Authoring/Moon Animator and Third-Party Tools.md | authoring, plugins, moon-animator, blender, tools | ~3.2k tok
+- Posing and Silhouettes | 08 Animation/03 Authoring/Posing and Silhouettes.md | authoring, craft, posing, silhouette, r15 | ~3.3k tok
+- Principles of Animation for Games | 08 Animation/03 Authoring/Principles of Animation for Games.md | authoring, craft, principles, game-animation | ~3.9k tok
+- Publishing Animations | 08 Animation/03 Authoring/Publishing Animations.md | authoring, publishing, release, assets, permissions | ~3.6k tok
+- R15 Run Cycle Key Poses | 08 Animation/03 Authoring/R15 Run Cycle Key Poses.md | authoring, locomotion, run, run-cycle, r15, key-poses, keyframesequence, swordsman, sprint, foot-sliding | ~2.4k tok
+- Spec-Driven Move Authoring | 08 Animation/03 Authoring/Spec-Driven Move Authoring.md | authoring, code, specs, ik, baking, combat | ~4.6k tok
+- Timing Spacing and Frame Charts | 08 Animation/03 Authoring/Timing Spacing and Frame Charts.md | authoring, craft, timing, spacing, frames | ~3.4k tok
+- Weapon Swing Design | 08 Animation/03 Authoring/Weapon Swing Design.md | authoring, craft, weapons, swords, two-handed, arcs | ~4.1k tok
+- Elbow Poles Swivel and Joint Limits | 08 Animation/04 Procedural/Elbow Poles Swivel and Joint Limits.md | procedural, ik, arms, wrist, swing-twist, viterbi, limits, quality | ~4.1k tok
 - Flight Flocks and Path Animation | 08 Animation/04 Procedural/Flight Flocks and Path Animation.md | procedural, flight, splines, b-spline, banking, flocks, boids, creatures, luau | ~4.2k tok
-- Foot Placement and Ground IK | 08 Animation/04 Procedural/Foot Placement and Ground IK.md | procedural, ik, feet, ground, slopes, stairs, raycast, luau | ~3.5k tok
-- IKControl Reference | 08 Animation/04 Procedural/IKControl Reference.md | procedural, ik, ikcontrol, reference, api | ~3.8k tok
-- Inverse Kinematics | 08 Animation/04 Procedural/Inverse Kinematics.md | procedural, ik, arms, legs, math, hub | ~2.9k tok
-- Look-At Aim and Head Tracking | 08 Animation/04 Procedural/Look-At Aim and Head Tracking.md | procedural, look-at, aim, head, neck, turret, axes, luau | ~3.2k tok
-- Multi-Bone IK - FABRIK and CCD | 08 Animation/04 Procedural/Multi-Bone IK - FABRIK and CCD.md | procedural, ik, fabrik, ccd, tails, tentacles, spines, chains, luau | ~3.8k tok
-- Procedural Animation | 08 Animation/04 Procedural/Procedural Animation.md | procedural, runservice, motor6d, animationconstraint, transform, timing, hub | ~4.4k tok
-- Procedural Death Knockdown and Hit Reactions | 08 Animation/04 Procedural/Procedural Death Knockdown and Hit Reactions.md | procedural, hit-reaction, death, knockdown, springs, combat, enemies, luau | ~3.6k tok
-- Procedural Gait and Footstep Planning | 08 Animation/04 Procedural/Procedural Gait and Footstep Planning.md | procedural, locomotion, gait, feet, cadence, foot-slide, luau | ~4.0k tok
-- Procedural Weapon Motion | 08 Animation/04 Procedural/Procedural Weapon Motion.md | procedural, weapons, grip, spin, toss, physics, flourish, luau | ~4.1k tok
-- Ragdolls and Physics-Based Animation | 08 Animation/04 Procedural/Ragdolls and Physics-Based Animation.md | procedural, ragdoll, physics, humanoid, ballsocketconstraint, animationconstraint, network-ownership | ~4.3k tok
-- Springs Damping and Smoothing | 08 Animation/04 Procedural/Springs Damping and Smoothing.md | procedural, springs, damping, smoothing, math, frame-rate, luau | ~3.3k tok
-- Tween and CFrame Animation of Objects | 08 Animation/04 Procedural/Tween and CFrame Animation of Objects.md | procedural, tweenservice, cframe, props, bulkmoveto, pivots, performance, luau | ~4.8k tok
-- Two-Bone IK Math | 08 Animation/04 Procedural/Two-Bone IK Math.md | procedural, ik, math, two-bone, arms, legs, luau | ~4.6k tok
-- Ability Kits Architecture | 08 Animation/05 Systems/Ability Kits Architecture.md | systems, abilities, kits, architecture, networking, priorities | ~4.0k tok
-- Boss Animation and Phases | 08 Animation/05 Systems/Boss Animation and Phases.md | systems, enemies, boss, phases, telegraph, dodge | ~2.6k tok
-- Camera Shake and Camera FX | 08 Animation/05 Systems/Camera Shake and Camera FX.md | systems, camera, shake, game-feel, accessibility, code | ~4.1k tok
-- Cameras and Cutscenes | 08 Animation/05 Systems/Cameras and Cutscenes.md | systems, camera, cutscene, cinematics, ui | ~4.2k tok
-- Cinematic Ultimates | 08 Animation/05 Systems/Cinematic Ultimates.md | systems, abilities, ultimates, camera, cinematics, networking | ~3.8k tok
-- Combat Combo Systems | 08 Animation/05 Systems/Combat Combo Systems.md | systems, combat, combo, input, networking, timing | ~4.3k tok
-- Custom Locomotion Controller Design | 08 Animation/05 Systems/Custom Locomotion Controller Design.md | systems, locomotion, architecture, state-machine, code | ~4.7k tok
-- Emotes and Social Animation | 08 Animation/05 Systems/Emotes and Social Animation.md | systems, emotes, social, humanoiddescription, networking | ~4.1k tok
-- Enemy Animation State Protocol | 08 Animation/05 Systems/Enemy Animation State Protocol.md | systems, enemies, networking, attributes, protocol, code | ~3.4k tok
-- Enemy and NPC Animation | 08 Animation/05 Systems/Enemy and NPC Animation.md | systems, enemies, npc, ai, performance, hub | ~3.3k tok
-- Equip Draw and Flourish Systems | 08 Animation/05 Systems/Equip Draw and Flourish Systems.md | systems, equip, flourish, weapons, networking, procedural | ~3.4k tok
-- Hit Reactions Stagger and Hit-Stop | 08 Animation/05 Systems/Hit Reactions Stagger and Hit-Stop.md | systems, combat, hit-reaction, stagger, hit-stop, game-feel | ~3.4k tok
-- Locomotion Systems | 08 Animation/05 Systems/Locomotion Systems.md | systems, locomotion, animate-script, gait, carry-layer | ~5.1k tok
-- Stance and Charge Moves | 08 Animation/05 Systems/Stance and Charge Moves.md | systems, abilities, stance, charge, iai, state-machine | ~4.0k tok
-- UI and GUI Animation | 08 Animation/05 Systems/UI and GUI Animation.md | systems, ui, gui, tweenservice, game-feel, accessibility, code | ~4.5k tok
-- VFX Timing with Animation | 08 Animation/05 Systems/VFX Timing with Animation.md | systems, vfx, markers, trails, timing, audio, performance | ~3.1k tok
-- Weapon and Combat Animation | 08 Animation/05 Systems/Weapon and Combat Animation.md | systems, combat, weapons, abilities, hub | ~3.4k tok
+- Foot Placement and Ground IK | 08 Animation/04 Procedural/Foot Placement and Ground IK.md | procedural, ik, feet, ground, slopes, stairs, raycast, luau | ~3.6k tok
+- IKControl Reference | 08 Animation/04 Procedural/IKControl Reference.md | procedural, ik, ikcontrol, reference, api | ~3.9k tok
+- Inverse Kinematics | 08 Animation/04 Procedural/Inverse Kinematics.md | procedural, ik, arms, legs, math, hub | ~3.0k tok
+- Look-At Aim and Head Tracking | 08 Animation/04 Procedural/Look-At Aim and Head Tracking.md | procedural, look-at, aim, head, neck, turret, axes, luau | ~3.4k tok
+- Multi-Bone IK - FABRIK and CCD | 08 Animation/04 Procedural/Multi-Bone IK - FABRIK and CCD.md | procedural, ik, fabrik, ccd, tails, tentacles, spines, chains, luau | ~3.9k tok
+- Procedural Animation | 08 Animation/04 Procedural/Procedural Animation.md | procedural, runservice, motor6d, animationconstraint, transform, timing, hub | ~4.5k tok
+- Procedural Death Knockdown and Hit Reactions | 08 Animation/04 Procedural/Procedural Death Knockdown and Hit Reactions.md | procedural, hit-reaction, death, knockdown, springs, combat, enemies, luau | ~3.7k tok
+- Procedural Gait and Footstep Planning | 08 Animation/04 Procedural/Procedural Gait and Footstep Planning.md | procedural, locomotion, gait, feet, cadence, foot-slide, luau | ~4.1k tok
+- Procedural Weapon Motion | 08 Animation/04 Procedural/Procedural Weapon Motion.md | procedural, weapons, grip, spin, toss, physics, flourish, luau | ~4.2k tok
+- Ragdolls and Physics-Based Animation | 08 Animation/04 Procedural/Ragdolls and Physics-Based Animation.md | procedural, ragdoll, physics, humanoid, ballsocketconstraint, animationconstraint, network-ownership | ~4.4k tok
+- Springs Damping and Smoothing | 08 Animation/04 Procedural/Springs Damping and Smoothing.md | procedural, springs, damping, smoothing, math, frame-rate, luau | ~3.4k tok
+- Tween and CFrame Animation of Objects | 08 Animation/04 Procedural/Tween and CFrame Animation of Objects.md | procedural, tweenservice, cframe, props, bulkmoveto, pivots, performance, luau | ~4.9k tok
+- Two-Bone IK Math | 08 Animation/04 Procedural/Two-Bone IK Math.md | procedural, ik, math, two-bone, arms, legs, luau | ~4.7k tok
+- Ability Kits Architecture | 08 Animation/05 Systems/Ability Kits Architecture.md | systems, abilities, kits, architecture, networking, priorities | ~4.1k tok
+- Boss Animation and Phases | 08 Animation/05 Systems/Boss Animation and Phases.md | systems, enemies, boss, phases, telegraph, dodge | ~2.7k tok
+- Camera Shake and Camera FX | 08 Animation/05 Systems/Camera Shake and Camera FX.md | systems, camera, shake, game-feel, accessibility, code | ~4.2k tok
+- Cameras and Cutscenes | 08 Animation/05 Systems/Cameras and Cutscenes.md | systems, camera, cutscene, cinematics, ui | ~4.3k tok
+- Cinematic Ultimates | 08 Animation/05 Systems/Cinematic Ultimates.md | systems, abilities, ultimates, camera, cinematics, networking | ~3.9k tok
+- Combat Combo Systems | 08 Animation/05 Systems/Combat Combo Systems.md | systems, combat, combo, input, networking, timing | ~4.4k tok
+- Custom Locomotion Controller Design | 08 Animation/05 Systems/Custom Locomotion Controller Design.md | systems, locomotion, architecture, state-machine, code | ~4.8k tok
+- Emotes and Social Animation | 08 Animation/05 Systems/Emotes and Social Animation.md | systems, emotes, social, humanoiddescription, networking | ~4.2k tok
+- Enemy Animation State Protocol | 08 Animation/05 Systems/Enemy Animation State Protocol.md | systems, enemies, networking, attributes, protocol, code | ~3.5k tok
+- Enemy and NPC Animation | 08 Animation/05 Systems/Enemy and NPC Animation.md | systems, enemies, npc, ai, performance, hub | ~3.4k tok
+- Equip Draw and Flourish Systems | 08 Animation/05 Systems/Equip Draw and Flourish Systems.md | systems, equip, flourish, weapons, networking, procedural | ~3.5k tok
+- First-Person Viewmodels - Arms Rig, Sway and Camera Binding | 08 Animation/05 Systems/First-Person Viewmodels - Arms Rig, Sway and Camera Binding.md | animation, first-person, viewmodel, fps, sway, bob, camera, weapons | ~2.6k tok
+- Hit Reactions Stagger and Hit-Stop | 08 Animation/05 Systems/Hit Reactions Stagger and Hit-Stop.md | systems, combat, hit-reaction, stagger, hit-stop, game-feel | ~3.5k tok
+- Locomotion Systems | 08 Animation/05 Systems/Locomotion Systems.md | systems, locomotion, animate-script, gait, carry-layer | ~5.2k tok
+- Mounts and Rideable Creatures | 08 Animation/05 Systems/Mounts and Rideable Creatures.md | animation, mounts, creatures, riding, locomotion, replication | ~2.4k tok
+- Stance and Charge Moves | 08 Animation/05 Systems/Stance and Charge Moves.md | systems, abilities, stance, charge, iai, state-machine | ~4.1k tok
+- UI and GUI Animation | 08 Animation/05 Systems/UI and GUI Animation.md | systems, ui, gui, tweenservice, game-feel, accessibility, code | ~4.6k tok
+- VFX Timing with Animation | 08 Animation/05 Systems/VFX Timing with Animation.md | systems, vfx, markers, trails, timing, audio, performance | ~3.3k tok
+- Weapon and Combat Animation | 08 Animation/05 Systems/Weapon and Combat Animation.md | systems, combat, weapons, abilities, hub | ~3.5k tok
 - Arm Baker Internals | 08 Animation/06 Pipelines and Tooling/Arm Baker Internals.md | pipeline, ik, arms, baking, algorithms, advanced | ~7.6k tok
-- Arm QA Metrics Reference | 08 Animation/06 Pipelines and Tooling/Arm QA Metrics Reference.md | pipeline, qa, arms, metrics, reference | ~4.7k tok
-- Baked Clip Stubs and Archiving | 08 Animation/06 Pipelines and Tooling/Baked Clip Stubs and Archiving.md | pipeline, performance, memory, keyframesequence, baking | ~3.1k tok
-- Case Study - Abilities That Only Worked in Studio | 08 Animation/06 Pipelines and Tooling/Case Study - Abilities That Only Worked in Studio.md | case-study, debugging, keyframesequenceprovider, publishing, runtime | ~3.8k tok
-- Case Study - Cutting a Million Instances | 08 Animation/06 Pipelines and Tooling/Case Study - Cutting a Million Instances.md | case-study, performance, memory, instances, baking | ~3.6k tok
-- Case Study - Fixing Hundreds of Attack Clips | 08 Animation/06 Pipelines and Tooling/Case Study - Fixing Hundreds of Attack Clips.md | case-study, pipeline, arms, qa, ik | ~3.3k tok
-- Clip Archive Server | 08 Animation/06 Pipelines and Tooling/Clip Archive Server.md | pipeline, tooling, archive, http, rbxm | ~4.2k tok
-- Clip Buffer Format | 08 Animation/06 Pipelines and Tooling/Clip Buffer Format.md | pipeline, data-format, buffer, compression, keyframesequence | ~4.4k tok
-- Enemy Import Axis Fix | 08 Animation/06 Pipelines and Tooling/Enemy Import Axis Fix.md | pipeline, import, gltf, math, cframe, enemies, debugging | ~3.5k tok
-- Ground Fitting Pipeline | 08 Animation/06 Pipelines and Tooling/Ground Fitting Pipeline.md | pipeline, enemies, ground, ik, procedural, death | ~3.6k tok
-- LihFolk R15 Keyframe Pipeline | 08 Animation/06 Pipelines and Tooling/LihFolk R15 Keyframe Pipeline.md | animation, pipeline, blender, r15, keyframe, export, qa, lihfolk | ~2.0k tok
-- Lua Keyframe Player Internals | 08 Animation/06 Pipelines and Tooling/Lua Keyframe Player Internals.md | pipeline, runtime, keyframesequence, internals, interpolation, advanced | ~4.9k tok
-- Lua Keyframe Player | 08 Animation/06 Pipelines and Tooling/Lua Keyframe Player.md | pipeline, runtime, keyframesequence, architecture, advanced | ~3.5k tok
-- Pipeline - Arm IK Baking and QA | 08 Animation/06 Pipelines and Tooling/Pipeline - Arm IK Baking and QA.md | pipeline, ik, arms, qa, baking, advanced | ~3.6k tok
-- Pipeline - Importing Animated Enemies | 08 Animation/06 Pipelines and Tooling/Pipeline - Importing Animated Enemies.md | pipeline, import, enemies, blender, gltf | ~3.2k tok
-- Pipeline - New Animated Weapon | 08 Animation/06 Pipelines and Tooling/Pipeline - New Animated Weapon.md | pipeline, weapons, rigging, kits, workflow | ~4.5k tok
-- Studio Tooling Architecture | 08 Animation/06 Pipelines and Tooling/Studio Tooling Architecture.md | pipeline, tooling, studio, http, architecture | ~4.6k tok
-- Weapon Design Rig Builder | 08 Animation/06 Pipelines and Tooling/Weapon Design Rig Builder.md | pipeline, weapons, rigging, motor6d, import | ~4.3k tok
-- Weapon Rig Player | 08 Animation/06 Pipelines and Tooling/Weapon Rig Player.md | pipeline, runtime, weapons, motor6d, keyframesequence | ~3.1k tok
-- Animation LOD | 08 Animation/07 Gotchas/Animation LOD.md | performance, lod, runtime, design | ~3.3k tok
-- Debugging Animation Problems | 08 Animation/07 Gotchas/Debugging Animation Problems.md | gotchas, debugging, method, tools | ~4.5k tok
-- Engine Gotchas | 08 Animation/07 Gotchas/Engine Gotchas.md | gotchas, debugging, animator, engine | ~5.9k tok
-- Open Questions | 08 Animation/07 Gotchas/Open Questions.md | gotchas, unresolved, research | ~5.3k tok
-- Performance and Memory | 08 Animation/07 Gotchas/Performance and Memory.md | performance, memory, budgets, gotchas | ~3.6k tok
-- Testing Animations in Studio | 08 Animation/07 Gotchas/Testing Animations in Studio.md | testing, qa, studio, tools | ~4.5k tok
-- Troubleshooting Table | 08 Animation/07 Gotchas/Troubleshooting Table.md | gotchas, troubleshooting, reference | ~4.4k tok
-- Snippets - Animation Controller Module | 08 Animation/08 Snippets/Snippets - Animation Controller Module.md | snippets, luau, controller, state-machine, architecture | ~6.5k tok
-- Snippets - Building and Sampling Clips | 08 Animation/08 Snippets/Snippets - Building and Sampling Clips.md | snippets, luau, keyframesequence, fk, sampling, easing | ~7.9k tok
-- Snippets - Camera Shake and FX | 08 Animation/08 Snippets/Snippets - Camera Shake and FX.md | snippets, luau, camera, fx, game-feel | ~5.2k tok
-- Snippets - Enemy Client Animator | 08 Animation/08 Snippets/Snippets - Enemy Client Animator.md | snippets, luau, enemies, npc, replication, client | ~6.0k tok
-- Snippets - IK | 08 Animation/08 Snippets/Snippets - IK.md | snippets, luau, ik, procedural | ~7.0k tok
-- Snippets - Lua Keyframe Player Core | 08 Animation/08 Snippets/Snippets - Lua Keyframe Player Core.md | snippets, luau, keyframe-player, runtime, sampling, blending | ~8.3k tok
-- Snippets - Playing Animations | 08 Animation/08 Snippets/Snippets - Playing Animations.md | snippets, luau, playback, animator | ~6.1k tok
-- Snippets - Procedural Motion | 08 Animation/08 Snippets/Snippets - Procedural Motion.md | snippets, luau, procedural, springs | ~5.7k tok
-- Snippets - Ragdoll | 08 Animation/08 Snippets/Snippets - Ragdoll.md | snippets, luau, ragdoll, physics, humanoid | ~5.0k tok
-- Reference - Purple Anime Settings UI (Claude + Figma) | 08 Animation/09 References/Reference - Purple Anime Settings UI (Claude + Figma).md | reference, ui, gui, figma, ai-workflow, settings-menu | ~2.8k tok
+- Arm QA Metrics Reference | 08 Animation/06 Pipelines and Tooling/Arm QA Metrics Reference.md | pipeline, qa, arms, metrics, reference | ~4.8k tok
+- Baked Clip Stubs and Archiving | 08 Animation/06 Pipelines and Tooling/Baked Clip Stubs and Archiving.md | pipeline, performance, memory, keyframesequence, baking | ~3.2k tok
+- Case Study - Abilities That Only Worked in Studio | 08 Animation/06 Pipelines and Tooling/Case Study - Abilities That Only Worked in Studio.md | case-study, debugging, keyframesequenceprovider, publishing, runtime | ~3.9k tok
+- Case Study - Cutting a Million Instances | 08 Animation/06 Pipelines and Tooling/Case Study - Cutting a Million Instances.md | case-study, performance, memory, instances, baking | ~3.7k tok
+- Case Study - Fixing Hundreds of Attack Clips | 08 Animation/06 Pipelines and Tooling/Case Study - Fixing Hundreds of Attack Clips.md | case-study, pipeline, arms, qa, ik | ~3.4k tok
+- Clip Archive Server | 08 Animation/06 Pipelines and Tooling/Clip Archive Server.md | pipeline, tooling, archive, http, rbxm | ~4.3k tok
+- Clip Buffer Format | 08 Animation/06 Pipelines and Tooling/Clip Buffer Format.md | pipeline, data-format, buffer, compression, keyframesequence | ~4.5k tok
+- Enemy Import Axis Fix | 08 Animation/06 Pipelines and Tooling/Enemy Import Axis Fix.md | pipeline, import, gltf, math, cframe, enemies, debugging | ~3.6k tok
+- Ground Fitting Pipeline | 08 Animation/06 Pipelines and Tooling/Ground Fitting Pipeline.md | pipeline, enemies, ground, ik, procedural, death | ~3.7k tok
+- LihFolk R15 Keyframe Pipeline | 08 Animation/06 Pipelines and Tooling/LihFolk R15 Keyframe Pipeline.md | animation, pipeline, blender, r15, keyframe, export, qa, lihfolk | ~2.1k tok
+- Lua Keyframe Player Internals | 08 Animation/06 Pipelines and Tooling/Lua Keyframe Player Internals.md | pipeline, runtime, keyframesequence, internals, interpolation, advanced | ~5.0k tok
+- Lua Keyframe Player | 08 Animation/06 Pipelines and Tooling/Lua Keyframe Player.md | pipeline, runtime, keyframesequence, architecture, advanced | ~3.6k tok
+- Pipeline - Arm IK Baking and QA | 08 Animation/06 Pipelines and Tooling/Pipeline - Arm IK Baking and QA.md | pipeline, ik, arms, qa, baking, advanced | ~3.7k tok
+- Pipeline - Importing Animated Enemies | 08 Animation/06 Pipelines and Tooling/Pipeline - Importing Animated Enemies.md | pipeline, import, enemies, blender, gltf | ~3.3k tok
+- Pipeline - New Animated Weapon | 08 Animation/06 Pipelines and Tooling/Pipeline - New Animated Weapon.md | pipeline, weapons, rigging, kits, workflow | ~4.6k tok
+- Studio Tooling Architecture | 08 Animation/06 Pipelines and Tooling/Studio Tooling Architecture.md | pipeline, tooling, studio, http, architecture | ~4.7k tok
+- Weapon Design Rig Builder | 08 Animation/06 Pipelines and Tooling/Weapon Design Rig Builder.md | pipeline, weapons, rigging, motor6d, import | ~4.4k tok
+- Weapon Rig Player | 08 Animation/06 Pipelines and Tooling/Weapon Rig Player.md | pipeline, runtime, weapons, motor6d, keyframesequence | ~3.3k tok
+- Animation LOD | 08 Animation/07 Gotchas/Animation LOD.md | performance, lod, runtime, design | ~3.4k tok
+- Debugging Animation Problems | 08 Animation/07 Gotchas/Debugging Animation Problems.md | gotchas, debugging, method, tools | ~4.7k tok
+- Engine Gotchas | 08 Animation/07 Gotchas/Engine Gotchas.md | gotchas, debugging, animator, engine | ~6.0k tok
+- Open Questions | 08 Animation/07 Gotchas/Open Questions.md | gotchas, unresolved, research | ~5.4k tok
+- Performance and Memory | 08 Animation/07 Gotchas/Performance and Memory.md | performance, memory, budgets, gotchas | ~3.7k tok
+- Testing Animations in Studio | 08 Animation/07 Gotchas/Testing Animations in Studio.md | testing, qa, studio, tools | ~4.6k tok
+- Troubleshooting Table | 08 Animation/07 Gotchas/Troubleshooting Table.md | gotchas, troubleshooting, reference | ~4.5k tok
+- Snippets - Animation Controller Module | 08 Animation/08 Snippets/Snippets - Animation Controller Module.md | snippets, luau, controller, state-machine, architecture | ~6.6k tok
+- Snippets - Building and Sampling Clips | 08 Animation/08 Snippets/Snippets - Building and Sampling Clips.md | snippets, luau, keyframesequence, fk, sampling, easing | ~8.0k tok
+- Snippets - Camera Shake and FX | 08 Animation/08 Snippets/Snippets - Camera Shake and FX.md | snippets, luau, camera, fx, game-feel | ~5.3k tok
+- Snippets - Enemy Client Animator | 08 Animation/08 Snippets/Snippets - Enemy Client Animator.md | snippets, luau, enemies, npc, replication, client | ~6.1k tok
+- Snippets - IK | 08 Animation/08 Snippets/Snippets - IK.md | snippets, luau, ik, procedural | ~7.1k tok
+- Snippets - Lua Keyframe Player Core | 08 Animation/08 Snippets/Snippets - Lua Keyframe Player Core.md | snippets, luau, keyframe-player, runtime, sampling, blending | ~8.5k tok
+- Snippets - Playing Animations | 08 Animation/08 Snippets/Snippets - Playing Animations.md | snippets, luau, playback, animator | ~6.3k tok
+- Snippets - Procedural Motion | 08 Animation/08 Snippets/Snippets - Procedural Motion.md | snippets, luau, procedural, springs | ~5.9k tok
+- Snippets - Ragdoll | 08 Animation/08 Snippets/Snippets - Ragdoll.md | snippets, luau, ragdoll, physics, humanoid | ~5.2k tok
+- Reference - Purple Anime Settings UI (Claude + Figma) | 08 Animation/09 References/Reference - Purple Anime Settings UI (Claude + Figma).md | reference, ui, gui, figma, ai-workflow, settings-menu | ~2.9k tok
 
 ## 09 Gameplay Systems
 
-- Behaviour Trees Utility AI and State Machines for NPCs | 09 Gameplay Systems/Behaviour Trees Utility AI and State Machines for NPCs.md | gameplay, ai, npc, state-machine, behaviour-tree, utility-ai, architecture, enemies, bosses | ~5.8k tok
-- Camera Systems | 09 Gameplay Systems/Camera Systems.md | gameplay, camera, cutscene, aiming, renderstep | ~3.5k tok
-- Characters and Humanoids | 09 Gameplay Systems/Characters and Humanoids.md | gameplay, characters, humanoid, spawning, health, states | ~4.3k tok
-- Combat Systems Architecture | 09 Gameplay Systems/Combat Systems Architecture.md | gameplay, combat, architecture, damage, knockback, guard, parry, server-authority | ~3.8k tok
-- Custom Character Controllers | 09 Gameplay Systems/Custom Character Controllers.md | gameplay, character-controller, movement, stamina, dash, input | ~4.2k tok
-- Economies and Currencies | 09 Gameplay Systems/Economies and Currencies.md | gameplay, economy, currency, sinks, faucets, inflation, analytics | ~3.5k tok
-- Hitboxes and Hit Detection | 09 Gameplay Systems/Hitboxes and Hit Detection.md | gameplay, combat, hitbox, hit-detection, latency, server-authority | ~3.9k tok
-- Mover Constraints and Physics Controllers | 09 Gameplay Systems/Mover Constraints and Physics Controllers.md | gameplay, physics, movers, linearvelocity, alignposition, controllermanager | ~5.0k tok
-- NPC AI and Behaviour | 09 Gameplay Systems/NPC AI and Behaviour.md | gameplay, ai, npc, enemies, aggro, behaviour, bosses | ~3.6k tok
-- Pathfinding Edge Cases and Fallbacks | 09 Gameplay Systems/Pathfinding Edge Cases and Fallbacks.md | gameplay, pathfinding, navigation, npc, ai, fallbacks, debugging | ~5.1k tok
-- Pathfinding | 09 Gameplay Systems/Pathfinding.md | gameplay, pathfinding, navigation, npc, ai | ~4.5k tok
-- Physics Assemblies and Constraints | 09 Gameplay Systems/Physics Assemblies and Constraints.md | gameplay, physics, assemblies, constraints, collision, network-ownership | ~5.1k tok
-- Progression Levels and Unlocks | 09 Gameplay Systems/Progression Levels and Unlocks.md | gameplay, progression, levels, xp, skill-tree, rebirth, crafting, forge | ~3.6k tok
-- Quests and Objectives | 09 Gameplay Systems/Quests and Objectives.md | gameplay, quests, objectives, dailies, tutorial, story | ~3.5k tok
-- RNG Drops and Luck Systems | 09 Gameplay Systems/RNG Drops and Luck Systems.md | gameplay, rng, luck, drops, loot, pity, rolling | ~3.4k tok
-- Raycasts Shapecasts and Spatial Queries | 09 Gameplay Systems/Raycasts Shapecasts and Spatial Queries.md | gameplay, raycast, spatial-query, overlapparams, shapecast, physics | ~3.5k tok
-- Spawning Teams and Rounds | 09 Gameplay Systems/Spawning Teams and Rounds.md | gameplay, spawning, teams, rounds, zones, gates, enemies | ~4.5k tok
-- Status Effects Buffs and Stacking Rules | 09 Gameplay Systems/Status Effects Buffs and Stacking Rules.md | gameplay, combat, status-effects, buffs, debuffs, crowd-control, stacking, server-authority | ~5.7k tok
-- Tools and Inventory Systems | 09 Gameplay Systems/Tools and Inventory Systems.md | gameplay, tools, inventory, backpack, equip, items | ~3.4k tok
+- AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses | 09 Gameplay Systems/AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses.md | gameplay, ai, difficulty, aim, reaction-time, fairness, npc, shooters, server-authority | ~2.1k tok
+- Behaviour Trees Utility AI and State Machines for NPCs | 09 Gameplay Systems/Behaviour Trees Utility AI and State Machines for NPCs.md | gameplay, ai, npc, state-machine, behaviour-tree, utility-ai, architecture, enemies, bosses | ~6.0k tok
+- Camera Obstruction Handling - Occlusion Modes, Fades and Collision | 09 Gameplay Systems/Camera Obstruction Handling - Occlusion Modes, Fades and Collision.md | gameplay, camera, occlusion, invisicam, spherecast, transparency, level-design | ~2.3k tok
+- Camera Systems | 09 Gameplay Systems/Camera Systems.md | gameplay, camera, cutscene, aiming, renderstep | ~3.6k tok
+- Character Select and Class Systems with Different Rigs | 09 Gameplay Systems/Character Select and Class Systems with Different Rigs.md | gameplay, characters, classes, character-select, rigs, morphs, humanoiddescription, data, server-authority | ~2.4k tok
+- Characters and Humanoids | 09 Gameplay Systems/Characters and Humanoids.md | gameplay, characters, humanoid, spawning, health, states | ~4.5k tok
+- Chase Cameras and Speed Effects for Vehicles | 09 Gameplay Systems/Chase Cameras and Speed Effects for Vehicles.md | gameplay, camera, vehicles, chase-camera, fov, speed-lines, springs, comfort | ~2.5k tok
+- Combat Systems Architecture | 09 Gameplay Systems/Combat Systems Architecture.md | gameplay, combat, architecture, damage, knockback, guard, parry, server-authority | ~3.9k tok
+- Custom Character Controllers | 09 Gameplay Systems/Custom Character Controllers.md | gameplay, character-controller, movement, stamina, dash, input | ~4.3k tok
+- Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations | 09 Gameplay Systems/Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations.md | gameplay, combat, damage, armor, resistances, crits, balance, math, server-authority | ~2.4k tok
+- Downed, Revive and Bleed-Out States | 09 Gameplay Systems/Downed, Revive and Bleed-Out States.md | gameplay, combat, co-op, downed, revive, bleed-out, health, state-machine, server-authority | ~2.3k tok
+- Economies and Currencies | 09 Gameplay Systems/Economies and Currencies.md | gameplay, economy, currency, sinks, faucets, inflation, analytics | ~3.6k tok
+- Enemy Archetype Kit - Fodder, Tank, Ranged, Support and Exploder | 09 Gameplay Systems/Enemy Archetype Kit - Fodder, Tank, Ranged, Support and Exploder.md | gameplay, ai, enemies, archetypes, encounter-design, roster, balance, data-driven | ~2.3k tok
+- Explosions - Radius Damage, Falloff and Cover Checks | 09 Gameplay Systems/Explosions - Radius Damage, Falloff and Cover Checks.md | gameplay, combat, explosions, aoe, falloff, cover, knockback, spatial-queries | ~2.6k tok
+- Grabs, Carries and Throws - Moving Players Safely | 09 Gameplay Systems/Grabs, Carries and Throws - Moving Players Safely.md | gameplay, combat, grabs, carry, throw, network-ownership, physics, anti-abuse, server-authority | ~2.4k tok
+- Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers | 09 Gameplay Systems/Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers.md | gameplay, combat, shooters, recoil, spread, bloom, headshots, hit-zones, game-feel, server-authority | ~2.4k tok
+- Hitboxes and Hit Detection | 09 Gameplay Systems/Hitboxes and Hit Detection.md | gameplay, combat, hitbox, hit-detection, latency, server-authority | ~4.0k tok
+- Kill Credit, Assists, Kill Feed and Death Recaps | 09 Gameplay Systems/Kill Credit, Assists, Kill Feed and Death Recaps.md | gameplay, combat, kill-credit, assists, kill-feed, death-recap, pvp, attribution, server-authority | ~2.2k tok
+- Map Voting and Rotation for Round Games | 09 Gameplay Systems/Map Voting and Rotation for Round Games.md | rounds, map-voting, map-rotation, round-games, streaming | ~2.5k tok
+- Mover Constraints and Physics Controllers | 09 Gameplay Systems/Mover Constraints and Physics Controllers.md | gameplay, physics, movers, linearvelocity, alignposition, controllermanager | ~5.1k tok
+- NPC AI and Behaviour | 09 Gameplay Systems/NPC AI and Behaviour.md | gameplay, ai, npc, enemies, aggro, behaviour, bosses | ~3.8k tok
+- Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run | 09 Gameplay Systems/Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run.md | gameplay, movement, parkour, vault, mantle, ledge-grab, wall-run, raycasts, anti-exploit | ~2.4k tok
+- Pathfinding Edge Cases and Fallbacks | 09 Gameplay Systems/Pathfinding Edge Cases and Fallbacks.md | gameplay, pathfinding, navigation, npc, ai, fallbacks, debugging | ~5.3k tok
+- Pathfinding | 09 Gameplay Systems/Pathfinding.md | gameplay, pathfinding, navigation, npc, ai | ~4.6k tok
+- Physics Assemblies and Constraints | 09 Gameplay Systems/Physics Assemblies and Constraints.md | gameplay, physics, assemblies, constraints, collision, network-ownership | ~5.3k tok
+- Police Chases and Wanted Levels | 09 Gameplay Systems/Police Chases and Wanted Levels.md | gameplay, roleplay, police, wanted-level, pursuit, ai, teams, anti-abuse | ~2.4k tok
+- Progression Levels and Unlocks | 09 Gameplay Systems/Progression Levels and Unlocks.md | gameplay, progression, levels, xp, skill-tree, rebirth, crafting, forge | ~3.7k tok
+- Quests and Objectives | 09 Gameplay Systems/Quests and Objectives.md | gameplay, quests, objectives, dailies, tutorial, story | ~3.6k tok
+- RNG Drops and Luck Systems | 09 Gameplay Systems/RNG Drops and Luck Systems.md | gameplay, rng, luck, drops, loot, pity, rolling | ~3.5k tok
+- Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking | 09 Gameplay Systems/Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking.md | gameplay, ai, ranged, cover, line-of-sight, influence-map, shooters, npc | ~2.3k tok
+- Raycasts Shapecasts and Spatial Queries | 09 Gameplay Systems/Raycasts Shapecasts and Spatial Queries.md | gameplay, raycast, spatial-query, overlapparams, shapecast, physics | ~3.7k tok
+- Spawn Director - Credit Budgets and Player-Count Scaling | 09 Gameplay Systems/Spawn Director - Credit Budgets and Player-Count Scaling.md | gameplay, ai, spawning, director, pacing, waves, scaling, co-op, server-authority | ~2.2k tok
+- Spawning Teams and Rounds | 09 Gameplay Systems/Spawning Teams and Rounds.md | gameplay, spawning, teams, rounds, zones, gates, enemies | ~4.7k tok
+- Squad AI - Attack Tokens, Flanking and Attacker Limits | 09 Gameplay Systems/Squad AI - Attack Tokens, Flanking and Attacker Limits.md | gameplay, ai, squad, attack-tokens, flanking, coordination, npc, server-authority | ~2.2k tok
+- Status Effects Buffs and Stacking Rules | 09 Gameplay Systems/Status Effects Buffs and Stacking Rules.md | gameplay, combat, status-effects, buffs, debuffs, crowd-control, stacking, server-authority | ~5.8k tok
+- Tools and Inventory Systems | 09 Gameplay Systems/Tools and Inventory Systems.md | gameplay, tools, inventory, backpack, equip, items | ~3.5k tok
+- Visual AI Debugging - State Labels, Path Lines and Perception Gizmos | 09 Gameplay Systems/Visual AI Debugging - State Labels, Path Lines and Perception Gizmos.md | gameplay, ai, debugging, gizmos, adornments, tooling, agents, npc | ~2.3k tok
+- Weather That Changes Gameplay - Grip, Visibility and Hearing | 09 Gameplay Systems/Weather That Changes Gameplay - Grip, Visibility and Hearing.md | weather, gameplay, vehicles, ai, perception, movement, anti-exploit | ~3.1k tok
+- Wildlife and Ambient Creature AI - Passive, Neutral and Hostile | 09 Gameplay Systems/Wildlife and Ambient Creature AI - Passive, Neutral and Hostile.md | gameplay, ai, wildlife, creatures, herds, flocking, survival, open-world, performance | ~2.3k tok
+- Zone Detection - Area Enter and Exit for Music, Lighting and Ambience | 09 Gameplay Systems/Zone Detection - Area Enter and Exit for Music, Lighting and Ambience.md | zones, regions, spatial-queries, ambience, lighting, music | ~2.7k tok
 
 ## 10 Game Design and Genres
 
-- Balancing with Spreadsheets and Data | 10 Game Design and Genres/Balancing with Spreadsheets and Data.md | game-design, balancing, spreadsheets, economy, simulation, analytics | ~4.4k tok
-- Boss Fight Design Patterns | 10 Game Design and Genres/Boss Fight Design Patterns.md | game-design, combat, bosses, encounters, phases, telegraphs, multiplayer, rewards | ~5.2k tok
-- Core Loops and Session Design | 10 Game Design and Genres/Core Loops and Session Design.md | game-design, core-loop, sessions, retention, roblox-audience | ~5.3k tok
-- Ethical Design and Player Trust | 10 Game Design and Genres/Ethical Design and Player Trust.md | game-design, ethics, dark-patterns, monetization, odds, child-safety, trust | ~3.6k tok
-- First-Time User Experience and Onboarding | 10 Game Design and Genres/First-Time User Experience and Onboarding.md | game-design, ftue, onboarding, tutorial, funnel, retention | ~5.5k tok
-- Genre Playbook - Battlegrounds and Arena Fighters | 10 Game Design and Genres/Genre Playbook - Battlegrounds and Arena Fighters.md | game-design, genre, battlegrounds, fighting, pvp, combos, netcode, arena | ~4.0k tok
-- Genre Playbook - Combat and RPG | 10 Game Design and Genres/Genre Playbook - Combat and RPG.md | game-design, genre, combat, rpg, enemies, bosses, ttk, abilities | ~4.0k tok
-- Genre Playbook - Horror and Story | 10 Game Design and Genres/Genre Playbook - Horror and Story.md | game-design, genre, horror, story, narrative, tension, cutscenes | ~3.8k tok
-- Genre Playbook - Obbies and Platformers | 10 Game Design and Genres/Genre Playbook - Obbies and Platformers.md | game-design, genre, obby, platformer, checkpoints, difficulty | ~3.8k tok
-- Genre Playbook - Party and Minigame Collections | 10 Game Design and Genres/Genre Playbook - Party and Minigame Collections.md | game-design, genre, party, minigames, rounds, lobby, social, replayability | ~3.6k tok
-- Genre Playbook - Puzzle and Escape Rooms | 10 Game Design and Genres/Genre Playbook - Puzzle and Escape Rooms.md | game-design, genre, puzzle, escape-room, co-op, hints, level-design, state | ~3.7k tok
-- Genre Playbook - RNG and Collection Games | 10 Game Design and Genres/Genre Playbook - RNG and Collection Games.md | game-design, genre, rng, rolling, luck, odds, rarity, collection, pity | ~5.0k tok
-- Genre Playbook - Racing and Driving | 10 Game Design and Genres/Genre Playbook - Racing and Driving.md | game-design, genre, racing, driving, vehicles, physics, network-ownership, cars | ~3.5k tok
-- Genre Playbook - Roleplay and Social Hangouts | 10 Game Design and Genres/Genre Playbook - Roleplay and Social Hangouts.md | game-design, genre, roleplay, hangout, social, expression, safety | ~3.3k tok
-- Genre Playbook - Shooters FPS and TPS | 10 Game Design and Genres/Genre Playbook - Shooters FPS and TPS.md | game-design, genre, shooter, fps, tps, hitscan, netcode, matchmaking, anti-cheat | ~4.3k tok
-- Genre Playbook - Simulators | 10 Game Design and Genres/Genre Playbook - Simulators.md | game-design, genre, simulator, multipliers, pets, rebirth | ~3.4k tok
-- Genre Playbook - Sports | 10 Game Design and Genres/Genre Playbook - Sports.md | game-design, genre, sports, ball-physics, teams, network-ownership, competitive | ~3.9k tok
-- Genre Playbook - Survival and Crafting | 10 Game Design and Genres/Genre Playbook - Survival and Crafting.md | game-design, genre, survival, crafting, building, resources, inventory, persistence | ~3.8k tok
-- Genre Playbook - Tower Defense | 10 Game Design and Genres/Genre Playbook - Tower Defense.md | game-design, genre, tower-defense, waves, co-op, units, economy, performance | ~4.8k tok
-- Genre Playbook - Tycoons | 10 Game Design and Genres/Genre Playbook - Tycoons.md | game-design, genre, tycoon, idle, payback, plots | ~3.4k tok
-- Progression and Pacing Design | 10 Game Design and Genres/Progression and Pacing Design.md | game-design, progression, pacing, curves, rebirth, prestige, math | ~5.0k tok
-- Rarity Ladders and Drop Pacing Math | 10 Game Design and Genres/Rarity Ladders and Drop Pacing Math.md | game-design, rng, rarity, drops, pacing, math, balancing, collection, luck | ~4.7k tok
-- Retention and Return Hooks | 10 Game Design and Genres/Retention and Return Hooks.md | game-design, retention, daily-rewards, streaks, quests, live-ops | ~5.0k tok
-- Simulator and RNG Genre Teardown | 10 Game Design and Genres/Simulator and RNG Genre Teardown.md | game-design, genre, simulator, rng, teardown, analysis, pacing, monetisation, case-study | ~4.8k tok
-- Social Design and Multiplayer Play | 10 Game Design and Genres/Social Design and Multiplayer Play.md | game-design, social, multiplayer, trading, pvp, friends, safety | ~4.2k tok
+- Balancing with Spreadsheets and Data | 10 Game Design and Genres/Balancing with Spreadsheets and Data.md | game-design, balancing, spreadsheets, economy, simulation, analytics | ~4.5k tok
+- Boss Fight Design Patterns | 10 Game Design and Genres/Boss Fight Design Patterns.md | game-design, combat, bosses, encounters, phases, telegraphs, multiplayer, rewards | ~5.3k tok
+- Core Loops and Session Design | 10 Game Design and Genres/Core Loops and Session Design.md | game-design, core-loop, sessions, retention, roblox-audience | ~5.4k tok
+- Ethical Design and Player Trust | 10 Game Design and Genres/Ethical Design and Player Trust.md | game-design, ethics, dark-patterns, monetization, odds, child-safety, trust | ~3.8k tok
+- First-Time User Experience and Onboarding | 10 Game Design and Genres/First-Time User Experience and Onboarding.md | game-design, ftue, onboarding, tutorial, funnel, retention | ~5.6k tok
+- Genre Playbook - Battle Royale | 10 Game Design and Genres/Genre Playbook - Battle Royale.md | game-design, genre, battle-royale, zone, loot, squads, matchmaking, streaming, server-size, teleport | ~1.7k tok
+- Genre Playbook - Battlegrounds and Arena Fighters | 10 Game Design and Genres/Genre Playbook - Battlegrounds and Arena Fighters.md | game-design, genre, battlegrounds, fighting, pvp, combos, netcode, arena | ~4.1k tok
+- Genre Playbook - Combat and RPG | 10 Game Design and Genres/Genre Playbook - Combat and RPG.md | game-design, genre, combat, rpg, enemies, bosses, ttk, abilities | ~4.1k tok
+- Genre Playbook - Horror and Story | 10 Game Design and Genres/Genre Playbook - Horror and Story.md | game-design, genre, horror, story, narrative, tension, cutscenes | ~3.9k tok
+- Genre Playbook - Naval and Open-Sea Adventure | 10 Game Design and Genres/Genre Playbook - Naval and Open-Sea Adventure.md | game-design, genre, naval, ships, ocean, sea-events, islands, crew, streaming, buoyancy | ~1.7k tok
+- Genre Playbook - Obbies and Platformers | 10 Game Design and Genres/Genre Playbook - Obbies and Platformers.md | game-design, genre, obby, platformer, checkpoints, difficulty | ~4.0k tok
+- Genre Playbook - Open-World City and Crime Roleplay | 10 Game Design and Genres/Genre Playbook - Open-World City and Crime Roleplay.md | game-design, genre, city, crime, cops-and-robbers, roleplay, vehicles, heists, wanted-level, streaming | ~2.0k tok
+- Genre Playbook - Party and Minigame Collections | 10 Game Design and Genres/Genre Playbook - Party and Minigame Collections.md | game-design, genre, party, minigames, rounds, lobby, social, replayability | ~3.7k tok
+- Genre Playbook - Puzzle and Escape Rooms | 10 Game Design and Genres/Genre Playbook - Puzzle and Escape Rooms.md | game-design, genre, puzzle, escape-room, co-op, hints, level-design, state | ~3.8k tok
+- Genre Playbook - RNG and Collection Games | 10 Game Design and Genres/Genre Playbook - RNG and Collection Games.md | game-design, genre, rng, rolling, luck, odds, rarity, collection, pity | ~5.1k tok
+- Genre Playbook - Racing and Driving | 10 Game Design and Genres/Genre Playbook - Racing and Driving.md | game-design, genre, racing, driving, vehicles, physics, network-ownership, cars | ~3.6k tok
+- Genre Playbook - Roleplay and Social Hangouts | 10 Game Design and Genres/Genre Playbook - Roleplay and Social Hangouts.md | game-design, genre, roleplay, hangout, social, expression, safety | ~3.5k tok
+- Genre Playbook - Shooters FPS and TPS | 10 Game Design and Genres/Genre Playbook - Shooters FPS and TPS.md | game-design, genre, shooter, fps, tps, hitscan, netcode, matchmaking, anti-cheat | ~4.4k tok
+- Genre Playbook - Simulators | 10 Game Design and Genres/Genre Playbook - Simulators.md | game-design, genre, simulator, multipliers, pets, rebirth | ~3.5k tok
+- Genre Playbook - Social Deduction and Murder Mystery | 10 Game Design and Genres/Genre Playbook - Social Deduction and Murder Mystery.md | game-design, genre, social-deduction, murder-mystery, hidden-roles, rounds, information-control, anti-teaming, chat | ~1.9k tok
+- Genre Playbook - Sports | 10 Game Design and Genres/Genre Playbook - Sports.md | game-design, genre, sports, ball-physics, teams, network-ownership, competitive | ~4.0k tok
+- Genre Playbook - Survival and Crafting | 10 Game Design and Genres/Genre Playbook - Survival and Crafting.md | game-design, genre, survival, crafting, building, resources, inventory, persistence | ~3.9k tok
+- Genre Playbook - Tower Defense | 10 Game Design and Genres/Genre Playbook - Tower Defense.md | game-design, genre, tower-defense, waves, co-op, units, economy, performance | ~4.9k tok
+- Genre Playbook - Tycoons | 10 Game Design and Genres/Genre Playbook - Tycoons.md | game-design, genre, tycoon, idle, payback, plots | ~3.5k tok
+- Genre Playbook - Zombie and Wave Survival Co-op | 10 Game Design and Genres/Genre Playbook - Zombie and Wave Survival Co-op.md | game-design, genre, zombies, wave-survival, co-op, director, scaling, revive, barricades, npc-performance | ~1.8k tok
+- Progression and Pacing Design | 10 Game Design and Genres/Progression and Pacing Design.md | game-design, progression, pacing, curves, rebirth, prestige, math | ~5.2k tok
+- Rarity Ladders and Drop Pacing Math | 10 Game Design and Genres/Rarity Ladders and Drop Pacing Math.md | game-design, rng, rarity, drops, pacing, math, balancing, collection, luck | ~4.8k tok
+- Retention and Return Hooks | 10 Game Design and Genres/Retention and Return Hooks.md | game-design, retention, daily-rewards, streaks, quests, live-ops | ~5.1k tok
+- Simulator and RNG Genre Teardown | 10 Game Design and Genres/Simulator and RNG Genre Teardown.md | game-design, genre, simulator, rng, teardown, analysis, pacing, monetisation, case-study | ~5.0k tok
+- Social Design and Multiplayer Play | 10 Game Design and Genres/Social Design and Multiplayer Play.md | game-design, social, multiplayer, trading, pvp, friends, safety | ~4.4k tok
+- Time-to-Kill Math and a Weapon Balance Sheet | 10 Game Design and Genres/Time-to-Kill Math and a Weapon Balance Sheet.md | design, balance, ttk, dps, weapons, spreadsheets, shooters, combat, math | ~2.1k tok
 
 ## 11 Monetization Publishing and Live Ops
 
-- Ads and Rewarded Video | 11 Monetization Publishing and Live Ops/Ads and Rewarded Video.md | monetization, ads, rewarded-video, adservice, ads-manager, luau | ~3.5k tok
+- Ads and Rewarded Video | 11 Monetization Publishing and Live Ops/Ads and Rewarded Video.md | monetization, ads, rewarded-video, adservice, ads-manager, luau | ~3.7k tok
 - Age Checks and Safety Features | 11 Monetization Publishing and Live Ops/Age Checks and Safety Features.md | safety, age-checks, chat, textchatservice, filtering, compliance, luau | ~3.4k tok
-- Analytics and Funnels | 11 Monetization Publishing and Live Ops/Analytics and Funnels.md | analytics, analyticsservice, funnels, economy, custom-events, live-ops, luau | ~3.8k tok
-- Community Building | 11 Monetization Publishing and Live Ops/Community Building.md | community, groups, social, invites, live-ops, luau | ~3.4k tok
-- Developer Products and ProcessReceipt | 11 Monetization Publishing and Live Ops/Developer Products and ProcessReceipt.md | monetization, developer-products, processreceipt, datastore, idempotency, luau | ~5.8k tok
-- Discovery and the Algorithm | 11 Monetization Publishing and Live Ops/Discovery and the Algorithm.md | discovery, recommendations, algorithm, growth, publishing | ~3.1k tok
-- Economy Inflation Sinks and Faucets Math | 11 Monetization Publishing and Live Ops/Economy Inflation Sinks and Faucets Math.md | economy, inflation, sinks, faucets, balancing, live-ops, math, luau | ~4.5k tok
-- Game Passes | 11 Monetization Publishing and Live Ops/Game Passes.md | monetization, game-passes, marketplaceservice, luau | ~3.9k tok
-- Live Ops Events and Updates | 11 Monetization Publishing and Live Ops/Live Ops Events and Updates.md | live-ops, events, notifications, updates, scheduling, luau | ~3.3k tok
-- Monetization Overview | 11 Monetization Publishing and Live Ops/Monetization Overview.md | monetization, robux, overview, business, live-ops | ~3.8k tok
-- Paid Random Items and Odds Disclosure in Practice | 11 Monetization Publishing and Live Ops/Paid Random Items and Odds Disclosure in Practice.md | monetization, policy, paid-random-items, odds, rng, compliance, luau | ~4.9k tok
-- Pricing and Store Design | 11 Monetization Publishing and Live Ops/Pricing and Store Design.md | monetization, pricing, managed-pricing, regional-pricing, shop, store-design, luau | ~4.0k tok
-- Publishing an Experience | 11 Monetization Publishing and Live Ops/Publishing an Experience.md | publishing, release, audience, kids-and-select, server-management, live-ops | ~3.2k tok
-- Refunds Chargebacks and Purchase Support | 11 Monetization Publishing and Live Ops/Refunds Chargebacks and Purchase Support.md | monetization, refunds, chargebacks, support, webhooks, purchases, live-ops, luau | ~5.1k tok
-- Roblox Policies Ratings and Compliance | 11 Monetization Publishing and Live Ops/Roblox Policies Ratings and Compliance.md | policy, compliance, maturity, paid-random-items, policyservice, odds, luau | ~4.0k tok
-- Robux Price Points and Offer Design | 11 Monetization Publishing and Live Ops/Robux Price Points and Offer Design.md | monetization, pricing, offers, robux, store, experiments, luau | ~4.6k tok
-- Subscriptions and Premium Payouts | 11 Monetization Publishing and Live Ops/Subscriptions and Premium Payouts.md | monetization, subscriptions, roblox-plus, creator-rewards, premium, luau | ~4.0k tok
-- Thumbnails Icons and Store Page | 11 Monetization Publishing and Live Ops/Thumbnails Icons and Store Page.md | publishing, thumbnails, icons, store-page, marketing, discovery | ~3.2k tok
+- Analytics and Funnels | 11 Monetization Publishing and Live Ops/Analytics and Funnels.md | analytics, analyticsservice, funnels, economy, custom-events, live-ops, luau | ~3.9k tok
+- Community Building | 11 Monetization Publishing and Live Ops/Community Building.md | community, groups, social, invites, live-ops, luau | ~3.5k tok
+- Developer Products and ProcessReceipt | 11 Monetization Publishing and Live Ops/Developer Products and ProcessReceipt.md | monetization, developer-products, processreceipt, datastore, idempotency, luau | ~5.9k tok
+- Discovery and the Algorithm | 11 Monetization Publishing and Live Ops/Discovery and the Algorithm.md | discovery, recommendations, algorithm, growth, publishing | ~3.2k tok
+- Economy Inflation Sinks and Faucets Math | 11 Monetization Publishing and Live Ops/Economy Inflation Sinks and Faucets Math.md | economy, inflation, sinks, faucets, balancing, live-ops, math, luau | ~4.6k tok
+- Game Passes | 11 Monetization Publishing and Live Ops/Game Passes.md | monetization, game-passes, marketplaceservice, luau | ~4.0k tok
+- Live Ops Events and Updates | 11 Monetization Publishing and Live Ops/Live Ops Events and Updates.md | live-ops, events, notifications, updates, scheduling, luau | ~3.4k tok
+- Monetization Overview | 11 Monetization Publishing and Live Ops/Monetization Overview.md | monetization, robux, overview, business, live-ops | ~3.9k tok
+- Paid Random Items and Odds Disclosure in Practice | 11 Monetization Publishing and Live Ops/Paid Random Items and Odds Disclosure in Practice.md | monetization, policy, paid-random-items, odds, rng, compliance, luau | ~5.0k tok
+- Pricing and Store Design | 11 Monetization Publishing and Live Ops/Pricing and Store Design.md | monetization, pricing, managed-pricing, regional-pricing, shop, store-design, luau | ~4.1k tok
+- Publishing an Experience | 11 Monetization Publishing and Live Ops/Publishing an Experience.md | publishing, release, audience, kids-and-select, server-management, live-ops | ~3.4k tok
+- Refunds Chargebacks and Purchase Support | 11 Monetization Publishing and Live Ops/Refunds Chargebacks and Purchase Support.md | monetization, refunds, chargebacks, support, webhooks, purchases, live-ops, luau | ~5.2k tok
+- Roblox Policies Ratings and Compliance | 11 Monetization Publishing and Live Ops/Roblox Policies Ratings and Compliance.md | policy, compliance, maturity, paid-random-items, policyservice, odds, luau | ~4.1k tok
+- Robux Price Points and Offer Design | 11 Monetization Publishing and Live Ops/Robux Price Points and Offer Design.md | monetization, pricing, offers, robux, store, experiments, luau | ~4.8k tok
+- Subscriptions and Premium Payouts | 11 Monetization Publishing and Live Ops/Subscriptions and Premium Payouts.md | monetization, subscriptions, roblox-plus, creator-rewards, premium, luau | ~4.2k tok
+- Thumbnails Icons and Store Page | 11 Monetization Publishing and Live Ops/Thumbnails Icons and Store Page.md | publishing, thumbnails, icons, store-page, marketing, discovery | ~3.3k tok
+- Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback | 11 Monetization Publishing and Live Ops/Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback.md | monetization, analytics, arpdau, arppu, conversion, ltv, payback, ads, creator-rewards, metrics | ~2.1k tok
 
 ## 12 Performance Testing and Debugging
 
-- Automated Luau Checks - LihFolk Hook and Audit | 12 Performance Testing and Debugging/Automated Luau Checks - LihFolk Hook and Audit.md | testing, static-analysis, linting, hooks, code-review, ai-agents, luau, tooling | ~1.4k tok
-- Automated Testing with TestEZ and Jest-Lua | 12 Performance Testing and Debugging/Automated Testing with TestEZ and Jest-Lua.md | testing, testez, jest-lua, ci, open-cloud, test-doubles, automation | ~4.8k tok
-- Crash and Error Telemetry | 12 Performance Testing and Debugging/Crash and Error Telemetry.md | telemetry, errors, crashes, monitoring, scriptcontext, logservice, live-ops | ~4.4k tok
-- Debugger Breakpoints and Logging | 12 Performance Testing and Debugging/Debugger Breakpoints and Logging.md | debugging, debugger, breakpoints, logging, logservice, traceback | ~3.6k tok
-- Developer Console and Stats | 12 Performance Testing and Debugging/Developer Console and Stats.md | performance, developer-console, stats, memory, overlays, debugging | ~4.6k tok
-- Hunting Memory Leaks Step by Step | 12 Performance Testing and Debugging/Hunting Memory Leaks Step by Step.md | performance, memory, leaks, debugging, luau-heap, soak-test, procedure | ~5.9k tok
-- Memory Budgets and Leaks | 12 Performance Testing and Debugging/Memory Budgets and Leaks.md | performance, memory, leaks, luau-heap, pooling, instances | ~4.9k tok
-- MicroProfiler Guide | 12 Performance Testing and Debugging/MicroProfiler Guide.md | performance, microprofiler, profiling, debug-profilebegin, frame-time | ~4.2k tok
-- Mobile and Low-End Optimization | 12 Performance Testing and Debugging/Mobile and Low-End Optimization.md | performance, mobile, low-end, graphics-quality, device-testing, memory | ~3.4k tok
-- Multi-Client and Device Playtesting Protocols | 12 Performance Testing and Debugging/Multi-Client and Device Playtesting Protocols.md | testing, playtesting, multi-client, devices, qa, protocol, bug-reports | ~3.8k tok
-- Multi-Client and Live Testing | 12 Performance Testing and Debugging/Multi-Client and Live Testing.md | testing, multiplayer, multi-client, live-testing, cheat-tools, network-simulation | ~3.3k tok
-- Network Bandwidth Budgets and Measuring Them | 12 Performance Testing and Debugging/Network Bandwidth Budgets and Measuring Them.md | performance, networking, bandwidth, budgets, remotes, replication, measurement | ~4.7k tok
-- Network Performance | 12 Performance Testing and Debugging/Network Performance.md | performance, networking, replication, remotes, bandwidth, ping | ~3.5k tok
-- Performance Fundamentals | 12 Performance Testing and Debugging/Performance Fundamentals.md | performance, fundamentals, profiling, budgets, frame-time | ~4.3k tok
-- Physics Performance | 12 Performance Testing and Debugging/Physics Performance.md | performance, physics, collision, humanoids, network-ownership, bulkmoveto | ~3.8k tok
-- QA Checklists Before Release | 12 Performance Testing and Debugging/QA Checklists Before Release.md | qa, release, checklist, testing, performance, live-ops | ~3.1k tok
-- Rendering Performance | 12 Performance Testing and Debugging/Rendering Performance.md | performance, rendering, draw-calls, lod, particles, highlights, shadows | ~3.7k tok
-- Script Performance | 12 Performance Testing and Debugging/Script Performance.md | performance, scripting, luau, script-profiler, runservice, scheduling | ~3.8k tok
-- Testing Strategies and Frameworks | 12 Performance Testing and Debugging/Testing Strategies and Frameworks.md | testing, testez, jest-lua, ci, dry-run, qa, static-analysis | ~4.4k tok
+- Automated Luau Checks - LihFolk Hook and Audit | 12 Performance Testing and Debugging/Automated Luau Checks - LihFolk Hook and Audit.md | testing, static-analysis, linting, hooks, code-review, ai-agents, luau, tooling | ~1.6k tok
+- Automated Testing with TestEZ and Jest-Lua | 12 Performance Testing and Debugging/Automated Testing with TestEZ and Jest-Lua.md | testing, testez, jest-lua, ci, open-cloud, test-doubles, automation | ~4.9k tok
+- Client Zone Culling for Interiors and Cities | 12 Performance Testing and Debugging/Client Zone Culling for Interiors and Cities.md | performance, culling, rendering, interiors, cities, streaming, client | ~2.4k tok
+- Crash and Error Telemetry | 12 Performance Testing and Debugging/Crash and Error Telemetry.md | telemetry, errors, crashes, monitoring, scriptcontext, logservice, live-ops | ~4.5k tok
+- Debugger Breakpoints and Logging | 12 Performance Testing and Debugging/Debugger Breakpoints and Logging.md | debugging, debugger, breakpoints, logging, logservice, traceback | ~3.7k tok
+- Developer Console and Stats | 12 Performance Testing and Debugging/Developer Console and Stats.md | performance, developer-console, stats, memory, overlays, debugging | ~4.7k tok
+- Dupe Hunting Test Script - Trades, Gifts, Drops and Rejoins | 12 Performance Testing and Debugging/Dupe Hunting Test Script - Trades, Gifts, Drops and Rejoins.md | testing, qa, dupes, trading, economy, datastore, security | ~2.1k tok
+- Gated Tester Commands and Debug Panels | 12 Performance Testing and Debugging/Gated Tester Commands and Debug Panels.md | testing, qa, debug, admin, security, remotes | ~2.2k tok
+- Genre QA Passes - Test Checklists per Game Type | 12 Performance Testing and Debugging/Genre QA Passes - Test Checklists per Game Type.md | testing, qa, genres, checklist, release | ~2.1k tok
+- Hunting Memory Leaks Step by Step | 12 Performance Testing and Debugging/Hunting Memory Leaks Step by Step.md | performance, memory, leaks, debugging, luau-heap, soak-test, procedure | ~6.0k tok
+- In-Game Bug Report Button with Automatic Context | 12 Performance Testing and Debugging/In-Game Bug Report Button with Automatic Context.md | testing, qa, bug-reports, telemetry, live-ops, ui | ~2.3k tok
+- Load and Soak Testing Servers - Long Sessions and Many Clients | 12 Performance Testing and Debugging/Load and Soak Testing Servers - Long Sessions and Many Clients.md | testing, qa, performance, memory, soak, load, servers | ~2.3k tok
+- Memory Budgets and Leaks | 12 Performance Testing and Debugging/Memory Budgets and Leaks.md | performance, memory, leaks, luau-heap, pooling, instances | ~5.1k tok
+- MicroProfiler Guide | 12 Performance Testing and Debugging/MicroProfiler Guide.md | performance, microprofiler, profiling, debug-profilebegin, frame-time | ~4.3k tok
+- Mobile and Low-End Optimization | 12 Performance Testing and Debugging/Mobile and Low-End Optimization.md | performance, mobile, low-end, graphics-quality, device-testing, memory | ~3.5k tok
+- Multi-Client and Device Playtesting Protocols | 12 Performance Testing and Debugging/Multi-Client and Device Playtesting Protocols.md | testing, playtesting, multi-client, devices, qa, protocol, bug-reports | ~4.0k tok
+- Multi-Client and Live Testing | 12 Performance Testing and Debugging/Multi-Client and Live Testing.md | testing, multiplayer, multi-client, live-testing, cheat-tools, network-simulation | ~3.4k tok
+- Network Bandwidth Budgets and Measuring Them | 12 Performance Testing and Debugging/Network Bandwidth Budgets and Measuring Them.md | performance, networking, bandwidth, budgets, remotes, replication, measurement | ~4.8k tok
+- Network Performance | 12 Performance Testing and Debugging/Network Performance.md | performance, networking, replication, remotes, bandwidth, ping | ~3.6k tok
+- Performance Fundamentals | 12 Performance Testing and Debugging/Performance Fundamentals.md | performance, fundamentals, profiling, budgets, frame-time | ~4.4k tok
+- Physics Performance | 12 Performance Testing and Debugging/Physics Performance.md | performance, physics, collision, humanoids, network-ownership, bulkmoveto | ~3.9k tok
+- QA Checklists Before Release | 12 Performance Testing and Debugging/QA Checklists Before Release.md | qa, release, checklist, testing, performance, live-ops | ~3.3k tok
+- Rendering Performance | 12 Performance Testing and Debugging/Rendering Performance.md | performance, rendering, draw-calls, lod, particles, highlights, shadows | ~3.8k tok
+- Save Migration Tests - Fixture Saves and Golden Files | 12 Performance Testing and Debugging/Save Migration Tests - Fixture Saves and Golden Files.md | testing, qa, datastore, migrations, fixtures, golden-files, persistence | ~2.1k tok
+- Script Performance | 12 Performance Testing and Debugging/Script Performance.md | performance, scripting, luau, script-profiler, runservice, scheduling | ~3.9k tok
+- StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs | 12 Performance Testing and Debugging/StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs.md | testing, qa, streaming, client, nil-bugs, networking | ~2.0k tok
+- Testing Strategies and Frameworks | 12 Performance Testing and Debugging/Testing Strategies and Frameworks.md | testing, testez, jest-lua, ci, dry-run, qa, static-analysis | ~4.5k tok
+- Testing Time-Based Features with a Controllable Clock | 12 Performance Testing and Debugging/Testing Time-Based Features with a Controllable Clock.md | testing, qa, time, daily-rewards, streaks, live-ops, luau | ~2.1k tok
+- UI Automation with VirtualInput and StudioTestService | 12 Performance Testing and Debugging/UI Automation with VirtualInput and StudioTestService.md | testing, qa, ui, automation, studio, studiotestservice, virtualinput, mcp | ~2.5k tok
+- Weather Performance Budgets and Quality Tiers | 12 Performance Testing and Debugging/Weather Performance Budgets and Quality Tiers.md | weather, performance, particles, mobile, quality-tiers, budgets, low-end | ~2.8k tok
 
 ## 13 Production and Case Studies
 
-- Asset Pipelines | 13 Production and Case Studies/Asset Pipelines.md | production, pipeline, blender, import, icons, audio, tooling, case-study | ~4.8k tok
-- Case Study - Enemy Roster Rebuild | 13 Production and Case Studies/Case Study - Enemy Roster Rebuild.md | case-study, enemies, ai, combat, migration, art-pipeline, production | ~3.9k tok
-- Case Study - Fast Join and Deferred Loading | 13 Production and Case Studies/Case Study - Fast Join and Deferred Loading.md | case-study, performance, join-time, loading, replication, streaming, production | ~3.9k tok
-- Case Study - Instance Cleanup and Place Size | 13 Production and Case Studies/Case Study - Instance Cleanup and Place Size.md | case-study, performance, instances, cleanup, place-size, studio, production | ~3.5k tok
-- Case Study - Phone UI Overhaul | 13 Production and Case Studies/Case Study - Phone UI Overhaul.md | case-study, ui, mobile, phone, responsive, testing, production | ~3.2k tok
-- Documentation and Knowledge Bases | 13 Production and Case Studies/Documentation and Knowledge Bases.md | production, documentation, notes, changelog, knowledge-base, obsidian, case-study | ~3.7k tok
-- Lessons Learned Index | 13 Production and Case Studies/Lessons Learned Index.md | production, lessons, index, moc, case-study | ~3.7k tok
-- Live Incident Response and Post-Mortems | 13 Production and Case Studies/Live Incident Response and Post-Mortems.md | production, live-ops, incidents, rollback, post-mortem, kill-switch, datastore, communication | ~4.8k tok
-- Planning and Scoping a Roblox Game | 13 Production and Case Studies/Planning and Scoping a Roblox Game.md | production, planning, scope, roadmap, budgets, case-study | ~4.7k tok
-- Post-Mortem - Building a Melee Action Game | 13 Production and Case Studies/Post-Mortem - Building a Melee Action Game.md | production, post-mortem, case-study, combat, rng, retrospective | ~3.2k tok
-- Release Process and Rollbacks | 13 Production and Case Studies/Release Process and Rollbacks.md | production, release, publishing, rollback, kill-switch, datastore, live-ops, case-study | ~3.5k tok
-- Safe Changes in a Shared Place | 13 Production and Case Studies/Safe Changes in a Shared Place.md | production, safety, backups, undo, terrain, workflow, case-study | ~4.0k tok
-- Scoping and Roles for Small Teams | 13 Production and Case Studies/Scoping and Roles for Small Teams.md | production, scope, team, capacity, payouts, contractors, permissions, planning | ~4.0k tok
-- Team Roles and Workflows | 13 Production and Case Studies/Team Roles and Workflows.md | production, team, workflow, ownership, collaboration, case-study | ~3.5k tok
-- Working with AI Assistants in Studio | 13 Production and Case Studies/Working with AI Assistants in Studio.md | production, ai-assistants, automation, verification, collaboration, case-study | ~3.8k tok
+- Asset Pipelines | 13 Production and Case Studies/Asset Pipelines.md | production, pipeline, blender, import, icons, audio, tooling, case-study | ~5.0k tok
+- Case Study - Building LihFolk V2 with AI Agents | 13 Production and Case Studies/Case Study - Building LihFolk V2 with AI Agents.md | case-study, ai, agents, lihfolk, pipeline, quality, review | ~1.8k tok
+- Case Study - Enemy Roster Rebuild | 13 Production and Case Studies/Case Study - Enemy Roster Rebuild.md | case-study, enemies, ai, combat, migration, art-pipeline, production | ~4.0k tok
+- Case Study - Fast Join and Deferred Loading | 13 Production and Case Studies/Case Study - Fast Join and Deferred Loading.md | case-study, performance, join-time, loading, replication, streaming, production | ~4.1k tok
+- Case Study - Instance Cleanup and Place Size | 13 Production and Case Studies/Case Study - Instance Cleanup and Place Size.md | case-study, performance, instances, cleanup, place-size, studio, production | ~3.6k tok
+- Case Study - Phone UI Overhaul | 13 Production and Case Studies/Case Study - Phone UI Overhaul.md | case-study, ui, mobile, phone, responsive, testing, production | ~3.4k tok
+- Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts | 13 Production and Case Studies/Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts.md | production, backups, disaster-recovery, accounts, security, datastore, runbook | ~2.2k tok
+- Documentation and Knowledge Bases | 13 Production and Case Studies/Documentation and Knowledge Bases.md | production, documentation, notes, changelog, knowledge-base, obsidian, case-study | ~3.8k tok
+- Lessons Learned Index | 13 Production and Case Studies/Lessons Learned Index.md | production, lessons, index, moc, case-study | ~3.8k tok
+- Live Incident Response and Post-Mortems | 13 Production and Case Studies/Live Incident Response and Post-Mortems.md | production, live-ops, incidents, rollback, post-mortem, kill-switch, datastore, communication | ~5.0k tok
+- Planning and Scoping a Roblox Game | 13 Production and Case Studies/Planning and Scoping a Roblox Game.md | production, planning, scope, roadmap, budgets, case-study | ~4.8k tok
+- Post-Mortem - Building a Melee Action Game | 13 Production and Case Studies/Post-Mortem - Building a Melee Action Game.md | production, post-mortem, case-study, combat, rng, retrospective | ~3.3k tok
+- Release Process and Rollbacks | 13 Production and Case Studies/Release Process and Rollbacks.md | production, release, publishing, rollback, kill-switch, datastore, live-ops, case-study | ~3.6k tok
+- Safe Changes in a Shared Place | 13 Production and Case Studies/Safe Changes in a Shared Place.md | production, safety, backups, undo, terrain, workflow, case-study | ~4.1k tok
+- Scoping and Roles for Small Teams | 13 Production and Case Studies/Scoping and Roles for Small Teams.md | production, scope, team, capacity, payouts, contractors, permissions, planning | ~4.1k tok
+- Ship a Game in 30 Days - Week-by-Week Plan for a Solo Dev | 13 Production and Case Studies/Ship a Game in 30 Days - Week-by-Week Plan for a Solo Dev.md | production, scoping, solo-dev, planning, launch, milestones, cut-list, qa, fast-ship | ~1.9k tok
+- Team Roles and Workflows | 13 Production and Case Studies/Team Roles and Workflows.md | production, team, workflow, ownership, collaboration, case-study | ~3.7k tok
+- Template Reskin Checklist - One Codebase, New Game | 13 Production and Case Studies/Template Reskin Checklist - One Codebase, New Game.md | production, reskin, template, reuse, asset-ids, products, economy, qa, compliance, fast-ship | ~1.8k tok
+- Working with AI Assistants in Studio | 13 Production and Case Studies/Working with AI Assistants in Studio.md | production, ai-assistants, automation, verification, collaboration, case-study | ~3.9k tok
 
 ## 14 3D Modeling
 
-- Bezier Curves and Splines for Modellers | 14 3D Modeling/Bezier Curves and Splines for Modellers.md | modeling, curves, bezier, splines, catmull-rom, b-spline, nurbs, continuity, curvature, silhouette, blender, animation | ~5.0k tok
-- Blender Workflow for Roblox Creators | 14 3D Modeling/Blender Workflow for Roblox Creators.md | modeling, blender, workflow, modifiers, export, python | ~5.6k tok
-- Curve-Based Modelling in Blender for Roblox | 14 3D Modeling/Curve-Based Modelling in Blender for Roblox.md | modeling, blender, curves, bezier, sweep, lathe, geometry-nodes, python, budgets, triangles, roblox, props, weapons, vfx | ~5.0k tok
-- Exporting and Validating Models for Roblox | 14 3D Modeling/Exporting and Validating Models for Roblox.md | modeling, export, import, validation, pivots, collision, meshpart | ~4.6k tok
-- Hand-Painted and Stylized Texturing | 14 3D Modeling/Hand-Painted and Stylized Texturing.md | modeling, texturing, stylized, hand-painted, toon, blender | ~3.3k tok
-- Hard-Surface Modeling | 14 3D Modeling/Hard-Surface Modeling.md | modeling, hard-surface, blender, bevel, booleans, normals, props | ~4.4k tok
-- Low-Poly and Stylized Modeling | 14 3D Modeling/Low-Poly and Stylized Modeling.md | modeling, low-poly, stylized, palette, vertex-colors, blender, art-style | ~3.4k tok
-- Mesh Optimization for Mobile | 14 3D Modeling/Mesh Optimization for Mobile.md | modeling, optimization, mobile, performance, meshes, draw-calls, blender, budgets | ~5.7k tok
-- Modeling Characters for R15 and Custom Rigs | 14 3D Modeling/Modeling Characters for R15 and Custom Rigs.md | modeling, characters, r15, avatar, custom-rigs, proportions, blender, python | ~4.2k tok
-- Modeling Fundamentals for Games | 14 3D Modeling/Modeling Fundamentals for Games.md | modeling, 3d, fundamentals, meshes, budgets, topology | ~4.8k tok
-- Modeling Weapons and Props | 14 3D Modeling/Modeling Weapons and Props.md | modeling, weapons, props, grip, pivots, blender, tools, conventions | ~4.2k tok
-- Modular Environment Kits | 14 3D Modeling/Modular Environment Kits.md | modeling, modular, kits, environment, grid, pivots, blender, luau, level-design | ~4.1k tok
-- Normal Maps and Detail Baking | 14 3D Modeling/Normal Maps and Detail Baking.md | modeling, normal-maps, baking, tangent-space, blender, surfaceappearance | ~4.2k tok
-- Organic and Creature Modeling | 14 3D Modeling/Organic and Creature Modeling.md | modeling, organic, creatures, sculpting, blender, enemies, rigging-prep | ~4.2k tok
-- Other Modeling Tools - Maya Max ZBrush MagicaVoxel | 14 3D Modeling/Other Modeling Tools - Maya Max ZBrush MagicaVoxel.md | modeling, tools, maya, 3ds-max, zbrush, magicavoxel, blockbench, pipeline | ~3.6k tok
-- Retopology and Decimation | 14 3D Modeling/Retopology and Decimation.md | modeling, retopology, decimation, remesh, lod, optimization, blender, python | ~3.6k tok
-- Substance Painter and Texturing Tools | 14 3D Modeling/Substance Painter and Texturing Tools.md | modeling, texturing, substance-painter, tools, export, pbr | ~3.2k tok
-- Texturing and PBR Baking | 14 3D Modeling/Texturing and PBR Baking.md | modeling, texturing, pbr, baking, blender, cycles, surfaceappearance | ~5.2k tok
-- Topology and Edge Flow | 14 3D Modeling/Topology and Edge Flow.md | modeling, topology, edge-flow, deformation, rigging-prep, blender | ~3.4k tok
-- Trim Sheets Atlases and Vertex Colors | 14 3D Modeling/Trim Sheets Atlases and Vertex Colors.md | modeling, texturing, trim-sheet, atlas, vertex-colors, optimization | ~4.1k tok
-- UGC Avatar Items and Accessories | 14 3D Modeling/UGC Avatar Items and Accessories.md | modeling, ugc, marketplace, accessories, layered-clothing, avatar | ~4.3k tok
-- UV Unwrapping | 14 3D Modeling/UV Unwrapping.md | modeling, uv, unwrapping, texturing, blender, texel-density | ~5.3k tok
-- Voxel and Blocky Modeling | 14 3D Modeling/Voxel and Blocky Modeling.md | modeling, voxel, blocky, studs, outlines, palette, art-style, blender, luau | ~5.6k tok
+- Bezier Curves and Splines for Modellers | 14 3D Modeling/Bezier Curves and Splines for Modellers.md | modeling, curves, bezier, splines, catmull-rom, b-spline, nurbs, continuity, curvature, silhouette, blender, animation | ~5.1k tok
+- Blender Workflow for Roblox Creators | 14 3D Modeling/Blender Workflow for Roblox Creators.md | modeling, blender, workflow, modifiers, export, python | ~5.8k tok
+- Curve-Based Modelling in Blender for Roblox | 14 3D Modeling/Curve-Based Modelling in Blender for Roblox.md | modeling, blender, curves, bezier, sweep, lathe, geometry-nodes, python, budgets, triangles, roblox, props, weapons, vfx | ~5.1k tok
+- Exporting and Validating Models for Roblox | 14 3D Modeling/Exporting and Validating Models for Roblox.md | modeling, export, import, validation, pivots, collision, meshpart | ~4.7k tok
+- Hand-Painted and Stylized Texturing | 14 3D Modeling/Hand-Painted and Stylized Texturing.md | modeling, texturing, stylized, hand-painted, toon, blender | ~3.4k tok
+- Hard-Surface Modeling | 14 3D Modeling/Hard-Surface Modeling.md | modeling, hard-surface, blender, bevel, booleans, normals, props | ~4.6k tok
+- Low-Poly and Stylized Modeling | 14 3D Modeling/Low-Poly and Stylized Modeling.md | modeling, low-poly, stylized, palette, vertex-colors, blender, art-style | ~3.5k tok
+- Mesh Gates for Generated Models - Symmetry, Seating and Caps | 14 3D Modeling/Mesh Gates for Generated Models - Symmetry, Seating and Caps.md | modeling, blender, procedural, qa, gates, symmetry, topology, bmesh, triangulation, lihfolk | ~1.4k tok
+- Mesh Optimization for Mobile | 14 3D Modeling/Mesh Optimization for Mobile.md | modeling, optimization, mobile, performance, meshes, draw-calls, blender, budgets | ~5.8k tok
+- Modeling Characters for R15 and Custom Rigs | 14 3D Modeling/Modeling Characters for R15 and Custom Rigs.md | modeling, characters, r15, avatar, custom-rigs, proportions, blender, python | ~4.3k tok
+- Modeling Fundamentals for Games | 14 3D Modeling/Modeling Fundamentals for Games.md | modeling, 3d, fundamentals, meshes, budgets, topology | ~4.9k tok
+- Modeling Weapons and Props | 14 3D Modeling/Modeling Weapons and Props.md | modeling, weapons, props, grip, pivots, blender, tools, conventions | ~4.3k tok
+- Modular Environment Kits | 14 3D Modeling/Modular Environment Kits.md | modeling, modular, kits, environment, grid, pivots, blender, luau, level-design | ~4.3k tok
+- Normal Maps and Detail Baking | 14 3D Modeling/Normal Maps and Detail Baking.md | modeling, normal-maps, baking, tangent-space, blender, surfaceappearance | ~4.3k tok
+- Organic and Creature Modeling | 14 3D Modeling/Organic and Creature Modeling.md | modeling, organic, creatures, sculpting, blender, enemies, rigging-prep | ~4.3k tok
+- Other Modeling Tools - Maya Max ZBrush MagicaVoxel | 14 3D Modeling/Other Modeling Tools - Maya Max ZBrush MagicaVoxel.md | modeling, tools, maya, 3ds-max, zbrush, magicavoxel, blockbench, pipeline | ~3.7k tok
+- Procedural Creatures - Fused Shells, Quad Cages and Faceting | 14 3D Modeling/Procedural Creatures - Fused Shells, Quad Cages and Faceting.md | modeling, blender, creatures, procedural, topology, subdivision, sdf, decimate, faceting, lihfolk | ~1.4k tok
+- Procedural Model Kits - Lessons | 14 3D Modeling/Procedural Model Kits - Lessons.md | modeling, blender, procedural, kits, weapons, props, lathe, bevel, faceting, gltf, vertex-colors, lihfolk | ~1.5k tok
+- Retopology and Decimation | 14 3D Modeling/Retopology and Decimation.md | modeling, retopology, decimation, remesh, lod, optimization, blender, python | ~3.8k tok
+- Substance Painter and Texturing Tools | 14 3D Modeling/Substance Painter and Texturing Tools.md | modeling, texturing, substance-painter, tools, export, pbr | ~3.3k tok
+- Texturing and PBR Baking | 14 3D Modeling/Texturing and PBR Baking.md | modeling, texturing, pbr, baking, blender, cycles, surfaceappearance | ~5.3k tok
+- Topology and Edge Flow | 14 3D Modeling/Topology and Edge Flow.md | modeling, topology, edge-flow, deformation, rigging-prep, blender | ~3.5k tok
+- Trim Sheets Atlases and Vertex Colors | 14 3D Modeling/Trim Sheets Atlases and Vertex Colors.md | modeling, texturing, trim-sheet, atlas, vertex-colors, optimization | ~4.2k tok
+- UGC Avatar Items and Accessories | 14 3D Modeling/UGC Avatar Items and Accessories.md | modeling, ugc, marketplace, accessories, layered-clothing, avatar | ~4.5k tok
+- UV Unwrapping | 14 3D Modeling/UV Unwrapping.md | modeling, uv, unwrapping, texturing, blender, texel-density | ~5.4k tok
+- Voxel and Blocky Modeling | 14 3D Modeling/Voxel and Blocky Modeling.md | modeling, voxel, blocky, studs, outlines, palette, art-style, blender, luau | ~5.7k tok
 
 ## 15 AI Tools
 
-- AI 3D Model Generation Outside Roblox | 15 AI Tools/AI 3D Model Generation Outside Roblox.md | ai, 3d, meshy, tripo, rodin, blender, retopology | ~3.4k tok
-- AI Agents and Autonomous Workflows | 15 AI Tools/AI Agents and Autonomous Workflows.md | ai, agents, mcp, automation, workflow, production | ~3.8k tok
-- AI Animation and Motion from Video | 15 AI Tools/AI Animation and Motion from Video.md | ai, animation, mocap, video, animation-capture | ~3.2k tok
-- AI Audio - Voice Music and SFX | 15 AI Tools/AI Audio - Voice Music and SFX.md | ai, audio, tts, music, sfx, licensing | ~3.5k tok
-- AI Code Assistants for Luau | 15 AI Tools/AI Code Assistants for Luau.md | ai, luau, scripting, code-assistants, tooling | ~3.9k tok
-- AI Image Generation for Icons Thumbnails and Concepts | 15 AI Tools/AI Image Generation for Icons Thumbnails and Concepts.md | ai, images, icons, thumbnails, concept-art, pipeline | ~3.2k tok
-- AI Material and Texture Generation | 15 AI Tools/AI Material and Texture Generation.md | ai, materials, textures, materialvariant, surfaceappearance | ~3.5k tok
-- AI Pitfalls - Assets and Import | 15 AI Tools/AI Pitfalls - Assets and Import.md | ai-pitfalls, assets, import, fbx, gltf, glb, blender, scale, textures, meshes, vertex-colors, creator-store | ~1.7k tok
-- AI Pitfalls - Data and Monetization | 15 AI Tools/AI Pitfalls - Data and Monetization.md | ai-pitfalls, datastore, persistence, session-locking, processreceipt, monetization, paid-random-items, pricing, roblox-plus | ~1.8k tok
-- AI Pitfalls - Networking and Security | 15 AI Tools/AI Pitfalls - Networking and Security.md | ai-pitfalls, networking, security, remotes, validation, replication, streaming, network-ownership, server-authority, anti-exploit | ~2.1k tok
-- AI Pitfalls - Physics and Animation | 15 AI Tools/AI Pitfalls - Physics and Animation.md | ai-pitfalls, physics, animation, motor6d, cframe, priorities, animator, network-ownership, rigs, server-authority | ~1.9k tok
-- AI Pitfalls - Stale APIs and Luau | 15 AI Tools/AI Pitfalls - Stale APIs and Luau.md | ai-pitfalls, luau, deprecated-apis, async-rename, task-library, chat, fonts, type-solver, lint | ~2.0k tok
+- AI 3D Model Generation Outside Roblox | 15 AI Tools/AI 3D Model Generation Outside Roblox.md | ai, 3d, meshy, tripo, rodin, blender, retopology | ~3.6k tok
+- AI Agents and Autonomous Workflows | 15 AI Tools/AI Agents and Autonomous Workflows.md | ai, agents, mcp, automation, workflow, production | ~4.0k tok
+- AI Animation and Motion from Video | 15 AI Tools/AI Animation and Motion from Video.md | ai, animation, mocap, video, animation-capture | ~3.3k tok
+- AI Asset Pipelines - Scoring, Reviewers and Spot Checks | 15 AI Tools/AI Asset Pipelines - Scoring, Reviewers and Spot Checks.md | ai, agents, review, rubric, quality, pipeline, assets, lihfolk | ~1.7k tok
+- AI Audio - Voice Music and SFX | 15 AI Tools/AI Audio - Voice Music and SFX.md | ai, audio, tts, music, sfx, licensing | ~3.6k tok
+- AI Code Assistants for Luau | 15 AI Tools/AI Code Assistants for Luau.md | ai, luau, scripting, code-assistants, tooling | ~4.0k tok
+- AI Image Generation for Icons Thumbnails and Concepts | 15 AI Tools/AI Image Generation for Icons Thumbnails and Concepts.md | ai, images, icons, thumbnails, concept-art, pipeline | ~3.4k tok
+- AI Material and Texture Generation | 15 AI Tools/AI Material and Texture Generation.md | ai, materials, textures, materialvariant, surfaceappearance | ~3.6k tok
+- AI Pitfalls - Assets and Import | 15 AI Tools/AI Pitfalls - Assets and Import.md | ai-pitfalls, assets, import, fbx, gltf, glb, blender, scale, textures, meshes, vertex-colors, creator-store | ~1.8k tok
+- AI Pitfalls - Data and Monetization | 15 AI Tools/AI Pitfalls - Data and Monetization.md | ai-pitfalls, datastore, persistence, session-locking, processreceipt, monetization, paid-random-items, pricing, roblox-plus | ~1.9k tok
+- AI Pitfalls - Networking and Security | 15 AI Tools/AI Pitfalls - Networking and Security.md | ai-pitfalls, networking, security, remotes, validation, replication, streaming, network-ownership, server-authority, anti-exploit | ~2.2k tok
+- AI Pitfalls - Physics and Animation | 15 AI Tools/AI Pitfalls - Physics and Animation.md | ai-pitfalls, physics, animation, motor6d, cframe, priorities, animator, network-ownership, rigs, server-authority | ~2.0k tok
+- AI Pitfalls - Stale APIs and Luau | 15 AI Tools/AI Pitfalls - Stale APIs and Luau.md | ai-pitfalls, luau, deprecated-apis, async-rename, task-library, chat, fonts, type-solver, lint | ~2.1k tok
 - AI Pitfalls - UI and Input | 15 AI Tools/AI Pitfalls - UI and Input.md | ai-pitfalls, ui, input, responsive, scale, safe-area, input-action-system, gamepad, touch, styling, fonts | ~1.6k tok
-- AI in Roblox Development Overview | 15 AI Tools/AI in Roblox Development Overview.md | ai, overview, workflow, production | ~4.0k tok
-- Evaluating AI Tools - A Practical Rubric | 15 AI Tools/Evaluating AI Tools - A Practical Rubric.md | ai, evaluation, rubric, tools, process, cost, licensing, verification | ~4.8k tok
-- In-Game AI - LLM NPCs and Text Generation | 15 AI Tools/In-Game AI - LLM NPCs and Text Generation.md | ai, llm, npc, textgenerator, httpservice, safety, moderation | ~4.4k tok
-- Prompting and Verifying AI Output | 15 AI Tools/Prompting and Verifying AI Output.md | ai, verification, prompting, testing, qa | ~3.4k tok
-- Roblox Generative AI - Cube Mesh and Texture Generation | 15 AI Tools/Roblox Generative AI - Cube Mesh and Texture Generation.md | ai, generative, mesh, cube, generationservice, 3d | ~4.1k tok
-- Roblox Policies on AI-Generated Content | 15 AI Tools/Roblox Policies on AI-Generated Content.md | ai, policy, compliance, licensing, moderation, ratings | ~3.4k tok
-- Roblox Studio Assistant | 15 AI Tools/Roblox Studio Assistant.md | ai, studio, assistant, mcp, workflow | ~4.0k tok
-- Token Cost Benchmarks | 15 AI Tools/Token Cost Benchmarks.md | ai, tokens, cost, benchmarks, plugin, router, lihfolk | ~1.3k tok
-- What AI Models Get Wrong in Roblox | 15 AI Tools/What AI Models Get Wrong in Roblox.md | ai-pitfalls, ai, code-review, luau, roblox, verification, lint, deprecated-apis, security | ~2.0k tok
+- AI in Roblox Development Overview | 15 AI Tools/AI in Roblox Development Overview.md | ai, overview, workflow, production | ~4.1k tok
+- Agent Orchestration - Sub-Agents, Hooks and Skill Costs | 15 AI Tools/Agent Orchestration - Sub-Agents, Hooks and Skill Costs.md | ai, agents, sub-agents, hooks, skills, claude-code, git, tokens, lihfolk | ~1.6k tok
+- Benchmark - Does a Knowledge Vault Make AI Better at Roblox | 15 AI Tools/Benchmark - Does a Knowledge Vault Make AI Better at Roblox.md | ai, benchmark, evaluation, vault, knowledge-base, accuracy, tokens, lihfolk | ~1.3k tok
+- Evaluating AI Tools - A Practical Rubric | 15 AI Tools/Evaluating AI Tools - A Practical Rubric.md | ai, evaluation, rubric, tools, process, cost, licensing, verification | ~4.9k tok
+- In-Game AI - LLM NPCs and Text Generation | 15 AI Tools/In-Game AI - LLM NPCs and Text Generation.md | ai, llm, npc, textgenerator, httpservice, safety, moderation | ~4.5k tok
+- Local vs Cloud AI - Keeping Unreleased Game Code Private | 15 AI Tools/Local vs Cloud AI - Keeping Unreleased Game Code Private.md | ai, privacy, security, local-models, data-retention, workflow | ~2.1k tok
+- Obsidian Vaults for AI Agents - Structure, Graph and Theming | 15 AI Tools/Obsidian Vaults for AI Agents - Structure, Graph and Theming.md | ai, obsidian, vault, knowledge-base, graph, css, theming, documentation, lihfolk | ~1.6k tok
+- Prompting and Verifying AI Output | 15 AI Tools/Prompting and Verifying AI Output.md | ai, verification, prompting, testing, qa | ~3.5k tok
+- Roblox Built-In AI Tools Timeline 2023-2026 | 15 AI Tools/Roblox Built-In AI Tools Timeline 2023-2026.md | ai, roblox, timeline, assistant, mcp, cube, generative-ai, history | ~1.9k tok
+- Roblox Generative AI - Cube Mesh and Texture Generation | 15 AI Tools/Roblox Generative AI - Cube Mesh and Texture Generation.md | ai, generative, mesh, cube, generationservice, 3d | ~4.2k tok
+- Roblox Policies on AI-Generated Content | 15 AI Tools/Roblox Policies on AI-Generated Content.md | ai, policy, compliance, licensing, moderation, ratings | ~3.5k tok
+- Roblox Studio Assistant | 15 AI Tools/Roblox Studio Assistant.md | ai, studio, assistant, mcp, workflow | ~4.2k tok
+- Token Cost Benchmarks | 15 AI Tools/Token Cost Benchmarks.md | ai, tokens, cost, benchmarks, plugin, router, lihfolk | ~1.5k tok
+- What AI Models Get Wrong in Roblox | 15 AI Tools/What AI Models Get Wrong in Roblox.md | ai-pitfalls, ai, code-review, luau, roblox, verification, lint, deprecated-apis, security | ~2.1k tok
+- Who Owns AI-Generated Code and Assets | 15 AI Tools/Who Owns AI-Generated Code and Assets.md | ai, legal, copyright, ownership, licensing, business, ugc | ~2.2k tok
+- Windows Tooling Pitfalls for Agent Pipelines | 15 AI Tools/Windows Tooling Pitfalls for Agent Pipelines.md | ai, agents, windows, powershell, encoding, utf-8, paths, tooling, lihfolk | ~1.5k tok
 
 ## 16 MCP and Agents
 
-- Agent Review Loops and Guardrails in Practice | 16 MCP and Agents/Agent Review Loops and Guardrails in Practice.md | agents, mcp, guardrails, review, hooks, permissions, verification, claude-code | ~6.2k tok
-- Blender MCP | 16 MCP and Agents/Blender MCP.md | mcp, blender, ai, agents, modeling, pipeline | ~3.9k tok
-- Case Study - Building a Game with AI Agents | 16 MCP and Agents/Case Study - Building a Game with AI Agents.md | case-study, mcp, agents, production, workflow | ~3.2k tok
-- MCP Workflows for Building Worlds | 16 MCP and Agents/MCP Workflows for Building Worlds.md | mcp, agents, world-building, terrain, workflow | ~3.5k tok
-- MCP Workflows for Scripting and Debugging | 16 MCP and Agents/MCP Workflows for Scripting and Debugging.md | mcp, agents, scripting, debugging, luau, workflow | ~4.6k tok
-- Multiple Agents in One Studio | 16 MCP and Agents/Multiple Agents in One Studio.md | mcp, agents, coordination, studio, workflow, collaboration | ~3.1k tok
-- Roblox Studio MCP Server | 16 MCP and Agents/Roblox Studio MCP Server.md | mcp, studio, ai, agents, tooling | ~4.5k tok
-- Safety Rules for AI Agents in Studio | 16 MCP and Agents/Safety Rules for AI Agents in Studio.md | mcp, agents, safety, rules, studio, workflow | ~3.3k tok
-- Setting Up MCP Clients | 16 MCP and Agents/Setting Up MCP Clients.md | mcp, setup, claude, cursor, vscode, agents | ~3.5k tok
-- Studio Plugins and Local HTTP Bridges | 16 MCP and Agents/Studio Plugins and Local HTTP Bridges.md | plugins, http, tooling, studio, bridges, mcp | ~4.5k tok
-- What Is MCP | 16 MCP and Agents/What Is MCP.md | mcp, ai, agents, protocol, tooling | ~4.7k tok
-- Writing Your Own MCP Server | 16 MCP and Agents/Writing Your Own MCP Server.md | mcp, python, typescript, plugins, tooling, agents | ~5.5k tok
+- AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well | 16 MCP and Agents/AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well.md | agents, ai, workflow, rojo, repo-layout, documentation, claude-code | ~2.3k tok
+- Agent Handoff Notes - Project State and Resume Templates | 16 MCP and Agents/Agent Handoff Notes - Project State and Resume Templates.md | agents, ai, workflow, handoff, documentation, claude-code | ~2.1k tok
+- Agent Review Loops and Guardrails in Practice | 16 MCP and Agents/Agent Review Loops and Guardrails in Practice.md | agents, mcp, guardrails, review, hooks, permissions, verification, claude-code | ~6.3k tok
+- Blender MCP | 16 MCP and Agents/Blender MCP.md | mcp, blender, ai, agents, modeling, pipeline | ~4.0k tok
+- Built-In Studio MCP vs Community MCP Servers - Migration Guide | 16 MCP and Agents/Built-In Studio MCP vs Community MCP Servers - Migration Guide.md | mcp, studio, agents, migration, tooling | ~2.1k tok
+- Case Study - Building a Game with AI Agents | 16 MCP and Agents/Case Study - Building a Game with AI Agents.md | case-study, mcp, agents, production, workflow | ~3.4k tok
+- MCP Workflows for Building Worlds | 16 MCP and Agents/MCP Workflows for Building Worlds.md | mcp, agents, world-building, terrain, workflow | ~3.6k tok
+- MCP Workflows for Scripting and Debugging | 16 MCP and Agents/MCP Workflows for Scripting and Debugging.md | mcp, agents, scripting, debugging, luau, workflow | ~4.7k tok
+- Multiple Agents in One Studio | 16 MCP and Agents/Multiple Agents in One Studio.md | mcp, agents, coordination, studio, workflow, collaboration | ~3.2k tok
+- Roblox Studio MCP Server | 16 MCP and Agents/Roblox Studio MCP Server.md | mcp, studio, ai, agents, tooling | ~4.6k tok
+- Safety Rules for AI Agents in Studio | 16 MCP and Agents/Safety Rules for AI Agents in Studio.md | mcp, agents, safety, rules, studio, workflow | ~3.5k tok
+- Setting Up MCP Clients | 16 MCP and Agents/Setting Up MCP Clients.md | mcp, setup, claude, cursor, vscode, agents | ~3.6k tok
+- Studio Plugins and Local HTTP Bridges | 16 MCP and Agents/Studio Plugins and Local HTTP Bridges.md | plugins, http, tooling, studio, bridges, mcp | ~4.6k tok
+- What Is MCP | 16 MCP and Agents/What Is MCP.md | mcp, ai, agents, protocol, tooling | ~4.8k tok
+- Writing Your Own MCP Server | 16 MCP and Agents/Writing Your Own MCP Server.md | mcp, python, typescript, plugins, tooling, agents | ~5.7k tok
 
 ## 17 Pipelines
 
-- Art Pipeline - Concept to In-Game Asset | 17 Pipelines/Art Pipeline - Concept to In-Game Asset.md | pipelines, art, blender, meshes, assets, import | ~4.5k tok
-- Asset Upload Automation with Open Cloud | 17 Pipelines/Asset Upload Automation with Open Cloud.md | pipelines, open-cloud, upload, automation, assets, publishing, python | ~5.0k tok
-- Audio Pipeline | 17 Pipelines/Audio Pipeline.md | pipelines, audio, sound, loudness, mixing, automation | ~4.2k tok
-- Batch Processing Tools in Studio | 17 Pipelines/Batch Processing Tools in Studio.md | pipelines, studio, tooling, batch, plugins, command-bar, http, automation | ~4.2k tok
-- Blender Automation with Python | 17 Pipelines/Blender Automation with Python.md | pipelines, blender, python, automation, voxel, export, headless | ~5.3k tok
-- Build Test and Release Pipeline | 17 Pipelines/Build Test and Release Pipeline.md | pipelines, release, testing, qa, publishing, rollback, environments | ~3.6k tok
-- Character and Creature Pipeline | 17 Pipelines/Character and Creature Pipeline.md | pipelines, characters, creatures, enemies, pets, armor, voxel, manifests | ~4.4k tok
-- Code Pipeline - Rojo Git and CI | 17 Pipelines/Code Pipeline - Rojo Git and CI.md | pipelines, code, rojo, git, ci, github-actions, open-cloud, testing | ~4.6k tok
-- Data and Config Pipeline - Spreadsheets to Game | 17 Pipelines/Data and Config Pipeline - Spreadsheets to Game.md | pipelines, config, data, spreadsheets, balancing, codegen, validation | ~5.1k tok
-- Environment and Level Pipeline | 17 Pipelines/Environment and Level Pipeline.md | pipelines, environment, level-design, terrain, manifests, map | ~3.9k tok
-- Icon and Thumbnail Rendering Pipeline | 17 Pipelines/Icon and Thumbnail Rendering Pipeline.md | pipelines, icons, thumbnails, blender, rendering, post-processing, ui | ~4.9k tok
-- Live Content Pipeline | 17 Pipelines/Live Content Pipeline.md | pipelines, live-ops, events, live-config, open-cloud, changelog, documentation | ~4.2k tok
-- Localization Pipeline | 17 Pipelines/Localization Pipeline.md | pipelines, localization, translation, text, ui, csv | ~4.8k tok
-- Pipeline Design Principles | 17 Pipelines/Pipeline Design Principles.md | pipelines, production, tooling, automation, workflow | ~5.4k tok
-- UI Asset Pipeline | 17 Pipelines/UI Asset Pipeline.md | pipelines, ui, design-system, automation, audits, mobile | ~3.5k tok
+- Art Pipeline - Concept to In-Game Asset | 17 Pipelines/Art Pipeline - Concept to In-Game Asset.md | pipelines, art, blender, meshes, assets, import | ~4.6k tok
+- Asset Upload Automation with Open Cloud | 17 Pipelines/Asset Upload Automation with Open Cloud.md | pipelines, open-cloud, upload, automation, assets, publishing, python | ~5.1k tok
+- Audio Pipeline | 17 Pipelines/Audio Pipeline.md | pipelines, audio, sound, loudness, mixing, automation | ~4.3k tok
+- Batch Processing Tools in Studio | 17 Pipelines/Batch Processing Tools in Studio.md | pipelines, studio, tooling, batch, plugins, command-bar, http, automation | ~4.3k tok
+- Blender Automation with Python | 17 Pipelines/Blender Automation with Python.md | pipelines, blender, python, automation, voxel, export, headless | ~5.4k tok
+- Build Test and Release Pipeline | 17 Pipelines/Build Test and Release Pipeline.md | pipelines, release, testing, qa, publishing, rollback, environments | ~3.7k tok
+- Character and Creature Pipeline | 17 Pipelines/Character and Creature Pipeline.md | pipelines, characters, creatures, enemies, pets, armor, voxel, manifests | ~4.5k tok
+- Code Pipeline - Rojo Git and CI | 17 Pipelines/Code Pipeline - Rojo Git and CI.md | pipelines, code, rojo, git, ci, github-actions, open-cloud, testing | ~4.7k tok
+- Data and Config Pipeline - Spreadsheets to Game | 17 Pipelines/Data and Config Pipeline - Spreadsheets to Game.md | pipelines, config, data, spreadsheets, balancing, codegen, validation | ~5.2k tok
+- Environment and Level Pipeline | 17 Pipelines/Environment and Level Pipeline.md | pipelines, environment, level-design, terrain, manifests, map | ~4.0k tok
+- Icon and Thumbnail Rendering Pipeline | 17 Pipelines/Icon and Thumbnail Rendering Pipeline.md | pipelines, icons, thumbnails, blender, rendering, post-processing, ui | ~5.0k tok
+- Live Content Pipeline | 17 Pipelines/Live Content Pipeline.md | pipelines, live-ops, events, live-config, open-cloud, changelog, documentation | ~4.3k tok
+- Localization Pipeline | 17 Pipelines/Localization Pipeline.md | pipelines, localization, translation, text, ui, csv | ~4.9k tok
+- Pipeline Design Principles | 17 Pipelines/Pipeline Design Principles.md | pipelines, production, tooling, automation, workflow | ~5.5k tok
+- UI Asset Pipeline | 17 Pipelines/UI Asset Pipeline.md | pipelines, ui, design-system, automation, audits, mobile | ~3.6k tok
 
 ## 18 Rigs and Skeletons
 
@@ -472,543 +559,899 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 
 ## 21 LihFolk UI Design System
 
-- LihFolk UI Design System | 21 LihFolk UI Design System/LihFolk UI Design System.md | ui, design-system, lihfolk-ui, simulator, cartoon, menus, hud | ~1.8k tok
-- LihFolk UI Spec | 21 LihFolk UI Design System/LihFolk UI Spec.md | ui, design-system, lihfolk-ui, tokens, spec, motion, accessibility | ~2.6k tok
+- LihFolk UI Design System | 21 LihFolk UI Design System/LihFolk UI Design System.md | ui, design-system, lihfolk-ui, simulator, cartoon, menus, hud | ~1.9k tok
+- LihFolk UI Spec | 21 LihFolk UI Design System/LihFolk UI Spec.md | ui, design-system, lihfolk-ui, tokens, spec, motion, accessibility | ~2.7k tok
 
 ## 22 Anti-Exploit and Security
 
+- Admin Commands Done Safely - Permissions and Audit Logs | 22 Anti-Exploit and Security/Admin Commands Done Safely - Permissions and Audit Logs.md | security, admin, moderation, permissions, audit-log, commands, textchatcommand, bans | ~2.5k tok
 - Anti-Exploit Start Here | 22 Anti-Exploit and Security/Anti-Exploit Start Here.md | index, start, security, anti-cheat | ~1.3k tok
-- Detecting Combat Exploits - Reach Rate and Aim | 22 Anti-Exploit and Security/Detecting Combat Exploits - Reach Rate and Aim.md | security, anti-cheat, combat, hit-detection, lag-compensation, luau | ~4.6k tok
-- Detecting Movement Exploits - Speed Fly Noclip Teleport | 22 Anti-Exploit and Security/Detecting Movement Exploits - Speed Fly Noclip Teleport.md | security, anti-cheat, movement, physics, network-ownership, luau | ~6.0k tok
-- Economy Exploits - Dupes Races and Purchase Abuse | 22 Anti-Exploit and Security/Economy Exploits - Dupes Races and Purchase Abuse.md | security, economy, duplication, datastore, purchases, audit, luau | ~4.7k tok
-- False Positives Lag and Fair Enforcement | 22 Anti-Exploit and Security/False Positives Lag and Fair Enforcement.md | security, anti-cheat, false-positives, enforcement, telemetry, fairness, luau | ~4.2k tok
-- How Exploits Work - The Client Boundary | 22 Anti-Exploit and Security/How Exploits Work - The Client Boundary.md | security, anti-cheat, exploits, client-server, replication, threat-model | ~4.8k tok
-- Logging Bans and Appeals | 22 Anti-Exploit and Security/Logging Bans and Appeals.md | security, moderation, ban-api, enforcement, appeals, logging, luau | ~4.6k tok
-- Testing Your Own Remotes - Fuzzing and Abuse Tests | 22 Anti-Exploit and Security/Testing Your Own Remotes - Fuzzing and Abuse Tests.md | security, testing, fuzzing, remotes, qa, studio, luau | ~5.0k tok
-- Threat Modeling a Roblox Game | 22 Anti-Exploit and Security/Threat Modeling a Roblox Game.md | security, threat-model, anti-cheat, design, combat, rng, economy | ~4.3k tok
+- Autoclicker and Macro Detection for Combat Remotes | 22 Anti-Exploit and Security/Autoclicker and Macro Detection for Combat Remotes.md | security, anti-exploit, autoclicker, macros, rate-limiting, combat, heuristics, false-positives | ~2.2k tok
+- Creator Account Security and Takeover Recovery | 22 Anti-Exploit and Security/Creator Account Security and Takeover Recovery.md | security, account-security, 2sv, groups, team-create, open-cloud, api-keys, takeover, recovery, incident-response | ~2.1k tok
+- Detecting Combat Exploits - Reach Rate and Aim | 22 Anti-Exploit and Security/Detecting Combat Exploits - Reach Rate and Aim.md | security, anti-cheat, combat, hit-detection, lag-compensation, luau | ~4.7k tok
+- Detecting Movement Exploits - Speed Fly Noclip Teleport | 22 Anti-Exploit and Security/Detecting Movement Exploits - Speed Fly Noclip Teleport.md | security, anti-cheat, movement, physics, network-ownership, luau | ~6.1k tok
+- Economy Exploits - Dupes Races and Purchase Abuse | 22 Anti-Exploit and Security/Economy Exploits - Dupes Races and Purchase Abuse.md | security, economy, duplication, datastore, purchases, audit, luau | ~4.8k tok
+- False Positives Lag and Fair Enforcement | 22 Anti-Exploit and Security/False Positives Lag and Fair Enforcement.md | security, anti-cheat, false-positives, enforcement, telemetry, fairness, luau | ~4.3k tok
+- How Exploits Work - The Client Boundary | 22 Anti-Exploit and Security/How Exploits Work - The Client Boundary.md | security, anti-cheat, exploits, client-server, replication, threat-model | ~5.0k tok
+- Logging Bans and Appeals | 22 Anti-Exploit and Security/Logging Bans and Appeals.md | security, moderation, ban-api, enforcement, appeals, logging, luau | ~4.7k tok
+- Testing Your Own Remotes - Fuzzing and Abuse Tests | 22 Anti-Exploit and Security/Testing Your Own Remotes - Fuzzing and Abuse Tests.md | security, testing, fuzzing, remotes, qa, studio, luau | ~5.2k tok
+- Threat Modeling a Roblox Game | 22 Anti-Exploit and Security/Threat Modeling a Roblox Game.md | security, threat-model, anti-cheat, design, combat, rng, economy | ~4.4k tok
 
 ## 23 Debugging Deep Dives
 
 - Debugging Client-Server Desync | 23 Debugging Deep Dives/Debugging Client-Server Desync.md | debugging, networking, replication, desync, attributes, remotes | ~4.6k tok
-- Debugging DataStore Problems | 23 Debugging Deep Dives/Debugging DataStore Problems.md | debugging, datastores, persistence, throttling, session-locking, open-cloud | ~4.7k tok
-- Debugging Live Servers | 23 Debugging Deep Dives/Debugging Live Servers.md | debugging, live-ops, developer-console, logservice, telemetry, open-cloud | ~4.0k tok
-- Debugging Physics and Network Ownership | 23 Debugging Deep Dives/Debugging Physics and Network Ownership.md | debugging, physics, network-ownership, assemblies, jitter, flinging | ~4.1k tok
-- Debugging Race Conditions and Yield Order | 23 Debugging Deep Dives/Debugging Race Conditions and Yield Order.md | debugging, race-conditions, task-library, yielding, characters, players | ~4.5k tok
+- Debugging DataStore Problems | 23 Debugging Deep Dives/Debugging DataStore Problems.md | debugging, datastores, persistence, throttling, session-locking, open-cloud | ~4.8k tok
+- Debugging Live Servers | 23 Debugging Deep Dives/Debugging Live Servers.md | debugging, live-ops, developer-console, logservice, telemetry, open-cloud | ~4.1k tok
+- Debugging Physics and Network Ownership | 23 Debugging Deep Dives/Debugging Physics and Network Ownership.md | debugging, physics, network-ownership, assemblies, jitter, flinging | ~4.2k tok
+- Debugging Race Conditions and Yield Order | 23 Debugging Deep Dives/Debugging Race Conditions and Yield Order.md | debugging, race-conditions, task-library, yielding, characters, players | ~4.6k tok
 - Debugging Start Here | 23 Debugging Deep Dives/Debugging Start Here.md | debugging, hub, start-here | ~1.2k tok
-- Debugging UI Layout and Input | 23 Debugging Deep Dives/Debugging UI Layout and Input.md | debugging, ui, layout, input, gamepad, zindex, automaticsize | ~4.8k tok
-- Reading Luau Errors and Stack Traces | 23 Debugging Deep Dives/Reading Luau Errors and Stack Traces.md | debugging, luau, errors, stack-trace, traceback, debug-info | ~4.7k tok
-- The Debugging Method - Reproduce Isolate Bisect | 23 Debugging Deep Dives/The Debugging Method - Reproduce Isolate Bisect.md | debugging, method, bisect, repro, minimal-repro, process | ~4.5k tok
+- Debugging UI Layout and Input | 23 Debugging Deep Dives/Debugging UI Layout and Input.md | debugging, ui, layout, input, gamepad, zindex, automaticsize | ~4.9k tok
+- Reading Luau Errors and Stack Traces | 23 Debugging Deep Dives/Reading Luau Errors and Stack Traces.md | debugging, luau, errors, stack-trace, traceback, debug-info | ~4.8k tok
+- The Debugging Method - Reproduce Isolate Bisect | 23 Debugging Deep Dives/The Debugging Method - Reproduce Isolate Bisect.md | debugging, method, bisect, repro, minimal-repro, process | ~4.6k tok
 
 ## 24 Worked Builds
 
-- Codes Redemption System End to End | 24 Worked Builds/Codes Redemption System End to End.md | worked-build, codes, live-ops, rate-limiting, datastore, remotes, ui, luau, strict | ~7.0k tok
-- Daily Rewards System End to End | 24 Worked Builds/Daily Rewards System End to End.md | worked-build, daily-rewards, retention, time, remotes, ui, luau, strict | ~5.9k tok
-- Global Leaderboards End to End | 24 Worked Builds/Global Leaderboards End to End.md | worked-build, leaderboards, ordered-datastore, datastore, budgets, ui, luau, strict | ~6.5k tok
-- LihFolk Systems - Data and Purchase Guarantees | 24 Worked Builds/LihFolk Systems - Data and Purchase Guarantees.md | worked-build, library, datastore, session-locking, processreceipt, idempotency, odds, policyservice, luau, strict | ~2.2k tok
-- LihFolk Systems Library | 24 Worked Builds/LihFolk Systems Library.md | worked-build, library, drop-in, luau, strict, datastore, remotes, monetization, odds, policyservice, testing | ~2.4k tok
-- Melee Combat System End to End | 24 Worked Builds/Melee Combat System End to End.md | worked-build, combat, melee, hitboxes, server-authority, anti-exploit, luau, animation | ~8.0k tok
-- Pet Hatching and Following End to End | 24 Worked Builds/Pet Hatching and Following End to End.md | worked-build, pets, eggs, rng, inventory, datastore, ui, luau, simulators | ~10.7k tok
-- Quest Chain System End to End | 24 Worked Builds/Quest Chain System End to End.md | worked-build, quests, objectives, progression, datastore, ui, luau, server-authority | ~9.7k tok
-- Rebirth and Prestige System End to End | 24 Worked Builds/Rebirth and Prestige System End to End.md | worked-build, rebirth, prestige, progression, economy, datastore, ui, luau, simulators | ~8.7k tok
-- Round-Based Minigame Loop End to End | 24 Worked Builds/Round-Based Minigame Loop End to End.md | worked-build, rounds, minigames, game-loop, server-authority, datastore, ui, luau | ~8.9k tok
-- Saved Inventory End to End | 24 Worked Builds/Saved Inventory End to End.md | worked-build, inventory, datastore, session-locking, remotes, ui, luau, strict | ~10.8k tok
-- Shop with Game Passes and Developer Products End to End | 24 Worked Builds/Shop with Game Passes and Developer Products End to End.md | worked-build, monetization, game-passes, developer-products, processreceipt, shop, ui, luau, strict | ~6.7k tok
+- Codes Redemption System End to End | 24 Worked Builds/Codes Redemption System End to End.md | worked-build, codes, live-ops, rate-limiting, datastore, remotes, ui, luau, strict | ~7.1k tok
+- Daily Rewards System End to End | 24 Worked Builds/Daily Rewards System End to End.md | worked-build, daily-rewards, retention, time, remotes, ui, luau, strict | ~6.0k tok
+- Global Leaderboards End to End | 24 Worked Builds/Global Leaderboards End to End.md | worked-build, leaderboards, ordered-datastore, datastore, budgets, ui, luau, strict | ~6.6k tok
+- LihFolk Systems - Data and Purchase Guarantees | 24 Worked Builds/LihFolk Systems - Data and Purchase Guarantees.md | worked-build, library, datastore, session-locking, processreceipt, idempotency, odds, policyservice, luau, strict | ~2.3k tok
+- LihFolk Systems Library | 24 Worked Builds/LihFolk Systems Library.md | worked-build, library, drop-in, luau, strict, datastore, remotes, monetization, odds, policyservice, testing | ~2.5k tok
+- Melee Combat System End to End | 24 Worked Builds/Melee Combat System End to End.md | worked-build, combat, melee, hitboxes, server-authority, anti-exploit, luau, animation | ~8.1k tok
+- Pet Hatching and Following End to End | 24 Worked Builds/Pet Hatching and Following End to End.md | worked-build, pets, eggs, rng, inventory, datastore, ui, luau, simulators | ~10.8k tok
+- Quest Chain System End to End | 24 Worked Builds/Quest Chain System End to End.md | worked-build, quests, objectives, progression, datastore, ui, luau, server-authority | ~9.8k tok
+- Rebirth and Prestige System End to End | 24 Worked Builds/Rebirth and Prestige System End to End.md | worked-build, rebirth, prestige, progression, economy, datastore, ui, luau, simulators | ~8.9k tok
+- Round-Based Minigame Loop End to End | 24 Worked Builds/Round-Based Minigame Loop End to End.md | worked-build, rounds, minigames, game-loop, server-authority, datastore, ui, luau | ~9.0k tok
+- Saved Inventory End to End | 24 Worked Builds/Saved Inventory End to End.md | worked-build, inventory, datastore, session-locking, remotes, ui, luau, strict | ~10.9k tok
+- Shop with Game Passes and Developer Products End to End | 24 Worked Builds/Shop with Game Passes and Developer Products End to End.md | worked-build, monetization, game-passes, developer-products, processreceipt, shop, ui, luau, strict | ~6.8k tok
+- Weekend Build - Arena Shooter with Server-Checked Hits | 24 Worked Builds/Weekend Build - Arena Shooter with Server-Checked Hits.md | worked-build, shooter, arena, hitscan, server-validation, respawn, scoreboard, remotes, anti-exploit, fast-ship | ~2.6k tok
+- Weekend Build - Roleplay Town with Jobs and Paychecks | 24 Worked Builds/Weekend Build - Roleplay Town with Jobs and Paychecks.md | worked-build, roleplay, jobs, teams, paychecks, housing, ownership, economy, safety, fast-ship | ~1.9k tok
+- Weekend Build - Survival Gather, Craft and Place | 24 Worked Builds/Weekend Build - Survival Gather, Craft and Place.md | worked-build, survival, crafting, resource-nodes, placement, building, datastore, saving, fast-ship | ~2.0k tok
 - Worked Builds Start Here | 24 Worked Builds/Worked Builds Start Here.md | index, start, worked-build | ~1.3k tok
 
 ## 25 Physics and Vehicles
 
-- Aircraft and Flight Models | 25 Physics and Vehicles/Aircraft and Flight Models.md | physics, vehicles, aircraft, flight, aerodynamics, network-ownership | ~5.2k tok
-- Boats Buoyancy and Water | 25 Physics and Vehicles/Boats Buoyancy and Water.md | physics, vehicles, boats, buoyancy, water, terrain, network-ownership | ~5.1k tok
-- Cars with Constraints - Suspension Steering and Drive | 25 Physics and Vehicles/Cars with Constraints - Suspension Steering and Drive.md | physics, vehicles, constraints, cars, suspension, network-ownership | ~6.4k tok
-- Destruction and Fracture | 25 Physics and Vehicles/Destruction and Fracture.md | physics, destruction, fracture, csg, geometryservice, explosions, performance | ~4.4k tok
+- Aircraft and Flight Models | 25 Physics and Vehicles/Aircraft and Flight Models.md | physics, vehicles, aircraft, flight, aerodynamics, network-ownership | ~5.3k tok
+- Boats Buoyancy and Water | 25 Physics and Vehicles/Boats Buoyancy and Water.md | physics, vehicles, boats, buoyancy, water, terrain, network-ownership | ~5.3k tok
+- Cars with Constraints - Suspension Steering and Drive | 25 Physics and Vehicles/Cars with Constraints - Suspension Steering and Drive.md | physics, vehicles, constraints, cars, suspension, network-ownership | ~6.6k tok
+- Centre of Mass, Anti-Flip and Self-Righting | 25 Physics and Vehicles/Centre of Mass, Anti-Flip and Self-Righting.md | physics, vehicles, cars, center-of-mass, stability, anti-roll, flip-recovery | ~2.4k tok
+- Choosing a Car Chassis - Raycast Suspension vs Constraint Builds vs Community Kits | 25 Physics and Vehicles/Choosing a Car Chassis - Raycast Suspension vs Constraint Builds vs Community Kits.md | physics, vehicles, cars, chassis, raycast-suspension, constraints, decision-guide | ~2.8k tok
+- Destruction and Fracture | 25 Physics and Vehicles/Destruction and Fracture.md | physics, destruction, fracture, csg, geometryservice, explosions, performance | ~4.5k tok
+- Engine, Gearbox and Torque Curve Model for Arcade Cars | 25 Physics and Vehicles/Engine, Gearbox and Torque Curve Model for Arcade Cars.md | physics, vehicles, cars, engine, gearbox, torque, audio, hud | ~2.5k tok
+- Multi-Seat Vehicles - Driver, Passenger and Gunner Roles | 25 Physics and Vehicles/Multi-Seat Vehicles - Driver, Passenger and Gunner Roles.md | physics, vehicles, seats, passengers, turrets, network-ownership, input | ~2.4k tok
 - Physics and Vehicles Start Here | 25 Physics and Vehicles/Physics and Vehicles Start Here.md | physics, vehicles, hub, start-here | ~1.3k tok
-- Projectiles and Ballistics | 25 Physics and Vehicles/Projectiles and Ballistics.md | physics, projectiles, ballistics, combat, networking, raycast, anti-cheat | ~4.9k tok
-- Ropes Chains and Soft Bodies | 25 Physics and Vehicles/Ropes Chains and Soft Bodies.md | physics, constraints, ropes, chains, soft-bodies, verlet, bones, procedural | ~4.7k tok
+- Projectiles and Ballistics | 25 Physics and Vehicles/Projectiles and Ballistics.md | physics, projectiles, ballistics, combat, networking, raycast, anti-cheat | ~5.1k tok
+- Racing AI on a Racing Line - Spline Following and Rubber-Banding | 25 Physics and Vehicles/Racing AI on a Racing Line - Spline Following and Rubber-Banding.md | physics, vehicles, racing, ai, splines, rubber-banding, game-design | ~2.9k tok
+- Rides and Attractions - Roller Coasters, Ziplines, Elevators and Cable Cars | 25 Physics and Vehicles/Rides and Attractions - Roller Coasters, Ziplines, Elevators and Cable Cars.md | physics, vehicles, rides, roller-coaster, zipline, elevator, cable-car, splines | ~2.3k tok
+- Ropes Chains and Soft Bodies | 25 Physics and Vehicles/Ropes Chains and Soft Bodies.md | physics, constraints, ropes, chains, soft-bodies, verlet, bones, procedural | ~4.9k tok
+- Standing on Moving Vehicles and Platforms - Keeping Players Glued | 25 Physics and Vehicles/Standing on Moving Vehicles and Platforms - Keeping Players Glued.md | physics, vehicles, moving-platforms, characters, elevators, trains, network-ownership | ~2.7k tok
+- Steering Geometry and Arcade Drifting - Ackermann, Slip and Grip Tuning | 25 Physics and Vehicles/Steering Geometry and Arcade Drifting - Ackermann, Slip and Grip Tuning.md | physics, vehicles, cars, steering, drifting, tyre-model, handling | ~2.6k tok
+- Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer | 25 Physics and Vehicles/Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer.md | physics, vehicles, input, mobile, gamepad, touch, input-action-system | ~2.8k tok
+- Vehicle Damage, Repair and Wreck States | 25 Physics and Vehicles/Vehicle Damage, Repair and Wreck States.md | physics, vehicles, damage, health, repair, wreck, respawn, state-machine | ~2.4k tok
+- Vehicle Ownership and Anti-Exploit - Server-Checked Driving | 25 Physics and Vehicles/Vehicle Ownership and Anti-Exploit - Server-Checked Driving.md | physics, vehicles, anti-exploit, network-ownership, server-authority, validation | ~2.9k tok
+- Vehicle Spawner and Garage - Spawn, Ownership, Despawn and Limits | 25 Physics and Vehicles/Vehicle Spawner and Garage - Spawn, Ownership, Despawn and Limits.md | physics, vehicles, spawning, garage, datastore, cleanup | ~2.7k tok
+- Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver | 25 Physics and Vehicles/Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver.md | physics, vehicles, streaming, streamingenabled, network-ownership, open-world | ~2.6k tok
 
 ## 26 Community and Moderation
 
 - Community and Moderation Start Here | 26 Community and Moderation/Community and Moderation Start Here.md | community, moderation, safety, hub | ~1.2k tok
-- Discord Servers for Roblox Games | 26 Community and Moderation/Discord Servers for Roblox Games.md | community, discord, moderation, safety, live-ops, social | ~3.6k tok
-- Groups Roles and Permissions for Studios | 26 Community and Moderation/Groups Roles and Permissions for Studios.md | community, groups, permissions, studio, team, security, moderation, luau | ~4.1k tok
-- Player Reports and In-Game Moderation | 26 Community and Moderation/Player Reports and In-Game Moderation.md | community, moderation, safety, reports, ban-api, luau, live-ops | ~4.6k tok
-- Text Chat Customization with TextChatService | 26 Community and Moderation/Text Chat Customization with TextChatService.md | community, moderation, chat, textchatservice, safety, luau, ui | ~5.2k tok
-- Voice Chat and Safety Features | 26 Community and Moderation/Voice Chat and Safety Features.md | community, moderation, voice-chat, safety, audio-api, luau | ~3.7k tok
-- Working with Content Creators | 26 Community and Moderation/Working with Content Creators.md | community, creators, influencers, marketing, safety, live-ops, luau | ~3.8k tok
+- Discord Servers for Roblox Games | 26 Community and Moderation/Discord Servers for Roblox Games.md | community, discord, moderation, safety, live-ops, social | ~3.7k tok
+- Groups Roles and Permissions for Studios | 26 Community and Moderation/Groups Roles and Permissions for Studios.md | community, groups, permissions, studio, team, security, moderation, luau | ~4.2k tok
+- Player Reports and In-Game Moderation | 26 Community and Moderation/Player Reports and In-Game Moderation.md | community, moderation, safety, reports, ban-api, luau, live-ops | ~4.7k tok
+- Text Chat Customization with TextChatService | 26 Community and Moderation/Text Chat Customization with TextChatService.md | community, moderation, chat, textchatservice, safety, luau, ui | ~5.3k tok
+- Voice Chat and Safety Features | 26 Community and Moderation/Voice Chat and Safety Features.md | community, moderation, voice-chat, safety, audio-api, luau | ~3.8k tok
+- Working with Content Creators | 26 Community and Moderation/Working with Content Creators.md | community, creators, influencers, marketing, safety, live-ops, luau | ~3.9k tok
 
 ## 27 Marketing and Growth
 
-- A-B Testing and Experiments on Roblox | 27 Marketing and Growth/A-B Testing and Experiments on Roblox.md | marketing, growth, experiments, ab-testing, configservice, analytics, statistics, luau | ~4.4k tok
-- Competitor Analysis Method | 27 Marketing and Growth/Competitor Analysis Method.md | marketing, growth, competitor-analysis, research, game-design, benchmarks | ~3.7k tok
-- Launch Strategy - The First Two Weeks | 27 Marketing and Growth/Launch Strategy - The First Two Weeks.md | marketing, growth, launch, soft-launch, retention, discovery, live-ops | ~4.1k tok
+- A-B Testing and Experiments on Roblox | 27 Marketing and Growth/A-B Testing and Experiments on Roblox.md | marketing, growth, experiments, ab-testing, configservice, analytics, statistics, luau | ~4.6k tok
+- Competitor Analysis Method | 27 Marketing and Growth/Competitor Analysis Method.md | marketing, growth, competitor-analysis, research, game-design, benchmarks | ~3.8k tok
+- Experience Description and Search Keywords | 27 Marketing and Growth/Experience Description and Search Keywords.md | marketing, search, description, title, discovery, localization, attribution, creator-rewards, store-page | ~1.9k tok
+- Game Icon Design - Readable at Small Sizes | 27 Marketing and Growth/Game Icon Design - Readable at Small Sizes.md | marketing, icon, store-page, composition, contrast, silhouette, readability, art-direction, testing | ~1.9k tok
+- Game Trailers and Clean Footage - Capture, Freecam and Editing | 27 Marketing and Growth/Game Trailers and Clean Footage - Capture, Freecam and Editing.md | marketing, trailer, video, freecam, capture, video-thumbnails, editing, store-page | ~1.9k tok
+- Launch Strategy - The First Two Weeks | 27 Marketing and Growth/Launch Strategy - The First Two Weeks.md | marketing, growth, launch, soft-launch, retention, discovery, live-ops | ~4.2k tok
 - Marketing and Growth Start Here | 27 Marketing and Growth/Marketing and Growth Start Here.md | marketing, growth, hub, start-here | ~1.2k tok
-- Short-Form Video Marketing | 27 Marketing and Growth/Short-Form Video Marketing.md | marketing, growth, video, short-form, share-links, content-creators, capture | ~4.0k tok
-- Sponsored Ads and Campaign Math | 27 Marketing and Growth/Sponsored Ads and Campaign Math.md | marketing, growth, ads-manager, sponsored-ads, user-acquisition, roas, math | ~4.2k tok
-- Update Cadence and Hype Cycles | 27 Marketing and Growth/Update Cadence and Hype Cycles.md | marketing, growth, live-ops, updates, cadence, events, retention | ~3.5k tok
+- Marketing to Kids and Teens - Age Rules and Paid-Promo Disclosure | 27 Marketing and Growth/Marketing to Kids and Teens - Age Rules and Paid-Promo Disclosure.md | marketing, kids, teens, coppa, advertising, disclosure, influencers, sponsored, ads, policy, compliance | ~1.9k tok
+- Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics | 27 Marketing and Growth/Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics.md | marketing, growth, launch, relaunch, ccu, empty-servers, funnel, diagnosis, server-fill, analytics | ~2.0k tok
+- Roblox Communities as Your On-Platform Hub | 27 Marketing and Growth/Roblox Communities as Your On-Platform Hub.md |  | ~2.4k tok
+- Short-Form Video Marketing | 27 Marketing and Growth/Short-Form Video Marketing.md | marketing, growth, video, short-form, share-links, content-creators, capture | ~4.1k tok
+- Sponsored Ads and Campaign Math | 27 Marketing and Growth/Sponsored Ads and Campaign Math.md | marketing, growth, ads-manager, sponsored-ads, user-acquisition, roas, math | ~4.3k tok
+- Update Cadence and Hype Cycles | 27 Marketing and Growth/Update Cadence and Hype Cycles.md | marketing, growth, live-ops, updates, cadence, events, retention | ~3.6k tok
 
 ## 28 Business and Careers
 
-- Building a Portfolio as a Roblox Developer | 28 Business and Careers/Building a Portfolio as a Roblox Developer.md | careers, portfolio, freelancing, job-search, showcase, minors | ~3.4k tok
+- Building a Portfolio as a Roblox Developer | 28 Business and Careers/Building a Portfolio as a Roblox Developer.md | careers, portfolio, freelancing, job-search, showcase, minors | ~3.5k tok
 - Business and Careers Start Here | 28 Business and Careers/Business and Careers Start Here.md | business, careers, hub, devex, contracts, studio, portfolio, legal | ~1.2k tok
-- Commissions Pricing and Contracts | 28 Business and Careers/Commissions Pricing and Contracts.md | business, commissions, freelancing, pricing, contracts, careers, minors | ~4.2k tok
-- DevEx and Cashing Out | 28 Business and Careers/DevEx and Cashing Out.md | business, devex, payouts, robux, earnings, taxes, careers, minors | ~4.3k tok
-- Hiring Freelancers and Revenue Shares | 28 Business and Careers/Hiring Freelancers and Revenue Shares.md | business, hiring, freelancers, revenue-share, payouts, groups, contracts, minors | ~3.8k tok
-- Legal Basics - IP Licenses and Assets | 28 Business and Careers/Legal Basics - IP Licenses and Assets.md | business, legal, ip, copyright, licensing, creator-store, assets, minors | ~4.2k tok
-- Running a Small Studio as a Business | 28 Business and Careers/Running a Small Studio as a Business.md | business, studio, finance, budgeting, groups, operations, careers, minors | ~3.8k tok
+- Commissions Pricing and Contracts | 28 Business and Careers/Commissions Pricing and Contracts.md | business, commissions, freelancing, pricing, contracts, careers, minors | ~4.3k tok
+- DevEx and Cashing Out | 28 Business and Careers/DevEx and Cashing Out.md | business, devex, payouts, robux, earnings, taxes, careers, minors | ~4.4k tok
+- Hiring Freelancers and Revenue Shares | 28 Business and Careers/Hiring Freelancers and Revenue Shares.md | business, hiring, freelancers, revenue-share, payouts, groups, contracts, minors | ~3.9k tok
+- Legal Basics - IP Licenses and Assets | 28 Business and Careers/Legal Basics - IP Licenses and Assets.md | business, legal, ip, copyright, licensing, creator-store, assets, minors | ~4.3k tok
+- Open-Source Licenses for Roblox Libraries - Quick Reference | 28 Business and Careers/Open-Source Licenses for Roblox Libraries - Quick Reference.md | business, legal, licensing, open-source, libraries, wally | ~1.8k tok
+- Running a Small Studio as a Business | 28 Business and Careers/Running a Small Studio as a Business.md | business, studio, finance, budgeting, groups, operations, careers, minors | ~3.9k tok
 
 ## 29 Luau Cookbook
 
-- Cookbook - Data and Saving | 29 Luau Cookbook/Cookbook - Data and Saving.md | luau, cookbook, datastore, saving, persistence, recipes | ~5.1k tok
-- Cookbook - Math CFrame and Vectors | 29 Luau Cookbook/Cookbook - Math CFrame and Vectors.md | luau, cookbook, math, cframe, vector3, recipes | ~4.7k tok
-- Cookbook - Players and Characters | 29 Luau Cookbook/Cookbook - Players and Characters.md | luau, cookbook, players, characters, humanoid, recipes | ~5.3k tok
-- Cookbook - Remotes and Networking | 29 Luau Cookbook/Cookbook - Remotes and Networking.md | luau, cookbook, remotes, networking, security, recipes | ~5.5k tok
-- Cookbook - Tables Strings and Time | 29 Luau Cookbook/Cookbook - Tables Strings and Time.md | luau, cookbook, tables, strings, time, recipes | ~4.9k tok
-- Cookbook - UI | 29 Luau Cookbook/Cookbook - UI.md | luau, cookbook, ui, gui, tween, recipes | ~5.1k tok
+- Cookbook - Data and Saving | 29 Luau Cookbook/Cookbook - Data and Saving.md | luau, cookbook, datastore, saving, persistence, recipes | ~5.2k tok
+- Cookbook - Math CFrame and Vectors | 29 Luau Cookbook/Cookbook - Math CFrame and Vectors.md | luau, cookbook, math, cframe, vector3, recipes | ~4.8k tok
+- Cookbook - Players and Characters | 29 Luau Cookbook/Cookbook - Players and Characters.md | luau, cookbook, players, characters, humanoid, recipes | ~5.4k tok
+- Cookbook - Remotes and Networking | 29 Luau Cookbook/Cookbook - Remotes and Networking.md | luau, cookbook, remotes, networking, security, recipes | ~5.6k tok
+- Cookbook - Tables Strings and Time | 29 Luau Cookbook/Cookbook - Tables Strings and Time.md | luau, cookbook, tables, strings, time, recipes | ~5.0k tok
+- Cookbook - UI | 29 Luau Cookbook/Cookbook - UI.md | luau, cookbook, ui, gui, tween, recipes | ~5.2k tok
 - Luau Cookbook Start Here | 29 Luau Cookbook/Luau Cookbook Start Here.md | luau, cookbook, hub, recipes | ~1.3k tok
 
 ## 31 AI Skills for Roblox
 
 - AI Skills Start Here | AI Skills Start Here.md | index, start, ai, agents, ai-skill | ~1.8k tok
-- Skill - Roblox Anti-Exploit Review | Skill - Roblox Anti-Exploit Review.md | ai, agents, ai-skill, security, anti-cheat | ~680 tok
-- Skill - Roblox Asset Import | Skill - Roblox Asset Import.md | ai, agents, ai-skill, modeling, blender, world-building | ~870 tok
-- Skill - Roblox DataStore Safety | Skill - Roblox DataStore Safety.md | ai, agents, ai-skill, datastore, data | ~740 tok
-- Skill - Roblox Debugging | Skill - Roblox Debugging.md | ai, agents, ai-skill, debugging, testing | ~670 tok
-- Skill - Roblox Monetization Compliance | Skill - Roblox Monetization Compliance.md | ai, agents, ai-skill, monetization, compliance, live-ops | ~820 tok
-- Skill - Roblox Performance Audit | Skill - Roblox Performance Audit.md | ai, agents, ai-skill, performance, profiling | ~790 tok
-- Skill - Roblox Secure Remotes | Skill - Roblox Secure Remotes.md | ai, agents, ai-skill, security, remotes, networking | ~690 tok
-- Skill - Roblox System Builder | Skill - Roblox System Builder.md | ai, agents, ai-skill, architecture, luau, worked-build | ~860 tok
-- Skill - Roblox UI Builder | Skill - Roblox UI Builder.md | ai, agents, ai-skill, ui, lihfolk-ui, accessibility | ~760 tok
-- Skill - Roblox Vault Research | Skill - Roblox Vault Research.md | ai, agents, ai-skill, research, workflow | ~710 tok
+- Skill - Roblox Anti-Exploit Review | Skill - Roblox Anti-Exploit Review.md | ai, agents, ai-skill, security, anti-cheat | ~690 tok
+- Skill - Roblox Asset Import | Skill - Roblox Asset Import.md | ai, agents, ai-skill, modeling, blender, world-building | ~880 tok
+- Skill - Roblox DataStore Safety | Skill - Roblox DataStore Safety.md | ai, agents, ai-skill, datastore, data | ~750 tok
+- Skill - Roblox Debugging | Skill - Roblox Debugging.md | ai, agents, ai-skill, debugging, testing | ~680 tok
+- Skill - Roblox Monetization Compliance | Skill - Roblox Monetization Compliance.md | ai, agents, ai-skill, monetization, compliance, live-ops | ~840 tok
+- Skill - Roblox Performance Audit | Skill - Roblox Performance Audit.md | ai, agents, ai-skill, performance, profiling | ~800 tok
+- Skill - Roblox Secure Remotes | Skill - Roblox Secure Remotes.md | ai, agents, ai-skill, security, remotes, networking | ~700 tok
+- Skill - Roblox System Builder | Skill - Roblox System Builder.md | ai, agents, ai-skill, architecture, luau, worked-build | ~870 tok
+- Skill - Roblox UI Builder | Skill - Roblox UI Builder.md | ai, agents, ai-skill, ui, lihfolk-ui, accessibility | ~770 tok
+- Skill - Roblox Vault Research | Skill - Roblox Vault Research.md | ai, agents, ai-skill, research, workflow | ~720 tok
 - Third-Party Skill - Caveman Token Saver | Third-Party Skill - Caveman Token Saver.md | ai, agents, ai-skill, tokens, third-party | ~1.5k tok
-- Third-Party Skill - Obsidian Skills | Third-Party Skill - Obsidian Skills.md | ai, agents, ai-skill, obsidian, third-party | ~940 tok
+- Third-Party Skill - Obsidian Skills | Third-Party Skill - Obsidian Skills.md | ai, agents, ai-skill, obsidian, third-party | ~950 tok
 
 ## 32 Case Studies of Top Roblox Games
 
 - Case Study - 99 Nights in the Forest | 32 Case Studies of Top Roblox Games/Case Study - 99 Nights in the Forest.md | case-study, top-games, survival, horror, co-op, live-ops, retention, monetization, marketing | ~4.3k tok
-- Case Study - Adopt Me | 32 Case Studies of Top Roblox Games/Case Study - Adopt Me.md | case-study, top-games, pet-care, roleplay, trading, live-ops, monetization, thumbnails | ~5.1k tok
-- Case Study - Blox Fruits | 32 Case Studies of Top Roblox Games/Case Study - Blox Fruits.md | case-study, top-games, action-rpg, grinding, rng, trading, live-ops, monetization, thumbnails | ~4.8k tok
-- Case Study - Brookhaven RP | 32 Case Studies of Top Roblox Games/Case Study - Brookhaven RP.md | case-study, top-games, roleplay, life-sim, social, private-servers, monetization, thumbnails | ~4.9k tok
-- Case Study - Doors | 32 Case Studies of Top Roblox Games/Case Study - Doors.md | case-study, top-games, horror, roguelite, co-op, lobby, matchmaking, live-ops, thumbnails, monetization | ~4.0k tok
-- Case Study - Dress to Impress | 32 Case Studies of Top Roblox Games/Case Study - Dress to Impress.md | case-study, top-games, dress-up, rounds, voting, collaborations, live-ops, monetization, thumbnails | ~4.6k tok
-- Case Study - Fisch | 32 Case Studies of Top Roblox Games/Case Study - Fisch.md | case-study, top-games, fishing, collection, rng, minigame, live-ops, thumbnails, monetization, progression | ~3.6k tok
-- Case Study - Grow a Garden | 32 Case Studies of Top Roblox Games/Case Study - Grow a Garden.md | case-study, top-games, simulator, idle, farming, live-ops, retention, monetization, marketing | ~5.0k tok
-- Case Study - Pet Simulator 99 | 32 Case Studies of Top Roblox Games/Case Study - Pet Simulator 99.md | case-study, top-games, simulator, pets, rng, trading, live-ops, monetization, thumbnails, sequel | ~4.0k tok
-- Case Study - Steal a Brainrot | 32 Case Studies of Top Roblox Games/Case Study - Steal a Brainrot.md | case-study, top-games, simulator, tycoon, idle, pvp, live-ops, monetization, marketing | ~4.2k tok
-- Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks | 32 Case Studies of Top Roblox Games/Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks.md | case-study, top-games, thumbnails, icons, titles, marketing, discovery, click-through, live-ops, comparison | ~4.2k tok
-- Top Games Case Studies Start Here | 32 Case Studies of Top Roblox Games/Top Games Case Studies Start Here.md | case-study, top-games, start-here, hub, marketing, game-design | ~1.4k tok
+- Case Study - Adopt Me | 32 Case Studies of Top Roblox Games/Case Study - Adopt Me.md | case-study, top-games, pet-care, roleplay, trading, live-ops, monetization, thumbnails | ~5.2k tok
+- Case Study - Blox Fruits | 32 Case Studies of Top Roblox Games/Case Study - Blox Fruits.md | case-study, top-games, action-rpg, grinding, rng, trading, live-ops, monetization, thumbnails | ~4.9k tok
+- Case Study - Brookhaven RP | 32 Case Studies of Top Roblox Games/Case Study - Brookhaven RP.md | case-study, top-games, roleplay, life-sim, social, private-servers, monetization, thumbnails | ~5.0k tok
+- Case Study - Dead Rails | 32 Case Studies of Top Roblox Games/Case Study - Dead Rails.md | case-study, top-games, survival, co-op, train, journey, zombies, virality, 2025, game-passes | ~1.6k tok
+- Case Study - Doors | 32 Case Studies of Top Roblox Games/Case Study - Doors.md | case-study, top-games, horror, roguelite, co-op, lobby, matchmaking, live-ops, thumbnails, monetization | ~4.1k tok
+- Case Study - Dress to Impress | 32 Case Studies of Top Roblox Games/Case Study - Dress to Impress.md | case-study, top-games, dress-up, rounds, voting, collaborations, live-ops, monetization, thumbnails | ~4.7k tok
+- Case Study - Fisch | 32 Case Studies of Top Roblox Games/Case Study - Fisch.md | case-study, top-games, fishing, collection, rng, minigame, live-ops, thumbnails, monetization, progression | ~3.7k tok
+- Case Study - Forsaken | 32 Case Studies of Top Roblox Games/Case Study - Forsaken.md | case-study, top-games, asymmetric, horror, killer-vs-survivors, balance, rounds, skins, accessibility | ~1.7k tok
+- Case Study - Grow a Garden | 32 Case Studies of Top Roblox Games/Case Study - Grow a Garden.md | case-study, top-games, simulator, idle, farming, live-ops, retention, monetization, marketing | ~5.1k tok
+- Case Study - Jailbreak | 32 Case Studies of Top Roblox Games/Case Study - Jailbreak.md | case-study, top-games, cops-and-robbers, open-world, vehicles, heists, anti-cheat, longevity, game-passes | ~1.8k tok
+- Case Study - Murder Mystery 2 | 32 Case Studies of Top Roblox Games/Case Study - Murder Mystery 2.md | case-study, top-games, murder-mystery, social-deduction, rounds, cosmetics, trading, knives, game-passes | ~1.6k tok
+- Case Study - Pet Simulator 99 | 32 Case Studies of Top Roblox Games/Case Study - Pet Simulator 99.md | case-study, top-games, simulator, pets, rng, trading, live-ops, monetization, thumbnails, sequel | ~4.1k tok
+- Case Study - Rivals | 32 Case Studies of Top Roblox Games/Case Study - Rivals.md | case-study, top-games, fps, shooter, duels, cosmetics, weapon-skins, cross-platform, anti-cheat | ~1.6k tok
+- Case Study - Steal a Brainrot | 32 Case Studies of Top Roblox Games/Case Study - Steal a Brainrot.md | case-study, top-games, simulator, tycoon, idle, pvp, live-ops, monetization, marketing | ~4.3k tok
+- Case Study - The Strongest Battlegrounds | 32 Case Studies of Top Roblox Games/Case Study - The Strongest Battlegrounds.md | case-study, top-games, battlegrounds, fighting, movesets, combat, update-cadence, anime, randomized-rewards | ~1.7k tok
+- Case Study - Tower Defense Simulator | 32 Case Studies of Top Roblox Games/Case Study - Tower Defense Simulator.md | case-study, top-games, tower-defense, co-op, units, waves, game-passes, battle-pass, crates, live-ops | ~1.6k tok
+- Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks | 32 Case Studies of Top Roblox Games/Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks.md | case-study, top-games, thumbnails, icons, titles, marketing, discovery, click-through, live-ops, comparison | ~4.3k tok
+- Top Games Case Studies Start Here | 32 Case Studies of Top Roblox Games/Top Games Case Studies Start Here.md | case-study, top-games, start-here, hub, marketing, game-design | ~1.5k tok
 
 ## 33 Level Design
 
-- Combat Arena and Encounter Layout | 33 Level Design/Combat Arena and Encounter Layout.md | level-design, combat, arena, encounters, enemy-spawning, pvp, cover, telegraphs | ~4.6k tok
-- Level Design Principles - Flow Sightlines and Landmarks | 33 Level Design/Level Design Principles - Flow Sightlines and Landmarks.md | level-design, flow, sightlines, landmarks, wayfinding, readability, camera, streaming | ~5.1k tok
+- Combat Arena and Encounter Layout | 33 Level Design/Combat Arena and Encounter Layout.md | level-design, combat, arena, encounters, enemy-spawning, pvp, cover, telegraphs | ~4.7k tok
+- Instanced Interiors - Pooled House and Room Copies for Many Players | 33 Level Design/Instanced Interiors - Pooled House and Room Copies for Many Players.md | level-design, interiors, instancing, housing, roleplay, pooling, streaming | ~2.6k tok
+- Kill Planes, Map Boundaries and Out-of-Bounds Recovery | 33 Level Design/Kill Planes, Map Boundaries and Out-of-Bounds Recovery.md | level-design, boundaries, out-of-bounds, kill-plane, collision-groups, respawn | ~2.6k tok
+- Level Design Principles - Flow Sightlines and Landmarks | 33 Level Design/Level Design Principles - Flow Sightlines and Landmarks.md | level-design, flow, sightlines, landmarks, wayfinding, readability, camera, streaming | ~5.3k tok
 - Level Design Start Here | 33 Level Design/Level Design Start Here.md | index, start, level-design | ~1.2k tok
-- Lobby and Hub Design | 33 Level Design/Lobby and Hub Design.md | level-design, lobby, hub, social, teleport, proximity-prompt, performance, layout | ~4.5k tok
-- Obby and Platforming Level Design | 33 Level Design/Obby and Platforming Level Design.md | level-design, obby, platforming, jump-math, difficulty, stage-design, validation | ~5.1k tok
-- Spawn Points Safe Zones and Respawn Flow | 33 Level Design/Spawn Points Safe Zones and Respawn Flow.md | level-design, spawning, respawn, safe-zones, fall-recovery, streaming, server-authority | ~6.6k tok
-- Teaching Through Level Design | 33 Level Design/Teaching Through Level Design.md | level-design, onboarding, teaching, affordances, tutorial, analytics, wayfinding | ~4.8k tok
+- Lobby and Hub Design | 33 Level Design/Lobby and Hub Design.md | level-design, lobby, hub, social, teleport, proximity-prompt, performance, layout | ~4.7k tok
+- Obby and Platforming Level Design | 33 Level Design/Obby and Platforming Level Design.md | level-design, obby, platforming, jump-math, difficulty, stage-design, validation | ~5.2k tok
+- Objective Mode Maps - Capture the Flag, King of the Hill and Control Points | 33 Level Design/Objective Mode Maps - Capture the Flag, King of the Hill and Control Points.md | level-design, pvp, objective-modes, capture-the-flag, king-of-the-hill, control-points | ~2.4k tok
+- Playtest Heatmaps - Position and Death Maps | 33 Level Design/Playtest Heatmaps - Position and Death Maps.md | level-design, playtesting, heatmaps, analytics, telemetry, deaths | ~2.4k tok
+- Spawn Points Safe Zones and Respawn Flow | 33 Level Design/Spawn Points Safe Zones and Respawn Flow.md | level-design, spawning, respawn, safe-zones, fall-recovery, streaming, server-authority | ~6.8k tok
+- Teaching Through Level Design | 33 Level Design/Teaching Through Level Design.md | level-design, onboarding, teaching, affordances, tutorial, analytics, wayfinding | ~4.9k tok
 
 ## 34 Procedural Generation
 
-- Dungeon and Room Generation | 34 Procedural Generation/Dungeon and Room Generation.md | procedural, generation, dungeons, roguelike, rooms, graphs, level-design, luau | ~4.3k tok
-- Infinite and Streamed Worlds | 34 Procedural Generation/Infinite and Streamed Worlds.md | procedural, generation, infinite-worlds, chunks, streaming, parallel-luau, terrain, performance | ~5.2k tok
-- Noise Functions and Terrain Generation | 34 Procedural Generation/Noise Functions and Terrain Generation.md | procedural, generation, noise, terrain, biomes, voxels, luau | ~4.5k tok
+- Dungeon and Room Generation | 34 Procedural Generation/Dungeon and Room Generation.md | procedural, generation, dungeons, roguelike, rooms, graphs, level-design, luau | ~4.4k tok
+- Infinite and Streamed Worlds | 34 Procedural Generation/Infinite and Streamed Worlds.md | procedural, generation, infinite-worlds, chunks, streaming, parallel-luau, terrain, performance | ~5.3k tok
+- Noise Functions and Terrain Generation | 34 Procedural Generation/Noise Functions and Terrain Generation.md | procedural, generation, noise, terrain, biomes, voxels, luau | ~4.6k tok
 - Procedural Generation Start Here | 34 Procedural Generation/Procedural Generation Start Here.md | procedural, generation, hub, start-here | ~1.2k tok
-- Procedural Loot and Item Generation | 34 Procedural Generation/Procedural Loot and Item Generation.md | procedural, generation, loot, items, affixes, economy, rng, datastores, luau | ~4.5k tok
-- Seeds Determinism and Reproducible Worlds | 34 Procedural Generation/Seeds Determinism and Reproducible Worlds.md | procedural, generation, seeds, determinism, random, hashing, testing, luau | ~5.0k tok
-- Wave Function Collapse on Roblox | 34 Procedural Generation/Wave Function Collapse on Roblox.md | procedural, generation, wfc, wave-function-collapse, tiles, constraints, luau | ~4.8k tok
+- Procedural Loot and Item Generation | 34 Procedural Generation/Procedural Loot and Item Generation.md | procedural, generation, loot, items, affixes, economy, rng, datastores, luau | ~4.6k tok
+- Seeds Determinism and Reproducible Worlds | 34 Procedural Generation/Seeds Determinism and Reproducible Worlds.md | procedural, generation, seeds, determinism, random, hashing, testing, luau | ~5.1k tok
+- Wave Function Collapse on Roblox | 34 Procedural Generation/Wave Function Collapse on Roblox.md | procedural, generation, wfc, wave-function-collapse, tiles, constraints, luau | ~4.9k tok
 
 ## 35 Advanced Luau
 
 - Advanced Luau Start Here | 35 Advanced Luau/Advanced Luau Start Here.md | luau, advanced-luau, hub, architecture, types, memory | ~1.2k tok
-- Advanced Types - Generics and Type Functions | 35 Advanced Luau/Advanced Types - Generics and Type Functions.md | luau, advanced-luau, types, generics, type-functions, strict-mode, validation | ~5.2k tok
-- Building a Signal Library | 35 Advanced Luau/Building a Signal Library.md | luau, advanced-luau, signals, events, coroutines, library-design, testing | ~5.3k tok
-- Custom Schedulers and Coroutine Patterns | 35 Advanced Luau/Custom Schedulers and Coroutine Patterns.md | luau, advanced-luau, coroutines, scheduler, task, timers, time-slicing, concurrency | ~5.6k tok
-- Luau Garbage Collection and the Memory Model | 35 Advanced Luau/Luau Garbage Collection and the Memory Model.md | luau, advanced-luau, memory, garbage-collection, gc, weak-tables, performance | ~4.8k tok
-- Module Design and Dependency Injection | 35 Advanced Luau/Module Design and Dependency Injection.md | luau, advanced-luau, architecture, modules, dependency-injection, testing, lifecycle | ~4.7k tok
-- Serialization Formats for Saves and Networking | 35 Advanced Luau/Serialization Formats for Saves and Networking.md | luau, advanced-luau, serialization, json, buffer, networking, datastore, versioning | ~6.2k tok
+- Advanced Types - Generics and Type Functions | 35 Advanced Luau/Advanced Types - Generics and Type Functions.md | luau, advanced-luau, types, generics, type-functions, strict-mode, validation | ~5.3k tok
+- Building a Signal Library | 35 Advanced Luau/Building a Signal Library.md | luau, advanced-luau, signals, events, coroutines, library-design, testing | ~5.4k tok
+- Custom Schedulers and Coroutine Patterns | 35 Advanced Luau/Custom Schedulers and Coroutine Patterns.md | luau, advanced-luau, coroutines, scheduler, task, timers, time-slicing, concurrency | ~5.7k tok
+- Luau Garbage Collection and the Memory Model | 35 Advanced Luau/Luau Garbage Collection and the Memory Model.md | luau, advanced-luau, memory, garbage-collection, gc, weak-tables, performance | ~4.9k tok
+- Module Design and Dependency Injection | 35 Advanced Luau/Module Design and Dependency Injection.md | luau, advanced-luau, architecture, modules, dependency-injection, testing, lifecycle | ~4.8k tok
+- Serialization Formats for Saves and Networking | 35 Advanced Luau/Serialization Formats for Saves and Networking.md | luau, advanced-luau, serialization, json, buffer, networking, datastore, versioning | ~6.3k tok
 
 ## 36 Narrative and Worldbuilding
 
-- Dialogue System End to End | 36 Narrative and Worldbuilding/Dialogue System End to End.md | narrative, dialogue, worked-build, luau, strict, server-authority, localization, npc, ui | ~12.2k tok
-- Localization-Ready Writing | 36 Narrative and Worldbuilding/Localization-Ready Writing.md | narrative, localization, writing, translation, i18n, strings, ui-text | ~5.7k tok
-- Lore Delivery Without Walls of Text | 36 Narrative and Worldbuilding/Lore Delivery Without Walls of Text.md | narrative, lore, worldbuilding, environmental-storytelling, codex, collectibles, community | ~5.6k tok
-- Naming Items Zones and Abilities | 36 Narrative and Worldbuilding/Naming Items Zones and Abilities.md | narrative, naming, items, zones, abilities, rarity, worldbuilding, content-pipeline | ~5.5k tok
+- Dialogue System End to End | 36 Narrative and Worldbuilding/Dialogue System End to End.md | narrative, dialogue, worked-build, luau, strict, server-authority, localization, npc, ui | ~12.3k tok
+- Localization-Ready Writing | 36 Narrative and Worldbuilding/Localization-Ready Writing.md | narrative, localization, writing, translation, i18n, strings, ui-text | ~5.8k tok
+- Lore Delivery Without Walls of Text | 36 Narrative and Worldbuilding/Lore Delivery Without Walls of Text.md | narrative, lore, worldbuilding, environmental-storytelling, codex, collectibles, community | ~5.7k tok
+- Multiplayer Cutscene Sync - Server Clock, Late Joiners and Skip Votes | 36 Narrative and Worldbuilding/Multiplayer Cutscene Sync - Server Clock, Late Joiners and Skip Votes.md | narrative, cutscenes, camera, networking, server-time, late-join, skip-vote | ~2.5k tok
+- Naming Items Zones and Abilities | 36 Narrative and Worldbuilding/Naming Items Zones and Abilities.md | narrative, naming, items, zones, abilities, rarity, worldbuilding, content-pipeline | ~5.6k tok
 - Narrative Start Here | 36 Narrative and Worldbuilding/Narrative Start Here.md | narrative, worldbuilding, index, start-here, writing, dialogue | ~1.2k tok
-- Quest Writing and Hooks | 36 Narrative and Worldbuilding/Quest Writing and Hooks.md | narrative, quests, writing, hooks, objectives, retention, ui-text | ~4.9k tok
-- Writing Dialogue for Roblox Players | 36 Narrative and Worldbuilding/Writing Dialogue for Roblox Players.md | narrative, dialogue, writing, npc, ux, onboarding, voice | ~5.5k tok
+- Puzzle Dependency Charts and Hint Systems | 36 Narrative and Worldbuilding/Puzzle Dependency Charts and Hint Systems.md | narrative, puzzles, escape-rooms, dependency-chart, hints, level-design, validation, co-op, server-authority | ~2.2k tok
+- Quest Writing and Hooks | 36 Narrative and Worldbuilding/Quest Writing and Hooks.md | narrative, quests, writing, hooks, objectives, retention, ui-text | ~5.0k tok
+- Story State Flags and Chapter Saves | 36 Narrative and Worldbuilding/Story State Flags and Chapter Saves.md | narrative, story, flags, chapters, saves, data, migrations, quests | ~2.2k tok
+- Writing Dialogue for Roblox Players | 36 Narrative and Worldbuilding/Writing Dialogue for Roblox Players.md | narrative, dialogue, writing, npc, ux, onboarding, voice | ~5.6k tok
 
 ## 37 Avatars and UGC
 
-- Avatar Body Types and Scale in Gameplay | 37 Avatars and UGC/Avatar Body Types and Scale in Gameplay.md | avatars, scale, body-types, collision, hitboxes, avatar-settings, gameplay, fairness | ~4.4k tok
-- AvatarEditorService and In-Game Avatar Editors | 37 Avatars and UGC/AvatarEditorService and In-Game Avatar Editors.md | avatars, ugc, avatar-editor, avatareditorservice, humanoiddescription, catalog, ui, security | ~5.6k tok
+- Avatar Body Types and Scale in Gameplay | 37 Avatars and UGC/Avatar Body Types and Scale in Gameplay.md | avatars, scale, body-types, collision, hitboxes, avatar-settings, gameplay, fairness | ~4.5k tok
+- AvatarEditorService and In-Game Avatar Editors | 37 Avatars and UGC/AvatarEditorService and In-Game Avatar Editors.md | avatars, ugc, avatar-editor, avatareditorservice, humanoiddescription, catalog, ui, security | ~5.7k tok
 - Avatars and UGC Start Here | 37 Avatars and UGC/Avatars and UGC Start Here.md | avatars, ugc, hub, start-here, marketplace, humanoiddescription | ~1.2k tok
-- Bundles Animation Packs and Emotes for Sale | 37 Avatars and UGC/Bundles Animation Packs and Emotes for Sale.md | ugc, bundles, emotes, animation-packs, marketplace, animation, avatars | ~4.0k tok
-- HumanoidDescription and Outfit Systems | 37 Avatars and UGC/HumanoidDescription and Outfit Systems.md | avatars, humanoiddescription, outfits, characters, data, npc, luau | ~4.8k tok
-- Layered Clothing Creation Workflow | 37 Avatars and UGC/Layered Clothing Creation Workflow.md | avatars, ugc, layered-clothing, cages, blender, skinning, wraplayer, workflow | ~4.7k tok
-- UGC Pricing Limiteds and Marketplace Rules | 37 Avatars and UGC/UGC Pricing Limiteds and Marketplace Rules.md | ugc, marketplace, pricing, limiteds, monetization, economy, policy | ~4.3k tok
+- Bundles Animation Packs and Emotes for Sale | 37 Avatars and UGC/Bundles Animation Packs and Emotes for Sale.md | ugc, bundles, emotes, animation-packs, marketplace, animation, avatars | ~4.1k tok
+- HumanoidDescription and Outfit Systems | 37 Avatars and UGC/HumanoidDescription and Outfit Systems.md | avatars, humanoiddescription, outfits, characters, data, npc, luau | ~4.9k tok
+- Layered Clothing Creation Workflow | 37 Avatars and UGC/Layered Clothing Creation Workflow.md | avatars, ugc, layered-clothing, cages, blender, skinning, wraplayer, workflow | ~4.8k tok
+- UGC Pricing Limiteds and Marketplace Rules | 37 Avatars and UGC/UGC Pricing Limiteds and Marketplace Rules.md | ugc, marketplace, pricing, limiteds, monetization, economy, policy | ~4.4k tok
 
 ## 38 Live Ops Deep Dive
 
-- Battle Pass and Season Design | 38 Live Ops Deep Dive/Battle Pass and Season Design.md | live-ops, battle-pass, season-pass, seasons, progression, monetization, luau | ~5.8k tok
-- Economy Resets and Seasonal Wipes | 38 Live Ops Deep Dive/Economy Resets and Seasonal Wipes.md | live-ops, economy, seasons, wipes, datastore, leaderboards, trust, luau | ~4.2k tok
-- Event Calendars and Content Planning | 38 Live Ops Deep Dive/Event Calendars and Content Planning.md | live-ops, events, calendar, planning, content, production, scheduling, luau | ~4.7k tok
-- Feature Flags and Staged Rollouts | 38 Live Ops Deep Dive/Feature Flags and Staged Rollouts.md | live-ops, feature-flags, rollout, configservice, release, kill-switch, luau | ~4.5k tok
-- Limited-Time Offers - Design and Ethics | 38 Live Ops Deep Dive/Limited-Time Offers - Design and Ethics.md | live-ops, monetization, offers, ethics, dark-patterns, pricing, luau | ~4.6k tok
+- Battle Pass and Season Design | 38 Live Ops Deep Dive/Battle Pass and Season Design.md | live-ops, battle-pass, season-pass, seasons, progression, monetization, luau | ~5.9k tok
+- Economy Resets and Seasonal Wipes | 38 Live Ops Deep Dive/Economy Resets and Seasonal Wipes.md | live-ops, economy, seasons, wipes, datastore, leaderboards, trust, luau | ~4.3k tok
+- Event Calendars and Content Planning | 38 Live Ops Deep Dive/Event Calendars and Content Planning.md | live-ops, events, calendar, planning, content, production, scheduling, luau | ~4.8k tok
+- Feature Flags and Staged Rollouts | 38 Live Ops Deep Dive/Feature Flags and Staged Rollouts.md | live-ops, feature-flags, rollout, configservice, release, kill-switch, luau | ~4.6k tok
+- Limited-Time Offers - Design and Ethics | 38 Live Ops Deep Dive/Limited-Time Offers - Design and Ethics.md | live-ops, monetization, offers, ethics, dark-patterns, pricing, luau | ~4.7k tok
 - Live Ops Deep Dive Start Here | 38 Live Ops Deep Dive/Live Ops Deep Dive Start Here.md | live-ops, hub, start-here, seasons, events, monetization, communication | ~1.2k tok
-- Patch Notes and Player Communication | 38 Live Ops Deep Dive/Patch Notes and Player Communication.md | live-ops, communication, patch-notes, community, updates, trust, luau | ~4.3k tok
+- Patch Notes and Player Communication | 38 Live Ops Deep Dive/Patch Notes and Player Communication.md | live-ops, communication, patch-notes, community, updates, trust, luau | ~4.4k tok
 
 ## 39 Studio Plugins and Tooling
 
-- Building a Studio Plugin End to End | 39 Studio Plugins and Tooling/Building a Studio Plugin End to End.md | studio, plugins, tooling, luau, workflow, architecture | ~5.7k tok
-- Plugin Development Start Here | 39 Studio Plugins and Tooling/Plugin Development Start Here.md | studio, plugins, tooling, hub | ~1.1k tok
-- Plugin Security and Permissions | 39 Studio Plugins and Tooling/Plugin Security and Permissions.md | studio, plugins, security, permissions, supply-chain, tooling | ~4.2k tok
-- Plugin UI with DockWidgets | 39 Studio Plugins and Tooling/Plugin UI with DockWidgets.md | studio, plugins, ui, dockwidget, theme, tooling | ~4.8k tok
-- Publishing Selling and Updating Plugins | 39 Studio Plugins and Tooling/Publishing Selling and Updating Plugins.md | studio, plugins, creator-store, publishing, monetization, versioning | ~4.7k tok
-- Selection Editing and Bulk Tools | 39 Studio Plugins and Tooling/Selection Editing and Bulk Tools.md | studio, plugins, selection, bulk-editing, tooling, building | ~5.3k tok
-- Undo and ChangeHistoryService Done Right | 39 Studio Plugins and Tooling/Undo and ChangeHistoryService Done Right.md | studio, plugins, undo, changehistoryservice, tooling, safety | ~5.0k tok
+- Building a Studio Plugin End to End | 39 Studio Plugins and Tooling/Building a Studio Plugin End to End.md | studio, plugins, tooling, luau, workflow, architecture | ~5.8k tok
+- Plugin Development Start Here | 39 Studio Plugins and Tooling/Plugin Development Start Here.md | studio, plugins, tooling, hub | ~1.2k tok
+- Plugin Security and Permissions | 39 Studio Plugins and Tooling/Plugin Security and Permissions.md | studio, plugins, security, permissions, supply-chain, tooling | ~4.3k tok
+- Plugin UI with DockWidgets | 39 Studio Plugins and Tooling/Plugin UI with DockWidgets.md | studio, plugins, ui, dockwidget, theme, tooling | ~4.9k tok
+- Publishing Selling and Updating Plugins | 39 Studio Plugins and Tooling/Publishing Selling and Updating Plugins.md | studio, plugins, creator-store, publishing, monetization, versioning | ~4.8k tok
+- Selection Editing and Bulk Tools | 39 Studio Plugins and Tooling/Selection Editing and Bulk Tools.md | studio, plugins, selection, bulk-editing, tooling, building | ~5.4k tok
+- Undo and ChangeHistoryService Done Right | 39 Studio Plugins and Tooling/Undo and ChangeHistoryService Done Right.md | studio, plugins, undo, changehistoryservice, tooling, safety | ~5.1k tok
 
 ## 40 Game Math
 
-- Big Numbers Precision and Formatting | 40 Game Math/Big Numbers Precision and Formatting.md | math, game-math, numbers, precision, floating-point, big-numbers, formatting, simulators, leaderboards, datastores, luau | ~5.2k tok
-- Curves in Luau - Paths Beams and Motion | 40 Game Math/Curves in Luau - Paths Beams and Motion.md | math, game-math, curves, bezier, catmull-rom, splines, beams, path2d, rails, cables, projectiles, ui, luau | ~5.4k tok
-- Dot and Cross Products in Gameplay | 40 Game Math/Dot and Cross Products in Gameplay.md | math, game-math, vectors, dot-product, cross-product, gameplay, combat, movement, luau | ~6.0k tok
+- Big Numbers Precision and Formatting | 40 Game Math/Big Numbers Precision and Formatting.md | math, game-math, numbers, precision, floating-point, big-numbers, formatting, simulators, leaderboards, datastores, luau | ~5.3k tok
+- Curves in Luau - Paths Beams and Motion | 40 Game Math/Curves in Luau - Paths Beams and Motion.md | math, game-math, curves, bezier, catmull-rom, splines, beams, path2d, rails, cables, projectiles, ui, luau | ~5.5k tok
+- Dot and Cross Products in Gameplay | 40 Game Math/Dot and Cross Products in Gameplay.md | math, game-math, vectors, dot-product, cross-product, gameplay, combat, movement, luau | ~6.1k tok
 - Game Math Start Here | 40 Game Math/Game Math Start Here.md | math, game-math, hub, vectors, rotations, probability, collision, numbers | ~1.3k tok
-- Interpolation Easing and Curves Math | 40 Game Math/Interpolation Easing and Curves Math.md | math, game-math, interpolation, easing, curves, bezier, splines, tweening, ui, camera, luau | ~5.8k tok
-- Intersection and Collision Math | 40 Game Math/Intersection and Collision Math.md | math, game-math, collision, intersection, hit-detection, raycast, zones, projectiles, luau | ~5.3k tok
+- Interpolation Easing and Curves Math | 40 Game Math/Interpolation Easing and Curves Math.md | math, game-math, interpolation, easing, curves, bezier, splines, tweening, ui, camera, luau | ~5.9k tok
+- Intersection and Collision Math | 40 Game Math/Intersection and Collision Math.md | math, game-math, collision, intersection, hit-detection, raycast, zones, projectiles, luau | ~5.4k tok
 - Probability and Statistics for Designers | 40 Game Math/Probability and Statistics for Designers.md | math, game-math, probability, statistics, rng, balancing, analytics, design, luau | ~4.9k tok
 - Rotations Angles and Quaternions | 40 Game Math/Rotations Angles and Quaternions.md | math, game-math, rotations, quaternions, euler-angles, cframe, turrets, networking, luau | ~6.0k tok
 
 ## 41 Multiplayer Services
 
-- Matchmaking Queues with MemoryStore | 41 Multiplayer Services/Matchmaking Queues with MemoryStore.md | multiplayer, matchmaking, memorystore, queues, lobby, reserved-servers, teleport, luau, strict | ~7.6k tok
+- Matchmaking Queues with MemoryStore | 41 Multiplayer Services/Matchmaking Queues with MemoryStore.md | multiplayer, matchmaking, memorystore, queues, lobby, reserved-servers, teleport, luau, strict | ~7.7k tok
 - Multiplayer Services Start Here | 41 Multiplayer Services/Multiplayer Services Start Here.md | multiplayer, hub, matchmaking, parties, teleport, reserved-servers, memorystore, live-ops | ~1.3k tok
-- Parties and Group Teleports | 41 Multiplayer Services/Parties and Group Teleports.md | multiplayer, parties, teleport, socialservice, reserved-servers, messagingservice, luau, strict | ~5.9k tok
-- Reserved and Private Servers in Practice | 41 Multiplayer Services/Reserved and Private Servers in Practice.md | multiplayer, reserved-servers, private-servers, teleport, monetization, datastore, luau, strict | ~5.3k tok
-- Server Browsers and Server Lists | 41 Multiplayer Services/Server Browsers and Server Lists.md | multiplayer, server-browser, memorystore, teleport, lobby, text-filtering, luau, strict | ~5.4k tok
-- Server Shutdowns Soft Updates and Migration | 41 Multiplayer Services/Server Shutdowns Soft Updates and Migration.md | multiplayer, updates, shutdown, migration, versioning, live-ops, configs, luau, strict | ~5.2k tok
+- Parties and Group Teleports | 41 Multiplayer Services/Parties and Group Teleports.md | multiplayer, parties, teleport, socialservice, reserved-servers, messagingservice, luau, strict | ~6.1k tok
+- Reserved and Private Servers in Practice | 41 Multiplayer Services/Reserved and Private Servers in Practice.md | multiplayer, reserved-servers, private-servers, teleport, monetization, datastore, luau, strict | ~5.4k tok
+- Server Browsers and Server Lists | 41 Multiplayer Services/Server Browsers and Server Lists.md | multiplayer, server-browser, memorystore, teleport, lobby, text-filtering, luau, strict | ~5.5k tok
+- Server Shutdowns Soft Updates and Migration | 41 Multiplayer Services/Server Shutdowns Soft Updates and Migration.md | multiplayer, updates, shutdown, migration, versioning, live-ops, configs, luau, strict | ~5.3k tok
 - Session State Across Places | 41 Multiplayer Services/Session State Across Places.md | multiplayer, teleport, session, memorystore, datastore, session-locking, multi-place, luau, strict | ~6.5k tok
 
 ## 42 Accessibility and Inclusive Design
 
 - Accessibility Start Here | 42 Accessibility and Inclusive Design/Accessibility Start Here.md | accessibility, hub, inclusive-design, colour-blindness, text, motion, captions, input, difficulty | ~1.3k tok
 - Captions and Audio Accessibility | 42 Accessibility and Inclusive Design/Captions and Audio Accessibility.md | accessibility, captions, subtitles, audio, deaf, hard-of-hearing, haptics, volume, localization | ~5.3k tok
-- Colour-Blind Safe Design | 42 Accessibility and Inclusive Design/Colour-Blind Safe Design.md | accessibility, colour-blindness, color, palette, ui, vfx, design-tokens, testing | ~6.0k tok
-- Difficulty Options and Cognitive Load | 42 Accessibility and Inclusive Design/Difficulty Options and Cognitive Load.md | accessibility, difficulty, assist-modes, cognitive-load, game-design, server-authority, onboarding, multiplayer | ~4.9k tok
-- Input Remapping and One-Handed Play | 42 Accessibility and Inclusive Design/Input Remapping and One-Handed Play.md | accessibility, input, remapping, keybinds, one-handed, motor, gamepad, touch, contextactionservice, input-action-system | ~6.5k tok
-- Motion Sensitivity and Camera Comfort | 42 Accessibility and Inclusive Design/Motion Sensitivity and Camera Comfort.md | accessibility, motion-sickness, reduced-motion, camera, fov, flashing, photosensitivity, comfort | ~5.4k tok
-- Readable Text and UI Scale | 42 Accessibility and Inclusive Design/Readable Text and UI Scale.md | accessibility, text, typography, ui-scale, readability, ui, localization, testing | ~5.1k tok
+- Colour-Blind Safe Design | 42 Accessibility and Inclusive Design/Colour-Blind Safe Design.md | accessibility, colour-blindness, color, palette, ui, vfx, design-tokens, testing | ~6.1k tok
+- Difficulty Options and Cognitive Load | 42 Accessibility and Inclusive Design/Difficulty Options and Cognitive Load.md | accessibility, difficulty, assist-modes, cognitive-load, game-design, server-authority, onboarding, multiplayer | ~5.0k tok
+- Input Remapping and One-Handed Play | 42 Accessibility and Inclusive Design/Input Remapping and One-Handed Play.md | accessibility, input, remapping, keybinds, one-handed, motor, gamepad, touch, contextactionservice, input-action-system | ~6.6k tok
+- Motion Sensitivity and Camera Comfort | 42 Accessibility and Inclusive Design/Motion Sensitivity and Camera Comfort.md | accessibility, motion-sickness, reduced-motion, camera, fov, flashing, photosensitivity, comfort | ~5.5k tok
+- Readable Text and UI Scale | 42 Accessibility and Inclusive Design/Readable Text and UI Scale.md | accessibility, text, typography, ui-scale, readability, ui, localization, testing | ~5.2k tok
 
 ## 43 Genre Systems End to End
 
-- Arena Rounds with Teams and Spectating End to End | 43 Genre Systems End to End/Arena Rounds with Teams and Spectating End to End.md | genre-system, rounds, minigames, teams, spectating, worked-build, matchmaking, luau | ~7.5k tok
+- Arena Rounds with Teams and Spectating End to End | 43 Genre Systems End to End/Arena Rounds with Teams and Spectating End to End.md | genre-system, rounds, minigames, teams, spectating, worked-build, matchmaking, luau | ~7.6k tok
 - Genre Systems Start Here | 43 Genre Systems End to End/Genre Systems Start Here.md | index, start, genre-system, worked-build | ~1.2k tok
-- Horror Monster Chase AI End to End | 43 Genre Systems End to End/Horror Monster Chase AI End to End.md | genre-system, horror, npc-ai, pathfinding, worked-build, server-authority, luau | ~8.1k tok
-- Obby Checkpoints and Stage Saves End to End | 43 Genre Systems End to End/Obby Checkpoints and Stage Saves End to End.md | genre-system, obby, worked-build, checkpoints, datastore, anti-cheat, streaming, luau | ~6.6k tok
-- Racing Laps and Checkpoints End to End | 43 Genre Systems End to End/Racing Laps and Checkpoints End to End.md | genre-system, racing, vehicles, checkpoints, worked-build, anti-cheat, timing, luau | ~7.6k tok
-- Tower Defense Waves and Placement End to End | 43 Genre Systems End to End/Tower Defense Waves and Placement End to End.md | genre-system, tower-defense, worked-build, waves, placement, networking, server-authority, luau | ~9.2k tok
-- Tycoon Plots and Droppers End to End | 43 Genre Systems End to End/Tycoon Plots and Droppers End to End.md | genre-system, tycoon, worked-build, plots, economy, server-authority, datastore, luau | ~8.5k tok
+- Horror Monster Chase AI End to End | 43 Genre Systems End to End/Horror Monster Chase AI End to End.md | genre-system, horror, npc-ai, pathfinding, worked-build, server-authority, luau | ~8.2k tok
+- Obby Checkpoints and Stage Saves End to End | 43 Genre Systems End to End/Obby Checkpoints and Stage Saves End to End.md | genre-system, obby, worked-build, checkpoints, datastore, anti-cheat, streaming, luau | ~6.7k tok
+- Racing Laps and Checkpoints End to End | 43 Genre Systems End to End/Racing Laps and Checkpoints End to End.md | genre-system, racing, vehicles, checkpoints, worked-build, anti-cheat, timing, luau | ~7.7k tok
+- Tower Defense Waves and Placement End to End | 43 Genre Systems End to End/Tower Defense Waves and Placement End to End.md | genre-system, tower-defense, worked-build, waves, placement, networking, server-authority, luau | ~9.3k tok
+- Tycoon Plots and Droppers End to End | 43 Genre Systems End to End/Tycoon Plots and Droppers End to End.md | genre-system, tycoon, worked-build, plots, economy, server-authority, datastore, luau | ~8.6k tok
 
 ## 44 Materials and Surfaces
 
-- Baking Lighting and Detail into Textures | 44 Materials and Surfaces/Baking Lighting and Detail into Textures.md | materials, baking, lighting, ambient-occlusion, blender, textures, stylized, optimization | ~4.1k tok
-- MaterialService and Custom Materials | 44 Materials and Surfaces/MaterialService and Custom Materials.md | materials, materialservice, materialvariant, custom-materials, terrain, pbr, world-building | ~5.6k tok
+- Baking Lighting and Detail into Textures | 44 Materials and Surfaces/Baking Lighting and Detail into Textures.md | materials, baking, lighting, ambient-occlusion, blender, textures, stylized, optimization | ~4.2k tok
+- MaterialService and Custom Materials | 44 Materials and Surfaces/MaterialService and Custom Materials.md | materials, materialservice, materialvariant, custom-materials, terrain, pbr, world-building | ~5.7k tok
 - Materials and Surfaces Start Here | 44 Materials and Surfaces/Materials and Surfaces Start Here.md | materials, surfaces, hub, start-here, textures, pbr, terrain | ~1.2k tok
-- Stylised vs Realistic Material Pipelines | 44 Materials and Surfaces/Stylised vs Realistic Material Pipelines.md | materials, art-direction, pipeline, stylized, realistic, pbr, production | ~4.2k tok
-- SurfaceAppearance PBR Workflow | 44 Materials and Surfaces/SurfaceAppearance PBR Workflow.md | materials, surfaceappearance, pbr, workflow, pipeline, textures, meshpart | ~5.1k tok
-- Terrain Materials and Painting | 44 Materials and Surfaces/Terrain Materials and Painting.md | terrain, materials, painting, materialvariant, terraindetail, procedural, world-building | ~5.1k tok
-- Tiling Trim Sheets and Decal Tricks | 44 Materials and Surfaces/Tiling Trim Sheets and Decal Tricks.md | materials, textures, decals, tiling, trim-sheet, world-building, performance | ~4.6k tok
+- Procedural Materials and Skies - Lessons | 44 Materials and Surfaces/Procedural Materials and Skies - Lessons.md | materials, pbr, tiling, procedural, skybox, sky, lighting, blender, qa, lihfolk | ~1.5k tok
+- Stylised vs Realistic Material Pipelines | 44 Materials and Surfaces/Stylised vs Realistic Material Pipelines.md | materials, art-direction, pipeline, stylized, realistic, pbr, production | ~4.3k tok
+- SurfaceAppearance PBR Workflow | 44 Materials and Surfaces/SurfaceAppearance PBR Workflow.md | materials, surfaceappearance, pbr, workflow, pipeline, textures, meshpart | ~5.2k tok
+- Terrain Materials and Painting | 44 Materials and Surfaces/Terrain Materials and Painting.md | terrain, materials, painting, materialvariant, terraindetail, procedural, world-building | ~5.2k tok
+- Tiling Trim Sheets and Decal Tricks | 44 Materials and Surfaces/Tiling Trim Sheets and Decal Tricks.md | materials, textures, decals, tiling, trim-sheet, world-building, performance | ~4.7k tok
 
 ## 45 Procedural Blender Assets
 
-- Blender 5 Python Gotchas for Headless Builds | 45 Procedural Blender Assets/Blender 5 Python Gotchas for Headless Builds.md | blender, python, bpy, bmesh, headless, gotchas | ~2.5k tok
-- Chibi Character Rules in Practice | 45 Procedural Blender Assets/Chibi Character Rules in Practice.md | blender, chibi, cute, character, stylized | ~2.1k tok
-- Dash VFX Presentation on an R15 Rig | 45 Procedural Blender Assets/Dash VFX Presentation on an R15 Rig.md | blender, python, vfx, eevee, r15, animation, rendering, bloom, video | ~3.6k tok
-- Dramatic Showcase Renders in Eevee | 45 Procedural Blender Assets/Dramatic Showcase Renders in Eevee.md | blender, eevee, rendering, presentation, volumetrics, lighting | ~2.2k tok
-- Low-Poly Creature From a Flat Reference Sheet | 45 Procedural Blender Assets/Low-Poly Creature From a Flat Reference Sheet.md | blender, python, bmesh, creature, quadruped, low-poly, palette, rigging, skinning, animation | ~4.0k tok
-- Low-Poly Tree Set Worked Example | 45 Procedural Blender Assets/Low-Poly Tree Set Worked Example.md | blender, trees, low-poly, foliage, environment | ~2.0k tok
-- Matching a Concept Sheet - Boss Creature Case Study | 45 Procedural Blender Assets/Matching a Concept Sheet - Boss Creature Case Study.md | blender, creature, concept, rigging, case-study, low-poly | ~2.4k tok
-- Mesh VFX Packs Built in Blender | 45 Procedural Blender Assets/Mesh VFX Packs Built in Blender.md | blender, vfx, meshes, textures, roblox | ~2.1k tok
+- Blender 5 Python Gotchas for Headless Builds | 45 Procedural Blender Assets/Blender 5 Python Gotchas for Headless Builds.md | blender, python, bpy, bmesh, headless, gotchas | ~2.6k tok
+- Chibi Character Rules in Practice | 45 Procedural Blender Assets/Chibi Character Rules in Practice.md | blender, chibi, cute, character, stylized | ~2.2k tok
+- Dash VFX Presentation on an R15 Rig | 45 Procedural Blender Assets/Dash VFX Presentation on an R15 Rig.md | blender, python, vfx, eevee, r15, animation, rendering, bloom, video | ~3.7k tok
+- Dramatic Showcase Renders in Eevee | 45 Procedural Blender Assets/Dramatic Showcase Renders in Eevee.md | blender, eevee, rendering, presentation, volumetrics, lighting | ~2.3k tok
+- Low-Poly Creature From a Flat Reference Sheet | 45 Procedural Blender Assets/Low-Poly Creature From a Flat Reference Sheet.md | blender, python, bmesh, creature, quadruped, low-poly, palette, rigging, skinning, animation | ~4.1k tok
+- Low-Poly Tree Set Worked Example | 45 Procedural Blender Assets/Low-Poly Tree Set Worked Example.md | blender, trees, low-poly, foliage, environment | ~2.1k tok
+- Matching a Concept Sheet - Boss Creature Case Study | 45 Procedural Blender Assets/Matching a Concept Sheet - Boss Creature Case Study.md | blender, creature, concept, rigging, case-study, low-poly | ~2.5k tok
+- Mesh VFX Packs Built in Blender | 45 Procedural Blender Assets/Mesh VFX Packs Built in Blender.md | blender, vfx, meshes, textures, roblox | ~2.2k tok
 - Procedural Blender Assets Start Here | 45 Procedural Blender Assets/Procedural Blender Assets Start Here.md | blender, python, procedural, modeling, rendering, hub | ~1.2k tok
-- Stylised Shop Stand Worked Example | 45 Procedural Blender Assets/Stylised Shop Stand Worked Example.md | blender, python, props, stylised, low-poly, environment, awning, export | ~3.4k tok
-- Stylised Weapons From a Concept | 45 Procedural Blender Assets/Stylised Weapons From a Concept.md | blender, weapons, sword, stylized, materials | ~2.3k tok
+- Stylised Shop Stand Worked Example | 45 Procedural Blender Assets/Stylised Shop Stand Worked Example.md | blender, python, props, stylised, low-poly, environment, awning, export | ~3.5k tok
+- Stylised Weapons From a Concept | 45 Procedural Blender Assets/Stylised Weapons From a Concept.md | blender, weapons, sword, stylized, materials | ~2.4k tok
 
 ## 46 Resource Library
 
 - Resource Library Link Check | 46 Resource Library/Resource Library Link Check.md | resources, links, maintenance | ~770 tok
-- Resource Library Start Here | 46 Resource Library/Resource Library Start Here.md | resources, links, hub | ~510 tok
-- Links - Backdoors and malicious assets | 46 Resource Library/00 Safety (free models and plugins)/Links - Backdoors and malicious assets.md | resources, links, safety-free-models-plugins | ~830 tok
-- Resource Library - Safety (free models and plugins) | 46 Resource Library/00 Safety (free models and plugins)/Resource Library - Safety (free models and plugins).md | resources, links, hub | ~130 tok
+- Resource Library Start Here | 46 Resource Library/Resource Library Start Here.md | resources, links, hub | ~520 tok
+- Links - Backdoors and malicious assets | 46 Resource Library/00 Safety (free models and plugins)/Links - Backdoors and malicious assets.md | resources, links, safety-free-models-plugins | ~840 tok
+- Resource Library - Safety (free models and plugins) | 46 Resource Library/00 Safety (free models and plugins)/Resource Library - Safety (free models and plugins).md | resources, links, hub | ~140 tok
 - Links - Animation creation | 46 Resource Library/01 Assets (creation)/Links - Animation creation.md | resources, links, assets-creation | ~1.4k tok
-- Links - Audio creation and uploading | 46 Resource Library/01 Assets (creation)/Links - Audio creation and uploading.md | resources, links, assets-creation | ~640 tok
-- Links - Avatars and UGC | 46 Resource Library/01 Assets (creation)/Links - Avatars and UGC.md | resources, links, assets-creation | ~940 tok
-- Links - Blender fundamentals for Roblox | 46 Resource Library/01 Assets (creation)/Links - Blender fundamentals for Roblox.md | resources, links, assets-creation | ~940 tok
-- Links - Environments | 46 Resource Library/01 Assets (creation)/Links - Environments.md | resources, links, assets-creation | ~900 tok
-- Links - Free and CC0 asset libraries | 46 Resource Library/01 Assets (creation)/Links - Free and CC0 asset libraries.md | resources, links, assets-creation | ~570 tok
-- Links - Image uploading and moderation | 46 Resource Library/01 Assets (creation)/Links - Image uploading and moderation.md | resources, links, assets-creation | ~660 tok
+- Links - Audio creation and uploading | 46 Resource Library/01 Assets (creation)/Links - Audio creation and uploading.md | resources, links, assets-creation | ~660 tok
+- Links - Avatars and UGC | 46 Resource Library/01 Assets (creation)/Links - Avatars and UGC.md | resources, links, assets-creation | ~950 tok
+- Links - Blender fundamentals for Roblox | 46 Resource Library/01 Assets (creation)/Links - Blender fundamentals for Roblox.md | resources, links, assets-creation | ~950 tok
+- Links - Environments | 46 Resource Library/01 Assets (creation)/Links - Environments.md | resources, links, assets-creation | ~910 tok
+- Links - Free and CC0 asset libraries | 46 Resource Library/01 Assets (creation)/Links - Free and CC0 asset libraries.md | resources, links, assets-creation | ~580 tok
+- Links - Image uploading and moderation | 46 Resource Library/01 Assets (creation)/Links - Image uploading and moderation.md | resources, links, assets-creation | ~670 tok
 - Links - Importing into Studio | 46 Resource Library/01 Assets (creation)/Links - Importing into Studio.md | resources, links, assets-creation | ~1.0k tok
-- Links - Plugins and custom tools | 46 Resource Library/01 Assets (creation)/Links - Plugins and custom tools.md | resources, links, assets-creation | ~970 tok
-- Links - Props | 46 Resource Library/01 Assets (creation)/Links - Props.md | resources, links, assets-creation | ~760 tok
-- Links - Texturing | 46 Resource Library/01 Assets (creation)/Links - Texturing.md | resources, links, assets-creation | ~1.2k tok
-- Links - Topology | 46 Resource Library/01 Assets (creation)/Links - Topology.md | resources, links, assets-creation | ~820 tok
+- Links - Plugins and custom tools | 46 Resource Library/01 Assets (creation)/Links - Plugins and custom tools.md | resources, links, assets-creation | ~980 tok
+- Links - Props | 46 Resource Library/01 Assets (creation)/Links - Props.md | resources, links, assets-creation | ~770 tok
+- Links - Texturing | 46 Resource Library/01 Assets (creation)/Links - Texturing.md | resources, links, assets-creation | ~1.3k tok
+- Links - Topology | 46 Resource Library/01 Assets (creation)/Links - Topology.md | resources, links, assets-creation | ~830 tok
 - Links - UVs and texture prep | 46 Resource Library/01 Assets (creation)/Links - UVs and texture prep.md | resources, links, assets-creation | ~1.0k tok
-- Resource Library - Assets (creation) | 46 Resource Library/01 Assets (creation)/Resource Library - Assets (creation).md | resources, links, hub | ~220 tok
-- Links - Level design and map layout | 46 Resource Library/02 Building and World/Links - Level design and map layout.md | resources, links, building-world | ~780 tok
+- Resource Library - Assets (creation) | 46 Resource Library/01 Assets (creation)/Resource Library - Assets (creation).md | resources, links, hub | ~230 tok
+- Links - Level design and map layout | 46 Resource Library/02 Building and World/Links - Level design and map layout.md | resources, links, building-world | ~800 tok
 - Links - Lighting | 46 Resource Library/02 Building and World/Links - Lighting.md | resources, links, building-world | ~1.4k tok
-- Links - Materials and MaterialVariants | 46 Resource Library/02 Building and World/Links - Materials and MaterialVariants.md | resources, links, building-world | ~580 tok
-- Links - Models, Toolbox and Creator Store | 46 Resource Library/02 Building and World/Links - Models, Toolbox and Creator Store.md | resources, links, building-world | ~540 tok
-- Links - Parts, unions and meshes | 46 Resource Library/02 Building and World/Links - Parts, unions and meshes.md | resources, links, building-world | ~710 tok
-- Links - StreamingEnabled | 46 Resource Library/02 Building and World/Links - StreamingEnabled.md | resources, links, building-world | ~870 tok
+- Links - Materials and MaterialVariants | 46 Resource Library/02 Building and World/Links - Materials and MaterialVariants.md | resources, links, building-world | ~600 tok
+- Links - Models, Toolbox and Creator Store | 46 Resource Library/02 Building and World/Links - Models, Toolbox and Creator Store.md | resources, links, building-world | ~550 tok
+- Links - Parts, unions and meshes | 46 Resource Library/02 Building and World/Links - Parts, unions and meshes.md | resources, links, building-world | ~720 tok
+- Links - StreamingEnabled | 46 Resource Library/02 Building and World/Links - StreamingEnabled.md | resources, links, building-world | ~890 tok
 - Links - Terrain | 46 Resource Library/02 Building and World/Links - Terrain.md | resources, links, building-world | ~1.4k tok
-- Resource Library - Building and World | 46 Resource Library/02 Building and World/Resource Library - Building and World.md | resources, links, hub | ~170 tok
-- Links - Beams and trails | 46 Resource Library/03 Visual Effects/Links - Beams and trails.md | resources, links, visual-effects | ~800 tok
-- Links - Highlights and selection | 46 Resource Library/03 Visual Effects/Links - Highlights and selection.md | resources, links, visual-effects | ~620 tok
+- Resource Library - Building and World | 46 Resource Library/02 Building and World/Resource Library - Building and World.md | resources, links, hub | ~180 tok
+- Links - Beams and trails | 46 Resource Library/03 Visual Effects/Links - Beams and trails.md | resources, links, visual-effects | ~810 tok
+- Links - Highlights and selection | 46 Resource Library/03 Visual Effects/Links - Highlights and selection.md | resources, links, visual-effects | ~630 tok
 - Links - Particle emitters | 46 Resource Library/03 Visual Effects/Links - Particle emitters.md | resources, links, visual-effects | ~1.1k tok
-- Links - Post-processing | 46 Resource Library/03 Visual Effects/Links - Post-processing.md | resources, links, visual-effects | ~490 tok
-- Resource Library - Visual Effects | 46 Resource Library/03 Visual Effects/Resource Library - Visual Effects.md | resources, links, hub | ~140 tok
+- Links - Post-processing | 46 Resource Library/03 Visual Effects/Links - Post-processing.md | resources, links, visual-effects | ~500 tok
+- Resource Library - Visual Effects | 46 Resource Library/03 Visual Effects/Resource Library - Visual Effects.md | resources, links, hub | ~150 tok
 - Links - Client-server and security model | 46 Resource Library/04 Scripting/Links - Client-server and security model.md | resources, links, scripting | ~1.0k tok
-- Links - Coroutines, task library and async | 46 Resource Library/04 Scripting/Links - Coroutines, task library and async.md | resources, links, scripting | ~1.0k tok
-- Links - Error handling and debugging | 46 Resource Library/04 Scripting/Links - Error handling and debugging.md | resources, links, scripting | ~720 tok
-- Links - Events, signals and connections | 46 Resource Library/04 Scripting/Links - Events, signals and connections.md | resources, links, scripting | ~880 tok
+- Links - Coroutines, task library and async | 46 Resource Library/04 Scripting/Links - Coroutines, task library and async.md | resources, links, scripting | ~1.1k tok
+- Links - Error handling and debugging | 46 Resource Library/04 Scripting/Links - Error handling and debugging.md | resources, links, scripting | ~740 tok
+- Links - Events, signals and connections | 46 Resource Library/04 Scripting/Links - Events, signals and connections.md | resources, links, scripting | ~900 tok
 - Links - Luau language | 46 Resource Library/04 Scripting/Links - Luau language.md | resources, links, scripting | ~1.2k tok
-- Links - OOP and module design | 46 Resource Library/04 Scripting/Links - OOP and module design.md | resources, links, scripting | ~970 tok
-- Links - Open Cloud and external APIs | 46 Resource Library/04 Scripting/Links - Open Cloud and external APIs.md | resources, links, scripting | ~1000 tok
-- Links - Remote events and functions | 46 Resource Library/04 Scripting/Links - Remote events and functions.md | resources, links, scripting | ~900 tok
-- Links - Script types | 46 Resource Library/04 Scripting/Links - Script types.md | resources, links, scripting | ~820 tok
-- Links - Services | 46 Resource Library/04 Scripting/Links - Services.md | resources, links, scripting | ~830 tok
-- Resource Library - Scripting | 46 Resource Library/04 Scripting/Resource Library - Scripting.md | resources, links, hub | ~200 tok
-- Links - Containers | 46 Resource Library/05 Ui/Links - Containers.md | resources, links, ui | ~850 tok
-- Links - Cross-platform UI | 46 Resource Library/05 Ui/Links - Cross-platform UI.md | resources, links, ui | ~410 tok
-- Links - Layouts and constraints | 46 Resource Library/05 Ui/Links - Layouts and constraints.md | resources, links, ui | ~790 tok
+- Links - OOP and module design | 46 Resource Library/04 Scripting/Links - OOP and module design.md | resources, links, scripting | ~990 tok
+- Links - Open Cloud and external APIs | 46 Resource Library/04 Scripting/Links - Open Cloud and external APIs.md | resources, links, scripting | ~1.0k tok
+- Links - Remote events and functions | 46 Resource Library/04 Scripting/Links - Remote events and functions.md | resources, links, scripting | ~930 tok
+- Links - Script types | 46 Resource Library/04 Scripting/Links - Script types.md | resources, links, scripting | ~830 tok
+- Links - Services | 46 Resource Library/04 Scripting/Links - Services.md | resources, links, scripting | ~850 tok
+- Resource Library - Scripting | 46 Resource Library/04 Scripting/Resource Library - Scripting.md | resources, links, hub | ~210 tok
+- Links - Containers | 46 Resource Library/05 Ui/Links - Containers.md | resources, links, ui | ~880 tok
+- Links - Cross-platform UI | 46 Resource Library/05 Ui/Links - Cross-platform UI.md | resources, links, ui | ~420 tok
+- Links - Layouts and constraints | 46 Resource Library/05 Ui/Links - Layouts and constraints.md | resources, links, ui | ~810 tok
 - Links - Menus, HUDs, inventories and shops | 46 Resource Library/05 Ui/Links - Menus, HUDs, inventories and shops.md | resources, links, ui | ~1.2k tok
-- Links - Scale vs offset and responsive design | 46 Resource Library/05 Ui/Links - Scale vs offset and responsive design.md | resources, links, ui | ~690 tok
-- Links - Tweening and UI animation | 46 Resource Library/05 Ui/Links - Tweening and UI animation.md | resources, links, ui | ~890 tok
+- Links - Scale vs offset and responsive design | 46 Resource Library/05 Ui/Links - Scale vs offset and responsive design.md | resources, links, ui | ~700 tok
+- Links - Tweening and UI animation | 46 Resource Library/05 Ui/Links - Tweening and UI animation.md | resources, links, ui | ~910 tok
 - Links - UI elements | 46 Resource Library/05 Ui/Links - UI elements.md | resources, links, ui | ~1.1k tok
-- Links - UI frameworks | 46 Resource Library/05 Ui/Links - UI frameworks.md | resources, links, ui | ~600 tok
-- Resource Library - Ui | 46 Resource Library/05 Ui/Resource Library - Ui.md | resources, links, hub | ~160 tok
+- Links - UI frameworks | 46 Resource Library/05 Ui/Links - UI frameworks.md | resources, links, ui | ~610 tok
+- Resource Library - Ui | 46 Resource Library/05 Ui/Resource Library - Ui.md | resources, links, hub | ~170 tok
 - Links - Cameras | 46 Resource Library/06 Input and Controls/Links - Cameras.md | resources, links, input-controls | ~1.6k tok
-- Links - Devices | 46 Resource Library/06 Input and Controls/Links - Devices.md | resources, links, input-controls | ~570 tok
-- Links - Input services | 46 Resource Library/06 Input and Controls/Links - Input services.md | resources, links, input-controls | ~1.0k tok
-- Links - Mobile controls | 46 Resource Library/06 Input and Controls/Links - Mobile controls.md | resources, links, input-controls | ~690 tok
-- Resource Library - Input and Controls | 46 Resource Library/06 Input and Controls/Resource Library - Input and Controls.md | resources, links, hub | ~120 tok
+- Links - Devices | 46 Resource Library/06 Input and Controls/Links - Devices.md | resources, links, input-controls | ~580 tok
+- Links - Input services | 46 Resource Library/06 Input and Controls/Links - Input services.md | resources, links, input-controls | ~1.1k tok
+- Links - Mobile controls | 46 Resource Library/06 Input and Controls/Links - Mobile controls.md | resources, links, input-controls | ~700 tok
+- Resource Library - Input and Controls | 46 Resource Library/06 Input and Controls/Resource Library - Input and Controls.md | resources, links, hub | ~130 tok
 - Links - Animation playback | 46 Resource Library/07 Characters and Animation/Links - Animation playback.md | resources, links, characters-animation | ~1.1k tok
-- Links - Custom characters and avatars | 46 Resource Library/07 Characters and Animation/Links - Custom characters and avatars.md | resources, links, characters-animation | ~760 tok
+- Links - Custom characters and avatars | 46 Resource Library/07 Characters and Animation/Links - Custom characters and avatars.md | resources, links, characters-animation | ~780 tok
 - Links - Humanoids and character controllers | 46 Resource Library/07 Characters and Animation/Links - Humanoids and character controllers.md | resources, links, characters-animation | ~1.7k tok
-- Links - Inverse kinematics | 46 Resource Library/07 Characters and Animation/Links - Inverse kinematics.md | resources, links, characters-animation | ~650 tok
-- Links - Rigs | 46 Resource Library/07 Characters and Animation/Links - Rigs.md | resources, links, characters-animation | ~640 tok
-- Resource Library - Characters and Animation | 46 Resource Library/07 Characters and Animation/Resource Library - Characters and Animation.md | resources, links, hub | ~140 tok
-- Links - Collisions | 46 Resource Library/08 Physics/Links - Collisions.md | resources, links, physics | ~660 tok
-- Links - Constraints | 46 Resource Library/08 Physics/Links - Constraints.md | resources, links, physics | ~870 tok
+- Links - Inverse kinematics | 46 Resource Library/07 Characters and Animation/Links - Inverse kinematics.md | resources, links, characters-animation | ~670 tok
+- Links - Rigs | 46 Resource Library/07 Characters and Animation/Links - Rigs.md | resources, links, characters-animation | ~660 tok
+- Resource Library - Characters and Animation | 46 Resource Library/07 Characters and Animation/Resource Library - Characters and Animation.md | resources, links, hub | ~150 tok
+- Links - Collisions | 46 Resource Library/08 Physics/Links - Collisions.md | resources, links, physics | ~680 tok
+- Links - Constraints | 46 Resource Library/08 Physics/Links - Constraints.md | resources, links, physics | ~880 tok
 - Links - Forces and movers | 46 Resource Library/08 Physics/Links - Forces and movers.md | resources, links, physics | ~1.2k tok
-- Links - Network ownership | 46 Resource Library/08 Physics/Links - Network ownership.md | resources, links, physics | ~680 tok
+- Links - Network ownership | 46 Resource Library/08 Physics/Links - Network ownership.md | resources, links, physics | ~710 tok
 - Links - Raycasting and spatial queries | 46 Resource Library/08 Physics/Links - Raycasting and spatial queries.md | resources, links, physics | ~1.2k tok
-- Resource Library - Physics | 46 Resource Library/08 Physics/Resource Library - Physics.md | resources, links, hub | ~150 tok
-- Links - Music and ambience | 46 Resource Library/09 Audio/Links - Music and ambience.md | resources, links, audio | ~560 tok
-- Links - Sounds and the Audio API | 46 Resource Library/09 Audio/Links - Sounds and the Audio API.md | resources, links, audio | ~860 tok
-- Links - Spatial audio | 46 Resource Library/09 Audio/Links - Spatial audio.md | resources, links, audio | ~610 tok
-- Resource Library - Audio | 46 Resource Library/09 Audio/Resource Library - Audio.md | resources, links, hub | ~130 tok
+- Resource Library - Physics | 46 Resource Library/08 Physics/Resource Library - Physics.md | resources, links, hub | ~160 tok
+- Links - Music and ambience | 46 Resource Library/09 Audio/Links - Music and ambience.md | resources, links, audio | ~580 tok
+- Links - Sounds and the Audio API | 46 Resource Library/09 Audio/Links - Sounds and the Audio API.md | resources, links, audio | ~870 tok
+- Links - Spatial audio | 46 Resource Library/09 Audio/Links - Spatial audio.md | resources, links, audio | ~620 tok
+- Resource Library - Audio | 46 Resource Library/09 Audio/Resource Library - Audio.md | resources, links, hub | ~140 tok
 - Links - DataStoreService | 46 Resource Library/10 Data and Persistence/Links - DataStoreService.md | resources, links, data-persistence | ~1.3k tok
-- Links - Leaderboards | 46 Resource Library/10 Data and Persistence/Links - Leaderboards.md | resources, links, data-persistence | ~700 tok
-- Links - MemoryStore | 46 Resource Library/10 Data and Persistence/Links - MemoryStore.md | resources, links, data-persistence | ~670 tok
-- Links - Session locking and data safety | 46 Resource Library/10 Data and Persistence/Links - Session locking and data safety.md | resources, links, data-persistence | ~930 tok
-- Resource Library - Data and Persistence | 46 Resource Library/10 Data and Persistence/Resource Library - Data and Persistence.md | resources, links, hub | ~140 tok
-- Links - Checkpoints and spawning | 46 Resource Library/11 Game Systems/Links - Checkpoints and spawning.md | resources, links, game-systems | ~660 tok
+- Links - Leaderboards | 46 Resource Library/10 Data and Persistence/Links - Leaderboards.md | resources, links, data-persistence | ~710 tok
+- Links - MemoryStore | 46 Resource Library/10 Data and Persistence/Links - MemoryStore.md | resources, links, data-persistence | ~690 tok
+- Links - Session locking and data safety | 46 Resource Library/10 Data and Persistence/Links - Session locking and data safety.md | resources, links, data-persistence | ~950 tok
+- Resource Library - Data and Persistence | 46 Resource Library/10 Data and Persistence/Resource Library - Data and Persistence.md | resources, links, hub | ~150 tok
+- Links - Checkpoints and spawning | 46 Resource Library/11 Game Systems/Links - Checkpoints and spawning.md | resources, links, game-systems | ~670 tok
 - Links - Combat | 46 Resource Library/11 Game Systems/Links - Combat.md | resources, links, game-systems | ~1.7k tok
-- Links - Horror game mechanics | 46 Resource Library/11 Game Systems/Links - Horror game mechanics.md | resources, links, game-systems | ~1.2k tok
-- Links - Inventory and items | 46 Resource Library/11 Game Systems/Links - Inventory and items.md | resources, links, game-systems | ~890 tok
+- Links - Horror game mechanics | 46 Resource Library/11 Game Systems/Links - Horror game mechanics.md | resources, links, game-systems | ~1.3k tok
+- Links - Inventory and items | 46 Resource Library/11 Game Systems/Links - Inventory and items.md | resources, links, game-systems | ~900 tok
 - Links - NPCs and AI | 46 Resource Library/11 Game Systems/Links - NPCs and AI.md | resources, links, game-systems | ~1.3k tok
-- Links - Quests and progression | 46 Resource Library/11 Game Systems/Links - Quests and progression.md | resources, links, game-systems | ~690 tok
-- Links - Rounds and matchmaking | 46 Resource Library/11 Game Systems/Links - Rounds and matchmaking.md | resources, links, game-systems | ~850 tok
-- Links - Teams and permissions | 46 Resource Library/11 Game Systems/Links - Teams and permissions.md | resources, links, game-systems | ~850 tok
-- Resource Library - Game Systems | 46 Resource Library/11 Game Systems/Resource Library - Game Systems.md | resources, links, hub | ~160 tok
-- Links - Cross-server messaging | 46 Resource Library/12 Networking and Multiplayer/Links - Cross-server messaging.md | resources, links, networking-multiplayer | ~430 tok
-- Links - Latency and prediction | 46 Resource Library/12 Networking and Multiplayer/Links - Latency and prediction.md | resources, links, networking-multiplayer | ~650 tok
-- Links - Replication | 46 Resource Library/12 Networking and Multiplayer/Links - Replication.md | resources, links, networking-multiplayer | ~520 tok
-- Links - Reserved and private servers | 46 Resource Library/12 Networking and Multiplayer/Links - Reserved and private servers.md | resources, links, networking-multiplayer | ~430 tok
-- Links - Server authority | 46 Resource Library/12 Networking and Multiplayer/Links - Server authority.md | resources, links, networking-multiplayer | ~450 tok
-- Links - Teleporting | 46 Resource Library/12 Networking and Multiplayer/Links - Teleporting.md | resources, links, networking-multiplayer | ~800 tok
-- Resource Library - Networking and Multiplayer | 46 Resource Library/12 Networking and Multiplayer/Resource Library - Networking and Multiplayer.md | resources, links, hub | ~160 tok
-- Links - Anti-exploit | 46 Resource Library/13 Security and Moderation/Links - Anti-exploit.md | resources, links, security-moderation | ~860 tok
-- Links - Chat and text filtering | 46 Resource Library/13 Security and Moderation/Links - Chat and text filtering.md | resources, links, security-moderation | ~650 tok
-- Links - Moderation compliance | 46 Resource Library/13 Security and Moderation/Links - Moderation compliance.md | resources, links, security-moderation | ~420 tok
-- Resource Library - Security and Moderation | 46 Resource Library/13 Security and Moderation/Resource Library - Security and Moderation.md | resources, links, hub | ~140 tok
-- Links - Ads | 46 Resource Library/14 Monetization/Links - Ads.md | resources, links, monetization | ~370 tok
-- Links - Developer products | 46 Resource Library/14 Monetization/Links - Developer products.md | resources, links, monetization | ~740 tok
-- Links - Game passes | 46 Resource Library/14 Monetization/Links - Game passes.md | resources, links, monetization | ~650 tok
-- Links - Overview | 46 Resource Library/14 Monetization/Links - Overview.md | resources, links, monetization | ~240 tok
-- Links - Subscriptions and payouts | 46 Resource Library/14 Monetization/Links - Subscriptions and payouts.md | resources, links, monetization | ~380 tok
-- Resource Library - Monetization | 46 Resource Library/14 Monetization/Resource Library - Monetization.md | resources, links, hub | ~150 tok
-- Links - Analytics | 46 Resource Library/15 Publishing and Live Ops/Links - Analytics.md | resources, links, publishing-live-ops | ~420 tok
-- Links - Badges | 46 Resource Library/15 Publishing and Live Ops/Links - Badges.md | resources, links, publishing-live-ops | ~350 tok
-- Links - Community and social | 46 Resource Library/15 Publishing and Live Ops/Links - Community and social.md | resources, links, publishing-live-ops | ~480 tok
-- Links - Settings and publishing | 46 Resource Library/15 Publishing and Live Ops/Links - Settings and publishing.md | resources, links, publishing-live-ops | ~630 tok
-- Links - Store page | 46 Resource Library/15 Publishing and Live Ops/Links - Store page.md | resources, links, publishing-live-ops | ~320 tok
+- Links - Quests and progression | 46 Resource Library/11 Game Systems/Links - Quests and progression.md | resources, links, game-systems | ~710 tok
+- Links - Rounds and matchmaking | 46 Resource Library/11 Game Systems/Links - Rounds and matchmaking.md | resources, links, game-systems | ~860 tok
+- Links - Teams and permissions | 46 Resource Library/11 Game Systems/Links - Teams and permissions.md | resources, links, game-systems | ~860 tok
+- Resource Library - Game Systems | 46 Resource Library/11 Game Systems/Resource Library - Game Systems.md | resources, links, hub | ~170 tok
+- Links - Cross-server messaging | 46 Resource Library/12 Networking and Multiplayer/Links - Cross-server messaging.md | resources, links, networking-multiplayer | ~450 tok
+- Links - Latency and prediction | 46 Resource Library/12 Networking and Multiplayer/Links - Latency and prediction.md | resources, links, networking-multiplayer | ~670 tok
+- Links - Replication | 46 Resource Library/12 Networking and Multiplayer/Links - Replication.md | resources, links, networking-multiplayer | ~540 tok
+- Links - Reserved and private servers | 46 Resource Library/12 Networking and Multiplayer/Links - Reserved and private servers.md | resources, links, networking-multiplayer | ~450 tok
+- Links - Server authority | 46 Resource Library/12 Networking and Multiplayer/Links - Server authority.md | resources, links, networking-multiplayer | ~460 tok
+- Links - Teleporting | 46 Resource Library/12 Networking and Multiplayer/Links - Teleporting.md | resources, links, networking-multiplayer | ~820 tok
+- Resource Library - Networking and Multiplayer | 46 Resource Library/12 Networking and Multiplayer/Resource Library - Networking and Multiplayer.md | resources, links, hub | ~170 tok
+- Links - Anti-exploit | 46 Resource Library/13 Security and Moderation/Links - Anti-exploit.md | resources, links, security-moderation | ~870 tok
+- Links - Chat and text filtering | 46 Resource Library/13 Security and Moderation/Links - Chat and text filtering.md | resources, links, security-moderation | ~670 tok
+- Links - Moderation compliance | 46 Resource Library/13 Security and Moderation/Links - Moderation compliance.md | resources, links, security-moderation | ~430 tok
+- Resource Library - Security and Moderation | 46 Resource Library/13 Security and Moderation/Resource Library - Security and Moderation.md | resources, links, hub | ~150 tok
+- Links - Ads | 46 Resource Library/14 Monetization/Links - Ads.md | resources, links, monetization | ~380 tok
+- Links - Developer products | 46 Resource Library/14 Monetization/Links - Developer products.md | resources, links, monetization | ~750 tok
+- Links - Game passes | 46 Resource Library/14 Monetization/Links - Game passes.md | resources, links, monetization | ~660 tok
+- Links - Overview | 46 Resource Library/14 Monetization/Links - Overview.md | resources, links, monetization | ~250 tok
+- Links - Subscriptions and payouts | 46 Resource Library/14 Monetization/Links - Subscriptions and payouts.md | resources, links, monetization | ~400 tok
+- Resource Library - Monetization | 46 Resource Library/14 Monetization/Resource Library - Monetization.md | resources, links, hub | ~160 tok
+- Links - Analytics | 46 Resource Library/15 Publishing and Live Ops/Links - Analytics.md | resources, links, publishing-live-ops | ~440 tok
+- Links - Badges | 46 Resource Library/15 Publishing and Live Ops/Links - Badges.md | resources, links, publishing-live-ops | ~360 tok
+- Links - Community and social | 46 Resource Library/15 Publishing and Live Ops/Links - Community and social.md | resources, links, publishing-live-ops | ~500 tok
+- Links - Settings and publishing | 46 Resource Library/15 Publishing and Live Ops/Links - Settings and publishing.md | resources, links, publishing-live-ops | ~640 tok
+- Links - Store page | 46 Resource Library/15 Publishing and Live Ops/Links - Store page.md | resources, links, publishing-live-ops | ~330 tok
 - Resource Library - Publishing and Live Ops | 46 Resource Library/15 Publishing and Live Ops/Resource Library - Publishing and Live Ops.md | resources, links, hub | ~150 tok
-- Links - External tooling | 46 Resource Library/16 Tools and Workflow/Links - External tooling.md | resources, links, tools-workflow | ~880 tok
-- Links - Roblox Studio | 46 Resource Library/16 Tools and Workflow/Links - Roblox Studio.md | resources, links, tools-workflow | ~580 tok
-- Links - Team Create | 46 Resource Library/16 Tools and Workflow/Links - Team Create.md | resources, links, tools-workflow | ~560 tok
-- Links - Testing | 46 Resource Library/16 Tools and Workflow/Links - Testing.md | resources, links, tools-workflow | ~430 tok
-- Links - Version control | 46 Resource Library/16 Tools and Workflow/Links - Version control.md | resources, links, tools-workflow | ~660 tok
-- Resource Library - Tools and Workflow | 46 Resource Library/16 Tools and Workflow/Resource Library - Tools and Workflow.md | resources, links, hub | ~130 tok
-- Links - Instance and part optimization | 46 Resource Library/17 Performance and Optimization/Links - Instance and part optimization.md | resources, links, performance-optimization | ~810 tok
-- Links - Memory leaks and cleanup | 46 Resource Library/17 Performance and Optimization/Links - Memory leaks and cleanup.md | resources, links, performance-optimization | ~840 tok
-- Links - Profiling | 46 Resource Library/17 Performance and Optimization/Links - Profiling.md | resources, links, performance-optimization | ~630 tok
-- Resource Library - Performance and Optimization | 46 Resource Library/17 Performance and Optimization/Resource Library - Performance and Optimization.md | resources, links, hub | ~130 tok
-- Links - Community | 46 Resource Library/18 Learning Hubs/Links - Community.md | resources, links, learning-hubs | ~450 tok
-- Links - Official | 46 Resource Library/18 Learning Hubs/Links - Official.md | resources, links, learning-hubs | ~360 tok
+- Links - External tooling | 46 Resource Library/16 Tools and Workflow/Links - External tooling.md | resources, links, tools-workflow | ~890 tok
+- Links - Roblox Studio | 46 Resource Library/16 Tools and Workflow/Links - Roblox Studio.md | resources, links, tools-workflow | ~590 tok
+- Links - Team Create | 46 Resource Library/16 Tools and Workflow/Links - Team Create.md | resources, links, tools-workflow | ~570 tok
+- Links - Testing | 46 Resource Library/16 Tools and Workflow/Links - Testing.md | resources, links, tools-workflow | ~440 tok
+- Links - Version control | 46 Resource Library/16 Tools and Workflow/Links - Version control.md | resources, links, tools-workflow | ~670 tok
+- Resource Library - Tools and Workflow | 46 Resource Library/16 Tools and Workflow/Resource Library - Tools and Workflow.md | resources, links, hub | ~140 tok
+- Links - Instance and part optimization | 46 Resource Library/17 Performance and Optimization/Links - Instance and part optimization.md | resources, links, performance-optimization | ~820 tok
+- Links - Memory leaks and cleanup | 46 Resource Library/17 Performance and Optimization/Links - Memory leaks and cleanup.md | resources, links, performance-optimization | ~860 tok
+- Links - Profiling | 46 Resource Library/17 Performance and Optimization/Links - Profiling.md | resources, links, performance-optimization | ~640 tok
+- Resource Library - Performance and Optimization | 46 Resource Library/17 Performance and Optimization/Resource Library - Performance and Optimization.md | resources, links, hub | ~150 tok
+- Links - Community | 46 Resource Library/18 Learning Hubs/Links - Community.md | resources, links, learning-hubs | ~460 tok
+- Links - Official | 46 Resource Library/18 Learning Hubs/Links - Official.md | resources, links, learning-hubs | ~370 tok
 - Resource Library - Learning Hubs | 46 Resource Library/18 Learning Hubs/Resource Library - Learning Hubs.md | resources, links, hub | ~110 tok
 
 ## 47 Game Feel and Juice
 
-- Feedback Timing - Sound Visual and Haptic Sync | 47 Game Feel and Juice/Feedback Timing - Sound Visual and Haptic Sync.md | game-feel, juice, audio, haptics, timing, latency, sync, feedback, luau | ~4.9k tok
+- Feedback Timing - Sound Visual and Haptic Sync | 47 Game Feel and Juice/Feedback Timing - Sound Visual and Haptic Sync.md | game-feel, juice, audio, haptics, timing, latency, sync, feedback, luau | ~5.0k tok
 - Game Feel Start Here | 47 Game Feel and Juice/Game Feel Start Here.md | game-feel, juice, hub, start-here | ~1.2k tok
-- Hit-Stop and Screen Shake Tuning by Numbers | 47 Game Feel and Juice/Hit-Stop and Screen Shake Tuning by Numbers.md | game-feel, juice, hit-stop, camera-shake, tuning, combat, numbers, luau | ~5.2k tok
+- Hit-Stop and Screen Shake Tuning by Numbers | 47 Game Feel and Juice/Hit-Stop and Screen Shake Tuning by Numbers.md | game-feel, juice, hit-stop, camera-shake, tuning, combat, numbers, luau | ~5.3k tok
 - Input Responsiveness Buffering and Coyote Time | 47 Game Feel and Juice/Input Responsiveness Buffering and Coyote Time.md | game-feel, input, responsiveness, buffering, coyote-time, controls, combat, platformer, luau | ~5.6k tok
-- Juice on a Budget - Mobile and Low-End | 47 Game Feel and Juice/Juice on a Budget - Mobile and Low-End.md | game-feel, juice, performance, mobile, low-end, pooling, budgets, luau | ~5.2k tok
-- Reward Moments and Celebrations | 47 Game Feel and Juice/Reward Moments and Celebrations.md | game-feel, juice, rewards, celebrations, ui, rng, pacing, ethics, luau | ~4.8k tok
-- Squash Stretch and Anticipation in UI and Characters | 47 Game Feel and Juice/Squash Stretch and Anticipation in UI and Characters.md | game-feel, juice, squash-stretch, anticipation, ui, animation, springs, luau | ~4.8k tok
+- Juice on a Budget - Mobile and Low-End | 47 Game Feel and Juice/Juice on a Budget - Mobile and Low-End.md | game-feel, juice, performance, mobile, low-end, pooling, budgets, luau | ~5.3k tok
+- Reward Moments and Celebrations | 47 Game Feel and Juice/Reward Moments and Celebrations.md | game-feel, juice, rewards, celebrations, ui, rng, pacing, ethics, luau | ~4.9k tok
+- Squash Stretch and Anticipation in UI and Characters | 47 Game Feel and Juice/Squash Stretch and Anticipation in UI and Characters.md | game-feel, juice, squash-stretch, anticipation, ui, animation, springs, luau | ~4.9k tok
 
 ## 48 Economy Design Deep Dive
 
-- Currency Architecture - Soft Hard and Event Currencies | 48 Economy Design Deep Dive/Currency Architecture - Soft Hard and Event Currencies.md | economy, currency, soft-currency, premium-currency, event-currency, wallet, analytics, luau, design | ~5.8k tok
-- Drop Tables Rarity and Pity Systems | 48 Economy Design Deep Dive/Drop Tables Rarity and Pity Systems.md | economy, rng, drops, loot-tables, rarity, pity, probability, luau, design | ~5.5k tok
+- Currency Architecture - Soft Hard and Event Currencies | 48 Economy Design Deep Dive/Currency Architecture - Soft Hard and Event Currencies.md | economy, currency, soft-currency, premium-currency, event-currency, wallet, analytics, luau, design | ~5.9k tok
+- Drop Tables Rarity and Pity Systems | 48 Economy Design Deep Dive/Drop Tables Rarity and Pity Systems.md | economy, rng, drops, loot-tables, rarity, pity, probability, luau, design | ~5.6k tok
 - Economy Design Start Here | 48 Economy Design Deep Dive/Economy Design Start Here.md | index, start, economy, design, balancing | ~1.2k tok
-- Economy Telemetry and Balancing Live | 48 Economy Design Deep Dive/Economy Telemetry and Balancing Live.md | economy, telemetry, analytics, analyticsservice, configservice, experiments, live-ops, balancing, luau | ~4.9k tok
-- Player-Driven Trading Economies | 48 Economy Design Deep Dive/Player-Driven Trading Economies.md | economy, trading, market-design, memorystore, pricing, scams, policy, luau, design | ~5.7k tok
-- Pricing Curves and Upgrade Costs | 48 Economy Design Deep Dive/Pricing Curves and Upgrade Costs.md | economy, pricing, upgrades, curves, progression, math, balancing, luau | ~4.9k tok
+- Economy Telemetry and Balancing Live | 48 Economy Design Deep Dive/Economy Telemetry and Balancing Live.md | economy, telemetry, analytics, analyticsservice, configservice, experiments, live-ops, balancing, luau | ~5.0k tok
+- Player-Driven Trading Economies | 48 Economy Design Deep Dive/Player-Driven Trading Economies.md | economy, trading, market-design, memorystore, pricing, scams, policy, luau, design | ~5.8k tok
+- Pricing Curves and Upgrade Costs | 48 Economy Design Deep Dive/Pricing Curves and Upgrade Costs.md | economy, pricing, upgrades, curves, progression, math, balancing, luau | ~5.0k tok
 - Simulating an Economy Before Launch | 48 Economy Design Deep Dive/Simulating an Economy Before Launch.md | economy, simulation, python, agent-based, balancing, testing, design, math | ~6.8k tok
 
 ## 49 Roblox Platform Features
 
 - Avatar Context Menus Profiles and Social Surfaces | 49 Roblox Platform Features/Avatar Context Menus Profiles and Social Surfaces.md | platform-features, social, avatar-context-menu, inspect-menu, profiles, friends, blocking, startergui, luau, strict | ~5.5k tok
-- Badges and Achievement Design | 49 Roblox Platform Features/Badges and Achievement Design.md | platform-features, badges, achievements, badgeservice, progression, retention, luau, strict | ~5.7k tok
-- Commerce and Physical Goods | 49 Roblox Platform Features/Commerce and Physical Goods.md | platform-features, commerce, merchandise, shopify, commerceservice, policyservice, avatar-items, monetization, luau, strict | ~5.0k tok
-- Data and Cloud Changes 2025-2026 | 49 Roblox Platform Features/Data and Cloud Changes 2025-2026.md | delta, datastore, limits, storage, open-cloud, web-api, rate-limits, deprecations, extended-services | ~1.6k tok
-- Discovery and Monetization Changes 2025-2026 | 49 Roblox Platform Features/Discovery and Monetization Changes 2025-2026.md | delta, discovery, algorithm, recommended-for-you, thumbnails, monetization, devex, creator-rewards, roblox-plus, regional-pricing, creator-store | ~2.5k tok
-- Engine and API Changes 2025-2026 | 49 Roblox Platform Features/Engine and API Changes 2025-2026.md | delta, engine, api, deprecations, async-rename, mesh-streaming, textures, fonts, type-solver, ui-styling, character-controller, streaming, luau | ~2.9k tok
-- Experience Notifications and Return Prompts | 49 Roblox Platform Features/Experience Notifications and Return Prompts.md | platform-features, notifications, retention, open-cloud, events, memorystore, live-ops, luau, strict | ~5.6k tok
-- Friend Invites Referrals and Experience Invites | 49 Roblox Platform Features/Friend Invites Referrals and Experience Invites.md | platform-features, invites, referrals, share-links, socialservice, growth, launch-data, luau, strict | ~5.2k tok
+- Badges and Achievement Design | 49 Roblox Platform Features/Badges and Achievement Design.md | platform-features, badges, achievements, badgeservice, progression, retention, luau, strict | ~5.8k tok
+- Commerce and Physical Goods | 49 Roblox Platform Features/Commerce and Physical Goods.md | platform-features, commerce, merchandise, shopify, commerceservice, policyservice, avatar-items, monetization, luau, strict | ~5.1k tok
+- Console and VR Release Checklists | 49 Roblox Platform Features/Console and VR Release Checklists.md | platform, console, xbox, playstation, vr, quest, release, qa | ~1.9k tok
+- Data and Cloud Changes 2025-2026 | 49 Roblox Platform Features/Data and Cloud Changes 2025-2026.md | delta, datastore, limits, storage, open-cloud, web-api, rate-limits, deprecations, extended-services | ~1.7k tok
+- Discovery and Monetization Changes 2025-2026 | 49 Roblox Platform Features/Discovery and Monetization Changes 2025-2026.md | delta, discovery, algorithm, recommended-for-you, thumbnails, monetization, devex, creator-rewards, roblox-plus, regional-pricing, creator-store | ~2.6k tok
+- Engine and API Changes 2025-2026 | 49 Roblox Platform Features/Engine and API Changes 2025-2026.md | delta, engine, api, deprecations, async-rename, mesh-streaming, textures, fonts, type-solver, ui-styling, character-controller, streaming, luau | ~3.0k tok
+- Experience Notifications and Return Prompts | 49 Roblox Platform Features/Experience Notifications and Return Prompts.md | platform-features, notifications, retention, open-cloud, events, memorystore, live-ops, luau, strict | ~5.7k tok
+- Friend Invites Referrals and Experience Invites | 49 Roblox Platform Features/Friend Invites Referrals and Experience Invites.md | platform-features, invites, referrals, share-links, socialservice, growth, launch-data, luau, strict | ~5.3k tok
+- Photo Mode and In-Game Screenshots with CaptureService | 49 Roblox Platform Features/Photo Mode and In-Game Screenshots with CaptureService.md | platform, camera, photo-mode, captureservice, screenshots, sharing, growth | ~2.2k tok
 - Platform Features Start Here | 49 Roblox Platform Features/Platform Features Start Here.md | platform-features, hub, badges, invites, notifications, subscriptions, commerce, social | ~1.3k tok
-- Policy and Age Rules 2026 | 49 Roblox Platform Features/Policy and Age Rules 2026.md | delta, policy, age-checks, chat, textchatservice, maturity, roblox-kids, roblox-select, paid-random-items, compliance, policyservice | ~2.6k tok
-- Roblox Changes 2025-2026 | 49 Roblox Platform Features/Roblox Changes 2025-2026.md | delta, platform-features, changelog, deprecations, policy, monetization, discovery, engine, ai-context | ~1.7k tok
-- Server Authority and Input Migration 2026 | 49 Roblox Platform Features/Server Authority and Input Migration 2026.md | delta, server-authority, replication, next-generation-replication, physics-replication, input-action-system, prediction, rollback, networking, migration, luau | ~2.6k tok
-- Subscriptions and Recurring Revenue | 49 Roblox Platform Features/Subscriptions and Recurring Revenue.md | platform-features, subscriptions, monetization, recurring-revenue, marketplaceservice, webhooks, retention, luau, strict | ~5.7k tok
+- Policy and Age Rules 2026 | 49 Roblox Platform Features/Policy and Age Rules 2026.md | delta, policy, age-checks, chat, textchatservice, maturity, roblox-kids, roblox-select, paid-random-items, compliance, policyservice | ~2.7k tok
+- Regional Compliance - Paid Random Items and Country Rules | 49 Roblox Platform Features/Regional Compliance - Paid Random Items and Country Rules.md | policy, compliance, policyservice, paid-random-items, regions, trading, country-rules, monetization | ~2.2k tok
+- Roblox Changes 2025-2026 | 49 Roblox Platform Features/Roblox Changes 2025-2026.md | delta, platform-features, changelog, deprecations, policy, monetization, discovery, engine, ai-context | ~1.9k tok
+- Server Authority and Input Migration 2026 | 49 Roblox Platform Features/Server Authority and Input Migration 2026.md | delta, server-authority, replication, next-generation-replication, physics-replication, input-action-system, prediction, rollback, networking, migration, luau | ~2.7k tok
+- Subscriptions and Recurring Revenue | 49 Roblox Platform Features/Subscriptions and Recurring Revenue.md | platform-features, subscriptions, monetization, recurring-revenue, marketplaceservice, webhooks, retention, luau, strict | ~5.8k tok
 
 ## 50 Team Collaboration and Project Management
 
-- Code Review for Luau Teams | 50 Team Collaboration and Project Management/Code Review for Luau Teams.md | team, code-review, luau, quality, security, git, workflow, strict-mode | ~4.6k tok
-- Documentation and Onboarding New Developers | 50 Team Collaboration and Project Management/Documentation and Onboarding New Developers.md | team, onboarding, documentation, knowledge-base, docs-as-code, luau, workflow | ~4.7k tok
-- Packages and Shared Assets Across Places | 50 Team Collaboration and Project Management/Packages and Shared Assets Across Places.md | team, packages, assets, asset-privacy, multi-place, versioning, workflow, luau | ~4.8k tok
-- Roadmaps Milestones and Scope Control | 50 Team Collaboration and Project Management/Roadmaps Milestones and Scope Control.md | team, production, roadmap, milestones, scope, estimation, planning, live-ops | ~4.5k tok
+- Code Review for Luau Teams | 50 Team Collaboration and Project Management/Code Review for Luau Teams.md | team, code-review, luau, quality, security, git, workflow, strict-mode | ~4.7k tok
+- Documentation and Onboarding New Developers | 50 Team Collaboration and Project Management/Documentation and Onboarding New Developers.md | team, onboarding, documentation, knowledge-base, docs-as-code, luau, workflow | ~4.8k tok
+- Packages and Shared Assets Across Places | 50 Team Collaboration and Project Management/Packages and Shared Assets Across Places.md | team, packages, assets, asset-privacy, multi-place, versioning, workflow, luau | ~4.9k tok
+- Roadmaps Milestones and Scope Control | 50 Team Collaboration and Project Management/Roadmaps Milestones and Scope Control.md | team, production, roadmap, milestones, scope, estimation, planning, live-ops | ~4.6k tok
 - Team Collaboration Start Here | 50 Team Collaboration and Project Management/Team Collaboration Start Here.md | team, hub, start-here, collaboration, production, project-management | ~1.3k tok
-- Team Create Permissions and Workflows | 50 Team Collaboration and Project Management/Team Create Permissions and Workflows.md | team, collaboration, team-create, permissions, drafts, workflow, groups, studio | ~5.9k tok
-- Working with Contractors and Revenue Splits | 50 Team Collaboration and Project Management/Working with Contractors and Revenue Splits.md | team, contractors, revenue-share, payouts, groups, intake, security, luau | ~5.5k tok
+- Team Create Permissions and Workflows | 50 Team Collaboration and Project Management/Team Create Permissions and Workflows.md | team, collaboration, team-create, permissions, drafts, workflow, groups, studio | ~6.0k tok
+- Working with Contractors and Revenue Splits | 50 Team Collaboration and Project Management/Working with Contractors and Revenue Splits.md | team, contractors, revenue-share, payouts, groups, intake, security, luau | ~5.6k tok
 
 ## 51 2D Game Development
 
-- 2D Collision Physics and Platformer Movement | 51 2D Game Development/2D Collision Physics and Platformer Movement.md | 2d, collision, physics, platformer, movement, tilemap, aabb, coyote-time, jump, luau | ~5.8k tok
+- 2D Collision Physics and Platformer Movement | 51 2D Game Development/2D Collision Physics and Platformer Movement.md | 2d, collision, physics, platformer, movement, tilemap, aabb, coyote-time, jump, luau | ~5.9k tok
 - 2D Game Development Start Here | 51 2D Game Development/2D Game Development Start Here.md | 2d, 2.5d, hub, side-scroller, platformer, pixel-art, screengui, sprites, tilemap, multiplayer | ~4.0k tok
-- 2D Multiplayer - Server Authority and Replicating GUI Worlds | 51 2D Game Development/2D Multiplayer - Server Authority and Replicating GUI Worlds.md | 2d, multiplayer, networking, server-authority, replication, snapshots, prediction, buffers, unreliable-remotes, luau | ~7.5k tok
-- A 2D Engine in a ScreenGui - Game Loop Entities and Rendering | 51 2D Game Development/A 2D Engine in a ScreenGui - Game Loop Entities and Rendering.md | 2d, screengui, game-loop, fixed-timestep, entities, rendering, object-pooling, performance, luau | ~5.9k tok
-- Choosing GUI 2D or Locked-Camera 2.5D | 51 2D Game Development/Choosing GUI 2D or Locked-Camera 2.5D.md | 2d, game-design, architecture, screengui, camera, side-scroller, decision, luau | ~5.2k tok
-- EditableImage for Pixel Buffers and Procedural 2D | 51 2D Game Development/EditableImage for Pixel Buffers and Procedural 2D.md | 2d, editableimage, pixel-buffer, procedural, buffers, rendering, performance, memory, permissions, luau | ~6.0k tok
-- Pixel Art Pipeline - Aseprite to Roblox Without Blur | 51 2D Game Development/Pixel Art Pipeline - Aseprite to Roblox Without Blur.md | 2d, pixel-art, aseprite, sprites, atlas, textures, ui, resampling, moderation, pipeline, luau | ~5.6k tok
-- Side-Scroller in 3D - Locking Camera and Movement to a Plane | 51 2D Game Development/Side-Scroller in 3D - Locking Camera and Movement to a Plane.md | 2d, 2.5d, side-scroller, camera, movement, platformer, physics, constraints, input, luau | ~7.4k tok
-- Sprite Sheets and Frame Animation with ImageRectOffset | 51 2D Game Development/Sprite Sheets and Frame Animation with ImageRectOffset.md | 2d, sprites, sprite-sheet, animation, imagelabel, imagerectoffset, pixel-art, flipbook, luau | ~5.7k tok
-- Tilemaps Cameras and Parallax for 2D Levels | 51 2D Game Development/Tilemaps Cameras and Parallax for 2D Levels.md | 2d, 2.5d, tilemap, level-design, camera, parallax, chunks, tiled, rendering, luau | ~7.1k tok
+- 2D Multiplayer - Server Authority and Replicating GUI Worlds | 51 2D Game Development/2D Multiplayer - Server Authority and Replicating GUI Worlds.md | 2d, multiplayer, networking, server-authority, replication, snapshots, prediction, buffers, unreliable-remotes, luau | ~7.6k tok
+- A 2D Engine in a ScreenGui - Game Loop Entities and Rendering | 51 2D Game Development/A 2D Engine in a ScreenGui - Game Loop Entities and Rendering.md | 2d, screengui, game-loop, fixed-timestep, entities, rendering, object-pooling, performance, luau | ~6.0k tok
+- Choosing GUI 2D or Locked-Camera 2.5D | 51 2D Game Development/Choosing GUI 2D or Locked-Camera 2.5D.md | 2d, game-design, architecture, screengui, camera, side-scroller, decision, luau | ~5.3k tok
+- EditableImage for Pixel Buffers and Procedural 2D | 51 2D Game Development/EditableImage for Pixel Buffers and Procedural 2D.md | 2d, editableimage, pixel-buffer, procedural, buffers, rendering, performance, memory, permissions, luau | ~6.1k tok
+- Pixel Art Pipeline - Aseprite to Roblox Without Blur | 51 2D Game Development/Pixel Art Pipeline - Aseprite to Roblox Without Blur.md | 2d, pixel-art, aseprite, sprites, atlas, textures, ui, resampling, moderation, pipeline, luau | ~5.7k tok
+- Side-Scroller in 3D - Locking Camera and Movement to a Plane | 51 2D Game Development/Side-Scroller in 3D - Locking Camera and Movement to a Plane.md | 2d, 2.5d, side-scroller, camera, movement, platformer, physics, constraints, input, luau | ~7.5k tok
+- Sprite Sheets and Frame Animation with ImageRectOffset | 51 2D Game Development/Sprite Sheets and Frame Animation with ImageRectOffset.md | 2d, sprites, sprite-sheet, animation, imagelabel, imagerectoffset, pixel-art, flipbook, luau | ~5.8k tok
+- Tilemaps Cameras and Parallax for 2D Levels | 51 2D Game Development/Tilemaps Cameras and Parallax for 2D Levels.md | 2d, 2.5d, tilemap, level-design, camera, parallax, chunks, tiled, rendering, luau | ~7.2k tok
 
 ## 52 Core Concepts
 
-- Accessibility Contrast | 52 Core Concepts/Accessibility Contrast.md | core-concept, accessibility, ui, art | ~880 tok
-- Anticipation | 52 Core Concepts/Anticipation.md | core-concept, animation, game-feel, combat, ui | ~830 tok
-- Click-Through Rate | 52 Core Concepts/Click-Through Rate.md | core-concept, marketing, discovery, analytics, thumbnails | ~880 tok
+- Accessibility Contrast | 52 Core Concepts/Accessibility Contrast.md | core-concept, accessibility, ui, art | ~940 tok
+- Anticipation | 52 Core Concepts/Anticipation.md | core-concept, animation, game-feel, combat, ui | ~900 tok
+- Click-Through Rate | 52 Core Concepts/Click-Through Rate.md | core-concept, marketing, discovery, analytics, thumbnails | ~980 tok
 - Core Concepts Start Here | 52 Core Concepts/Core Concepts Start Here.md | core-concept, hub, start-here | ~1.2k tok
-- Core Loop | 52 Core Concepts/Core Loop.md | core-concept, game-design, retention, progression | ~920 tok
-- Data Schema Versioning | 52 Core Concepts/Data Schema Versioning.md | core-concept, data, persistence, migrations | ~940 tok
-- Dependency Injection in Luau | 52 Core Concepts/Dependency Injection in Luau.md | core-concept, architecture, luau, testing, modules | ~930 tok
-- Deterministic Simulation | 52 Core Concepts/Deterministic Simulation.md | core-concept, networking, procedural, math, testing | ~970 tok
-- Draw Calls | 52 Core Concepts/Draw Calls.md | core-concept, performance, rendering, art | ~910 tok
-- Easing | 52 Core Concepts/Easing.md | core-concept, animation, ui, math, game-feel | ~900 tok
-- Event Bus | 52 Core Concepts/Event Bus.md | core-concept, architecture, luau, signals | ~920 tok
-- Expected Value | 52 Core Concepts/Expected Value.md | core-concept, math, economy, rng, balancing | ~840 tok
-- Faucets and Sinks | 52 Core Concepts/Faucets and Sinks.md | core-concept, economy, game-design, balancing | ~890 tok
-- Feature Flags | 52 Core Concepts/Feature Flags.md | core-concept, live-ops, release, architecture | ~940 tok
-- Frame Budget | 52 Core Concepts/Frame Budget.md | core-concept, performance, rendering, scripting | ~890 tok
-- Hit-Stop | 52 Core Concepts/Hit-Stop.md | core-concept, game-feel, combat, animation | ~880 tok
-- Idempotency | 52 Core Concepts/Idempotency.md | core-concept, data, purchases, reliability, security | ~970 tok
-- Input Buffering | 52 Core Concepts/Input Buffering.md | core-concept, input, game-feel, combat, controls | ~850 tok
-- Instance Count | 52 Core Concepts/Instance Count.md | core-concept, performance, memory, world-building | ~850 tok
-- Object Pooling | 52 Core Concepts/Object Pooling.md | core-concept, performance, memory, vfx, scripting | ~910 tok
-- Onboarding Funnel | 52 Core Concepts/Onboarding Funnel.md | core-concept, analytics, onboarding, game-design, retention | ~890 tok
-- Pity Timer | 52 Core Concepts/Pity Timer.md | core-concept, economy, rng, monetization, game-design | ~850 tok
-- Power Curve | 52 Core Concepts/Power Curve.md | core-concept, progression, economy, balancing, math | ~930 tok
-- Rate Limiting | 52 Core Concepts/Rate Limiting.md | core-concept, security, networking, remotes, datastore | ~1000 tok
-- Replication Boundary | 52 Core Concepts/Replication Boundary.md | core-concept, networking, replication, architecture | ~1.0k tok
-- Retention Cohorts | 52 Core Concepts/Retention Cohorts.md | core-concept, analytics, retention, live-ops | ~850 tok
-- Safe Area | 52 Core Concepts/Safe Area.md | core-concept, ui, mobile, console, layout | ~850 tok
+- Core Loop | 52 Core Concepts/Core Loop.md | core-concept, game-design, retention, progression | ~990 tok
+- Data Schema Versioning | 52 Core Concepts/Data Schema Versioning.md | core-concept, data, persistence, migrations | ~1.0k tok
+- Dependency Injection in Luau | 52 Core Concepts/Dependency Injection in Luau.md | core-concept, architecture, luau, testing, modules | ~1.0k tok
+- Deterministic Simulation | 52 Core Concepts/Deterministic Simulation.md | core-concept, networking, procedural, math, testing | ~1.0k tok
+- Draw Calls | 52 Core Concepts/Draw Calls.md | core-concept, performance, rendering, art | ~990 tok
+- Easing | 52 Core Concepts/Easing.md | core-concept, animation, ui, math, game-feel | ~970 tok
+- Event Bus | 52 Core Concepts/Event Bus.md | core-concept, architecture, luau, signals | ~990 tok
+- Expected Value | 52 Core Concepts/Expected Value.md | core-concept, math, economy, rng, balancing | ~910 tok
+- Faucets and Sinks | 52 Core Concepts/Faucets and Sinks.md | core-concept, economy, game-design, balancing | ~960 tok
+- Feature Flags | 52 Core Concepts/Feature Flags.md | core-concept, live-ops, release, architecture | ~1.0k tok
+- Frame Budget | 52 Core Concepts/Frame Budget.md | core-concept, performance, rendering, scripting | ~960 tok
+- Hit-Stop | 52 Core Concepts/Hit-Stop.md | core-concept, game-feel, combat, animation | ~950 tok
+- Idempotency | 52 Core Concepts/Idempotency.md | core-concept, data, purchases, reliability, security | ~1.1k tok
+- Input Buffering | 52 Core Concepts/Input Buffering.md | core-concept, input, game-feel, combat, controls | ~930 tok
+- Instance Count | 52 Core Concepts/Instance Count.md | core-concept, performance, memory, world-building | ~920 tok
+- Object Pooling | 52 Core Concepts/Object Pooling.md | core-concept, performance, memory, vfx, scripting | ~980 tok
+- Onboarding Funnel | 52 Core Concepts/Onboarding Funnel.md | core-concept, analytics, onboarding, game-design, retention | ~960 tok
+- Pity Timer | 52 Core Concepts/Pity Timer.md | core-concept, economy, rng, monetization, game-design | ~930 tok
+- Power Curve | 52 Core Concepts/Power Curve.md | core-concept, progression, economy, balancing, math | ~980 tok
+- Rate Limiting | 52 Core Concepts/Rate Limiting.md | core-concept, security, networking, remotes, datastore | ~1.1k tok
+- Replication Boundary | 52 Core Concepts/Replication Boundary.md | core-concept, networking, replication, architecture | ~1.1k tok
+- Retention Cohorts | 52 Core Concepts/Retention Cohorts.md | core-concept, analytics, retention, live-ops | ~930 tok
+- Safe Area | 52 Core Concepts/Safe Area.md | core-concept, ui, mobile, console, layout | ~940 tok
 - Server Authority | 52 Core Concepts/Server Authority.md | core-concept, architecture, security, networking, server-authority | ~1.1k tok
-- Session Length | 52 Core Concepts/Session Length.md | core-concept, game-design, analytics, retention | ~860 tok
-- Session Lock | 52 Core Concepts/Session Lock.md | core-concept, data, datastore, persistence | ~950 tok
-- Skinning Weights | 52 Core Concepts/Skinning Weights.md | core-concept, animation, rigging, 3d-modeling | ~910 tok
-- Streaming Radius | 52 Core Concepts/Streaming Radius.md | core-concept, streaming, performance, networking, world-building | ~940 tok
-- Telemetry Events | 52 Core Concepts/Telemetry Events.md | core-concept, analytics, live-ops, debugging, economy | ~900 tok
-- Texel Density | 52 Core Concepts/Texel Density.md | core-concept, art, texturing, 3d-modeling, performance | ~1.0k tok
-- Thumbnail Contrast | 52 Core Concepts/Thumbnail Contrast.md | core-concept, marketing, art, thumbnails, ui | ~860 tok
-- Triangle Budget | 52 Core Concepts/Triangle Budget.md | core-concept, art, 3d-modeling, performance | ~920 tok
-- Tween vs Spring | 52 Core Concepts/Tween vs Spring.md | core-concept, animation, ui, game-feel, math | ~910 tok
-- Variance | 52 Core Concepts/Variance.md | core-concept, math, rng, game-design, analytics | ~840 tok
+- Session Length | 52 Core Concepts/Session Length.md | core-concept, game-design, analytics, retention | ~920 tok
+- Session Lock | 52 Core Concepts/Session Lock.md | core-concept, data, datastore, persistence | ~1.0k tok
+- Skinning Weights | 52 Core Concepts/Skinning Weights.md | core-concept, animation, rigging, 3d-modeling | ~970 tok
+- Streaming Radius | 52 Core Concepts/Streaming Radius.md | core-concept, streaming, performance, networking, world-building | ~1.1k tok
+- Telemetry Events | 52 Core Concepts/Telemetry Events.md | core-concept, analytics, live-ops, debugging, economy | ~980 tok
+- Texel Density | 52 Core Concepts/Texel Density.md | core-concept, art, texturing, 3d-modeling, performance | ~1.1k tok
+- Thumbnail Contrast | 52 Core Concepts/Thumbnail Contrast.md | core-concept, marketing, art, thumbnails, ui | ~930 tok
+- Triangle Budget | 52 Core Concepts/Triangle Budget.md | core-concept, art, 3d-modeling, performance | ~990 tok
+- Tween vs Spring | 52 Core Concepts/Tween vs Spring.md | core-concept, animation, ui, game-feel, math | ~980 tok
+- Variance | 52 Core Concepts/Variance.md | core-concept, math, rng, game-design, analytics | ~910 tok
 
 ## 53 Voxel Modelling Deep Dive
 
-- MagicaVoxel Goxel and Blockbench Workflows Compared | 53 Voxel Modelling Deep Dive/MagicaVoxel Goxel and Blockbench Workflows Compared.md | modeling, voxel, magicavoxel, goxel, blockbench, blender, tools, export, pipeline, textures | ~4.3k tok
-- Meshing Voxels for Roblox - Greedy Meshing and Export | 53 Voxel Modelling Deep Dive/Meshing Voxels for Roblox - Greedy Meshing and Export.md | modeling, voxel, meshing, greedy-meshing, blender, python, export, glb, triangles, collision, lod | ~4.7k tok
-- Voxel Characters - Proportions Joints and Rigging | 53 Voxel Modelling Deep Dive/Voxel Characters - Proportions Joints and Rigging.md | modeling, voxel, characters, proportions, rigging, motor6d, r15, joints, animation, blender, luau | ~4.5k tok
+- MagicaVoxel Goxel and Blockbench Workflows Compared | 53 Voxel Modelling Deep Dive/MagicaVoxel Goxel and Blockbench Workflows Compared.md | modeling, voxel, magicavoxel, goxel, blockbench, blender, tools, export, pipeline, textures | ~4.4k tok
+- Meshing Voxels for Roblox - Greedy Meshing and Export | 53 Voxel Modelling Deep Dive/Meshing Voxels for Roblox - Greedy Meshing and Export.md | modeling, voxel, meshing, greedy-meshing, blender, python, export, glb, triangles, collision, lod | ~4.8k tok
+- Voxel Characters - Proportions Joints and Rigging | 53 Voxel Modelling Deep Dive/Voxel Characters - Proportions Joints and Rigging.md | modeling, voxel, characters, proportions, rigging, motor6d, r15, joints, animation, blender, luau | ~4.6k tok
 - Voxel Modelling Start Here | 53 Voxel Modelling Deep Dive/Voxel Modelling Start Here.md | modeling, voxel, hub, start-here, blocky, magicavoxel, roblox | ~1.6k tok
-- Voxel Palettes - Ramps Hue Shifting and Limits | 53 Voxel Modelling Deep Dive/Voxel Palettes - Ramps Hue Shifting and Limits.md | modeling, voxel, palette, colour, ramps, hue-shifting, oklab, luau, art-direction | ~4.3k tok
+- Voxel Palettes - Ramps Hue Shifting and Limits | 53 Voxel Modelling Deep Dive/Voxel Palettes - Ramps Hue Shifting and Limits.md | modeling, voxel, palette, colour, ramps, hue-shifting, oklab, luau, art-direction | ~4.4k tok
 - Voxel Props Environments and Modular Tiles | 53 Voxel Modelling Deep Dive/Voxel Props Environments and Modular Tiles.md | modeling, voxel, environment, props, modular, tiles, autotiling, kits, instancing, streaming, luau | ~4.2k tok
-- Voxel Scale Grids and Stud Alignment | 53 Voxel Modelling Deep Dive/Voxel Scale Grids and Stud Alignment.md | modeling, voxel, grid, scale, studs, alignment, pivots, export, luau, blender, magicavoxel | ~4.7k tok
-- Voxel Shading - Baked AO Edges and Lighting | 53 Voxel Modelling Deep Dive/Voxel Shading - Baked AO Edges and Lighting.md | modeling, voxel, shading, ambient-occlusion, vertex-colors, lighting, bevels, blender, python, mobile | ~4.7k tok
+- Voxel Scale Grids and Stud Alignment | 53 Voxel Modelling Deep Dive/Voxel Scale Grids and Stud Alignment.md | modeling, voxel, grid, scale, studs, alignment, pivots, export, luau, blender, magicavoxel | ~4.8k tok
+- Voxel Shading - Baked AO Edges and Lighting | 53 Voxel Modelling Deep Dive/Voxel Shading - Baked AO Edges and Lighting.md | modeling, voxel, shading, ambient-occlusion, vertex-colors, lighting, bevels, blender, python, mobile | ~4.8k tok
 
 ## 54 Untextured Stylised Modelling
 
-- Clean Stylised Shading - Weighted and Custom Normals | 54 Untextured Stylised Modelling/Clean Stylised Shading - Weighted and Custom Normals.md | modeling, untextured, stylised, normals, weighted-normals, bevel, shading, blender, foliage | ~3.8k tok
-- Colour Scripts and Value Structure for Untextured Art | 54 Untextured Stylised Modelling/Colour Scripts and Value Structure for Untextured Art.md | art-direction, untextured, stylised, colour, value, palette, colour-script, readability, luau | ~3.9k tok
-- Faceted Low-Poly - Flat Normals and Facet Size | 54 Untextured Stylised Modelling/Faceted Low-Poly - Flat Normals and Facet Size.md | modeling, untextured, low-poly, faceted, flat-shading, normals, facet-size, blender, performance | ~3.7k tok
-- Flat Colour vs Gradient Atlas vs Vertex Colour | 54 Untextured Stylised Modelling/Flat Colour vs Gradient Atlas vs Vertex Colour.md | modeling, untextured, stylised, flat-colour, gradient-atlas, vertex-colour, meshpart, surfaceappearance, decision | ~4.5k tok
-- Keeping a Mixed Asset Library Consistent | 54 Untextured Stylised Modelling/Keeping a Mixed Asset Library Consistent.md | art-direction, untextured, stylised, asset-library, consistency, pipeline, audit, palette, luau | ~4.0k tok
-- Lighting Untextured Art in Roblox | 54 Untextured Stylised Modelling/Lighting Untextured Art in Roblox.md | lighting, untextured, stylised, flat-colour, materials, look-dev, roblox, phone, luau | ~4.2k tok
-- The Gradient Palette Texture Workflow | 54 Untextured Stylised Modelling/The Gradient Palette Texture Workflow.md | modeling, untextured, stylised, gradient-atlas, palette, uv, blender, texture, workflow | ~4.5k tok
+- Clean Stylised Shading - Weighted and Custom Normals | 54 Untextured Stylised Modelling/Clean Stylised Shading - Weighted and Custom Normals.md | modeling, untextured, stylised, normals, weighted-normals, bevel, shading, blender, foliage | ~3.9k tok
+- Colour Scripts and Value Structure for Untextured Art | 54 Untextured Stylised Modelling/Colour Scripts and Value Structure for Untextured Art.md | art-direction, untextured, stylised, colour, value, palette, colour-script, readability, luau | ~4.0k tok
+- Faceted Low-Poly - Flat Normals and Facet Size | 54 Untextured Stylised Modelling/Faceted Low-Poly - Flat Normals and Facet Size.md | modeling, untextured, low-poly, faceted, flat-shading, normals, facet-size, blender, performance | ~3.8k tok
+- Flat Colour vs Gradient Atlas vs Vertex Colour | 54 Untextured Stylised Modelling/Flat Colour vs Gradient Atlas vs Vertex Colour.md | modeling, untextured, stylised, flat-colour, gradient-atlas, vertex-colour, meshpart, surfaceappearance, decision | ~4.6k tok
+- Keeping a Mixed Asset Library Consistent | 54 Untextured Stylised Modelling/Keeping a Mixed Asset Library Consistent.md | art-direction, untextured, stylised, asset-library, consistency, pipeline, audit, palette, luau | ~4.1k tok
+- Lighting Untextured Art in Roblox | 54 Untextured Stylised Modelling/Lighting Untextured Art in Roblox.md | lighting, untextured, stylised, flat-colour, materials, look-dev, roblox, phone, luau | ~4.3k tok
+- The Gradient Palette Texture Workflow | 54 Untextured Stylised Modelling/The Gradient Palette Texture Workflow.md | modeling, untextured, stylised, gradient-atlas, palette, uv, blender, texture, workflow | ~4.6k tok
 - Untextured Stylised Modelling Start Here | 54 Untextured Stylised Modelling/Untextured Stylised Modelling Start Here.md | hub, modeling, untextured, stylised, flat-colour, gradient-atlas, normals, lighting, art-direction | ~1.5k tok
 
 ## 55 Modelling Nuance and Readability
 
-- Bevels Chamfers and Edge Highlights Without Textures | 55 Modelling Nuance and Readability/Bevels Chamfers and Edge Highlights Without Textures.md | modeling, bevel, chamfer, edge-highlight, normals, vertex-colors, untextured, blender, stylised, lighting | ~4.5k tok
+- Bevels Chamfers and Edge Highlights Without Textures | 55 Modelling Nuance and Readability/Bevels Chamfers and Edge Highlights Without Textures.md | modeling, bevel, chamfer, edge-highlight, normals, vertex-colors, untextured, blender, stylised, lighting | ~4.6k tok
 - Critiquing a Model - Paintovers and Iteration | 55 Modelling Nuance and Readability/Critiquing a Model - Paintovers and Iteration.md | modeling, critique, paintover, feedback, iteration, review, art-direction, workflow, studio, blender | ~3.7k tok
 - Modelling Nuance Start Here | 55 Modelling Nuance and Readability/Modelling Nuance Start Here.md | modeling, hub, readability, silhouette, proportion, style-bible, critique, start-here | ~1.5k tok
-- Modelling to the Roblox Camera and Player Scale | 55 Modelling Nuance and Readability/Modelling to the Roblox Camera and Player Scale.md | modeling, camera, scale, studs, avatar, field-of-view, readability, blender, luau, studio | ~3.8k tok
-- Proportion Exaggeration and Gameplay Distance | 55 Modelling Nuance and Readability/Proportion Exaggeration and Gameplay Distance.md | modeling, proportion, exaggeration, readability, scale, stylised, distance, props, characters | ~3.6k tok
-- Shape Language and Silhouette Testing | 55 Modelling Nuance and Readability/Shape Language and Silhouette Testing.md | modeling, shape-language, silhouette, readability, art-direction, blender, studio, critique | ~4.7k tok
-- Spending Triangles Where the Camera Looks | 55 Modelling Nuance and Readability/Spending Triangles Where the Camera Looks.md | modeling, triangles, budgets, optimization, camera, lod, silhouette, blender, python, mobile | ~3.9k tok
-- Style Bibles for Consistent Models | 55 Modelling Nuance and Readability/Style Bibles for Consistent Models.md | modeling, style-bible, style-guide, art-direction, consistency, pipeline, team, validation, luau, blender | ~4.0k tok
+- Modelling to the Roblox Camera and Player Scale | 55 Modelling Nuance and Readability/Modelling to the Roblox Camera and Player Scale.md | modeling, camera, scale, studs, avatar, field-of-view, readability, blender, luau, studio | ~3.9k tok
+- Proportion Exaggeration and Gameplay Distance | 55 Modelling Nuance and Readability/Proportion Exaggeration and Gameplay Distance.md | modeling, proportion, exaggeration, readability, scale, stylised, distance, props, characters | ~3.7k tok
+- Shape Language and Silhouette Testing | 55 Modelling Nuance and Readability/Shape Language and Silhouette Testing.md | modeling, shape-language, silhouette, readability, art-direction, blender, studio, critique | ~4.8k tok
+- Spending Triangles Where the Camera Looks | 55 Modelling Nuance and Readability/Spending Triangles Where the Camera Looks.md | modeling, triangles, budgets, optimization, camera, lod, silhouette, blender, python, mobile | ~4.0k tok
+- Style Bibles for Consistent Models | 55 Modelling Nuance and Readability/Style Bibles for Consistent Models.md | modeling, style-bible, style-guide, art-direction, consistency, pipeline, team, validation, luau, blender | ~4.1k tok
 
 ## 56 Field Notes
 
-- A Stuck Player Watchdog That Logs the Cause | 56 Field Notes/A Stuck Player Watchdog That Logs the Cause.md | field-notes, characters, movement, watchdog, telemetry, datastore, debugging, luau | ~2.1k tok
-- Animation Data Hygiene - Euler Wrap Joint Holes and Easing | 56 Field Notes/Animation Data Hygiene - Euler Wrap Joint Holes and Easing.md | field-notes, animation, keyframes, euler, interpolation, easing, procedural, luau | ~1.6k tok
-- Centre-Screen Announcements That Stay Centred | 56 Field Notes/Centre-Screen Announcements That Stay Centred.md | field-notes, ui, announcements, layout, queue, notifications, luau | ~1.6k tok
-- Client Hit Prediction for Melee Feedback | 56 Field Notes/Client Hit Prediction for Melee Feedback.md | field-notes, combat, melee, prediction, latency, networking, game-feel, luau | ~1.6k tok
+- A Stuck Player Watchdog That Logs the Cause | 56 Field Notes/A Stuck Player Watchdog That Logs the Cause.md | field-notes, characters, movement, watchdog, telemetry, datastore, debugging, luau | ~2.2k tok
+- Animation Data Hygiene - Euler Wrap Joint Holes and Easing | 56 Field Notes/Animation Data Hygiene - Euler Wrap Joint Holes and Easing.md | field-notes, animation, keyframes, euler, interpolation, easing, procedural, luau | ~1.7k tok
+- Centre-Screen Announcements That Stay Centred | 56 Field Notes/Centre-Screen Announcements That Stay Centred.md | field-notes, ui, announcements, layout, queue, notifications, luau | ~1.7k tok
+- Client Hit Prediction for Melee Feedback | 56 Field Notes/Client Hit Prediction for Melee Feedback.md | field-notes, combat, melee, prediction, latency, networking, game-feel, luau | ~1.7k tok
 - Field Notes Start Here | 56 Field Notes/Field Notes Start Here.md | field-notes, hub, start-here, gotchas, production, lessons | ~1.3k tok
-- Held Weapons on Motor6D - Locking the Grip During Attacks | 56 Field Notes/Held Weapons on Motor6D - Locking the Grip During Attacks.md | field-notes, animation, motor6d, weapons, grip, procedural, combat | ~1.6k tok
-- Hold-to-Attack Input That Never Sticks | 56 Field Notes/Hold-to-Attack Input That Never Sticks.md | field-notes, input, contextactionservice, combat, stamina, gamepad, luau | ~1.7k tok
-- Layering Camera Feedback on the Default Camera | 56 Field Notes/Layering Camera Feedback on the Default Camera.md | field-notes, camera, bindtorenderstep, fov, game-feel, playermodule, luau | ~1.9k tok
-- Moving Data Out of a Play Session | 56 Field Notes/Moving Data Out of a Play Session.md | field-notes, studio, playtest, httpservice, mcp, tooling, ui, datamodel | ~1.7k tok
-- ProximityPrompt Gamepad Keys and the Hidden PlayerList Tab | 56 Field Notes/ProximityPrompt Gamepad Keys and the Hidden PlayerList Tab.md | field-notes, input, gamepad, proximityprompt, coregui, playerlist, console | ~1.5k tok
-- Resetting One Player's Data Safely | 56 Field Notes/Resetting One Player's Data Safely.md | field-notes, datastore, data, reset, support, versioning, live-ops, luau | ~1.6k tok
+- Held Weapons on Motor6D - Locking the Grip During Attacks | 56 Field Notes/Held Weapons on Motor6D - Locking the Grip During Attacks.md | field-notes, animation, motor6d, weapons, grip, procedural, combat | ~1.8k tok
+- Hold-to-Attack Input That Never Sticks | 56 Field Notes/Hold-to-Attack Input That Never Sticks.md | field-notes, input, contextactionservice, combat, stamina, gamepad, luau | ~1.8k tok
+- Layering Camera Feedback on the Default Camera | 56 Field Notes/Layering Camera Feedback on the Default Camera.md | field-notes, camera, bindtorenderstep, fov, game-feel, playermodule, luau | ~2.0k tok
+- Moving Data Out of a Play Session | 56 Field Notes/Moving Data Out of a Play Session.md | field-notes, studio, playtest, httpservice, mcp, tooling, ui, datamodel | ~1.9k tok
+- ProximityPrompt Gamepad Keys and the Hidden PlayerList Tab | 56 Field Notes/ProximityPrompt Gamepad Keys and the Hidden PlayerList Tab.md | field-notes, input, gamepad, proximityprompt, coregui, playerlist, console | ~1.6k tok
+- Resetting One Player's Data Safely | 56 Field Notes/Resetting One Player's Data Safely.md | field-notes, datastore, data, reset, support, versioning, live-ops, luau | ~1.7k tok
 - Running Many AI Agents on One Roblox Place | 56 Field Notes/Running Many AI Agents on One Roblox Place.md | field-notes, ai, agents, mcp, coordination, studio, workflow, backups | ~1.6k tok
-- Server-Authoritative Freeze and Stun Timestamps | 56 Field Notes/Server-Authoritative Freeze and Stun Timestamps.md | field-notes, status-effects, stun, freeze, server-authority, attributes, combat, luau | ~1.7k tok
-- Shared Close Buttons and Headers Across Many Screens | 56 Field Notes/Shared Close Buttons and Headers Across Many Screens.md | field-notes, ui, close-button, layout, clipsdescendants, attributes, design-system | ~1.6k tok
-- Shift-Lock Sprint and Gamepad B for Menus | 56 Field Notes/Shift-Lock Sprint and Gamepad B for Menus.md | field-notes, input, shift-lock, sprint, gamepad, menus, contextactionservice | ~1.5k tok
-- Sound Design Pitfalls - Reused Ids Onsets and Layered Loops | 56 Field Notes/Sound Design Pitfalls - Reused Ids Onsets and Layered Loops.md | field-notes, audio, sound, sound-design, combat, asset-audit, marketplace | ~1.7k tok
-- Springs That Survive Long Frames - dt Clamps and NaN Guards | 56 Field Notes/Springs That Survive Long Frames - dt Clamps and NaN Guards.md | field-notes, springs, renderstepped, camera, nan, stability, game-feel, luau | ~1.7k tok
-- Streaming Joins - Frozen Players and Loading Screen Teardown | 56 Field Notes/Streaming Joins - Frozen Players and Loading Screen Teardown.md | field-notes, streaming, loading-screen, joins, network-ownership, replicatedfirst, luau | ~1.6k tok
-- Studio Automation Without Freezing Studio | 56 Field Notes/Studio Automation Without Freezing Studio.md | field-notes, studio, command-bar, mcp, automation, patterns, scripts, performance | ~1.8k tok
-- UIStroke on Text - Glyph Counters and the Stroke Ratio | 56 Field Notes/UIStroke on Text - Glyph Counters and the Stroke Ratio.md | field-notes, ui, uistroke, text, fonts, readability, numbers | ~1.5k tok
-- ipairs Stops at the First nil - Cleanup Tables That Leak | 56 Field Notes/ipairs Stops at the First nil - Cleanup Tables That Leak.md | field-notes, luau, ipairs, tables, cleanup, memory-leaks, sound | ~1.5k tok
+- Server-Authoritative Freeze and Stun Timestamps | 56 Field Notes/Server-Authoritative Freeze and Stun Timestamps.md | field-notes, status-effects, stun, freeze, server-authority, attributes, combat, luau | ~1.8k tok
+- Shared Close Buttons and Headers Across Many Screens | 56 Field Notes/Shared Close Buttons and Headers Across Many Screens.md | field-notes, ui, close-button, layout, clipsdescendants, attributes, design-system | ~1.7k tok
+- Shift-Lock Sprint and Gamepad B for Menus | 56 Field Notes/Shift-Lock Sprint and Gamepad B for Menus.md | field-notes, input, shift-lock, sprint, gamepad, menus, contextactionservice | ~1.6k tok
+- Sound Design Pitfalls - Reused Ids Onsets and Layered Loops | 56 Field Notes/Sound Design Pitfalls - Reused Ids Onsets and Layered Loops.md | field-notes, audio, sound, sound-design, combat, asset-audit, marketplace | ~1.8k tok
+- Springs That Survive Long Frames - dt Clamps and NaN Guards | 56 Field Notes/Springs That Survive Long Frames - dt Clamps and NaN Guards.md | field-notes, springs, renderstepped, camera, nan, stability, game-feel, luau | ~1.8k tok
+- Streaming Joins - Frozen Players and Loading Screen Teardown | 56 Field Notes/Streaming Joins - Frozen Players and Loading Screen Teardown.md | field-notes, streaming, loading-screen, joins, network-ownership, replicatedfirst, luau | ~1.8k tok
+- Studio Automation Without Freezing Studio | 56 Field Notes/Studio Automation Without Freezing Studio.md | field-notes, studio, command-bar, mcp, automation, patterns, scripts, performance | ~1.9k tok
+- UIStroke on Text - Glyph Counters and the Stroke Ratio | 56 Field Notes/UIStroke on Text - Glyph Counters and the Stroke Ratio.md | field-notes, ui, uistroke, text, fonts, readability, numbers | ~1.6k tok
+- ipairs Stops at the First nil - Cleanup Tables That Leak | 56 Field Notes/ipairs Stops at the First nil - Cleanup Tables That Leak.md | field-notes, luau, ipairs, tables, cleanup, memory-leaks, sound | ~1.6k tok
+
+## 57 API and Concept Atlas
+
+- API and Concept Atlas Start Here | 57 API and Concept Atlas/API and Concept Atlas Start Here.md | atlas, hub, start-here | ~1.5k tok
+- AbsoluteSize | 57 API and Concept Atlas/AbsoluteSize.md | atlas, api | ~380 tok
+- Actor | 57 API and Concept Atlas/Actor.md | atlas, api | ~250 tok
+- AdjustSpeed | 57 API and Concept Atlas/AdjustSpeed.md | atlas, api | ~560 tok
+- AlwaysOnTop | 57 API and Concept Atlas/AlwaysOnTop.md | atlas, api | ~390 tok
+- AnalyticsService | 57 API and Concept Atlas/AnalyticsService.md | atlas, api | ~660 tok
+- AnchorPoint | 57 API and Concept Atlas/AnchorPoint.md | atlas, api | ~560 tok
+- Animation | 57 API and Concept Atlas/Animation.md | atlas, api | ~650 tok
+- AnimationConstraint | 57 API and Concept Atlas/AnimationConstraint.md | atlas, api | ~720 tok
+- AnimationController | 57 API and Concept Atlas/AnimationController.md | atlas, api | ~630 tok
+- AnimationPriority | 57 API and Concept Atlas/AnimationPriority.md | atlas, api | ~550 tok
+- AnimationTrack | 57 API and Concept Atlas/AnimationTrack.md | atlas, api | ~740 tok
+- Animator | 57 API and Concept Atlas/Animator.md | atlas, api | ~1.5k tok
+- Anti-Cheat | 57 API and Concept Atlas/Anti-Cheat.md | atlas, concept | ~1.1k tok
+- ApplyDescription | 57 API and Concept Atlas/ApplyDescription.md | atlas, api | ~360 tok
+- ApplyDescriptionAsync | 57 API and Concept Atlas/ApplyDescriptionAsync.md | atlas, api | ~260 tok
+- ApplyImpulse | 57 API and Concept Atlas/ApplyImpulse.md | atlas, api | ~270 tok
+- AssemblyAngularVelocity | 57 API and Concept Atlas/AssemblyAngularVelocity.md | atlas, api | ~300 tok
+- Atmosphere | 57 API and Concept Atlas/Atmosphere.md | atlas, api | ~990 tok
+- Audio API | 57 API and Concept Atlas/Audio API.md | atlas, concept | ~580 tok
+- AudioDeviceInput | 57 API and Concept Atlas/AudioDeviceInput.md | atlas, api | ~270 tok
+- AudioEmitter | 57 API and Concept Atlas/AudioEmitter.md | atlas, api | ~330 tok
+- AudioPlayer | 57 API and Concept Atlas/AudioPlayer.md | atlas, api | ~470 tok
+- AutoLocalize | 57 API and Concept Atlas/AutoLocalize.md | atlas, api | ~300 tok
+- AvatarEditorService | 57 API and Concept Atlas/AvatarEditorService.md | atlas, api | ~420 tok
+- Battle Pass | 57 API and Concept Atlas/Battle Pass.md | atlas, concept | ~600 tok
+- Beam | 57 API and Concept Atlas/Beam.md | atlas, api | ~550 tok
+- Behaviour Trees | 57 API and Concept Atlas/Behaviour Trees.md | atlas, concept | ~440 tok
+- Bevels | 57 API and Concept Atlas/Bevels.md | atlas, concept | ~860 tok
+- Bezier Curves | 57 API and Concept Atlas/Bezier Curves.md | atlas, concept | ~360 tok
+- BillboardGui | 57 API and Concept Atlas/BillboardGui.md | atlas, api | ~640 tok
+- BindToClose | 57 API and Concept Atlas/BindToClose.md | atlas, api | ~1.3k tok
+- BindToRenderStep | 57 API and Concept Atlas/BindToRenderStep.md | atlas, api | ~420 tok
+- BindableEvent | 57 API and Concept Atlas/BindableEvent.md | atlas, api | ~720 tok
+- Blender | 57 API and Concept Atlas/Blender.md | atlas, concept | ~2.0k tok
+- Blockbench | 57 API and Concept Atlas/Blockbench.md | atlas, concept | ~360 tok
+- Bone | 57 API and Concept Atlas/Bone.md | atlas, api | ~510 tok
+- BulkMoveTo | 57 API and Concept Atlas/BulkMoveTo.md | atlas, api | ~510 tok
+- CFrame | 57 API and Concept Atlas/CFrame.md | atlas, api | ~2.5k tok
+- Camera | 57 API and Concept Atlas/Camera.md | atlas, api | ~760 tok
+- CanvasGroup | 57 API and Concept Atlas/CanvasGroup.md | atlas, api | ~430 tok
+- ChangeHistoryService | 57 API and Concept Atlas/ChangeHistoryService.md | atlas, api | ~540 tok
+- CharacterAdded | 57 API and Concept Atlas/CharacterAdded.md | atlas, api | ~770 tok
+- CharacterAppearanceLoaded | 57 API and Concept Atlas/CharacterAppearanceLoaded.md | atlas, api | ~370 tok
+- Clouds | 57 API and Concept Atlas/Clouds.md | atlas, api | ~350 tok
+- CollectionService | 57 API and Concept Atlas/CollectionService.md | atlas, api | ~1.0k tok
+- Color3 | 57 API and Concept Atlas/Color3.md | atlas, api | ~1.3k tok
+- ColorCorrectionEffect | 57 API and Concept Atlas/ColorCorrectionEffect.md | atlas, api | ~640 tok
+- ColorShift_Bottom | 57 API and Concept Atlas/ColorShift_Bottom.md | atlas, api | ~290 tok
+- Combos | 57 API and Concept Atlas/Combos.md | atlas, concept | ~910 tok
+- ComputeAsync | 57 API and Concept Atlas/ComputeAsync.md | atlas, api | ~380 tok
+- ConfigService | 57 API and Concept Atlas/ConfigService.md | atlas, api | ~360 tok
+- ContextActionService | 57 API and Concept Atlas/ContextActionService.md | atlas, api | ~890 tok
+- Continuous Integration | 57 API and Concept Atlas/Continuous Integration.md | atlas, concept | ~960 tok
+- Cooldowns | 57 API and Concept Atlas/Cooldowns.md | atlas, concept | ~1.6k tok
+- Coroutines | 57 API and Concept Atlas/Coroutines.md | atlas, concept | ~660 tok
+- Coyote Time | 57 API and Concept Atlas/Coyote Time.md | atlas, concept | ~570 tok
+- CreateHumanoidModelFromDescriptionAsync | 57 API and Concept Atlas/CreateHumanoidModelFromDescriptionAsync.md | atlas, api | ~310 tok
+- Creator Rewards | 57 API and Concept Atlas/Creator Rewards.md | atlas, concept | ~460 tok
+- Cross Product | 57 API and Concept Atlas/Cross Product.md | atlas, concept | ~450 tok
+- CurveAnimation | 57 API and Concept Atlas/CurveAnimation.md | atlas, api | ~480 tok
+- Cutscenes | 57 API and Concept Atlas/Cutscenes.md | atlas, concept | ~1.3k tok
+- Daily Rewards | 57 API and Concept Atlas/Daily Rewards.md | atlas, concept | ~860 tok
+- Damage Numbers | 57 API and Concept Atlas/Damage Numbers.md | atlas, concept | ~650 tok
+- DataStore | 57 API and Concept Atlas/DataStore.md | atlas, api | ~1.8k tok
+- DataStoreService | 57 API and Concept Atlas/DataStoreService.md | atlas, api | ~730 tok
+- Day-N Retention | 57 API and Concept Atlas/Day-N Retention.md | atlas, concept | ~500 tok
+- Decimation | 57 API and Concept Atlas/Decimation.md | atlas, concept | ~610 tok
+- Destroying | 57 API and Concept Atlas/Destroying.md | atlas, api | ~470 tok
+- DevEx | 57 API and Concept Atlas/DevEx.md | atlas, concept | ~540 tok
+- Developer Products | 57 API and Concept Atlas/Developer Products.md | atlas, concept | ~1.3k tok
+- Discord | 57 API and Concept Atlas/Discord.md | atlas, concept | ~660 tok
+- DisplayOrder | 57 API and Concept Atlas/DisplayOrder.md | atlas, api | ~370 tok
+- Drop Rates | 57 API and Concept Atlas/Drop Rates.md | atlas, concept | ~500 tok
+- Dynamic Heads | 57 API and Concept Atlas/Dynamic Heads.md | atlas, concept | ~570 tok
+- Edge Flow | 57 API and Concept Atlas/Edge Flow.md | atlas, concept | ~590 tok
+- EditableImage | 57 API and Concept Atlas/EditableImage.md | atlas, api | ~610 tok
+- Entity Component System | 57 API and Concept Atlas/Entity Component System.md | atlas, concept | ~210 tok
+- Exponential Backoff | 57 API and Concept Atlas/Exponential Backoff.md | atlas, concept | ~500 tok
+- FACS | 57 API and Concept Atlas/FACS.md | atlas, concept | ~340 tok
+- FBX | 57 API and Concept Atlas/FBX.md | atlas, concept | ~830 tok
+- FaceControls | 57 API and Concept Atlas/FaceControls.md | atlas, api | ~290 tok
+- FieldOfView | 57 API and Concept Atlas/FieldOfView.md | atlas, api | ~480 tok
+- FindFirstChild | 57 API and Concept Atlas/FindFirstChild.md | atlas, api | ~2.0k tok
+- Fixed Timestep | 57 API and Concept Atlas/Fixed Timestep.md | atlas, concept | ~350 tok
+- FloorMaterial | 57 API and Concept Atlas/FloorMaterial.md | atlas, api | ~560 tok
+- ForceField | 57 API and Concept Atlas/ForceField.md | atlas, api | ~460 tok
+- Frame | 57 API and Concept Atlas/Frame.md | atlas, api | ~710 tok
+- Free Models | 57 API and Concept Atlas/Free Models.md | atlas, concept | ~460 tok
+- Funnels | 57 API and Concept Atlas/Funnels.md | atlas, concept | ~1.3k tok
+- GetAttributeChangedSignal | 57 API and Concept Atlas/GetAttributeChangedSignal.md | atlas, api | ~680 tok
+- GetImageForKeyCode | 57 API and Concept Atlas/GetImageForKeyCode.md | atlas, api | ~340 tok
+- GetInstanceAddedSignal | 57 API and Concept Atlas/GetInstanceAddedSignal.md | atlas, api | ~680 tok
+- GetMarkerReachedSignal | 57 API and Concept Atlas/GetMarkerReachedSignal.md | atlas, api | ~410 tok
+- GetNetworkPing | 57 API and Concept Atlas/GetNetworkPing.md | atlas, api | ~340 tok
+- GetPartBoundsInBox | 57 API and Concept Atlas/GetPartBoundsInBox.md | atlas, api | ~570 tok
+- GetPartsInPart | 57 API and Concept Atlas/GetPartsInPart.md | atlas, api | ~460 tok
+- GetProductInfo | 57 API and Concept Atlas/GetProductInfo.md | atlas, api | ~420 tok
+- GetProductInfoAsync | 57 API and Concept Atlas/GetProductInfoAsync.md | atlas, api | ~580 tok
+- GetRankInGroup | 57 API and Concept Atlas/GetRankInGroup.md | atlas, api | ~390 tok
+- GlobalShadows | 57 API and Concept Atlas/GlobalShadows.md | atlas, api | ~380 tok
+- Greyboxing | 57 API and Concept Atlas/Greyboxing.md | atlas, concept | ~580 tok
+- Haptics | 57 API and Concept Atlas/Haptics.md | atlas, concept | ~570 tok
+- Heartbeat | 57 API and Concept Atlas/Heartbeat.md | atlas, api | ~810 tok
+- HipHeight | 57 API and Concept Atlas/HipHeight.md | atlas, api | ~460 tok
+- Hitboxes | 57 API and Concept Atlas/Hitboxes.md | atlas, concept | ~1.1k tok
+- Honeypots | 57 API and Concept Atlas/Honeypots.md | atlas, concept | ~260 tok
+- HttpService | 57 API and Concept Atlas/HttpService.md | atlas, api | ~1.5k tok
+- Humanoid | 57 API and Concept Atlas/Humanoid.md | atlas, api | ~2.1k tok
+- HumanoidDescription | 57 API and Concept Atlas/HumanoidDescription.md | atlas, api | ~560 tok
+- IKControl | 57 API and Concept Atlas/IKControl.md | atlas, api | ~420 tok
+- ImageRectOffset | 57 API and Concept Atlas/ImageRectOffset.md | atlas, api | ~460 tok
+- Impact Frames | 57 API and Concept Atlas/Impact Frames.md | atlas, concept | ~540 tok
+- IncrementAsync | 57 API and Concept Atlas/IncrementAsync.md | atlas, api | ~350 tok
+- InputAction | 57 API and Concept Atlas/InputAction.md | atlas, api | ~480 tok
+- InputBinding | 57 API and Concept Atlas/InputBinding.md | atlas, api | ~390 tok
+- Instance | 57 API and Concept Atlas/Instance.md | atlas, api | ~3.0k tok
+- IntValue | 57 API and Concept Atlas/IntValue.md | atlas, api | ~360 tok
+- Interpolation | 57 API and Concept Atlas/Interpolation.md | atlas, concept | ~1.5k tok
+- InvokeClient | 57 API and Concept Atlas/InvokeClient.md | atlas, api | ~430 tok
+- Item Duplication | 57 API and Concept Atlas/Item Duplication.md | atlas, concept | ~1.1k tok
+- Juice | 57 API and Concept Atlas/Juice.md | atlas, concept | ~1.0k tok
+- KeyframeMarker | 57 API and Concept Atlas/KeyframeMarker.md | atlas, api | ~470 tok
+- KeyframeSequence | 57 API and Concept Atlas/KeyframeSequence.md | atlas, api | ~850 tok
+- KeyframeSequenceProvider | 57 API and Concept Atlas/KeyframeSequenceProvider.md | atlas, api | ~610 tok
+- Kick | 57 API and Concept Atlas/Kick.md | atlas, api | ~560 tok
+- Kill Switches | 57 API and Concept Atlas/Kill Switches.md | atlas, concept | ~580 tok
+- Landmarks | 57 API and Concept Atlas/Landmarks.md | atlas, concept | ~870 tok
+- Layered Clothing | 57 API and Concept Atlas/Layered Clothing.md | atlas, concept | ~650 tok
+- Leaderboards | 57 API and Concept Atlas/Leaderboards.md | atlas, concept | ~1.3k tok
+- Lerp | 57 API and Concept Atlas/Lerp.md | atlas, concept | ~780 tok
+- Level of Detail | 57 API and Concept Atlas/Level of Detail.md | atlas, concept | ~1.0k tok
+- LightInfluence | 57 API and Concept Atlas/LightInfluence.md | atlas, api | ~330 tok
+- Lighting | 57 API and Concept Atlas/Lighting.md | atlas, api | ~840 tok
+- Live Ops | 57 API and Concept Atlas/Live Ops.md | atlas, concept | ~1.1k tok
+- LoadAnimation | 57 API and Concept Atlas/LoadAnimation.md | atlas, api | ~560 tok
+- LocalScript | 57 API and Concept Atlas/LocalScript.md | atlas, api | ~1.5k tok
+- LocalTransparencyModifier | 57 API and Concept Atlas/LocalTransparencyModifier.md | atlas, api | ~490 tok
+- Login Streaks | 57 API and Concept Atlas/Login Streaks.md | atlas, concept | ~960 tok
+- Lore | 57 API and Concept Atlas/Lore.md | atlas, concept | ~520 tok
+- Low Poly | 57 API and Concept Atlas/Low Poly.md | atlas, concept | ~860 tok
+- Lune | 57 API and Concept Atlas/Lune.md | atlas, concept | ~380 tok
+- MagicaVoxel | 57 API and Concept Atlas/MagicaVoxel.md | atlas, concept | ~520 tok
+- MaterialService | 57 API and Concept Atlas/MaterialService.md | atlas, api | ~540 tok
+- MaterialVariant | 57 API and Concept Atlas/MaterialVariant.md | atlas, api | ~700 tok
+- Maturity Labels | 57 API and Concept Atlas/Maturity Labels.md | atlas, concept | ~510 tok
+- MaxVelocity | 57 API and Concept Atlas/MaxVelocity.md | atlas, api | ~380 tok
+- MeshPart | 57 API and Concept Atlas/MeshPart.md | atlas, api | ~1.2k tok
+- MessagingService | 57 API and Concept Atlas/MessagingService.md | atlas, api | ~700 tok
+- Metatables | 57 API and Concept Atlas/Metatables.md | atlas, concept | ~580 tok
+- MicroProfiler | 57 API and Concept Atlas/MicroProfiler.md | atlas, concept | ~1.0k tok
+- Model Context Protocol | 57 API and Concept Atlas/Model Context Protocol.md | atlas, concept | ~840 tok
+- Model | 57 API and Concept Atlas/Model.md | atlas, api | ~2.1k tok
+- Modular Kits | 57 API and Concept Atlas/Modular Kits.md | atlas, concept | ~410 tok
+- Motor6D | 57 API and Concept Atlas/Motor6D.md | atlas, api | ~1.1k tok
+- MouseButton1Click | 57 API and Concept Atlas/MouseButton1Click.md | atlas, api | ~200 tok
+- NPCs | 57 API and Concept Atlas/NPCs.md | atlas, concept | ~2.0k tok
+- Noclip | 57 API and Concept Atlas/Noclip.md | atlas, concept | ~840 tok
+- Normal Maps | 57 API and Concept Atlas/Normal Maps.md | atlas, concept | ~630 tok
+- Offline Earnings | 57 API and Concept Atlas/Offline Earnings.md | atlas, concept | ~400 tok
+- Open Cloud | 57 API and Concept Atlas/Open Cloud.md | atlas, concept | ~1.3k tok
+- PBR | 57 API and Concept Atlas/PBR.md | atlas, concept | ~660 tok
+- Paid Random Items | 57 API and Concept Atlas/Paid Random Items.md | atlas, concept | ~1.0k tok
+- Parallax | 57 API and Concept Atlas/Parallax.md | atlas, concept | ~470 tok
+- Parallel Luau | 57 API and Concept Atlas/Parallel Luau.md | atlas, concept | ~720 tok
+- Part | 57 API and Concept Atlas/Part.md | atlas, api | ~690 tok
+- Part0 | 57 API and Concept Atlas/Part0.md | atlas, api | ~580 tok
+- Part1 | 57 API and Concept Atlas/Part1.md | atlas, api | ~670 tok
+- ParticleEmitter | 57 API and Concept Atlas/ParticleEmitter.md | atlas, api | ~680 tok
+- PathfindingService | 57 API and Concept Atlas/PathfindingService.md | atlas, api | ~370 tok
+- Pixel Art | 57 API and Concept Atlas/Pixel Art.md | atlas, concept | ~520 tok
+- Player | 57 API and Concept Atlas/Player.md | atlas, api | ~2.8k tok
+- PlayerRemoving | 57 API and Concept Atlas/PlayerRemoving.md | atlas, api | ~910 tok
+- Playtesting | 57 API and Concept Atlas/Playtesting.md | atlas, concept | ~1.3k tok
+- Plugin | 57 API and Concept Atlas/Plugin.md | atlas, api | ~390 tok
+- PluginGui | 57 API and Concept Atlas/PluginGui.md | atlas, api | ~270 tok
+- PolicyService | 57 API and Concept Atlas/PolicyService.md | atlas, api | ~730 tok
+- Pose | 57 API and Concept Atlas/Pose.md | atlas, api | ~490 tok
+- Post-Processing | 57 API and Concept Atlas/Post-Processing.md | atlas, concept | ~880 tok
+- PreRender | 57 API and Concept Atlas/PreRender.md | atlas, api | ~610 tok
+- PreSimulation | 57 API and Concept Atlas/PreSimulation.md | atlas, api | ~810 tok
+- PrioritizeLightingQuality | 57 API and Concept Atlas/PrioritizeLightingQuality.md | atlas, api | ~460 tok
+- Private Servers | 57 API and Concept Atlas/Private Servers.md | atlas, concept | ~1.2k tok
+- ProcessReceipt | 57 API and Concept Atlas/ProcessReceipt.md | atlas, api | ~1.1k tok
+- ProfileStore | 57 API and Concept Atlas/ProfileStore.md | atlas, concept | ~270 tok
+- PromptPurchaseFinished | 57 API and Concept Atlas/PromptPurchaseFinished.md | atlas, api | ~280 tok
+- ProximityPrompt | 57 API and Concept Atlas/ProximityPrompt.md | atlas, api | ~770 tok
+- Quaternions | 57 API and Concept Atlas/Quaternions.md | atlas, concept | ~680 tok
+- Quests | 57 API and Concept Atlas/Quests.md | atlas, concept | ~1.6k tok
+- R15 | 57 API and Concept Atlas/R15.md | atlas, concept | ~1.3k tok
+- R6 | 57 API and Concept Atlas/R6.md | atlas, concept | ~420 tok
+- Ragdolls | 57 API and Concept Atlas/Ragdolls.md | atlas, concept | ~780 tok
+- Random Seeds | 57 API and Concept Atlas/Random Seeds.md | atlas, concept | ~1.1k tok
+- Raycast | 57 API and Concept Atlas/Raycast.md | atlas, api | ~900 tok
+- Rebirth | 57 API and Concept Atlas/Rebirth.md | atlas, concept | ~900 tok
+- Reduced Motion | 57 API and Concept Atlas/Reduced Motion.md | atlas, concept | ~650 tok
+- RegisterKeyframeSequence | 57 API and Concept Atlas/RegisterKeyframeSequence.md | atlas, api | ~580 tok
+- RemoteEvent | 57 API and Concept Atlas/RemoteEvent.md | atlas, api | ~1.6k tok
+- RemoteFunction | 57 API and Concept Atlas/RemoteFunction.md | atlas, api | ~810 tok
+- RemoveAsync | 57 API and Concept Atlas/RemoveAsync.md | atlas, api | ~400 tok
+- ReplicatedStorage | 57 API and Concept Atlas/ReplicatedStorage.md | atlas, api | ~2.4k tok
+- Replication | 57 API and Concept Atlas/Replication.md | atlas, concept | ~2.2k tok
+- ResampleMode | 57 API and Concept Atlas/ResampleMode.md | atlas, api | ~520 tok
+- Retargeting | 57 API and Concept Atlas/Retargeting.md | atlas, concept | ~580 tok
+- Retopology | 57 API and Concept Atlas/Retopology.md | atlas, concept | ~480 tok
+- RigidConstraint | 57 API and Concept Atlas/RigidConstraint.md | atlas, api | ~460 tok
+- Roblox Assistant | 57 API and Concept Atlas/Roblox Assistant.md | atlas, concept | ~300 tok
+- Rojo | 57 API and Concept Atlas/Rojo.md | atlas, concept | ~1.0k tok
+- RopeConstraint | 57 API and Concept Atlas/RopeConstraint.md | atlas, api | ~270 tok
+- RunService | 57 API and Concept Atlas/RunService.md | atlas, api | ~2.4k tok
+- ScaleTo | 57 API and Concept Atlas/ScaleTo.md | atlas, api | ~530 tok
+- Script | 57 API and Concept Atlas/Script.md | atlas, api | ~970 tok
+- ScrollingFrame | 57 API and Concept Atlas/ScrollingFrame.md | atlas, api | ~470 tok
+- ServerRestartScheduled | 57 API and Concept Atlas/ServerRestartScheduled.md | atlas, api | ~250 tok
+- ServerStorage | 57 API and Concept Atlas/ServerStorage.md | atlas, api | ~1.4k tok
+- SetCore | 57 API and Concept Atlas/SetCore.md | atlas, api | ~430 tok
+- SetNetworkOwner | 57 API and Concept Atlas/SetNetworkOwner.md | atlas, api | ~690 tok
+- SetSetting | 57 API and Concept Atlas/SetSetting.md | atlas, api | ~380 tok
+- ShadowSoftness | 57 API and Concept Atlas/ShadowSoftness.md | atlas, api | ~290 tok
+- Sightlines | 57 API and Concept Atlas/Sightlines.md | atlas, concept | ~590 tok
+- Silhouette | 57 API and Concept Atlas/Silhouette.md | atlas, concept | ~1.5k tok
+- Slerp | 57 API and Concept Atlas/Slerp.md | atlas, concept | ~400 tok
+- SmoothTime | 57 API and Concept Atlas/SmoothTime.md | atlas, api | ~230 tok
+- SocialService | 57 API and Concept Atlas/SocialService.md | atlas, api | ~400 tok
+- Sound | 57 API and Concept Atlas/Sound.md | atlas, api | ~740 tok
+- SoundGroup | 57 API and Concept Atlas/SoundGroup.md | atlas, api | ~460 tok
+- Spatial Audio | 57 API and Concept Atlas/Spatial Audio.md | atlas, concept | ~690 tok
+- Sponsored Ads | 57 API and Concept Atlas/Sponsored Ads.md | atlas, concept | ~530 tok
+- Stamina | 57 API and Concept Atlas/Stamina.md | atlas, concept | ~460 tok
+- StepAnimations | 57 API and Concept Atlas/StepAnimations.md | atlas, api | ~610 tok
+- StreamingEnabled | 57 API and Concept Atlas/StreamingEnabled.md | atlas, api | ~850 tok
+- Strict Type Checking | 57 API and Concept Atlas/Strict Type Checking.md | atlas, concept | ~680 tok
+- StudsPerTile | 57 API and Concept Atlas/StudsPerTile.md | atlas, api | ~400 tok
+- Subscriptions | 57 API and Concept Atlas/Subscriptions.md | atlas, concept | ~870 tok
+- SurfaceAppearance | 57 API and Concept Atlas/SurfaceAppearance.md | atlas, api | ~1.1k tok
+- SurfaceGui | 57 API and Concept Atlas/SurfaceGui.md | atlas, api | ~710 tok
+- Team Create | 57 API and Concept Atlas/Team Create.md | atlas, concept | ~830 tok
+- Team | 57 API and Concept Atlas/Team.md | atlas, api | ~480 tok
+- Teams | 57 API and Concept Atlas/Teams.md | atlas, api | ~310 tok
+- Telegraphing | 57 API and Concept Atlas/Telegraphing.md | atlas, concept | ~820 tok
+- TeleportService | 57 API and Concept Atlas/TeleportService.md | atlas, api | ~550 tok
+- Terrain | 57 API and Concept Atlas/Terrain.md | atlas, api | ~1.1k tok
+- TestEZ | 57 API and Concept Atlas/TestEZ.md | atlas, concept | ~870 tok
+- TextChatService | 57 API and Concept Atlas/TextChatService.md | atlas, api | ~680 tok
+- Texture Memory | 57 API and Concept Atlas/Texture Memory.md | atlas, concept | ~930 tok
+- Texture | 57 API and Concept Atlas/Texture.md | atlas, api | ~420 tok
+- TextureID | 57 API and Concept Atlas/TextureID.md | atlas, api | ~590 tok
+- Thumbnails | 57 API and Concept Atlas/Thumbnails.md | atlas, concept | ~1.3k tok
+- Tilemaps | 57 API and Concept Atlas/Tilemaps.md | atlas, concept | ~390 tok
+- TimePosition | 57 API and Concept Atlas/TimePosition.md | atlas, api | ~480 tok
+- TintColor | 57 API and Concept Atlas/TintColor.md | atlas, api | ~350 tok
+- Tool | 57 API and Concept Atlas/Tool.md | atlas, api | ~540 tok
+- Topology | 57 API and Concept Atlas/Topology.md | atlas, concept | ~780 tok
+- Touched | 57 API and Concept Atlas/Touched.md | atlas, api | ~760 tok
+- Tower Defense | 57 API and Concept Atlas/Tower Defense.md | atlas, concept | ~540 tok
+- Trim Sheets | 57 API and Concept Atlas/Trim Sheets.md | atlas, concept | ~780 tok
+- TweenService | 57 API and Concept Atlas/TweenService.md | atlas, api | ~870 tok
+- Tycoon | 57 API and Concept Atlas/Tycoon.md | atlas, concept | ~630 tok
+- UDim2 | 57 API and Concept Atlas/UDim2.md | atlas, api | ~1.0k tok
+- UGC | 57 API and Concept Atlas/UGC.md | atlas, concept | ~810 tok
+- UIScale | 57 API and Concept Atlas/UIScale.md | atlas, api | ~740 tok
+- UIStroke | 57 API and Concept Atlas/UIStroke.md | atlas, api | ~560 tok
+- UnreliableRemoteEvent | 57 API and Concept Atlas/UnreliableRemoteEvent.md | atlas, api | ~780 tok
+- UpdateAsync | 57 API and Concept Atlas/UpdateAsync.md | atlas, api | ~840 tok
+- UserInputService | 57 API and Concept Atlas/UserInputService.md | atlas, api | ~1.2k tok
+- Vector3 | 57 API and Concept Atlas/Vector3.md | atlas, api | ~2.5k tok
+- VehicleSeat | 57 API and Concept Atlas/VehicleSeat.md | atlas, api | ~580 tok
+- Vertex Colours | 57 API and Concept Atlas/Vertex Colours.md | atlas, concept | ~950 tok
+- ViewportFrame | 57 API and Concept Atlas/ViewportFrame.md | atlas, api | ~630 tok
+- Voxels | 57 API and Concept Atlas/Voxels.md | atlas, concept | ~1.2k tok
+- WaitForChild | 57 API and Concept Atlas/WaitForChild.md | atlas, api | ~1.9k tok
+- Wally | 57 API and Concept Atlas/Wally.md | atlas, concept | ~700 tok
+- Wave Function Collapse | 57 API and Concept Atlas/Wave Function Collapse.md | atlas, concept | ~250 tok
+- WeightCurrent | 57 API and Concept Atlas/WeightCurrent.md | atlas, api | ~310 tok
+- Weighted Normals | 57 API and Concept Atlas/Weighted Normals.md | atlas, concept | ~540 tok
+- ZIndex | 57 API and Concept Atlas/ZIndex.md | atlas, api | ~420 tok
+- glTF and GLB | 57 API and Concept Atlas/glTF and GLB.md | atlas, concept | ~1.0k tok
+
+## 58 Player QoL and Game Tweaks
+
+- AFK Detection Idle Kicks and AFK Reward Rules | 58 Player QoL and Game Tweaks/AFK Detection Idle Kicks and AFK Reward Rules.md | qol, afk, idle, idled, kick, rewards, retention, policy, server-authority | ~1.9k tok
+- Accessibility Cross-Links for QoL Settings | 58 Player QoL and Game Tweaks/Accessibility Cross-Links for QoL Settings.md | qol, accessibility, cross-links, settings, inclusive-design, map | ~1.6k tok
+- Aim Assist and Generous Hitboxes | 58 Player QoL and Game Tweaks/Aim Assist and Generous Hitboxes.md | qol, game-tweaks, aim-assist, hitboxes, mobile, controller, fairness, combat, server-authority | ~2.1k tok
+- Audio Mixer Settings with SoundGroups | 58 Player QoL and Game Tweaks/Audio Mixer Settings with SoundGroups.md | qol, audio, soundgroup, volume, mixer, music, ducking, sidechain, settings | ~1.9k tok
+- Block and Mute Respecting Platform Rules | 58 Player QoL and Game Tweaks/Block and Mute Respecting Platform Rules.md | qol, social, block, mute, safety, textchatservice, voice-chat, moderation, policy | ~2.0k tok
+- Camera Settings - FOV Shake Sensitivity and Shift-Lock | 58 Player QoL and Game Tweaks/Camera Settings - FOV Shake Sensitivity and Shift-Lock.md | qol, camera, fov, camera-shake, sensitivity, invert, shift-lock, first-person, settings | ~2.1k tok
+- Colourblind Palettes Text Size and Tooltips | 58 Player QoL and Game Tweaks/Colourblind Palettes Text Size and Tooltips.md | qol, colourblind, palette, text-size, tooltips, readability, preferredtextsize, ui | ~1.9k tok
+- Comfort Toggles - Flashes Damage Numbers and Hit-Stop | 58 Player QoL and Game Tweaks/Comfort Toggles - Flashes Damage Numbers and Hit-Stop.md | qol, comfort, reduced-motion, flashes, photosensitivity, damage-numbers, hit-stop, juice, settings | ~1.8k tok
+- Confirmation and Undo Patterns for Destructive and Paid Actions | 58 Player QoL and Game Tweaks/Confirmation and Undo Patterns for Destructive and Paid Actions.md | qol, confirmation, undo, bulk-sell, destructive-actions, purchases, dark-patterns, server-authority | ~2.0k tok
+- Controller Support QoL | 58 Player QoL and Game Tweaks/Controller Support QoL.md | qol, gamepad, controller, console, xbox, playstation, haptics, selection, deadzone | ~1.9k tok
+- Feedback - Autosave Indicator Ping Display and Error Toasts | 58 Player QoL and Game Tweaks/Feedback - Autosave Indicator Ping Display and Error Toasts.md | qol, feedback, autosave, save-indicator, ping, latency, error-messages, toasts, trust | ~2.1k tok
+- Graphics and Performance Toggles for Low-End Devices | 58 Player QoL and Game Tweaks/Graphics and Performance Toggles for Low-End Devices.md | qol, graphics, performance, low-end, mobile, particles, shadows, vfx, settings | ~2.1k tok
+- Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots | 58 Player QoL and Game Tweaks/Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots.md | qol, sprint, hold-vs-toggle, auto-sprint, auto-equip, hotbar, quick-slots, controls, server-authority | ~2.0k tok
+- Inventory QoL - Sort Filter Search Stack and Lock | 58 Player QoL and Game Tweaks/Inventory QoL - Sort Filter Search Stack and Lock.md | qol, inventory, sort, filter, search, stacking, lock, favourite, server-authority, ui | ~2.0k tok
+- Joining Friends Parties and Private Servers | 58 Player QoL and Game Tweaks/Joining Friends Parties and Private Servers.md | qol, social, friends, parties, teleport, private-servers, reserved-servers, invites | ~2.0k tok
+- Loading Screen Skip and First-Session Goals | 58 Player QoL and Game Tweaks/Loading Screen Skip and First-Session Goals.md | qol, loading-screen, replicatedfirst, preload, fast-join, first-session, goals, onboarding | ~1.9k tok
+- Making Numbers Feel Good - Cooldowns Buffering and Coyote Time | 58 Player QoL and Game Tweaks/Making Numbers Feel Good - Cooldowns Buffering and Coyote Time.md | qol, game-tweaks, tuning, cooldowns, input-buffering, coyote-time, latency, game-feel, server-authority | ~2.2k tok
+- Mobile Button Layout Editor | 58 Player QoL and Game Tweaks/Mobile Button Layout Editor.md | qol, mobile, touch, layout-editor, buttons, drag, persistence, controls | ~2.0k tok
+- Notification Queues and Limits | 58 Player QoL and Game Tweaks/Notification Queues and Limits.md | qol, notifications, toasts, queue, rate-limit, priority, dedupe, ui | ~1.8k tok
+- Player QoL Start Here | 58 Player QoL and Game Tweaks/Player QoL Start Here.md | qol, hub, start-here, settings, game-tweaks, player-experience | ~1.6k tok
+- Purchase Receipts and Purchase History in UI | 58 Player QoL and Game Tweaks/Purchase Receipts and Purchase History in UI.md | qol, purchases, receipts, processreceipt, purchase-history, developer-products, game-passes, support, trust | ~2.1k tok
+- QoL Audit Checklist | 58 Player QoL and Game Tweaks/QoL Audit Checklist.md | qol, audit, checklist, qa, review, release, playtest | ~2.0k tok
+- Quick Respawn and Spawn Protection | 58 Player QoL and Game Tweaks/Quick Respawn and Spawn Protection.md | qol, respawn, spawn-protection, forcefield, spawnlocation, death, server-authority, combat | ~2.0k tok
+- Rebinding Controls with the Input Action System | 58 Player QoL and Game Tweaks/Rebinding Controls with the Input Action System.md | qol, rebinding, keybinds, input-action-system, inputaction, inputbinding, inputcontext, controls, settings | ~1.9k tok
+- Server Hop Rejoin and Server Lists with Ping | 58 Player QoL and Game Tweaks/Server Hop Rejoin and Server Lists with Ping.md | qol, server-hop, rejoin, server-list, ping, memorystore, teleport, multiplayer | ~2.1k tok
+- Settings Menu Essentials and Persistence | 58 Player QoL and Game Tweaks/Settings Menu Essentials and Persistence.md | qol, settings, persistence, datastore, schema, defaults, reset, remotes | ~2.4k tok
+- Skippable Tutorials and Replayable Tips | 58 Player QoL and Game Tweaks/Skippable Tutorials and Replayable Tips.md | qol, onboarding, tutorial, skip, tips, ftue, progressive-disclosure, persistence | ~1.9k tok
+- Top 25 QoL Wins by Effort | 58 Player QoL and Game Tweaks/Top 25 QoL Wins by Effort.md | qol, prioritisation, quick-wins, roadmap, effort, impact, ranking | ~1.7k tok
+- UI Scale HUD Hide and Compact Mode | 58 Player QoL and Game Tweaks/UI Scale HUD Hide and Compact Mode.md | qol, ui, ui-scale, hud, declutter, compact-mode, uiscale, settings, mobile, console | ~1.9k tok

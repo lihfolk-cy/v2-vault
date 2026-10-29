@@ -1,5 +1,5 @@
 ---
-tags: [avatars, ugc, layered-clothing, cages, blender, skinning, wraplayer, workflow]
+tags: [avatars, ugc, layered-clothing, cages, blender, skinning, wraplayer, workflow, type/guide, area/avatars, level/intermediate, area/modeling]
 ---
 # Layered Clothing Creation Workflow
 
@@ -12,7 +12,7 @@ tags: [avatars, ugc, layered-clothing, cages, blender, skinning, wraplayer, work
 > - Outer cage duplicated from inner at the start; inner locked.
 > - Garment under 4,000 triangles, watertight, clear of the body.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.7k tok. Read more: ## 4. Edit the outer cage · ## 7. Debug the fit in Studio before any upload · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.8k tok. Read more: ## 4. Edit the outer cage · ## 7. Debug the fit in Studio before any upload · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[UGC Avatar Items and Accessories]] lists the layered clothing specification (one mesh, 4,000 triangles, inner and outer cages, R15 skinning, 2048 textures) and [[Layered Clothing Cages and Animation]] explains how garments deform in motion. This note is the production workflow between those two: the order of operations in Blender, how to edit the outer cage without breaking it, the two skinning routes and when each wins, how to debug a bad fit in Studio with the WrapLayer debug modes, and garment-specific problems (hoods, skirts, shoes, bulky coats). The goal is to get a garment that passes validation the first time, because every re-upload of a published item costs the upload fee again.
@@ -257,5 +257,10 @@ Not every layered garment needs the Marketplace. A game can ship its own layered
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Bundles Animation Packs and Emotes for Sale]] · [[Links - Avatars and UGC]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Skinning Weights]] · [[UV Unwrapping]] · [[Rigging in Blender]]
+[[Bundles Animation Packs and Emotes for Sale]] · [[Links - Avatars and UGC]] · Modeling Characters for R15 and Custom Rigs · Skinning Weights · UV Unwrapping · Rigging in Blender
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Modeling Characters for R15 and Custom Rigs]] · [[HumanoidDescription and Outfit Systems]] · [[Rigging in Blender]] · [[Bones and Skinned Meshes]] · [[Skinning Weights]] · [[AvatarEditorService and In-Game Avatar Editors]]
+<!-- related:end -->

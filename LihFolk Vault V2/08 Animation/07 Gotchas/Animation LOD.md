@@ -1,5 +1,5 @@
 ---
-tags: [performance, lod, runtime, design]
+tags: [performance, lod, runtime, design, type/guide, area/animation, level/intermediate, api/Animator, area/performance]
 ---
 # Animation LOD
 
@@ -12,7 +12,7 @@ tags: [performance, lod, runtime, design]
 > - Skipped frames accumulate dt.
 > - Tiers re-evaluated on a staggered schedule, with hysteresis.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.3k tok. Read more: ## 3. LOD for Lua players and procedural rigs · ## 5. A scheduler that respects time and events · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.4k tok. Read more: ## 3. LOD for Lua players and procedural rigs · ## 5. A scheduler that respects time and events · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Level of detail for animation means spending evaluation time where the player can see the result, and almost none where they cannot. Done well it is invisible and cuts animation CPU by 3 to 10 times in crowded scenes. Done badly it causes the most confusing bugs in a game: hits that land without a swing, markers that never fire, enemies that teleport into a pose as you approach, and gameplay that differs by distance.
@@ -246,5 +246,10 @@ Animation state replicated to clients should be coarse:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animator Deep Dive]] · [[Replication and Ownership]] · [[Procedural Animation]] · [[Animation Start Here]] · [[AI Animation and Motion from Video]] · [[Interest Management and Per-Player Replication]]
+[[Animator Deep Dive]] · [[Replication and Ownership]] · [[Procedural Animation]] · [[Animation Start Here]] · [[AI Animation and Motion from Video]] · Interest Management and Per-Player Replication
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Engine Gotchas]] · [[Lua Keyframe Player]] · [[Debugging Animation Problems]] · [[Testing Animations in Studio]] · [[Enemy and NPC Animation]] · [[How the Animator Really Behaves]] · [[Snippets - Procedural Motion]] · [[Animation Glossary]]
+<!-- related:end -->

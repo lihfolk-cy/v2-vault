@@ -1,5 +1,5 @@
 ---
-tags: [fundamentals, math, cframe, motor6d, fk]
+tags: [fundamentals, math, cframe, motor6d, fk, type/guide, area/animation, level/beginner, api/Part1, area/math, api/Part0, api/Motor6D]
 ---
 # Motor6D Math and CFrame Composition
 
@@ -9,7 +9,7 @@ tags: [fundamentals, math, cframe, motor6d, fk]
 > - Avoid: Assuming R15 axes on R6 or imported rigs.
 > - Avoid: World-space joint math in huge maps. Symptom: limb jitter far from the origin.
 >
-> Cost: TL;DR ~100 tok · whole note ~4.6k tok. Read more: ## Forward kinematics for a whole rig · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~4.7k tok. Read more: ## Forward kinematics for a whole rig · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 Every animation system, procedural layer, IK solver and offline tool in Roblox comes down to one equation per joint. If you can read and invert it in your head, you can write look-at code, IK, ragdoll hand-offs, retargeting and QA tools; if you cannot, you will multiply in the wrong order and get limbs that rotate about the wrong pivot or in the wrong space. This note derives the equation for all three joint types, shows how to solve it for what you want, and lists the composition rules and numeric traps.
@@ -34,7 +34,7 @@ Same equation with attachments instead of C0/C1:
 Part1.CFrame = Part0.CFrame * Attachment0.CFrame * Transform * Attachment1.CFrame:Inverse()
 -- Part0 = Attachment0.Parent, Part1 = Attachment1.Parent
 ```
-The docs describe the deprecated read-only `C0/C1/Part0/Part1` on AnimationConstraint as aliases of exactly these. With `IsKinematic = true` the parts follow this exactly; with `false` they are pulled toward it by forces (see [[AnimationConstraint and Physically Simulated Characters]]).
+The docs describe the deprecated read-only `C0/C1/Part0/Part1` on [[AnimationConstraint]] as aliases of exactly these. With `IsKinematic = true` the parts follow this exactly; with `false` they are pulled toward it by forces (see [[AnimationConstraint and Physically Simulated Characters]]).
 
 ### Bone
 ```
@@ -206,7 +206,7 @@ Apply it to `RightUpperArm`'s Transform to get `LeftUpperArm`'s. If your rig's f
 - **Accumulating errors.** `t = t * smallDelta` every frame for minutes drifts off orthonormal and can shear. Rebuild from angles or call `CFrame.fromMatrix`/`Orthonormalize()` periodically, or better, never accumulate: recompute from the source each frame.
 - **Reading part CFrames in PreSimulation.** The Animator has written this frame's `Transform`s, but per the docs they are applied to parts in a batched job **after** PreSimulation, just before physics. So `Part.CFrame` read in PreSimulation is last frame's pose. For a look-at that is a harmless one-frame lag; for an IK foot lock it can cause a visible one-frame slip. Compute the chain yourself with FK from the root if you need this frame's values.
 - **Scale.** Translations in `Transform` are in studs of the rig as built. On a model scaled with `Model:ScaleTo` the Animator scales clip offsets by `GetScale()`; your own procedural offsets are not scaled for you. See [[Scale and Animation]].
-- **Translation on rotation-only joints.** A tiny translation in an elbow Transform (from a slerp of CFrames with different positions, or float noise) shows as a gap at the joint at high scale. Strip it: `t.Rotation`.
+- **Translation on rotation-only joints.** A tiny translation in an elbow Transform (from a [[slerp]] of CFrames with different positions, or float noise) shows as a gap at the joint at high scale. Strip it: `t.Rotation`.
 
 ## Worked example: hand to a ledge with layering
 
@@ -242,7 +242,7 @@ A climbing system wants the right hand on a ledge point while the climb clip pla
 ## Related decisions
 
 - [[Math Vectors and CFrames]]: the general CFrame primer this note assumes.
-- [[Rotations Angles and Quaternions]]: Euler order, quaternions and why lerping spins fails.
+- [[Rotations Angles and Quaternions]]: Euler order, [[quaternions]] and why lerping spins fails.
 - [[Dot and Cross Products in Gameplay]]: building aim and look rotations from vectors.
 - [[Luau Performance and Native Codegen]]: speeding up heavy per-frame CFrame maths.
 - [[Replication Rules]]: why `C0` replicates and `Transform` does not.
@@ -252,5 +252,10 @@ A climbing system wants the right hand on a ledge point while the climb clip pla
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Blender Armature and Bone Roll Conventions]] · [[Retargeting Animations Between Rigs]] · [[Enemy Import Axis Fix]] · [[Animation Data from Blender to Roblox]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Game Math Start Here]] · [[Animation Start Here]]
+[[Blender Armature and Bone Roll Conventions]] · [[Retargeting Animations Between Rigs]] · [[Enemy Import Axis Fix]] · [[Animation Data from Blender to Roblox]] · [[Voxel Characters - Proportions Joints and Rigging]] · Game Math Start Here · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Procedural Animation]] · [[Inverse Kinematics]] · [[Animator Deep Dive]] · [[AI Pitfalls - Physics and Animation]] · [[Snippets - Building and Sampling Clips]] · [[R15 Rig Anatomy and Attachments]] · [[Animation Glossary]] · [[Snippets - IK]] · [[Weapon Design Rig Builder]]
+<!-- related:end -->

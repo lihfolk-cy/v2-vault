@@ -1,5 +1,5 @@
 ---
-tags: [world-building, art, textures, decals, memory, performance, images]
+tags: [world-building, art, textures, decals, memory, performance, images, type/guide, area/world, level/intermediate, api/SurfaceAppearance, area/performance]
 ---
 # Textures Decals and Texture Memory
 
@@ -12,7 +12,7 @@ tags: [world-building, art, textures, decals, memory, performance, images]
 > - PBR sets trimmed to the maps that matter.
 > - Kits share trim sheets or atlases; tints instead of duplicate textures.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.1k tok. Read more: ## Decal versus Texture · ## How texture memory works · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.2k tok. Read more: ## Decal versus Texture · ## How texture memory works · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Images reach the 3D world in five ways: **Decals**, **Textures**, a **MeshPart's `TextureID`**, **SurfaceAppearance** maps (see [[Materials MaterialVariants and SurfaceAppearance]]) and **MaterialVariant** maps. They also appear in UI, particles and beams, which share the same memory pool. This note covers the two face-projected image objects (Decal and Texture), how image memory really works, and how to keep a world sharp on desktop without blowing the memory budget on phones.
@@ -194,7 +194,7 @@ end
 | Decal smeared on a mesh | Bounding-box projection | Bake into the UV texture |
 | Frame drops where many transparent decals overlap | Overdraw | Merge into one texture; fewer layers |
 | Memory climbs as players explore | Many unique large textures streaming in | Developer Console Memory, `GraphicsTexture` categories ([[Developer Console and Stats]]) |
-| Stud/tile pattern misaligned between parts | Different part sizes with the same StudsPerTile start at each part's own corner | Align part edges to the tile size, or use `OffsetStuds` |
+| Stud/tile pattern misaligned between parts | Different part sizes with the same [[StudsPerTile]] start at each part's own corner | Align part edges to the tile size, or use `OffsetStuds` |
 
 The Developer Console's memory view and the MicroProfiler show texture memory and render cost; see [[Memory Budgets and Leaks]] and [[MicroProfiler Guide]].
 
@@ -258,5 +258,10 @@ The senior trade-off: texture resolution is where artists and performance most o
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Texel Density]] · [[Materials and Surfaces Start Here]] · [[UV Unwrapping]] · [[Draw Calls]] · [[AI Material and Texture Generation]] · [[Texturing and PBR Baking]]
+[[Texel Density]] · Materials and Surfaces Start Here · UV Unwrapping · Draw Calls · AI Material and Texture Generation · Texturing and PBR Baking
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Draw Calls]] · [[UV Unwrapping]] · [[Parts Unions and MeshParts]] · [[Level of Detail and Model Streaming]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Foliage Props and Scatter]] · [[Environment Art Styles]] · [[Terrain Tools and Terrain API]]
+<!-- related:end -->

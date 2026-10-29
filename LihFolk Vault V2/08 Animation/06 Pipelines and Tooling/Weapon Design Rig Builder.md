@@ -1,5 +1,5 @@
 ---
-tags: [pipeline, weapons, rigging, motor6d, import]
+tags: [pipeline, weapons, rigging, motor6d, import, type/guide, area/animation, level/intermediate, api/Motor6D, area/gameplay, api/Part0, api/Animator]
 ---
 # Weapon Design Rig Builder
 
@@ -12,7 +12,7 @@ tags: [pipeline, weapons, rigging, motor6d, import]
 > - Importer joints destroyed; materials restored.
 > - One Motor6D per hinge with C0 and C1 describing the same world frame.
 >
-> Cost: TL;DR ~170 tok · whole note ~4.3k tok. Read more: ## Route 1: the setup-script import · ## Route 2: your own Blender model (no setup script) · ## Grip placement gotchas · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.4k tok. Read more: ## Route 1: the setup-script import · ## Route 2: your own Blender model (no setup script) · ## Grip placement gotchas · ## Checklist
 <!-- tldr:end -->
 
 How one live action game turned an imported weapon model into an animatable "Design rig": a Handle-rooted Model with one Motor6D per hinge, everything else welded, and its own Idle and Special clips. Two routes are covered: the **setup-script route** (a GLB plus a script describing hinges, materials and per-frame animation) and the **own-Blender-model route** (meshes uploaded individually, placed from a parts JSON). The surrounding workflow is [[Pipeline - New Animated Weapon]]; the player that animates the result is [[Weapon Rig Player]]; general weapon rigging is in [[Custom Rigs - Weapons and Props]].
@@ -56,7 +56,7 @@ The setup embeds three tiny parts at known design-space positions:
 | `RbxRefB` | (0, -0.2875, 0) |
 | `RbxRefC` | (0.037, -0.48, 0) |
 
-After import, their world positions A, B, C are read and an orthonormal basis is built from each triangle: the first axis along A to B, the second the component of A to C perpendicular to it, the third their cross product. The rotation between the two bases, the length ratio of A to B, and A itself define the mapping:
+After import, their world positions A, B, C are read and an orthonormal basis is built from each triangle: the first axis along A to B, the second the component of A to C perpendicular to it, the third their [[cross product]]. The rotation between the two bases, the length ratio of A to B, and A itself define the mapping:
 
 ```lua
 local MA, MB, MC = Vector3.new(0, -0.48, 0), Vector3.new(0, -0.2875, 0), Vector3.new(0.037, -0.48, 0)
@@ -117,7 +117,7 @@ With `C0` and `C1` both describing the same world frame, the Motor6D starts at r
 
 ### Step 6: the clips
 
-The setup carries raw per-frame data: for each frame, per animated hinge, a quaternion `x, y, z, w` and, for hinges flagged with position keys, a position in design units. The generator thins it per joint (offline) and the installer writes it:
+The setup carries raw per-frame data: for each frame, per animated hinge, a [[Quaternions|quaternion]] `x, y, z, w` and, for hinges flagged with position keys, a position in design units. The generator thins it per joint (offline) and the installer writes it:
 
 ```lua
 -- keys[part] = { { t, qx, qy, qz, qw [, px, py, pz] }, ... }   (thinned, rounded)
@@ -294,5 +294,10 @@ A rig where "0 of N joints moved" usually means a naming mismatch between clip p
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Rigs and Joints]] · [[Animation Data from Blender to Roblox]] · [[Modeling Weapons and Props]] · [[Authoring Clips in Code]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Skeleton Library]] · [[Animation Start Here]]
+[[Rigs and Joints]] · [[Animation Data from Blender to Roblox]] · [[Modeling Weapons and Props]] · [[Authoring Clips in Code]] · Voxel Characters - Proportions Joints and Rigging · Skeleton Library · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Pipeline - Importing Animated Enemies]] · [[Snippets - Building and Sampling Clips]] · [[Accessories and Armor That Follow Animation]] · [[Bones and Skinned Meshes]] · [[Blender Armature and Bone Roll Conventions]] · [[Baked Clip Stubs and Archiving]] · [[Clip Buffer Format]] · [[Weapon and Combat Animation]]
+<!-- related:end -->

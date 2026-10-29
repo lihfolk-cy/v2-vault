@@ -1,5 +1,5 @@
 ---
-tags: [rigging, blender, skinning, weights, deformation]
+tags: [rigging, blender, skinning, weights, deformation, type/guide, area/animation, level/intermediate, api/RigidConstraint, area/modeling]
 ---
 # Weight Painting and Skinning for Roblox
 
@@ -12,7 +12,7 @@ tags: [rigging, blender, skinning, weights, deformation]
 > - Preserve Volume off while judging.
 > - Clean, Limit Total 4, Normalize All.
 >
-> Cost: TL;DR ~130 tok · whole note ~3.6k tok. Read more: ## 4. Painting workflow in Blender · ## 7. Making joints deform well without correctives · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.7k tok. Read more: ## 4. Painting workflow in Blender · ## 7. Making joints deform well without correctives · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Skinning decides whether a perfectly keyed animation looks good. A clean clip on bad weights reads as rubber elbows, collapsing wrists and shoulders that cave in; the animator gets blamed. This note covers what Roblox does with your weights, the hard limits, how to paint and generate weights in Blender, how to make joints deform well without the corrective machinery Roblox lacks, and how to test.
@@ -20,7 +20,7 @@ Skinning decides whether a perfectly keyed animation looks good. A clean clip on
 ## 1. What Roblox does with weights
 
 - A skinned mesh imports as **one MeshPart plus a tree of `Bone` instances**. Each vertex stores up to **4 bone influences** (Roblox docs: "a maximum of 4 bones or joints" per vertex, for meshes, bodies and layered accessories alike).
-- At runtime each vertex is moved by the weighted blend of its bones' transforms. Treat it as **linear blend skinning** (the standard game-engine method; Roblox does not document dual-quaternion skinning). Linear blending is why twisting a forearm 180 degrees pinches it to a point ("candy wrapper") and why a bent elbow loses volume.
+- At runtime each vertex is moved by the weighted blend of its bones' transforms. Treat it as **linear blend skinning** (the standard game-engine method; Roblox does not document dual-[[Quaternions|quaternion]] skinning). Linear blending is why twisting a forearm 180 degrees pinches it to a point ("candy wrapper") and why a bent elbow loses volume.
 - Weights are baked into the mesh asset. **You cannot edit weights in Studio.** Every weight fix is a Blender round trip and a re-import, so get them right before the batch.
 - Roblox docs rules: no influences on the **root** bone or joint; keep influences symmetric where possible; freeze bone transforms (scale 1, rotation 0) and keep the root at the origin.
 - Bones with no influence are **removed on import** unless "Keep Zero Influence Bones" is enabled in the importer (Roblox docs, File General settings). That matters for socket bones that only carry props (section 6).
@@ -177,5 +177,10 @@ Some poses cannot be skinned well with 4 linear influences (wrist twist past 120
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skinning Weights]] · [[Topology and Edge Flow]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Organic and Creature Modeling]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Layered Clothing Creation Workflow]] · [[Animation Start Here]]
+[[Skinning Weights]] · Topology and Edge Flow · Modeling Characters for R15 and Custom Rigs · Organic and Creature Modeling · Voxel Characters - Proportions Joints and Rigging · Layered Clothing Creation Workflow · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Topology and Edge Flow]] · [[Modeling Characters for R15 and Custom Rigs]] · [[3D Importer Settings Reference]] · [[Animation Data from Blender to Roblox]] · [[Retargeting Animations Between Rigs]] · [[Importing Models and Rigs]] · [[R15 Rig Anatomy and Attachments]] · [[Pipeline - Importing Animated Enemies]] · [[Rigs and Joints]] · [[Custom Characters and StarterCharacter]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [ai, agents, ai-skill, performance, profiling]
+tags: [ai, agents, ai-skill, performance, profiling, type/guide, area/performance, level/intermediate, area/ai]
 ---
 # Skill - Roblox Performance Audit
 
@@ -42,5 +42,5 @@ The MicroProfiler shortcut (Ctrl+F6 or Ctrl+Alt+F6) and the server memory guidan
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Frame Budget]] · [[Skill - Roblox Vault Research]] · [[Skill - Roblox DataStore Safety]] · [[Skill - Roblox UI Builder]] · [[Debugging Start Here]] · [[Network Performance]]
+[[Frame Budget]] · [[Skill - Roblox Vault Research]] · [[Skill - Roblox DataStore Safety]] · [[Skill - Roblox UI Builder]] · Debugging Start Here · Network Performance
 <!-- auto-links:end -->

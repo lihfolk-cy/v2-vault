@@ -1,5 +1,5 @@
 ---
-tags: [luau, cookbook, players, characters, humanoid, recipes]
+tags: [luau, cookbook, players, characters, humanoid, recipes, type/reference, area/scripting, level/intermediate, api/Humanoid, api/CharacterAdded, api/SetCore]
 ---
 # Cookbook - Players and Characters
 
@@ -12,7 +12,7 @@ tags: [luau, cookbook, players, characters, humanoid, recipes]
 > - Every `CharacterAdded` handler also handles an existing character.
 > - Every `WaitForChild` that may never resolve has a timeout.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.3k tok. Read more: ## 3. Keep per-player state and clean it up on leave · ## Nuances and edge cases · ## Common mistakes across these recipes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.4k tok. Read more: ## 3. Keep per-player state and clean it up on leave · ## Nuances and edge cases · ## Common mistakes across these recipes · ## Checklist
 <!-- tldr:end -->
 
 Short, self-contained recipes for the player and character code every game writes. Each recipe gives the problem, the code, why it works, and the pitfall that bites people. All code is `--!strict` Luau using modern APIs (`task.*`, `PivotTo`, attributes). It is reviewed, not run: paste it into a fresh place and test it before you build on it. For the reasoning behind these patterns read [[Characters and Humanoids]], [[Humanoid States and Animation]], [[Custom Characters and StarterCharacter]] and [[Events Signals and Connections]].
@@ -460,5 +460,10 @@ end
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Debugging Race Conditions and Yield Order]] · [[Links - Humanoids and character controllers]] · [[Cookbook - Data and Saving]] · [[Obby Checkpoints and Stage Saves End to End]] · [[Links - Checkpoints and spawning]] · [[Round-Based Minigame Loop End to End]]
+[[Debugging Race Conditions and Yield Order]] · Links - Humanoids and character controllers · [[Cookbook - Data and Saving]] · Obby Checkpoints and Stage Saves End to End · Links - Checkpoints and spawning · Round-Based Minigame Loop End to End
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Character Select and Class Systems with Different Rigs]] · [[Cookbook - UI]] · [[Snippets - Ragdoll]] · [[AI Pitfalls - Networking and Security]] · [[Cookbook - Tables Strings and Time]] · [[Downed, Revive and Bleed-Out States]]
+<!-- related:end -->

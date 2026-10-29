@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, math, rng, game-design, analytics]
+tags: [core-concept, math, rng, game-design, analytics, type/reference, area/design, level/beginner, area/math]
 ---
 # Variance
 
@@ -10,7 +10,7 @@ tags: [core-concept, math, rng, game-design, analytics]
 > - Variance shrinks with repetition. Over N independent rolls the average's standard deviation falls with the square root of N.
 > - Variance is a tool for pacing. Low variance for the core income (players can plan), high variance for bonus moments (players...
 >
-> Cost: TL;DR ~130 tok · whole note ~840 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~910 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Variance** measures how spread out random outcomes are around their average. Its square root, the **standard deviation**, is in the same units as the outcome. Two drop tables can have the same [[Expected Value]] and wildly different variance: one pays 50 coins every time, the other pays 0 most of the time and 5,000 rarely.
@@ -55,5 +55,10 @@ Related concepts: [[Expected Value]], [[Pity Timer]], [[Retention Cohorts]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Economy Design Start Here]] · [[Core Concepts Start Here]] · [[Deterministic Simulation]] · [[RNG Drops and Luck Systems]] · [[Balancing with Spreadsheets and Data]] · [[Procedural Generation Start Here]]
+[[Economy Design Start Here]] · [[Core Concepts Start Here]] · [[Deterministic Simulation]] · RNG Drops and Luck Systems · Balancing with Spreadsheets and Data · Procedural Generation Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Expected Value]] · [[Click-Through Rate]] · [[Session Length]] · [[Telemetry Events]] · [[Onboarding Funnel]] · [[Core Loop]] · [[Faucets and Sinks]]
+<!-- related:end -->

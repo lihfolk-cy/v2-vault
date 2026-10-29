@@ -1,5 +1,5 @@
 ---
-tags: [fundamentals, rigging, motor6d, joints]
+tags: [fundamentals, rigging, motor6d, joints, type/guide, area/animation, level/beginner, api/Motor6D, api/AnimationConstraint, api/Part1]
 ---
 # Rigs and Joints
 
@@ -9,7 +9,7 @@ tags: [fundamentals, rigging, motor6d, joints]
 > - Avoid: `IsA("Motor6D")` only -> Accept AnimationConstraint
 > - Avoid: Animating `C0` every frame -> Write `Transform` in PreSimulation
 >
-> Cost: TL;DR ~100 tok · whole note ~4.1k tok. Read more: ## The three animatable joints · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~4.2k tok. Read more: ## The three animatable joints · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 An animation never moves parts directly. It writes a local offset into **joints**, and the joints position the parts. So the first question about any rig is: what kind of joints does it have, what are they named, and which part is the parent of which? Get that wrong and clips play silently with nothing moving, or move the wrong limb, or work on your test dummy and break on players.
@@ -21,7 +21,7 @@ This note covers the three joint types, the R6 and R15 joint tables, how the Ani
 | Joint | Class hierarchy | Used by | Rest pose defined by | Animated through |
 |---|---|---|---|---|
 | `Motor6D` | JointInstance > Motor > Motor6D | Classic R6/R15, part rigs, weapon hinges, doors, vehicles | `C0` (in Part0's space) and `C1` (in Part1's space) | `Transform` (hidden, not replicated) |
-| `AnimationConstraint` | Constraint > AnimationConstraint | R15 avatars with Avatar Joint Upgrade (default for new experiences); physically simulated characters | `Attachment0.CFrame` and `Attachment1.CFrame` | `Transform` |
+| `AnimationConstraint` | Constraint > [[AnimationConstraint]] | R15 avatars with Avatar Joint Upgrade (default for new experiences); physically simulated characters | `Attachment0.CFrame` and `Attachment1.CFrame` | `Transform` |
 | `Bone` | Attachment > Bone | Skinned meshes | the Bone's own `CFrame` relative to its parent | `Transform` (not replicated) |
 
 Other joints (`Weld`, `WeldConstraint`, `RigidConstraint`, `BallSocketConstraint`, `HingeConstraint`) are **not** animated by the Animator. A part attached by a Weld follows its parent rigidly; a part on a hinge constraint is moved by physics.
@@ -99,7 +99,7 @@ R6 has no elbows, knees, wrists or ankles: one rigid part per limb. Its C0/C1 fr
 | Clip data | Binds to |
 |---|---|
 | KeyframeSequence `Pose` named X under parent Pose P | The joint whose Part1 is named X (and whose Part0 is P's part). For bones: the Bone named X. |
-| CurveAnimation `Folder` named X | Same rule, folder nesting mirrors the joint tree. |
+| [[CurveAnimation]] `Folder` named X | Same rule, folder nesting mirrors the joint tree. |
 | `Motor6D.ChildName` / `ParentName` | Read-only mirrors of Part1.Name / Part0.Name; the docs state the animation system matches joints by these names. |
 
 Consequences:
@@ -217,5 +217,10 @@ end
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Accessories and Armor That Follow Animation]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Skeleton Library]] · [[Animation Editor Workflow]] · [[Character and Creature Pipeline]] · [[Skinning Weights]] · [[Animation Start Here]]
+[[Accessories and Armor That Follow Animation]] · [[Voxel Characters - Proportions Joints and Rigging]] · Skeleton Library · [[Animation Editor Workflow]] · Character and Creature Pipeline · Skinning Weights · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Skeleton Library]] · [[Retargeting Animations Between Rigs]] · [[AI Pitfalls - Physics and Animation]] · [[Animator Deep Dive]] · [[Procedural Animation]] · [[Snippets - Ragdoll]] · [[Blender Armature and Bone Roll Conventions]] · [[Custom Characters and StarterCharacter]] · [[Ragdolls and Physics-Based Animation]] · [[Snippets - Procedural Motion]]
+<!-- related:end -->

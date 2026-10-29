@@ -1,5 +1,5 @@
 ---
-tags: [case-study, enemies, ai, combat, migration, art-pipeline, production]
+tags: [case-study, enemies, ai, combat, migration, art-pipeline, production, type/case-study, area/production, level/intermediate, area/monetization]
 ---
 # Case Study: Enemy Roster Rebuild
 
@@ -12,7 +12,7 @@ tags: [case-study, enemies, ai, combat, migration, art-pipeline, production]
 > - Enemy data, models and clips independent of level geometry.
 > - Zone-by-zone ownership flags; old path intact until the new one is play-tested.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.9k tok. Read more: ## Migration: the strangler pattern · ## Tuning: size, density, damage, tempo · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.0k tok. Read more: ## Migration: the strangler pattern · ## Tuning: size, density, damage, tempo · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Enemies are where combat, AI, art, animation, economy and performance meet, so rebuilding them touches everything. This case study follows one live action game through a complete replacement of its enemy roster: from an old data-driven system living inside one oversized combat script, to a new enemy service with roles and telegraphs, migrated zone by zone while the game kept working, then tuned (size, density, damage, tempo) and finally given an entirely new look in one day without touching the AI.
@@ -214,5 +214,10 @@ The enemy clips themselves (well over a thousand across dozens of kits) were bak
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Genre Playbook - Combat and RPG]] · [[Boss Fight Design Patterns]] · [[Anticipation]] · [[Character and Creature Pipeline]] · [[Snippets - Enemy Client Animator]] · [[Hit Reactions Stagger and Hit-Stop]]
+[[Genre Playbook - Combat and RPG]] · Boss Fight Design Patterns · Anticipation · Character and Creature Pipeline · Snippets - Enemy Client Animator · Hit Reactions Stagger and Hit-Stop
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Case Study - Instance Cleanup and Place Size]] · [[Release Process and Rollbacks]] · [[Team Roles and Workflows]] · [[Case Study - Fast Join and Deferred Loading]] · [[Working with AI Assistants in Studio]] · [[Case Study - Phone UI Overhaul]] · [[Documentation and Knowledge Bases]] · [[Case Study - Building LihFolk V2 with AI Agents]]
+<!-- related:end -->

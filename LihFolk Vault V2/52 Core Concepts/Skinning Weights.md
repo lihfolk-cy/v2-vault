@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, animation, rigging, 3d-modeling]
+tags: [core-concept, animation, rigging, 3d-modeling, type/reference, area/animation, level/beginner, area/modeling]
 ---
 # Skinning Weights
 
@@ -10,7 +10,7 @@ tags: [core-concept, animation, rigging, 3d-modeling]
 > - Weights must sum to 1. Unnormalised weights shrink or inflate vertices when bones move.
 > - Joints need edge loops. No weight painting saves a joint with one edge loop at the elbow.
 >
-> Cost: TL;DR ~130 tok · whole note ~910 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~970 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Skinning weights** say how strongly each bone moves each vertex of a skinned mesh. A vertex on the forearm might be 100 percent forearm bone; a vertex at the elbow might be 50 percent upper arm and 50 percent forearm. The weights are painted or computed in a modelling tool and exported with the mesh.
@@ -52,5 +52,10 @@ Related concepts: [[Triangle Budget]], [[Texel Density]], [[Anticipation]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Voxel Characters - Proportions Joints and Rigging]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[3D Importer Settings Reference]] · [[Snippets - IK]] · [[Accessories and Armor That Follow Animation]] · [[Facial Animation and Dynamic Heads]] · [[Core Concepts Start Here]]
+[[Voxel Characters - Proportions Joints and Rigging]] · Matching a Concept Sheet - Boss Creature Case Study · 3D Importer Settings Reference · Snippets - IK · Accessories and Armor That Follow Animation · Facial Animation and Dynamic Heads · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Hit-Stop]] · [[Tween vs Spring]] · [[Draw Calls]] · [[Thumbnail Contrast]] · [[Instance Count]] · [[Easing]] · [[Pity Timer]] · [[Feature Flags]]
+<!-- related:end -->

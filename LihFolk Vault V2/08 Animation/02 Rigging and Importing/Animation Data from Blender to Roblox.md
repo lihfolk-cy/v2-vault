@@ -1,5 +1,5 @@
 ---
-tags: [blender, export, keyframesequence, python, pipeline, clips]
+tags: [blender, export, keyframesequence, python, pipeline, clips, type/guide, area/animation, level/intermediate, api/Animator, area/data, api/KeyframeSequence]
 ---
 # Animation Data from Blender to Roblox
 
@@ -9,7 +9,7 @@ tags: [blender, export, keyframesequence, python, pipeline, clips]
 > - Avoid: Root travel keyed on the top pose -> Key the first child
 > - Avoid: Axis map applied twice, or not at all -> Calibration clip; one conversion in one place
 >
-> Cost: TL;DR ~110 tok · whole note ~4.8k tok. Read more: ## 3. The Blender exporter · ## 4. The Studio builder · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~4.9k tok. Read more: ## 3. The Blender exporter · ## 4. The Studio builder · ## Common mistakes
 <!-- tldr:end -->
 
 There are three ways to get motion authored in Blender into a Roblox clip: let the 3D Importer bring the animations, import a file in the Animation Editor, or export the transforms yourself and build the KeyframeSequence (or a compact buffer) in Studio. The first two are quick and come with quirks you cannot control. The third is more work once and then gives you exact markers, names, partial clips, thinning, easing and root handling for every clip after. This note covers all three, with a complete exporter and builder, the maths that makes them correct, and the measured pitfalls from one production game.
@@ -52,7 +52,7 @@ For a joint whose frame is world-aligned at rest, the parent's joint frame at po
 Transform = Q_parent^-1 * Q_child          (in Blender axes)
 ```
 
-Then convert axes. With the conventions in [[Blender Armature and Bone Roll Conventions]] (character faces -Y in Blender), Blender `(x, y, z)` maps to Roblox `(-x, z, y)`. That map is a proper rotation, so a quaternion `(w, x, y, z)` converts to `(w, -x, z, y)` and a vector `(x, y, z)` to `(-x, z, y)`. Bone roll does not matter at all in this mode, which is why it is the most forgiving.
+Then convert axes. With the conventions in [[Blender Armature and Bone Roll Conventions]] (character faces -Y in Blender), Blender `(x, y, z)` maps to Roblox `(-x, z, y)`. That map is a proper rotation, so a [[Quaternions|quaternion]] `(w, x, y, z)` converts to `(w, -x, z, y)` and a vector `(x, y, z)` to `(-x, z, y)`. Bone roll does not matter at all in this mode, which is why it is the most forgiving.
 
 Translations: export them only where the clip means them (the root child for hip travel, slide joints such as pistons). For the root child under a static `HumanoidRootPart`, the Transform translation is simply the joint's displacement from rest in model axes. Limb translations are a smell: the reference project wrote arm poses rotation-only because any arm translation over 0.05 studs "reads as a detached shoulder".
 
@@ -256,7 +256,7 @@ Thin **per joint** (a still joint loses all its keys while a busy one keeps many
 
 ### Interpolation changes when you thin
 
-The Animator interpolates rotations by quaternion nlerp only when all keyframes are evenly spaced (marker-only keyframes count) and every key is Linear; otherwise it linearly blends rotation vectors measured from rest (measured; up to about 10 degrees apart from slerp on big turns far from rest). Dense, evenly spaced samples play the same either way. A thinned clip has uneven spacing, so:
+The Animator interpolates rotations by quaternion nlerp only when all keyframes are evenly spaced (marker-only keyframes count) and every key is Linear; otherwise it linearly blends rotation vectors measured from rest (measured; up to about 10 degrees apart from [[slerp]] on big turns far from rest). Dense, evenly spaced samples play the same either way. A thinned clip has uneven spacing, so:
 
 - Check the thinned result against the dense one **with the Animator's actual model**, not with slerp. The project switched every offline tool to a rotation-vector model and then matched the Animator to within 0.24 degrees.
 - Keep every key-to-key segment under about 120 degrees (the project's flip guard), and never write a key exactly 180 degrees from its neighbour: the Animator picks the direction inconsistently.
@@ -306,5 +306,10 @@ Clips do not have to exist as Pose instances at all. The reference project shipp
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Moon Animator and Third-Party Tools]] · [[Open Questions]] · [[Importing Models and Rigs]] · [[Weapon Design Rig Builder]] · [[AI Animation and Motion from Video]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Animation Start Here]]
+[[Moon Animator and Third-Party Tools]] · [[Open Questions]] · [[Importing Models and Rigs]] · [[Weapon Design Rig Builder]] · [[AI Animation and Motion from Video]] · Modeling Characters for R15 and Custom Rigs · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Weapon Rig Player]] · [[Pipeline - Importing Animated Enemies]] · [[Engine Gotchas]] · [[Animation Editor Advanced]] · [[3D Importer Settings Reference]] · [[Animation Glossary]] · [[Performance and Memory]] · [[Animation Editor Workflow]]
+<!-- related:end -->

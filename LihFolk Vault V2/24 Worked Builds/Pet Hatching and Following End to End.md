@@ -1,5 +1,5 @@
 ---
-tags: [worked-build, pets, eggs, rng, inventory, datastore, ui, luau, simulators]
+tags: [worked-build, pets, eggs, rng, inventory, datastore, ui, luau, simulators, type/guide, area/gameplay, level/intermediate]
 ---
 # Pet Hatching and Following End to End
 
@@ -12,7 +12,7 @@ tags: [worked-build, pets, eggs, rng, inventory, datastore, ui, luau, simulators
 > - Every pet Kind in odds tables has a model in `ReplicatedStorage.PetModels`
 > - Odds labels come from `PetConfig.OddsPercent`
 >
-> Cost: TL;DR ~160 tok · whole note ~10.7k tok. Read more: ## 4. Server modules: PlayerStore and RateLimit · ## 5. PetService (server) · ## 10. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~160 tok · whole note ~10.8k tok. Read more: ## 4. Server modules: PlayerStore and RateLimit · ## 5. PetService (server) · ## 10. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 This note builds the pet system that most simulators and collection games share, from an empty place: eggs in the world with odds shown above them, server-side hatching with weighted random rolls, a saved pet inventory with unique ids, equip and unequip with a cap, an "equip best" button, a passive income boost from equipped pets, and pets that follow every player smoothly, rendered on each client so the server never simulates them.
@@ -1143,5 +1143,10 @@ More in [[Economy Exploits - Dupes Races and Purchase Abuse]] and [[Threat Model
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Pity Timer]] · [[Case Study - Adopt Me]] · [[Roblox Policies Ratings and Compliance]] · [[Expected Value]] · [[Genre Playbook - RNG and Collection Games]] · [[Economy Design Start Here]]
+[[Pity Timer]] · Case Study - Adopt Me · Roblox Policies Ratings and Compliance · Expected Value · Genre Playbook - RNG and Collection Games · Economy Design Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Quest Chain System End to End]] · [[LihFolk Systems Library]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[Melee Combat System End to End]] · [[Codes Redemption System End to End]] · [[Daily Rewards System End to End]] · [[Global Leaderboards End to End]] · [[Weekend Build - Survival Gather, Craft and Place]]
+<!-- related:end -->

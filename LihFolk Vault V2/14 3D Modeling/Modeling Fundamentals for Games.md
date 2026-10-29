@@ -1,5 +1,5 @@
 ---
-tags: [modeling, 3d, fundamentals, meshes, budgets, topology]
+tags: [modeling, 3d, fundamentals, meshes, budgets, topology, type/guide, area/modeling, level/beginner]
 ---
 # Modeling Fundamentals for Games
 
@@ -12,7 +12,7 @@ tags: [modeling, 3d, fundamentals, meshes, budgets, topology]
 > - Blockout at final scale beside a character proxy, checked in Studio.
 > - Silhouette readable as a filled black shape.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.8k tok. Read more: ## 1. What a mesh is to the engine · ## 3. Budgets that shipped · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.9k tok. Read more: ## 1. What a mesh is to the engine · ## 3. Budgets that shipped · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A game model is not a sculpture. It is a set of triangles that a phone GPU must draw 30 to 60 times a second, next to hundreds of other models, under a camera that is usually 20 to 200 studs away. Everything in this section follows from that sentence: why triangle counts matter more than polygon counts, why a silhouette beats surface detail, why a pivot in the wrong place costs a programmer a day, and why "it looks fine in Blender" is not a test.
@@ -52,7 +52,7 @@ A vertex on the GPU is a unique combination of position, normal, UV and colour. 
 A normal is the direction a surface faces. Two kinds matter:
 
 - **Face normals**: one per face, used for flat shading and to decide which side is the front.
-- **Vertex (split) normals**: what the renderer interpolates across a face for smooth shading. Blender can also store **custom normals** (written by Weighted Normal, by Bevel's Harden Normals, or by hand), and Roblox's importer keeps the normals you export.
+- **Vertex (split) normals**: what the renderer interpolates across a face for smooth shading. Blender can also store **custom normals** (written by [[Weighted Normals|Weighted Normal]], by Bevel's Harden Normals, or by hand), and Roblox's importer keeps the normals you export.
 
 Two failure modes recur constantly:
 
@@ -177,7 +177,7 @@ In Roblox the pivot of an imported MeshPart (and the model's `WorldPivot`) is wh
 | Props that sit on the ground | Bottom centre of the footprint | Front toward -Y |
 | Doors, lids, hinged parts | On the hinge axis | Hinge axis along a world axis |
 | Weapons | Grip centre | Blade along +Z in Blender; see [[Modeling Weapons and Props]] |
-| Modular kit pieces | A grid corner or bottom centre on the grid | See [[Modular Environment Kits]] |
+| [[Modular Kits\|Modular kit]] pieces | A grid corner or bottom centre on the grid | See [[Modular Environment Kits]] |
 | Spinning parts | Centre of rotation | Spin axis along a world axis |
 
 The Studio importer has two pivot options that interact with this (Docs): *Set Pivot to Scene Origin* (on by default; the model's pivot becomes the scene origin) and *Use Imported Pivot* (on by default; each object keeps its own origin as its pivot). If you set origins in Blender, keep both on and your pivots arrive intact. The reference project also found that an Open Cloud upload add-on wrote pivot offsets into uploaded meshes, so parts came in rotated until those offsets were cleared (Measured).
@@ -247,5 +247,10 @@ Always check models in the game's real lighting and at the real camera distance,
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Clean Stylised Shading - Weighted and Custom Normals]] · [[AI 3D Model Generation Outside Roblox]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Bevels Chamfers and Edge Highlights Without Textures]]
+[[Clean Stylised Shading - Weighted and Custom Normals]] · AI 3D Model Generation Outside Roblox · Meshing Voxels for Roblox - Greedy Meshing and Export · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · Faceted Low-Poly - Flat Normals and Facet Size · Bevels Chamfers and Edge Highlights Without Textures
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Mesh Optimization for Mobile]] · [[AI 3D Model Generation Outside Roblox]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Hand-Painted and Stylized Texturing]] · [[UGC Avatar Items and Accessories]] · [[Curve-Based Modelling in Blender for Roblox]] · [[Procedural Model Kits - Lessons]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]]
+<!-- related:end -->

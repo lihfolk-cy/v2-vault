@@ -1,5 +1,5 @@
 ---
-tags: [systems, camera, cutscene, cinematics, ui]
+tags: [systems, camera, cutscene, cinematics, ui, type/guide, area/animation, level/intermediate, api/UserInputService, area/ui, api/BindToRenderStep, api/Camera]
 ---
 # Cameras and Cutscenes
 
@@ -9,7 +9,7 @@ tags: [systems, camera, cutscene, cinematics, ui]
 > - HUD missing after a cutscene: No restore on an error path -> Watchdog and restore on every exit
 > - Camera stuck Scriptable after death: Restore not hooked to Died / CharacterRemoving -> Hook both
 >
-> Cost: TL;DR ~120 tok · whole note ~4.2k tok. Read more: ## Cutscenes · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~120 tok · whole note ~4.3k tok. Read more: ## Cutscenes · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 The camera is part of the animation. A swing with a 3-frame camera kick reads twice as heavy; an ultimate shot from a low three-quarter angle reads twice as big. But the camera is also the player's main tool for playing the game, so every camera effect is a negotiation over who owns it. This note covers the two ownership models (additive and Scriptable), how to build a cutscene system that always gives the camera back, framing rules, and the Studio gotchas. Shake and short effects are in [[Camera Shake and Camera FX]]; ultimates in [[Cinematic Ultimates]]. Numbers come from one live action game (the reference project).
@@ -247,5 +247,10 @@ The senior trade-off: cinematic camera work sells moments, but every second of t
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Cameras]] · [[Safe Areas and Insets]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] · [[Modelling to the Roblox Camera and Player Scale]] · [[Safe Area]] · [[HUD Design]] · [[Animation Start Here]]
+[[Links - Cameras]] · Safe Areas and Insets · Side-Scroller in 3D - Locking Camera and Movement to a Plane · Modelling to the Roblox Camera and Player Scale · Safe Area · HUD Design · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Layering Camera Feedback on the Default Camera]] · [[Ability Kits Architecture]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]] · [[VFX Timing with Animation]] · [[Hit Reactions Stagger and Hit-Stop]] · [[Emotes and Social Animation]] · [[Weapon and Combat Animation]] · [[Custom Locomotion Controller Design]] · [[Enemy and NPC Animation]]
+<!-- related:end -->

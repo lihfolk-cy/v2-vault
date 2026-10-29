@@ -1,5 +1,5 @@
 ---
-tags: [modeling, voxel, characters, proportions, rigging, motor6d, r15, joints, animation, blender, luau]
+tags: [modeling, voxel, characters, proportions, rigging, motor6d, r15, joints, animation, blender, luau, type/guide]
 ---
 # Voxel Characters - Proportions Joints and Rigging
 
@@ -12,7 +12,7 @@ tags: [modeling, voxel, characters, proportions, rigging, motor6d, r15, joints, 
 > - Face at least 6, ideally 8 or more cells across; limbs 2 or more cells thick.
 > - Joint shape chosen per joint; rotation limits noted for animators.
 >
-> Cost: TL;DR ~210 tok · whole note ~4.5k tok. Read more: ## 2. Joint shapes that hide the gap · ## 5. Getting joints from Blender to Studio · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~210 tok · whole note ~4.6k tok. Read more: ## 2. Joint shapes that hide the gap · ## 5. Getting joints from Blender to Studio · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A voxel character has to solve a problem that smooth characters do not: cubes do not bend. Every joint is a place where two blocks rotate against each other, and every rotation either opens a gap, pushes one block through another, or does both. Good voxel characters are designed around their joints from the first cell. They also have to choose a rigging route early, because Roblox offers three (a part rig with Motor6Ds, the 15-part R15 layout, or a single skinned mesh with bones) and each one suits voxels differently. [[Voxel and Blocky Modeling]] lists archetype proportions for enemies and companions; [[Modeling Characters for R15 and Custom Rigs]] and [[Rigging in Blender]] cover rigging in general. This note joins them for blocky characters specifically: head-to-body ratios that read at Roblox distances, joint shapes that hide gaps, where to put pivots on a grid, which rig route to pick, and a worked example built to R15 so the default animations work.
@@ -139,7 +139,7 @@ Run it with the model in its rest pose, every part anchored, then unanchor all b
 
 Goal: a toy-proportioned blocky character, 5 studs tall, 0.25-stud cells (20 cells tall), that uses the default R15 animations.
 
-1. **Block out the proportions** in MagicaVoxel: head 8 x 8 x 8 cells (2 studs, 40 percent of height, chibi-to-toy), torso 8 wide x 6 tall x 4 deep, legs 4 x 6 x 4 each, arms 3 x 6 x 3 each. Arms are odd-width; decide now that arm pivots sit on cell centres and leg pivots on cell edges, and record both.
+1. **Block out the proportions** in [[MagicaVoxel]]: head 8 x 8 x 8 cells (2 studs, 40 percent of height, chibi-to-toy), torso 8 wide x 6 tall x 4 deep, legs 4 x 6 x 4 each, arms 3 x 6 x 3 each. Arms are odd-width; decide now that arm pivots sit on cell centres and leg pivots on cell edges, and record both.
 2. **Split into R15 parts.** R15 needs Head, UpperTorso, LowerTorso, and Upper, Lower and Hand parts for each arm and leg. Split the 6-cell torso into a 4-cell UpperTorso and 2-cell LowerTorso; split each limb 3 / 2 / 1 cells into upper, lower and hand or foot. The default animations bend elbows and knees, so give those joints cap shapes one cell wider than the limb, or accept small gaps.
 3. **Make each part a separate model** in the voxel scene so each exports as its own object.
 4. **Import into Blender** (greedy meshing, material per colour or palette texture), scale by 0.25, apply transforms.
@@ -176,7 +176,7 @@ Goal: a toy-proportioned blocky character, 5 studs tall, 0.25-stud cells (20 cel
 - [ ] Pivot rule for odd and even widths written down; left and right mirrored numerically.
 - [ ] Rig route chosen: R15 layout, part rig, rigid-skinned mesh, or none.
 - [ ] Joints built from a manifest with exact C0 and C1, or importer behaviour tested on one character.
-- [ ] HumanoidRootPart, Humanoid and HipHeight set for playable characters.
+- [ ] HumanoidRootPart, Humanoid and [[HipHeight]] set for playable characters.
 - [ ] Default or custom clips checked for intersections at the extremes of motion.
 
 ## Related
@@ -185,5 +185,10 @@ Goal: a toy-proportioned blocky character, 5 studs tall, 0.25-stud cells (20 cel
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skinning Weights]] · [[Organic and Creature Modeling]] · [[Voxel Modelling Start Here]] · [[Posing and Silhouettes]] · [[Rigs and Joints]] · [[Two-Bone IK Math]]
+[[Skinning Weights]] · Organic and Creature Modeling · [[Voxel Modelling Start Here]] · Posing and Silhouettes · Rigs and Joints · Two-Bone IK Math
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Organic and Creature Modeling]] · [[Rigs and Joints]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Voxel Props Environments and Modular Tiles]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Voxel Palettes - Ramps Hue Shifting and Limits]]
+<!-- related:end -->

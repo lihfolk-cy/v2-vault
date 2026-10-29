@@ -1,5 +1,5 @@
 ---
-tags: [fundamentals, humanoid, states, locomotion]
+tags: [fundamentals, humanoid, states, locomotion, type/guide, area/animation, level/beginner, api/Humanoid, api/HipHeight]
 ---
 # Humanoid States and Animation
 
@@ -9,7 +9,7 @@ tags: [fundamentals, humanoid, states, locomotion]
 > - Avoid: Choosing walk vs idle by state -> Speed thresholds with hysteresis
 > - Avoid: `SetStateEnabled` on the server for a player -> Run it on the client
 >
-> Cost: TL;DR ~100 tok · whole note ~3.0k tok. Read more: ## The states · ## Building animation on states: patterns that work · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~3.1k tok. Read more: ## The states · ## Building animation on states: patterns that work · ## Common mistakes
 <!-- tldr:end -->
 
 The `Humanoid` runs a state machine (running, jumping, falling, climbing, swimming, seated and so on) and fires events as it changes state. Character animation is mostly a function of that state plus speed: the default Animate script is little more than a state-to-clip table (see [[The Default Animate Script]]), and most custom locomotion systems start the same way. This note documents every state, every state event with its real semantics, the ownership rules that decide where state code must run, and the traps that make animations lag, stick or fire twice.
@@ -118,7 +118,7 @@ A Humanoid on the ground brakes toward its move input. If you launch a dash with
 `Humanoid.HipHeight` is how far the Humanoid holds the root above the floor (R15: total height = `0.5 * RootPart.Size.Y + HipHeight`). Clips do not change it. A crouch that lowers `LowerTorso` by 2 studs lowers the body relative to a root that stays at hip height, so the feet go 2 studs into the floor unless the legs bend to compensate. Rules from one project's authoring specs:
 - Keep root (LowerTorso) drops shallow: about -1.0 stud at most at that project's scale; deeper drops pushed feet 1-2.5 studs through the floor.
 - If a pose must go low (kneel, slam), bend the knees in the clip to keep feet on the ground, or use foot IK at runtime (see [[Foot Placement and Ground IK]]).
-- For NPCs, a wrong `HipHeight` makes every clip float or sink: one game fixed HipHeight on 17 enemy templates after ground-fitting their death clips.
+- For NPCs, a wrong `HipHeight` makes every clip float or sink: one game fixed [[HipHeight]] on 17 enemy templates after ground-fitting their death clips.
 
 ## Death
 
@@ -143,5 +143,10 @@ A Humanoid on the ground brakes toward its move input. If you launch a dash with
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Characters and Humanoids]] · [[Snippets - Animation Controller Module]] · [[Links - Humanoids and character controllers]] · [[Snippets - Ragdoll]] · [[Mover Constraints and Physics Controllers]] · [[Custom Character Controllers]] · [[Animation Start Here]]
+[[Characters and Humanoids]] · [[Snippets - Animation Controller Module]] · Links - Humanoids and character controllers · [[Snippets - Ragdoll]] · Mover Constraints and Physics Controllers · Custom Character Controllers · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Custom Characters and StarterCharacter]] · [[Mounts and Rideable Creatures]] · [[Procedural Gait and Footstep Planning]] · [[R15 Run Cycle Key Poses]] · [[Animator Deep Dive]] · [[Animation Objects]] · [[AnimationTrack Reference]] · [[AnimationConstraint and Physically Simulated Characters]]
+<!-- related:end -->

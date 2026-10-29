@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, building-world]
+tags: [resources, links, building-world, type/reference, area/world, level/intermediate, api/StreamingEnabled]
 ---
 # Links - StreamingEnabled
 

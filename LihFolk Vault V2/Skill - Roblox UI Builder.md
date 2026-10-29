@@ -1,5 +1,5 @@
 ---
-tags: [ai, agents, ai-skill, ui, lihfolk-ui, accessibility]
+tags: [ai, agents, ai-skill, ui, lihfolk-ui, accessibility, type/guide, area/ui, level/intermediate, area/ai]
 ---
 # Skill - Roblox UI Builder
 
@@ -36,5 +36,5 @@ The docs allow `MinTextSize` down to 9, while the reference project's floor is 1
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Safe Area]] · [[Skill - Roblox System Builder]] · [[Skill - Roblox Secure Remotes]] · [[Skill - Roblox DataStore Safety]] · [[Readable Text and UI Scale]] · [[UI Asset Pipeline]]
+[[Safe Area]] · [[Skill - Roblox System Builder]] · [[Skill - Roblox Secure Remotes]] · [[Skill - Roblox DataStore Safety]] · Readable Text and UI Scale · UI Asset Pipeline
 <!-- auto-links:end -->

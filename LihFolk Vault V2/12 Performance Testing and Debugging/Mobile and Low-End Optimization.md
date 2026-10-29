@@ -1,5 +1,5 @@
 ---
-tags: [performance, mobile, low-end, graphics-quality, device-testing, memory]
+tags: [performance, mobile, low-end, graphics-quality, device-testing, memory, type/guide, area/performance, level/intermediate, api/UserInputService]
 ---
 # Mobile and Low-End Optimization
 
@@ -12,7 +12,7 @@ tags: [performance, mobile, low-end, graphics-quality, device-testing, memory]
 > - 15-minute soak on a real phone each release, numbers recorded.
 > - In-game graphics preset with a sensible default and live switching.
 >
-> Cost: TL;DR ~150 tok · whole note ~3.4k tok. Read more: ## 3. An in-game graphics preset · ## 9. Joins and first-use stutter on phones · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.5k tok. Read more: ## 3. An in-game graphics preset · ## 9. Joins and first-use stutter on phones · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 On most Roblox games, a large share of sessions are on phones and tablets (check your own analytics; the split varies by genre and audience). A game that is smooth on a developer's PC can be unplayable on a three-year-old phone: it runs hot after ten minutes, drops to 20 fps in combat, and crashes when a big menu opens. This note covers why low-end devices fail differently, how to detect and respect graphics quality, an in-game graphics preset system, memory on phones, touch-sized UI checks, and how to test on real devices instead of trusting the Studio Device Simulator.
@@ -252,5 +252,10 @@ Measure join time with a stopwatch on the baseline phone (Docs: there is no buil
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Juice on a Budget - Mobile and Low-End]] · [[QA Checklists Before Release]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Skill - Roblox Performance Audit]] · [[VFX Performance Budgets and Culling]] · [[Testing Modes - Play Run and Multi-Client]]
+[[Juice on a Budget - Mobile and Low-End]] · [[QA Checklists Before Release]] · Art Budgets - Triangles Draw Calls Memory · Skill - Roblox Performance Audit · VFX Performance Budgets and Culling · Testing Modes - Play Run and Multi-Client
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Weather Performance Budgets and Quality Tiers]] · [[Performance Fundamentals]] · [[Developer Console and Stats]] · [[Multi-Client and Device Playtesting Protocols]] · [[Hunting Memory Leaks Step by Step]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[Network Performance]] · [[Network Bandwidth Budgets and Measuring Them]]
+<!-- related:end -->

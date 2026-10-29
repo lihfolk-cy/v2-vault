@@ -1,5 +1,5 @@
 ---
-tags: [blender, python, bmesh, creature, quadruped, low-poly, palette, rigging, skinning, animation]
+tags: [blender, python, bmesh, creature, quadruped, low-poly, palette, rigging, skinning, animation, type/reference, area/modeling]
 ---
 # Low-Poly Creature From a Flat Reference Sheet
 
@@ -9,7 +9,7 @@ tags: [blender, python, bmesh, creature, quadruped, low-poly, palette, rigging, 
 > - Avoid: Linear texture interpolation on a palette.
 > - Avoid: Degenerate UVs. Symptom: importer warnings or broken tangents.
 >
-> Cost: TL;DR ~80 tok · whole note ~4.0k tok. Read more: ## Flat colour from a palette atlas · ## Rig and skinning · ## Common mistakes
+> Cost: TL;DR ~80 tok · whole note ~4.1k tok. Read more: ## Flat colour from a palette atlas · ## Rig and skinning · ## Common mistakes
 <!-- tldr:end -->
 
 ![[p45_wolf_side.png]]
@@ -230,5 +230,10 @@ Export is GLB with `export_yup=True` and animations on. [[Exporting FBX vs GLB]]
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Procedural Blender Assets Start Here]] · [[Concept Sheets]] · [[Topology and Edge Flow]] · [[Untextured Stylised Modelling Start Here]] · [[Skinning Weights]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]]
+[[Procedural Blender Assets Start Here]] · [[Concept Sheets]] · Topology and Edge Flow · Untextured Stylised Modelling Start Here · Skinning Weights · Meshing Voxels for Roblox - Greedy Meshing and Export
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Topology and Edge Flow]] · [[Stylised Shop Stand Worked Example]] · [[Chibi Character Rules in Practice]] · [[Low-Poly Tree Set Worked Example]] · [[Dash VFX Presentation on an R15 Rig]]
+<!-- related:end -->

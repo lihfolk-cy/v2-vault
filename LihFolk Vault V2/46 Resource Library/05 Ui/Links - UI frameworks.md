@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, ui]
+tags: [resources, links, ui, type/reference, area/ui, level/intermediate]
 ---
 # Links - UI frameworks
 
@@ -47,5 +47,5 @@ Part of [[Resource Library - Ui]] in the [[Resource Library Start Here]]. 31 lin
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - OOP and module design]] · [[Links - Testing]] · [[Declarative UI - React-Lua and Fusion]] · [[Links - Client-server and security model]] · [[Frameworks - Knit Matter and Others]]
+[[Links - OOP and module design]] · [[Links - Testing]] · [[Declarative UI - React-Lua and Fusion]] · [[Links - Client-server and security model]] · Frameworks - Knit Matter and Others
 <!-- auto-links:end -->

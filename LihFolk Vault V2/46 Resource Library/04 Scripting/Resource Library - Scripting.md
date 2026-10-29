@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, hub]
+tags: [resources, links, hub, type/hub, area/scripting, level/intermediate]
 ---
 # Resource Library - Scripting
 

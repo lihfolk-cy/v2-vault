@@ -1,5 +1,5 @@
 ---
-tags: [monetization, subscriptions, roblox-plus, creator-rewards, premium, luau]
+tags: [monetization, subscriptions, roblox-plus, creator-rewards, premium, luau, type/guide, area/monetization, level/intermediate, area/scripting, api/Player]
 ---
 # Subscriptions and Premium Payouts
 
@@ -12,14 +12,14 @@ tags: [monetization, subscriptions, roblox-plus, creator-rewards, premium, luau]
 > - Status cached server-side; `UserSubscriptionStatusChanged` handled
 > - Daily stipend idempotent per UTC day
 >
-> Cost: TL;DR ~160 tok · whole note ~4.0k tok. Read more: ## 1. Experience subscriptions · ## 2. Roblox Plus (the platform subscription) · ## 5. Common mistakes · ## 6. Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.2k tok. Read more: ## 1. Experience subscriptions · ## 2. Roblox Plus (the platform subscription) · ## 5. Common mistakes · ## 6. Checklist
 <!-- tldr:end -->
 
 Recurring revenue on Roblox now comes from three different places, and their names are easy to confuse:
 
 1. **Experience subscriptions**: *your* monthly product, sold inside your game.
 2. **Roblox Plus**: Roblox's own platform subscription (launched April 30, 2026), which pays creators when players subscribe through their game, discounts purchases at Roblox's expense, and pays for paid private server use.
-3. **Creator Rewards**: platform payouts for engaging and bringing in spending users, which **replaced Engagement-Based Payouts ("Premium Payouts") on July 24, 2025**.
+3. **[[Creator Rewards]]**: platform payouts for engaging and bringing in spending users, which **replaced Engagement-Based Payouts ("Premium Payouts") on July 24, 2025**.
 
 Premium itself stopped taking new sign-ups when Plus launched; existing members keep it. This note explains all three plus the Premium legacy APIs you will still find in older code. Everything was checked against the Creator Hub (Subscriptions, Roblox Plus, Creator Rewards and Engagement-Based Payouts pages) and the Roblox newsroom **as of October 2026**. These programs changed twice in 12 months; verify before you plan around a number.
 
@@ -256,5 +256,10 @@ If your game gave Premium players perks, decide whether Plus subscribers get the
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Subscriptions and Recurring Revenue]] · [[Links - Subscriptions and payouts]] · [[DevEx and Cashing Out]] · [[Skill - Roblox Monetization Compliance]] · [[Platform Features Start Here]] · [[Sponsored Ads and Campaign Math]]
+[[Subscriptions and Recurring Revenue]] · Links - Subscriptions and payouts · DevEx and Cashing Out · Skill - Roblox Monetization Compliance · Platform Features Start Here · Sponsored Ads and Campaign Math
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Discovery and Monetization Changes 2025-2026]] · [[Robux Price Points and Offer Design]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Discovery and the Algorithm]] · [[Refunds Chargebacks and Purchase Support]] · [[Publishing an Experience]] · [[Ads and Rewarded Video]] · [[Roblox Policies Ratings and Compliance]]
+<!-- related:end -->

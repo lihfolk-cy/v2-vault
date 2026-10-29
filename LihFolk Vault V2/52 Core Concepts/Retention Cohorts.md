@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, analytics, retention, live-ops]
+tags: [core-concept, analytics, retention, live-ops, type/reference, area/design, level/beginner, area/liveops]
 ---
 # Retention Cohorts
 
@@ -10,7 +10,7 @@ tags: [core-concept, analytics, retention, live-ops]
 > - Traffic source changes the cohort. Players from a sponsored ad, a viral video or a front-page placement behave differently.
 > - D1 measures the first session; D7 and D30 measure the game.
 >
-> Cost: TL;DR ~150 tok · whole note ~850 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~150 tok · whole note ~930 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 A **cohort** is a group of players who share a starting point, usually the day they first joined. **Retention** is the share of a cohort that comes back after a given time: day-1 (D1) retention is the percentage who return the day after their first play, D7 a week later, D30 a month later. The Creator Dashboard reports these (Roblox docs, "Retention" analytics, as of October 2026).
@@ -55,5 +55,10 @@ Related concepts: [[Session Length]], [[Onboarding Funnel]], [[Telemetry Events]
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Marketing and Growth Start Here]] · [[Discovery and the Algorithm]] · [[Click-Through Rate]] · [[Live Ops Deep Dive Start Here]] · [[Working with Content Creators]] · [[Roadmaps Milestones and Scope Control]] · [[Core Concepts Start Here]]
+[[Marketing and Growth Start Here]] · Discovery and the Algorithm · [[Click-Through Rate]] · Live Ops Deep Dive Start Here · Working with Content Creators · Roadmaps Milestones and Scope Control · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics]] · [[Core Loop]] · [[Feature Flags]] · [[Expected Value]] · [[Pity Timer]] · [[Faucets and Sinks]] · [[Session Lock]] · [[Event Bus]] · [[Safe Area]]
+<!-- related:end -->

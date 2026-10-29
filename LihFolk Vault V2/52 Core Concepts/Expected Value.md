@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, math, economy, rng, balancing]
+tags: [core-concept, math, economy, rng, balancing, type/reference, area/economy, level/beginner, area/math]
 ---
 # Expected Value
 
@@ -10,7 +10,7 @@ tags: [core-concept, math, economy, rng, balancing]
 > - EV of what? "Value" must be one unit: coins, power, or time saved.
 > - Luck boosts rarely double EV. A "2x luck" that doubles the chance of the top tier only raises EV by that tier's share of the...
 >
-> Cost: TL;DR ~130 tok · whole note ~840 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~910 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Expected value (EV)** is the average outcome of a random event over many repetitions: each outcome's value multiplied by its probability, summed. A chest with a 90 percent chance of 10 coins and a 10 percent chance of 200 coins has an EV of 0.9 x 10 + 0.1 x 200 = 29 coins.
@@ -64,5 +64,10 @@ Related concepts: [[Variance]], [[Pity Timer]], [[Faucets and Sinks]], [[Power C
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Economy Design Start Here]] · [[Genre Playbook - RNG and Collection Games]] · [[Core Concepts Start Here]] · [[Roblox Policies Ratings and Compliance]] · [[Pet Hatching and Following End to End]] · [[Genre Playbook - Simulators]]
+[[Economy Design Start Here]] · Genre Playbook - RNG and Collection Games · [[Core Concepts Start Here]] · Roblox Policies Ratings and Compliance · Pet Hatching and Following End to End · Genre Playbook - Simulators
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Faucets and Sinks]] · [[Core Loop]] · [[Deterministic Simulation]] · [[Telemetry Events]] · [[Retention Cohorts]] · [[Server Authority]] · [[Click-Through Rate]] · [[Tween vs Spring]]
+<!-- related:end -->

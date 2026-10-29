@@ -1,5 +1,5 @@
 ---
-tags: [performance, memory, leaks, debugging, luau-heap, soak-test, procedure]
+tags: [performance, memory, leaks, debugging, luau-heap, soak-test, procedure, type/guide, area/performance, level/advanced, api/LoadAnimation, area/scripting]
 ---
 # Hunting Memory Leaks Step by Step
 
@@ -12,7 +12,7 @@ tags: [performance, memory, leaks, debugging, luau-heap, soak-test, procedure]
 > - Growth expressed as MB per hour or KB per repetition.
 > - Time-to-ceiling estimated for server and for a low-end phone.
 >
-> Cost: TL;DR ~140 tok · whole note ~5.9k tok. Read more: ## 2. Find the category that grows · ## 6. Worked cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~6.0k tok. Read more: ## 2. Find the category that grows · ## 6. Worked cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Memory Budgets and Leaks]] explains where memory goes, the leak patterns and the Luau heap tool. This note is the procedure: what to do from the first "memory feels high" report to a fix you can prove. It is written for the case that actually happens in production: a server that crashes after eight hours, or phones that start dropping after twenty minutes, and nobody knows which of forty systems is responsible.
@@ -485,5 +485,10 @@ From the reference project (measured): instance hygiene in the *place file* beha
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Luau Garbage Collection and the Memory Model]] · [[Skill - Roblox Performance Audit]] · [[Links - Memory leaks and cleanup]] · [[Debugging Live Servers]] · [[Functions Closures and Upvalues]] · [[Building a Signal Library]]
+[[Luau Garbage Collection and the Memory Model]] · Skill - Roblox Performance Audit · Links - Memory leaks and cleanup · Debugging Live Servers · Functions Closures and Upvalues · Building a Signal Library
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[Performance Fundamentals]] · [[Debugging Live Servers]] · [[Performance and Memory]] · [[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]] · [[Debugger Breakpoints and Logging]] · [[Network Bandwidth Budgets and Measuring Them]]
+<!-- related:end -->

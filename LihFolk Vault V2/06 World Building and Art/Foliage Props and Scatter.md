@@ -1,5 +1,5 @@
 ---
-tags: [world-building, foliage, trees, props, scatter, placement, wind]
+tags: [world-building, foliage, trees, props, scatter, placement, wind, type/guide, area/world, level/intermediate, api/CollectionService, api/Terrain]
 ---
 # Foliage Props and Scatter
 
@@ -12,7 +12,7 @@ tags: [world-building, foliage, trees, props, scatter, placement, wind]
 > - Tree pivots at trunk base; canopies non-colliding.
 > - Scatter seeded, Poisson-spaced, long-tail scaled, layered.
 >
-> Cost: TL;DR ~130 tok · whole note ~4.8k tok. Read more: ## Scatter: placing many props naturally · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.9k tok. Read more: ## Scatter: placing many props naturally · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Foliage and props are most of what makes a world feel inhabited, and most of its instance count. This note covers how to build trees and plants for Roblox, how to place hundreds of props so they look natural instead of stamped, how to ground them reliably, how to animate wind cheaply, and how to keep it all inside performance budgets. The production numbers come from one production game that dressed a ten-zone realm and a hub with several thousand props.
@@ -333,5 +333,10 @@ The senior trade-off: dense foliage is the cheapest way to make a world look ric
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Voxel Props Environments and Modular Tiles]] · [[Draw Calls]] · [[Triangle Budget]] · [[MCP Workflows for Building Worlds]] · [[Environment and Level Pipeline]] · [[Exporting and Validating Models for Roblox]]
+[[Voxel Props Environments and Modular Tiles]] · Draw Calls · Triangle Budget · MCP Workflows for Building Worlds · Environment and Level Pipeline · Exporting and Validating Models for Roblox
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Parts Unions and MeshParts]] · [[Zone and Biome Art Direction]] · [[Materials MaterialVariants and SurfaceAppearance]] · [[Grid Placement and Player Building Systems]] · [[Modeling in Blender for Roblox]] · [[Water Sky and Atmosphere Art]] · [[Textures Decals and Texture Memory]] · [[Terrain Deep Dive - Materials Water and Performance]]
+<!-- related:end -->

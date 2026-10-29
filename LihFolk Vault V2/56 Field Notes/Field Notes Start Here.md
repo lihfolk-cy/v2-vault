@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [field-notes, hub, start-here, gotchas, production, lessons]
+tags: [field-notes, hub, start-here, gotchas, production, lessons, type/hub, area/monetization, level/beginner]
 ---
 # Field Notes Start Here
 
@@ -66,5 +66,5 @@ The foundations these notes build on live elsewhere:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Debugging Start Here]] · [[Game Feel Start Here]] · [[Post-Mortem - Building a Melee Action Game]] · [[Case Study - Building a Game with AI Agents]] · [[Melee Combat System End to End]]
+[[Debugging Start Here]] · Game Feel Start Here · Post-Mortem - Building a Melee Action Game · Case Study - Building a Game with AI Agents · Melee Combat System End to End
 <!-- auto-links:end -->

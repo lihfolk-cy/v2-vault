@@ -1,5 +1,5 @@
 ---
-tags: [community, groups, permissions, studio, team, security, moderation, luau]
+tags: [community, groups, permissions, studio, team, security, moderation, luau, type/guide, area/community, level/intermediate, area/security]
 ---
 # Groups Roles and Permissions for Studios
 
@@ -12,7 +12,7 @@ tags: [community, groups, permissions, studio, team, security, moderation, luau]
 > - Dedicated owner account with 2SV and offline backup codes
 > - Role ladder written down; each role's permissions reviewed against the risk table
 >
-> Cost: TL;DR ~140 tok · whole note ~4.1k tok. Read more: ## 5. A role ladder for a small studio · ## 6. Using ranks inside the game · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.2k tok. Read more: ## 5. A role ladder for a small studio · ## 6. Using ranks inside the game · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 A Roblox group (shown as a "community" in parts of the 2025 and 2026 interface) is three things at once: the legal-ish container that owns your games, assets and revenue; the permission system for your team; and the public home of your players. Most small studios set it up once in an afternoon and then live with an owner account that holds every key, five people with "edit everything", and contractors who still have access a year later. This note is about doing it deliberately: a role ladder that matches how a studio actually works, the exact permissions to give each role, the ones that need two-step verification, moderators and the 18+ chat permission, revenue splits, audit logs, and the failure cases (lost owner, rogue member, leaked API key). For player-facing group features (perks, join prompts) see [[Community Building]]; for Team Create mechanics see [[Team Create and Collaboration]].
@@ -235,5 +235,10 @@ Use a Tester role with "Playtest experiences" scoped to a separate test place or
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Working with Contractors and Revenue Splits]] · [[Team Create Permissions and Workflows]] · [[Team Collaboration Start Here]] · [[Business and Careers Start Here]] · [[Documentation and Onboarding New Developers]] · [[Building a Portfolio as a Roblox Developer]]
+[[Working with Contractors and Revenue Splits]] · Team Create Permissions and Workflows · Team Collaboration Start Here · Business and Careers Start Here · Documentation and Onboarding New Developers · Building a Portfolio as a Roblox Developer
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Team Create Permissions and Workflows]] · [[Roblox Communities as Your On-Platform Hub]] · [[Creator Account Security and Takeover Recovery]] · [[Working with Content Creators]] · [[Voice Chat and Safety Features]] · [[Text Chat Customization with TextChatService]]
+<!-- related:end -->

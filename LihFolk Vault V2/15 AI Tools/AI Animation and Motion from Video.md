@@ -1,5 +1,5 @@
 ---
-tags: [ai, animation, mocap, video, animation-capture]
+tags: [ai, animation, mocap, video, animation-capture, type/guide, area/ai, level/intermediate, api/KeyframeSequence, area/animation, api/Animator]
 ---
 # AI Animation and Motion from Video
 
@@ -12,7 +12,7 @@ tags: [ai, animation, mocap, video, animation-capture]
 > - Cleanup: jitter filtered, feet locked, root handled, wrists unrolled.
 > - Keys reduced with an error bound; no segment over about 120 degrees; none at 180.
 >
-> Cost: TL;DR ~150 tok · whole note ~3.2k tok. Read more: ## 1. Roblox Animation Capture · ## 6. How the reference project used AI for animation (without capture) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.3k tok. Read more: ## 1. Roblox Animation Capture · ## 6. How the reference project used AI for animation (without capture) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 AI can now turn a phone video into keyframes. Roblox has this built into the Animation Editor (Animation Capture), and several external services do the same with more control. For emotes, idles, dances and social animation this is a real shortcut. For combat, where contact frames, weapon arcs and timing are the whole design, video capture is at best reference. This note covers Roblox's capture tools, external options, the cleanup that video motion always needs, Roblox-specific pitfalls when importing it, and how the reference project used AI agents for animation without any motion capture at all.
@@ -99,7 +99,7 @@ Captured clips arrive with a key on every frame for every joint. On Roblox that 
 
 These come from measurements in the reference project (see [[Engine Gotchas]] and [[How the Animator Really Behaves]]):
 
-- **Big key-to-key turns take unexpected paths.** For most clips the Animator blends rotation vectors between keys, not a slerp. After key reduction, keep each joint's turn between consecutive keys under about 120 degrees.
+- **Big key-to-key turns take unexpected paths.** For most clips the Animator blends rotation vectors between keys, not a [[slerp]]. After key reduction, keep each joint's turn between consecutive keys under about 120 degrees.
 - **Exactly 180 degree segments are ambiguous**; the engine may go either way.
 - **Legacy `Cubic` easing runs reversed**; use `CubicV2` or Linear. Captured and reduced clips usually use Linear, which is safe.
 - **The top-level root pose is never applied.** Root lift and travel must be on its first child (LowerTorso).
@@ -215,5 +215,10 @@ Publishing the final clips and play-testing stayed manual, done by the owner.
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animation Review Checklist]] · [[Animation Start Here]] · [[Authoring Clips in Code]] · [[Moon Animator and Third-Party Tools]] · [[Animation Glossary]] · [[Animation Editor Advanced]]
+[[Animation Review Checklist]] · Animation Start Here · Authoring Clips in Code · Moon Animator and Third-Party Tools · Animation Glossary · Animation Editor Advanced
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Moon Animator and Third-Party Tools]] · [[Authoring Clips in Code]] · [[AI Pitfalls - Physics and Animation]] · [[AI 3D Model Generation Outside Roblox]] · [[Prompting and Verifying AI Output]] · [[AI Image Generation for Icons Thumbnails and Concepts]] · [[AI Agents and Autonomous Workflows]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Roblox Studio Assistant]] · [[AI Pitfalls - Assets and Import]]
+<!-- related:end -->

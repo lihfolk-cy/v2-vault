@@ -1,5 +1,5 @@
 ---
-tags: [ai, agents, mcp, automation, workflow, production]
+tags: [ai, agents, mcp, automation, workflow, production, type/guide, area/ai, level/intermediate, api/HttpService, area/monetization]
 ---
 # AI Agents and Autonomous Workflows
 
@@ -12,7 +12,7 @@ tags: [ai, agents, mcp, automation, workflow, production]
 > - Ownership map for every agent session.
 > - Snapshot and rollback path for every risky change.
 >
-> Cost: TL;DR ~130 tok · whole note ~3.8k tok. Read more: ## 3. The working rules that made it safe · ## 4. Moving work out of Studio: the bridge pattern · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.0k tok. Read more: ## 3. The working rules that made it safe · ## 4. Moving work out of Studio: the bridge pattern · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 An AI agent is a model in a loop with tools: it reads, acts, checks the result, and decides what to do next, for many steps without a person approving each one. In Roblox development, agents can now read and edit your place through Studio's built-in MCP server, run Blender through a Blender MCP connection, run Python and shell commands on your machine, and play-test through Roblox's playtest subagent. That is enough to build large parts of a game. The reference project did exactly that: most of its code, tooling, animation data, icons and generated sounds were produced by AI coding agents connected to Studio and Blender, coordinated by a lead session, under a strict set of working rules.
@@ -27,7 +27,7 @@ Products as of October 2026.
 
 | Part | What it is | Roblox examples |
 |---|---|---|
-| Model | The LLM making decisions | Whatever your client uses; Roblox Assistant can use Roblox's default or your own keys |
+| Model | The LLM making decisions | Whatever your client uses; [[Roblox Assistant]] can use Roblox's default or your own keys |
 | Tools | Functions the model can call | Studio MCP tools (`execute_luau`, `script_read`, `multi_edit`, `screen_capture`...), Blender MCP, shell, file edit, web fetch |
 | Memory | What persists between steps and sessions | A project notes file, a scratch folder, structured JSON outputs, the place itself |
 | Orchestration | Who starts what | One agent; a lead with subagents; several parallel sessions |
@@ -230,5 +230,10 @@ Keep a human on: taste, play-testing, publishing, and anything irreversible.
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Batch Processing Tools in Studio]] · [[AI in Roblox Development Overview]] · [[MCP Workflows for Building Worlds]] · [[MCP Workflows for Scripting and Debugging]] · [[Studio Tooling Architecture]] · [[Writing Your Own MCP Server]]
+[[Batch Processing Tools in Studio]] · [[AI in Roblox Development Overview]] · MCP Workflows for Building Worlds · MCP Workflows for Scripting and Debugging · Studio Tooling Architecture · Writing Your Own MCP Server
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[MCP Workflows for Building Worlds]] · [[MCP Workflows for Scripting and Debugging]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[AI Code Assistants for Luau]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Evaluating AI Tools - A Practical Rubric]] · [[Agent Orchestration - Sub-Agents, Hooks and Skill Costs]] · [[Windows Tooling Pitfalls for Agent Pipelines]] · [[AI Asset Pipelines - Scoring, Reviewers and Spot Checks]]
+<!-- related:end -->

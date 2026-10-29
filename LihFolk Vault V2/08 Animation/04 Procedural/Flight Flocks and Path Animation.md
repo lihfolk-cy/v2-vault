@@ -1,5 +1,5 @@
 ---
-tags: [procedural, flight, splines, b-spline, banking, flocks, boids, creatures, luau]
+tags: [procedural, flight, splines, b-spline, banking, flocks, boids, creatures, luau, type/guide, area/animation, level/intermediate]
 ---
 # Flight Flocks and Path Animation
 
@@ -21,7 +21,7 @@ Flying creatures are judged on two things: the path (does it move like something
 | Straight segments | yes | position only (C0): heading jumps at corners | none | never, for flight |
 | Catmull-Rom | yes | C1: heading continuous, curvature (and so bank) jumps at points | can loop and overshoot | camera paths through exact spots |
 | **Uniform cubic B-spline** | no (passes near) | **C2: heading, curvature, bank and pitch never jump** | **never: stays inside the convex hull of its control points** | flight, smooth patrols |
-| Bezier chains | at segment ends | C1 unless constrained | handles can be wild | authored curves in editors |
+| [[Bezier Curves\|Bezier]] chains | at segment ends | C1 unless constrained | handles can be wild | authored curves in editors |
 
 Two properties make the uniform cubic B-spline ideal for creatures:
 
@@ -299,5 +299,10 @@ Related: [[Animating Creatures and Monsters]], [[Multi-Bone IK - FABRIK and CCD]
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Aircraft and Flight Models]] · [[Interpolation Easing and Curves Math]] · [[Creature Rig Conventions]] · [[Look-At Aim and Head Tracking]] · [[Cookbook - Math CFrame and Vectors]] · [[Pathfinding]] · [[Animation Start Here]]
+[[Aircraft and Flight Models]] · Interpolation Easing and Curves Math · [[Creature Rig Conventions]] · [[Look-At Aim and Head Tracking]] · Cookbook - Math CFrame and Vectors · Pathfinding · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Procedural Gait and Footstep Planning]] · [[Procedural Death Knockdown and Hit Reactions]] · [[Procedural Weapon Motion]] · [[Inverse Kinematics]] · [[Two-Bone IK Math]] · [[Snippets - Procedural Motion]] · [[Ground Fitting Pipeline]] · [[Foot Placement and Ground IK]]
+<!-- related:end -->

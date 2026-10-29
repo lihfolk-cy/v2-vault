@@ -1,5 +1,5 @@
 ---
-tags: [production, planning, scope, roadmap, budgets, case-study]
+tags: [production, planning, scope, roadmap, budgets, case-study, type/case-study, area/production, level/intermediate, area/monetization]
 ---
 # Planning and Scoping a Roblox Game
 
@@ -12,7 +12,7 @@ tags: [production, planning, scope, roadmap, budgets, case-study]
 > - The content unit is defined and counted; the launch set is a number.
 > - Shared parts (rigs, kits, materials) are identified before production.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.7k tok. Read more: ## Count the content before you build it · ## Phases with gates · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.8k tok. Read more: ## Count the content before you build it · ## Phases with gates · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most Roblox projects do not fail because a system is hard to build. They fail because the project keeps changing what it is: the map is rebuilt three times, the progression model is replaced twice, and the content that already exists has to be dragged through every change. This note is about the planning layer above the code: how to decide what the game is, how big it is, what "done" means for each piece, and how to change your mind cheaply when (not if) you do.
@@ -224,5 +224,10 @@ A plan should have a risk list with a mitigation for each. From the reference pr
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Roadmaps Milestones and Scope Control]] · [[Scoping and Roles for Small Teams]] · [[Genre Playbook - Combat and RPG]] · [[Level Design for Roblox]] · [[Environment and Level Pipeline]] · [[Progression Levels and Unlocks]]
+[[Roadmaps Milestones and Scope Control]] · [[Scoping and Roles for Small Teams]] · Genre Playbook - Combat and RPG · Level Design for Roblox · Environment and Level Pipeline · Progression Levels and Unlocks
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Case Study - Instance Cleanup and Place Size]] · [[Working with AI Assistants in Studio]] · [[Asset Pipelines]] · [[Ship a Game in 30 Days - Week-by-Week Plan for a Solo Dev]] · [[Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts]] · [[Case Study - Phone UI Overhaul]] · [[Template Reskin Checklist - One Codebase, New Game]] · [[Live Incident Response and Post-Mortems]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [blender, python, vfx, eevee, r15, animation, rendering, bloom, video]
+tags: [blender, python, vfx, eevee, r15, animation, rendering, bloom, video, type/guide, area/modeling, level/intermediate]
 ---
 # Dash VFX Presentation on an R15 Rig
 
@@ -12,7 +12,7 @@ tags: [blender, python, vfx, eevee, r15, animation, rendering, bloom, video]
 > - Anticipation, short action, long follow-through
 > - One additive material type; fades keyed on a Value node
 >
-> Cost: TL;DR ~150 tok · whole note ~3.6k tok. Read more: ## The glow material · ## Light, camera and shadows · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.7k tok. Read more: ## The glow material · ## Light, camera and shadows · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 ![[p45_dash_burst.png]]
@@ -213,5 +213,10 @@ The render is a presentation, but each layer maps to an in-game part (rule of th
 
 ## Connected notes
 <!-- auto-links:start -->
-[[VFX Timing with Animation]] · [[Light Sources and Shadows]] · [[Stylized Lighting Recipes]] · [[Game Feel and Juice]] · [[Texturing and PBR Baking]] · [[Lighting Untextured Art in Roblox]]
+[[VFX Timing with Animation]] · Light Sources and Shadows · Stylized Lighting Recipes · Game Feel and Juice · Texturing and PBR Baking · Lighting Untextured Art in Roblox
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Slash VFX Recipes - Crescent and Ring]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Stylised Shop Stand Worked Example]] · [[Stylised Weapons From a Concept]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[Chibi Character Rules in Practice]] · [[Low-Poly Tree Set Worked Example]]
+<!-- related:end -->

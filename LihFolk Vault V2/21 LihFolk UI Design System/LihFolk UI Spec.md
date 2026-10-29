@@ -1,5 +1,5 @@
 ---
-tags: [ui, design-system, lihfolk-ui, tokens, spec, motion, accessibility]
+tags: [ui, design-system, lihfolk-ui, tokens, spec, motion, accessibility, type/guide, area/ui, level/intermediate, api/UIScale, area/design]
 ---
 # LihFolk UI Spec
 
@@ -12,7 +12,7 @@ tags: [ui, design-system, lihfolk-ui, tokens, spec, motion, accessibility]
 > - Text meets the contrast column above; bright slabs keep the ink stroke.
 > - Tap targets are at least 52 units (44 px drawn) with at least 8 px between them.
 >
-> Cost: TL;DR ~160 tok · whole note ~2.6k tok. Read more: ## 7. Components · ## 8. Motion · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~2.7k tok. Read more: ## 7. Components · ## 8. Motion · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The numbers behind [[LihFolk UI Design System]]. The source of truth is `skills/lihfolk-ui/src/LihFolkUITheme.luau`. If this note and the module ever disagree, the module wins, and this note should be fixed.
@@ -101,7 +101,7 @@ Nested radius rule: the inner radius equals the outer radius minus the gap. The 
 
 | Rule | Value |
 |---|---|
-| Layers | Backdrop `ScreenInsets.None` (DisplayOrder 40), main `CoreUISafeInsets` (41); both `SafeAreaCompatibility.None`, `ResetOnSpawn = false`, Sibling ZIndex |
+| Layers | Backdrop `ScreenInsets.None` ([[DisplayOrder]] 40), main `CoreUISafeInsets` (41); both `SafeAreaCompatibility.None`, `ResetOnSpawn = false`, Sibling ZIndex |
 | Device base scale | phone 1.0; desktop / tablet `clamp(safeHeight / 1000, 0.85, 1.4)`; console (large display or ten-foot) 1.35 |
 | Phone | touch device with safe-area short side under 520 px |
 | Fit | `scale = max(min(base x player, fit), touchFloor)`, with `fit` computed against the safe area minus a 16 px margin |
@@ -183,3 +183,8 @@ License: this note is CC BY 4.0 (LihFolk). The LihFolk UI code is free to use an
 ## Connected notes
 <!-- auto-links:start -->
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[UI Asset Pipeline]] · [[UIStroke on Text - Glyph Counters and the Stroke Ratio]] · [[Accessibility]] · [[Layout - Scale Offset and Constraints]] · [[Debugging UI Layout and Input]] · [[Reference - Purple Anime Settings UI (Claude + Figma)]]
+<!-- related:end -->

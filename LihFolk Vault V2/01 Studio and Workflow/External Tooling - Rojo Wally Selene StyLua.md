@@ -1,5 +1,5 @@
 ---
-tags: [tooling, rojo, wally, selene, stylua, luau-lsp, darklua, script-sync]
+tags: [tooling, rojo, wally, selene, stylua, luau-lsp, darklua, script-sync, type/guide, area/studio, level/intermediate, area/scripting]
 ---
 # External Tooling - Rojo Wally Selene StyLua
 
@@ -12,7 +12,7 @@ tags: [tooling, rojo, wally, selene, stylua, luau-lsp, darklua, script-sync]
 > - `rokit.toml`, `wally.toml`, `wally.lock`, `selene.toml`, `stylua.toml`, `.luaurc` committed.
 > - Rojo maps code only; world protected; `servePlaceIds` set.
 >
-> Cost: TL;DR ~170 tok · whole note ~4.1k tok. Read more: ## 1. Script Sync or Rojo? · ## 3. Rojo · ## 11. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.2k tok. Read more: ## 1. Script Sync or Rojo? · ## 3. Rojo · ## 11. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 Studio stores your project in the cloud. External tools put it, or part of it, on disk, so you can use a real editor, Git, code review, linters, formatters, type checking in CI and package managers. Roblox's docs describe this as a syncing problem: files on disk, instances in Studio, and conflicts when both change (Docs). This note explains the options (Studio's built-in **Script Sync** versus **Rojo**), then each tool in the standard community toolchain with working config: Rokit, Rojo, Wally, Selene, StyLua, Luau Language Server and darklua. Versions are current as of October 2026; pin what you have tested.
@@ -237,7 +237,7 @@ See [[Luau Type System and Strict Mode]].
 
 ## 8. darklua (code transforms)
 
-darklua rewrites Lua/Luau with configurable rules (`.darklua.json` or `.darklua.json5`, run with `darklua process`) (darklua docs). The main Roblox use: write requires as **paths** (`require("./util")`, `require("@pkg/react")`) for tooling such as Lune and luau-lsp, and convert them to Roblox instance requires at build time with the `convert_require` rule and the Rojo sourcemap:
+darklua rewrites Lua/Luau with configurable rules (`.darklua.json` or `.darklua.json5`, run with `darklua process`) (darklua docs). The main Roblox use: write requires as **paths** (`require("./util")`, `require("@pkg/react")`) for tooling such as [[Lune]] and luau-lsp, and convert them to Roblox instance requires at build time with the `convert_require` rule and the Rojo sourcemap:
 
 ```json5
 {
@@ -295,5 +295,10 @@ Lune runs Luau outside Roblox with filesystem, process, network and a `roblox` l
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Code Pipeline - Rojo Git and CI]] · [[Links - External tooling]] · [[Code Review for Luau Teams]] · [[Packages and Asset Reuse]] · [[Documentation and Onboarding New Developers]] · [[AI Code Assistants for Luau]]
+[[Code Pipeline - Rojo Git and CI]] · Links - External tooling · Code Review for Luau Teams · [[Packages and Asset Reuse]] · Documentation and Onboarding New Developers · AI Code Assistants for Luau
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Team Create and Collaboration]] · [[Command Bar and Studio Scripting]] · [[Studio Interface Tour]] · [[Version History and Backups]] · [[Explorer Properties and Selection]] · [[Creator Store and Toolbox Safety]]
+<!-- related:end -->

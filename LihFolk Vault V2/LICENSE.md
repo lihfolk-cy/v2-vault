@@ -31,5 +31,5 @@ documentation before relying on limits, prices or policies. Test all code before
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Free and CC0 asset libraries]] · [[Third-Party Skill - Obsidian Skills]] · [[CHANGELOG]] · [[Legal Basics - IP Licenses and Assets]] · [[AI Skills Start Here]] · [[Skill - Roblox Asset Import]]
+[[Links - Free and CC0 asset libraries]] · [[Third-Party Skill - Obsidian Skills]] · [[CHANGELOG]] · Legal Basics - IP Licenses and Assets · [[AI Skills Start Here]] · [[Skill - Roblox Asset Import]]
 <!-- auto-links:end -->

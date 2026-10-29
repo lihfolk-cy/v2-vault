@@ -1,5 +1,5 @@
 ---
-tags: [procedural, weapons, grip, spin, toss, physics, flourish, luau]
+tags: [procedural, weapons, grip, spin, toss, physics, flourish, luau, type/guide, area/animation, level/intermediate, area/physics]
 ---
 # Procedural Weapon Motion
 
@@ -9,7 +9,7 @@ tags: [procedural, weapons, grip, spin, toss, physics, flourish, luau]
 > - Spin ends with the edge backwards: turns not an integer or ramps ignored -> solve `W` so the integral is whole turns
 > - Toss rockets up and slams down: `workspace.Gravity` -> gravity scaled to the avatar
 >
-> Cost: TL;DR ~130 tok · whole note ~4.1k tok. Read more: ## Spins with cosine ramps · ## The toss · ## Common mistakes
+> Cost: TL;DR ~130 tok · whole note ~4.2k tok. Read more: ## Spins with cosine ramps · ## The toss · ## Common mistakes
 <!-- tldr:end -->
 
 Body clips can swing an arm; they cannot easily spin a blade six times around the grip, throw it into the air on a real parabola and catch it with a wrist that gives under the spin. Those motions are better computed: exact, cheap, identical on every client, and tunable by numbers instead of by re-keying. This note covers the grip joint, spins, tosses, the catch, regrips and hand roll, using the system one live action game (the reference project) shipped for its equip flourishes.
@@ -230,5 +230,10 @@ Related: [[Equip Draw and Flourish Systems]], [[Weapon and Combat Animation]], [
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Weapon Swing Design]] · [[Modeling Weapons and Props]] · [[Snippets - Procedural Motion]] · [[Arm QA Metrics Reference]] · [[Rotations Angles and Quaternions]] · [[Tween vs Spring]] · [[Animation Start Here]]
+[[Weapon Swing Design]] · [[Modeling Weapons and Props]] · [[Snippets - Procedural Motion]] · [[Arm QA Metrics Reference]] · Rotations Angles and Quaternions · Tween vs Spring · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Procedural Animation]] · [[Blade Grip and Wrist Limits]] · [[Two-Bone IK Math]] · [[Elbow Poles Swivel and Joint Limits]] · [[Tween and CFrame Animation of Objects]] · [[Look-At Aim and Head Tracking]] · [[Procedural Death Knockdown and Hit Reactions]] · [[LihFolk R15 Keyframe Pipeline]]
+<!-- related:end -->

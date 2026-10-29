@@ -1,5 +1,5 @@
 ---
-tags: [level-design, onboarding, teaching, affordances, tutorial, analytics, wayfinding]
+tags: [level-design, onboarding, teaching, affordances, tutorial, analytics, wayfinding, type/guide, area/world, level/intermediate, api/CollectionService, area/design]
 ---
 # Teaching Through Level Design
 
@@ -12,7 +12,7 @@ tags: [level-design, onboarding, teaching, affordances, tutorial, analytics, way
 > - Each new mechanic has show, try, test and combine spaces.
 > - Demonstrations framed in the direction of travel, triggered on arrival.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.8k tok. Read more: ## 2. Build a visual language and never break it · ## 8. Measure what the space taught · ## 11. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.9k tok. Read more: ## 2. Build a visual language and never break it · ## 8. Measure what the space taught · ## 11. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 [[First-Time User Experience and Onboarding]] covers the first minutes as a product problem: the funnel, starter items, tutorial gating, the HUD reveal, five versions of one real tutorial and a server-side onboarding state machine. This note covers the part that lives in the world itself: how a space teaches a mechanic without a text box, how to build a visual language players learn once and trust forever, where to let players fail safely, when geometry should gate progress instead of UI, and how to measure what a space actually taught by putting trigger volumes on the map.
@@ -302,5 +302,10 @@ Funnel volumes: courtyard entrance (step 10), tunnel below the cracked tile (ste
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Onboarding Funnel]] · [[Core Loops and Session Design]] · [[Spawn Points Safe Zones and Respawn Flow]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Pathfinding Edge Cases and Fallbacks]] · [[UI Motion Language and Timing]]
+[[Onboarding Funnel]] · Core Loops and Session Design · [[Spawn Points Safe Zones and Respawn Flow]] · Genre Playbook - Puzzle and Escape Rooms · Pathfinding Edge Cases and Fallbacks · UI Motion Language and Timing
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Playtest Heatmaps - Position and Death Maps]] · [[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Lobby and Hub Design]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]] · [[Skippable Tutorials and Replayable Tips]] · [[Core Loops and Session Design]] · [[Instanced Interiors - Pooled House and Room Copies for Many Players]]
+<!-- related:end -->

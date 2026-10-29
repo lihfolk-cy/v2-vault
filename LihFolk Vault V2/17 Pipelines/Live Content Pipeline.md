@@ -1,5 +1,5 @@
 ---
-tags: [pipelines, live-ops, events, live-config, open-cloud, changelog, documentation]
+tags: [pipelines, live-ops, events, live-config, open-cloud, changelog, documentation, type/guide, area/pipelines, level/intermediate, api/MessagingService, area/liveops]
 ---
 # Live Content Pipeline
 
@@ -12,7 +12,7 @@ tags: [pipelines, live-ops, events, live-config, open-cloud, changelog, document
 > - Live config document with schema, revision and defaults in the build
 > - Server validation, clamps and forward-only revisions
 >
-> Cost: TL;DR ~180 tok · whole note ~4.2k tok. Read more: ## Stage 1: the live config document · ## Stage 3: pushing changes from outside the game · ## Failure modes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~4.3k tok. Read more: ## Stage 1: the live config document · ## Stage 3: pushing changes from outside the game · ## Failure modes · ## Checklist
 <!-- tldr:end -->
 
 A live game changes between publishes: a weekend event starts, the shop rotates, a promo code goes live, a broken feature is switched off, a bonus is announced to every server. If each of those needs a code change and a publish, live operations become slow and risky. This note is the pipeline for **content that changes while the game is running**: what can be live and what must ship in a build, how to push data to running servers safely with Open Cloud, how to schedule events, and the record keeping (changelogs, decision logs, notes) that lets a small team run a live game without losing track. Design of events is in [[Live Ops Events and Updates]]; the runtime config mechanism is in [[Global State and Live Config]]; cross-server messaging in [[Cross-Server Messaging]] and [[MemoryStore Service]].
@@ -303,5 +303,10 @@ See [[Documentation and Knowledge Bases]] for structuring the knowledge base its
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Cross-server messaging]] · [[Codes Redemption System End to End]] · [[Live Ops Deep Dive Start Here]] · [[Feature Flags]] · [[Places Universes and Experience Settings]] · [[Feature Flags and Staged Rollouts]]
+[[Links - Cross-server messaging]] · Codes Redemption System End to End · Live Ops Deep Dive Start Here · Feature Flags · Places Universes and Experience Settings · Feature Flags and Staged Rollouts
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Data and Config Pipeline - Spreadsheets to Game]] · [[Code Pipeline - Rojo Git and CI]] · [[Asset Upload Automation with Open Cloud]] · [[Batch Processing Tools in Studio]] · [[Environment and Level Pipeline]] · [[UI Asset Pipeline]] · [[Art Pipeline - Concept to In-Game Asset]] · [[Icon and Thumbnail Rendering Pipeline]]
+<!-- related:end -->

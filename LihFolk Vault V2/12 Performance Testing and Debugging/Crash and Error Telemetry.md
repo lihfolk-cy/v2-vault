@@ -1,5 +1,5 @@
 ---
-tags: [telemetry, errors, crashes, monitoring, scriptcontext, logservice, live-ops]
+tags: [telemetry, errors, crashes, monitoring, scriptcontext, logservice, live-ops, type/guide, area/performance, level/intermediate, api/HttpService, area/liveops]
 ---
 # Crash and Error Telemetry
 
@@ -12,7 +12,7 @@ tags: [telemetry, errors, crashes, monitoring, scriptcontext, logservice, live-o
 > - Ignore and Group rules maintained.
 > - Error messages stable, variable data excluded.
 >
-> Cost: TL;DR ~120 tok · whole note ~4.4k tok. Read more: ## 1. What Roblox gives you · ## 3. A small error pipeline · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~120 tok · whole note ~4.5k tok. Read more: ## 1. What Roblox gives you · ## 3. A small error pipeline · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Once a game is live, you cannot attach a debugger to it. Thousands of servers and devices run your code in combinations you never tested, and the only way to know what breaks is telemetry: the built-in Creator Dashboard reports, plus whatever your own scripts collect. This note covers what Roblox gives you (Error Report, Performance dashboard), what it does not (client crash causes), how to capture script errors yourself with `ScriptContext.Error` and `LogService`, how to aggregate and rate-limit them so telemetry does not become the outage, and how to use all of it in release triage.
@@ -306,5 +306,10 @@ The senior trade-off: more telemetry means more cost, more noise and more privac
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Telemetry Events]] · [[Links - Error handling and debugging]] · [[Debugging Start Here]] · [[Mobile and Low-End Optimization]] · [[Rate Limiting]] · [[Error Handling - pcall xpcall and Promise Patterns]]
+[[Telemetry Events]] · Links - Error handling and debugging · Debugging Start Here · [[Mobile and Low-End Optimization]] · Rate Limiting · Error Handling - pcall xpcall and Promise Patterns
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[In-Game Bug Report Button with Automatic Context]] · [[Feature Flags]] · [[Economy Telemetry and Balancing Live]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Economy Exploits - Dupes Races and Purchase Abuse]] · [[Multi-Client and Device Playtesting Protocols]]
+<!-- related:end -->

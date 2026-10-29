@@ -1,5 +1,5 @@
 ---
-tags: [2d, collision, physics, platformer, movement, tilemap, aabb, coyote-time, jump, luau]
+tags: [2d, collision, physics, platformer, movement, tilemap, aabb, coyote-time, jump, luau, type/guide, area/2d]
 ---
 # 2D Collision Physics and Platformer Movement
 
@@ -12,7 +12,7 @@ tags: [2d, collision, physics, platformer, movement, tilemap, aabb, coyote-time,
 > - Move X then Y, one pixel at a time; zero remainder on block.
 > - Out-of-bounds policy decided (walls, sky, pit).
 >
-> Cost: TL;DR ~140 tok · whole note ~5.8k tok. Read more: ## 3. Moving: one axis, one pixel at a time · ## 5. The controller · ## 11. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~140 tok · whole note ~5.9k tok. Read more: ## 3. Moving: one axis, one pixel at a time · ## 5. The controller · ## 11. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 A GUI 2D game has no physics engine. Every floor you stand on, every wall you slide along and every jump arc is your code. The good news is that 2D platformer physics is a solved problem with a small, robust core: axis-aligned boxes, a tile grid, movement one axis at a time, and a handful of tuning numbers derived from how the jump should feel. This note gives that core in strict Luau, explains why it is built that way, and covers the parts that usually go wrong: tunnelling, corner snags, one-way platforms, slopes, moving platforms, stomps, and the tuning math.
@@ -463,5 +463,10 @@ See [[Testing Strategies and Frameworks]] for running these in CI.
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Input Buffering]] · [[Detecting Movement Exploits - Speed Fly Noclip Teleport]] · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]] · [[Humanoid States and Animation]] · [[Mover Constraints and Physics Controllers]] · [[Characters and Humanoids]]
+[[Input Buffering]] · Detecting Movement Exploits - Speed Fly Noclip Teleport · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]] · Humanoid States and Animation · Mover Constraints and Physics Controllers · Characters and Humanoids
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Input Buffering]] · [[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]] · [[Standing on Moving Vehicles and Platforms - Keeping Players Glued]] · [[Detecting Movement Exploits - Speed Fly Noclip Teleport]] · [[Pixel Art Pipeline - Aseprite to Roblox Without Blur]] · [[EditableImage for Pixel Buffers and Procedural 2D]]
+<!-- related:end -->

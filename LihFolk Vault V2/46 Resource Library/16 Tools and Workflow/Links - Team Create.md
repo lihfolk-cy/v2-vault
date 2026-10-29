@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, tools-workflow]
+tags: [resources, links, tools-workflow, type/reference, level/intermediate]
 ---
 # Links - Team Create
 
@@ -34,5 +34,5 @@ Part of [[Resource Library - Tools and Workflow]] in the [[Resource Library Star
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Settings and publishing]] · [[Team Create and Collaboration]] · [[Team Create Permissions and Workflows]] · [[Links - Models, Toolbox and Creator Store]]
+[[Links - Settings and publishing]] · [[Team Create and Collaboration]] · Team Create Permissions and Workflows · [[Links - Models, Toolbox and Creator Store]]
 <!-- auto-links:end -->

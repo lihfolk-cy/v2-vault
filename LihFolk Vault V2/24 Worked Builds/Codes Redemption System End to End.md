@@ -1,5 +1,5 @@
 ---
-tags: [worked-build, codes, live-ops, rate-limiting, datastore, remotes, ui, luau, strict]
+tags: [worked-build, codes, live-ops, rate-limiting, datastore, remotes, ui, luau, strict, type/guide, area/gameplay, level/intermediate]
 ---
 # Codes Redemption System End to End
 
@@ -12,7 +12,7 @@ tags: [worked-build, codes, live-ops, rate-limiting, datastore, remotes, ui, lua
 > - Input normalised (case, whitespace, length, characters)
 > - Rate limit plus failure lockout
 >
-> Cost: TL;DR ~130 tok · whole note ~7.0k tok. Read more: ## 4. Server · ## 5. Client and UI · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~7.1k tok. Read more: ## 4. Server · ## 5. Client and UI · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A codes box from an empty place: the player types a code, the server normalises it, checks it against a server-only list plus live codes you can add without a shutdown, enforces expiry, eligibility, per-player single use and an optional global use limit, grants the reward, and answers with a clear message. Wrong guesses are rate-limited and locked out so the box cannot be used to brute-force unreleased codes. It sits on the foundation from [[Saved Inventory End to End]] (`PlayerData`, `Net`, `RateLimiter`, `InventoryService`); the profile already has a `RedeemedCodes` map.
@@ -604,5 +604,10 @@ Use `UpdateAsync`, not `GetAsync` then `SetAsync`, so two people adding codes at
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Live Content Pipeline]] · [[Global Leaderboards End to End]] · [[Session Lock]] · [[Strings Patterns and Formatting]] · [[Friend Invites Referrals and Experience Invites]] · [[Idempotency]]
+[[Live Content Pipeline]] · [[Global Leaderboards End to End]] · Session Lock · Strings Patterns and Formatting · Friend Invites Referrals and Experience Invites · Idempotency
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Shop with Game Passes and Developer Products End to End]] · [[LihFolk Systems Library]] · [[Rebirth and Prestige System End to End]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[Quest Chain System End to End]] · [[Pet Hatching and Following End to End]] · [[Round-Based Minigame Loop End to End]] · [[Melee Combat System End to End]]
+<!-- related:end -->

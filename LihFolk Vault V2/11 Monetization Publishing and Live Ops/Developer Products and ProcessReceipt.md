@@ -1,5 +1,5 @@
 ---
-tags: [monetization, developer-products, processreceipt, datastore, idempotency, luau]
+tags: [monetization, developer-products, processreceipt, datastore, idempotency, luau, type/guide, area/monetization, level/intermediate, api/ProcessReceipt, area/data, api/UpdateAsync]
 ---
 # Developer Products and ProcessReceipt
 
@@ -12,7 +12,7 @@ tags: [monetization, developer-products, processreceipt, datastore, idempotency,
 > - Every configured product has a grant; startup assert
 > - Grant and receipt marker in the same saved document
 >
-> Cost: TL;DR ~150 tok · whole note ~5.8k tok. Read more: ## 2. The receipt contract · ## 3. A correct implementation · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.9k tok. Read more: ## 2. The receipt contract · ## 3. A correct implementation · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Developer products are repeatable purchases: currency packs, boosts, revives, bundles, starter packs. Every one of them is delivered through a single server callback, `MarketplaceService.ProcessReceipt`. Getting that callback right is the most important piece of monetization code in a Roblox game, because mistakes cost real money: players charged with nothing granted, or items granted twice.
@@ -367,5 +367,10 @@ end)
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Shop with Game Passes and Developer Products End to End]] · [[Idempotency]] · [[Refunds Chargebacks and Purchase Support]] · [[Skill - Roblox Monetization Compliance]] · [[Links - Developer products]] · [[Economy Exploits - Dupes Races and Purchase Abuse]]
+[[Shop with Game Passes and Developer Products End to End]] · Idempotency · [[Refunds Chargebacks and Purchase Support]] · Skill - Roblox Monetization Compliance · Links - Developer products · Economy Exploits - Dupes Races and Purchase Abuse
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[AI Pitfalls - Data and Monetization]] · [[Purchase Receipts and Purchase History in UI]] · [[Idempotency]] · [[Robux Price Points and Offer Design]] · [[Subscriptions and Premium Payouts]] · [[Paid Random Items and Odds Disclosure in Practice]]
+<!-- related:end -->

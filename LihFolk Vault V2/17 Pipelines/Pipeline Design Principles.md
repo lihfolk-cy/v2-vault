@@ -1,5 +1,5 @@
 ---
-tags: [pipelines, production, tooling, automation, workflow]
+tags: [pipelines, production, tooling, automation, workflow, type/guide, area/pipelines, level/intermediate, area/monetization]
 ---
 # Pipeline Design Principles
 
@@ -12,7 +12,7 @@ tags: [pipelines, production, tooling, automation, workflow]
 > - Stable id scheme used in files, attributes and config
 > - Every install idempotent and marked with attributes
 >
-> Cost: TL;DR ~130 tok · whole note ~5.4k tok. Read more: ## Principle 1: one source of truth per thing, and it is not the place · ## Principle 2: every install is idempotent · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~5.5k tok. Read more: ## Principle 1: one source of truth per thing, and it is not the place · ## Principle 2: every install is idempotent · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A pipeline is the path a piece of content travels from "someone had an idea" to "it is live in a published place and we can change it again safely". Every Roblox game has pipelines whether or not anyone designed them: a modeller exporting a mesh, a designer pasting numbers into a ModuleScript, a scripter syncing files with Rojo. The difference between a team that ships weekly and a team that is scared of its own place is almost never talent. It is whether those paths are **repeatable, checkable and reversible**.
@@ -150,7 +150,7 @@ Rules that came out of the reference project (measured in one production game):
 
 - **Each Studio call under about 1.5 s.** Studio froze for about 25 minutes when roughly 18 offline baker processes ran while in-Studio simulations were also going.
 - **Slice long jobs into resumable steps.** Keep a cursor in a module-level table or `_G`, process N items per call, return progress. A bake that needs 47 frames at about 0.5 s per frame runs as many short calls, each well under budget.
-- **Heavy maths offline.** Python (or Lune, or Node) does IK solves, image processing, audio analysis; Studio only does I/O.
+- **Heavy maths offline.** Python (or [[Lune]], or Node) does IK solves, image processing, audio analysis; Studio only does I/O.
 - **Throttle offline workers.** At most two Python processes per agent, each with `OMP_NUM_THREADS=1` (and the OpenBLAS / MKL equivalents), so numpy does not grab every core.
 - **Respect HttpService limits.** About 500 requests per minute place-wide (Roblox docs list 500 per minute for HttpService). Post one JSON per batch, not one per item.
 
@@ -271,5 +271,10 @@ Fill this in before you write code. It is a page of text and it will save days.
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Case Study - Building a Game with AI Agents]] · [[Writing Your Own MCP Server]] · [[MCP Workflows for Building Worlds]] · [[Icon and Thumbnail Rendering Pipeline]] · [[Working with AI Assistants in Studio]] · [[MCP Workflows for Scripting and Debugging]]
+[[Case Study - Building a Game with AI Agents]] · Writing Your Own MCP Server · MCP Workflows for Building Worlds · [[Icon and Thumbnail Rendering Pipeline]] · Working with AI Assistants in Studio · MCP Workflows for Scripting and Debugging
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Command Bar and Studio Scripting]] · [[Working with AI Assistants in Studio]] · [[MCP Workflows for Building Worlds]] · [[Character and Creature Pipeline]] · [[Live Content Pipeline]] · [[Localization Pipeline]]
+<!-- related:end -->

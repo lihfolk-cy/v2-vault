@@ -1,5 +1,5 @@
 ---
-tags: [world-building, art, performance, budgets, draw-calls, triangles, memory, instances]
+tags: [world-building, art, performance, budgets, draw-calls, triangles, memory, instances, type/guide, area/world, level/intermediate, api/SurfaceAppearance]
 ---
 # Art Budgets - Triangles Draw Calls Memory
 
@@ -12,7 +12,7 @@ tags: [world-building, art, performance, budgets, draw-calls, triangles, memory,
 > - Budgets written per prop, zone and hub.
 > - Unique mesh count tracked; copies are clones.
 >
-> Cost: TL;DR ~130 tok · whole note ~4.0k tok. Read more: ## Measuring: an art audit script · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.1k tok. Read more: ## Measuring: an art audit script · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 An art budget is a limit you set before building, so the game runs on the weakest device you care about. Roblox does not publish hard per-scene budgets; it publishes **mechanisms** (instancing rules, texture memory rules, shadow costs) and leaves the numbers to you. This note explains what actually costs frame time and memory for world art, gives starting budgets (marked as rules of thumb), and shows how to measure. Deep profiling technique lives in [[Rendering Performance]], [[MicroProfiler Guide]] and [[Memory Budgets and Leaks]].
@@ -71,7 +71,7 @@ SLIM (see [[Level of Detail and Model Streaming]]) can cut distant triangles dra
 
 Transparent pixels are drawn once per layer. Budget them:
 - Partially transparent objects near each other force overlapping pixels to render several times (docs). Remove layered transparencies.
-- Alpha-card foliage, stacked water planes, glass walls, big particle systems and ForceField surfaces all add layers.
+- Alpha-card foliage, stacked water planes, glass walls, big particle systems and [[ForceField]] surfaces all add layers.
 - Neon surfaces are not transparent, but large neon areas plus bloom raise post-processing cost and wash shapes out; one style study capped glow coverage at about 16 percent of an object's pixels for readability alone.
 
 ## Shadows and lights
@@ -238,5 +238,10 @@ The senior trade-off: art budgets protect performance and frustrate artists. Mak
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Draw Calls]] · [[Triangle Budget]] · [[Modeling in Blender for Roblox]] · [[Skill - Roblox Performance Audit]] · [[Materials and Surfaces Start Here]] · [[Texel Density]]
+[[Draw Calls]] · Triangle Budget · [[Modeling in Blender for Roblox]] · Skill - Roblox Performance Audit · Materials and Surfaces Start Here · Texel Density
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Materials MaterialVariants and SurfaceAppearance]] · [[Triangle Budget]] · [[Foliage Props and Scatter]] · [[Water Sky and Atmosphere Art]] · [[Environment Art Styles]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[Collision and Physics Geometry]] · [[Zone and Biome Art Direction]] · [[Level Design for Roblox]]
+<!-- related:end -->

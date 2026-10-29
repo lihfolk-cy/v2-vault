@@ -1,5 +1,5 @@
 ---
-tags: [fundamentals, runservice, timing, frame-order, procedural]
+tags: [fundamentals, runservice, timing, frame-order, procedural, type/guide, area/animation, level/beginner, api/PreSimulation, area/procedural, api/Animator, api/PreRender]
 ---
 # Frame Order and RunService Timing
 
@@ -9,7 +9,7 @@ tags: [fundamentals, runservice, timing, frame-order, procedural]
 > - Avoid: Writing in `Heartbeat` -> PreSimulation
 > - Avoid: Composing onto unkeyed joints -> Assign from your own base
 >
-> Cost: TL;DR ~90 tok · whole note ~3.9k tok. Read more: ## What to do where · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~90 tok · whole note ~4.0k tok. Read more: ## What to do where · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 Procedural animation in Roblox is a race against the Animator: it overwrites joint transforms every frame, so where in the frame your code runs decides whether your layer sticks, flickers, lags a frame, or accumulates. This note lays out the frame pipeline as documented, says what to do in each slot, and covers the less obvious parts: one-frame latency, reading part positions mid-frame, deferred events, Edit mode, the server, and fixed-rate simulation.
@@ -46,7 +46,7 @@ From the `RunService` documentation (client; the server has no render steps):
 
 | Slot | Animation work |
 |---|---|
-| Input handlers, `PreRender` / render step | Read input; decide what to play; camera (BindToRenderStep around Camera priority); UI animation. Calling `Play()` here is picked up by this frame's animation step. |
+| Input handlers, `PreRender` / render step | Read input; decide what to play; camera ([[BindToRenderStep]] around Camera priority); UI animation. Calling `Play()` here is picked up by this frame's animation step. |
 | `PreAnimation` | Change tracks, weights, speeds, `TimePosition` so they apply this frame. Set up per-frame blend weights (locomotion blend by speed). |
 | (Animator) | Writes `Transform` for every joint any playing track keys. |
 | `PreSimulation` | **Procedural layers**: look-at, IK, recoil, foot locking, additive breathing. Read the animated `Transform` and compose. Custom Lua players that write `Transform` run here too. |
@@ -180,5 +180,10 @@ The senior trade-off: putting all per-frame work into one ordered dispatcher (on
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Script Performance]] · [[Engine Gotchas]] · [[Snippets - Procedural Motion]] · [[Events Signals and Connections]] · [[Camera Systems]] · [[Building a Signal Library]] · [[Animation Start Here]]
+[[Script Performance]] · [[Engine Gotchas]] · [[Snippets - Procedural Motion]] · Events Signals and Connections · Camera Systems · Building a Signal Library · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Bones and Skinned Meshes]] · [[Snippets - Lua Keyframe Player Core]] · [[Debugging Animation Problems]] · [[AnimationConstraint and Physically Simulated Characters]] · [[How the Animator Really Behaves]] · [[Animation LOD]] · [[Playback, Priorities and Blending]] · [[Markers and Events]]
+<!-- related:end -->

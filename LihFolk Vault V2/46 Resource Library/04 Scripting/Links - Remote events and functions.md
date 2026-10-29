@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, scripting]
+tags: [resources, links, scripting, type/reference, area/networking, level/intermediate, api/RemoteFunction, area/scripting, api/InvokeClient]
 ---
 # Links - Remote events and functions
 

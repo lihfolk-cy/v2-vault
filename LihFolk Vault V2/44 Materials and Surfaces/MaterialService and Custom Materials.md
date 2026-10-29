@@ -1,5 +1,5 @@
 ---
-tags: [materials, materialservice, materialvariant, custom-materials, terrain, pbr, world-building]
+tags: [materials, materialservice, materialvariant, custom-materials, terrain, pbr, world-building, type/guide, area/materials, level/intermediate, api/MaterialService, area/world]
 ---
 # MaterialService and Custom Materials
 
@@ -12,7 +12,7 @@ tags: [materials, materialservice, materialvariant, custom-materials, terrain, p
 > - Every variant's base chosen for physics and sound behaviour.
 > - Maps downscaled: 1024 for part variants, 512 for terrain; unused maps left blank.
 >
-> Cost: TL;DR ~170 tok · whole note ~5.6k tok. Read more: ## 3. Building a variant from a CC0 set · ## 5. Theme swaps: same names, different maps · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.7k tok. Read more: ## 3. Building a variant from a CC0 set · ## 5. Theme swaps: same names, different maps · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Materials MaterialVariants and SurfaceAppearance]] explains the three layers of surface appearance (built-in `Material`, `MaterialVariant`, `SurfaceAppearance`) and the override-slot trap that hurt one production game. This note assumes you know that and goes one level down: how `MaterialService` actually resolves a custom material, how to build and maintain a library of custom materials as a project asset (with the vault's own CC0 textures in [[CC0 Texture and HDRI Library]] as the raw material), how to swap whole material themes at runtime, what each variant really costs, and the failure modes you only meet once a place has a few hundred thousand parts.
@@ -22,7 +22,7 @@ tags: [materials, materialservice, materialvariant, custom-materials, terrain, p
 A part never points at a `MaterialVariant` instance. It stores two values: `BasePart.Material` (an enum) and `BasePart.MaterialVariant` (a string). The engine resolves the look from those two values every time it needs to. Roblox docs (as of October 2026) state the rules:
 
 - A variant's **identity is its Name plus its BaseMaterial**. "Only one variant with a given name and BaseMaterial can be used." Two variants called `Moss` with base `Grass` collide; a `Moss` with base `Grass` and a `Moss` with base `Rock` are two different materials.
-- **"MaterialVariant objects only work as descendants of MaterialService."** Descendants, not children: folders inside `MaterialService` are fine, and that is what makes theme folders possible (section 5).
+- **"MaterialVariant objects only work as descendants of [[MaterialService]]."** Descendants, not children: folders inside `MaterialService` are fine, and that is what makes theme folders possible (section 5).
 - `MaterialService:GetMaterialVariant(material, name)` returns the effective variant for that pair, or `nil` if none exists.
 - If no match is found, **the built-in material is used**. There is no error and no warning at runtime: the part silently looks like plain Grass or Rock.
 - A name assigned to one of the per-material override properties (`GrassName`, `RockName` and 38 others) replaces that built-in material everywhere. Those properties are "Not Scriptable"; from code you use `SetBaseMaterialOverride(material, name)` and `GetBaseMaterialOverride(material)`.
@@ -61,7 +61,7 @@ Texel density for a variant is `image pixels / StudsPerTile`. Match it to the bu
 
 | Use | Target density (rule of thumb from the spec above) | 1024 image | 512 image |
 |---|---|---|---|
-| Part surfaces seen up close | about 128 px per stud | StudsPerTile 8 | StudsPerTile 4 |
+| Part surfaces seen up close | about 128 px per stud | [[StudsPerTile]] 8 | StudsPerTile 4 |
 | Terrain | about 64 px per stud | StudsPerTile 16 | StudsPerTile 8 |
 | Large distant surfaces (cliffs, roofs) | 32 to 64 px per stud | StudsPerTile 16 to 32 | StudsPerTile 8 to 16 |
 
@@ -334,5 +334,10 @@ Studio's Material Generator creates variants from a text prompt, with a Studs Pe
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Materials and MaterialVariants]] · [[Texturing and PBR Baking]] · [[The Gradient Palette Texture Workflow]] · [[Hand-Painted and Stylized Texturing]] · [[Substance Painter and Texturing Tools]] · [[Texel Density]]
+[[Links - Materials and MaterialVariants]] · Texturing and PBR Baking · The Gradient Palette Texture Workflow · Hand-Painted and Stylized Texturing · Substance Painter and Texturing Tools · Texel Density
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Procedural Materials and Skies - Lessons]] · [[Texturing and PBR Baking]] · [[Texel Density]] · [[Hand-Painted and Stylized Texturing]] · [[Terrain Tools and Terrain API]] · [[The Gradient Palette Texture Workflow]]
+<!-- related:end -->

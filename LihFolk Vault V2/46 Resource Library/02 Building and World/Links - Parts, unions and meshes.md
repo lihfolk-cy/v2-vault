@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, building-world]
+tags: [resources, links, building-world, type/reference, area/modeling, level/intermediate, area/world]
 ---
 # Links - Parts, unions and meshes
 

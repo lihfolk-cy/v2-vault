@@ -1,5 +1,5 @@
 ---
-tags: [field-notes, luau, ipairs, tables, cleanup, memory-leaks, sound]
+tags: [field-notes, luau, ipairs, tables, cleanup, memory-leaks, sound, type/guide, area/audio, level/intermediate, area/performance, api/Sound]
 ---
 # ipairs Stops at the First nil - Cleanup Tables That Leak
 
@@ -12,7 +12,7 @@ tags: [field-notes, luau, ipairs, tables, cleanup, memory-leaks, sound]
 > - Cleanup helpers have an `add` that ignores `nil`.
 > - Varargs with possible holes use `select("#", ...)` or `table.pack`.
 >
-> Cost: TL;DR ~190 tok · whole note ~1.5k tok. Read more: ## Fixes that cannot skip · ## Where this hides in Roblox code · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~1.6k tok. Read more: ## Fixes that cannot skip · ## Where this hides in Roblox code · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 `ipairs` walks `t[1]`, `t[2]`, `t[3]` and stops at the first `nil`. Everyone knows that, and it still causes leaks, because the `nil` usually arrives later, from an optional value that was never `nil` when the code was written. This note shows the pattern that bit a shipped game, why the length operator does not save you, and the cleanup shapes that cannot skip items. Table basics are in [[Tables Metatables and OOP]]; leak hunting in [[Hunting Memory Leaks Step by Step]].
@@ -114,5 +114,10 @@ Most leaked instances are invisible. A leaked looping `Sound` is audible and gro
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Tables Metatables and OOP]] · [[Cookbook - Tables Strings and Time]] · [[Memory Budgets and Leaks]] · [[Hunting Memory Leaks Step by Step]] · [[Sound Design Pitfalls - Reused Ids Onsets and Layered Loops]] · [[Field Notes Start Here]]
+[[Tables Metatables and OOP]] · Cookbook - Tables Strings and Time · Memory Budgets and Leaks · Hunting Memory Leaks Step by Step · [[Sound Design Pitfalls - Reused Ids Onsets and Layered Loops]] · [[Field Notes Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Streaming Joins - Frozen Players and Loading Screen Teardown]] · [[Animation Data Hygiene - Euler Wrap Joint Holes and Easing]] · [[Springs That Survive Long Frames - dt Clamps and NaN Guards]] · [[Client Hit Prediction for Melee Feedback]] · [[Running Many AI Agents on One Roblox Place]] · [[Hold-to-Attack Input That Never Sticks]] · [[Resetting One Player's Data Safely]] · [[Layering Camera Feedback on the Default Camera]]
+<!-- related:end -->

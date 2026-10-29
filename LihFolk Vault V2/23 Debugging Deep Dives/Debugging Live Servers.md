@@ -1,5 +1,5 @@
 ---
-tags: [debugging, live-ops, developer-console, logservice, telemetry, open-cloud]
+tags: [debugging, live-ops, developer-console, logservice, telemetry, open-cloud, type/guide, area/debugging, level/advanced, api/DataStore, area/liveops, api/HttpService]
 ---
 # Debugging Live Servers
 
@@ -12,7 +12,7 @@ tags: [debugging, live-ops, developer-console, logservice, telemetry, open-cloud
 > - Gated admin commands: teleport to job, fetch server log, dump system state, raise log level temporarily.
 > - Every system registers a state dump.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.0k tok. Read more: ## 3. In-server tools · ## 4. Shipping logs off the server · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.1k tok. Read more: ## 3. In-server tools · ## 4. Shipping logs off the server · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Some bugs only exist in live servers: they need real latency, 30 players, a server that has been up for nine hours, a device you do not own, or real purchases and teleports. You cannot put a breakpoint on a live server. What you can do is see its output, ask it questions through tools you built in advance, ship its logs somewhere you can search, and change its behaviour with flags. This note is about that toolkit and how to use it during an investigation.
@@ -299,5 +299,10 @@ When logs point at a cause but you still cannot reproduce in Studio:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox Debugging]] · [[Telemetry Events]] · [[Skill - Roblox Performance Audit]] · [[Links - Error handling and debugging]] · [[Feature Flags]] · [[Memory Budgets and Leaks]]
+[[Skill - Roblox Debugging]] · Telemetry Events · Skill - Roblox Performance Audit · Links - Error handling and debugging · Feature Flags · Memory Budgets and Leaks
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[In-Game Bug Report Button with Automatic Context]] · [[Telemetry Events]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[Reading Luau Errors and Stack Traces]] · [[Debugging Client-Server Desync]] · [[Debugging Physics and Network Ownership]]
+<!-- related:end -->

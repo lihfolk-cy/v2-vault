@@ -1,5 +1,5 @@
 ---
-tags: [gotchas, unresolved, research]
+tags: [gotchas, unresolved, research, type/guide, area/animation, level/intermediate, api/Animator, api/StepAnimations, api/IKControl]
 ---
 # Open Questions
 
@@ -47,8 +47,8 @@ Quick index:
 - **Discussed in:** [[Keyframes, Easing and Interpolation]], [[Animation Editor Workflow]], [[Authoring Clips in Code]], [[Lua Keyframe Player Internals]], [[Weapon Rig Player]].
 
 ### A3. When does the Animator nlerp instead of blending rotation vectors?
-- **Claim 1 (animation standard).** Rotations between keys are a linear blend of rotation vectors, choosing the closest representation pair. Measured to 0.24 degrees on 15 clips where slerp was up to 178 degrees off; an offline model matched every baked clip (several hundred) (median 0.03 degrees, 99th percentile 2 to 4).
-- **Claim 2 (weapon-rig player).** Quaternion nlerp (shortest way) when **a joint's** keys are evenly spaced, rotation vectors otherwise. Measured within 0.001 rad on 80 rigs.
+- **Claim 1 (animation standard).** Rotations between keys are a linear blend of rotation vectors, choosing the closest representation pair. Measured to 0.24 degrees on 15 clips where [[slerp]] was up to 178 degrees off; an offline model matched every baked clip (several hundred) (median 0.03 degrees, 99th percentile 2 to 4).
+- **Claim 2 (weapon-rig player).** [[Quaternions|Quaternion]] nlerp (shortest way) when **a joint's** keys are evenly spaced, rotation vectors otherwise. Measured within 0.001 rad on 80 rigs.
 - **Claim 3 (character player, latest).** nlerp only when **all keyframes of the sequence** are evenly spaced (a marker-only keyframe off the grid counts) **and every key is Linear**; joints, rig type and key count do not matter.
 - **Reconciliation.** Probably consistent: Claim 1 was measured on uneven clips, Claim 2 on weapon clips that are generated with uniform Linear keys or thinned per joint (where the two rules agree), and Claim 3 is the most specific. On arbitrary clips Claims 2 and 3 can differ.
 - **Why it matters.** Dense, evenly spaced bakes and sparse hand-keyed clips interpolate differently; a thinned clip silently switches mode.
@@ -114,7 +114,7 @@ Roblox applies a Pose's easing to the segment **leaving** it. Clip specs and aut
 ## C. Never tested in production
 
 ### C1. IKControl and CurveAnimation
-Both are documented ([[IKControl Reference]], [[CurveAnimation and Curve Channels]]), but the reference pipelines baked everything. Unknowns: how `IKControl` composes with Lua code that writes `Transform` in `PreSimulation` (docs say IKControl overrides the animation on its chain and `Priority` orders controls, not where IK sits relative to script writes), whether a foot IKControl's result shows up in `Transform` when read in `PreSimulation`, and whether CurveAnimation interpolates like KeyframeSequences.
+Both are documented ([[IKControl Reference]], [[CurveAnimation and Curve Channels]]), but the reference pipelines baked everything. Unknowns: how `IKControl` composes with Lua code that writes `Transform` in `PreSimulation` (docs say [[IKControl]] overrides the animation on its chain and `Priority` orders controls, not where IK sits relative to script writes), whether a foot IKControl's result shows up in `Transform` when read in `PreSimulation`, and whether [[CurveAnimation]] interpolates like KeyframeSequences.
 
 ### C2. Live replication of Lua-played tracks
 The relay (batched, throttled; speed changes sent at once past 6%, else every 0.25 s; late joiners request active tracks) was verified in Studio and by maths, not under real latency with many players. **Discussed in:** [[Lua Keyframe Player]], [[Replication and Ownership]].
@@ -154,7 +154,7 @@ The `PoseEasingDirection` enum page still describes directions in the legacy rev
 Asset privacy docs say revoking a collaborator only stops them granting new experiences (existing grants stay); an animation announcement says collaborator access "can be revoked at any time". Both can be true. Plan as if experience grants are permanent. **Discussed in:** [[Animation Asset Permissions and Groups]].
 
 ### D6. `ScaleTo` on upgraded avatars
-A community thread on the avatar joint upgrade (AnimationConstraint joints) reports `Character:ScaleTo` broken on upgraded characters; body-scale values still work. Unverified; test scaling on upgraded rigs. **Discussed in:** [[AnimationConstraint and Physically Simulated Characters]], [[Scale and Animation]].
+A community thread on the avatar joint upgrade ([[AnimationConstraint]] joints) reports `Character:ScaleTo` broken on upgraded characters; body-scale values still work. Unverified; test scaling on upgraded rigs. **Discussed in:** [[AnimationConstraint and Physically Simulated Characters]], [[Scale and Animation]].
 
 ### D7. One animation per FBX versus multi-clip GLB
 Roblox's modeling specification says only one animation track can be exported per mesh or model. The reference project imported creature GLBs with every Blender action as a named clip (23 for one boss), and a 2026 announcement added an "Animation Track Selection" option to the editor's import dialog. Probably the 3D Importer handles several glTF animations while the avatar path and editor import take one at a time; test with your Studio version. **Discussed in:** [[Exporting FBX vs GLB]], [[3D Importer Settings Reference]], [[Animation Data from Blender to Roblox]].
@@ -194,5 +194,10 @@ Several look-at snippets in the wild (and an earlier version of this vault) buil
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animation Start Here]] · [[Animation Glossary]] · [[Troubleshooting Table]] · [[Moon Animator and Third-Party Tools]] · [[AI Animation and Motion from Video]] · [[Easing]]
+[[Animation Start Here]] · [[Animation Glossary]] · [[Troubleshooting Table]] · [[Moon Animator and Third-Party Tools]] · [[AI Animation and Motion from Video]] · Easing
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Debugging Animation Problems]] · [[Inverse Kinematics]] · [[Procedural Animation]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Timing Spacing and Frame Charts]] · [[Rigging in Blender]] · [[Pipeline - New Animated Weapon]] · [[Custom Rigs - Weapons and Props]]
+<!-- related:end -->

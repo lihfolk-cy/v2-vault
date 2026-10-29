@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, safety-free-models-plugins]
+tags: [resources, links, safety-free-models-plugins, type/reference, area/studio, level/intermediate]
 ---
 # Links - Backdoors and malicious assets
 
@@ -51,5 +51,5 @@ Part of [[Resource Library - Safety (free models and plugins)]] in the [[Resourc
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Creator Store and Toolbox Safety]] · [[Links - Models, Toolbox and Creator Store]] · [[Links - Plugins and custom tools]] · [[Links - Anti-exploit]] · [[Plugin Security and Permissions]]
+[[Creator Store and Toolbox Safety]] · [[Links - Models, Toolbox and Creator Store]] · [[Links - Plugins and custom tools]] · [[Links - Anti-exploit]] · Plugin Security and Permissions
 <!-- auto-links:end -->

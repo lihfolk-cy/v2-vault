@@ -1,5 +1,5 @@
 ---
-tags: [gameplay, economy, currency, sinks, faucets, inflation, analytics]
+tags: [gameplay, economy, currency, sinks, faucets, inflation, analytics, type/guide, area/gameplay, level/intermediate, api/AnalyticsService, area/economy]
 ---
 # Economies and Currencies
 
@@ -12,7 +12,7 @@ tags: [gameplay, economy, currency, sinks, faucets, inflation, analytics]
 > - Prices and rewards derived from an income model.
 > - All transactions server-side, validated, non-yielding, logged.
 >
-> Cost: TL;DR ~130 tok · whole note ~3.5k tok. Read more: ## 2. Faucets and sinks · ## 3. Transactions on the server · ## 8. Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.6k tok. Read more: ## 2. Faucets and sinks · ## 3. Transactions on the server · ## 8. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 An in-game economy is a set of currencies, the **faucets** that create them, the **sinks** that destroy them, and the prices that connect the two to progression. A good one keeps every player near a meaningful purchase, survives a million-fold growth in income, resists duplication exploits, and can be rebalanced without wiping saves. This note covers currency design, faucet/sink accounting, exponential economies, server-side transactions, analytics and the rebalancing lessons of one production game whose cash went from thousands to hundreds of millions per gate.
@@ -218,5 +218,10 @@ See [[HUD Design]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Economy Inflation Sinks and Faucets Math]] · [[Currency Architecture - Soft Hard and Event Currencies]] · [[Faucets and Sinks]] · [[Progression and Pacing Design]] · [[Economy Telemetry and Balancing Live]] · [[Simulating an Economy Before Launch]]
+[[Economy Inflation Sinks and Faucets Math]] · Currency Architecture - Soft Hard and Event Currencies · Faucets and Sinks · Progression and Pacing Design · Economy Telemetry and Balancing Live · Simulating an Economy Before Launch
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Currency Architecture - Soft Hard and Event Currencies]] · [[Faucets and Sinks]] · [[Progression and Pacing Design]] · [[Economy Telemetry and Balancing Live]] · [[Robux Price Points and Offer Design]] · [[Tools and Inventory Systems]]
+<!-- related:end -->

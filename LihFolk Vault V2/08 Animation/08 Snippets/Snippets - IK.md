@@ -1,5 +1,5 @@
 ---
-tags: [snippets, luau, ik, procedural]
+tags: [snippets, luau, ik, procedural, type/reference, area/animation, level/advanced, api/IKControl, area/scripting, api/Humanoid, api/AnimationConstraint]
 ---
 # Snippets: IK
 
@@ -9,7 +9,7 @@ tags: [snippets, luau, ik, procedural]
 > - Avoid: Targets past full reach (snaps and flips at the singular straight pose).
 > - Avoid: A pole on the limb line (undefined bend plane).
 >
-> Cost: TL;DR ~100 tok · whole note ~7.0k tok. Read more: ## 1. IKControl setups · ## 5. Foot IK during locomotion (pelvis drop, ground normal, blend) · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~7.1k tok. Read more: ## 1. IKControl setups · ## 5. Foot IK during locomotion (pelvis drop, ground normal, blend) · ## Common mistakes
 <!-- tldr:end -->
 
 Two ways to do inverse kinematics on Roblox rigs, with working code for each:
@@ -72,7 +72,7 @@ leftGrip.SmoothTime = 0                             -- the hand must stay ON the
 leftGrip.Priority = 1                               -- solved after other controls
 leftGrip.Parent = character.Humanoid
 ```
-Design notes from the reference project (which baked this instead of solving at runtime): the off hand sat 1.15 studs below the sword hand along the blade, rolled 180 degrees about it, and **let go of the hilt wherever holding it would bury the arm in the body**. A runtime IKControl cannot know that, so fade its `Weight` to 0 during moves that turn the blade across the chest, or the forearm will clip through the torso. See [[Weapon and Combat Animation]].
+Design notes from the reference project (which baked this instead of solving at runtime): the off hand sat 1.15 studs below the sword hand along the blade, rolled 180 degrees about it, and **let go of the hilt wherever holding it would bury the arm in the body**. A runtime [[IKControl]] cannot know that, so fade its `Weight` to 0 during moves that turn the blade across the chest, or the forearm will clip through the torso. See [[Weapon and Combat Animation]].
 
 ### Head look-at
 ```lua
@@ -172,7 +172,7 @@ Why `normal = poleDir:Cross(dir)`: the exact plane normal is `(E - S):Cross(W - 
 
 ## 3. From positions to joint Transforms (R15 arm or leg)
 
-The robust way to turn `E` and `W` into rotations: build an orthonormal frame from "bone direction + hinge axis" in the part's **rest** space and in **world** space, and rotate one onto the other. This works on slanted R15 bones, with Motor6D or AnimationConstraint joints, and never inverts the elbow, because the hinge axis is pinned to the bend-plane normal.
+The robust way to turn `E` and `W` into rotations: build an orthonormal frame from "bone direction + hinge axis" in the part's **rest** space and in **world** space, and rotate one onto the other. This works on slanted R15 bones, with Motor6D or [[AnimationConstraint]] joints, and never inverts the elbow, because the hinge axis is pinned to the bend-plane normal.
 
 ```lua
 --!strict
@@ -467,5 +467,10 @@ Limits used by the reference project's wrist: flex 70, deviation 30, twist 85 de
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Troubleshooting Table]] · [[Animation Glossary]] · [[Spec-Driven Move Authoring]] · [[Animation Quality Standard]] · [[Links - Inverse kinematics]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Animation Start Here]]
+[[Troubleshooting Table]] · [[Animation Glossary]] · [[Spec-Driven Move Authoring]] · [[Animation Quality Standard]] · [[Links - Inverse kinematics]] · Voxel Characters - Proportions Joints and Rigging · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Procedural Animation]] · [[Snippets - Ragdoll]] · [[R15 Run Cycle Key Poses]] · [[Look-At Aim and Head Tracking]] · [[LihFolk R15 Keyframe Pipeline]] · [[Posing and Silhouettes]] · [[Arm QA Metrics Reference]] · [[Snippets - Lua Keyframe Player Core]]
+<!-- related:end -->

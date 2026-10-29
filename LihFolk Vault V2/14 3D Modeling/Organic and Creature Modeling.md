@@ -1,5 +1,5 @@
 ---
-tags: [modeling, organic, creatures, sculpting, blender, enemies, rigging-prep]
+tags: [modeling, organic, creatures, sculpting, blender, enemies, rigging-prep, type/guide, area/modeling, level/intermediate, area/animation]
 ---
 # Organic and Creature Modeling
 
@@ -12,7 +12,7 @@ tags: [modeling, organic, creatures, sculpting, blender, enemies, rigging-prep]
 > - Modelled at final stud size, facing -Y, root at the origin.
 > - One exaggerated feature; silhouette reads as a filled shape.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.2k tok. Read more: ## 1. The first decision: skinned or segmented · ## 2. Three ways to build an organic form · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.3k tok. Read more: ## 1. The first decision: skinned or segmented · ## 2. Three ways to build an organic form · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Organic modelling covers anything grown rather than built: creatures, monsters, faces, hands, trees, roots, tentacles, rocks with soft forms. In a game the organic model has a second job beyond looking right: it must **move**. That makes the first decision in every creature project a rigging decision, not a sculpting one: will this creature be one skinned mesh that bends, or a set of rigid pieces on joints? The answer changes how you model the shoulders, where the polygons go, how many meshes you export and how much the creature costs.
@@ -30,7 +30,7 @@ This note covers that decision, the three ways to build an organic form (box mod
 | Modelling cost | High: deformation topology, weight painting | Low: model each piece, overlap at joints |
 | Runtime cost | Skinning cost per vertex; one mesh can carry the whole body | One part per piece; more instances, no skinning |
 | Per-mesh 20,000-tri limit | Split into several skinned meshes bound to one armature if needed | Each piece is far under it naturally |
-| Who writes the joints | Animator on Bones | Animator or code on Motor6D / AnimationConstraint |
+| Who writes the joints | Animator on Bones | Animator or code on Motor6D / [[AnimationConstraint]] |
 | Failure modes | Candy-wrapper twists, collapsing elbows, bad weights | Gaps or intersections at joints, "floating parts" look |
 
 Rules of thumb:
@@ -174,7 +174,7 @@ Expression and readability:
 - **Eyes are the brightest pixels** on a creature in every reference style in this vault (neon eyes on dark bodies, white-hot catchlights on cute pets). Model a clear eye socket or eye plate so the eye has somewhere to sit.
 - **Brows carry expression.** A heavy brow ridge makes even a static face look angry.
 - **Mouth line** (the edge between lips or jaw plates) should be a clean loop so the jaw can open without the face tearing; see [[Topology and Edge Flow]].
-- For animated faces on avatars (FACS), follow the dynamic head specification in [[Facial Animation and Dynamic Heads]].
+- For animated faces on avatars ([[FACS]]), follow the dynamic head specification in [[Facial Animation and Dynamic Heads]].
 
 ---
 
@@ -239,5 +239,10 @@ The gap between the plan (3-6k) and what shipped (15-40k) is the cost of a voxel
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Voxel Characters - Proportions Joints and Rigging]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Skinning Weights]] · [[Skeleton Library]] · [[Low-Poly Creature From a Flat Reference Sheet]] · [[Chibi Character Rules in Practice]]
+[[Voxel Characters - Proportions Joints and Rigging]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · Skinning Weights · Skeleton Library · Low-Poly Creature From a Flat Reference Sheet · Chibi Character Rules in Practice
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Modeling Fundamentals for Games]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Hard-Surface Modeling]] · [[Blender Workflow for Roblox Creators]] · [[Modeling Weapons and Props]] · [[Mesh Optimization for Mobile]] · [[UGC Avatar Items and Accessories]] · [[Normal Maps and Detail Baking]]
+<!-- related:end -->

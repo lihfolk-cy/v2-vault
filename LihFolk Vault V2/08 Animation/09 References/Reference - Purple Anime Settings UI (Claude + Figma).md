@@ -1,5 +1,5 @@
 ---
-tags: [reference, ui, gui, figma, ai-workflow, settings-menu]
+tags: [reference, ui, gui, figma, ai-workflow, settings-menu, type/reference, area/animation, level/intermediate, api/CanvasGroup, area/ui, api/UIScale]
 source: https://www.tiktok.com/@las.rcd/video/7697675920353660212
 source_author: "lasse (@las.rcd)"
 source_date: 2026-10-17
@@ -13,7 +13,7 @@ studied: 2026-10-26
 > - Avoid: Treating the AI design as the spec. Symptom: widgets that look right but have no hover, pressed, disabled or gamepad-selected...
 > - Avoid: Tweening slider fill while dragging. Symptom: fill lags behind the knob.
 >
-> Cost: TL;DR ~120 tok · whole note ~2.8k tok. Read more: ## Bringing it to life in Roblox (vault patterns) · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~120 tok · whole note ~2.9k tok. Read more: ## Bringing it to life in Roblox (vault patterns) · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 A 15-second TikTok by **lasse (@las.rcd)**, posted 2026-10-17. The video was filmed on a phone pointed at a monitor. It shows a finished **Roblox-style Settings menu** open in a Figma prototype in the browser. The tab title reads roughly "Anime Settings UI - Purple - Figma". The on-screen caption says it was "all made with Claude with Figma UI Roblox skill". A second caption says the skill will be released at 1k likes. The post's tags are #claude #clauderoblox #roblox #robloxstudio.
@@ -136,5 +136,10 @@ Rebuilding a static design like this in Roblox is where the real decisions are. 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[UI Design Systems]] · [[UI Motion Language and Timing]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[LihFolk UI Spec]] · [[Debugging UI Layout and Input]] · [[UI Layout Objects - Lists Grids and Pages]] · [[Animation Start Here]]
+[[UI Design Systems]] · UI Motion Language and Timing · Menu Archetypes - Shop Settings Codes Rewards · LihFolk UI Spec · Debugging UI Layout and Input · UI Layout Objects - Lists Grids and Pages · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Cookbook - UI]] · [[Accessibility]] · [[Layout - Scale Offset and Constraints]] · [[UI Motion Language and Timing]] · [[LihFolk UI Design System]] · [[LihFolk UI Spec]]
+<!-- related:end -->

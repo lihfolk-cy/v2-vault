@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, networking, replication, architecture]
+tags: [core-concept, networking, replication, architecture, type/reference, area/networking, level/beginner]
 ---
 # Replication Boundary
 
@@ -10,7 +10,7 @@ tags: [core-concept, networking, replication, architecture]
 > - Streaming changes "replicated" into "replicated if near".
 > - Remote arguments are copies, not references.
 >
-> Cost: TL;DR ~120 tok · whole note ~1.0k tok. Read more: ## What crosses, in short · ## The nuance most people miss
+> Cost: TL;DR ~120 tok · whole note ~1.1k tok. Read more: ## What crosses, in short · ## The nuance most people miss
 <!-- tldr:end -->
 
 The **replication boundary** is the line between what the server sends to every client automatically and what stays local to one machine. Changes the server makes to replicated instances (in Workspace, ReplicatedStorage and similar containers) flow down to clients. Changes a client makes stay on that client, with a short list of exceptions. Everything else crosses only through remotes you write.
@@ -65,5 +65,10 @@ Related concepts: [[Server Authority]], [[Streaming Radius]], [[Event Bus]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Network Performance]] · [[Skill - Roblox Secure Remotes]] · [[Links - Replication]] · [[Core Concepts Start Here]] · [[Luau Cookbook Start Here]] · [[Case Study - Fast Join and Deferred Loading]]
+[[Network Performance]] · Skill - Roblox Secure Remotes · Links - Replication · [[Core Concepts Start Here]] · Luau Cookbook Start Here · Case Study - Fast Join and Deferred Loading
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Event Bus]] · [[Deterministic Simulation]] · [[Instance Count]] · [[Rate Limiting]] · [[Feature Flags]] · [[Data Schema Versioning]] · [[Dependency Injection in Luau]] · [[Object Pooling]]
+<!-- related:end -->

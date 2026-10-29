@@ -1,5 +1,5 @@
 ---
-tags: [field-notes, studio, command-bar, mcp, automation, patterns, scripts, performance]
+tags: [field-notes, studio, command-bar, mcp, automation, patterns, scripts, performance, type/guide, area/performance, level/intermediate, area/ai]
 ---
 # Studio Automation Without Freezing Studio
 
@@ -12,7 +12,7 @@ tags: [field-notes, studio, command-bar, mcp, automation, patterns, scripts, per
 > - Long jobs yield and are paged across calls.
 > - Source length checked against the cap before writing.
 >
-> Cost: TL;DR ~170 tok · whole note ~1.8k tok. Read more: ## 1. Patterns that backtrack catastrophically · ## 4. Compile-check before saving · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~1.9k tok. Read more: ## 1. Patterns that backtrack catastrophically · ## 4. Compile-check before saving · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Bulk work through the command bar or an MCP `execute_luau` call (search every script, patch a pattern, rebuild a folder) runs on Studio's main thread. A slow call does not just take a while; it freezes the editor for everyone connected, and a pathological one can freeze it for most of an hour. This note collects the rules that came out of running large automated edits on a big place: pattern traps, chunking, the script size cap, compile checks, and the AutoRecovery trap. Basics are in [[Command Bar and Studio Scripting]] and [[Batch Processing Tools in Studio]]; agent rules in [[Safety Rules for AI Agents in Studio]].
@@ -127,5 +127,10 @@ After a crash, Studio offers to open an auto-recovered copy. It is a local file,
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Command Bar and Studio Scripting]] · [[Batch Processing Tools in Studio]] · [[MCP Workflows for Scripting and Debugging]] · [[Safety Rules for AI Agents in Studio]] · [[Running Many AI Agents on One Roblox Place]] · [[Field Notes Start Here]]
+[[Command Bar and Studio Scripting]] · Batch Processing Tools in Studio · MCP Workflows for Scripting and Debugging · Safety Rules for AI Agents in Studio · [[Running Many AI Agents on One Roblox Place]] · [[Field Notes Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Moving Data Out of a Play Session]] · [[Server-Authoritative Freeze and Stun Timestamps]] · [[Sound Design Pitfalls - Reused Ids Onsets and Layered Loops]] · [[Resetting One Player's Data Safely]] · [[Streaming Joins - Frozen Players and Loading Screen Teardown]] · [[ipairs Stops at the First nil - Cleanup Tables That Leak]] · [[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[A Stuck Player Watchdog That Logs the Cause]]
+<!-- related:end -->

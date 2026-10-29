@@ -32,7 +32,7 @@ ROOT_SECTION = "31 AI Skills for Roblox"  # root skill notes are listed under th
 NO_TLDR_SECTIONS = {"46 Resource Library"}
 NO_TLDR_TITLE = re.compile(r"(Start Here|Link Check| - Map$|^Concept Sheets$|^LICENSE$)")
 NAV_HEAD = re.compile(r"(?i)^(\d+[.)]\s*)?(see also|connected notes|related\b|sources|links\b|topics|"
-                      r"the notes|reading|suggested|contents|tiny example|example|references?|further|where this shows up)")
+                      r"the notes|reading|suggested|contents|tiny example|example|references?|further|where this shows up|mentioned in)")
 MISTAKES_HEAD = re.compile(r"(?i)mistakes|gotchas|pitfalls|failure modes|anti-patterns")
 CHECK_HEAD = re.compile(r"(?i)checklist")
 KEY_HEAD = re.compile(r"(?i)nuance|gotcha|rule|docs do not say|things|why it matters|key|diagnos|"
@@ -525,6 +525,8 @@ def main():
     changed, report = [], defaultdict(list)
     for n in notes:
         n["fm"], n["tags"] = parse_note(n["text"])
+        # area/ level/ type/ api/ tags (added by link_builder.py) stay out of INDEX and ROUTER to keep them small
+        n["tags"] = [t for t in n["tags"] if not re.match(r"(area|level|type|api)/", t)]
         block, kind = tldr_for(n)
         n["summary"] = summary_of(n["clean"])
         if block and n["section"] in skip_tldr:

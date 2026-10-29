@@ -1,5 +1,5 @@
 ---
-tags: [game-feel, juice, performance, mobile, low-end, pooling, budgets, luau]
+tags: [game-feel, juice, performance, mobile, low-end, pooling, budgets, luau, type/guide, area/game-feel, level/intermediate, api/ParticleEmitter]
 ---
 # Juice on a Budget - Mobile and Low-End
 
@@ -12,7 +12,7 @@ tags: [game-feel, juice, performance, mobile, low-end, pooling, budgets, luau]
 > - Tier from the player's setting as a ceiling, adjusted by measured frame time with hysteresis.
 > - Per-frame spawn and per-second particle budgets enforced by one governor.
 >
-> Cost: TL;DR ~200 tok · whole note ~5.2k tok. Read more: ## 1. Where juice costs go · ## 3. A juice governor · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~200 tok · whole note ~5.3k tok. Read more: ## 1. Where juice costs go · ## 3. A juice governor · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most Roblox players are on phones, many of them old, hot or both. Juice that is cheap on a developer's PC can be what pushes a phone from 40 fps into the twenties, and a stutter at the moment of a hit or a reward undoes the very feeling the juice was meant to create. [[Mobile and Low-End Optimization]] covers phones in general (quality presets, memory, what to cut first); [[VFX Performance Budgets and Culling]] covers combat effects. This note is narrower and deeper: what each kind of juice actually costs, a governor that adapts juice to the device in real time, pooling and spawn budgets, cheap substitutes for expensive effects, and the rule that keeps degraded juice fair. All code is full strict Luau.
@@ -415,5 +415,10 @@ Tag each effect in your data as `info` or `decor`. The governor only ever scales
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Game Feel Start Here]] · [[Object Pooling]] · [[Rendering Performance]] · [[Links - Post-processing]] · [[UI and GUI Animation]] · [[Frame Budget]]
+[[Game Feel Start Here]] · [[Object Pooling]] · Rendering Performance · Links - Post-processing · UI and GUI Animation · Frame Budget
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Weather Performance Budgets and Quality Tiers]] · [[Graphics and Performance Toggles for Low-End Devices]] · [[Rendering Performance]] · [[Hit-Stop and Screen Shake Tuning by Numbers]] · [[Squash Stretch and Anticipation in UI and Characters]] · [[Feedback Timing - Sound Visual and Haptic Sync]]
+<!-- related:end -->

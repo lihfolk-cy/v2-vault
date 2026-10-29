@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [debugging, hub, start-here]
+tags: [debugging, hub, start-here, type/hub, area/debugging, level/beginner, api/DataStore]
 ---
 # Debugging Start Here
 
@@ -60,5 +60,5 @@ Source labels used throughout: **Docs** (Creator Hub, as of October 2026), **Mea
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox Debugging]] · [[Links - Error handling and debugging]] · [[Telemetry Events]] · [[Skill - Roblox Performance Audit]] · [[Cookbook - Remotes and Networking]] · [[Deterministic Simulation]]
+[[Skill - Roblox Debugging]] · Links - Error handling and debugging · Telemetry Events · Skill - Roblox Performance Audit · Cookbook - Remotes and Networking · Deterministic Simulation
 <!-- auto-links:end -->

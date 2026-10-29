@@ -1,5 +1,5 @@
 ---
-tags: [luau, cookbook, ui, gui, tween, recipes]
+tags: [luau, cookbook, ui, gui, tween, recipes, type/reference, area/scripting, level/intermediate, api/UIScale, area/ui, api/TweenService]
 ---
 # Cookbook - UI
 
@@ -12,7 +12,7 @@ tags: [luau, cookbook, ui, gui, tween, recipes]
 > - All buttons use `Activated` and work with gamepad selection.
 > - Panels open and close through one manager.
 >
-> Cost: TL;DR ~120 tok · whole note ~5.1k tok. Read more: ## 3. Open and close a panel with a tween that cannot glitch · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~120 tok · whole note ~5.2k tok. Read more: ## 3. Open and close a panel with a tween that cannot glitch · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Recipes for the client-side UI jobs that come up in every game: finding your GUI, wiring buttons for every input type, opening and closing panels, binding labels to data, building lists, and keeping layouts safe on phones and consoles. Code is `--!strict` Luau in `LocalScript`s, reviewed, not run. The deep notes are [[ScreenGui Fundamentals]], [[Layout - Scale Offset and Constraints]], [[Responsive UI for Phone Tablet Console and PC]], [[UI Motion Language and Timing]] and [[Safe Areas and Insets]].
@@ -433,5 +433,10 @@ end
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Safe Area]] · [[Skill - Roblox UI Builder]] · [[Links - UI elements]] · [[LihFolk UI Design System]] · [[Plugin UI with DockWidgets]] · [[UI and GUI Animation]]
+[[Safe Area]] · Skill - Roblox UI Builder · Links - UI elements · LihFolk UI Design System · Plugin UI with DockWidgets · UI and GUI Animation
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[AI Pitfalls - UI and Input]] · [[UI Scale HUD Hide and Compact Mode]] · [[Mobile Button Layout Editor]] · [[Cookbook - Players and Characters]] · [[Cookbook - Data and Saving]] · [[Cookbook - Math CFrame and Vectors]]
+<!-- related:end -->

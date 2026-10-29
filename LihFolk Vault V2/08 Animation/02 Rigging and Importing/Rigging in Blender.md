@@ -1,5 +1,5 @@
 ---
-tags: [rigging, blender, import, workflow, hub]
+tags: [rigging, blender, import, workflow, hub, type/hub, area/animation, level/intermediate, api/Motor6D, area/modeling, api/Humanoid, api/Animator]
 ---
 # Rigging in Blender (for Roblox)
 
@@ -12,7 +12,7 @@ tags: [rigging, blender, import, workflow, hub]
 > - Character faces -Y, feet on Z = 0, final stud height.
 > - Root bone at origin, no weights on it, motion on its first child.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.2k tok. Read more: ## 1. The three questions to answer before you add a bone · ## 3. Building the armature · ## Checklist before export · ## Common mistakes
+> Cost: TL;DR ~160 tok · whole note ~4.3k tok. Read more: ## 1. The three questions to answer before you add a bone · ## 3. Building the armature · ## Checklist before export · ## Common mistakes
 <!-- tldr:end -->
 
 This is the hub note for building rigs in Blender that survive the trip into Roblox and animate correctly once they get there. It covers the decisions you make before the first bone exists, the scene setup that makes every later step predictable, and the rules that one live action game (the "reference project") learned by shipping about 20 creature rigs, 150+ weapon rigs, pets, bosses and an armour kit through this pipeline. The detail lives in the linked notes; this one tells you which decision to make when, and why.
@@ -172,5 +172,10 @@ Practical gotchas measured in the project:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Modeling Characters for R15 and Custom Rigs]] · [[Skinning Weights]] · [[Skeleton Library]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Character and Creature Pipeline]] · [[Links - Importing into Studio]] · [[Animation Start Here]]
+[[Modeling Characters for R15 and Custom Rigs]] · Skinning Weights · Skeleton Library · Voxel Characters - Proportions Joints and Rigging · Character and Creature Pipeline · Links - Importing into Studio · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Skinning Weights]] · [[Accessories and Armor That Follow Animation]] · [[Skeleton Library]] · [[Enemy Import Axis Fix]] · [[Layered Clothing Cages and Animation]] · [[Weapon Design Rig Builder]] · [[Moon Animator and Third-Party Tools]] · [[Animation Glossary]] · [[Facial Animation and Dynamic Heads]] · [[Motor6D Math and CFrame Composition]]
+<!-- related:end -->

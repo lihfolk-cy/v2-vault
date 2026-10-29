@@ -1,5 +1,5 @@
 ---
-tags: [terrain, materials, painting, materialvariant, terraindetail, procedural, world-building]
+tags: [terrain, materials, painting, materialvariant, terraindetail, procedural, world-building, type/guide, area/materials, level/intermediate, api/Terrain, area/procedural]
 ---
 # Terrain Materials and Painting
 
@@ -12,7 +12,7 @@ tags: [terrain, materials, painting, materialvariant, terraindetail, procedural,
 > - Three to five materials per view; path lighter than surroundings in grayscale.
 > - Natural terrain uses a TerrainDetail override (top and side) where possible.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.1k tok. Read more: ## 2. Let the material paint slopes: TerrainDetail · ## 4. Procedural painting by slope, height and noise · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.2k tok. Read more: ## 2. Let the material paint slopes: TerrainDetail · ## 4. Procedural painting by slope, height and noise · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The vault already covers terrain's data model and API ([[Terrain Tools and Terrain API]]), and what is global versus local about terrain materials, water, Expanded Terrain limits and performance ([[Terrain Deep Dive - Materials Water and Performance]]). This note is about **the craft of painting**: choosing a small palette of ground materials that reads well, letting `TerrainDetail` do slope painting for you, painting by hand without the result looking like a paint program, painting procedurally by slope, height and noise with a correct and chunked script, importing a colormap, and dressing terrain with the vault's own CC0 textures. The goal is ground that tells the player where to walk, not ground that shows off how many materials exist.
@@ -46,7 +46,7 @@ That means a single material can be **grass on top and rock on the sides**. Pain
 
 Using sets from [[CC0 Texture and HDRI Library]]:
 
-| Face | Source set | Maps | Size | StudsPerTile (start) |
+| Face | Source set | Maps | Size | [[StudsPerTile]] (start) |
 |---|---|---|---|---|
 | Top | `forest_ground_04` | diff, nor_gl, rough | 512 | 8 to 12 |
 | Side | `mossy_rock` | diff, nor_gl, rough | 512 | 12 to 16 |
@@ -325,5 +325,10 @@ The texture costs follow [[Textures Decals and Texture Memory]]: pixels, not fil
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Terrain]] · [[AI Material and Texture Generation]] · [[Hand-Painted and Stylized Texturing]] · [[Links - Materials and MaterialVariants]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Voxel Shading - Baked AO Edges and Lighting]]
+[[Links - Terrain]] · AI Material and Texture Generation · Hand-Painted and Stylized Texturing · Links - Materials and MaterialVariants · MagicaVoxel Goxel and Blockbench Workflows Compared · Voxel Shading - Baked AO Edges and Lighting
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[AI Material and Texture Generation]] · [[Stylised vs Realistic Material Pipelines]] · [[SurfaceAppearance PBR Workflow]] · [[Procedural Materials and Skies - Lessons]] · [[Baking Lighting and Detail into Textures]] · [[Tiling Trim Sheets and Decal Tricks]]
+<!-- related:end -->

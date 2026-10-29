@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, networking-multiplayer]
+tags: [resources, links, networking-multiplayer, type/reference, area/networking, level/intermediate, api/MessagingService]
 ---
 # Links - Cross-server messaging
 

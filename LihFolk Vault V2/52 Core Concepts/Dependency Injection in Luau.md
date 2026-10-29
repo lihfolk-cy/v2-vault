@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, architecture, luau, testing, modules]
+tags: [core-concept, architecture, luau, testing, modules, type/reference, area/scripting, level/beginner, api/DataStore]
 ---
 # Dependency Injection in Luau
 
@@ -10,7 +10,7 @@ tags: [core-concept, architecture, luau, testing, modules]
 > - Inject what varies or what is slow. Time, randomness, persistence, HTTP and remotes are the usual candidates.
 > - Defaults keep call sites simple. Accept an optional dependency table and fall back to the real services, so production code...
 >
-> Cost: TL;DR ~150 tok · whole note ~930 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~150 tok · whole note ~1.0k tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Dependency injection (DI)** means a module receives the things it depends on (a data store wrapper, a clock, a random generator, another service) from outside, instead of fetching them itself with `require` or `game:GetService`. In Luau that usually just means passing a table of dependencies into a constructor or an `init` function.
@@ -70,5 +70,10 @@ Related concepts: [[Event Bus]], [[Feature Flags]], [[Deterministic Simulation]]
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Advanced Luau Start Here]] · [[Skill - Roblox System Builder]] · [[MCP Workflows for Scripting and Debugging]] · [[Links - Testing]] · [[External Tooling - Rojo Wally Selene StyLua]] · [[Resource Library - Data and Persistence]] · [[Core Concepts Start Here]]
+[[Advanced Luau Start Here]] · Skill - Roblox System Builder · MCP Workflows for Scripting and Debugging · Links - Testing · External Tooling - Rojo Wally Selene StyLua · Resource Library - Data and Persistence · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Event Bus]] · [[MCP Workflows for Scripting and Debugging]] · [[Data Schema Versioning]] · [[Replication Boundary]] · [[Session Lock]] · [[Testing Time-Based Features with a Controllable Clock]]
+<!-- related:end -->

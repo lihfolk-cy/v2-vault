@@ -1,5 +1,5 @@
 ---
-tags: [art-direction, untextured, stylised, asset-library, consistency, pipeline, audit, palette, luau]
+tags: [art-direction, untextured, stylised, asset-library, consistency, pipeline, audit, palette, luau, type/guide, area/modeling, level/intermediate]
 ---
 # Keeping a Mixed Asset Library Consistent
 
@@ -12,10 +12,10 @@ tags: [art-direction, untextured, stylised, asset-library, consistency, pipeline
 > - Shared Blender template with palette, modifier presets, measuring cube and export preset.
 > - Per-source normalisation steps applied (Parts, Blender, CC0, store, voxel, AI).
 >
-> Cost: TL;DR ~210 tok · whole note ~4.0k tok. Read more: ## Normalising each source · ## Auditing a place with Luau · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~210 tok · whole note ~4.1k tok. Read more: ## Normalising each source · ## Auditing a place with Luau · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-Very few Roblox games are built from one source. A typical library mixes Parts and unions built in Studio, meshes modelled in Blender by two or three people, a CC0 pack (Kenney and Quaternius publish large free low-poly kits), a few Creator Store models, voxel props exported from MagicaVoxel, and lately AI-generated meshes. Each source arrives with its own scale, palette, shading, bevel size and material habits. Textured games can hide some of the mismatch under a shared texture style; untextured games cannot, because the mismatch is in the geometry and the flat colours themselves. Put a gently bevelled Blender barrel next to a sharp-edged Studio crate and a faceted store rock, and the scene reads as an asset flip even if every piece is good on its own.
+Very few Roblox games are built from one source. A typical library mixes Parts and unions built in Studio, meshes modelled in Blender by two or three people, a CC0 pack (Kenney and Quaternius publish large free low-poly kits), a few Creator Store models, voxel props exported from [[MagicaVoxel]], and lately AI-generated meshes. Each source arrives with its own scale, palette, shading, bevel size and material habits. Textured games can hide some of the mismatch under a shared texture style; untextured games cannot, because the mismatch is in the geometry and the flat colours themselves. Put a gently bevelled Blender barrel next to a sharp-edged Studio crate and a faceted store rock, and the scene reads as an asset flip even if every piece is good on its own.
 
 This note is the practical side of consistency: the handful of measurable properties that make untextured assets match, a normalisation pass for each source, a Luau audit that finds outliers in a place, a palette remap script, and how to keep the library from drifting over months. The written style document itself (what goes in it and how to run reviews) is the subject of [[Style Bibles for Consistent Models]]; this note assumes you have one, even a one-page version, and shows how to enforce it.
 
@@ -41,7 +41,7 @@ A one-page table, kept with the style document. Example values for a generic chu
 |---|---|
 | Player reference | Default avatar height; doors 8 to 10 studs tall, 6 studs wide |
 | Bevel width | 3 to 5 percent of the object's smallest large dimension; minimum 0.08 studs; 1 segment, 2 on hero props |
-| Shading | Smooth with weighted normals for props and architecture; faceted only for rocks, crystals, canopies |
+| Shading | Smooth with [[weighted normals]] for props and architecture; faceted only for rocks, crystals, canopies |
 | Facet size (faceted assets) | About 12 px on a 720 px tall render at the usual viewing distance ([[Faceted Low-Poly - Flat Normals and Facet Size]]) |
 | Colour method | Gradient atlas `zone_L1` for props; flat `Color` for surfaces over 50 studs; Neon for glows; no vertex colour except grey AO |
 | Palette | Base 16 colours plus zone 12; props use 2 to 4 |
@@ -257,5 +257,10 @@ Keep a shelf of 10 to 20 "golden" approved assets in the look-dev place specific
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Bevels Chamfers and Edge Highlights Without Textures]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[Low-Poly and Stylized Modeling]] · [[Modelling Nuance Start Here]] · [[Modeling Fundamentals for Games]] · [[Hard-Surface Modeling]]
+[[Bevels Chamfers and Edge Highlights Without Textures]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · Low-Poly and Stylized Modeling · Modelling Nuance Start Here · Modeling Fundamentals for Games · Hard-Surface Modeling
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Low-Poly and Stylized Modeling]] · [[Spending Triangles Where the Camera Looks]] · [[AI 3D Model Generation Outside Roblox]] · [[Modeling Fundamentals for Games]] · [[Hard-Surface Modeling]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]
+<!-- related:end -->

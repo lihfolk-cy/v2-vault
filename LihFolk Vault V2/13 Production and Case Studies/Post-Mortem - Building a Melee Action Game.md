@@ -1,5 +1,5 @@
 ---
-tags: [production, post-mortem, case-study, combat, rng, retrospective]
+tags: [production, post-mortem, case-study, combat, rng, retrospective, type/case-study, area/production, level/intermediate, area/monetization]
 ---
 # Post-Mortem: Building a Melee Action Game
 
@@ -9,7 +9,7 @@ tags: [production, post-mortem, case-study, combat, rng, retrospective]
 > - Week 1: a vertical slice and a play-test cadence.
 > - The reference project shipped an enormous amount of content quickly because its pipelines were good and its verification was...
 >
-> Cost: TL;DR ~110 tok · whole note ~3.2k tok. Read more: ## What went right · ## What went wrong
+> Cost: TL;DR ~110 tok · whole note ~3.3k tok. Read more: ## What went right · ## What went wrong
 <!-- tldr:end -->
 
 This is a post-mortem in the classic format (what went right, what went wrong, the numbers) for one live action game on Roblox: a melee game with collectible weapons of rising rarity, zones of enemies, crafting and bosses. The project is anonymised; it is called "the reference project" elsewhere in this vault. All figures are measured from the project's own notes unless marked otherwise.
@@ -134,5 +134,10 @@ The reference project shipped an enormous amount of content quickly because its 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Case Study - Building a Game with AI Agents]] · [[Baked Clip Stubs and Archiving]] · [[Documentation and Knowledge Bases]] · [[Version History and Backups]] · [[AI Agents and Autonomous Workflows]] · [[Pipeline Design Principles]]
+[[Case Study - Building a Game with AI Agents]] · Baked Clip Stubs and Archiving · [[Documentation and Knowledge Bases]] · Version History and Backups · AI Agents and Autonomous Workflows · Pipeline Design Principles
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Scoping and Roles for Small Teams]] · [[Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts]] · [[Case Study - Building LihFolk V2 with AI Agents]] · [[Live Incident Response and Post-Mortems]] · [[Ship a Game in 30 Days - Week-by-Week Plan for a Solo Dev]] · [[Template Reskin Checklist - One Codebase, New Game]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [modeling, export, import, validation, pivots, collision, meshpart]
+tags: [modeling, export, import, validation, pivots, collision, meshpart, type/guide, area/modeling, level/intermediate, api/DoubleSided, api/Model]
 ---
 # Exporting and Validating Models for Roblox
 
@@ -12,7 +12,7 @@ tags: [modeling, export, import, validation, pivots, collision, meshpart]
 > - Normals outward; no internal faces; triangles within limit.
 > - One UV map, one material; textures embedded or uploaded.
 >
-> Cost: TL;DR ~130 tok · whole note ~4.6k tok. Read more: ## 5. Pivots · ## 6. Collision and render fidelity · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.7k tok. Read more: ## 5. Pivots · ## 6. Collision and render fidelity · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The last mile from Blender to a working MeshPart is where good models go wrong: the wrong scale, a pivot floating 12 studs above a tree, a sword that faces sideways, a collider that blocks a doorway, a texture that silently did not come through, 400 meshes uploaded to the wrong owner. This note is a pre-export checklist, the export settings that matter, what the 3D Importer and upload add-ons do to pivots and axes, collision fidelity and `AssetService:CreateMeshPartAsync`, and a Studio validation script you can run on every import. Specs from the Creator Hub (checked October 2026); "measured" items are from one production game, the reference project, which imported and uploaded thousands of meshes.
@@ -307,5 +307,10 @@ When a kit is placed by script, validate the placement numerically rather than b
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox Asset Import]] · [[Links - Importing into Studio]] · [[Modeling in Blender for Roblox]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Art Pipeline - Concept to In-Game Asset]] · [[Rigging in Blender]]
+[[Skill - Roblox Asset Import]] · Links - Importing into Studio · Modeling in Blender for Roblox · Meshing Voxels for Roblox - Greedy Meshing and Export · Art Pipeline - Concept to In-Game Asset · Rigging in Blender
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[AI Pitfalls - Assets and Import]] · [[Modular Environment Kits]] · [[Modeling in Blender for Roblox]] · [[Mesh Optimization for Mobile]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Substance Painter and Texturing Tools]] · [[Modeling Weapons and Props]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Hard-Surface Modeling]] · [[Topology and Edge Flow]]
+<!-- related:end -->

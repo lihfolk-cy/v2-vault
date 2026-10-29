@@ -1,5 +1,5 @@
 ---
-tags: [ui, gamepad, console, selection, guiservice, ten-foot]
+tags: [ui, gamepad, console, selection, guiservice, ten-foot, type/guide, area/ui, level/intermediate, api/UserInputService, api/ContextActionService, api/TweenService]
 ---
 # Gamepad and Console UX
 
@@ -12,7 +12,7 @@ tags: [ui, gamepad, console, selection, guiservice, ten-foot]
 > - Shoulder buttons switch tabs; key HUD actions mapped.
 > - Selection visual equals hover visual plus a strong ring.
 >
-> Cost: TL;DR ~130 tok · whole note ~3.6k tok. Read more: ## 3. A focus manager · ## 8. Diagnosing selection problems · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.7k tok. Read more: ## 3. A focus manager · ## 8. Diagnosing selection problems · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 On a console, or on a PC or tablet with a controller, there is no cursor. The player moves a **selection** between UI objects with the d-pad or thumbstick and presses A to activate. Roblox's selection engine does a lot automatically, but games that rely on the defaults alone end up with menus where the selection starts nowhere, jumps to the wrong button, escapes into the HUD behind the panel, or vanishes after a panel closes. This note covers the selection API, a focus manager pattern, ten-foot (TV) design rules, and the console polish the reference project added.
@@ -259,5 +259,10 @@ See also: [[Input - UserInputService and ContextActionService]], [[Responsive UI
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Debugging UI Layout and Input]] · [[Cookbook - UI]] · [[Links - Cross-platform UI]] · [[ScreenGui Fundamentals]] · [[Safe Area]] · [[Case Study - Phone UI Overhaul]]
+[[Debugging UI Layout and Input]] · Cookbook - UI · Links - Cross-platform UI · [[ScreenGui Fundamentals]] · Safe Area · Case Study - Phone UI Overhaul
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Controller Support QoL]] · [[Cookbook - UI]] · [[Virtualized Lists and Large Inventories]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[Layout - Scale Offset and Constraints]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]] · [[UI Motion Language and Timing]] · [[Safe Areas and Insets]]
+<!-- related:end -->

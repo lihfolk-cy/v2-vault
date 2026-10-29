@@ -1,5 +1,5 @@
 ---
-tags: [performance, physics, collision, humanoids, network-ownership, bulkmoveto]
+tags: [performance, physics, collision, humanoids, network-ownership, bulkmoveto, type/guide, area/performance, level/intermediate, api/BulkMoveTo, area/physics, api/Touched]
 ---
 # Physics Performance
 
@@ -12,7 +12,7 @@ tags: [performance, physics, collision, humanoids, network-ownership, bulkmoveto
 > - Collision fidelity audited; no precise fidelity on small or distant meshes.
 > - Large complex meshes use simple invisible colliders.
 >
-> Cost: TL;DR ~160 tok · whole note ~3.8k tok. Read more: ## 3. Collision: fidelity and flags · ## 6. Moving many parts: `BulkMoveTo` · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.9k tok. Read more: ## 3. Collision: fidelity and flags · ## 6. Moving many parts: `BulkMoveTo` · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Physics cost on Roblox is rarely about one heavy simulation. It is about **how many things the engine thinks it has to simulate, collide or query**: thousands of decorative parts left unanchored, precise collision on every rock, Humanoids on statues, ownership ping-ponging between players, and scripts that move hundreds of parts one property set at a time. This note explains what the physics engine actually spends time on, the switches that remove work (anchoring, collision flags, fidelity, stepping method, Humanoid states), network ownership costs, moving many parts cheaply with `BulkMoveTo`, and how to diagnose physics load.
@@ -271,5 +271,10 @@ See [[Raycasts Shapecasts and Spatial Queries]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Debugging Physics and Network Ownership]] · [[Links - Collisions]] · [[Tween and CFrame Animation of Objects]] · [[Links - Raycasting and spatial queries]] · [[Exporting and Validating Models for Roblox]] · [[Resource Library - Physics]]
+[[Debugging Physics and Network Ownership]] · Links - Collisions · Tween and CFrame Animation of Objects · Links - Raycasting and spatial queries · Exporting and Validating Models for Roblox · Resource Library - Physics
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Network Bandwidth Budgets and Measuring Them]] · [[Network Performance]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[Rendering Performance]] · [[Performance Fundamentals]] · [[Client Zone Culling for Interiors and Cities]] · [[Mobile and Low-End Optimization]] · [[Weather Performance Budgets and Quality Tiers]]
+<!-- related:end -->

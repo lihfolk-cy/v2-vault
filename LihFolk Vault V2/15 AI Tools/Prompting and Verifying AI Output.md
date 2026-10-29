@@ -1,5 +1,5 @@
 ---
-tags: [ai, verification, prompting, testing, qa]
+tags: [ai, verification, prompting, testing, qa, type/guide, area/ai, level/intermediate]
 ---
 # Prompting and Verifying AI Output
 
@@ -12,7 +12,7 @@ tags: [ai, verification, prompting, testing, qa]
 > - Each change verified to a named rung; the rung is reported.
 > - Live-only dependencies tested in a live or team-test server.
 >
-> Cost: TL;DR ~150 tok · whole note ~3.4k tok. Read more: ## 1. How AI-written Roblox code fails · ## 3. Verifying: the ladder · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.5k tok. Read more: ## 1. How AI-written Roblox code fails · ## 3. Verifying: the ladder · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 AI output fails in a specific way: it looks finished. Wrong code compiles, a wrong mesh renders, a wrong explanation reads fluently, and an agent's report says "done". This note is about the two halves of working with that: asking in a way that makes errors less likely and easier to see, and verifying in a way that catches the errors that remain.
@@ -231,5 +231,10 @@ Rules of thumb from the reference project:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[MCP Workflows for Scripting and Debugging]] · [[AI in Roblox Development Overview]] · [[Working with AI Assistants in Studio]] · [[Case Study - Building a Game with AI Agents]] · [[Agent Review Loops and Guardrails in Practice]] · [[Roblox Studio MCP Server]]
+[[MCP Workflows for Scripting and Debugging]] · [[AI in Roblox Development Overview]] · Working with AI Assistants in Studio · Case Study - Building a Game with AI Agents · Agent Review Loops and Guardrails in Practice · Roblox Studio MCP Server
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Evaluating AI Tools - A Practical Rubric]] · [[What AI Models Get Wrong in Roblox]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[AI Animation and Motion from Video]] · [[AI Asset Pipelines - Scoring, Reviewers and Spot Checks]] · [[Agent Orchestration - Sub-Agents, Hooks and Skill Costs]] · [[AI Audio - Voice Music and SFX]] · [[Token Cost Benchmarks]]
+<!-- related:end -->

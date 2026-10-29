@@ -1,5 +1,5 @@
 ---
-tags: [game-design, ethics, dark-patterns, monetization, odds, child-safety, trust]
+tags: [game-design, ethics, dark-patterns, monetization, odds, child-safety, trust, type/guide, area/design, level/intermediate, api/ProcessReceipt, area/monetization]
 ---
 # Ethical Design and Player Trust
 
@@ -12,7 +12,7 @@ tags: [game-design, ethics, dark-patterns, monetization, odds, child-safety, tru
 > - Is every price shown in Robux (or with a Robux equivalent)?
 > - Are any odds shown as real percentages computed from the code, updated for active boosts?
 >
-> Cost: TL;DR ~150 tok · whole note ~3.6k tok. Read more: ## 3. Dark patterns and honest alternatives · ## 6. Onboarding and purchase timing · ## 9. Feature review checklist · ## 10. Common mistakes
+> Cost: TL;DR ~150 tok · whole note ~3.8k tok. Read more: ## 3. Dark patterns and honest alternatives · ## 6. Onboarding and purchase timing · ## 9. Feature review checklist · ## 10. Common mistakes
 <!-- tldr:end -->
 
 Roblox's audience is young, and many players spend money that belongs to their parents. Every technique in this folder (hooks, streaks, timers, RNG, status, offers) can be used to make a game better or to pressure children into playing and spending more than is good for them. This note sets out the rules Roblox itself enforces, the dark patterns researchers have documented in Roblox games, honest alternatives for each, and a review checklist for any feature that touches time, money or randomness. It is opinionated on purpose: trust is the one resource a game cannot buy back.
@@ -67,7 +67,7 @@ The "parent test" (rule of thumb): would you be comfortable explaining exactly h
 Many standard Roblox products are fine in moderation and harmful in excess:
 - **Multiplier passes** (x2 cash) are a fair trade when the free pace is good.
 - **Luck products** put money directly on the gamble. Keep them modest, explain them numerically, and update displayed odds while active (Docs requirement for paid probability modifiers).
-- **"Claim x2" on rewards** (offline earnings, quest rewards) is fine when the free claim is generous; it becomes a pattern of pressure if every reward screen leads with the paid button.
+- **"Claim x2" on rewards** ([[offline earnings]], quest rewards) is fine when the free claim is generous; it becomes a pattern of pressure if every reward screen leads with the paid button.
 
 ---
 
@@ -211,5 +211,10 @@ Run this for every feature that touches money, time or randomness:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Paid Random Items and Odds Disclosure in Practice]] · [[Skill - Roblox Monetization Compliance]] · [[Robux Price Points and Offer Design]] · [[Limited-Time Offers - Design and Ethics]] · [[Pity Timer]] · [[RNG Drops and Luck Systems]]
+[[Paid Random Items and Odds Disclosure in Practice]] · Skill - Roblox Monetization Compliance · Robux Price Points and Offer Design · Limited-Time Offers - Design and Ethics · Pity Timer · RNG Drops and Luck Systems
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Limited-Time Offers - Design and Ethics]] · [[Robux Price Points and Offer Design]] · [[Genre Playbook - Simulators]] · [[Simulator and RNG Genre Teardown]] · [[Balancing with Spreadsheets and Data]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Tycoons]] · [[Progression and Pacing Design]] · [[Genre Playbook - Tower Defense]] · [[Rarity Ladders and Drop Pacing Math]]
+<!-- related:end -->

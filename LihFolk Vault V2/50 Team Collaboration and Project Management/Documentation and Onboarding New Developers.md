@@ -1,5 +1,5 @@
 ---
-tags: [team, onboarding, documentation, knowledge-base, docs-as-code, luau, workflow]
+tags: [team, onboarding, documentation, knowledge-base, docs-as-code, luau, workflow, type/guide, area/production, level/intermediate, area/scripting, api/Player]
 ---
 # Documentation and Onboarding New Developers
 
@@ -12,7 +12,7 @@ tags: [team, onboarding, documentation, knowledge-base, docs-as-code, luau, work
 > - Access (age check, group role, 2SV, sandbox, repo, chat) requested a week before day one.
 > - One-command setup, tested on a clean machine recently.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.7k tok. Read more: ## 6. Documentation that lives next to the code · ## 7. A generated index of remotes and modules · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.8k tok. Read more: ## 6. Documentation that lives next to the code · ## 7. A generated index of remotes and modules · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Documentation and Knowledge Bases]] explains the four documents a team needs (project map, running changelog, decisions log, systems notes), how documentation rots, honest verification labels, and generated docs, using the reference project's real files. This note uses those documents for one specific job: getting a new person productive and safe in a Roblox project quickly. It covers what to prepare before their first day, a day-one document that fits on two screens, a first-two-weeks plan with a measurable goal, how to pick starter tasks, code-level documentation that lives next to the code (module headers, doc comments, architecture decision records), a generated index of remotes and modules, onboarding builders and artists who never open a script, and how to keep the onboarding path from rotting between hires.
@@ -333,5 +333,10 @@ Onboarding documents rot fastest because the people who maintain them already kn
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Team Collaboration Start Here]] · [[Git and Source Control for Roblox]] · [[Scoping and Roles for Small Teams]] · [[Running a Small Studio as a Business]] · [[Business and Careers Start Here]] · [[Team Roles and Workflows]]
+[[Team Collaboration Start Here]] · [[Git and Source Control for Roblox]] · Scoping and Roles for Small Teams · Running a Small Studio as a Business · Business and Careers Start Here · Team Roles and Workflows
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Scoping and Roles for Small Teams]] · [[Packages and Shared Assets Across Places]] · [[Team Roles and Workflows]] · [[Commissions Pricing and Contracts]] · [[Running a Small Studio as a Business]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]]
+<!-- related:end -->

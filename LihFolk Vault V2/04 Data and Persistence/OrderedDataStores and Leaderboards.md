@@ -1,5 +1,5 @@
 ---
-tags: [data, ordereddatastore, leaderboards, memorystore, ranking]
+tags: [data, ordereddatastore, leaderboards, memorystore, ranking, type/guide, area/data, level/intermediate, api/IncrementAsync, area/performance, api/DataStore, api/UpdateAsync]
 ---
 # OrderedDataStores and Leaderboards
 
@@ -12,7 +12,7 @@ tags: [data, ordereddatastore, leaderboards, memorystore, ranking]
 > - Writes on an interval and on leave, only for loaded profiles, only when changed.
 > - Reads cached per server, staggered, with a fallback display.
 >
-> Cost: TL;DR ~170 tok · whole note ~4.5k tok. Read more: ## Writing scores · ## Nuances and edge cases · ## Checklist · ## Common mistakes
+> Cost: TL;DR ~170 tok · whole note ~4.6k tok. Read more: ## Writing scores · ## Nuances and edge cases · ## Checklist · ## Common mistakes
 <!-- tldr:end -->
 
 A global leaderboard looks trivial ("sort everyone by coins") and is one of the easiest ways to throttle your whole experience. This note covers `OrderedDataStore` exactly as it behaves in October 2026 (integers only, no versioning, small per-server write budgets, 100-entry pages), the read and write patterns that scale, periodic boards (daily, weekly), when a MemoryStore sorted map is the better tool, how to show a player's own rank, big-number scores for simulators, and what one production game's hub leaderboards did.
@@ -308,5 +308,10 @@ The senior trade-off: global leaderboards drive competition and attract exploite
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Cookbook - Data and Saving]] · [[Links - Leaderboards]] · [[Economy Resets and Seasonal Wipes]] · [[Debugging DataStore Problems]] · [[Session Lock]] · [[Cross-Server Messaging]]
+[[Cookbook - Data and Saving]] · Links - Leaderboards · Economy Resets and Seasonal Wipes · Debugging DataStore Problems · Session Lock · Cross-Server Messaging
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Resetting One Player's Data Safely]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[Global State and Live Config]] · [[Data Schema Design and Migrations]] · [[Open Cloud APIs]] · [[Schema Migrations - Worked Case Studies]] · [[Data Loss Prevention and Recovery]] · [[HttpService and External APIs]] · [[Trading Systems Without Duplication]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [case-study, mcp, agents, production, workflow]
+tags: [case-study, mcp, agents, production, workflow, type/case-study, area/ai, level/intermediate, area/monetization]
 ---
 # Case Study - Building a Game with AI Agents
 
@@ -10,7 +10,7 @@ tags: [case-study, mcp, agents, production, workflow]
 > - Keep a map of the place in the instructions.
 > - Studio is for I/O and truth; compute elsewhere.
 >
-> Cost: TL;DR ~110 tok · whole note ~3.2k tok. Read more: ## 4. A real agent pipeline: adding a weapon · ## 6. What went wrong
+> Cost: TL;DR ~110 tok · whole note ~3.4k tok. Read more: ## 4. A real agent pipeline: adding a weapon · ## 6. What went wrong
 <!-- tldr:end -->
 
 This is the story of the reference project used throughout this vault: a live action game on Roblox built with heavy use of AI coding agents (Claude Code sessions) connected to Roblox Studio and Blender through MCP. It covers what the game contained, how the work was organised, a real end-to-end agent pipeline (adding a new weapon), the numbers, what went wrong, and the lessons that generalise. Names, ids and people are left out; the numbers are real.
@@ -173,5 +173,10 @@ A good split: **agents do volume and verification; the human does judgement and 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Asset Pipelines]] · [[Batch Processing Tools in Studio]] · [[Agent Review Loops and Guardrails in Practice]] · [[MCP Workflows for Building Worlds]] · [[Prompting and Verifying AI Output]] · [[AI in Roblox Development Overview]]
+[[Asset Pipelines]] · Batch Processing Tools in Studio · [[Agent Review Loops and Guardrails in Practice]] · [[MCP Workflows for Building Worlds]] · Prompting and Verifying AI Output · AI in Roblox Development Overview
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[MCP Workflows for Scripting and Debugging]] · [[Batch Processing Tools in Studio]] · [[Writing Your Own MCP Server]] · [[Case Study - Instance Cleanup and Place Size]] · [[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[What Is MCP]] · [[Setting Up MCP Clients]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]]
+<!-- related:end -->

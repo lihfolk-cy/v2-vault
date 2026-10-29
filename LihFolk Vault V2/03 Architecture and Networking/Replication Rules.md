@@ -1,5 +1,5 @@
 ---
-tags: [architecture, networking, replication, attributes, fundamentals]
+tags: [architecture, networking, replication, attributes, fundamentals, type/guide, area/networking, level/beginner, api/GetAttributeChangedSignal, api/RemoteEvent, api/CollectionService]
 ---
 # Replication Rules
 
@@ -12,7 +12,7 @@ tags: [architecture, networking, replication, attributes, fundamentals]
 > - Each piece of shared state has exactly one channel.
 > - Late joiners see correct state with no extra code (attributes, not one-off remotes, for persistent state).
 >
-> Cost: TL;DR ~180 tok · whole note ~4.4k tok. Read more: ## Attributes as a replication channel · ## Pattern: attribute-driven client presentation · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~4.5k tok. Read more: ## Attributes as a replication channel · ## Pattern: attribute-driven client presentation · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Replication is the engine process that keeps every client's copy of the DataModel close to the server's. You do not call it; it happens whenever the server creates, destroys, reparents or changes an instance in a replicated container. Understanding exactly what replicates, in which direction, and in what order lets you move most client-server communication out of hand-written remotes and into plain property and attribute writes, which are cheaper, simpler and automatically correct for late joiners.
@@ -238,5 +238,10 @@ So client code must treat every Workspace reference as possibly gone: check `ins
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Replication Boundary]] · [[Debugging Client-Server Desync]] · [[Script Types and Run Context]] · [[Interest Management and Per-Player Replication]] · [[How Exploits Work - The Client Boundary]] · [[Skill - Roblox Secure Remotes]]
+[[Replication Boundary]] · Debugging Client-Server Desync · Script Types and Run Context · [[Interest Management and Per-Player Replication]] · How Exploits Work - The Client Boundary · Skill - Roblox Secure Remotes
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Debugging Client-Server Desync]] · [[Entity Component Systems]] · [[Snapshot Interpolation for Custom Replication]] · [[Remote Abuse Patterns and Rate Limiting in Practice]] · [[Rate Limiting and Abuse Prevention]] · [[Client Prediction and Reconciliation for Combat]] · [[Frameworks - Knit Matter and Others]] · [[Exploits and Anti-Cheat]]
+<!-- related:end -->

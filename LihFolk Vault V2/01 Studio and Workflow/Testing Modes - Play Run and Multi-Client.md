@@ -1,5 +1,5 @@
 ---
-tags: [studio, testing, playtest, multiplayer, emulation, workflow]
+tags: [studio, testing, playtest, multiplayer, emulation, workflow, type/guide, area/studio, level/intermediate, area/networking, api/Script]
 ---
 # Testing Modes - Play Run and Multi-Client
 
@@ -12,7 +12,7 @@ tags: [studio, testing, playtest, multiplayer, emulation, workflow]
 > - Network Simulator pass at 3G for anything latency-sensitive.
 > - Device Simulator pass for every UI change.
 >
-> Cost: TL;DR ~150 tok · whole note ~3.8k tok. Read more: ## 1. The modes · ## 6. What Studio tests do not tell you · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.9k tok. Read more: ## 1. The modes · ## 6. What Studio tests do not tell you · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 Studio can run your game in several ways: one player with a local server, a server with no player, a real server with up to eight clients, a shared test with teammates, and with emulated devices and bad networks. Each mode answers a different question, and each lies to you in specific ways. This note maps the modes to the questions, lists what behaves differently in Studio than in a live server, and adds the scripted testing services that let a plugin or pipeline drive tests. Mode names changed in recent Studio versions: the old **Play / Play Here** are now **Test / Test Here** in the mezzanine dropdown (Docs, October 2026).
@@ -236,5 +236,10 @@ Tools and previews often run in Edit, where:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Multi-Client and Device Playtesting Protocols]] · [[Mobile and Low-End Optimization]] · [[Parties and Group Teleports]] · [[Multiplayer Services Start Here]] · [[Automated Testing with TestEZ and Jest-Lua]] · [[MCP Workflows for Scripting and Debugging]]
+[[Multi-Client and Device Playtesting Protocols]] · Mobile and Low-End Optimization · Parties and Group Teleports · Multiplayer Services Start Here · Automated Testing with TestEZ and Jest-Lua · MCP Workflows for Scripting and Debugging
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[UI Automation with VirtualInput and StudioTestService]] · [[Studio Settings and Shortcuts]] · [[Team Create and Collaboration]] · [[Studio Assistant and AI Tools]] · [[Places Universes and Experience Settings]] · [[Version History and Backups]] · [[Explorer Properties and Selection]]
+<!-- related:end -->

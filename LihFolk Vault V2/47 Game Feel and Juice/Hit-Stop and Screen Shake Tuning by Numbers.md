@@ -1,5 +1,5 @@
 ---
-tags: [game-feel, juice, hit-stop, camera-shake, tuning, combat, numbers, luau]
+tags: [game-feel, juice, hit-stop, camera-shake, tuning, combat, numbers, luau, type/guide, area/game-feel, level/intermediate, area/gameplay]
 ---
 # Hit-Stop and Screen Shake Tuning by Numbers
 
@@ -12,7 +12,7 @@ tags: [game-feel, juice, hit-stop, camera-shake, tuning, combat, numbers, luau]
 > - Light tier produces no stop and no shake.
 > - One hit-stop per swing; trauma scales with log of target count.
 >
-> Cost: TL;DR ~180 tok · whole note ~5.2k tok. Read more: ## 4. What a shake looks like depends on FOV, not resolution · ## 7. A tuning module · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.3k tok. Read more: ## 4. What a shake looks like depends on FOV, not resolution · ## 7. A tuning module · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Hit Reactions Stagger and Hit-Stop]] explains how to build a hit-stop that does not desync from clock-timed effects, and [[Camera Shake and Camera FX]] gives a trauma shake with envelopes and caps. This note assumes both and answers the next question: **what numbers do you actually type in, and how do you know they are right?** It covers frame math at the frame rates Roblox players really run, a strength ladder that ties stop length and trauma to one value, budgets that stop flurries from grinding to a halt, how field of view and screen size change what a shake looks like, the aliasing trap on 30 fps phones, and a tuning workflow you can repeat.
@@ -34,7 +34,7 @@ Players perceive hit-stop as "the action caught for a moment". What they actuall
 A 50 ms stop is three frames at 60 fps and **one or two** frames at 30 fps, depending on where the stop starts relative to the frame boundary. That is the first nuance: on a slow device the same stop length alternates between one and two frames from hit to hit, which reads as inconsistency rather than weight. Two practical consequences:
 
 - **Below 2 frames at 30 fps (about 66 ms), short stops are unreliable on phones.** If a beat matters, either give it at least 66 ms or accept that weak devices will see it only half the time. The reference project's catch-up stop runs from 50 ms (strength 0.45) to about 89 ms (strength 1.3): the light end is below the phone threshold and the heavy end above it. That is acceptable because light stops are seasoning, but do not lean on a 50 ms stop to communicate anything important.
-- **Effects that must be exactly N frames (impact frames, white flashes) should count rendered frames, not seconds.** Connect to `RunService.PreRender` and remove the flash after the second callback, not after `task.wait(1/30)`. On a 240 fps PC a 1/30 s flash is eight frames of strobe; counting frames keeps it one or two at every rate.
+- **Effects that must be exactly N frames ([[impact frames]], white flashes) should count rendered frames, not seconds.** Connect to `RunService.PreRender` and remove the flash after the second callback, not after `task.wait(1/30)`. On a 240 fps PC a 1/30 s flash is eight frames of strobe; counting frames keeps it one or two at every rate.
 
 The catch-up technique (slow to 0.12x, then run at 1.88x for the same length) is frame-rate independent because it changes playback speed, not frame counts. Keep it for the body, and use frame counting only for full-screen effects.
 
@@ -110,7 +110,7 @@ Two consequences most shake systems miss:
 - **Resolution does not matter**, because the fraction is independent of pixel count. A phone and a 4K monitor see the same proportion of movement. Specify shake as a fraction of screen height and you never need per-device tuning for size.
 - **FOV matters a lot.** A shake tuned at FOV 70 is almost twice as violent while zoomed to FOV 40. Games with aim-down-sights or zoom must scale rotational shake by `tan(FOV / 2) / tan(35 degrees)`. If your [[Camera Shake and Camera FX]] envelopes push FOV up on dashes, the shake during a dash is correspondingly weaker, which is usually fine.
 
-Translational shake (camera-space offset in studs) behaves differently: its on-screen size depends on distance to what you are looking at. A 0.3 stud offset is huge on a close-up shoulder camera and invisible on a top-down camera 60 studs up. **Use rotation for impacts and translation only for "the ground moved" effects** (landings, explosions under the player), where parallax between near and far objects is the point.
+Translational shake (camera-space offset in studs) behaves differently: its on-screen size depends on distance to what you are looking at. A 0.3 stud offset is huge on a close-up shoulder camera and invisible on a top-down camera 60 studs up. **Use rotation for impacts and translation only for "the ground moved" effects** (landings, explosions under the player), where [[parallax]] between near and far objects is the point.
 
 ### Phones and the 30 fps aliasing trap
 
@@ -346,5 +346,10 @@ Tuning by feel alone drifts: after an hour, every developer's tolerance for shak
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Snippets - Camera Shake and FX]] · [[Game Feel Start Here]] · [[Hit-Stop]] · [[Cinematic Ultimates]] · [[Combat Combo Systems]] · [[Combat Animation Craft]]
+[[Snippets - Camera Shake and FX]] · [[Game Feel Start Here]] · Hit-Stop · Cinematic Ultimates · Combat Combo Systems · Combat Animation Craft
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Hit-Stop]] · [[Juice on a Budget - Mobile and Low-End]] · [[Layering Camera Feedback on the Default Camera]] · [[Squash Stretch and Anticipation in UI and Characters]] · [[Feedback Timing - Sound Visual and Haptic Sync]] · [[Comfort Toggles - Flashes Damage Numbers and Hit-Stop]]
+<!-- related:end -->

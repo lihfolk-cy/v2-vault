@@ -1,5 +1,5 @@
 ---
-tags: [marketing, growth, video, short-form, share-links, content-creators, capture]
+tags: [marketing, growth, video, short-form, share-links, content-creators, capture, type/guide, area/marketing, level/intermediate, api/UserInputService]
 ---
 # Short-Form Video Marketing
 
@@ -12,7 +12,7 @@ tags: [marketing, growth, video, short-form, share-links, content-creators, capt
 > - UI hide toggle and free camera for clean shots
 > - Hook in the first 1 to 2 seconds; text in the safe middle area
 >
-> Cost: TL;DR ~140 tok · whole note ~4.0k tok. Read more: ## 3. Capturing clean footage in Studio · ## 4. Share links and attribution · ## 9. Common mistakes · ## 10. Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.1k tok. Read more: ## 3. Capturing clean footage in Studio · ## 4. Share links and attribution · ## 9. Common mistakes · ## 10. Checklist
 <!-- tldr:end -->
 
 Short vertical video (the 15 to 60 second clips on the big video and social apps) is the cheapest way for a small Roblox team to reach players outside Roblox. It is also the channel with the most ways to go wrong: audiences that skew young, platform rules about children, Roblox's own rules about pointing players off-platform, and a format that rewards exaggeration in ways that hurt a game's real metrics.
@@ -124,7 +124,7 @@ Practical setup:
 - Read the join source on the server and log it as a funnel field so you can compare the D1 of video viewers with organic players ([[Analytics and Funnels]]).
 
 ### Why share links matter financially
-Creator Rewards' **Audience Expansion** pays the creator a **35% revenue share on a new or reactivated user's first $100 of qualifying purchases** anywhere on Roblox in their first 60 days, when the user arrives through your Share Link (or a direct link or a name search) and plays 10+ minutes that day; reactivated users must have been inactive for 60 consecutive days; the experience must average 100+ DAU for the 60 days after; one reward per user; you need an ID-verified account in good standing (Roblox docs, as of October 2026). Qualifying purchases are Robux, Premium and UGC subscriptions.
+[[Creator Rewards]]' **Audience Expansion** pays the creator a **35% revenue share on a new or reactivated user's first $100 of qualifying purchases** anywhere on Roblox in their first 60 days, when the user arrives through your Share Link (or a direct link or a name search) and plays 10+ minutes that day; reactivated users must have been inactive for 60 consecutive days; the experience must average 100+ DAU for the 60 days after; one reward per user; you need an ID-verified account in good standing (Roblox docs, as of October 2026). Qualifying purchases are Robux, Premium and UGC subscriptions.
 
 So a video that brings genuinely new players to Roblox through your share link can earn you money even if those players never buy anything in your game, provided they meet the rules. That changes the value of short-form traffic compared with sponsored ads, where I could not confirm that ad-acquired users qualify (see that note). The docs say the framework may change; check the Creator Rewards page before planning around it.
 
@@ -214,5 +214,10 @@ The underlying principle: short-form views are not a Roblox metric. The Roblox m
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Discord Servers for Roblox Games]] · [[Community and Moderation Start Here]] · [[Ads and Rewarded Video]] · [[Click-Through Rate]] · [[Friend Invites Referrals and Experience Invites]] · [[Legal Basics - IP Licenses and Assets]]
+[[Discord Servers for Roblox Games]] · Community and Moderation Start Here · Ads and Rewarded Video · Click-Through Rate · Friend Invites Referrals and Experience Invites · Legal Basics - IP Licenses and Assets
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Game Trailers and Clean Footage - Capture, Freecam and Editing]] · [[Marketing to Kids and Teens - Age Rules and Paid-Promo Disclosure]] · [[Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics]] · [[Competitor Analysis Method]] · [[Experience Description and Search Keywords]] · [[A-B Testing and Experiments on Roblox]] · [[Game Icon Design - Readable at Small Sizes]] · [[Roblox Communities as Your On-Platform Hub]]
+<!-- related:end -->

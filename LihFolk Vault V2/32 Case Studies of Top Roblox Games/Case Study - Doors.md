@@ -1,5 +1,5 @@
 ---
-tags: [case-study, top-games, horror, roguelite, co-op, lobby, matchmaking, live-ops, thumbnails, monetization]
+tags: [case-study, top-games, horror, roguelite, co-op, lobby, matchmaking, live-ops, thumbnails, monetization, type/case-study, area/design]
 ---
 
 # Case Study - Doors
@@ -13,7 +13,7 @@ tags: [case-study, top-games, horror, roguelite, co-op, lobby, matchmaking, live
 > - Store has at most a handful of products, each tied to one moment.
 > - Free revives exist and are easy to get.
 >
-> Cost: TL;DR ~130 tok · whole note ~4.0k tok. Read more: ## Snapshot · ## Click-through: thumbnail, icon and title · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.1k tok. Read more: ## Snapshot · ## Click-through: thumbnail, icon and title · ## Checklist
 <!-- tldr:end -->
 
 Doors is a first-person co-op horror run: you and a few friends ride an elevator into a hotel, open numbered doors one at a time, and try to reach door 100 while entities hunt you. It is the clearest example on Roblox of a small team building a premium-feeling horror game with short, replayable runs, a tiny monetization surface and a brand strong enough that Roblox picks it for platform events. This note is a teardown for developers: what is visible from outside, what it teaches, and which parts are dangerous to copy.
@@ -136,5 +136,10 @@ What is notable is what is absent: no paid power, no gacha, no paid luck. Revive
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Case Study - Fisch]] · [[Case Study - Pet Simulator 99]] · [[Case Study - Adopt Me]] · [[Case Study - Dress to Impress]] · [[Links - Horror game mechanics]] · [[Marketing and Growth Start Here]] · [[Top Games Case Studies Start Here]]
+[[Case Study - Fisch]] · [[Case Study - Pet Simulator 99]] · [[Case Study - Adopt Me]] · [[Case Study - Dress to Impress]] · [[Links - Horror game mechanics]] · Marketing and Growth Start Here · [[Top Games Case Studies Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Case Study - 99 Nights in the Forest]] · [[Case Study - Blox Fruits]] · [[Case Study - Brookhaven RP]] · [[Case Study - Steal a Brainrot]] · [[Case Study - Grow a Garden]] · [[Case Study - Forsaken]] · [[Case Study - Tower Defense Simulator]] · [[Case Study - Jailbreak]]
+<!-- related:end -->

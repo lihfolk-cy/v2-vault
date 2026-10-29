@@ -1,5 +1,5 @@
 ---
-tags: [modeling, voxel, shading, ambient-occlusion, vertex-colors, lighting, bevels, blender, python, mobile]
+tags: [modeling, voxel, shading, ambient-occlusion, vertex-colors, lighting, bevels, blender, python, mobile, type/guide, area/modeling]
 ---
 # Voxel Shading - Baked AO Edges and Lighting
 
@@ -12,7 +12,7 @@ tags: [modeling, voxel, shading, ambient-occlusion, vertex-colors, lighting, bev
 > - AO computed with the both-sides rule and triangulated along the correct diagonal.
 > - Merging limited to faces with matching AO, or AO moved to a texture.
 >
-> Cost: TL;DR ~200 tok · whole note ~4.7k tok. Read more: ## 2. Per-corner voxel ambient occlusion · ## 3. Baking voxel AO into vertex colours in Blender · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~200 tok · whole note ~4.8k tok. Read more: ## 2. Per-corner voxel ambient occlusion · ## 3. Baking voxel AO into vertex colours in Blender · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A voxel model with flat colours and no shading looks like a diagram. What makes good voxel art look solid is shading at the scale of the cells: darker corners where cubes meet, a soft gradient down into crevices, a lighter rim on outside edges, and lighting that separates the top, sides and underside. Some of that the engine provides, much of it it does not, and on low-end phones it provides even less. This note covers the three tools you control: **baked ambient occlusion** per voxel corner (the classic "smooth lighting" of block games), **edge treatments** (bevels, rim colour, normal-mapped bevels), and **lighting setup** in Roblox for blocky art, including what each lighting style does to small voxels. It builds on the shading section of [[Voxel and Blocky Modeling]] (three tones per material) and on [[Baking Lighting and Detail into Textures]], which covers baking into textures in general.
@@ -182,7 +182,7 @@ A 0.5-stud-cell cottage, 24 x 20 x 24 cells, five colours.
 ## 8. When not to bake shading
 
 - **Objects that rotate freely** (spinning pickups, tumbling debris): AO from contact with the floor is wrong once they turn over; keep only self-occlusion, which rotates with them.
-- **Modular pieces that will be placed against unknown neighbours**: AO baked on a wall's base assumes a floor; if the piece is also used floating, it looks dirty. Bake only self-occlusion into kit pieces, or make two variants.
+- **[[Modular Kits|Modular pieces]] that will be placed against unknown neighbours**: AO baked on a wall's base assumes a floor; if the piece is also used floating, it looks dirty. Bake only self-occlusion into kit pieces, or make two variants.
 - **Day-night cycles with dramatic light**: strong baked AO stays dark at noon and at midnight alike; keep it moderate.
 
 ## Common mistakes
@@ -214,5 +214,10 @@ A 0.5-stud-cell cottage, 24 x 20 x 24 cells, five colours.
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Voxel Modelling Start Here]] · [[Bevels Chamfers and Edge Highlights Without Textures]] · [[Lighting Untextured Art in Roblox]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Untextured Stylised Modelling Start Here]] · [[Hand-Painted and Stylized Texturing]]
+[[Voxel Modelling Start Here]] · [[Bevels Chamfers and Edge Highlights Without Textures]] · Lighting Untextured Art in Roblox · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · Untextured Stylised Modelling Start Here · Hand-Painted and Stylized Texturing
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Lighting Untextured Art in Roblox]] · [[Hand-Painted and Stylized Texturing]] · [[The Gradient Palette Texture Workflow]] · [[Texturing and PBR Baking]] · [[Voxel Scale Grids and Stud Alignment]] · [[Voxel Characters - Proportions Joints and Rigging]]
+<!-- related:end -->

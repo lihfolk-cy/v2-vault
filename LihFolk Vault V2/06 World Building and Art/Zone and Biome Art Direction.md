@@ -1,5 +1,5 @@
 ---
-tags: [world-building, art-direction, zones, biomes, palette, lighting, atmosphere, landmarks, progression]
+tags: [world-building, art-direction, zones, biomes, palette, lighting, atmosphere, landmarks, progression, type/guide, area/world, level/intermediate]
 ---
 # Zone and Biome Art Direction
 
@@ -12,7 +12,7 @@ tags: [world-building, art-direction, zones, biomes, palette, lighting, atmosphe
 > - Silhouette, colour and light tests pass against neighbouring zones.
 > - Chain strip reviewed: one accent per zone, warm and cool alternate, value range widens.
 >
-> Cost: TL;DR ~170 tok · whole note ~5.4k tok. Read more: ## 3. Colour across the chain · ## 5. Lighting, air, sky and sound per zone · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.5k tok. Read more: ## 3. Colour across the chain · ## 5. Lighting, air, sky and sound per zone · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most Roblox games with progression are a chain of zones: forest, then crystal caves, then lava fields, then ice peaks, then something cosmic. Players judge the whole game by how different and how desirable the next zone looks. A zone that looks like a recoloured copy of the last one kills the pull of progression; a chain where every zone is maximally loud reads as noise, and nothing feels like an upgrade.
@@ -357,5 +357,10 @@ Numbers are rules of thumb for a small team. The point is that the expensive uni
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Colour Scripts and Value Structure for Untextured Art]] · [[Stylized Lighting Recipes]] · [[Voxel Palettes - Ramps Hue Shifting and Limits]] · [[Lighting Untextured Art in Roblox]] · [[Level Design Principles - Flow Sightlines and Landmarks]] · [[The Gradient Palette Texture Workflow]]
+[[Colour Scripts and Value Structure for Untextured Art]] · Stylized Lighting Recipes · Voxel Palettes - Ramps Hue Shifting and Limits · Lighting Untextured Art in Roblox · Level Design Principles - Flow Sightlines and Landmarks · The Gradient Palette Texture Workflow
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Stylized Lighting Recipes]] · [[Water Sky and Atmosphere Art]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Terrain Tools and Terrain API]] · [[Modeling in Blender for Roblox]] · [[Parts Unions and MeshParts]] · [[Procedural World Generation]]
+<!-- related:end -->

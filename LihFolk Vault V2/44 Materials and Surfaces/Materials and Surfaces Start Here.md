@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [materials, surfaces, hub, start-here, textures, pbr, terrain]
+tags: [materials, surfaces, hub, start-here, textures, pbr, terrain, type/hub, area/materials, level/beginner, api/Terrain, area/modeling]
 ---
 # Materials and Surfaces Start Here
 
@@ -29,7 +29,7 @@ This section is about everything that sits on the outside of geometry: custom ma
 
 Section 20 is a working asset library. Where it fits:
 
-- **Custom materials:** downscale a set to 1024 for part variants or 512 for terrain, map `_diff`, `_nor_gl`, `_rough` (and `_metal` for metal sets), and pick StudsPerTile from density or real-world size. Worked through with `mossy_rock` in [[MaterialService and Custom Materials]].
+- **Custom materials:** downscale a set to 1024 for part variants or 512 for terrain, map `_diff`, `_nor_gl`, `_rough` (and `_metal` for metal sets), and pick [[StudsPerTile]] from density or real-world size. Worked through with `mossy_rock` in [[MaterialService and Custom Materials]].
 - **Terrain details:** a grass-top, rock-side override from `forest_ground_04` and `mossy_rock` in [[Terrain Materials and Painting]].
 - **AO:** the `_ao` and `_arm` maps Roblox ignores can be composited into colour maps with the script in [[Baking Lighting and Detail into Textures]].
 - **HDRIs:** the same HDRI as the Blender world and the Studio sky keeps reflections and baked bounce light consistent ([[SurfaceAppearance PBR Workflow]], [[Baking Lighting and Detail into Textures]]).
@@ -53,5 +53,5 @@ Section 20 is a working asset library. Where it fits:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Texel Density]] · [[Links - Texturing]] · [[Skill - Roblox Asset Import]] · [[Links - Materials and MaterialVariants]] · [[Untextured Stylised Modelling Start Here]] · [[Draw Calls]]
+[[Texel Density]] · Links - Texturing · Skill - Roblox Asset Import · Links - Materials and MaterialVariants · Untextured Stylised Modelling Start Here · Draw Calls
 <!-- auto-links:end -->

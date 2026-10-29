@@ -1,5 +1,5 @@
 ---
-tags: [systems, enemies, npc, ai, performance, hub]
+tags: [systems, enemies, npc, ai, performance, hub, type/hub, area/animation, level/intermediate, api/HipHeight, area/performance, api/Animator]
 ---
 # Enemy and NPC Animation
 
@@ -9,7 +9,7 @@ tags: [systems, enemies, npc, ai, performance, hub]
 > - Root motion missing: Root keyed at the top-level pose -> Key a child joint
 > - Floating or sinking: Clips not ground-fitted; wrong HipHeight -> Fit per clip; set HipHeight; runtime slope clamp
 >
-> Cost: TL;DR ~110 tok · whole note ~3.3k tok. Read more: ## Rig choices · ## Ground fitting (floating and sinking) · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~3.4k tok. Read more: ## Rig choices · ## Ground fitting (floating and sinking) · ## Common mistakes
 <!-- tldr:end -->
 
 Enemies are where animation meets scale: dozens on screen, each with 17 to 34 clips, driven by server AI, seen by every player, and expected to read clearly at a glance. NPCs are the opposite problem: one or two characters that must feel alive for minutes while doing nothing. This note is the hub for both. The precise server/client protocol is in [[Enemy Animation State Protocol]]; bosses in [[Boss Animation and Phases]]. Numbers come from one live action game (the reference project) unless marked otherwise.
@@ -18,7 +18,7 @@ Enemies are where animation meets scale: dozens on screen, each with 17 to 34 cl
 
 | Choice | Use when | Notes |
 |---|---|---|
-| `Humanoid` + Animator | The enemy paths with `Humanoid:MoveTo` and uses Humanoid physics | You get HipHeight, states, auto-rotation; you also get Humanoid costs and quirks |
+| `Humanoid` + Animator | The enemy paths with `Humanoid:MoveTo` and uses Humanoid physics | You get [[HipHeight]], states, auto-rotation; you also get Humanoid costs and quirks |
 | `AnimationController` + Animator | Your AI moves the root itself (CFrame, `AlignPosition`, custom physics) | Lighter; no states; you write ground handling |
 | Motor6D joints | Part-based rigs, imported or built in Studio | `Motor6D.Transform` is what the Animator writes |
 | Bones (skinned mesh) | Imported creatures with deformation | Bone rigs need their own ground-fit approach (below) |
@@ -129,7 +129,7 @@ Enemy sounds are cheapest to time from the same markers: a voice profile per ene
 | Load each clip once per rig; reuse tracks | |
 | Distance LOD for a Lua keyframe player | Every frame within 60 studs, every 2nd within 150, every 4th within 300, beyond that time only advances |
 | Cost per rig | About 22 microseconds per 25-bone rig-frame (39 to 60 on the largest boss) |
-| Compile and stream clip data once per client | 19 to 235 KB per kit (about 1.6 MB total) after key thinning (0.03 degrees) and quaternion packing |
+| Compile and stream clip data once per client | 19 to 235 KB per kit (about 1.6 MB total) after key thinning (0.03 degrees) and [[Quaternions\|quaternion]] packing |
 | Destroy duplicated animation folders | Enemy models carried their own Animations copies (207k instances) that were destroyed on every spawn anyway |
 | Delete clips of removed enemies | 69k instances for 12 enemies no longer in the game |
 | Outlines | Bake into meshes for crowds; `Highlight` only for bosses and flashes |
@@ -163,5 +163,10 @@ See also: [[Enemy Animation State Protocol]], [[Boss Animation and Phases]], [[S
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Procedural Death Knockdown and Hit Reactions]] · [[Case Study - Enemy Roster Rebuild]] · [[NPC AI and Behaviour]] · [[Bones and Skinned Meshes]] · [[Genre Playbook - Combat and RPG]] · [[Character and Creature Pipeline]] · [[Animation Start Here]]
+[[Procedural Death Knockdown and Hit Reactions]] · [[Case Study - Enemy Roster Rebuild]] · NPC AI and Behaviour · [[Bones and Skinned Meshes]] · Genre Playbook - Combat and RPG · Character and Creature Pipeline · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[NPC AI and Behaviour]] · [[Weapon and Combat Animation]] · [[Retargeting Animations Between Rigs]] · [[Custom Characters and StarterCharacter]] · [[Foot Placement and Ground IK]] · [[Rigging in Blender]] · [[Locomotion Systems]] · [[Animation Glossary]] · [[Importing Models and Rigs]]
+<!-- related:end -->

@@ -398,6 +398,70 @@ def gate(ob, cls="small", foliage_card=False, symmetric=None, align=None, seats=
     return (not fails), fails, r
 
 
+# ---------------------------------------------------------------- modular pieces: grid + tiling (adjacency)
+
+def end_raster(ob, axis, value, res=0.05, tol=1e-3):
+    """Cells (res-stud grid, aligned to world 0) covered by the faces lying in the plane <axis> = value.
+    Coordinates are the other two axes in XYZ order (X plane -> (y, z), Y plane -> (x, z), Z plane -> (x, y)),
+    so the end of an X-running piece can be compared with the end of a Y-running piece."""
+    k = "XYZ".index(axis.upper()); i, j = [a for a in range(3) if a != k]
+    bm = _eval_bm(ob)
+    tris = []
+    for f in bm.faces:
+        if all(abs(v.co[k] - value) < tol for v in f.verts):
+            p = [Vector((v.co[i], v.co[j])) for v in f.verts]
+            tris += [(p[0], p[t], p[t + 1]) for t in range(1, len(p) - 1)]
+    bm.free()
+    cells = set()
+    for a, b, c in tris:
+        u0, u1 = math.floor(min(a.x, b.x, c.x) / res), math.ceil(max(a.x, b.x, c.x) / res)
+        v0, v1 = math.floor(min(a.y, b.y, c.y) / res), math.ceil(max(a.y, b.y, c.y) / res)
+        for iu in range(u0, u1 + 1):
+            for iv in range(v0, v1 + 1):
+                if (iu, iv) in cells:
+                    continue
+                if _geo.intersect_point_tri_2d(Vector(((iu + 0.5) * res, (iv + 0.5) * res)), a, b, c):
+                    cells.add((iu, iv))
+    return cells
+
+
+def tile_check(ob, axis, period, other=None, other_axis=None, mode="equal", res=0.05, tol=1e-3, min_match=0.97):
+    """Adjacency check for grid pieces with the grid corner at the world origin.
+    A copy of `other` (default: ob itself) placed `period` studs further along `axis` must meet ob flush:
+    - no overlap: ob stays inside [0, period] along axis (and other starts at 0),
+    - no gap: ob's faces in the plane axis = period and other's faces in the plane other_axis = 0 coincide
+      (mode "equal": IoU of the two end profiles >= min_match; "contain": the smaller profile is covered by the
+      larger one, e.g. rail ends against a post).
+    other_axis lets an X-running piece be checked against the end of a Y-running one (corner pieces).
+    Returns {"axis", "period", "a_cells", "b_cells", "iou", "cover", "inside", "ok"}."""
+    k = "XYZ".index(axis.upper())
+    o2 = other or ob
+    k2 = "XYZ".index((other_axis or axis).upper())
+    bm = _eval_bm(ob); lo, hi = _bounds([v.co for v in bm.verts]); bm.free()
+    bm = _eval_bm(o2); lo2, hi2 = _bounds([v.co for v in bm.verts]); bm.free()
+    inside = lo[k] > -tol and hi[k] < period + tol and lo2[k2] > -tol
+    A = end_raster(ob, axis, period, res, tol)
+    B = end_raster(o2, other_axis or axis, 0.0, res, tol)
+    inter = len(A & B)
+    iou = inter / len(A | B) if (A or B) else 0.0
+    cover = inter / min(len(A), len(B)) if A and B else 0.0
+    ok = bool(A) and bool(B) and inside and ((iou if mode == "equal" else cover) >= min_match)
+    return {"axis": axis.upper(), "period": period, "with": o2.name, "other_axis": (other_axis or axis).upper(), "mode": mode,
+            "a_cells": len(A), "b_cells": len(B), "iou": round(iou, 4), "cover": round(cover, 4), "inside": inside, "ok": ok}
+
+
+def grid_check(ob, footprint, step=2.0, tol=1e-3):
+    """Grid piece sanity: footprint (W, D, H) is a multiple of `step` studs on X and Y, the evaluated mesh lies inside
+    [0, W] x [0, D] x [0, H] (origin = grid corner at world 0) and touches the floor plane z = 0."""
+    bm = _eval_bm(ob); lo, hi = _bounds([v.co for v in bm.verts]); bm.free()
+    W, D, H = footprint
+    on_grid = all(abs(x / step - round(x / step)) < 1e-6 for x in (W, D))
+    inside = all(lo[a] > -tol for a in range(3)) and hi.x < W + tol and hi.y < D + tol and hi.z < H + tol
+    return {"footprint": list(footprint), "step": step, "on_grid": on_grid, "inside": inside, "touches_floor": abs(lo.z) < tol,
+            "bbox": [[round(x, 4) for x in lo], [round(x, 4) for x in hi]],
+            "ok": on_grid and inside and abs(lo.z) < tol}
+
+
 def render_review(ob, out_dir, size=512, features=None, color=None):
     """Renders front, three-quarter, top and silhouette views (Workbench) for the visual rubric V1-V9.
     features: optional close-ups of child features (star, gem, guard, cork...) so small cap artifacts,

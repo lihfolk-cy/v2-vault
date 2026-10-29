@@ -1,5 +1,5 @@
 ---
-tags: [git, source-control, ci, github-actions, open-cloud, workflow]
+tags: [git, source-control, ci, github-actions, open-cloud, workflow, type/guide, area/studio, level/intermediate]
 ---
 # Git and Source Control for Roblox
 
@@ -12,7 +12,7 @@ tags: [git, source-control, ci, github-actions, open-cloud, workflow]
 > - `.gitignore` and `.gitattributes` in place; LF everywhere.
 > - Tool versions pinned; `wally.lock` committed.
 >
-> Cost: TL;DR ~170 tok · whole note ~3.8k tok. Read more: ## 2. Repository layout (model B) · ## 6. CD: publishing and testing with Open Cloud · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~170 tok · whole note ~3.9k tok. Read more: ## 2. Repository layout (model B) · ## 6. CD: publishing and testing with Open Cloud · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Git assumes your project is a folder of text files. A Roblox game is a cloud data model edited live by several people, with binary place files, assets referenced by id and no local build step. Source control for Roblox is therefore a choice about **which part of the game lives in Git** and how it gets back into the place. Done well, it gives you code review, history that survives place restores, CI that blocks broken code, and reproducible releases. Done badly, it gives you a repo that disagrees with the live place and a team that stops trusting either. This note covers the three workable models, repo layout, `.gitignore` and `.gitattributes`, branching that fits a single cloud place, and a full CI pipeline including Open Cloud place publishing and Luau Execution tests (APIs as of October 2026).
@@ -293,5 +293,10 @@ No Rojo, no CI, still worth doing:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Code Pipeline - Rojo Git and CI]] · [[Build Test and Release Pipeline]] · [[Code Review for Luau Teams]] · [[Packages and Asset Reuse]] · [[Links - Version control]] · [[Documentation and Onboarding New Developers]]
+[[Code Pipeline - Rojo Git and CI]] · Build Test and Release Pipeline · Code Review for Luau Teams · [[Packages and Asset Reuse]] · Links - Version control · Documentation and Onboarding New Developers
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Studio Settings and Shortcuts]] · [[Studio Interface Tour]] · [[Plugins - Using and Writing]] · [[Command Bar and Studio Scripting]] · [[Studio Assistant and AI Tools]] · [[Testing Modes - Play Run and Multi-Client]] · [[Explorer Properties and Selection]]
+<!-- related:end -->

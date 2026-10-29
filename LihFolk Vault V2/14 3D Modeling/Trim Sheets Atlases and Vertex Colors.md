@@ -1,5 +1,5 @@
 ---
-tags: [modeling, texturing, trim-sheet, atlas, vertex-colors, optimization]
+tags: [modeling, texturing, trim-sheet, atlas, vertex-colors, optimization, type/guide, area/modeling, level/intermediate, api/SurfaceAppearance, area/performance]
 ---
 # Trim Sheets Atlases and Vertex Colors
 
@@ -12,7 +12,7 @@ tags: [modeling, texturing, trim-sheet, atlas, vertex-colors, optimization]
 > - Trim rows tile horizontally with padding; tinted rows near-white; untinted rows alpha 0 with real RGB.
 > - TintMask maps exported without premultiplied alpha.
 >
-> Cost: TL;DR ~170 tok · whole note ~4.1k tok. Read more: ## 2. Trim sheets · ## 5. Vertex colours · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.2k tok. Read more: ## 2. Trim sheets · ## 5. Vertex colours · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Unique textures for every mesh do not scale. A Roblox game with hundreds of props, dozens of armour pieces and a hundred weapons cannot give each a 1024 PBR set: memory, download size and upload churn all explode. Three techniques let many meshes share very few textures: **trim sheets** (a texture of reusable strips and panels that many meshes map onto), **atlases** (many small textures or colour swatches packed into one image) and **vertex colours** (colour stored on the mesh itself, no texture at all). This note explains each, when it is the right choice on Roblox, how they combine with `SurfaceAppearance` tinting, and the production lessons from one production game (the reference project), which used a shared tinted trim sheet for an entire armour line, palette atlases for kits, and learned the hard way how vertex colours interact with `Color`.
@@ -213,5 +213,10 @@ Sharing textures also helps rendering. Rule of thumb (Roblox does not document i
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Substance Painter and Texturing Tools]] · [[The Gradient Palette Texture Workflow]] · [[Bevels Chamfers and Edge Highlights Without Textures]] · [[Tiling Trim Sheets and Decal Tricks]] · [[Baking Lighting and Detail into Textures]]
+[[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Substance Painter and Texturing Tools]] · The Gradient Palette Texture Workflow · Bevels Chamfers and Edge Highlights Without Textures · Tiling Trim Sheets and Decal Tricks · Baking Lighting and Detail into Textures
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[The Gradient Palette Texture Workflow]] · [[Modeling in Blender for Roblox]] · [[Modeling Fundamentals for Games]] · [[Hard-Surface Modeling]] · [[Mesh Optimization for Mobile]] · [[Blender Workflow for Roblox Creators]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[UGC Avatar Items and Accessories]] · [[Procedural Model Kits - Lessons]] · [[Retopology and Decimation]]
+<!-- related:end -->

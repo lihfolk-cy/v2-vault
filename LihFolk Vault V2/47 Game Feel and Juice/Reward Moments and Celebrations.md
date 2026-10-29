@@ -1,5 +1,5 @@
 ---
-tags: [game-feel, juice, rewards, celebrations, ui, rng, pacing, ethics, luau]
+tags: [game-feel, juice, rewards, celebrations, ui, rng, pacing, ethics, luau, type/guide, area/game-feel, level/intermediate]
 ---
 # Reward Moments and Celebrations
 
@@ -12,7 +12,7 @@ tags: [game-feel, juice, rewards, celebrations, ui, rng, pacing, ethics, luau]
 > - Reward animation time measured per hour of play, under about 10%.
 > - Server decides results before animation; reels show only reachable items; tells derive from the result.
 >
-> Cost: TL;DR ~210 tok · whole note ~4.8k tok. Read more: ## 3. Honest suspense · ## 5. A queue that waits for safe moments · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~210 tok · whole note ~4.9k tok. Read more: ## 3. Honest suspense · ## 5. A queue that waits for safe moments · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A reward moment is the few seconds between "something good is coming" and "it is mine". Done well, it is the emotional peak of a session and the moment players clip and share. Done badly, it is a forced cutscene the hundredth time, a banner that covers the boss, or a reveal that lies. [[Game Feel and Juice]] gives the basic sequence (anticipation, reveal, payoff, settle) and the reference project's gating of popups; [[Notification and Toast Systems]] covers small, frequent messages. This note covers the big ones: how long each tier should take and what that costs over a session, honest suspense, manual versus automatic modes, a queue that waits for safe moments without starving, count-ups, social celebrations, and the accessibility rules that apply to flashing, full-screen moments.
@@ -329,5 +329,10 @@ Big reward moments combine the things that cause problems: flashes, shakes, loud
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Game Feel Start Here]] · [[RNG Drops and Luck Systems]] · [[Juice on a Budget - Mobile and Low-End]] · [[Simulator and RNG Genre Teardown]] · [[Accessibility]] · [[Variance]]
+[[Game Feel Start Here]] · [[RNG Drops and Luck Systems]] · [[Juice on a Budget - Mobile and Low-End]] · Simulator and RNG Genre Teardown · Accessibility · Variance
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Hit-Stop and Screen Shake Tuning by Numbers]] · [[Simulator and RNG Genre Teardown]] · [[Comfort Toggles - Flashes Damage Numbers and Hit-Stop]] · [[Pity Timer]] · [[Drop Tables Rarity and Pity Systems]] · [[Input Responsiveness Buffering and Coyote Time]]
+<!-- related:end -->

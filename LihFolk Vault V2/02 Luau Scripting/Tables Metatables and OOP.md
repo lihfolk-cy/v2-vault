@@ -1,5 +1,5 @@
 ---
-tags: [luau, tables, metatables, oop, data-structures]
+tags: [luau, tables, metatables, oop, data-structures, type/guide, area/scripting, level/advanced, api/DataStore, area/data, api/Model]
 ---
 # Tables Metatables and OOP
 
@@ -12,7 +12,7 @@ tags: [luau, tables, metatables, oop, data-structures]
 > - Sort comparators are strict with explicit tie-breaks.
 > - Shared config is deep-frozen.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.6k tok. Read more: ## 5. Classes · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.7k tok. Read more: ## 5. Classes · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Tables are Luau's only built-in data structure. Arrays, dictionaries, sets, objects, classes, modules and configuration are all tables. Metatables let a table customize indexing, arithmetic, comparison, calling and iteration, which is how classes are built. This note covers how tables behave (including the length operator and holes), the `table` library, copying and freezing, metatables, class patterns with inheritance and composition, weak tables, and what happens to tables when they cross Roblox boundaries.
@@ -370,5 +370,10 @@ The senior trade-off: tables are the only data structure, so the question is nev
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - OOP and module design]] · [[Cookbook - Tables Strings and Time]] · [[Links - Luau language]] · [[Luau Performance Patterns with Benchmarks]] · [[Reading Luau Errors and Stack Traces]] · [[Advanced Luau Start Here]]
+[[Links - OOP and module design]] · Cookbook - Tables Strings and Time · Links - Luau language · [[Luau Performance Patterns with Benchmarks]] · Reading Luau Errors and Stack Traces · Advanced Luau Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Cookbook - Tables Strings and Time]] · [[Instances Attributes and Tags]] · [[Task Library Coroutines and Yielding]] · [[Buffers and Binary Data]] · [[Script Types and Run Context]] · [[Strings Patterns and Formatting]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Parallel Luau and Actors]] · [[Error Handling and Retries]]
+<!-- related:end -->

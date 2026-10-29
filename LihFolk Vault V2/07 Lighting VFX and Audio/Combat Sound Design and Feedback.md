@@ -1,5 +1,5 @@
 ---
-tags: [audio, combat, sound-design, feedback, networking, mixing, game-feel]
+tags: [audio, combat, sound-design, feedback, networking, mixing, game-feel, type/guide, area/vfx, level/intermediate, area/audio, api/Sound]
 ---
 # Combat Sound Design and Feedback
 
@@ -12,7 +12,7 @@ tags: [audio, combat, sound-design, feedback, networking, mixing, game-feel]
 > - Neutral contact predicted on the attacker; meaning waits for the server.
 > - Kill and hurt confirms 2D and personal; never predicted.
 >
-> Cost: TL;DR ~170 tok · whole note ~5.6k tok. Read more: ## 3. Who plays what, and when: the network problem · ## 6. Priority, voice limits and stealing · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.7k tok. Read more: ## 3. Who plays what, and when: the network problem · ## 6. Priority, voice limits and stealing · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Sound Design for Games]] covers the general craft: layering, landing the peak on the beat, variation bags, weapon voices and cue rate limits. This note goes deeper into the one place where sound is gameplay, not decoration: combat. It covers what each combat **outcome** should sound like and why, the network question nobody asks until it hurts (who plays which sound, and when, on a 120 ms connection), how hit-stop and sound interact, telegraphs that players can actually react to, priority and voice stealing when twenty enemies die at once, ducking the rest of the mix around impacts, and a test protocol.
@@ -363,5 +363,10 @@ See also: [[Sound Design for Games]], [[Sound Fundamentals]], [[The Audio API - 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Audio Pipeline]] · [[Feedback Timing - Sound Visual and Haptic Sync]] · [[Captions and Audio Accessibility]] · [[Resource Library - Audio]] · [[AI Audio - Voice Music and SFX]] · [[Links - Music and ambience]]
+[[Audio Pipeline]] · Feedback Timing - Sound Visual and Haptic Sync · Captions and Audio Accessibility · Resource Library - Audio · AI Audio - Voice Music and SFX · Links - Music and ambience
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Audio Mixer Settings with SoundGroups]] · [[Feedback Timing - Sound Visual and Haptic Sync]] · [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Engine and Tyre Audio Driven by RPM and Slip]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[VFX Design Playbook]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Music Licensing and Audio Upload Rules for 2026]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]]
+<!-- related:end -->

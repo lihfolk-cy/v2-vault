@@ -1,5 +1,5 @@
 ---
-tags: [multiplayer, matchmaking, memorystore, queues, lobby, reserved-servers, teleport, luau, strict]
+tags: [multiplayer, matchmaking, memorystore, queues, lobby, reserved-servers, teleport, luau, strict, type/guide, area/networking, level/intermediate]
 ---
 # Matchmaking Queues with MemoryStore
 
@@ -12,7 +12,7 @@ tags: [multiplayer, matchmaking, memorystore, queues, lobby, reserved-servers, t
 > - Party is one ticket; party rating rule chosen.
 > - One leader per queue via a lease; ownership re-checked before reserving.
 >
-> Cost: TL;DR ~150 tok · whole note ~7.6k tok. Read more: ## 1. First question: do you need a queue at all? · ## 6. The code · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~7.7k tok. Read more: ## 1. First question: do you need a queue at all? · ## 6. The code · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A "Play Ranked" button looks like one feature. Behind it sit five problems that each fail in their own way: deciding whether you need your own queue at all, describing a player (or a party) as a ticket, letting exactly one server do the matching, handing the result back to the right lobby servers, and surviving every crash in between without matching a player twice or losing them forever. This note goes past the starter queue in [[MemoryStore Service]] and the four-step sketch in [[Teleporting and Multi-Place Games]]. It covers the built-in custom matchmaking option first (because it removes the need for a queue in many games), then a full queue-based matchmaker in strict Luau with leader election, ticket cancellation, widening skill windows, budget maths and failure paths.
@@ -630,5 +630,10 @@ Always give the player a **cancel button that works locally** (stop showing "sea
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Server Browsers and Server Lists]] · [[Session Locking and Profile Libraries]] · [[Links - MemoryStore]] · [[Server Shutdowns Soft Updates and Migration]] · [[Saving Correctly - Autosave and BindToClose]] · [[Arena Rounds with Teams and Spectating End to End]]
+[[Server Browsers and Server Lists]] · [[Session Locking and Profile Libraries]] · Links - MemoryStore · [[Server Shutdowns Soft Updates and Migration]] · Saving Correctly - Autosave and BindToClose · Arena Rounds with Teams and Spectating End to End
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Server Hop Rejoin and Server Lists with Ping]] · [[Joining Friends Parties and Private Servers]] · [[Genre Playbook - Battle Royale]] · [[Arena Rounds with Teams and Spectating End to End]] · [[Saving Correctly - Autosave and BindToClose]] · [[OrderedDataStores and Leaderboards]]
+<!-- related:end -->

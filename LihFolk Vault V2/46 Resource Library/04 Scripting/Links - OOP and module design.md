@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, scripting]
+tags: [resources, links, scripting, type/reference, area/scripting, level/intermediate, area/design]
 ---
 # Links - OOP and module design
 
@@ -67,5 +67,5 @@ Part of [[Resource Library - Scripting]] in the [[Resource Library Start Here]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - UI frameworks]] · [[Links - Services]] · [[Entity Component Systems]] · [[Links - Luau language]] · [[Frameworks - Knit Matter and Others]] · [[Metatables and OOP - When and When Not]]
+[[Links - UI frameworks]] · [[Links - Services]] · [[Entity Component Systems]] · [[Links - Luau language]] · Frameworks - Knit Matter and Others · Metatables and OOP - When and When Not
 <!-- auto-links:end -->

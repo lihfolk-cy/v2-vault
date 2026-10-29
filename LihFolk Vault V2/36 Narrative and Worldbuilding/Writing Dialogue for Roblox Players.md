@@ -1,5 +1,5 @@
 ---
-tags: [narrative, dialogue, writing, npc, ux, onboarding, voice]
+tags: [narrative, dialogue, writing, npc, ux, onboarding, voice, type/guide, area/narrative, level/intermediate, api/TextChatService]
 ---
 # Writing Dialogue for Roblox Players
 
@@ -12,7 +12,7 @@ tags: [narrative, dialogue, writing, npc, ux, onboarding, voice]
 > - First conversation with any NPC is under about 50 words.
 > - Every critical instruction is also in the tracker or world guidance.
 >
-> Cost: TL;DR ~160 tok · whole note ~5.5k tok. Read more: ## 3. Line craft · ## 7. Barks: the dialogue most players actually hear · ## 11. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.6k tok. Read more: ## 3. Line craft · ## 7. Barks: the dialogue most players actually hear · ## 11. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 Most dialogue advice comes from novels, films and long single-player RPGs, where the audience chose to sit down for a story. Roblox dialogue is read by a different audience in a different situation: many players are children or young teens, many are reading in their second language (or reading a machine translation), most are on a phone, often in a noisy room, and almost all of them arrived to play, not to read. Roblox's own onboarding guidance puts it bluntly: players often skip text (Roblox docs, "Onboarding techniques", as of October 2026). This note is about writing lines that survive that: how long a line can be, how to give a character a voice in eight words, how to write choices that are real, how to keep branching affordable, and how to edit a scene down until players actually read it.
@@ -296,5 +296,10 @@ Write the scene, then edit it in this order. Each pass usually cuts 20 to 40 per
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Localization Pipeline]] · [[Captions and Audio Accessibility]] · [[Notification and Toast Systems]] · [[Readable Text and UI Scale]] · [[Voice Chat and Safety Features]] · [[Links - Chat and text filtering]]
+[[Localization Pipeline]] · Captions and Audio Accessibility · Notification and Toast Systems · Readable Text and UI Scale · Voice Chat and Safety Features · Links - Chat and text filtering
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Captions and Audio Accessibility]] · [[Story State Flags and Chapter Saves]] · [[Notification and Toast Systems]] · [[Age Checks and Safety Features]] · [[Multiplayer Cutscene Sync - Server Clock, Late Joiners and Skip Votes]] · [[Puzzle Dependency Charts and Hint Systems]]
+<!-- related:end -->

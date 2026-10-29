@@ -1,5 +1,5 @@
 ---
-tags: [gameplay, spawning, teams, rounds, zones, gates, enemies]
+tags: [gameplay, spawning, teams, rounds, zones, gates, enemies, type/guide, area/gameplay, level/intermediate, api/ForceField, api/Team]
 ---
 # Spawning Teams and Rounds
 
@@ -12,7 +12,7 @@ tags: [gameplay, spawning, teams, rounds, zones, gates, enemies]
 > - Teams with unique colours; friendly fire in the damage core.
 > - Round loop is a server state machine publishing end times.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.5k tok. Read more: ## 4. Enemy spawning: tables, caps and waking · ## 5. Zone gates · ## 6. Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.7k tok. Read more: ## 4. Enemy spawning: tables, caps and waking · ## 5. Zone gates · ## 6. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Three related problems: where **players** appear (spawn points, teams, respawn after death), how a **match** is structured (rounds, intermission, win conditions), and where **enemies** appear (spawn tables, caps, waking areas near players). Plus the glue that most progression games need: **zone gates** that decide which areas a player may enter. This note covers the built-in objects, server-driven round loops, data-driven enemy spawners, and gate enforcement, with numbers from one production game.
@@ -31,7 +31,7 @@ Source labels: **Docs** (SpawnLocation, Team references, checked October 2026), 
 | `Neutral` | True: anyone may spawn here. False: only players whose `TeamColor` matches |
 | `TeamColor` | The team this spawn belongs to |
 | `AllowTeamChangeOnTouch` | Touching sets the player's team to this spawn's |
-| `Duration` | Seconds of spawn ForceField; default 10; 0 = none |
+| `Duration` | Seconds of spawn [[ForceField]]; default 10; 0 = none |
 
 With several eligible spawns, one is chosen at random, and players can overlap if they respawn together (Docs). The ForceField protects only against damage that uses `TakeDamage` or checks for ForceFields.
 
@@ -346,5 +346,10 @@ The senior trade-off: a strict round loop is predictable and fair but empties qu
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Rounds and matchmaking]] · [[Links - Checkpoints and spawning]] · [[Combat Arena and Encounter Layout]] · [[Level Design Start Here]] · [[Lobby and Hub Design]] · [[Cookbook - Players and Characters]]
+[[Links - Rounds and matchmaking]] · Links - Checkpoints and spawning · Combat Arena and Encounter Layout · Level Design Start Here · Lobby and Hub Design · Cookbook - Players and Characters
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Quick Respawn and Spawn Protection]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Map Voting and Rotation for Round Games]] · [[Quests and Objectives]] · [[Behaviour Trees Utility AI and State Machines for NPCs]] · [[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Downed, Revive and Bleed-Out States]] · [[Pathfinding Edge Cases and Fallbacks]]
+<!-- related:end -->

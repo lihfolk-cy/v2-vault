@@ -1,5 +1,5 @@
 ---
-tags: [pipeline, import, gltf, math, cframe, enemies, debugging]
+tags: [pipeline, import, gltf, math, cframe, enemies, debugging, type/guide, area/animation, level/intermediate, api/Animator, area/gameplay]
 ---
 # Enemy Import Axis Fix
 
@@ -11,7 +11,7 @@ tags: [pipeline, import, gltf, math, cframe, enemies, debugging]
 > - forward travel mirrored on one rig
 > - one limb occasionally swings the long way
 >
-> Cost: TL;DR ~100 tok · whole note ~3.5k tok. Read more: ## The code · ## How it was proven · ## Symptoms checklist
+> Cost: TL;DR ~100 tok · whole note ~3.6k tok. Read more: ## The code · ## How it was proven · ## Symptoms checklist
 <!-- tldr:end -->
 
 A whole roster of imported creatures "attacked from behind": their bodies played turned 180 deg away from the HumanoidRootPart, and all root motion (spawn rises, intro drops, leaps) was missing. Server logic was right (it used the root's LookVector), so enemies dealt damage in front of them while visibly facing away. This note derives the fix from first principles, shows the code, explains how it was proven, and generalises the method so you can debug the next importer convention yourself. Context: [[Pipeline - Importing Animated Enemies]].
@@ -259,5 +259,10 @@ After the fix, root motion played (spawn rises, intro drops, a boss leap), and e
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Blender Armature and Bone Roll Conventions]] · [[Retargeting Animations Between Rigs]] · [[Rigging in Blender]] · [[Exporting FBX vs GLB]] · [[Skeleton Library]] · [[Links - Importing into Studio]] · [[Animation Start Here]]
+[[Blender Armature and Bone Roll Conventions]] · [[Retargeting Animations Between Rigs]] · [[Rigging in Blender]] · [[Exporting FBX vs GLB]] · [[Skeleton Library]] · Links - Importing into Studio · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Weapon Design Rig Builder]] · [[Weapon Rig Player]] · [[Lua Keyframe Player]] · [[Creature Rig Conventions]] · [[Moon Animator and Third-Party Tools]] · [[Pipeline - Arm IK Baking and QA]] · [[Authoring Clips in Code]] · [[Ground Fitting Pipeline]]
+<!-- related:end -->

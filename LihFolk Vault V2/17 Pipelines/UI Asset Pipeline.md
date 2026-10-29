@@ -1,5 +1,5 @@
 ---
-tags: [pipelines, ui, design-system, automation, audits, mobile]
+tags: [pipelines, ui, design-system, automation, audits, mobile, type/guide, area/pipelines, level/intermediate, area/ui]
 ---
 # UI Asset Pipeline
 
@@ -12,7 +12,7 @@ tags: [pipelines, ui, design-system, automation, audits, mobile]
 > - Painters idempotent (reuse their own children)
 > - Builders bake the static StarterGui copy; layout version attribute
 >
-> Cost: TL;DR ~170 tok · whole note ~3.5k tok. Read more: ## Stage 1: tokens · ## Stage 5: automated audits · ## Failure modes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~3.6k tok. Read more: ## Stage 1: tokens · ## Stage 5: automated audits · ## Failure modes · ## Checklist
 <!-- tldr:end -->
 
 Roblox UI is built from instances: ScreenGuis, Frames, ImageLabels, UIStrokes, UIGradients, layout objects. In most games those instances are edited by hand in StarterGui, restyled by hand, and then patched at runtime by scripts that "fix" them. After a few months the saved copy in StarterGui, the runtime copy on a player's screen and the designer's intent are three different things, and every restyle breaks something on phones.
@@ -232,5 +232,10 @@ Animation in UI follows the same rule as styling: one module, used everywhere. T
 
 ## Connected notes
 <!-- auto-links:start -->
-[[ScreenGui Fundamentals]] · [[Skill - Roblox UI Builder]] · [[Debugging UI Layout and Input]] · [[Safe Area]] · [[Readable Text and UI Scale]] · [[Cookbook - UI]]
+[[ScreenGui Fundamentals]] · Skill - Roblox UI Builder · Debugging UI Layout and Input · Safe Area · Readable Text and UI Scale · Cookbook - UI
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[LihFolk UI Design System]] · [[Build Test and Release Pipeline]] · [[Environment and Level Pipeline]] · [[Blender Automation with Python]] · [[Art Pipeline - Concept to In-Game Asset]] · [[Data and Config Pipeline - Spreadsheets to Game]] · [[Live Content Pipeline]] · [[Audio Pipeline]] · [[Asset Upload Automation with Open Cloud]]
+<!-- related:end -->

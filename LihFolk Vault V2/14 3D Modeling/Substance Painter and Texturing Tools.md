@@ -1,5 +1,5 @@
 ---
-tags: [modeling, texturing, substance-painter, tools, export, pbr]
+tags: [modeling, texturing, substance-painter, tools, export, pbr, type/guide, area/modeling, level/intermediate, api/SurfaceAppearance]
 ---
 # Substance Painter and Texturing Tools
 
@@ -12,7 +12,7 @@ tags: [modeling, texturing, substance-painter, tools, export, pbr]
 > - Untinted RGB preserved under alpha 0 for TintMask.
 > - Final judgement under Studio lighting, not in Painter's viewport.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.2k tok. Read more: ## 3. Export presets for Roblox · ## 6. Alternatives · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.3k tok. Read more: ## 3. Export presets for Roblox · ## 6. Alternatives · ## Checklist
 <!-- tldr:end -->
 
 Adobe Substance 3D Painter is the industry-standard tool for painting PBR textures on 3D meshes, and it is widely used for Roblox assets, UGC especially. It is also not required: Blender alone, free tools and procedural scripts can produce everything a `SurfaceAppearance` needs. This note covers setting Painter up correctly for Roblox (the settings that silently break assets), export presets and a custom template for every Roblox alpha mode, and how the alternatives compare. Roblox specs are from the Creator Hub, checked October 2026; product details are as of October 2026 and change often, so verify in your version.
@@ -173,5 +173,10 @@ Plugin note: SurfaceAppearance map properties are Plugin security, so a Studio p
 
 ## Connected notes
 <!-- auto-links:start -->
-[[SurfaceAppearance PBR Workflow]] · [[Links - Texturing]] · [[Materials and Surfaces Start Here]] · [[Stylised vs Realistic Material Pipelines]] · [[Baking Lighting and Detail into Textures]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]]
+[[SurfaceAppearance PBR Workflow]] · Links - Texturing · Materials and Surfaces Start Here · Stylised vs Realistic Material Pipelines · Baking Lighting and Detail into Textures · MagicaVoxel Goxel and Blockbench Workflows Compared
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Stylised vs Realistic Material Pipelines]] · [[Blender Workflow for Roblox Creators]] · [[Modeling Fundamentals for Games]] · [[Low-Poly and Stylized Modeling]] · [[Mesh Optimization for Mobile]] · [[Modular Environment Kits]] · [[Voxel and Blocky Modeling]] · [[Hard-Surface Modeling]] · [[Procedural Model Kits - Lessons]]
+<!-- related:end -->

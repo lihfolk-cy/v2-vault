@@ -1,5 +1,5 @@
 ---
-tags: [modeling, tools, maya, 3ds-max, zbrush, magicavoxel, blockbench, pipeline]
+tags: [modeling, tools, maya, 3ds-max, zbrush, magicavoxel, blockbench, pipeline, type/guide, area/modeling, level/intermediate]
 ---
 # Other Modeling Tools: Maya, Max, ZBrush, MagicaVoxel
 
@@ -12,10 +12,10 @@ tags: [modeling, tools, maya, 3ds-max, zbrush, magicavoxel, blockbench, pipeline
 > - Reference cube and arrow imported into Studio from each tool's preset.
 > - Units, axes and pivots normalised (often via Blender) before the final export.
 >
-> Cost: TL;DR ~150 tok · whole note ~3.6k tok. Read more: ## 2. Getting any tool's output into Roblox · ## 6. MagicaVoxel · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.7k tok. Read more: ## 2. Getting any tool's output into Roblox · ## 6. MagicaVoxel · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-Blender is the default for Roblox creators, but it is not the only tool, and on many teams not the best one for every job. Studios hire artists who already know Maya or 3ds Max; sculptors live in ZBrush; voxel artists work faster in MagicaVoxel than any general tool; Blockbench is often the quickest route for blocky low-poly models. This note explains what each tool is good at, how its output gets into Roblox, the unit and axis traps for each, and how to mix tools in one pipeline without losing scale, pivots or normals on every hand-off.
+Blender is the default for Roblox creators, but it is not the only tool, and on many teams not the best one for every job. Studios hire artists who already know Maya or 3ds Max; sculptors live in ZBrush; voxel artists work faster in [[MagicaVoxel]] than any general tool; [[Blockbench]] is often the quickest route for blocky low-poly models. This note explains what each tool is good at, how its output gets into Roblox, the unit and axis traps for each, and how to mix tools in one pipeline without losing scale, pivots or normals on every hand-off.
 
 Product details change: licensing, prices and feature names below are as of October 2026 and should be checked on each vendor's site before you budget for them. Roblox import facts are from the Creator Hub.
 
@@ -155,7 +155,7 @@ Pixel textures: set texture filtering expectations. Roblox textures are filtered
 | Plasticity, Fusion and other CAD-style tools | NURBS/CAD modelling for clean hard-surface shapes | Export meshes with controlled tessellation; triangle counts can be huge if you do not set it |
 | Houdini | Procedural generation, scattering, terrain | Powerful for pipelines; outputs need the same cleanup and budgets |
 | Photogrammetry and 3D scan apps | Real objects to meshes | Dense triangle soup with baked lighting: decimate and re-texture; rarely fits stylised Roblox art |
-| AI mesh generators | Text or image to 3D | See [[AI 3D Model Generation Outside Roblox]] and [[Roblox Generative AI - Cube Mesh and Texture Generation]]. The reference project banned generated meshes for its map art after early results, requiring hand-built Blender assets with "quad topology, controlled triangulation, weighted normals, consistent texel density, packed atlas, LOD for big pieces" |
+| AI mesh generators | Text or image to 3D | See [[AI 3D Model Generation Outside Roblox]] and [[Roblox Generative AI - Cube Mesh and Texture Generation]]. The reference project banned generated meshes for its map art after early results, requiring hand-built Blender assets with "quad topology, controlled triangulation, [[weighted normals]], consistent texel density, packed atlas, LOD for big pieces" |
 
 ---
 
@@ -199,5 +199,10 @@ Every hand-off between tools can lose scale, axes, pivots, normals, UVs or names
 
 ## Connected notes
 <!-- auto-links:start -->
-[[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Voxel Modelling Start Here]] · [[Voxel Scale Grids and Stud Alignment]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Modeling in Blender for Roblox]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]]
+[[MagicaVoxel Goxel and Blockbench Workflows Compared]] · Voxel Modelling Start Here · Voxel Scale Grids and Stud Alignment · Meshing Voxels for Roblox - Greedy Meshing and Export · Modeling in Blender for Roblox · Flat Colour vs Gradient Atlas vs Vertex Colour
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Voxel Scale Grids and Stud Alignment]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Organic and Creature Modeling]] · [[Normal Maps and Detail Baking]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Mesh Optimization for Mobile]] · [[Modular Environment Kits]] · [[Topology and Edge Flow]] · [[UV Unwrapping]] · [[Hard-Surface Modeling]]
+<!-- related:end -->

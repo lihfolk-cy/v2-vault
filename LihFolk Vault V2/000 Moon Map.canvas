@@ -1,1072 +1,129 @@
 {
- "nodes": [
-  {
-   "id": "s0",
-   "type": "file",
-   "file": "01 Studio and Workflow/Command Bar and Studio Scripting.md",
-   "x": 958,
-   "y": 1613,
-   "width": 320,
-   "height": 90,
-   "color": "5"
-  },
-  {
-   "id": "s1",
-   "type": "file",
-   "file": "02 Luau Scripting/Buffers and Binary Data.md",
-   "x": 716,
-   "y": 1752,
-   "width": 320,
-   "height": 90,
-   "color": "6"
-  },
-  {
-   "id": "s2",
-   "type": "file",
-   "file": "03 Architecture and Networking/Client Prediction and Reconciliation for Combat.md",
-   "x": 458,
-   "y": 1857,
-   "width": 320,
-   "height": 90,
-   "color": "4"
-  },
-  {
-   "id": "s3",
-   "type": "file",
-   "file": "04 Data and Persistence/Data Loss Prevention and Recovery.md",
-   "x": 187,
-   "y": 1924,
-   "width": 320,
-   "height": 90,
-   "color": "3"
-  },
-  {
-   "id": "s4",
-   "type": "file",
-   "file": "05 UI and UX/Accessibility.md",
-   "x": 13,
-   "y": 1605,
-   "width": 320,
-   "height": 90,
-   "color": "2"
-  },
-  {
-   "id": "s5",
-   "type": "file",
-   "file": "06 World Building and Art/Art Budgets - Triangles Draw Calls Memory.md",
-   "x": -90,
-   "y": 1953,
-   "width": 320,
-   "height": 90,
-   "color": "1"
-  },
-  {
-   "id": "s6",
-   "type": "file",
-   "file": "07 Lighting VFX and Audio/Atmosphere Sky Clouds and Post-Processing.md",
-   "x": -217,
-   "y": 1613,
-   "width": 320,
-   "height": 90,
-   "color": "5"
-  },
-  {
-   "id": "s7",
-   "type": "file",
-   "file": "08 Animation/Animation Start Here.md",
-   "x": -369,
-   "y": 1944,
-   "width": 320,
-   "height": 90,
-   "color": "6"
-  },
-  {
-   "id": "s8",
-   "type": "file",
-   "file": "09 Gameplay Systems/Behaviour Trees Utility AI and State Machines for NPCs.md",
-   "x": -448,
-   "y": 1589,
-   "width": 320,
-   "height": 90,
-   "color": "4"
-  },
-  {
-   "id": "s9",
-   "type": "file",
-   "file": "10 Game Design and Genres/Balancing with Spreadsheets and Data.md",
-   "x": -643,
-   "y": 1895,
-   "width": 320,
-   "height": 90,
-   "color": "3"
-  },
-  {
-   "id": "s10",
-   "type": "file",
-   "file": "11 Monetization Publishing and Live Ops/Monetization Overview.md",
-   "x": -672,
-   "y": 1533,
-   "width": 320,
-   "height": 90,
-   "color": "2"
-  },
-  {
-   "id": "s11",
-   "type": "file",
-   "file": "12 Performance Testing and Debugging/Automated Luau Checks - LihFolk Hook and Audit.md",
-   "x": -567,
-   "y": 1210,
-   "width": 320,
-   "height": 90,
-   "color": "1"
-  },
-  {
-   "id": "s12",
-   "type": "file",
-   "file": "13 Production and Case Studies/Lessons Learned Index.md",
-   "x": -909,
-   "y": 1809,
-   "width": 320,
-   "height": 90,
-   "color": "5"
-  },
-  {
-   "id": "s13",
-   "type": "file",
-   "file": "14 3D Modeling/Bezier Curves and Splines for Modellers.md",
-   "x": -887,
-   "y": 1446,
-   "width": 320,
-   "height": 90,
-   "color": "6"
-  },
-  {
-   "id": "s14",
-   "type": "file",
-   "file": "15 AI Tools/AI in Roblox Development Overview.md",
-   "x": -1159,
-   "y": 1687,
-   "width": 320,
-   "height": 90,
-   "color": "4"
-  },
-  {
-   "id": "s15",
-   "type": "file",
-   "file": "16 MCP and Agents/Agent Review Loops and Guardrails in Practice.md",
-   "x": -1088,
-   "y": 1331,
-   "width": 320,
-   "height": 90,
-   "color": "3"
-  },
-  {
-   "id": "s16",
-   "type": "file",
-   "file": "17 Pipelines/Art Pipeline - Concept to In-Game Asset.md",
-   "x": -1391,
-   "y": 1531,
-   "width": 320,
-   "height": 90,
-   "color": "2"
-  },
-  {
-   "id": "s17",
-   "type": "file",
-   "file": "18 Rigs and Skeletons/Skeleton Library.md",
-   "x": -1270,
-   "y": 1188,
-   "width": 320,
-   "height": 90,
-   "color": "1"
-  },
-  {
-   "id": "s18",
-   "type": "file",
-   "file": "19 Concept Sheets/Concept Sheets.md",
-   "x": -1598,
-   "y": 1344,
-   "width": 320,
-   "height": 90,
-   "color": "5"
-  },
-  {
-   "id": "s19",
-   "type": "file",
-   "file": "21 LihFolk UI Design System/LihFolk UI Design System.md",
-   "x": -1431,
-   "y": 1022,
-   "width": 320,
-   "height": 90,
-   "color": "6"
-  },
-  {
-   "id": "s20",
-   "type": "file",
-   "file": "22 Anti-Exploit and Security/Anti-Exploit Start Here.md",
-   "x": -1778,
-   "y": 1130,
-   "width": 320,
-   "height": 90,
-   "color": "4"
-  },
-  {
-   "id": "s21",
-   "type": "file",
-   "file": "23 Debugging Deep Dives/Debugging Start Here.md",
-   "x": -1567,
-   "y": 834,
-   "width": 320,
-   "height": 90,
-   "color": "3"
-  },
-  {
-   "id": "s22",
-   "type": "file",
-   "file": "24 Worked Builds/Worked Builds Start Here.md",
-   "x": -1925,
-   "y": 893,
-   "width": 320,
-   "height": 90,
-   "color": "2"
-  },
-  {
-   "id": "s23",
-   "type": "file",
-   "file": "25 Physics and Vehicles/Physics and Vehicles Start Here.md",
-   "x": -1676,
-   "y": 630,
-   "width": 320,
-   "height": 90,
-   "color": "1"
-  },
-  {
-   "id": "s24",
-   "type": "file",
-   "file": "26 Community and Moderation/Community and Moderation Start Here.md",
-   "x": -2039,
-   "y": 639,
-   "width": 320,
-   "height": 90,
-   "color": "5"
-  },
-  {
-   "id": "s25",
-   "type": "file",
-   "file": "27 Marketing and Growth/Marketing and Growth Start Here.md",
-   "x": -1755,
-   "y": 412,
-   "width": 320,
-   "height": 90,
-   "color": "6"
-  },
-  {
-   "id": "s26",
-   "type": "file",
-   "file": "28 Business and Careers/Business and Careers Start Here.md",
-   "x": -2116,
-   "y": 370,
-   "width": 320,
-   "height": 90,
-   "color": "4"
-  },
-  {
-   "id": "s27",
-   "type": "file",
-   "file": "29 Luau Cookbook/Luau Cookbook Start Here.md",
-   "x": -1803,
-   "y": 186,
-   "width": 320,
-   "height": 90,
-   "color": "3"
-  },
-  {
-   "id": "s28",
-   "type": "file",
-   "file": "32 Case Studies of Top Roblox Games/Top Games Case Studies Start Here.md",
-   "x": -2155,
-   "y": 94,
-   "width": 320,
-   "height": 90,
-   "color": "2"
-  },
-  {
-   "id": "s29",
-   "type": "file",
-   "file": "33 Level Design/Level Design Start Here.md",
-   "x": -1820,
-   "y": -44,
-   "width": 320,
-   "height": 90,
-   "color": "1"
-  },
-  {
-   "id": "s30",
-   "type": "file",
-   "file": "34 Procedural Generation/Procedural Generation Start Here.md",
-   "x": -2155,
-   "y": -184,
-   "width": 320,
-   "height": 90,
-   "color": "5"
-  },
-  {
-   "id": "s31",
-   "type": "file",
-   "file": "35 Advanced Luau/Advanced Luau Start Here.md",
-   "x": -1803,
-   "y": -276,
-   "width": 320,
-   "height": 90,
-   "color": "6"
-  },
-  {
-   "id": "s32",
-   "type": "file",
-   "file": "36 Narrative and Worldbuilding/Narrative Start Here.md",
-   "x": -2116,
-   "y": -460,
-   "width": 320,
-   "height": 90,
-   "color": "4"
-  },
-  {
-   "id": "s33",
-   "type": "file",
-   "file": "37 Avatars and UGC/Avatars and UGC Start Here.md",
-   "x": -1755,
-   "y": -502,
-   "width": 320,
-   "height": 90,
-   "color": "3"
-  },
-  {
-   "id": "s34",
-   "type": "file",
-   "file": "38 Live Ops Deep Dive/Live Ops Deep Dive Start Here.md",
-   "x": -2039,
-   "y": -729,
-   "width": 320,
-   "height": 90,
-   "color": "2"
-  },
-  {
-   "id": "s35",
-   "type": "file",
-   "file": "39 Studio Plugins and Tooling/Plugin Development Start Here.md",
-   "x": -1676,
-   "y": -720,
-   "width": 320,
-   "height": 90,
-   "color": "1"
-  },
-  {
-   "id": "s36",
-   "type": "file",
-   "file": "40 Game Math/Game Math Start Here.md",
-   "x": -1925,
-   "y": -983,
-   "width": 320,
-   "height": 90,
-   "color": "5"
-  },
-  {
-   "id": "s37",
-   "type": "file",
-   "file": "41 Multiplayer Services/Multiplayer Services Start Here.md",
-   "x": -1567,
-   "y": -924,
-   "width": 320,
-   "height": 90,
-   "color": "6"
-  },
-  {
-   "id": "s38",
-   "type": "file",
-   "file": "42 Accessibility and Inclusive Design/Accessibility Start Here.md",
-   "x": -1778,
-   "y": -1220,
-   "width": 320,
-   "height": 90,
-   "color": "4"
-  },
-  {
-   "id": "s39",
-   "type": "file",
-   "file": "43 Genre Systems End to End/Genre Systems Start Here.md",
-   "x": -1431,
-   "y": -1112,
-   "width": 320,
-   "height": 90,
-   "color": "3"
-  },
-  {
-   "id": "s40",
-   "type": "file",
-   "file": "44 Materials and Surfaces/Materials and Surfaces Start Here.md",
-   "x": -1598,
-   "y": -1434,
-   "width": 320,
-   "height": 90,
-   "color": "2"
-  },
-  {
-   "id": "s41",
-   "type": "file",
-   "file": "45 Procedural Blender Assets/Procedural Blender Assets Start Here.md",
-   "x": -1270,
-   "y": -1278,
-   "width": 320,
-   "height": 90,
-   "color": "1"
-  },
-  {
-   "id": "s42",
-   "type": "file",
-   "file": "46 Resource Library/Resource Library Start Here.md",
-   "x": -1391,
-   "y": -1621,
-   "width": 320,
-   "height": 90,
-   "color": "5"
-  },
-  {
-   "id": "s43",
-   "type": "file",
-   "file": "47 Game Feel and Juice/Game Feel Start Here.md",
-   "x": -1088,
-   "y": -1421,
-   "width": 320,
-   "height": 90,
-   "color": "6"
-  },
-  {
-   "id": "s44",
-   "type": "file",
-   "file": "48 Economy Design Deep Dive/Economy Design Start Here.md",
-   "x": -1160,
-   "y": -1777,
-   "width": 320,
-   "height": 90,
-   "color": "4"
-  },
-  {
-   "id": "s45",
-   "type": "file",
-   "file": "49 Roblox Platform Features/Platform Features Start Here.md",
-   "x": -887,
-   "y": -1536,
-   "width": 320,
-   "height": 90,
-   "color": "3"
-  },
-  {
-   "id": "s46",
-   "type": "file",
-   "file": "50 Team Collaboration and Project Management/Team Collaboration Start Here.md",
-   "x": -909,
-   "y": -1899,
-   "width": 320,
-   "height": 90,
-   "color": "2"
-  },
-  {
-   "id": "s47",
-   "type": "file",
-   "file": "51 2D Game Development/2D Game Development Start Here.md",
-   "x": -672,
-   "y": -1623,
-   "width": 320,
-   "height": 90,
-   "color": "1"
-  },
-  {
-   "id": "s48",
-   "type": "file",
-   "file": "52 Core Concepts/Core Concepts Start Here.md",
-   "x": -643,
-   "y": -1985,
-   "width": 320,
-   "height": 90,
-   "color": "5"
-  },
-  {
-   "id": "s49",
-   "type": "file",
-   "file": "53 Voxel Modelling Deep Dive/Voxel Modelling Start Here.md",
-   "x": -448,
-   "y": -1679,
-   "width": 320,
-   "height": 90,
-   "color": "6"
-  },
-  {
-   "id": "s50",
-   "type": "file",
-   "file": "54 Untextured Stylised Modelling/Untextured Stylised Modelling Start Here.md",
-   "x": -369,
-   "y": -2034,
-   "width": 320,
-   "height": 90,
-   "color": "4"
-  },
-  {
-   "id": "s51",
-   "type": "file",
-   "file": "55 Modelling Nuance and Readability/Modelling Nuance Start Here.md",
-   "x": -90,
-   "y": -2043,
-   "width": 320,
-   "height": 90,
-   "color": "3"
-  },
-  {
-   "id": "s52",
-   "type": "file",
-   "file": "56 Field Notes/Field Notes Start Here.md",
-   "x": 187,
-   "y": -2014,
-   "width": 320,
-   "height": 90,
-   "color": "2"
-  },
-  {
-   "id": "star0",
-   "type": "text",
-   "text": "# ✦",
-   "x": 3055.0,
-   "y": -1100,
-   "width": 90,
-   "height": 90,
-   "color": "6"
-  },
-  {
-   "id": "star1",
-   "type": "text",
-   "text": "# ✧",
-   "x": 2700,
-   "y": -400,
-   "width": 90,
-   "height": 90,
-   "color": "6"
-  },
-  {
-   "id": "star2",
-   "type": "text",
-   "text": "# ✦",
-   "x": 2450,
-   "y": 350,
-   "width": 90,
-   "height": 90,
-   "color": "6"
-  },
-  {
-   "id": "star3",
-   "type": "text",
-   "text": "# ✧",
-   "x": 2900,
-   "y": 900,
-   "width": 90,
-   "height": 90,
-   "color": "6"
-  },
-  {
-   "id": "star4",
-   "type": "text",
-   "text": "# ✦",
-   "x": 2100,
-   "y": 1250,
-   "width": 90,
-   "height": 90,
-   "color": "6"
-  },
-  {
-   "id": "star5",
-   "type": "text",
-   "text": "# ⋆",
-   "x": 3100,
-   "y": -800,
-   "width": 90,
-   "height": 90,
-   "color": "6"
-  },
-  {
-   "id": "star6",
-   "type": "text",
-   "text": "# ✦",
-   "x": 3300,
-   "y": 300,
-   "width": 90,
-   "height": 90,
-   "color": "6"
-  },
-  {
-   "id": "star7",
-   "type": "text",
-   "text": "# ⋆",
-   "x": 2800,
-   "y": -1500,
-   "width": 90,
-   "height": 90,
-   "color": "6"
-  },
-  {
-   "id": "title",
-   "type": "text",
-   "x": 1300,
-   "y": -260,
-   "width": 900,
-   "height": 420,
-   "color": "6",
-   "text": "# ☾ LihFolk Vault V2\n\nThe Roblox game studio in a vault.\n\nEvery card on the crescent is a section: click one to open it.\nStart at [[000 Home]] · search with [[INDEX_SLIM]]"
-  }
- ],
- "edges": [
-  {
-   "id": "es0s1",
-   "fromNode": "s0",
-   "toNode": "s1",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es1s2",
-   "fromNode": "s1",
-   "toNode": "s2",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es2s3",
-   "fromNode": "s2",
-   "toNode": "s3",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es3s4",
-   "fromNode": "s3",
-   "toNode": "s4",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es4s5",
-   "fromNode": "s4",
-   "toNode": "s5",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es5s6",
-   "fromNode": "s5",
-   "toNode": "s6",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es6s7",
-   "fromNode": "s6",
-   "toNode": "s7",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es7s8",
-   "fromNode": "s7",
-   "toNode": "s8",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es8s9",
-   "fromNode": "s8",
-   "toNode": "s9",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es9s10",
-   "fromNode": "s9",
-   "toNode": "s10",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es10s11",
-   "fromNode": "s10",
-   "toNode": "s11",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es11s12",
-   "fromNode": "s11",
-   "toNode": "s12",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es12s13",
-   "fromNode": "s12",
-   "toNode": "s13",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es13s14",
-   "fromNode": "s13",
-   "toNode": "s14",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es14s15",
-   "fromNode": "s14",
-   "toNode": "s15",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es15s16",
-   "fromNode": "s15",
-   "toNode": "s16",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es16s17",
-   "fromNode": "s16",
-   "toNode": "s17",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es17s18",
-   "fromNode": "s17",
-   "toNode": "s18",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es18s19",
-   "fromNode": "s18",
-   "toNode": "s19",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es19s20",
-   "fromNode": "s19",
-   "toNode": "s20",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es20s21",
-   "fromNode": "s20",
-   "toNode": "s21",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es21s22",
-   "fromNode": "s21",
-   "toNode": "s22",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es22s23",
-   "fromNode": "s22",
-   "toNode": "s23",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es23s24",
-   "fromNode": "s23",
-   "toNode": "s24",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es24s25",
-   "fromNode": "s24",
-   "toNode": "s25",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es25s26",
-   "fromNode": "s25",
-   "toNode": "s26",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es26s27",
-   "fromNode": "s26",
-   "toNode": "s27",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es27s28",
-   "fromNode": "s27",
-   "toNode": "s28",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es28s29",
-   "fromNode": "s28",
-   "toNode": "s29",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es29s30",
-   "fromNode": "s29",
-   "toNode": "s30",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es30s31",
-   "fromNode": "s30",
-   "toNode": "s31",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es31s32",
-   "fromNode": "s31",
-   "toNode": "s32",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es32s33",
-   "fromNode": "s32",
-   "toNode": "s33",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es33s34",
-   "fromNode": "s33",
-   "toNode": "s34",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es34s35",
-   "fromNode": "s34",
-   "toNode": "s35",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es35s36",
-   "fromNode": "s35",
-   "toNode": "s36",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es36s37",
-   "fromNode": "s36",
-   "toNode": "s37",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es37s38",
-   "fromNode": "s37",
-   "toNode": "s38",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es38s39",
-   "fromNode": "s38",
-   "toNode": "s39",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es39s40",
-   "fromNode": "s39",
-   "toNode": "s40",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es40s41",
-   "fromNode": "s40",
-   "toNode": "s41",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es41s42",
-   "fromNode": "s41",
-   "toNode": "s42",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es42s43",
-   "fromNode": "s42",
-   "toNode": "s43",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es43s44",
-   "fromNode": "s43",
-   "toNode": "s44",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es44s45",
-   "fromNode": "s44",
-   "toNode": "s45",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es45s46",
-   "fromNode": "s45",
-   "toNode": "s46",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es46s47",
-   "fromNode": "s46",
-   "toNode": "s47",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es47s48",
-   "fromNode": "s47",
-   "toNode": "s48",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es48s49",
-   "fromNode": "s48",
-   "toNode": "s49",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es49s50",
-   "fromNode": "s49",
-   "toNode": "s50",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es50s51",
-   "fromNode": "s50",
-   "toNode": "s51",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "es51s52",
-   "fromNode": "s51",
-   "toNode": "s52",
-   "fromSide": "right",
-   "toSide": "left",
-   "color": "6"
-  },
-  {
-   "id": "c0",
-   "fromNode": "star0",
-   "toNode": "star1",
-   "color": "5"
-  },
-  {
-   "id": "c1",
-   "fromNode": "star1",
-   "toNode": "star2",
-   "color": "5"
-  },
-  {
-   "id": "c3",
-   "fromNode": "star3",
-   "toNode": "star4",
-   "color": "5"
-  },
-  {
-   "id": "c4",
-   "fromNode": "star4",
-   "toNode": "star5",
-   "color": "5"
-  },
-  {
-   "id": "c6",
-   "fromNode": "star6",
-   "toNode": "star7",
-   "color": "5"
-  }
- ]
+	"nodes":[
+		{"id":"s0","type":"file","file":"01 Studio and Workflow/Command Bar and Studio Scripting.md","x":958,"y":1613,"width":320,"height":90,"color":"5"},
+		{"id":"s1","type":"file","file":"02 Luau Scripting/Buffers and Binary Data.md","x":716,"y":1752,"width":320,"height":90,"color":"6"},
+		{"id":"s2","type":"file","file":"03 Architecture and Networking/Client Prediction and Reconciliation for Combat.md","x":458,"y":1857,"width":320,"height":90,"color":"4"},
+		{"id":"s3","type":"file","file":"04 Data and Persistence/Data Loss Prevention and Recovery.md","x":187,"y":1924,"width":320,"height":90,"color":"3"},
+		{"id":"s4","type":"file","file":"05 UI and UX/Accessibility.md","x":13,"y":1605,"width":320,"height":90,"color":"2"},
+		{"id":"s5","type":"file","file":"06 World Building and Art/Art Budgets - Triangles Draw Calls Memory.md","x":-90,"y":1953,"width":320,"height":90,"color":"1"},
+		{"id":"s6","type":"file","file":"07 Lighting VFX and Audio/Atmosphere Sky Clouds and Post-Processing.md","x":-217,"y":1613,"width":320,"height":90,"color":"5"},
+		{"id":"s7","type":"file","file":"08 Animation/Animation Start Here.md","x":-369,"y":1944,"width":320,"height":90,"color":"6"},
+		{"id":"s8","type":"file","file":"09 Gameplay Systems/Behaviour Trees Utility AI and State Machines for NPCs.md","x":-448,"y":1589,"width":320,"height":90,"color":"4"},
+		{"id":"s9","type":"file","file":"10 Game Design and Genres/Balancing with Spreadsheets and Data.md","x":-643,"y":1895,"width":320,"height":90,"color":"3"},
+		{"id":"s10","type":"file","file":"11 Monetization Publishing and Live Ops/Monetization Overview.md","x":-672,"y":1533,"width":320,"height":90,"color":"2"},
+		{"id":"s11","type":"file","file":"12 Performance Testing and Debugging/Automated Luau Checks - LihFolk Hook and Audit.md","x":-567,"y":1210,"width":320,"height":90,"color":"1"},
+		{"id":"s12","type":"file","file":"13 Production and Case Studies/Lessons Learned Index.md","x":-909,"y":1809,"width":320,"height":90,"color":"5"},
+		{"id":"s13","type":"file","file":"14 3D Modeling/Bezier Curves and Splines for Modellers.md","x":-887,"y":1446,"width":320,"height":90,"color":"6"},
+		{"id":"s14","type":"file","file":"15 AI Tools/AI in Roblox Development Overview.md","x":-1159,"y":1687,"width":320,"height":90,"color":"4"},
+		{"id":"s15","type":"file","file":"16 MCP and Agents/Agent Review Loops and Guardrails in Practice.md","x":-1088,"y":1331,"width":320,"height":90,"color":"3"},
+		{"id":"s16","type":"file","file":"17 Pipelines/Art Pipeline - Concept to In-Game Asset.md","x":-1391,"y":1531,"width":320,"height":90,"color":"2"},
+		{"id":"s17","type":"file","file":"18 Rigs and Skeletons/Skeleton Library.md","x":-1270,"y":1188,"width":320,"height":90,"color":"1"},
+		{"id":"s18","type":"file","file":"19 Concept Sheets/Concept Sheets.md","x":-1598,"y":1344,"width":320,"height":90,"color":"5"},
+		{"id":"s19","type":"file","file":"21 LihFolk UI Design System/LihFolk UI Design System.md","x":-1431,"y":1022,"width":320,"height":90,"color":"6"},
+		{"id":"s20","type":"file","file":"22 Anti-Exploit and Security/Anti-Exploit Start Here.md","x":-1778,"y":1130,"width":320,"height":90,"color":"4"},
+		{"id":"s21","type":"file","file":"23 Debugging Deep Dives/Debugging Start Here.md","x":-1567,"y":834,"width":320,"height":90,"color":"3"},
+		{"id":"s22","type":"file","file":"24 Worked Builds/Worked Builds Start Here.md","x":-1925,"y":893,"width":320,"height":90,"color":"2"},
+		{"id":"s23","type":"file","file":"25 Physics and Vehicles/Physics and Vehicles Start Here.md","x":-1676,"y":630,"width":320,"height":90,"color":"1"},
+		{"id":"s24","type":"file","file":"26 Community and Moderation/Community and Moderation Start Here.md","x":-2039,"y":639,"width":320,"height":90,"color":"5"},
+		{"id":"s25","type":"file","file":"27 Marketing and Growth/Marketing and Growth Start Here.md","x":-1755,"y":412,"width":320,"height":90,"color":"6"},
+		{"id":"s26","type":"file","file":"28 Business and Careers/Business and Careers Start Here.md","x":-2116,"y":370,"width":320,"height":90,"color":"4"},
+		{"id":"s27","type":"file","file":"29 Luau Cookbook/Luau Cookbook Start Here.md","x":-1803,"y":186,"width":320,"height":90,"color":"3"},
+		{"id":"s28","type":"file","file":"32 Case Studies of Top Roblox Games/Top Games Case Studies Start Here.md","x":-2155,"y":94,"width":320,"height":90,"color":"2"},
+		{"id":"s29","type":"file","file":"33 Level Design/Level Design Start Here.md","x":-1820,"y":-44,"width":320,"height":90,"color":"1"},
+		{"id":"s30","type":"file","file":"34 Procedural Generation/Procedural Generation Start Here.md","x":-2155,"y":-184,"width":320,"height":90,"color":"5"},
+		{"id":"s31","type":"file","file":"35 Advanced Luau/Advanced Luau Start Here.md","x":-1803,"y":-276,"width":320,"height":90,"color":"6"},
+		{"id":"s32","type":"file","file":"36 Narrative and Worldbuilding/Narrative Start Here.md","x":-2116,"y":-460,"width":320,"height":90,"color":"4"},
+		{"id":"s33","type":"file","file":"37 Avatars and UGC/Avatars and UGC Start Here.md","x":-1755,"y":-502,"width":320,"height":90,"color":"3"},
+		{"id":"s34","type":"file","file":"38 Live Ops Deep Dive/Live Ops Deep Dive Start Here.md","x":-2039,"y":-729,"width":320,"height":90,"color":"2"},
+		{"id":"s35","type":"file","file":"39 Studio Plugins and Tooling/Plugin Development Start Here.md","x":-1676,"y":-720,"width":320,"height":90,"color":"1"},
+		{"id":"s36","type":"file","file":"40 Game Math/Game Math Start Here.md","x":-1925,"y":-983,"width":320,"height":90,"color":"5"},
+		{"id":"s37","type":"file","file":"41 Multiplayer Services/Multiplayer Services Start Here.md","x":-1567,"y":-924,"width":320,"height":90,"color":"6"},
+		{"id":"s38","type":"file","file":"42 Accessibility and Inclusive Design/Accessibility Start Here.md","x":-1778,"y":-1220,"width":320,"height":90,"color":"4"},
+		{"id":"s39","type":"file","file":"43 Genre Systems End to End/Genre Systems Start Here.md","x":-1431,"y":-1112,"width":320,"height":90,"color":"3"},
+		{"id":"s40","type":"file","file":"44 Materials and Surfaces/Materials and Surfaces Start Here.md","x":-1598,"y":-1434,"width":320,"height":90,"color":"2"},
+		{"id":"s41","type":"file","file":"45 Procedural Blender Assets/Procedural Blender Assets Start Here.md","x":-1270,"y":-1278,"width":320,"height":90,"color":"1"},
+		{"id":"s42","type":"file","file":"46 Resource Library/Resource Library Start Here.md","x":-1391,"y":-1621,"width":320,"height":90,"color":"5"},
+		{"id":"s43","type":"file","file":"47 Game Feel and Juice/Game Feel Start Here.md","x":-1088,"y":-1421,"width":320,"height":90,"color":"6"},
+		{"id":"s44","type":"file","file":"48 Economy Design Deep Dive/Economy Design Start Here.md","x":-1160,"y":-1777,"width":320,"height":90,"color":"4"},
+		{"id":"s45","type":"file","file":"49 Roblox Platform Features/Platform Features Start Here.md","x":-887,"y":-1536,"width":320,"height":90,"color":"3"},
+		{"id":"s46","type":"file","file":"50 Team Collaboration and Project Management/Team Collaboration Start Here.md","x":-909,"y":-1899,"width":320,"height":90,"color":"2"},
+		{"id":"s47","type":"file","file":"51 2D Game Development/2D Game Development Start Here.md","x":-672,"y":-1623,"width":320,"height":90,"color":"1"},
+		{"id":"s48","type":"file","file":"52 Core Concepts/Core Concepts Start Here.md","x":-643,"y":-1985,"width":320,"height":90,"color":"5"},
+		{"id":"s49","type":"file","file":"53 Voxel Modelling Deep Dive/Voxel Modelling Start Here.md","x":-448,"y":-1679,"width":320,"height":90,"color":"6"},
+		{"id":"s50","type":"file","file":"54 Untextured Stylised Modelling/Untextured Stylised Modelling Start Here.md","x":-369,"y":-2034,"width":320,"height":90,"color":"4"},
+		{"id":"s51","type":"file","file":"55 Modelling Nuance and Readability/Modelling Nuance Start Here.md","x":-90,"y":-2043,"width":320,"height":90,"color":"3"},
+		{"id":"s52","type":"file","file":"56 Field Notes/Field Notes Start Here.md","x":187,"y":-2014,"width":320,"height":90,"color":"2"},
+		{"id":"star0","type":"text","text":"# ✦","x":3055,"y":-1100,"width":90,"height":90,"color":"6"},
+		{"id":"star1","type":"text","text":"# ✧","x":2700,"y":-400,"width":90,"height":90,"color":"6"},
+		{"id":"star2","type":"text","text":"# ✦","x":2450,"y":350,"width":90,"height":90,"color":"6"},
+		{"id":"star3","type":"text","text":"# ✧","x":2900,"y":900,"width":90,"height":90,"color":"6"},
+		{"id":"star4","type":"text","text":"# ✦","x":2100,"y":1250,"width":90,"height":90,"color":"6"},
+		{"id":"star5","type":"text","text":"# ⋆","x":3100,"y":-800,"width":90,"height":90,"color":"6"},
+		{"id":"star6","type":"text","text":"# ✦","x":3300,"y":300,"width":90,"height":90,"color":"6"},
+		{"id":"star7","type":"text","text":"# ⋆","x":2800,"y":-1500,"width":90,"height":90,"color":"6"},
+		{"id":"title","type":"text","x":1300,"y":-260,"width":900,"height":420,"color":"6","text":"# ☾ LihFolk Vault V2\n\nThe Roblox game studio in a vault.\n\nEvery card on the crescent is a section: click one to open it.\nStart at [[000 Home]] · search with [[INDEX_SLIM]]"}
+	],
+	"edges":[
+		{"id":"es0s1","fromNode":"s0","toNode":"s1","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es1s2","fromNode":"s1","toNode":"s2","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es2s3","fromNode":"s2","toNode":"s3","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es3s4","fromNode":"s3","toNode":"s4","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es4s5","fromNode":"s4","toNode":"s5","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es5s6","fromNode":"s5","toNode":"s6","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es6s7","fromNode":"s6","toNode":"s7","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es7s8","fromNode":"s7","toNode":"s8","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es8s9","fromNode":"s8","toNode":"s9","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es9s10","fromNode":"s9","toNode":"s10","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es10s11","fromNode":"s10","toNode":"s11","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es11s12","fromNode":"s11","toNode":"s12","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es12s13","fromNode":"s12","toNode":"s13","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es13s14","fromNode":"s13","toNode":"s14","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es14s15","fromNode":"s14","toNode":"s15","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es15s16","fromNode":"s15","toNode":"s16","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es16s17","fromNode":"s16","toNode":"s17","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es17s18","fromNode":"s17","toNode":"s18","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es18s19","fromNode":"s18","toNode":"s19","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es19s20","fromNode":"s19","toNode":"s20","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es20s21","fromNode":"s20","toNode":"s21","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es21s22","fromNode":"s21","toNode":"s22","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es22s23","fromNode":"s22","toNode":"s23","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es23s24","fromNode":"s23","toNode":"s24","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es24s25","fromNode":"s24","toNode":"s25","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es25s26","fromNode":"s25","toNode":"s26","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es26s27","fromNode":"s26","toNode":"s27","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es27s28","fromNode":"s27","toNode":"s28","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es28s29","fromNode":"s28","toNode":"s29","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es29s30","fromNode":"s29","toNode":"s30","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es30s31","fromNode":"s30","toNode":"s31","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es31s32","fromNode":"s31","toNode":"s32","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es32s33","fromNode":"s32","toNode":"s33","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es33s34","fromNode":"s33","toNode":"s34","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es34s35","fromNode":"s34","toNode":"s35","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es35s36","fromNode":"s35","toNode":"s36","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es36s37","fromNode":"s36","toNode":"s37","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es37s38","fromNode":"s37","toNode":"s38","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es38s39","fromNode":"s38","toNode":"s39","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es39s40","fromNode":"s39","toNode":"s40","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es40s41","fromNode":"s40","toNode":"s41","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es41s42","fromNode":"s41","toNode":"s42","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es42s43","fromNode":"s42","toNode":"s43","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es43s44","fromNode":"s43","toNode":"s44","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es44s45","fromNode":"s44","toNode":"s45","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es45s46","fromNode":"s45","toNode":"s46","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es46s47","fromNode":"s46","toNode":"s47","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es47s48","fromNode":"s47","toNode":"s48","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es48s49","fromNode":"s48","toNode":"s49","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es49s50","fromNode":"s49","toNode":"s50","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es50s51","fromNode":"s50","toNode":"s51","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"es51s52","fromNode":"s51","toNode":"s52","fromSide":"right","toSide":"left","color":"6"},
+		{"id":"c0","fromNode":"star0","toNode":"star1","color":"5","fromSide":"bottom","toSide":"top"},
+		{"id":"c1","fromNode":"star1","toNode":"star2","color":"5","fromSide":"bottom","toSide":"top"},
+		{"id":"c3","fromNode":"star3","toNode":"star4","color":"5","fromSide":"left","toSide":"right"},
+		{"id":"c4","fromNode":"star4","toNode":"star5","color":"5","fromSide":"top","toSide":"bottom"},
+		{"id":"c6","fromNode":"star6","toNode":"star7","color":"5","fromSide":"top","toSide":"bottom"}
+	],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
 }

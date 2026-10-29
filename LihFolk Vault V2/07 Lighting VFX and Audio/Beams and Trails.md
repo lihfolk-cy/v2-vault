@@ -1,5 +1,5 @@
 ---
-tags: [vfx, beams, trails, slashes, bezier]
+tags: [vfx, beams, trails, slashes, bezier, type/guide, area/vfx, level/intermediate, api/Beam, api/LightInfluence, api/Texture]
 ---
 # Beams and Trails
 
@@ -12,10 +12,10 @@ tags: [vfx, beams, trails, slashes, bezier]
 > - Arcs built with 4/3 r handles and enough segments.
 > - VFX ribbons at LightInfluence 0 with appropriate LightEmission.
 >
-> Cost: TL;DR ~180 tok · whole note ~4.2k tok. Read more: ## 1. Beam fundamentals · ## 2. Slash crescents with beams · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~4.4k tok. Read more: ## 1. Beam fundamentals · ## 2. Slash crescents with beams · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-Particles are points; beams and trails are ribbons. A `Beam` draws a textured ribbon along a cubic Bézier curve between two attachments: lasers, lightning arcs, waterfalls, force-field skins, slash crescents, tractor beams, tutorial guide lines. A `Trail` records where two attachments have been and fills the space between: sword trails, dash streaks, limb afterimages, tyre marks. Both are cheap, both are easy to make ugly, and both have a handful of rules that explain nearly every bug.
+Particles are points; beams and trails are ribbons. A `Beam` draws a textured ribbon along a cubic [[Bezier Curves|Bézier curve]] between two attachments: lasers, lightning arcs, waterfalls, force-field skins, slash crescents, tractor beams, tutorial guide lines. A `Trail` records where two attachments have been and fills the space between: sword trails, dash streaks, limb afterimages, tyre marks. Both are cheap, both are easy to make ugly, and both have a handful of rules that explain nearly every bug.
 
 Source labels: **Docs** (October 2026), **API dump** (defaults), **Reference project** (one live action game and its studied VFX packs), **Rule of thumb**.
 
@@ -56,7 +56,7 @@ A cubic Bézier approximates a circular arc of angle θ when the handles are `k 
 | `FaceCamera` | false | When true the ribbon always faces the camera. |
 | `LightEmission` | 0 | 0 normal, 1 additive. Does not light the world. |
 | `LightInfluence` | 0 | 0 to 1. Keep 0 for VFX. |
-| `Brightness` | 1 | 0 to 10000; scales emitted light when LightInfluence is below 1. |
+| `Brightness` | 1 | 0 to 10000; scales emitted light when [[LightInfluence]] is below 1. |
 | `ZOffset` | 0 | Studs toward the camera; separates beams that share attachments to avoid z-fighting. |
 
 ### The "solid white bar" bug
@@ -275,5 +275,10 @@ See also: [[Particle Emitters In Depth]], [[VFX Design Playbook]], [[VFX Timing 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Beams and trails]] · [[Mesh VFX Packs Built in Blender]] · [[Light Sources and Shadows]] · [[Dash VFX Presentation on an R15 Rig]] · [[Mover Constraints and Physics Controllers]] · [[Water Sky and Atmosphere Art]]
+[[Links - Beams and trails]] · Mesh VFX Packs Built in Blender · [[Light Sources and Shadows]] · Dash VFX Presentation on an R15 Rig · Mover Constraints and Physics Controllers · Water Sky and Atmosphere Art
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Slash VFX Recipes - Crescent and Ring]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[VFX Performance Budgets and Culling]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]]
+<!-- related:end -->

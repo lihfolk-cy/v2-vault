@@ -1,5 +1,5 @@
 ---
-tags: [snippets, luau, procedural, springs]
+tags: [snippets, luau, procedural, springs, type/reference, area/animation, level/intermediate, api/BulkMoveTo, area/scripting, api/Motor6D, api/Animator]
 ---
 # Snippets: Procedural Motion
 
@@ -9,7 +9,7 @@ tags: [snippets, luau, procedural, springs]
 > - Avoid: Compounding `Transform = Transform * offset` (winds up on throttled or unkeyed frames).
 > - Avoid: Per-frame smoothing with a constant factor (`x += (t - x) * 0.2`), which changes with frame rate.
 >
-> Cost: TL;DR ~120 tok · whole note ~5.7k tok. Read more: ## 3. Look-at for neck and waist, clamped and smoothed · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~120 tok · whole note ~5.9k tok. Read more: ## 3. Look-at for neck and waist, clamped and smoothed · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 Code for motion computed at runtime instead of played from clips: additive layers on top of the Animator, springs, look-at, recoil, breathing, lean, spinning and bobbing objects, a weapon toss, a hinged lid, and server-synchronised one-off motion. The theory is in [[Procedural Animation]], [[Springs Damping and Smoothing]] and [[Look-At Aim and Head Tracking]].
@@ -400,7 +400,7 @@ For models, tween a NumberValue and call `Model:ScaleTo` on change, or scale a s
 2. **Server-side procedural motion is usually wrong.** Writing `Transform` on the server for a player's character competes with the owner's Animator and arrives late. Server writes make sense only for server-owned props (lids, doors, spinners), and even those look smoother when each client animates them from a shared start time.
 3. **Springs at extreme frame rates.** An analytic or substepped spring is stable from 20 to 240 FPS. A naive semi-implicit Euler spring with high stiffness explodes when a phone hitches to a 200 ms frame. Clamp `dt` (for example to 1/20 s) before stepping, and substep if you must use high stiffness.
 4. **Hitches and pauses.** When a client alt-tabs on PC or backgrounds the app on mobile, the next frame can carry a `dt` of several seconds. Unclamped bobbing jumps phase visibly; unclamped springs fly away. Clamp `dt` for all procedural motion, and resync time-based motion from `GetServerTimeNow`.
-5. **BulkMoveTo and streaming.** One loop moving 500 pickups with `workspace:BulkMoveTo` is cheap, but with StreamingEnabled some of those parts may be streamed out on a given client. Iterate a list that you add to and remove from on stream in and out (CollectionService tags plus `GetInstanceAddedSignal` handle this well), rather than a list built once at start.
+5. **[[BulkMoveTo]] and streaming.** One loop moving 500 pickups with `workspace:BulkMoveTo` is cheap, but with StreamingEnabled some of those parts may be streamed out on a given client. Iterate a list that you add to and remove from on stream in and out (CollectionService tags plus `GetInstanceAddedSignal` handle this well), rather than a list built once at start.
 6. **Anchored vs physics props.** Bobbing an anchored part with CFrame does not push players standing on it; they slide off or clip. If players stand on it, use a constraint-driven platform or move the floor and carry the player explicitly.
 7. **Look-at on other players and privacy of input.** Replicating the exact camera direction reveals where a player looks, which matters in hide-and-seek or horror. Replicate only when the look-at is meant to be visible, or blur it (lower rate, coarser angles).
 8. **Layering with layered clothing.** Large procedural lean or spine twist can push layered clothing cages past what they were authored for. Keep added spine rotation modest (rule of thumb: under about 20 degrees on top of the clip).
@@ -427,5 +427,10 @@ For models, tween a NumberValue and call `Model:ScaleTo` on change, or scale a s
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Tween vs Spring]] · [[Rigs and Joints]] · [[Motor6D Math and CFrame Composition]] · [[Custom Rigs - Weapons and Props]] · [[UI Motion Language and Timing]] · [[Cookbook - Math CFrame and Vectors]] · [[Animation Start Here]]
+[[Tween vs Spring]] · [[Rigs and Joints]] · [[Motor6D Math and CFrame Composition]] · [[Custom Rigs - Weapons and Props]] · UI Motion Language and Timing · Cookbook - Math CFrame and Vectors · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Snippets - Ragdoll]] · [[Snippets - Building and Sampling Clips]] · [[Procedural Death Knockdown and Hit Reactions]] · [[Equip Draw and Flourish Systems]] · [[Snippets - Animation Controller Module]] · [[Animation Glossary]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Engine Gotchas]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [lighting, stylized, recipes, mood, post-processing, atmosphere, art-direction]
+tags: [lighting, stylized, recipes, mood, post-processing, atmosphere, art-direction, type/guide, area/vfx, level/intermediate, api/Atmosphere, area/lighting]
 ---
 # Stylized Lighting Recipes
 
@@ -12,7 +12,7 @@ tags: [lighting, stylized, recipes, mood, post-processing, atmosphere, art-direc
 > - Each zone has a named recipe stored as data.
 > - Greyscale test passed: characters, enemies, pickups and paths are distinct values.
 >
-> Cost: TL;DR ~180 tok · whole note ~6.0k tok. Read more: ## 3. The recipes · ## 4. Recipes as data · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~6.2k tok. Read more: ## 3. The recipes · ## 4. Recipes as data · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The other lighting notes explain the machinery: [[Lighting Technologies and Settings]] for every global property and its trap, [[Atmosphere Sky Clouds and Post-Processing]] for air, sky and screen effects, [[Light Sources and Shadows]] for local lights, and [[Lighting Mood and Time of Day]] for clocks and zone blending. This note is the cookbook: complete, numbered starting points for the stylised looks Roblox games actually ship (bright cartoon, toon arena, golden hour, readable night, neon city, fog horror, underwater, crystal cave, lava, frost, void), the reasoning behind each number, and the ways each recipe breaks.
@@ -68,7 +68,7 @@ The look of most top simulator hubs: saturated flat colours, soft shadows, nothi
 | Object | Values |
 |---|---|
 | Style | `Soft`, `GlobalShadows` true |
-| Lighting | Ambient (110, 110, 125), OutdoorAmbient (150, 150, 160), Brightness 2.5, ColorShift_Top (255, 240, 215), ColorShift_Bottom (0, 0, 0), EnvironmentDiffuseScale 0.3, EnvironmentSpecularScale 0, ClockTime 13.5 |
+| Lighting | Ambient (110, 110, 125), OutdoorAmbient (150, 150, 160), Brightness 2.5, ColorShift_Top (255, 240, 215), [[ColorShift_Bottom]] (0, 0, 0), EnvironmentDiffuseScale 0.3, EnvironmentSpecularScale 0, ClockTime 13.5 |
 | Atmosphere | Density 0.25, Offset 0.1, Color (200, 225, 255), Decay (120, 160, 210), Glare 0, Haze 0.5 |
 | Bloom | Intensity 0.5, Size 24, Threshold 1.2 |
 | Grade | Brightness 0.02, Contrast 0.08, Saturation 0.15, Tint white |
@@ -104,7 +104,7 @@ The cheapest "beautiful" look there is.
 | Lighting | ClockTime 17.6, GeographicLatitude 30, Ambient (90, 70, 70), OutdoorAmbient (130, 100, 90), Brightness 2.2, ColorShift_Top (255, 190, 120), ColorShift_Bottom (60, 40, 80), EnvironmentDiffuseScale 0.4 |
 | Atmosphere | Density 0.35, Offset 0.2, Color (255, 200, 160), Decay (200, 120, 110), Glare 0.4, Haze 1.5 |
 | Bloom | Intensity 0.7, Size 32, Threshold 1.1 |
-| Grade | Contrast 0.1, Saturation 0.1, TintColor (255, 245, 235) |
+| Grade | Contrast 0.1, Saturation 0.1, [[TintColor]] (255, 245, 235) |
 | Sun rays | Intensity 0.06, Spread 0.6 |
 
 Why: a low sun and long shadows, warm top, purple bottom shift (complementary), warm haze with `Glare` for the sun halo. Sun rays only help when the sun is on screen; otherwise they cost and do nothing.
@@ -399,5 +399,10 @@ See also: [[Lighting Technologies and Settings]], [[Atmosphere Sky Clouds and Po
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Lighting Untextured Art in Roblox]] · [[Colour Scripts and Value Structure for Untextured Art]] · [[Zone and Biome Art Direction]] · [[Voxel Palettes - Ramps Hue Shifting and Limits]] · [[Baking Lighting and Detail into Textures]] · [[Voxel Shading - Baked AO Edges and Lighting]]
+[[Lighting Untextured Art in Roblox]] · Colour Scripts and Value Structure for Untextured Art · Zone and Biome Art Direction · Voxel Palettes - Ramps Hue Shifting and Limits · Baking Lighting and Detail into Textures · Voxel Shading - Baked AO Edges and Lighting
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Colour Scripts and Value Structure for Untextured Art]] · [[Zone and Biome Art Direction]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Weather System Architecture - State Machine, Transitions and Replication]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Particle Emitters In Depth]] · [[Slash VFX Recipes - Crescent and Ring]]
+<!-- related:end -->

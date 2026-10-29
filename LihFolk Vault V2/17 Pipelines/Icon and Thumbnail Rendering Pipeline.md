@@ -1,5 +1,5 @@
 ---
-tags: [pipelines, icons, thumbnails, blender, rendering, post-processing, ui]
+tags: [pipelines, icons, thumbnails, blender, rendering, post-processing, ui, type/guide, area/pipelines, level/intermediate, api/ViewportFrame, area/ui]
 ---
 # Icon and Thumbnail Rendering Pipeline
 
@@ -12,7 +12,7 @@ tags: [pipelines, icons, thumbnails, blender, rendering, post-processing, ui]
 > - In-game look exported and merged before rendering
 > - Two passes: beauty and emission; render 2x and downsample
 >
-> Cost: TL;DR ~160 tok · whole note ~4.9k tok. Read more: ## Stage 2 and 3: render two passes in background Blender · ## Stage 4: post-process (outline, bloom, sparkles) · ## Failure modes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.0k tok. Read more: ## Stage 2 and 3: render two passes in background Blender · ## Stage 4: post-process (outline, bloom, sparkles) · ## Failure modes · ## Checklist
 <!-- tldr:end -->
 
 Item icons are the most-viewed art in most Roblox games: every inventory slot, shop card, drop popup and trade window shows them. A collection game with 150 items needs 150 icons that look like one set, and needs to re-render all of them when the style changes. Hand-made screenshots do not survive that. This note is the recipe for a rendered icon pipeline (Blender, background mode, two passes, scripted post-processing, upload, ids written into config), based on the one a production game used to render and reinstall well over a hundred weapon icons several times. The second half covers experience thumbnails and the store icon, which are a different job. Store page strategy is in [[Thumbnails Icons and Store Page]]; AI-generated art is in [[AI Image Generation for Icons Thumbnails and Concepts]].
@@ -327,5 +327,10 @@ When you use AI tools for thumbnails, follow [[Roblox Policies on AI-Generated C
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Asset Pipelines]] · [[Blender MCP]] · [[Dramatic Showcase Renders in Eevee]] · [[Thumbnail Contrast]] · [[Blender 5 Python Gotchas for Headless Builds]] · [[Dash VFX Presentation on an R15 Rig]]
+[[Asset Pipelines]] · Blender MCP · Dramatic Showcase Renders in Eevee · Thumbnail Contrast · Blender 5 Python Gotchas for Headless Builds · Dash VFX Presentation on an R15 Rig
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Character and Creature Pipeline]] · [[Batch Processing Tools in Studio]] · [[Audio Pipeline]] · [[Environment and Level Pipeline]] · [[Code Pipeline - Rojo Git and CI]] · [[Build Test and Release Pipeline]] · [[Localization Pipeline]] · [[Live Content Pipeline]]
+<!-- related:end -->

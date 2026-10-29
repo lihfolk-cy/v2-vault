@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, analytics, live-ops, debugging, economy]
+tags: [core-concept, analytics, live-ops, debugging, economy, type/reference, area/economy, level/beginner, api/AnalyticsService, area/debugging, api/HttpService]
 ---
 # Telemetry Events
 
@@ -10,7 +10,7 @@ tags: [core-concept, analytics, live-ops, debugging, economy]
 > - Names and fields are a schema. Rename an event and your charts break.
 > - Log on the server. Client-logged events can be forged and are lost when the client crashes.
 >
-> Cost: TL;DR ~130 tok · whole note ~900 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~980 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Telemetry events** are small structured records your game emits when something meaningful happens: a purchase, a level-up, a funnel step, an error, a currency gain. Collected across thousands of sessions they show what players actually do, as opposed to what you assumed.
@@ -64,5 +64,10 @@ Related concepts: [[Onboarding Funnel]], [[Retention Cohorts]], [[Faucets and Si
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Analytics]] · [[Session Length]] · [[Anti-Exploit Start Here]] · [[Economy Design Start Here]] · [[Debugging Start Here]] · [[Skill - Roblox Debugging]] · [[Core Concepts Start Here]]
+[[Links - Analytics]] · [[Session Length]] · Anti-Exploit Start Here · Economy Design Start Here · Debugging Start Here · Skill - Roblox Debugging · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Faucets and Sinks]] · [[Click-Through Rate]] · [[Variance]] · [[Rate Limiting]] · [[Expected Value]] · [[Data Schema Versioning]] · [[Power Curve]] · [[Core Loop]]
+<!-- related:end -->

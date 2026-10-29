@@ -1,5 +1,5 @@
 ---
-tags: [discovery, recommendations, algorithm, growth, publishing]
+tags: [discovery, recommendations, algorithm, growth, publishing, type/guide, area/monetization, level/intermediate, area/marketing]
 ---
 # Discovery and the Algorithm
 
@@ -12,7 +12,7 @@ tags: [discovery, recommendations, algorithm, growth, publishing]
 > - Day 2 to 7 return reasons exist (dailies, streaks, events)
 > - Social co-play rewards
 >
-> Cost: TL;DR ~110 tok · whole note ~3.1k tok. Read more: ## 2. Recommended for You: the two-stage model (Docs) · ## 5. What else drives traffic · ## 9. Checklist
+> Cost: TL;DR ~110 tok · whole note ~3.2k tok. Read more: ## 2. Recommended for You: the two-stage model (Docs) · ## 5. What else drives traffic · ## 9. Checklist
 <!-- tldr:end -->
 
 Most Roblox games are found through the Home page, and most of Home is **Recommended for You**, a personalised feed ranked by an algorithm Roblox now documents in some detail. This note explains how that algorithm works according to the Creator Hub "Discovery" page **as of October 2026**, what it measures and what it ignores, and how to turn that into decisions about your first session, your thumbnails, your updates and your marketing. Where the docs are silent, advice is marked rule of thumb.
@@ -69,7 +69,7 @@ And: benchmark games and benchmark metrics do not affect the algorithm (Docs). T
 
 ## 3. The playtime cap and AFK design
 
-A common simulator pattern is rewarding AFK time (offline vaults, AFK zones, auto-farming). Since ranking counts playtime only up to 60 minutes per user per day, AFK hours do not help ranking beyond that cap. They can still help retention (a reason to return) and Creator Rewards (the 10-minute daily engagement bar; see [[Subscriptions and Premium Payouts]]). The reference project's offline "vault" banked a share of income while players were away, capped at 8 hours (12 for VIP), and paid it out in a welcome-back card after the player pressed Play. That design brings players back *into* the game daily, which hits play days; it does not try to inflate playtime. Rule of thumb: design AFK rewards to create a return, not to keep a client idling.
+A common simulator pattern is rewarding AFK time (offline vaults, AFK zones, auto-farming). Since ranking counts playtime only up to 60 minutes per user per day, AFK hours do not help ranking beyond that cap. They can still help retention (a reason to return) and [[Creator Rewards]] (the 10-minute daily engagement bar; see [[Subscriptions and Premium Payouts]]). The reference project's offline "vault" banked a share of income while players were away, capped at 8 hours (12 for VIP), and paid it out in a welcome-back card after the player pressed Play. That design brings players back *into* the game daily, which hits play days; it does not try to inflate playtime. Rule of thumb: design AFK rewards to create a return, not to keep a client idling.
 
 ---
 
@@ -164,5 +164,10 @@ After every update, compare the first three days of players who joined after it 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Launch Strategy - The First Two Weeks]] · [[Sponsored Ads and Campaign Math]] · [[Marketing and Growth Start Here]] · [[Click-Through Rate]] · [[Retention Cohorts]] · [[Session Length]]
+[[Launch Strategy - The First Two Weeks]] · Sponsored Ads and Campaign Math · Marketing and Growth Start Here · Click-Through Rate · Retention Cohorts · Session Length
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Sponsored Ads and Campaign Math]] · [[Discovery and Monetization Changes 2025-2026]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Robux Price Points and Offer Design]] · [[Economy Inflation Sinks and Faucets Math]] · [[Age Checks and Safety Features]]
+<!-- related:end -->

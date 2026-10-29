@@ -1,5 +1,5 @@
 ---
-tags: [pipeline, runtime, keyframesequence, architecture, advanced]
+tags: [pipeline, runtime, keyframesequence, architecture, advanced, type/guide, area/animation, level/advanced, api/Animator, api/KeyframeSequence, api/LoadAnimation]
 ---
 # Lua Keyframe Player
 
@@ -10,7 +10,7 @@ tags: [pipeline, runtime, keyframesequence, architecture, advanced]
 > - AnimationTrack-compatible tracks. Tracks expose `Play(fade, weight, speed)`, `Stop(fade)`, `AdjustSpeed`...
 > - Measured in Edit against `Animator:StepAnimations` (details and numbers in How the Animator Really Behaves and Lua Keyframe...
 >
-> Cost: TL;DR ~160 tok · whole note ~3.5k tok. Read more: ## Architecture · ## The Animator model it reproduces
+> Cost: TL;DR ~160 tok · whole note ~3.6k tok. Read more: ## Architecture · ## The Animator model it reproduces
 <!-- tldr:end -->
 
 An advanced pattern with a big payoff: instead of publishing every clip as an Animation asset and letting the Animator play it, a Lua module **reads KeyframeSequence data and writes joint `Transform`s itself**, every frame, reproducing the Animator's measured behaviour. One production game moved all of its animation (players, about 1,500 enemy clips, several hundred weapon-part clips) onto two such players: a general one ("KeyframePlayer", this note) and a small one for weapon rigs ("PoseDriver", [[Weapon Rig Player]]). The mechanism in full detail: [[Lua Keyframe Player Internals]]. Copyable core: [[Snippets - Lua Keyframe Player Core]].
@@ -52,7 +52,7 @@ Key design decisions:
 
 1. **AnimationTrack-compatible tracks.** Tracks expose `Play(fade, weight, speed)`, `Stop(fade)`, `AdjustSpeed`, `AdjustWeight(weight, fade)`, `GetMarkerReachedSignal`, `GetTimeOfKeyframe`, `Destroy`, `IsA("AnimationTrack")`, fields `Looped`, `Priority`, `Speed`, `Length`, `TimePosition` (settable), `IsPlaying`, `WeightCurrent`, `WeightTarget`, `Name`, `Animation`, and signals `Stopped`, `Ended`, `DidLoop`, `KeyframeReached`. Existing code that expects an AnimationTrack keeps working.
 2. **An Animator shim.** `Register(ks)` returns a token string (`ksp://<n>`) that you put in `Animation.AnimationId`. `LoadAnimation(animator, animation)` returns a Lua track for tokens (or for an empty id plus an attribute naming the clip) and forwards anything else to `animator:LoadAnimation`. Migrating a codebase is mostly a find-and-replace of `animator:LoadAnimation(a)` with `KeyframePlayer.LoadAnimation(animator, a)` and of `RegisterKeyframeSequence` with `Register`.
-3. **Writes `Transform` on Motor6D, AnimationConstraint or Bone joints**, matched by name (Part1 name, Attachment1's part name, or the bone name). Joints of nested rigs (a held weapon with its own Animator) are skipped.
+3. **Writes `Transform` on Motor6D, [[AnimationConstraint]] or Bone joints**, matched by name (Part1 name, Attachment1's part name, or the bone name). Joints of nested rigs (a held weapon with its own Animator) are skipped.
 4. **Runs in `RunService.PreSimulation`**, after the real Animator has applied its poses for the frame and before physics (in Edit, where nothing simulates, on Heartbeat). A joint the real Animator or another writer set this frame is used as the base under the Lua tracks, so both can coexist.
 5. **One clip cache** per KeyframeSequence instance and per network key, so a clip is parsed once no matter how many rigs play it.
 
@@ -63,7 +63,7 @@ Measured in Edit against `Animator:StepAnimations` (details and numbers in [[How
 - Per joint, only poses with `Weight > 0` are keys; weight-0 poses are hierarchy placeholders.
 - The keyframe's top-level pose (HumanoidRootPart, or a bone rig's Root bone holder) is never applied.
 - A segment eases by its **first** pose's style. CubicV2 follows TweenService directions; legacy Cubic runs reversed; Constant has three behaviours by direction.
-- Rotation between keys: **quaternion nlerp only when every keyframe of the sequence is evenly spaced and every key is Linear**; otherwise a linear blend of rotation vectors (axis times angle from rest), choosing the closest pair of representations. Offsets lerp.
+- Rotation between keys: **[[Quaternions|quaternion]] nlerp only when every keyframe of the sequence is evenly spaced and every key is Linear**; otherwise a linear blend of rotation vectors (axis times angle from rest), choosing the closest pair of representations. Offsets lerp.
 - Fades are linear. A one-shot that reaches its end holds its last pose and fades out over 0.3 s. `Stop` keeps time running during its fade. `Play` restarts at 0. Track time is float32.
 - Weights are handed out from the highest priority down; tracks of one priority normalise when they sum past 1; an under-weighted result scales its rotation vector toward rest.
 - Translations scale with `Model:GetScale()` (characters sized through Humanoid body scales have scale 1, so clip offsets must already be at game scale; see [[Scale and Animation]]).
@@ -149,5 +149,10 @@ Everything that used to listen to Animator signals must listen to the Lua player
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Engine Gotchas]] · [[AnimationTrack Reference]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Animation Objects]] · [[Links - Animation playback]] · [[AI Animation and Motion from Video]] · [[Animation Start Here]]
+[[Engine Gotchas]] · [[AnimationTrack Reference]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Animation Objects]] · [[Links - Animation playback]] · AI Animation and Motion from Video · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Authoring Clips in Code]] · [[Publishing Animations]] · [[Animation Glossary]] · [[Animator Deep Dive]] · [[Animation Data from Blender to Roblox]] · [[Debugging Animation Problems]] · [[Snippets - Building and Sampling Clips]] · [[Troubleshooting Table]]
+<!-- related:end -->

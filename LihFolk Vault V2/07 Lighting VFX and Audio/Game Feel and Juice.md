@@ -1,5 +1,5 @@
 ---
-tags: [game-feel, juice, feedback, ui, vfx, audio, combat]
+tags: [game-feel, juice, feedback, ui, vfx, audio, combat, type/guide, area/vfx, level/intermediate, api/TweenService, area/audio]
 ---
 # Game Feel and Juice
 
@@ -12,7 +12,7 @@ tags: [game-feel, juice, feedback, ui, vfx, audio, combat]
 > - Every reward: motion, number, payoff pop.
 > - Big moments: anticipation then reveal.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.4k tok. Read more: ## 2. UI juice · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.5k tok. Read more: ## 2. UI juice · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Game feel is the sense that the game responds to you: a click that pops, a hit that lands, a reward that pays out. "Juice" is the pile of small, cheap feedback that creates it: scale pops, flashes, particles, sounds, numbers that count up, a tiny shake. On Roblox, where a new player decides in the first minute whether to stay, juice is not polish to add at the end; it is part of the core loop ([[Core Loops and Session Design]]).
@@ -305,5 +305,10 @@ The senior trade-off: juice is cheap to add and expensive to tune. A small set o
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Game Feel Start Here]] · [[Reward Moments and Celebrations]] · [[Hit-Stop]] · [[Juice on a Budget - Mobile and Low-End]] · [[Hit-Stop and Screen Shake Tuning by Numbers]] · [[Feedback Timing - Sound Visual and Haptic Sync]]
+[[Game Feel Start Here]] · Reward Moments and Celebrations · Hit-Stop · Juice on a Budget - Mobile and Low-End · Hit-Stop and Screen Shake Tuning by Numbers · Feedback Timing - Sound Visual and Haptic Sync
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Reward Moments and Celebrations]] · [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[VFX Design Playbook]] · [[Gore Policy and Kid-Friendly Hit Feedback]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Highlights and Selection Effects]]
+<!-- related:end -->

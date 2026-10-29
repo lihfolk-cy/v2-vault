@@ -1,5 +1,5 @@
 ---
-tags: [business, legal, ip, copyright, licensing, creator-store, assets, minors]
+tags: [business, legal, ip, copyright, licensing, creator-store, assets, minors, type/guide, area/business, level/beginner]
 ---
 # Legal Basics - IP Licenses and Assets
 
@@ -12,7 +12,7 @@ tags: [business, legal, ip, copyright, licensing, creator-store, assets, minors]
 > - Licence log for every third-party asset and library.
 > - No non-commercial, share-alike or unknown licences in core content.
 >
-> Cost: TL;DR ~130 tok · whole note ~4.2k tok. Read more: ## 3. Using other people's assets · ## 5. Other people's games, brands and characters · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.3k tok. Read more: ## 3. Using other people's assets · ## 5. Other people's games, brands and characters · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 > **Not legal advice.** This note explains general concepts that help Roblox developers ask the right questions. It is not legal advice. Copyright, trademark, contract and consumer law differ by country, and the details matter. For a real dispute, a takedown, a brand deal or a large contract, talk to a qualified lawyer where you live. The binding platform rules are Roblox's Terms of Use, Community Standards, the Creator Store terms and the Developer Exchange Terms of Use; read the current versions. **Minors** usually need a parent or guardian for contracts, licences and any legal process.
@@ -260,5 +260,10 @@ After the fixes, the studio can answer "yes" with evidence. Each fix was easier 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Publishing Selling and Updating Plugins]] · [[Building a Portfolio as a Roblox Developer]] · [[Working with Content Creators]] · [[Groups Roles and Permissions for Studios]] · [[LICENSE]] · [[Links - Free and CC0 asset libraries]]
+[[Publishing Selling and Updating Plugins]] · [[Building a Portfolio as a Roblox Developer]] · Working with Content Creators · Groups Roles and Permissions for Studios · LICENSE · Links - Free and CC0 asset libraries
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Open-Source Licenses for Roblox Libraries - Quick Reference]] · [[Who Owns AI-Generated Code and Assets]] · [[Music Licensing and Audio Upload Rules for 2026]] · [[Groups Roles and Permissions for Studios]] · [[Working with Contractors and Revenue Splits]] · [[Free Mocap and Mixamo Licensing for Roblox]]
+<!-- related:end -->

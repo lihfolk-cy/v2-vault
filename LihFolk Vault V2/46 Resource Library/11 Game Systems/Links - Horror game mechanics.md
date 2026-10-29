@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, game-systems]
+tags: [resources, links, game-systems, type/reference, level/intermediate]
 ---
 # Links - Horror game mechanics
 
@@ -80,5 +80,5 @@ Part of [[Resource Library - Game Systems]] in the [[Resource Library Start Here
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - NPCs and AI]] · [[Genre Playbook - Horror and Story]] · [[Links - Inventory and items]] · [[Links - Music and ambience]] · [[Horror Monster Chase AI End to End]]
+[[Links - NPCs and AI]] · [[Genre Playbook - Horror and Story]] · [[Links - Inventory and items]] · [[Links - Music and ambience]] · Horror Monster Chase AI End to End
 <!-- auto-links:end -->

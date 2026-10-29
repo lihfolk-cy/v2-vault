@@ -1,5 +1,5 @@
 ---
-tags: [networking, combat, prediction, latency, reconciliation, server-authority]
+tags: [networking, combat, prediction, latency, reconciliation, server-authority, type/guide, area/networking, level/advanced, api/RemoteEvent, area/gameplay]
 ---
 # Client Prediction and Reconciliation for Combat
 
@@ -12,7 +12,7 @@ tags: [networking, combat, prediction, latency, reconciliation, server-authority
 > - Rejections roll back quietly; rejection rates are measured.
 > - Rules (costs, cooldowns, shapes) live in one shared module.
 >
-> Cost: TL;DR ~160 tok · whole note ~5.5k tok. Read more: ## 3. Sequence numbers: the backbone of reconciliation · ## 9. The engine's server authority model · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.6k tok. Read more: ## 3. Sequence numbers: the backbone of reconciliation · ## 9. The engine's server authority model · ## Checklist
 <!-- tldr:end -->
 
 Every combat game on Roblox lives with a round trip of roughly 50 to 300 ms between a player's input and the server's verdict. If the client waits for the server before showing anything, combat feels like wading through mud. If the client decides everything, exploiters decide everything. Prediction is the middle path: the client **shows** the likely result immediately, the server **decides** the real one, and reconciliation makes the two agree without the player noticing.
@@ -323,5 +323,10 @@ What failures look like:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Detecting Combat Exploits - Reach Rate and Aim]] · [[Server Authority]] · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]] · [[Links - Latency and prediction]] · [[Projectiles and Ballistics]] · [[Debugging Client-Server Desync]]
+[[Detecting Combat Exploits - Reach Rate and Aim]] · Server Authority · 2D Multiplayer - Server Authority and Replicating GUI Worlds · Links - Latency and prediction · Projectiles and Ballistics · Debugging Client-Server Desync
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Client Hit Prediction for Melee Feedback]] · [[Server Authority and Input Migration 2026]] · [[Projectiles and Ballistics]] · [[Snapshot Interpolation for Custom Replication]] · [[Remote Abuse Patterns and Rate Limiting in Practice]] · [[Replication Rules]]
+<!-- related:end -->

@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [index, start, level-design]
+tags: [index, start, level-design, type/hub, area/world, level/beginner, api/Terrain, area/design]
 ---
 # Level Design Start Here
 
@@ -38,5 +38,5 @@ Terrain, foliage and art budgets: [[Terrain Tools and Terrain API]], [[Foliage P
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Procedural Generation Start Here]] · [[Genre Systems Start Here]] · [[Onboarding Funnel]] · [[Genre Playbook - Combat and RPG]] · [[Obby Checkpoints and Stage Saves End to End]] · [[Anticipation]]
+[[Procedural Generation Start Here]] · Genre Systems Start Here · Onboarding Funnel · Genre Playbook - Combat and RPG · Obby Checkpoints and Stage Saves End to End · Anticipation
 <!-- auto-links:end -->

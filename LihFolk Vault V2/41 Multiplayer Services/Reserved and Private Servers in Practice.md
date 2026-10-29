@@ -1,5 +1,5 @@
 ---
-tags: [multiplayer, reserved-servers, private-servers, teleport, monetization, datastore, luau, strict]
+tags: [multiplayer, reserved-servers, private-servers, teleport, monetization, datastore, luau, strict, type/guide, area/networking, level/intermediate, api/TeleportService]
 ---
 # Reserved and Private Servers in Practice
 
@@ -12,7 +12,7 @@ tags: [multiplayer, reserved-servers, private-servers, teleport, monetization, d
 > - Private server price chosen with "permanent" in mind; free option considered.
 > - Owner and co-owner powers validated server-side, keyed by `PrivateServerId`.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.3k tok. Read more: ## 2. Private servers as a product · ## 3. Reserved servers as a building block · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.4k tok. Read more: ## 2. Private servers as a product · ## 3. Reserved servers as a building block · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox has two kinds of server that matchmaking never fills: **private servers** that players buy or get for free from your game page, and **reserved servers** that your code creates with `TeleportService:ReserveServerAsync`. Both report a non-empty `game.PrivateServerId`, both can run many server instances over their lifetime, and both change what your game should do: who has admin powers, whether rewards should be limited, whether a match that already ended may restart, how a player-shared "room code" maps to a real server. This note is the practical layer on top of the reserved-server basics in [[Teleporting and Multi-Place Games]] and the social framing in [[Social Design and Multiplayer Play]].
@@ -416,5 +416,10 @@ A reserved server is the standard "holding pen" for the soft-shutdown pattern in
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Reserved and private servers]] · [[Session State Across Places]] · [[Links - Teleporting]] · [[Resource Library - Networking and Multiplayer]] · [[Cross-Server Messaging]] · [[Monetization Overview]]
+[[Links - Reserved and private servers]] · [[Session State Across Places]] · Links - Teleporting · Resource Library - Networking and Multiplayer · Cross-Server Messaging · Monetization Overview
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Joining Friends Parties and Private Servers]] · [[Server Hop Rejoin and Server Lists with Ping]] · [[Cross-Server Messaging]] · [[AI Pitfalls - Data and Monetization]] · [[Session Lock]] · [[Genre Playbook - Battle Royale]]
+<!-- related:end -->

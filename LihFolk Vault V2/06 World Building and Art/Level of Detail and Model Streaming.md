@@ -1,5 +1,5 @@
 ---
-tags: [world-building, lod, streaming, slim, renderfidelity, performance]
+tags: [world-building, lod, streaming, slim, renderfidelity, performance, type/guide, area/world, level/intermediate, api/CollectionService, area/performance, api/Model]
 ---
 # Level of Detail and Model Streaming
 
@@ -12,7 +12,7 @@ tags: [world-building, lod, streaming, slim, renderfidelity, performance]
 > - Every server move streams the destination first.
 > - Buildings Atomic; essentials Persistent; nothing else Persistent.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.6k tok. Read more: ## Layer 2: instance streaming · ## Layer 3: Model.LevelOfDetail · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.8k tok. Read more: ## Layer 2: instance streaming · ## Layer 3: Model.LevelOfDetail · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Large Roblox worlds stay fast by not drawing (or not even loading) what is far away. Roblox gives you four layers of distance management: **mesh RenderFidelity** (per MeshPart detail), **instance streaming** (what exists on the client), **Model.LevelOfDetail** (what a streamed-out model looks like: nothing, a coarse imposter, or a SLIM composite) and **your own scripted LOD** (swapping models, sleeping effects). This note covers the art side of all four. Networking details of streaming (replication foci, scripts and `WaitForChild` patterns) are in [[Instance Streaming]].
@@ -288,5 +288,10 @@ The senior trade-off: streaming saves client memory and join time but makes ever
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Streaming Radius]] · [[Links - StreamingEnabled]] · [[Interest Management and Per-Player Replication]] · [[Performance and Memory]] · [[Network Performance]] · [[Retopology and Decimation]]
+[[Streaming Radius]] · Links - StreamingEnabled · Interest Management and Per-Player Replication · Performance and Memory · Network Performance · Retopology and Decimation
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver]] · [[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]] · [[Foliage Props and Scatter]] · [[Textures Decals and Texture Memory]] · [[Procedural World Generation]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[Terrain Tools and Terrain API]] · [[Modeling in Blender for Roblox]]
+<!-- related:end -->

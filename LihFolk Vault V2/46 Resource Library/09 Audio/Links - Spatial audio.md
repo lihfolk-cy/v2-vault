@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, audio]
+tags: [resources, links, audio, type/reference, area/audio, level/intermediate]
 ---
 # Links - Spatial audio
 

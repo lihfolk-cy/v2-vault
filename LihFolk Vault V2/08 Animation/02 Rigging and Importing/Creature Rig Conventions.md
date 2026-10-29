@@ -1,5 +1,5 @@
 ---
-tags: [rigging, blender, enemies, creatures, conventions, families]
+tags: [rigging, blender, enemies, creatures, conventions, families, type/guide, area/animation, level/intermediate, area/modeling]
 ---
 # Creature Rig Conventions (Blender to Roblox)
 
@@ -12,7 +12,7 @@ tags: [rigging, blender, enemies, creatures, conventions, families]
 > - Author the shared clips on the proxy (12-13 clips, markers included); export a test GLB, import it into a scratch place, and...
 > - For each enemy: duplicate the armature, edit rest bone lengths only, model at true stud height, bind, paint the atlas...
 >
-> Cost: TL;DR ~200 tok · whole note ~3.6k tok. Read more: ## 2. Conventions shared by all families · ## 3. The five families · ## 9. Blender start checklist (per family) · ## Common mistakes
+> Cost: TL;DR ~200 tok · whole note ~3.7k tok. Read more: ## 2. Conventions shared by all families · ## 3. The five families · ## 9. Blender start checklist (per family) · ## Common mistakes
 <!-- tldr:end -->
 
 A convention sheet for building a **roster** of creature rigs that share clips, import cleanly and can be driven by generic code. It is distilled from one production game that planned its enemies as five rig families: every regular in a family uses the same bone names and hierarchy, the family's locomotion and reaction clips are shared, and each enemy only adds its own mesh, rest proportions and attack clips. The plan cut a realm's clip count from about 300 one-off clips to roughly 150 (about 61 shared, 66 own, 22 boss).
@@ -219,5 +219,10 @@ For blocky or voxel styles, keep bones and pivots identical between old and new 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Modeling Characters for R15 and Custom Rigs]] · [[Skeleton Library]] · [[Animation Data from Blender to Roblox]] · [[Procedural Death Knockdown and Hit Reactions]] · [[Case Study - Enemy Roster Rebuild]] · [[Organic and Creature Modeling]] · [[Animation Start Here]]
+[[Modeling Characters for R15 and Custom Rigs]] · Skeleton Library · [[Animation Data from Blender to Roblox]] · [[Procedural Death Knockdown and Hit Reactions]] · Case Study - Enemy Roster Rebuild · Organic and Creature Modeling · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[3D Importer Settings Reference]] · [[Skeleton Library]] · [[Organic and Creature Modeling]] · [[Importing Models and Rigs]] · [[Accessories and Armor That Follow Animation]] · [[Custom Characters and StarterCharacter]] · [[Layered Clothing Cages and Animation]] · [[R15 Rig Anatomy and Attachments]] · [[Snippets - Enemy Client Animator]] · [[Custom Rigs - Weapons and Props]]
+<!-- related:end -->

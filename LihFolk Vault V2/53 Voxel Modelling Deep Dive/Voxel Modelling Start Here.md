@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [modeling, voxel, hub, start-here, blocky, magicavoxel, roblox]
+tags: [modeling, voxel, hub, start-here, blocky, magicavoxel, roblox, type/hub, area/modeling, level/beginner]
 ---
 # Voxel Modelling Start Here
 
@@ -8,7 +8,7 @@ This section is a deep dive into blocky and voxel art for Roblox: the numbers, p
 
 1. [[Voxel and Blocky Modeling]]: voxel grammar (one grid, three tones, one glow colour), three studied styles, and Part and Blender builders.
 2. [[Voxel Art - Studs Outlines and Style Kits]]: studs, outlines, greedy Part merging and style kits.
-3. [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]: what MagicaVoxel and Blockbench are, and the unit traps of each tool.
+3. [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]: what [[MagicaVoxel]] and [[Blockbench]] are, and the unit traps of each tool.
 
 Also useful beforehand: [[Low-Poly and Stylized Modeling]] and [[Trim Sheets Atlases and Vertex Colors]] for colouring without unique textures, [[Art Budgets - Triangles Draw Calls Memory]] for budgets, and [[Lighting Technologies and Settings]] for the lighting styles your art will be judged under.
 
@@ -66,5 +66,5 @@ These are flagged in the notes and worth testing in your own Studio before you b
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Untextured Stylised Modelling Start Here]] · [[Modelling Nuance Start Here]] · [[Modeling in Blender for Roblox]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Bevels Chamfers and Edge Highlights Without Textures]] · [[Skill - Roblox Asset Import]]
+[[Untextured Stylised Modelling Start Here]] · Modelling Nuance Start Here · Modeling in Blender for Roblox · Flat Colour vs Gradient Atlas vs Vertex Colour · Bevels Chamfers and Edge Highlights Without Textures · Skill - Roblox Asset Import
 <!-- auto-links:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [authoring, animation-editor, curve-editor, ik, events, studio]
+tags: [authoring, animation-editor, curve-editor, ik, events, studio, type/guide, area/animation, level/advanced, api/CurveAnimation, area/liveops, api/Animator]
 ---
 # Animation Editor Advanced
 
@@ -9,7 +9,7 @@ tags: [authoring, animation-editor, curve-editor, ik, events, studio]
 > - Avoid: Converting with Euler rotation type on a shoulder-heavy clip and getting gimbal wobble that cannot be undone.
 > - Avoid: Running Optimize Keyframes and not re-checking contacts and big turns.
 >
-> Cost: TL;DR ~110 tok · whole note ~4.3k tok. Read more: ## 1. The Curve Editor · ## 2. Keyframe optimisation · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~4.5k tok. Read more: ## 1. The Curve Editor · ## 2. Keyframe optimisation · ## Common mistakes
 <!-- tldr:end -->
 
 The features beyond basic posing: the Curve Editor and `CurveAnimation`, keyframe optimisation, IK inside the editor, animation events and named keyframes, imports (including video capture), partial-body clips, and how what you see in the editor differs from what the engine plays. Read [[Animation Editor Workflow]] first.
@@ -21,10 +21,10 @@ Labels: "Roblox docs" = checked against the official Animation Editor, Curve Edi
 ### What switching actually does
 Roblox docs: clicking the **Curve Editor** icon (top-left of the timeline) asks you to confirm that your `KeyframeSequence` clip **will convert to a `CurveAnimation`** clip. This is a format change, not a view toggle:
 
-| | KeyframeSequence | CurveAnimation |
+| | KeyframeSequence | [[CurveAnimation]] |
 |---|---|---|
-| Storage | Keyframes holding a tree of `Pose`s (one CFrame per joint per key) | Roblox docs: a hierarchy of `Folder`s named after the joints, each holding a `Position` (`Vector3Curve`) and a `Rotation` (`EulerRotationCurve` or `RotationCurve`); other numeric channels (for example FACS face controls) as `FloatCurve`s |
-| Rotation | quaternion per key (CFrame) | Euler angles **or** quaternions, chosen when you convert |
+| Storage | Keyframes holding a tree of `Pose`s (one CFrame per joint per key) | Roblox docs: a hierarchy of `Folder`s named after the joints, each holding a `Position` (`Vector3Curve`) and a `Rotation` (`EulerRotationCurve` or `RotationCurve`); other numeric channels (for example [[FACS]] face controls) as `FloatCurve`s |
+| Rotation | [[Quaternions\|quaternion]] per key (CFrame) | Euler angles **or** quaternions, chosen when you convert |
 | Easing | style + direction per pose (Linear, Constant, CubicV2, Elastic, Bounce) | interpolation mode per key: Linear, Constant, Cubic (with tangents) |
 | Tangent control | none | yes, on Cubic keys |
 | Bounce / Elastic | native | only approximated with **Generate Curve** (extra keys) |
@@ -66,7 +66,7 @@ Why it matters on Roblox specifically: every `Pose` is an instance, and instance
 Optimisation risks:
 - **Contacts get softened.** A foot plant or a hit pose that is held for 2 frames may be judged "low impact" and removed, so the foot slides or the impact loses its moving hold. Re-check contacts after optimising.
 - **Large spans can flip.** Removing the middle key of a big turn can leave a key-to-key segment over 120 degrees, which the Animator may interpolate the wrong way round. The reference project rejects any arm segment over 120 degrees and re-inserts a mid key.
-- **The editor's error metric is not the Animator's.** The reference project measured that the Animator does not slerp between keys on unevenly spaced clips (it blends rotation vectors), so thinning that "looks" lossless in a slerp model can differ by several degrees on big turns far from rest. See [[How the Animator Really Behaves]].
+- **The editor's error metric is not the Animator's.** The reference project measured that the Animator does not [[slerp]] between keys on unevenly spaced clips (it blends rotation vectors), so thinning that "looks" lossless in a slerp model can differ by several degrees on big turns far from rest. See [[How the Animator Really Behaves]].
 - **Identity-track removal can delete intent.** A joint you deliberately keyed at rest to override a lower-priority layer becomes "default values only" and is removed, and the lower layer then shows through. Key it 0.1 degree off rest, or set it in code.
 
 Offline tools can do better thinning with explicit tolerances (the reference project used 0.75 degrees and 0.03 studs for body joints, checked at 60 Hz with feet held to 0.05 studs while planted). See [[Authoring Clips in Code]].
@@ -167,5 +167,10 @@ Roblox docs: the **Animation Graph Editor** (Avatar tab > Graph Editor) is a nod
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Snippets - Building and Sampling Clips]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Animation Glossary]] · [[Animation Data from Blender to Roblox]] · [[AI Animation and Motion from Video]] · [[Rotations Angles and Quaternions]] · [[Animation Start Here]]
+[[Snippets - Building and Sampling Clips]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Animation Glossary]] · [[Animation Data from Blender to Roblox]] · [[AI Animation and Motion from Video]] · Rotations Angles and Quaternions · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Moon Animator and Third-Party Tools]] · [[Animation Objects]] · [[Timing Spacing and Frame Charts]] · [[Engine Gotchas]] · [[Spec-Driven Move Authoring]] · [[Weapon Rig Player]] · [[Animation Review Checklist]] · [[Retargeting Animations Between Rigs]]
+<!-- related:end -->

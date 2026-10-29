@@ -1,5 +1,5 @@
 ---
-tags: [studio, plugins, tooling, luau, workflow, architecture]
+tags: [studio, plugins, tooling, luau, workflow, architecture, type/guide, area/studio, level/intermediate, api/ChangeHistoryService, area/scripting, api/SetSetting]
 ---
 # Building a Studio Plugin End to End
 
@@ -12,7 +12,7 @@ tags: [studio, plugins, tooling, luau, workflow, architecture]
 > - `RunService:IsEdit()` guard before any UI is created.
 > - One Janitor owns every long-lived connection and instance; cleaned on `Unloading`.
 >
-> Cost: TL;DR ~160 tok · whole note ~5.7k tok. Read more: ## 5. Settings with a schema · ## 8. Worked example: Duplicate Name Linter · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.8k tok. Read more: ## 5. Settings with a schema · ## 8. Worked example: Duplicate Name Linter · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 [[Plugins - Using and Writing]] shows the anatomy of a plugin and one small example. This note is the next step: how to build a plugin you will still be happy to maintain a year from now. It covers the plugin lifecycle (when your code runs, how many copies run, and in which data models), a project layout that survives growth, a disciplined cleanup pattern, settings with a schema version, actions and shortcuts, error handling, and a complete worked plugin, a **Duplicate Name Linter**, that ties all of it together.
@@ -479,5 +479,10 @@ When you use Rojo, set **ReloadLocalPluginsOnChange** so a rebuild reloads the p
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Studio Settings and Shortcuts]] · [[Links - Plugins and custom tools]] · [[Studio Interface Tour]] · [[Links - Roblox Studio]] · [[Writing Your Own MCP Server]] · [[Script Types and Run Context]]
+[[Studio Settings and Shortcuts]] · Links - Plugins and custom tools · Studio Interface Tour · Links - Roblox Studio · Writing Your Own MCP Server · Script Types and Run Context
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Studio Interface Tour]] · [[MCP Workflows for Scripting and Debugging]] · [[Writing Your Own MCP Server]] · [[Team Create and Collaboration]] · [[Script Types and Run Context]] · [[Reading Luau Errors and Stack Traces]]
+<!-- related:end -->

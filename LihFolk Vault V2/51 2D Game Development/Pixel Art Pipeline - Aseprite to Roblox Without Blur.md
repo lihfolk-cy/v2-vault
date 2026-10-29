@@ -1,5 +1,5 @@
 ---
-tags: [2d, pixel-art, aseprite, sprites, atlas, textures, ui, resampling, moderation, pipeline, luau]
+tags: [2d, pixel-art, aseprite, sprites, atlas, textures, ui, resampling, moderation, pipeline, luau, type/guide]
 ---
 # Pixel Art Pipeline - Aseprite to Roblox Without Blur
 
@@ -12,10 +12,10 @@ tags: [2d, pixel-art, aseprite, sprites, atlas, textures, ui, resampling, modera
 > - Hard alpha, exact palette, tags and frame durations in the Aseprite source.
 > - Export with spacing and extrusion; JSON converted to a typed Luau module; no pre-scaling for GUI art.
 >
-> Cost: TL;DR ~200 tok · whole note ~5.6k tok. Read more: ## 4. Atlas packing without bleeding · ## 5. Integer scaling on every screen · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~200 tok · whole note ~5.7k tok. Read more: ## 4. Atlas packing without bleeding · ## 5. Integer scaling on every screen · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
-Pixel art fails on Roblox in a predictable way: you draw a crisp 16 by 16 sprite, upload it, put it in an ImageLabel, and it shows up as a soft smudge with a faint halo, or it looks sharp in Studio and shimmers on a phone. None of this is mysterious. Blur comes from four places: the resampling filter, non-integer scale, sub-pixel placement, and the engine choosing a lower quality version of the texture. Halos and bleeding come from the atlas layout. This note walks the whole path from the Aseprite file to a sharp sprite on every device, and covers the parts people forget: upload limits, moderation, atlas metadata, and 3D surfaces that have no pixel filter at all.
+[[Pixel art]] fails on Roblox in a predictable way: you draw a crisp 16 by 16 sprite, upload it, put it in an ImageLabel, and it shows up as a soft smudge with a faint halo, or it looks sharp in Studio and shimmers on a phone. None of this is mysterious. Blur comes from four places: the resampling filter, non-integer scale, sub-pixel placement, and the engine choosing a lower quality version of the texture. Halos and bleeding come from the atlas layout. This note walks the whole path from the Aseprite file to a sharp sprite on every device, and covers the parts people forget: upload limits, moderation, atlas metadata, and 3D surfaces that have no pixel filter at all.
 
 Related: [[Sprite Sheets and Frame Animation with ImageRectOffset]] for animation playback, [[Textures Decals and Texture Memory]] for memory, [[UI Asset Pipeline]] for the general UI art workflow, and [[EditableImage for Pixel Buffers and Procedural 2D]] for drawing pixels at runtime.
 
@@ -347,5 +347,10 @@ Bulk uploading is available through Studio's Asset Manager and through Open Clou
 
 ## Connected notes
 <!-- auto-links:start -->
-[[2D Game Development Start Here]] · [[The Gradient Palette Texture Workflow]] · [[Texel Density]] · [[SurfaceAppearance PBR Workflow]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[UV Unwrapping]]
+[[2D Game Development Start Here]] · [[The Gradient Palette Texture Workflow]] · Texel Density · SurfaceAppearance PBR Workflow · MagicaVoxel Goxel and Blockbench Workflows Compared · UV Unwrapping
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[SurfaceAppearance PBR Workflow]] · [[Texel Density]] · [[2D Collision Physics and Platformer Movement]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]]
+<!-- related:end -->

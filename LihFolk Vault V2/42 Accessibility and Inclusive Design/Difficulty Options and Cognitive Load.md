@@ -1,5 +1,5 @@
 ---
-tags: [accessibility, difficulty, assist-modes, cognitive-load, game-design, server-authority, onboarding, multiplayer]
+tags: [accessibility, difficulty, assist-modes, cognitive-load, game-design, server-authority, onboarding, multiplayer, type/guide, area/accessibility, level/intermediate, area/networking]
 ---
 # Difficulty Options and Cognitive Load
 
@@ -12,7 +12,7 @@ tags: [accessibility, difficulty, assist-modes, cognitive-load, game-design, ser
 > - Each assist classified: personal, personal with fairness impact, or world-level (instanced only).
 > - Assists stored and enforced on the server, sanitised, rate-limited, locked in combat where needed.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.9k tok. Read more: ## 3. Server-authoritative assists · ## 6. Cognitive load: what it is and how to cut it · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.0k tok. Read more: ## 3. Server-authoritative assists · ## 6. Cognitive load: what it is and how to cut it · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Some players cannot finish a game not because of their eyes, ears or hands, but because the game asks for too much at once: too many timers, too many systems, too little room for a mistake, too much to remember between sessions. [[Accessibility]] lists the basics (one objective at a time, consistent placement, clear feedback). This note goes into the design and the engineering: granular assist options instead of "Easy / Normal / Hard", how assists work in a multiplayer, server-authoritative Roblox game, how to keep leaderboards fair, adaptive help that does not patronise, and how to measure and cut cognitive load.
@@ -324,5 +324,10 @@ See also: [[Accessibility Start Here]], [[Accessibility]], [[First-Time User Exp
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Genre Playbook - Puzzle and Escape Rooms]] · [[Obby Checkpoints and Stage Saves End to End]] · [[Quests and Objectives]] · [[Obby and Platforming Level Design]] · [[Links - Leaderboards]] · [[Core Loops and Session Design]]
+[[Genre Playbook - Puzzle and Escape Rooms]] · Obby Checkpoints and Stage Saves End to End · Quests and Objectives · Obby and Platforming Level Design · Links - Leaderboards · Core Loops and Session Design
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Accessibility Cross-Links for QoL Settings]] · [[Core Loops and Session Design]] · [[Captions and Audio Accessibility]] · [[Readable Text and UI Scale]] · [[Motion Sensitivity and Camera Comfort]] · [[Colour-Blind Safe Design]]
+<!-- related:end -->

@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [community, moderation, safety, hub]
+tags: [community, moderation, safety, hub, type/hub, area/community, level/beginner]
 ---
 # Community and Moderation Start Here
 
@@ -43,5 +43,5 @@ This section was written against Roblox docs and announcements as of October 202
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Resource Library - Security and Moderation]] · [[Links - Chat and text filtering]] · [[Links - Moderation compliance]] · [[Hiring Freelancers and Revenue Shares]] · [[Links - Community and social]] · [[Roblox Policies on AI-Generated Content]]
+[[Resource Library - Security and Moderation]] · Links - Chat and text filtering · Links - Moderation compliance · Hiring Freelancers and Revenue Shares · Links - Community and social · Roblox Policies on AI-Generated Content
 <!-- auto-links:end -->

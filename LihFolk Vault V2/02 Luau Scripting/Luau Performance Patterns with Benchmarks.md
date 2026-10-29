@@ -1,5 +1,5 @@
 ---
-tags: [luau, performance, benchmarking, optimization, profiling, gc]
+tags: [luau, performance, benchmarking, optimization, profiling, gc, type/guide, area/scripting, level/intermediate, area/performance]
 ---
 # Luau Performance Patterns with Benchmarks
 
@@ -12,7 +12,7 @@ tags: [luau, performance, benchmarking, optimization, profiling, gc]
 > - Benchmarks use warm-up, several rounds, a median, a sink and a heap delta.
 > - Per-frame cost computed as cost x count x rate, on the target device.
 >
-> Cost: TL;DR ~170 tok · whole note ~5.5k tok. Read more: ## 3. Micro patterns: what to expect · ## 4. Structural patterns that actually move the needle · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.6k tok. Read more: ## 3. Micro patterns: what to expect · ## 4. Structural patterns that actually move the needle · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Luau Performance and Native Codegen]] explains how the Luau VM makes code fast and when to reach for `@native`. This note is the practical companion: how to write a benchmark that does not lie, how to turn microseconds into a frame budget, and a catalogue of the patterns people argue about (iteration styles, appends, string building, method caching, property reads, `pcall` in loops, closures) with the result you should expect and why. It ends with the structural patterns (time slicing, spatial hashing, ring buffers) that matter far more than any of the micro ones.
@@ -269,7 +269,7 @@ A real example of the cost of not slicing: the reference project used deferred l
 
 ### 4.2 Ring buffers for histories
 
-Position histories for lag compensation, damage-per-second windows and input buffers all need "append new, drop oldest". A fixed-size ring does it with zero allocation after setup:
+Position histories for lag compensation, damage-per-second windows and [[Input Buffering|input buffers]] all need "append new, drop oldest". A fixed-size ring does it with zero allocation after setup:
 
 ```lua
 --!strict
@@ -437,5 +437,10 @@ Either document "caller must not keep this" in the function name (`nearbyEnemies
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Luau Garbage Collection and the Memory Model]] · [[Luau Language Essentials]] · [[Advanced Luau Start Here]] · [[Links - Luau language]] · [[Entity Component Systems]] · [[Building a Signal Library]]
+[[Luau Garbage Collection and the Memory Model]] · [[Luau Language Essentials]] · Advanced Luau Start Here · Links - Luau language · Entity Component Systems · Building a Signal Library
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Luau Type System and Strict Mode]] · [[Math Vectors and CFrames]] · [[Events Signals and Connections]] · [[Strings Patterns and Formatting]] · [[Task Library Coroutines and Yielding]] · [[Module Scripts and Requiring]] · [[Instances Attributes and Tags]] · [[Error Handling and Retries]]
+<!-- related:end -->

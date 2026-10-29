@@ -1,5 +1,5 @@
 ---
-tags: [case-study, top-games, thumbnails, icons, titles, marketing, discovery, click-through, live-ops, comparison]
+tags: [case-study, top-games, thumbnails, icons, titles, marketing, discovery, click-through, live-ops, comparison, type/case-study, area/design]
 ---
 
 # Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks
@@ -13,7 +13,7 @@ tags: [case-study, top-games, thumbnails, icons, titles, marketing, discovery, c
 > - Icon is a face, readable at 50 pixels.
 > - Thumbnails share one template; key text is clear of the bottom edge.
 >
-> Cost: TL;DR ~180 tok · whole note ~4.2k tok. Read more: ## The snapshot · ## Pattern 1: the title is a fixed skeleton with one moving part · ## Common mistakes this comparison exposes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~4.3k tok. Read more: ## The snapshot · ## Pattern 1: the title is a fixed skeleton with one moving part · ## Common mistakes this comparison exposes · ## Checklist
 <!-- tldr:end -->
 
 This note compares how the games in this section present themselves on a Roblox card: the title string, the square icon and the 16:9 thumbnails. Everything was captured on the same day, 27 October 2026, from Roblox's public games and thumbnails APIs, which return the current title and the first three active thumbnails for each game. That week was unusual: Roblox's platform Halloween event, The Hollow, had started on 22 or 23 October 2026 depending on time zone (Press, Katadata, 21 October 2026), and most games were in Halloween dress. That makes the snapshot a good look at seasonal habits and a poor look at everyday art. Treat it as one frame of a moving picture.
@@ -143,5 +143,10 @@ Not a card element, but it lives one click away. Fisch's description is a four-l
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Top Games Case Studies Start Here]] · [[Click-Through Rate]] · [[Core Loop]] · [[Thumbnail Contrast]] · [[Launch Strategy - The First Two Weeks]] · [[Marketing and Growth Start Here]]
+[[Top Games Case Studies Start Here]] · [[Click-Through Rate]] · Core Loop · Thumbnail Contrast · Launch Strategy - The First Two Weeks · Marketing and Growth Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Case Study - Dead Rails]] · [[Case Study - Jailbreak]] · [[Case Study - Tower Defense Simulator]] · [[Case Study - Forsaken]] · [[Case Study - Murder Mystery 2]] · [[Case Study - The Strongest Battlegrounds]] · [[Case Study - Rivals]]
+<!-- related:end -->

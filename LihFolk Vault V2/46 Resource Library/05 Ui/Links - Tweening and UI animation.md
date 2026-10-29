@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, ui]
+tags: [resources, links, ui, type/reference, area/ui, level/intermediate, api/TweenService, area/animation]
 ---
 # Links - Tweening and UI animation
 
@@ -62,5 +62,5 @@ Part of [[Resource Library - Ui]] in the [[Resource Library Start Here]]. 44 lin
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Cameras]] · [[Links - Cross-platform UI]] · [[Links - Replication]] · [[Links - Animation playback]] · [[Tween vs Spring]] · [[Tween and CFrame Animation of Objects]]
+[[Links - Cameras]] · [[Links - Cross-platform UI]] · [[Links - Replication]] · [[Links - Animation playback]] · [[Tween vs Spring]] · Tween and CFrame Animation of Objects
 <!-- auto-links:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, architecture, luau, signals]
+tags: [core-concept, architecture, luau, signals, type/reference, area/scripting, level/beginner, area/liveops]
 ---
 # Event Bus
 
@@ -10,7 +10,7 @@ tags: [core-concept, architecture, luau, signals]
 > - A bus is not a network. A server-side bus does not reach clients.
 > - Too much indirection hides flow. If everything is an event, nobody can follow what happens when a player buys an item.
 >
-> Cost: TL;DR ~140 tok · whole note ~920 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~140 tok · whole note ~990 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 An **event bus** is a shared channel where systems publish named events ("PlayerLevelledUp", "EnemyKilled") and other systems subscribe to them, without either side knowing about the other. The quest system hears "EnemyKilled" without the combat system ever calling the quest system.
@@ -72,5 +72,10 @@ Related concepts: [[Dependency Injection in Luau]], [[Telemetry Events]], [[Repl
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Advanced Luau Start Here]] · [[Links - Quests and progression]] · [[Core Concepts Start Here]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Module Scripts and Requiring]] · [[Subscriptions and Premium Payouts]]
+[[Advanced Luau Start Here]] · Links - Quests and progression · [[Core Concepts Start Here]] · Error Handling - pcall xpcall and Promise Patterns · Module Scripts and Requiring · Subscriptions and Premium Payouts
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Feature Flags]] · [[Server Authority]] · [[Onboarding Funnel]] · [[Streaming Radius]] · [[Faucets and Sinks]] · [[Rate Limiting]] · [[Session Length]] · [[Instance Count]]
+<!-- related:end -->

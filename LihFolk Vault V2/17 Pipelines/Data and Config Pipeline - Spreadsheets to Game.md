@@ -1,5 +1,5 @@
 ---
-tags: [pipelines, config, data, spreadsheets, balancing, codegen, validation]
+tags: [pipelines, config, data, spreadsheets, balancing, codegen, validation, type/guide, area/pipelines, level/intermediate, api/HttpService, area/data]
 ---
 # Data and Config Pipeline - Spreadsheets to Game
 
@@ -12,7 +12,7 @@ tags: [pipelines, config, data, spreadsheets, balancing, codegen, validation]
 > - Schema validation plus cross-table references in CI
 > - Derived stats computed by tested code, overrides explicit
 >
-> Cost: TL;DR ~150 tok · whole note ~5.1k tok. Read more: ## Stage 2: validate before anything touches the game · ## Stage 5: install · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.2k tok. Read more: ## Stage 2: validate before anything touches the game · ## Stage 5: install · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most of a game's content is numbers: item stats, drop odds, prices, enemy health, quest rewards, cooldowns. Designers want to edit them in a spreadsheet where they can sort, chart and compare; the game wants them in a ModuleScript it can `require`. The gap between the two is where balance bugs, typos and lost edits live. This note is a pipeline that closes it: **sheet, validate, generate, install safely, read back**. The balancing method itself is in [[Balancing with Spreadsheets and Data]]; schema design in [[Data Schema Design and Migrations]]; changing values on live servers without a publish in [[Global State and Live Config]].
@@ -307,5 +307,10 @@ Every new system ships with a flag that turns it off without a code change. The 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Icon and Thumbnail Rendering Pipeline]] · [[Build Test and Release Pipeline]] · [[Cookbook - Tables Strings and Time]] · [[MCP Workflows for Scripting and Debugging]] · [[AI Agents and Autonomous Workflows]] · [[Studio Tooling Architecture]]
+[[Icon and Thumbnail Rendering Pipeline]] · [[Build Test and Release Pipeline]] · [[Cookbook - Tables Strings and Time]] · MCP Workflows for Scripting and Debugging · AI Agents and Autonomous Workflows · Studio Tooling Architecture
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Asset Upload Automation with Open Cloud]] · [[Batch Processing Tools in Studio]] · [[Blender Automation with Python]] · [[Environment and Level Pipeline]] · [[Art Pipeline - Concept to In-Game Asset]] · [[Character and Creature Pipeline]] · [[UI Asset Pipeline]] · [[Audio Pipeline]]
+<!-- related:end -->

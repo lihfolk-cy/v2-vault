@@ -1,5 +1,5 @@
 ---
-tags: [gotchas, debugging, method, tools]
+tags: [gotchas, debugging, method, tools, type/guide, area/animation, level/intermediate, api/Animator, area/debugging, api/Part1, api/AnimationConstraint, api/Animation]
 ---
 # Debugging Animation Problems
 
@@ -12,7 +12,7 @@ tags: [gotchas, debugging, method, tools]
 > - Clip tried on a known-good rig.
 > - Owner, other client and server compared.
 >
-> Cost: TL;DR ~120 tok · whole note ~4.5k tok. Read more: ## Step 2: isolate the track · ## The power tools · ## Checklist
+> Cost: TL;DR ~120 tok · whole note ~4.7k tok. Read more: ## Step 2: isolate the track · ## The power tools · ## Checklist
 <!-- tldr:end -->
 
 Animation bugs are hard because the evidence is visual and fleeting, and because six different systems sit between "I called Play" and "the arm moved": the asset service, the Animator's mixer, the joints, your own procedural code, replication, and the frame scheduler. This note is a method for narrowing a bug down to one of those quickly, plus the tools that make each step cheap. For known symptoms go straight to the [[Troubleshooting Table]]; for the engine behaviours behind them, see [[Engine Gotchas]].
@@ -28,7 +28,7 @@ Every animation bug in the reference project (one live action game) turned out t
 | **Asset** | Does the clip data exist and load here? | Studio-only id, wrong owner, not loaded yet, stub with no Poses |
 | **Track** | Is a track actually playing, at what time, weight and speed? | `LoadAnimation` per use, restarted every frame, `Length` 0, stopped early |
 | **Priority / blend** | Who wins each joint? | A higher layer keys the joint; same-priority averaging; weight toward rest |
-| **Rig** | Do the clip's pose names match joints, and does the joint type behave? | Renamed part, missing Motor6D, AnimationConstraint not handled, root pose keyed |
+| **Rig** | Do the clip's pose names match joints, and does the joint type behave? | Renamed part, missing Motor6D, [[AnimationConstraint]] not handled, root pose keyed |
 | **Replication** | Who is playing it, and who can see it? | NPC played on a client, Lua writes not mirrored, markers on the wrong machine |
 | **Timing** | When does each write happen in the frame? | Procedural write before the Animator, compounding on throttled frames, task.wait drift |
 
@@ -129,8 +129,8 @@ end)
 What the report tells you:
 - **Track missing.** It was never played, or it already ended. Check the code path.
 - **Many copies of one clip.** `LoadAnimation` per use (see the 256-track warning in [[Engine Gotchas]]).
-- **TimePosition stuck at 0.** Something calls `Play` every frame (restart), or speed is 0 (hit-stop that never restored, or `Length` was 0 when speed was computed).
-- **WeightCurrent stuck below 1.** A fade that was overridden, or `AdjustWeight` after `Stop`.
+- **[[TimePosition]] stuck at 0.** Something calls `Play` every frame (restart), or speed is 0 (hit-stop that never restored, or `Length` was 0 when speed was computed).
+- **[[WeightCurrent]] stuck below 1.** A fade that was overridden, or `AdjustWeight` after `Stop`.
 - **Plays, then "fading" immediately.** Another system stopped it. Search for `:Stop(` and for "stop all tracks" loops (the classic culprit is a helper that stops every playing track when changing the default Animate ids).
 
 If you play clips through a Lua player, it should offer the same report. The reference project's player exposed `PlayingTracks(model)` and an `OnPlayed` hook for exactly this.
@@ -220,7 +220,7 @@ See [[Testing Animations in Studio]] for a full stepping harness.
 Write (or reuse) a Lua sampler that reproduces the Animator ([[Lua Keyframe Player Internals]], [[Snippets - Lua Keyframe Player Core]]). Then step the real Animator and the Lua model side by side and diff joint rotations per frame. This answers "is the Animator doing something weird, or is my data weird?" with numbers.
 
 What the reference project got out of this:
-- The discovery that rotations blend as rotation vectors, not slerp, came from exactly this diff (a slerp model was up to 178 degrees off; a rotation-vector model 0.24 degrees).
+- The discovery that rotations blend as rotation vectors, not [[slerp]], came from exactly this diff (a slerp model was up to 178 degrees off; a rotation-vector model 0.24 degrees).
 - The Lua player was accepted only after matching within 0.084 degrees on 10 R15 clips, 0.056 degrees and 0.002 studs on 60 enemy clips, 0.04 degrees on a five-track blend, and 319 of 319 markers.
 - A residual of three clips turned out to be exact 180-degree keys, where the Animator itself is ambiguous.
 
@@ -282,5 +282,10 @@ The reference project posed the rig straight from the `KeyframeSequence` with th
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animator Deep Dive]] · [[Performance and Memory]] · [[Animation Objects]] · [[Animation Glossary]] · [[The Debugging Method - Reproduce Isolate Bisect]] · [[AI Animation and Motion from Video]] · [[Animation Start Here]]
+[[Animator Deep Dive]] · [[Performance and Memory]] · [[Animation Objects]] · [[Animation Glossary]] · [[The Debugging Method - Reproduce Isolate Bisect]] · AI Animation and Motion from Video · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Open Questions]] · [[Authoring Clips in Code]] · [[Weapon Rig Player]] · [[Animation Data from Blender to Roblox]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Procedural Animation]] · [[Playback, Priorities and Blending]] · [[Motor6D Math and CFrame Composition]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [modeling, topology, edge-flow, deformation, rigging-prep, blender]
+tags: [modeling, topology, edge-flow, deformation, rigging-prep, blender, type/guide, area/modeling, level/intermediate, area/animation]
 ---
 # Topology and Edge Flow
 
@@ -12,7 +12,7 @@ tags: [modeling, topology, edge-flow, deformation, rigging-prep, blender]
 > - Skinned: 3+ loops at hinges, 5+ at shoulders and hips, rings around eyes and mouth.
 > - Poles on flat, rigid areas.
 >
-> Cost: TL;DR ~150 tok · whole note ~3.4k tok. Read more: ## 3. Loops for deformation: joint by joint · ## 6. Blender tools for topology work · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.5k tok. Read more: ## 3. Loops for deformation: joint by joint · ## 6. Blender tools for topology work · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Topology is how the faces of a mesh are connected: which vertices share edges, where the loops run, where triangles and poles sit. Two meshes with the same silhouette can behave completely differently: one bends cleanly at the elbow and shades smoothly, the other collapses into a crease and shows streaks. Edge flow is the direction those loops travel across the surface, and for anything that deforms it should follow the way the surface moves.
@@ -25,7 +25,7 @@ This note explains when topology matters (and when it does not, which is more of
 
 | Mesh | Does topology matter? | What matters |
 |---|---|---|
-| Static prop, flat-shaded or weighted normals | Little | Shading (no long thin triangles on smooth areas), triangle count, clean silhouette |
+| Static prop, flat-shaded or [[weighted normals]] | Little | Shading (no long thin triangles on smooth areas), triangle count, clean silhouette |
 | Static prop that will be subdivided for a high-poly bake | Yes | All quads, support loops, no poles on curved areas |
 | Rigid segmented character or creature (one MeshPart per body part) | Little inside each piece | Each piece closed; good cuts at joints |
 | Skinned character, creature, tail, cloth | **A lot** | Loops at joints, even density where it bends, poles away from bends |
@@ -121,7 +121,7 @@ Faces deform the most and are read the closest. Standard layout:
 - **Poles** placed between the eye and mouth rings, on the cheek, where they do the least harm.
 - The **mouth line** (between the lips or jaw plates) should be a clean edge loop so the jaw can open without tearing.
 
-For stylised or blocky faces this reduces to: one ring around each eye, one around the mouth, a clean mouth line. For FACS-driven dynamic heads, follow Roblox's head specification and the facial topology guidance in [[Facial Animation and Dynamic Heads]].
+For stylised or blocky faces this reduces to: one ring around each eye, one around the mouth, a clean mouth line. For [[FACS]]-driven dynamic heads, follow Roblox's head specification and the facial topology guidance in [[Facial Animation and Dynamic Heads]].
 
 ---
 
@@ -239,5 +239,10 @@ Many "rigging bugs" are topology bugs. Before blaming weights in [[Weight Painti
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skinning Weights]] · [[Blender Workflow for Roblox Creators]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Links - Topology]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Two-Bone IK Math]]
+[[Skinning Weights]] · [[Blender Workflow for Roblox Creators]] · Voxel Characters - Proportions Joints and Rigging · Links - Topology · Faceted Low-Poly - Flat Normals and Facet Size · Two-Bone IK Math
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Voxel Characters - Proportions Joints and Rigging]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Curve-Based Modelling in Blender for Roblox]] · [[UGC Avatar Items and Accessories]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Exporting and Validating Models for Roblox]] · [[Modeling Weapons and Props]] · [[Low-Poly and Stylized Modeling]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]
+<!-- related:end -->

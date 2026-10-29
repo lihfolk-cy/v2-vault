@@ -1,5 +1,5 @@
 ---
-tags: [snippets, luau, controller, state-machine, architecture]
+tags: [snippets, luau, controller, state-machine, architecture, type/reference, area/animation, level/intermediate, api/AnimationPriority, area/scripting, api/Humanoid, api/AnimationTrack]
 ---
 # Snippets: Animation Controller Module
 
@@ -9,7 +9,7 @@ tags: [snippets, luau, controller, state-machine, architecture]
 > - Avoid: Choosing gaits without hysteresis.
 > - Avoid: `AdjustSpeed` every frame on a replicated character (network noise).
 >
-> Cost: TL;DR ~90 tok · whole note ~6.5k tok. Read more: ## 2. The module · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~90 tok · whole note ~6.6k tok. Read more: ## 2. The module · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 A complete, typed animation controller for a character or NPC: locomotion chosen by speed with hysteresis and phase-kept crossfades, playback rate matched to ground speed, idle fidgets that never repeat twice running, fall and land, one-shot actions with priority-based interruption, marker hooks, **step-aside flags** that let other systems take the body without fighting, and full cleanup.
@@ -524,5 +524,10 @@ The trade-off a senior developer weighs is breadth against ownership: a controll
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Procedural Gait and Footstep Planning]] · [[Engine Gotchas]] · [[Scale and Animation]] · [[Weapon and Combat Animation]] · [[Links - Humanoids and character controllers]] · [[Characters and Humanoids]] · [[Animation Start Here]]
+[[Procedural Gait and Footstep Planning]] · [[Engine Gotchas]] · [[Scale and Animation]] · [[Weapon and Combat Animation]] · [[Links - Humanoids and character controllers]] · Characters and Humanoids · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Snippets - Ragdoll]] · [[Snippets - Lua Keyframe Player Core]] · [[Ability Kits Architecture]] · [[R15 Run Cycle Key Poses]] · [[Emotes and Social Animation]] · [[Replication and Ownership]] · [[Combat Animation Craft]] · [[Mounts and Rideable Creatures]]
+<!-- related:end -->

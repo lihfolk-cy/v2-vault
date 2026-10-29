@@ -1,5 +1,5 @@
 ---
-tags: [production, pipeline, blender, import, icons, audio, tooling, case-study]
+tags: [production, pipeline, blender, import, icons, audio, tooling, case-study, type/case-study, area/production, level/intermediate, api/TextureID]
 ---
 # Asset Pipelines
 
@@ -12,7 +12,7 @@ tags: [production, pipeline, blender, import, icons, audio, tooling, case-study]
 > - Axis and scale conventions are written down and applied in code.
 > - Every upload writes an id map to disk.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.8k tok. Read more: ## Blender to Roblox: the conventions that bite · ## Install scripts: dry run, idempotent, reversible · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.0k tok. Read more: ## Blender to Roblox: the conventions that bite · ## Install scripts: dry run, idempotent, reversible · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 An asset pipeline is the repeatable path from a source file (a Blender scene, a sound take, a design spec) to a finished, wired, budget-checked thing in the game. Without one, every model is a hand job: import, fix the axis, fix the scale, guess the collision, place it, forget to record what you did. With one, adding the 150th weapon costs about the same as adding the 15th, and anybody on the team can do it.
@@ -279,5 +279,10 @@ See [[Sound Fundamentals]] and [[Sound Design for Games]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Art Pipeline - Concept to In-Game Asset]] · [[Case Study - Building a Game with AI Agents]] · [[Character and Creature Pipeline]] · [[Pipeline Design Principles]] · [[Icon and Thumbnail Rendering Pipeline]] · [[Audio Pipeline]]
+[[Art Pipeline - Concept to In-Game Asset]] · Case Study - Building a Game with AI Agents · Character and Creature Pipeline · Pipeline Design Principles · Icon and Thumbnail Rendering Pipeline · Audio Pipeline
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Case Study - Building a Game with AI Agents]] · [[Pipeline Design Principles]] · [[Post-Mortem - Building a Melee Action Game]] · [[Team Roles and Workflows]] · [[Working with AI Assistants in Studio]] · [[Case Study - Instance Cleanup and Place Size]] · [[Case Study - Building LihFolk V2 with AI Agents]] · [[Release Process and Rollbacks]] · [[Case Study - Fast Join and Deferred Loading]]
+<!-- related:end -->

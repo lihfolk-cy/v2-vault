@@ -1,5 +1,5 @@
 ---
-tags: [ui, responsive, mobile, phone, tablet, console, cross-platform]
+tags: [ui, responsive, mobile, phone, tablet, console, cross-platform, type/guide, area/ui, level/intermediate, api/UserInputService, api/UIScale]
 ---
 # Responsive UI for Phone Tablet Console and PC
 
@@ -12,7 +12,7 @@ tags: [ui, responsive, mobile, phone, tablet, console, cross-platform]
 > - Five viewports plus a notched phone in every test pass.
 > - Numbers enforced: 12 px text, 44 px taps, 8 px gaps, 0 overlaps.
 >
-> Cost: TL;DR ~130 tok · whole note ~4.0k tok. Read more: ## 1. Classify by capability, not by guessing the device · ## 4. Four strategies for small screens, ranked by what survived · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.1k tok. Read more: ## 1. Classify by capability, not by guessing the device · ## 4. Four strategies for small screens, ranked by what survived · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox players arrive on 4.7 inch phones, tablets, laptops, ultrawide monitors and living-room TVs, and the same player may switch device between sessions. Mobile is a large share of the audience, so a UI signed off only at Studio's default desktop window is broken for many of your players. This note is about strategy: how to classify devices without guessing, which viewports to test, the measurable rules (text size, tap size, gaps, overlaps) that define "fits", and why the reference project ended up building real phone layouts instead of shrinking or zooming desktop ones.
@@ -279,5 +279,10 @@ See also: [[Layout - Scale Offset and Constraints]], [[Safe Areas and Insets]], 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox UI Builder]] · [[Safe Area]] · [[Cookbook - UI]] · [[Readable Text and UI Scale]] · [[UI Asset Pipeline]] · [[Links - Scale vs offset and responsive design]]
+[[Skill - Roblox UI Builder]] · Safe Area · Cookbook - UI · Readable Text and UI Scale · UI Asset Pipeline · Links - Scale vs offset and responsive design
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[AI Pitfalls - UI and Input]] · [[Safe Area]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]] · [[ScreenGui Fundamentals]] · [[Input - UserInputService and ContextActionService]] · [[UI Layout Objects - Lists Grids and Pages]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[UI Motion Language and Timing]]
+<!-- related:end -->

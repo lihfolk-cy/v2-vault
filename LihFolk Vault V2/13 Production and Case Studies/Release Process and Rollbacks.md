@@ -1,5 +1,5 @@
 ---
-tags: [production, release, publishing, rollback, kill-switch, datastore, live-ops, case-study]
+tags: [production, release, publishing, rollback, kill-switch, datastore, live-ops, case-study, type/case-study, area/production, level/intermediate, api/DataStoreService]
 ---
 # Release Process and Rollbacks
 
@@ -12,7 +12,7 @@ tags: [production, release, publishing, rollback, kill-switch, datastore, live-o
 > - Animations are published to the experience owner
 > - Product and pass ids are real
 >
-> Cost: TL;DR ~130 tok · whole note ~3.5k tok. Read more: ## Kill switches · ## Data releases: versioned stores · ## Pre-release checklist · ## Common mistakes
+> Cost: TL;DR ~130 tok · whole note ~3.6k tok. Read more: ## Kill switches · ## Data releases: versioned stores · ## Pre-release checklist · ## Common mistakes
 <!-- tldr:end -->
 
 Editing a place in Studio changes nothing for players. A change reaches players only when the place is published and running servers move to the new version. Between "it works in Studio" and "it works for players" sit several steps that small teams skip: a pre-release check, a publish, a server restart decision, a watch period, and a ready way back. This note covers that path and the rollback tools that make releasing often safe.
@@ -230,5 +230,10 @@ Rule of thumb for a small team: release small and often, with one theme per rele
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Server Shutdowns Soft Updates and Migration]] · [[Live Incident Response and Post-Mortems]] · [[Build Test and Release Pipeline]] · [[Feature Flags]] · [[Places Universes and Experience Settings]] · [[Data Schema Versioning]]
+[[Server Shutdowns Soft Updates and Migration]] · [[Live Incident Response and Post-Mortems]] · Build Test and Release Pipeline · Feature Flags · Places Universes and Experience Settings · Data Schema Versioning
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Build Test and Release Pipeline]] · [[Post-Mortem - Building a Melee Action Game]] · [[Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts]] · [[Planning and Scoping a Roblox Game]] · [[Case Study - Instance Cleanup and Place Size]] · [[Team Roles and Workflows]] · [[Case Study - Enemy Roster Rebuild]] · [[Ship a Game in 30 Days - Week-by-Week Plan for a Solo Dev]] · [[Working with AI Assistants in Studio]]
+<!-- related:end -->

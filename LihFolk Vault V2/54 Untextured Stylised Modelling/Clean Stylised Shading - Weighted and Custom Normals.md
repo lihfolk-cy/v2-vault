@@ -1,5 +1,5 @@
 ---
-tags: [modeling, untextured, stylised, normals, weighted-normals, bevel, shading, blender, foliage]
+tags: [modeling, untextured, stylised, normals, weighted-normals, bevel, shading, blender, foliage, type/guide, area/modeling, level/intermediate]
 ---
 # Clean Stylised Shading - Weighted and Custom Normals
 
@@ -12,12 +12,12 @@ tags: [modeling, untextured, stylised, normals, weighted-normals, bevel, shading
 > - Bevels sized to at least 2 to 3 px at the usual viewing distance; Harden Normals on.
 > - Weighted Normal last in the stack, Face Area, Keep Sharp, Threshold 0.01.
 >
-> Cost: TL;DR ~200 tok · whole note ~3.8k tok. Read more: ## Technique 2: bevel with Harden Normals · ## Technique 4: normal transfer for soft volumes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~200 tok · whole note ~3.9k tok. Read more: ## Technique 2: bevel with Harden Normals · ## Technique 4: normal transfer for soft volumes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Untextured stylised art has nowhere to hide shading errors. On a painted asset, a smudgy gradient across a flat face disappears under brush strokes; on a flat-coloured SmoothPlastic prop, it is the most visible thing on screen. "Clean" stylised shading means flat faces look flat, curved faces look curved, edges catch a crisp highlight, and big soft forms (tree canopies, clouds, cartoon heads) shade like one smooth volume instead of a pile of lumps. Almost all of that is controlled by **normals**, not by geometry or colour.
 
-This note covers the normals toolkit for low and mid-poly stylised meshes: sharp edges, bevels with harden normals, the Weighted Normal modifier, face strength, and normal transfer for foliage and characters. It also covers how those normals survive export into Roblox and what breaks them. The geometric side of bevels (chamfer widths, edge highlight design) is in [[Bevels Chamfers and Edge Highlights Without Textures]] and [[Hard-Surface Modeling]]; faceted styles, where every face is flat on purpose, are in [[Faceted Low-Poly - Flat Normals and Facet Size]].
+This note covers the normals toolkit for low and mid-poly stylised meshes: sharp edges, bevels with harden normals, the [[Weighted Normals|Weighted Normal]] modifier, face strength, and normal transfer for foliage and characters. It also covers how those normals survive export into Roblox and what breaks them. The geometric side of bevels (chamfer widths, edge highlight design) is in [[Bevels Chamfers and Edge Highlights Without Textures]] and [[Hard-Surface Modeling]]; faceted styles, where every face is flat on purpose, are in [[Faceted Low-Poly - Flat Normals and Facet Size]].
 ## The problem in one picture
 
 Take a cube with a small bevel on every edge and Shade Smooth. Each corner vertex averages the normals of the big face and the bevel faces around it. The result: the big flat faces shade with a gradient that darkens toward the edges, as if the cube were slightly inflated. On a textured asset that is barely noticeable. On a white SmoothPlastic crate under Roblox's sun it reads as dirty, soft, "cheap asset pack".
@@ -168,5 +168,10 @@ Triangle count: about 250 to 350 with 1-segment bevels. A 2-segment bevel roughl
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Keeping a Mixed Asset Library Consistent]] · [[Low-Poly and Stylized Modeling]] · [[Blender Workflow for Roblox Creators]] · [[Modeling Fundamentals for Games]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]]
+[[Keeping a Mixed Asset Library Consistent]] · [[Low-Poly and Stylized Modeling]] · Blender Workflow for Roblox Creators · Modeling Fundamentals for Games · Voxel Shading - Baked AO Edges and Lighting · Meshing Voxels for Roblox - Greedy Meshing and Export
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Modeling Fundamentals for Games]] · [[Blender Workflow for Roblox Creators]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Colour Scripts and Value Structure for Untextured Art]]
+<!-- related:end -->

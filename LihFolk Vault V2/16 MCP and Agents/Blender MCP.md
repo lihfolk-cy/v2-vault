@@ -1,5 +1,5 @@
 ---
-tags: [mcp, blender, ai, agents, modeling, pipeline]
+tags: [mcp, blender, ai, agents, modeling, pipeline, type/guide, area/ai, level/intermediate, area/modeling]
 ---
 # Blender MCP
 
@@ -12,7 +12,7 @@ tags: [mcp, blender, ai, agents, modeling, pipeline]
 > - Working on a copy of the .blend, or the file is under version control.
 > - The agent inspects before editing and returns dicts.
 >
-> Cost: TL;DR ~190 tok · whole note ~3.9k tok. Read more: ## 2. Architecture and why it matters · ## 3. The tools (official server) · ## 7. Failure modes · ## 8. Checklist
+> Cost: TL;DR ~190 tok · whole note ~4.0k tok. Read more: ## 2. Architecture and why it matters · ## 3. The tools (official server) · ## 7. Failure modes · ## 8. Checklist
 <!-- tldr:end -->
 
 A Blender MCP server lets an AI agent inspect and change a running Blender: list collections and objects, read mesh and material details, run `bpy` Python, take screenshots of the window, render thumbnails and viewport images, and search the Blender API and manual. Combined with the [[Roblox Studio MCP Server]] in the same host, one agent can model a prop, render its icon, export it, and wire it into the game, with a human only doing the steps the tools cannot (importing a file into Studio, approving uploads).
@@ -231,5 +231,10 @@ A single art style was written down (flat colours, chunky stylised shapes, model
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Blender 5 Python Gotchas for Headless Builds]] · [[Links - Blender fundamentals for Roblox]] · [[Writing Your Own MCP Server]] · [[Case Study - Building a Game with AI Agents]] · [[AI Agents and Autonomous Workflows]] · [[Asset Pipelines]]
+[[Blender 5 Python Gotchas for Headless Builds]] · Links - Blender fundamentals for Roblox · [[Writing Your Own MCP Server]] · [[Case Study - Building a Game with AI Agents]] · AI Agents and Autonomous Workflows · Asset Pipelines
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Safety Rules for AI Agents in Studio]] · [[Studio Plugins and Local HTTP Bridges]] · [[Multiple Agents in One Studio]] · [[MCP Workflows for Scripting and Debugging]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]] · [[Agent Review Loops and Guardrails in Practice]] · [[Agent Handoff Notes - Project State and Resume Templates]]
+<!-- related:end -->

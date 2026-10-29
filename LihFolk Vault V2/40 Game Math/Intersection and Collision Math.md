@@ -1,5 +1,5 @@
 ---
-tags: [math, game-math, collision, intersection, hit-detection, raycast, zones, projectiles, luau]
+tags: [math, game-math, collision, intersection, hit-detection, raycast, zones, projectiles, luau, type/guide, area/math, level/intermediate]
 ---
 # Intersection and Collision Math
 
@@ -12,7 +12,7 @@ tags: [math, game-math, collision, intersection, hit-detection, raycast, zones, 
 > - Zones are polled with containment tests, not `Touched`.
 > - Ray tests handle parallel rays and origins inside the shape.
 >
-> Cost: TL;DR ~180 tok · whole note ~5.3k tok. Read more: ## 3. Rays against simple shapes · ## 4. Capsules: the right shape for characters · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.4k tok. Read more: ## 3. Rays against simple shapes · ## 4. Capsules: the right shape for characters · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox gives you a physics engine and fast spatial queries, so why do the maths yourself? Because a lot of gameplay collision is not about parts at all. A safe zone drawn as a polygon, a hitbox that exists only for one server tick, a lag-compensated capsule around where a player was 120 ms ago, a building cursor projected onto a floor plane, a turret leading a moving target, a thousand bullets in a bullet-hell mode: none of those need an `Instance`, and several cannot use one. Pure geometry is deterministic, runs in parallel Luau, costs nothing in replication and is easy to test.
@@ -437,5 +437,10 @@ This ignores `Rotation` on the GUI objects and any clipping by parents; for a dr
 
 ## Connected notes
 <!-- auto-links:start -->
-[[2D Collision Physics and Platformer Movement]] · [[Links - Raycasting and spatial queries]] · [[Physics Performance]] · [[Voxel Scale Grids and Stud Alignment]] · [[Links - Combat]] · [[Physics Assemblies and Constraints]]
+[[2D Collision Physics and Platformer Movement]] · Links - Raycasting and spatial queries · Physics Performance · Voxel Scale Grids and Stud Alignment · Links - Combat · Physics Assemblies and Constraints
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Rotations Angles and Quaternions]] · [[Math Vectors and CFrames]] · [[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]] · [[Curves in Luau - Paths Beams and Motion]] · [[Interpolation Easing and Curves Math]] · [[Probability and Statistics for Designers]]
+<!-- related:end -->

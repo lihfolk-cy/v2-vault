@@ -1,5 +1,5 @@
 ---
-tags: [ui, layout, uilistlayout, flex, uigridlayout, uipagelayout, scrollingframe]
+tags: [ui, layout, uilistlayout, flex, uigridlayout, uipagelayout, scrollingframe, type/guide, area/ui, level/intermediate, api/ScrollingFrame, api/UIScale]
 ---
 # UI Layout Objects - Lists Grids and Pages
 
@@ -12,7 +12,7 @@ tags: [ui, layout, uilistlayout, flex, uigridlayout, uipagelayout, scrollingfram
 > - Laid-out slots are static; animation happens on inner faces.
 > - Tab bars use flex `Fill`; card rows with uneven content use `Stretch`.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.3k tok. Read more: ## 3. Flex layouts · ## 7. ScrollingFrame with layouts · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.4k tok. Read more: ## 3. Flex layouts · ## 7. ScrollingFrame with layouts · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Layout objects arrange the siblings they sit next to. Insert a `UIListLayout` into a frame and every other `GuiObject` child of that frame is positioned (and possibly sized) by the layout instead of by its own `Position`. This note covers `UIListLayout` (including wrapping and flex), `UIFlexItem`, `UIGridLayout`, `UIPageLayout`, `UITableLayout` and `ScrollingFrame` with automatic canvas size, plus the performance and ordering traps that show up in shops and inventories with hundreds of entries.
@@ -339,5 +339,10 @@ See also: [[Layout - Scale Offset and Constraints]], [[Responsive UI for Phone T
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Layouts and constraints]] · [[Virtualized Lists and Large Inventories]] · [[Cookbook - UI]] · [[Debugging UI Layout and Input]] · [[Case Study - Phone UI Overhaul]] · [[Links - UI elements]]
+[[Links - Layouts and constraints]] · [[Virtualized Lists and Large Inventories]] · Cookbook - UI · Debugging UI Layout and Input · Case Study - Phone UI Overhaul · Links - UI elements
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Cookbook - UI]] · [[Debugging UI Layout and Input]] · [[HUD Design]] · [[Safe Areas and Insets]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[UI Design Systems]] · [[UI Motion Language and Timing]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[Text Fonts and Rich Text]]
+<!-- related:end -->

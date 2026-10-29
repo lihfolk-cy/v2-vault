@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, physics]
+tags: [resources, links, physics, type/reference, area/physics, level/intermediate]
 ---
 # Links - Constraints
 
@@ -54,5 +54,5 @@ Part of [[Resource Library - Physics]] in the [[Resource Library Start Here]]. 3
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Beams and trails]] · [[Links - Forces and movers]] · [[Links - Roblox Studio]] · [[Links - Leaderboards]] · [[Cars with Constraints - Suspension Steering and Drive]] · [[Ropes Chains and Soft Bodies]]
+[[Links - Beams and trails]] · [[Links - Forces and movers]] · [[Links - Roblox Studio]] · [[Links - Leaderboards]] · [[Cars with Constraints - Suspension Steering and Drive]] · Ropes Chains and Soft Bodies
 <!-- auto-links:end -->

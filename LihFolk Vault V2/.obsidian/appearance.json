@@ -6,9 +6,11 @@
     "graph-cosmic",
     "vault-polish",
     "lihfolk-home",
-    "celestial-v2"
+    "celestial-v2",
+    "celestial-v2-notes",
+    "celestial-v2-hud"
   ],
   "theme": "obsidian",
-  "cssTheme": "",
+  "cssTheme": "Everforest",
   "accentColor": "#9b7bff"
 }

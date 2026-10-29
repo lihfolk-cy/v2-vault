@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [blender, python, procedural, modeling, rendering, hub]
+tags: [blender, python, procedural, modeling, rendering, hub, type/hub, area/modeling, level/beginner, area/procedural]
 ---
 # Procedural Blender Assets Start Here
 
@@ -44,5 +44,5 @@ The `scripts` folder holds the build scripts behind these notes (boss owl and it
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Untextured Stylised Modelling Start Here]] · [[Skinning Weights]] · [[Blender Automation with Python]] · [[Modelling Nuance Start Here]] · [[Character and Creature Pipeline]] · [[Modeling Characters for R15 and Custom Rigs]]
+[[Untextured Stylised Modelling Start Here]] · Skinning Weights · Blender Automation with Python · Modelling Nuance Start Here · Character and Creature Pipeline · Modeling Characters for R15 and Custom Rigs
 <!-- auto-links:end -->

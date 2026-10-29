@@ -1,5 +1,5 @@
 ---
-tags: [rigging, facial, dynamic-heads, facs, facecontrols, blender]
+tags: [rigging, facial, dynamic-heads, facs, facecontrols, blender, type/guide, area/animation, level/intermediate, api/FaceControls, area/modeling]
 ---
 # Facial Animation and Dynamic Heads
 
@@ -9,16 +9,16 @@ tags: [rigging, facial, dynamic-heads, facs, facecontrols, blender]
 > - Avoid: Same FACS name on two frames -> One frame per pose
 > - Avoid: Corrective with 4 names -> At most 3 names
 >
-> Cost: TL;DR ~90 tok · whole note ~3.0k tok. Read more: ## 1. How a dynamic head works · ## 2. Building a dynamic head in Blender (Roblox's process) · ## Common mistakes
+> Cost: TL;DR ~90 tok · whole note ~3.1k tok. Read more: ## 1. How a dynamic head works · ## 2. Building a dynamic head in Blender (Roblox's process) · ## Common mistakes
 <!-- tldr:end -->
 
-Roblox faces come in two very different technologies. **Dynamic heads** are skinned head meshes driven by a standard set of FACS controls through a `FaceControls` instance; they work with the Animation Editor's face tools, camera-based capture and avatar systems. **Custom faces** on your own rigs are just bones or parts (a jaw hinge, eyelids, swapped decals) animated like any other joint. This note covers both, with the Roblox specifications (Creator Hub, checked October 2026) and the craft choices behind them.
+Roblox faces come in two very different technologies. **Dynamic heads** are skinned head meshes driven by a standard set of [[FACS]] controls through a `FaceControls` instance; they work with the Animation Editor's face tools, camera-based capture and avatar systems. **Custom faces** on your own rigs are just bones or parts (a jaw hinge, eyelids, swapped decals) animated like any other joint. This note covers both, with the Roblox specifications (Creator Hub, checked October 2026) and the craft choices behind them.
 
 ## 1. How a dynamic head works
 
 - The head is a MeshPart (`Head_Geo` in the source file) skinned to **face joints** that hang under a **root face joint** (conventionally `DynamicHead`) under the R15 `Head` bone.
 - On import Studio creates a **`FaceControls`** instance on the head. It hides the face joints under the mapped root, and stores pose data, including the correction data for combination poses.
-- You **do not animate the face bones directly**. Roblox docs: "You can't access the facial Bones of a head mesh directly"; you combine FaceControls poses.
+- You **do not animate the face bones directly**. Roblox docs: "You can't access the facial Bones of a head mesh directly"; you combine [[FaceControls]] poses.
 - `FaceControls` exposes **50 number properties**, one per base FACS pose, grouped by region:
 
 | Region | Properties (examples) |
@@ -141,5 +141,10 @@ The reference project built creature heads with the skull "in anatomical order" 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Organic and Creature Modeling]] · [[Topology and Edge Flow]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Skinning Weights]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Skeleton Library]] · [[Animation Start Here]]
+[[Organic and Creature Modeling]] · Topology and Edge Flow · Modeling Characters for R15 and Custom Rigs · Skinning Weights · Voxel Characters - Proportions Joints and Rigging · Skeleton Library · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Blender Armature and Bone Roll Conventions]] · [[3D Importer Settings Reference]] · [[Creature Rig Conventions]] · [[Bones and Skinned Meshes]] · [[Accessories and Armor That Follow Animation]] · [[Animation Data from Blender to Roblox]] · [[Custom Characters and StarterCharacter]] · [[Importing Models and Rigs]]
+<!-- related:end -->

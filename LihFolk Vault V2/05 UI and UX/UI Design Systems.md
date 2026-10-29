@@ -1,5 +1,5 @@
 ---
-tags: [ui, design-system, tokens, theming, styling, components, audit]
+tags: [ui, design-system, tokens, theming, styling, components, audit, type/guide, area/ui, level/intermediate, api/UIStroke, area/design]
 ---
 # UI Design Systems
 
@@ -12,7 +12,7 @@ tags: [ui, design-system, tokens, theming, styling, components, audit]
 > - Component builders or style rules; screens never hard-code values.
 > - Exceptions are attributes that every pass respects.
 >
-> Cost: TL;DR ~130 tok · whole note ~4.4k tok. Read more: ## 3. Theme module: one source of truth in code · ## 4. The engine option: UI styling · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.5k tok. Read more: ## 3. Theme module: one source of truth in code · ## 4. The engine option: UI styling · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A design system is the set of decisions that make forty screens look like one game: a palette with roles, a type scale, spacing and radius steps, a handful of components with defined states, and motion rules. On Roblox it can live in a theme ModuleScript, in the engine's own UI styling system (`StyleSheet`, tokens, themes, queries), or both. This note covers what to put in a system, how to enforce it, the cartoon "simulator" style in concrete numbers, and the tooling that took one production game's 92 screens to a measured 10/10 for positioning and sizing.
@@ -321,5 +321,10 @@ See also: [[Menu Archetypes - Shop Settings Codes Rewards]], [[HUD Design]], [[T
 
 ## Connected notes
 <!-- auto-links:start -->
-[[UI Asset Pipeline]] · [[LihFolk UI Spec]] · [[Reference - Purple Anime Settings UI (Claude + Figma)]] · [[LihFolk UI Design System]]
+[[UI Asset Pipeline]] · LihFolk UI Spec · Reference - Purple Anime Settings UI (Claude + Figma) · LihFolk UI Design System
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[LihFolk UI Design System]] · [[Layout - Scale Offset and Constraints]] · [[AI Pitfalls - UI and Input]] · [[UI Motion Language and Timing]] · [[UI Layout Objects - Lists Grids and Pages]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Virtualized Lists and Large Inventories]] · [[Safe Areas and Insets]] · [[Input - UserInputService and ContextActionService]] · [[Nametags and Overhead Bars - Cost and Visibility Rules]]
+<!-- related:end -->

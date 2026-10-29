@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, assets-creation]
+tags: [resources, links, assets-creation, type/reference, level/intermediate]
 ---
 # Links - Topology
 
@@ -56,5 +56,5 @@ Part of [[Resource Library - Assets (creation)]] in the [[Resource Library Start
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - UVs and texture prep]] · [[Links - Blender fundamentals for Roblox]] · [[Resource Library Link Check]] · [[Links - Texturing]] · [[Retopology and Decimation]] · [[Modeling Fundamentals for Games]]
+[[Links - UVs and texture prep]] · [[Links - Blender fundamentals for Roblox]] · [[Resource Library Link Check]] · [[Links - Texturing]] · [[Retopology and Decimation]] · Modeling Fundamentals for Games
 <!-- auto-links:end -->

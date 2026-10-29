@@ -1,5 +1,5 @@
 ---
-tags: [fundamentals, api, reference, animationtrack]
+tags: [fundamentals, api, reference, animationtrack, type/reference, area/animation, level/beginner, api/AnimationTrack, api/Animator, api/TimePosition, api/Animation]
 ---
 # AnimationTrack Reference
 
@@ -9,7 +9,7 @@ tags: [fundamentals, api, reference, animationtrack]
 > - Avoid: Setting `TimePosition` before `Play` -> Play first
 > - Avoid: Using `Length` right after loading -> Wait, preload, or use data
 >
-> Cost: TL;DR ~90 tok · whole note ~3.5k tok. Read more: ## Properties · ## Behaviour you need to know · ## Common mistakes
+> Cost: TL;DR ~90 tok · whole note ~3.6k tok. Read more: ## Properties · ## Behaviour you need to know · ## Common mistakes
 <!-- tldr:end -->
 
 An `AnimationTrack` is one loaded instance of a clip on one [[Animator Deep Dive|Animator]]. You never create it with `Instance.new`; `Animator:LoadAnimation(animation)` returns a fresh one every call. This note lists every member with its exact signature and default, then covers the behaviour you only learn by shipping: restart rules, time semantics, the difference between `Stopped` and `Ended`, and what to do while the asset is still loading.
@@ -209,5 +209,10 @@ A 1.2 s stance clip that must fit a 0.7 s window plays at `1.2 / 0.7 ≈ 1.71`. 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animation Objects]] · [[Engine Gotchas]] · [[Weapon Rig Player]] · [[Snippets - Lua Keyframe Player Core]] · [[Links - Animation playback]] · [[Hit-Stop]] · [[Animation Start Here]]
+[[Animation Objects]] · [[Engine Gotchas]] · [[Weapon Rig Player]] · [[Snippets - Lua Keyframe Player Core]] · [[Links - Animation playback]] · Hit-Stop · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[KeyframeSequence Keyframe and Pose Reference]] · [[Lua Keyframe Player Internals]] · [[Animation Glossary]] · [[Troubleshooting Table]] · [[Debugging Animation Problems]] · [[CurveAnimation and Curve Channels]] · [[Custom Locomotion Controller Design]] · [[Keyframes, Easing and Interpolation]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [modeling, shape-language, silhouette, readability, art-direction, blender, studio, critique]
+tags: [modeling, shape-language, silhouette, readability, art-direction, blender, studio, critique, type/guide, area/modeling, level/intermediate, area/gameplay]
 ---
 # Shape Language and Silhouette Testing
 
@@ -12,7 +12,7 @@ tags: [modeling, shape-language, silhouette, readability, art-direction, blender
 > - One dominant shape family plus one accent family.
 > - Straight against curve on the main masses.
 >
-> Cost: TL;DR ~210 tok · whole note ~4.7k tok. Read more: ## Worked example: a silhouette sheet in Blender · ## Worked example: a silhouette mode inside Studio · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~210 tok · whole note ~4.8k tok. Read more: ## Worked example: a silhouette sheet in Blender · ## Worked example: a silhouette mode inside Studio · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Low-Poly and Stylized Modeling]] gives the one-line version of shape language (circles friendly, squares stable, triangles dangerous) and [[Modeling Fundamentals for Games]] gives the black silhouette test. This note goes past both. It covers how to build a shape hierarchy that survives a phone screen, how negative space and tangents make or break a silhouette, why one silhouette test is not enough on Roblox (the camera looks down, not across), how to test a whole roster at once instead of one model at a time, and how to run the test inside Studio under the game's real lighting. The focus is non-hand-painted art, where the silhouette and the big colour shapes are almost the whole look, because there is no painted detail to rescue a weak shape.
@@ -179,7 +179,7 @@ Remove the highlights before publishing. Highlights are cheap individually, but 
 ## When not to chase a perfect silhouette
 
 - **Background and filler art.** Distant cliffs, crowds of trees and wall kits should read as masses, not as individual silhouettes. Give them a strong group silhouette (a skyline) and stop.
-- **Modular kit pieces.** A wall segment has no silhouette on its own; test the assembled building instead. See [[Modular Environment Kits]].
+- **[[Modular Kits|Modular kit]] pieces.** A wall segment has no silhouette on its own; test the assembled building instead. See [[Modular Environment Kits]].
 - **Items seen only in UI.** An item that only ever appears as an icon needs an icon silhouette, which is a 2D design task with its own framing. Model it to look good from the icon camera.
 - **First-person or very close views.** A first-person weapon is judged by its shape from behind the hand, not by a side silhouette.
 
@@ -224,5 +224,10 @@ Remove the highlights before publishing. Highlights are cheap individually, but 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Colour Scripts and Value Structure for Untextured Art]] · [[Bevels Chamfers and Edge Highlights Without Textures]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Voxel and Blocky Modeling]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Thumbnail Contrast]]
+[[Colour Scripts and Value Structure for Untextured Art]] · [[Bevels Chamfers and Edge Highlights Without Textures]] · Faceted Low-Poly - Flat Normals and Facet Size · Voxel and Blocky Modeling · Voxel Art - Studs Outlines and Style Kits · Thumbnail Contrast
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Style Bibles for Consistent Models]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Voxel and Blocky Modeling]] · [[Chibi Character Rules in Practice]] · [[Hand-Painted and Stylized Texturing]] · [[Matching a Concept Sheet - Boss Creature Case Study]]
+<!-- related:end -->

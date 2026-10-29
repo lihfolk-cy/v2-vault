@@ -1,5 +1,5 @@
 ---
-tags: [procedural, ik, arms, wrist, swing-twist, viterbi, limits, quality]
+tags: [procedural, ik, arms, wrist, swing-twist, viterbi, limits, quality, type/reference, area/animation, level/advanced, area/procedural]
 ---
 # Elbow Poles Swivel and Joint Limits
 
@@ -9,7 +9,7 @@ tags: [procedural, ik, arms, wrist, swing-twist, viterbi, limits, quality]
 > - Wrist flips 170 degrees in one frame: twist wrapped at +-180 then clamped -> unwrap twist against last frame before clamping
 > - Thrust looks like a broken wrist: wrist asked to aim the blade -> aim with the arm; wrist limits force it
 >
-> Cost: TL;DR ~130 tok · whole note ~4.0k tok. Read more: ## Swing/twist decomposition · ## Continuity: Viterbi over the whole clip · ## Common mistakes
+> Cost: TL;DR ~130 tok · whole note ~4.1k tok. Read more: ## Swing/twist decomposition · ## Continuity: Viterbi over the whole clip · ## Common mistakes
 <!-- tldr:end -->
 
 A two-bone solver puts the hand on the target. It does not make the arm look human. That depends on three choices the solver leaves open: **which way the elbow points** (the pole or swivel), **how much the wrist is allowed to do** (limits on flex, deviation and twist), and **how those choices change from frame to frame** (continuity). This note covers all three with the numbers one live action game (the reference project) arrived at after baking and scoring a few hundred attack clips.
@@ -72,7 +72,7 @@ The project's single most useful rule came out of this: **a wrist cannot aim a b
 
 ## Swing/twist decomposition
 
-Take the wrist's local rotation `q` (the hand relative to the forearm, as a unit quaternion `(w, x, y, z)`), with the forearm along the hand's Y axis. Split it as `q = swing * twist`, where `twist` is a rotation about Y and `swing` has no Y component.
+Take the wrist's local rotation `q` (the hand relative to the forearm, as a unit [[Quaternions|quaternion]] `(w, x, y, z)`), with the forearm along the hand's Y axis. Split it as `q = swing * twist`, where `twist` is a rotation about Y and `swing` has no Y component.
 
 ```
 twist angle:  tw = 2 * atan2(y, w)         (wrapped to [-pi, pi])
@@ -200,7 +200,7 @@ end
 
 Cost is `frames x K^2`. With K = 864 (24 x 36) that is about 750,000 transitions per frame: fine offline in vectorised numpy (the project's bakes took 40 s to 3 min per move including repair rounds), far too slow in Luau at runtime. For runtime, restrict transitions to neighbours (only candidates within a few steps of each other), which makes it nearly linear in K.
 
-After Viterbi, the project **unwrapped** the chosen roll and swivel curves, **Gaussian-smoothed** them (sigma 1 frame) and **solved again exactly** on the smoothed curves, so the final arm moves continuously rather than in 10-degree steps. Then it smoothed in joint space (sigma 0.8 frames where the blade mattered, 3.5 elsewhere; "blending two natural joint poses traces an arc"), and ran a flip guard: any joint turning more than 45 degrees in one 60 Hz frame was re-routed by a smoothstep slerp over plus or minus 4 frames (growing to 12 if needed).
+After Viterbi, the project **unwrapped** the chosen roll and swivel curves, **Gaussian-smoothed** them (sigma 1 frame) and **solved again exactly** on the smoothed curves, so the final arm moves continuously rather than in 10-degree steps. Then it smoothed in joint space (sigma 0.8 frames where the blade mattered, 3.5 elsewhere; "blending two natural joint poses traces an arc"), and ran a flip guard: any joint turning more than 45 degrees in one 60 Hz frame was re-routed by a smoothstep [[slerp]] over plus or minus 4 frames (growing to 12 if needed).
 
 ## A runtime version
 
@@ -253,5 +253,10 @@ Related: [[Two-Bone IK Math]], [[Inverse Kinematics]], [[Arm Baker Internals]], 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animation Quality Standard]] · [[Snippets - IK]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[IKControl Reference]] · [[Skinning Weights]] · [[Topology and Edge Flow]] · [[Animation Start Here]]
+[[Animation Quality Standard]] · [[Snippets - IK]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[IKControl Reference]] · [[Skinning Weights]] · Topology and Edge Flow · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Blade Grip and Wrist Limits]] · [[Spec-Driven Move Authoring]] · [[Posing and Silhouettes]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Human Swing Biomechanics]] · [[Look-At Aim and Head Tracking]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Animation Review Checklist]]
+<!-- related:end -->

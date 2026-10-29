@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [case-study, top-games, start-here, hub, marketing, game-design]
+tags: [case-study, top-games, start-here, hub, marketing, game-design, type/hub, area/design, level/beginner, area/marketing]
 ---
 
 # Top Games Case Studies Start Here
@@ -47,5 +47,5 @@ Use [[Competitor Analysis Method]] to study a game that is not covered here. Rec
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Core Loop]] · [[Click-Through Rate]] · [[Session Length]] · [[Core Loops and Session Design]] · [[Links - Store page]] · [[Power Curve]]
+[[Core Loop]] · Click-Through Rate · Session Length · Core Loops and Session Design · Links - Store page · Power Curve
 <!-- auto-links:end -->

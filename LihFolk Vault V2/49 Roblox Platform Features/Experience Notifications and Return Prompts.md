@@ -1,5 +1,5 @@
 ---
-tags: [platform-features, notifications, retention, open-cloud, events, memorystore, live-ops, luau, strict]
+tags: [platform-features, notifications, retention, open-cloud, events, memorystore, live-ops, luau, strict, type/guide, area/platform, level/intermediate]
 ---
 # Experience Notifications and Return Prompts
 
@@ -12,12 +12,12 @@ tags: [platform-features, notifications, retention, open-cloud, events, memoryst
 > - Opt-in prompt only after a delayed-payoff action, with a context line first
 > - At most one queued notification per user; priority rules decide which
 >
-> Cost: TL;DR ~160 tok · whole note ~5.6k tok. Read more: ## 2. Experience notifications · ## 5. The scheduling problem · ## 9. Common mistakes · ## 10. Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.7k tok. Read more: ## 2. Experience notifications · ## 5. The scheduling problem · ## 9. Common mistakes · ## 10. Checklist
 <!-- tldr:end -->
 
 A player who closes your game is unreachable unless they gave you a way back in. Roblox offers three on-platform channels for that: **experience notifications** (personal, one per player per day), **update announcements** (broadcast to everyone who follows the game) and **event notifications** (for players who tapped "Notify Me" on an event). Each has its own eligibility, limits and failure modes. This note covers all three, the scheduling problem nobody mentions (the event you want to notify about usually happens while no server is running for that player), and copy that survives the spam filter. [[Retention and Return Hooks]] lists notifications as one hook among many; this note is the implementation.
 
-Platform facts are labelled **Roblox docs (as of October 2026)** and were checked against the Experience notifications guide, the Open Cloud User notifications guide, the ExperienceNotificationService and SocialService references, the Open Cloud API reference and the Experience events and updates guide on create.roblox.com. Strategy is rule of thumb.
+Platform facts are labelled **Roblox docs (as of October 2026)** and were checked against the Experience notifications guide, the Open Cloud User notifications guide, the ExperienceNotificationService and [[SocialService]] references, the Open Cloud API reference and the Experience events and updates guide on create.roblox.com. Strategy is rule of thumb.
 
 ## 1. The three channels
 
@@ -347,5 +347,10 @@ Keep them honest: the guidelines' bans on false time pressure apply in spirit to
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Discovery and the Algorithm]] · [[Update Cadence and Hype Cycles]] · [[Links - Community and social]] · [[Cross-Server Messaging]] · [[Community Building]] · [[Click-Through Rate]]
+[[Discovery and the Algorithm]] · Update Cadence and Hype Cycles · Links - Community and social · Cross-Server Messaging · Community Building · Click-Through Rate
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Badges and Achievement Design]] · [[Subscriptions and Recurring Revenue]] · [[Avatar Context Menus Profiles and Social Surfaces]] · [[Commerce and Physical Goods]] · [[Discovery and Monetization Changes 2025-2026]] · [[Photo Mode and In-Game Screenshots with CaptureService]] · [[Roblox Changes 2025-2026]] · [[Data and Cloud Changes 2025-2026]]
+<!-- related:end -->

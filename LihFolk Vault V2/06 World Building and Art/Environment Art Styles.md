@@ -1,5 +1,5 @@
 ---
-tags: [world-building, art-direction, style, palette, stylised, voxel, pbr]
+tags: [world-building, art-direction, style, palette, stylised, voxel, pbr, type/guide, area/world, level/intermediate, area/modeling]
 ---
 # Environment Art Styles
 
@@ -12,7 +12,7 @@ tags: [world-building, art-direction, style, palette, stylised, voxel, pbr]
 > - Palette derived systematically; sampled under game lighting.
 > - Silhouette test passed for key assets at 30 to 40 px.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.2k tok. Read more: ## Writing a style down · ## Palettes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.3k tok. Read more: ## Writing a style down · ## Palettes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 An art style is a set of rules that every asset obeys: shape language, palette, materials, texture density, lighting, and how much detail goes where. On Roblox the style must also survive a phone screen, the default camera distance, low graphics settings and dozens of assets from different hands. This note describes the common Roblox style families, how to write a style down so a team (or a script) can reproduce it, how to derive palettes, and the style lessons from one production game whose owner rejected several "technically fine" versions of its hub before landing on one that worked.
@@ -179,5 +179,10 @@ One production game's "game-ready" material pass also tuned `EnvironmentSpecular
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Voxel and Blocky Modeling]] · [[Stylized Lighting Recipes]] · [[Colour Scripts and Value Structure for Untextured Art]] · [[Lighting Untextured Art in Roblox]] · [[Voxel Palettes - Ramps Hue Shifting and Limits]] · [[Untextured Stylised Modelling Start Here]]
+[[Voxel and Blocky Modeling]] · Stylized Lighting Recipes · Colour Scripts and Value Structure for Untextured Art · Lighting Untextured Art in Roblox · Voxel Palettes - Ramps Hue Shifting and Limits · Untextured Stylised Modelling Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Stylized Lighting Recipes]] · [[Colour Scripts and Value Structure for Untextured Art]] · [[Zone and Biome Art Direction]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Parts Unions and MeshParts]] · [[Textures Decals and Texture Memory]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[Terrain Tools and Terrain API]]
+<!-- related:end -->

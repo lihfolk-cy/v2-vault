@@ -1,5 +1,5 @@
 ---
-tags: [authoring, review, checklist, qa]
+tags: [authoring, review, checklist, qa, type/checklist, area/animation, level/intermediate]
 ---
 # Animation Review Checklist
 
@@ -10,7 +10,7 @@ tags: [authoring, review, checklist, qa]
 > - Something moves on the input frame for player actions.
 > - Secondary motion on dangling parts and the free hand.
 >
-> Cost: TL;DR ~130 tok · whole note ~2.9k tok. Read more: ## 3. Craft (should-fix) · ## 4. Technical safety (blockers)
+> Cost: TL;DR ~130 tok · whole note ~3.0k tok. Read more: ## 3. Craft (should-fix) · ## 4. Technical safety (blockers)
 <!-- tldr:end -->
 
 A review pass catches problems before players do. This checklist collects every check from the authoring notes into one place, ordered the way a review actually goes: first "does it work in the game", then "does it read", then "is it well made", then "is it technically safe", then "is it shippable". Thresholds come from the reference project (one live action game) where marked; adjust distances if your character is a different size.
@@ -30,7 +30,7 @@ Use it as a gate. A clip with any **blocker** does not ship; **should-fix** item
 
 - [ ] **Hit frames** land when design says. `Hit` markers sit on the contact frame; data tables (server hit times) match the markers. Reference project: server hits at marker time minus 0.06 s.
 - [ ] **All markers present and named correctly** (`Hit`, `Hit2`, `TrailOn` / `TrailOff`, `Step`, `Tele`, cast markers, `CancelOpen` or your equivalents). Marker-driven effects fire once, not twice (full and upper-body copies both playing).
-- [ ] **Cancel windows** are where design wants them; input buffering feels right.
+- [ ] **Cancel windows** are where design wants them; [[input buffering]] feels right.
 - [ ] **Length** matches what balance assumed (clip length can feed damage and cooldown formulas).
 - [ ] **Speed range**: if the clip plays faster or slower (attack-speed stats, `AdjustSpeed`), check it at the extremes.
 - [ ] **Enemy telegraphs** are readable: at least about 0.45 s from telegraph to blow, 0.5 s or more for bosses (reference project).
@@ -166,5 +166,10 @@ Out of several hundred attack clips: wrist problems in **97%**, arms in body in 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Arm QA Metrics Reference]] · [[Animation Editor Workflow]] · [[Timing Spacing and Frame Charts]] · [[Spec-Driven Move Authoring]] · [[AI Animation and Motion from Video]] · [[Anticipation]] · [[Animation Start Here]]
+[[Arm QA Metrics Reference]] · [[Animation Editor Workflow]] · [[Timing Spacing and Frame Charts]] · [[Spec-Driven Move Authoring]] · [[AI Animation and Motion from Video]] · Anticipation · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Pipeline - Arm IK Baking and QA]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Idle Breathing and Secondary Motion]] · [[Human Swing Biomechanics]] · [[Authoring Clips in Code]] · [[Weapon and Combat Animation]] · [[Animation Capture and Mocap]] · [[R15 Run Cycle Key Poses]]
+<!-- related:end -->

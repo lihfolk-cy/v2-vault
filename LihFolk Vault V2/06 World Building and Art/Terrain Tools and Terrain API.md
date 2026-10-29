@@ -1,5 +1,5 @@
 ---
-tags: [world-building, terrain, voxels, api, materials, tools]
+tags: [world-building, terrain, voxels, api, materials, tools, type/reference, area/world, level/intermediate, api/Terrain, area/modeling, api/Atmosphere]
 ---
 # Terrain Tools and Terrain API
 
@@ -12,7 +12,7 @@ tags: [world-building, terrain, voxels, api, materials, tools]
 > - Snapshot (CopyRegion) taken and named before every edit.
 > - Writes chunked, read back, verified.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.4k tok. Read more: ## The scripting API · ## Recipes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.5k tok. Read more: ## The scripting API · ## Recipes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox Terrain is a voxel field: the world is divided into **4 x 4 x 4 stud cells**, each with a **material** and an **occupancy** between 0 and 1 (Roblox docs). The engine builds a smooth surface from those numbers, renders it with its own LOD, and collides against it. Terrain is the cheapest way to cover large ground areas, make caves and cliffs, and fill water bodies; it is also global, hard to undo, and full of measured quirks. This note covers the Studio tools briefly, the scripting API in depth, and the hard lessons of one production game that lost and rebuilt its terrain.
@@ -45,7 +45,7 @@ One production game ended up with **terrain for realm floors** and **no terrain 
 | `Decoration` | No (Studio) | Animated grass on the Grass material |
 | `GrassLength` | No (Studio) | 0.1 to 1 |
 | `WaterColor`, `WaterReflectance`, `WaterTransparency`, `WaterWaveSize`, `WaterWaveSpeed` | Yes | Global water look |
-| Material textures | via MaterialService overrides | Global; see [[Materials MaterialVariants and SurfaceAppearance]] |
+| Material textures | via [[MaterialService]] overrides | Global; see [[Materials MaterialVariants and SurfaceAppearance]] |
 
 "Global" is the single most important fact about terrain art. If realm 1 has green grass and realm 2 wants yellow grass, **use a different material** (Grass vs LeafyGrass) rather than recolouring. One production game assigned one floor material per zone (Grass, Mud, Limestone, Sandstone, Basalt, Snow, Pavement, Asphalt, Rock) and documented that list so nobody recoloured a material another zone used.
 
@@ -298,5 +298,10 @@ Terrain water is real: it has swimming, buoyancy, waves and refraction. It is al
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Terrain Deep Dive - Materials Water and Performance]] · [[Terrain Materials and Painting]] · [[Links - Terrain]] · [[MCP Workflows for Building Worlds]] · [[Noise Functions and Terrain Generation]] · [[Environment and Level Pipeline]]
+[[Terrain Deep Dive - Materials Water and Performance]] · [[Terrain Materials and Painting]] · Links - Terrain · MCP Workflows for Building Worlds · Noise Functions and Terrain Generation · Environment and Level Pipeline
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[MCP Workflows for Building Worlds]] · [[Noise Functions and Terrain Generation]] · [[Parts Unions and MeshParts]] · [[Zone and Biome Art Direction]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Grid Placement and Player Building Systems]]
+<!-- related:end -->

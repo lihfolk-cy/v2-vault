@@ -1,5 +1,5 @@
 ---
-tags: [ui, hud, layout, overlap, popups, mobile]
+tags: [ui, hud, layout, overlap, popups, mobile, type/guide, area/ui, level/intermediate, area/design]
 ---
 # HUD Design
 
@@ -12,7 +12,7 @@ tags: [ui, hud, layout, overlap, popups, mobile]
 > - Every stackable element is a slot row; the checker runs the game's placement code.
 > - 0 overlaps at five viewports and every scenario.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.7k tok. Read more: ## 2. The overlap problem · ## 3. Popup arbitration · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.8k tok. Read more: ## 2. The overlap problem · ## 3. Popup arbitration · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The HUD is the UI that is always on: currencies, the main action button, navigation into menus, objectives, boosts, health and the transient things (toasts, reward banners, damage numbers) that compete for the same screen. Unlike a menu, it shares the screen with gameplay, so every pixel it uses is a pixel the player cannot see the world through, and on a phone it shares that space with the player's thumbs. This note covers HUD zones, a slot system that prevents overlaps by construction, popup arbitration, unlock gating, and motion and performance budgets, with the reference project's numbers.
@@ -199,7 +199,7 @@ What the reference project's tutorial does:
 - **Hide everything not needed by the current step.** The bottom bar shows only the Roll button on the roll step, only Backpack on the equip step, nothing on the walk step. Auto-roll, the settings circles and proximity prompts stay off until the tutorial is done. The dock's tab bar and the boost pill hide during the tutorial; the quest tracker stays hidden until onboarding is complete.
 - **Show locked features as locked**, with the condition, once the player could plausibly want them: a lock veil and "Unlocks in Zone 4".
 - **Badge sparingly.** A red dot on the rail means "you can do something useful here now" (claimable reward, affordable upgrade), not "this exists".
-- **Point, then get out of the way.** The tutorial hand sits on top of everything (DisplayOrder 205), glides between targets, and the spotlight (a dark cut-out with a pulsing outline) lives at 204. Targets are found by a dedicated attribute (`TutHook`), not by name, so redesigns do not break the tutorial.
+- **Point, then get out of the way.** The tutorial hand sits on top of everything ([[DisplayOrder]] 205), glides between targets, and the spotlight (a dark cut-out with a pulsing outline) lives at 204. Targets are found by a dedicated attribute (`TutHook`), not by name, so redesigns do not break the tutorial.
 
 A related lesson: a feature that is only reachable from a hidden HUD element is a broken feature. A free gift button once sat in a hidden top-right container, so quests requiring players to collect the gift could never be completed. Every quest or tutorial target needs a visible route.
 
@@ -278,5 +278,10 @@ See also: [[Safe Areas and Insets]], [[Responsive UI for Phone Tablet Console an
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Case Study - Phone UI Overhaul]] · [[Links - Menus, HUDs, inventories and shops]] · [[Notification and Toast Systems]] · [[Layout - Scale Offset and Constraints]] · [[Debugging UI Layout and Input]] · [[Cookbook - UI]]
+[[Case Study - Phone UI Overhaul]] · Links - Menus, HUDs, inventories and shops · [[Notification and Toast Systems]] · [[Layout - Scale Offset and Constraints]] · Debugging UI Layout and Input · Cookbook - UI
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[UI Asset Pipeline]] · [[Gamepad and Console UX]] · [[UI Layout Objects - Lists Grids and Pages]] · [[UI Motion Language and Timing]] · [[Declarative UI - React-Lua and Fusion]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[Virtualized Lists and Large Inventories]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]]
+<!-- related:end -->

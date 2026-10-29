@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [team, hub, start-here, collaboration, production, project-management]
+tags: [team, hub, start-here, collaboration, production, project-management, type/hub, area/production, level/beginner, area/monetization]
 ---
 # Team Collaboration Start Here
 
@@ -53,5 +53,5 @@ Facts are labelled **Roblox docs (as of October 2026)**, **measured in the refer
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Business and Careers Start Here]] · [[Links - Team Create]] · [[Lessons Learned Index]] · [[Animation Asset Permissions and Groups]] · [[Plugin Development Start Here]] · [[Live Ops Deep Dive Start Here]]
+[[Business and Careers Start Here]] · Links - Team Create · Lessons Learned Index · Animation Asset Permissions and Groups · Plugin Development Start Here · Live Ops Deep Dive Start Here
 <!-- auto-links:end -->

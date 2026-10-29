@@ -1,5 +1,5 @@
 ---
-tags: [authoring, craft, idle, breathing, secondary-motion, overlap]
+tags: [authoring, craft, idle, breathing, secondary-motion, overlap, type/guide, area/animation, level/intermediate, api/Animator, api/Motor6D, api/AnimationConstraint]
 ---
 # Idle Breathing and Secondary Motion
 
@@ -9,7 +9,7 @@ tags: [authoring, craft, idle, breathing, secondary-motion, overlap]
 > - Avoid: Panting idle -> 1 to 3 degrees, 3 to 5 s cycle
 > - Avoid: Idle pose far from attack start poses -> keep the idle near the class rest; re-check clip entries if the...
 >
-> Cost: TL;DR ~100 tok · whole note ~3.5k tok. Read more: ## 4. Fidgets and variety · ## 7. Adding procedural layers without fighting the Animator · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~3.6k tok. Read more: ## 4. Fidgets and variety · ## 7. Adding procedural layers without fighting the Animator · ## Common mistakes
 <!-- tldr:end -->
 
 The idle is the animation players look at the longest. It plays in menus, between fights, while chatting, and under every upper-body clip. Secondary motion (overlap, drag, small reactions of parts that are not the main action) is what separates "moving" from "alive". This note covers idle design, breathing and weight shifts, fidget systems, overlap and successive breaking, secondary motion on attachments, and how to add these procedurally on Roblox without fighting the Animator.
@@ -205,5 +205,10 @@ Upper-body attacks and casts play over the idle's legs. If the idle has big hip 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animation Review Checklist]] · [[Posing and Silhouettes]] · [[Playback, Priorities and Blending]] · [[Retargeting Animations Between Rigs]] · [[AI Animation and Motion from Video]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Animation Start Here]]
+[[Animation Review Checklist]] · [[Posing and Silhouettes]] · [[Playback, Priorities and Blending]] · [[Retargeting Animations Between Rigs]] · [[AI Animation and Motion from Video]] · Modeling Characters for R15 and Custom Rigs · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Timing Spacing and Frame Charts]] · [[R15 Run Cycle Key Poses]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[Spec-Driven Move Authoring]] · [[Combat Animation Craft]] · [[Animating Creatures and Monsters]] · [[Animation Quality Standard]] · [[Multi-Bone IK - FABRIK and CCD]]
+<!-- related:end -->

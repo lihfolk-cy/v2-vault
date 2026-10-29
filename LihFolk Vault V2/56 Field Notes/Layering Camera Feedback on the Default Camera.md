@@ -1,5 +1,5 @@
 ---
-tags: [field-notes, camera, bindtorenderstep, fov, game-feel, playermodule, luau]
+tags: [field-notes, camera, bindtorenderstep, fov, game-feel, playermodule, luau, type/guide, area/scripting, level/intermediate, api/FieldOfView, api/BindToRenderStep]
 ---
 # Layering Camera Feedback on the Default Camera
 
@@ -12,7 +12,7 @@ tags: [field-notes, camera, bindtorenderstep, fov, game-feel, playermodule, luau
 > - FOV contribution tracked and replaced, never accumulated.
 > - Other scripts' FOV writes detected by comparing with the last written value.
 >
-> Cost: TL;DR ~180 tok · whole note ~1.9k tok. Read more: ## 1. Run after the camera, every frame · ## 2. FOV is absolute, so additive punches accumulate · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~2.0k tok. Read more: ## 1. Run after the camera, every frame · ## 2. FOV is absolute, so additive punches accumulate · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roll on a dash, an FOV punch on a heavy hit, a tilt into a turn: most action games want these on top of Roblox's default follow camera, not a replacement for it. Layering them is easy to get almost right and hard to get exactly right, because you share the camera with a script that runs every frame and does not know you exist. This note gives the ordering, the bookkeeping that stops values drifting, and when to stand down. Trauma shake and kicks are in [[Camera Shake and Camera FX]]; tuning numbers in [[Hit-Stop and Screen Shake Tuning by Numbers]].
@@ -131,5 +131,10 @@ Let the springs keep stepping while standing down, so that when control returns 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Camera Shake and Camera FX]] · [[Camera Systems]] · [[Hit-Stop and Screen Shake Tuning by Numbers]] · [[Motion Sensitivity and Camera Comfort]] · [[Springs That Survive Long Frames - dt Clamps and NaN Guards]] · [[Field Notes Start Here]]
+[[Camera Shake and Camera FX]] · Camera Systems · Hit-Stop and Screen Shake Tuning by Numbers · Motion Sensitivity and Camera Comfort · [[Springs That Survive Long Frames - dt Clamps and NaN Guards]] · [[Field Notes Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Snippets - Camera Shake and FX]] · [[Chase Cameras and Speed Effects for Vehicles]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Shift-Lock Sprint and Gamepad B for Menus]] · [[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[Resetting One Player's Data Safely]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [studio, assistant, ai, mcp, code-assist, generation, workflow]
+tags: [studio, assistant, ai, mcp, code-assist, generation, workflow, type/guide, area/studio, level/intermediate, area/ai]
 ---
 # Studio Assistant and AI Tools
 
@@ -175,5 +175,10 @@ And the soft rule: **verify by data, not by the assistant's summary.** After any
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Roblox Studio Assistant]] · [[Roblox Studio MCP Server]] · [[AI Material and Texture Generation]] · [[AI in Roblox Development Overview]] · [[AI Code Assistants for Luau]] · [[Setting Up MCP Clients]]
+[[Roblox Studio Assistant]] · Roblox Studio MCP Server · AI Material and Texture Generation · AI in Roblox Development Overview · AI Code Assistants for Luau · Setting Up MCP Clients
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Roblox Studio MCP Server]] · [[AI in Roblox Development Overview]] · [[Studio Interface Tour]] · [[Team Create and Collaboration]] · [[Studio Settings and Shortcuts]] · [[Packages and Asset Reuse]] · [[Explorer Properties and Selection]]
+<!-- related:end -->

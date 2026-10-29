@@ -1,5 +1,5 @@
 ---
-tags: [field-notes, audio, sound, sound-design, combat, asset-audit, marketplace]
+tags: [field-notes, audio, sound, sound-design, combat, asset-audit, marketplace, type/guide, area/audio, level/intermediate, area/gameplay, api/Sound]
 ---
 # Sound Design Pitfalls - Reused Ids Onsets and Layered Loops
 
@@ -12,7 +12,7 @@ tags: [field-notes, audio, sound, sound-design, combat, asset-audit, marketplace
 > - Code asks for roles, not raw ids.
 > - Trimmed sounds keep their swell; each trimmed swing auditioned.
 >
-> Cost: TL;DR ~180 tok · whole note ~1.7k tok. Read more: ## 1. Audit reused ids by what they are, not what they are called · ## 2. Onset trimming that removes the attack · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~1.8k tok. Read more: ## 1. Audit reused ids by what they are, not what they are called · ## 2. Onset trimming that removes the attack · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most combat audio problems in a large Roblox game are not about choosing good sounds. They are about bookkeeping: an id reused in places nobody remembers, an automated trim that cut the part of the sound that mattered, two copies of a swing playing on top of each other, and a loop that cannot be partly turned down. This note collects five such pitfalls from a shipped action game and the fixes. Fundamentals are in [[Sound Design for Games]] and [[Combat Sound Design and Feedback]]; the import side in [[Audio Pipeline]].
@@ -112,5 +112,10 @@ Build per-weapon loops from layers (body, low, and a separate high "swing whine"
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Sound Design for Games]] · [[Combat Sound Design and Feedback]] · [[Audio Pipeline]] · [[Spatial Audio and Mixing]] · [[Feedback Timing - Sound Visual and Haptic Sync]] · [[Field Notes Start Here]]
+[[Sound Design for Games]] · Combat Sound Design and Feedback · Audio Pipeline · Spatial Audio and Mixing · Feedback Timing - Sound Visual and Haptic Sync · [[Field Notes Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Sound Fundamentals]] · [[Audio Mixer Settings with SoundGroups]] · [[Client Hit Prediction for Melee Feedback]] · [[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[Hold-to-Attack Input That Never Sticks]] · [[Running Many AI Agents on One Roblox Place]] · [[Layering Camera Feedback on the Default Camera]]
+<!-- related:end -->

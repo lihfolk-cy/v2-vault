@@ -12,10 +12,10 @@ tags: [math, game-math, curves, bezier, catmull-rom, splines, beams, path2d, rai
 > - Anything placed along a path is spaced by arc length.
 > - Orientations along 3D paths come from rotation-minimising frames, banking added on purpose.
 >
-> Cost: TL;DR ~160 tok · whole note ~5.4k tok. Read more: ## 2. Centripetal Catmull-Rom, as Bezier segments · ## 5. Beams are cubic Beziers: driving them from paths · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.5k tok. Read more: ## 2. Centripetal Catmull-Rom, as Bezier segments · ## 5. Beams are cubic Beziers: driving them from paths · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-[[Interpolation Easing and Curves Math]] already gives the basic Luau building blocks: a cubic Bezier with its tangent, uniform Catmull-Rom, an arc-length table for constant speed, and Hermite retargeting. This note is what you build on top of them: a centripetal Catmull-Rom path that converts straight into Roblox `Beam` segments, rails and fences laid out with evenly spaced pieces that never flip upside down, a hanging cable as a single Beam, a beam that draws itself along its own curve, curved projectile paths the server can check, and the UI side through `Path2D`. The modelling theory behind all of it (handles, continuity, curvature) is in [[Bezier Curves and Splines for Modellers]].
+[[Interpolation Easing and Curves Math]] already gives the basic Luau building blocks: a cubic [[Bezier Curves|Bezier]] with its tangent, uniform Catmull-Rom, an arc-length table for constant speed, and Hermite retargeting. This note is what you build on top of them: a centripetal Catmull-Rom path that converts straight into Roblox `Beam` segments, rails and fences laid out with evenly spaced pieces that never flip upside down, a hanging cable as a single Beam, a beam that draws itself along its own curve, curved projectile paths the server can check, and the UI side through `Path2D`. The modelling theory behind all of it (handles, continuity, curvature) is in [[Bezier Curves and Splines for Modellers]].
 
 Trust labels: **Roblox docs** (create.roblox.com, October 2026), **API dump** (robloxapi.github.io reference generated from the engine), **Derived** (worked out in this note; the algebra is shown), **Rule of thumb**, **Unverified**. The Luau snippets were written for this note and checked against the same maths that `lihfolk_curves.py` tests in Blender; they have not been run in a live Studio session, so test them in your place before shipping.
 
@@ -377,5 +377,10 @@ The `0.999` clamp is a defensive habit: a developer forum report described `GetP
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Flight Flocks and Path Animation]] · [[UI and GUI Animation]] · [[Game Math Start Here]] · [[VFX Design Playbook]] · [[Tween vs Spring]] · [[Procedural World Generation]]
+[[Flight Flocks and Path Animation]] · UI and GUI Animation · [[Game Math Start Here]] · VFX Design Playbook · Tween vs Spring · Procedural World Generation
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Dot and Cross Products in Gameplay]] · [[Cookbook - Math CFrame and Vectors]] · [[Intersection and Collision Math]] · [[Big Numbers Precision and Formatting]] · [[Probability and Statistics for Designers]]
+<!-- related:end -->

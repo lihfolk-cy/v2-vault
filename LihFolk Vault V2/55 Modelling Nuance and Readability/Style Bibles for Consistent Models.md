@@ -1,5 +1,5 @@
 ---
-tags: [modeling, style-bible, style-guide, art-direction, consistency, pipeline, team, validation, luau, blender]
+tags: [modeling, style-bible, style-guide, art-direction, consistency, pipeline, team, validation, luau, blender, type/guide, area/modeling]
 ---
 # Style Bibles for Consistent Models
 
@@ -9,7 +9,7 @@ tags: [modeling, style-bible, style-guide, art-direction, consistency, pipeline,
 > - Nobody reads it: 30-plus pages of prose -> 4 to 8 pages, tables and do/don't pairs
 > - Reviews turn into taste arguments: No golden assets -> Pick 3 to 5 golden assets; review side by side
 >
-> Cost: TL;DR ~120 tok · whole note ~4.0k tok. Read more: ## What a modelling style bible contains · ## Enforcing the bible automatically · ## 12. A checklist the reviewer runs · ## Common mistakes
+> Cost: TL;DR ~120 tok · whole note ~4.1k tok. Read more: ## What a modelling style bible contains · ## Enforcing the bible automatically · ## 12. A checklist the reviewer runs · ## Common mistakes
 <!-- tldr:end -->
 
 [[Environment Art Styles]] explains how to write a style down in ten sections (core rules, anatomy, shape grammar, materials, palette, tiers, motion, build steps, QA, mistakes). That is the art-direction view. This note is the modeller's view: what a style bible needs so that a new modeller, a contractor, a procedural script or an AI generator produces models that sit next to existing ones without anyone noticing a seam. The difference is precision. "Chunky with soft edges" is a mood. "Outer bevel 0.08 studs, 2 segments, on props under 3 studs" is a rule someone can follow and someone else can check.
@@ -52,7 +52,7 @@ A single image and table with the avatar proxies and the approved sizes of stand
 
 | Size band | Bevel width | Segments | Profile | Shading |
 |---|---|---|---|---|
-| Small props under 3 studs | 0.06 to 0.08 studs | 2 | Round (0.5) | Smooth, Weighted Normal |
+| Small props under 3 studs | 0.06 to 0.08 studs | 2 | Round (0.5) | Smooth, [[Weighted Normals\|Weighted Normal]] |
 | Medium props 3 to 10 studs | 0.12 to 0.2 studs | 2 | Round | Smooth, Weighted Normal |
 | Buildings and kits | 0.2 to 0.3 studs on outer corners only | 1 | Chamfer | Smooth by Angle 30 degrees |
 | Rocks and terrain props | 0.15 studs chamfer | 1 | Chamfer | Flat |
@@ -247,5 +247,10 @@ That page is enough for a new modeller to produce a matching barrel on their fir
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Keeping a Mixed Asset Library Consistent]] · [[Untextured Stylised Modelling Start Here]] · [[Low-Poly and Stylized Modeling]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[Stylised Shop Stand Worked Example]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]]
+[[Keeping a Mixed Asset Library Consistent]] · Untextured Stylised Modelling Start Here · Low-Poly and Stylized Modeling · Clean Stylised Shading - Weighted and Custom Normals · Stylised Shop Stand Worked Example · Flat Colour vs Gradient Atlas vs Vertex Colour
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Low-Poly and Stylized Modeling]] · [[Shape Language and Silhouette Testing]] · [[Stylised Shop Stand Worked Example]] · [[Hard-Surface Modeling]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[Modeling in Blender for Roblox]]
+<!-- related:end -->

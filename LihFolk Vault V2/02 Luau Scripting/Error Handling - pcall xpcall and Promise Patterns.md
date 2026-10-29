@@ -1,5 +1,5 @@
 ---
-tags: [luau, errors, pcall, xpcall, promises, async, reliability]
+tags: [luau, errors, pcall, xpcall, promises, async, reliability, type/guide, area/scripting, level/intermediate, api/DataStore, area/gameplay]
 ---
 # Error Handling - pcall xpcall and Promise Patterns
 
@@ -12,7 +12,7 @@ tags: [luau, errors, pcall, xpcall, promises, async, reliability]
 > - `xpcall` with a small, non-yielding trace handler at every catching boundary.
 > - Rethrows use level 0 or structured errors with `cause`.
 >
-> Cost: TL;DR ~180 tok · whole note ~5.5k tok. Read more: ## 4. Boundaries: where error handling belongs · ## 6. Promises: when they earn their place · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.6k tok. Read more: ## 4. Boundaries: where error handling belongs · ## 6. Promises: when they earn their place · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Error Handling and Retries]] covers the foundations: how errors propagate per thread, which Roblox APIs fail at runtime, retry with backoff, timeouts, result types and a circuit breaker. This note goes one level deeper. It covers the details of `pcall` and `xpcall` that bite in production (what they catch and what they do not, rethrowing without losing the trace, structured error values), error handling at system boundaries (module loading, remote handlers, per-entity loops), how to fingerprint errors so telemetry stays readable, and when a Promise library earns its place versus plain Luau coroutines.
@@ -461,5 +461,10 @@ Whatever you pick, apply it consistently per layer. Half the bugs in mixed codeb
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Reading Luau Errors and Stack Traces]] · [[Custom Schedulers and Coroutine Patterns]] · [[Links - Coroutines, task library and async]] · [[Building a Signal Library]] · [[Links - Error handling and debugging]] · [[Debugging Race Conditions and Yield Order]]
+[[Reading Luau Errors and Stack Traces]] · Custom Schedulers and Coroutine Patterns · Links - Coroutines, task library and async · Building a Signal Library · Links - Error handling and debugging · Debugging Race Conditions and Yield Order
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Functions Closures and Upvalues]] · [[Luau Type System and Strict Mode]] · [[Script Types and Run Context]] · [[Luau Language Essentials]] · [[Metatables and OOP - When and When Not]] · [[Luau Performance Patterns with Benchmarks]] · [[Parallel Luau and Actors]] · [[Luau Performance and Native Codegen]]
+<!-- related:end -->

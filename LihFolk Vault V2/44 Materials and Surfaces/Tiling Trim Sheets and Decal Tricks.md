@@ -1,5 +1,5 @@
 ---
-tags: [materials, textures, decals, tiling, trim-sheet, world-building, performance]
+tags: [materials, textures, decals, tiling, trim-sheet, world-building, performance, type/guide, area/materials, level/intermediate, api/ZIndex, area/performance]
 ---
 # Tiling Trim Sheets and Decal Tricks
 
@@ -12,7 +12,7 @@ tags: [materials, textures, decals, tiling, trim-sheet, world-building, performa
 > - Repetition handled at micro, meso and macro scale.
 > - Floor and wall parts snapped to tile sizes or offsets aligned by script.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.6k tok. Read more: ## 5. Pulling one trim strip onto a plain Part · ## 6. Decal tricks that are cheap · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.7k tok. Read more: ## 5. Pulling one trim strip onto a plain Part · ## 6. Decal tricks that are cheap · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Trim Sheets Atlases and Vertex Colors]] covers trim sheets as a modelling technique: layouts, TintMask, palettes and vertex colours for meshes. [[Textures Decals and Texture Memory]] covers what Decals and Textures are and how image memory works. This note sits between them and is about **surfaces built from parts and flat faces**: making a texture that truly tiles, hiding repetition at three scales, aligning tiling across neighbouring parts, pulling single trim strips onto plain Parts with `Texture`, and the decal tricks that the current `Decal` API makes possible (UV transforms, rotation, ordering and PBR maps). Most Roblox worlds are still mostly Parts. These are the tools that make those Parts look authored.
@@ -292,5 +292,10 @@ Count per view, not per place. One corridor with 30 decals is worse than a city 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Texel Density]] · [[Materials MaterialVariants and SurfaceAppearance]] · [[Draw Calls]] · [[AI Material and Texture Generation]] · [[Texturing and PBR Baking]] · [[The Gradient Palette Texture Workflow]]
+[[Texel Density]] · Materials MaterialVariants and SurfaceAppearance · Draw Calls · AI Material and Texture Generation · Texturing and PBR Baking · The Gradient Palette Texture Workflow
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Baking Lighting and Detail into Textures]] · [[Materials MaterialVariants and SurfaceAppearance]] · [[AI Material and Texture Generation]] · [[Procedural Materials and Skies - Lessons]] · [[Texturing and PBR Baking]] · [[Terrain Materials and Painting]]
+<!-- related:end -->

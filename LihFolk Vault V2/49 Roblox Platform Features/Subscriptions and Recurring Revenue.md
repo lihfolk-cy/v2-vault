@@ -1,5 +1,5 @@
 ---
-tags: [platform-features, subscriptions, monetization, recurring-revenue, marketplaceservice, webhooks, retention, luau, strict]
+tags: [platform-features, subscriptions, monetization, recurring-revenue, marketplaceservice, webhooks, retention, luau, strict, type/guide, area/platform, level/intermediate]
 ---
 # Subscriptions and Recurring Revenue
 
@@ -12,7 +12,7 @@ tags: [platform-features, subscriptions, monetization, recurring-revenue, market
 > - Cycle grant keyed on `CycleStartTime`, saved with the profile
 > - Refresh on join, on `UserSubscriptionStatusChanged` and every 15 minutes
 >
-> Cost: TL;DR ~170 tok · whole note ~5.7k tok. Read more: ## 1. The state machine · ## 2. Per-cycle grants instead of per-day guesses · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.8k tok. Read more: ## 1. The state machine · ## 2. Per-cycle grants instead of per-day guesses · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 [[Subscriptions and Premium Payouts]] covers what experience subscriptions are, how they pay, the platform rules, the basic status check and Roblox Plus. This note goes underneath: the subscription **state machine** and its grace period, granting benefits per **paid cycle** rather than per day, the arithmetic of churn and lifetime value, benefit design that does not trap you on a content treadmill, honest cancellation, webhooks, and the edge cases (refunds, lapses, region and platform eligibility, price changes, replacing a pass) that decide whether a subscription earns trust or support tickets.
@@ -319,5 +319,10 @@ Test the state machine, not just the happy path. Useful cases: first purchase wi
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Commerce and Physical Goods]] · [[Robux Price Points and Offer Design]] · [[Skill - Roblox Monetization Compliance]] · [[DevEx and Cashing Out]] · [[Currency Architecture - Soft Hard and Event Currencies]] · [[Working with Contractors and Revenue Splits]]
+[[Commerce and Physical Goods]] · [[Robux Price Points and Offer Design]] · Skill - Roblox Monetization Compliance · DevEx and Cashing Out · Currency Architecture - Soft Hard and Event Currencies · Working with Contractors and Revenue Splits
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Discovery and Monetization Changes 2025-2026]] · [[Regional Compliance - Paid Random Items and Country Rules]] · [[Badges and Achievement Design]] · [[Experience Notifications and Return Prompts]] · [[Friend Invites Referrals and Experience Invites]] · [[Roblox Changes 2025-2026]]
+<!-- related:end -->

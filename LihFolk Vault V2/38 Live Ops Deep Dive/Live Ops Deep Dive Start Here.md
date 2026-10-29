@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [live-ops, hub, start-here, seasons, events, monetization, communication]
+tags: [live-ops, hub, start-here, seasons, events, monetization, communication, type/hub, area/liveops, level/beginner, area/monetization]
 ---
 # Live Ops Deep Dive Start Here
 
@@ -47,5 +47,5 @@ Facts are labelled **Roblox docs (as of October 2026)**, **measured in the refer
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Feature Flags]] · [[Economy Design Start Here]] · [[Marketing and Growth Start Here]] · [[Retention Cohorts]] · [[Team Collaboration Start Here]] · [[Faucets and Sinks]]
+[[Feature Flags]] · Economy Design Start Here · Marketing and Growth Start Here · Retention Cohorts · Team Collaboration Start Here · Faucets and Sinks
 <!-- auto-links:end -->

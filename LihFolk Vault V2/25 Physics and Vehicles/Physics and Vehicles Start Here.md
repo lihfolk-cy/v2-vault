@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [physics, vehicles, hub, start-here]
+tags: [physics, vehicles, hub, start-here, type/hub, area/physics, level/beginner]
 ---
 # Physics and Vehicles Start Here
 
@@ -27,7 +27,7 @@ The base layer; unfamiliar terms are explained there.
 | [[Aircraft and Flight Models]] | Arcade, simple aerodynamic and engine fluid-force tiers, lift and drag calibrated from cruise speed, stalls, helicopters, controls on every device, camera, streaming at speed | You are building planes, helicopters, flying mounts or jetpacks |
 | [[Projectiles and Ballistics]] | Simulated points versus physical parts, closed-form motion, aiming with drop and leading, swept casts, shooter-predicts-server-decides networking, validation, spread seeds, ricochet and penetration | You are building guns, bows, spells or thrown weapons |
 | [[Destruction and Fracture]] | Swap-and-fake, pre-fractured welds with connectivity, runtime fracture with GeometryService, explosions, terrain and voxel destruction, destruction budgets and rate limits | Anything in your game breaks |
-| [[Ropes Chains and Soft Bodies]] | What RopeConstraint really is, stable physical chains and bridges, client-side verlet ropes and cloth, spring-driven bones for jiggle, a grappling hook worked example | You need ropes, capes, flags, tails or anything squishy |
+| [[Ropes Chains and Soft Bodies]] | What [[RopeConstraint]] really is, stable physical chains and bridges, client-side verlet ropes and cloth, spring-driven bones for jiggle, a grappling hook worked example | You need ropes, capes, flags, tails or anything squishy |
 
 ## Themes that run through every note
 
@@ -48,5 +48,5 @@ The base layer; unfamiliar terms are explained there.
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Constraints]] · [[Racing Laps and Checkpoints End to End]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Resource Library - Physics]] · [[Snippets - Ragdoll]]
+[[Links - Constraints]] · Racing Laps and Checkpoints End to End · Multi-Bone IK - FABRIK and CCD · Genre Playbook - Roleplay and Social Hangouts · Resource Library - Physics · Snippets - Ragdoll
 <!-- auto-links:end -->

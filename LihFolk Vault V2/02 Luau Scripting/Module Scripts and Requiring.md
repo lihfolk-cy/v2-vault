@@ -1,5 +1,5 @@
 ---
-tags: [luau, modulescript, require, architecture, caching]
+tags: [luau, modulescript, require, architecture, caching, type/guide, area/scripting, level/intermediate, api/Script]
 ---
 # Module Scripts and Requiring
 
@@ -12,7 +12,7 @@ tags: [luau, modulescript, require, architecture, caching]
 > - No yields at module top level.
 > - No cycles; shared dependencies extracted.
 >
-> Cost: TL;DR ~170 tok · whole note ~3.5k tok. Read more: ## 2. Caching: once per VM · ## 7. The Source size limit and splitting modules · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~3.6k tok. Read more: ## 2. Caching: once per VM · ## 7. The Source size limit and splitting modules · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A `ModuleScript` is code that runs when something calls `require` on it and returns exactly one value, usually a table of functions. Modules are how Roblox code is shared and organized: one entry script per side requires a tree of modules. This note explains the caching rules (once per Luau VM, which is not "once per game"), require by instance and by string path, cyclic requires, yielding in modules, initialization order, the 200,000-character Source limit and how to split large modules safely, and how to test edits when `require` hands you a cached copy.
@@ -276,5 +276,10 @@ Rule of thumb: one module per system or concept, typically 100 to 1,500 lines. M
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Module Design and Dependency Injection]] · [[Dependency Injection in Luau]] · [[Links - Script types]] · [[Advanced Luau Start Here]] · [[MCP Workflows for Scripting and Debugging]] · [[Links - OOP and module design]]
+[[Module Design and Dependency Injection]] · Dependency Injection in Luau · Links - Script types · Advanced Luau Start Here · MCP Workflows for Scripting and Debugging · Links - OOP and module design
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Dependency Injection in Luau]] · [[Luau Type System and Strict Mode]] · [[Metatables and OOP - When and When Not]] · [[Events Signals and Connections]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Luau Performance and Native Codegen]] · [[CollectionService Patterns]] · [[Task Library Coroutines and Yielding]] · [[Error Handling and Retries]]
+<!-- related:end -->

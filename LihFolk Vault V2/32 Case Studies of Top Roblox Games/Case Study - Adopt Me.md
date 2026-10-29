@@ -1,5 +1,5 @@
 ---
-tags: [case-study, top-games, pet-care, roleplay, trading, live-ops, monetization, thumbnails]
+tags: [case-study, top-games, pet-care, roleplay, trading, live-ops, monetization, thumbnails, type/case-study, area/design, level/intermediate, area/monetization]
 ---
 # Case Study - Adopt Me
 
@@ -12,7 +12,7 @@ tags: [case-study, top-games, pet-care, roleplay, trading, live-ops, monetizatio
 > - Event currency is event-only; any multiplier pass is cheap and expires with the event.
 > - Retired items or passes are announced before they leave.
 >
-> Cost: TL;DR ~140 tok · whole note ~5.1k tok. Read more: ## 1. Snapshot · ## 6. What to copy and what not to copy · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~5.2k tok. Read more: ## 1. Snapshot · ## 6. What to copy and what not to copy · ## Checklist
 <!-- tldr:end -->
 
 Adopt Me is the clearest example on Roblox of a game that turned a light roleplay toy (adopt a baby, decorate a house) into a collection and trading economy, then kept that economy alive for years with a strict event calendar. It is not a game you should clone. It is a game you should study for three things: how a care loop makes cute objects feel earned, how a trade layer turns a single player collection into a social status system, and how a studio ships a seasonal event almost every few weeks without breaking the economy that pays for everything.
@@ -215,5 +215,10 @@ If you want the lesson without the risk: one pet type family (5 rarity tiers), a
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Case Study - Dress to Impress]] · [[Case Study - Pet Simulator 99]] · [[Case Study - Grow a Garden]] · [[Top Games Case Studies Start Here]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Roleplay and Social Hangouts]]
+[[Case Study - Dress to Impress]] · [[Case Study - Pet Simulator 99]] · [[Case Study - Grow a Garden]] · [[Top Games Case Studies Start Here]] · [[Genre Playbook - Simulators]] · Genre Playbook - Roleplay and Social Hangouts
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Case Study - Steal a Brainrot]] · [[Case Study - Fisch]] · [[Case Study - Doors]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - Murder Mystery 2]] · [[Case Study - Jailbreak]] · [[Case Study - Tower Defense Simulator]] · [[Case Study - Rivals]]
+<!-- related:end -->

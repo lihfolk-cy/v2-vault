@@ -1,5 +1,5 @@
 ---
-tags: [physics, constraints, ropes, chains, soft-bodies, verlet, bones, procedural]
+tags: [physics, constraints, ropes, chains, soft-bodies, verlet, bones, procedural, type/guide, area/physics, level/intermediate, api/RopeConstraint]
 ---
 # Ropes Chains and Soft Bodies
 
@@ -12,7 +12,7 @@ tags: [physics, constraints, ropes, chains, soft-bodies, verlet, bones, procedur
 > - RopeConstraint uses: restitution chosen, winch force above weight, explicit ownership.
 > - Physical chains: few fat links, matched masses, no self-collision, limits on.
 >
-> Cost: TL;DR ~170 tok · whole note ~4.7k tok. Read more: ## 4. Client-side verlet: ropes and cloth for free · ## 7. Worked example: a grappling hook · ## 8. Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.9k tok. Read more: ## 4. Client-side verlet: ropes and cloth for free · ## 7. Worked example: a grappling hook · ## 8. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox has a `RopeConstraint`, and it is not a rope. It is a maximum-distance limit between two attachments with a visual line drawn between them. That is exactly what you want for a grappling hook or a tethered balloon, and exactly wrong for a rope that drapes over a branch, a chain that swings links against a wall, a flag, a jiggly slime or a bridge that sags under players. This note covers what the built-in rope does and does not do, physical chains built from parts, client-side verlet ropes and cloth that cost almost nothing, bone-driven soft bodies on skinned meshes, the grappling hook as a worked example, and which approach to pick for each job.
@@ -284,7 +284,7 @@ Server movement checks must allow grapple speeds while a grapple is active ([[De
 
 | Mistake | What you see | Fix |
 |---|---|---|
-| Expecting RopeConstraint to collide or wrap | Rope passes through beams and poles | Accept it, or visual verlet with collision |
+| Expecting [[RopeConstraint]] to collide or wrap | Rope passes through beams and poles | Accept it, or visual verlet with collision |
 | Negative WinchSpeed to reel out | Winch stops instead of reversing | Positive speed, change `WinchTarget` (Docs) |
 | Winch force below weight | Winch does nothing | `WinchForce > mass * g` with headroom |
 | Chain of 60 tiny links | Jitter, explosions | 8 to 15 fat links, similar masses |
@@ -311,5 +311,10 @@ Server movement checks must allow grapple speeds while a grapple is active ([[De
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Constraints]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Cars with Constraints - Suspension Steering and Drive]] · [[Links - Beams and trails]] · [[Squash Stretch and Anticipation in UI and Characters]] · [[Rigging in Blender]]
+[[Links - Constraints]] · Multi-Bone IK - FABRIK and CCD · [[Cars with Constraints - Suspension Steering and Drive]] · Links - Beams and trails · Squash Stretch and Anticipation in UI and Characters · Rigging in Blender
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Choosing a Car Chassis - Raycast Suspension vs Constraint Builds vs Community Kits]] · [[Standing on Moving Vehicles and Platforms - Keeping Players Glued]] · [[Boats Buoyancy and Water]] · [[Centre of Mass, Anti-Flip and Self-Righting]] · [[Aircraft and Flight Models]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[Rides and Attractions - Roller Coasters, Ziplines, Elevators and Cable Cars]] · [[Vehicle Damage, Repair and Wreck States]]
+<!-- related:end -->

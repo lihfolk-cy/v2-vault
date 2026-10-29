@@ -1,5 +1,5 @@
 ---
-tags: [gameplay, combat, hitbox, hit-detection, latency, server-authority]
+tags: [gameplay, combat, hitbox, hit-detection, latency, server-authority, type/guide, area/gameplay, level/intermediate, api/Touched, api/Player]
 ---
 # Hitboxes and Hit Detection
 
@@ -12,7 +12,7 @@ tags: [gameplay, combat, hitbox, hit-detection, latency, server-authority]
 > - Server hit time derived from the animation markers, enforced by a test.
 > - Reach validation with logged distances and latency tolerance.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.9k tok. Read more: ## 3. Server hit timing from data · ## 5. Enemy attacks on players: telegraphs and shapes · ## 8. Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.0k tok. Read more: ## 3. Server hit timing from data · ## 5. Enemy attacks on players: telegraphs and shapes · ## 8. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Hit detection decides whether a swing, shot or spell touched something. On Roblox it is shaped by one hard fact: the attacker, the victim and the server all see slightly different worlds, because each player's character is simulated on their own client and arrives at others 100 to 300 ms late. Every design is a trade between **feel** (the attacker's screen is right), **fairness** (the victim's screen is right) and **security** (the server's view is right). This note lays out the techniques, how to time hits on the server, how to handle latency, and how one production game did melee for players and telegraphed attacks for enemies.
@@ -267,5 +267,10 @@ Players forgive a damage number that appears 100 ms late; they do not forgive a 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Detecting Combat Exploits - Reach Rate and Aim]] · [[Melee Combat System End to End]] · [[Combat Animation Craft]] · [[Genre Playbook - Battlegrounds and Arena Fighters]] · [[Client Prediction and Reconciliation for Combat]] · [[Anticipation]]
+[[Detecting Combat Exploits - Reach Rate and Aim]] · Melee Combat System End to End · Combat Animation Craft · Genre Playbook - Battlegrounds and Arena Fighters · Client Prediction and Reconciliation for Combat · Anticipation
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Client Prediction and Reconciliation for Combat]] · [[Melee Combat System End to End]] · [[AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses]] · [[Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Explosions - Radius Damage, Falloff and Cover Checks]] · [[Grabs, Carries and Throws - Moving Players Safely]] · [[Status Effects Buffs and Stacking Rules]] · [[Squad AI - Attack Tokens, Flanking and Attacker Limits]] · [[Custom Character Controllers]]
+<!-- related:end -->

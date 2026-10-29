@@ -1,5 +1,5 @@
 ---
-tags: [field-notes, input, gamepad, proximityprompt, coregui, playerlist, console]
+tags: [field-notes, input, gamepad, proximityprompt, coregui, playerlist, console, type/guide, area/ui, level/intermediate, api/ProximityPrompt, area/ai]
 ---
 # ProximityPrompt Gamepad Keys and the Hidden PlayerList Tab
 
@@ -12,7 +12,7 @@ tags: [field-notes, input, gamepad, proximityprompt, coregui, playerlist, consol
 > - Remap applied on start, on `DescendantAdded` and on `PromptShown`.
 > - Deliberate exceptions marked with an attribute.
 >
-> Cost: TL;DR ~180 tok · whole note ~1.5k tok. Read more: ## 1. Prompt keys collide with ability binds · ## 2. Hiding the player list kills Tab · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~1.6k tok. Read more: ## 1. Prompt keys collide with ability binds · ## 2. Hiding the player list kills Tab · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Two small defaults that bite games with a full controller layout. First, every `ProximityPrompt` uses `ButtonX` on gamepad by default, which is also a natural ability or attack button, so walking past a chest while pressing your ability does both. Second, hiding the CoreGui player list also removes the Tab key's toggle, and PC players lose a feature they use constantly. Both are one-time fixes; both are easy to forget. Controller design in general is in [[Gamepad and Console UX]]; remapping for accessibility in [[Input Remapping and One-Handed Play]].
@@ -118,5 +118,10 @@ If you replaced the list with your own leaderboard, bind Tab to that instead. Ei
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Gamepad and Console UX]] · [[Input Remapping and One-Handed Play]] · [[Input - UserInputService and ContextActionService]] · [[Shift-Lock Sprint and Gamepad B for Menus]] · [[Responsive UI for Phone Tablet Console and PC]] · [[Field Notes Start Here]]
+[[Gamepad and Console UX]] · Input Remapping and One-Handed Play · Input - UserInputService and ContextActionService · [[Shift-Lock Sprint and Gamepad B for Menus]] · Responsive UI for Phone Tablet Console and PC · [[Field Notes Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Hold-to-Attack Input That Never Sticks]] · [[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[Shared Close Buttons and Headers Across Many Screens]] · [[Centre-Screen Announcements That Stay Centred]] · [[Springs That Survive Long Frames - dt Clamps and NaN Guards]] · [[Layering Camera Feedback on the Default Camera]] · [[A Stuck Player Watchdog That Logs the Cause]] · [[Moving Data Out of a Play Session]]
+<!-- related:end -->

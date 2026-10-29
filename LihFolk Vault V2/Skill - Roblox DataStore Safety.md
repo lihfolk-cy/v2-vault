@@ -1,5 +1,5 @@
 ---
-tags: [ai, agents, ai-skill, datastore, data]
+tags: [ai, agents, ai-skill, datastore, data, type/guide, area/data, level/intermediate, api/DataStore, area/ai]
 ---
 # Skill - Roblox DataStore Safety
 
@@ -40,5 +40,5 @@ The experience write budget appears as 300 or 250 plus a per-player amount on tw
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Session Lock]] · [[Idempotency]] · [[Skill - Roblox Vault Research]] · [[Data Schema Versioning]] · [[Developer Products and ProcessReceipt]] · [[Error Handling and Retries]]
+[[Session Lock]] · Idempotency · [[Skill - Roblox Vault Research]] · Data Schema Versioning · Developer Products and ProcessReceipt · Error Handling and Retries
 <!-- auto-links:end -->

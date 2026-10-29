@@ -1,5 +1,5 @@
 ---
-tags: [safety, age-checks, chat, textchatservice, filtering, compliance, luau]
+tags: [safety, age-checks, chat, textchatservice, filtering, compliance, luau, type/guide, area/monetization, level/intermediate, api/TextChatService, area/scripting]
 ---
 # Age Checks and Safety Features
 
@@ -220,5 +220,10 @@ If your game is cooperative and chat matters, the Text Chat matchmaking signal h
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Text Chat Customization with TextChatService]] · [[Community and Moderation Start Here]] · [[Discord Servers for Roblox Games]] · [[Voice Chat and Safety Features]] · [[Links - Chat and text filtering]] · [[Roblox Policies on AI-Generated Content]]
+[[Text Chat Customization with TextChatService]] · Community and Moderation Start Here · Discord Servers for Roblox Games · Voice Chat and Safety Features · Links - Chat and text filtering · Roblox Policies on AI-Generated Content
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Policy and Age Rules 2026]] · [[Voice Chat and Safety Features]] · [[Paid Random Items and Odds Disclosure in Practice]] · [[Monetization Overview]] · [[Ads and Rewarded Video]] · [[Discovery and the Algorithm]] · [[Live Ops Events and Updates]]
+<!-- related:end -->

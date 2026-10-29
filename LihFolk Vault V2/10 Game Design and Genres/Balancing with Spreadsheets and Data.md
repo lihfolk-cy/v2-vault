@@ -1,5 +1,5 @@
 ---
-tags: [game-design, balancing, spreadsheets, economy, simulation, analytics]
+tags: [game-design, balancing, spreadsheets, economy, simulation, analytics, type/guide, area/design, level/intermediate, area/data]
 ---
 # Balancing with Spreadsheets and Data
 
@@ -12,7 +12,7 @@ tags: [game-design, balancing, spreadsheets, economy, simulation, analytics]
 > - Minutes-per-step plotted; spikes flagged automatically.
 > - Prices expressed as minutes of income at the unlocking zone.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.4k tok. Read more: ## 4. Odds and rarity maths · ## 7. Simulate the randomness · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.5k tok. Read more: ## 4. Odds and rarity maths · ## 7. Simulate the randomness · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 Balancing is turning design intent ("zone 5 should take about ten minutes", "a Mythic should feel twice as strong as a Legendary") into numbers, then checking those numbers against what real players do. The spreadsheet is where intent becomes numbers; simulation checks the randomness; live analytics checks the players. This note shows how to lay out a balance sheet for a Roblox game, the formulas that matter (curves, time per step, expected value, odds, power fits), how to simulate RNG in Luau, and how to close the loop with live data.
@@ -191,7 +191,7 @@ For each currency, list every source and sink with a **per-hour** rate for a rep
 | Rebirth | Sink (reset) | | | wipes balance |
 
 Checks:
-- **Share of income from non-play sources.** If quests, gifts and offline earnings exceed about a third of income, the core loop is no longer what pays (rule of thumb).
+- **Share of income from non-play sources.** If quests, gifts and [[offline earnings]] exceed about a third of income, the core loop is no longer what pays (rule of thumb).
 - **Balance growth.** If the median player's balance grows faster than prices, add sinks or slow sources.
 - **Event deltas.** Model every event as a temporary change in the table, as the docs' fishing example warns.
 
@@ -346,5 +346,10 @@ Add similar checks for item tables (probabilities sum to 1, rarer items have hig
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Rarity Ladders and Drop Pacing Math]] · [[Expected Value]] · [[Drop Tables Rarity and Pity Systems]] · [[Economy Inflation Sinks and Faucets Math]] · [[Economy Design Start Here]] · [[Simulating an Economy Before Launch]]
+[[Rarity Ladders and Drop Pacing Math]] · [[Expected Value]] · Drop Tables Rarity and Pity Systems · Economy Inflation Sinks and Faucets Math · Economy Design Start Here · Simulating an Economy Before Launch
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Economy Inflation Sinks and Faucets Math]] · [[Genre Playbook - Simulators]] · [[Simulator and RNG Genre Teardown]] · [[Expected Value]] · [[Genre Playbook - Combat and RPG]] · [[Retention and Return Hooks]] · [[Genre Playbook - Tycoons]] · [[Genre Playbook - Tower Defense]] · [[First-Time User Experience and Onboarding]] · [[Time-to-Kill Math and a Weapon Balance Sheet]]
+<!-- related:end -->

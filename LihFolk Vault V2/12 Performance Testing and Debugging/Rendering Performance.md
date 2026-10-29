@@ -1,5 +1,5 @@
 ---
-tags: [performance, rendering, draw-calls, lod, particles, highlights, shadows]
+tags: [performance, rendering, draw-calls, lod, particles, highlights, shadows, type/guide, area/performance, level/intermediate, api/SurfaceAppearance, area/vfx]
 ---
 # Rendering Performance
 
@@ -12,7 +12,7 @@ tags: [performance, rendering, draw-calls, lod, particles, highlights, shadows]
 > - Repeated meshes share ids and appearance so they instance.
 > - `RenderFidelity` Automatic or Performance except where justified.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.7k tok. Read more: ## 6. Effects budgets · ## 8. Sleep ambient effects by distance and quality · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.8k tok. Read more: ## 6. Effects budgets · ## 8. Sleep ambient effects by distance and quality · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Rendering is usually the largest slice of a client frame, and it is the slice you control least directly: you cannot write the renderer, you can only decide what you ask it to draw. This note covers what makes Roblox rendering expensive (draw calls, geometry complexity, overdraw, lights and shadows, effects, UI), how instancing works, the engine's level-of-detail options and when to switch them off, effect budgets with real production numbers, the Highlight limit, and gating ambient effects by distance and graphics quality.
@@ -261,5 +261,10 @@ See [[ScreenGui Fundamentals]] and [[HUD Design]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[VFX Performance Budgets and Culling]] · [[Draw Calls]] · [[Performance Fundamentals]] · [[Mesh Optimization for Mobile]] · [[Juice on a Budget - Mobile and Low-End]] · [[Resource Library - Visual Effects]]
+[[VFX Performance Budgets and Culling]] · Draw Calls · [[Performance Fundamentals]] · Mesh Optimization for Mobile · Juice on a Budget - Mobile and Low-End · Resource Library - Visual Effects
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Mesh Optimization for Mobile]] · [[Draw Calls]] · [[Weather Performance Budgets and Quality Tiers]] · [[Client Zone Culling for Interiors and Cities]] · [[Developer Console and Stats]] · [[Physics Performance]] · [[Memory Budgets and Leaks]] · [[QA Checklists Before Release]] · [[Network Bandwidth Budgets and Measuring Them]]
+<!-- related:end -->

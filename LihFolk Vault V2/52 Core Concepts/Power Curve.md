@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, progression, economy, balancing, math]
+tags: [core-concept, progression, economy, balancing, math, type/reference, area/economy, level/beginner, area/design]
 ---
 # Power Curve
 
@@ -10,7 +10,7 @@ tags: [core-concept, progression, economy, balancing, math]
 > - Exponential income demands exponential costs.
 > - Walls are a design choice. A deliberate steepening before a rebirth or a new zone tells the player "change strategy".
 >
-> Cost: TL;DR ~130 tok · whole note ~930 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~980 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 A **power curve** describes how a player's strength (damage, income, speed) grows as they progress, usually plotted against level, time played or currency spent. It is always paired with a **cost curve**: how much each next step costs. The relationship between the two decides pacing.
@@ -67,5 +67,10 @@ Related concepts: [[Faucets and Sinks]], [[Expected Value]], [[Core Loop]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Economy Inflation Sinks and Faucets Math]] · [[Economies and Currencies]] · [[Genre Playbook - Tycoons]] · [[Economy Design Start Here]] · [[Simulating an Economy Before Launch]] · [[Simulator and RNG Genre Teardown]] · [[Core Concepts Start Here]]
+[[Economy Inflation Sinks and Faucets Math]] · Economies and Currencies · Genre Playbook - Tycoons · Economy Design Start Here · Simulating an Economy Before Launch · Simulator and RNG Genre Teardown · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Faucets and Sinks]] · [[Expected Value]] · [[Telemetry Events]] · [[Variance]] · [[Easing]] · [[Pity Timer]]
+<!-- related:end -->

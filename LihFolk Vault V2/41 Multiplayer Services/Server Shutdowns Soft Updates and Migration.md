@@ -1,5 +1,5 @@
 ---
-tags: [multiplayer, updates, shutdown, migration, versioning, live-ops, configs, luau, strict]
+tags: [multiplayer, updates, shutdown, migration, versioning, live-ops, configs, luau, strict, type/guide, area/networking, level/intermediate]
 ---
 # Server Shutdowns Soft Updates and Migration
 
@@ -12,7 +12,7 @@ tags: [multiplayer, updates, shutdown, migration, versioning, live-ops, configs,
 > - Profile loader runs the schema guard; old builds never save newer data.
 > - Schema changes ship as expand, then contract.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.2k tok. Read more: ## 1. What Roblox does for you (and what it does not) · ## 5. The code · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.3k tok. Read more: ## 1. What Roblox does for you (and what it does not) · ## 5. The code · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Publishing a new version is the easy part. The hard part is the hour after: old and new servers running side by side, players hopping between them through invites and teleports, a lobby on version 41 sending players to a match place on version 17, a profile saved by new code being loaded and overwritten by old code, a match server cut off mid-round with rewards half granted. [[Server Lifecycle and Shutdown]] covers the mechanics (`BindToClose`, the 30 second window, `ServerRestartScheduled`, a basic soft shutdown). This note covers **migration**: how to move a live multi-server, multi-place game from one version to the next without data damage, without stranding parties, and with the fewest visible disconnects.
@@ -339,5 +339,10 @@ A single-place game with no persistent schema change and no long activities can 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Places Universes and Experience Settings]] · [[Data Schema Versioning]] · [[Reserved and Private Servers in Practice]] · [[Teleporting and Multi-Place Games]] · [[Publishing an Experience]] · [[Build Test and Release Pipeline]]
+[[Places Universes and Experience Settings]] · Data Schema Versioning · [[Reserved and Private Servers in Practice]] · Teleporting and Multi-Place Games · Publishing an Experience · Build Test and Release Pipeline
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Server Browsers and Server Lists]] · [[Server Hop Rejoin and Server Lists with Ping]] · [[Publishing an Experience]] · [[Matchmaking Queues with MemoryStore]] · [[Patch Notes and Player Communication]] · [[Build Test and Release Pipeline]]
+<!-- related:end -->

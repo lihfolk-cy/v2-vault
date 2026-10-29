@@ -1,5 +1,5 @@
 ---
-tags: [studio, places, universe, settings, environments, publishing]
+tags: [studio, places, universe, settings, environments, publishing, type/guide, area/studio, level/intermediate]
 ---
 # Places Universes and Experience Settings
 
@@ -12,7 +12,7 @@ tags: [studio, places, universe, settings, environments, publishing]
 > - Studio API access on only where data is disposable.
 > - Environment module for ids; no ids scattered in scripts.
 >
-> Cost: TL;DR ~150 tok · whole note ~3.3k tok. Read more: ## 2. Creating and managing places · ## 5. Environments: dev, staging, live · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.4k tok. Read more: ## 2. Creating and managing places · ## 5. Environments: dev, staging, live · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 A Roblox "game" (the docs also say experience) is a **universe** containing one or more **places**. Players enter through the **start place**; other places are reached only by teleport. Settings live at three levels: the universe (name, access, monetization, security toggles), each place (its data model, server size, version history), and the Creator Hub (audience, configs, server management). Getting this structure right early decides how you separate development from live, how you test risky changes, and how you ship without breaking players. Facts are from the docs as of October 2026.
@@ -202,5 +202,10 @@ Limitation (Docs): the place publishing API does not update `EditableImage`, `Ed
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Build Test and Release Pipeline]] · [[Server Shutdowns Soft Updates and Migration]] · [[Code Pipeline - Rojo Git and CI]] · [[Asset Upload Automation with Open Cloud]] · [[Packages and Shared Assets Across Places]] · [[Links - Settings and publishing]]
+[[Build Test and Release Pipeline]] · Server Shutdowns Soft Updates and Migration · Code Pipeline - Rojo Git and CI · Asset Upload Automation with Open Cloud · Packages and Shared Assets Across Places · Links - Settings and publishing
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Server Shutdowns Soft Updates and Migration]] · [[Packages and Asset Reuse]] · [[Studio Interface Tour]] · [[Command Bar and Studio Scripting]] · [[Testing Modes - Play Run and Multi-Client]] · [[Creator Store and Toolbox Safety]] · [[Studio Settings and Shortcuts]] · [[Plugins - Using and Writing]] · [[Studio Assistant and AI Tools]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [game-design, genre, roleplay, hangout, social, expression, safety]
+tags: [game-design, genre, roleplay, hangout, social, expression, safety, type/guide, area/design, level/intermediate, api/CollectionService, api/Player]
 ---
 # Genre Playbook - Roleplay and Social Hangouts
 
@@ -12,7 +12,7 @@ tags: [game-design, genre, roleplay, hangout, social, expression, safety]
 > - Expression tools: outfits, emotes, props, houses, vehicles, camera mode.
 > - Non-chat communication for everyone.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.3k tok. Read more: ## 5. Houses and permissions · ## 7. Safety: the core of the genre · ## 11. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.5k tok. Read more: ## 5. Houses and permissions · ## 7. Safety: the core of the genre · ## 11. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 Roleplay (RP) towns, life games, pet-raising worlds and hangouts are among the most played experiences on Roblox, and they break most rules in this folder: they have weak or no core loops in the usual sense, little progression, and almost no failure. What they offer instead is a **stage**: places, props, outfits, vehicles, houses and roles that players use to make their own stories with friends. The docs list Roleplaying and Customization among the platform's common genres and cite an RP town's hide-the-UI "Creator Cam" as a feature built for content creators (Docs, "Design for Roblox"). This playbook covers what makes a good stage, expression tools, the light systems that support RP, server and performance design, and the safety work these genres demand.
@@ -260,5 +260,10 @@ The reference project is a combat game, but two of its social decisions transfer
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Case Study - Brookhaven RP]] · [[Genre Playbook - Racing and Driving]] · [[Community and Moderation Start Here]] · [[Player Reports and In-Game Moderation]] · [[Top Games Case Studies Start Here]] · [[Physics and Vehicles Start Here]]
+[[Case Study - Brookhaven RP]] · [[Genre Playbook - Racing and Driving]] · Community and Moderation Start Here · Player Reports and In-Game Moderation · Top Games Case Studies Start Here · Physics and Vehicles Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Genre Playbook - Open-World City and Crime Roleplay]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Survival and Crafting]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Tycoons]] · [[Genre Playbook - Social Deduction and Murder Mystery]] · [[Genre Playbook - Horror and Story]] · [[Simulator and RNG Genre Teardown]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [export, blender, fbx, gltf, glb, import]
+tags: [export, blender, fbx, gltf, glb, import, type/guide, area/animation, level/intermediate, area/modeling]
 ---
 # Exporting FBX vs GLB
 
@@ -12,7 +12,7 @@ tags: [export, blender, fbx, gltf, glb, import]
 > - Faces -Y, final stud height, feet on Z = 0.
 > - Weights limited to 4 and normalised; no zero-weight vertices.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.6k tok. Read more: ## 3. GLB export: settings and the reasons for them · ## 4. FBX export: settings and the reasons for them · ## 7. Pre-export checklist · ## Common mistakes
+> Cost: TL;DR ~140 tok · whole note ~3.7k tok. Read more: ## 3. GLB export: settings and the reasons for them · ## 4. FBX export: settings and the reasons for them · ## 7. Pre-export checklist · ## Common mistakes
 <!-- tldr:end -->
 
 Studio's 3D Importer reads `.fbx`, `.gltf` / `.glb` and `.obj` (Roblox docs). FBX and glTF both carry multiple meshes, PBR textures, cage meshes, rigs, avatar components, animation data and vertex colours. So the choice is not "which one works" but "which one fails in ways you can control". This note compares them as they behave on the Blender to Roblox route, lists the export settings that matter and why, and records what one production game measured.
@@ -57,11 +57,11 @@ The reference project exported every creature with the same keyword set from bac
 | Armature > Use Rest Position | on (default) | Rest pose is the bind pose, not whatever frame the timeline sits on |
 | Armature > Export Deformation Bones Only | on if you have control bones; off if every bone deforms or is a socket | Keeps IK and mechanism bones out of Roblox |
 | Skinning > Bone influences | 4; Include All Bone Influences **off** | Roblox's limit; but limit in Blender first so preview matches |
-| Shape Keys | off for bodies | Not used by Roblox bodies (heads use bones plus FACS frames) |
+| Shape Keys | off for bodies | Not used by Roblox bodies (heads use bones plus [[FACS]] frames) |
 | Animation mode | Actions | One glTF animation per Action |
 | Export all Armature Actions | on | All clips of the single armature, even ones not on the NLA |
 | Reset pose bones between actions | **on** | Without it, a bone not keyed in clip B keeps clip A's last pose in the export |
-| Always Sample Animations | on, sampling rate 1 frame | Bakes constraints, drivers, IK and Bezier handles into plain keys |
+| Always Sample Animations | on, sampling rate 1 frame | Bakes constraints, drivers, IK and [[Bezier Curves\|Bezier]] handles into plain keys |
 | Optimize Animation Size | **off** | When on, channels whose keys are all identical can be removed, so a bone that holds still in a clip becomes un-keyed. In Roblox an un-keyed joint lets lower-priority tracks (or rest) show through, which is a different result |
 | Set all glTF Animation starting at 0 | on | Clips start at time 0 in Roblox |
 | One armature per file | yes | Project rule; multi-armature exports confuse the "all actions" mode and the importer's rig detection |
@@ -165,5 +165,10 @@ If you build clips from your own exported data instead (recommended for anything
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Exporting and Validating Models for Roblox]] · [[Moon Animator and Third-Party Tools]] · [[Skill - Roblox Asset Import]] · [[Facial Animation and Dynamic Heads]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Modeling in Blender for Roblox]] · [[Animation Start Here]]
+[[Exporting and Validating Models for Roblox]] · [[Moon Animator and Third-Party Tools]] · Skill - Roblox Asset Import · [[Facial Animation and Dynamic Heads]] · Other Modeling Tools - Maya Max ZBrush MagicaVoxel · Modeling in Blender for Roblox · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[AI Pitfalls - Assets and Import]] · [[Bones and Skinned Meshes]] · [[Creature Rig Conventions]] · [[Blender Workflow for Roblox Creators]] · [[Retargeting Animations Between Rigs]] · [[Layered Clothing Cages and Animation]] · [[Weapon Design Rig Builder]] · [[Animation Editor Advanced]] · [[LihFolk R15 Keyframe Pipeline]] · [[Custom Characters and StarterCharacter]]
+<!-- related:end -->

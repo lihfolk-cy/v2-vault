@@ -1,5 +1,5 @@
 ---
-tags: [performance, memory, leaks, luau-heap, pooling, instances]
+tags: [performance, memory, leaks, luau-heap, pooling, instances, type/guide, area/performance, level/advanced, api/PlayerRemoving, area/scripting, api/Model]
 ---
 # Memory Budgets and Leaks
 
@@ -12,7 +12,7 @@ tags: [performance, memory, leaks, luau-heap, pooling, instances]
 > - Soak tests exist for respawn, zone change, menu open/close, equip/unequip.
 > - Every system with connections has a cleanup owner and uses `Destroying`/`PlayerRemoving`.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.9k tok. Read more: ## 6. The cleanup discipline · ## 7. Pooling · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.1k tok. Read more: ## 6. The cleanup discipline · ## 7. Pooling · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Memory problems on Roblox look like nothing for a long time and then like everything at once: phones crash after twenty minutes, servers bloat over a six-hour session, the garbage collector starts eating frames. This note covers where memory goes (instances, assets, the Luau heap), what a budget looks like, the leak patterns that cause almost every real-world leak, how to find a leak with the Luau heap tool and a soak test, and the cleanup and pooling patterns that prevent them.
@@ -417,5 +417,10 @@ See [[Case Study - Instance Cleanup and Place Size]] and [[Safe Changes in a Sha
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Hunting Memory Leaks Step by Step]] · [[Luau Garbage Collection and the Memory Model]] · [[Links - Memory leaks and cleanup]] · [[Performance Fundamentals]] · [[Functions Closures and Upvalues]] · [[Instance Count]]
+[[Hunting Memory Leaks Step by Step]] · [[Luau Garbage Collection and the Memory Model]] · Links - Memory leaks and cleanup · [[Performance Fundamentals]] · Functions Closures and Upvalues · Instance Count
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[QA Checklists Before Release]] · [[Network Performance]] · [[Client Zone Culling for Interiors and Cities]] · [[MicroProfiler Guide]] · [[Network Bandwidth Budgets and Measuring Them]] · [[Crash and Error Telemetry]] · [[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]]
+<!-- related:end -->

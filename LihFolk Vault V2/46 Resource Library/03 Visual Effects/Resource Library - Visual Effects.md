@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, hub]
+tags: [resources, links, hub, type/hub, level/intermediate]
 ---
 # Resource Library - Visual Effects
 
@@ -14,5 +14,5 @@ Part of [[Resource Library Start Here]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Resource Library - Tools and Workflow]] · [[Resource Library - Characters and Animation]] · [[Resource Library - Building and World]] · [[Resource Library - Game Systems]] · [[Rendering Performance]] · [[VFX Performance Budgets and Culling]]
+[[Resource Library - Tools and Workflow]] · [[Resource Library - Characters and Animation]] · [[Resource Library - Building and World]] · [[Resource Library - Game Systems]] · [[Rendering Performance]] · VFX Performance Budgets and Culling
 <!-- auto-links:end -->

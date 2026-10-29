@@ -1,5 +1,5 @@
 ---
-tags: [ai, luau, scripting, code-assistants, tooling]
+tags: [ai, luau, scripting, code-assistants, tooling, type/guide, area/ai, level/intermediate, api/LoadAnimation, area/scripting, api/Animator, api/Humanoid]
 ---
 # AI Code Assistants for Luau
 
@@ -12,7 +12,7 @@ tags: [ai, luau, scripting, code-assistants, tooling]
 > - Project memory file with hard rules and checks.
 > - Docs access (llms.txt, `.md` reference pages, `http_get`) and an instruction to use it.
 >
-> Cost: TL;DR ~160 tok · whole note ~3.9k tok. Read more: ## 2. Set the project up for AI · ## 3. What AI gets wrong in Luau specifically · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.0k tok. Read more: ## 2. Set the project up for AI · ## 3. What AI gets wrong in Luau specifically · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 This note covers using AI to write Luau: which kinds of tools exist, how to set up a project so they work well, what they get wrong about Luau and Roblox specifically, and the checks that catch those errors. The verification method is expanded in [[Prompting and Verifying AI Output]]; agent setups in [[AI Agents and Autonomous Workflows]].
@@ -26,7 +26,7 @@ Products named here are as of October 2026. Features and plans change monthly; p
 | Kind | Examples (October 2026) | Where it works | Best for | Main risk |
 |---|---|---|---|---|
 | Inline completion | Roblox Code Assist in the Script Editor, GitHub Copilot, Cursor Tab | As you type | Finishing the line or block you already started | Plausible wrong member names you accept with Tab |
-| Chat | Roblox Assistant, ChatGPT, Claude, Gemini, Copilot Chat | A side panel or browser | Explaining errors, drafting a module, reviewing a function | Code written without seeing your project |
+| Chat | [[Roblox Assistant]], ChatGPT, Claude, Gemini, Copilot Chat | A side panel or browser | Explaining errors, drafting a module, reviewing a function | Code written without seeing your project |
 | Agentic (tool-using) | Claude Code, OpenAI Codex CLI, Gemini CLI, Cursor agent, GitHub Copilot agent mode, Google Antigravity, Roblox Assistant in its agent role | Your repo and terminal, and Studio through MCP | Multi-file changes, running checks, refactors, tooling | Large changes made quickly, claimed done without proof |
 
 Roblox's Studio MCP docs list quick-connect support for Antigravity, Codex CLI, Claude Code, Claude Desktop, Cursor, Gemini CLI and Visual Studio Code (German-language version of the page, October 2026), and any client that supports stdio transport can connect. See [[Setting Up MCP Clients]].
@@ -236,5 +236,10 @@ Models often know an obscure API correctly. Do not reject unfamiliar code on ins
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI in Roblox Development Overview]] · [[Studio Assistant and AI Tools]] · [[Roblox Studio MCP Server]] · [[Code Review for Luau Teams]] · [[Links - External tooling]] · [[Safety Rules for AI Agents in Studio]]
+[[AI in Roblox Development Overview]] · [[Studio Assistant and AI Tools]] · Roblox Studio MCP Server · Code Review for Luau Teams · Links - External tooling · Safety Rules for AI Agents in Studio
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[What AI Models Get Wrong in Roblox]] · [[AI Pitfalls - Stale APIs and Luau]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Evaluating AI Tools - A Practical Rubric]] · [[Windows Tooling Pitfalls for Agent Pipelines]] · [[Agent Orchestration - Sub-Agents, Hooks and Skill Costs]] · [[In-Game AI - LLM NPCs and Text Generation]]
+<!-- related:end -->

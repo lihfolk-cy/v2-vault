@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [multiplayer, hub, matchmaking, parties, teleport, reserved-servers, memorystore, live-ops]
+tags: [multiplayer, hub, matchmaking, parties, teleport, reserved-servers, memorystore, live-ops, type/hub, area/networking, level/beginner, area/performance]
 ---
 # Multiplayer Services Start Here
 
@@ -53,5 +53,5 @@ It builds on four older notes. Read them first if the services are new to you; t
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Session Lock]] · [[Links - Reserved and private servers]] · [[Links - MemoryStore]] · [[Skill - Roblox DataStore Safety]] · [[Debugging DataStore Problems]] · [[Cookbook - Data and Saving]]
+[[Session Lock]] · Links - Reserved and private servers · Links - MemoryStore · Skill - Roblox DataStore Safety · Debugging DataStore Problems · Cookbook - Data and Saving
 <!-- auto-links:end -->

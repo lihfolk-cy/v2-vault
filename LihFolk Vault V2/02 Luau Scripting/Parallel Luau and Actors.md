@@ -1,5 +1,5 @@
 ---
-tags: [luau, parallel, actors, multithreading, sharedtable, performance]
+tags: [luau, parallel, actors, multithreading, sharedtable, performance, type/guide, area/scripting, level/advanced, area/performance, api/Actor, api/Script]
 ---
 # Parallel Luau and Actors
 
@@ -12,7 +12,7 @@ tags: [luau, parallel, actors, multithreading, sharedtable, performance]
 > - Work split by logical unit across many Actors.
 > - Requires at load time; no requires in parallel.
 >
-> Cost: TL;DR ~160 tok · whole note ~3.7k tok. Read more: ## 4. Communication · ## 5. Pattern: a worker pool for spatial queries · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.9k tok. Read more: ## 4. Communication · ## 5. Pattern: a worker pool for spatial queries · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 By default all Luau in a Roblox server or client runs on one thread, one piece at a time. **Parallel Luau** lets scripts placed under `Actor` instances run parts of their work simultaneously on several CPU cores. It is powerful for compute-heavy, mostly read-only work (raycasts, spatial queries, NPC sensing, procedural generation, pathfinding maths) and useless or harmful for work that mainly writes to Instances. This note explains the execution model, thread safety levels, communication (messages, SharedTable, the DataModel), how modules behave per Actor, a worker-pool pattern, and how to tell whether it helped.
@@ -279,5 +279,10 @@ On the client, good candidates are visual-only computations: crowd or flock stee
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Infinite and Streamed Worlds]] · [[Luau Garbage Collection and the Memory Model]] · [[Links - Script types]] · [[Building a Signal Library]] · [[Frame Order and RunService Timing]] · [[Frame Budget]]
+[[Infinite and Streamed Worlds]] · Luau Garbage Collection and the Memory Model · Links - Script types · Building a Signal Library · Frame Order and RunService Timing · Frame Budget
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Luau Performance Patterns with Benchmarks]] · [[Script Types and Run Context]] · [[Tables Metatables and OOP]] · [[Events Signals and Connections]] · [[Metatables and OOP - When and When Not]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[CollectionService Patterns]] · [[Luau Language Essentials]]
+<!-- related:end -->

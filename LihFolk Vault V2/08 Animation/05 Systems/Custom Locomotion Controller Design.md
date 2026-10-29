@@ -1,5 +1,5 @@
 ---
-tags: [systems, locomotion, architecture, state-machine, code]
+tags: [systems, locomotion, architecture, state-machine, code, type/guide, area/animation, level/intermediate, api/Animator, area/design, api/AdjustSpeed, api/FloorMaterial]
 ---
 # Custom Locomotion Controller Design
 
@@ -12,7 +12,7 @@ tags: [systems, locomotion, architecture, state-machine, code]
 > - Gait data lives with the clips; load-time validation of bands vs clamps.
 > - Speed smoothed, hysteresis on downshift.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.7k tok. Read more: ## Arbitration: who owns the body · ## A working controller · ## Failure modes and how they look · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.8k tok. Read more: ## Arbitration: who owns the body · ## A working controller · ## Failure modes and how they look · ## Checklist
 <!-- tldr:end -->
 
 This note is the design document for a client-side locomotion controller: the module that decides, every frame, which idle, gait or air clip the local character plays, at what rate, with what layers, and when it must get out of the way. The numbers and behaviours it encodes are explained in [[Locomotion Systems]]; this note is about structure, state, arbitration and networking. Code is typed Luau using `Animator:LoadAnimation`, `task.*` and attributes.
@@ -354,5 +354,10 @@ See also: [[Locomotion Systems]], [[Snippets - Animation Controller Module]], [[
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Ability Kits Architecture]] · [[Weapon and Combat Animation]] · [[Snippets - Playing Animations]] · [[The Default Animate Script]] · [[Custom Character Controllers]] · [[Characters and Humanoids]] · [[Animation Start Here]]
+[[Ability Kits Architecture]] · [[Weapon and Combat Animation]] · [[Snippets - Playing Animations]] · [[The Default Animate Script]] · [[Custom Character Controllers]] · Characters and Humanoids · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Enemy Animation State Protocol]] · [[Mounts and Rideable Creatures]] · [[Combat Combo Systems]] · [[Emotes and Social Animation]] · [[Stance and Charge Moves]] · [[Procedural Gait and Footstep Planning]] · [[Equip Draw and Flourish Systems]] · [[Hit Reactions Stagger and Hit-Stop]]
+<!-- related:end -->

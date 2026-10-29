@@ -1,5 +1,5 @@
 ---
-tags: [modeling, voxel, meshing, greedy-meshing, blender, python, export, glb, triangles, collision, lod]
+tags: [modeling, voxel, meshing, greedy-meshing, blender, python, export, glb, triangles, collision, lod, type/guide]
 ---
 # Meshing Voxels for Roblox - Greedy Meshing and Export
 
@@ -12,7 +12,7 @@ tags: [modeling, voxel, meshing, greedy-meshing, blender, python, export, glb, t
 > - Faces merge only when colour, material and baked values match.
 > - T-junction strategy chosen for large or grazing-angle meshes.
 >
-> Cost: TL;DR ~190 tok · whole note ~4.7k tok. Read more: ## 3. A greedy mesher in Blender Python · ## 7. In Studio: collision and render fidelity · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~4.8k tok. Read more: ## 3. A greedy mesher in Blender Python · ## 7. In Studio: collision and render fidelity · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A voxel model is data: a set of filled cells, each with a colour. Before Roblox can draw it, that data has to become a mesh, and the way you build the mesh decides the triangle count, the number of MeshParts, whether textures tile, whether cracks appear between faces, and how the model collides. [[Voxel and Blocky Modeling]] shows a Blender script that emits only exposed faces, one mesh per colour. This note takes the next steps: greedy meshing (merging coplanar faces into big rectangles), the T-junction problem it creates, how to keep tiling stud textures working on merged faces, the export settings that keep voxels flat-shaded, and the Roblox-side settings (collision fidelity, render fidelity) that quietly change how voxel meshes look and behave.
@@ -140,7 +140,7 @@ Ways to deal with it, cheapest first:
 
 1. **Ignore it on small or close objects.** At character scale with 0.25-stud cells the sparkles are rare and tiny.
 2. **Put a backing colour behind seams.** Because interior faces are culled, the "behind" of a seam is the sky. A model with a dark interior shell (a culled but not merged inner layer) hides sparkles at a small triangle cost; usually not worth it.
-3. **Watertight greedy meshing.** The Blender "MagicaVoxel VOX format" importer extension offers a watertight variant of its greedy mode that removes T-junctions (tool docs). In your own script, after merging, insert the T-junction vertices into the long edges (split each long edge at every vertex that lies on it), then triangulate.
+3. **Watertight greedy meshing.** The Blender "[[MagicaVoxel]] VOX format" importer extension offers a watertight variant of its greedy mode that removes T-junctions (tool docs). In your own script, after merging, insert the T-junction vertices into the long edges (split each long edge at every vertex that lies on it), then triangulate.
 4. **Do not merge across large distances** on terrain-like chunks: cap rectangle width at, say, 16 cells. This bounds the edge length and the error.
 
 ## 5. Keeping tiling stud textures on merged faces
@@ -240,5 +240,10 @@ A 0.25-stud-cell lantern post, 8 x 8 x 40 cells (2 x 2 x 10 studs), four colours
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Voxel Modelling Start Here]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Voxel Props Environments and Modular Tiles]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Parts Unions and MeshParts]] · [[Modeling Fundamentals for Games]]
+[[Voxel Modelling Start Here]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Voxel Props Environments and Modular Tiles]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · Parts Unions and MeshParts · Modeling Fundamentals for Games
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Modeling Fundamentals for Games]] · [[Parts Unions and MeshParts]] · [[Modeling in Blender for Roblox]] · [[Bevels Chamfers and Edge Highlights Without Textures]] · [[Voxel Palettes - Ramps Hue Shifting and Limits]] · [[Voxel Characters - Proportions Joints and Rigging]]
+<!-- related:end -->

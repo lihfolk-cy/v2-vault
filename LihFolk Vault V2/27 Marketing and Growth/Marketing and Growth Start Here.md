@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [marketing, growth, hub, start-here]
+tags: [marketing, growth, hub, start-here, type/hub, area/marketing, level/beginner]
 ---
 # Marketing and Growth Start Here
 
@@ -39,9 +39,9 @@ Related sections: [[Working with Content Creators]] and [[Discord Servers for Ro
 No fake reviews, bot traffic, bought likes, misleading thumbnails, "free Robux" hooks, or titles borrowing another game's name. Each note explains why these break Roblox's Community Standards or thumbnail rules, but the practical reason is simpler: they move vanity numbers and damage the numbers that matter. A misleading thumbnail raises clicks and bounce together; bot visits do not count toward ranking and corrupt your own analytics; a broken promise in a teaser costs you the players most likely to return. See [[Ethical Design and Player Trust]].
 
 ## Labels used
-"Roblox docs (as of October 2026)" for platform facts checked against Creator Hub pages; "rule of thumb" for practice and judgement. Ads, Creator Rewards and experiments change often; re-check the docs before committing money or a schedule.
+"Roblox docs (as of October 2026)" for platform facts checked against Creator Hub pages; "rule of thumb" for practice and judgement. Ads, [[Creator Rewards]] and experiments change often; re-check the docs before committing money or a schedule.
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Click-Through Rate]] · [[Retention Cohorts]] · [[Live Ops Deep Dive Start Here]] · [[Top Games Case Studies Start Here]] · [[Roadmaps Milestones and Scope Control]] · [[Links - Ads]]
+[[Click-Through Rate]] · Retention Cohorts · Live Ops Deep Dive Start Here · Top Games Case Studies Start Here · Roadmaps Milestones and Scope Control · Links - Ads
 <!-- auto-links:end -->

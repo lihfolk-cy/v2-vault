@@ -1,5 +1,5 @@
 ---
-tags: [field-notes, combat, melee, prediction, latency, networking, game-feel, luau]
+tags: [field-notes, combat, melee, prediction, latency, networking, game-feel, luau, type/guide, area/networking, level/advanced, area/gameplay]
 ---
 # Client Hit Prediction for Melee Feedback
 
@@ -12,7 +12,7 @@ tags: [field-notes, combat, melee, prediction, latency, networking, game-feel, l
 > - Damage, numbers and status effects only from the server.
 > - Server echo suppressed per target within a short window.
 >
-> Cost: TL;DR ~170 tok · whole note ~1.6k tok. Read more: ## Why the hit feels late · ## Suppress the server echo per target · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~1.7k tok. Read more: ## Why the hit feels late · ## Suppress the server echo per target · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A melee hit that only plays its flash, hit-stop and sound when the server confirms it will feel late on every connection, and players describe it precisely: "the hit lands at the end of the animation". This note explains where that delay comes from, and how to play the *feel* of the hit on the attacker's client at the hit frame while keeping damage and outcomes on the server. The general model is in [[Client Prediction and Reconciliation for Combat]]; hit detection in [[Hitboxes and Hit Detection]].
@@ -115,5 +115,10 @@ The server remains authoritative: it decides hits from its own timing and positi
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Client Prediction and Reconciliation for Combat]] · [[Hitboxes and Hit Detection]] · [[Melee Combat System End to End]] · [[Combat Sound Design and Feedback]] · [[Hit-Stop and Screen Shake Tuning by Numbers]] · [[Field Notes Start Here]]
+[[Client Prediction and Reconciliation for Combat]] · Hitboxes and Hit Detection · Melee Combat System End to End · Combat Sound Design and Feedback · Hit-Stop and Screen Shake Tuning by Numbers · [[Field Notes Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Server-Authoritative Freeze and Stun Timestamps]] · [[Hold-to-Attack Input That Never Sticks]] · [[Layering Camera Feedback on the Default Camera]] · [[Sound Design Pitfalls - Reused Ids Onsets and Layered Loops]] · [[Streaming Joins - Frozen Players and Loading Screen Teardown]] · [[ipairs Stops at the First nil - Cleanup Tables That Leak]] · [[A Stuck Player Watchdog That Logs the Cause]] · [[Held Weapons on Motor6D - Locking the Grip During Attacks]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, performance, rendering, scripting]
+tags: [core-concept, performance, rendering, scripting, type/reference, area/performance, level/beginner, area/scripting]
 ---
 # Frame Budget
 
@@ -10,7 +10,7 @@ tags: [core-concept, performance, rendering, scripting]
 > - Spikes matter more than averages. A game averaging 10 ms with a 60 ms hitch every second feels worse than a steady 20 ms.
 > - Frame rate is not fixed at 60. Players can raise the frame cap in settings, so a PC may run at 120 or 240 fps (4 to 8 ms per...
 >
-> Cost: TL;DR ~140 tok · whole note ~890 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~140 tok · whole note ~960 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 The **frame budget** is the time available to produce one frame: 1000 ms divided by the target frame rate. At 60 fps it is about 16.7 ms; at 30 fps, 33.3 ms. Everything that happens in a frame (your scripts, physics, animation, rendering, UI layout) shares that budget. Go over it and the frame rate drops.
@@ -62,5 +62,10 @@ Related concepts: [[Draw Calls]], [[Instance Count]], [[Object Pooling]], [[Dete
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox Performance Audit]] · [[Game Feel Start Here]] · [[Triangle Budget]] · [[Core Concepts Start Here]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Luau Performance Patterns with Benchmarks]]
+[[Skill - Roblox Performance Audit]] · Game Feel Start Here · [[Triangle Budget]] · [[Core Concepts Start Here]] · Art Budgets - Triangles Draw Calls Memory · Luau Performance Patterns with Benchmarks
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Object Pooling]] · [[Hit-Stop]] · [[Streaming Radius]] · [[Variance]] · [[Texel Density]] · [[Tween vs Spring]] · [[Session Length]] · [[Safe Area]]
+<!-- related:end -->

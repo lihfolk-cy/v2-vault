@@ -1,5 +1,5 @@
 ---
-tags: [world-building, terrain, materials, materialvariant, water, shorelines, performance, streaming, voxels]
+tags: [world-building, terrain, materials, materialvariant, water, shorelines, performance, streaming, voxels, type/guide, area/world, level/advanced]
 ---
 # Terrain Deep Dive - Materials Water and Performance
 
@@ -12,7 +12,7 @@ tags: [world-building, terrain, materials, materialvariant, water, shorelines, p
 > - Material list per zone; no base material recoloured or overridden for a single zone.
 > - Expanded Terrain decision made before heavy painting (it restarts the place).
 >
-> Cost: TL;DR ~170 tok · whole note ~6.4k tok. Read more: ## 2. Materials: what is global and what is not · ## 3. Water · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~6.5k tok. Read more: ## 2. Materials: what is global and what is not · ## 3. Water · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Terrain Tools and Terrain API]] covers the voxel model, the editing tools, the fill and voxel APIs, and a set of measured quirks (the rendered surface sitting about 2 studs above the voxel top, blocky materials, one write per call). This note goes one level down into the three areas where terrain decisions bite late in a project: **materials** (what is global, what can be overridden, and what Expanded Terrain changes), **water** (shorelines, the liquid channel, swimming and underwater effects, fake versus real), and **performance** (rendering, memory, place size, streaming, physics, and the hidden cost of runtime edits).
@@ -50,7 +50,7 @@ Three different "global" mechanisms change how they look:
 | Mechanism | Scope | What it changes |
 |---|---|---|
 | `Terrain.MaterialColors` / `Terrain:SetMaterialColor(material, color)` | Every voxel of that material in the place | Tint. Water is excluded (Water uses `WaterColor`) |
-| MaterialService override (a `MaterialVariant` set as the override for a base material) | Every terrain voxel **and every part** using that base material | Texture maps and, for parts and default terrain slots, physical properties |
+| [[MaterialService]] override (a `MaterialVariant` set as the override for a base material) | Every terrain voxel **and every part** using that base material | Texture maps and, for parts and default terrain slots, physical properties |
 | Expanded Terrain custom materials | Only voxels painted with that custom material | Colour and an optional MaterialVariant per slot |
 
 The trap in the first two: they are place-wide. Recolouring Grass to autumn orange for one zone turns every Grass voxel orange. Overriding Grass with a stylised variant also changes every Part whose `Material` is Grass. This is why, before Expanded Terrain, the standard advice was "one material per look": use Leafy Grass for the forest zone and Grass for the meadow, and never share.
@@ -407,5 +407,10 @@ Decisions this table forces early: whether Expanded Terrain is on (needed for th
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Terrain Materials and Painting]] · [[Links - Terrain]] · [[MaterialService and Custom Materials]] · [[Noise Functions and Terrain Generation]] · [[AI Material and Texture Generation]] · [[Materials and Surfaces Start Here]]
+[[Terrain Materials and Painting]] · Links - Terrain · MaterialService and Custom Materials · Noise Functions and Terrain Generation · AI Material and Texture Generation · Materials and Surfaces Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Textures Decals and Texture Memory]] · [[Parts Unions and MeshParts]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Environment Art Styles]] · [[Level Design for Roblox]] · [[Modeling in Blender for Roblox]] · [[Voxel Art - Studs Outlines and Style Kits]]
+<!-- related:end -->

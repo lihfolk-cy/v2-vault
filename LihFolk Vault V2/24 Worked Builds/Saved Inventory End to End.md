@@ -1,5 +1,5 @@
 ---
-tags: [worked-build, inventory, datastore, session-locking, remotes, ui, luau, strict]
+tags: [worked-build, inventory, datastore, session-locking, remotes, ui, luau, strict, type/guide, area/gameplay, level/intermediate, api/RemoteFunction]
 ---
 # Saved Inventory End to End
 
@@ -12,7 +12,7 @@ tags: [worked-build, inventory, datastore, session-locking, remotes, ui, luau, s
 > - Only `PlayerData` touches the player data store
 > - Every remote payload type-checked, length-capped, rate-limited
 >
-> Cost: TL;DR ~170 tok · whole note ~10.8k tok. Read more: ## 4. The data layer · ## 5. The inventory itself · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~10.9k tok. Read more: ## 4. The data layer · ## 5. The inventory itself · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 This build starts from an empty place and ends with a saved, session-locked inventory: stackable items (potions, ores) and unique items (a sword with its own level), a coin balance, equip and sell actions over a validated remote, a grid UI, and a tool that appears in the player's hand when they equip a weapon. It is also the **foundation build** for this folder: the data layer, the remote helper and the rate limiter written here are reused by [[Daily Rewards System End to End]], [[Shop with Game Passes and Developer Products End to End]], [[Codes Redemption System End to End]] and [[Global Leaderboards End to End]]. Build this one first.
@@ -1172,5 +1172,10 @@ What it does not stop on its own: dupes through a future trading feature, and ec
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox DataStore Safety]] · [[Debugging DataStore Problems]] · [[Cookbook - Data and Saving]] · [[Genre Systems Start Here]] · [[Skill - Roblox System Builder]] · [[Session Lock]]
+[[Skill - Roblox DataStore Safety]] · Debugging DataStore Problems · Cookbook - Data and Saving · Genre Systems Start Here · Skill - Roblox System Builder · Session Lock
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[LihFolk Systems - Data and Purchase Guarantees]] · [[LihFolk Systems Library]] · [[Pet Hatching and Following End to End]] · [[Round-Based Minigame Loop End to End]] · [[Rebirth and Prestige System End to End]] · [[Quest Chain System End to End]] · [[Weekend Build - Survival Gather, Craft and Place]]
+<!-- related:end -->

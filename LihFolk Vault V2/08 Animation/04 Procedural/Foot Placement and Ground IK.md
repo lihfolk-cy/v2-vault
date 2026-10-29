@@ -1,5 +1,5 @@
 ---
-tags: [procedural, ik, feet, ground, slopes, stairs, raycast, luau]
+tags: [procedural, ik, feet, ground, slopes, stairs, raycast, luau, type/guide, area/animation, level/advanced, api/Humanoid]
 ---
 # Foot Placement and Ground IK
 
@@ -9,7 +9,7 @@ tags: [procedural, ik, feet, ground, slopes, stairs, raycast, luau]
 > - Whole body floats on slopes: hips never lowered -> drop the pelvis by the lowest foot's deficit
 > - Body bobs up and down climbing stairs: pelvis offset unsmoothed -> asymmetric rates or a spring
 >
-> Cost: TL;DR ~130 tok · whole note ~3.5k tok. Read more: ## The algorithm (per frame, after the Animator) · ## Bodies on the ground: the ground-fit clamp · ## Common mistakes
+> Cost: TL;DR ~130 tok · whole note ~3.6k tok. Read more: ## The algorithm (per frame, after the Animator) · ## Bodies on the ground: the ground-fit clamp · ## Common mistakes
 <!-- tldr:end -->
 
 Every walk, idle and attack clip is authored on a flat floor. The world is not flat. On a slope one foot floats and the other sinks; on stairs feet hang in the air over step edges; a corpse on a hillside lies half underground. Ground IK fixes this at runtime: find the real ground under each foot, lower the hips so the low foot can reach, bend the knees, and tilt the feet to the surface. This note covers the live-character version and the "body on the ground" version the reference project used for deaths.
@@ -190,5 +190,10 @@ Related: [[Two-Bone IK Math]], [[Procedural Gait and Footstep Planning]], [[Proc
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Snippets - IK]] · [[Inverse Kinematics]] · [[Humanoid States and Animation]] · [[Animating Creatures and Monsters]] · [[Raycasts Shapecasts and Spatial Queries]] · [[Skeleton Library]] · [[Animation Start Here]]
+[[Snippets - IK]] · [[Inverse Kinematics]] · [[Humanoid States and Animation]] · [[Animating Creatures and Monsters]] · [[Raycasts Shapecasts and Spatial Queries]] · Skeleton Library · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[R15 Run Cycle Key Poses]] · [[Ragdolls and Physics-Based Animation]] · [[Locomotion and Melee Reference Numbers]] · [[Scale and Animation]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Enemy and NPC Animation]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[LihFolk R15 Keyframe Pipeline]]
+<!-- related:end -->

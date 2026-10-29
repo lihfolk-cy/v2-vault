@@ -1,5 +1,5 @@
 ---
-tags: [rigging, r15, humanoid, attachments, reference]
+tags: [rigging, r15, humanoid, attachments, reference, type/reference, area/animation, level/intermediate, api/AnimationConstraint, api/Motor6D, api/Part0]
 ---
 # R15 Rig Anatomy and Attachments
 
@@ -9,7 +9,7 @@ tags: [rigging, r15, humanoid, attachments, reference]
 > - Avoid: IK uses part centres or vertical arm length -> Use RigAttachment positions (slanted upper arm)
 > - Avoid: Root motion keyed on HumanoidRootPart -> Key LowerTorso
 >
-> Cost: TL;DR ~100 tok · whole note ~4.3k tok. Read more: ## 1. The parts · ## 2. The joints · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~4.4k tok. Read more: ## 1. The parts · ## 2. The joints · ## Common mistakes
 <!-- tldr:end -->
 
 The R15 rig is the contract that the default Animate script, emotes, layered clothing, accessories, the Animation Editor and most community tooling assume. Knowing its exact parts, joints and attachment offsets lets you build IK that hits the real pivots, write procedural code that works on any body, import custom bodies that animate, and diagnose "why is my arm offset" problems in minutes.
@@ -45,7 +45,7 @@ Derived heights:
 | Stored | 2.18 | 3.01 | about 5.2 studs |
 | Jointed (in game) | 2.27 | 3.19 | about 5.5 studs |
 
-The jointed value agrees with `Humanoid.HipHeight` (measured 2.192): the root centre stands HipHeight + half the root's height (2.192 + 1 = 3.19) above the ground. A pose solved against the stored 3.01 floats its feet 0.18 studs off the ground in game. (The reference project's players were scaled 1.6x through body scales, about 9 studs tall, with the hip about 3.5 studs above ground: 2.19 x 1.6.) If a body type or scale differs, re-measure on the rig with `root.CFrame:ToObjectSpace(part.CFrame)`.
+The jointed value agrees with `Humanoid.HipHeight` (measured 2.192): the root centre stands [[HipHeight]] + half the root's height (2.192 + 1 = 3.19) above the ground. A pose solved against the stored 3.01 floats its feet 0.18 studs off the ground in game. (The reference project's players were scaled 1.6x through body scales, about 9 studs tall, with the hip about 3.5 studs above ground: 2.19 x 1.6.) If a body type or scale differs, re-measure on the rig with `root.CFrame:ToObjectSpace(part.CFrame)`.
 
 Every body part carries an `OriginalSize` Vector3Value (the unscaled size), used by the scaling system.
 
@@ -81,7 +81,7 @@ Every body part carries an `OriginalSize` Vector3Value (the unscaled size), used
 
 ### Motor6D or AnimationConstraint?
 
-The rig generated in Studio in October 2026 had **15 `AnimationConstraint` joints and no Motor6Ds**. Roblox's reference describes AnimationConstraint as the default joint type for R15 avatar rigs when the Avatar Joint Upgrade is enabled (the default for new experiences), while Motor6D remains supported. The reference project's live characters used AnimationConstraints too. Consequences:
+The rig generated in Studio in October 2026 had **15 `AnimationConstraint` joints and no Motor6Ds**. Roblox's reference describes [[AnimationConstraint]] as the default joint type for R15 avatar rigs when the Avatar Joint Upgrade is enabled (the default for new experiences), while Motor6D remains supported. The reference project's live characters used AnimationConstraints too. Consequences:
 
 - Code that does `part:FindFirstChildOfClass("Motor6D")` finds nothing on modern characters. Accept both: `FindFirstChildWhichIsA("AnimationConstraint")`, falling back to Motor6D.
 - An AnimationConstraint's frame comes from `Attachment0` / `Attachment1` (the RigAttachments), not `C0` / `C1` properties. The Animator writes its `Transform` just like a Motor6D's.
@@ -236,5 +236,10 @@ end
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Modeling Characters for R15 and Custom Rigs]] · [[UGC Avatar Items and Accessories]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Rigging in Blender]] · [[Avatar Body Types and Scale in Gameplay]] · [[Skeleton Library]] · [[Animation Start Here]]
+[[Modeling Characters for R15 and Custom Rigs]] · UGC Avatar Items and Accessories · Voxel Characters - Proportions Joints and Rigging · [[Rigging in Blender]] · Avatar Body Types and Scale in Gameplay · Skeleton Library · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[R15 Run Cycle Key Poses]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[3D Importer Settings Reference]] · [[IKControl Reference]] · [[Animation Data from Blender to Roblox]] · [[Weight Painting and Skinning for Roblox]] · [[Snippets - IK]] · [[Posing and Silhouettes]] · [[Authoring Clips in Code]]
+<!-- related:end -->

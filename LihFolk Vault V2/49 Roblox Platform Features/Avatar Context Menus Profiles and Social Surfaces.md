@@ -1,5 +1,5 @@
 ---
-tags: [platform-features, social, avatar-context-menu, inspect-menu, profiles, friends, blocking, startergui, luau, strict]
+tags: [platform-features, social, avatar-context-menu, inspect-menu, profiles, friends, blocking, startergui, luau, strict, type/guide, area/platform]
 ---
 # Avatar Context Menus Profiles and Social Surfaces
 
@@ -17,7 +17,7 @@ tags: [platform-features, social, avatar-context-menu, inspect-menu, profiles, f
 
 "Social surfaces" are the places where one player learns about, and acts on, another: clicking someone's avatar, opening their profile card, seeing that a friend is here, sending a friend request, blocking a nuisance, trying on the outfit someone is wearing. Roblox supplies several of these as built-in menus you can switch on, restyle or replace: the **Avatar Context Menu** (ACM), the **Avatar Inspect Menu**, and a family of `StarterGui:SetCore` prompts. This note covers what each one does, when to use the built-in version and when to build your own, the friends and profile APIs behind custom cards, and the rules that keep these surfaces safe: respect blocks, validate every action on the server, and never show more about a player than they chose to share. [[Social Design and Multiplayer Play]] explains why visible social signals matter; this note is the toolkit.
 
-Platform facts are labelled **Roblox docs (as of October 2026)** and were checked against the Avatar Context Menu and Avatar Inspect Menu guides and the StarterGui, GuiService, Players, Player, SocialService and AvatarContextMenuOption references on create.roblox.com. Design advice is rule of thumb.
+Platform facts are labelled **Roblox docs (as of October 2026)** and were checked against the Avatar Context Menu and Avatar Inspect Menu guides and the StarterGui, GuiService, Players, Player, [[SocialService]] and AvatarContextMenuOption references on create.roblox.com. Design advice is rule of thumb.
 
 ## 1. The Avatar Context Menu
 
@@ -76,7 +76,7 @@ For outfit systems and in-game editors, see [[HumanoidDescription and Outfit Sys
 
 `StarterGui:SetCore` also exposes platform prompts you can attach to your own UI (Roblox docs, as of October 2026):
 
-| SetCore option | Argument | Effect |
+| [[SetCore]] option | Argument | Effect |
 |---|---|---|
 | `PromptSendFriendRequest` | `Player` | Prompts the local player to send a friend request |
 | `PromptUnfriend` | `Player` | Prompts to remove a friend |
@@ -359,5 +359,10 @@ Never turn friend presence into pressure ("Your friend is waiting for you!" when
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Avatars and UGC Start Here]] · [[Multiplayer Services Start Here]] · [[Community Building]] · [[Experience Notifications and Return Prompts]] · [[Server Browsers and Server Lists]] · [[Age Checks and Safety Features]]
+[[Avatars and UGC Start Here]] · Multiplayer Services Start Here · Community Building · [[Experience Notifications and Return Prompts]] · Server Browsers and Server Lists · Age Checks and Safety Features
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Block and Mute Respecting Platform Rules]] · [[Joining Friends Parties and Private Servers]] · [[Age Checks and Safety Features]] · [[Community Building]] · [[Notification and Toast Systems]] · [[Engine and API Changes 2025-2026]]
+<!-- related:end -->

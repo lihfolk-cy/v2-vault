@@ -1,5 +1,5 @@
 ---
-tags: [modeling, low-poly, stylized, palette, vertex-colors, blender, art-style]
+tags: [modeling, low-poly, stylized, palette, vertex-colors, blender, art-style, type/guide, area/modeling, level/intermediate, api/SurfaceAppearance]
 ---
 # Low-Poly and Stylized Modeling
 
@@ -12,7 +12,7 @@ tags: [modeling, low-poly, stylized, palette, vertex-colors, blender, art-style]
 > - One focal feature; exaggerated proportions; tapers and tilts.
 > - Segment counts chosen by on-screen size.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.4k tok. Read more: ## 4. Colouring without unique textures · ## 5. Building common stylised assets · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.5k tok. Read more: ## 4. Colouring without unique textures · ## 5. Building common stylised assets · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most successful Roblox games are stylised: chunky shapes, saturated colours, simple materials, readable at a glance on a phone. That is not only taste. Stylised art ages slowly, survives low graphics settings, keeps texture memory tiny, and lets one artist (or one script) build a whole world. This note covers the two related styles, **faceted low-poly** and **smooth stylised**, how to design shapes for them, how to colour them without per-asset textures (palette atlases and vertex colours), segment counts that look right at Roblox camera distances, and the production tricks that let one geometry serve ten zones.
@@ -26,7 +26,7 @@ For hard edges and bevels see [[Hard-Surface Modeling]]; for blocky and voxel lo
 | | Faceted low-poly | Smooth stylised |
 |---|---|---|
 | Look | Visible flat triangles, gem-like, origami | Soft chunky forms, cartoon proportions, smooth shading |
-| Shading | Flat (each face its own normal) | Smooth with weighted normals; bevels |
+| Shading | Flat (each face its own normal) | Smooth with [[weighted normals]]; bevels |
 | Colour | Flat colour per face or per region, often gradients by face | Flat or hand-painted, gradients across forms |
 | Triangle count | Very low (100-2,000 per prop) | Low to medium (500-8,000 per prop) |
 | GPU vertex cost | Higher than it looks: flat shading splits every vertex (about 3 GPU vertices per triangle) | Lower per triangle (shared vertices) |
@@ -227,5 +227,10 @@ Rules of thumb, compared with the reference project's shipped numbers:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Untextured Stylised Modelling Start Here]] · [[Bevels Chamfers and Edge Highlights Without Textures]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Low-Poly Tree Set Worked Example]]
+[[Untextured Stylised Modelling Start Here]] · Bevels Chamfers and Edge Highlights Without Textures · Flat Colour vs Gradient Atlas vs Vertex Colour · Clean Stylised Shading - Weighted and Custom Normals · Faceted Low-Poly - Flat Normals and Facet Size · Low-Poly Tree Set Worked Example
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Bevels Chamfers and Edge Highlights Without Textures]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[UV Unwrapping]] · [[Mesh Optimization for Mobile]] · [[Normal Maps and Detail Baking]] · [[Organic and Creature Modeling]] · [[Procedural Model Kits - Lessons]] · [[Blender Workflow for Roblox Creators]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Retopology and Decimation]]
+<!-- related:end -->

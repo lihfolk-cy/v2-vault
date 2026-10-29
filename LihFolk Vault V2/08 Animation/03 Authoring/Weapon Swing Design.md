@@ -1,5 +1,5 @@
 ---
-tags: [authoring, craft, weapons, swords, two-handed, arcs]
+tags: [authoring, craft, weapons, swords, two-handed, arcs, type/guide, area/animation, level/intermediate, area/gameplay]
 ---
 # Weapon Swing Design
 
@@ -9,7 +9,7 @@ tags: [authoring, craft, weapons, swords, two-handed, arcs]
 > - Avoid: Flat leads the cut -> edge = plane axis x blade direction
 > - Avoid: Overhead straight to drive -> add a chop key over the front
 >
-> Cost: TL;DR ~90 tok · whole note ~4.0k tok. Read more: ## 1. Conventions you must fix before animating · ## 9. Long pommels · ## 14. Common mistakes
+> Cost: TL;DR ~90 tok · whole note ~4.1k tok. Read more: ## 1. Conventions you must fix before animating · ## 8. Overheads, chops and drives · ## 14. Common mistakes
 <!-- tldr:end -->
 
 A sword swing is a body motion that happens to end in a blade. This note covers how to design swings that read and feel right on a Roblox character: cut planes and edge alignment, the kinetic chain, why the arm and not the wrist aims the blade, one-handed vs two-handed mechanics, long pommels, thrusts, overheads, spins, staffs and scythes, and the specific failures that automatic QA caught in one production game.
@@ -130,7 +130,7 @@ Transitions between one and two hands need care: the free hand must arrive exact
 The overhead-to-ground blow is the most dramatic swing and the most error-prone.
 
 ### The chop key
-An overhead (blade back over the head) to a drive (blade down into the ground in front) is a turn of nearly 180 degrees. Interpolation takes the **short way**, which can be **back over the head**, so the impact frame ends with the blade pointing up behind the character. The reference project's fix, written into its pose library: insert a **chop key** between overhead and drive that brings the blade **over the front** (blade up and forward, hands high in front). Each segment is then well under 180 degrees and goes the right way.
+An overhead (blade back over the head) to a drive (blade down into the ground in front) is a turn of nearly 180 degrees. Interpolation takes the **short way**, which can be **back over the head**, so the [[Impact Frames|impact frame]] ends with the blade pointing up behind the character. The reference project's fix, written into its pose library: insert a **chop key** between overhead and drive that brings the blade **over the front** (blade up and forward, hands high in front). Each segment is then well under 180 degrees and goes the right way.
 
 General rule: no key-to-key segment of any joint should turn more than **120 degrees**; exactly 180 degrees is a coin flip even in the Animator itself (measured).
 
@@ -208,5 +208,10 @@ Check by hand:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Elbow Poles Swivel and Joint Limits]] · [[Animation Review Checklist]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Modeling Weapons and Props]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[AI Animation and Motion from Video]] · [[Animation Start Here]]
+[[Elbow Poles Swivel and Joint Limits]] · [[Animation Review Checklist]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Modeling Weapons and Props]] · Voxel Characters - Proportions Joints and Rigging · AI Animation and Motion from Video · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Blade Grip and Wrist Limits]] · [[Human Swing Biomechanics]] · [[Principles of Animation for Games]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Arm QA Metrics Reference]] · [[Timing Spacing and Frame Charts]] · [[Animation Editor Workflow]] · [[Arm Baker Internals]]
+<!-- related:end -->

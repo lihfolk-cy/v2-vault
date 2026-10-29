@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [2d, 2.5d, hub, side-scroller, platformer, pixel-art, screengui, sprites, tilemap, multiplayer]
+tags: [2d, 2.5d, hub, side-scroller, platformer, pixel-art, screengui, sprites, tilemap, multiplayer, type/hub, area/2d]
 ---
 # 2D Game Development Start Here
 
@@ -20,13 +20,13 @@ Source labels used across the section: **Roblox docs (as of October 2026)** for 
 | Note | Route | What it gives you |
 |---|---|---|
 | [[Choosing GUI 2D or Locked-Camera 2.5D]] | Both | The decision: the one multiplayer question that settles most projects, a side-by-side comparison, what each route cannot do well, security differences, the screen-size tax of GUI games, worked decisions |
-| [[A 2D Engine in a ScreenGui - Game Loop Entities and Rendering]] | GUI | The engine skeleton: fixed-timestep loop with interpolation, entities as plain data, pooled and dirty-checked `ImageLabel` rendering, layers, culling, pixel snapping, a basic camera, lifecycle |
+| [[A 2D Engine in a ScreenGui - Game Loop Entities and Rendering]] | GUI | The engine skeleton: [[Fixed Timestep\|fixed-timestep]] loop with interpolation, entities as plain data, pooled and dirty-checked `ImageLabel` rendering, layers, culling, pixel snapping, a basic camera, lifecycle |
 | [[Sprite Sheets and Frame Animation with ImageRectOffset]] | GUI | Atlases and `ImageRectOffset`/`ImageRectSize`, padding and bleeding, mirroring, a sprite registry, importing frame data from art tools, a frame-accurate animation player, gameplay events on frames |
 | [[2D Collision Physics and Platformer Movement]] | GUI (tuning applies to both) | Tile collision with separate axes, integer movement with remainders, one-way platforms, jump tuning from height and time, coyote time and buffering, slopes, moving platforms, headless tests |
-| [[Pixel Art Pipeline - Aseprite to Roblox Without Blur]] | Both | Where blur comes from and how to remove it: `ResampleMode` Pixelated, integer scaling, atlas packing with extrusion, texture size limits, uploading and moderation, palette swaps, pixel art on 3D surfaces |
+| [[Pixel Art Pipeline - Aseprite to Roblox Without Blur]] | Both | Where blur comes from and how to remove it: `ResampleMode` Pixelated, integer scaling, atlas packing with extrusion, texture size limits, uploading and moderation, palette swaps, [[pixel art]] on 3D surfaces |
 | [[EditableImage for Pixel Buffers and Procedural 2D]] | GUI mostly | The current `EditableImage` API, memory budgets and permissions, a framebuffer with dirty rectangles, destructible terrain, fog of war, procedural effects, fallbacks for when creation fails |
 | [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] | 2.5D | The three locks (camera, input, body), `PlaneConstraint` on characters, low field of view instead of orthographic, input remapping, a complete setup, level building and multiplayer on a plane |
-| [[Tilemaps Cameras and Parallax for 2D Levels]] | Both | Level data with separate collision and visual layers, Tiled import and flip flags, chunked tile rendering, seams, camera regions and room cameras, parallax with tiled `ImageLabel`s, greedy-merged parts for 2.5D |
+| [[Tilemaps Cameras and Parallax for 2D Levels]] | Both | Level data with separate collision and visual layers, Tiled import and flip flags, chunked tile rendering, seams, camera regions and room cameras, [[parallax]] with tiled `ImageLabel`s, greedy-merged parts for 2.5D |
 | [[2D Multiplayer - Server Authority and Replicating GUI Worlds]] | GUI (ideas apply to both) | Three network architectures, a deterministic shared simulation, buffer-packed inputs and snapshots under the remote limits, snapshot interpolation, prediction and reconciliation, replay validation |
 
 ---
@@ -94,7 +94,7 @@ The notes were written to fit together, so their code agrees on a few convention
 - **The simulation never touches Instances.** Entities, tiles and collision are tables or buffers. The renderer reads them and writes GUI properties. This is what makes headless tests, server validation and replays possible.
 - **Snap at render time only**, camera first, then everything derived from the snapped camera. Screen shake is added after snapping, in whole pixels.
 - **`ResampleMode = Enum.ResamplerMode.Pixelated`** on every pixel-art image, and an integer world scale with letterboxing for the rest of the screen.
-- **Collision data is separate from visual data**, in tilemaps and in sprites (hitboxes come from frame data, not image bounds).
+- **Collision data is separate from visual data**, in [[tilemaps]] and in sprites (hitboxes come from frame data, not image bounds).
 - **The client is never trusted** for anything that grants value, in either route.
 
 ---
@@ -179,5 +179,5 @@ Only after that, decide whether the game needs multiplayer, and if it does, read
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Input Buffering]] · [[Resource Library - Networking and Multiplayer]] · [[Deterministic Simulation]] · [[Game Feel Start Here]] · [[Voxel Modelling Start Here]] · [[Modelling to the Roblox Camera and Player Scale]]
+[[Input Buffering]] · Resource Library - Networking and Multiplayer · Deterministic Simulation · Game Feel Start Here · Voxel Modelling Start Here · Modelling to the Roblox Camera and Player Scale
 <!-- auto-links:end -->

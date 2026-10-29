@@ -1,5 +1,5 @@
 ---
-tags: [economy, pricing, upgrades, curves, progression, math, balancing, luau]
+tags: [economy, pricing, upgrades, curves, progression, math, balancing, luau, type/guide, area/economy, level/advanced, area/scripting]
 ---
 # Pricing Curves and Upgrade Costs
 
@@ -12,7 +12,7 @@ tags: [economy, pricing, upgrades, curves, progression, math, balancing, luau]
 > - Payback time per level computed; natural cap `L*` known per zone.
 > - Multiplicative tracks checked against stacking rules and payer gap.
 >
-> Cost: TL;DR ~170 tok · whole note ~4.9k tok. Read more: ## 3. Payback: the number that decides when players stop · ## 6. Buy-max and bulk purchases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.0k tok. Read more: ## 3. Payback: the number that decides when players stop · ## 6. Buy-max and bulk purchases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Economy Inflation Sinks and Faucets Math]] prices zone gates from an income model and checks the ratio of price growth to income growth. [[Progression and Pacing Design]] and [[Balancing with Spreadsheets and Data]] set the pacing targets. This note goes one level down, to the **per-level upgrade track**: the "level 37 of 100, next level costs 4.2K" button that most Roblox games have several of. It covers which curve family to use and what each one does to the player over time, the payback period that decides when players stop buying, how several tracks compete for the same coins, buy-max arithmetic, rounding prices to readable numbers without breaking the curve, refunds and respecs, and how to put all of this on the server.
@@ -315,5 +315,10 @@ Store the rounded prices in the config ([[Data and Config Pipeline - Spreadsheet
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Power Curve]] · [[Faucets and Sinks]] · [[Economies and Currencies]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - Tycoons]] · [[Expected Value]]
+[[Power Curve]] · Faucets and Sinks · Economies and Currencies · Simulator and RNG Genre Teardown · Genre Playbook - Tycoons · Expected Value
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Faucets and Sinks]] · [[Economies and Currencies]] · [[Expected Value]] · [[Genre Playbook - Tycoons]] · [[Player-Driven Trading Economies]] · [[Drop Tables Rarity and Pity Systems]]
+<!-- related:end -->

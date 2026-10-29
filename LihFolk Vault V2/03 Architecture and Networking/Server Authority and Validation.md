@@ -1,5 +1,5 @@
 ---
-tags: [architecture, security, validation, server-authority, combat]
+tags: [architecture, security, validation, server-authority, combat, type/guide, area/networking, level/intermediate, api/ProcessReceipt, area/security, api/Player, api/Model]
 ---
 # Server Authority and Validation
 
@@ -12,7 +12,7 @@ tags: [architecture, security, validation, server-authority, combat]
 > - Every numeric argument is checked for NaN, infinity, range and integrality.
 > - Every Instance argument is checked for type, location, ownership and distance.
 >
-> Cost: TL;DR ~160 tok · whole note ~5.0k tok. Read more: ## A reusable validation module · ## Pattern: KitGuard-style ability validation · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.1k tok. Read more: ## A reusable validation module · ## Pattern: KitGuard-style ability validation · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 **Server authority** means the server holds the true game state and decides every outcome that matters; clients render, predict and request. **Validation** is how the server turns untrusted requests into safe decisions. Together they are the only real security a Roblox game has: client-side checks can always be removed by an exploiter (Roblox docs, "Security and cheat mitigation tactics").
@@ -392,5 +392,10 @@ It changes the trade-offs in this note: movement validation largely disappears, 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Server Authority]] · [[Remote Abuse Patterns and Rate Limiting in Practice]] · [[Cookbook - Remotes and Networking]] · [[Client Prediction and Reconciliation for Combat]] · [[Detecting Combat Exploits - Reach Rate and Aim]] · [[Idempotency]]
+[[Server Authority]] · [[Remote Abuse Patterns and Rate Limiting in Practice]] · Cookbook - Remotes and Networking · [[Client Prediction and Reconciliation for Combat]] · Detecting Combat Exploits - Reach Rate and Aim · Idempotency
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Cookbook - Remotes and Networking]] · [[Network Ownership]] · [[Project Structure and Bootstrapping]] · [[Replication Rules]] · [[Interest Management and Per-Player Replication]] · [[Frameworks - Knit Matter and Others]] · [[Snapshot Interpolation for Custom Replication]] · [[Teleporting and Multi-Place Games]]
+<!-- related:end -->

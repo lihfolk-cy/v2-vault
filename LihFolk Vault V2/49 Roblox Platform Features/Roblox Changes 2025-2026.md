@@ -1,5 +1,5 @@
 ---
-tags: [delta, platform-features, changelog, deprecations, policy, monetization, discovery, engine, ai-context]
+tags: [delta, platform-features, changelog, deprecations, policy, monetization, discovery, engine, ai-context, type/guide, area/platform, level/intermediate]
 verified: 2026-10-28
 ---
 # Roblox Changes 2025-2026
@@ -13,7 +13,7 @@ verified: 2026-10-28
 > - Game has completed the maturity questionnaire (unrated games are unplayable).
 > - Any paid random item shows numerical odds for every outcome before purchase.
 >
-> Cost: TL;DR ~190 tok · whole note ~1.7k tok. Read more: ## The ten changes most likely to break generated code · ## Child notes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~1.9k tok. Read more: ## The ten changes most likely to break generated code · ## Child notes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 This hub lists what changed on Roblox between January 2025 and late October 2026 that a capable developer or a strong AI model trained before mid-2025 is likely to miss. It is a delta, not a tutorial: each child note says what changed, when, what code or behaviour must change, and gives a short migration snippet. The numbers are also in machine-readable form in `_data/roblox_facts_2026.json`.
@@ -40,7 +40,7 @@ All dates are post dates or stated effective dates. "As of 2026-10-28" means the
 7. **Paid random items need numerical odds for every outcome, before purchase**, including luck boosts and indirect purchases (Community Standards update May 26, 2026).
 8. **Age-checked chat and age-tiered accounts.** Chat requires an age check worldwide (January 2026). Roblox Kids (5-8) and Roblox Select (9-15) see only games that pass a selection process. Games with no maturity questionnaire are unplayable for everyone.
 9. **Mesh streaming and cloud LoDs** replace `MeshPart.RenderFidelity`, which is ignored when `Workspace.MeshStreamingAndImprovedLoDs` is on and is planned for removal. **4096 x 4096 textures render in live games** (January 30, 2026).
-10. **Money changed.** Roblox Plus replaced Premium for new subscribers (April 30, 2026). Creator Rewards replaced Premium Payouts (July 24, 2025). The standard DevEx rate is $0.0038 per Robux (September 5, 2025), and a US 18+ rate of $0.0054 applies from June 8, 2026. Regional pricing is on by default for passes (March 30, 2026). See [[Discovery and Monetization Changes 2025-2026]].
+10. **Money changed.** Roblox Plus replaced Premium for new subscribers (April 30, 2026). [[Creator Rewards]] replaced Premium Payouts (July 24, 2025). The standard DevEx rate is $0.0038 per Robux (September 5, 2025), and a US 18+ rate of $0.0054 applies from June 8, 2026. Regional pricing is on by default for passes (March 30, 2026). See [[Discovery and Monetization Changes 2025-2026]].
 
 ## Child notes
 
@@ -83,3 +83,8 @@ All dates are post dates or stated effective dates. "As of 2026-10-28" means the
 - [[Discovery and the Algorithm]]
 - [[DataStore Fundamentals]]
 - [[Server Authority and Validation]]
+
+<!-- related:start -->
+## Related
+[[AI Pitfalls - Data and Monetization]] · [[AI Pitfalls - Stale APIs and Luau]] · [[Regional Compliance - Paid Random Items and Country Rules]] · [[Console and VR Release Checklists]] · [[Commerce and Physical Goods]] · [[Subscriptions and Recurring Revenue]] · [[Badges and Achievement Design]] · [[Experience Notifications and Return Prompts]]
+<!-- related:end -->

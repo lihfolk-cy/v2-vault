@@ -1,5 +1,5 @@
 ---
-tags: [ui, layout, udim2, uiscale, constraints, responsive]
+tags: [ui, layout, udim2, uiscale, constraints, responsive, type/guide, area/ui, level/intermediate, api/UIScale, area/physics, api/AnchorPoint]
 ---
 # Layout - Scale Offset and Constraints
 
@@ -12,7 +12,7 @@ tags: [ui, layout, udim2, uiscale, constraints, responsive]
 > - Panels are authored at one design resolution with one device `UIScale`.
 > - Clamp floor computed from the smallest authored text (12 px drawn minimum).
 >
-> Cost: TL;DR ~160 tok · whole note ~4.2k tok. Read more: ## 4. Design resolution plus UIScale · ## 6. The constraints · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.3k tok. Read more: ## 4. Design resolution plus UIScale · ## 6. The constraints · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox UI is laid out with one data type, `UDim2`, and a handful of modifier objects that sit as children of the thing they modify. This note covers the maths of `UDim2`, when to use Scale and when Offset, the design-resolution approach with `UIScale`, and every size constraint, including the cases where they silently override each other. Layout objects that arrange many children (lists, grids, pages, flex) are in [[UI Layout Objects - Lists Grids and Pages]]. Per-device strategy is in [[Responsive UI for Phone Tablet Console and PC]].
@@ -305,5 +305,10 @@ See also: [[ScreenGui Fundamentals]], [[UI Layout Objects - Lists Grids and Page
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Readable Text and UI Scale]] · [[Links - Layouts and constraints]] · [[Debugging UI Layout and Input]] · [[Cookbook - UI]] · [[Case Study - Phone UI Overhaul]] · [[Skill - Roblox UI Builder]]
+[[Readable Text and UI Scale]] · Links - Layouts and constraints · Debugging UI Layout and Input · Cookbook - UI · Case Study - Phone UI Overhaul · Skill - Roblox UI Builder
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Debugging UI Layout and Input]] · [[UI Design Systems]] · [[AI Pitfalls - UI and Input]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Virtualized Lists and Large Inventories]] · [[Gamepad and Console UX]] · [[UI Motion Language and Timing]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[Race HUD - Position, Laps, Splits, Speedometer and Minimap]] · [[Menu Archetypes - Shop Settings Codes Rewards]]
+<!-- related:end -->

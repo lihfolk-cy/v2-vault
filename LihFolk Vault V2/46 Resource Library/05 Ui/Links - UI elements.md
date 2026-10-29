@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, ui]
+tags: [resources, links, ui, type/reference, area/ui, level/intermediate]
 ---
 # Links - UI elements
 

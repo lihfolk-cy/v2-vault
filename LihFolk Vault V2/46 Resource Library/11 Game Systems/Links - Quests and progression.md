@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, game-systems]
+tags: [resources, links, game-systems, type/reference, area/design, level/intermediate]
 ---
 # Links - Quests and progression
 

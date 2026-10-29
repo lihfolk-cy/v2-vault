@@ -1,5 +1,5 @@
 ---
-tags: [lighting, untextured, stylised, flat-colour, materials, look-dev, roblox, phone, luau]
+tags: [lighting, untextured, stylised, flat-colour, materials, look-dev, roblox, phone, luau, type/guide, area/modeling, level/intermediate]
 ---
 # Lighting Untextured Art in Roblox
 
@@ -12,7 +12,7 @@ tags: [lighting, untextured, stylised, flat-colour, materials, look-dev, roblox,
 > - Sun 30 to 50 degrees up at the chosen time; lit faces about 1.5 to 2.5 times shadow faces.
 > - Warm top tint and cool ambient (or the zone's equivalent) set.
 >
-> Cost: TL;DR ~210 tok · whole note ~4.2k tok. Read more: ## Choosing a built-in material under flat colour · ## Building a look-dev room · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~210 tok · whole note ~4.3k tok. Read more: ## Choosing a built-in material under flat colour · ## Building a look-dev room · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Painted textures carry their own light: an artist paints the highlight on the top of a barrel and the shadow under its rim, and the barrel reads even in dull light. Untextured art (flat colour, gradient atlases, vertex colour) carries little or none. Every bit of form a player sees on a flat-coloured MeshPart comes from three sources: the mesh's normals, any gradient baked into its colour, and Roblox's lighting. That makes lighting a much bigger share of the look than in a textured game, and it makes untextured art sensitive to things textured art shrugs off: ambient balance, sun angle, material choice, and how the game degrades on low graphics settings.
@@ -42,7 +42,7 @@ Untextured meshes still have a `Material`. It changes surface response and, if t
 | Plastic | Very subtle surface pattern | Large surfaces where perfect evenness looks sterile | Pattern smears on collapsed or missing UVs |
 | Neon | Glows at its colour regardless of lighting, blooms | Accents, eyes, gems, lamps, rune lines | Large Neon areas flatten form and wash out under bloom; low graphics may lose the bloom |
 | Glass | Transparent, reflective | Windows, ice, potions | Transparency sorting and overdraw; avoid large areas on phones |
-| ForceField | Animated, translucent | Shields, magic | Not a general surface |
+| [[ForceField]] | Animated, translucent | Shields, magic | Not a general surface |
 | Wood, Slate, Fabric and others | Visible material pattern | Only if the mesh has real UVs and you want texture after all | Breaks the "non-textured" look; check against the style sheet |
 
 Rule of thumb: **SmoothPlastic for almost everything**, Neon for a small budget of glowing accents, and nothing patterned unless the style sheet says so. If the game mixes Parts built in Studio with imported meshes, put both on the same material or they will look like two different games next to each other ([[Keeping a Mixed Asset Library Consistent]]).
@@ -228,5 +228,10 @@ Delete or move the look-dev folder out of the published place (for example to `S
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Baking Lighting and Detail into Textures]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Bevels Chamfers and Edge Highlights Without Textures]] · [[Hand-Painted and Stylized Texturing]] · [[Voxel Palettes - Ramps Hue Shifting and Limits]] · [[Links - Lighting]]
+[[Baking Lighting and Detail into Textures]] · Voxel Shading - Baked AO Edges and Lighting · Bevels Chamfers and Edge Highlights Without Textures · Hand-Painted and Stylized Texturing · Voxel Palettes - Ramps Hue Shifting and Limits · Links - Lighting
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Voxel Shading - Baked AO Edges and Lighting]] · [[Bevels Chamfers and Edge Highlights Without Textures]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Hand-Painted and Stylized Texturing]] · [[Voxel Palettes - Ramps Hue Shifting and Limits]] · [[Stylised vs Realistic Material Pipelines]]
+<!-- related:end -->

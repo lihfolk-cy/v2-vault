@@ -1,5 +1,5 @@
 ---
-tags: [mcp, studio, ai, agents, tooling]
+tags: [mcp, studio, ai, agents, tooling, type/guide, area/ai, level/intermediate, area/studio]
 ---
 # Roblox Studio MCP Server
 
@@ -12,7 +12,7 @@ tags: [mcp, studio, ai, agents, tooling]
 > - `list_roblox_studios` called; correct place id chosen.
 > - `get_studio_state` says Edit.
 >
-> Cost: TL;DR ~130 tok · whole note ~4.5k tok. Read more: ## 1. History: from a plugin bridge to a built-in server · ## 3. The tool set · ## 7. Common mistakes · ## 8. Checklist before an agent session in Studio
+> Cost: TL;DR ~130 tok · whole note ~4.6k tok. Read more: ## 1. History: from a plugin bridge to a built-in server · ## 3. The tool set · ## 7. Common mistakes · ## 8. Checklist before an agent session in Studio
 <!-- tldr:end -->
 
 Roblox Studio ships with a built-in MCP server. Turn it on, point an MCP client at it, and an AI agent can explore your data model, read and edit scripts, run Luau in Edit, Server or Client contexts, start and stop play tests, read the Output, take screenshots, simulate player input, search and insert Creator Store assets, upload images and call Roblox's generative tools. This note covers how to enable it, what each tool does, how it behaves in practice, and the gotchas the reference project hit while building a whole game through it.
@@ -216,7 +216,7 @@ end
 
 ### 5.4 `screen_capture` surprises
 - **Black image or timeout** when Studio is not the foreground window (Measured). Ask the user to bring Studio to the front, retry once, then verify numerically and say you did.
-- **AlwaysOnTop BillboardGuis are not drawn** (health bars, name tags). Their absence in a capture is not a bug in your game.
+- **[[AlwaysOnTop]] BillboardGuis are not drawn** (health bars, name tags). Their absence in a capture is not a bug in your game.
 - **Capturing with a camera position leaves the Edit camera `Scriptable`**, and camera changes made inside `execute_luau` can be reverted by the tooling. Fix in one call with a delayed reset, then confirm in a second call:
 
 ```lua
@@ -287,5 +287,10 @@ The pattern that worked: **Studio is an I/O device and a ground-truth oracle; he
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI Agents and Autonomous Workflows]] · [[Batch Processing Tools in Studio]] · [[AI Code Assistants for Luau]] · [[Working with AI Assistants in Studio]] · [[AI in Roblox Development Overview]] · [[Plugin Security and Permissions]]
+[[AI Agents and Autonomous Workflows]] · Batch Processing Tools in Studio · AI Code Assistants for Luau · Working with AI Assistants in Studio · AI in Roblox Development Overview · Plugin Security and Permissions
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Agent Review Loops and Guardrails in Practice]] · [[Batch Processing Tools in Studio]] · [[AI in Roblox Development Overview]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]]
+<!-- related:end -->

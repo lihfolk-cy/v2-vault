@@ -1,5 +1,5 @@
 ---
-tags: [ai, 3d, meshy, tripo, rodin, blender, retopology]
+tags: [ai, 3d, meshy, tripo, rodin, blender, retopology, type/guide, area/ai, level/intermediate, area/modeling]
 ---
 # AI 3D Model Generation Outside Roblox
 
@@ -12,7 +12,7 @@ tags: [ai, 3d, meshy, tripo, rodin, blender, retopology]
 > - Transforms applied, origin set, scale and facing correct.
 > - Under 20,000 triangles per mesh and within your own budget.
 >
-> Cost: TL;DR ~150 tok · whole note ~3.4k tok. Read more: ## 1. The tools · ## 3. Cleanup pipeline (Blender) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.6k tok. Read more: ## 1. The tools · ## 3. Cleanup pipeline (Blender) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Outside Roblox, a crowded market of tools turns text or images into 3D models: Meshy, Tripo, Hyper3D Rodin, and open-weight models such as Roblox's own Cube 3D. Their output is impressive in a turntable video and awkward in a game: dense triangulated surfaces, baked-in lighting, messy UVs, no LODs, and sizes that mean nothing. This note covers what these tools actually output, the licence traps, and a concrete cleanup pipeline to turn a generated model into a Roblox-ready MeshPart, plus the reference project's reasons for banning generated meshes from its shipping art.
@@ -110,7 +110,7 @@ for obj in [o for o in bpy.context.selected_objects if o.type == 'MESH']:
     print(obj.name, before, "->", tri_count(obj))
 ```
 
-After decimation: merge by distance, recalculate normals outside, delete loose geometry, check for holes, and use weighted normals or shade-auto-smooth so faceting does not look accidental.
+After decimation: merge by distance, recalculate normals outside, delete loose geometry, check for holes, and use [[weighted normals]] or shade-auto-smooth so faceting does not look accidental.
 
 ### Step 4: UVs and texture transfer
 
@@ -211,5 +211,10 @@ Rules of thumb that reduce cleanup:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[AI in Roblox Development Overview]] · [[Modeling in Blender for Roblox]] · [[Roblox Policies on AI-Generated Content]] · [[Low-Poly and Stylized Modeling]] · [[Keeping a Mixed Asset Library Consistent]]
+[[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[AI in Roblox Development Overview]] · Modeling in Blender for Roblox · [[Roblox Policies on AI-Generated Content]] · Low-Poly and Stylized Modeling · Keeping a Mixed Asset Library Consistent
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[AI Pitfalls - Assets and Import]] · [[AI Material and Texture Generation]] · [[Who Owns AI-Generated Code and Assets]] · [[Evaluating AI Tools - A Practical Rubric]] · [[AI Animation and Motion from Video]] · [[AI Audio - Voice Music and SFX]] · [[Roblox Studio Assistant]] · [[Roblox Built-In AI Tools Timeline 2023-2026]]
+<!-- related:end -->

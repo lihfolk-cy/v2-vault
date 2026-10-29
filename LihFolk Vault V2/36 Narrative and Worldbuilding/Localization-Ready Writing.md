@@ -1,5 +1,5 @@
 ---
-tags: [narrative, localization, writing, translation, i18n, strings, ui-text]
+tags: [narrative, localization, writing, translation, i18n, strings, ui-text, type/guide, area/narrative, level/intermediate, area/ui]
 ---
 # Localization-Ready Writing
 
@@ -12,7 +12,7 @@ tags: [narrative, localization, writing, translation, i18n, strings, ui-text]
 > - Placeholders are named and say what they hold.
 > - No English plural logic in code; counts use labels or neutral wording.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.7k tok. Read more: ## 8. A style guide and a glossary · ## 9. Linting the source · ## 12. Common mistakes · ## 13. Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.8k tok. Read more: ## 8. A style guide and a glossary · ## 9. Linting the source · ## 12. Common mistakes · ## 13. Checklist
 <!-- tldr:end -->
 
 Localization problems are usually blamed on translators or on the translation tool, but most of them are written into the English source long before anyone translates it. A sentence built from three fragments, a label that reuses one word for two meanings, a pun that only works in English, a plural made by adding "s" in code, a line that calls the player "brave hero" in a language where adjectives agree with gender: each of these produces a broken or wrong translation no matter how good the translator is. This note is about writing English that translates well, by human translators and by Roblox's automatic translation alike.
@@ -331,5 +331,10 @@ Notes:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Readable Text and UI Scale]] · [[Captions and Audio Accessibility]] · [[Cookbook - Tables Strings and Time]] · [[Prompting and Verifying AI Output]] · [[Notification and Toast Systems]] · [[Patch Notes and Player Communication]]
+[[Readable Text and UI Scale]] · Captions and Audio Accessibility · Cookbook - Tables Strings and Time · Prompting and Verifying AI Output · Notification and Toast Systems · Patch Notes and Player Communication
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Experience Description and Search Keywords]] · [[Story State Flags and Chapter Saves]] · [[Captions and Audio Accessibility]] · [[Cookbook - Tables Strings and Time]] · [[Multiplayer Cutscene Sync - Server Clock, Late Joiners and Skip Votes]] · [[Puzzle Dependency Charts and Hint Systems]]
+<!-- related:end -->

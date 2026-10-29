@@ -1,5 +1,5 @@
 ---
-tags: [snippets, luau, keyframe-player, runtime, sampling, blending]
+tags: [snippets, luau, keyframe-player, runtime, sampling, blending, type/reference, area/animation, level/intermediate, api/Animator, area/scripting, api/PreSimulation]
 ---
 # Snippets: Lua Keyframe Player Core
 
@@ -12,7 +12,7 @@ tags: [snippets, luau, keyframe-player, runtime, sampling, blending]
 > - Markers: every marker fires exactly once per pass, including at time 0 and at the clip's end, and on loop wrap.
 > - Stop during a fade, Play during a fade, Play while playing (restart), AdjustWeight while fading.
 >
-> Cost: TL;DR ~200 tok · whole note ~8.3k tok. Read more: ## 1. The module · ## Nuances and edge cases · ## Checklist before trusting your own player · ## Common mistakes
+> Cost: TL;DR ~200 tok · whole note ~8.5k tok. Read more: ## 1. The module · ## Nuances and edge cases · ## Checklist before trusting your own player · ## Common mistakes
 <!-- tldr:end -->
 
 A self-contained Lua player for `KeyframeSequence`s: it parses a clip, samples it the way the engine Animator does, mixes several tracks by priority and weight the way the Animator does, fires markers, and writes joint `Transform`s once per frame for every rig, with distance LOD. Tracks expose the familiar `AnimationTrack` surface (`Play`, `Stop`, `AdjustSpeed`, `AdjustWeight`, `GetMarkerReachedSignal`, `Stopped`, `Ended`, `DidLoop`, `TimePosition`, `WeightCurrent`...).
@@ -25,7 +25,7 @@ Measured behaviour reproduced here (see [[How the Animator Really Behaves]]):
 - Rotations: nlerp when every keyframe is evenly spaced and every key is Linear; otherwise a linear blend of rotation vectors using the closest pair of representations.
 - Offsets lerp; translations scale with `Model:GetScale()`.
 - Fades are linear. A one-shot that ends holds its last pose and fades out over 0.3 s. A stopped track keeps advancing time during its fade. `Play` restarts at 0. Track time is float32.
-- Mixing: weight is handed out from the highest priority down; a priority whose weights fit in what is left keeps them, otherwise each track gets `w * rem / min(S, 1)`; contributions are summed as one weighted quaternion; with less than full weight in total, the rotation vector and offset scale toward rest. Offset weights are capped at 1.
+- Mixing: weight is handed out from the highest priority down; a priority whose weights fit in what is left keeps them, otherwise each track gets `w * rem / min(S, 1)`; contributions are summed as one weighted [[Quaternions|quaternion]]; with less than full weight in total, the rotation vector and offset scale toward rest. Offset weights are capped at 1.
 
 The reference implementation matched the real Animator within 0.084 degrees on R15 clips, 0.056 degrees and 0.002 studs on 60 enemy clips, 0.04 degrees on a five-track blend, and fired 319 of 319 markers, at about 22 microseconds per 25-bone rig per frame. This compact version follows the same rules but has not been measured on its own; A/B it against the Animator before trusting it ([[Testing Animations in Studio]]).
 
@@ -705,5 +705,10 @@ The reference project's production player added, on top of this core:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Engine Gotchas]] · [[AnimationTrack Reference]] · [[Debugging Animation Problems]] · [[Replication and Ownership]] · [[AI Animation and Motion from Video]] · [[Script Performance]] · [[Animation Start Here]]
+[[Engine Gotchas]] · [[AnimationTrack Reference]] · [[Debugging Animation Problems]] · [[Replication and Ownership]] · [[AI Animation and Motion from Video]] · Script Performance · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Authoring Clips in Code]] · [[Snippets - Playing Animations]] · [[Animation Glossary]] · [[Open Questions]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Animation Data from Blender to Roblox]] · [[Performance and Memory]] · [[Playback, Priorities and Blending]]
+<!-- related:end -->

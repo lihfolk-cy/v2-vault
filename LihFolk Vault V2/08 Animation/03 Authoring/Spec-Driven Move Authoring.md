@@ -1,5 +1,5 @@
 ---
-tags: [authoring, code, specs, ik, baking, combat]
+tags: [authoring, code, specs, ik, baking, combat, type/guide, area/animation, level/advanced, area/gameplay]
 ---
 # Spec-Driven Move Authoring
 
@@ -9,7 +9,7 @@ tags: [authoring, code, specs, ik, baking, combat]
 > - Avoid: Overhead straight to drive -> chop key
 > - Avoid: Deep root drops -> y >= -1.0 at scale 1
 >
-> Cost: TL;DR ~90 tok · whole note ~4.5k tok. Read more: ## The shared pose library (speclib) · ## The baker · ## Common mistakes
+> Cost: TL;DR ~90 tok · whole note ~4.6k tok. Read more: ## The shared pose library (speclib) · ## The baker · ## Common mistakes
 <!-- tldr:end -->
 
 Instead of keying every joint, describe each move as a handful of **key poses of what matters**: where the sword hand is, which way the blade points and its edge faces, where the off hand goes, where the feet stand, how the root leans and turns, and when the gameplay beats happen. A baker then solves the arms and legs with IK at dense in-between times and fits the result back into a compact `KeyframeSequence`.
@@ -178,7 +178,7 @@ About **0.5 s of solve time per baked frame** inside Studio: 15 / 20 / 47 frames
 ## Choreography lessons (written into the library)
 
 ### The chop key
-An **overhead to drive** swing turns the blade nearly 180 degrees. Interpolation takes the short way, which can be **back over the head**, so the impact frame ends with the blade pointing up. Insert a **chop** key that brings the blade **over the front** between overhead and drive. General rule: keep every joint's key-to-key turn under 120 degrees.
+An **overhead to drive** swing turns the blade nearly 180 degrees. Interpolation takes the short way, which can be **back over the head**, so the [[Impact Frames|impact frame]] ends with the blade pointing up. Insert a **chop** key that brings the blade **over the front** between overhead and drive. General rule: keep every joint's key-to-key turn under 120 degrees.
 
 ### Long pommels
 Use the "2" variants; make overhead, drive and kneel one-handed with the off hand out to the side; **chop before every drive**; halve the root yaw in flurries (turn the waist more); keep hands further from the body; **end on rest** (arms hanging like the game idle).
@@ -252,5 +252,10 @@ Checks before baking: no stance change under 0.12 s (the feet change WIDE > DEEP
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Posing and Silhouettes]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Weapon and Combat Animation]] · [[Principles of Animation for Games]] · [[AI Animation and Motion from Video]] · [[Modeling Weapons and Props]] · [[Animation Start Here]]
+[[Posing and Silhouettes]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Weapon and Combat Animation]] · [[Principles of Animation for Games]] · [[AI Animation and Motion from Video]] · Modeling Weapons and Props · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Animation Review Checklist]] · [[Timing Spacing and Frame Charts]] · [[Inverse Kinematics]] · [[Animation Editor Workflow]] · [[R15 Run Cycle Key Poses]] · [[Keyframes, Easing and Interpolation]] · [[Animation Editor Advanced]] · [[Snippets - IK]]
+<!-- related:end -->

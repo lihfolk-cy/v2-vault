@@ -1,5 +1,5 @@
 ---
-tags: [fundamentals, api, animator, reference]
+tags: [fundamentals, api, animator, reference, type/reference, area/animation, level/beginner, api/Animator, api/LoadAnimation, api/StepAnimations]
 ---
 # Animator Deep Dive
 
@@ -10,7 +10,7 @@ tags: [fundamentals, api, animator, reference]
 > - Translation offsets scale with `Model:GetScale()`.
 > - `track.Length` stays 0: the asset never loaded.
 >
-> Cost: TL;DR ~130 tok · whole note ~4.0k tok. Read more: ## Complete member list · ## StepAnimations: the Edit-mode workhorse
+> Cost: TL;DR ~130 tok · whole note ~4.1k tok. Read more: ## Complete member list · ## StepAnimations: the Edit-mode workhorse
 <!-- tldr:end -->
 
 The `Animator` is the engine object that owns playback for one rig: it creates tracks, evaluates them each frame, mixes them, writes joint transforms and replicates what is playing. This note is the complete member reference plus everything the reference does not tell you. For measured numerical behaviour (interpolation, weights, fades) see [[How the Animator Really Behaves]]; for track members see [[AnimationTrack Reference]].
@@ -124,7 +124,7 @@ Pattern B is what one production Lua keyframe player does to decide whether "som
 `StepAnimations` is the only way to run the real Animator without pressing Play, so every serious offline animation tool uses it. Measured rules from one production pipeline:
 
 - It works in Edit mode but needs **`dt > 0`** (measured). One of the same project's tool snippets calls `StepAnimations(0)` right after `Play(0)`, which contradicts that rule; the sources do not say whether a zero step applies the first pose. Use a tiny positive dt (for example `1e-4`) and you never have to know.
-- The clip must have **loaded**: wait for `track.Length > 0`. A freshly registered KeyframeSequenceProvider clip plays nothing until then; one QA run that skipped the wait reported a 117 degree "error" that was just an unloaded clip.
+- The clip must have **loaded**: wait for `track.Length > 0`. A freshly registered [[KeyframeSequenceProvider]] clip plays nothing until then; one QA run that skipped the wait reported a 117 degree "error" that was just an unloaded clip.
 - Edit mode has **no physics**, so `Transform` values do not move parts. Read joint `Transform`s and compute part CFrames yourself (see [[Motor6D Math and CFrame Composition]]), or pose the parts directly.
 - **Reset joints afterwards** (the docs say so explicitly): set every `Transform` back to identity, or your Edit-mode rig is left posed and the pose gets saved into the place.
 - ViewportFrame rigs cannot be advanced in Edit.
@@ -190,7 +190,7 @@ What replicates is **track state** (which clip, play/stop, weight, speed, priori
 - **Joints are matched by name.** A Pose (or curve folder) binds to the joint whose `Part1` has that name (for Bones, the bone's name). Keys for joints that do not exist are silently ignored. A misspelt Pose name gives a clip that "plays" and moves nothing.
 - **The top-level pose is never applied.** The first Pose under each Keyframe (`HumanoidRootPart`, or a bone rig's `Root`) does nothing. Root motion must be on a child joint.
 - **Translation offsets scale with `Model:GetScale()`.** Body-scaled avatars report 1, so they get no scaling. See [[Scale and Animation]].
-- **Interpolation is not slerp** for most clips. See [[How the Animator Really Behaves]].
+- **Interpolation is not [[slerp]]** for most clips. See [[How the Animator Really Behaves]].
 - **Missing Animator in Edit-built rigs.** `Players:CreateHumanoidModelFromDescription` (now deprecated in favour of `CreateHumanoidModelFromDescriptionAsync`) in Edit mode returned a rig with no Motor6Ds in one project; `BuildRigFromAttachments` failed quietly. Rebuild joints from the `RigAttachment` pairs for Edit-mode test dummies.
 - **Retargeting.** `Workspace.Retargeting` (`AnimatorRetargetingMode`: `Default`, `Disabled`, `Enabled`) adapts joint transforms to body proportions. Community reports say turning it on changed how existing R15 clips and C0-driven code looked; if a clip that used to be exact now looks off on unusual avatars, check this property first. Exact algorithm: undocumented.
 
@@ -211,5 +211,10 @@ Work down this list; each line is a real cause seen in production.
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Debugging Animation Problems]] · [[Snippets - Lua Keyframe Player Core]] · [[Troubleshooting Table]] · [[Performance and Memory]] · [[Links - Animation playback]] · [[Links - Rigs]] · [[Animation Start Here]]
+[[Debugging Animation Problems]] · [[Snippets - Lua Keyframe Player Core]] · [[Troubleshooting Table]] · [[Performance and Memory]] · [[Links - Animation playback]] · Links - Rigs · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[KeyframeSequence Keyframe and Pose Reference]] · [[AI Pitfalls - Physics and Animation]] · [[Animation Glossary]] · [[Rigs and Joints]] · [[Open Questions]] · [[Bones and Skinned Meshes]] · [[Procedural Animation]] · [[CurveAnimation and Curve Channels]] · [[Snippets - Ragdoll]]
+<!-- related:end -->

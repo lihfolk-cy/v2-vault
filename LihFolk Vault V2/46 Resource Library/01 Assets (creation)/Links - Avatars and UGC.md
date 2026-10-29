@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, assets-creation]
+tags: [resources, links, assets-creation, type/reference, area/avatars, level/intermediate]
 ---
 # Links - Avatars and UGC
 
@@ -62,5 +62,5 @@ Part of [[Resource Library - Assets (creation)]] in the [[Resource Library Start
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Custom characters and avatars]] · [[UGC Avatar Items and Accessories]] · [[Avatars and UGC Start Here]] · [[Links - Overview]] · [[Bundles Animation Packs and Emotes for Sale]] · [[Layered Clothing Creation Workflow]]
+[[Links - Custom characters and avatars]] · [[UGC Avatar Items and Accessories]] · Avatars and UGC Start Here · [[Links - Overview]] · Bundles Animation Packs and Emotes for Sale · Layered Clothing Creation Workflow
 <!-- auto-links:end -->

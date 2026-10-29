@@ -1,5 +1,5 @@
 ---
-tags: [modeling, optimization, mobile, performance, meshes, draw-calls, blender, budgets]
+tags: [modeling, optimization, mobile, performance, meshes, draw-calls, blender, budgets, type/guide, area/modeling, level/intermediate, api/DoubleSided]
 ---
 # Mesh Optimization for Mobile
 
@@ -12,7 +12,7 @@ tags: [modeling, optimization, mobile, performance, meshes, draw-calls, blender,
 > - Repeated props are one mesh, cloned in Studio, sharing textures.
 > - Unique detail merged per object; large world pieces split for culling.
 >
-> Cost: TL;DR ~190 tok · whole note ~5.7k tok. Read more: ## 6. Worked example: a market stall · ## 7. Audit scripts · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~5.8k tok. Read more: ## 6. Worked example: a market stall · ## 7. Audit scripts · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most Roblox players are on phones, and phones fail differently from PCs: they run out of memory before they run out of triangles, they pay heavily for transparent pixels, and they get hot and throttle after ten minutes. This note is about making meshes that survive that: what a phone actually pays for when it draws your model, per-asset budgets for mid-range phones, when to merge meshes and when to split them, the properties that quietly double a mesh's cost, a full worked optimisation of one prop, and two audit scripts (one in Blender, one in Studio) that find problems before players do.
@@ -325,5 +325,10 @@ See also: [[Modeling Fundamentals for Games]], [[Retopology and Decimation]], [[
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Draw Calls]] · [[Triangle Budget]] · [[Modeling in Blender for Roblox]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Foliage Props and Scatter]] · [[Parts Unions and MeshParts]]
+[[Draw Calls]] · Triangle Budget · Modeling in Blender for Roblox · Flat Colour vs Gradient Atlas vs Vertex Colour · Foliage Props and Scatter · Parts Unions and MeshParts
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Spending Triangles Where the Camera Looks]] · [[Triangle Budget]] · [[UV Unwrapping]] · [[Blender Workflow for Roblox Creators]] · [[Texturing and PBR Baking]] · [[Hard-Surface Modeling]] · [[Hand-Painted and Stylized Texturing]] · [[Voxel and Blocky Modeling]] · [[Organic and Creature Modeling]] · [[Normal Maps and Detail Baking]]
+<!-- related:end -->

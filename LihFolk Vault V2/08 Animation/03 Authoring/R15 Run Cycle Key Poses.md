@@ -1,5 +1,5 @@
 ---
-tags: [authoring, locomotion, run, run-cycle, r15, key-poses, keyframesequence, swordsman, sprint, foot-sliding]
+tags: [authoring, locomotion, run, run-cycle, r15, key-poses, keyframesequence, swordsman, sprint, foot-sliding, type/guide, area/animation]
 ---
 # R15 Run Cycle Key Poses
 
@@ -12,7 +12,7 @@ tags: [authoring, locomotion, run, run-cycle, r15, key-poses, keyframesequence, 
 > - Chest leans, pelvis stays within 8°, head counter-rotates.
 > - Hip bob solved per key for foot contact.
 >
-> Cost: TL;DR ~150 tok · whole note ~2.3k tok. Read more: ## 3. The swordsman run: poses · ## 4. Matching the clip to movement speed (foot sliding) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~2.4k tok. Read more: ## 3. The swordsman run: poses · ## 4. Matching the clip to movement speed (foot sliding) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A run is the one cycle every action game needs, and the one the rest of this vault gives rules for but no numbers. This note gives a complete, worked set of R15 key poses for a fast, hunched **swordsman run**: joint angles per key, timing, hip bob and the speed the clip implies. It then covers how to change it into other runs and how to match it to `WalkSpeed` so the feet don't slide.
@@ -42,7 +42,7 @@ A **quick-step** run (short stride, high cadence) keeps every beat but shrinks t
 ## 2. The swordsman run: timing
 
 - **Keys:** 8 keys, plus a closing key equal to the first, every **0.0625 s**. The cycle is **0.5 s**: 2 steps of 0.25 s, or 240 steps per minute.
-- **Easing:** all segments are **Linear**. Evenly spaced Linear keys make Studio blend rotations with quaternions, which is smooth and shortest-way. Segments under 0.1 s that move the hips or feet should stay Linear anyway ([[Keyframes, Easing and Interpolation]]).
+- **Easing:** all segments are **Linear**. Evenly spaced Linear keys make Studio blend rotations with [[quaternions]], which is smooth and shortest-way. Segments under 0.1 s that move the hips or feet should stay Linear anyway ([[Keyframes, Easing and Interpolation]]).
 - **Priority:** `Movement`, with `Looped` true.
 
 ## 3. The swordsman run: poses
@@ -139,3 +139,8 @@ If the sword is a `Tool`, the stock Animate script plays `toolnone` on the right
 - [[KeyframeSequence Keyframe and Pose Reference]]: building the clip in code.
 - [[Procedural Gait and Footstep Planning]]: the no-slide condition.
 - [[Locomotion Systems]]: playing run clips from movement speed.
+
+<!-- related:start -->
+## Related
+[[Locomotion Readability - Lessons from Blind Panels]] · [[LihFolk R15 Keyframe Pipeline]] · [[Retargeting Animations Between Rigs]] · [[Posing and Silhouettes]] · [[Snippets - IK]] · [[Spec-Driven Move Authoring]] · [[Authoring Clips in Code]] · [[Scale and Animation]]
+<!-- related:end -->

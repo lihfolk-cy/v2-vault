@@ -1,5 +1,5 @@
 ---
-tags: [2d, editableimage, pixel-buffer, procedural, buffers, rendering, performance, memory, permissions, luau]
+tags: [2d, editableimage, pixel-buffer, procedural, buffers, rendering, performance, memory, permissions, luau, type/guide, area/2d]
 ---
 # EditableImage for Pixel Buffers and Procedural 2D
 
@@ -12,7 +12,7 @@ tags: [2d, editableimage, pixel-buffer, procedural, buffers, rendering, performa
 > - Creation wrapped in `pcall`, `nil` handled, and a fallback path exists.
 > - Framebuffers at native pixel resolution (well under 1024), scaled up with `Pixelated`.
 >
-> Cost: TL;DR ~140 tok · whole note ~6.0k tok. Read more: ## 1. The API as documented · ## 4. A framebuffer you can build on · ## 6. Fallbacks and failure modes · ## 9. Checklist
+> Cost: TL;DR ~140 tok · whole note ~6.1k tok. Read more: ## 1. The API as documented · ## 4. A framebuffer you can build on · ## 6. Fallbacks and failure modes · ## 9. Checklist
 <!-- tldr:end -->
 
 `EditableImage` lets a script create an image at runtime and write pixels into it. For 2D games that opens doors that ImageLabels alone cannot: a real framebuffer you draw into, destructible terrain masks, fog of war, paint and drawing tools, procedural backgrounds and effects, runtime palette swaps, and minimaps drawn from data. It also has sharp edges: a client memory budget that makes creation return `nil`, a permission toggle that is off by default in published games, a display path that only refreshes one image per frame, and policy questions as soon as players can draw things other players see. This note covers the current API as documented, the budgets, a working framebuffer, and when to avoid the whole thing.
@@ -39,7 +39,7 @@ Everything in this section is from the EditableImage and AssetService reference 
 **Drawing primitives.**
 
 - `DrawRectangle(position, size, color, transparency, combineType)`
-- `DrawCircle(center, radius, color, transparency, combineType, antiAliasing)` and `DrawLine(p1, p2, color, transparency, combineType, antiAliasing)`; `antiAliasing` defaults to enabled, which you will want to turn off for pixel art.
+- `DrawCircle(center, radius, color, transparency, combineType, antiAliasing)` and `DrawLine(p1, p2, color, transparency, combineType, antiAliasing)`; `antiAliasing` defaults to enabled, which you will want to turn off for [[pixel art]].
 - `DrawImage(position, image, combineType)` copies another EditableImage in.
 - `DrawImageTransformed(position, scale, rotation, image, options?)` with options including `CombineType` (default AlphaBlend), `SamplingMode` (`Default` is bilinear, `Pixelated` is nearest neighbour) and `PivotPoint`.
 - `DrawImageProjected` and `SampleImageProjected` project images onto meshes; they are aimed at 3D painting rather than 2D games.
@@ -340,7 +340,7 @@ Keep a one byte per pixel solidity mask in a buffer (1 = solid). Draw the terrai
 
 ### 5.2 Fog of war
 
-Use one pixel per tile, not per screen pixel. A 128 by 128 tile map becomes a 64 KB image; display it over the map scaled by the tile size with `ResampleMode = Default` if you want soft fog edges for free (bilinear scaling of a low resolution mask is exactly a soft fog), or `Pixelated` for hard tile fog. The server decides visibility; the client only draws what the server told it (section 7).
+Use one pixel per tile, not per screen pixel. A 128 by 128 [[Tilemaps|tile map]] becomes a 64 KB image; display it over the map scaled by the tile size with `ResampleMode = Default` if you want soft fog edges for free (bilinear scaling of a low resolution mask is exactly a soft fog), or `Pixelated` for hard tile fog. The server decides visibility; the client only draws what the server told it (section 7).
 
 ### 5.3 Runtime palette swap
 
@@ -428,5 +428,10 @@ Every feature built on EditableImage should have a "unavailable" path that still
 
 ## Connected notes
 <!-- auto-links:start -->
-[[2D Game Development Start Here]] · [[SurfaceAppearance PBR Workflow]] · [[Choosing GUI 2D or Locked-Camera 2.5D]] · [[Textures Decals and Texture Memory]] · [[The Gradient Palette Texture Workflow]] · [[Texturing and PBR Baking]]
+[[2D Game Development Start Here]] · [[SurfaceAppearance PBR Workflow]] · [[Choosing GUI 2D or Locked-Camera 2.5D]] · Textures Decals and Texture Memory · The Gradient Palette Texture Workflow · Texturing and PBR Baking
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Textures Decals and Texture Memory]] · [[2D Collision Physics and Platformer Movement]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] · [[Luau Performance Patterns with Benchmarks]] · [[Infinite and Streamed Worlds]]
+<!-- related:end -->

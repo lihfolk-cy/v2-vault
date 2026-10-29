@@ -1,5 +1,5 @@
 ---
-tags: [modeling, texturing, pbr, baking, blender, cycles, surfaceappearance]
+tags: [modeling, texturing, pbr, baking, blender, cycles, surfaceappearance, type/guide, area/modeling, level/intermediate, api/SurfaceAppearance, api/Part]
 ---
 # Texturing and PBR Baking
 
@@ -12,7 +12,7 @@ tags: [modeling, texturing, pbr, baking, blender, cycles, surfaceappearance]
 > - Colour map sRGB, all other maps Non-Color, verified pixel values.
 > - Metalness binary except transitions; dielectric albedo within range.
 >
-> Cost: TL;DR ~140 tok · whole note ~5.2k tok. Read more: ## 1. The SurfaceAppearance maps · ## 4. Baking in Blender with Cycles · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~5.3k tok. Read more: ## 1. The SurfaceAppearance maps · ## 4. Baking in Blender with Cycles · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox renders custom-textured meshes through `SurfaceAppearance`, a metalness-workflow PBR material with five maps. This note explains what each map means to the renderer, which colour space each must be authored in, how to bake them in Blender with Cycles (including selected-to-active baking with a cage), the roughness and metalness conventions that make assets look right under Roblox lighting, and what a texture set costs. Specs are from the Creator Hub (checked October 2026); "measured" items come from one production game, the reference project.
@@ -285,5 +285,10 @@ Cost-saving rules:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[SurfaceAppearance PBR Workflow]] · [[Baking Lighting and Detail into Textures]] · [[Stylised vs Realistic Material Pipelines]] · [[Materials and Surfaces Start Here]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Voxel Shading - Baked AO Edges and Lighting]]
+[[SurfaceAppearance PBR Workflow]] · Baking Lighting and Detail into Textures · Stylised vs Realistic Material Pipelines · Materials and Surfaces Start Here · Flat Colour vs Gradient Atlas vs Vertex Colour · Voxel Shading - Baked AO Edges and Lighting
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Baking Lighting and Detail into Textures]] · [[Stylised vs Realistic Material Pipelines]] · [[Mesh Optimization for Mobile]] · [[Low-Poly and Stylized Modeling]] · [[Hard-Surface Modeling]] · [[Modeling Fundamentals for Games]] · [[Blender Workflow for Roblox Creators]]
+<!-- related:end -->

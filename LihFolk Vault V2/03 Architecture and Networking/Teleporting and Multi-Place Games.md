@@ -1,5 +1,5 @@
 ---
-tags: [architecture, networking, teleport, multi-place, security, matchmaking]
+tags: [architecture, networking, teleport, multi-place, security, matchmaking, type/guide, area/networking, level/intermediate, api/TeleportService, area/security, api/HttpService]
 ---
 # Teleporting and Multi-Place Games
 
@@ -12,7 +12,7 @@ tags: [architecture, networking, teleport, multi-place, security, matchmaking]
 > - Teleport data contains no value; tickets live in MemoryStore or DataStore.
 > - Destination servers validate `SourcePlaceId`, membership, and default-deny.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.8k tok. Read more: ## Teleport data: what you may trust · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.0k tok. Read more: ## Teleport data: what you may trust · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 An experience (universe) can contain many **places**: a lobby, dungeons, arenas, a trading hub, event maps. `TeleportService` moves players between places, between servers of the same place, and into **reserved servers** that only your code can send people to. Multi-place design keeps each server's memory small, lets you build instanced content (a private dungeon run, a ranked match), and separates risky features. It also introduces failure modes that do not exist in a single place: teleports that fail halfway, data that must survive the hop, a client that tells the destination lies, and sub-places that players can enter directly if you configure access wrongly. This note covers all of it with the documented rules.
@@ -215,7 +215,7 @@ The classic multi-place bug is a **race between saving on the source and loading
 
 Solutions:
 
-- **Session locking** (profile libraries such as ProfileStore): the destination waits until the source releases the lock. See [[Session Locking and Profile Libraries]].
+- **Session locking** (profile libraries such as [[ProfileStore]]): the destination waits until the source releases the lock. See [[Session Locking and Profile Libraries]].
 - **Save before teleporting**: flush the profile and release the lock, then call `TeleportAsync`. Still keep locking; teleports can fail and leave the player on the source.
 - **Never carry value in teleport data.** Rewards earned in a dungeon are written to the profile on the dungeon server.
 
@@ -310,5 +310,10 @@ The senior trade-off: splitting a game into places allows bigger worlds and sepa
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Teleporting]] · [[Multiplayer Services Start Here]] · [[Links - Reserved and private servers]] · [[Server Shutdowns Soft Updates and Migration]] · [[Server Browsers and Server Lists]] · [[Session Lock]]
+[[Links - Teleporting]] · Multiplayer Services Start Here · Links - Reserved and private servers · Server Shutdowns Soft Updates and Migration · Server Browsers and Server Lists · Session Lock
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Joining Friends Parties and Private Servers]] · [[Server Hop Rejoin and Server Lists with Ping]] · [[Client-Server Model]] · [[Network Ownership]] · [[RemoteEvents RemoteFunctions and Unreliable Remotes]] · [[Project Structure and Bootstrapping]] · [[Rate Limiting and Abuse Prevention]] · [[Replication Rules]]
+<!-- related:end -->

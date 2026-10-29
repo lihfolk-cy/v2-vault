@@ -1,5 +1,5 @@
 ---
-tags: [rigs, skeletons, animation, assets]
+tags: [rigs, skeletons, animation, assets, type/guide, area/animation, level/intermediate, api/Humanoid]
 ---
 # Skeleton Library
 
@@ -89,5 +89,10 @@ Related: [[Blender Workflow for Roblox Creators]], [[Exporting and Validating Mo
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Rigging in Blender]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Skinning Weights]] · [[3D Importer Settings Reference]] · [[Rigs and Joints]] · [[Creature Rig Conventions]]
+[[Rigging in Blender]] · Modeling Characters for R15 and Custom Rigs · Skinning Weights · 3D Importer Settings Reference · Rigs and Joints · Creature Rig Conventions
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Modeling Characters for R15 and Custom Rigs]] · [[3D Importer Settings Reference]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Rigs and Joints]] · [[Blender Armature and Bone Roll Conventions]] · [[Skinning Weights]]
+<!-- related:end -->

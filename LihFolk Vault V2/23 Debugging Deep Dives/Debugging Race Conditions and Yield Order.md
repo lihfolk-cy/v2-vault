@@ -1,5 +1,5 @@
 ---
-tags: [debugging, race-conditions, task-library, yielding, characters, players]
+tags: [debugging, race-conditions, task-library, yielding, characters, players, type/guide, area/debugging, level/advanced, api/CharacterAdded, api/Humanoid, api/Player]
 ---
 # Debugging Race Conditions and Yield Order
 
@@ -12,7 +12,7 @@ tags: [debugging, race-conditions, task-library, yielding, characters, players]
 > - Character bindings clean up on respawn and re-check `player.Character == character` after waits.
 > - Server handlers change state before yielding, or hold a per-player busy flag.
 >
-> Cost: TL;DR ~180 tok · whole note ~4.5k tok. Read more: ## 5. Character load order · ## 8. Tools for catching races · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~4.6k tok. Read more: ## 5. Character load order · ## 8. Tools for catching races · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Luau in Roblox runs one thread at a time per Luau VM (outside Parallel Luau), so people often assume races cannot happen. They happen constantly. A race in Roblox is not two threads writing the same memory at the same instant; it is **two pieces of code whose relative order is not fixed**, where one order works and the other does not. The order changes with network latency, device speed, streaming, deferred signals and which script the engine happens to start first. That is why race bugs show up on phones and in live servers and hide in Studio.
@@ -377,5 +377,10 @@ Log violations with a traceback (Studio) or a counter (live). They turn silent r
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Custom Schedulers and Coroutine Patterns]] · [[Building a Signal Library]] · [[Cookbook - Remotes and Networking]] · [[Cookbook - Players and Characters]] · [[Functions Closures and Upvalues]] · [[Error Handling - pcall xpcall and Promise Patterns]]
+[[Custom Schedulers and Coroutine Patterns]] · Building a Signal Library · Cookbook - Remotes and Networking · Cookbook - Players and Characters · Functions Closures and Upvalues · Error Handling - pcall xpcall and Promise Patterns
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[The Debugging Method - Reproduce Isolate Bisect]] · [[Cookbook - Players and Characters]] · [[AI Pitfalls - Networking and Security]] · [[Debugging DataStore Problems]] · [[Debugging Live Servers]] · [[Debugging UI Layout and Input]] · [[Debugging Physics and Network Ownership]]
+<!-- related:end -->

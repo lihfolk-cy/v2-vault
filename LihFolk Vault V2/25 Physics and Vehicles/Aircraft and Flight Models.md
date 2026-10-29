@@ -1,5 +1,5 @@
 ---
-tags: [physics, vehicles, aircraft, flight, aerodynamics, network-ownership]
+tags: [physics, vehicles, aircraft, flight, aerodynamics, network-ownership, type/guide, area/physics, level/intermediate, area/networking]
 ---
 # Aircraft and Flight Models
 
@@ -12,7 +12,7 @@ tags: [physics, vehicles, aircraft, flight, aerodynamics, network-ownership]
 > - Arcade: bank, speed-pitch trade, auto-level.
 > - Tier 2: `K` from cruise speed, stall speed computed, tail stability, damping, assists.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.2k tok. Read more: ## 2. Tier 1: arcade flight · ## 3. Tier 2: simple aerodynamic model · ## 10. Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.3k tok. Read more: ## 2. Tier 1: arcade flight · ## 3. Tier 2: simple aerodynamic model · ## 10. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Flying is the vehicle type where "realistic" and "fun" disagree the most. A real flight model stalls, needs runways, and punishes a thumb on a phone screen. An arcade model that ignores physics feels like a floating camera. Good Roblox aircraft sit in between, and the choice of where is a design decision before it is a code decision. This note covers the three flight-model tiers (arcade, simple aerodynamic, engine fluid forces), the lift and drag maths you need for the middle tier, helicopters and hover craft, controls for keyboard, gamepad and touch, cameras, ownership, anti-cheat for things that legitimately fly, and the performance and streaming problems that only appear when players move very fast over a large map.
@@ -245,7 +245,7 @@ end
 return surfaceForce
 ```
 
-Check the sign of `liftDir` in Studio with a debug arrow: with the plane flying level and nose slightly up, lift must point up. If it points down, the cross product order is reversed somewhere (with Roblox's right-handed axes and a forward of -Z, `right:Cross(flow)` points up for level flight; `flow:Cross(right)` points down). Sign errors in lift are the most common bug in hand-rolled flight models, and they show up as a plane that dives harder the more you pull up.
+Check the sign of `liftDir` in Studio with a debug arrow: with the plane flying level and nose slightly up, lift must point up. If it points down, the [[cross product]] order is reversed somewhere (with Roblox's right-handed axes and a forward of -Z, `right:Cross(flow)` points up for level flight; `flow:Cross(right)` points down). Sign errors in lift are the most common bug in hand-rolled flight models, and they show up as a plane that dives harder the more you pull up.
 
 ---
 
@@ -372,5 +372,10 @@ Run checks against the aircraft root, not the character, and switch them on only
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Genre Playbook - Racing and Driving]] · [[Links - Forces and movers]] · [[Rotations Angles and Quaternions]] · [[Physics Assemblies and Constraints]] · [[Debugging Physics and Network Ownership]] · [[Motion Sensitivity and Camera Comfort]]
+[[Genre Playbook - Racing and Driving]] · Links - Forces and movers · Rotations Angles and Quaternions · Physics Assemblies and Constraints · Debugging Physics and Network Ownership · Motion Sensitivity and Camera Comfort
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Centre of Mass, Anti-Flip and Self-Righting]] · [[Choosing a Car Chassis - Raycast Suspension vs Constraint Builds vs Community Kits]] · [[Steering Geometry and Arcade Drifting - Ackermann, Slip and Grip Tuning]] · [[Standing on Moving Vehicles and Platforms - Keeping Players Glued]] · [[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[Engine, Gearbox and Torque Curve Model for Arcade Cars]] · [[Multi-Seat Vehicles - Driver, Passenger and Gunner Roles]]
+<!-- related:end -->

@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [index, start, economy, design, balancing]
+tags: [index, start, economy, design, balancing, type/hub, area/economy, level/beginner, area/design]
 ---
 # Economy Design Start Here
 
@@ -35,7 +35,7 @@ Read the older notes first if the words faucet, sink, time to afford or effectiv
 
 ## Sourcing
 
-Platform facts (AnalyticsService economy events, ConfigService and experiments, MemoryStore limits, PolicyService and regional price levels) were checked against create.roblox.com and are labelled "Roblox docs (as of October 2026)". Production lessons from one live game are labelled "measured in the reference project". Everything else is labelled "rule of thumb" or, in the simulation note, "simulated". Luau code is strict and reviewed by reading, not run. The Python simulation was run, and its numbers are quoted from those runs.
+Platform facts (AnalyticsService economy events, [[ConfigService]] and experiments, MemoryStore limits, PolicyService and regional price levels) were checked against create.roblox.com and are labelled "Roblox docs (as of October 2026)". Production lessons from one live game are labelled "measured in the reference project". Everything else is labelled "rule of thumb" or, in the simulation note, "simulated". Luau code is strict and reviewed by reading, not run. The Python simulation was run, and its numbers are quoted from those runs.
 
 ## Related sections
 
@@ -48,5 +48,5 @@ Platform facts (AnalyticsService economy events, ConfigService and experiments, 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Faucets and Sinks]] · [[Expected Value]] · [[Pity Timer]] · [[Variance]] · [[Progression Levels and Unlocks]] · [[Telemetry Events]]
+[[Faucets and Sinks]] · Expected Value · Pity Timer · Variance · Progression Levels and Unlocks · Telemetry Events
 <!-- auto-links:end -->

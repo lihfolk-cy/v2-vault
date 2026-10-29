@@ -1,5 +1,5 @@
 ---
-tags: [policy, compliance, maturity, paid-random-items, policyservice, odds, luau]
+tags: [policy, compliance, maturity, paid-random-items, policyservice, odds, luau, type/guide, area/monetization, level/intermediate, api/PolicyService, area/scripting]
 ---
 # Roblox Policies Ratings and Compliance
 
@@ -12,7 +12,7 @@ tags: [policy, compliance, maturity, paid-random-items, policyservice, odds, lua
 > - Policy service on the server, fail-closed, attributes for UI
 > - Every paid random item: all outcomes, numerical odds, 100% sum, labelled details button
 >
-> Cost: TL;DR ~140 tok · whole note ~4.0k tok. Read more: ## 1. The Maturity & Compliance Questionnaire (Docs) · ## 2. Paid random items (Docs, Oct 2026) · ## 7. Common mistakes · ## 8. Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.1k tok. Read more: ## 1. The Maturity & Compliance Questionnaire (Docs) · ## 2. Paid random items (Docs, Oct 2026) · ## 7. Common mistakes · ## 8. Checklist
 <!-- tldr:end -->
 
 Compliance on Roblox has three layers: the **Maturity & Compliance Questionnaire** (which sets your content label and who can see your game), **monetization policies** (paid random items and odds disclosure, paid item trading, subscription, ad and notification rules), and the general **Terms of Use and Community Standards**. Breaking them costs reach, ads eligibility, payouts, or the game. This note explains each layer, the `PolicyService` checks you must implement, and how to build odds disclosure that meets the rules, with code. Verified against the Creator Hub "Content maturity and compliance", "Paid random items" and `PolicyService` pages **as of October 2026**. This is a developer guide, not legal advice; regulations differ by country and change.
@@ -90,7 +90,7 @@ The "indirect" clause catches most simulators: if gems can be bought with Robux 
 The user may not interact with paid random item generators. You must do one of (Docs):
 - offer an unpaid, earnable path to the item;
 - offer outcomes in a predetermined, disclosed, non-random order;
-- sell specific outcomes directly, priced at expected value;
+- sell specific outcomes directly, priced at [[expected value]];
 - remove or hide the paid random item;
 - block the purchase with an error message;
 - keep the user out of areas with paid random items.
@@ -276,5 +276,10 @@ Before each release:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Paid Random Items and Odds Disclosure in Practice]] · [[Skill - Roblox Monetization Compliance]] · [[Pity Timer]] · [[Expected Value]] · [[Pet Hatching and Following End to End]] · [[Genre Playbook - Simulators]]
+[[Paid Random Items and Odds Disclosure in Practice]] · [[Skill - Roblox Monetization Compliance]] · Pity Timer · Expected Value · Pet Hatching and Following End to End · Genre Playbook - Simulators
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Policy and Age Rules 2026]] · [[Regional Compliance - Paid Random Items and Country Rules]] · [[Robux Price Points and Offer Design]] · [[Economy Inflation Sinks and Faucets Math]] · [[Discovery and the Algorithm]] · [[Refunds Chargebacks and Purchase Support]]
+<!-- related:end -->

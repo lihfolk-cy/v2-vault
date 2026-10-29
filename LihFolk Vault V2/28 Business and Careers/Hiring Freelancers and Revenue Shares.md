@@ -1,5 +1,5 @@
 ---
-tags: [business, hiring, freelancers, revenue-share, payouts, groups, contracts, minors]
+tags: [business, hiring, freelancers, revenue-share, payouts, groups, contracts, minors, type/guide, area/business, level/intermediate]
 ---
 # Hiring Freelancers and Revenue Shares
 
@@ -12,7 +12,7 @@ tags: [business, hiring, freelancers, revenue-share, payouts, groups, contracts,
 > - Fixed pay for contractors; shares only for core members, from a set pool.
 > - Paid trial task.
 >
-> Cost: TL;DR ~120 tok · whole note ~3.8k tok. Read more: ## 2. Finding people · ## 5. Revenue shares in depth · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~120 tok · whole note ~3.9k tok. Read more: ## 2. Finding people · ## 5. Revenue shares in depth · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 > **Not advice.** General information for game owners who hire help. It is not legal, tax or financial advice, and rules differ by country (employment status, contractor rules, tax reporting, consumer and contract law). Ask a qualified professional before committing to large payments or long revenue shares. **Minors** (anyone under 18) need a parent or guardian to approve any agreement and to handle payment; plan for that when you hire young developers, and when you are young yourself.
@@ -257,5 +257,10 @@ Option A was right for bounded work. Option B needed vesting, a contribution req
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Working with Contractors and Revenue Splits]] · [[Team Collaboration Start Here]] · [[Working with Content Creators]] · [[Documentation and Onboarding New Developers]] · [[Community and Moderation Start Here]] · [[Publishing Selling and Updating Plugins]]
+[[Working with Contractors and Revenue Splits]] · Team Collaboration Start Here · Working with Content Creators · Documentation and Onboarding New Developers · Community and Moderation Start Here · Publishing Selling and Updating Plugins
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Working with Content Creators]] · [[Documentation and Onboarding New Developers]] · [[Publishing Selling and Updating Plugins]] · [[Team Create Permissions and Workflows]] · [[Creator Account Security and Takeover Recovery]] · [[Open-Source Licenses for Roblox Libraries - Quick Reference]]
+<!-- related:end -->

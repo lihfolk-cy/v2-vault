@@ -1,5 +1,5 @@
 ---
-tags: [delta, server-authority, replication, next-generation-replication, physics-replication, input-action-system, prediction, rollback, networking, migration, luau]
+tags: [delta, server-authority, replication, next-generation-replication, physics-replication, input-action-system, prediction, rollback, networking, migration, luau, type/guide]
 verified: 2026-10-28
 ---
 # Server Authority and Input Migration 2026
@@ -13,7 +13,7 @@ verified: 2026-10-28
 > - Predicted state lives in at most 64 attributes with short names and short strings.
 > - VFX and sounds tolerate a rollback.
 >
-> Cost: TL;DR ~170 tok · whole note ~2.6k tok. Read more: ## 1. Server Authority (full release July 9, 2026) · ## 4. Input Action System and the converted player scripts · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~2.7k tok. Read more: ## 1. Server Authority (full release July 9, 2026) · ## 4. Input Action System and the converted player scripts · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 In 2026 Roblox shipped three linked changes: **Server Authority** (server-authoritative simulation with client prediction and rollback), a **rewrite of physics replication**, and the **Input Action System** (IAS), which now drives the default player scripts. Each one changes code that every pre-2026 model writes by reflex. Labels follow [[Roblox Changes 2025-2026]].
@@ -167,7 +167,7 @@ Players.PlayerAdded:Connect(function(p) template:Clone().Parent = p end)
 - [ ] VFX and sounds tolerate a rollback.
 - [ ] No remote is used as a property fence.
 - [ ] Camera reads on the server use `Player:GetCameraState()`.
-- [ ] Every InputAction has keyboard, gamepad and touch bindings.
+- [ ] Every [[InputAction]] has keyboard, gamepad and touch bindings.
 - [ ] Place tested with `PlayerScriptsUseInputActionSystem = Enabled` before early 2027.
 
 ## See also
@@ -180,3 +180,8 @@ Players.PlayerAdded:Connect(function(p) template:Clone().Parent = p end)
 - [[Client Prediction and Reconciliation for Combat]]
 - [[Input - UserInputService and ContextActionService]]
 - [[Debugging Physics and Network Ownership]]
+
+<!-- related:start -->
+## Related
+[[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[Data and Cloud Changes 2025-2026]] · [[Console and VR Release Checklists]] · [[Discovery and Monetization Changes 2025-2026]] · [[Policy and Age Rules 2026]]
+<!-- related:end -->

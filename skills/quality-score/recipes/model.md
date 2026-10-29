@@ -79,3 +79,12 @@ seams were gone, but the blind score did NOT beat the 22-shell loft build (7.7).
 | A17 after join although every part is clean | Coincident poles of two lathes (stem top = hub top) weld into one shell in cleanup; offset by 0.03 |
 | glTF (Blender 5.2) exports EVERY colour attribute as COLOR_n | Keep only "Col" on the mesh while exporting each colourway |
 | Reviewer types weight-1 grades as 1 (= "1/1") | Re-read grades from the evidence lines (3 of ~90 reviews) |
+## Kits wave 2 (Nature / Modular / Furniture, 2026-10-29: 34 types, 3 fix rounds, 17 passed the 3-reviewer panel, 2 withdrawn by spot panels)
+| Miss | Fix / lesson |
+|---|---|
+| Diagonal smears on flat caps (stairs sides, spandrels, shelf tops) | Headless `shade_auto_smooth` does not feed WeightedNormal keep_sharp: mark `edge.smooth = False` by face angle in bmesh, then add the WeightedNormal modifier (kitlib `style="smooth_wn"`) |
+| Non-manifold welds between touching boxes (walls, frames) | lf.cleanup welds coincident corners of separate parts: pull each part in by 6e-4 studs (`finalize(inset=)`) and keep cores from sharing corners |
+| Z-fighting at modular ends | Never let two parts share an end plane over the same region: split the section by depth (blocks in front of y = 0.45, core behind) |
+| Modular snapping | `lf.tile_check` / `lf.grid_check` (T1) + tools/kits/snap_check.py on the shipped .blends; first/last rows must share joints for Y tiling |
+| Fused puff canopies / bushes stay at 6-7 | Radial smooth-union blobs on a UV grid read as "lumpy blob, grid faceting" whatever the colour scheme (4 rounds); pine as ONE lathe passed (8.7) |
+| Organic plant parts (stump skirts, grass blades, petals, dead-tree branches) stuck at 6-7.7 | Single-shell lathe skirts read as "lampshade"; plugged-in branches read as unfused. Needs real fused topology (quad cage + subsurf), not more tuning |

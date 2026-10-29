@@ -1,5 +1,5 @@
 ---
-tags: [worked-build, combat, melee, hitboxes, server-authority, anti-exploit, luau, animation]
+tags: [worked-build, combat, melee, hitboxes, server-authority, anti-exploit, luau, animation, type/guide, area/gameplay, level/intermediate, api/ContextActionService]
 ---
 # Melee Combat System End to End
 
@@ -12,7 +12,7 @@ tags: [worked-build, combat, melee, hitboxes, server-authority, anti-exploit, lu
 > - Animations are owned by you or your group and set to Action priority
 > - Client sends only "attack" and "block(bool)"
 >
-> Cost: TL;DR ~160 tok · whole note ~8.0k tok. Read more: ## 5. CombatService (server) · ## 6. CombatClient (client) · ## 10. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~160 tok · whole note ~8.1k tok. Read more: ## 5. CombatService (server) · ## 6. CombatClient (client) · ## 10. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 This note builds a server-authoritative sword combat system from an empty place: a `Tool` with no scripts inside it, a three-hit combo with a windup, server-side box hitboxes with line-of-sight checks, blocking that only works from the front, hit stun, knockback that respects network ownership, kill credit for quests, and client feedback (animations, hit sound, damage numbers). It is deliberately the simplest design that is safe; section 9 explains where and how to go further.
@@ -767,5 +767,10 @@ Profile with many players swinging using [[MicroProfiler Guide]]; `GetPartBounds
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Combat]] · [[Genre Playbook - Battlegrounds and Arena Fighters]] · [[Hit-Stop]] · [[Anti-Exploit Start Here]] · [[Combat Animation Craft]] · [[Server Authority]]
+[[Links - Combat]] · Genre Playbook - Battlegrounds and Arena Fighters · Hit-Stop · Anti-Exploit Start Here · Combat Animation Craft · Server Authority
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Weekend Build - Arena Shooter with Server-Checked Hits]] · [[Pet Hatching and Following End to End]] · [[Saved Inventory End to End]] · [[Codes Redemption System End to End]] · [[Weekend Build - Roleplay Town with Jobs and Paychecks]] · [[Daily Rewards System End to End]] · [[Global Leaderboards End to End]]
+<!-- related:end -->

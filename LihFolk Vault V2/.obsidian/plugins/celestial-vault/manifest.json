@@ -1,9 +1,0 @@
-{
-    "id":  "celestial-vault",
-    "name":  "Celestial Vault",
-    "version":  "1.0.0",
-    "minAppVersion":  "1.4.0",
-    "description":  "Starfield welcome tab, painted daily-journal banners, a moon calendar and a streak planet.",
-    "author":  "LihFolk",
-    "isDesktopOnly":  false
-}

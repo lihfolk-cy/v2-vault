@@ -1,5 +1,5 @@
 ---
-tags: [business, devex, payouts, robux, earnings, taxes, careers, minors]
+tags: [business, devex, payouts, robux, earnings, taxes, careers, minors, type/guide, area/business, level/intermediate, area/monetization]
 ---
 # DevEx and Cashing Out
 
@@ -12,7 +12,7 @@ tags: [business, devex, payouts, robux, earnings, taxes, careers, minors]
 > - Verified email; legal name matches what you will use on the form.
 > - Tax form type known (W-9 or W-8); a tax professional consulted where needed.
 >
-> Cost: TL;DR ~180 tok · whole note ~4.3k tok. Read more: ## 2. The numbers (Roblox docs, as of October 2026) · ## 4. Eligibility and the request flow · ## 9. Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~4.4k tok. Read more: ## 2. The numbers (Roblox docs, as of October 2026) · ## 4. Eligibility and the request flow · ## 9. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 > **Not advice.** This note is general information about how the Developer Exchange works and how developers usually plan around it. It is not tax, legal or financial advice. Tax and contract rules differ by country (and often by state or province). The only binding rules are Roblox's own **Developer Exchange Terms of Use** and the DevEx page on the Creator Hub (Creator Hub, Docs, Monetization, Developer Exchange). Read them on the day you cash out; rates and requirements change.
@@ -250,5 +250,10 @@ Points to notice:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Working with Contractors and Revenue Splits]] · [[Legal Basics - IP Licenses and Assets]] · [[Groups Roles and Permissions for Studios]] · [[Publishing Selling and Updating Plugins]] · [[Working with Content Creators]] · [[Team Collaboration Start Here]]
+[[Working with Contractors and Revenue Splits]] · [[Legal Basics - IP Licenses and Assets]] · Groups Roles and Permissions for Studios · Publishing Selling and Updating Plugins · Working with Content Creators · Team Collaboration Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Publishing Selling and Updating Plugins]] · [[Building a Portfolio as a Roblox Developer]] · [[Groups Roles and Permissions for Studios]] · [[Discovery and Monetization Changes 2025-2026]] · [[Commerce and Physical Goods]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [agents, mcp, guardrails, review, hooks, permissions, verification, claude-code]
+tags: [agents, mcp, guardrails, review, hooks, permissions, verification, claude-code, type/guide, area/ai, level/intermediate, area/design]
 ---
 # Agent Review Loops and Guardrails in Practice
 
@@ -12,7 +12,7 @@ tags: [agents, mcp, guardrails, review, hooks, permissions, verification, claude
 > - Permissions: deny banned tools, ask on broad writes, allow read-only.
 > - PreToolUse hook on code execution: undo, play control, unbounded loops, bulk deletes; exits 2; logs blocks.
 >
-> Cost: TL;DR ~170 tok · whole note ~6.2k tok. Read more: ## 3. Hooks: deterministic checks on content · ## 5. Review loops that work · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~6.3k tok. Read more: ## 3. Hooks: deterministic checks on content · ## 5. Review loops that work · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Safety Rules for AI Agents in Studio]] lists the rules an agent working in Roblox Studio should follow: Edit mode only, short calls, no undo, snapshot first, the save gate, honest reporting. This note is about **making those rules hold** when nobody is watching every call. Rules written in an instructions file are requests; a tired model at hour three of a long session, or a model that has compacted its context, can drop them. The fix is layered guardrails that do not depend on the model remembering, plus review loops that catch what slips through.
@@ -369,5 +369,10 @@ See also: [[Safety Rules for AI Agents in Studio]], [[Roblox Studio MCP Server]]
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Working with AI Assistants in Studio]] · [[Code Review for Luau Teams]] · [[What Is MCP]] · [[Roblox Studio Assistant]] · [[AI Skills Start Here]] · [[AI Code Assistants for Luau]]
+[[Working with AI Assistants in Studio]] · Code Review for Luau Teams · [[What Is MCP]] · Roblox Studio Assistant · AI Skills Start Here · AI Code Assistants for Luau
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]] · [[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[Writing Your Own MCP Server]] · [[MCP Workflows for Building Worlds]] · [[Studio Plugins and Local HTTP Bridges]] · [[Blender MCP]]
+<!-- related:end -->

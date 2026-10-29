@@ -1,5 +1,5 @@
 ---
-tags: [snippets, luau, keyframesequence, fk, sampling, easing]
+tags: [snippets, luau, keyframesequence, fk, sampling, easing, type/reference, area/animation, level/intermediate, api/KeyframeSequence, area/scripting, api/Animator]
 ---
 # Snippets: Building and Sampling Clips
 
@@ -9,7 +9,7 @@ tags: [snippets, luau, keyframesequence, fk, sampling, easing]
 > - Avoid: Putting easing on the destination key.
 > - Avoid: Keying the top-level root pose.
 >
-> Cost: TL;DR ~80 tok · whole note ~7.9k tok. Read more: ## 4. Building a KeyframeSequence from a table · ## 6. Sampling a KeyframeSequence like the Animator · ## Common mistakes
+> Cost: TL;DR ~80 tok · whole note ~8.0k tok. Read more: ## 4. Building a KeyframeSequence from a table · ## 6. Sampling a KeyframeSequence like the Animator · ## Common mistakes
 <!-- tldr:end -->
 
 Code for working with clip data directly: forward kinematics over any rig, pose helpers, building a `KeyframeSequence` from a table, sampling a `KeyframeSequence` at any time **the way the Animator does** (rotation vectors or nlerp, the measured easing curves including reversed legacy Cubic), posing an anchored mannequin for filmstrips, Studio stepping, and the compact binary encoding used for clip stubs.
@@ -300,7 +300,7 @@ end
 Measured model (see [[How the Animator Really Behaves]]):
 - Per joint, only `Weight > 0` poses are keys; the top-level root pose is ignored.
 - A segment eases by its first pose's style.
-- Rotations: if **every keyframe** is evenly spaced (marker-only keyframes count) **and every key is Linear**, quaternion nlerp along the shortest way. Otherwise a linear blend of **rotation vectors**, using, per segment, whichever of each key's two representations (`v` or `v - 2*pi*axis`) are closest.
+- Rotations: if **every keyframe** is evenly spaced (marker-only keyframes count) **and every key is Linear**, [[Quaternions|quaternion]] nlerp along the shortest way. Otherwise a linear blend of **rotation vectors**, using, per segment, whichever of each key's two representations (`v` or `v - 2*pi*axis`) are closest.
 - Offsets lerp linearly. Before the first key and after the last, the joint holds.
 - Translations scale with `Model:GetScale()` on model-scaled rigs.
 
@@ -458,7 +458,7 @@ local function samplePose(clip: Clip, t: number, scale: number?): { [string]: CF
 end
 ```
 
-Why bother: a slerp sampler (`CFrame:Lerp`) predicts the Animator within a fraction of a degree on small turns but was measured up to 178 degrees off on big key-to-key turns far from rest; this model matched within 0.24 degrees. If your tools (QA, bakers, filmstrips, a Lua player) predict poses, they need this, or they will pass clips that look wrong in game.
+Why bother: a [[slerp]] sampler (`CFrame:Lerp`) predicts the Animator within a fraction of a degree on small turns but was measured up to 178 degrees off on big key-to-key turns far from rest; this model matched within 0.24 degrees. If your tools (QA, bakers, filmstrips, a Lua player) predict poses, they need this, or they will pass clips that look wrong in game.
 
 Known edge: segments of exactly 180 degrees are ambiguous in the Animator itself. This sampler picks deterministically; the Animator may not.
 
@@ -667,5 +667,10 @@ The senior trade-off here is fidelity against weight: every extra key adds insta
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animation Data from Blender to Roblox]] · [[Weapon Rig Player]] · [[Animation Editor Advanced]] · [[Animation Glossary]] · [[AI Animation and Motion from Video]] · [[Game Math Start Here]] · [[Animation Start Here]]
+[[Animation Data from Blender to Roblox]] · [[Weapon Rig Player]] · [[Animation Editor Advanced]] · [[Animation Glossary]] · [[AI Animation and Motion from Video]] · Game Math Start Here · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Lua Keyframe Player]] · [[Debugging Animation Problems]] · [[Animation Data Hygiene - Euler Wrap Joint Holes and Easing]] · [[Animation Editor Workflow]] · [[CurveAnimation and Curve Channels]] · [[Moon Animator and Third-Party Tools]] · [[Weapon Design Rig Builder]] · [[Timing Spacing and Frame Charts]] · [[Snippets - Procedural Motion]]
+<!-- related:end -->

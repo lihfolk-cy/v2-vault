@@ -1,5 +1,5 @@
 ---
-tags: [systems, combat, hit-reaction, stagger, hit-stop, game-feel]
+tags: [systems, combat, hit-reaction, stagger, hit-stop, game-feel, type/guide, area/animation, level/intermediate, api/AdjustSpeed, area/gameplay]
 ---
 # Hit Reactions Stagger and Hit-Stop
 
@@ -9,7 +9,7 @@ tags: [systems, combat, hit-reaction, stagger, hit-stop, game-feel]
 > - Enemy twitches while held or stunned: Flinch not skipped in higher states -> Ladder skip rules
 > - Stagger feels like lag: Attack clips slowed -> Only slow the stagger clip
 >
-> Cost: TL;DR ~110 tok · whole note ~3.4k tok. Read more: ## Directional flinches · ## Hit-stop · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~3.5k tok. Read more: ## Directional flinches · ## Hit-stop · ## Common mistakes
 <!-- tldr:end -->
 
 A hit is not one event on screen; it is a short stack of reactions on both bodies, layered over a tenth of a second: the attacker's motion catches, the target flashes, flinches in the direction of the blow, maybe staggers, the camera kicks, a spark and a sound land. Getting each layer's timing and priority right is most of what players call "impact". This note covers the reaction ladder, directional flinches, stagger and poise, parry and guard, and hit-stop done in a way that survives networked, clock-timed effects. Numbers are from one live action game (the reference project) unless marked as rules of thumb. Procedural (physics) reactions are in [[Procedural Death Knockdown and Hit Reactions]] and [[Ragdolls and Physics-Based Animation]].
@@ -145,7 +145,7 @@ Design details:
 - **One at a time** (`stopping` guard). Overlapping hit-stops would multiply speeds.
 - **Reduced Motion** disables it entirely, along with the impact flash.
 
-The `d` formula gives 50 ms at the lightest stopping beat and about 89 ms at the heaviest, inside the 50 to 100 ms rule of thumb. The ultimate camera places its impact frames (1/30 s each) **inside** the same hit-stop window and starts its shake when the freeze lets go; see [[Camera Shake and Camera FX]].
+The `d` formula gives 50 ms at the lightest stopping beat and about 89 ms at the heaviest, inside the 50 to 100 ms rule of thumb. The ultimate camera places its [[impact frames]] (1/30 s each) **inside** the same hit-stop window and starts its shake when the freeze lets go; see [[Camera Shake and Camera FX]].
 
 ### Hit-stop on the target
 
@@ -191,5 +191,10 @@ See also: [[Combat Combo Systems]], [[Ability Kits Architecture]], [[Enemy Anima
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Snippets - Enemy Client Animator]] · [[Combat Animation Craft]] · [[Weapon and Combat Animation]] · [[Hit-Stop]] · [[Combat Systems Architecture]] · [[Hit-Stop and Screen Shake Tuning by Numbers]] · [[Animation Start Here]]
+[[Snippets - Enemy Client Animator]] · [[Combat Animation Craft]] · [[Weapon and Combat Animation]] · [[Hit-Stop]] · Combat Systems Architecture · Hit-Stop and Screen Shake Tuning by Numbers · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Cinematic Ultimates]] · [[Markers and Events]] · [[Custom Locomotion Controller Design]] · [[Playback, Priorities and Blending]] · [[Animating Creatures and Monsters]] · [[Stance and Charge Moves]] · [[Locomotion Systems]] · [[Equip Draw and Flourish Systems]]
+<!-- related:end -->

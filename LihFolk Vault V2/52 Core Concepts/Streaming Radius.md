@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, streaming, performance, networking, world-building]
+tags: [core-concept, streaming, performance, networking, world-building, type/reference, area/performance, level/beginner, api/CollectionService, area/networking]
 ---
 # Streaming Radius
 
@@ -10,7 +10,7 @@ tags: [core-concept, streaming, performance, networking, world-building]
 > - Bigger radius is not "safer". It raises memory and network cost on every device.
 > - Model streaming modes change the unit of streaming.
 >
-> Cost: TL;DR ~110 tok · whole note ~940 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~110 tok · whole note ~1.1k tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 With **instance streaming** (`Workspace.StreamingEnabled`), the client only receives the parts of the world near its focus point. The **streaming radius** settings decide how near: `StreamingTargetRadius` is how far the engine tries to keep content loaded, and `StreamingMinRadius` is the area it treats as most important to load first (Roblox docs, "Instance streaming", as of October 2026; defaults are 1024 and 64 studs).
@@ -61,5 +61,10 @@ Related concepts: [[Replication Boundary]], [[Instance Count]], [[Frame Budget]]
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Replication Rules]] · [[Debugging Race Conditions and Yield Order]] · [[Instances Attributes and Tags]] · [[Obby Checkpoints and Stage Saves End to End]] · [[Links - Checkpoints and spawning]] · [[Network Performance]] · [[Core Concepts Start Here]]
+[[Replication Rules]] · Debugging Race Conditions and Yield Order · Instances Attributes and Tags · Obby Checkpoints and Stage Saves End to End · Links - Checkpoints and spawning · Network Performance · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]] · [[Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver]] · [[Server Authority]] · [[Object Pooling]] · [[Triangle Budget]] · [[Deterministic Simulation]] · [[Event Bus]] · [[Texel Density]] · [[Draw Calls]] · [[Rate Limiting]]
+<!-- related:end -->

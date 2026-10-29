@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [narrative, worldbuilding, index, start-here, writing, dialogue]
+tags: [narrative, worldbuilding, index, start-here, writing, dialogue, type/hub, area/narrative, level/beginner, area/world]
 ---
 # Narrative Start Here
 
@@ -48,5 +48,5 @@ Back to [[00 Start Here]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Accessibility Start Here]] · [[Links - Quests and progression]] · [[Captions and Audio Accessibility]] · [[Onboarding Funnel]] · [[Links - Chat and text filtering]] · [[Links - NPCs and AI]]
+[[Accessibility Start Here]] · Links - Quests and progression · Captions and Audio Accessibility · Onboarding Funnel · Links - Chat and text filtering · Links - NPCs and AI
 <!-- auto-links:end -->

@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [math, game-math, hub, vectors, rotations, probability, collision, numbers]
+tags: [math, game-math, hub, vectors, rotations, probability, collision, numbers, type/hub, area/math, level/beginner, area/gameplay]
 ---
 # Game Math Start Here
 
@@ -16,9 +16,9 @@ The notes here go a level deeper without repeating them.
 | Note | Gameplay it unlocks | Key ideas |
 |---|---|---|
 | [[Dot and Cross Products in Gameplay]] | Backstabs and flanks, jitter-free steering, homing and aggro leashes, lap progress and gate crossing, wall running, bounce pads, aim assist | Dot as signed length, `atan2(cross, dot)`, closing speed, projections, building frames |
-| [[Interpolation Easing and Curves Math]] | Damage falloff, UI motion, camera FX envelopes, rails and paths, constant-speed carts, smooth retargeting | `invLerp, clamp, shape, lerp`, easing derivatives, overshoot budgets, Bezier, Catmull-Rom, arc length, Hermite |
+| [[Interpolation Easing and Curves Math]] | Damage falloff, UI motion, camera FX envelopes, rails and paths, constant-speed carts, smooth retargeting | `invLerp, clamp, shape, lerp`, easing derivatives, overshoot budgets, [[Bezier Curves\|Bezier]], Catmull-Rom, arc length, Hermite |
 | [[Probability and Statistics for Designers]] | Fair crit and dodge stacking, build balance at breakpoints, streak control, verifying drop rates, reading analytics | At-least-once odds, stacking models, variance, PRD, shuffle bags, Wilson intervals, sample sizes |
-| [[Rotations Angles and Quaternions]] | Turrets with limits, rate-limited turning, throws that keep spin, head and item limits, compact replication | Angle wrapping, axis-angle, swing-twist, quaternion toolkit, slerp vs nlerp, smallest-three packing |
+| [[Rotations Angles and Quaternions]] | Turrets with limits, rate-limited turning, throws that keep spin, head and item limits, compact replication | Angle wrapping, axis-angle, swing-twist, [[Quaternions\|quaternion]] toolkit, [[slerp]] vs nlerp, smallest-three packing |
 | [[Intersection and Collision Math]] | Zones without `Touched`, building cursors, lag-compensated melee, bullets that cannot tunnel, leading targets, big fights | Containment tests, ray vs plane, sphere and box, capsules, swept spheres, intercepts, spatial hashing |
 | [[Big Numbers Precision and Formatting]] | Simulators past 10^15, worlds far from the origin, long timers, huge leaderboards, honest number display | Container types and limits, float32 gaps, mantissa-exponent numbers, integer currency, order-preserving encodings |
 
@@ -46,5 +46,5 @@ The notes here go a level deeper without repeating them.
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Snippets - Building and Sampling Clips]] · [[Luau Cookbook Start Here]] · [[CurveAnimation and Curve Channels]] · [[Look-At Aim and Head Tracking]] · [[Expected Value]] · [[Animation Editor Advanced]]
+[[Snippets - Building and Sampling Clips]] · Luau Cookbook Start Here · CurveAnimation and Curve Channels · Look-At Aim and Head Tracking · Expected Value · Animation Editor Advanced
 <!-- auto-links:end -->

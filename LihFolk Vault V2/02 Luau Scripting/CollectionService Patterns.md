@@ -1,5 +1,5 @@
 ---
-tags: [luau, collectionservice, tags, architecture, patterns]
+tags: [luau, collectionservice, tags, architecture, patterns, type/guide, area/scripting, level/intermediate, api/CollectionService, api/GetInstanceAddedSignal, api/ProximityPrompt, api/Part]
 ---
 # CollectionService Patterns
 
@@ -12,7 +12,7 @@ tags: [luau, collectionservice, tags, architecture, patterns]
 > - Removed-signal connected, `GetTagged` iterated, setup idempotent.
 > - Cleanup releases connections, effects and table entries.
 >
-> Cost: TL;DR ~170 tok · whole note ~5.0k tok. Read more: ## 3. A binder with per-instance cleanup · ## 8. Worked example: doors driven by tags and attributes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.1k tok. Read more: ## 3. A binder with per-instance cleanup · ## 8. Worked example: doors driven by tags and attributes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 `CollectionService` turns tags into behaviour. Instead of copying a script into every lava brick, door, coin or enemy, you tag the instances and one module handles all of them: present ones at startup, new ones as they appear, removed ones as they go. Roblox's own guidance recommends this: avoid attaching scripts directly to Workspace instances, tag them and work with them from a single ModuleScript (Docs: script types and locations). This note covers the tag API and its guarantees, the binder pattern with correct cleanup, streaming and replication interactions, the newer query-based `Collection` API, and when tags are the wrong tool.
@@ -376,5 +376,10 @@ The senior trade-off: tags make level designers productive (drop a model, tag it
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Debugging Race Conditions and Yield Order]] · [[Replication Rules]] · [[Hunting Memory Leaks Step by Step]] · [[Obby Checkpoints and Stage Saves End to End]] · [[Building a Signal Library]] · [[Explorer Properties and Selection]]
+[[Debugging Race Conditions and Yield Order]] · Replication Rules · Hunting Memory Leaks Step by Step · Obby Checkpoints and Stage Saves End to End · Building a Signal Library · Explorer Properties and Selection
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Tables Metatables and OOP]] · [[Metatables and OOP - When and When Not]] · [[Functions Closures and Upvalues]] · [[Parallel Luau and Actors]] · [[Luau Language Essentials]] · [[Task Library Coroutines and Yielding]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Luau Type System and Strict Mode]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [architecture, networking, client-server, fundamentals, security]
+tags: [architecture, networking, client-server, fundamentals, security, type/guide, area/networking, level/beginner, api/RemoteEvent, area/security, api/Script, api/Player]
 ---
 # Client-Server Model
 
@@ -12,7 +12,7 @@ tags: [architecture, networking, client-server, fundamentals, security]
 > - No secrets in ReplicatedStorage, ReplicatedFirst, Workspace, StarterGui or StarterPlayer.
 > - Every remote handler validates type, value, context and rate before acting.
 >
-> Cost: TL;DR ~180 tok · whole note ~4.9k tok. Read more: ## Latency: the other half of the model · ## A minimal correct round trip · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.0k tok. Read more: ## Latency: the other half of the model · ## A minimal correct round trip · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Every Roblox experience is a distributed program. One **server** runs the authoritative copy of the game; every player runs a **client** with a partial, delayed copy. Almost every hard bug in a multiplayer Roblox game (duplicated items, enemies that "teleport", effects only one player sees, a shop that gives free items) comes from code that forgot which side it was on, or trusted the wrong side. This note is the map: what runs where, what each side can see and change, what the latency looks like, and how to decide where a piece of logic belongs.
@@ -266,5 +266,10 @@ What makes it correct: the client sends no data the server uses, the cooldown an
 
 ## Connected notes
 <!-- auto-links:start -->
-[[How Exploits Work - The Client Boundary]] · [[Replication Boundary]] · [[Server Authority]] · [[Client Prediction and Reconciliation for Combat]] · [[Debugging Client-Server Desync]] · [[Skill - Roblox Secure Remotes]]
+[[How Exploits Work - The Client Boundary]] · Replication Boundary · Server Authority · [[Client Prediction and Reconciliation for Combat]] · Debugging Client-Server Desync · Skill - Roblox Secure Remotes
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Server Authority]] · [[Replication Boundary]] · [[Interest Management and Per-Player Replication]] · [[Snapshot Interpolation for Custom Replication]] · [[Remote Abuse Patterns and Rate Limiting in Practice]] · [[Frameworks - Knit Matter and Others]] · [[Cross-Server Messaging]]
+<!-- related:end -->

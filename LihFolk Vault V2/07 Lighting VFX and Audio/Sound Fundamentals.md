@@ -1,5 +1,5 @@
 ---
-tags: [audio, sound, soundgroup, assets, loudness]
+tags: [audio, sound, soundgroup, assets, loudness, type/guide, area/vfx, level/beginner, api/AudioPlayer, area/audio, api/Sound, api/SoundGroup]
 ---
 # Sound Fundamentals
 
@@ -12,7 +12,7 @@ tags: [audio, sound, soundgroup, assets, loudness]
 > - Forbidden or removed ids listed.
 > - Bus tree with settings sliders wired to buses.
 >
-> Cost: TL;DR ~150 tok · whole note ~3.6k tok. Read more: ## 2. The `Sound` object · ## 6. Measuring loudness · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.7k tok. Read more: ## 2. The `Sound` object · ## 6. Measuring loudness · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox has two audio systems side by side. The classic one is the `Sound` object (with `SoundGroup` mixers and `SoundEffect` children), which every tutorial and most existing games use. The newer one is the modular audio API (`AudioPlayer`, `AudioEmitter`, `AudioListener`, `AudioDeviceOutput`, `Wire` and effect objects), which the docs now recommend: "`Sound`, `SoundGroup`, and `SoundEffect` objects are now discouraged in favor of the more robust functionality of audio objects" (Docs, October 2026). Both work today, and you will meet both.
@@ -269,5 +269,10 @@ See also: [[The Audio API - Players Emitters Wires and Effects]], [[Spatial Audi
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Audio Pipeline]] · [[Combat Sound Design and Feedback]] · [[AI Audio - Voice Music and SFX]] · [[Links - Sounds and the Audio API]] · [[Resource Library - Audio]] · [[Feedback Timing - Sound Visual and Haptic Sync]]
+[[Audio Pipeline]] · [[Combat Sound Design and Feedback]] · AI Audio - Voice Music and SFX · Links - Sounds and the Audio API · Resource Library - Audio · Feedback Timing - Sound Visual and Haptic Sync
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Audio Mixer Settings with SoundGroups]] · [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[AI Audio - Voice Music and SFX]] · [[Engine and Tyre Audio Driven by RPM and Slip]] · [[Music Licensing and Audio Upload Rules for 2026]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]]
+<!-- related:end -->

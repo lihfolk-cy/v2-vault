@@ -1,5 +1,5 @@
 ---
-tags: [vfx, particles, particleemitter, flipbooks, performance]
+tags: [vfx, particles, particleemitter, flipbooks, performance, type/guide, area/vfx, level/intermediate, api/LightInfluence, area/performance, api/ParticleEmitter]
 ---
 # Particle Emitters In Depth
 
@@ -12,7 +12,7 @@ tags: [vfx, particles, particleemitter, flipbooks, performance]
 > - Brightness chosen by screen area; one dark contrast layer per bright stack.
 > - Bursts via `Emit` with your own quality scaling; streams capped.
 >
-> Cost: TL;DR ~180 tok · whole note ~5.2k tok. Read more: ## 2. Property reference with traps · ## 5. Motion recipes (studied packs) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.4k tok. Read more: ## 2. Property reference with traps · ## 5. Motion recipes (studied packs) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 `ParticleEmitter` is the workhorse of Roblox VFX: sparks, smoke, slash cards, ground rings, flashes, rain, auras and magic dust are all camera-facing (or velocity-aligned) textured quads with a few curves. It looks simple, and that is the danger: most of its properties have a non-obvious rule (which ones affect live particles, which only new ones, which are world space, which silently cap), and a professional-looking effect is almost always a stack of six to twenty tuned emitters rather than one clever one.
@@ -329,5 +329,10 @@ See also: [[VFX Design Playbook]], [[Beams and Trails]], [[VFX Timing with Anima
 
 ## Connected notes
 <!-- auto-links:start -->
-[[VFX Performance Budgets and Culling]] · [[Links - Particle emitters]] · [[Light Sources and Shadows]] · [[Mesh VFX Packs Built in Blender]] · [[Juice on a Budget - Mobile and Low-End]] · [[Dash VFX Presentation on an R15 Rig]]
+[[VFX Performance Budgets and Culling]] · [[Links - Particle emitters]] · [[Light Sources and Shadows]] · Mesh VFX Packs Built in Blender · Juice on a Budget - Mobile and Low-End · Dash VFX Presentation on an R15 Rig
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Slash VFX Recipes - Crescent and Ring]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Atmosphere Sky Clouds and Post-Processing]] · [[Stylized Lighting Recipes]]
+<!-- related:end -->

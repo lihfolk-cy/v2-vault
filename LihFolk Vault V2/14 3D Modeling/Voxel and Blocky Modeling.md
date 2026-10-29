@@ -1,5 +1,5 @@
 ---
-tags: [modeling, voxel, blocky, studs, outlines, palette, art-style, blender, luau]
+tags: [modeling, voxel, blocky, studs, outlines, palette, art-style, blender, luau, type/guide, area/modeling, level/intermediate]
 ---
 # Voxel and Blocky Modeling
 
@@ -12,7 +12,7 @@ tags: [modeling, voxel, blocky, studs, outlines, palette, art-style, blender, lu
 > - One grid; cell size set; smallest details 1/40-1/60 of the longest dimension.
 > - Three tones per material; one main hue; one glow colour.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.6k tok. Read more: ## 3. Style B: outlined studded voxels ("toy-box heroes") · ## 5. Building voxels: Parts in Studio or meshes from Blender · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.7k tok. Read more: ## 3. Style B: outlined studded voxels ("toy-box heroes") · ## 5. Building voxels: Parts in Studio or meshes from Blender · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Blocky art is Roblox's native language: the platform grew up on studded bricks, and players read cubes as "made for this world". A modern voxel style is not lazy art, though. The good ones follow strict rules (one grid, three tones per material, one glow colour, studs or outlines applied everywhere) and those rules are what make ten unrelated models look like one game. This note teaches three production voxel styles studied for the reference project (dark-and-neon tiered showpieces, outlined studded "toy-box" enemies, and cute pastel companions), the shared grammar behind them, how to build voxels as Parts in Studio or as meshes from Blender, and what they really cost. The reference project rebuilt all 49 of its first-realm enemies in the outlined studded style, so the numbers here are real.
@@ -320,7 +320,7 @@ Faces between two different colours are culled too (any neighbour hides the face
 
 ### Route 3: a voxel editor
 
-MagicaVoxel and similar editors are faster than code for hand-designed voxel art. See [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] for its limits and export path into Blender for cleanup.
+[[MagicaVoxel]] and similar editors are faster than code for hand-designed voxel art. See [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] for its limits and export path into Blender for cleanup.
 
 ---
 
@@ -373,5 +373,10 @@ MagicaVoxel and similar editors are faster than code for hand-designed voxel art
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Voxel Art - Studs Outlines and Style Kits]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Voxel Modelling Start Here]] · [[Voxel Scale Grids and Stud Alignment]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Voxel Characters - Proportions Joints and Rigging]]
+[[Voxel Art - Studs Outlines and Style Kits]] · Voxel Shading - Baked AO Edges and Lighting · Voxel Modelling Start Here · Voxel Scale Grids and Stud Alignment · Meshing Voxels for Roblox - Greedy Meshing and Export · Voxel Characters - Proportions Joints and Rigging
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Voxel Scale Grids and Stud Alignment]] · [[Hand-Painted and Stylized Texturing]] · [[Organic and Creature Modeling]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Hard-Surface Modeling]] · [[Modular Environment Kits]] · [[Mesh Optimization for Mobile]] · [[UV Unwrapping]] · [[Retopology and Decimation]] · [[Modeling Characters for R15 and Custom Rigs]]
+<!-- related:end -->

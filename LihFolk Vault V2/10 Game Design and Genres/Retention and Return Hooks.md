@@ -1,5 +1,5 @@
 ---
-tags: [game-design, retention, daily-rewards, streaks, quests, live-ops]
+tags: [game-design, retention, daily-rewards, streaks, quests, live-ops, type/guide, area/design, level/intermediate, area/liveops]
 ---
 # Retention and Return Hooks
 
@@ -12,7 +12,7 @@ tags: [game-design, retention, daily-rewards, streaks, quests, live-ops]
 > - Daily reward: server-timed, mark-then-pay, saved at once, throttled, grace considered.
 > - Timers capped per day; AFK policy decided.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.0k tok. Read more: ## 3. Daily rewards and streaks · ## 4. Free gifts and playtime timers · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.1k tok. Read more: ## 3. Daily rewards and streaks · ## 4. Free gifts and playtime timers · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 Retention is the share of players who come back. A **return hook** is a designed reason to come back at a particular time: a daily reward, a gift timer, a quest reset, a vault that fills while you are away, an event that starts at 6 pm. Hooks multiply a good loop; they cannot rescue a bad one. This note covers how Roblox measures retention, the main hook families with production numbers, how to implement daily rewards and timers correctly (time zones, streaks, exploits), and where hooks turn into chores or pressure.
@@ -54,7 +54,7 @@ For content cadence the docs suggest **smaller updates every 2 to 4 weeks and la
 | Calendar | Daily login reward, 7-day calendar | "Today's reward is waiting" | Low | Feels like a chore; streak loss anger |
 | Timer | Free gifts by playtime, spin wheel cooldown | "Something is ready" | Low | Pushes AFK; timer fatigue |
 | Goal | Daily/weekly quests, next-goal chain, achievements | "I am almost there" | Medium | Chore quests that do not teach the loop |
-| Accumulation | Offline earnings, brewing, crop growth | "My stuff piled up" | Medium | Inflation if too generous |
+| Accumulation | [[Offline earnings]], brewing, crop growth | "My stuff piled up" | Medium | Inflation if too generous |
 | Social | Friends online, group perks, trading, events | "My friends are here" | Medium to high | Needs critical mass |
 | Content | Updates, limited events, seasons | "Something new" | High (ongoing) | Team burnout |
 | Collection | Index, set bonuses, rarity ladders | "One more to complete the set" | Medium | Endless grind if sets are too big |
@@ -352,5 +352,10 @@ Fixes:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Daily Rewards System End to End]] · [[Retention Cohorts]] · [[Battle Pass and Season Design]] · [[Genre Playbook - Simulators]] · [[Quest Writing and Hooks]] · [[Session Length]]
+[[Daily Rewards System End to End]] · Retention Cohorts · Battle Pass and Season Design · [[Genre Playbook - Simulators]] · Quest Writing and Hooks · Session Length
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Testing Time-Based Features with a Controllable Clock]] · [[Simulator and RNG Genre Teardown]] · [[Balancing with Spreadsheets and Data]] · [[Genre Playbook - Tower Defense]] · [[Boss Fight Design Patterns]] · [[Genre Playbook - Tycoons]] · [[Rarity Ladders and Drop Pacing Math]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Party and Minigame Collections]]
+<!-- related:end -->

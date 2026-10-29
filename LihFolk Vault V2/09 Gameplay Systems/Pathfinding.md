@@ -1,5 +1,5 @@
 ---
-tags: [gameplay, pathfinding, navigation, npc, ai]
+tags: [gameplay, pathfinding, navigation, npc, ai, type/guide, area/gameplay, level/intermediate, api/ComputeAsync, area/ai, api/Humanoid, api/PathfindingService]
 ---
 # Pathfinding
 
@@ -12,14 +12,14 @@ tags: [gameplay, pathfinding, navigation, npc, ai]
 > - Costs table includes danger labels and link labels.
 > - Follower has per-waypoint timeouts, stuck handling and blocked recompute.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.5k tok. Read more: ## 3. A robust follower · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.6k tok. Read more: ## 3. A robust follower · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 `PathfindingService` computes walkable routes over a navigation mesh that Roblox builds from your world. It handles stairs, ramps, jumps, gaps and (with links) ladders, boats and teleporters. It is also slower, more failure-prone and more limited than people expect: a path can be blocked a moment after you compute it, the agent shape must be described honestly, long paths fail, and following waypoints with a Humanoid needs care. This note covers the API, costs, modifiers and links, a robust follower, when not to use pathfinding at all, and debugging.
 
 Related: [[NPC AI and Behaviour]] (decisions), [[Characters and Humanoids]] (MoveTo), [[Level Design for Roblox]] (building navigable spaces).
 
-Source labels: **Docs** (PathfindingService, Path and the character pathfinding guide, checked October 2026), **Measured** (the reference project), **Rule of thumb**.
+Source labels: **Docs** ([[PathfindingService]], Path and the character pathfinding guide, checked October 2026), **Measured** (the reference project), **Rule of thumb**.
 
 ---
 
@@ -303,5 +303,10 @@ The senior trade-off: built-in pathfinding is excellent for occasional, varied r
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - NPCs and AI]] · [[Links - Horror game mechanics]] · [[MCP Workflows for Building Worlds]] · [[Physics and Vehicles Start Here]] · [[Level Design Start Here]] · [[Roblox Studio Assistant]]
+[[Links - NPCs and AI]] · Links - Horror game mechanics · MCP Workflows for Building Worlds · Physics and Vehicles Start Here · Level Design Start Here · Roblox Studio Assistant
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]] · [[Police Chases and Wanted Levels]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Squad AI - Attack Tokens, Flanking and Attacker Limits]] · [[Camera Obstruction Handling - Occlusion Modes, Fades and Collision]] · [[Weather That Changes Gameplay - Grip, Visibility and Hearing]] · [[Spawning Teams and Rounds]]
+<!-- related:end -->

@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [avatars, ugc, hub, start-here, marketplace, humanoiddescription]
+tags: [avatars, ugc, hub, start-here, marketplace, humanoiddescription, type/hub, area/avatars, level/beginner, api/ApplyDescriptionAsync, api/AvatarEditorService]
 ---
 # Avatars and UGC Start Here
 
@@ -21,7 +21,7 @@ Everything time-sensitive is marked **as of October 2026**. Roblox renamed many 
 
 ## Suggested paths
 
-**Game developer adding avatar features:** HumanoidDescription and Outfit Systems, then AvatarEditorService and In-Game Avatar Editors, then Avatar Body Types and Scale in Gameplay. Finish with the in-game sales section of UGC Pricing Limiteds and Marketplace Rules.
+**Game developer adding avatar features:** HumanoidDescription and Outfit Systems, then [[AvatarEditorService]] and In-Game Avatar Editors, then Avatar Body Types and Scale in Gameplay. Finish with the in-game sales section of UGC Pricing Limiteds and Marketplace Rules.
 
 **Competitive or obby game:** Avatar Body Types and Scale in Gameplay first. It decides whether you need any of the rest.
 
@@ -49,5 +49,5 @@ Not confirmed as of October 2026, and flagged in the notes: whether `ApplyDescri
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Avatars and UGC]] · [[Commerce and Physical Goods]] · [[Links - Custom characters and avatars]] · [[3D Importer Settings Reference]] · [[Links - Animation creation]] · [[Skinning Weights]]
+[[Links - Avatars and UGC]] · Commerce and Physical Goods · Links - Custom characters and avatars · 3D Importer Settings Reference · Links - Animation creation · Skinning Weights
 <!-- auto-links:end -->

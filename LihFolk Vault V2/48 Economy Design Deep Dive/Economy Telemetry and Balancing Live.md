@@ -1,5 +1,5 @@
 ---
-tags: [economy, telemetry, analytics, analyticsservice, configservice, experiments, live-ops, balancing, luau]
+tags: [economy, telemetry, analytics, analyticsservice, configservice, experiments, live-ops, balancing, luau, type/guide, area/economy, level/advanced]
 ---
 # Economy Telemetry and Balancing Live
 
@@ -12,7 +12,7 @@ tags: [economy, telemetry, analytics, analyticsservice, configservice, experimen
 > - Custom fields used for progress band, config version and variant.
 > - Hours held, velocity and time to afford tracked per progress cohort.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.9k tok. Read more: ## 3. Your own aggregates without wrecking data store budgets · ## 5. The balancing loop · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~5.0k tok. Read more: ## 3. Your own aggregates without wrecking data store budgets · ## 5. The balancing loop · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Analytics and Funnels]] explains the built-in dashboards and the `AnalyticsService` API. [[Economy Inflation Sinks and Faucets Math]] names three inflation metrics (hours of income held, sink to faucet ratio, observed time to afford). [[A-B Testing and Experiments on Roblox]] covers configs, experiments and sample sizes. This note joins them into an operating practice for a live economy: what to measure beyond the built-in charts, how to aggregate your own numbers without blowing data store budgets, how to read economy metrics without being fooled by who is still playing, how to alert on anomalies, and how to run a balance change from hypothesis to rollback.
@@ -322,5 +322,10 @@ Wait for a full week before judging any change that touches retention. Many econ
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Economies and Currencies]] · [[Faucets and Sinks]] · [[Balancing with Spreadsheets and Data]] · [[Telemetry Events]] · [[Robux Price Points and Offer Design]] · [[Links - Analytics]]
+[[Economies and Currencies]] · Faucets and Sinks · Balancing with Spreadsheets and Data · Telemetry Events · Robux Price Points and Offer Design · Links - Analytics
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Telemetry Events]] · [[Faucets and Sinks]] · [[Balancing with Spreadsheets and Data]] · [[Robux Price Points and Offer Design]] · [[Trading Systems Without Duplication]] · [[Economy Exploits - Dupes Races and Purchase Abuse]]
+<!-- related:end -->

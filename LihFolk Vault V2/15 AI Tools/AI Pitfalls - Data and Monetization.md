@@ -1,5 +1,5 @@
 ---
-tags: [ai-pitfalls, datastore, persistence, session-locking, processreceipt, monetization, paid-random-items, pricing, roblox-plus]
+tags: [ai-pitfalls, datastore, persistence, session-locking, processreceipt, monetization, paid-random-items, pricing, roblox-plus, type/guide, area/ai, level/intermediate]
 verified: 2026-10-28
 ---
 # AI Pitfalls - Data and Monetization
@@ -13,7 +13,7 @@ verified: 2026-10-28
 > - Failed load blocks saving.
 > - `ProcessReceipt` is single, idempotent on `PurchaseId`, and saves before `PurchaseGranted`.
 >
-> Cost: TL;DR ~140 tok · whole note ~1.8k tok. Read more: ## 1. `GetAsync` then `SetAsync` on the same key · ## 6. Granting developer products in the wrong place · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~1.9k tok. Read more: ## 1. `GetAsync` then `SetAsync` on the same key · ## 6. Granting developer products in the wrong place · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Data and purchase bugs cost real money and player trust, and generated code gets them wrong in a few predictable ways: single-server thinking, the wrong purchase hook, and rules from before 2025. Hub: [[What AI Models Get Wrong in Roblox]]. Current limits: [[Data and Cloud Changes 2025-2026]].
@@ -32,7 +32,7 @@ local ok, err = pcall(store.UpdateAsync, store, "u_" .. userId, function(old)
 end)
 ```
 
-- For whole player profiles, use a **session lock** (ProfileStore-style) so only one server owns the profile at a time. Without it, trading and rejoin dupes appear. See [[Session Locking and Profile Libraries]].
+- For whole player profiles, use a **session lock** ([[ProfileStore]]-style) so only one server owns the profile at a time. Without it, trading and rejoin dupes appear. See [[Session Locking and Profile Libraries]].
 - **Detect:** `GetAsync` and `SetAsync` on the same key in one function.
 
 ## 2. Retry handling: none, or forever
@@ -91,7 +91,7 @@ end
 | Model writes | Current (see [[Discovery and Monetization Changes 2025-2026]]) |
 |---|---|
 | Hard-coded `"R$ 99"` labels | `GetProductInfoAsync`; passes have regional prices by default since March 30, 2026, and Plus members see discounts |
-| Perks for `MembershipType.Premium` and "Premium Payouts" | Premium closed to new subscribers April 30, 2026; Premium Payouts replaced by Creator Rewards July 24, 2025; offer Plus with `PromptRobloxSubscriptionPurchase` |
+| Perks for `MembershipType.Premium` and "Premium Payouts" | Premium closed to new subscribers April 30, 2026; Premium Payouts replaced by [[Creator Rewards]] July 24, 2025; offer Plus with `PromptRobloxSubscriptionPurchase` |
 | DevEx $0.0035 per Robux | $0.0038 standard (Sept 5, 2025); $0.0054 on US 18+ spend in eligible games (June 8, 2026) |
 | `GetProductInfo` | `GetProductInfoAsync` (January 2026 rename) |
 
@@ -126,3 +126,8 @@ end
 - [[Economy Exploits - Dupes Races and Purchase Abuse]]
 - [[Trading Systems Without Duplication]]
 - [[Paid Random Items and Odds Disclosure in Practice]]
+
+<!-- related:start -->
+## Related
+[[Cookbook - Data and Saving]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[Shop with Game Passes and Developer Products End to End]] · [[Session Lock]] · [[Idempotency]] · [[Purchase Receipts and Purchase History in UI]]
+<!-- related:end -->

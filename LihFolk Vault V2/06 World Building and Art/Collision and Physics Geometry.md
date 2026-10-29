@@ -1,5 +1,5 @@
 ---
-tags: [world-building, collision, physics, collisionfidelity, colliders, collision-groups]
+tags: [world-building, collision, physics, collisionfidelity, colliders, collision-groups, type/guide, area/world, level/intermediate, api/CollectionService, area/physics, api/Touched]
 ---
 # Collision and Physics Geometry
 
@@ -12,7 +12,7 @@ tags: [world-building, collision, physics, collisionfidelity, colliders, collisi
 > - Decoration CanTouch / CanQuery off.
 > - Mesh fidelity: Box for small, Hull for convex, PCD only where needed.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.5k tok. Read more: ## Mesh CollisionFidelity · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.7k tok. Read more: ## Mesh CollisionFidelity · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 What players see and what they collide with should be two different problems. Visual geometry is detailed, irregular and full of tiny parts; good collision geometry is simple, smooth, predictable and cheap. This note covers the collision flags every part has, mesh `CollisionFidelity`, the visual/collider split, collision groups, invisible floors for AI, and how to test collision after an art pass. Physics simulation itself (assemblies, constraints, ownership) is in [[Physics Assemblies and Constraints]] and [[Physics Performance]].
@@ -274,5 +274,10 @@ The senior trade-off: accurate collision costs authoring time and physics time; 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Collisions]] · [[Exporting and Validating Models for Roblox]] · [[Skill - Roblox Asset Import]] · [[Environment and Level Pipeline]] · [[Avatar Body Types and Scale in Gameplay]] · [[Modular Environment Kits]]
+[[Links - Collisions]] · Exporting and Validating Models for Roblox · Skill - Roblox Asset Import · Environment and Level Pipeline · Avatar Body Types and Scale in Gameplay · Modular Environment Kits
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Exporting and Validating Models for Roblox]] · [[Level of Detail and Model Streaming]] · [[Procedural World Generation]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Grid Placement and Player Building Systems]] · [[Materials MaterialVariants and SurfaceAppearance]] · [[Modeling in Blender for Roblox]] · [[Terrain Deep Dive - Materials Water and Performance]]
+<!-- related:end -->

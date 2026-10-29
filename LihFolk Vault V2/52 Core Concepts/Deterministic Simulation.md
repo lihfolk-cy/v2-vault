@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, networking, procedural, math, testing]
+tags: [core-concept, networking, procedural, math, testing, type/reference, area/networking, level/beginner, area/math]
 ---
 # Deterministic Simulation
 
@@ -10,7 +10,7 @@ tags: [core-concept, networking, procedural, math, testing]
 > - One `Random` object per stream. If combat and loot draw from the same generator, adding one extra combat roll shifts every...
 > - Sort before iterating. When iterating a dictionary matters for the result, collect keys into an array and sort them first.
 >
-> Cost: TL;DR ~160 tok · whole note ~970 tok. Read more: ## What is and is not deterministic on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~160 tok · whole note ~1.0k tok. Read more: ## What is and is not deterministic on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 A simulation is **deterministic** when the same starting state and the same inputs always produce exactly the same result. If two machines run a deterministic simulation from the same seed with the same inputs, they stay in sync without sending the results to each other.
@@ -30,7 +30,7 @@ Determinism lets you send *seeds and inputs* instead of *state*: generate a whol
 
 ## The nuance most people miss
 
-1. **Use a fixed timestep.** Stepping a simulation with the frame's `dt` gives different results at 30 and 60 fps. Accumulate time and step in fixed increments (for example 1/60 s).
+1. **Use a [[fixed timestep]].** Stepping a simulation with the frame's `dt` gives different results at 30 and 60 fps. Accumulate time and step in fixed increments (for example 1/60 s).
 2. **One `Random` object per stream.** If combat and loot draw from the same generator, adding one extra combat roll shifts every later loot roll. Give each system its own seeded `Random`.
 3. **Sort before iterating.** When iterating a dictionary matters for the result, collect keys into an array and sort them first.
 4. **Never trust the client's result.** Determinism lets the server *check* a client's claimed result by replaying inputs; it does not make the claim trustworthy.
@@ -69,5 +69,10 @@ Related concepts: [[Variance]], [[Frame Budget]], [[Server Authority]], [[Teleme
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Procedural Generation Start Here]] · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]] · [[Procedural World Generation]] · [[Infinite and Streamed Worlds]] · [[Procedural Loot and Item Generation]] · [[Debugging Start Here]] · [[Core Concepts Start Here]]
+[[Procedural Generation Start Here]] · 2D Multiplayer - Server Authority and Replicating GUI Worlds · Procedural World Generation · Infinite and Streamed Worlds · Procedural Loot and Item Generation · Debugging Start Here · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Replication Boundary]] · [[Expected Value]] · [[Dependency Injection in Luau]] · [[Streaming Radius]] · [[Data Schema Versioning]] · [[Hit-Stop]] · [[Pity Timer]] · [[Tween vs Spring]]
+<!-- related:end -->

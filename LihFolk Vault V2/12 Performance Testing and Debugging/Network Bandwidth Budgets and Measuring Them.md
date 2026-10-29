@@ -1,5 +1,5 @@
 ---
-tags: [performance, networking, bandwidth, budgets, remotes, replication, measurement]
+tags: [performance, networking, bandwidth, budgets, remotes, replication, measurement, type/guide, area/performance, level/intermediate, api/UnreliableRemoteEvent, area/networking]
 ---
 # Network Bandwidth Budgets and Measuring Them
 
@@ -12,7 +12,7 @@ tags: [performance, networking, bandwidth, budgets, remotes, replication, measur
 > - Fan-out arithmetic done for every broadcast at full server size.
 > - Top talkers measured (A/B or instrumented remotes).
 >
-> Cost: TL;DR ~150 tok · whole note ~4.7k tok. Read more: ## 3. The fan-out arithmetic · ## 4. Measuring per system · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.8k tok. Read more: ## 3. The fan-out arithmetic · ## 4. Measuring per system · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Network Performance]] lists the tools and the traffic-cutting patterns. This note is about numbers: how to set a bandwidth budget per player, how to find out what each system actually costs, and how to keep the total inside the budget as the game grows. The theme is that you cannot manage what you only feel. "The game is laggy on phones" becomes fixable when you can say "combat sends 38 kbps per player at 20 players, and the budget is 25".
@@ -357,5 +357,10 @@ A budget measured once is out of date after the next update. Three habits keep i
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Interest Management and Per-Player Replication]] · [[Cookbook - Remotes and Networking]] · [[Skill - Roblox Performance Audit]] · [[Replication Boundary]] · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]] · [[Serialization Formats for Saves and Networking]]
+[[Interest Management and Per-Player Replication]] · Cookbook - Remotes and Networking · Skill - Roblox Performance Audit · Replication Boundary · 2D Multiplayer - Server Authority and Replicating GUI Worlds · Serialization Formats for Saves and Networking
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Performance Fundamentals]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[Script Performance]] · [[Client Zone Culling for Interiors and Cities]] · [[Hunting Memory Leaks Step by Step]] · [[Weather Performance Budgets and Quality Tiers]] · [[Memory Budgets and Leaks]] · [[Crash and Error Telemetry]]
+<!-- related:end -->

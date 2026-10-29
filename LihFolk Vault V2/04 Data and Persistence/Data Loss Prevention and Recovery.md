@@ -1,5 +1,5 @@
 ---
-tags: [data, datastore, data-loss, recovery, rollback, versioning, incident]
+tags: [data, datastore, data-loss, recovery, rollback, versioning, incident, type/guide, area/data, level/intermediate, api/DataStore, area/liveops]
 ---
 # Data Loss Prevention and Recovery
 
@@ -12,7 +12,7 @@ tags: [data, datastore, data-loss, recovery, rollback, versioning, incident]
 > - Studio access is off on the live game or fully guarded (test key, simulator, side systems obey).
 > - Saves validated; failures alert and keep the last good copy.
 >
-> Cost: TL;DR ~190 tok · whole note ~3.9k tok. Read more: ## Guard 3: validate before you write · ## Recovery tool 1: per-key version history · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~4.0k tok. Read more: ## Guard 3: validate before you write · ## Recovery tool 1: per-key version history · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Players forgive bugs. They rarely forgive losing a week of progress. This note is the defensive layer around everything else in this folder: where loss really comes from (most of it is self-inflicted), the guards that stop it before it happens, how to see it happening in production, and how to restore a player or a whole population from Roblox's built-in version history and snapshots. It ends with an incident runbook.
@@ -234,5 +234,10 @@ Roblox's open-source Data Stores Batch Processor is designed for large jobs like
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Debugging DataStore Problems]] · [[Live Incident Response and Post-Mortems]] · [[Skill - Roblox DataStore Safety]] · [[Cookbook - Data and Saving]] · [[Saved Inventory End to End]] · [[Session Lock]]
+[[Debugging DataStore Problems]] · Live Incident Response and Post-Mortems · Skill - Roblox DataStore Safety · Cookbook - Data and Saving · Saved Inventory End to End · Session Lock
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Schema Migrations - Worked Case Studies]] · [[Cookbook - Data and Saving]] · [[Live Incident Response and Post-Mortems]] · [[Global State and Live Config]] · [[Player Privacy and Data Deletion]] · [[Trading Systems Without Duplication]] · [[OrderedDataStores and Leaderboards]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[MemoryStore Service]]
+<!-- related:end -->

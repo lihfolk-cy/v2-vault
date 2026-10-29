@@ -1,5 +1,5 @@
 ---
-tags: [debugging, luau, errors, stack-trace, traceback, debug-info]
+tags: [debugging, luau, errors, stack-trace, traceback, debug-info, type/guide, area/debugging, level/advanced, area/scripting, api/Script]
 ---
 # Reading Luau Errors and Stack Traces
 
@@ -12,7 +12,7 @@ tags: [debugging, luau, errors, stack-trace, traceback, debug-info]
 > - I checked the frame below the top for where the bad value came from.
 > - I scrolled to the first error in the Output.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.7k tok. Read more: ## 2. The common messages, decoded · ## 4. `debug.traceback` and `debug.info` as tools · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.8k tok. Read more: ## 2. The common messages, decoded · ## 4. `debug.traceback` and `debug.info` as tools · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most error messages tell you exactly what went wrong, and most developers read only the first five words. This note decodes the messages you will actually see in Roblox, explains what each one usually means in practice (which is often not what it literally says), and shows how to read a stack trace, including the cases where the trace points at the wrong place. It finishes with `debug.traceback` and `debug.info` used as tools, not just for logging.
@@ -309,5 +309,10 @@ A good habit: after each play test, the Output should have **zero** errors and z
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Error handling and debugging]] · [[Functions Closures and Upvalues]] · [[Building a Signal Library]] · [[Custom Schedulers and Coroutine Patterns]] · [[Tables Metatables and OOP]] · [[Skill - Roblox Debugging]]
+[[Links - Error handling and debugging]] · Functions Closures and Upvalues · Building a Signal Library · Custom Schedulers and Coroutine Patterns · Tables Metatables and OOP · Skill - Roblox Debugging
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Functions Closures and Upvalues]] · [[Custom Schedulers and Coroutine Patterns]] · [[The Debugging Method - Reproduce Isolate Bisect]] · [[Debugging Live Servers]] · [[Debugging Client-Server Desync]] · [[Debugging UI Layout and Input]]
+<!-- related:end -->

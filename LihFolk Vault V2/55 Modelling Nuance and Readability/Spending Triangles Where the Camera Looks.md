@@ -1,5 +1,5 @@
 ---
-tags: [modeling, triangles, budgets, optimization, camera, lod, silhouette, blender, python, mobile]
+tags: [modeling, triangles, budgets, optimization, camera, lod, silhouette, blender, python, mobile, type/guide, area/modeling]
 ---
 # Spending Triangles Where the Camera Looks
 
@@ -12,7 +12,7 @@ tags: [modeling, triangles, budgets, optimization, camera, lod, silhouette, blen
 > - Cylinder and sphere segments chosen from radius and distance.
 > - Bottom, touching, interior and against-wall faces deleted where safe.
 >
-> Cost: TL;DR ~200 tok · whole note ~3.9k tok. Read more: ## Segment counts from distance: the sagitta rule · ## Scene-level spending · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~200 tok · whole note ~4.0k tok. Read more: ## Segment counts from distance: the sagitta rule · ## Scene-level spending · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A triangle budget says how many triangles an asset may have. It does not say where they should go. Two crates with 600 triangles each can look completely different: one spends its triangles on a rounded silhouette and chunky handles the player sees from the high follow camera, the other spends them on a detailed underside nobody ever sees. [[Art Budgets - Triangles Draw Calls Memory]] sets the totals and [[Environment Art Styles]] lists which places in a world deserve detail. This note is about the distribution **inside** each model and across a scene: how to calculate segment counts from viewing distance, which faces the Roblox camera actually sees, where to delete, where to add, and how to check the spend with a script.
@@ -195,5 +195,10 @@ Typical findings: a "bottom" share above about 10 percent on a grounded prop mea
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Modelling Nuance Start Here]] · [[Style Bibles for Consistent Models]] · [[Triangle Budget]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Hard-Surface Modeling]] · [[Stylised Shop Stand Worked Example]]
+[[Modelling Nuance Start Here]] · [[Style Bibles for Consistent Models]] · [[Triangle Budget]] · Faceted Low-Poly - Flat Normals and Facet Size · Hard-Surface Modeling · Stylised Shop Stand Worked Example
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Proportion Exaggeration and Gameplay Distance]] · [[Modeling Fundamentals for Games]] · [[Stylised Shop Stand Worked Example]] · [[Keeping a Mixed Asset Library Consistent]] · [[Critiquing a Model - Paintovers and Iteration]]
+<!-- related:end -->

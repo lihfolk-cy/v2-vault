@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, assets-creation]
+tags: [resources, links, assets-creation, type/reference, area/audio, level/intermediate]
 ---
 # Links - Audio creation and uploading
 

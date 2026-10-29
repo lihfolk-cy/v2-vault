@@ -1,5 +1,5 @@
 ---
-tags: [rigging, characters, startercharacter, humanoid, r15]
+tags: [rigging, characters, startercharacter, humanoid, r15, type/guide, area/animation, level/intermediate, api/HipHeight, api/Humanoid, api/HumanoidDescription]
 ---
 # Custom Characters and StarterCharacter
 
@@ -9,7 +9,7 @@ tags: [rigging, characters, startercharacter, humanoid, r15]
 > - Avoid: Wrong HipHeight -> Compute from the rest model
 > - Avoid: Anchored or unjoined parts -> Joint everything to the root; nothing anchored
 >
-> Cost: TL;DR ~100 tok · whole note ~3.1k tok. Read more: ## 1. Five ways to customise a character · ## 4. HipHeight · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~3.2k tok. Read more: ## 1. Five ways to customise a character · ## 4. HipHeight · ## Common mistakes
 <!-- tldr:end -->
 
 "Give the player a custom character" covers five very different jobs, from swapping a hat to replacing the whole skeleton. Each choice decides which built-in systems keep working (the default Animate script, emotes, layered clothing, avatar accessories, the Animation Editor's R15 tools) and which ones you must rebuild. This note maps the options, then covers the mechanics that trip people up: Humanoid requirements, `HipHeight`, scale, the Animate script and testing.
@@ -35,7 +35,7 @@ Put a Model named **`StarterCharacter`** in `StarterPlayer`. Every player then s
 | A `Humanoid` | Movement, states, health, the character contract |
 | An `Animator` under the Humanoid | Clip playback; create it rather than relying on lazy creation |
 | A `HumanoidRootPart`, set as `PrimaryPart` | The part the Humanoid moves; root of the joint tree |
-| Every other part joined to it by joints (Motor6D or AnimationConstraint), no anchored parts | Anything unjoined falls off; anything anchored freezes the character |
+| Every other part joined to it by joints (Motor6D or [[AnimationConstraint]]), no anchored parts | Anything unjoined falls off; anything anchored freezes the character |
 | `Humanoid.RigType` matching the skeleton (R15 for R15 names) | Selects the default animation set and some physics behaviour |
 | A correct `HipHeight` (section 4) | Otherwise the character floats or sinks |
 | Visual parts non-colliding except what you mean to collide | Extra colliding parts snag on geometry |
@@ -147,7 +147,7 @@ The client owns its character's physics and its Animator: clips the client plays
 | Mistake | On screen | Fix |
 |---|---|---|
 | Non-R15 StarterCharacter with the default Animate | Character slides around in rest pose | Own `Animate` in StarterCharacterScripts |
-| Wrong HipHeight | Floating or sinking; feet clip on slopes | Compute from the rest model |
+| Wrong [[HipHeight]] | Floating or sinking; feet clip on slopes | Compute from the rest model |
 | Anchored or unjoined parts | Character frozen, or parts left behind at spawn | Joint everything to the root; nothing anchored |
 | Body scaled with `ScaleTo` but clips authored for body-scale values (or the reverse) | Crouches hover or sink; lunges too short or long | One scaling method; author root offsets accordingly |
 | Renamed R15 bones on a custom skinned body | R15 clips and emotes do nothing | Keep names; add extra bones |
@@ -159,5 +159,10 @@ The client owns its character's physics and its Animator: clips the client plays
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Modeling Characters for R15 and Custom Rigs]] · [[Characters and Humanoids]] · [[Rigging in Blender]] · [[HumanoidDescription and Outfit Systems]] · [[Avatar Body Types and Scale in Gameplay]] · [[Avatars and UGC Start Here]] · [[Animation Start Here]]
+[[Modeling Characters for R15 and Custom Rigs]] · Characters and Humanoids · [[Rigging in Blender]] · HumanoidDescription and Outfit Systems · Avatar Body Types and Scale in Gameplay · Avatars and UGC Start Here · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Voxel Characters - Proportions Joints and Rigging]] · [[Character Select and Class Systems with Different Rigs]] · [[3D Importer Settings Reference]] · [[Rigs and Joints]] · [[Importing Models and Rigs]] · [[Bones and Skinned Meshes]] · [[Creature Rig Conventions]] · [[Blender Armature and Bone Roll Conventions]] · [[Enemy and NPC Animation]] · [[Animation Data from Blender to Roblox]]
+<!-- related:end -->

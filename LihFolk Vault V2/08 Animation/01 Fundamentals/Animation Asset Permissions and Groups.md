@@ -1,5 +1,5 @@
 ---
-tags: [fundamentals, publishing, permissions, groups, assets]
+tags: [fundamentals, publishing, permissions, groups, assets, type/guide, area/animation, level/beginner, api/Animator, api/Animation]
 ---
 # Animation Asset Permissions and Groups
 
@@ -12,7 +12,7 @@ tags: [fundamentals, publishing, permissions, groups, assets]
 > - No temporary (registered) ids anywhere in scripts or data.
 > - No ids copied from free models without a grant.
 >
-> Cost: TL;DR ~160 tok · whole note ~3.7k tok. Read more: ## How animation permissions work now · ## Nuances and edge cases · ## Checklist before a release or transfer · ## Common mistakes in production
+> Cost: TL;DR ~160 tok · whole note ~3.8k tok. Read more: ## How animation permissions work now · ## Nuances and edge cases · ## Checklist before a release or transfer · ## Common mistakes in production
 <!-- tldr:end -->
 
 An animation asset only plays in an experience that is **allowed** to use it. When it is not, nothing errors in a live server: the track's `Length` stays 0 and the character stands still. This is the single most common reason a working animation "stops working" after a game moves to a group, after a collaborator uploads clips, or after someone pastes an id from a free model. This note explains the current rules (verified against the docs and Roblox announcements as of October 2026), how group ownership works, how to grant access instead of re-uploading, and a pipeline that avoids the whole class of bug.
@@ -169,5 +169,10 @@ One production game ended up not depending on published ids for most clips: it k
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Packages and Shared Assets Across Places]] · [[Team Create Permissions and Workflows]] · [[Team Create and Collaboration]] · [[Packages and Asset Reuse]] · [[Team Collaboration Start Here]] · [[Plugin Security and Permissions]] · [[Animation Start Here]]
+[[Packages and Shared Assets Across Places]] · Team Create Permissions and Workflows · Team Create and Collaboration · Packages and Asset Reuse · Team Collaboration Start Here · Plugin Security and Permissions · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Team Create Permissions and Workflows]] · [[Creator Account Security and Takeover Recovery]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Animator Deep Dive]] · [[AnimationTrack Reference]] · [[3D Importer Settings Reference]] · [[Case Study - Cutting a Million Instances]]
+<!-- related:end -->

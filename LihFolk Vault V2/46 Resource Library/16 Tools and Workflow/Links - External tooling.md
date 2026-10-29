@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, tools-workflow]
+tags: [resources, links, tools-workflow, type/reference, area/studio, level/intermediate]
 ---
 # Links - External tooling
 
@@ -66,5 +66,5 @@ Part of [[Resource Library - Tools and Workflow]] in the [[Resource Library Star
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Version control]] · [[Links - Testing]] · [[External Tooling - Rojo Wally Selene StyLua]] · [[Links - Plugins and custom tools]] · [[Code Pipeline - Rojo Git and CI]]
+[[Links - Version control]] · [[Links - Testing]] · [[External Tooling - Rojo Wally Selene StyLua]] · [[Links - Plugins and custom tools]] · Code Pipeline - Rojo Git and CI
 <!-- auto-links:end -->

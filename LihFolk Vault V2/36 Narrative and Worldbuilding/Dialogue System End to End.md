@@ -1,5 +1,5 @@
 ---
-tags: [narrative, dialogue, worked-build, luau, strict, server-authority, localization, npc, ui]
+tags: [narrative, dialogue, worked-build, luau, strict, server-authority, localization, npc, ui, type/guide, area/narrative, level/intermediate]
 ---
 # Dialogue System End to End
 
@@ -12,7 +12,7 @@ tags: [narrative, dialogue, worked-build, luau, strict, server-authority, locali
 > - Every line and choice is a key plus an English default; CSV generated from trees.
 > - Start entries ordered from specific to general.
 >
-> Cost: TL;DR ~160 tok · whole note ~12.2k tok. Read more: ## 5. Server: DialogueService · ## 7. Client: DialogueController · ## 11. Common mistakes and extensions · ## 12. Checklist
+> Cost: TL;DR ~160 tok · whole note ~12.3k tok. Read more: ## 5. Server: DialogueService · ## 7. Client: DialogueController · ## 11. Common mistakes and extensions · ## 12. Checklist
 <!-- tldr:end -->
 
 This note builds a complete NPC dialogue system from an empty place: conversations written as data, a server that owns every decision (which greeting you get, which choices you see, what a choice does), a client that only displays and reports clicks, conditions and effects that other systems plug into, text that is sent as keys and translated on each player's own client, a typewriter that does not break translation or accessibility, and a validator that catches broken trees before players do.
@@ -1211,5 +1211,10 @@ Rate limiting here is light because each input already needs a fresh token, and 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Strings Patterns and Formatting]] · [[Lore Delivery Without Walls of Text]] · [[Naming Items Zones and Abilities]] · [[Notification and Toast Systems]] · [[Captions and Audio Accessibility]] · [[Links - NPCs and AI]]
+[[Strings Patterns and Formatting]] · [[Lore Delivery Without Walls of Text]] · [[Naming Items Zones and Abilities]] · Notification and Toast Systems · Captions and Audio Accessibility · Links - NPCs and AI
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Story State Flags and Chapter Saves]] · [[Puzzle Dependency Charts and Hint Systems]] · [[Notification and Toast Systems]] · [[Cookbook - UI]] · [[Round-Based Minigame Loop End to End]] · [[Multiplayer Cutscene Sync - Server Clock, Late Joiners and Skip Votes]]
+<!-- related:end -->

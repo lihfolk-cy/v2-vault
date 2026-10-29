@@ -1,5 +1,5 @@
 ---
-tags: [import, studio, reference, 3d-importer]
+tags: [import, studio, reference, 3d-importer, type/reference, area/animation, level/intermediate, api/Motor6D, area/studio]
 ---
 # 3D Importer Settings Reference
 
@@ -10,7 +10,7 @@ tags: [import, studio, reference, 3d-importer]
 > - The importer page above does not list animation options.
 > - When a mesh object has the same name as a bone in the connected armature, the importer turns that bone into a Motor6D joining...
 >
-> Cost: TL;DR ~140 tok · whole note ~2.9k tok. Read more: ## 2. File General · ## 6. Animation import options
+> Cost: TL;DR ~140 tok · whole note ~3.1k tok. Read more: ## 2. File General · ## 6. Animation import options
 <!-- tldr:end -->
 
 Every option of Studio's 3D Importer (File > Import 3D), what it really does to an animated asset, and what to pick for each kind of import. Option names and defaults are from the Roblox Creator Hub importer page (checked October 2026). Behaviour notes marked "measured" come from one production game; anything from community threads is marked as such. Studio changes this dialog often: when a name here does not match your Studio, trust your Studio and update this note.
@@ -137,5 +137,10 @@ None of this is in the official importer page. Practical rule: if you want Bones
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Modeling Characters for R15 and Custom Rigs]] · [[Exporting and Validating Models for Roblox]] · [[Pipeline - Importing Animated Enemies]] · [[Links - Importing into Studio]] · [[Skeleton Library]] · [[Skill - Roblox Asset Import]] · [[Animation Start Here]]
+[[Modeling Characters for R15 and Custom Rigs]] · Exporting and Validating Models for Roblox · [[Pipeline - Importing Animated Enemies]] · Links - Importing into Studio · Skeleton Library · Skill - Roblox Asset Import · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Animation Data from Blender to Roblox]] · [[Blender Armature and Bone Roll Conventions]] · [[Weight Painting and Skinning for Roblox]] · [[Bones and Skinned Meshes]] · [[Exporting and Validating Models for Roblox]] · [[Skeleton Library]] · [[R15 Rig Anatomy and Attachments]] · [[Creature Rig Conventions]] · [[Custom Characters and StarterCharacter]] · [[Accessories and Armor That Follow Animation]]
+<!-- related:end -->

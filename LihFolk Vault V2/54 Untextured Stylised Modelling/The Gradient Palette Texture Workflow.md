@@ -1,5 +1,5 @@
 ---
-tags: [modeling, untextured, stylised, gradient-atlas, palette, uv, blender, texture, workflow]
+tags: [modeling, untextured, stylised, gradient-atlas, palette, uv, blender, texture, workflow, type/reference, area/modeling, level/intermediate]
 ---
 # The Gradient Palette Texture Workflow
 
@@ -12,7 +12,7 @@ tags: [modeling, untextured, stylised, gradient-atlas, palette, uv, blender, tex
 > - Each strip has contact shadow, body ramp and highlight, with hue shift.
 > - Flat accent strips, a grey ramp and reserved empty strips included.
 >
-> Cost: TL;DR ~200 tok · whole note ~4.5k tok. Read more: ## Designing the layout · ## The UV moves in Blender · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~200 tok · whole note ~4.6k tok. Read more: ## Designing the layout · ## The UV moves in Blender · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A gradient palette texture is one small image made of colour strips, each strip running from a dark to a light version of one colour (or from one hue into another). Every mesh in a kit maps its faces onto those strips: a tree trunk samples the brown strip from its dark end at the root to its lighter end near the crown, a leaf blob samples the green strip so its underside is darker than its top. The result looks shaded and designed, costs one tiny texture for a whole world, and needs no painting at all. This is the workflow behind a large share of mobile low-poly games, Synty-style asset packs (which share one palette texture across hundreds of meshes) and many popular Blender tutorials.
@@ -83,7 +83,7 @@ So the strip must stay at least a couple of texels wide at the mip level a dista
 - Keep neighbouring strips **similar in value** where you can (order strips by family: greens next to greens), so a bleed is a slight shift, not a visible seam colour.
 - Test by viewing a prop at its furthest realistic distance in Studio and on a phone emulator, not only up close.
 
-**ResampleMode.** Roblox docs (as of October 2026) list a `ResampleMode` property on `SurfaceAppearance` using `Enum.ResamplerMode` with two items, `Default` and `Pixelated`. The reference page does not describe the behaviour. Pixelated presumably means nearest-neighbour magnification, which removes bilinear bleed up close and suits pixel-art palettes. Whether it changes mip selection at distance is unverified; test before relying on it. Plain `MeshPart.TextureID` has no such property.
+**[[ResampleMode]].** Roblox docs (as of October 2026) list a `ResampleMode` property on `SurfaceAppearance` using `Enum.ResamplerMode` with two items, `Default` and `Pixelated`. The reference page does not describe the behaviour. Pixelated presumably means nearest-neighbour magnification, which removes bilinear bleed up close and suits pixel-art palettes. Whether it changes mip selection at distance is unverified; test before relying on it. Plain `MeshPart.TextureID` has no such property.
 
 **Texture quality reduction.** Rule of thumb: low-memory devices may load reduced texture resolutions. If a 128 x 128 atlas is effectively loaded at 64 x 64, every 8 px strip becomes 4 px. Another reason to keep strips at 8 px minimum.
 
@@ -251,5 +251,10 @@ A gradient atlas is a contract between the image and every mesh. Treat it like a
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Bevels Chamfers and Edge Highlights Without Textures]] · [[Voxel Palettes - Ramps Hue Shifting and Limits]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Low-Poly and Stylized Modeling]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Hand-Painted and Stylized Texturing]]
+[[Bevels Chamfers and Edge Highlights Without Textures]] · Voxel Palettes - Ramps Hue Shifting and Limits · MagicaVoxel Goxel and Blockbench Workflows Compared · Low-Poly and Stylized Modeling · Voxel Shading - Baked AO Edges and Lighting · Hand-Painted and Stylized Texturing
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Low-Poly and Stylized Modeling]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[Voxel Palettes - Ramps Hue Shifting and Limits]] · [[Texturing and PBR Baking]] · [[Keeping a Mixed Asset Library Consistent]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [systems, abilities, ultimates, camera, cinematics, networking]
+tags: [systems, abilities, ultimates, camera, cinematics, networking, type/guide, area/animation, level/intermediate, area/networking]
 ---
 # Cinematic Ultimates
 
@@ -9,7 +9,7 @@ tags: [systems, abilities, ultimates, camera, cinematics, networking]
 > - Enemies die during the drag: Damage before pull -> Pull-only first hit
 > - Impact a few frames off the cut: Enemy snap on server time -> Local climax for the caster
 >
-> Cost: TL;DR ~110 tok · whole note ~3.8k tok. Read more: ## The anchor contract · ## Layer one: the additive ultimate camera (everyone) · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~3.9k tok. Read more: ## The anchor contract · ## Layer one: the additive ultimate camera (everyone) · ## Common mistakes
 <!-- tldr:end -->
 
 An ultimate is the move players save up for and want to show off. In one live action game (the reference project) every weapon's last move is an ultimate, and every ultimate is a short cutscene for its caster, an additive camera package for everyone, and a choreographed sequence for the enemies it hits. Making those three line up (the enemies are exactly at the centre of the explosion, on the exact frame the camera cuts to it) took an explicit contract between four subsystems. This note documents that contract and the two camera layers, with their numbers.
@@ -101,7 +101,7 @@ A related constant: the ability controller fires the cast to the server **0.06 s
 
 Applied on top of the player's own camera, never Scriptable for onlookers. Tier from the weapon's rarity. Beats from markers:
 - **OPEN** at t = 0 (or an `Open` marker): FOV punch in over 0.12 s, held to the `Open` mark (usually about 0.21 s, clamped 0.15 to 0.6), then over 0.55 s the widen, dolly back and lift, orbit bias toward the anchor and a partial aim. Grade in over 0.25 s, letterbox in over 0.35 s (under the HUD), a title card "<RARITY> ULTIMATE" plus the move name held 1.35 s; the top two tiers add a low rumble building to the climax.
-- **CLIMAX** on the strongest `Impact` / `Detonate` / `Execute` / `Collapse` marker (latest on a tie; `Erupt` / `Shock` as fallbacks; a per-move override). Without a marker: the spec `t`, else 66% of the clip, with a 0.35 s guard when a marker exists. Then impact frames inside the hit-stop, FOV kick, shake when the freeze ends, blur, colour punch (see [[Camera Shake and Camera FX]]).
+- **CLIMAX** on the strongest `Impact` / `Detonate` / `Execute` / `Collapse` marker (latest on a tie; `Erupt` / `Shock` as fallbacks; a per-move override). Without a marker: the spec `t`, else 66% of the clip, with a 0.35 s guard when a marker exists. Then [[impact frames]] inside the hit-stop, FOV kick, shake when the freeze ends, blur, colour punch (see [[Camera Shake and Camera FX]]).
 - **RECOVER** starts at `clamp(clipEnd - 0.6 x recover, climax + post, climax + post + 0.9)` and eases everything to 0 with smootherstep.
 
 ### Tier table (reference)
@@ -189,5 +189,10 @@ See also: [[Ability Kits Architecture]], [[Cameras and Cutscenes]], [[Camera Sha
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Camera Systems]] · [[Procedural Death Knockdown and Hit Reactions]] · [[Snippets - Camera Shake and FX]] · [[VFX Design Playbook]] · [[Genre Playbook - Combat and RPG]] · [[Hit-Stop and Screen Shake Tuning by Numbers]] · [[Animation Start Here]]
+[[Camera Systems]] · [[Procedural Death Knockdown and Hit Reactions]] · [[Snippets - Camera Shake and FX]] · VFX Design Playbook · Genre Playbook - Combat and RPG · Hit-Stop and Screen Shake Tuning by Numbers · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Combat Combo Systems]] · [[Weapon and Combat Animation]] · [[Stance and Charge Moves]] · [[Enemy Animation State Protocol]] · [[Custom Locomotion Controller Design]] · [[Equip Draw and Flourish Systems]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]] · [[Emotes and Social Animation]]
+<!-- related:end -->

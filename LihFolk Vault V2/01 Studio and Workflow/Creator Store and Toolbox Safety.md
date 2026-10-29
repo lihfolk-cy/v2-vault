@@ -1,5 +1,5 @@
 ---
-tags: [studio, toolbox, creator-store, security, backdoors, assets]
+tags: [studio, toolbox, creator-store, security, backdoors, assets, type/guide, area/studio, level/intermediate, area/security]
 ---
 # Creator Store and Toolbox Safety
 
@@ -12,7 +12,7 @@ tags: [studio, toolbox, creator-store, security, backdoors, assets]
 > - Read every script in an inserted asset.
 > - Run the audit script before every release and after installing a new plugin.
 >
-> Cost: TL;DR ~150 tok · whole note ~3.2k tok. Read more: ## 6. An audit script · ## 7. Licensing, ownership and permissions · ## 9. Common mistakes · ## 10. Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.3k tok. Read more: ## 6. An audit script · ## 7. Licensing, ownership and permissions · ## 9. Common mistakes · ## 10. Checklist
 <!-- tldr:end -->
 
 The Creator Store holds millions of free and paid models, meshes, images, audio, plugins, fonts and videos, browsable on the web and inside Studio's Toolbox. Used carefully it saves weeks. Used carelessly it is the main way malicious code enters Roblox games: a free model with a hidden script that `require`s a remote module, grants an attacker admin, or injects obfuscated code into your other scripts. This note covers how the store works (as of October 2026), the store's own rules about unsafe code, how to inspect and quarantine assets, how backdoors look in practice, and licensing and permission traps. It ends with a command-bar audit script you can run on any place.
@@ -214,5 +214,10 @@ When you do use store content (prototypes, jams, solo projects):
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Plugin Security and Permissions]] · [[Links - Backdoors and malicious assets]] · [[Publishing Selling and Updating Plugins]] · [[Legal Basics - IP Licenses and Assets]] · [[Resource Library - Safety (free models and plugins)]] · [[Links - Models, Toolbox and Creator Store]]
+[[Plugin Security and Permissions]] · Links - Backdoors and malicious assets · Publishing Selling and Updating Plugins · Legal Basics - IP Licenses and Assets · Resource Library - Safety (free models and plugins) · Links - Models, Toolbox and Creator Store
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Publishing Selling and Updating Plugins]] · [[Legal Basics - IP Licenses and Assets]] · [[Version History and Backups]] · [[Team Create and Collaboration]] · [[Studio Assistant and AI Tools]] · [[Explorer Properties and Selection]] · [[Studio Interface Tour]] · [[Studio Settings and Shortcuts]]
+<!-- related:end -->

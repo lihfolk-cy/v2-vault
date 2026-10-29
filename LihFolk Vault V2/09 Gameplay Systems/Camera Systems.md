@@ -1,5 +1,5 @@
 ---
-tags: [gameplay, camera, cutscene, aiming, renderstep]
+tags: [gameplay, camera, cutscene, aiming, renderstep, type/guide, area/gameplay, level/intermediate, api/BindToRenderStep, api/TweenService, api/Camera]
 ---
 # Camera Systems
 
@@ -12,7 +12,7 @@ tags: [gameplay, camera, cutscene, aiming, renderstep]
 > - Additive effects never drift and end at zero.
 > - Cutscenes save and restore type, subject, FOV and GUI, with a watchdog.
 >
-> Cost: TL;DR ~150 tok · whole note ~3.5k tok. Read more: ## 2. The frame: where camera code must run · ## 5. Cinematic takeovers · ## 8. Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.6k tok. Read more: ## 2. The frame: where camera code must run · ## 5. Cinematic takeovers · ## 8. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The camera is the player's eyes and the system most likely to make a game feel cheap or nauseating. Roblox gives you a capable default (the `CameraModule` inside `PlayerModule`) and a raw `Camera` object you can take over completely. This note explains how the camera is updated each frame, the API that matters, how to layer effects on the default camera without breaking it, how to build custom cameras (over-the-shoulder, top-down, lock-on) and cinematic takeovers, and the comfort rules.
@@ -248,5 +248,10 @@ Give players a "Camera Effects" toggle and honour a reduced-motion preference ([
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Cameras]] · [[Motion Sensitivity and Camera Comfort]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] · [[Game Feel Start Here]] · [[Modelling to the Roblox Camera and Player Scale]] · [[Safe Area]]
+[[Links - Cameras]] · Motion Sensitivity and Camera Comfort · Side-Scroller in 3D - Locking Camera and Movement to a Plane · Game Feel Start Here · Modelling to the Roblox Camera and Player Scale · Safe Area
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Chase Cameras and Speed Effects for Vehicles]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Camera Obstruction Handling - Occlusion Modes, Fades and Collision]] · [[Layering Camera Feedback on the Default Camera]] · [[Motion Sensitivity and Camera Comfort]] · [[Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, security, networking, remotes, datastore]
+tags: [core-concept, security, networking, remotes, datastore, type/reference, area/data, level/beginner, api/DataStore, area/security]
 ---
 # Rate Limiting
 
@@ -10,7 +10,7 @@ tags: [core-concept, security, networking, remotes, datastore]
 > - A token bucket beats a cooldown. A cooldown ("one per 0.5 s") rejects an honest double-tap.
 > - Gameplay cooldowns and abuse limits are different layers.
 >
-> Cost: TL;DR ~100 tok · whole note ~1000 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~100 tok · whole note ~1.1k tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Rate limiting** caps how often something may happen per unit of time: how many times a player may fire a remote, how many DataStore requests a server may make, how many messages a player may send. Requests over the cap are dropped, queued or slowed.
@@ -68,5 +68,10 @@ Related concepts: [[Server Authority]], [[Input Buffering]], [[Telemetry Events]
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Cookbook - Remotes and Networking]] · [[Anti-Exploit Start Here]] · [[Core Concepts Start Here]] · [[Crash and Error Telemetry]] · [[Skill - Roblox Anti-Exploit Review]] · [[RemoteEvents RemoteFunctions and Unreliable Remotes]]
+[[Cookbook - Remotes and Networking]] · Anti-Exploit Start Here · [[Core Concepts Start Here]] · Crash and Error Telemetry · Skill - Roblox Anti-Exploit Review · RemoteEvents RemoteFunctions and Unreliable Remotes
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Input Buffering]] · [[Replication Boundary]] · [[Feature Flags]] · [[Session Lock]] · [[Idempotency]] · [[Streaming Radius]] · [[Event Bus]] · [[Deterministic Simulation]]
+<!-- related:end -->

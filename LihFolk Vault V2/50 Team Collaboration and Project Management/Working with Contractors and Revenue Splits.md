@@ -1,5 +1,5 @@
 ---
-tags: [team, contractors, revenue-share, payouts, groups, intake, security, luau]
+tags: [team, contractors, revenue-share, payouts, groups, intake, security, luau, type/guide, area/production, level/intermediate, area/security]
 ---
 # Working with Contractors and Revenue Splits
 
@@ -12,7 +12,7 @@ tags: [team, contractors, revenue-share, payouts, groups, intake, security, luau
 > - Change orders for every addition; mirrored in the scope ledger.
 > - Least access: file delivery, or a sandbox experience with per-game permissions.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.5k tok. Read more: ## 5. Intake: scan every delivered model · ## 7. Split designs for several contributors · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.6k tok. Read more: ## 5. Intake: scan every delivered model · ## 7. Split designs for several contributors · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 > **Not advice.** General information for Roblox teams. It is not legal, tax or financial advice. Contract, employment and tax rules differ by country. Anyone under 18 needs a parent or guardian to approve agreements and payments.
@@ -373,5 +373,10 @@ Roblox does not arbitrate disagreements between group members; the group owner's
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Team Collaboration Start Here]] · [[Running a Small Studio as a Business]] · [[Business and Careers Start Here]] · [[Legal Basics - IP Licenses and Assets]] · [[Working with Content Creators]] · [[Subscriptions and Recurring Revenue]]
+[[Team Collaboration Start Here]] · [[Running a Small Studio as a Business]] · Business and Careers Start Here · Legal Basics - IP Licenses and Assets · Working with Content Creators · Subscriptions and Recurring Revenue
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Legal Basics - IP Licenses and Assets]] · [[Creator Account Security and Takeover Recovery]] · [[Working with Content Creators]] · [[Community Building]] · [[Building a Portfolio as a Roblox Developer]] · [[Plugin Security and Permissions]]
+<!-- related:end -->

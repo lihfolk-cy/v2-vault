@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, monetization]
+tags: [resources, links, monetization, type/reference, area/monetization, level/intermediate]
 ---
 # Links - Subscriptions and payouts
 
@@ -25,5 +25,5 @@ Part of [[Resource Library - Monetization]] in the [[Resource Library Start Here
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Overview]] · [[Links - Reserved and private servers]] · [[Links - Analytics]] · [[Links - Game passes]] · [[Subscriptions and Premium Payouts]] · [[Monetization Overview]]
+[[Links - Overview]] · [[Links - Reserved and private servers]] · [[Links - Analytics]] · [[Links - Game passes]] · [[Subscriptions and Premium Payouts]] · Monetization Overview
 <!-- auto-links:end -->

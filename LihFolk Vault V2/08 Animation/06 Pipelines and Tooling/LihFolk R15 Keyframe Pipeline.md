@@ -1,5 +1,5 @@
 ---
-tags: [animation, pipeline, blender, r15, keyframe, export, qa, lihfolk]
+tags: [animation, pipeline, blender, r15, keyframe, export, qa, lihfolk, type/guide, area/animation, level/intermediate, area/modeling]
 ---
 # LihFolk R15 Keyframe Pipeline
 
@@ -12,7 +12,7 @@ tags: [animation, pipeline, blender, r15, keyframe, export, qa, lihfolk]
 > - Overlap offsets on head, off-arm and forearm
 > - Feet on `FootTrack`; slide under 0.02 studs
 >
-> Cost: TL;DR ~130 tok · whole note ~2.0k tok. Read more: ## 2. Authoring · ## 3. Automatic QA (written into each clip's JSON) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~2.1k tok. Read more: ## 2. Authoring · ## 3. Automatic QA (written into each clip's JSON) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 How LihFolk authors original R15 animations in Blender by script, checks them automatically, and exports them for Roblox. It exists because hand-wired AI keyframing tends to produce stiff, clipping "slop". Every guard below catches a specific failure seen in real test clips.
@@ -26,7 +26,7 @@ How LihFolk authors original R15 animations in Blender by script, checks them au
 
 ## 2. Authoring
 
-- Clips are Python modules (`tools/anim/clips/<name>.py`) that build a `Clip` from **key poses**: dictionaries per joint, plus an ease per key (`smooth`, `snap`, `launch`, `flat`, `linear`, `hold`). Keys become Bezier F-curves with real handles, never linear interpolation.
+- Clips are Python modules (`tools/anim/clips/<name>.py`) that build a `Clip` from **key poses**: dictionaries per joint, plus an ease per key (`smooth`, `snap`, `launch`, `flat`, `linear`, `hold`). Keys become [[Bezier Curves|Bezier]] F-curves with real handles, never linear interpolation.
 - **Limbs aim, not rotate.** `aim(direction, twist)` swings an upper arm or leg to point along a direction in its parent's frame, which is far easier to pose well than raw Euler angles.
 - **Overlap.** `offset(joints, n)` delays the head, off-arm or forearm by 1-3 frames so the motion leads from the torso.
 - **Feet.** `FootTrack` keys ankle targets with heel and toe roll and lift arcs. An analytic two-bone IK bakes the legs per frame, so planted feet don't slide.
@@ -117,3 +117,8 @@ Previews show three views for sword clips: three-quarter from the front-left (th
 ## Connected notes
 
 [[Animation Start Here]] · [[Blade Grip and Wrist Limits]]
+
+<!-- related:start -->
+## Related
+[[Human Swing Biomechanics]] · [[R15 Run Cycle Key Poses]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Pipeline - Arm IK Baking and QA]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Arm QA Metrics Reference]] · [[Snippets - IK]]
+<!-- related:end -->

@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [accessibility, hub, inclusive-design, colour-blindness, text, motion, captions, input, difficulty]
+tags: [accessibility, hub, inclusive-design, colour-blindness, text, motion, captions, input, difficulty, type/hub, area/accessibility, level/beginner]
 ---
 # Accessibility Start Here
 
@@ -45,5 +45,5 @@ Engine facts are labelled "Roblox docs (as of October 2026)" and should be reche
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Accessibility Contrast]] · [[Narrative Start Here]] · [[Game Feel Start Here]] · [[Snippets - Camera Shake and FX]] · [[Safe Area]] · [[Skill - Roblox UI Builder]]
+[[Accessibility Contrast]] · Narrative Start Here · Game Feel Start Here · Snippets - Camera Shake and FX · Safe Area · Skill - Roblox UI Builder
 <!-- auto-links:end -->

@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [core-concept, hub, start-here]
+tags: [core-concept, hub, start-here, type/hub, level/beginner]
 ---
 # Core Concepts Start Here
 
@@ -91,5 +91,5 @@ For broader orientation, see [[Glossary]] and the other section hubs such as [[G
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Live Ops Deep Dive Start Here]] · [[Balancing with Spreadsheets and Data]] · [[Discovery and the Algorithm]] · [[Analytics and Funnels]] · [[Advanced Luau Start Here]] · [[Core Loops and Session Design]]
+[[Live Ops Deep Dive Start Here]] · Balancing with Spreadsheets and Data · Discovery and the Algorithm · Analytics and Funnels · Advanced Luau Start Here · Core Loops and Session Design
 <!-- auto-links:end -->

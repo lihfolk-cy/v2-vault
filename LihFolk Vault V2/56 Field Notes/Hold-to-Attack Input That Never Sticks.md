@@ -1,5 +1,5 @@
 ---
-tags: [field-notes, input, contextactionservice, combat, stamina, gamepad, luau]
+tags: [field-notes, input, contextactionservice, combat, stamina, gamepad, luau, type/guide, area/gameplay, level/intermediate, api/UserInputService, area/scripting]
 ---
 # Hold-to-Attack Input That Never Sticks
 
@@ -12,7 +12,7 @@ tags: [field-notes, input, contextactionservice, combat, stamina, gamepad, luau]
 > - Held state cleared on End, Cancel, `WindowFocusReleased`, death and menu open.
 > - Polled button state checked inside the loop.
 >
-> Cost: TL;DR ~170 tok · whole note ~1.7k tok. Read more: ## 1. Track held state from Begin and End, loop through the normal gates · ## 2. The stuck-held cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~1.8k tok. Read more: ## 1. Track held state from Begin and End, loop through the normal gates · ## 2. The stuck-held cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Players expect to hold the attack button and keep swinging. Implementing that is a dozen lines; implementing it so the attack never gets stuck "on" after an alt-tab, never bypasses the stamina or pacing rules, and never spams "not enough stamina" twenty times a second takes a little more thought. This note gives a pattern that held up in a shipped melee game. Input APIs are in [[Input - UserInputService and ContextActionService]]; buffering in [[Input Responsiveness Buffering and Coyote Time]].
@@ -133,5 +133,10 @@ The server must not trust a held state at all. It receives individual attack req
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Input - UserInputService and ContextActionService]] · [[Input Responsiveness Buffering and Coyote Time]] · [[Input Buffering]] · [[Combat Systems Architecture]] · [[Gamepad and Console UX]] · [[Field Notes Start Here]]
+[[Input - UserInputService and ContextActionService]] · Input Responsiveness Buffering and Coyote Time · Input Buffering · Combat Systems Architecture · Gamepad and Console UX · [[Field Notes Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Shift-Lock Sprint and Gamepad B for Menus]] · [[ProximityPrompt Gamepad Keys and the Hidden PlayerList Tab]] · [[Server-Authoritative Freeze and Stun Timestamps]] · [[Client Hit Prediction for Melee Feedback]] · [[A Stuck Player Watchdog That Logs the Cause]] · [[Springs That Survive Long Frames - dt Clamps and NaN Guards]] · [[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[Streaming Joins - Frozen Players and Loading Screen Teardown]]
+<!-- related:end -->

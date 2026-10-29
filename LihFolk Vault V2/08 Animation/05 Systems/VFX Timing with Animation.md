@@ -1,5 +1,5 @@
 ---
-tags: [systems, vfx, markers, trails, timing, audio, performance]
+tags: [systems, vfx, markers, trails, timing, audio, performance, type/guide, area/animation, level/intermediate, api/Animator, area/vfx]
 ---
 # VFX Timing with Animation
 
@@ -9,7 +9,7 @@ tags: [systems, vfx, markers, trails, timing, audio, performance]
 > - Sheet of trail under the blade: Trail on through the wind-up -> Trail window on markers, or crescents
 > - Streak across the body when a trail enables: Trail not cleared -> `Trail:Clear()` before enabling
 >
-> Cost: TL;DR ~120 tok · whole note ~3.1k tok. Read more: ## Three clocks · ## Layered hits · ## Common mistakes
+> Cost: TL;DR ~120 tok · whole note ~3.3k tok. Read more: ## Three clocks · ## Layered hits · ## Common mistakes
 <!-- tldr:end -->
 
 Visual effects sell an animation only when they land on the right frame. A slash crescent one frame late reads as lag; a trail left on through the wind-up draws a sheet of colour under the blade; an explosion that fires twice reads as a bug. This note covers how to time VFX (and sound) to animation in Roblox: markers as the shared clock, the three clocks that drift apart, trail windows, slash crescents, afterimages, juice beats, layered hits and readability budgets. Numbers come from one live action game (the reference project). Building the effects themselves (particles, beams, meshes) is a separate craft; this note is about **when**.
@@ -184,5 +184,10 @@ See also: [[Markers and Events]], [[Combat Combo Systems]], [[Hit Reactions Stag
 
 ## Connected notes
 <!-- auto-links:start -->
-[[VFX Design Playbook]] · [[Beams and Trails]] · [[Combat Animation Craft]] · [[Sound Design for Games]] · [[Mesh VFX Packs Built in Blender]] · [[Game Feel and Juice]] · [[Animation Start Here]]
+[[VFX Design Playbook]] · Beams and Trails · [[Combat Animation Craft]] · Sound Design for Games · Mesh VFX Packs Built in Blender · Game Feel and Juice · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Slash VFX Recipes - Crescent and Ring]] · [[Mesh VFX Packs Built in Blender]] · [[Stance and Charge Moves]] · [[Enemy and NPC Animation]] · [[Boss Animation and Phases]] · [[Custom Locomotion Controller Design]] · [[Timing Spacing and Frame Charts]] · [[Camera Shake and Camera FX]] · [[Pipeline - New Animated Weapon]] · [[Enemy Animation State Protocol]]
+<!-- related:end -->

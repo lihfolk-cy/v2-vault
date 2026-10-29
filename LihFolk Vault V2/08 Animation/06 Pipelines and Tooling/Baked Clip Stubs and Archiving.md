@@ -1,5 +1,5 @@
 ---
-tags: [pipeline, performance, memory, keyframesequence, baking]
+tags: [pipeline, performance, memory, keyframesequence, baking, type/guide, area/animation, level/intermediate, api/KeyframeSequence, area/performance, api/RegisterKeyframeSequence, api/Animator]
 ---
 # Baked Clip Stubs and Archiving
 
@@ -12,7 +12,7 @@ tags: [pipeline, performance, memory, keyframesequence, baking]
 > - `Run`, then `Verify`: zero bad.
 > - Instance counts before and after recorded.
 >
-> Cost: TL;DR ~130 tok · whole note ~3.1k tok. Read more: ## Anatomy of a stub · ## Three bakers, three subtleties · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.2k tok. Read more: ## Anatomy of a stub · ## Three bakers, three subtleties · ## Checklist
 <!-- tldr:end -->
 
 How one live action game removed almost every Pose instance from its place without losing a single clip: each KeyframeSequence becomes a **stub** (no Poses, the motion stored as a compact binary buffer in an attribute), the original is **archived to disk** as an `.rbxm`, and a Lua player reads the buffer. Numbers and the story: [[Case Study - Cutting a Million Instances]]. Buffer layout: [[Clip Buffer Format]]. The disk archive: [[Clip Archive Server]].
@@ -33,7 +33,7 @@ Everything in ReplicatedStorage is downloaded by every client on join; everythin
 
 ## The idea
 
-1. **Encode** the clip's motion into a binary buffer: per-joint key thinning that changes playback by at most 0.03 deg / 0.002 studs, quaternions packed "smallest three" into 6 bytes, offsets quantised to 16 bits per axis.
+1. **Encode** the clip's motion into a binary buffer: per-joint key thinning that changes playback by at most 0.03 deg / 0.002 studs, [[quaternions]] packed "smallest three" into 6 bytes, offsets quantised to 16 bits per axis.
 2. **Store** the buffer base64-encoded in a string attribute (`KSB`) on a **stub** KeyframeSequence that keeps everything other code reads (name, loop, priority, attributes, tags, markers, named keyframes, first and last keyframes) and **no Poses**.
 3. **Archive** the original to disk, read it back, compare, and only then destroy it in the place.
 4. **Play** stubs with a Lua keyframe player that reads the buffer ([[Lua Keyframe Player]], [[Weapon Rig Player]]).
@@ -185,5 +185,10 @@ Enemy streaming after baking: each kit 19-235 KB as buffers, about 1.6 MB for th
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Case Study - Instance Cleanup and Place Size]] · [[Snippets - Building and Sampling Clips]] · [[Animation Data from Blender to Roblox]] · [[Authoring Clips in Code]] · [[Version History and Backups]] · [[Batch Processing Tools in Studio]] · [[Animation Start Here]]
+[[Case Study - Instance Cleanup and Place Size]] · [[Snippets - Building and Sampling Clips]] · [[Animation Data from Blender to Roblox]] · [[Authoring Clips in Code]] · Version History and Backups · Batch Processing Tools in Studio · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Lua Keyframe Player Internals]] · [[Studio Tooling Architecture]] · [[Pipeline - New Animated Weapon]] · [[Pipeline - Importing Animated Enemies]] · [[Pipeline - Arm IK Baking and QA]] · [[Case Study - Abilities That Only Worked in Studio]] · [[Keyframes, Easing and Interpolation]] · [[Enemy Import Axis Fix]]
+<!-- related:end -->

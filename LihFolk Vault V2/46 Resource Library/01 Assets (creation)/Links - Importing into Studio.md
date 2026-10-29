@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, assets-creation]
+tags: [resources, links, assets-creation, type/reference, area/studio, level/intermediate]
 ---
 # Links - Importing into Studio
 
@@ -66,5 +66,5 @@ Part of [[Resource Library - Assets (creation)]] in the [[Resource Library Start
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Materials and MaterialVariants]] · [[Links - Blender fundamentals for Roblox]] · [[Links - Animation creation]] · [[Links - Parts, unions and meshes]] · [[Exporting and Validating Models for Roblox]] · [[Skill - Roblox Asset Import]]
+[[Links - Materials and MaterialVariants]] · [[Links - Blender fundamentals for Roblox]] · [[Links - Animation creation]] · [[Links - Parts, unions and meshes]] · [[Exporting and Validating Models for Roblox]] · Skill - Roblox Asset Import
 <!-- auto-links:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, building-world]
+tags: [resources, links, building-world, type/reference, area/lighting, level/intermediate, api/Atmosphere, area/world]
 ---
 # Links - Lighting
 
@@ -88,5 +88,5 @@ Part of [[Resource Library - Building and World]] in the [[Resource Library Star
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Lighting Technologies and Settings]] · [[Links - Instance and part optimization]] · [[Links - Post-processing]] · [[Links - Particle emitters]] · [[Lighting Mood and Time of Day]] · [[Stylized Lighting Recipes]]
+[[Lighting Technologies and Settings]] · [[Links - Instance and part optimization]] · [[Links - Post-processing]] · [[Links - Particle emitters]] · Lighting Mood and Time of Day · Stylized Lighting Recipes
 <!-- auto-links:end -->

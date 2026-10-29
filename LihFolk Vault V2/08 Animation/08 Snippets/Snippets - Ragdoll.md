@@ -1,5 +1,5 @@
 ---
-tags: [snippets, luau, ragdoll, physics, humanoid]
+tags: [snippets, luau, ragdoll, physics, humanoid, type/reference, area/animation, level/intermediate, api/AnimationConstraint, area/physics, api/Humanoid, api/Motor6D]
 ---
 # Snippets: Ragdoll
 
@@ -9,7 +9,7 @@ tags: [snippets, luau, ragdoll, physics, humanoid]
 > - Avoid: Leaving the Animator playing locomotion during the ragdoll (limbs fight physics or the body slides).
 > - Avoid: Editing the R15 rig attachments to set socket axes (create your own).
 >
-> Cost: TL;DR ~110 tok · whole note ~5.0k tok. Read more: ## 3. Server module · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~5.2k tok. Read more: ## 3. Server module · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 Turning an animated R15 character (or NPC) into a physics ragdoll and back: prebuilt ball-socket constraints with per-joint limits, disabling `Motor6D` **or** `AnimationConstraint` joints, the Humanoid state and ownership rules that decide where each step must run, carrying the animation's momentum into the fall, death ragdolls, getting up without a pop, and a note on physically driven ("active") ragdolls with `AnimationConstraint`.
@@ -333,5 +333,10 @@ This has not been tested in production by the reference project (it baked everyt
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animator Deep Dive]] · [[Accessories and Armor That Follow Animation]] · [[Rigs and Joints]] · [[Characters and Humanoids]] · [[Mover Constraints and Physics Controllers]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Animation Start Here]]
+[[Animator Deep Dive]] · [[Accessories and Armor That Follow Animation]] · [[Rigs and Joints]] · [[Characters and Humanoids]] · Mover Constraints and Physics Controllers · Modeling Characters for R15 and Custom Rigs · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Snippets - IK]] · [[Snippets - Enemy Client Animator]] · [[Snippets - Playing Animations]] · [[Motor6D Math and CFrame Composition]] · [[Custom Characters and StarterCharacter]] · [[R15 Rig Anatomy and Attachments]] · [[Procedural Animation]] · [[Snippets - Building and Sampling Clips]]
+<!-- related:end -->

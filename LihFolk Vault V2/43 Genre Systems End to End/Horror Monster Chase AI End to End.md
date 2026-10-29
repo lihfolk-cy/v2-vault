@@ -1,5 +1,5 @@
 ---
-tags: [genre-system, horror, npc-ai, pathfinding, worked-build, server-authority, luau]
+tags: [genre-system, horror, npc-ai, pathfinding, worked-build, server-authority, luau, type/guide, area/gameplay, level/intermediate, api/ComputeAsync, area/ai]
 ---
 # Horror Monster Chase AI End to End
 
@@ -12,7 +12,7 @@ tags: [genre-system, horror, npc-ai, pathfinding, worked-build, server-authority
 > - Enter its sight cone: chase starts; break line of sight and wait: it goes to your last position, searches, returns.
 > - Hide in a locker out of sight: safe. Hide while being chased in view: refused.
 >
-> Cost: TL;DR ~180 tok · whole note ~8.1k tok. Read more: ## 4. The server: MonsterService · ## 5. The client: MonsterClient · ## 6. Edge cases and failure modes · ## 9. Test checklist
+> Cost: TL;DR ~180 tok · whole note ~8.2k tok. Read more: ## 4. The server: MonsterService · ## 5. The client: MonsterClient · ## 6. Edge cases and failure modes · ## 9. Test checklist
 <!-- tldr:end -->
 
 This note builds a complete horror monster: a server-owned NPC with a five-state machine (patrol, investigate, chase, search, return), sight and hearing that the server computes from its own view of the world, a memory that lets players escape, pathfinding that recomputes on a budget and recovers when stuck, hiding spots that are fair in both directions, a catch that cannot chain-kill a group, client-side dread cues (music, heartbeat, an accessible screen-edge warning, a jumpscare), and save hooks for deaths and escapes. [[Genre Playbook - Horror and Story]] gives the design principles (fair senses, memory that decays, speed at or below sprint) and a tension director sketch; this note turns those principles into a working system and adds the failure modes that make monsters feel broken in practice.
@@ -761,5 +761,10 @@ The blink to a patrol point only happens when no player can see the monster and 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Horror game mechanics]] · [[Links - Music and ambience]] · [[Links - NPCs and AI]] · [[Combat Arena and Encounter Layout]] · [[Anticipation]] · [[Level Design Start Here]]
+[[Links - Horror game mechanics]] · Links - Music and ambience · Links - NPCs and AI · Combat Arena and Encounter Layout · Anticipation · Level Design Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Police Chases and Wanted Levels]] · [[Tycoon Plots and Droppers End to End]] · [[Obby Checkpoints and Stage Saves End to End]] · [[Racing Laps and Checkpoints End to End]] · [[Arena Rounds with Teams and Spectating End to End]]
+<!-- related:end -->

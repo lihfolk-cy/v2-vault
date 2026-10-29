@@ -1,5 +1,5 @@
 ---
-tags: [monetization, policy, paid-random-items, odds, rng, compliance, luau]
+tags: [monetization, policy, paid-random-items, odds, rng, compliance, luau, type/guide, area/monetization, level/intermediate, area/scripting]
 ---
 # Paid Random Items and Odds Disclosure in Practice
 
@@ -12,7 +12,7 @@ tags: [monetization, policy, paid-random-items, odds, rng, compliance, luau]
 > - Odds disclosed on every random system; restricted behaviour decided per system.
 > - Final-outcome odds flattened from the same tables the server rolls.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.9k tok. Read more: ## 2. Audit first: draw the money paths · ## 3. One source of truth: flatten what the server rolls · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.0k tok. Read more: ## 2. Audit first: draw the money paths · ## 3. One source of truth: flatten what the server rolls · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Roblox Policies Ratings and Compliance]] states the rules: what counts as a paid random item, the disclosure format, the `PolicyService` checks. This note is about implementing them in a real RNG game, where the hard parts are not the rules but the maths around them: tiered rolls whose final odds must be flattened, luck boosts that change odds live, pity counters, once-per-player outcomes, multi-roll packs, rarity caps, and the compliant alternatives for restricted players. It ends with a statistical test that proves your displayed odds match your server rolls.
@@ -330,5 +330,10 @@ Put it in CI ([[Testing Strategies and Frameworks]]). A config change that edits
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Pity Timer]] · [[Skill - Roblox Monetization Compliance]] · [[Drop Tables Rarity and Pity Systems]] · [[Expected Value]] · [[Genre Playbook - Simulators]] · [[Rarity Ladders and Drop Pacing Math]]
+[[Pity Timer]] · Skill - Roblox Monetization Compliance · Drop Tables Rarity and Pity Systems · Expected Value · Genre Playbook - Simulators · Rarity Ladders and Drop Pacing Math
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Drop Tables Rarity and Pity Systems]] · [[Regional Compliance - Paid Random Items and Country Rules]] · [[Monetization Overview]] · [[Game Passes]] · [[Ads and Rewarded Video]] · [[Refunds Chargebacks and Purchase Support]] · [[Age Checks and Safety Features]] · [[Subscriptions and Premium Payouts]] · [[Community Building]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]]
+<!-- related:end -->

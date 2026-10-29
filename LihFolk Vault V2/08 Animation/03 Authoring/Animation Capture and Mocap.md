@@ -1,5 +1,5 @@
 ---
-tags: [authoring, mocap, animation-capture, video, face]
+tags: [authoring, mocap, animation-capture, video, face, type/guide, area/animation, level/intermediate]
 ---
 # Animation Capture and Mocap
 
@@ -12,7 +12,7 @@ tags: [authoring, mocap, animation-capture, video, face]
 > - Skeleton errors and flips fixed
 > - Jitter filtered, contacts protected
 >
-> Cost: TL;DR ~130 tok · whole note ~3.3k tok. Read more: ## 1. Studio's Animation Capture · ## 2. External mocap · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.4k tok. Read more: ## 1. Studio's Animation Capture · ## 2. External mocap · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Motion capture records real movement and turns it into keys. On Roblox you have Studio's built-in **Animation Capture** (body from video, face from webcam), external mocap (video AI services, inertial suits, optical studios) brought in through Blender, and the humble option that every good game animator uses daily: **video reference** that you count frame by frame and key by hand.
@@ -35,7 +35,7 @@ Labels: "Roblox docs" = the official Animation capture page (October 2026). "Mea
 - Select a rig with an **animation-compatible (dynamic) head**, create an animation, press **Face Capture** in the track list, accept the consent prompt (collection of facial movement and camera access), choose a camera if you have several, record with the red circle, stop with the red square or the countdown.
 - Recordings up to **60 seconds**. **Re-Record** discards and retries.
 - Light the room well and sit so your face is centred and close; the docs note this helps the tracker separate you from the background.
-- Facial keys drive the head's FACS controls; see [[Facial Animation and Dynamic Heads]].
+- Facial keys drive the head's [[FACS]] controls; see [[Facial Animation and Dynamic Heads]].
 
 ### Getting good results from video capture
 Rules of thumb (consistent with the requirements above and with how pose-estimation trackers fail):
@@ -86,7 +86,7 @@ Raw capture always needs these passes, roughly in this order.
 High-frequency noise reads as shivering. Smooth each rotation channel over time:
 - A **Gaussian** window of about 1 to 2 frames (at 60 Hz) on fast parts and 3 to 4 frames on slow parts is a good start (the reference project's arm solver smooths joint rotations with sigma 0.8 frames where the blade matters and 3.5 elsewhere).
 - **Never smooth across contacts and hits.** Smoothing rounds off the impact, which is the frame that matters most. Keep a window of untouched frames around each contact (the reference project protects 90 ms around markers).
-- Smooth **rotations as rotations** (quaternions or rotation vectors with consistent hemisphere), not Euler channels independently, or you create wobbles at wrap-around points.
+- Smooth **rotations as rotations** ([[quaternions]] or rotation vectors with consistent hemisphere), not Euler channels independently, or you create wobbles at wrap-around points.
 
 ### 3c. Fix contacts
 - **Foot plants**: find frames where the foot should be still (low velocity, near the ground) and lock it there with IK, then re-key the leg. Foot slide is the most visible mocap artefact on a third-person camera.
@@ -162,5 +162,10 @@ Captured motion is dense by nature. On Roblox:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI Animation and Motion from Video]] · [[Animation Editor Workflow]] · [[Moon Animator and Third-Party Tools]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Links - Animation creation]] · [[Animation Start Here]]
+[[AI Animation and Motion from Video]] · [[Animation Editor Workflow]] · [[Moon Animator and Third-Party Tools]] · Modeling Characters for R15 and Custom Rigs · Voxel Characters - Proportions Joints and Rigging · Links - Animation creation · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Free Mocap and Mixamo Licensing for Roblox]] · [[Posing and Silhouettes]] · [[Authoring Clips in Code]] · [[R15 Run Cycle Key Poses]] · [[Spec-Driven Move Authoring]] · [[Animation Glossary]] · [[LihFolk R15 Keyframe Pipeline]] · [[Idle Breathing and Secondary Motion]]
+<!-- related:end -->

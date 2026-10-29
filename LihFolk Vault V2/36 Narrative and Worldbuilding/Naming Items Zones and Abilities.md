@@ -1,5 +1,5 @@
 ---
-tags: [narrative, naming, items, zones, abilities, rarity, worldbuilding, content-pipeline]
+tags: [narrative, naming, items, zones, abilities, rarity, worldbuilding, content-pipeline, type/guide, area/narrative, level/intermediate, area/world]
 ---
 # Naming Items Zones and Abilities
 
@@ -12,7 +12,7 @@ tags: [narrative, naming, items, zones, abilities, rarity, worldbuilding, conten
 > - Rarity tiers ordered and visible in UI; invented tier names tested on players.
 > - Zones have a name, a short form, a number if progression is linear, and matching art.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.5k tok. Read more: ## 3. Names as a rarity ladder · ## 10. A name validator · ## 12. Common mistakes · ## 13. Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.6k tok. Read more: ## 3. Names as a rarity ladder · ## 10. A name validator · ## 12. Common mistakes · ## 13. Checklist
 <!-- tldr:end -->
 
 Names are the narrative text every player reads. A player who skips every line of dialogue still reads the name of the sword they just rolled, the zone they just entered and the button they press forty times a minute. Names carry tone, rarity, lore and function in two or three words, they become the vocabulary players use in chat, trades, videos and wikis, and once players have learned them they are expensive to change. This note covers what a name has to do, naming patterns that scale to catalogues of hundreds of items, rarity ladders expressed through names, zone and ability naming, length and distinctness budgets, the technical side (display names versus ids versus instance names), real-world names and legal risk, and a validator that catches problems before they ship.
@@ -320,5 +320,10 @@ The pairwise comparison is quadratic: 500 names is about 125,000 comparisons of 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Writing Dialogue for Roblox Players]] · [[Dialogue System End to End]] · [[Genre Playbook - RNG and Collection Games]] · [[Balancing with Spreadsheets and Data]] · [[Procedural Loot and Item Generation]] · [[Notification and Toast Systems]]
+[[Writing Dialogue for Roblox Players]] · [[Dialogue System End to End]] · [[Genre Playbook - RNG and Collection Games]] · Balancing with Spreadsheets and Data · Procedural Loot and Item Generation · Notification and Toast Systems
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Story State Flags and Chapter Saves]] · [[Procedural Loot and Item Generation]] · [[Experience Description and Search Keywords]] · [[Balancing with Spreadsheets and Data]] · [[Puzzle Dependency Charts and Hint Systems]] · [[Multiplayer Cutscene Sync - Server Clock, Late Joiners and Skip Votes]]
+<!-- related:end -->

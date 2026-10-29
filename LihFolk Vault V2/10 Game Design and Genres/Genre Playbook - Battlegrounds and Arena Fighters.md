@@ -1,5 +1,5 @@
 ---
-tags: [game-design, genre, battlegrounds, fighting, pvp, combos, netcode, arena]
+tags: [game-design, genre, battlegrounds, fighting, pvp, combos, netcode, arena, type/guide, area/design, level/intermediate]
 ---
 # Genre Playbook - Battlegrounds and Arena Fighters
 
@@ -12,7 +12,7 @@ tags: [game-design, genre, battlegrounds, fighting, pvp, combos, netcode, arena]
 > - Two-client test with simulated latency (100 and 250 ms) for every character's combos.
 > - Hit validation and rate limits on every combat remote; fuzzed.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.0k tok. Read more: ## 1. Core loop · ## 3. Fairness under latency · ## 8. Common mistakes · ## 9. Launch checklist
+> Cost: TL;DR ~160 tok · whole note ~4.1k tok. Read more: ## 1. Core loop · ## 3. Fairness under latency · ## 8. Common mistakes · ## 9. Launch checklist
 <!-- tldr:end -->
 
 A "battlegrounds" game drops a server of players into one open arena, each picking a character with a fixed move set (usually four abilities plus a basic attack chain and an ultimate that charges in combat), and lets them fight freely. Arena fighters are the tighter cousin: one-on-one or small-team rounds, often ranked. Both are pure PvP skill games built on the moment-to-moment feel of hits, which makes them the most netcode-sensitive genre on Roblox and the one where exploiters do the most visible damage.
@@ -242,5 +242,10 @@ Patterns, not copies:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Genre Playbook - Shooters FPS and TPS]] · [[Hit-Stop]] · [[Genre Playbook - Sports]] · [[Links - Combat]] · [[Input Responsiveness Buffering and Coyote Time]] · [[Level Design Start Here]]
+[[Genre Playbook - Shooters FPS and TPS]] · [[Hit-Stop]] · [[Genre Playbook - Sports]] · Links - Combat · Input Responsiveness Buffering and Coyote Time · Level Design Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Case Study - The Strongest Battlegrounds]] · [[Genre Playbook - Battle Royale]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Open-World City and Crime Roleplay]] · [[Boss Fight Design Patterns]] · [[Time-to-Kill Math and a Weapon Balance Sheet]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Genre Playbook - Obbies and Platformers]]
+<!-- related:end -->

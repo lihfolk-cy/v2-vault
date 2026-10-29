@@ -1,5 +1,5 @@
 ---
-tags: [modeling, characters, r15, avatar, custom-rigs, proportions, blender, python]
+tags: [modeling, characters, r15, avatar, custom-rigs, proportions, blender, python, type/guide, area/modeling, level/intermediate, api/Motor6D]
 ---
 # Modeling Characters for R15 and Custom Rigs
 
@@ -12,7 +12,7 @@ tags: [modeling, characters, r15, avatar, custom-rigs, proportions, blender, pyt
 > - R15 proxy in the scene at the right scale; character faces -Y.
 > - Joint geometry centred on R15 pivots (inner-top shoulder, hips, knees, elbows).
 >
-> Cost: TL;DR ~160 tok · whole note ~4.2k tok. Read more: ## 2. R15 proportions and pivots (measured) · ## 3. A Blender proxy that matches R15 · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.3k tok. Read more: ## 2. R15 proportions and pivots (measured) · ## 3. A Blender proxy that matches R15 · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A character model on Roblox is never just a mesh. It has to match a rig contract: the R15 skeleton that the default Animate script, emotes, accessories, layered clothing and most community animations assume, or a custom rig that your own code drives. Modelling a character without knowing which contract it targets is the most expensive mistake in character art: the result either cannot use any existing animation, or cannot wear any accessory, or does not fit the hit boxes the game was balanced around.
@@ -243,5 +243,10 @@ Part-based (Motor6D) custom rigs follow the segmented modelling rules: one objec
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Voxel Characters - Proportions Joints and Rigging]] · [[Skinning Weights]] · [[3D Importer Settings Reference]] · [[Skeleton Library]] · [[Bones and Skinned Meshes]] · [[Rigs and Joints]]
+[[Voxel Characters - Proportions Joints and Rigging]] · Skinning Weights · 3D Importer Settings Reference · Skeleton Library · Bones and Skinned Meshes · Rigs and Joints
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[3D Importer Settings Reference]] · [[Bones and Skinned Meshes]] · [[Blender Workflow for Roblox Creators]] · [[Modeling Weapons and Props]] · [[Modeling Fundamentals for Games]] · [[Exporting and Validating Models for Roblox]] · [[UV Unwrapping]] · [[Hard-Surface Modeling]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Voxel and Blocky Modeling]]
+<!-- related:end -->

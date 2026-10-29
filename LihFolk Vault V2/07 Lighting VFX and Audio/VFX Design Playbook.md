@@ -1,5 +1,5 @@
 ---
-tags: [vfx, design, playbook, combat, particles, beams, budgets]
+tags: [vfx, design, playbook, combat, particles, beams, budgets, type/guide, area/vfx, level/intermediate, api/ParticleEmitter, area/gameplay]
 ---
 # VFX Design Playbook
 
@@ -12,7 +12,7 @@ tags: [vfx, design, playbook, combat, particles, beams, budgets]
 > - White core, colour edge, dark rim; one dark layer per bright stack.
 > - Tier ladder written and audited.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.0k tok. Read more: ## 1. Design before Studio · ## 5. Budgets and architecture · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.2k tok. Read more: ## 1. Design before Studio · ## 5. Budgets and architecture · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 This is the method for designing effects that look professional in Roblox, distilled from decoding several open-source effect packs (slashes, glass combos, lightning hand charges, water explosions, staggered beam slashes, auras) and from shipping hundreds of ability effects in one live action game (the reference project). The individual tools are covered elsewhere: [[Particle Emitters In Depth]], [[Beams and Trails]], [[Highlights and Selection Effects]], [[Light Sources and Shadows]]. Timing against animation is in [[VFX Timing with Animation]]. This note is about **design**: how to decide what layers an effect needs, what numbers make them read, how to scale effects by importance, and how to keep a fight readable and fast.
@@ -266,5 +266,10 @@ See also: [[Particle Emitters In Depth]], [[Beams and Trails]], [[Highlights and
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Mesh VFX Packs Built in Blender]] · [[VFX Performance Budgets and Culling]] · [[Dash VFX Presentation on an R15 Rig]] · [[Links - Particle emitters]] · [[Voxel and Blocky Modeling]] · [[Dramatic Showcase Renders in Eevee]]
+[[Mesh VFX Packs Built in Blender]] · [[VFX Performance Budgets and Culling]] · Dash VFX Presentation on an R15 Rig · Links - Particle emitters · Voxel and Blocky Modeling · Dramatic Showcase Renders in Eevee
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Slash VFX Recipes - Crescent and Ring]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]]
+<!-- related:end -->

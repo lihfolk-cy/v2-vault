@@ -1,5 +1,5 @@
 ---
-tags: [field-notes, ui, uistroke, text, fonts, readability, numbers]
+tags: [field-notes, ui, uistroke, text, fonts, readability, numbers, type/guide, area/ui, level/intermediate, api/UIStroke, area/gameplay]
 ---
 # UIStroke on Text - Glyph Counters and the Stroke Ratio
 
@@ -12,7 +12,7 @@ tags: [field-notes, ui, uistroke, text, fonts, readability, numbers]
 > - Rounded heavy fonts at or below about 7% stroke.
 > - Test string with 0, 6, 8, 9, a and e checked at the smallest size on a phone.
 >
-> Cost: TL;DR ~170 tok · whole note ~1.5k tok. Read more: ## What the stroke does to a glyph · ## How to test · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~1.6k tok. Read more: ## What the stroke does to a glyph · ## How to test · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A thick outline makes cartoon text pop, and past a certain thickness it starts eating the letters. A `UIStroke` in `Contextual` mode grows outward *and* into the small enclosed holes of glyphs (the counters of 0, 6, 8, 9, a, e, o), so "10" and "20" turn into blobs and "Fast" reads as "Fust". This note gives the ratio that avoids it, why scaling does not help, and how to test. The general outline properties are in [[Text Fonts and Rich Text]]; minimum sizes in [[Readable Text and UI Scale]].
@@ -103,5 +103,10 @@ end
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Text Fonts and Rich Text]] · [[Readable Text and UI Scale]] · [[Responsive UI for Phone Tablet Console and PC]] · [[Accessibility Contrast]] · [[Centre-Screen Announcements That Stay Centred]] · [[Field Notes Start Here]]
+[[Text Fonts and Rich Text]] · Readable Text and UI Scale · Responsive UI for Phone Tablet Console and PC · Accessibility Contrast · [[Centre-Screen Announcements That Stay Centred]] · [[Field Notes Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Layout - Scale Offset and Constraints]] · [[UI Design Systems]] · [[Accessibility]] · [[LihFolk UI Spec]] · [[Shared Close Buttons and Headers Across Many Screens]] · [[Animation Data Hygiene - Euler Wrap Joint Holes and Easing]]
+<!-- related:end -->

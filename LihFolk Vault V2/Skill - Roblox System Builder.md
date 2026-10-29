@@ -1,5 +1,5 @@
 ---
-tags: [ai, agents, ai-skill, architecture, luau, worked-build]
+tags: [ai, agents, ai-skill, architecture, luau, worked-build, type/guide, area/ai, level/intermediate, area/scripting]
 ---
 # Skill - Roblox System Builder
 
@@ -41,5 +41,5 @@ Worked-build code in the vault is labelled "reviewed, not run". The skill keeps 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Worked Builds Start Here]] · [[Skill - Roblox Anti-Exploit Review]] · [[Skill - Roblox Debugging]] · [[Skill - Roblox Vault Research]] · [[LihFolk UI Design System]] · [[Dependency Injection in Luau]]
+[[Worked Builds Start Here]] · [[Skill - Roblox Anti-Exploit Review]] · [[Skill - Roblox Debugging]] · [[Skill - Roblox Vault Research]] · LihFolk UI Design System · Dependency Injection in Luau
 <!-- auto-links:end -->

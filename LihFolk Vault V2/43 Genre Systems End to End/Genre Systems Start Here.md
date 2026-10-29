@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [index, start, genre-system, worked-build]
+tags: [index, start, genre-system, worked-build, type/hub, area/gameplay, level/beginner]
 ---
 # Genre Systems Start Here
 
@@ -12,7 +12,7 @@ All code is marked "reviewed, not run": written against Roblox docs (as of Octob
 
 | Note | Genre playbook | The hard part it solves |
 |---|---|---|
-| [[Tycoon Plots and Droppers End to End]] | [[Genre Playbook - Tycoons]] | Income without physics parts, plots rebuilt from ids, offline earnings, chain changes after launch |
+| [[Tycoon Plots and Droppers End to End]] | [[Genre Playbook - Tycoons]] | Income without physics parts, plots rebuilt from ids, [[offline earnings]], chain changes after launch |
 | [[Tower Defense Waves and Placement End to End]] | [[Genre Playbook - Tower Defense]] | Hundreds of enemies as numbers, batched events, eight-step placement validation, balance arithmetic |
 | [[Obby Checkpoints and Stage Saves End to End]] | [[Genre Playbook - Obbies and Platformers]] | Current versus furthest stage, presence and timing checks, skips, streaming-safe respawns and kill bricks |
 | [[Arena Rounds with Teams and Spectating End to End]] | [[Genre Playbook - Party and Minigame Collections]], [[Genre Playbook - Battlegrounds and Arena Fighters]] | Several arenas per server, rating-balanced teams, late joins, spectating, stale timers |
@@ -47,5 +47,5 @@ Every build here sits on the plumbing from [[Saved Inventory End to End]]: the `
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Level Design Start Here]] · [[Skill - Roblox System Builder]] · [[Core Loop]] · [[Multiplayer Services Start Here]] · [[Obby and Platforming Level Design]] · [[Genre Playbook - Sports]]
+[[Level Design Start Here]] · Skill - Roblox System Builder · Core Loop · Multiplayer Services Start Here · Obby and Platforming Level Design · Genre Playbook - Sports
 <!-- auto-links:end -->

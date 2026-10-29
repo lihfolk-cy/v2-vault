@@ -1,5 +1,5 @@
 ---
-tags: [gameplay, quests, objectives, dailies, tutorial, story]
+tags: [gameplay, quests, objectives, dailies, tutorial, story, type/guide, area/gameplay, level/intermediate]
 ---
 # Quests and Objectives
 
@@ -12,7 +12,7 @@ tags: [gameplay, quests, objectives, dailies, tutorial, story]
 > - Rewards frozen at deal; scale with progress.
 > - UTC period keys; rerolls and a weekly track.
 >
-> Cost: TL;DR ~120 tok · whole note ~3.5k tok. Read more: ## 2. Driving progress: a signal bus · ## 3. Dealing dailies and weeklies · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~120 tok · whole note ~3.6k tok. Read more: ## 2. Driving progress: a signal bus · ## 3. Dealing dailies and weeklies · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Quests turn a sandbox into a sequence of goals. On Roblox they come in three shapes: **onboarding steps** (a scripted sequence for new players), **story beats** (one-off objectives tied to the world: talk to this NPC, defeat this boss, open this gate) and **repeatable quests** (dailies and weeklies that bring players back). All three share the same machinery: a definition, progress counters driven by game events, a completion check, a reward, and UI that says what to do next. This note covers that machinery, the data design that keeps it maintainable, and the production lessons from one game's daily/weekly system and tutorial rewrites.
@@ -259,5 +259,10 @@ Quest UI competes with everything else for attention. Measured rules from the re
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Quest Writing and Hooks]] · [[Quest Chain System End to End]] · [[Core Loops and Session Design]] · [[Combat Systems Architecture]] · [[Links - Quests and progression]] · [[Menu Archetypes - Shop Settings Codes Rewards]]
+[[Quest Writing and Hooks]] · Quest Chain System End to End · Core Loops and Session Design · [[Combat Systems Architecture]] · Links - Quests and progression · Menu Archetypes - Shop Settings Codes Rewards
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[RNG Drops and Luck Systems]] · [[Spawning Teams and Rounds]] · [[Tools and Inventory Systems]] · [[Status Effects Buffs and Stacking Rules]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[NPC AI and Behaviour]] · [[Downed, Revive and Bleed-Out States]] · [[Behaviour Trees Utility AI and State Machines for NPCs]]
+<!-- related:end -->

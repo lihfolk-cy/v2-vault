@@ -1,5 +1,5 @@
 ---
-tags: [fundamentals, api, overview]
+tags: [fundamentals, api, overview, type/guide, area/animation, level/beginner, api/Animator, api/CurveAnimation, api/LoadAnimation, api/Animation]
 ---
 # Animation Objects
 
@@ -9,7 +9,7 @@ tags: [fundamentals, api, overview]
 > - Avoid: Creating an Animator on the client for a character -> Use the server-created Animator
 > - Avoid: Loading the same Animation every time you play it -> Cache one track per Animator per clip
 >
-> Cost: TL;DR ~120 tok · whole note ~3.6k tok. Read more: ## Every class, by role · ## The lifecycle of a clip, end to end · ## Common mistakes
+> Cost: TL;DR ~120 tok · whole note ~3.7k tok. Read more: ## Every class, by role · ## The lifecycle of a clip, end to end · ## Common mistakes
 <!-- tldr:end -->
 
 This is the map of every object Roblox uses to store, load and play animation, and how they connect. Each object has its own deep reference note; this note is about the relationships, the lifecycle and the choices you make between them. If you only read one fundamentals note, read this one and [[Animator Deep Dive]].
@@ -60,7 +60,7 @@ Parts and mesh vertices move on screen
 | Service | Use |
 |---|---|
 | `KeyframeSequenceProvider` | Older service. `RegisterKeyframeSequence` returns a temporary hash id, `RegisterActiveKeyframeSequence` an `active://` URL. **Both only load inside Studio.** `GetKeyframeSequenceAsync(id)` downloads a published clip's KeyframeSequence (yields; wrap in `pcall`). |
-| `AnimationClipProvider` | The documented replacement. Same register methods for any `AnimationClip` (also Studio-only), `GetAnimationClipAsync` (returns a KeyframeSequence or CurveAnimation), and `GetClipEvaluatorAsync`, which returns a `ClipEvaluator` that samples a clip without an Animator. |
+| `AnimationClipProvider` | The documented replacement. Same register methods for any `AnimationClip` (also Studio-only), `GetAnimationClipAsync` (returns a KeyframeSequence or [[CurveAnimation]]), and `GetClipEvaluatorAsync`, which returns a `ClipEvaluator` that samples a clip without an Animator. |
 
 ### Joints (what actually moves)
 | Class | Used by | What the Animator writes |
@@ -73,7 +73,7 @@ See [[Rigs and Joints]], [[Motor6D Math and CFrame Composition]], [[Bones and Sk
 
 ### Neighbours that touch animation
 - `IKControl`: runtime IK applied on top of the animated pose (see [[IKControl Reference]]).
-- `FaceControls`: about 50 numeric FACS properties on dynamic heads, animated through FloatCurves or NumberPoses (see [[Facial Animation and Dynamic Heads]]).
+- `FaceControls`: about 50 numeric [[FACS]] properties on dynamic heads, animated through FloatCurves or NumberPoses (see [[Facial Animation and Dynamic Heads]]).
 - `HumanoidDescription`: holds the avatar's animation pack ids (`IdleAnimation`, `WalkAnimation`, `RunAnimation`, `JumpAnimation`, `FallAnimation`, `ClimbAnimation`, `SwimAnimation`, `MoodAnimation`) and body scales.
 - The default `Animate` LocalScript in every character: see [[The Default Animate Script]].
 
@@ -153,7 +153,7 @@ end
 |---|---|
 | Hand-keyed clips from the Animation Editor | KeyframeSequence (default) or CurveAnimation (curve editor mode) |
 | Clips written by code or offline tools | KeyframeSequence: simplest to build, every tool understands it |
-| Fine tangent control, face animation | CurveAnimation (FloatCurve tangents, FaceControls channels) |
+| Fine tangent control, face animation | CurveAnimation (FloatCurve tangents, [[FaceControls]] channels) |
 | Playback without publishing at all | Your own Lua player that samples KeyframeSequence data and writes `Transform` (see [[Lua Keyframe Player]]) |
 | Runtime-blended state machines | Your own controller over normal tracks today; animation graphs are newer and still evolving |
 
@@ -176,5 +176,10 @@ One production game used **only** KeyframeSequences and never shipped CurveAnima
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Engine Gotchas]] · [[Animation Glossary]] · [[Animation Editor Advanced]] · [[Snippets - Playing Animations]] · [[Links - Animation playback]] · [[Links - Animation creation]] · [[Animation Start Here]]
+[[Engine Gotchas]] · [[Animation Glossary]] · [[Animation Editor Advanced]] · [[Snippets - Playing Animations]] · [[Links - Animation playback]] · Links - Animation creation · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[How the Animator Really Behaves]] · [[Open Questions]] · [[Animation Data from Blender to Roblox]] · [[Animation Editor Workflow]] · [[Weapon Rig Player]] · [[Snippets - Lua Keyframe Player Core]] · [[Troubleshooting Table]] · [[Debugging Animation Problems]]
+<!-- related:end -->

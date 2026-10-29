@@ -1,5 +1,5 @@
 ---
-tags: [fundamentals, scale, locomotion, rigs]
+tags: [fundamentals, scale, locomotion, rigs, type/guide, area/animation, level/beginner, api/ScaleTo, api/Animator, api/Humanoid, api/Model]
 ---
 # Scale and Animation
 
@@ -12,7 +12,7 @@ tags: [fundamentals, scale, locomotion, rigs]
 > - Root drops and lifts tested at the real in-game size.
 > - Locomotion rate divides by authored ground speed times scale.
 >
-> Cost: TL;DR ~160 tok · whole note ~3.6k tok. Read more: ## Locomotion at scale · ## Nuances and edge cases · ## Checklist · ## Common mistakes in production
+> Cost: TL;DR ~160 tok · whole note ~3.8k tok. Read more: ## Locomotion at scale · ## Nuances and edge cases · ## Checklist · ## Common mistakes in production
 <!-- tldr:end -->
 
 Rotations do not care about size: a 90 degree elbow bend is 90 degrees on a tiny pet and on a 30-stud boss. Everything else does: root offsets, stride lengths, playback rates, IK lengths, camera distances, toss arcs, ground clearance. Roblox has two different ways to scale a character, and the Animator treats them differently, which is the source of the most confusing scale bugs ("the crouch works on the dummy and floats on players"). This note explains both mechanisms, what the Animator scales and what it does not, and how to keep motion believable at any size.
@@ -173,5 +173,10 @@ end
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Retargeting Animations Between Rigs]] · [[Snippets - IK]] · [[R15 Rig Anatomy and Attachments]] · [[Foot Placement and Ground IK]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Animation Start Here]]
+[[Retargeting Animations Between Rigs]] · [[Snippets - IK]] · [[R15 Rig Anatomy and Attachments]] · [[Foot Placement and Ground IK]] · [[Modeling Characters for R15 and Custom Rigs]] · Voxel Characters - Proportions Joints and Rigging · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[R15 Run Cycle Key Poses]] · [[Enemy and NPC Animation]] · [[Locomotion and Melee Reference Numbers]] · [[Playback, Priorities and Blending]] · [[Bones and Skinned Meshes]] · [[Rigs and Joints]] · [[Animating Creatures and Monsters]] · [[Snippets - Animation Controller Module]]
+<!-- related:end -->

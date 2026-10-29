@@ -29,7 +29,7 @@ K1, B = 1.2, 0.75
 SYMPTOM_WEIGHT = 0.0  # extra boost from matched symptom lines; 0 = symptoms act only as the sym field
 # Notes that should rank below a real explanation when both match: link lists, short glossary-style concept
 # notes, hubs and visual references. (path prefix or title suffix, multiplier)
-DAMP = [("46 Resource Library/", 0.5), ("52 Core Concepts/", 0.75), ("Start Here", 0.7),
+DAMP = [("46 Resource Library/", 0.5), ("57 API and Concept Atlas/", 0.5), ("52 Core Concepts/", 0.75), ("Start Here", 0.7),
         ("08 Animation/09 References/", 0.6), ("Skill - ", 0.8)]
 STOP = set("""a an and are as at be but by can do does for from get got how i if in into is it its make
 my me of on or so that the then there this to too up use using want way what when where which while
@@ -99,6 +99,8 @@ def parse(path):
     tldr = m.group(1).strip() if m else ""
     if m:
         body = body[: m.start()] + body[m.end():]
+    # generated "## Related" blocks (link_builder.py) are navigation, not content
+    body = re.sub(r"<!-- related:start -->.*?<!-- related:end -->", "", body, flags=re.S)
     heads = re.findall(r"^#{1,4} +(.+)$", body, re.M)
     plain = re.sub(r"```.*?```", lambda c: c.group(0)[:600], body, flags=re.S)  # code counts, but capped
     title = os.path.basename(path)[:-3]

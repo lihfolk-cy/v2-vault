@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, animation, game-feel, combat, ui]
+tags: [core-concept, animation, game-feel, combat, ui, type/reference, area/ui, level/beginner, area/animation]
 ---
 # Anticipation
 
@@ -10,7 +10,7 @@ tags: [core-concept, animation, game-feel, combat, ui]
 > - Anticipation can hide latency. Start the wind-up on the client the instant the player presses, and send the request at the...
 > - Enemy telegraphs must outlast latency plus reaction time.
 >
-> Cost: TL;DR ~150 tok · whole note ~830 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~150 tok · whole note ~900 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Anticipation** is the small movement before the main action that prepares the viewer for it: the wind-up before a punch, the crouch before a jump, the button shrinking slightly before it pops. It is one of the classic principles of animation and one of the main tools for making actions readable.
@@ -56,5 +56,10 @@ Related concepts: [[Hit-Stop]], [[Input Buffering]], [[Easing]], [[Tween vs Spri
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Game Feel Start Here]] · [[Timing Spacing and Frame Charts]] · [[Combat Animation Craft]] · [[Hitboxes and Hit Detection]] · [[Animating Creatures and Monsters]] · [[Genre Playbook - Combat and RPG]] · [[Core Concepts Start Here]]
+[[Game Feel Start Here]] · Timing Spacing and Frame Charts · Combat Animation Craft · Hitboxes and Hit Detection · Animating Creatures and Monsters · Genre Playbook - Combat and RPG · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Input Buffering]] · [[Server Authority]] · [[Skinning Weights]] · [[Thumbnail Contrast]] · [[Accessibility Contrast]] · [[Onboarding Funnel]] · [[Deterministic Simulation]] · [[Safe Area]]
+<!-- related:end -->

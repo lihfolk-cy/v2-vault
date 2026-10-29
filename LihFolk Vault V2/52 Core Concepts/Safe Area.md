@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, ui, mobile, console, layout]
+tags: [core-concept, ui, mobile, console, layout, type/reference, area/ui, level/beginner]
 ---
 # Safe Area
 
@@ -10,7 +10,7 @@ tags: [core-concept, ui, mobile, console, layout]
 > - Thumb reach is a second safe area. On phones the bottom corners are easiest to reach and the top centre is hardest.
 > - Orientation changes the shape. A notch is on the left or right depending on which way the phone is turned.
 >
-> Cost: TL;DR ~130 tok · whole note ~850 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~940 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 The **safe area** is the part of the screen where UI can be placed without being covered by hardware (notches, rounded corners, camera cut-outs, home indicators), Roblox's own top bar and buttons, or the overscan edge of a TV. Anything outside it may be hidden or hard to tap.
@@ -61,5 +61,10 @@ Related concepts: [[Accessibility Contrast]], [[Onboarding Funnel]], [[Thumbnail
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Cookbook - UI]] · [[Links - Scale vs offset and responsive design]] · [[ScreenGui Fundamentals]] · [[UI Asset Pipeline]] · [[Accessibility Start Here]] · [[LihFolk UI Design System]] · [[Core Concepts Start Here]]
+[[Cookbook - UI]] · Links - Scale vs offset and responsive design · ScreenGui Fundamentals · UI Asset Pipeline · Accessibility Start Here · LihFolk UI Design System · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Mobile Button Layout Editor]] · [[AI Pitfalls - UI and Input]] · [[Click-Through Rate]] · [[Input Buffering]] · [[Frame Budget]] · [[Instance Count]] · [[Anticipation]] · [[Replication Boundary]] · [[Streaming Radius]] · [[Core Loop]]
+<!-- related:end -->

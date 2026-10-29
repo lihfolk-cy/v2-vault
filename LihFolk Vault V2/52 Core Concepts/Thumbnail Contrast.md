@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, marketing, art, thumbnails, ui]
+tags: [core-concept, marketing, art, thumbnails, ui, type/reference, area/ui, level/beginner, area/marketing]
 ---
 # Thumbnail Contrast
 
@@ -10,7 +10,7 @@ tags: [core-concept, marketing, art, thumbnails, ui]
 > - Value contrast beats colour. Two different hues of the same brightness blur together, especially for colour-blind viewers.
 > - One subject, big. A character or object filling 50 to 70 percent of the frame (rule of thumb from studying top games) reads; a...
 >
-> Cost: TL;DR ~150 tok · whole note ~860 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~150 tok · whole note ~930 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Thumbnail contrast** is how strongly the subject of an icon or thumbnail separates from its background and from neighbouring tiles: value contrast (light against dark), colour contrast (complementary hues), and shape contrast (a clear silhouette). It decides whether a tile can be read at a glance at small size.
@@ -50,5 +50,10 @@ Related concepts: [[Click-Through Rate]], [[Accessibility Contrast]], [[Texel De
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Colour Scripts and Value Structure for Untextured Art]] · [[Voxel Palettes - Ramps Hue Shifting and Limits]] · [[Shape Language and Silhouette Testing]] · [[Core Concepts Start Here]] · [[Voxel and Blocky Modeling]] · [[Hand-Painted and Stylized Texturing]]
+[[Colour Scripts and Value Structure for Untextured Art]] · Voxel Palettes - Ramps Hue Shifting and Limits · Shape Language and Silhouette Testing · [[Core Concepts Start Here]] · Voxel and Blocky Modeling · Hand-Painted and Stylized Texturing
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Game Icon Design - Readable at Small Sizes]] · [[Draw Calls]] · [[Safe Area]] · [[Triangle Budget]] · [[Shape Language and Silhouette Testing]] · [[Voxel and Blocky Modeling]]
+<!-- related:end -->

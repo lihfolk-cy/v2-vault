@@ -1,5 +1,5 @@
 ---
-tags: [pipelines, characters, creatures, enemies, pets, armor, voxel, manifests]
+tags: [pipelines, characters, creatures, enemies, pets, armor, voxel, manifests, type/guide, area/pipelines, level/intermediate, api/AnimationConstraint]
 ---
 # Character and Creature Pipeline
 
@@ -12,7 +12,7 @@ tags: [pipelines, characters, creatures, enemies, pets, armor, voxel, manifests]
 > - Design scripts share style helpers and palette tables
 > - Previews and a contact sheet for review
 >
-> Cost: TL;DR ~170 tok · whole note ~4.4k tok. Read more: ## The look-swap pipeline (enemies) · ## Armour and wearables: fit without touching joints · ## Failure modes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.5k tok. Read more: ## The look-swap pipeline (enemies) · ## Armour and wearables: fit without touching joints · ## Failure modes · ## Checklist
 <!-- tldr:end -->
 
 Characters are the hardest assets to pipeline because they are three things glued together: a **look** (meshes, materials), a **skeleton** (bones or Motor6Ds, pivots, root height) and **behaviour data** (clips, hitboxes, AI role, stats). Change any one carelessly and the other two break: a new mesh with a different root height floats; a re-exported skeleton breaks every clip; a resized creature keeps its old hitbox.
@@ -192,7 +192,7 @@ end
 
 ## Armour and wearables: fit without touching joints
 
-Armour is the case where breaking animation is easiest, so the contract is strict: **never touch a joint, Motor6D, AnimationConstraint, Humanoid or scale value**. The reference project's fit (measured in one production game):
+Armour is the case where breaking animation is easiest, so the contract is strict: **never touch a joint, Motor6D, [[AnimationConstraint]], Humanoid or scale value**. The reference project's fit (measured in one production game):
 
 1. Meshes are authored in each body part's local space against a measured reference R15 rig at scale 1.
 2. At wear time, each mesh is cloned, scaled per axis by `wearer part size / reference size`, and welded to the body part with a stored offset.
@@ -263,5 +263,10 @@ Edit-mode gotchas from the reference project: `CreateHumanoidModelFromDescriptio
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Importing Models and Rigs]] · [[Asset Pipelines]] · [[Bones and Skinned Meshes]] · [[Modeling in Blender for Roblox]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[3D Importer Settings Reference]]
+[[Importing Models and Rigs]] · Asset Pipelines · Bones and Skinned Meshes · Modeling in Blender for Roblox · Voxel Characters - Proportions Joints and Rigging · 3D Importer Settings Reference
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Asset Pipelines]] · [[Environment and Level Pipeline]] · [[Icon and Thumbnail Rendering Pipeline]] · [[Batch Processing Tools in Studio]] · [[Data and Config Pipeline - Spreadsheets to Game]] · [[Audio Pipeline]] · [[Build Test and Release Pipeline]] · [[UI Asset Pipeline]]
+<!-- related:end -->

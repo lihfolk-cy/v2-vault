@@ -1,5 +1,5 @@
 ---
-tags: [ai, agents, ai-skill, research, workflow]
+tags: [ai, agents, ai-skill, research, workflow, type/guide, area/ai, level/intermediate]
 ---
 # Skill - Roblox Vault Research
 

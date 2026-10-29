@@ -1,5 +1,5 @@
 ---
-tags: [live-ops, monetization, offers, ethics, dark-patterns, pricing, luau]
+tags: [live-ops, monetization, offers, ethics, dark-patterns, pricing, luau, type/guide, area/liveops, level/advanced, api/PolicyService, area/monetization]
 ---
 # Limited-Time Offers - Design and Ethics
 
@@ -12,7 +12,7 @@ tags: [live-ops, monetization, offers, ethics, dark-patterns, pricing, luau]
 > - End times stored on the server; personal timers fixed on first view; never re-armed
 > - Client countdowns use server time and never restart themselves
 >
-> Cost: TL;DR ~170 tok · whole note ~4.6k tok. Read more: ## 3. Kinds of LTO and their specific traps · ## 4. Building timers that cannot lie · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.7k tok. Read more: ## 3. Kinds of LTO and their specific traps · ## 4. Building timers that cannot lie · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 A limited-time offer (LTO) is anything sold with a time or quantity limit: a holiday bundle, a weekly rotating item, a starter pack that disappears after three days, a flash discount. LTOs work because scarcity is real information ("this will not be sold again") and because events give players a reason to buy now. They are also the single easiest place in a Roblox game to cross from good design into manipulation of children, and Roblox's own monetization guidance draws specific lines around them.
@@ -247,5 +247,10 @@ LTOs almost always "work" on the day they run: revenue spikes. The question is w
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Monetization Overview]] · [[Skill - Roblox Monetization Compliance]] · [[Commerce and Physical Goods]] · [[UGC Pricing Limiteds and Marketplace Rules]] · [[Subscriptions and Premium Payouts]] · [[Purchase Data and Receipts]]
+[[Monetization Overview]] · Skill - Roblox Monetization Compliance · Commerce and Physical Goods · UGC Pricing Limiteds and Marketplace Rules · Subscriptions and Premium Payouts · Purchase Data and Receipts
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[UGC Pricing Limiteds and Marketplace Rules]] · [[Subscriptions and Premium Payouts]] · [[AI Pitfalls - Data and Monetization]] · [[Economy Resets and Seasonal Wipes]] · [[Patch Notes and Player Communication]] · [[Feature Flags and Staged Rollouts]]
+<!-- related:end -->

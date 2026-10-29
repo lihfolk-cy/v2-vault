@@ -1,5 +1,5 @@
 ---
-tags: [fundamentals, api, reference, keyframesequence, data]
+tags: [fundamentals, api, reference, keyframesequence, data, type/reference, area/animation, level/beginner, api/KeyframeSequence, area/data, api/KeyframeMarker, api/Part1]
 ---
 # KeyframeSequence, Keyframe and Pose Reference
 
@@ -12,7 +12,7 @@ tags: [fundamentals, api, reference, keyframesequence, data]
 > - No key-to-key turn near 180 degrees; ideally under 120.
 > - Markers carry gameplay events; Keyframe names left as "Keyframe" unless a legacy listener needs them.
 >
-> Cost: TL;DR ~160 tok · whole note ~3.9k tok. Read more: ## Class reference · ## Semantics the reference does not spell out · ## Checklist for a clean KeyframeSequence
+> Cost: TL;DR ~160 tok · whole note ~4.0k tok. Read more: ## Class reference · ## Semantics the reference does not spell out · ## Checklist for a clean KeyframeSequence
 <!-- tldr:end -->
 
 `KeyframeSequence` is the classic clip format: what the Animation Editor saves, what the 3D importer writes, what most code-built clips use, and what gets uploaded when you publish. This note documents every class in the format (`KeyframeSequence`, `Keyframe`, `PoseBase`, `Pose`, `NumberPose`, `KeyframeMarker`) and the services around it (`KeyframeSequenceProvider`, `AnimationClipProvider`), then explains the semantics the reference pages leave out: what counts as a key, where easing lives, why the root pose is ignored, and how instance counts explode.
@@ -99,7 +99,7 @@ Measured in one production project: the Pose directly under a Keyframe (`Humanoi
 `EasingStyle` and `EasingDirection` on a Pose shape the motion **from this key to the next key of the same joint**. The easing on the last key of a joint does nothing. Tools that think in "how do I arrive at this key" must write each key's easing onto the previous key. One team's convention, from their builder's comments: "a key's easing is the shape of the move INTO it, so the leaving pose carries it". Full easing semantics, including the reversed legacy `Cubic`, are in [[Keyframes, Easing and Interpolation]].
 
 ### 5. Keyframe order and evenly spaced keyframes
-The Animator picks its rotation interpolation model from the **keyframe spacing of the whole sequence** (measured): evenly spaced keyframes with all-Linear keys get quaternion nlerp; anything else gets a linear blend of rotation vectors. A marker-only Keyframe off the grid counts and switches the model. See [[How the Animator Really Behaves]].
+The Animator picks its rotation interpolation model from the **keyframe spacing of the whole sequence** (measured): evenly spaced keyframes with all-Linear keys get [[Quaternions|quaternion]] nlerp; anything else gets a linear blend of rotation vectors. A marker-only Keyframe off the grid counts and switches the model. See [[How the Animator Really Behaves]].
 
 ### 6. Length is the last Keyframe's time
 Not the last Pose, not the last marker: the highest `Keyframe.Time`. A marker after the last motion key extends the clip.
@@ -247,5 +247,10 @@ Ways out, in order of effort: keep source clips out of ReplicatedStorage; thin k
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Weapon Rig Player]] · [[Engine Gotchas]] · [[Animation Data from Blender to Roblox]] · [[Lua Keyframe Player]] · [[AI Animation and Motion from Video]] · [[Easing]] · [[Animation Start Here]]
+[[Weapon Rig Player]] · [[Engine Gotchas]] · [[Animation Data from Blender to Roblox]] · [[Lua Keyframe Player]] · [[AI Animation and Motion from Video]] · Easing · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Animation Glossary]] · [[AnimationTrack Reference]] · [[Animation Editor Advanced]] · [[Animator Deep Dive]] · [[Animation Editor Workflow]] · [[Lua Keyframe Player Internals]] · [[Snippets - Lua Keyframe Player Core]] · [[Performance and Memory]]
+<!-- related:end -->

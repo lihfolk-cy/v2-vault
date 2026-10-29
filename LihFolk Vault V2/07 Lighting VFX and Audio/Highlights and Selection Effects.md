@@ -1,5 +1,5 @@
 ---
-tags: [vfx, highlight, outline, selection, readability, feedback]
+tags: [vfx, highlight, outline, selection, readability, feedback, type/guide, area/vfx, level/intermediate, api/AlwaysOnTop, area/gameplay, api/TweenService]
 ---
 # Highlights and Selection Effects
 
@@ -12,7 +12,7 @@ tags: [vfx, highlight, outline, selection, readability, feedback]
 > - One owner per highlighted object (arbiter) or one container Highlight per class.
 > - Flashes animate a persistent Highlight; unused Highlights destroyed, not disabled.
 >
-> Cost: TL;DR ~190 tok · whole note ~3.3k tok. Read more: ## 1. Highlight properties · ## 2. One Highlight per object, and who owns it · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~3.4k tok. Read more: ## 1. Highlight properties · ## 2. One Highlight per object, and who owns it · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A `Highlight` draws an outline around a model or part and an optional tinted fill over it, optionally visible through walls. It is the cheapest way to say "this matters": the interactable chest, the enemy that just aggroed, the teammate behind a wall, the character that took damage, the tutorial target. Because it is so easy to use, games accumulate highlights from five systems that fight over the same character, and on mobile the first one on screen costs real GPU time.
@@ -183,7 +183,7 @@ Note the trade-off: the arbiter destroys the Highlight when no request remains (
 
 **Do not convey state by colour alone.** Red versus green outlines are unreadable for many colour-blind players. Pair colour with shape, pulse rhythm or an icon ([[Accessibility]]).
 
-**AlwaysOnTop is information.** A Highlight that shows enemies through walls is a gameplay feature (a wallhack) if the player should not know that. Use `Occluded` unless seeing through walls is intended.
+**[[AlwaysOnTop]] is information.** A Highlight that shows enemies through walls is a gameplay feature (a wallhack) if the player should not know that. Use `Occluded` unless seeing through walls is intended.
 
 ---
 
@@ -207,7 +207,7 @@ Strengths: box-shaped, crisp, no Highlight slot, no silhouette rendering. Weakne
 | Technique | When |
 |---|---|
 | **Neon shell** (a slightly enlarged duplicate mesh in Neon, high transparency 0.9 to 0.97) | Glows, auras, "powered up" states. Costs one draw per shell and no Highlight slot. |
-| **ForceField material shell** | Animated energy shield look. The reference project used a ForceField shell instead of a glass-refraction effect. |
+| **[[ForceField]] material shell** | Animated energy shield look. The reference project used a ForceField shell instead of a glass-refraction effect. |
 | **Material or colour swap** | Hit flash on simple parts: tween `Color` to white and back. Cheapest of all, but needs per-part bookkeeping. |
 | **BillboardGui marker** | Distant objectives, off-screen indicators. See [[World-Space UI - BillboardGui and SurfaceGui]]. |
 | **Particles at the feet** | Selection rings for RTS-style selection; one flat ring card under each unit. |
@@ -250,5 +250,10 @@ See also: [[VFX Design Playbook]], [[Game Feel and Juice]], [[Light Sources and 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Highlights and selection]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Rendering Performance]] · [[Accessibility Contrast]] · [[Colour-Blind Safe Design]] · [[Voxel and Blocky Modeling]]
+[[Links - Highlights and selection]] · Voxel Art - Studs Outlines and Style Kits · Rendering Performance · Accessibility Contrast · Colour-Blind Safe Design · Voxel and Blocky Modeling
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[VFX Performance Budgets and Culling]] · [[Gore Policy and Kid-Friendly Hit Feedback]] · [[Particle Emitters In Depth]] · [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]] · [[Beams and Trails]] · [[Stylized Lighting Recipes]] · [[Atmosphere Sky Clouds and Post-Processing]]
+<!-- related:end -->

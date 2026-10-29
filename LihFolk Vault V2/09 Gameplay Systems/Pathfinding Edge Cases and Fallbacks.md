@@ -1,5 +1,5 @@
 ---
-tags: [gameplay, pathfinding, navigation, npc, ai, fallbacks, debugging]
+tags: [gameplay, pathfinding, navigation, npc, ai, fallbacks, debugging, type/guide, area/gameplay, level/intermediate, api/ComputeAsync, area/ai]
 ---
 # Pathfinding Edge Cases and Fallbacks
 
@@ -12,14 +12,14 @@ tags: [gameplay, pathfinding, navigation, npc, ai, fallbacks, debugging]
 > - Agent parameters measured from the widest collidable part, with margin, per size class.
 > - Doors have `PassThrough` modifiers; spawned barriers trigger delayed recomputes.
 >
-> Cost: TL;DR ~170 tok · whole note ~5.1k tok. Read more: ## 2. Bad endpoints: resolve the goal before asking · ## 5. Follower edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.3k tok. Read more: ## 2. Bad endpoints: resolve the goal before asking · ## 5. Follower edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Pathfinding]] covers the `PathfindingService` API, costs, modifiers, links and a robust follower. This note is about what happens after the happy path: the goal is in the air, the start is inside a wall, the door just closed, the client has not streamed the target in, the NPC grinds against a corner for nine seconds, forty enemies ask for a path on the same frame. Every one of these looks to players like "the AI is broken", and every one has a cheap fallback. The rule this note is built around: **an NPC must always be doing something sensible, even when no path exists.**
 
 Related: [[Pathfinding]], [[NPC AI and Behaviour]], [[Behaviour Trees Utility AI and State Machines for NPCs]], [[Characters and Humanoids]], [[Raycasts Shapecasts and Spatial Queries]], [[Instance Streaming]], [[Collision and Physics Geometry]].
 
-Source labels: **Docs** (Roblox docs as of October 2026: the character pathfinding guide and the PathfindingService, Path and PathStatus reference pages), **Measured** (the reference project), **Rule of thumb**.
+Source labels: **Docs** (Roblox docs as of October 2026: the character pathfinding guide and the [[PathfindingService]], Path and PathStatus reference pages), **Measured** (the reference project), **Rule of thumb**.
 
 ---
 
@@ -327,5 +327,10 @@ Visualise: turn on the navigation mesh and pathfinding modifier overlays in Stud
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Horror Monster Chase AI End to End]] · [[Combat Arena and Encounter Layout]] · [[Links - NPCs and AI]] · [[Detecting Movement Exploits - Speed Fly Noclip Teleport]] · [[Humanoid States and Animation]] · [[Physics Performance]]
+[[Horror Monster Chase AI End to End]] · Combat Arena and Encounter Layout · Links - NPCs and AI · Detecting Movement Exploits - Speed Fly Noclip Teleport · Humanoid States and Animation · Physics Performance
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Police Chases and Wanted Levels]] · [[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run]] · [[Squad AI - Attack Tokens, Flanking and Attacker Limits]] · [[Wildlife and Ambient Creature AI - Passive, Neutral and Hostile]]
+<!-- related:end -->

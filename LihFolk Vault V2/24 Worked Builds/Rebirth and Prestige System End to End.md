@@ -1,5 +1,5 @@
 ---
-tags: [worked-build, rebirth, prestige, progression, economy, datastore, ui, luau, simulators]
+tags: [worked-build, rebirth, prestige, progression, economy, datastore, ui, luau, simulators, type/guide, area/gameplay, level/intermediate]
 ---
 # Rebirth and Prestige System End to End
 
@@ -12,7 +12,7 @@ tags: [worked-build, rebirth, prestige, progression, economy, datastore, ui, lua
 > - Bulk "max" computed on the server; counts validated for NaN, fractions, bounds and type
 > - No yield between affordability check and reset
 >
-> Cost: TL;DR ~150 tok · whole note ~8.7k tok. Read more: ## 4. Server modules: PlayerStore and RateLimit · ## 5. RebirthService (server) · ## 10. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~150 tok · whole note ~8.9k tok. Read more: ## 4. Server modules: PlayerStore and RateLimit · ## 5. RebirthService (server) · ## 10. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 This note builds a two-layer reset system from an empty place: coins you earn, **rebirths** that reset coins for a permanent income multiplier (with single, x5 and "max" bulk buys computed in closed form), and **prestige**, which resets rebirths for a bigger multiplier and a token currency. It includes shared math used by both client and server, number formatting that never lies about affordability, a confirmation dialog, safe saving at the moments that matter, and a pacing worked example that shows why most rebirth curves hit a wall.
@@ -843,7 +843,7 @@ More: [[Economy Exploits - Dupes Races and Purchase Abuse]], [[Remote Abuse Patt
 ## 11. Extending it
 
 - **Upgrades that reset.** Add `ClickLevel` to data and to `RESET_ON_REBIRTH`; price upgrades with the multiplier in mind.
-- **Prestige shop.** Spend `PrestigeTokens` on permanent perks (auto-clicker, offline earnings). Perks live outside both reset lists.
+- **Prestige shop.** Spend `PrestigeTokens` on permanent perks (auto-clicker, [[offline earnings]]). Perks live outside both reset lists.
 - **Rebirth rewards.** Pets from [[Pet Hatching and Following End to End]] or items from [[Saved Inventory End to End]] at milestones (5, 10, 25 rebirths).
 - **Game pass multipliers.** Multiply in `RebirthMath.Multiplier` with a flag the server sets from ownership; never trust the client's claim (see [[Shop with Game Passes and Developer Products End to End]]).
 - **A third layer** (ascension) follows the same pattern: requirement on prestige count, resets prestige and below.
@@ -868,5 +868,10 @@ More: [[Economy Exploits - Dupes Races and Purchase Abuse]], [[Remote Abuse Patt
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Pricing Curves and Upgrade Costs]] · [[Big Numbers Precision and Formatting]] · [[Power Curve]] · [[Faucets and Sinks]] · [[Economies and Currencies]] · [[Currency Architecture - Soft Hard and Event Currencies]]
+[[Pricing Curves and Upgrade Costs]] · Big Numbers Precision and Formatting · Power Curve · Faucets and Sinks · Economies and Currencies · Currency Architecture - Soft Hard and Event Currencies
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Big Numbers Precision and Formatting]] · [[Power Curve]] · [[Daily Rewards System End to End]] · [[LihFolk Systems Library]] · [[Codes Redemption System End to End]] · [[Melee Combat System End to End]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[Weekend Build - Survival Gather, Craft and Place]] · [[Weekend Build - Arena Shooter with Server-Checked Hits]]
+<!-- related:end -->

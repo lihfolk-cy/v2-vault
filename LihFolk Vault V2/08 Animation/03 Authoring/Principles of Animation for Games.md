@@ -1,5 +1,5 @@
 ---
-tags: [authoring, craft, principles, game-animation]
+tags: [authoring, craft, principles, game-animation, type/guide, area/animation, level/intermediate]
 ---
 # Principles of Animation for Games
 
@@ -10,7 +10,7 @@ tags: [authoring, craft, principles, game-animation]
 > - Film: volumes deform to show speed, impact and flexibility.
 > - Film: a preparatory move tells the audience something is coming.
 >
-> Cost: TL;DR ~110 tok · whole note ~3.8k tok. Read more: ## 2. Anticipation · ## Game-only principles
+> Cost: TL;DR ~110 tok · whole note ~3.9k tok. Read more: ## 2. Anticipation · ## Game-only principles
 <!-- tldr:end -->
 
 The twelve principles of animation (Thomas and Johnston, *The Illusion of Life*) were written for film, where the animator controls every frame the audience sees. In a game the player controls timing, the camera moves, clips blend into each other, and the same attack is seen by the attacker, the target and bystanders at different distances and with network delay. Every principle still applies, but several change meaning.
@@ -183,5 +183,10 @@ Every keyframe costs instances on Roblox, every clip costs memory and load time,
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animation Editor Workflow]] · [[Animation Start Here]] · [[AI Animation and Motion from Video]] · [[Squash Stretch and Anticipation in UI and Characters]] · [[Anticipation]] · [[Game Feel Start Here]]
+[[Animation Editor Workflow]] · [[Animation Start Here]] · [[AI Animation and Motion from Video]] · Squash Stretch and Anticipation in UI and Characters · Anticipation · Game Feel Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Animation Capture and Mocap]] · [[Human Swing Biomechanics]] · [[Authoring Clips in Code]] · [[Locomotion and Melee Reference Numbers]] · [[Animation Editor Advanced]] · [[R15 Run Cycle Key Poses]] · [[Weapon and Combat Animation]] · [[Locomotion Readability - Lessons from Blind Panels]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [art-direction, untextured, stylised, colour, value, palette, colour-script, readability, luau]
+tags: [art-direction, untextured, stylised, colour, value, palette, colour-script, readability, luau, type/guide, area/modeling, level/intermediate]
 ---
 # Colour Scripts and Value Structure for Untextured Art
 
@@ -12,7 +12,7 @@ tags: [art-direction, untextured, stylised, colour, value, palette, colour-scrip
 > - Neighbouring zones differ in at least two of hue, value key, saturation; the hub is distinct.
 > - Each zone has 3 to 5 value bands with roles assigned; about 60/30/10 by area.
 >
-> Cost: TL;DR ~230 tok · whole note ~3.9k tok. Read more: ## Value first, hue second · ## Building a colour script for a Roblox game · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~230 tok · whole note ~4.0k tok. Read more: ## Value first, hue second · ## Building a colour script for a Roblox game · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 When art has no painted texture, its colour choices are its entire surface. A flat-coloured world lives or dies on two things: **value structure** (how light or dark each thing is relative to everything else) and **colour planning across the game** (how palettes change from zone to zone so the journey feels designed). Film studios plan the second with a **colour script**: a strip of small, rough images showing the colour and light of every sequence in order. Pixar's colour scripts, published in "The Art of Pixar" and discussed by production designer Lou Romano in public interviews, exist mostly to set "the emotional tone of each scene" with abstract shapes and colour rather than detail. Game zones are sequences too.
@@ -68,7 +68,7 @@ So the same mid-grey part can be value 75 on its sunny side and 35 in shadow. Pr
 A ramp is the set of values one colour takes from shadow to light. Flat-coloured art usually needs ramps in two places: gradient atlas strips, and parts that are deliberately darker or lighter variants (a dark trim on a light wall).
 
 - **Shift hue with value.** Shadows move toward the scene's shadow hue (often blue or purple outdoors, a deep warm tone indoors by firelight); lights move toward the light colour (warm yellow in sunlight, cool blue under moonlight). A ramp that only changes value looks grey and dead in the shadows.
-- **Typical shift:** 10 to 25 degrees of hue across the ramp, saturation peaking in the mid-tones and dropping a little at both ends (rule of thumb from pixel art and illustration practice).
+- **Typical shift:** 10 to 25 degrees of hue across the ramp, saturation peaking in the mid-tones and dropping a little at both ends (rule of thumb from [[pixel art]] and illustration practice).
 - **Avoid pure black and pure white** in the environment. Reserve them for UI, eyes and special effects. Pure black shadows on a phone in daylight are just holes.
 
 Voxel-specific ramps and palette limits are covered in depth by the voxel section; the principles here apply to every untextured style.
@@ -227,5 +227,10 @@ Reading the output: if one bucket holds about 60 percent of the area and the lig
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Voxel Palettes - Ramps Hue Shifting and Limits]] · [[Thumbnail Contrast]] · [[Hand-Painted and Stylized Texturing]] · [[Voxel and Blocky Modeling]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Lighting Mood and Time of Day]]
+[[Voxel Palettes - Ramps Hue Shifting and Limits]] · Thumbnail Contrast · Hand-Painted and Stylized Texturing · Voxel and Blocky Modeling · Voxel Shading - Baked AO Edges and Lighting · Lighting Mood and Time of Day
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Hand-Painted and Stylized Texturing]] · [[Lighting Mood and Time of Day]] · [[Voxel and Blocky Modeling]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Clean Stylised Shading - Weighted and Custom Normals]]
+<!-- related:end -->

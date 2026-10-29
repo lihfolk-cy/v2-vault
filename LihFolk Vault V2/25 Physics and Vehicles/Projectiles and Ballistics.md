@@ -1,5 +1,5 @@
 ---
-tags: [physics, projectiles, ballistics, combat, networking, raycast, anti-cheat]
+tags: [physics, projectiles, ballistics, combat, networking, raycast, anti-cheat, type/guide, area/physics, level/intermediate, api/Touched, area/security]
 ---
 # Projectiles and Ballistics
 
@@ -12,7 +12,7 @@ tags: [physics, projectiles, ballistics, combat, networking, raycast, anti-cheat
 > - Closed-form motion from launch data; one shared module for client and server.
 > - Shooter predicts; server validates and decides damage; others replay cosmetically.
 >
-> Cost: TL;DR ~170 tok · whole note ~4.9k tok. Read more: ## 2. Motion maths · ## 3. The simulation loop that never misses · ## 10. Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.1k tok. Read more: ## 2. Motion maths · ## 3. The simulation loop that never misses · ## 10. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Every shooter, bow, fireball and thrown grenade is a projectile system, and every projectile system answers the same four questions: what moves (a physical part, or a mathematical point), who simulates it (server, shooter, everyone), who decides the hit, and how other players see it. Getting the answers wrong produces the familiar failures: bullets that pass through walls, hits that "should have landed", rockets that lag behind the launcher, and exploiters hitting everyone on the map. This note covers the motion maths (gravity drop, drag, aiming with drop, leading a moving target), the simulation loop that never misses thin walls, the standard network architecture with its trade-offs, server validation, ricochet and penetration, homing, and the budgets that keep hundreds of projectiles cheap.
@@ -342,5 +342,10 @@ A client-chosen seed lets an exploiter pick seeds that produce tight groupings. 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Intersection and Collision Math]] · [[Cookbook - Math CFrame and Vectors]] · [[Game Math Start Here]] · [[Dot and Cross Products in Gameplay]] · [[Links - Raycasting and spatial queries]] · [[Links - Latency and prediction]]
+[[Intersection and Collision Math]] · Cookbook - Math CFrame and Vectors · Game Math Start Here · Dot and Cross Products in Gameplay · Links - Raycasting and spatial queries · Links - Latency and prediction
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Ropes Chains and Soft Bodies]] · [[Multi-Seat Vehicles - Driver, Passenger and Gunner Roles]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[Cars with Constraints - Suspension Steering and Drive]] · [[Standing on Moving Vehicles and Platforms - Keeping Players Glued]] · [[Vehicle Damage, Repair and Wreck States]] · [[Boats Buoyancy and Water]] · [[Aircraft and Flight Models]]
+<!-- related:end -->

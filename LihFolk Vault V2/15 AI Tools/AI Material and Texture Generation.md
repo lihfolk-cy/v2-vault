@@ -1,5 +1,5 @@
 ---
-tags: [ai, materials, textures, materialvariant, surfaceappearance]
+tags: [ai, materials, textures, materialvariant, surfaceappearance, type/guide, area/ai, level/intermediate, api/SurfaceAppearance, area/modeling, api/TextureID, api/MaterialVariant]
 ---
 # AI Material and Texture Generation
 
@@ -12,7 +12,7 @@ tags: [ai, materials, textures, materialvariant, surfaceappearance]
 > - Studs Per Tile checked at close, gameplay and far distance.
 > - Variants named for the project and stored where scripts expect them.
 >
-> Cost: TL;DR ~150 tok · whole note ~3.5k tok. Read more: ## 2. Texture Generator · ## 3. Production experience: the reference project · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.6k tok. Read more: ## 2. Texture Generator · ## 3. Production experience: the reference project · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox has two AI surface tools that are easy to confuse:
@@ -199,7 +199,7 @@ General image generators can produce tiling textures when asked ("seamless tilea
 3. **Maps.** A colour image alone is not a PBR set. You need normal, roughness and (if used) metalness maps. Derive them in a texturing tool, or bake from geometry ([[Normal Maps and Detail Baking]]).
 4. **Licence.** Check the generator's terms for commercial use on your plan (see [[Roblox Policies on AI-Generated Content]]).
 
-Then build a `MaterialVariant` (ColorMap, NormalMap, RoughnessMap, MetalnessMap, StudsPerTile) or a `SurfaceAppearance` for a specific mesh. See [[Substance Painter and Texturing Tools]] and [[Hand-Painted and Stylized Texturing]].
+Then build a `MaterialVariant` (ColorMap, NormalMap, RoughnessMap, MetalnessMap, [[StudsPerTile]]) or a `SurfaceAppearance` for a specific mesh. See [[Substance Painter and Texturing Tools]] and [[Hand-Painted and Stylized Texturing]].
 
 ### Style consistency beats realism
 
@@ -242,5 +242,10 @@ A stylised Roblox game with photoreal generated rock looks broken. The reference
 
 ## Connected notes
 <!-- auto-links:start -->
-[[MaterialService and Custom Materials]] · [[Materials and Surfaces Start Here]] · [[Stylised vs Realistic Material Pipelines]] · [[SurfaceAppearance PBR Workflow]] · [[Studio Assistant and AI Tools]] · [[Terrain Materials and Painting]]
+[[MaterialService and Custom Materials]] · Materials and Surfaces Start Here · Stylised vs Realistic Material Pipelines · SurfaceAppearance PBR Workflow · Studio Assistant and AI Tools · Terrain Materials and Painting
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[SurfaceAppearance PBR Workflow]] · [[Stylised vs Realistic Material Pipelines]] · [[AI in Roblox Development Overview]] · [[AI 3D Model Generation Outside Roblox]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[AI Pitfalls - Assets and Import]] · [[AI Image Generation for Icons Thumbnails and Concepts]]
+<!-- related:end -->

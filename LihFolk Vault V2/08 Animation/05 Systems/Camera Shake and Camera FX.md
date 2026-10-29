@@ -1,5 +1,5 @@
 ---
-tags: [systems, camera, shake, game-feel, accessibility, code]
+tags: [systems, camera, shake, game-feel, accessibility, code, type/guide, area/animation, level/intermediate, area/accessibility, api/Camera, api/Frame]
 ---
 # Camera Shake and Camera FX
 
@@ -9,10 +9,10 @@ tags: [systems, camera, shake, game-feel, accessibility, code]
 > - Effects fight sprint FOV: Two writers of FieldOfView -> One owner adds the stack's delta
 > - Camera turns slightly after every dash: Look rotated in the offset, not undone -> Translation and roll only; undo before the module
 >
-> Cost: TL;DR ~130 tok · whole note ~4.1k tok. Read more: ## The envelope model · ## Trauma-based shake · ## Common mistakes
+> Cost: TL;DR ~130 tok · whole note ~4.2k tok. Read more: ## The envelope model · ## Trauma-based shake · ## Common mistakes
 <!-- tldr:end -->
 
-Short camera effects (a FOV punch on a dash, a dip on landing, a shake on a heavy hit, impact frames, a letterbox) are animation for the viewer. They multiply the weight of body animation for almost no cost, and they are the fastest way to make a game nauseating. This note gives a design that composes many effects safely, the measured numbers from one live action game (the reference project), trauma-based shake, reduced-motion rules, and the letterbox fix. Ownership of the camera (additive vs Scriptable) is in [[Cameras and Cutscenes]].
+Short camera effects (a FOV punch on a dash, a dip on landing, a shake on a heavy hit, [[impact frames]], a letterbox) are animation for the viewer. They multiply the weight of body animation for almost no cost, and they are the fastest way to make a game nauseating. This note gives a design that composes many effects safely, the measured numbers from one live action game (the reference project), trauma-based shake, reduced-motion rules, and the letterbox fix. Ownership of the camera (additive vs Scriptable) is in [[Cameras and Cutscenes]].
 
 ## The envelope model
 
@@ -255,5 +255,10 @@ The companion note [[Snippets - Camera Shake and FX]] covers implementation edge
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Camera Systems]] · [[Game Feel Start Here]] · [[Hit-Stop]] · [[Game Feel and Juice]] · [[Custom Character Controllers]] · [[Links - Cameras]] · [[Animation Start Here]]
+[[Camera Systems]] · Game Feel Start Here · Hit-Stop · Game Feel and Juice · Custom Character Controllers · Links - Cameras · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Layering Camera Feedback on the Default Camera]] · [[VFX Timing with Animation]] · [[Ability Kits Architecture]] · [[Boss Animation and Phases]] · [[Combat Combo Systems]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]] · [[Procedural Death Knockdown and Hit Reactions]] · [[Custom Locomotion Controller Design]] · [[Enemy and NPC Animation]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [systems, abilities, kits, architecture, networking, priorities]
+tags: [systems, abilities, kits, architecture, networking, priorities, type/guide, area/animation, level/intermediate, api/RemoteEvent, area/networking, api/KeyframeSequence]
 ---
 # Ability Kits Architecture
 
@@ -12,7 +12,7 @@ tags: [systems, abilities, kits, architecture, networking, priorities]
 > - Registry entry (moves, labels, cooldowns) and Info descriptions; icons.
 > - Beat table entries for non-standard marker names; travel list.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.0k tok. Read more: ## The registry · ## Playing a move · ## Registering a kit (checklist)
+> Cost: TL;DR ~160 tok · whole note ~4.1k tok. Read more: ## The registry · ## Playing a move · ## Registering a kit (checklist)
 <!-- tldr:end -->
 
 An "ability kit" is the set of special moves bound to one weapon: two to six moves, the last one an ultimate, each with a body clip, optional weapon-part clips, client movement and VFX, and server hit data. The reference project (one live action game) shipped more than a hundred kits and over 400 moves on one shared architecture. This note describes that architecture: the registry, the per-kit folder, the reserved names, priorities and fades, upper-body copies, full-body control, beat tables, preloading and validation, with the failure stories that shaped each rule.
@@ -228,5 +228,10 @@ See also: [[Weapon and Combat Animation]], [[Combat Combo Systems]], [[Stance an
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Custom Locomotion Controller Design]] · [[Playback, Priorities and Blending]] · [[Markers and Events]] · [[Snippets - Playing Animations]] · [[Hitboxes and Hit Detection]] · [[Genre Playbook - Combat and RPG]] · [[Animation Start Here]]
+[[Custom Locomotion Controller Design]] · [[Playback, Priorities and Blending]] · [[Markers and Events]] · [[Snippets - Playing Animations]] · [[Hitboxes and Hit Detection]] · Genre Playbook - Combat and RPG · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Combat Animation Craft]] · [[Publishing Animations]] · [[Snippets - Animation Controller Module]] · [[Animation Glossary]] · [[Equip Draw and Flourish Systems]] · [[Enemy Animation State Protocol]] · [[Engine Gotchas]] · [[Enemy and NPC Animation]]
+<!-- related:end -->

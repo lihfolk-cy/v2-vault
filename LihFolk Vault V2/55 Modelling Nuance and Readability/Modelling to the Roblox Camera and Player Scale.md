@@ -1,5 +1,5 @@
 ---
-tags: [modeling, camera, scale, studs, avatar, field-of-view, readability, blender, luau, studio]
+tags: [modeling, camera, scale, studs, avatar, field-of-view, readability, blender, luau, studio, type/guide, area/modeling]
 ---
 # Modelling to the Roblox Camera and Player Scale
 
@@ -12,7 +12,7 @@ tags: [modeling, camera, scale, studs, avatar, field-of-view, readability, blend
 > - Blender camera at 70 degrees vertical, phone aspect, real distances.
 > - Key features checked against `d / 260` studs at their usual distance.
 >
-> Cost: TL;DR ~180 tok · whole note ~3.8k tok. Read more: ## From studs to pixels · ## Worked example: measuring screen size in Studio · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~3.9k tok. Read more: ## From studs to pixels · ## Worked example: measuring screen size in Studio · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most modelling mistakes that show up in Roblox playtests are not modelling mistakes. They are framing mistakes: the model was judged from a Blender viewport at a distance, angle and field of view the player never uses, beside no avatar, at a scale nobody checked. This note gives the numbers that tie a model to how Roblox actually shows it: stud scale, avatar heights, the default camera's field of view and zoom, the formula that turns a size in studs into pixels on a phone, how screen shape changes what the player sees, and how to set up Blender and Studio so you judge models the way players will.
@@ -221,5 +221,10 @@ Note that the Studio field of view may differ if your game sets `FieldOfView` or
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Critiquing a Model - Paintovers and Iteration]] · [[Style Bibles for Consistent Models]] · [[Choosing GUI 2D or Locked-Camera 2.5D]] · [[Cameras and Cutscenes]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]]
+[[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Critiquing a Model - Paintovers and Iteration]] · [[Style Bibles for Consistent Models]] · Choosing GUI 2D or Locked-Camera 2.5D · Cameras and Cutscenes · Side-Scroller in 3D - Locking Camera and Movement to a Plane
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Bevels Chamfers and Edge Highlights Without Textures]] · [[Voxel Scale Grids and Stud Alignment]] · [[Camera Obstruction Handling - Occlusion Modes, Fades and Collision]] · [[Blender Workflow for Roblox Creators]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] · [[Choosing GUI 2D or Locked-Camera 2.5D]]
+<!-- related:end -->

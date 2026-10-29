@@ -1,5 +1,5 @@
 ---
-tags: [economy, inflation, sinks, faucets, balancing, live-ops, math, luau]
+tags: [economy, inflation, sinks, faucets, balancing, live-ops, math, luau, type/guide, area/monetization, level/intermediate, area/economy]
 ---
 # Economy Inflation Sinks and Faucets Math
 
@@ -12,7 +12,7 @@ tags: [economy, inflation, sinks, faucets, balancing, live-ops, math, luau]
 > - Income and price growth per zone known; `p / g` checked.
 > - Maximum payer gap declared; all multipliers stack by a defined rule.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.5k tok. Read more: ## 1. The one number that matters: time to afford · ## 4. Measuring inflation instead of guessing · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.6k tok. Read more: ## 1. The one number that matters: time to afford · ## 4. Measuring inflation instead of guessing · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Economies and Currencies]] explains what faucets and sinks are and how to write transactions safely. This note is the arithmetic underneath: how to model time-to-afford across an exponential progression, how multipliers stack into a payer gap, how to tell real inflation from healthy growth, how item supply works in RNG games, and how to simulate a live change before you ship it. Every formula comes with a worked example and the failure it predicts.
@@ -269,5 +269,10 @@ The general lesson: fix the model, then derive every price from it again. Patchi
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Faucets and Sinks]] · [[Simulating an Economy Before Launch]] · [[Currency Architecture - Soft Hard and Event Currencies]] · [[Economy Telemetry and Balancing Live]] · [[Pricing Curves and Upgrade Costs]] · [[Economy Design Start Here]]
+[[Faucets and Sinks]] · Simulating an Economy Before Launch · Currency Architecture - Soft Hard and Event Currencies · Economy Telemetry and Balancing Live · Pricing Curves and Upgrade Costs · Economy Design Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Pricing Curves and Upgrade Costs]] · [[Simulating an Economy Before Launch]] · [[Monetization Overview]] · [[Pricing and Store Design]] · [[Roblox Policies Ratings and Compliance]] · [[Game Passes]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Refunds Chargebacks and Purchase Support]] · [[Discovery and the Algorithm]]
+<!-- related:end -->

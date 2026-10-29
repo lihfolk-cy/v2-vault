@@ -1,5 +1,5 @@
 ---
-tags: [marketing, growth, ads-manager, sponsored-ads, user-acquisition, roas, math]
+tags: [marketing, growth, ads-manager, sponsored-ads, user-acquisition, roas, math, type/guide, area/marketing, level/intermediate, api/HttpService, area/math]
 ---
 # Sponsored Ads and Campaign Math
 
@@ -12,7 +12,7 @@ tags: [marketing, growth, ads-manager, sponsored-ads, user-acquisition, roas, ma
 > - Objective, audience and budget type chosen deliberately (they cannot change later)
 > - Launch data tags whitelisted and logged as an analytics field
 >
-> Cost: TL;DR ~230 tok · whole note ~4.2k tok. Read more: ## 1. The platform, as documented (Roblox docs, as of October 2026) · ## 7. Measuring ad cohorts in your own analytics · ## 8. Failure modes · ## 11. Checklist
+> Cost: TL;DR ~230 tok · whole note ~4.3k tok. Read more: ## 1. The platform, as documented (Roblox docs, as of October 2026) · ## 7. Measuring ad cohorts in your own analytics · ## 8. Failure modes · ## 11. Checklist
 <!-- tldr:end -->
 
 Paid user acquisition on Roblox means Ads Manager: your game's tile shown as a sponsored placement on Home and in search, with Roblox's auto-bidder spending a budget you set. The interface is simple. The decisions are not: who to target, how much a player is worth to you, how long to wait before judging, and what the ads can and cannot do for organic ranking.
@@ -85,7 +85,7 @@ The most common wrong belief is "ads kickstart the algorithm". The docs say ad-a
 ```
 Value_N (USD) = ARPU_N (Robux) x s x V
 ```
-Plus any value from things you cannot easily measure (friends they bring, Creator Rewards payouts, see below). Treat those as upside, not as the case for the campaign.
+Plus any value from things you cannot easily measure (friends they bring, [[Creator Rewards]] payouts, see below). Treat those as upside, not as the case for the campaign.
 
 ### Payback and ROAS
 ```
@@ -277,5 +277,10 @@ Reviewed, not run. Notes:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Click-Through Rate]] · [[Retention Cohorts]] · [[Monetization Overview]] · [[Working with Content Creators]] · [[Running a Small Studio as a Business]] · [[DevEx and Cashing Out]]
+[[Click-Through Rate]] · Retention Cohorts · Monetization Overview · Working with Content Creators · Running a Small Studio as a Business · DevEx and Cashing Out
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics]] · [[Discovery and Monetization Changes 2025-2026]] · [[Marketing to Kids and Teens - Age Rules and Paid-Promo Disclosure]] · [[Experience Description and Search Keywords]] · [[Competitor Analysis Method]]
+<!-- related:end -->

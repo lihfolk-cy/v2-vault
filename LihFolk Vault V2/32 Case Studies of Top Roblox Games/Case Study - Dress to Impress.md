@@ -1,5 +1,5 @@
 ---
-tags: [case-study, top-games, dress-up, rounds, voting, collaborations, live-ops, monetization, thumbnails]
+tags: [case-study, top-games, dress-up, rounds, voting, collaborations, live-ops, monetization, thumbnails, type/case-study, area/design, level/intermediate]
 ---
 # Case Study - Dress to Impress
 
@@ -12,7 +12,7 @@ tags: [case-study, top-games, dress-up, rounds, voting, collaborations, live-ops
 > - A no-timer Freeplay mode exists.
 > - Item browsing is virtualised and fast on phones.
 >
-> Cost: TL;DR ~120 tok · whole note ~4.6k tok. Read more: ## 1. Snapshot · ## 6. What to copy and what not to copy · ## Checklist
+> Cost: TL;DR ~120 tok · whole note ~4.7k tok. Read more: ## 1. Snapshot · ## 6. What to copy and what not to copy · ## Checklist
 <!-- tldr:end -->
 
 Dress to Impress (DTI) took a very old game format (a themed dress-up contest judged by other players) and made it one of the most played experiences on Roblox within a year of launch. It is the best recent proof that a **short, round-based social loop with player voting** can beat bigger, more complex games, and that **story events and brand collaborations** can keep a simple loop fresh. It is also a lesson in volatility: its player count rose fast and fell a long way, so study both halves.
@@ -212,5 +212,10 @@ A round manager (lobby 20 s, create 180 s, show 8 s per player, vote, podium), o
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Case Study - Steal a Brainrot]] · [[Case Study - Adopt Me]] · [[Case Study - Blox Fruits]] · [[Case Study - Grow a Garden]] · [[Round-Based Minigame Loop End to End]] · [[Working with Content Creators]] · [[Top Games Case Studies Start Here]]
+[[Case Study - Steal a Brainrot]] · [[Case Study - Adopt Me]] · [[Case Study - Blox Fruits]] · [[Case Study - Grow a Garden]] · [[Round-Based Minigame Loop End to End]] · Working with Content Creators · [[Top Games Case Studies Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Case Study - Brookhaven RP]] · [[Case Study - Doors]] · [[Case Study - Pet Simulator 99]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - Fisch]] · [[Case Study - Murder Mystery 2]] · [[Case Study - Tower Defense Simulator]] · [[Case Study - Jailbreak]]
+<!-- related:end -->

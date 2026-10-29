@@ -1,5 +1,5 @@
 ---
-tags: [testing, multiplayer, multi-client, live-testing, cheat-tools, network-simulation]
+tags: [testing, multiplayer, multi-client, live-testing, cheat-tools, network-simulation, type/guide, area/performance, level/intermediate, area/security, api/Player]
 ---
 # Multi-Client and Live Testing
 
@@ -12,7 +12,7 @@ tags: [testing, multiplayer, multi-client, live-testing, cheat-tools, network-si
 > - Leave and rejoin mid-interaction tested.
 > - Network Simulator on for timing features.
 >
-> Cost: TL;DR ~120 tok · whole note ~3.3k tok. Read more: ## 2. The multiplayer test matrix · ## 3. Gated cheat tooling · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~120 tok · whole note ~3.4k tok. Read more: ## 2. The multiplayer test matrix · ## 3. Gated cheat tooling · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A solo play test in Studio proves that a feature works for one player, on one fast machine, with zero latency, joining first. Real players join late, leave mid-trade, lag, run on phones and share a server with thirty strangers. Most shipped multiplayer bugs live in that gap. This note covers Studio's multi-client and network simulation tools, the multiplayer test matrix (join order, leave and rejoin, streaming), gated cheat tooling to reach states fast, testing in real servers, and the hazards of testing inside a place other people are also working in.
@@ -255,5 +255,10 @@ Use explicit levels ([[Testing Strategies and Frameworks]]):
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Multi-Client and Device Playtesting Protocols]] · [[Client-Server Model]] · [[Command Bar and Studio Scripting]] · [[Debugging Start Here]] · [[Anti-Exploit Start Here]] · [[MCP Workflows for Scripting and Debugging]]
+[[Multi-Client and Device Playtesting Protocols]] · [[Client-Server Model]] · Command Bar and Studio Scripting · Debugging Start Here · Anti-Exploit Start Here · MCP Workflows for Scripting and Debugging
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Genre QA Passes - Test Checklists per Game Type]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[Gated Tester Commands and Debug Panels]] · [[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]] · [[Dupe Hunting Test Script - Trades, Gifts, Drops and Rejoins]] · [[Performance Fundamentals]] · [[Mobile and Low-End Optimization]] · [[Debugger Breakpoints and Logging]]
+<!-- related:end -->

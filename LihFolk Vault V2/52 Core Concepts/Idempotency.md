@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, data, purchases, reliability, security]
+tags: [core-concept, data, purchases, reliability, security, type/reference, area/data, level/beginner, api/DataStore, area/security]
 ---
 # Idempotency
 
@@ -10,7 +10,7 @@ tags: [core-concept, data, purchases, reliability, security]
 > - The key must be saved in the same write as the effect.
 > - The ledger must be bounded. A list of every PurchaseId forever grows without limit.
 >
-> Cost: TL;DR ~130 tok · whole note ~970 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~1.1k tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 An operation is **idempotent** when running it twice has the same effect as running it once. "Grant purchase 7f3a" is idempotent if the second call notices the purchase was already granted and does nothing. "Add 100 gems" is not.
@@ -61,5 +61,10 @@ Related concepts: [[Session Lock]], [[Data Schema Versioning]], [[Server Authori
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Shop with Game Passes and Developer Products End to End]] · [[Skill - Roblox DataStore Safety]] · [[Links - Developer products]] · [[Skill - Roblox Monetization Compliance]] · [[Server Authority and Validation]] · [[Battle Pass and Season Design]] · [[Core Concepts Start Here]]
+[[Shop with Game Passes and Developer Products End to End]] · Skill - Roblox DataStore Safety · Links - Developer products · Skill - Roblox Monetization Compliance · Server Authority and Validation · Battle Pass and Season Design · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[AI Pitfalls - Data and Monetization]] · [[Purchase Receipts and Purchase History in UI]] · [[Rate Limiting]] · [[Feature Flags]] · [[Faucets and Sinks]] · [[Onboarding Funnel]] · [[Replication Boundary]] · [[Telemetry Events]] · [[Deterministic Simulation]] · [[Event Bus]]
+<!-- related:end -->

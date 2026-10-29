@@ -1,5 +1,5 @@
 ---
-tags: [world-building, art, materials, materialvariant, materialservice, surfaceappearance, pbr]
+tags: [world-building, art, materials, materialvariant, materialservice, surfaceappearance, pbr, type/guide, area/world, level/intermediate, api/SurfaceAppearance, api/MaterialVariant]
 ---
 # Materials MaterialVariants and SurfaceAppearance
 
@@ -12,7 +12,7 @@ tags: [world-building, art, materials, materialvariant, materialservice, surface
 > - Override slots planned and documented; terrain materials chosen with global colours in mind.
 > - MaterialVariants live in MaterialService with a stable naming convention.
 >
-> Cost: TL;DR ~180 tok · whole note ~4.0k tok. Read more: ## MaterialService and MaterialVariant · ## SurfaceAppearance · ## Gotchas collected · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~4.1k tok. Read more: ## MaterialService and MaterialVariant · ## SurfaceAppearance · ## Gotchas collected · ## Checklist
 <!-- tldr:end -->
 
 Roblox has three layers of surface appearance, and mixing them up is the cause of most "why won't this change colour / texture" bugs:
@@ -27,12 +27,12 @@ Roblox's own summary: MaterialVariant is for reusable **tileable** materials; Su
 
 Every BasePart has a `Material`. Notes that matter for art:
 
-- **Use2022Materials.** `MaterialService.Use2022Materials` switches between the legacy material textures and the 2022 set. It is `Roblox Script Security` (not readable or settable by game scripts) and set in Studio (Material Manager / MaterialService properties). Check it before matching colours to a reference: the same Color looks different under each set. One production game's notes say both "the place uses legacy materials" and "overrides off, default 2022 textures"; verify in your own place rather than trusting memory.
+- **Use2022Materials.** `MaterialService.Use2022Materials` switches between the legacy material textures and the 2022 set. It is `Roblox Script Security` (not readable or settable by game scripts) and set in Studio (Material Manager / [[MaterialService]] properties). Check it before matching colours to a reference: the same Color looks different under each set. One production game's notes say both "the place uses legacy materials" and "overrides off, default 2022 textures"; verify in your own place rather than trusting memory.
 - **The material texture multiplies with `Color`.** Very dark colours hide the texture completely. One production game measured that colours under about 0.06 luminance hid material textures, and lifted near-black surfaces to about 0.085 so stone and wood still read.
 - **SmoothPlastic** is the flat, textureless choice for stylised art. **Plastic** has a faint noise. Stylised games often use SmoothPlastic everywhere and let lighting do the work.
 - **Neon** renders self-lit and blooms. It does **not** emit light onto other surfaces; add a `PointLight` if you need spill. Neon parts should have `CastShadow = false`. Neon colour should be set a little darker and more saturated than you want it to look, because bloom lifts it (rule of thumb from studying several stylised games).
 - **Glass** is transparent and reflective; behaviour varies with graphics quality. Combine with Transparency around 0.3 to 0.6.
-- **ForceField** is animated and view-dependent; good for shields and holograms, poor for architecture.
+- **[[ForceField]]** is animated and view-dependent; good for shields and holograms, poor for architecture.
 - **Material also sets physics.** Ice is slippery, Plastic default. If you change material for looks, check whether walking or driving changes too. `CustomPhysicalProperties` on the part overrides it.
 
 ## MaterialService and MaterialVariant
@@ -243,5 +243,10 @@ Materials with a count of zero are candidates for terrain overrides.
 
 ## Connected notes
 <!-- auto-links:start -->
-[[MaterialService and Custom Materials]] · [[SurfaceAppearance PBR Workflow]] · [[Texturing and PBR Baking]] · [[AI Material and Texture Generation]] · [[Substance Painter and Texturing Tools]] · [[Trim Sheets Atlases and Vertex Colors]]
+[[MaterialService and Custom Materials]] · SurfaceAppearance PBR Workflow · Texturing and PBR Baking · AI Material and Texture Generation · Substance Painter and Texturing Tools · Trim Sheets Atlases and Vertex Colors
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[SurfaceAppearance PBR Workflow]] · [[Texturing and PBR Baking]] · [[AI Material and Texture Generation]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[Foliage Props and Scatter]]
+<!-- related:end -->

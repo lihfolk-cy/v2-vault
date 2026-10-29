@@ -1,5 +1,5 @@
 ---
-tags: [architecture, project-structure, bootstrapping, modules, workflow]
+tags: [architecture, project-structure, bootstrapping, modules, workflow, type/guide, area/networking, level/intermediate, area/scripting, api/Player]
 ---
 # Project Structure and Bootstrapping
 
@@ -12,7 +12,7 @@ tags: [architecture, project-structure, bootstrapping, modules, workflow]
 > - Deterministic two-phase bootstrap with error isolation and timing.
 > - Remotes created by the server and published after all systems registered.
 >
-> Cost: TL;DR ~140 tok · whole note ~5.1k tok. Read more: ## Server bootstrap: two phases · ## Production lessons that shape structure · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~5.2k tok. Read more: ## Server bootstrap: two phases · ## Production lessons that shape structure · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A Roblox game that survives a year of development has a small number of entry points, one obvious home for every piece of code, a deterministic start-up order, and remotes treated as a typed API. A game without those has hundreds of loose Scripts racing each other at join, systems that only work if another script happened to run first, and a 200,000 character file nobody dares to touch. This note gives the layout, the two-phase bootstrap for server and client, how to register remotes and config, how to load fast, and the production lessons (source size limits, require caching, reserved names, test flags, sandboxed checks) that shape structure in practice.
@@ -349,5 +349,10 @@ The senior trade-off: structure has a cost in ceremony (more files, more indirec
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Dependency Injection in Luau]] · [[Event Bus]] · [[Debugging Race Conditions and Yield Order]] · [[MCP Workflows for Scripting and Debugging]] · [[Advanced Luau Start Here]] · [[Error Handling - pcall xpcall and Promise Patterns]]
+[[Dependency Injection in Luau]] · Event Bus · Debugging Race Conditions and Yield Order · MCP Workflows for Scripting and Debugging · Advanced Luau Start Here · Error Handling - pcall xpcall and Promise Patterns
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Replication Rules]] · [[Server Authority and Validation]] · [[Entity Component Systems]] · [[Teleporting and Multi-Place Games]] · [[Server Lifecycle and Shutdown]] · [[Interest Management and Per-Player Replication]] · [[Cross-Server Messaging]] · [[Rate Limiting and Abuse Prevention]]
+<!-- related:end -->

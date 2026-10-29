@@ -1,5 +1,5 @@
 ---
-tags: [marketing, growth, live-ops, updates, cadence, events, retention]
+tags: [marketing, growth, live-ops, updates, cadence, events, retention, type/guide, area/marketing, level/intermediate, area/design]
 ---
 # Update Cadence and Hype Cycles
 
@@ -12,7 +12,7 @@ tags: [marketing, growth, live-ops, updates, cadence, events, retention]
 > - Feature freeze at T-10; event public at T-7; featuring submitted if eligible
 > - Publish before go-live; content gated by server time
 >
-> Cost: TL;DR ~160 tok · whole note ~3.5k tok. Read more: ## 2. Choosing a cadence · ## 3. Building anticipation honestly · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.6k tok. Read more: ## 2. Choosing a cadence · ## 3. Building anticipation honestly · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Roblox players expect games to change. A game that updates on a predictable rhythm trains players to come back on update day, gives the recommendation system fresh reasons to see returning players (play days on days 2 to 7 and 8 to 28 are ranking signals; see [[Discovery and the Algorithm]]), and gives your page, notifications and videos something true to say. A game that updates in random bursts, or that promises an update and misses it, burns the same goodwill.
@@ -234,5 +234,10 @@ The lesson is not "slower is better". It is that the baseline, and especially th
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Event Calendars and Content Planning]] · [[Patch Notes and Player Communication]] · [[Experience Notifications and Return Prompts]] · [[Live Ops Deep Dive Start Here]] · [[Retention Cohorts]] · [[Roadmaps Milestones and Scope Control]]
+[[Event Calendars and Content Planning]] · Patch Notes and Player Communication · Experience Notifications and Return Prompts · Live Ops Deep Dive Start Here · Retention Cohorts · Roadmaps Milestones and Scope Control
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Patch Notes and Player Communication]] · [[Competitor Analysis Method]] · [[A-B Testing and Experiments on Roblox]] · [[Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics]] · [[Experience Description and Search Keywords]] · [[Sponsored Ads and Campaign Math]] · [[Marketing to Kids and Teens - Age Rules and Paid-Promo Disclosure]] · [[Game Trailers and Clean Footage - Capture, Freecam and Editing]] · [[Roblox Communities as Your On-Platform Hub]]
+<!-- related:end -->

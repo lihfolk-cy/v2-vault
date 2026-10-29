@@ -1,5 +1,5 @@
 ---
-tags: [gameplay, ai, npc, state-machine, behaviour-tree, utility-ai, architecture, enemies, bosses]
+tags: [gameplay, ai, npc, state-machine, behaviour-tree, utility-ai, architecture, enemies, bosses, type/guide, area/gameplay, level/intermediate]
 ---
 # Behaviour Trees Utility AI and State Machines for NPCs
 
@@ -12,10 +12,10 @@ tags: [gameplay, ai, npc, state-machine, behaviour-tree, utility-ai, architectur
 > - Global interrupts (death, stagger, leash, zone change) handled once, above states.
 > - Every state or action releases what it acquired on exit, halt, death and despawn.
 >
-> Cost: TL;DR ~160 tok · whole note ~5.8k tok. Read more: ## 2. State machines that do not rot · ## 3. Behaviour trees, honestly · ## 8. Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~6.0k tok. Read more: ## 2. State machines that do not rot · ## 3. Behaviour trees, honestly · ## 8. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-[[NPC AI and Behaviour]] covers the whole enemy stack (perception, decision, action, presentation) and recommends "state machine first". This note goes one level down into the **decision layer**: how finite state machines, hierarchical state machines, behaviour trees and utility scoring actually differ, what each costs to author and debug, how each one fails, and how to combine them on a Roblox server that runs hundreds of brains at 10 Hz. The goal is not to pick the most impressive technique. It is to pick the cheapest one that still lets a designer say "make the archer back off when cornered" and get it done in one config change.
+[[NPC AI and Behaviour]] covers the whole enemy stack (perception, decision, action, presentation) and recommends "state machine first". This note goes one level down into the **decision layer**: how finite state machines, hierarchical state machines, [[behaviour trees]] and utility scoring actually differ, what each costs to author and debug, how each one fails, and how to combine them on a Roblox server that runs hundreds of brains at 10 Hz. The goal is not to pick the most impressive technique. It is to pick the cheapest one that still lets a designer say "make the archer back off when cornered" and get it done in one config change.
 
 Related: [[NPC AI and Behaviour]], [[Pathfinding Edge Cases and Fallbacks]], [[Boss Fight Design Patterns]], [[Combat Systems Architecture]], [[Status Effects Buffs and Stacking Rules]], [[Entity Component Systems]], [[Enemy Animation State Protocol]].
 
@@ -455,5 +455,10 @@ Rule of thumb: build the overhead label before the second enemy type. It pays fo
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Horror Monster Chase AI End to End]] · [[Enemy and NPC Animation]] · [[Links - NPCs and AI]] · [[Anticipation]] · [[Dialogue System End to End]] · [[Hit Reactions Stagger and Hit-Stop]]
+[[Horror Monster Chase AI End to End]] · Enemy and NPC Animation · Links - NPCs and AI · Anticipation · Dialogue System End to End · Hit Reactions Stagger and Hit-Stop
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]] · [[Squad AI - Attack Tokens, Flanking and Attacker Limits]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Wildlife and Ambient Creature AI - Passive, Neutral and Hostile]] · [[Enemy Archetype Kit - Fodder, Tank, Ranged, Support and Exploder]] · [[Spawning Teams and Rounds]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses]]
+<!-- related:end -->

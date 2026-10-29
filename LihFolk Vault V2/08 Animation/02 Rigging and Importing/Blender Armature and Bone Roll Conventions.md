@@ -1,5 +1,5 @@
 ---
-tags: [rigging, blender, armature, axes, bone-roll, conventions]
+tags: [rigging, blender, armature, axes, bone-roll, conventions, type/guide, area/animation, level/intermediate, area/modeling, api/Bone]
 ---
 # Blender Armature and Bone Roll Conventions
 
@@ -9,7 +9,7 @@ tags: [rigging, blender, armature, axes, bone-roll, conventions]
 > - Avoid: Editing the rest pose after clips exist -> Re-bake clips from world-space targets, or never touch rest after...
 > - Avoid: Assuming glTF +Z front means Roblox +Z front -> Know the measured importer turn; test with the calibration clip
 >
-> Cost: TL;DR ~130 tok · whole note ~4.2k tok. Read more: ## 2. The axis chain from Blender to Roblox (measured) · ## 4. The roll convention (project rule, recommended) · ## Common mistakes
+> Cost: TL;DR ~130 tok · whole note ~4.4k tok. Read more: ## 2. The axis chain from Blender to Roblox (measured) · ## 4. The roll convention (project rule, recommended) · ## Common mistakes
 <!-- tldr:end -->
 
 Axis bugs are the most expensive bugs in a Blender to Roblox pipeline, because they look like animation bugs. An arm that lifts sideways instead of forward, a creature that attacks from behind, a shared clip that works on four family members and twists the fifth: all of these are frame conventions, not keys. This note pins down every frame involved, from Blender world space to a Roblox joint's `Transform`, and gives the conventions one production game used to make one clip drive many rigs.
@@ -55,7 +55,7 @@ For FBX the Roblox Blender guide says to export with "Forward: Z Forward, Up: Y 
 
 ### Quaternions and CFrames under the axis change
 
-The map `(x, y, z) -> (-x, z, y)` is a proper rotation (its determinant is +1), so it maps rotations to rotations without mirroring. A Blender rotation quaternion `(w, x, y, z)` expressed in Blender world axes becomes, in Roblox axes:
+The map `(x, y, z) -> (-x, z, y)` is a proper rotation (its determinant is +1), so it maps rotations to rotations without mirroring. A Blender rotation [[Quaternions|quaternion]] `(w, x, y, z)` expressed in Blender world axes becomes, in Roblox axes:
 
 ```
 (w, x, y, z)  ->  (w, -x, z, y)
@@ -229,5 +229,10 @@ for b in rig.data.bones:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Exporting FBX vs GLB]] · [[Pipeline - Importing Animated Enemies]] · [[Moon Animator and Third-Party Tools]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Skeleton Library]] · [[Rotations Angles and Quaternions]] · [[Animation Start Here]]
+[[Exporting FBX vs GLB]] · [[Pipeline - Importing Animated Enemies]] · [[Moon Animator and Third-Party Tools]] · [[Modeling Characters for R15 and Custom Rigs]] · Skeleton Library · Rotations Angles and Quaternions · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Weight Painting and Skinning for Roblox]] · [[3D Importer Settings Reference]] · [[Importing Models and Rigs]] · [[Skeleton Library]] · [[Accessories and Armor That Follow Animation]] · [[Custom Rigs - Weapons and Props]] · [[Weapon Design Rig Builder]] · [[Custom Characters and StarterCharacter]] · [[Look-At Aim and Head Tracking]]
+<!-- related:end -->

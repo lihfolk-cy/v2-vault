@@ -1,5 +1,5 @@
 ---
-tags: [ui, inventory, scrollingframe, virtualization, performance, pooling, search, gamepad, networking]
+tags: [ui, inventory, scrollingframe, virtualization, performance, pooling, search, gamepad, networking, type/guide, area/ui, level/intermediate]
 ---
 # Virtualized Lists and Large Inventories
 
@@ -12,7 +12,7 @@ tags: [ui, inventory, scrollingframe, virtualization, performance, pooling, sear
 > - Under ~100 entries: plain layout. Over ~300 or growing: virtualised.
 > - View array built by filter then sort, with a unique tiebreaker.
 >
-> Cost: TL;DR ~160 tok · whole note ~6.0k tok. Read more: ## 3. A grid virtualiser that rebinds only what changed · ## 4. Search, filter and sort at scale · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~6.1k tok. Read more: ## 3. A grid virtualiser that rebinds only what changed · ## 4. Search, filter and sort at scale · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Inventories grow. A collection game that starts with 30 items at launch has 400 after six months of updates, and a dedicated player owns 2,000 entries. The UI that was fine at 30 (build a card per item inside a `UIGridLayout`) becomes the slowest screen in the game: it takes a second to open, it hitches when an item is added, and on a low-end phone it eats memory that the world needed.
@@ -492,5 +492,10 @@ The reference project's backpack was a fixed 1160 x 720 panel scaled to fit 84% 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Cookbook - UI]] · [[Debugging UI Layout and Input]] · [[Plugin UI with DockWidgets]] · [[Grid Placement and Player Building Systems]] · [[AvatarEditorService and In-Game Avatar Editors]] · [[Reference - Purple Anime Settings UI (Claude + Figma)]]
+[[Cookbook - UI]] · Debugging UI Layout and Input · Plugin UI with DockWidgets · Grid Placement and Player Building Systems · AvatarEditorService and In-Game Avatar Editors · Reference - Purple Anime Settings UI (Claude + Figma)
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Inventory QoL - Sort Filter Search Stack and Lock]] · [[Layout - Scale Offset and Constraints]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Declarative UI - React-Lua and Fusion]] · [[HUD Design]] · [[Safe Areas and Insets]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[Notification and Toast Systems]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [luau, cookbook, tables, strings, time, recipes]
+tags: [luau, cookbook, tables, strings, time, recipes, type/reference, area/scripting, level/intermediate]
 ---
 # Cookbook - Tables Strings and Time
 
@@ -12,7 +12,7 @@ tags: [luau, cookbook, tables, strings, time, recipes]
 > - Random picks run on the server with `Random` objects.
 > - Number formatting truncates near tier boundaries.
 >
-> Cost: TL;DR ~120 tok · whole note ~4.9k tok. Read more: ## 11. Pick the right clock · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~120 tok · whole note ~5.0k tok. Read more: ## 11. Pick the right clock · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Recipes for the utility code every project ends up writing: copying and shuffling tables, weighted picks, safe removal while iterating, number and duration formatting, splitting and trimming text, and the clocks you should use for cooldowns, countdowns and daily resets. Code is `--!strict` Luau, reviewed, not run. The background is in [[Tables Metatables and OOP]], [[Strings Patterns and Formatting]], [[Task Library Coroutines and Yielding]] and [[Luau Performance Patterns with Benchmarks]].
@@ -426,5 +426,10 @@ end
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Localization Pipeline]] · [[Data and Config Pipeline - Spreadsheets to Game]] · [[Retention and Return Hooks]] · [[Metatables and OOP - When and When Not]] · [[Drop Tables Rarity and Pity Systems]] · [[Menu Archetypes - Shop Settings Codes Rewards]]
+[[Localization Pipeline]] · Data and Config Pipeline - Spreadsheets to Game · Retention and Return Hooks · Metatables and OOP - When and When Not · Drop Tables Rarity and Pity Systems · Menu Archetypes - Shop Settings Codes Rewards
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Testing Time-Based Features with a Controllable Clock]] · [[Cookbook - Remotes and Networking]] · [[Cookbook - Players and Characters]] · [[Data and Config Pipeline - Spreadsheets to Game]] · [[Cookbook - Math CFrame and Vectors]] · [[Drop Tables Rarity and Pity Systems]]
+<!-- related:end -->

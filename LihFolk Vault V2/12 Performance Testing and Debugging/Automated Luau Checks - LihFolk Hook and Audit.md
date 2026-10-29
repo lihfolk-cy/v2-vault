@@ -1,5 +1,5 @@
 ---
-tags: [testing, static-analysis, linting, hooks, code-review, ai-agents, luau, tooling]
+tags: [testing, static-analysis, linting, hooks, code-review, ai-agents, luau, tooling, type/guide, area/performance, level/intermediate, api/DataStore]
 ---
 # Automated Luau Checks - LihFolk Hook and Audit
 
@@ -9,7 +9,7 @@ tags: [testing, static-analysis, linting, hooks, code-review, ai-agents, luau, t
 > - Avoid: Treating a clean hook run as a security review.
 > - Avoid: Wrapping a DataStore call in `pcall` but ignoring the success flag, then saving over data that failed to load.
 >
-> Cost: TL;DR ~110 tok · whole note ~1.4k tok. Read more: ## 1. Where it sits in the workflow · ## 2. What it catches · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~1.6k tok. Read more: ## 1. Where it sits in the workflow · ## 2. What it catches · ## Common mistakes
 <!-- tldr:end -->
 
 The LihFolk plugin ships a PostToolUse hook that checks Luau the moment an AI agent writes it. It targets the mistakes that cost the most on Roblox and are easy to miss in review: unprotected DataStore calls, broken `ProcessReceipt`, client-owned currency, unvalidated remotes, loops that freeze a server, and leaked connections. This note explains what it catches, how to act on a finding and where it stops. Implementation details and the full rule table live in the plugin's `hooks/README.md`.
@@ -80,3 +80,8 @@ If the finding is wrong, prove it (for example, the argument is validated inside
 ## See also
 
 [[External Tooling - Rojo Wally Selene StyLua]] · [[Testing Strategies and Frameworks]] · [[QA Checklists Before Release]] · [[Testing Your Own Remotes - Fuzzing and Abuse Tests]] · [[Skill - Roblox Secure Remotes]] · [[Skill - Roblox DataStore Safety]] · [[Hunting Memory Leaks Step by Step]]
+
+<!-- related:start -->
+## Related
+[[Code Review for Luau Teams]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]] · [[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]] · [[Dupe Hunting Test Script - Trades, Gifts, Drops and Rejoins]] · [[Automated Testing with TestEZ and Jest-Lua]] · [[Gated Tester Commands and Debug Panels]] · [[Genre QA Passes - Test Checklists per Game Type]] · [[Testing Time-Based Features with a Controllable Clock]] · [[In-Game Bug Report Button with Automatic Context]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]]
+<!-- related:end -->

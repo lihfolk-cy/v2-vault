@@ -1,5 +1,5 @@
 ---
-tags: [ugc, marketplace, pricing, limiteds, monetization, economy, policy]
+tags: [ugc, marketplace, pricing, limiteds, monetization, economy, policy, type/guide, area/avatars, level/intermediate, api/PromptPurchaseFinished, area/monetization]
 ---
 # UGC Pricing Limiteds and Marketplace Rules
 
@@ -12,7 +12,7 @@ tags: [ugc, marketplace, pricing, limiteds, monetization, economy, policy]
 > - Revenue-share tier chosen deliberately (1.5x to 2x for unknown items).
 > - Advance break-even sales count written down and believable.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.3k tok. Read more: ## 4. Limiteds: when they are the right product · ## 5. Selling UGC inside your experience · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.4k tok. Read more: ## 4. Limiteds: when they are the right product · ## 5. Selling UGC inside your experience · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[UGC Avatar Items and Accessories]] records the fee schedule: upload fees, publishing advances by item type, the revenue-share curve, Limited splits and publishing limits. This note is about using those numbers: how price-floor pricing really works, the arithmetic of advances and rebates, when a Limited is the right product and when it is a trap, what the irreversible switches are, how a game developer should sell UGC inside an experience, and the policy lines that cost creators their items. Numbers repeated from the older note are there only where a calculation needs them.
@@ -254,5 +254,10 @@ Moderation also applies to everything inside the item: textures and meshes must 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Commerce and Physical Goods]] · [[Player-Driven Trading Economies]] · [[Links - Avatars and UGC]] · [[Limited-Time Offers - Design and Ethics]] · [[Subscriptions and Premium Payouts]] · [[Game Passes]]
+[[Commerce and Physical Goods]] · Player-Driven Trading Economies · Links - Avatars and UGC · Limited-Time Offers - Design and Ethics · Subscriptions and Premium Payouts · Game Passes
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Limited-Time Offers - Design and Ethics]] · [[Player-Driven Trading Economies]] · [[Subscriptions and Premium Payouts]] · [[HumanoidDescription and Outfit Systems]] · [[Layered Clothing Creation Workflow]] · [[Avatar Body Types and Scale in Gameplay]]
+<!-- related:end -->

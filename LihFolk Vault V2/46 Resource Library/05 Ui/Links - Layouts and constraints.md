@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, ui]
+tags: [resources, links, ui, type/reference, area/ui, level/intermediate, api/AnchorPoint, area/physics]
 ---
 # Links - Layouts and constraints
 
@@ -52,5 +52,5 @@ Part of [[Resource Library - Ui]] in the [[Resource Library Start Here]]. 36 lin
 
 ## Connected notes
 <!-- auto-links:start -->
-[[UI Layout Objects - Lists Grids and Pages]] · [[Links - Cross-platform UI]] · [[Links - Scale vs offset and responsive design]] · [[Links - Materials and MaterialVariants]] · [[Layout - Scale Offset and Constraints]]
+[[UI Layout Objects - Lists Grids and Pages]] · [[Links - Cross-platform UI]] · [[Links - Scale vs offset and responsive design]] · [[Links - Materials and MaterialVariants]] · Layout - Scale Offset and Constraints
 <!-- auto-links:end -->

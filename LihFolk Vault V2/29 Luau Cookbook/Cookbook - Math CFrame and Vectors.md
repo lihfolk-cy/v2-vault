@@ -1,5 +1,5 @@
 ---
-tags: [luau, cookbook, math, cframe, vector3, recipes]
+tags: [luau, cookbook, math, cframe, vector3, recipes, type/reference, area/scripting, level/intermediate, area/math]
 ---
 # Cookbook - Math CFrame and Vectors
 
@@ -12,7 +12,7 @@ tags: [luau, cookbook, math, cframe, vector3, recipes]
 > - Smoothing uses `1 - exp(-k * dt)` or a spring.
 > - Field of view checks compare against a precomputed cosine.
 >
-> Cost: TL;DR ~120 tok · whole note ~4.7k tok. Read more: ## 10. Launch a projectile to hit a point in a given time · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~120 tok · whole note ~4.8k tok. Read more: ## 10. Launch a projectile to hit a point in a given time · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Recipes for the geometry questions that come up weekly: facing things, measuring angles, checking cones, smoothing motion, orbiting, random points, projectile arcs and grid snapping. Each recipe is a small pure function you can drop into a shared `MathUtil` module. Code is `--!strict` Luau, reviewed, not run. The theory (spaces, composition order, Euler angles, float precision) is in [[Math Vectors and CFrames]] and [[Motor6D Math and CFrame Composition]]; motion smoothing in depth is in [[Springs Damping and Smoothing]].
@@ -372,5 +372,10 @@ end
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Game Math Start Here]] · [[Intersection and Collision Math]] · [[Two-Bone IK Math]] · [[Cookbook - Remotes and Networking]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]]
+[[Game Math Start Here]] · Intersection and Collision Math · Two-Bone IK Math · [[Cookbook - Remotes and Networking]] · Multi-Bone IK - FABRIK and CCD · Side-Scroller in 3D - Locking Camera and Movement to a Plane
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Intersection and Collision Math]] · [[Two-Bone IK Math]] · [[Animation Data Hygiene - Euler Wrap Joint Holes and Easing]] · [[Cookbook - UI]] · [[Cookbook - Data and Saving]] · [[Cookbook - Tables Strings and Time]]
+<!-- related:end -->

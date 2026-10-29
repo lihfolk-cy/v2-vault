@@ -1,5 +1,5 @@
 ---
-tags: [audio, audio-api, audioplayer, audioemitter, wire, effects, mixing]
+tags: [audio, audio-api, audioplayer, audioemitter, wire, effects, mixing, type/reference, area/vfx, level/intermediate, api/AudioPlayer, area/audio]
 ---
 # The Audio API - Players Emitters Wires and Effects
 
@@ -12,7 +12,7 @@ tags: [audio, audio-api, audioplayer, audioemitter, wire, effects, mixing]
 > - Listener strategy chosen (default or custom per category).
 > - Interaction groups consistent between emitters and listeners.
 >
-> Cost: TL;DR ~170 tok · whole note ~4.4k tok. Read more: ## 5. Effects reference · ## 6. Building real buses · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.5k tok. Read more: ## 5. Effects reference · ## 6. Building real buses · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The modular audio API models audio like real equipment: a player makes a signal, wires carry it, effects shape it, an emitter is a speaker in the world, a listener is a microphone in the world, and a device output is the player's headphones. It is more verbose than a `Sound`, and in exchange it gives you explicit routing (real buses), effects you can share across many sources, sample-accurate scheduling, analysis, voice chat and speech in the same graph. As of October 2026 the docs recommend it over `Sound`/`SoundGroup`/`SoundEffect`.
@@ -347,5 +347,10 @@ See also: [[Sound Fundamentals]], [[Spatial Audio and Mixing]], [[Music and Adap
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Voice Chat and Safety Features]] · [[Links - Sounds and the Audio API]] · [[AI Audio - Voice Music and SFX]] · [[Captions and Audio Accessibility]] · [[Audio Pipeline]] · [[Links - Spatial audio]]
+[[Voice Chat and Safety Features]] · Links - Sounds and the Audio API · AI Audio - Voice Music and SFX · Captions and Audio Accessibility · Audio Pipeline · Links - Spatial audio
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Combat Sound Design and Feedback]] · [[Audio Mixer Settings with SoundGroups]] · [[AI Audio - Voice Music and SFX]] · [[Engine and Tyre Audio Driven by RPM and Slip]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[Music Licensing and Audio Upload Rules for 2026]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]]
+<!-- related:end -->

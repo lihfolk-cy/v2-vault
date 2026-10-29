@@ -1,5 +1,5 @@
 ---
-tags: [gameplay, physics, movers, linearvelocity, alignposition, controllermanager]
+tags: [gameplay, physics, movers, linearvelocity, alignposition, controllermanager, type/guide, area/gameplay, level/intermediate, api/Humanoid, area/physics, api/MaxVelocity]
 ---
 # Mover Constraints and Physics Controllers
 
@@ -12,7 +12,7 @@ tags: [gameplay, physics, movers, linearvelocity, alignposition, controllermanag
 > - Player movers run on the player's client; NPC movers on the server with server ownership.
 > - Dashes use Plane mode and agree with the Humanoid.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.0k tok. Read more: ## 2. LinearVelocity · ## 7. ControllerManager: the physics character controller · ## 9. Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.1k tok. Read more: ## 2. LinearVelocity · ## 7. ControllerManager: the physics character controller · ## 9. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Mover constraints are how you push, pull, steer and hold assemblies without fighting the solver. Dashes, knockback, grabs, hover, homing projectiles and server-driven NPC movement are all built from the same seven constraints. The physics character controller (`ControllerManager`) is the same idea packaged for characters. This note covers what each mover does, the properties that matter, the patterns that held up in a production combat game, and the traps.
@@ -122,7 +122,7 @@ end
 
 **`MaxVelocity` is a walk speed.** For an NPC, OneAttachment mode with `MaxVelocity = walkSpeed` and a high `MaxForce` gives you "go to this point at this speed" with physics doing the integration. Update `Position` from your AI at 5 to 10 Hz and the motion is still smooth, because the solver interpolates at physics rate.
 
-**Measured.** The reference project's enemy runtime uses server-owned `AlignPosition` movers for every enemy. The brain thinks at 10 Hz within 200 studs of a player and sets a goal; chase, wander, return-home, kit pulls and knockback are all "place a goal, let the mover take it there". Offline dry runs modelled it as "the root moves toward the goal at MaxVelocity", which matched live behaviour well enough to test thousands of navigation cases in Edit (where there is no physics).
+**Measured.** The reference project's enemy runtime uses server-owned `AlignPosition` movers for every enemy. The brain thinks at 10 Hz within 200 studs of a player and sets a goal; chase, wander, return-home, kit pulls and knockback are all "place a goal, let the mover take it there". Offline dry runs modelled it as "the root moves toward the goal at [[MaxVelocity]]", which matched live behaviour well enough to test thousands of navigation cases in Edit (where there is no physics).
 
 ### Pull / grab pattern
 A "caught" pull (an ultimate drags enemies into a slot, holds them, releases) is AlignPosition with a moderate `MaxVelocity` (the glide speed) and `Responsiveness` around 30 to 60, then raising `MaxVelocity` or enabling rigidity for the hold. Disable or destroy the mover before releasing, or the target snaps back when you think you let go. Rule from the reference project: **pull before damage**, so the hit lands where the animation expects the body.
@@ -331,5 +331,10 @@ As of October 2026 the docs describe a beta **Character Controller Library** (CC
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Aircraft and Flight Models]] · [[Links - Forces and movers]] · [[Boats Buoyancy and Water]] · [[Debugging Physics and Network Ownership]] · [[Cars with Constraints - Suspension Steering and Drive]] · [[Snippets - Ragdoll]]
+[[Aircraft and Flight Models]] · Links - Forces and movers · Boats Buoyancy and Water · Debugging Physics and Network Ownership · Cars with Constraints - Suspension Steering and Drive · Snippets - Ragdoll
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run]] · [[Grabs, Carries and Throws - Moving Players Safely]] · [[Explosions - Radius Damage, Falloff and Cover Checks]] · [[Pathfinding Edge Cases and Fallbacks]] · [[Pathfinding]] · [[Raycasts Shapecasts and Spatial Queries]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Wildlife and Ambient Creature AI - Passive, Neutral and Hostile]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, game-design, analytics, retention]
+tags: [core-concept, game-design, analytics, retention, type/reference, area/design, level/beginner]
 ---
 # Session Length
 
@@ -10,7 +10,7 @@ tags: [core-concept, game-design, analytics, retention]
 > - Length bought with friction is fake. Long walks, slow timers and forced waits raise session length and lower satisfaction and...
 > - Natural stopping points help retention. A game that offers a satisfying place to stop ("quest done, come back tomorrow for the...
 >
-> Cost: TL;DR ~170 tok · whole note ~860 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~170 tok · whole note ~920 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Session length** is how long a player stays in one visit, from join to leave. Averaged across players it becomes one of the main engagement numbers in the Creator Dashboard (reported as average session time or playtime per user; names change, check your dashboard) (Roblox docs, "Analytics", as of October 2026).
@@ -50,5 +50,10 @@ Related concepts: [[Core Loop]], [[Retention Cohorts]], [[Onboarding Funnel]], [
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Subscriptions and payouts]] · [[Click-Through Rate]] · [[Core Concepts Start Here]] · [[Monetization Overview]] · [[Top Games Case Studies Start Here]] · [[Sponsored Ads and Campaign Math]]
+[[Links - Subscriptions and payouts]] · [[Click-Through Rate]] · [[Core Concepts Start Here]] · Monetization Overview · Top Games Case Studies Start Here · Sponsored Ads and Campaign Math
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Variance]] · [[Faucets and Sinks]] · [[Pity Timer]] · [[Frame Budget]] · [[Feature Flags]] · [[Event Bus]] · [[Expected Value]] · [[Anticipation]]
+<!-- related:end -->

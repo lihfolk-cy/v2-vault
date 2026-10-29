@@ -1,5 +1,5 @@
 ---
-tags: [modeling, bevel, chamfer, edge-highlight, normals, vertex-colors, untextured, blender, stylised, lighting]
+tags: [modeling, bevel, chamfer, edge-highlight, normals, vertex-colors, untextured, blender, stylised, lighting, type/guide, area/modeling]
 ---
 # Bevels Chamfers and Edge Highlights Without Textures
 
@@ -12,10 +12,10 @@ tags: [modeling, bevel, chamfer, edge-highlight, normals, vertex-colors, untextu
 > - Segment count matches the shading style (chamfer for faceted, 2 for smooth).
 > - Bevel widths match the style bible's size bands.
 >
-> Cost: TL;DR ~190 tok · whole note ~4.5k tok. Read more: ## Roblox lighting and materials: what survives · ## Worked example: edge-highlighted rocks without textures · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~4.6k tok. Read more: ## Roblox lighting and materials: what survives · ## Worked example: edge-highlighted rocks without textures · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-Hand-painted art paints a light line along every edge so shapes read. Untextured art has no paint, so the edge highlight must come from geometry, normals, vertex colour or lighting. [[Hard-Surface Modeling]] already covers the bevel-and-weighted-normal workflow: bevel widths as a percentage of object size, segment counts, and the Weighted Normal modifier. This note goes deeper into the part that matters for non-hand-painted styles: **why** a bevel catches light, how to size bevels for the distance an asset is seen from, what Roblox's materials and lighting do to that highlight, how to add edge brightening with vertex colour when geometry is too expensive, and the outline tricks that stand in for edge lines.
+Hand-painted art paints a light line along every edge so shapes read. Untextured art has no paint, so the edge highlight must come from geometry, normals, vertex colour or lighting. [[Hard-Surface Modeling]] already covers the bevel-and-weighted-normal workflow: bevel widths as a percentage of object size, segment counts, and the [[Weighted Normals|Weighted Normal]] modifier. This note goes deeper into the part that matters for non-hand-painted styles: **why** a bevel catches light, how to size bevels for the distance an asset is seen from, what Roblox's materials and lighting do to that highlight, how to add edge brightening with vertex colour when geometry is too expensive, and the outline tricks that stand in for edge lines.
 
 ## Why a sharp edge looks wrong
 
@@ -178,5 +178,10 @@ Result: rock planes defined by a chamfer highlight and by vertex-colour ambient 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Untextured Stylised Modelling Start Here]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Keeping a Mixed Asset Library Consistent]]
+[[Untextured Stylised Modelling Start Here]] · Clean Stylised Shading - Weighted and Custom Normals · Faceted Low-Poly - Flat Normals and Facet Size · Voxel Shading - Baked AO Edges and Lighting · Flat Colour vs Gradient Atlas vs Vertex Colour · Keeping a Mixed Asset Library Consistent
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Clean Stylised Shading - Weighted and Custom Normals]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[The Gradient Palette Texture Workflow]] · [[Critiquing a Model - Paintovers and Iteration]]
+<!-- related:end -->

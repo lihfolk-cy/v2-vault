@@ -1,5 +1,5 @@
 ---
-tags: [ai, audio, tts, music, sfx, licensing]
+tags: [ai, audio, tts, music, sfx, licensing, type/guide, area/ai, level/intermediate, area/audio]
 ---
 # AI Audio - Voice Music and SFX
 
@@ -12,7 +12,7 @@ tags: [ai, audio, tts, music, sfx, licensing]
 > - Every uploaded id recorded by script; none invented.
 > - Loudness measured; every id has a levelling entry.
 >
-> Cost: TL;DR ~130 tok · whole note ~3.5k tok. Read more: ## 1. Roblox's own speech APIs · ## 2. External AI audio tools · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.6k tok. Read more: ## 1. Roblox's own speech APIs · ## 2. External AI audio tools · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 AI audio covers three different jobs: speech (text-to-speech and voice conversion), music, and sound effects. Roblox now has its own runtime speech APIs, and a large market of external tools generates all three. The technical part is easy. The hard parts are licensing, loudness consistency, and fitting generated sound into a mix. This note covers Roblox's speech APIs, external tools and their licensing traps, Roblox's upload rules, and how the reference project got 22 new weapon sound banks without any generative model at all.
@@ -223,5 +223,10 @@ Rules of thumb:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI in Roblox Development Overview]] · [[Captions and Audio Accessibility]] · [[Resource Library - Audio]] · [[Voice Chat and Safety Features]] · [[Links - Audio creation and uploading]] · [[Combat Sound Design and Feedback]]
+[[AI in Roblox Development Overview]] · [[Captions and Audio Accessibility]] · Resource Library - Audio · Voice Chat and Safety Features · Links - Audio creation and uploading · Combat Sound Design and Feedback
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Music Licensing and Audio Upload Rules for 2026]] · [[Evaluating AI Tools - A Practical Rubric]] · [[Who Owns AI-Generated Code and Assets]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[AI Image Generation for Icons Thumbnails and Concepts]] · [[AI 3D Model Generation Outside Roblox]] · [[Roblox Studio Assistant]] · [[Roblox Generative AI - Cube Mesh and Texture Generation]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]]
+<!-- related:end -->

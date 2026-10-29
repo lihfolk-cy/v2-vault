@@ -1,5 +1,5 @@
 ---
-tags: [blender, eevee, rendering, presentation, volumetrics, lighting]
+tags: [blender, eevee, rendering, presentation, volumetrics, lighting, type/guide, area/modeling, level/intermediate, area/lighting]
 ---
 # Dramatic Showcase Renders in Eevee
 
@@ -9,7 +9,7 @@ tags: [blender, eevee, rendering, presentation, volumetrics, lighting]
 > - Avoid: Fog density too high. Symptom: pink or purple wash over the whole frame.
 > - Avoid: Visible volume box edges. Symptom: straight vertical walls in the gas.
 >
-> Cost: TL;DR ~100 tok · whole note ~2.2k tok. Read more: ## Building blocks · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~2.3k tok. Read more: ## Building blocks · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 ![[p45_cosmic_sword.png]]
@@ -91,5 +91,10 @@ Related: [[Stylized Lighting Recipes]], [[VFX Design Playbook]], [[Stylised Weap
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Dash VFX Presentation on an R15 Rig]] · [[Thumbnail Contrast]] · [[Mesh VFX Packs Built in Blender]] · [[Blender 5 Python Gotchas for Headless Builds]] · [[Voxel and Blocky Modeling]] · [[Colour Scripts and Value Structure for Untextured Art]]
+[[Dash VFX Presentation on an R15 Rig]] · [[Thumbnail Contrast]] · [[Mesh VFX Packs Built in Blender]] · [[Blender 5 Python Gotchas for Headless Builds]] · Voxel and Blocky Modeling · Colour Scripts and Value Structure for Untextured Art
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Stylised Shop Stand Worked Example]] · [[Low-Poly Tree Set Worked Example]] · [[Hand-Painted and Stylized Texturing]] · [[Voxel and Blocky Modeling]] · [[Chibi Character Rules in Practice]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[Low-Poly Creature From a Flat Reference Sheet]]
+<!-- related:end -->

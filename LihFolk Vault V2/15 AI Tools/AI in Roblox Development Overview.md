@@ -1,5 +1,5 @@
 ---
-tags: [ai, overview, workflow, production]
+tags: [ai, overview, workflow, production, type/guide, area/ai, level/beginner, api/HttpService, area/monetization]
 ---
 # AI in Roblox Development Overview
 
@@ -12,7 +12,7 @@ tags: [ai, overview, workflow, production]
 > - Who has final say on taste (art, audio, feel), and when do they look?
 > - Is every claim of "done" labelled with how it was verified?
 >
-> Cost: TL;DR ~160 tok · whole note ~4.0k tok. Read more: ## 1. The families · ## 5. Choosing a tool: a decision table · ## Checklist before adopting any AI tool
+> Cost: TL;DR ~160 tok · whole note ~4.1k tok. Read more: ## 1. The families · ## 5. Choosing a tool: a decision table · ## Checklist before adopting any AI tool
 <!-- tldr:end -->
 
 This note is the map of the AI section. It sorts every kind of AI a Roblox creator meets into a few families, says what each is actually good for, where each one fails, and which note goes deeper. It is written as of October 2026. AI products change monthly; every product claim in this section was checked against official pages at that date, and anything that could not be checked says "unverified".
@@ -25,7 +25,7 @@ The reference project (one live action game) was built with heavy use of AI codi
 
 | Family | Examples (as of October 2026) | Runs where | Good at | Weak at | Deep note |
 |---|---|---|---|---|---|
-| Roblox's own Studio assistant | Roblox Assistant (chat, Planning Mode, slash commands, subagents), Code Assist | Inside Studio | Questions about the engine, small scripts, edits across many instances, quick props | Large architectures, anything it cannot see, consistency across long sessions | [[Roblox Studio Assistant]] |
+| Roblox's own Studio assistant | [[Roblox Assistant]] (chat, Planning Mode, slash commands, subagents), Code Assist | Inside Studio | Questions about the engine, small scripts, edits across many instances, quick props | Large architectures, anything it cannot see, consistency across long sessions | [[Roblox Studio Assistant]] |
 | Roblox generative 3D | Cube (mesh generation), procedural models, segmentation, `GenerationService` | Studio and, for some APIs, at runtime | Fast placeholder props, player-generated objects | Exact proportions, art-style consistency, clean topology | [[Roblox Generative AI - Cube Mesh and Texture Generation]] |
 | Roblox surface generators | Material Generator, Texture Generator | Studio (also Assistant and MCP) | Tiling materials, a first texture pass on a mesh | Stylised art direction, reliability through automation | [[AI Material and Texture Generation]] |
 | General LLM coding assistants | Claude and Claude Code, ChatGPT and Codex, GitHub Copilot, Cursor, Gemini and Gemini CLI | Your editor, terminal, or Studio via MCP | Writing and refactoring Luau, tooling, data transforms, explaining errors | Invented or outdated APIs, client/server confusion, claiming success without testing | [[AI Code Assistants for Luau]], [[Prompting and Verifying AI Output]] |
@@ -158,5 +158,10 @@ The full story is in [[Case Study - Building a Game with AI Agents]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Evaluating AI Tools - A Practical Rubric]] · [[Setting Up MCP Clients]] · [[Third-Party Skill - Caveman Token Saver]] · [[MCP Workflows for Scripting and Debugging]] · [[Links - External tooling]] · [[Audio Pipeline]]
+[[Evaluating AI Tools - A Practical Rubric]] · [[Setting Up MCP Clients]] · Third-Party Skill - Caveman Token Saver · MCP Workflows for Scripting and Debugging · Links - External tooling · Audio Pipeline
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[Who Owns AI-Generated Code and Assets]] · [[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[What AI Models Get Wrong in Roblox]]
+<!-- related:end -->

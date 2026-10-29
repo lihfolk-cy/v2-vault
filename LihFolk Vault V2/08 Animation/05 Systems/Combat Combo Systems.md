@@ -1,5 +1,5 @@
 ---
-tags: [systems, combat, combo, input, networking, timing]
+tags: [systems, combat, combo, input, networking, timing, type/guide, area/animation, level/intermediate, area/networking]
 ---
 # Combat Combo Systems
 
@@ -12,10 +12,10 @@ tags: [systems, combat, combo, input, networking, timing]
 > - Min gap per class; later-hit rule applied.
 > - One-press buffer; combo window resets the step.
 >
-> Cost: TL;DR ~170 tok · whole note ~4.3k tok. Read more: ## Server-authoritative hits · ## A buffered combo controller · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.4k tok. Read more: ## Server-authoritative hits · ## A buffered combo controller · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-A click combo is the most-played animation system in any melee game. It is three or four short clips, a counter and a timer, and it is surprisingly easy to make feel bad: dropped inputs, swings that blend into mush, hits that land before or after the blade arrives, server damage that disagrees with what the player saw. This note covers the design: chain structure, input buffering, combo windows, pose continuity, and server-authoritative hit timing with latency. Numbers are from one live action game (the reference project) unless marked otherwise. Swing craft (how to pose and time a single swing) is in [[Weapon Swing Design]] and [[Combat Animation Craft]].
+A click combo is the most-played animation system in any melee game. It is three or four short clips, a counter and a timer, and it is surprisingly easy to make feel bad: dropped inputs, swings that blend into mush, hits that land before or after the blade arrives, server damage that disagrees with what the player saw. This note covers the design: chain structure, [[input buffering]], combo windows, pose continuity, and server-authoritative hit timing with latency. Numbers are from one live action game (the reference project) unless marked otherwise. Swing craft (how to pose and time a single swing) is in [[Weapon Swing Design]] and [[Combat Animation Craft]].
 
 ## Anatomy of a chain
 
@@ -269,5 +269,10 @@ See also: [[Weapon and Combat Animation]], [[Ability Kits Architecture]], [[Hit 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Hitboxes and Hit Detection]] · [[Melee Combat System End to End]] · [[Input Buffering]] · [[Snippets - Playing Animations]] · [[Input Responsiveness Buffering and Coyote Time]] · [[Detecting Combat Exploits - Reach Rate and Aim]] · [[Animation Start Here]]
+[[Hitboxes and Hit Detection]] · Melee Combat System End to End · Input Buffering · [[Snippets - Playing Animations]] · Input Responsiveness Buffering and Coyote Time · Detecting Combat Exploits - Reach Rate and Aim · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Timing Spacing and Frame Charts]] · [[Enemy Animation State Protocol]] · [[Stance and Charge Moves]] · [[Playback, Priorities and Blending]] · [[Cinematic Ultimates]] · [[Equip Draw and Flourish Systems]] · [[Locomotion and Melee Reference Numbers]] · [[Boss Animation and Phases]]
+<!-- related:end -->

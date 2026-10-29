@@ -1,5 +1,5 @@
 ---
-tags: [worked-build, quests, objectives, progression, datastore, ui, luau, server-authority]
+tags: [worked-build, quests, objectives, progression, datastore, ui, luau, server-authority, type/guide, area/gameplay, level/intermediate, api/ProximityPrompt]
 ---
 # Quest Chain System End to End
 
@@ -12,7 +12,7 @@ tags: [worked-build, quests, objectives, progression, datastore, ui, luau, serve
 > - Every quest id is unique; ids are never renamed without an alias
 > - No client remote can add progress
 >
-> Cost: TL;DR ~140 tok · whole note ~9.7k tok. Read more: ## 4. Server modules: PlayerStore and RateLimit · ## 5. QuestService (server module) · ## 10. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~140 tok · whole note ~9.8k tok. Read more: ## 4. Server modules: PlayerStore and RateLimit · ## 5. QuestService (server module) · ## 10. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 This note builds a linear quest chain from an empty place: quests defined as data, progress reported only by server systems (collect, defeat, talk), a claim button with rewards, saved progress that survives reordering and new quests, a tracker UI with a waypoint beam, per-player collectibles, and enemies that credit the player who last hit them.
@@ -983,5 +983,10 @@ Background: [[Server Authority and Validation]], [[Testing Your Own Remotes - Fu
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Narrative Start Here]] · [[Links - Quests and progression]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[Core Loops and Session Design]] · [[Onboarding Funnel]] · [[Skill - Roblox System Builder]]
+[[Narrative Start Here]] · Links - Quests and progression · Menu Archetypes - Shop Settings Codes Rewards · Core Loops and Session Design · Onboarding Funnel · Skill - Roblox System Builder
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[LihFolk Systems Library]] · [[Codes Redemption System End to End]] · [[Global Leaderboards End to End]] · [[Shop with Game Passes and Developer Products End to End]] · [[Weekend Build - Survival Gather, Craft and Place]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[Weekend Build - Arena Shooter with Server-Checked Hits]] · [[Weekend Build - Roleplay Town with Jobs and Paychecks]]
+<!-- related:end -->

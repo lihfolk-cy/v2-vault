@@ -1,5 +1,5 @@
 ---
-tags: [procedural, ragdoll, physics, humanoid, ballsocketconstraint, animationconstraint, network-ownership]
+tags: [procedural, ragdoll, physics, humanoid, ballsocketconstraint, animationconstraint, network-ownership, type/guide, area/animation, level/intermediate, api/AnimationConstraint, area/physics]
 ---
 # Ragdolls and Physics-Based Animation
 
@@ -9,7 +9,7 @@ tags: [procedural, ragdoll, physics, humanoid, ballsocketconstraint, animationco
 > - Body falls apart into loose parts on death: `BreakJointsOnDeath = true` -> set false before death and build sockets
 > - Ragdoll stands back up or slides around: Humanoid still in a normal state -> `Physics` state on the owner, or `EvaluateStateMachine = false`
 >
-> Cost: TL;DR ~140 tok · whole note ~4.3k tok. Read more: ## The Humanoid gets a vote · ## Building a ragdoll · ## Common mistakes
+> Cost: TL;DR ~140 tok · whole note ~4.4k tok. Read more: ## The Humanoid gets a vote · ## Building a ragdoll · ## Common mistakes
 <!-- tldr:end -->
 
 A ragdoll hands a character's body from the Animator to the physics engine: joints stop following clips and become limited sockets, and gravity and collisions do the animating. Done well it gives deaths, knockdowns and explosions that never repeat. Done badly it gives bodies that explode, jitter, sink through floors, kill living players, or look completely different on every client. This note covers the Humanoid side, building the constraints, network ownership, physically simulated `AnimationConstraint` joints, getting back up, and when not to ragdoll at all.
@@ -244,5 +244,10 @@ Related: [[Humanoid States and Animation]], [[AnimationConstraint and Physically
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Characters and Humanoids]] · [[IKControl Reference]] · [[Foot Placement and Ground IK]] · [[Debugging Physics and Network Ownership]] · [[Physics Assemblies and Constraints]] · [[Mover Constraints and Physics Controllers]] · [[Animation Start Here]]
+[[Characters and Humanoids]] · [[IKControl Reference]] · [[Foot Placement and Ground IK]] · Debugging Physics and Network Ownership · Physics Assemblies and Constraints · Mover Constraints and Physics Controllers · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Procedural Animation]] · [[Rigs and Joints]] · [[Inverse Kinematics]] · [[Two-Bone IK Math]] · [[Snippets - IK]] · [[Multi-Bone IK - FABRIK and CCD]] · [[R15 Rig Anatomy and Attachments]] · [[Motor6D Math and CFrame Composition]]
+<!-- related:end -->

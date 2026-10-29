@@ -1,5 +1,5 @@
 ---
-tags: [modeling, uv, unwrapping, texturing, blender, texel-density]
+tags: [modeling, uv, unwrapping, texturing, blender, texel-density, type/guide, area/modeling, level/intermediate, api/SurfaceAppearance]
 ---
 # UV Unwrapping
 
@@ -12,7 +12,7 @@ tags: [modeling, uv, unwrapping, texturing, blender, texel-density]
 > - Seams on hard edges, hidden sides, material boundaries.
 > - No visible stretch (Display Stretch overlay).
 >
-> Cost: TL;DR ~130 tok · whole note ~5.3k tok. Read more: ## 2. Roblox rules that constrain your UVs · ## 5. Texel density · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~5.4k tok. Read more: ## 2. Roblox rules that constrain your UVs · ## 5. Texel density · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A UV map tells the engine which pixel of a texture lands on which point of a mesh. Every textured MeshPart in Roblox depends on one: a `TextureID`, a `SurfaceAppearance`, a trim sheet, a palette atlas, a baked VFX gradient. Bad UVs are the most common reason a good model looks cheap in game: blurry patches next to sharp ones, visible seams, stretched stripes, colour bleeding from the neighbouring island. This note covers how unwrapping works, the Roblox-specific rules (Creator Hub, checked October 2026), how to plan seams, pick a texel density, pack islands with the right margins, and how to diagnose UV problems you only see in Studio.
@@ -268,5 +268,10 @@ A quick in-Studio test: assign a checker texture (a uniform grid image) as the `
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Texel Density]] · [[Links - UVs and texture prep]] · [[Materials and Surfaces Start Here]] · [[The Gradient Palette Texture Workflow]] · [[Tiling Trim Sheets and Decal Tricks]] · [[Baking Lighting and Detail into Textures]]
+[[Texel Density]] · Links - UVs and texture prep · Materials and Surfaces Start Here · The Gradient Palette Texture Workflow · Tiling Trim Sheets and Decal Tricks · Baking Lighting and Detail into Textures
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[The Gradient Palette Texture Workflow]] · [[Low-Poly and Stylized Modeling]] · [[Modular Environment Kits]] · [[Hard-Surface Modeling]] · [[AI Material and Texture Generation]] · [[Mesh Optimization for Mobile]] · [[Retopology and Decimation]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Voxel and Blocky Modeling]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]
+<!-- related:end -->

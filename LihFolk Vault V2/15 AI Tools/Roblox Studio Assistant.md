@@ -1,5 +1,5 @@
 ---
-tags: [ai, studio, assistant, mcp, workflow]
+tags: [ai, studio, assistant, mcp, workflow, type/guide, area/ai, level/intermediate, area/studio]
 ---
 # Roblox Studio Assistant
 
@@ -12,10 +12,10 @@ tags: [ai, studio, assistant, mcp, workflow]
 > - Planning Mode for anything that touches more than one script.
 > - Snapshot before risky edits; no undo in shared places.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.0k tok. Read more: ## 3. Slash commands and tools · ## 5. Using Assistant well · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.2k tok. Read more: ## 3. Slash commands and tools · ## 5. Using Assistant well · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-Roblox Assistant is the AI helper built into Roblox Studio. Roblox's own guide describes it as something that "helps you build games faster by answering questions, generating content, and performing actions directly in Studio". It is a large language model joined to a set of tools that act on your open place: reading and writing scripts, creating and deleting instances, inserting assets, generating meshes and materials, capturing the viewport and, in beta, play-testing.
+[[Roblox Assistant]] is the AI helper built into Roblox Studio. Roblox's own guide describes it as something that "helps you build games faster by answering questions, generating content, and performing actions directly in Studio". It is a large language model joined to a set of tools that act on your open place: reading and writing scripts, creating and deleting instances, inserting assets, generating meshes and materials, capturing the viewport and, in beta, play-testing.
 
 This note covers what Assistant can do as of October 2026, how it works underneath, how to use it well, and where it fails. For the general overview of Studio's AI features see [[Studio Assistant and AI Tools]]; for using external AI clients against the same tools, see [[Roblox Studio MCP Server]].
 
@@ -258,5 +258,10 @@ Many teams use both: Assistant for quick in-place questions and edits; an extern
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI Agents and Autonomous Workflows]] · [[AI in Roblox Development Overview]] · [[AI Code Assistants for Luau]] · [[MCP Workflows for Building Worlds]] · [[Working with AI Assistants in Studio]] · [[Agent Review Loops and Guardrails in Practice]]
+[[AI Agents and Autonomous Workflows]] · [[AI in Roblox Development Overview]] · [[AI Code Assistants for Luau]] · [[MCP Workflows for Building Worlds]] · Working with AI Assistants in Studio · Agent Review Loops and Guardrails in Practice
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[Roblox Policies on AI-Generated Content]] · [[Evaluating AI Tools - A Practical Rubric]] · [[What AI Models Get Wrong in Roblox]] · [[In-Game AI - LLM NPCs and Text Generation]] · [[AI Image Generation for Icons Thumbnails and Concepts]] · [[AI Audio - Voice Music and SFX]]
+<!-- related:end -->

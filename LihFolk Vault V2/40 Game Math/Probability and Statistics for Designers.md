@@ -1,5 +1,5 @@
 ---
-tags: [math, game-math, probability, statistics, rng, balancing, analytics, design, luau]
+tags: [math, game-math, probability, statistics, rng, balancing, analytics, design, luau, type/guide, area/math, level/intermediate]
 ---
 # Probability and Statistics for Designers
 
@@ -294,5 +294,10 @@ Players do not judge the distribution; they judge their own stories. Some rules 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Variance]] · [[Pity Timer]] · [[Expected Value]] · [[Drop Tables Rarity and Pity Systems]] · [[Economy Design Start Here]] · [[Economy Telemetry and Balancing Live]]
+[[Variance]] · Pity Timer · Expected Value · Drop Tables Rarity and Pity Systems · Economy Design Start Here · Economy Telemetry and Balancing Live
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Expected Value]] · [[Drop Tables Rarity and Pity Systems]] · [[Pity Timer]] · [[Economy Telemetry and Balancing Live]] · [[Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations]] · [[Simulating an Economy Before Launch]]
+<!-- related:end -->

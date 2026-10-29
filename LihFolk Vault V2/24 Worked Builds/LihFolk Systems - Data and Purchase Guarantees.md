@@ -1,5 +1,5 @@
 ---
-tags: [worked-build, library, datastore, session-locking, processreceipt, idempotency, odds, policyservice, luau, strict]
+tags: [worked-build, library, datastore, session-locking, processreceipt, idempotency, odds, policyservice, luau, strict, type/guide, area/gameplay]
 ---
 # LihFolk Systems - Data and Purchase Guarantees
 
@@ -12,7 +12,7 @@ tags: [worked-build, library, datastore, session-locking, processreceipt, idempo
 > - `SimulateLoadFailure` kicks without saving; `TestProfileKey` gives a fresh profile.
 > - Play/Stop/Play quickly exercises the locked path without data loss.
 >
-> Cost: TL;DR ~180 tok · whole note ~2.2k tok. Read more: ## 2. Guarantee: one server writes a profile · ## 6. Guarantee: a Robux purchase grants exactly once · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~2.3k tok. Read more: ## 2. Guarantee: one server writes a profile · ## 6. Guarantee: a Robux purchase grants exactly once · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 This note explains, guarantee by guarantee, how the [[LihFolk Systems Library]] keeps player data and Robux purchases safe: what each guarantee is, the exact mechanism in `PlayerData`, `Receipts`, `Shop`, `EggHatch` and `Policy`, and the failure each one prevents. Read it before changing those modules or porting a game's existing data layer onto them.
@@ -101,3 +101,8 @@ The check, grant and record have no yield between them, so two concurrent delive
 
 ## See also
 [[LihFolk Systems Library]] · [[Session Locking and Profile Libraries]] · [[Saving Correctly - Autosave and BindToClose]] · [[Data Schema Design and Migrations]] · [[Purchase Data and Receipts]] · [[Developer Products and ProcessReceipt]] · [[Paid Random Items and Odds Disclosure in Practice]] · [[Roblox Policies Ratings and Compliance]] · [[Trading Systems Without Duplication]] · [[Economy Exploits - Dupes Races and Purchase Abuse]] · [[Idempotency]] · [[Session Lock]]
+
+<!-- related:start -->
+## Related
+[[AI Pitfalls - Data and Monetization]] · [[Saved Inventory End to End]] · [[Shop with Game Passes and Developer Products End to End]] · [[Pet Hatching and Following End to End]] · [[Global Leaderboards End to End]] · [[Codes Redemption System End to End]] · [[Daily Rewards System End to End]]
+<!-- related:end -->

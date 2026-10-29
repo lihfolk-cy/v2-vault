@@ -1,5 +1,5 @@
 ---
-tags: [modeling, retopology, decimation, remesh, lod, optimization, blender, python]
+tags: [modeling, retopology, decimation, remesh, lod, optimization, blender, python, type/guide, area/modeling, level/intermediate, area/performance]
 ---
 # Retopology and Decimation
 
@@ -12,7 +12,7 @@ tags: [modeling, retopology, decimation, remesh, lod, optimization, blender, pyt
 > - Source kept hidden; work on a duplicate.
 > - Merge by distance before decimating; symmetry on.
 >
-> Cost: TL;DR ~130 tok · whole note ~3.6k tok. Read more: ## 2. Decimation in Blender · ## 5. Level of detail on Roblox · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.8k tok. Read more: ## 2. Decimation in Blender · ## 5. Level of detail on Roblox · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Sooner or later every model has too many triangles: a sculpt with two million, a boolean-heavy prop with 60,000, an AI-generated or scanned mesh with a triangle soup, a kit piece that needs a cheaper far version. There are three ways down, and they produce very different meshes:
@@ -62,7 +62,7 @@ The edit-mode equivalent of Collapse is *Mesh > Clean Up > Decimate Geometry* (m
 2. *Merge by Distance* first (duplicate vertices confuse the collapse).
 3. Decimate **Planar** at a small angle to clear flat areas.
 4. Decimate **Collapse** with Symmetry on until the triangle budget is met.
-5. Shade: Smooth by Angle or Weighted Normal (decimated meshes often have bad smoothing).
+5. Shade: Smooth by Angle or [[Weighted Normals|Weighted Normal]] (decimated meshes often have bad smoothing).
 6. Check silhouette from the game camera angles, and check UV seams for stretching.
 
 ### Decimate to an exact triangle budget
@@ -268,5 +268,10 @@ Splitting also helps culling (off-screen pieces are skipped) and lets the engine
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Modeling Fundamentals for Games]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Hard-Surface Modeling]] · [[Links - Topology]] · [[Modeling in Blender for Roblox]] · [[Clean Stylised Shading - Weighted and Custom Normals]]
+[[Modeling Fundamentals for Games]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Hard-Surface Modeling]] · Links - Topology · Modeling in Blender for Roblox · Clean Stylised Shading - Weighted and Custom Normals
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Mesh Optimization for Mobile]] · [[UV Unwrapping]] · [[Low-Poly and Stylized Modeling]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Exporting and Validating Models for Roblox]] · [[Modular Environment Kits]] · [[Curve-Based Modelling in Blender for Roblox]]
+<!-- related:end -->

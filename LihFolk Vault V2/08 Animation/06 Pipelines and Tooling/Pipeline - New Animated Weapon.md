@@ -1,5 +1,5 @@
 ---
-tags: [pipeline, weapons, rigging, kits, workflow]
+tags: [pipeline, weapons, rigging, kits, workflow, type/guide, area/animation, level/intermediate, api/Motor6D, area/gameplay, api/Animator]
 ---
 # Pipeline: New Animated Weapon
 
@@ -12,7 +12,7 @@ tags: [pipeline, weapons, rigging, kits, workflow]
 > - Kit sources pass size, reserved-name, forbidden-id and order checks.
 > - Each move STAGED; kit installed; folder under 2,500.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.5k tok. Read more: ## Step 1: offline generation · ## Step 5: design the kit · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.6k tok. Read more: ## Step 1: offline generation · ## Step 5: design the kit · ## Checklist
 <!-- tldr:end -->
 
 How one live action game took a modelled weapon (a GLB plus a setup script describing its hinges, materials and effects) to a held, animated weapon with an ability kit, in about 1-1.5 hours, most of it creative work. It ran dozens of times; the steps below are the version that survived. The weapon's own rig is covered in depth in [[Weapon Design Rig Builder]], its runtime in [[Weapon Rig Player]], the arm pass in [[Pipeline - Arm IK Baking and QA]].
@@ -62,7 +62,7 @@ Everything a tool can do is a tool; the human does the import (Studio cannot imp
 
 A Python driver reads the setup script and the GLB:
 
-- **Setup parsing** (format v2): the hinge table (`{ name, part, pivot Vector3, CFrame }` per hinge), materials (`MAT`: material, colour, reflectance, transparency per part), owner and link tables (which part welds to which), hanging chain links, FX attachments, ribbons, and the animation data block (idle length and fps, special length and fps, per-hinge flags for "has position keys", and the raw per-frame quaternion arrays). A legacy setup format is detected and refused with a pointer to the older route.
+- **Setup parsing** (format v2): the hinge table (`{ name, part, pivot Vector3, CFrame }` per hinge), materials (`MAT`: material, colour, reflectance, transparency per part), owner and link tables (which part welds to which), hanging chain links, FX attachments, ribbons, and the animation data block (idle length and fps, special length and fps, per-hinge flags for "has position keys", and the raw per-frame [[Quaternions|quaternion]] arrays). A legacy setup format is detected and refused with a pointer to the older route.
 - **GLB parsing:** the glTF JSON chunk and binary buffer are read directly (no Blender) to get each mesh node's bounds and vertices. The blade's vertex profile (17 rows of min/max X along the blade's Y span) feeds the aura/glow effect.
 - **Blade colour:** the most common *saturated* neon material colour (saturation over 0.25), normalised to full brightness. White and grey neons are common on many setups and would otherwise win.
 - **Weapon-part clips:** `Idle` and `Special` are built from the setup's per-frame hinge data and **thinned per joint**:
@@ -151,7 +151,7 @@ An assembler concatenates the kit's head, the shared core library, the shared ef
 Two patches are applied to the baker on the way:
 
 - **Seed loop cap:** the IK baker's fallback seed loops may take over 1 s per frame on unreachable targets; they are capped at 0.3 s per solve to keep Studio calls short. (The arms are re-solved offline later anyway.)
-- **Marker values:** a spec marker written `Name=value` becomes a KeyframeMarker `Name` with that `Value` (for example `StaffSpin=2,0.5,1,F,0,0`); plain names keep the clip name as their value.
+- **Marker values:** a spec marker written `Name=value` becomes a [[KeyframeMarker]] `Name` with that `Value` (for example `StaffSpin=2,0.5,1,F,0,0`); plain names keep the clip name as their value.
 
 ## Step 7: bake and install the kit
 
@@ -220,5 +220,10 @@ Cleanup removes test objects and restores the camera to `Custom` after a short d
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Case Study - Building a Game with AI Agents]] · [[Asset Pipelines]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Modeling Weapons and Props]] · [[AI Agents and Autonomous Workflows]] · [[Pipeline Design Principles]] · [[Animation Start Here]]
+[[Case Study - Building a Game with AI Agents]] · Asset Pipelines · [[Case Study - Fixing Hundreds of Attack Clips]] · Modeling Weapons and Props · AI Agents and Autonomous Workflows · Pipeline Design Principles · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Importing Models and Rigs]] · [[Animation Data from Blender to Roblox]] · [[Baked Clip Stubs and Archiving]] · [[Arm Baker Internals]] · [[Keyframes, Easing and Interpolation]] · [[Lua Keyframe Player]] · [[Testing Animations in Studio]] · [[Weapon Swing Design]]
+<!-- related:end -->

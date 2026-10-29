@@ -1,5 +1,5 @@
 ---
-tags: [ui, motion, animation, tweenservice, timing, easing, springs, reduced-motion, design-system]
+tags: [ui, motion, animation, tweenservice, timing, easing, springs, reduced-motion, design-system, type/guide, area/ui, level/intermediate]
 ---
 # UI Motion Language and Timing
 
@@ -12,7 +12,7 @@ tags: [ui, motion, animation, tweenservice, timing, easing, springs, reduced-mot
 > - Exits are faster than entrances and use In easing without overshoot.
 > - Moves scale duration with screen-space distance, clamped.
 >
-> Cost: TL;DR ~150 tok · whole note ~6.3k tok. Read more: ## 5. Interruption: where most UI motion breaks · ## 8. A motion module that enforces the language · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~6.4k tok. Read more: ## 5. Interruption: where most UI motion breaks · ## 8. A motion module that enforces the language · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A motion language is the small set of rules that decides how every piece of UI moves: which direction things come from, how long they take, which easing they use, what happens when the player interrupts them, and what all of it collapses to when the player asks for reduced motion. Without one, every panel gets tuned by whoever built it, and the game ends up with 40 different "open" animations that feel like 40 different products.
@@ -437,5 +437,10 @@ The reference project's rule was "fades only, no scale or lift" under reduced mo
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Easing]] · [[Tween vs Spring]] · [[Links - Tweening and UI animation]] · [[Squash Stretch and Anticipation in UI and Characters]] · [[Skill - Roblox UI Builder]] · [[Tween and CFrame Animation of Objects]]
+[[Easing]] · Tween vs Spring · Links - Tweening and UI animation · Squash Stretch and Anticipation in UI and Characters · Skill - Roblox UI Builder · Tween and CFrame Animation of Objects
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Tween vs Spring]] · [[Layout - Scale Offset and Constraints]] · [[Responsive UI for Phone Tablet Console and PC]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[Text Fonts and Rich Text]] · [[Safe Areas and Insets]] · [[World-Space UI - BillboardGui and SurfaceGui]]
+<!-- related:end -->

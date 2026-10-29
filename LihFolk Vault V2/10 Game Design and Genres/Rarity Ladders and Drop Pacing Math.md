@@ -1,5 +1,5 @@
 ---
-tags: [game-design, rng, rarity, drops, pacing, math, balancing, collection, luck]
+tags: [game-design, rng, rarity, drops, pacing, math, balancing, collection, luck, type/guide, area/design, level/intermediate]
 ---
 # Rarity Ladders and Drop Pacing Math
 
@@ -12,7 +12,7 @@ tags: [game-design, rng, rarity, drops, pacing, math, balancing, collection, luc
 > - Median, p90 and p99 waits computed for every tier, in hours, per play phase.
 > - Next unreached tier has a median wait of one to two sessions at each stage.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.7k tok. Read more: ## 3. From odds to hours: pacing over a player's life · ## 5. Luck inflation: how ladders collapse · ## 9. Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.8k tok. Read more: ## 3. From odds to hours: pacing over a player's life · ## 5. Luck inflation: how ladders collapse · ## 9. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A rarity ladder is a schedule disguised as a lottery. When you write "Mythic: 1 in 3,125" you are really deciding *how many hours into the game the typical player first sees a Mythic, how long the unlucky tenth waits, and how many Mythics the veteran owns by week three*. This note gives the maths to set those numbers on purpose: geometric ladders, the distribution of waiting times, how roll speed and luck change pacing over a player's life, collection completion, variance in drop-based crafting, and how luck inflation quietly collapses a ladder. Everything is ordinary probability; the value is in applying it before launch instead of discovering it in reviews.
@@ -305,5 +305,10 @@ Rule of thumb: 1.25x to 1.5x per tier, plus within-tier variation from a fitted 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Drop Tables Rarity and Pity Systems]] · [[Pity Timer]] · [[Expected Value]] · [[Probability and Statistics for Designers]] · [[Variance]] · [[Paid Random Items and Odds Disclosure in Practice]]
+[[Drop Tables Rarity and Pity Systems]] · Pity Timer · Expected Value · Probability and Statistics for Designers · Variance · Paid Random Items and Odds Disclosure in Practice
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Pity Timer]] · [[Probability and Statistics for Designers]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Combat and RPG]] · [[Core Loops and Session Design]] · [[Retention and Return Hooks]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Tycoons]] · [[Time-to-Kill Math and a Weapon Balance Sheet]]
+<!-- related:end -->

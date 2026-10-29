@@ -1,5 +1,5 @@
 ---
-tags: [data, trading, duplication, transactions, security, economy, luau]
+tags: [data, trading, duplication, transactions, security, economy, luau, type/guide, area/data, level/intermediate, api/UpdateAsync, area/security]
 ---
 # Trading Systems Without Duplication
 
@@ -12,7 +12,7 @@ tags: [data, trading, duplication, transactions, security, economy, luau]
 > - Server-owned offers; edits bump a version; ready and confirm carry it.
 > - Countdown before confirm; any edit cancels it.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.2k tok. Read more: ## 3. The state machine and the server-owned offer · ## 5. Committing across two profiles · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.3k tok. Read more: ## 3. The state machine and the server-owned offer · ## 5. Committing across two profiles · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Player-to-player trading is the feature most likely to destroy an economy. A single duplication bug turns your rarest item into the most common one in a weekend, and every trade after that spreads the copies. The cause is almost never exotic: a trade changes **two** player profiles, Roblox data stores have no multi-key transaction, and the gap between "player A saved" and "player B saved" is where items are born or lost.
@@ -340,5 +340,10 @@ Scams are not duplication, but they generate more support tickets than dupes do.
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Player-Driven Trading Economies]] · [[Economy Exploits - Dupes Races and Purchase Abuse]] · [[Economy Design Start Here]] · [[Skill - Roblox DataStore Safety]] · [[Session Lock]] · [[Developer Products and ProcessReceipt]]
+[[Player-Driven Trading Economies]] · Economy Exploits - Dupes Races and Purchase Abuse · Economy Design Start Here · Skill - Roblox DataStore Safety · Session Lock · Developer Products and ProcessReceipt
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Economy Exploits - Dupes Races and Purchase Abuse]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[Purchase Data and Receipts]] · [[Dupe Hunting Test Script - Trades, Gifts, Drops and Rejoins]] · [[Data Loss Prevention and Recovery]] · [[Global State and Live Config]] · [[OrderedDataStores and Leaderboards]]
+<!-- related:end -->

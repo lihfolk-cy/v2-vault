@@ -1,5 +1,5 @@
 ---
-tags: [luau, buffer, binary, serialization, networking, compression]
+tags: [luau, buffer, binary, serialization, networking, compression, type/guide, area/scripting, level/advanced, area/data]
 ---
 # Buffers and Binary Data
 
@@ -12,7 +12,7 @@ tags: [luau, buffer, binary, serialization, networking, compression]
 > - Writer and reader live together and mirror each other.
 > - Field precision and ranges are documented and clamped.
 >
-> Cost: TL;DR ~170 tok · whole note ~4.8k tok. Read more: ## 2. A typed writer and reader · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.9k tok. Read more: ## 2. A typed writer and reader · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 `buffer` is a Luau type for a fixed-size, mutable block of raw bytes, with functions to read and write integers, floats, strings and bit fields at byte offsets. It replaces most uses of `string.pack`/`string.unpack` and of hand-rolled string encodings. Use it to make network payloads and saved data compact, to implement binary formats, and to give hot numeric code a dense, native-friendly memory layout. This note covers the API and its exact semantics, a typed reader/writer, quantization techniques, buffers across remotes, attributes and DataStores, `EncodingService` (base64, compression, hashing), and a production case where a binary clip format cut animation data to a fraction of its instance size.
@@ -157,7 +157,7 @@ Most game values do not need 64-bit doubles.
 | Position inside a 4096-stud map | `i16` per axis at 1/8 stud | 6 | 0.125 stud |
 | Yaw angle | `u8` (256 steps) or `u16` | 1 or 2 | 1.4 or 0.0055 degrees |
 | Unit direction | 2 x `i16` octahedral, or 3 x `i8` | 3 to 4 | ~0.01 to ~1 degree |
-| Rotation | Smallest-three quaternion, 3 x `i16` + 2 bits | ~6.25 | ~0.003 |
+| Rotation | Smallest-three [[Quaternions\|quaternion]], 3 x `i16` + 2 bits | ~6.25 | ~0.003 |
 | Timestamp offset | `u16` milliseconds from a base | 2 | 1 ms, 65 s range |
 
 ```lua
@@ -342,5 +342,10 @@ The senior trade-off: binary formats trade developer time and debuggability for 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Big Numbers Precision and Formatting]] · [[Snippets - Building and Sampling Clips]] · [[Luau Performance Patterns with Benchmarks]] · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]] · [[Baked Clip Stubs and Archiving]] · [[Advanced Luau Start Here]]
+[[Big Numbers Precision and Formatting]] · Snippets - Building and Sampling Clips · [[Luau Performance Patterns with Benchmarks]] · 2D Multiplayer - Server Authority and Replicating GUI Worlds · Baked Clip Stubs and Archiving · Advanced Luau Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Tables Metatables and OOP]] · [[Luau Type System and Strict Mode]] · [[Luau Language Essentials]] · [[Functions Closures and Upvalues]] · [[Metatables and OOP - When and When Not]] · [[Instances Attributes and Tags]] · [[Parallel Luau and Actors]] · [[Module Scripts and Requiring]]
+<!-- related:end -->

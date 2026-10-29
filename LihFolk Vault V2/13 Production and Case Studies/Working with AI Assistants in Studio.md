@@ -1,5 +1,5 @@
 ---
-tags: [production, ai-assistants, automation, verification, collaboration, case-study]
+tags: [production, ai-assistants, automation, verification, collaboration, case-study, type/case-study, area/production, level/intermediate, area/monetization]
 ---
 # Working with AI Assistants in Studio
 
@@ -12,7 +12,7 @@ tags: [production, ai-assistants, automation, verification, collaboration, case-
 > - Pre-save gate: compile, scan, size, clone-require, harness.
 > - Numbers over screenshots for verification.
 >
-> Cost: TL;DR ~130 tok · whole note ~3.8k tok. Read more: ## Verification discipline · ## Parallel sessions sharing one place · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.9k tok. Read more: ## Verification discipline · ## Parallel sessions sharing one place · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 AI coding assistants can now drive Roblox Studio directly: read the Explorer tree, read and edit scripts, run Luau in the Edit data model, capture the viewport, and call offline tools (Blender, Python, local servers) around it. Used well, they turn an owner with ideas into a small studio. Used badly, they produce a place full of half-verified changes, backups nobody can find, and work that overwrites other work.
@@ -229,5 +229,10 @@ Without this, each new session rediscovers the 200,000-character limit, the glob
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI Agents and Autonomous Workflows]] · [[Safety Rules for AI Agents in Studio]] · [[Case Study - Building a Game with AI Agents]] · [[Multiple Agents in One Studio]] · [[Roblox Studio MCP Server]] · [[Agent Review Loops and Guardrails in Practice]]
+[[AI Agents and Autonomous Workflows]] · Safety Rules for AI Agents in Studio · Case Study - Building a Game with AI Agents · Multiple Agents in One Studio · Roblox Studio MCP Server · Agent Review Loops and Guardrails in Practice
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Safety Rules for AI Agents in Studio]] · [[Case Study - Building a Game with AI Agents]] · [[Post-Mortem - Building a Melee Action Game]] · [[Planning and Scoping a Roblox Game]] · [[Asset Pipelines]] · [[Scoping and Roles for Small Teams]] · [[Release Process and Rollbacks]] · [[Case Study - Enemy Roster Rebuild]]
+<!-- related:end -->

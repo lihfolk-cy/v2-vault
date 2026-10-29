@@ -1,5 +1,5 @@
 ---
-tags: [ai-pitfalls, physics, animation, motor6d, cframe, priorities, animator, network-ownership, rigs, server-authority]
+tags: [ai-pitfalls, physics, animation, motor6d, cframe, priorities, animator, network-ownership, rigs, server-authority, type/guide, area/ai]
 verified: 2026-10-28
 ---
 # AI Pitfalls - Physics and Animation
@@ -13,7 +13,7 @@ verified: 2026-10-28
 > - Every track has an explicit priority; no `.Value` sorting.
 > - Attack clips that play while moving have no lower-body keys.
 >
-> Cost: TL;DR ~160 tok · whole note ~1.9k tok. Read more: ## 1. Motor6D composition order · ## 2. Priorities and weights · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~2.0k tok. Read more: ## 1. Motor6D composition order · ## 2. Priorities and weights · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Generated physics and animation code fails on maths conventions (which frame a CFrame is in), on engine behaviour the docs only hint at, and on Edit-mode versus Play-mode differences. Several entries below are **Measured** in the LihFolk reference project, which built hundreds of animated weapons and enemies. Hub: [[What AI Models Get Wrong in Roblox]].
@@ -116,3 +116,8 @@ end)
 - [[Debugging Physics and Network Ownership]]
 - [[Mover Constraints and Physics Controllers]]
 - [[Procedural Animation]]
+
+<!-- related:start -->
+## Related
+[[Engine Gotchas]] · [[Standing on Moving Vehicles and Platforms - Keeping Players Glued]] · [[Animation Glossary]] · [[AI Pitfalls - Networking and Security]] · [[AI Animation and Motion from Video]] · [[AI Pitfalls - Stale APIs and Luau]]
+<!-- related:end -->

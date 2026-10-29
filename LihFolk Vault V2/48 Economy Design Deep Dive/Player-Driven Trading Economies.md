@@ -1,5 +1,5 @@
 ---
-tags: [economy, trading, market-design, memorystore, pricing, scams, policy, luau, design]
+tags: [economy, trading, market-design, memorystore, pricing, scams, policy, luau, design, type/guide, area/economy, level/advanced]
 ---
 # Player-Driven Trading Economies
 
@@ -12,7 +12,7 @@ tags: [economy, trading, market-design, memorystore, pricing, scams, policy, lua
 > - Trade cooldown on new acquisitions; requirements and receive caps for new accounts.
 > - Format chosen from the ladder; premium currency never tradeable.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.7k tok. Read more: ## 7. Real-money trading, scams and moderation load · ## 8. A cross-server listing board with MemoryStore · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.8k tok. Read more: ## 7. Real-money trading, scams and moderation load · ## 8. A cross-server listing board with MemoryStore · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Trading Systems Without Duplication]] makes a trade correct: server-owned offers, a commit protocol across two profiles, recovery, policy gates. [[Economy Exploits - Dupes Races and Purchase Abuse]] covers the attacks. This note is about the **market** that trading creates once it works: how items become money, how prices form and how to show them without being manipulated, which trade formats to support, fees and taxes as sinks, controlling item supply when every copy lives forever, real-money trading and scams, and a cross-server listing board built on MemoryStore.
@@ -307,5 +307,10 @@ Important details:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Faucets and Sinks]] · [[UGC Pricing Limiteds and Marketplace Rules]] · [[Economies and Currencies]] · [[Commerce and Physical Goods]] · [[Expected Value]] · [[Progression Levels and Unlocks]]
+[[Faucets and Sinks]] · UGC Pricing Limiteds and Marketplace Rules · Economies and Currencies · Commerce and Physical Goods · Expected Value · Progression Levels and Unlocks
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Faucets and Sinks]] · [[UGC Pricing Limiteds and Marketplace Rules]] · [[Pricing Curves and Upgrade Costs]] · [[Economies and Currencies]] · [[Robux Price Points and Offer Design]] · [[Expected Value]]
+<!-- related:end -->

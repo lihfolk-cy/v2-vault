@@ -1,5 +1,5 @@
 ---
-tags: [accessibility, motion-sickness, reduced-motion, camera, fov, flashing, photosensitivity, comfort]
+tags: [accessibility, motion-sickness, reduced-motion, camera, fov, flashing, photosensitivity, comfort, type/guide, area/accessibility, level/intermediate, api/Camera]
 ---
 # Motion Sensitivity and Camera Comfort
 
@@ -12,10 +12,10 @@ tags: [accessibility, motion-sickness, reduced-motion, camera, fov, flashing, ph
 > - FOV slider (about 60 to 100), one FOV owner, effect contributions scaled and clamped.
 > - Camera shake scalable to zero; no gameplay roll.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.4k tok. Read more: ## 3. A comfort settings module · ## 5. Camera motion budget · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.5k tok. Read more: ## 3. A comfort settings module · ## 5. Camera motion budget · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-[[Accessibility]] covers `GuiService.ReducedMotionEnabled` for UI tweens. [[Camera Shake and Camera FX]] covers how shake is built and how the reference project scaled it under reduced motion. [[Camera Systems]] covers the camera itself. This note is about the player's body: why some players get sick or get headaches in Roblox games, which camera and effect choices cause it, a comfort settings module that ties the platform preference to game-specific controls, a horizon-locked vehicle camera, a speed vignette, and a flash limiter that keeps impact frames and rarity reveals under the photosensitivity guideline.
+[[Accessibility]] covers `GuiService.ReducedMotionEnabled` for UI tweens. [[Camera Shake and Camera FX]] covers how shake is built and how the reference project scaled it under reduced motion. [[Camera Systems]] covers the camera itself. This note is about the player's body: why some players get sick or get headaches in Roblox games, which camera and effect choices cause it, a comfort settings module that ties the platform preference to game-specific controls, a horizon-locked vehicle camera, a speed vignette, and a flash limiter that keeps [[impact frames]] and rarity reveals under the photosensitivity guideline.
 
 Sources: **Roblox docs (as of October 2026)** for engine facts (`Camera`, `GuiService`, `UserGameSettings`), the public **WCAG 2.x** guideline for flash thresholds, and **rule of thumb** for comfort numbers (the research on simulator sickness is broad; the numbers here are design defaults, not medical limits).
 
@@ -30,7 +30,7 @@ Simulator sickness comes mostly from a mismatch between what the eyes report (I 
 - **The field of view is narrow on a large, close screen.** A narrow FOV makes every turn sweep the image faster across the retina, and the mismatch between the screen's real angle and the rendered angle grows.
 - **Acceleration changes abruptly.** Constant velocity is comfortable; sudden starts, stops and FOV kicks are not.
 - **The frame rate is low or uneven.** Judder makes motion harder to integrate.
-- **Large parts of the view move at once.** Full-screen parallax, spinning backgrounds, screen-wide wobble.
+- **Large parts of the view move at once.** Full-screen [[parallax]], spinning backgrounds, screen-wide wobble.
 
 Separately, **photosensitive** players can have seizures triggered by flashing, especially large-area flashes and saturated red flashes. This is a safety issue, not comfort, and it has a published threshold (section 6).
 
@@ -415,5 +415,10 @@ See also: [[Accessibility Start Here]], [[Accessibility]], [[Camera Shake and Ca
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Snippets - Camera Shake and FX]] · [[Game Feel Start Here]] · [[Hit-Stop and Screen Shake Tuning by Numbers]] · [[Links - Cameras]] · [[Juice on a Budget - Mobile and Low-End]] · [[Tween vs Spring]]
+[[Snippets - Camera Shake and FX]] · Game Feel Start Here · Hit-Stop and Screen Shake Tuning by Numbers · Links - Cameras · Juice on a Budget - Mobile and Low-End · Tween vs Spring
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Comfort Toggles - Flashes Damage Numbers and Hit-Stop]] · [[Chase Cameras and Speed Effects for Vehicles]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Accessibility Cross-Links for QoL Settings]] · [[Layering Camera Feedback on the Default Camera]]
+<!-- related:end -->

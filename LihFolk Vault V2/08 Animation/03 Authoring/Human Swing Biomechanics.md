@@ -1,5 +1,5 @@
 ---
-tags: [animation, authoring, combat, sword, biomechanics, kinematic-chain, pronation, twist, qa]
+tags: [animation, authoring, combat, sword, biomechanics, kinematic-chain, pronation, twist, qa, type/guide, area/animation, level/intermediate]
 ---
 # Human Swing Biomechanics
 
@@ -12,7 +12,7 @@ tags: [animation, authoring, combat, sword, biomechanics, kinematic-chain, prona
 > - 35-60 deg hip-shoulder separation at the top of the windup
 > - `Clip.cut()` declared for every swing
 >
-> Cost: TL;DR ~130 tok · whole note ~1.4k tok. Read more: ## 2. Rules at 30 fps · ## 3. QA in the pipeline · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~1.5k tok. Read more: ## 2. Rules at 30 fps · ## 3. QA in the pipeline · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Measured strikes (kendo, batting, tennis, golf) agree on one pattern: a swing is a proximal-to-distal wave. The hips turn first, then the trunk, upper arm, elbow, wrist, and last the forearm twist. Each segment twists **once, in one direction**. Keyed swings that re-twist the arm between poses read as "the arm randomly twisting", even when every single pose looks fine. This note turns the published numbers into keyframe rules and QA gates. Full citations are in `D:\LihFolk Build\research\animation-references.md`.
@@ -76,3 +76,8 @@ Measured strikes (kendo, batting, tennis, golf) agree on one pattern: a swing is
 ## Connected notes
 
 [[Animation Start Here]] · [[Combat Animation Craft]] · [[Weapon Swing Design]]
+
+<!-- related:start -->
+## Related
+[[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Animation Quality Standard]] · [[Elbow Poles Swivel and Joint Limits]] · [[Animation Review Checklist]] · [[Arm QA Metrics Reference]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[Posing and Silhouettes]] · [[Case Study - Fixing Hundreds of Attack Clips]]
+<!-- related:end -->

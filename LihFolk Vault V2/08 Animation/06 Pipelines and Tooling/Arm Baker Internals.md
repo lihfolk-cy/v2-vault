@@ -1,5 +1,5 @@
 ---
-tags: [pipeline, ik, arms, baking, algorithms, advanced]
+tags: [pipeline, ik, arms, baking, algorithms, advanced, type/guide, area/animation, level/advanced, api/Animator]
 ---
 # Arm Baker Internals
 
@@ -283,7 +283,7 @@ After the first left solve, frames where a two-handed hold would bury the left a
 
 ## Stage 7: joint-space smoothing
 
-Each arm joint's rotation sequence is smoothed as hemisphere-aligned quaternions with a per-frame blend between a light Gaussian (sigma **0.8 frames**) and a heavy one (sigma **3.5 frames**):
+Each arm joint's rotation sequence is smoothed as hemisphere-aligned [[quaternions]] with a per-frame blend between a light Gaussian (sigma **0.8 frames**) and a heavy one (sigma **3.5 frames**):
 
 - right arm heavy weight: `max(1 - imp, popRepair)`;
 - left arm heavy weight: `max(1 - impL + 0.5 * deadw, popRepair)` where `impL = two + 0.3 * (1 - two)`.
@@ -416,5 +416,10 @@ The Studio writer reads `strip`, `keys` and `thin`, builds the clip with parents
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animation Quality Standard]] · [[Spec-Driven Move Authoring]] · [[Weapon Swing Design]] · [[Authoring Clips in Code]] · [[AI Animation and Motion from Video]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Animation Start Here]]
+[[Animation Quality Standard]] · [[Spec-Driven Move Authoring]] · [[Weapon Swing Design]] · [[Authoring Clips in Code]] · [[AI Animation and Motion from Video]] · Voxel Characters - Proportions Joints and Rigging · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Snippets - IK]] · [[LihFolk R15 Keyframe Pipeline]] · [[Pipeline - New Animated Weapon]] · [[IKControl Reference]] · [[Blade Grip and Wrist Limits]] · [[Posing and Silhouettes]] · [[Animation Review Checklist]] · [[Clip Buffer Format]]
+<!-- related:end -->

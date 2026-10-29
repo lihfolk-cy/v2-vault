@@ -1,5 +1,5 @@
 ---
-tags: [lighting, rendering, environment, settings, performance]
+tags: [lighting, rendering, environment, settings, performance, type/guide, area/vfx, level/intermediate, api/PrioritizeLightingQuality, area/lighting, api/Atmosphere, api/GlobalShadows]
 ---
 # Lighting Technologies and Settings
 
@@ -12,7 +12,7 @@ tags: [lighting, rendering, environment, settings, performance]
 > - `GlobalShadows` on unless the art style needs it off; interiors sealed and thick enough.
 > - `Ambient` at or below `OutdoorAmbient` in every channel.
 >
-> Cost: TL;DR ~220 tok · whole note ~5.0k tok. Read more: ## 1. Technology is deprecated: what replaced it · ## 3. The global properties, one by one · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~220 tok · whole note ~5.1k tok. Read more: ## 1. Technology is deprecated: what replaced it · ## 3. The global properties, one by one · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The `Lighting` service decides how every pixel of your world is shaded: which shading path the renderer uses, how bright the sun is, what colour the shadows take, how far players can see when their device is struggling, and what "indoors" means. Most lighting problems people bring to a forum ("my game looks flat", "light leaks through the wall", "it looks great in Studio and grey on my phone", "shadows vanished") come from four or five properties and one deprecated setting that still appears in every old tutorial.
@@ -251,5 +251,10 @@ See also: [[Atmosphere Sky Clouds and Post-Processing]], [[Light Sources and Sha
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Stylized Lighting Recipes]] · [[Lighting Untextured Art in Roblox]] · [[Links - Lighting]] · [[Baking Lighting and Detail into Textures]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Stylised vs Realistic Material Pipelines]]
+[[Stylized Lighting Recipes]] · [[Lighting Untextured Art in Roblox]] · Links - Lighting · Baking Lighting and Detail into Textures · Voxel Shading - Baked AO Edges and Lighting · Stylised vs Realistic Material Pipelines
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Voxel Shading - Baked AO Edges and Lighting]] · [[Baking Lighting and Detail into Textures]] · [[Weather System Architecture - State Machine, Transitions and Replication]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Particle Emitters In Depth]] · [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[VFX Performance Budgets and Culling]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [case-study, performance, instances, cleanup, place-size, studio, production]
+tags: [case-study, performance, instances, cleanup, place-size, studio, production, type/case-study, area/production, level/intermediate, area/performance]
 ---
 # Case Study: Instance Cleanup and Place Size
 
@@ -12,7 +12,7 @@ tags: [case-study, performance, instances, cleanup, place-size, studio, producti
 > - No backup folders in the place; originals as attributes, copies on disk.
 > - A written deletion policy with the reference-proof procedure.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.5k tok. Read more: ## Timeline of cuts · ## Proving something is unreferenced · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.6k tok. Read more: ## Timeline of cuts · ## Proving something is unreferenced · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 This case study is about the place as a file and a working environment: how one live action game (the reference project) grew to millions of instances, what that did to Studio, saves and joins, how the team cut it back, and the policies that decided what could be deleted. The animation-specific techniques (baking keyframe data into compact stubs, the clip archive) are covered in [[Case Study - Cutting a Million Instances]] and [[Baked Clip Stubs and Archiving]]; this note covers the process and the non-animation causes.
@@ -195,5 +195,10 @@ The reference project had most of these numbers, but only when someone went look
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Batch Processing Tools in Studio]] · [[Safety Rules for AI Agents in Studio]] · [[Performance and Memory]] · [[Documentation and Knowledge Bases]] · [[Case Study - Building a Game with AI Agents]] · [[Instance Count]]
+[[Batch Processing Tools in Studio]] · Safety Rules for AI Agents in Studio · Performance and Memory · [[Documentation and Knowledge Bases]] · Case Study - Building a Game with AI Agents · Instance Count
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Case Study - Building a Game with AI Agents]] · [[Working with AI Assistants in Studio]] · [[Team Roles and Workflows]] · [[Release Process and Rollbacks]] · [[Case Study - Enemy Roster Rebuild]] · [[Asset Pipelines]] · [[Scoping and Roles for Small Teams]] · [[Case Study - Phone UI Overhaul]] · [[Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts]]
+<!-- related:end -->

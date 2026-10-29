@@ -1,5 +1,5 @@
 ---
-tags: [authoring, publishing, release, assets, permissions]
+tags: [authoring, publishing, release, assets, permissions, type/guide, area/animation, level/intermediate, api/KeyframeSequenceProvider, api/RegisterKeyframeSequence, api/KeyframeSequence, api/Animation]
 ---
 # Publishing Animations
 
@@ -12,19 +12,19 @@ tags: [authoring, publishing, release, assets, permissions]
 > - Every clip slot has a published id (scan for empty `*Id` attributes and placeholder ids)
 > - Assets owned by the experience's owner (user or group), or permission granted
 >
-> Cost: TL;DR ~170 tok · whole note ~3.5k tok. Read more: ## 3. Ownership and permissions · ## 5. Keep ids as data, not in code · ## 10. Release checklist · ## Common mistakes
+> Cost: TL;DR ~170 tok · whole note ~3.6k tok. Read more: ## 3. Ownership and permissions · ## 5. Keep ids as data, not in code · ## 10. Release checklist · ## Common mistakes
 <!-- tldr:end -->
 
 A clip in your place is just data. For the engine's Animator to play it in a live server, it must be **published as an animation asset** owned by (or shared with) the experience, and referenced by its asset id. This note covers why, the current publishing flow, ownership and permissions, bulk publishing, how to store and load ids, preloading, verification in live servers, and the alternative of not publishing at all.
 
-Labels: "Roblox docs" = official pages (Animation Editor, KeyframeSequenceProvider, Asset privacy, Open Cloud Assets usage), checked October 2026. "Reference project" = one live action game.
+Labels: "Roblox docs" = official pages (Animation Editor, [[KeyframeSequenceProvider]], Asset privacy, Open Cloud Assets usage), checked October 2026. "Reference project" = one live action game.
 
 ## 1. Why publishing is not optional
 
 - Roblox docs (`KeyframeSequenceProvider:RegisterActiveKeyframeSequence`, same for `RegisterKeyframeSequence`): the generated id "is temporary and cannot be used outside of Studio. Developers wishing to generate an asset ID that can be used online should upload the KeyframeSequence to Roblox."
 - Saved clips (Animation Editor **Save**) are `KeyframeSequence`s in ServerStorage: no id at all.
 
-What it looked like in the reference project: abilities worked perfectly in Studio and did nothing in live servers. Every clip registered at runtime silently failed: weapon hinge parts on dozens of kits never moved, marker-driven effects never fired, ability clips played nothing. Worse, new kits generated from a template kept reintroducing the register call. Rule adopted: **never add RegisterKeyframeSequence for a shipped clip**, and grep for it in every release. See [[Case Study - Abilities That Only Worked in Studio]].
+What it looked like in the reference project: abilities worked perfectly in Studio and did nothing in live servers. Every clip registered at runtime silently failed: weapon hinge parts on dozens of kits never moved, marker-driven effects never fired, ability clips played nothing. Worse, new kits generated from a template kept reintroducing the register call. Rule adopted: **never add [[RegisterKeyframeSequence]] for a shipped clip**, and grep for it in every release. See [[Case Study - Abilities That Only Worked in Studio]].
 
 ## 2. The publishing flow (Roblox docs)
 
@@ -196,5 +196,10 @@ Published assets are not convenient to edit. Keep the sources:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[KeyframeSequence Keyframe and Pose Reference]] · [[Animation Objects]] · [[Ability Kits Architecture]] · [[Snippets - Playing Animations]] · [[Asset Upload Automation with Open Cloud]] · [[Packages and Shared Assets Across Places]] · [[Animation Start Here]]
+[[KeyframeSequence Keyframe and Pose Reference]] · [[Animation Objects]] · [[Ability Kits Architecture]] · [[Snippets - Playing Animations]] · [[Asset Upload Automation with Open Cloud]] · Packages and Shared Assets Across Places · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Weapon Rig Player]] · [[Performance and Memory]] · [[Animation Data from Blender to Roblox]] · [[Engine Gotchas]] · [[Combat Animation Craft]] · [[Case Study - Cutting a Million Instances]] · [[Animation Editor Advanced]] · [[Animation Glossary]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [modeling, critique, paintover, feedback, iteration, review, art-direction, workflow, studio, blender]
+tags: [modeling, critique, paintover, feedback, iteration, review, art-direction, workflow, studio, blender, type/guide, area/modeling]
 ---
 # Critiquing a Model - Paintovers and Iteration
 
@@ -200,5 +200,10 @@ Three must-fix notes, three paintovers, about 25 minutes of review. The same fee
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Colour Scripts and Value Structure for Untextured Art]] · [[Untextured Stylised Modelling Start Here]] · [[Low-Poly and Stylized Modeling]] · [[Keeping a Mixed Asset Library Consistent]] · [[Colour-Blind Safe Design]] · [[Voxel Palettes - Ramps Hue Shifting and Limits]]
+[[Colour Scripts and Value Structure for Untextured Art]] · Untextured Stylised Modelling Start Here · Low-Poly and Stylized Modeling · Keeping a Mixed Asset Library Consistent · Colour-Blind Safe Design · Voxel Palettes - Ramps Hue Shifting and Limits
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Low-Poly and Stylized Modeling]] · [[Keeping a Mixed Asset Library Consistent]] · [[The Gradient Palette Texture Workflow]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Voxel Palettes - Ramps Hue Shifting and Limits]] · [[Clean Stylised Shading - Weighted and Custom Normals]]
+<!-- related:end -->

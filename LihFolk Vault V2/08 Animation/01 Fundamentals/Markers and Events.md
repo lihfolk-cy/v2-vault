@@ -1,5 +1,5 @@
 ---
-tags: [fundamentals, markers, events, combat, timing]
+tags: [fundamentals, markers, events, combat, timing, type/guide, area/animation, level/beginner, api/AnimationTrack, area/gameplay, api/Animator, api/GetMarkerReachedSignal]
 ---
 # Markers and Events
 
@@ -12,18 +12,18 @@ tags: [fundamentals, markers, events, combat, timing]
 > - Listeners connect once per track and disconnect on `Ended`.
 > - Upper-body copies are marked so cosmetic listeners skip them.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.0k tok. Read more: ## Exactly when a marker fires · ## Nuances and edge cases · ## Checklist · ## Common mistakes in production
+> Cost: TL;DR ~160 tok · whole note ~4.2k tok. Read more: ## Exactly when a marker fires · ## Nuances and edge cases · ## Checklist · ## Common mistakes in production
 <!-- tldr:end -->
 
 Markers are how a clip tells code "now": the frame the blade connects, a footstep, the moment a trail should start, the instant a projectile leaves the hand. They are the bridge between animation and gameplay, and in a combat game they carry most of the timing. This note covers the three event mechanisms, exactly when markers fire (and when they silently do not), how to keep server timing honest, and the data-driven patterns that kept one game's 350 markers consistent across bakes, upper-body copies and network relays.
 
 ## Three mechanisms
 
-| | `KeyframeMarker` (use this) | Named Keyframe (legacy) | `MarkerCurve` (CurveAnimation) |
+| | `KeyframeMarker` (use this) | Named Keyframe (legacy) | `MarkerCurve` ([[CurveAnimation]]) |
 |---|---|---|---|
 | Lives in | A child of a `Keyframe` | The `Keyframe`'s own Name (anything but "Keyframe") | A curve in a CurveAnimation |
 | Authoring | Animation Editor event track ("Add Event", optional parameter), or code `kf:AddMarker(m)` | Rename the keyframe | Curve editor / `InsertMarkerAtTime` |
-| Listen | `track:GetMarkerReachedSignal("Hit"):Connect(function(value) end)` | `track.KeyframeReached:Connect(function(name) end)` | Same as KeyframeMarker |
+| Listen | `track:GetMarkerReachedSignal("Hit"):Connect(function(value) end)` | `track.KeyframeReached:Connect(function(name) end)` | Same as [[KeyframeMarker]] |
 | Payload | `Value` string (the editor's "parameter") | none | marker string |
 | Multiple per time | yes | one name per keyframe | yes |
 
@@ -228,5 +228,10 @@ Duplicate marker names in one clip (two `Hit`s) overwrite each other in this sim
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Snippets - Enemy Client Animator]] · [[Combat Animation Craft]] · [[Animation Editor Advanced]] · [[Snippets - Playing Animations]] · [[Building a Signal Library]] · [[Hit-Stop]] · [[Animation Start Here]]
+[[Snippets - Enemy Client Animator]] · [[Combat Animation Craft]] · [[Animation Editor Advanced]] · [[Snippets - Playing Animations]] · [[Building a Signal Library]] · Hit-Stop · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Stance and Charge Moves]] · [[Playback, Priorities and Blending]] · [[Timing Spacing and Frame Charts]] · [[Animation Objects]] · [[Ability Kits Architecture]] · [[Lua Keyframe Player]] · [[Animation Glossary]] · [[Frame Order and RunService Timing]]
+<!-- related:end -->

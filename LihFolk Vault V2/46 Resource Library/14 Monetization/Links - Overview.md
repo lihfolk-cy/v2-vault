@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, monetization]
+tags: [resources, links, monetization, type/reference, area/monetization, level/beginner]
 ---
 # Links - Overview
 

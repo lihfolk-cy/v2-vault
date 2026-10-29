@@ -1,5 +1,5 @@
 ---
-tags: [gameplay, character-controller, movement, stamina, dash, input]
+tags: [gameplay, character-controller, movement, stamina, dash, input, type/guide, area/gameplay, level/intermediate, api/Humanoid]
 ---
 # Custom Character Controllers
 
@@ -12,7 +12,7 @@ tags: [gameplay, character-controller, movement, stamina, dash, input]
 > - Stamina has regen delay and exhausted lockout; bar always readable.
 > - Coyote time and jump buffer present.
 >
-> Cost: TL;DR ~130 tok · whole note ~4.2k tok. Read more: ## 4. Sprint and stamina · ## 7. Server validation that does not punish lag · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.3k tok. Read more: ## 4. Sprint and stamina · ## 7. Server validation that does not punish lag · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 "Custom character controller" covers a wide range: a sprint key with stamina on top of the default Humanoid, a full move set (double jump, wall jump, dash, slide, ground slam), or a complete replacement of Humanoid movement with a `ControllerManager`. This note is about building the movement layer players feel every second: how to structure it, where it runs, how to keep it responsive and still cheat-resistant, and the game-feel details (coyote time, jump buffering, stamina regen delay) that separate good controllers from stiff ones.
@@ -358,5 +358,10 @@ Details: [[Input - UserInputService and ContextActionService]], [[Gamepad and Co
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Humanoids and character controllers]] · [[Input Responsiveness Buffering and Coyote Time]] · [[Humanoid States and Animation]] · [[Input Buffering]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] · [[2D Collision Physics and Platformer Movement]]
+[[Links - Humanoids and character controllers]] · Input Responsiveness Buffering and Coyote Time · Humanoid States and Animation · Input Buffering · Side-Scroller in 3D - Locking Camera and Movement to a Plane · 2D Collision Physics and Platformer Movement
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run]] · [[Status Effects Buffs and Stacking Rules]] · [[Chase Cameras and Speed Effects for Vehicles]] · [[Physics Assemblies and Constraints]] · [[Weather That Changes Gameplay - Grip, Visibility and Hearing]] · [[Grabs, Carries and Throws - Moving Players Safely]] · [[Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers]] · [[Pathfinding Edge Cases and Fallbacks]]
+<!-- related:end -->

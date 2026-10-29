@@ -1,5 +1,5 @@
 ---
-tags: [data, privacy, gdpr, rtbf, right-to-erasure, compliance, webhooks]
+tags: [data, privacy, gdpr, rtbf, right-to-erasure, compliance, webhooks, type/guide, area/data, level/intermediate, api/RemoveAsync]
 ---
 # Player Privacy and Data Deletion
 
@@ -12,7 +12,7 @@ tags: [data, privacy, gdpr, rtbf, right-to-erasure, compliance, webhooks]
 > - Deletion templates for every standard and ordered key pattern, including old stores.
 > - Templates tested end to end with a dummy account.
 >
-> Cost: TL;DR ~170 tok · whole note ~3.4k tok. Read more: ## Mechanism 1: automated deletion templates · ## Mechanism 2: the Right to Erasure webhook · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~3.5k tok. Read more: ## Mechanism 1: automated deletion templates · ## Mechanism 2: the Right to Erasure webhook · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 If your game stores anything keyed by user id, you hold personal data, and global privacy laws (GDPR, CCPA, LGPD, PIPA and others) give users the right to have it deleted. Roblox passes those requests to you, and you are responsible for completing them. As of October 2026 Roblox offers three mechanisms: a daily message listing requests, **automated data store deletion templates**, and a **Right to Erasure webhook** for custom automation. This note explains what counts as personal data in a Roblox game, how each mechanism works, how to design keys so deletion is automatic, and the edge cases (scopes, ordered boards, period stores, backups, external services) that templates miss.
@@ -197,5 +197,10 @@ Partial deletion inside shared records (a guild roster, a trade log, a gift ledg
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Open Cloud and external APIs]] · [[Refunds Chargebacks and Purchase Support]] · [[Links - Session locking and data safety]] · [[Cookbook - Data and Saving]] · [[Logging Bans and Appeals]] · [[Crash and Error Telemetry]]
+[[Links - Open Cloud and external APIs]] · Refunds Chargebacks and Purchase Support · Links - Session locking and data safety · Cookbook - Data and Saving · Logging Bans and Appeals · Crash and Error Telemetry
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Data Loss Prevention and Recovery]] · [[Purchase Data and Receipts]] · [[Schema Migrations - Worked Case Studies]] · [[MemoryStore Service]] · [[Trading Systems Without Duplication]] · [[Saving Correctly - Autosave and BindToClose]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[Session Locking and Profile Libraries]]
+<!-- related:end -->

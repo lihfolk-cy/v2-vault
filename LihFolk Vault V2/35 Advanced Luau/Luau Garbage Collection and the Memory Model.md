@@ -1,5 +1,5 @@
 ---
-tags: [luau, advanced-luau, memory, garbage-collection, gc, weak-tables, performance]
+tags: [luau, advanced-luau, memory, garbage-collection, gc, weak-tables, performance, type/guide, area/scripting, level/advanced, area/performance, api/Model]
 ---
 # Luau Garbage Collection and the Memory Model
 
@@ -12,7 +12,7 @@ tags: [luau, advanced-luau, memory, garbage-collection, gc, weak-tables, perform
 > - Every module-level table keyed by players or instances has a removal path.
 > - No weak-table value references its key.
 >
-> Cost: TL;DR ~170 tok · whole note ~4.8k tok. Read more: ## 1. What lives on the heap · ## 4. What Luau leaves out, and why it matters · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.9k tok. Read more: ## 1. What lives on the heap · ## 4. What Luau leaves out, and why it matters · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The vault already says what leaks look like and how to hunt them ([[Memory Budgets and Leaks]], [[Hunting Memory Leaks Step by Step]]) and that allocation churn costs frame time ([[Luau Performance and Native Codegen]], [[Luau Performance Patterns with Benchmarks]]). This note explains the machinery underneath: which Luau values live on the heap and which do not, how the collector decides when to run and what it does in each phase, what Luau deliberately leaves out compared with other Lua versions, how Roblox Instances add a second lifetime on top, and how those facts turn into concrete rules. If you understand this model, most memory advice stops being folklore.
@@ -279,5 +279,10 @@ Actors can run in separate Luau VMs, each with its own heap and collector. Data 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Task Library Coroutines and Yielding]] · [[Luau Language Essentials]] · [[Metatables and OOP - When and When Not]] · [[Links - Memory leaks and cleanup]] · [[Tables Metatables and OOP]] · [[Script Performance]]
+[[Task Library Coroutines and Yielding]] · Luau Language Essentials · Metatables and OOP - When and When Not · Links - Memory leaks and cleanup · Tables Metatables and OOP · Script Performance
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Script Performance]] · [[Tables Metatables and OOP]] · [[Luau Language Essentials]] · [[Serialization Formats for Saves and Networking]] · [[Module Design and Dependency Injection]] · [[Advanced Types - Generics and Type Functions]]
+<!-- related:end -->

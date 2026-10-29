@@ -1,5 +1,5 @@
 ---
-tags: [physics, destruction, fracture, csg, geometryservice, explosions, performance]
+tags: [physics, destruction, fracture, csg, geometryservice, explosions, performance, type/guide, area/physics, level/intermediate, api/Terrain, area/performance]
 ---
 # Destruction and Fracture
 
@@ -12,7 +12,7 @@ tags: [physics, destruction, fracture, csg, geometryservice, explosions, perform
 > - Cosmetic breaks are client-only with pooled debris.
 > - Structural breaks: server-owned, pre-fractured or queued runtime fracture, connectivity checked.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.4k tok. Read more: ## 3. Technique B: pre-fractured models · ## 4. Technique C: runtime fracture with GeometryService · ## 9. Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.5k tok. Read more: ## 3. Technique B: pre-fractured models · ## 4. Technique C: runtime fracture with GeometryService · ## 9. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Breaking things is one of the most satisfying verbs in a game and one of the easiest ways to wreck a Roblox server. Every new fragment is an instance that must replicate to every client, every unanchored fragment is a physics body, and every client's frame rate pays for the debris it can see. This note covers the five ways to make things break (swap models, pre-fractured welds, runtime fracture with `GeometryService`, explosions, terrain and voxel destruction), how to decide what breaks on the server, the budgets that keep it running on phones, debris lifecycles, rebuilding, and the exploits destruction invites.
@@ -312,5 +312,10 @@ Rules of thumb for a mixed-device audience:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Parts Unions and MeshParts]] · [[Instance Count]] · [[Debugging Physics and Network Ownership]] · [[Network Ownership]] · [[Object Pooling]] · [[Infinite and Streamed Worlds]]
+[[Parts Unions and MeshParts]] · Instance Count · Debugging Physics and Network Ownership · Network Ownership · Object Pooling · Infinite and Streamed Worlds
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Explosions - Radius Damage, Falloff and Cover Checks]] · [[Vehicle Damage, Repair and Wreck States]] · [[Instance Count]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[Debugging Physics and Network Ownership]] · [[Standing on Moving Vehicles and Platforms - Keeping Players Glued]]
+<!-- related:end -->

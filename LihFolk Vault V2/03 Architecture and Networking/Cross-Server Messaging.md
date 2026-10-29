@@ -1,5 +1,5 @@
 ---
-tags: [architecture, networking, messagingservice, live-ops, cross-server]
+tags: [architecture, networking, messagingservice, live-ops, cross-server, type/guide, area/networking, level/intermediate, api/MessagingService, area/liveops, api/DataStore, api/HttpService]
 ---
 # Cross-Server Messaging
 
@@ -12,7 +12,7 @@ tags: [architecture, networking, messagingservice, live-ops, cross-server]
 > - Message duplicated
 > - Message late
 >
-> Cost: TL;DR ~110 tok · whole note ~4.5k tok. Read more: ## A robust wrapper · ## Nuances and edge cases · ## Reliability checklist for messages · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~4.6k tok. Read more: ## A robust wrapper · ## Nuances and edge cases · ## Reliability checklist for messages · ## Common mistakes
 <!-- tldr:end -->
 
 A popular experience runs as many independent servers. Each has its own DataModel and its own players, and by default they share nothing except DataStores. **MessagingService** lets servers of the same experience publish and subscribe to messages on named topics, typically delivered within one to two seconds (Roblox docs). It is how you build global announcements, cross-server events ("a world boss spawned somewhere"), server browsers, friend-follow notices and live-ops broadcasts. It is also **best effort, size-limited and rate-limited**, and treating it like a reliable database is the most common mistake. This note covers the exact limits, topic and payload design, reliability patterns, how it combines with MemoryStore and DataStores, and working code.
@@ -285,5 +285,10 @@ The senior trade-off: cross-server features (global events, shouts, live config)
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Live Content Pipeline]] · [[Links - Cross-server messaging]] · [[Multiplayer Services Start Here]] · [[Experience Notifications and Return Prompts]] · [[Debugging DataStore Problems]] · [[Parties and Group Teleports]]
+[[Live Content Pipeline]] · Links - Cross-server messaging · Multiplayer Services Start Here · Experience Notifications and Return Prompts · Debugging DataStore Problems · Parties and Group Teleports
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[RemoteEvents RemoteFunctions and Unreliable Remotes]] · [[Remote Abuse Patterns and Rate Limiting in Practice]] · [[Client-Server Model]] · [[Interest Management and Per-Player Replication]] · [[Replication Rules]] · [[Instance Streaming]] · [[Project Structure and Bootstrapping]] · [[Server Authority and Validation]]
+<!-- related:end -->

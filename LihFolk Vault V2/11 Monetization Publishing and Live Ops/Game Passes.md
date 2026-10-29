@@ -1,5 +1,5 @@
 ---
-tags: [monetization, game-passes, marketplaceservice, luau]
+tags: [monetization, game-passes, marketplaceservice, luau, type/guide, area/monetization, level/intermediate, api/GetProductInfoAsync, area/scripting, api/Player]
 ---
 # Game Passes
 
@@ -12,7 +12,7 @@ tags: [monetization, game-passes, marketplaceservice, luau]
 > - One server ownership cache, updated on join and on purchase
 > - Unknown ownership retried, not stored as false
 >
-> Cost: TL;DR ~140 tok · whole note ~3.9k tok. Read more: ## 3. Server code · ## 5. Designing a pass lineup · ## 7. Common mistakes · ## 8. Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.0k tok. Read more: ## 3. Server code · ## 5. Designing a pass lineup · ## 7. Common mistakes · ## 8. Checklist
 <!-- tldr:end -->
 
 A pass is a one-time Robux purchase that grants a permanent privilege: a multiplier, an area, a tool, a tag. This note covers how passes work, how to check ownership correctly (including the cases where the obvious check returns the wrong answer), how to grant in-session, and how to design a pass lineup. Facts verified against the Creator Hub "Passes" guide and the `MarketplaceService` reference **as of October 2026**.
@@ -282,5 +282,10 @@ Turn pass effects off where they would break the tutorial. The reference project
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Game passes]] · [[Shop with Game Passes and Developer Products End to End]] · [[Purchase Data and Receipts]] · [[Skill - Roblox Monetization Compliance]] · [[Genre Playbook - Simulators]] · [[UGC Pricing Limiteds and Marketplace Rules]]
+[[Links - Game passes]] · Shop with Game Passes and Developer Products End to End · Purchase Data and Receipts · Skill - Roblox Monetization Compliance · Genre Playbook - Simulators · UGC Pricing Limiteds and Marketplace Rules
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Shop with Game Passes and Developer Products End to End]] · [[Robux Price Points and Offer Design]] · [[Purchase Data and Receipts]] · [[Subscriptions and Premium Payouts]] · [[Roblox Policies Ratings and Compliance]] · [[Refunds Chargebacks and Purchase Support]] · [[Paid Random Items and Odds Disclosure in Practice]] · [[Economy Inflation Sinks and Faucets Math]] · [[Ads and Rewarded Video]] · [[Community Building]]
+<!-- related:end -->

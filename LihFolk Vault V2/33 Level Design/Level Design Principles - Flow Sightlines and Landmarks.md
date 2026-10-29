@@ -1,5 +1,5 @@
 ---
-tags: [level-design, flow, sightlines, landmarks, wayfinding, readability, camera, streaming]
+tags: [level-design, flow, sightlines, landmarks, wayfinding, readability, camera, streaming, type/guide, area/world, level/intermediate, area/gameplay]
 ---
 # Level Design Principles - Flow Sightlines and Landmarks
 
@@ -12,7 +12,7 @@ tags: [level-design, flow, sightlines, landmarks, wayfinding, readability, camer
 > - Critical path marked in the blockout; most first-time testers find it without UI.
 > - Optional content branches off and rejoins the critical path.
 >
-> Cost: TL;DR ~160 tok · whole note ~5.1k tok. Read more: ## 2. Flow: making the intended route the easy one · ## 3. Sightlines: what the player actually sees · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.3k tok. Read more: ## 2. Flow: making the intended route the easy one · ## 3. Sightlines: what the player actually sees · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 [[Level Design for Roblox]] covers the practical basics: measure the character, block out first, time the walks, give every zone one colour and one landmark, test for sight-line leaks into locked zones. This note goes a level deeper into the three ideas underneath all of that: **flow** (how players move through a space without being told), **sightlines** (what they can see from where they stand, and why it changes on every device), and **landmarks** (what they use to build a mental map). It ends with tools to measure all three instead of guessing.
@@ -289,5 +289,10 @@ In production you would not keep this table forever; ship a sampled version that
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Modelling to the Roblox Camera and Player Scale]] · [[Voxel Props Environments and Modular Tiles]] · [[Wave Function Collapse on Roblox]] · [[Streaming Radius]] · [[Proportion Exaggeration and Gameplay Distance]] · [[Stylized Lighting Recipes]]
+[[Modelling to the Roblox Camera and Player Scale]] · Voxel Props Environments and Modular Tiles · Wave Function Collapse on Roblox · Streaming Radius · Proportion Exaggeration and Gameplay Distance · Stylized Lighting Recipes
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Playtest Heatmaps - Position and Death Maps]] · [[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Camera Obstruction Handling - Occlusion Modes, Fades and Collision]] · [[Instanced Interiors - Pooled House and Room Copies for Many Players]] · [[Proportion Exaggeration and Gameplay Distance]] · [[Obby and Platforming Level Design]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]]
+<!-- related:end -->

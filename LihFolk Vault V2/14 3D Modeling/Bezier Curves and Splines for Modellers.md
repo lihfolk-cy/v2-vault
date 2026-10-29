@@ -12,10 +12,10 @@ tags: [modeling, curves, bezier, splines, catmull-rom, b-spline, nurbs, continui
 > - The tightest curvature sits where the eye should go.
 > - Hero curves are G2 (B-spline or G2 blends); pipes and mechanical parts may stay G1 arcs.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.0k tok. Read more: ## 2. Splines: chains of curves with rules · ## 3. Continuity: G and C, and why it shows · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.1k tok. Read more: ## 2. Splines: chains of curves with rules · ## 3. Continuity: G and C, and why it shows · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-Curves are how a modeller says "this shape flows": a blade edge, a horn spiral, a pipe run, a logo, the S of a character's pose, the ease of a keyframe. This note is the theory a modeller actually uses: what a Bezier curve is and why its handles behave as they do, how Catmull-Rom, B-splines, NURBS and Hermite curves differ, what G0/G1/G2 continuity means and why it shows in highlights, how to read curvature and spot kinks, and how the same maths drives Blender's F-curves. The Blender build side is in [[Curve-Based Modelling in Blender for Roblox]]; the Luau side is in [[Curves in Luau - Paths Beams and Motion]]; the gameplay-maths view (easing, arc-length tables) is in [[Interpolation Easing and Curves Math]].
+Curves are how a modeller says "this shape flows": a blade edge, a horn spiral, a pipe run, a logo, the S of a character's pose, the ease of a keyframe. This note is the theory a modeller actually uses: what a [[Bezier Curves|Bezier curve]] is and why its handles behave as they do, how Catmull-Rom, B-splines, NURBS and Hermite curves differ, what G0/G1/G2 continuity means and why it shows in highlights, how to read curvature and spot kinks, and how the same maths drives Blender's F-curves. The Blender build side is in [[Curve-Based Modelling in Blender for Roblox]]; the Luau side is in [[Curves in Luau - Paths Beams and Motion]]; the gameplay-maths view (easing, arc-length tables) is in [[Interpolation Easing and Curves Math]].
 
 Trust labels: **Measured** (run in headless Blender 5.2 with `lihfolk_curves.py`, October 2026), **Docs** (Blender or Roblox documentation), **Source** (paper or reference named in Sources), **Rule of thumb**, **Unverified**.
 
@@ -115,7 +115,7 @@ Two curves (or surfaces) meeting at a point can match at several levels.
 
 1. **Silhouette curvature.** Outlines where the radius changes gradually read as designed. Outlines that go straight, then suddenly round, then straight read as "rounded rectangle tool". This is visible at any triangle count.
 2. **Ring spacing that follows curvature.** Put rings where the curve bends; few on straights. Even rings on an uneven curve give the banding you were trying to avoid.
-3. **Hard-surface bevels can stay G1.** A one-segment bevel plus weighted normals ([[Clean Stylised Shading - Weighted and Custom Normals]]) is the efficient stylised answer. Spend G2 where the eye lingers: blade edges, guards, hero silhouettes, logos, vehicle bodies.
+3. **Hard-surface bevels can stay G1.** A one-segment bevel plus [[weighted normals]] ([[Clean Stylised Shading - Weighted and Custom Normals]]) is the efficient stylised answer. Spend G2 where the eye lingers: blade edges, guards, hero silhouettes, logos, vehicle bodies.
 
 ### Rounding a corner: arc fillet versus G2 blend
 
@@ -226,5 +226,10 @@ How Roblox's own easing differs from Blender's, and how the LihFolk pipeline bak
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Modeling Weapons and Props]] · [[Organic and Creature Modeling]] · [[Low-Poly and Stylized Modeling]] · [[Stylised Weapons From a Concept]] · [[CurveAnimation and Curve Channels]] · [[Easing]]
+[[Modeling Weapons and Props]] · [[Organic and Creature Modeling]] · [[Low-Poly and Stylized Modeling]] · [[Stylised Weapons From a Concept]] · CurveAnimation and Curve Channels · Easing
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Modeling Fundamentals for Games]] · [[Normal Maps and Detail Baking]] · [[Blender Workflow for Roblox Creators]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Procedural Model Kits - Lessons]] · [[Hand-Painted and Stylized Texturing]] · [[UV Unwrapping]]
+<!-- related:end -->

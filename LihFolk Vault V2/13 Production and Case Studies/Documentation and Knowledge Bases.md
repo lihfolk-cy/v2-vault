@@ -1,5 +1,5 @@
 ---
-tags: [production, documentation, notes, changelog, knowledge-base, obsidian, case-study]
+tags: [production, documentation, notes, changelog, knowledge-base, obsidian, case-study, type/case-study, area/production, level/intermediate, api/HttpService, area/monetization]
 ---
 # Documentation and Knowledge Bases
 
@@ -12,7 +12,7 @@ tags: [production, documentation, notes, changelog, knowledge-base, obsidian, ca
 > - The changelog is append-only with tagged, dated entries of a few lines.
 > - Every entry has the request quote, paths, verification level and revert.
 >
-> Cost: TL;DR ~160 tok · whole note ~3.7k tok. Read more: ## Four documents, four jobs · ## Generated documentation from the place · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.8k tok. Read more: ## Four documents, four jobs · ## Generated documentation from the place · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A Roblox place does not explain itself. The Explorer shows that `ReplicatedStorage.Enemies.EnemyDefs` exists; it does not say that it replaced an older system, that a flag in the old system's loop skips zones the new one owns, that the old system's script is 300 characters from the Source limit, or that the owner decided bosses do not scale. That knowledge lives in people's heads, in chat, or in notes. Only notes survive a week off, a new teammate, or a parallel workstream that was not in the room.
@@ -232,5 +232,10 @@ See [[Live Ops Events and Updates]] and [[Localization]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Live Content Pipeline]] · [[Case Study - Instance Cleanup and Place Size]] · [[Documentation and Onboarding New Developers]] · [[Pipeline Design Principles]] · [[Multiple Agents in One Studio]] · [[Safety Rules for AI Agents in Studio]]
+[[Live Content Pipeline]] · [[Case Study - Instance Cleanup and Place Size]] · Documentation and Onboarding New Developers · Pipeline Design Principles · Multiple Agents in One Studio · Safety Rules for AI Agents in Studio
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Post-Mortem - Building a Melee Action Game]] · [[Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts]] · [[Scoping and Roles for Small Teams]] · [[Asset Pipelines]] · [[Case Study - Building LihFolk V2 with AI Agents]] · [[Case Study - Phone UI Overhaul]] · [[Case Study - Enemy Roster Rebuild]] · [[Live Incident Response and Post-Mortems]]
+<!-- related:end -->

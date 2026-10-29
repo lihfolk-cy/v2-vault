@@ -1,5 +1,5 @@
 ---
-tags: [game-design, social, multiplayer, trading, pvp, friends, safety]
+tags: [game-design, social, multiplayer, trading, pvp, friends, safety, type/guide, area/design, level/intermediate, api/PolicyService, area/networking]
 ---
 # Social Design and Multiplayer Play
 
@@ -12,7 +12,7 @@ tags: [game-design, social, multiplayer, trading, pvp, friends, safety]
 > - Rare moments visible to the whole server.
 > - Hub designed as the social centre; density checked.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.2k tok. Read more: ## 4. Friends · ## 5. Cooperation · ## 11. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.4k tok. Read more: ## 4. Friends · ## 5. Cooperation · ## 11. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 Every Roblox game is multiplayer by default: players share a server, see each other's avatars, and usually arrived with or because of friends. Social design is deciding **what other players mean to you** in that shared space: scenery, audience, helpers, rivals, trading partners. Done well, it is the strongest retention force on the platform and an explicit discovery signal. Done badly, it produces griefing, scams and empty-feeling servers. This note covers the forms of social play, the features that make other players matter, trading and PvP design, and the safety rules that are not optional on a platform with young players.
@@ -311,5 +311,10 @@ Players follow creators into games (Docs). Features that help:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Community and Moderation Start Here]] · [[Robux Price Points and Offer Design]] · [[Friend Invites Referrals and Experience Invites]] · [[Platform Features Start Here]] · [[Trading Systems Without Duplication]] · [[Links - Community and social]]
+[[Community and Moderation Start Here]] · Robux Price Points and Offer Design · Friend Invites Referrals and Experience Invites · Platform Features Start Here · Trading Systems Without Duplication · Links - Community and social
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Genre Playbook - RNG and Collection Games]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Tycoons]] · [[Boss Fight Design Patterns]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - Survival and Crafting]] · [[First-Time User Experience and Onboarding]]
+<!-- related:end -->

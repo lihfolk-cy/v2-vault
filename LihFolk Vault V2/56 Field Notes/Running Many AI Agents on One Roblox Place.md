@@ -1,5 +1,5 @@
 ---
-tags: [field-notes, ai, agents, mcp, coordination, studio, workflow, backups]
+tags: [field-notes, ai, agents, mcp, coordination, studio, workflow, backups, type/guide, area/ai, level/intermediate, area/studio]
 ---
 # Running Many AI Agents on One Roblox Place
 
@@ -98,5 +98,10 @@ Every edit an agent makes carries a short marker comment, such as `-- [agent-ui-
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Multiple Agents in One Studio]] · [[Safety Rules for AI Agents in Studio]] · [[Case Study - Building a Game with AI Agents]] · [[Agent Review Loops and Guardrails in Practice]] · [[Version History and Backups]] · [[Field Notes Start Here]]
+[[Multiple Agents in One Studio]] · Safety Rules for AI Agents in Studio · Case Study - Building a Game with AI Agents · Agent Review Loops and Guardrails in Practice · Version History and Backups · [[Field Notes Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[AI Agents and Autonomous Workflows]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[Roblox Studio MCP Server]] · [[Resetting One Player's Data Safely]] · [[Moving Data Out of a Play Session]] · [[Server-Authoritative Freeze and Stun Timestamps]]
+<!-- related:end -->

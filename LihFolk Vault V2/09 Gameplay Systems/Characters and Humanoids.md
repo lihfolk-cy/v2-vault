@@ -1,5 +1,5 @@
 ---
-tags: [gameplay, characters, humanoid, spawning, health, states]
+tags: [gameplay, characters, humanoid, spawning, health, states, type/guide, area/gameplay, level/intermediate, api/Humanoid, api/ForceField, api/HipHeight]
 ---
 # Characters and Humanoids
 
@@ -12,7 +12,7 @@ tags: [gameplay, characters, humanoid, spawning, health, states]
 > - Movement-state edits happen on the owning machine.
 > - Character scale decided before ranges are tuned.
 >
-> Cost: TL;DR ~130 tok · whole note ~4.3k tok. Read more: ## 2. Movement properties and their defaults · ## 6. Keeping players in the world (production guards) · ## 9. Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.5k tok. Read more: ## 2. Movement properties and their defaults · ## 6. Keeping players in the world (production guards) · ## 9. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The `Humanoid` is the most used and least understood object in Roblox. It is a movement controller, a state machine, a health container, an appearance applier and a network-ownership anchor in one. Most "my character does something weird" bugs come from not knowing which of those jobs is running, on which machine. This note covers the character model, the Humanoid's properties and states, health and death, spawning and respawning, scaling, and the production failure modes (wall-jump exploits, players stuck in geometry, falling through the world).
@@ -57,7 +57,7 @@ The character is one rigid assembly rooted at `HumanoidRootPart` (see [[Physics 
 
 Rules of thumb:
 - **Change speeds on the server or the client, not both.** WalkSpeed replicates server to client, and the client's change is simulated locally (it owns the body). A server sprint system that sets WalkSpeed is honest but feels laggy; a client sprint system feels instant but is trivially exploitable. Production answer: the client sets WalkSpeed for feel, the server measures actual speed for anti-cheat ([[Exploits and Anti-Cheat]]).
-- **HipHeight is not "leg length".** It is the distance the Humanoid holds the root above the floor. Scaling a custom rig without fixing HipHeight gives a character that sinks into or floats above the ground. The reference project stored the old value in an attribute (`PreProHipHeight`) before fixing 17 enemy templates: always keep the original when you change it in bulk.
+- **[[HipHeight]] is not "leg length".** It is the distance the Humanoid holds the root above the floor. Scaling a custom rig without fixing HipHeight gives a character that sinks into or floats above the ground. The reference project stored the old value in an attribute (`PreProHipHeight`) before fixing 17 enemy templates: always keep the original when you change it in bulk.
 - **Large characters.** The reference project scales player characters 1.6x (about 9 studs tall). Every range (melee reach, ability radius, prompt distance, camera offset, door heights) had to account for it. Decide character scale before tuning anything else; re-tuning ranges afterwards touches every system. See [[Scale and Animation]].
 
 ### Moving a Humanoid from code
@@ -106,7 +106,7 @@ General lesson: `FloorMaterial` is "touching something", not "standing on flat g
 | `Health` is clamped to 0..`MaxHealth`, held at 0 when dead | Docs |
 | The default `Health` script regenerates 1% of MaxHealth per second for living player characters | Docs |
 | `TakeDamage(n)` respects a `ForceField`; setting `Health` directly bypasses it | Docs |
-| `SpawnLocation.Duration` default 10 s of ForceField on spawn | Docs |
+| `SpawnLocation.Duration` default 10 s of [[ForceField]] on spawn | Docs |
 | `BreakJointsOnDeath` default true; `RequiresNeck` default true | Docs |
 
 Server rules for health (rule of thumb, and enforced in the reference project):
@@ -259,5 +259,10 @@ Rule of thumb: name local-only flags with a `Local` suffix and never let the ser
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Spawn Points Safe Zones and Respawn Flow]] · [[Cookbook - Players and Characters]] · [[Ragdolls and Physics-Based Animation]] · [[Links - Humanoids and character controllers]] · [[Snippets - Ragdoll]] · [[Debugging Physics and Network Ownership]]
+[[Spawn Points Safe Zones and Respawn Flow]] · Cookbook - Players and Characters · Ragdolls and Physics-Based Animation · Links - Humanoids and character controllers · Snippets - Ragdoll · Debugging Physics and Network Ownership
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Cookbook - Players and Characters]] · [[Ragdolls and Physics-Based Animation]] · [[Character Select and Class Systems with Different Rigs]] · [[Pathfinding Edge Cases and Fallbacks]] · [[Combat Systems Architecture]] · [[Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run]] · [[Downed, Revive and Bleed-Out States]] · [[Grabs, Carries and Throws - Moving Players Safely]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]]
+<!-- related:end -->

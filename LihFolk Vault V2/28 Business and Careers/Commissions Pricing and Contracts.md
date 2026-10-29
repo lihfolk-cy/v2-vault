@@ -1,5 +1,5 @@
 ---
-tags: [business, commissions, freelancing, pricing, contracts, careers, minors]
+tags: [business, commissions, freelancing, pricing, contracts, careers, minors, type/guide, area/business, level/intermediate]
 ---
 # Commissions Pricing and Contracts
 
@@ -12,7 +12,7 @@ tags: [business, commissions, freelancing, pricing, contracts, careers, minors]
 > - Scope with includes, excludes, testing bar and revisions.
 > - Price, currency and milestone schedule written.
 >
-> Cost: TL;DR ~130 tok · whole note ~4.2k tok. Read more: ## 1. Pricing: three models and when each fails · ## 3. The contract: short, written, agreed · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.3k tok. Read more: ## 1. Pricing: three models and when each fails · ## 3. The contract: short, written, agreed · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 > **Not advice.** General information for developers who take paid work. It is not legal, tax or financial advice. Contract law, consumer law and tax rules differ by country. For anything large, or anything you are unsure about, ask a qualified professional where you live. Anyone under 18 needs a parent or guardian to agree to contracts and handle payment; in many places a contract with a minor can be cancelled by the minor, so clients should expect the parent or guardian to sign or approve.
@@ -277,5 +277,10 @@ Quote: midpoint 29 hours x hourly rate x 1.2 risk factor, as a fixed price, in t
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Working with Contractors and Revenue Splits]] · [[Working with Content Creators]] · [[Team Collaboration Start Here]] · [[Publishing Selling and Updating Plugins]] · [[Groups Roles and Permissions for Studios]] · [[Subscriptions and Premium Payouts]]
+[[Working with Contractors and Revenue Splits]] · Working with Content Creators · Team Collaboration Start Here · Publishing Selling and Updating Plugins · Groups Roles and Permissions for Studios · Subscriptions and Premium Payouts
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Groups Roles and Permissions for Studios]] · [[Publishing Selling and Updating Plugins]] · [[Working with Content Creators]] · [[Documentation and Onboarding New Developers]] · [[Monetization Overview]] · [[Open-Source Licenses for Roblox Libraries - Quick Reference]]
+<!-- related:end -->

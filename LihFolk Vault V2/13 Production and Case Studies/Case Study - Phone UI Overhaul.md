@@ -1,5 +1,5 @@
 ---
-tags: [case-study, ui, mobile, phone, responsive, testing, production]
+tags: [case-study, ui, mobile, phone, responsive, testing, production, type/case-study, area/production, level/intermediate, api/UserInputService, area/ui]
 ---
 # Case Study: Phone UI Overhaul
 
@@ -12,7 +12,7 @@ tags: [case-study, ui, mobile, phone, responsive, testing, production]
 > - Every screen has a phone arrangement or an explicit "fits as is" mark.
 > - Desktop values stored and restored exactly.
 >
-> Cost: TL;DR ~120 tok · whole note ~3.2k tok. Read more: ## Approach 3: real phone layouts (the following days) · ## Bugs the checker found · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~120 tok · whole note ~3.4k tok. Read more: ## Approach 3: real phone layouts (the following days) · ## Bugs the checker found · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most Roblox players are on phones, and most Roblox UI is designed on a desktop monitor. This case study follows one live action game (the reference project) from "the desktop UI, scaled down" to real phone layouts for every screen, with automated checks that prove nothing overlaps and every button is big enough to tap. It covers the three approaches tried, why the first two were not enough, the framework that worked, the bugs it found, and the numbers.
@@ -237,5 +237,10 @@ The overhaul ran over about five days of a UI workstream, interleaved with other
 
 ## Connected notes
 <!-- auto-links:start -->
-[[UI Asset Pipeline]] · [[Skill - Roblox UI Builder]] · [[Debugging UI Layout and Input]] · [[Cookbook - UI]] · [[Safe Area]] · [[Readable Text and UI Scale]]
+[[UI Asset Pipeline]] · Skill - Roblox UI Builder · Debugging UI Layout and Input · Cookbook - UI · Safe Area · Readable Text and UI Scale
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Debugging UI Layout and Input]] · [[AI Pitfalls - UI and Input]] · [[Team Roles and Workflows]] · [[Case Study - Fast Join and Deferred Loading]] · [[Case Study - Instance Cleanup and Place Size]] · [[Release Process and Rollbacks]] · [[Documentation and Knowledge Bases]] · [[Case Study - Enemy Roster Rebuild]] · [[Planning and Scoping a Roblox Game]] · [[Working with AI Assistants in Studio]]
+<!-- related:end -->

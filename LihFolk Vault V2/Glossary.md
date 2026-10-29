@@ -1,5 +1,5 @@
 ---
-tags: [reference, glossary]
+tags: [reference, glossary, type/reference, level/beginner, api/ProcessReceipt, api/SurfaceAppearance, api/DataStore]
 ---
 # Glossary
 
@@ -8,11 +8,11 @@ Cross-section terms. Animation terms (Animator, KeyframeSequence, poles, rotatio
 | Term | Meaning | Read more |
 |---|---|---|
 | **Actor** | A container whose scripts can run in parallel (Parallel Luau) | [[Parallel Luau and Actors]] |
-| **Active Spender** | A paying user, the unit of Creator Rewards payouts | [[Subscriptions and Premium Payouts]] |
+| **Active Spender** | A paying user, the unit of [[Creator Rewards]] payouts | [[Subscriptions and Premium Payouts]] |
 | **Agent (AI)** | An AI that takes actions with tools (edit scripts, run Luau, render) instead of only chatting | [[AI Agents and Autonomous Workflows]] |
 | **Assembly** | Parts welded or rigidly joined into one physics body | [[Physics Assemblies and Constraints]] |
 | **Attribute** | A typed custom value on an Instance; replicates and fires change events | [[Instances Attributes and Tags]] |
-| **Audio API** | The newer audio graph: AudioPlayer, AudioEmitter, AudioListener, Wire, effects | [[The Audio API - Players Emitters Wires and Effects]] |
+| **Audio API** | The newer audio graph: [[AudioPlayer]], [[AudioEmitter]], AudioListener, Wire, effects | [[The Audio API - Players Emitters Wires and Effects]] |
 | **BindToClose** | Server shutdown callback; up to 30 s to save | [[Saving Correctly - Autosave and BindToClose]] |
 | **Buffer** | Fixed-size mutable byte array in Luau | [[Buffers and Binary Data]] |
 | **CanvasGroup** | A GUI container rendered as one image (fades, clipping) | [[ScreenGui Fundamentals]] |
@@ -24,7 +24,7 @@ Cross-section terms. Animation terms (Animator, KeyframeSequence, poles, rotatio
 | **DataStore** | Roblox's persistent key-value storage | [[DataStore Fundamentals]] |
 | **Developer Product** | A repeatable purchase (currency, boosts), granted via ProcessReceipt | [[Developer Products and ProcessReceipt]] |
 | **Draw call** | One batch sent to the GPU; fewer is faster | [[Art Budgets - Triangles Draw Calls Memory]] |
-| **ECS** | Entity Component System architecture | [[Entity Component Systems]] |
+| **[[Entity Component System\|ECS]]** | Entity Component System architecture | [[Entity Component Systems]] |
 | **FTUE** | First-time user experience | [[First-Time User Experience and Onboarding]] |
 | **Game Pass** | A one-time purchase that grants a permanent perk | [[Game Passes]] |
 | **Idempotent** | Safe to run twice with the same result (essential for receipts and installers) | [[Developer Products and ProcessReceipt]], [[Pipeline Design Principles]] |
@@ -45,7 +45,7 @@ Cross-section terms. Animation terms (Animator, KeyframeSequence, poles, rotatio
 | **Pity** | A guarantee after N unlucky rolls | [[RNG Drops and Luck Systems]] |
 | **Pipeline** | A repeatable sequence of steps that turns source into in-game content | [[Pipeline Design Principles]] |
 | **ProcessReceipt** | The callback that grants Developer Product purchases | [[Developer Products and ProcessReceipt]] |
-| **ProfileStore / profile library** | A wrapper that adds session locking and safe saving on DataStores | [[Session Locking and Profile Libraries]] |
+| **[[ProfileStore]] / profile library** | A wrapper that adds session locking and safe saving on DataStores | [[Session Locking and Profile Libraries]] |
 | **Rebirth / prestige** | Resetting progress for a permanent multiplier | [[Progression and Pacing Design]] |
 | **RemoteEvent / RemoteFunction** | Client-server messages; UnreliableRemoteEvent drops instead of queueing | [[RemoteEvents RemoteFunctions and Unreliable Remotes]] |
 | **Replication** | How server changes reach clients | [[Replication Rules]] |

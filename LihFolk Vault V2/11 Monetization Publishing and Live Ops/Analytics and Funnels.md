@@ -1,5 +1,5 @@
 ---
-tags: [analytics, analyticsservice, funnels, economy, custom-events, live-ops, luau]
+tags: [analytics, analyticsservice, funnels, economy, custom-events, live-ops, luau, type/guide, area/monetization, level/intermediate, api/AnalyticsService, area/economy]
 ---
 # Analytics and Funnels
 
@@ -12,7 +12,7 @@ tags: [analytics, analyticsservice, funnels, economy, custom-events, live-ops, l
 > - All currency changes through one function that logs economy events
 > - Onboarding funnel from join to 10 minutes
 >
-> Cost: TL;DR ~140 tok · whole note ~3.8k tok. Read more: ## 3. A typed analytics module · ## 5. Funnels · ## 7. Common mistakes · ## 8. Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.9k tok. Read more: ## 3. A typed analytics module · ## 5. Funnels · ## 7. Common mistakes · ## 8. Checklist
 <!-- tldr:end -->
 
 Creator Analytics gives every game standard dashboards (retention, engagement, monetization, acquisition) for free. `AnalyticsService` adds your own data: **economy events** (currency sources and sinks), **funnel events** (where players drop out of a sequence), **progression events** and **custom events** (anything else). This note covers what each dashboard tells you, how to instrument a game correctly in Luau, the limits that silently break instrumentation, and how to turn charts into decisions. Verified against the Creator Hub analytics pages and the `AnalyticsService` reference **as of October 2026**.
@@ -27,7 +27,7 @@ Key metrics named in the docs: **Day 1, Day 7, Day 30 retention**, average sessi
 
 Thresholds and limits (Docs): benchmark scorecards need **100+ DAU** and update daily; watchlists hold up to nine games.
 
-Separate dashboards elsewhere in the Creator Hub: Ads analytics ([[Ads and Rewarded Video]]), Creator Rewards and Roblox Plus earnings ([[Subscriptions and Premium Payouts]]), notification analytics ([[Live Ops Events and Updates]]), thumbnail personalisation ([[Thumbnails Icons and Store Page]]), the error report and performance dashboards ([[Crash and Error Telemetry]]).
+Separate dashboards elsewhere in the Creator Hub: Ads analytics ([[Ads and Rewarded Video]]), [[Creator Rewards]] and Roblox Plus earnings ([[Subscriptions and Premium Payouts]]), notification analytics ([[Live Ops Events and Updates]]), thumbnail personalisation ([[Thumbnails Icons and Store Page]]), the error report and performance dashboards ([[Crash and Error Telemetry]]).
 
 ### Reading the core four (rule of thumb)
 - **D1 retention** is the health of your first session. If it is low, nothing else matters yet.
@@ -298,5 +298,10 @@ Use a new session id per shop open. If 3 to 4 is weak, price or prompt timing is
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Economy Telemetry and Balancing Live]] · [[Currency Architecture - Soft Hard and Event Currencies]] · [[Telemetry Events]] · [[Onboarding Funnel]] · [[Links - Analytics]] · [[A-B Testing and Experiments on Roblox]]
+[[Economy Telemetry and Balancing Live]] · Currency Architecture - Soft Hard and Event Currencies · Telemetry Events · Onboarding Funnel · Links - Analytics · A-B Testing and Experiments on Roblox
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Monetization Overview]] · [[Currency Architecture - Soft Hard and Event Currencies]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Economy Inflation Sinks and Faucets Math]] · [[Telemetry Events]] · [[Robux Price Points and Offer Design]] · [[Developer Products and ProcessReceipt]] · [[Refunds Chargebacks and Purchase Support]] · [[Roblox Policies Ratings and Compliance]] · [[Community Building]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [audio, sound-design, combat, layering, variation, ui-sounds]
+tags: [audio, sound-design, combat, layering, variation, ui-sounds, type/guide, area/vfx, level/intermediate, area/audio, api/Sound]
 ---
 # Sound Design for Games
 
@@ -12,7 +12,7 @@ tags: [audio, sound-design, combat, layering, variation, ui-sounds]
 > - Peaks aligned to visual beats from measured data.
 > - Variation by bags, pitch and recombination; choke on rapid repeats.
 >
-> Cost: TL;DR ~160 tok · whole note ~3.4k tok. Read more: ## 2. Timing: the peak lands on the beat · ## 5. Physics-driven and state-driven sounds · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.5k tok. Read more: ## 2. Timing: the peak lands on the beat · ## 5. Physics-driven and state-driven sounds · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Sound design is deciding what every action sounds like, then making it sound like that every time without becoming repetitive, without arriving late, and without drowning everything else. On Roblox you rarely record your own foley; you assemble sounds from licensed library takes and your own uploads, slice them, layer them, pitch them, level them and trigger them precisely. This note is the craft side: layering, timing to the visual beat, variation, character and weapon voices, enemy sound profiles, physics-driven sounds, UI kits, cues as gameplay information, and the governance that keeps a sound library sane.
@@ -256,5 +256,10 @@ See also: [[Sound Fundamentals]], [[Spatial Audio and Mixing]], [[Music and Adap
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Combat Sound Design and Feedback]] · [[Audio Pipeline]] · [[Feedback Timing - Sound Visual and Haptic Sync]] · [[AI Audio - Voice Music and SFX]] · [[Captions and Audio Accessibility]] · [[Links - Sounds and the Audio API]]
+[[Combat Sound Design and Feedback]] · [[Audio Pipeline]] · Feedback Timing - Sound Visual and Haptic Sync · AI Audio - Voice Music and SFX · Captions and Audio Accessibility · Links - Sounds and the Audio API
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Sound Design Pitfalls - Reused Ids Onsets and Layered Loops]] · [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Engine and Tyre Audio Driven by RPM and Slip]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[VFX Design Playbook]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Music Licensing and Audio Upload Rules for 2026]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]]
+<!-- related:end -->

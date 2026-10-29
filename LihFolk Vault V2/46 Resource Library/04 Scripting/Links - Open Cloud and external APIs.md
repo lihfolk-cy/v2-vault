@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, scripting]
+tags: [resources, links, scripting, type/reference, area/scripting, level/advanced, api/HttpService]
 ---
 # Links - Open Cloud and external APIs
 

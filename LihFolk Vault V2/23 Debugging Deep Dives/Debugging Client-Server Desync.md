@@ -1,5 +1,5 @@
 ---
-tags: [debugging, networking, replication, desync, attributes, remotes]
+tags: [debugging, networking, replication, desync, attributes, remotes, type/guide, area/debugging, level/advanced, api/CollectionService, area/networking, api/RemoteFunction]
 ---
 # Debugging Client-Server Desync
 
@@ -336,5 +336,10 @@ Debug move: print from the place that **writes the label**, not from the data. I
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Replication Boundary]] · [[Cookbook - Remotes and Networking]] · [[Network Performance]] · [[Skill - Roblox Secure Remotes]] · [[Server Authority]] · [[Skill - Roblox Debugging]]
+[[Replication Boundary]] · Cookbook - Remotes and Networking · Network Performance · Skill - Roblox Secure Remotes · Server Authority · Skill - Roblox Debugging
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Network Performance]] · [[Cookbook - Remotes and Networking]] · [[Reading Luau Errors and Stack Traces]] · [[The Debugging Method - Reproduce Isolate Bisect]] · [[Debugging Live Servers]] · [[Debugging DataStore Problems]]
+<!-- related:end -->

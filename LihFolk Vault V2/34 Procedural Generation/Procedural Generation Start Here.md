@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [procedural, generation, hub, start-here]
+tags: [procedural, generation, hub, start-here, type/hub, area/procedural, level/beginner, api/Terrain]
 ---
 # Procedural Generation Start Here
 
@@ -56,5 +56,5 @@ Engine facts are labelled "Roblox docs (as of October 2026)". Several behaviours
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Deterministic Simulation]] · [[Links - Terrain]] · [[Level Design Start Here]] · [[Economy Design Start Here]] · [[Variance]] · [[Math Vectors and CFrames]]
+[[Deterministic Simulation]] · Links - Terrain · Level Design Start Here · Economy Design Start Here · Variance · Math Vectors and CFrames
 <!-- auto-links:end -->

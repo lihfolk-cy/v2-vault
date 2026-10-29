@@ -1,5 +1,5 @@
 ---
-tags: [luau, events, signals, connections, deferred-events, memory]
+tags: [luau, events, signals, connections, deferred-events, memory, type/guide, area/scripting, level/intermediate, api/BindableEvent, area/performance, api/Heartbeat]
 ---
 # Events Signals and Connections
 
@@ -12,7 +12,7 @@ tags: [luau, events, signals, connections, deferred-events, memory]
 > - Every connection to a signal that outlives its owner is stored and disconnected.
 > - Systems handle existing state, then subscribe.
 >
-> Cost: TL;DR ~170 tok · whole note ~5.4k tok. Read more: ## 4. Connection lifetime and leaks · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.5k tok. Read more: ## 4. Connection lifetime and leaks · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox is event driven. The engine exposes thousands of signals (`RBXScriptSignal`): `Touched`, `Changed`, `PlayerAdded`, `Heartbeat`, `ChildAdded`, `Activated`. Your code connects functions to them and gets back an `RBXScriptConnection`. Getting connections right means three things: run handlers at the right time (immediate vs deferred), avoid races, and disconnect what you connect. Leaked connections are the most common cause of memory growth and "ghost" behaviour in long-running servers.
@@ -421,5 +421,10 @@ The senior trade-off: events decouple code but hide the flow. A system with 30 s
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Events, signals and connections]] · [[Event Bus]] · [[Script Performance]] · [[Links - Memory leaks and cleanup]] · [[Custom Schedulers and Coroutine Patterns]] · [[Advanced Luau Start Here]]
+[[Links - Events, signals and connections]] · Event Bus · Script Performance · Links - Memory leaks and cleanup · Custom Schedulers and Coroutine Patterns · Advanced Luau Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Event Bus]] · [[Luau Garbage Collection and the Memory Model]] · [[Tables Metatables and OOP]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Metatables and OOP - When and When Not]] · [[Script Types and Run Context]] · [[Module Scripts and Requiring]] · [[Luau Performance Patterns with Benchmarks]] · [[Luau Type System and Strict Mode]] · [[Error Handling and Retries]]
+<!-- related:end -->

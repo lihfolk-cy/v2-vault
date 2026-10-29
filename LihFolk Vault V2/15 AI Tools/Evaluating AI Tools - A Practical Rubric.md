@@ -1,5 +1,5 @@
 ---
-tags: [ai, evaluation, rubric, tools, process, cost, licensing, verification]
+tags: [ai, evaluation, rubric, tools, process, cost, licensing, verification, type/guide, area/ai, level/intermediate]
 ---
 # Evaluating AI Tools - A Practical Rubric
 
@@ -12,7 +12,7 @@ tags: [ai, evaluation, rubric, tools, process, cost, licensing, verification]
 > - Acceptance criteria written before the trial.
 > - Every task logged: attempts, generation, verification, fix, integration, outcome.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.8k tok. Read more: ## 2. The rubric · ## 3. The trial protocol · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.9k tok. Read more: ## 2. The rubric · ## 3. The trial protocol · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 New AI tools for game development appear every month, each with a demo video that looks like it will replace a job. Most of them do not survive contact with a real Roblox project. This note is a method for deciding, with evidence instead of vibes, whether a tool earns a place in your pipeline: the questions that matter, a weighted scoring rubric, a two-week trial protocol built on tasks from your own backlog, how to measure the cost of verification (the hidden cost that sinks most tools), kill criteria, and how to re-evaluate when the tool changes under you.
@@ -263,5 +263,10 @@ See also: [[AI in Roblox Development Overview]], [[Prompting and Verifying AI Ou
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Team Roles and Workflows]] · [[Case Study - Building a Game with AI Agents]] · [[AI Image Generation for Icons Thumbnails and Concepts]] · [[Working with Contractors and Revenue Splits]] · [[Safety Rules for AI Agents in Studio]] · [[Third-Party Skill - Caveman Token Saver]]
+[[Team Roles and Workflows]] · Case Study - Building a Game with AI Agents · [[AI Image Generation for Icons Thumbnails and Concepts]] · Working with Contractors and Revenue Splits · Safety Rules for AI Agents in Studio · Third-Party Skill - Caveman Token Saver
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[AI Asset Pipelines - Scoring, Reviewers and Spot Checks]] · [[Who Owns AI-Generated Code and Assets]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[What AI Models Get Wrong in Roblox]] · [[Roblox Generative AI - Cube Mesh and Texture Generation]] · [[Benchmark - Does a Knowledge Vault Make AI Better at Roblox]] · [[In-Game AI - LLM NPCs and Text Generation]]
+<!-- related:end -->

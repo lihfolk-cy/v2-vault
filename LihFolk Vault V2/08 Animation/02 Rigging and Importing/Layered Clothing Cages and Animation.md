@@ -1,5 +1,5 @@
 ---
-tags: [rigging, layered-clothing, cages, wraplayer, avatar]
+tags: [rigging, layered-clothing, cages, wraplayer, avatar, type/guide, area/animation, level/intermediate, area/avatars]
 ---
 # Layered Clothing Cages and Animation
 
@@ -9,7 +9,7 @@ tags: [rigging, layered-clothing, cages, wraplayer, avatar]
 > - Avoid: Deleted or re-UV'd cage vertices -> Start from the cage templates; edit positions only
 > - Avoid: Only an inner cage -> Both cages, outer adjusted
 >
-> Cost: TL;DR ~100 tok · whole note ~2.7k tok. Read more: ## 2. How it deforms when the character moves · ## 4. What this means for animation · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~2.8k tok. Read more: ## 2. How it deforms when the character moves · ## 4. What this means for animation · ## Common mistakes
 <!-- tldr:end -->
 
 Layered clothing is Roblox's system for 3D garments that fit any body and stack over each other (a shirt under a jacket under a scarf). For an animator it matters because it changes what your clips look like on real players: clothes stretch, pinch and clip in extreme poses, long garments behave badly between the legs, and none of it is visible on the blocky test dummy. This note explains how the system deforms with animation, the specifications (Creator Hub, checked October 2026), and how to author clips and rigs that survive it.
@@ -140,5 +140,10 @@ Welded rigid pieces (armour, gear, weapon holsters) sit **over** layered clothin
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Layered Clothing Creation Workflow]] · [[UGC Avatar Items and Accessories]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Skinning Weights]] · [[Avatars and UGC Start Here]] · [[Bundles Animation Packs and Emotes for Sale]] · [[Animation Start Here]]
+[[Layered Clothing Creation Workflow]] · UGC Avatar Items and Accessories · Modeling Characters for R15 and Custom Rigs · Skinning Weights · Avatars and UGC Start Here · Bundles Animation Packs and Emotes for Sale · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[UGC Avatar Items and Accessories]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Rigging in Blender]] · [[Bones and Skinned Meshes]] · [[Creature Rig Conventions]] · [[Exporting FBX vs GLB]] · [[Retargeting Animations Between Rigs]] · [[Blender Armature and Bone Roll Conventions]] · [[Rigs and Joints]]
+<!-- related:end -->

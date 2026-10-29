@@ -1,5 +1,5 @@
 ---
-tags: [worked-build, leaderboards, ordered-datastore, datastore, budgets, ui, luau, strict]
+tags: [worked-build, leaderboards, ordered-datastore, datastore, budgets, ui, luau, strict, type/guide, area/gameplay, level/intermediate, api/DataStoreService]
 ---
 # Global Leaderboards End to End
 
@@ -12,7 +12,7 @@ tags: [worked-build, leaderboards, ordered-datastore, datastore, budgets, ui, lu
 > - Write and list budgets computed for the worst server size
 > - Writes staggered, only on change, never lowering monotonic scores
 >
-> Cost: TL;DR ~150 tok · whole note ~6.5k tok. Read more: ## 4. Server · ## 5. Client and UI · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~6.6k tok. Read more: ## 4. Server · ## 5. Client and UI · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Two cross-server leaderboards from an empty place: an all-time "most coins earned" board and a weekly board that resets every week without deleting anything. Scores come only from server-side profile stats, are written to ordered data stores on a budgeted schedule, read back once per board every two minutes per server, resolved to display names in batches, pushed to every client, and drawn both on a board in the world and as a player's own rank. It uses the foundation from [[Saved Inventory End to End]], whose `InventoryService.AddCoins` already maintains `Stats.CoinsEarned` and `Weekly`.
@@ -609,5 +609,10 @@ Prizes for top places need care: decide the cutoff time in UTC, freeze by readin
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Cookbook - Data and Saving]] · [[Links - Leaderboards]] · [[Economy Resets and Seasonal Wipes]] · [[Codes Redemption System End to End]] · [[Saving Correctly - Autosave and BindToClose]] · [[Session Lock]]
+[[Cookbook - Data and Saving]] · Links - Leaderboards · Economy Resets and Seasonal Wipes · [[Codes Redemption System End to End]] · Saving Correctly - Autosave and BindToClose · Session Lock
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Daily Rewards System End to End]] · [[Rebirth and Prestige System End to End]] · [[Shop with Game Passes and Developer Products End to End]] · [[LihFolk Systems Library]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[Round-Based Minigame Loop End to End]] · [[Weekend Build - Survival Gather, Craft and Place]] · [[Pet Hatching and Following End to End]]
+<!-- related:end -->

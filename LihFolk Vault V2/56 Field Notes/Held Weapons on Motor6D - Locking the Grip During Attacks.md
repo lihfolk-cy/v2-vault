@@ -1,5 +1,5 @@
 ---
-tags: [field-notes, animation, motor6d, weapons, grip, procedural, combat]
+tags: [field-notes, animation, motor6d, weapons, grip, procedural, combat, type/guide, area/animation, level/intermediate, api/Motor6D, area/gameplay]
 ---
 # Held Weapons on Motor6D - Locking the Grip During Attacks
 
@@ -12,7 +12,7 @@ tags: [field-notes, animation, motor6d, weapons, grip, procedural, combat]
 > - Clearance and sway corrections disabled from attack accept to recovery end.
 > - Locked frames write identity, or deliberately defer to clips that key the grip.
 >
-> Cost: TL;DR ~190 tok · whole note ~1.6k tok. Read more: ## What went wrong · ## The rule · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~1.8k tok. Read more: ## What went wrong · ## The rule · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A weapon held by a `Motor6D` between the hand and the handle is usually animated by two things at once: the attack clip and some procedural correction (sway, a "blade clearance" spring that tilts the blade away from the body or the ground, a look-at). During idle and walking that layering looks great. During attacks it makes the blade twist inside the hand, because the correction fights the clip on the one joint where the player is looking hardest. This note covers why, and the rule that fixed it: lock the grip during attack clips and keep the hold tilt constant. Grip angles are covered in [[Blade Grip and Wrist Limits]]; joint maths in [[Motor6D Math and CFrame Composition]].
@@ -97,5 +97,10 @@ Lock from the moment the attack request is accepted (not the first animation mar
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Blade Grip and Wrist Limits]] · [[Motor6D Math and CFrame Composition]] · [[Procedural Weapon Motion]] · [[Weapon Swing Design]] · [[Custom Rigs - Weapons and Props]] · [[Field Notes Start Here]]
+[[Blade Grip and Wrist Limits]] · Motor6D Math and CFrame Composition · Procedural Weapon Motion · Weapon Swing Design · Custom Rigs - Weapons and Props · [[Field Notes Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Procedural Animation]] · [[Animation Data Hygiene - Euler Wrap Joint Holes and Easing]] · [[Springs That Survive Long Frames - dt Clamps and NaN Guards]] · [[Layering Camera Feedback on the Default Camera]] · [[Hold-to-Attack Input That Never Sticks]] · [[Sound Design Pitfalls - Reused Ids Onsets and Layered Loops]] · [[Shared Close Buttons and Headers Across Many Screens]] · [[Server-Authoritative Freeze and Stun Timestamps]] · [[Client Hit Prediction for Melee Feedback]]
+<!-- related:end -->

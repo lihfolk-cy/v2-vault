@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, building-world]
+tags: [resources, links, building-world, type/reference, area/ui, level/intermediate, area/design]
 ---
 # Links - Level design and map layout
 

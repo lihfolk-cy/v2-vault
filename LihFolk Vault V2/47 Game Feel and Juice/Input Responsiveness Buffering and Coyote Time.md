@@ -1,5 +1,5 @@
 ---
-tags: [game-feel, input, responsiveness, buffering, coyote-time, controls, combat, platformer, luau]
+tags: [game-feel, input, responsiveness, buffering, coyote-time, controls, combat, platformer, luau, type/guide, area/game-feel, level/intermediate]
 ---
 # Input Responsiveness Buffering and Coyote Time
 
@@ -353,5 +353,10 @@ Rules that hold up (rule of thumb, consistent with [[Server Authority and Valida
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Input Buffering]] · [[Game Feel Start Here]] · [[2D Collision Physics and Platformer Movement]] · [[Rate Limiting]] · [[Combat Animation Craft]] · [[Genre Playbook - Battlegrounds and Arena Fighters]]
+[[Input Buffering]] · [[Game Feel Start Here]] · 2D Collision Physics and Platformer Movement · Rate Limiting · Combat Animation Craft · Genre Playbook - Battlegrounds and Arena Fighters
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Input Buffering]] · [[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]] · [[2D Collision Physics and Platformer Movement]] · [[Anticipation]] · [[Hold-to-Attack Input That Never Sticks]] · [[Combat Animation Craft]]
+<!-- related:end -->

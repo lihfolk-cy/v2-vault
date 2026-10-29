@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, hub]
+tags: [resources, links, hub, type/hub, area/audio, level/intermediate]
 ---
 # Resource Library - Audio
 
@@ -13,5 +13,5 @@ Part of [[Resource Library Start Here]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Resource Library - Tools and Workflow]] · [[Resource Library - Physics]] · [[Resource Library - Characters and Animation]] · [[Resource Library - Building and World]] · [[Audio Pipeline]] · [[Music and Adaptive Audio]]
+[[Resource Library - Tools and Workflow]] · [[Resource Library - Physics]] · [[Resource Library - Characters and Animation]] · [[Resource Library - Building and World]] · [[Audio Pipeline]] · Music and Adaptive Audio
 <!-- auto-links:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [ui, localization, translation, localizationservice, translator, i18n]
+tags: [ui, localization, translation, localizationservice, translator, i18n, type/guide, area/ui, level/intermediate, api/AutoLocalize]
 ---
 # Localization
 
@@ -255,5 +255,10 @@ See also: [[Text Fonts and Rich Text]], [[Layout - Scale Offset and Constraints]
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Localization Pipeline]] · [[Localization-Ready Writing]] · [[Dialogue System End to End]] · [[Strings Patterns and Formatting]] · [[Readable Text and UI Scale]] · [[Naming Items Zones and Abilities]]
+[[Localization Pipeline]] · Localization-Ready Writing · Dialogue System End to End · Strings Patterns and Formatting · Readable Text and UI Scale · Naming Items Zones and Abilities
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Localization-Ready Writing]] · [[Dialogue System End to End]] · [[Readable Text and UI Scale]] · [[Strings Patterns and Formatting]] · [[Notification and Toast Systems]] · [[Experience Description and Search Keywords]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [architecture, frameworks, libraries, knit, ecs, networking]
+tags: [architecture, frameworks, libraries, knit, ecs, networking, type/guide, area/networking, level/advanced, api/CollectionService]
 ---
 # Frameworks - Knit Matter and Others
 
@@ -12,7 +12,7 @@ tags: [architecture, frameworks, libraries, knit, ecs, networking]
 > - Every dependency is pinned, reviewed and actively maintained (or small enough to own).
 > - The client-server boundary is visible in names, and every exposed method passes middleware.
 >
-> Cost: TL;DR ~180 tok · whole note ~3.5k tok. Read more: ## Small utility libraries worth knowing · ## A framework-free core in one page · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~3.6k tok. Read more: ## Small utility libraries worth knowing · ## A framework-free core in one page · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox has no official game framework. The community has produced several, plus many small libraries that solve one problem well (signals, promises, cleanup, networking, state, UI). Choosing among them is mostly a question of what problem you have, how big the team is, and how long you will maintain the game. This note explains what frameworks actually give you, the main options and their status as of October 2026, when a framework hurts, and how to get the same benefits with plain modules.
@@ -31,7 +31,7 @@ Strip away the branding and Roblox frameworks provide some subset of:
 | Middleware | Validation and rate limiting on every remote | Middleware list in `Net` |
 | Component binding | Behaviour attached to tagged instances | CollectionService managers ([[CollectionService Patterns]]) |
 | State management | Reactive or immutable state stores | Signals, attributes |
-| Data model | Entities and components instead of objects | Tables, or an ECS library ([[Entity Component Systems]]) |
+| Data model | Entities and components instead of objects | Tables, or an [[Entity Component System\|ECS]] library ([[Entity Component Systems]]) |
 
 If you already have a clean bootstrap, a remote wrapper with middleware and a tag-manager pattern, you have most of a framework. The remaining value of a framework is **shared convention**: new team members know where things go.
 
@@ -81,7 +81,7 @@ Benefits are real for games with heavy traffic (shooters, physics sims, many NPC
 | Cleanup | Trove, Janitor, Maid | Track connections and instances, clean in one call; essential against leaks ([[Memory Budgets and Leaks]]) |
 | Async flows | Promise libraries | Chainable async with cancellation; heavier than `task` + coroutines; see [[Task Library Coroutines and Yielding]] |
 | Runtime type checks | `t` | Declarative validators for remote arguments; or the small `Guard` module in [[Server Authority and Validation]] |
-| Player data | ProfileStore (successor of ProfileService) and similar | Session locking and autosave; see [[Session Locking and Profile Libraries]] |
+| Player data | [[ProfileStore]] (successor of ProfileService) and similar | Session locking and autosave; see [[Session Locking and Profile Libraries]] |
 | UI | React-Lua, Fusion, Vide | See [[Declarative UI - React-Lua and Fusion]] |
 | State containers | Rodux, Reflex, Charm | Store patterns for UI-heavy games |
 | Testing | TestEZ, Jest-Lua | See [[Testing Strategies and Frameworks]] |
@@ -211,5 +211,10 @@ The reference project used no third-party framework. It had a central service th
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - OOP and module design]] · [[Dependency Injection in Luau]] · [[Links - Remote events and functions]] · [[Links - UI frameworks]] · [[Module Design and Dependency Injection]] · [[Links - Services]]
+[[Links - OOP and module design]] · Dependency Injection in Luau · Links - Remote events and functions · Links - UI frameworks · Module Design and Dependency Injection · Links - Services
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Client-Server Model]] · [[Snapshot Interpolation for Custom Replication]] · [[Interest Management and Per-Player Replication]] · [[Server Lifecycle and Shutdown]] · [[Remote Abuse Patterns and Rate Limiting in Practice]] · [[Instance Streaming]] · [[Network Ownership]] · [[Client Prediction and Reconciliation for Combat]]
+<!-- related:end -->

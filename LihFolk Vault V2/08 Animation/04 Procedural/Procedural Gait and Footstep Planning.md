@@ -1,5 +1,5 @@
 ---
-tags: [procedural, locomotion, gait, feet, cadence, foot-slide, luau]
+tags: [procedural, locomotion, gait, feet, cadence, foot-slide, luau, type/guide, area/animation, level/intermediate, area/scripting]
 ---
 # Procedural Gait and Footstep Planning
 
@@ -9,7 +9,7 @@ tags: [procedural, locomotion, gait, feet, cadence, foot-slide, luau]
 > - Feet pedal frantically: cadence tied linearly to speed -> cap the cadence; lengthen the stride instead
 > - Legs pop when walk blends to run: clips out of phase -> shared phase, same contact timing in all cycles
 >
-> Cost: TL;DR ~120 tok · whole note ~4.0k tok. Read more: ## The shipped procedural gait · ## The foot-plant layer: authored style, planted feet · ## Common mistakes
+> Cost: TL;DR ~120 tok · whole note ~4.1k tok. Read more: ## The shipped procedural gait · ## The foot-plant layer: authored style, planted feet · ## Common mistakes
 <!-- tldr:end -->
 
 Foot slide is the most visible locomotion bug in Roblox games: the character runs at 64 studs/s while its feet pedal at the speed the clip was authored for. Rate-matching the clip helps until the rate is clamped; authoring more clips helps until the character changes size. A procedural gait solves it from first principles: decide when each foot is on the ground, keep it exactly still in the world while it is, and swing it to the next spot while it is not. This note derives the maths, gives the formulas one production game shipped (the reference project), and shows the middle path that keeps authored style: a legs-only foot-plant layer over authored clips.
@@ -99,7 +99,7 @@ At `phase = beta/2` (the left foot's mid-stance) the cosine is 1 and the body is
 
 **Carriage on top:** a forward lean of 4 degrees at the root plus 3 at the waist for a run (5 + 4 for a sprint: the "+7 / +9 degrees" in the notes), the neck tilted back 4-5 degrees to keep the eyes level, and the free arm swinging opposite the same-side leg about a forward centre (30 degrees for run, 36 sprint, amplitude 14 / 10, elbow bent 80 / 88, abducted 10).
 
-Each leg was then solved with 3D two-bone IK on the character's own joint attachments (so it worked on Motor6D and AnimationConstraint rigs at any body scale) with the hip split into pitch and roll so the foot could land under the hip even when the pelvis swayed.
+Each leg was then solved with 3D two-bone IK on the character's own joint attachments (so it worked on Motor6D and [[AnimationConstraint]] rigs at any body scale) with the hip split into pitch and roll so the foot could land under the hip even when the pelvis swayed.
 
 **Measured result:** foot slide about 0 from 12 to 120 studs/s, where it had been about 90% of speed. That gait was later removed when the owner switched to authored clips; the foot-plant layer below replaced it.
 
@@ -220,5 +220,10 @@ Related: [[Locomotion Systems]], [[Custom Locomotion Controller Design]], [[Foot
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Scale and Animation]] · [[Snippets - IK]] · [[Snippets - Animation Controller Module]] · [[Animating Creatures and Monsters]] · [[Low-Poly Creature From a Flat Reference Sheet]] · [[Custom Character Controllers]] · [[Animation Start Here]]
+[[Scale and Animation]] · [[Snippets - IK]] · [[Snippets - Animation Controller Module]] · [[Animating Creatures and Monsters]] · [[Low-Poly Creature From a Flat Reference Sheet]] · Custom Character Controllers · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[R15 Run Cycle Key Poses]] · [[Locomotion and Melee Reference Numbers]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[Inverse Kinematics]] · [[Humanoid States and Animation]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Procedural Animation]] · [[Retargeting Animations Between Rigs]]
+<!-- related:end -->

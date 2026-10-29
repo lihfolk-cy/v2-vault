@@ -1,5 +1,5 @@
 ---
-tags: [delta, datastore, limits, storage, open-cloud, web-api, rate-limits, deprecations, extended-services]
+tags: [delta, datastore, limits, storage, open-cloud, web-api, rate-limits, deprecations, extended-services, type/guide, area/platform, level/intermediate]
 verified: 2026-10-28
 ---
 # Data and Cloud Changes 2025-2026
@@ -13,7 +13,7 @@ verified: 2026-10-28
 > - Background jobs self-throttle with `GetRequestBudgetForRequestType` or HTTP-side limits.
 > - Storage usage checked in Data Stores Observability.
 >
-> Cost: TL;DR ~170 tok · whole note ~1.6k tok. Read more: ## 1. Timeline · ## 2. Numbers to use now · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~1.7k tok. Read more: ## 1. Timeline · ## 2. Numbers to use now · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 DataStore limits moved from per-server to per-experience, then merged with Open Cloud into one budget, and a total storage cap arrived. Several legacy web endpoints that tools and bots used for passes and products were retired. Models trained on 2023-2024 material quote the old per-server formulas and the "one write per key every 6 seconds" rule. Labels follow [[Roblox Changes 2025-2026]].
@@ -101,3 +101,8 @@ Impact: price-update scripts, product-creation tooling and dashboards that used 
 - [[Session Locking and Profile Libraries]]
 - [[Debugging DataStore Problems]]
 - [[AI Pitfalls - Data and Monetization]]
+
+<!-- related:start -->
+## Related
+[[Discovery and Monetization Changes 2025-2026]] · [[Engine and API Changes 2025-2026]] · [[Policy and Age Rules 2026]] · [[Server Authority and Input Migration 2026]] · [[Experience Notifications and Return Prompts]] · [[Badges and Achievement Design]]
+<!-- related:end -->

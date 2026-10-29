@@ -1,5 +1,5 @@
 ---
-tags: [gameplay, progression, levels, xp, skill-tree, rebirth, crafting, forge]
+tags: [gameplay, progression, levels, xp, skill-tree, rebirth, crafting, forge, type/guide, area/gameplay, level/intermediate, area/design]
 ---
 # Progression Levels and Unlocks
 
@@ -12,7 +12,7 @@ tags: [gameplay, progression, levels, xp, skill-tree, rebirth, crafting, forge]
 > - Costs derived from a documented income model and checked with analytics.
 > - All unlocks enforced on the server from saved state.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.6k tok. Read more: ## 5. Skill trees · ## 6. Item upgrade systems · ## 9. Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.7k tok. Read more: ## 5. Skill trees · ## 6. Item upgrade systems · ## 9. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Progression is the set of numbers that go up and the things they unlock. Most Roblox games stack several progression axes: player level, gear power, zones unlocked, a skill tree, upgrade levels on items, a prestige reset ("rebirth"), and a collection index. Each axis needs a cost curve, a reward curve, a reason to exist and a clear interaction with the others. This note covers the implementation side: curves and formulas, unlock checks, skill trees, item upgrade systems (forge, fusion, crafting, salvage), rebirth, and how one production game priced all of it in "minutes of income".
@@ -267,5 +267,10 @@ Implementation rules:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Economy Inflation Sinks and Faucets Math]] · [[Pricing Curves and Upgrade Costs]] · [[Power Curve]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - RNG and Collection Games]] · [[Rebirth and Prestige System End to End]]
+[[Economy Inflation Sinks and Faucets Math]] · Pricing Curves and Upgrade Costs · Power Curve · Simulator and RNG Genre Teardown · Genre Playbook - RNG and Collection Games · Rebirth and Prestige System End to End
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Pricing Curves and Upgrade Costs]] · [[Power Curve]] · [[Simulator and RNG Genre Teardown]] · [[Combat Systems Architecture]] · [[Spawning Teams and Rounds]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]]
+<!-- related:end -->

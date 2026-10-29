@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, assets-creation]
+tags: [resources, links, assets-creation, type/reference, area/animation, level/intermediate, api/Animator]
 ---
 # Links - Animation creation
 

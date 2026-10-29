@@ -1,5 +1,5 @@
 ---
-tags: [game-design, genre, survival, crafting, building, resources, inventory, persistence]
+tags: [game-design, genre, survival, crafting, building, resources, inventory, persistence, type/guide, area/design, level/intermediate, area/data]
 ---
 # Genre Playbook - Survival and Crafting
 
@@ -12,7 +12,7 @@ tags: [game-design, genre, survival, crafting, building, resources, inventory, p
 > - Base save and load tested at the maximum piece count, including version migration.
 > - Load time and server memory measured with a full server of large bases.
 >
-> Cost: TL;DR ~160 tok · whole note ~3.8k tok. Read more: ## 1. Core loop · ## 2. Session length and persistence model · ## 9. Common mistakes · ## 10. Launch checklist
+> Cost: TL;DR ~160 tok · whole note ~3.9k tok. Read more: ## 1. Core loop · ## 2. Session length and persistence model · ## 9. Common mistakes · ## 10. Launch checklist
 <!-- tldr:end -->
 
 Survival games put players in a hostile world with needs (hunger, thirst, temperature, health) and let them gather resources, craft tools, build shelter and push into more dangerous areas. On Roblox the genre spans several shapes: short-session co-op survival (survive a set number of nights), persistent-world sandbox survival with bases that save, PvP survival where other players are the main threat, and "survive the disaster" party variants. They share one engine: **gather, craft, build, survive, expand**.
@@ -239,5 +239,10 @@ Patterns, not copies:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Procedural Generation Start Here]] · [[Case Study - 99 Nights in the Forest]] · [[Tycoon Plots and Droppers End to End]] · [[Progression Levels and Unlocks]] · [[Top Games Case Studies Start Here]] · [[Multiplayer Services Start Here]]
+[[Procedural Generation Start Here]] · Case Study - 99 Nights in the Forest · Tycoon Plots and Droppers End to End · Progression Levels and Unlocks · Top Games Case Studies Start Here · Multiplayer Services Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Weekend Build - Survival Gather, Craft and Place]] · [[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Party and Minigame Collections]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - Horror and Story]] · [[Genre Playbook - Combat and RPG]] · [[Genre Playbook - Naval and Open-Sea Adventure]]
+<!-- related:end -->

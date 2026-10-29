@@ -1,5 +1,5 @@
 ---
-tags: [systems, ui, gui, tweenservice, game-feel, accessibility, code]
+tags: [systems, ui, gui, tweenservice, game-feel, accessibility, code, type/guide, area/animation, level/intermediate, api/UIScale, area/ui]
 ---
 # UI and GUI Animation
 
@@ -9,7 +9,7 @@ tags: [systems, ui, gui, tweenservice, game-feel, accessibility, code]
 > - List jiggles during a pop: Tweening `Size` in a layout -> `UIScale`
 > - Phone gets hot in menus: Per-frame loops while hidden -> Loops only while visible
 >
-> Cost: TL;DR ~100 tok · whole note ~4.5k tok. Read more: ## Pattern 1: the pop · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~4.6k tok. Read more: ## Pattern 1: the pop · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 UI animation is the part of game animation players touch most directly: every button press, reward, toast and menu. Done well it makes a game feel expensive; done badly it makes menus slow and phones hot. This note covers the Roblox tools (TweenService, `UIScale`, `UIGradient`, `CanvasGroup`, flipbooks, hand-written springs), patterns with concrete numbers from one production game's UI passes (the reference project), performance rules and reduced motion. World-object tweens (doors, lids) are in [[Tween and CFrame Animation of Objects]].
@@ -252,5 +252,10 @@ The senior trade-off: UI motion is the cheapest juice in the game and the easies
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Tweening and UI animation]] · [[Debugging UI Layout and Input]] · [[Tween vs Spring]] · [[Accessibility]] · [[Squash Stretch and Anticipation in UI and Characters]] · [[Cookbook - UI]] · [[Animation Start Here]]
+[[Links - Tweening and UI animation]] · Debugging UI Layout and Input · Tween vs Spring · Accessibility · Squash Stretch and Anticipation in UI and Characters · Cookbook - UI · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Cameras and Cutscenes]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]] · [[Equip Draw and Flourish Systems]] · [[Custom Locomotion Controller Design]] · [[Hit Reactions Stagger and Hit-Stop]] · [[Enemy and NPC Animation]]
+<!-- related:end -->

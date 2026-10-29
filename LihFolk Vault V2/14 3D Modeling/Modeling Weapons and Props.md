@@ -1,5 +1,5 @@
 ---
-tags: [modeling, weapons, props, grip, pivots, blender, tools, conventions]
+tags: [modeling, weapons, props, grip, pivots, blender, tools, conventions, type/guide, area/modeling, level/intermediate, area/gameplay]
 ---
 # Modeling Weapons and Props
 
@@ -12,7 +12,7 @@ tags: [modeling, weapons, props, grip, pivots, blender, tools, conventions]
 > - Proportions checked against the character proxy; pommel clears the body.
 > - Parts split by role (Handle, Guard, Blade, Glow) and by motion (one object per moving piece).
 >
-> Cost: TL;DR ~160 tok · whole note ~4.2k tok. Read more: ## 1. The weapon contract · ## 3. Building a sword, step by step · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.3k tok. Read more: ## 1. The weapon contract · ## 3. Building a sword, step by step · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A weapon is the most-looked-at model in a combat game: it is in the player's hand on every frame, in every icon, every trade, every inspect screen. It also has the strictest technical contract of any static model, because animators, VFX artists and programmers all build on its axes: where the grip is, which way the blade points, where the edge faces, where the trail starts and ends. A sword with a beautiful blade and an arbitrary pivot costs the team more than an ugly sword with the right one.
@@ -107,7 +107,7 @@ Worked example: a stylised longsword, total 5.5 studs, mid-poly (bevel workflow 
 5. **Blade.** A plane 0.55 wide (X) and 3.6 long (Z) starting at Z = 0.65. Loop-cut once along the length (the fuller line) and once across near the tip. Merge the tip vertices to a point. Add a Solidify of 0.08 (blade thickness) and pull the centre loop out along ±Y to make a diamond cross-section; the edges stay thin.
    - For a single-edged blade, keep the spine thick on +Y and the edge sharp on -Y.
 6. **Bevel** the guard and pommel (width 0.02-0.03, 2 segments, limit by angle); blade edges usually get no bevel (a sharp edge catches a crisp highlight).
-7. **Shading**: Smooth by Angle around 30 degrees on the blade so the bevel planes stay flat; weighted normals on guard and pommel.
+7. **Shading**: Smooth by Angle around 30 degrees on the blade so the bevel planes stay flat; [[weighted normals]] on guard and pommel.
 8. **Glow part**: duplicate the fuller loop's faces into a separate object `EdgeGlow` (or a core strip) for a Neon material in Roblox.
 9. **Markers**: add empties or tiny meshes for VFX attachments at the blade base and tip. The importer converts meshes named with `_Att` to Attachments (Docs), for example `TrailTop_Att`, `TrailBottom_Att`.
 10. **Split into parts by role**: `Handle` (grip + pommel, the root), `Guard`, `Blade`, `EdgeGlow`. Static parts can also be joined into one mesh; split only what needs its own material or motion.
@@ -227,5 +227,10 @@ Weapons appear huge in icons and inspect screens, so close-up quality matters mo
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Weapon and Combat Animation]] · [[Rigs and Joints]] · [[Modeling Fundamentals for Games]] · [[Blender Workflow for Roblox Creators]] · [[Stylised Weapons From a Concept]] · [[Skeleton Library]]
+[[Weapon and Combat Animation]] · Rigs and Joints · [[Modeling Fundamentals for Games]] · [[Blender Workflow for Roblox Creators]] · Stylised Weapons From a Concept · Skeleton Library
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Procedural Model Kits - Lessons]] · [[Exporting and Validating Models for Roblox]] · [[Organic and Creature Modeling]] · [[Low-Poly and Stylized Modeling]] · [[Topology and Edge Flow]] · [[Curve-Based Modelling in Blender for Roblox]] · [[Voxel and Blocky Modeling]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]]
+<!-- related:end -->

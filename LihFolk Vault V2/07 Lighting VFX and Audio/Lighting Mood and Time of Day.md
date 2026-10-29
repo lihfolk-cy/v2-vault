@@ -1,5 +1,5 @@
 ---
-tags: [lighting, mood, day-night, weather, zones, environment]
+tags: [lighting, mood, day-night, weather, zones, environment, type/guide, area/vfx, level/intermediate, api/Atmosphere, area/lighting, api/Lighting]
 ---
 # Lighting Mood and Time of Day
 
@@ -12,7 +12,7 @@ tags: [lighting, mood, day-night, weather, zones, environment]
 > - Mood keyframes for at least dawn, noon, dusk, midnight.
 > - Night readable on a dim phone screen.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.7k tok. Read more: ## 1. The clock · ## 2. Mood keyframes across the day · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.8k tok. Read more: ## 1. The clock · ## 2. Mood keyframes across the day · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A day/night cycle looks like a one-liner (`Lighting.ClockTime += dt`) and turns into a system as soon as the game has zones, weather, cutscenes, indoor areas and players on phones. This note covers the clock itself (who owns it and how it reaches clients), mood keyframes across the day, zone and weather overrides, handing control to cutscenes, and the readability rules that keep a beautiful night from becoming an unplayable one.
@@ -312,5 +312,10 @@ The senior trade-off: a living day cycle adds atmosphere and makes screenshots v
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Lighting Untextured Art in Roblox]] · [[Links - Lighting]] · [[Colour Scripts and Value Structure for Untextured Art]] · [[Links - Music and ambience]] · [[Baking Lighting and Detail into Textures]] · [[Voxel Palettes - Ramps Hue Shifting and Limits]]
+[[Lighting Untextured Art in Roblox]] · Links - Lighting · Colour Scripts and Value Structure for Untextured Art · Links - Music and ambience · Baking Lighting and Detail into Textures · Voxel Palettes - Ramps Hue Shifting and Limits
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Weather System Architecture - State Machine, Transitions and Replication]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[VFX Design Playbook]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [ai, policy, compliance, licensing, moderation, ratings]
+tags: [ai, policy, compliance, licensing, moderation, ratings, type/guide, area/ai, level/intermediate]
 ---
 # Roblox Policies on AI-Generated Content
 
@@ -12,7 +12,7 @@ tags: [ai, policy, compliance, licensing, moderation, ratings]
 > - AI-assisted thumbnails and trailers
 > - NPC chat via `TextGenerator`
 >
-> Cost: TL;DR ~120 tok · whole note ~3.4k tok. Read more: ## 2. AI-made assets you upload · ## 3. AI features at runtime · ## 6. A compliance checklist by feature · ## Common mistakes
+> Cost: TL;DR ~120 tok · whole note ~3.5k tok. Read more: ## 2. AI-made assets you upload · ## 3. AI features at runtime · ## 6. A compliance checklist by feature · ## Common mistakes
 <!-- tldr:end -->
 
 This note collects the rules that apply when AI is involved in a Roblox experience: assets made with AI before upload, AI features players interact with at runtime, and the licences of the AI tools themselves. The short version: Roblox treats AI-made content like any other content (you need the rights, it must follow the Community Standards, it must not mislead), and adds specific duties for experiences where players trigger AI responses (disclosure, notices, ratings, filtering).
@@ -173,5 +173,10 @@ Assistant, mesh generation, procedural models, Material Generator and Texture Ge
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI in Roblox Development Overview]] · [[Roblox Generative AI - Cube Mesh and Texture Generation]] · [[Legal Basics - IP Licenses and Assets]] · [[Community and Moderation Start Here]] · [[Publishing an Experience]] · [[Links - Moderation compliance]]
+[[AI in Roblox Development Overview]] · [[Roblox Generative AI - Cube Mesh and Texture Generation]] · [[Legal Basics - IP Licenses and Assets]] · Community and Moderation Start Here · Publishing an Experience · Links - Moderation compliance
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Who Owns AI-Generated Code and Assets]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Music Licensing and Audio Upload Rules for 2026]] · [[Evaluating AI Tools - A Practical Rubric]] · [[Roblox Studio Assistant]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[AI Material and Texture Generation]] · [[AI Animation and Motion from Video]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [gameplay, raycast, spatial-query, overlapparams, shapecast, physics]
+tags: [gameplay, raycast, spatial-query, overlapparams, shapecast, physics, type/guide, area/gameplay, level/intermediate, api/GetPartsInPart, area/physics, api/CollectionService]
 ---
 # Raycasts Shapecasts and Spatial Queries
 
@@ -12,7 +12,7 @@ tags: [gameplay, raycast, spatial-query, overlapparams, shapecast, physics]
 > - New code uses `ExcludeInstances`/`IncludeInstances`.
 > - Broad phase (bounds) then narrow phase (exact or distance).
 >
-> Cost: TL;DR ~140 tok · whole note ~3.5k tok. Read more: ## 2. Filtering: RaycastParams and OverlapParams · ## 3. Patterns · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.7k tok. Read more: ## 2. Filtering: RaycastParams and OverlapParams · ## 3. Patterns · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Spatial queries answer "what is there?" without waiting for physics contact. Hit detection, ground checks, line of sight, aiming, prop placement, AI perception and zone membership all use them. Roblox has two families: **casts** (move a shape along a direction and report the first hit) and **overlaps** (list everything inside a volume right now). Choosing the right one, filtering correctly and knowing the edge cases (parts you start inside, bounding boxes on rotated meshes, terrain) is most of the work.
@@ -239,5 +239,10 @@ If every enemy is already in a table, "who is within 12 studs" is a loop over th
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Intersection and Collision Math]] · [[Links - Raycasting and spatial queries]] · [[Collision and Physics Geometry]] · [[Projectiles and Ballistics]] · [[Physics Performance]] · [[MCP Workflows for Building Worlds]]
+[[Intersection and Collision Math]] · Links - Raycasting and spatial queries · Collision and Physics Geometry · Projectiles and Ballistics · Physics Performance · MCP Workflows for Building Worlds
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]] · [[Camera Obstruction Handling - Occlusion Modes, Fades and Collision]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Explosions - Radius Damage, Falloff and Cover Checks]] · [[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]] · [[Pathfinding Edge Cases and Fallbacks]] · [[Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run]] · [[Characters and Humanoids]]
+<!-- related:end -->

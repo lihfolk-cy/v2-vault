@@ -1,5 +1,5 @@
 ---
-tags: [materials, surfaceappearance, pbr, workflow, pipeline, textures, meshpart]
+tags: [materials, surfaceappearance, pbr, workflow, pipeline, textures, meshpart, type/guide, area/materials, level/intermediate, api/SurfaceAppearance, area/modeling]
 ---
 # SurfaceAppearance PBR Workflow
 
@@ -12,10 +12,10 @@ tags: [materials, surfaceappearance, pbr, workflow, pipeline, textures, meshpart
 > - One suffix scheme; normal maps OpenGL; meshes exported with tangents.
 > - Import checked: every SurfaceAppearance has the expected maps.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.1k tok. Read more: ## 4. Import: let the importer do the wiring · ## 7. Runtime cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.2k tok. Read more: ## 4. Import: let the importer do the wiring · ## 7. Runtime cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-The map-by-map facts about `SurfaceAppearance` (what each map means, colour spaces, AlphaMode, baking in Blender) are already in [[Texturing and PBR Baking]] and [[Materials MaterialVariants and SurfaceAppearance]]. This note is about the **workflow around them**: how to size a texture set before you paint it, how assets travel from the texturing tool into Studio without hand-pasting ids, how to keep one source of truth so instancing works, how to build a look-development room that tells the truth, how to audit a place full of PBR meshes, and how to handle the runtime cases (generated looks, pixel art, tint-driven variants). It is written for a small team that will import hundreds of assets, not one hero prop.
+The map-by-map facts about `SurfaceAppearance` (what each map means, colour spaces, AlphaMode, baking in Blender) are already in [[Texturing and PBR Baking]] and [[Materials MaterialVariants and SurfaceAppearance]]. This note is about the **workflow around them**: how to size a texture set before you paint it, how assets travel from the texturing tool into Studio without hand-pasting ids, how to keep one source of truth so instancing works, how to build a look-development room that tells the truth, how to audit a place full of PBR meshes, and how to handle the runtime cases (generated looks, [[pixel art]], tint-driven variants). It is written for a small team that will import hundreds of assets, not one hero prop.
 
 ## 1. The shape of the pipeline
 
@@ -350,5 +350,10 @@ Nuance: a SurfaceAppearance on a mesh that only needs flat colour is the most co
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI Material and Texture Generation]] · [[Hand-Painted and Stylized Texturing]] · [[Textures Decals and Texture Memory]] · [[Links - Texturing]] · [[Skill - Roblox Asset Import]] · [[Texel Density]]
+[[AI Material and Texture Generation]] · Hand-Painted and Stylized Texturing · Textures Decals and Texture Memory · Links - Texturing · Skill - Roblox Asset Import · Texel Density
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Hand-Painted and Stylized Texturing]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Textures Decals and Texture Memory]] · [[Procedural Materials and Skies - Lessons]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[The Gradient Palette Texture Workflow]]
+<!-- related:end -->

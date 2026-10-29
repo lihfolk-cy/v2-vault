@@ -1,5 +1,5 @@
 ---
-tags: [2d, game-design, architecture, screengui, camera, side-scroller, decision, luau]
+tags: [2d, game-design, architecture, screengui, camera, side-scroller, decision, luau, type/guide, area/2d, level/intermediate, api/SurfaceGui]
 ---
 # Choosing GUI 2D or Locked-Camera 2.5D
 
@@ -12,7 +12,7 @@ tags: [2d, game-design, architecture, screengui, camera, side-scroller, decision
 > - Answered: is pixel exactness part of the art identity or rules?
 > - Listed what the game must do that the chosen route does not give for free (particles, physics toys, netcode, level editor) and...
 >
-> Cost: TL;DR ~160 tok · whole note ~5.2k tok. Read more: ## 5. The awkward middle: what each route cannot do well · ## 7. Screen size: the GUI route's hidden tax · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.3k tok. Read more: ## 5. The awkward middle: what each route cannot do well · ## 7. Screen size: the GUI route's hidden tax · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 Roblox is a 3D engine with a strong 2D UI system bolted on. That gives you two honest ways to build a 2D game, and one hybrid that is often the right answer:
@@ -47,7 +47,7 @@ Roblox players also expect to see their avatar. A GUI 2D game hides the avatar t
 | Avatars | Not shown unless you render them in a `ViewportFrame` (costly, see section 5) | Shown for free, with animations |
 | Pixel-perfect art | Yes: `ResampleMode = Pixelated`, integer scaling, exact positions | Hard: perspective, lighting, mip-mapping and filtering soften pixels |
 | Lighting, shadows, particles | No engine lighting; `ParticleEmitter` does not render in GUI; you fake effects with images and tweens | Full lighting, particles, beams, post-processing |
-| Determinism | Fully under your control (fixed timestep, your own integrator) | Engine physics is not deterministic across machines |
+| Determinism | Fully under your control ([[fixed timestep]], your own integrator) | Engine physics is not deterministic across machines |
 | Exploit surface | Client runs the whole game; the server must check results, not trust them | Same client-trust problem for characters, but the engine already limits a few things |
 | Screen sizes | You must handle aspect ratio and safe areas yourself | The camera handles aspect ratio; only the HUD needs care |
 | Level editing | No built-in editor: you need a tile editor, data format and loader ([[Tilemaps Cameras and Parallax for 2D Levels]]) | Build levels in Studio with parts, as usual |
@@ -61,7 +61,7 @@ Read the last row carefully. A GUI 2D game looks simpler because it is "just fra
 
 ## 3. When GUI 2D is clearly right
 
-- **Pixel art is the identity of the game.** Crisp, unfiltered pixels at an integer scale are straightforward in GUI with `ImageLabel.ResampleMode = Enum.ResamplerMode.Pixelated` (Roblox docs (as of October 2026): "When set to Enum.ResamplerMode.Pixelated, the image preserves the sharp edges of pixels"). In 3D, the same art goes through lighting, perspective and texture filtering, and keeping it crisp is a fight. The pipeline is in [[Pixel Art Pipeline - Aseprite to Roblox Without Blur]].
+- **[[Pixel art]] is the identity of the game.** Crisp, unfiltered pixels at an integer scale are straightforward in GUI with `ImageLabel.ResampleMode = Enum.ResamplerMode.Pixelated` (Roblox docs (as of October 2026): "When set to Enum.ResamplerMode.Pixelated, the image preserves the sharp edges of pixels"). In 3D, the same art goes through lighting, perspective and texture filtering, and keeping it crisp is a fight. The pipeline is in [[Pixel Art Pipeline - Aseprite to Roblox Without Blur]].
 - **Gameplay needs exact, frame-stable rules.** Rhythm games, fighting-game style hitboxes, bullet patterns and puzzle games that must behave identically every run. Your own fixed-timestep loop gives you that; the physics engine does not.
 - **The 2D game lives inside a 3D game.** A minigame on an arcade cabinet (a `SurfaceGui` on a part), a lockpicking bar, a fishing reel, a phone app inside the game. These are small, single-player, and short. GUI 2D is the natural fit, and the 3D game around it supplies the social layer.
 - **Turn-based or low-motion games.** Card games, board games, tactics grids. Very few objects move each frame, replication is just "state changed", and GUI layout objects (grids, lists) do half the work. See [[UI Layout Objects - Lists Grids and Pages]].
@@ -244,5 +244,10 @@ For the 2.5D route, none of this is needed for the world; the HUD still follows 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[EditableImage for Pixel Buffers and Procedural 2D]] · [[Modelling to the Roblox Camera and Player Scale]] · [[Debugging UI Layout and Input]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[Cookbook - UI]] · [[Links - Containers]]
+[[EditableImage for Pixel Buffers and Procedural 2D]] · [[Modelling to the Roblox Camera and Player Scale]] · Debugging UI Layout and Input · World-Space UI - BillboardGui and SurfaceGui · Cookbook - UI · Links - Containers
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Debugging UI Layout and Input]] · [[Cookbook - UI]] · [[Layout - Scale Offset and Constraints]] · [[AI Pitfalls - UI and Input]] · [[Off-Screen Objective Markers and Waypoint Arrows]]
+<!-- related:end -->

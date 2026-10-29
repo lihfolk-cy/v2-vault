@@ -1,5 +1,5 @@
 ---
-tags: [gameplay, ai, npc, enemies, aggro, behaviour, bosses]
+tags: [gameplay, ai, npc, enemies, aggro, behaviour, bosses, type/guide, area/gameplay, level/intermediate, area/ai, api/Player]
 ---
 # NPC AI and Behaviour
 
@@ -12,7 +12,7 @@ tags: [gameplay, ai, npc, enemies, aggro, behaviour, bosses]
 > - State machine with explicit return-home.
 > - Tokens limit simultaneous attackers and are always returned.
 >
-> Cost: TL;DR ~130 tok · whole note ~3.6k tok. Read more: ## 4. Decision: state machine first · ## 5. Group behaviour: fights that read · ## 10. Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.8k tok. Read more: ## 4. Decision: state machine first · ## 5. Group behaviour: fights that read · ## 10. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Good enemy AI on Roblox is rarely clever. It is readable, cheap, fair and tunable: enemies notice you at a predictable range, announce it, take turns attacking, telegraph every blow, keep out of each other's way, give up when you leave their area, and do all of that for hundreds of enemies on one server without hurting frame time. This note describes the architecture (perception, decision, action, presentation), the scheduling that keeps it cheap, and the group behaviours that make fights feel designed. Numbers come from one production combat game's enemy system, which ran a data-driven "kit" brain for roughly 90 enemy kinds plus elites and bosses.
@@ -108,7 +108,7 @@ Idle ─(player in aggro)─► Alert ─► Chase ─(in range, token)─► At
   └──────(target lost / leash)───── Return home (heal, ignore hits briefly)
 ```
 
-Behaviour trees and utility AI help when one enemy has many competing options (a boss with 12 attacks and phases). A practical middle ground is **weighted attack selection** inside the Attack state: filter attacks whose range and cooldown allow, then pick by weight, never the same twice in a row for bosses.
+[[Behaviour trees]] and utility AI help when one enemy has many competing options (a boss with 12 attacks and phases). A practical middle ground is **weighted attack selection** inside the Attack state: filter attacks whose range and cooldown allow, then pick by weight, never the same twice in a row for bosses.
 
 ```lua
 --!strict
@@ -297,5 +297,10 @@ Boss fairness rules (measured): warnings and combo links at least 0.5 s, trackin
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Behaviour Trees Utility AI and State Machines for NPCs]] · [[Genre Playbook - Combat and RPG]] · [[Combat Arena and Encounter Layout]] · [[Pathfinding Edge Cases and Fallbacks]] · [[Boss Fight Design Patterns]] · [[Snippets - Enemy Client Animator]]
+[[Behaviour Trees Utility AI and State Machines for NPCs]] · [[Genre Playbook - Combat and RPG]] · Combat Arena and Encounter Layout · [[Pathfinding Edge Cases and Fallbacks]] · Boss Fight Design Patterns · Snippets - Enemy Client Animator
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Wildlife and Ambient Creature AI - Passive, Neutral and Hostile]] · [[Enemy Archetype Kit - Fodder, Tank, Ranged, Support and Exploder]] · [[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]] · [[Squad AI - Attack Tokens, Flanking and Attacker Limits]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses]] · [[Weather That Changes Gameplay - Grip, Visibility and Hearing]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [studio, plugins, security, permissions, supply-chain, tooling]
+tags: [studio, plugins, security, permissions, supply-chain, tooling, type/guide, area/studio, level/intermediate, api/HttpService, area/security]
 ---
 # Plugin Security and Permissions
 
@@ -12,7 +12,7 @@ tags: [studio, plugins, security, permissions, supply-chain, tooling]
 > - New plugins are audited in an empty place before installation.
 > - Script injection only for code tools; HTTP domains documented.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.2k tok. Read more: ## 4. Auditing a plugin before you trust it · ## 7. Writing a plugin that deserves trust · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.3k tok. Read more: ## 4. Auditing a plugin before you trust it · ## 7. Writing a plugin that deserves trust · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 A plugin runs inside Studio with access no game script ever gets: it can read and rewrite every script in every place you open, make web requests, prompt you to open files, and do all of it every time Studio starts, in every project, updated silently by its author. That makes plugins the largest supply-chain risk in Roblox development, larger than free models, because a model only runs inside the game it was inserted into while a plugin touches everything you work on.
@@ -211,5 +211,10 @@ Measured in the reference project: the local receiver that accepted dumps from S
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Backdoors and malicious assets]] · [[Resource Library - Safety (free models and plugins)]] · [[Command Bar and Studio Scripting]] · [[Clip Archive Server]] · [[Roblox Studio MCP Server]] · [[Animation Asset Permissions and Groups]]
+[[Links - Backdoors and malicious assets]] · Resource Library - Safety (free models and plugins) · Command Bar and Studio Scripting · Clip Archive Server · Roblox Studio MCP Server · Animation Asset Permissions and Groups
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Creator Account Security and Takeover Recovery]] · [[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Command Bar and Studio Scripting]] · [[Roblox Studio MCP Server]] · [[Undo and ChangeHistoryService Done Right]] · [[Selection Editing and Bulk Tools]]
+<!-- related:end -->

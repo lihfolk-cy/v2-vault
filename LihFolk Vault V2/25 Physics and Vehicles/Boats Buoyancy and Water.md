@@ -1,5 +1,5 @@
 ---
-tags: [physics, vehicles, boats, buoyancy, water, terrain, network-ownership]
+tags: [physics, vehicles, boats, buoyancy, water, terrain, network-ownership, type/guide, area/physics, level/intermediate, api/Terrain, area/networking]
 ---
 # Boats Buoyancy and Water
 
@@ -12,7 +12,7 @@ tags: [physics, vehicles, boats, buoyancy, water, terrain, network-ownership]
 > - `k` computed from mass, gravity, point count and draft; bob frequency checked.
 > - Damping ratio 0.5 to 0.7; depth clamp set.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.1k tok. Read more: ## 3. The float-point model · ## 5. Players on a moving deck · ## 9. Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.3k tok. Read more: ## 3. The float-point model · ## 5. Players on a moving deck · ## 9. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Boats look like the easy vehicle: drop a light hull into terrain water and it floats. The trouble starts when you want waves that move the boat, a ship players can walk around on, a hull that turns instead of sliding sideways, or water that is not terrain at all. This note covers the two ways to float things on Roblox (engine buoyancy in terrain water, and your own float-point model), how to calibrate buoyancy so a hull sits at the draft you want, why a boat needs different drag forward and sideways, deterministic waves that every client agrees on, propulsion and steering, the "players slide off the moving ship" problem, and the ownership and security choices.
@@ -259,7 +259,7 @@ Options, best first:
 1. **Seats for the people who matter.** Crew positions as `Seat`s. Seated characters are welded into the ship's assembly and move with it exactly. Fine for small boats.
 2. **Platform-relative movement on each client.** Each frame, if the local character is standing on the ship (cast down from the root, check the hit is a ship part), compute the ship's CFrame change since last frame and apply the same change to the character's root before physics. This is the classic "moving platform" technique and makes walking on a deck feel solid. It must run on the passenger's client in `PreSimulation`.
 3. **Server-owned ship.** Every client, including the captain, sees the ship replicated. Passengers no longer fight the captain's simulation, but the captain's steering now has a round-trip delay. Large, slow ships tolerate this well; fast boats do not.
-4. **Kinematic ship.** Anchor the ship and move it by `PivotTo` on a fixed timestep on the server, with clients smoothing. No physics fighting at all, at the cost of no physical collisions for the ship. Common for huge ships whose motion is mostly scripted anyway.
+4. **Kinematic ship.** Anchor the ship and move it by `PivotTo` on a [[fixed timestep]] on the server, with clients smoothing. No physics fighting at all, at the cost of no physical collisions for the ship. Common for huge ships whose motion is mostly scripted anyway.
 
 A sketch of option 2:
 
@@ -363,5 +363,10 @@ Edge cases: jumping (keep carrying for a short time after leaving the deck, or t
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Genre Playbook - Racing and Driving]] · [[Debugging Physics and Network Ownership]] · [[Terrain Tools and Terrain API]] · [[Racing Laps and Checkpoints End to End]] · [[Links - Constraints]] · [[Links - Forces and movers]]
+[[Genre Playbook - Racing and Driving]] · Debugging Physics and Network Ownership · Terrain Tools and Terrain API · Racing Laps and Checkpoints End to End · Links - Constraints · Links - Forces and movers
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Standing on Moving Vehicles and Platforms - Keeping Players Glued]] · [[Choosing a Car Chassis - Raycast Suspension vs Constraint Builds vs Community Kits]] · [[Centre of Mass, Anti-Flip and Self-Righting]] · [[Multi-Seat Vehicles - Driver, Passenger and Gunner Roles]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[Engine, Gearbox and Torque Curve Model for Arcade Cars]] · [[Steering Geometry and Arcade Drifting - Ackermann, Slip and Grip Tuning]] · [[Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [genre-system, tower-defense, worked-build, waves, placement, networking, server-authority, luau]
+tags: [genre-system, tower-defense, worked-build, waves, placement, networking, server-authority, luau, type/guide, area/gameplay, level/intermediate, api/UnreliableRemoteEvent]
 ---
 # Tower Defense Waves and Placement End to End
 
@@ -12,7 +12,7 @@ tags: [genre-system, tower-defense, worked-build, waves, placement, networking, 
 > - Place on the path, outside bounds, on an untagged roof, overlapping another tower, with no cash, past the cap: each returns...
 > - Fire `TDPlace` with NaN, a huge vector, a number instead of a string, and a tower not in the loadout.
 >
-> Cost: TL;DR ~220 tok · whole note ~9.2k tok. Read more: ## 4. The server: MatchService · ## 5. The client: TDClient · ## 6. Common mistakes · ## 8. Test checklist
+> Cost: TL;DR ~220 tok · whole note ~9.3k tok. Read more: ## 4. The server: MatchService · ## 5. The client: TDClient · ## 6. Common mistakes · ## 8. Test checklist
 <!-- tldr:end -->
 
 This note builds the match half of a tower defense game: a wave scheduler driven by data, enemies that exist on the server only as numbers, a batched event stream that lets every client draw the same enemies without CFrame replication, server-side targeting at a fixed rate, a placement remote that checks eight things in a fixed order, upgrades and selling, a skip-wave vote, and a match result written into the player's profile exactly once. [[Genre Playbook - Tower Defense]] explains why the data-driven enemy pattern is necessary and gives the `PathMath` module; this note builds the full system around that module and covers the parts the playbook leaves as bullet points: tick ordering, what to batch, how corrections work in practice, and how placement validation fails.
@@ -791,5 +791,10 @@ Two traps the arithmetic catches early. First, **health scaling against reward**
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Genre Playbook - Combat and RPG]] · [[Power Curve]] · [[Tycoon Plots and Droppers End to End]] · [[Interest Management and Per-Player Replication]] · [[Round-Based Minigame Loop End to End]] · [[Genre Playbook - Shooters FPS and TPS]]
+[[Genre Playbook - Combat and RPG]] · Power Curve · [[Tycoon Plots and Droppers End to End]] · Interest Management and Per-Player Replication · Round-Based Minigame Loop End to End · Genre Playbook - Shooters FPS and TPS
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Horror Monster Chase AI End to End]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Case Study - Tower Defense Simulator]] · [[Racing Laps and Checkpoints End to End]] · [[Obby Checkpoints and Stage Saves End to End]]
+<!-- related:end -->

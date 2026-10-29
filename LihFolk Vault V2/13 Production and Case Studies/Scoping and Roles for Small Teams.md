@@ -1,5 +1,5 @@
 ---
-tags: [production, scope, team, capacity, payouts, contractors, permissions, planning]
+tags: [production, scope, team, capacity, payouts, contractors, permissions, planning, type/guide, area/production, level/intermediate, area/monetization]
 ---
 # Scoping and Roles for Small Teams
 
@@ -12,7 +12,7 @@ tags: [production, scope, team, capacity, payouts, contractors, permissions, pla
 > - Every feature estimated as a range; integration and testing added.
 > - Total compared with capacity; cuts decided and recorded.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.0k tok. Read more: ## 1. Capacity: the number nobody writes down · ## 5. Money and access on Roblox · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.1k tok. Read more: ## 1. Capacity: the number nobody writes down · ## 5. Money and access on Roblox · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Planning and Scoping a Roblox Game]] covers counting content, phase gates and scope reversals. [[Team Roles and Workflows]] covers the role table, ownership maps and the daily loop. This note covers what sits between them for teams of one to six people: turning available hours into a scope that fits, the team shapes that work at each size, who decides what, how money and access are handled on Roblox, and how to work with contractors without losing control of your game.
@@ -257,5 +257,10 @@ If, at the end of week 5, systems took 100 hours instead of 70, the plan must ch
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Hiring Freelancers and Revenue Shares]] · [[Working with Contractors and Revenue Splits]] · [[Roadmaps Milestones and Scope Control]] · [[Team Collaboration Start Here]] · [[Groups Roles and Permissions for Studios]] · [[Running a Small Studio as a Business]]
+[[Hiring Freelancers and Revenue Shares]] · Working with Contractors and Revenue Splits · Roadmaps Milestones and Scope Control · Team Collaboration Start Here · Groups Roles and Permissions for Studios · Running a Small Studio as a Business
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Roadmaps Milestones and Scope Control]] · [[Working with Contractors and Revenue Splits]] · [[Ship a Game in 30 Days - Week-by-Week Plan for a Solo Dev]] · [[Lessons Learned Index]] · [[Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts]] · [[Post-Mortem - Building a Melee Action Game]] · [[Working with AI Assistants in Studio]] · [[Case Study - Instance Cleanup and Place Size]]
+<!-- related:end -->

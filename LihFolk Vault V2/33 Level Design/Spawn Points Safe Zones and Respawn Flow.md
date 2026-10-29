@@ -1,5 +1,5 @@
 ---
-tags: [level-design, spawning, respawn, safe-zones, fall-recovery, streaming, server-authority]
+tags: [level-design, spawning, respawn, safe-zones, fall-recovery, streaming, server-authority, type/guide, area/world, level/intermediate, api/ForceField, area/design]
 ---
 # Spawn Points Safe Zones and Respawn Flow
 
@@ -12,7 +12,7 @@ tags: [level-design, spawning, respawn, safe-zones, fall-recovery, streaming, se
 > - Respawn time chosen for the genre, not left at the default by accident.
 > - Contexts defined; context recorded at death on the server.
 >
-> Cost: TL;DR ~140 tok · whole note ~6.6k tok. Read more: ## 6. Fall recovery · ## 8. A complete respawn service · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~140 tok · whole note ~6.8k tok. Read more: ## 6. Fall recovery · ## 8. A complete respawn service · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 [[Spawning Teams and Rounds]] covers the building blocks: `SpawnLocation` properties, teams, moving a character in `CharacterAdded`, the different respawn contexts in one production game, and round loops. This note treats spawning as a **flow** the player lives through, from the moment of death to the moment they can act again, and as a set of **places** a level designer has to build: spawn spots that make sense, safe zones that cannot be abused, and fall recovery that catches every way out of the map. It ends with a complete server-side respawn service.
@@ -34,7 +34,7 @@ What feels like "you died, you came back" is a chain of steps. Each one can fail
 | 7. Protect | Shield for a short time | 1.5 to 5 s |
 | 8. Reveal | Camera returns, UI returns | 0.5 to 1 s |
 
-The default engine flow does steps 1, 5 and a crude 6 and 7: when `Players.CharacterAutoLoads` is true (the default), characters respawn automatically after `Players.RespawnTime`, which defaults to 5 seconds (Roblox docs, as of October 2026), at a random eligible `SpawnLocation`, with that spawn's ForceField for `SpawnLocation.Duration` seconds (default 10). Everything else is yours.
+The default engine flow does steps 1, 5 and a crude 6 and 7: when `Players.CharacterAutoLoads` is true (the default), characters respawn automatically after `Players.RespawnTime`, which defaults to 5 seconds (Roblox docs, as of October 2026), at a random eligible `SpawnLocation`, with that spawn's [[ForceField]] for `SpawnLocation.Duration` seconds (default 10). Everything else is yours.
 
 Measured in the reference project, a realm death went: topple animation (0.55 s), a white "fizzle" fade-out (0.8 s), a scripted camera glide to a point in front of the respawn spot (1.4 s), then a fizzle back in when the server revived the player (a knock-out of about 4 s), with a 2-second ForceField. PvP deaths used a shorter 3-second knock-out and their own card. The whole flow sat inside the knock-out time, so the presentation hid the wait. That is the main trick: **steps 2 and 4 overlap**, and the presentation is the loading screen.
 
@@ -516,5 +516,10 @@ Things to adapt: the spot is chosen twice (at death for streaming, at respawn fo
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Checkpoints and spawning]] · [[Obby Checkpoints and Stage Saves End to End]] · [[Cookbook - Players and Characters]] · [[Arena Rounds with Teams and Spectating End to End]] · [[Genre Playbook - Combat and RPG]] · [[Streaming Radius]]
+[[Links - Checkpoints and spawning]] · Obby Checkpoints and Stage Saves End to End · Cookbook - Players and Characters · Arena Rounds with Teams and Spectating End to End · Genre Playbook - Combat and RPG · Streaming Radius
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Quick Respawn and Spawn Protection]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]] · [[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Weekend Build - Arena Shooter with Server-Checked Hits]] · [[Playtest Heatmaps - Position and Death Maps]] · [[Teaching Through Level Design]] · [[Instanced Interiors - Pooled House and Room Copies for Many Players]]
+<!-- related:end -->

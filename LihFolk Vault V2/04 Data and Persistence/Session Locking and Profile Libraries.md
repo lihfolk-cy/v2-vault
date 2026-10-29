@@ -1,5 +1,5 @@
 ---
-tags: [data, datastore, session-locking, profiles, profilestore, dupes]
+tags: [data, datastore, session-locking, profiles, profilestore, dupes, type/guide, area/data, level/intermediate, api/UpdateAsync, area/performance, api/BindToClose]
 ---
 # Session Locking and Profile Libraries
 
@@ -12,10 +12,10 @@ tags: [data, datastore, session-locking, profiles, profilestore, dupes]
 > - Every save is fenced by a per-session token; "lost" stops all writes.
 > - Autosave interval is shorter than the lease and renews it.
 >
-> Cost: TL;DR ~190 tok · whole note ~6.3k tok. Read more: ## A complete session-locked profile module · ## Exposing the profile to the rest of the game (the bridge) · ## Failure modes and diagnosis · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~6.4k tok. Read more: ## A complete session-locked profile module · ## Exposing the profile to the rest of the game (the bridge) · ## Failure modes and diagnosis · ## Checklist
 <!-- tldr:end -->
 
-Every serious Roblox game keeps a player's data **in server memory** for the session and writes it back periodically. That design is only safe if **one server at a time** owns a given player's data. Session locking is the mechanism that guarantees it. This note explains why it is needed (with the exact failure sequences), how to build a lease-based lock on `UpdateAsync` correctly, the production lessons from one shipped game (including a 90 second lease that blocked Studio test loads), and how the common libraries (ProfileStore, ProfileService, Roblox's sample) compare.
+Every serious Roblox game keeps a player's data **in server memory** for the session and writes it back periodically. That design is only safe if **one server at a time** owns a given player's data. Session locking is the mechanism that guarantees it. This note explains why it is needed (with the exact failure sequences), how to build a lease-based lock on `UpdateAsync` correctly, the production lessons from one shipped game (including a 90 second lease that blocked Studio test loads), and how the common libraries ([[ProfileStore]], ProfileService, Roblox's sample) compare.
 
 Prerequisites: [[DataStore Fundamentals]]. Follow-ups: [[Saving Correctly - Autosave and BindToClose]], [[Data Schema Design and Migrations]], [[Purchase Data and Receipts]].
 
@@ -459,5 +459,10 @@ Roblox's advice before adopting any module: check ownership and maintenance, and
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox DataStore Safety]] · [[Debugging DataStore Problems]] · [[Saved Inventory End to End]] · [[Session Lock]] · [[Cookbook - Data and Saving]] · [[Links - Session locking and data safety]]
+[[Skill - Roblox DataStore Safety]] · Debugging DataStore Problems · Saved Inventory End to End · Session Lock · Cookbook - Data and Saving · Links - Session locking and data safety
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Session Lock]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[Trading Systems Without Duplication]] · [[Open Cloud APIs]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[Schema Migrations - Worked Case Studies]] · [[Global State and Live Config]] · [[OrderedDataStores and Leaderboards]] · [[MemoryStore Service]] · [[HttpService and External APIs]]
+<!-- related:end -->

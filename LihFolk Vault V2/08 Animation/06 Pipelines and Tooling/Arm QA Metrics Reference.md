@@ -1,5 +1,5 @@
 ---
-tags: [pipeline, qa, arms, metrics, reference]
+tags: [pipeline, qa, arms, metrics, reference, type/reference, area/animation, level/intermediate, api/Animator]
 ---
 # Arm QA Metrics Reference
 
@@ -10,7 +10,7 @@ tags: [pipeline, qa, arms, metrics, reference]
 > - Note the deliberate gap: the baker clamps wrists to 70 / 30 / 85 deg while QA flags at 75 / 40 / 95.
 > - Every issue has a severity clamped to 0..1, a worst time, and a human-readable detail.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.7k tok. Read more: ## The metrics · ## The score
+> Cost: TL;DR ~140 tok · whole note ~4.8k tok. Read more: ## The metrics · ## The score
 <!-- tldr:end -->
 
 The complete metric set of the arm QA scorer ("armcheck") used in one live action game: every metric, how it is measured, its threshold, its severity formula, its score weight, which ones are critical, the score formula, and the rules a re-baked clip must pass before install. Workflow context: [[Pipeline - Arm IK Baking and QA]]. Solver that targets these metrics: [[Arm Baker Internals]].
@@ -35,7 +35,7 @@ Everything is in HumanoidRootPart space of a 1.6x R15 rig (studs), times in seco
 | Grip point | 0.19 hand-widths below the hand centre along the hand's Y |
 | Blade | along the hand's -Z, 9.5 studs, 20% behind the grip; 9 points from 1.2 to 7.6 studs ahead of the grip plus 3 pommel points 0.9-1.9 studs behind, radius 0.12 |
 | Blade targets | torso, hips, head, both upper and lower legs, the free (left) upper arm and forearm, each box at 85% |
-| Swing / twist | joint rotations split into swing and twist about the part's local Y axis (quaternion swing-twist decomposition) |
+| Swing / twist | joint rotations split into swing and twist about the part's local Y axis ([[Quaternions\|quaternion]] swing-twist decomposition) |
 | Rest | identity Transform (arms at the rig's bind pose) |
 | Idle | the first keyframe of the game's standing idle clip |
 
@@ -302,5 +302,10 @@ A verifier samples the baker's own after-dump through the offline Animator model
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Posing and Silhouettes]] · [[Troubleshooting Table]] · [[Weapon Swing Design]] · [[Spec-Driven Move Authoring]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Skinning Weights]] · [[Animation Start Here]]
+[[Posing and Silhouettes]] · [[Troubleshooting Table]] · [[Weapon Swing Design]] · [[Spec-Driven Move Authoring]] · [[Voxel Characters - Proportions Joints and Rigging]] · Skinning Weights · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Inverse Kinematics]] · [[LihFolk R15 Keyframe Pipeline]] · [[Human Swing Biomechanics]] · [[Two-Bone IK Math]] · [[Blade Grip and Wrist Limits]] · [[Snippets - IK]] · [[Testing Animations in Studio]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]]
+<!-- related:end -->

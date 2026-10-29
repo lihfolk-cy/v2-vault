@@ -1,5 +1,5 @@
 ---
-tags: [systems, abilities, stance, charge, iai, state-machine]
+tags: [systems, abilities, stance, charge, iai, state-machine, type/guide, area/animation, level/intermediate]
 ---
 # Stance and Charge Moves
 
@@ -9,7 +9,7 @@ tags: [systems, abilities, stance, charge, iai, state-machine]
 > - Dash fires off the visual cut: Clips retimed, marker table stale -> Regenerate the table from clips
 > - Sheath inside the thigh: Sheath fitted to the idle -> Fit to the stance pose
 >
-> Cost: TL;DR ~110 tok · whole note ~4.0k tok. Read more: ## A charge move controller · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~4.1k tok. Read more: ## A charge move controller · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 A stance move has the player hold a pose to build power, then release into a strike: the iaido quick-draw, a charged overhead, a bow draw, a sprinter's crouch. Animation-wise it is two or three clips stitched by a state machine whose timing is partly authored (the release) and partly player-driven (how long they hold). This note uses the shared "iai strike" of one live action game (the reference project) as the worked example: one ability on every weapon kit, with a stance, a charge, a release clip and a lightning dash through the target.
@@ -216,5 +216,10 @@ See also: [[Ability Kits Architecture]], [[Combat Combo Systems]], [[Markers and
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Equip Draw and Flourish Systems]] · [[Spec-Driven Move Authoring]] · [[Pipeline - New Animated Weapon]] · [[Combat Animation Craft]] · [[Anticipation]] · [[Input Buffering]] · [[Animation Start Here]]
+[[Equip Draw and Flourish Systems]] · [[Spec-Driven Move Authoring]] · [[Pipeline - New Animated Weapon]] · [[Combat Animation Craft]] · [[Anticipation]] · Input Buffering · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[VFX Timing with Animation]] · [[Custom Locomotion Controller Design]] · [[Hit Reactions Stagger and Hit-Stop]] · [[Locomotion Systems]] · [[Animation Review Checklist]] · [[Timing Spacing and Frame Charts]] · [[Cinematic Ultimates]] · [[Playback, Priorities and Blending]]
+<!-- related:end -->

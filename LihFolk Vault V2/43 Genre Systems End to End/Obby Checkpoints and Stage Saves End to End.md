@@ -1,5 +1,5 @@
 ---
-tags: [genre-system, obby, worked-build, checkpoints, datastore, anti-cheat, streaming, luau]
+tags: [genre-system, obby, worked-build, checkpoints, datastore, anti-cheat, streaming, luau, type/guide, area/gameplay, level/intermediate, api/CollectionService]
 ---
 # Obby Checkpoints and Stage Saves End to End
 
@@ -12,7 +12,7 @@ tags: [genre-system, obby, worked-build, checkpoints, datastore, anti-cheat, str
 > - Touch pad 4 from stage 2 (teleport in Studio with the command bar): no progress.
 > - Set `MinSeconds` on a pad to 999, then reach it: refused, warning logged, no kick.
 >
-> Cost: TL;DR ~160 tok · whole note ~6.6k tok. Read more: ## 4. The server: ObbyService · ## 5. The client: ObbyClient · ## 6. Edge cases and failure modes · ## 9. Test checklist
+> Cost: TL;DR ~160 tok · whole note ~6.7k tok. Read more: ## 4. The server: ObbyService · ## 5. The client: ObbyClient · ## 6. Edge cases and failure modes · ## 9. Test checklist
 <!-- tldr:end -->
 
 This note builds the progression spine of a stage obby: checkpoint pads that advance a player only one stage at a time and only when they are really there, a separation between the stage a player is on and the furthest stage they have reached, stage travel back and forth over a validated remote, skip credits bought with a developer product and spent through the server, server-timed splits that can feed a leaderboard, client-side kill bricks that keep working with streaming, respawning at the right checkpoint without falling through an unloaded map, and saving that does not hammer the data store on every stage. [[Genre Playbook - Obbies and Platformers]] gives the short version of the checkpoint pad and the reasons behind it; this note goes past it into the cases that break a real obby with 100 or more stages.
@@ -565,5 +565,10 @@ With `SaveEveryStages = 5` and a 30-second gap, a fast player on short stages sa
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Checkpoints and spawning]] · [[Spawn Points Safe Zones and Respawn Flow]] · [[Purchase Data and Receipts]] · [[Racing Laps and Checkpoints End to End]] · [[Cookbook - Players and Characters]] · [[Level Design Start Here]]
+[[Links - Checkpoints and spawning]] · Spawn Points Safe Zones and Respawn Flow · Purchase Data and Receipts · [[Racing Laps and Checkpoints End to End]] · Cookbook - Players and Characters · Level Design Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Genre QA Passes - Test Checklists per Game Type]] · [[Tycoon Plots and Droppers End to End]] · [[Spawn Points Safe Zones and Respawn Flow]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]] · [[Tower Defense Waves and Placement End to End]] · [[Horror Monster Chase AI End to End]]
+<!-- related:end -->

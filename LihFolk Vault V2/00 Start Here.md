@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [index, start]
+tags: [index, start, type/hub, level/beginner, api/Terrain, api/Animator, api/DataStore, api/SurfaceAppearance]
 ---
 # LihFolk Vault V2: Start Here
 

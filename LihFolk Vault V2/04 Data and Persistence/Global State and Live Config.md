@@ -1,5 +1,5 @@
 ---
-tags: [data, configs, configservice, feature-flags, live-ops, global-state, messaging]
+tags: [data, configs, configservice, feature-flags, live-ops, global-state, messaging, type/guide, area/data, level/intermediate, api/ConfigService, area/liveops]
 ---
 # Global State and Live Config
 
@@ -12,7 +12,7 @@ tags: [data, configs, configservice, feature-flags, live-ops, global-state, mess
 > - Kill switches for risky systems.
 > - Refresh policy decided per value (immediate vs boundary).
 >
-> Cost: TL;DR ~170 tok · whole note ~4.6k tok. Read more: ## Experience configs (ConfigService) · ## Game-written global state · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.7k tok. Read more: ## Experience configs (ConfigService) · ## Game-written global state · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Some state belongs to the whole game rather than to a player: a feature flag, a drop-rate multiplier for a weekend event, the start time of a boss raid, a "server luck" boost someone bought for everyone, a kill switch for a broken system, a global counter ("1,000,000 eggs hatched"). Getting that state to every server quickly, safely, and without hammering a single data store key is its own problem. As of October 2026 Roblox has a first-party answer for read-only tuning (**experience configs** via `ConfigService`), and the classic tools (data stores, MessagingService, memory stores) for state the game itself writes. This note covers each, a combined pattern, and the traps.
@@ -295,5 +295,10 @@ The senior trade-off: live config turns deploys into data edits, which is faster
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Feature Flags]] · [[Economy Telemetry and Balancing Live]] · [[Live Ops Deep Dive Start Here]] · [[Live Content Pipeline]] · [[Links - Cross-server messaging]] · [[Codes Redemption System End to End]]
+[[Feature Flags]] · Economy Telemetry and Balancing Live · Live Ops Deep Dive Start Here · Live Content Pipeline · Links - Cross-server messaging · Codes Redemption System End to End
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Live Content Pipeline]] · [[OrderedDataStores and Leaderboards]] · [[Data Loss Prevention and Recovery]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[Schema Migrations - Worked Case Studies]] · [[Saving Correctly - Autosave and BindToClose]] · [[Trading Systems Without Duplication]] · [[Player Privacy and Data Deletion]]
+<!-- related:end -->

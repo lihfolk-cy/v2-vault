@@ -1,5 +1,5 @@
 ---
-tags: [worked-build, rounds, minigames, game-loop, server-authority, datastore, ui, luau]
+tags: [worked-build, rounds, minigames, game-loop, server-authority, datastore, ui, luau, type/guide, area/gameplay, level/intermediate, api/GetAttributeChangedSignal]
 ---
 # Round-Based Minigame Loop End to End
 
@@ -12,7 +12,7 @@ tags: [worked-build, rounds, minigames, game-loop, server-authority, datastore, 
 > - Every map has `Spawns` (enough parts) and, for Lava Rise, a `Lava` part
 > - `RoundGui.ResetOnSpawn = false`
 >
-> Cost: TL;DR ~160 tok · whole note ~8.9k tok. Read more: ## 4. Saving wins: PlayerStore · ## 6. The round loop: RoundService · ## 10. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~160 tok · whole note ~9.0k tok. Read more: ## 4. Saving wins: PlayerStore · ## 6. The round loop: RoundService · ## 10. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 This note builds a complete round loop from an empty place: a lobby, an intermission timer, a map vote, a minigame played on a cloned map, elimination tracking, winners, saved win counts, and cleanup back to the lobby. The example minigame is "Lava Rise" (survive while lava climbs), but the loop is written so each minigame is one ModuleScript that plugs into the same contract.
@@ -955,5 +955,10 @@ The general rules behind these live in [[Server Authority and Validation]], [[Re
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Genre Playbook - Party and Minigame Collections]] · [[Arena Rounds with Teams and Spectating End to End]] · [[Links - Rounds and matchmaking]] · [[Genre Systems Start Here]] · [[Obby Checkpoints and Stage Saves End to End]] · [[Spawn Points Safe Zones and Respawn Flow]]
+[[Genre Playbook - Party and Minigame Collections]] · Arena Rounds with Teams and Spectating End to End · Links - Rounds and matchmaking · Genre Systems Start Here · Obby Checkpoints and Stage Saves End to End · Spawn Points Safe Zones and Respawn Flow
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Arena Rounds with Teams and Spectating End to End]] · [[Saved Inventory End to End]] · [[Rebirth and Prestige System End to End]] · [[Pet Hatching and Following End to End]] · [[Map Voting and Rotation for Round Games]] · [[Weekend Build - Arena Shooter with Server-Checked Hits]] · [[Daily Rewards System End to End]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [fundamentals, animator, measured, advanced]
+tags: [fundamentals, animator, measured, advanced, type/guide, area/animation, level/beginner, api/Animator, api/StepAnimations]
 ---
 # How the Animator Really Behaves (measured)
 
@@ -10,7 +10,7 @@ tags: [fundamentals, animator, measured, advanced]
 > - Keys bind by name to joints (Part1 name, or Bone name).
 > - CurveAnimation playback against `RotationCurve` / `FloatCurve` sampling.
 >
-> Cost: TL;DR ~120 tok · whole note ~2.9k tok. Read more: ## How the measurements were made · ## 3. Rotation interpolation
+> Cost: TL;DR ~120 tok · whole note ~3.0k tok. Read more: ## How the measurements were made · ## 3. Rotation interpolation
 <!-- tldr:end -->
 
 The official docs describe what the Animator's API does, not how it computes a pose. This note collects what one production project **measured** by playing clips on the real Animator (`Animator:StepAnimations` in Edit mode, reading every joint's `Transform`) and fitting models until a Lua re-implementation matched it. That re-implementation then ran the game's entire animation runtime, so these rules were tested on hundreds of shipped clips, not toy cases.
@@ -27,7 +27,7 @@ Use this note when you build anything that predicts or reproduces playback: offl
 
 Tolerances that defined "match": 0.03 deg median and within 0.25 deg for clean clips. Results at the end of this note.
 
-Caveats on the method: Edit mode, test dummies built from attachments (the live game used AnimationConstraint joints), and `Workspace.Retargeting` at whatever the place had at the time. Retargeting adapts joint transforms to body proportions, so on unusual avatars live playback may not match these numbers exactly.
+Caveats on the method: Edit mode, test dummies built from attachments (the live game used [[AnimationConstraint]] joints), and `Workspace.Retargeting` at whatever the place had at the time. Retargeting adapts joint transforms to body proportions, so on unusual avatars live playback may not match these numbers exactly.
 
 ## 1. Which poses are keys
 - Per joint, only Poses with `Weight > 0` are keys. Weight-0 Poses are placeholders and are skipped entirely when finding a joint's neighbouring keys.
@@ -40,7 +40,7 @@ Caveats on the method: Edit mode, test dummies built from attachments (the live 
 - Offsets lerp linearly with the eased alpha.
 
 ## 3. Rotation interpolation
-- **Quaternion nlerp** (shortest way, normalised linear blend of quaternions) when **all of the sequence's keyframes are evenly spaced** (marker-only keyframes included) **and every key is Linear**. Joint count, rig type and key count do not matter.
+- **[[Quaternions|Quaternion]] nlerp** (shortest way, normalised linear blend of quaternions) when **all of the sequence's keyframes are evenly spaced** (marker-only keyframes included) **and every key is Linear**. Joint count, rig type and key count do not matter.
 - **Otherwise a linear blend of rotation vectors**: each key as `axis * angle` relative to rest; of the two representations of each key (`v` and `v - 2*pi*axis`), the pair closest together is lerped.
 - An eased segment blends rotation vectors even in an evenly spaced sequence.
 - After the last key, an nlerp-mode joint holds the key as stored; a rotation-vector joint holds the paired vector it used for the last segment. A rotation-vector joint ending on a key of **exactly 180 degrees** holds it as `-axis * pi` (the other way round). That only matters when a weight below 1 scales the held rotation.
@@ -91,7 +91,7 @@ end
 | Comparison | Max error |
 |---|---|
 | Rotation-vector model vs Animator, 15 fresh clips | 0.24 deg |
-| Slerp model vs Animator, same clips | up to 178 deg (a shoulder; others at 146, 154, 175) |
+| [[Slerp]] model vs Animator, same clips | up to 178 deg (a shoulder; others at 146, 154, 175) |
 | Off-hand shoulder going overhead, slerp vs Animator | 9 to 12 deg mid-segment |
 | Rotation-vector model vs Animator, every combat clip (several hundred) | median 0.03 deg, 99th percentile 2 to 4 deg (the tail is segments near 180 deg) |
 
@@ -123,7 +123,7 @@ Details and worked examples: [[Playback, Priorities and Blending]].
 - `StepAnimations` needs `dt > 0`, a loaded clip (`Length > 0`) and is plugin/command-bar only.
 - Edit has no physics; `Transform` writes do not move parts. Read `Transform`s and compute part CFrames by FK.
 - ViewportFrame rigs cannot be stepped in Edit.
-- A KeyframeSequenceProvider-registered clip that has not loaded plays nothing; one QA run reported a 117 degree "error" that was just a fresh, unloaded clip.
+- A [[KeyframeSequenceProvider]]-registered clip that has not loaded plays nothing; one QA run reported a 117 degree "error" that was just a fresh, unloaded clip.
 - `Players:CreateHumanoidModelFromDescriptionAsync` in Edit returned a rig without Motor6Ds; build test rigs from rig attachments.
 
 ## 9. Frame placement
@@ -152,7 +152,7 @@ The Lua player also distance-LODs: every frame within 60 studs of the camera, ev
 
 ## Things not measured (treat as unknown)
 
-- CurveAnimation playback against `RotationCurve` / `FloatCurve` sampling.
+- [[CurveAnimation]] playback against `RotationCurve` / `FloatCurve` sampling.
 - Whether the even-spacing test has a tolerance and what it is.
 - Exact behaviour with `Workspace.Retargeting` enabled on non-standard proportions.
 - Animation graph clips.
@@ -163,5 +163,10 @@ The Lua player also distance-LODs: every frame within 60 studs of the camera, ev
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Authoring Clips in Code]] · [[Weapon Rig Player]] · [[Snippets - Lua Keyframe Player Core]] · [[Snippets - Building and Sampling Clips]] · [[AI Animation and Motion from Video]] · [[Rotations Angles and Quaternions]] · [[Animation Start Here]]
+[[Authoring Clips in Code]] · [[Weapon Rig Player]] · [[Snippets - Lua Keyframe Player Core]] · [[Snippets - Building and Sampling Clips]] · [[AI Animation and Motion from Video]] · Rotations Angles and Quaternions · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[KeyframeSequence Keyframe and Pose Reference]] · [[Animation Data from Blender to Roblox]] · [[CurveAnimation and Curve Channels]] · [[Animation Editor Advanced]] · [[Animation Glossary]] · [[Animation Objects]] · [[Clip Buffer Format]] · [[Animation Editor Workflow]]
+<!-- related:end -->

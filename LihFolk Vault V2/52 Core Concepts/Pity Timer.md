@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, economy, rng, monetization, game-design]
+tags: [core-concept, economy, rng, monetization, game-design, type/reference, area/monetization, level/beginner, area/economy]
 ---
 # Pity Timer
 
@@ -10,7 +10,7 @@ tags: [core-concept, economy, rng, monetization, game-design]
 > - Hard pity versus soft pity. Hard pity is a guarantee at roll N.
 > - The counter must be saved. A pity counter held only in server memory resets when the player rejoins, which players notice and...
 >
-> Cost: TL;DR ~140 tok · whole note ~850 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~140 tok · whole note ~930 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 A **pity timer** (or pity system) guarantees a rare outcome after a set number of failures: "a legendary within 90 rolls", or a chance that rises with each miss until it hits. It caps the worst-case bad luck without changing the average much.
@@ -59,5 +59,10 @@ Related concepts: [[Expected Value]], [[Variance]], [[Faucets and Sinks]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Economy Design Start Here]] · [[Balancing with Spreadsheets and Data]] · [[Roblox Policies Ratings and Compliance]] · [[Core Concepts Start Here]] · [[Genre Playbook - Simulators]] · [[Simulator and RNG Genre Teardown]]
+[[Economy Design Start Here]] · Balancing with Spreadsheets and Data · Roblox Policies Ratings and Compliance · [[Core Concepts Start Here]] · Genre Playbook - Simulators · Simulator and RNG Genre Teardown
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Expected Value]] · [[Balancing with Spreadsheets and Data]] · [[Genre Playbook - Simulators]] · [[Roblox Policies Ratings and Compliance]] · [[Faucets and Sinks]] · [[Simulator and RNG Genre Teardown]]
+<!-- related:end -->

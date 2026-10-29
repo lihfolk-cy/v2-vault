@@ -1,5 +1,5 @@
 ---
-tags: [procedural, generation, dungeons, roguelike, rooms, graphs, level-design, luau]
+tags: [procedural, generation, dungeons, roguelike, rooms, graphs, level-design, luau, type/guide, area/procedural, level/intermediate, area/scripting]
 ---
 # Dungeon and Room Generation
 
@@ -12,7 +12,7 @@ tags: [procedural, generation, dungeons, roguelike, rooms, graphs, level-design,
 > - Description generated separately from building.
 > - Loops added; critical path measured and within targets.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.3k tok. Read more: ## Grid scatter plus graph: a complete generator · ## Building it in Roblox · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.4k tok. Read more: ## Grid scatter plus graph: a complete generator · ## Building it in Roblox · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Procedural World Generation]] shows one dungeon method: grow a layout by snapping prefab rooms together at connector attachments, rejecting overlaps. That method is a good default for hand-built room kits. This note covers the rest of the toolbox and, more importantly, what separates a generated dungeon players enjoy from a random maze: graph structure, loops, pacing by distance, locks and keys, validation, and building the result in Roblox without blowing the part budget or breaking pathfinding.
@@ -26,7 +26,7 @@ tags: [procedural, generation, dungeons, roguelike, rooms, graphs, level-design,
 | BSP split | Recursively split a box, a room in each leaf, connect siblings | Dense buildings, offices, bases | Looks regular; few loops |
 | Graph first (mission graph) | Generate an abstract graph of encounters (start, key, lock, boss), then embed in space | Designed progression, lock and key puzzles | More code, two stages |
 | Cellular automata | Random fill, smooth by neighbour rules | Caves, organic blobs | Control, guaranteed connectivity |
-| Wave function collapse | Tiles constrained by neighbours | Towns, decorated layouts | Global structure; see [[Wave Function Collapse on Roblox]] |
+| [[Wave function collapse]] | Tiles constrained by neighbours | Towns, decorated layouts | Global structure; see [[Wave Function Collapse on Roblox]] |
 
 Most good generators **combine** them: a mission graph decides what must exist and in what order, a grid or prefab method places it, and WFC or scatter dresses it.
 
@@ -314,5 +314,10 @@ Generation pays off when replayability is the core loop ([[Genre Playbook - Comb
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Deterministic Simulation]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Combat Arena and Encounter Layout]] · [[Noise Functions and Terrain Generation]] · [[Voxel Props Environments and Modular Tiles]] · [[Tilemaps Cameras and Parallax for 2D Levels]]
+[[Deterministic Simulation]] · Genre Playbook - Puzzle and Escape Rooms · Combat Arena and Encounter Layout · [[Noise Functions and Terrain Generation]] · Voxel Props Environments and Modular Tiles · Tilemaps Cameras and Parallax for 2D Levels
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Infinite and Streamed Worlds]] · [[Voxel Props Environments and Modular Tiles]] · [[Combat Arena and Encounter Layout]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Puzzle Dependency Charts and Hint Systems]] · [[Tilemaps Cameras and Parallax for 2D Levels]]
+<!-- related:end -->

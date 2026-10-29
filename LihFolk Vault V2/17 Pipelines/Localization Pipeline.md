@@ -1,5 +1,5 @@
 ---
-tags: [pipelines, localization, translation, text, ui, csv]
+tags: [pipelines, localization, translation, text, ui, csv, type/guide, area/pipelines, level/intermediate, api/AutoLocalize, area/ui]
 ---
 # Localization Pipeline
 
@@ -12,7 +12,7 @@ tags: [pipelines, localization, translation, text, ui, csv]
 > - Context on ambiguous strings; plural variants as keys
 > - Source CSV generated from code and data, kept in Git
 >
-> Cost: TL;DR ~170 tok · whole note ~4.8k tok. Read more: ## Stage 1: write text for translation · ## Nuances and edge cases · ## Checklist · ## Common mistakes
+> Cost: TL;DR ~170 tok · whole note ~4.9k tok. Read more: ## Stage 1: write text for translation · ## Nuances and edge cases · ## Checklist · ## Common mistakes
 <!-- tldr:end -->
 
 Roblox has a large non-English audience, and the platform does a lot of translation work for you: it can capture in-game text automatically, translate it automatically for supported languages, and swap it at runtime. That makes it tempting to treat localization as "turn it on and forget it". In practice the automatic layer only works well when the game's text is **built for it**: stable keys, no text glued together in code, placeholders instead of concatenation, UI that survives longer strings, and a review loop for the strings that matter. This note is the pipeline that gets there. Concepts and APIs are introduced in [[Localization]]; text rendering in [[Text Fonts and Rich Text]]; UI sizing in [[UI Asset Pipeline]] and [[Responsive UI for Phone Tablet Console and PC]].
@@ -24,7 +24,7 @@ Roblox has a large non-English audience, and the platform does a lot of translat
 | **LocalizationTable** | holds entries: `Key`, `Source`, `Context`, `Example`, and `Values` (a dictionary of locale code to translated text). Edited in Studio, on the Creator Hub, or via CSV |
 | **Automatic text capture** | records text that appears in the running game into the experience's cloud table, so you do not have to list it by hand |
 | **Automatic translation** | Roblox machine-translates captured or uploaded strings for supported languages; manual translations take priority (check the current language list and behaviour in the docs, as of October 2026) |
-| **AutoLocalize** | a property on GUI objects; when on, the engine replaces matching source text with the player's translation at runtime |
+| **[[AutoLocalize]]** | a property on GUI objects; when on, the engine replaces matching source text with the player's translation at runtime |
 | **Translator** | `LocalizationService:GetTranslatorForPlayerAsync(player)` returns a Translator; `Translator:FormatByKey(key, args)` formats a keyed string with arguments |
 | **Translator Portal / Creator Hub** | where humans review and edit translations; CSV download and upload for bulk work |
 
@@ -284,5 +284,10 @@ Commit the CSV, the strings module and the item data together. Log which locales
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Dialogue System End to End]] · [[Narrative Start Here]] · [[Writing Dialogue for Roblox Players]] · [[Cookbook - Tables Strings and Time]] · [[Quest Writing and Hooks]] · [[Lore Delivery Without Walls of Text]]
+[[Dialogue System End to End]] · Narrative Start Here · Writing Dialogue for Roblox Players · Cookbook - Tables Strings and Time · Quest Writing and Hooks · Lore Delivery Without Walls of Text
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Icon and Thumbnail Rendering Pipeline]] · [[Live Content Pipeline]] · [[Code Pipeline - Rojo Git and CI]] · [[Build Test and Release Pipeline]] · [[Asset Upload Automation with Open Cloud]] · [[Blender Automation with Python]] · [[Audio Pipeline]] · [[Art Pipeline - Concept to In-Game Asset]]
+<!-- related:end -->

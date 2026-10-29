@@ -1,5 +1,5 @@
 ---
-tags: [authoring, plugins, moon-animator, blender, tools]
+tags: [authoring, plugins, moon-animator, blender, tools, type/guide, area/animation, level/intermediate, api/Animator, area/modeling, api/KeyframeSequence, api/Motor6D]
 ---
 # Moon Animator and Third-Party Tools
 
@@ -9,7 +9,7 @@ tags: [authoring, plugins, moon-animator, blender, tools]
 > - Avoid: Frame rate assumptions (24 vs 30 vs 60) -> Roblox stores seconds; check key times after import
 > - Avoid: Curves the enum cannot represent -> thin with a tolerance
 >
-> Cost: TL;DR ~110 tok · whole note ~3.1k tok. Read more: ## Moon Animator 2 · ## Blender (with or without a bridge) · ## Interop pitfalls between tools
+> Cost: TL;DR ~110 tok · whole note ~3.2k tok. Read more: ## Moon Animator 2 · ## Blender (with or without a bridge) · ## Interop pitfalls between tools
 <!-- tldr:end -->
 
 The built-in editor is not the only way to make Roblox animation. Many studios use a paid Studio plugin (Moon Animator 2 is the best known), Blender with a bridge add-on, or their own code. This note describes what each route is good for, what it hands to the engine, and where the hand-off goes wrong.
@@ -80,7 +80,7 @@ Export FBX or glTF with animation, then import through Studio's 3D Importer. The
 - Bridges still must respect Roblox's limits: the root pose is not applied, legacy Cubic runs backwards, and the Animator's in-between interpolation is not Blender's. Check the result in Studio, not only in Blender.
 
 ### Blender gotchas specific to Roblox
-- **Blender interpolates in its own way** (Bezier F-curves on Euler or quaternion channels). The Animator interpolates per joint between keys with only the enum easings. Bake to keys dense enough that Roblox's interpolation cannot wander: every 2 to 3 frames through fast motion, sparser in holds, then thin with a tolerance.
+- **Blender interpolates in its own way** ([[Bezier Curves|Bezier]] F-curves on Euler or [[Quaternions|quaternion]] channels). The Animator interpolates per joint between keys with only the enum easings. Bake to keys dense enough that Roblox's interpolation cannot wander: every 2 to 3 frames through fast motion, sparser in holds, then thin with a tolerance.
 - **Scale.** Blender units should equal studs at the final character height. Translation keys are absolute studs; see [[Scale and Animation]].
 - **Root motion.** Put root travel on the first child bone or joint (LowerTorso, or a "Body" bone), not the top-level root.
 - **Constraints and drivers do not export.** Bake them to keys before export.
@@ -131,5 +131,10 @@ Plugins run inside Studio with access to the whole data model. Before installing
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animation Start Here]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Engine Gotchas]] · [[Keyframes, Easing and Interpolation]] · [[AI Animation and Motion from Video]] · [[Links - Animation creation]]
+[[Animation Start Here]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Engine Gotchas]] · [[Keyframes, Easing and Interpolation]] · [[AI Animation and Motion from Video]] · Links - Animation creation
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Open Questions]] · [[Snippets - Building and Sampling Clips]] · [[Animation Glossary]] · [[How the Animator Really Behaves]] · [[Timing Spacing and Frame Charts]] · [[Enemy Import Axis Fix]] · [[Importing Models and Rigs]] · [[Animation Objects]]
+<!-- related:end -->

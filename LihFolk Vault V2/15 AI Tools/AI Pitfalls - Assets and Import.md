@@ -13,7 +13,7 @@ verified: 2026-10-28
 > - GLB exported with modifiers applied (static) or applied manually (rigs).
 > - Vertex colours ACTIVE, `MeshPart.Color` white.
 >
-> Cost: TL;DR ~150 tok · whole note ~1.7k tok. Read more: ## 1. Models 100x too big or too small (FBX) · ## 7. Mesh and texture limits from old training data · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~1.8k tok. Read more: ## 1. Models 100x too big or too small (FBX) · ## 7. Mesh and texture limits from old training data · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Asset mistakes come from unit and default mismatches between tools that a model never sees together: Blender, its exporters, the Roblox 3D Importer and the asset pipeline. Most entries are **Measured** in the LihFolk reference project or recorded in the vault's shipped recipes (`skills/quality-score/recipes/model.md`). Hub: [[What AI Models Get Wrong in Roblox]].
@@ -27,7 +27,7 @@ Asset mistakes come from unit and default mismatches between tools that a model 
 
 ## 2. Bevels and modifiers missing (glTF)
 
-- **Wrong:** Blender glTF export with defaults on a model built with Bevel, Mirror, Solidify or Weighted Normal modifiers.
+- **Wrong:** Blender glTF export with defaults on a model built with Bevel, Mirror, Solidify or [[Weighted Normals|Weighted Normal]] modifiers.
 - **Right:** **Measured** (recipe): the GLB exporter's `export_apply` defaults to off and drops modifiers; set `export_apply=True` for static props. For skinned rigs, apply the geometry modifiers yourself and keep the Armature modifier live.
 - Over-bevelling: **Measured** (recipe): more than 2 bevel segments on small props multiplied triangles 9x or more.
 
@@ -40,7 +40,7 @@ Asset mistakes come from unit and default mismatches between tools that a model 
 ## 4. Transforms, pivots and axes
 
 - **Wrong:** unapplied rotation or scale in Blender; origin in the middle of a floor prop; Z-up assumptions.
-- **Right:** apply transforms before export; origin at the bottom for floor props, back for wall props, a corner for modular pieces (recipe defaults). Roblox is Y-up; check forward axis on creatures (see [[Enemy Import Axis Fix]]).
+- **Right:** apply transforms before export; origin at the bottom for floor props, back for wall props, a corner for [[Modular Kits|modular pieces]] (recipe defaults). Roblox is Y-up; check forward axis on creatures (see [[Enemy Import Axis Fix]]).
 
 ## 5. Decal id used as an image id
 
@@ -102,3 +102,8 @@ Asset mistakes come from unit and default mismatches between tools that a model 
 - [[Textures Decals and Texture Memory]]
 - [[Level of Detail and Model Streaming]]
 - [[Engine and API Changes 2025-2026]]
+
+<!-- related:start -->
+## Related
+[[Modeling Fundamentals for Games]] · [[Blender Workflow for Roblox Creators]] · [[AI Material and Texture Generation]] · [[Roblox Generative AI - Cube Mesh and Texture Generation]] · [[AI Pitfalls - Physics and Animation]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Roblox Studio Assistant]] · [[Benchmark - Does a Knowledge Vault Make AI Better at Roblox]] · [[AI Image Generation for Icons Thumbnails and Concepts]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [blender, vfx, meshes, textures, roblox]
+tags: [blender, vfx, meshes, textures, roblox, type/guide, area/modeling, level/intermediate, area/vfx]
 ---
 # Mesh VFX Packs Built in Blender
 
@@ -9,7 +9,7 @@ tags: [blender, vfx, meshes, textures, roblox]
 > - Avoid: Meshes collidable or queryable. Symptom: slashes block players, trip hitbox raycasts or shift physics.
 > - Avoid: Destroying and recreating per hit. Symptom: frame spikes during busy fights and growing memory.
 >
-> Cost: TL;DR ~130 tok · whole note ~2.1k tok. Read more: ## The parts that made each effect · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~130 tok · whole note ~2.2k tok. Read more: ## The parts that made each effect · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 ![[p45_mesh_vfx_pack.png]]
@@ -81,5 +81,10 @@ Related: [[Beams and Trails]], [[Particle Emitters In Depth]], [[Dramatic Showca
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Dash VFX Presentation on an R15 Rig]] · [[VFX Timing with Animation]] · [[Stylised Weapons From a Concept]] · [[Light Sources and Shadows]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Hand-Painted and Stylized Texturing]]
+[[Dash VFX Presentation on an R15 Rig]] · [[VFX Timing with Animation]] · [[Stylised Weapons From a Concept]] · Light Sources and Shadows · Trim Sheets Atlases and Vertex Colors · Hand-Painted and Stylized Texturing
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Slash VFX Recipes - Crescent and Ring]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[Low-Poly Tree Set Worked Example]] · [[Blender 5 Python Gotchas for Headless Builds]] · [[Chibi Character Rules in Practice]]
+<!-- related:end -->

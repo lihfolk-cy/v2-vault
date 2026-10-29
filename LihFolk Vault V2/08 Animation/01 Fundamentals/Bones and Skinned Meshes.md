@@ -1,5 +1,5 @@
 ---
-tags: [fundamentals, bones, skinning, rigging]
+tags: [fundamentals, bones, skinning, rigging, type/guide, area/animation, level/beginner, api/Motor6D, area/modeling, api/Animator, api/RigidConstraint, api/Bone]
 ---
 # Bones and Skinned Meshes
 
@@ -9,7 +9,7 @@ tags: [fundamentals, bones, skinning, rigging]
 > - Avoid: Using `Bone.WorldCFrame` for animated position -> `TransformedWorldCFrame`
 > - Avoid: Relying on MeshPart collision for animated limbs -> Hitbox parts on bones, or data-driven hits
 >
-> Cost: TL;DR ~100 tok · whole note ~3.9k tok. Read more: ## Driving bones from code · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~4.1k tok. Read more: ## Driving bones from code · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 A skinned mesh is one mesh whose vertices are deformed by a hierarchy of `Bone` objects, each vertex weighted to a few bones. It is how smooth creatures, tails, capes, tentacles, dragons and modern avatar bodies bend without visible seams. This note covers the `Bone` class, how the Animator drives bones, how skinned rigs differ from part rigs in practice (collision, replication, hit detection, root motion), the limits, and the patterns one production game used for dozens of skinned enemies and bosses.
@@ -137,7 +137,7 @@ From one game's creature "family" conventions (rules of thumb that held across 2
 
 ## Skinned avatars
 
-Roblox avatar bodies can be skinned meshes across the 15 R15 body parts: the parts and their joints (Motor6D or AnimationConstraint) still exist and are what clips drive; the skinning lets the mesh deform smoothly across part boundaries. Animating them is the same as animating any R15 rig: Poses named after the parts. Layered clothing then wraps the deformed body (see [[Layered Clothing Cages and Animation]]).
+Roblox avatar bodies can be skinned meshes across the 15 R15 body parts: the parts and their joints (Motor6D or [[AnimationConstraint]]) still exist and are what clips drive; the skinning lets the mesh deform smoothly across part boundaries. Animating them is the same as animating any R15 rig: Poses named after the parts. Layered clothing then wraps the deformed body (see [[Layered Clothing Cages and Animation]]).
 
 ## Common mistakes
 
@@ -186,5 +186,10 @@ Roblox avatar bodies can be skinned meshes across the 15 R15 body parts: the par
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skinning Weights]] · [[Skeleton Library]] · [[Modeling Characters for R15 and Custom Rigs]] · [[3D Importer Settings Reference]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Modeling Fundamentals for Games]] · [[Animation Start Here]]
+[[Skinning Weights]] · Skeleton Library · Modeling Characters for R15 and Custom Rigs · [[3D Importer Settings Reference]] · Voxel Characters - Proportions Joints and Rigging · Modeling Fundamentals for Games · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Skeleton Library]] · [[Blender Armature and Bone Roll Conventions]] · [[Accessories and Armor That Follow Animation]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Exporting FBX vs GLB]] · [[Retargeting Animations Between Rigs]] · [[Importing Models and Rigs]] · [[Custom Rigs - Weapons and Props]] · [[Custom Characters and StarterCharacter]] · [[Animation Data from Blender to Roblox]]
+<!-- related:end -->

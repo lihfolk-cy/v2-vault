@@ -1,5 +1,5 @@
 ---
-tags: [pipeline, tooling, archive, http, rbxm]
+tags: [pipeline, tooling, archive, http, rbxm, type/guide, area/animation, level/intermediate, api/HttpService, area/studio, api/KeyframeSequence]
 ---
 # Clip Archive Server
 
@@ -9,7 +9,7 @@ tags: [pipeline, tooling, archive, http, rbxm]
 > - Avoid: Running the server from a terminal that gets closed.
 > - Avoid: Archive folder outside the backup set. Symptom: a disk failure loses every original.
 >
-> Cost: TL;DR ~100 tok · whole note ~4.2k tok. Read more: ## The Studio side · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~4.3k tok. Read more: ## The Studio side · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 A 120-line local HTTP server that one project used to keep the **originals of baked clips out of the place**: one `.rbxm` file per KeyframeSequence on disk, written and read by Studio tools over localhost. It is what made it safe to delete hundreds of thousands of Pose instances ([[Baked Clip Stubs and Archiving]]) while keeping every original one call away. The pattern works for any "export this instance, get it back later" need.
@@ -236,5 +236,10 @@ The trade-off a senior developer weighs: an archive server is one more process t
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Publishing Animations]] · [[Command Bar and Studio Scripting]] · [[Pipeline Design Principles]] · [[Asset Upload Automation with Open Cloud]] · [[Safe Changes in a Shared Place]] · [[Writing Your Own MCP Server]] · [[Animation Start Here]]
+[[Publishing Animations]] · [[Command Bar and Studio Scripting]] · Pipeline Design Principles · Asset Upload Automation with Open Cloud · Safe Changes in a Shared Place · Writing Your Own MCP Server · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Lua Keyframe Player]] · [[Weapon Rig Player]] · [[Pipeline - Importing Animated Enemies]] · [[Enemy Import Axis Fix]] · [[Animation Data from Blender to Roblox]] · [[Pipeline - Arm IK Baking and QA]] · [[Snippets - Building and Sampling Clips]] · [[Case Study - Fixing Hundreds of Attack Clips]]
+<!-- related:end -->

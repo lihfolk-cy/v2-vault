@@ -1,5 +1,5 @@
 ---
-tags: [debugging, physics, network-ownership, assemblies, jitter, flinging]
+tags: [debugging, physics, network-ownership, assemblies, jitter, flinging, type/guide, area/debugging, level/advanced, api/SetNetworkOwner, area/physics, api/CollectionService]
 ---
 # Debugging Physics and Network Ownership
 
@@ -12,7 +12,7 @@ tags: [debugging, physics, network-ownership, assemblies, jitter, flinging]
 > - Owner answered, with a watcher over time and two or more clients.
 > - One mover per assembly (kinematic or constraints, not both).
 >
-> Cost: TL;DR ~130 tok · whole note ~4.1k tok. Read more: ## 2. Tools · ## 3. Jitter and stutter · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.2k tok. Read more: ## 2. Tools · ## 3. Jitter and stutter · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Physics bugs in Roblox look dramatic (players launched into the sky, NPCs vibrating, vehicles snapping back) and usually come from a small set of causes: the wrong machine simulating an assembly, an assembly that is not shaped the way you think, scripts fighting the solver, or collisions resolved with huge forces. This note is a diagnostic method: which tools show ownership and assemblies, how to log ownership over time, and a symptom-to-cause guide that goes past the short table in [[Network Ownership]].
@@ -287,5 +287,10 @@ Touched-based logic misbehaves in predictable ways:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Cars with Constraints - Suspension Steering and Drive]] · [[Snippets - Ragdoll]] · [[Links - Network ownership]] · [[Ragdolls and Physics-Based Animation]] · [[Boats Buoyancy and Water]] · [[Physics and Vehicles Start Here]]
+[[Cars with Constraints - Suspension Steering and Drive]] · Snippets - Ragdoll · Links - Network ownership · Ragdolls and Physics-Based Animation · Boats Buoyancy and Water · Physics and Vehicles Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Standing on Moving Vehicles and Platforms - Keeping Players Glued]] · [[AI Pitfalls - Physics and Animation]] · [[Centre of Mass, Anti-Flip and Self-Righting]] · [[Grabs, Carries and Throws - Moving Players Safely]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[Snippets - Ragdoll]]
+<!-- related:end -->

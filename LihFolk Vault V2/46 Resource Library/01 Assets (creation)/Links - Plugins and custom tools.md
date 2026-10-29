@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, assets-creation]
+tags: [resources, links, assets-creation, type/reference, area/studio, level/intermediate]
 ---
 # Links - Plugins and custom tools
 

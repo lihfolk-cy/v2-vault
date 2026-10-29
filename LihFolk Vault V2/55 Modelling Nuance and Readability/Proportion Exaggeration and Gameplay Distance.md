@@ -1,5 +1,5 @@
 ---
-tags: [modeling, proportion, exaggeration, readability, scale, stylised, distance, props, characters]
+tags: [modeling, proportion, exaggeration, readability, scale, stylised, distance, props, characters, type/guide, area/modeling, level/intermediate]
 ---
 # Proportion Exaggeration and Gameplay Distance
 
@@ -12,7 +12,7 @@ tags: [modeling, proportion, exaggeration, readability, scale, stylised, distanc
 > - Smallest feature checked against the distance table.
 > - Exaggeration done in pairs (one feature up, a neighbour down).
 >
-> Cost: TL;DR ~180 tok · whole note ~3.6k tok. Read more: ## Exaggeration is a function of distance · ## What to exaggerate, and by how much · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~3.7k tok. Read more: ## Exaggeration is a function of distance · ## What to exaggerate, and by how much · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Stylised Roblox art exaggerates: big heads, thick rims, oversized doors, chunky weapons. [[Low-Poly and Stylized Modeling]] says "exaggerate scale contrast" and "thick everything". This note answers the harder questions: exaggerate by how much, for which distance, and where exaggeration breaks gameplay (a door the player cannot fit through, a weapon that clips the camera, a prop so big it hides a path). The core idea is that the right proportions are not fixed. They depend on the distance the object is usually seen from, its gameplay role, and the scale of the avatar standing next to it.
@@ -182,5 +182,10 @@ Goal: a stall for a hub plaza, seen from 15 to 60 studs, with an interactable co
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Stylised Shop Stand Worked Example]] · [[Critiquing a Model - Paintovers and Iteration]] · [[Spending Triangles Where the Camera Looks]] · [[Untextured Stylised Modelling Start Here]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Keeping a Mixed Asset Library Consistent]]
+[[Stylised Shop Stand Worked Example]] · [[Critiquing a Model - Paintovers and Iteration]] · [[Spending Triangles Where the Camera Looks]] · Untextured Stylised Modelling Start Here · Faceted Low-Poly - Flat Normals and Facet Size · Keeping a Mixed Asset Library Consistent
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Keeping a Mixed Asset Library Consistent]] · [[Modeling Fundamentals for Games]] · [[Hard-Surface Modeling]] · [[Mesh Optimization for Mobile]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[Faceted Low-Poly - Flat Normals and Facet Size]]
+<!-- related:end -->

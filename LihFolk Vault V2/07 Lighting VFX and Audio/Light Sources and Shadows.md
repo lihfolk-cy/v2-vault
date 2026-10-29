@@ -1,5 +1,5 @@
 ---
-tags: [lighting, lights, shadows, performance, vfx]
+tags: [lighting, lights, shadows, performance, vfx, type/guide, area/vfx, level/intermediate, api/CollectionService, area/lighting, api/TweenService, api/Lighting]
 ---
 # Light Sources and Shadows
 
@@ -12,7 +12,7 @@ tags: [lighting, lights, shadows, performance, vfx]
 > - Shadow-casting lights limited to a few hero lights per view.
 > - VFX parts have CastShadow off; VFX lights have Shadows off and expire.
 >
-> Cost: TL;DR ~180 tok · whole note ~3.4k tok. Read more: ## 2. Shadows: sun versus local lights · ## 5. Managing many lights in code · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~3.5k tok. Read more: ## 2. Shadows: sun versus local lights · ## 5. Managing many lights in code · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Local lights are where lighting stops being global and starts telling the player things: the lantern on the safe path, the glow under a charging ability, the red alarm strobe, the flicker that says "this corridor is wrong". They are also the lighting feature that most often ruins frame rate, because each one is cheap until there are forty of them overlapping the camera with shadows on.
@@ -269,5 +269,10 @@ See also: [[Lighting Technologies and Settings]], [[Lighting Mood and Time of Da
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Lighting Untextured Art in Roblox]] · [[Stylized Lighting Recipes]] · [[Baking Lighting and Detail into Textures]] · [[VFX Performance Budgets and Culling]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Art Budgets - Triangles Draw Calls Memory]]
+[[Lighting Untextured Art in Roblox]] · [[Stylized Lighting Recipes]] · Baking Lighting and Detail into Textures · [[VFX Performance Budgets and Culling]] · Voxel Shading - Baked AO Edges and Lighting · Art Budgets - Triangles Draw Calls Memory
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Particle Emitters In Depth]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Atmosphere Sky Clouds and Post-Processing]] · [[Beams and Trails]] · [[Slash VFX Recipes - Crescent and Ring]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]]
+<!-- related:end -->

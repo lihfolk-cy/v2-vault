@@ -12,10 +12,10 @@ tags: [modeling, blender, curves, bezier, sweep, lathe, geometry-nodes, python, 
 > - Profile point count matches viewing distance (6 / 8 / 12 / 16).
 > - Rings follow curvature; straights carry one ring at each end.
 >
-> Cost: TL;DR ~160 tok · whole note ~5.0k tok. Read more: ## 6. The LihFolk helper module · ## 7. Worked samples (measured) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.1k tok. Read more: ## 6. The LihFolk helper module · ## 7. Worked samples (measured) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-Many of the best-looking stylised props are a curve with a cross-section: a sword blade, a horn, a pipe run, a cable, a tentacle, a branch, a VFX swirl, a lathed potion bottle, a bevelled badge. Blender offers four ways to build them (curve objects, Geometry Nodes, modelling tools like Spin and Screw, and Python), and every one of them can quietly spend thousands of triangles on straight sections nobody looks at. This note covers each route, what it costs in triangles (measured), how to keep the result inside Roblox budgets, and the LihFolk helper module `lihfolk_curves.py` that builds these shapes from a script and checks them against the house gate. The underlying maths (Bezier handles, splines, continuity, curvature) is in [[Bezier Curves and Splines for Modellers]].
+Many of the best-looking stylised props are a curve with a cross-section: a sword blade, a horn, a pipe run, a cable, a tentacle, a branch, a VFX swirl, a lathed potion bottle, a bevelled badge. Blender offers four ways to build them (curve objects, Geometry Nodes, modelling tools like Spin and Screw, and Python), and every one of them can quietly spend thousands of triangles on straight sections nobody looks at. This note covers each route, what it costs in triangles (measured), how to keep the result inside Roblox budgets, and the LihFolk helper module `lihfolk_curves.py` that builds these shapes from a script and checks them against the house gate. The underlying maths ([[Bezier Curves|Bezier]] handles, splines, continuity, curvature) is in [[Bezier Curves and Splines for Modellers]].
 
 Trust labels: **Measured** (headless Blender 5.2, October 2026, `tools/curves/test_lihfolk_curves.py`), **Docs** (Blender 5.2 manual), **Rule of thumb**, **Unverified**.
 
@@ -86,7 +86,7 @@ Fillet Curve makes **arcs**, which are G1: fine for pipes and rails. For blade a
 - **Spin** (Edit Mode) revolves selected geometry around the 3D cursor: a lathe. Draw the half-profile of a vase as a vertex chain, spin 360 degrees with 12 to 20 steps, merge by distance at the seam.
 - **Screw modifier** revolves with an offset along the axis: springs, screw threads, spiral staircases, drill bits. Steps per turn sets the triangle cost directly.
 - **Simple Deform** bends, tapers, twists or stretches a mesh about the object's origin and a chosen axis. Model a straight blade or branch with enough edge loops along its length, then bend it. Too few loops give a polygonal bend; the loop count is your curve resolution.
-- **Subdivision Surface vs bevel.** Subdivision with support loops makes very smooth curvature, but each level multiplies faces by four (Docs: one level splits each quad into four). On Roblox that cost is rarely worth it: use subdivision as a modelling step to find a shape, then apply and reduce, or use a limited bevel plus weighted normals ([[Hard-Surface Modeling]], [[Bevels Chamfers and Edge Highlights Without Textures]]).
+- **Subdivision Surface vs bevel.** Subdivision with support loops makes very smooth curvature, but each level multiplies faces by four (Docs: one level splits each quad into four). On Roblox that cost is rarely worth it: use subdivision as a modelling step to find a shape, then apply and reduce, or use a limited bevel plus [[weighted normals]] ([[Hard-Surface Modeling]], [[Bevels Chamfers and Edge Highlights Without Textures]]).
 
 ---
 
@@ -257,5 +257,10 @@ What made them look right, in order of impact:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Blender Automation with Python]] · [[Low-Poly Tree Set Worked Example]] · [[Organic and Creature Modeling]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[Procedural Blender Assets Start Here]] · [[Topology and Edge Flow]]
+[[Blender Automation with Python]] · Low-Poly Tree Set Worked Example · [[Organic and Creature Modeling]] · Clean Stylised Shading - Weighted and Custom Normals · Procedural Blender Assets Start Here · [[Topology and Edge Flow]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Procedural Model Kits - Lessons]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Modeling Fundamentals for Games]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Retopology and Decimation]] · [[Low-Poly and Stylized Modeling]] · [[Normal Maps and Detail Baking]] · [[Modular Environment Kits]]
+<!-- related:end -->

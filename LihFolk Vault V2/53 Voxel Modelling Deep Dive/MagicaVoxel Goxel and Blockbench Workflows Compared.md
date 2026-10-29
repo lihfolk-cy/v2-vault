@@ -1,5 +1,5 @@
 ---
-tags: [modeling, voxel, magicavoxel, goxel, blockbench, blender, tools, export, pipeline, textures]
+tags: [modeling, voxel, magicavoxel, goxel, blockbench, blender, tools, export, pipeline, textures, type/guide, area/modeling]
 ---
 # MagicaVoxel Goxel and Blockbench Workflows Compared
 
@@ -12,10 +12,10 @@ tags: [modeling, voxel, magicavoxel, goxel, blockbench, blender, tools, export, 
 > - Project palette loaded in every tool; role slots fixed.
 > - Reference cube scale tested for each tool's exporter.
 >
-> Cost: TL;DR ~210 tok · whole note ~4.3k tok. Read more: ## 1. What each tool actually produces · ## 3. MagicaVoxel pipeline · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~210 tok · whole note ~4.4k tok. Read more: ## 1. What each tool actually produces · ## 3. MagicaVoxel pipeline · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-Three free tools dominate hand-made blocky art: **MagicaVoxel** (a dedicated voxel editor with a path-traced renderer), **Goxel** (an open-source voxel editor with an unbounded scene) and **Blockbench** (a box modeller with per-face UVs and pixel textures, which is not a voxel editor at all, though its output looks blocky). They produce very different data, and that difference decides your whole Roblox pipeline: how colour reaches the mesh, how many triangles you ship, whether you need Blender in the middle, and whether a model can be rigged. [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] introduces MagicaVoxel and Blockbench in a paragraph each. This note compares all three side by side, walks one model through each pipeline, and covers the Roblox-side settings that make or break blocky textures, in particular texture filtering, which most tutorials miss.
+Three free tools dominate hand-made blocky art: **[[MagicaVoxel]]** (a dedicated voxel editor with a path-traced renderer), **Goxel** (an open-source voxel editor with an unbounded scene) and **[[Blockbench]]** (a box modeller with per-face UVs and pixel textures, which is not a voxel editor at all, though its output looks blocky). They produce very different data, and that difference decides your whole Roblox pipeline: how colour reaches the mesh, how many triangles you ship, whether you need Blender in the middle, and whether a model can be rigged. [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] introduces MagicaVoxel and Blockbench in a paragraph each. This note compares all three side by side, walks one model through each pipeline, and covers the Roblox-side settings that make or break blocky textures, in particular texture filtering, which most tutorials miss.
 
 Product details change between releases. Facts below are labelled "tool docs" where they come from each project's own pages, and are as of October 2026. MagicaVoxel's official site did not render readable text when checked, so its limits are taken from its published file-format specification and long-standing community documentation and are marked as such.
 
@@ -90,7 +90,7 @@ Blockbench builds models from boxes, each with six UV-mapped faces, and paints a
 
 ## 6. Texture filtering: the setting that decides whether blocky art looks crisp
 
-Roblox filters textures bilinearly by default, which is right for photographs and wrong for pixel art. Two cases.
+Roblox filters textures bilinearly by default, which is right for photographs and wrong for [[pixel art]]. Two cases.
 
 **Painted pixel textures (Blockbench).** A 16 x 16 face texture on a 1-stud cube, seen up close, covers far more screen pixels than it has texels, so bilinear filtering blurs every edge. `SurfaceAppearance` has a `ResampleMode` property: `Default` smooths with bilinear filtering, while `Pixelated` "preserve[s] the sharp edges of pixels using nearest-neighbor filtering" (Roblox docs, as of October 2026). So for pixel art on meshes, put the texture in a `SurfaceAppearance` ColorMap with `ResampleMode = Pixelated` rather than in `MeshPart.TextureID`, which has no such property on the MeshPart reference page. The docs do not say how `Pixelated` interacts with mipmaps when the texture is minified at a distance; test a distant view before relying on it.
 
@@ -158,5 +158,10 @@ Many blocky games mix tools: environment in a voxel editor, characters in Blockb
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Voxel Modelling Start Here]] · [[The Gradient Palette Texture Workflow]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Modeling in Blender for Roblox]] · [[Substance Painter and Texturing Tools]] · [[Untextured Stylised Modelling Start Here]]
+[[Voxel Modelling Start Here]] · [[The Gradient Palette Texture Workflow]] · Flat Colour vs Gradient Atlas vs Vertex Colour · Modeling in Blender for Roblox · Substance Painter and Texturing Tools · Untextured Stylised Modelling Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Modeling in Blender for Roblox]] · [[Substance Painter and Texturing Tools]] · [[UV Unwrapping]] · [[Voxel Props Environments and Modular Tiles]] · [[Voxel Art - Studs Outlines and Style Kits]]
+<!-- related:end -->

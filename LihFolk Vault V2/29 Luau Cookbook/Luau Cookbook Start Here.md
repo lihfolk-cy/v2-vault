@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [luau, cookbook, hub, recipes]
+tags: [luau, cookbook, hub, recipes, type/hub, area/scripting, level/beginner]
 ---
 # Luau Cookbook Start Here
 
@@ -46,5 +46,5 @@ Start with Players and Characters and Remotes and Networking (most first-game bu
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox DataStore Safety]] · [[Game Math Start Here]] · [[Advanced Luau Start Here]] · [[Debugging Start Here]] · [[Skill - Roblox Secure Remotes]] · [[Replication Boundary]]
+[[Skill - Roblox DataStore Safety]] · Game Math Start Here · Advanced Luau Start Here · Debugging Start Here · Skill - Roblox Secure Remotes · Replication Boundary
 <!-- auto-links:end -->

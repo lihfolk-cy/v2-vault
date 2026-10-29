@@ -1,5 +1,5 @@
 ---
-tags: [math, game-math, rotations, quaternions, euler-angles, cframe, turrets, networking, luau]
+tags: [math, game-math, rotations, quaternions, euler-angles, cframe, turrets, networking, luau, type/guide, area/math, level/advanced]
 ---
 # Rotations Angles and Quaternions
 
@@ -15,7 +15,7 @@ tags: [math, game-math, rotations, quaternions, euler-angles, cframe, turrets, n
 > Cost: TL;DR ~180 tok · whole note ~6.0k tok. Read more: ## 6. A small quaternion toolkit in Luau · ## 9. Compressing rotations for the network and for saves · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-Rotations cause more confusing bugs than any other part of game maths: turrets that spin the long way round, cameras that flip at the top of a look, held items that drift and skew, thrown objects that tumble wrong, and animations that interpolate through an impossible pose. [[Math Vectors and CFrames]] covers building rotations (`CFrame.Angles`, `fromAxisAngle`, `lookAt`), Euler orders, composition order and `Orthonormalize`. [[Motor6D Math and CFrame Composition]] covers joints. This note goes deeper into the representations themselves and the gameplay jobs that need them: wrapping and limiting angles, turning at a fixed rate in 3D, splitting a rotation into swing and twist for turret and head limits, angular velocity for throws, averaging orientations, quaternion maths you can run in Luau, and compressing rotations for the network.
+Rotations cause more confusing bugs than any other part of game maths: turrets that spin the long way round, cameras that flip at the top of a look, held items that drift and skew, thrown objects that tumble wrong, and animations that interpolate through an impossible pose. [[Math Vectors and CFrames]] covers building rotations (`CFrame.Angles`, `fromAxisAngle`, `lookAt`), Euler orders, composition order and `Orthonormalize`. [[Motor6D Math and CFrame Composition]] covers joints. This note goes deeper into the representations themselves and the gameplay jobs that need them: wrapping and limiting angles, turning at a fixed rate in 3D, splitting a rotation into swing and twist for turret and head limits, angular velocity for throws, averaging orientations, [[Quaternions|quaternion]] maths you can run in Luau, and compressing rotations for the network.
 
 Conventions: Roblox is right-handed and Y up, `LookVector` is negative Z, and angles in code are radians (Roblox docs (as of October 2026)). A positive rotation about +Y turns the forward vector toward -X, which is to the player's left; a positive rotation about +X tips the forward vector upward. The reference project documented the same convention for body poses: positive X rotation leans back, positive Y rotation turns left (measured in the reference project).
 
@@ -293,7 +293,7 @@ This is a good approximation when the inputs are within a few tens of degrees of
 
 ## 8. Interpolation: slerp, nlerp and what the Animator actually does
 
-- **Slerp** moves at constant angular speed along the shortest arc.
+- **[[Slerp]]** moves at constant angular speed along the shortest arc.
 - **Nlerp** (lerp the four numbers, then normalise) follows the same path but speeds up slightly in the middle; for angles under about 30 degrees the difference is negligible (rule of thumb). It is cheaper and, unlike slerp, it is commutative when blending several rotations with weights, which is why animation blending uses it.
 - **Long turns.** Both pick the short way. If a designer wants a 270 degree spin, a single interpolation will go 90 degrees the other way. Split long turns into steps under 180 degrees, or interpolate an angle about a fixed axis with `fromAxisAngle`.
 
@@ -401,5 +401,10 @@ Not every rotation bug is maths. Assets arrive with their own conventions: Blend
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Snippets - Building and Sampling Clips]] · [[Blender Armature and Bone Roll Conventions]] · [[Animation Data from Blender to Roblox]] · [[Animation Editor Advanced]] · [[CurveAnimation and Curve Channels]] · [[Springs Damping and Smoothing]]
+[[Snippets - Building and Sampling Clips]] · Blender Armature and Bone Roll Conventions · Animation Data from Blender to Roblox · Animation Editor Advanced · CurveAnimation and Curve Channels · Springs Damping and Smoothing
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Animation Data Hygiene - Euler Wrap Joint Holes and Easing]] · [[Blender Armature and Bone Roll Conventions]] · [[Animation Data from Blender to Roblox]] · [[Curves in Luau - Paths Beams and Motion]] · [[Intersection and Collision Math]] · [[Big Numbers Precision and Formatting]]
+<!-- related:end -->

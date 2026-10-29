@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, performance, memory, vfx, scripting]
+tags: [core-concept, performance, memory, vfx, scripting, type/reference, area/vfx, level/beginner, area/performance]
 ---
 # Object Pooling
 
@@ -9,7 +9,7 @@ tags: [core-concept, performance, memory, vfx, scripting]
 > - Pool on the client for visuals. Most pooled things (tracers, hit sparks, damage numbers) should exist only on the client.
 > - Reset everything on reuse. A pooled part keeps its old Transparency, Color, attached emitters' state and attributes.
 >
-> Cost: TL;DR ~130 tok · whole note ~910 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~980 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Object pooling** keeps a supply of pre-made instances (bullets, damage numbers, effect parts, list rows) and reuses them instead of creating and destroying new ones each time. "Spawn" takes one from the pool and positions it; "despawn" hides it and returns it.
@@ -74,5 +74,10 @@ Related concepts: [[Instance Count]], [[Frame Budget]], [[Draw Calls]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Memory Budgets and Leaks]] · [[Links - Memory leaks and cleanup]] · [[Core Concepts Start Here]] · [[Instances Attributes and Tags]] · [[Game Feel and Juice]] · [[Game Feel Start Here]]
+[[Memory Budgets and Leaks]] · Links - Memory leaks and cleanup · [[Core Concepts Start Here]] · Instances Attributes and Tags · Game Feel and Juice · Game Feel Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Streaming Radius]] · [[Core Loop]] · [[Replication Boundary]] · [[Triangle Budget]] · [[Texel Density]] · [[Hit-Stop]] · [[Data Schema Versioning]] · [[Server Authority]]
+<!-- related:end -->

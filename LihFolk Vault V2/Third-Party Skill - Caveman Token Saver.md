@@ -1,5 +1,5 @@
 ---
-tags: [ai, agents, ai-skill, tokens, third-party]
+tags: [ai, agents, ai-skill, tokens, third-party, type/guide, area/ai, level/intermediate]
 ---
 # Third-Party Skill - Caveman Token Saver
 
@@ -101,5 +101,5 @@ On npm 12 or newer, add `--allow-git=root` to the first command.
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Third-Party Skill - Obsidian Skills]] · [[Setting Up MCP Clients]] · [[AI in Roblox Development Overview]] · [[Writing Your Own MCP Server]] · [[Case Study - Building a Game with AI Agents]] · [[Studio Assistant and AI Tools]]
+[[Third-Party Skill - Obsidian Skills]] · [[Setting Up MCP Clients]] · AI in Roblox Development Overview · Writing Your Own MCP Server · Case Study - Building a Game with AI Agents · Studio Assistant and AI Tools
 <!-- auto-links:end -->

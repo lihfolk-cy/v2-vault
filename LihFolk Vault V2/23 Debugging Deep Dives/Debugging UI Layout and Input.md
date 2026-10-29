@@ -1,5 +1,5 @@
 ---
-tags: [debugging, ui, layout, input, gamepad, zindex, automaticsize]
+tags: [debugging, ui, layout, input, gamepad, zindex, automaticsize, type/guide, area/debugging, level/advanced, api/ZIndex, area/ui]
 ---
 # Debugging UI Layout and Input
 
@@ -12,7 +12,7 @@ tags: [debugging, ui, layout, input, gamepad, zindex, automaticsize]
 > - DisplayOrder bands written down and assigned to every ScreenGui.
 > - Rotated or rounded clipping uses CanvasGroup, sparingly.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.8k tok. Read more: ## 1. See what the engine sees · ## 4. AutomaticSize problems · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.9k tok. Read more: ## 1. See what the engine sees · ## 4. AutomaticSize problems · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 UI bugs are reported vaguely ("the button does not work on my phone", "the shop looks broken") and caused precisely: a transparent frame on top eating clicks, a `ZIndex` that only applies among siblings, a `ClipsDescendants` that does not clip rotated children, an `AutomaticSize` that feeds back into itself, two `UIScale` objects multiplying, a gamepad selection that lands on an invisible button. This note gives the tools to see what the engine sees and a cause list for each family of symptom.
@@ -125,7 +125,7 @@ Sibling is the behaviour new ScreenGuis use (Docs), and it is the sane one: a po
 | Symptom | Cause |
 |---|---|
 | Setting `ZIndex = 100` on a button does nothing | Sibling mode: the button's **ancestor** is under another branch; raise the ancestor, or move the button |
-| A tooltip appears under the next card in a grid | tooltip is a child of one card; later siblings draw above it. Put tooltips in a separate top-level ScreenGui with a higher DisplayOrder |
+| A tooltip appears under the next card in a grid | tooltip is a child of one card; later siblings draw above it. Put tooltips in a separate top-level ScreenGui with a higher [[DisplayOrder]] |
 | A modal sometimes appears under the HUD | two ScreenGuis with equal DisplayOrder; set explicit values for every ScreenGui |
 | Core UI (top bar, chat) covers your button | your UI is inside the inset area; see section 6 |
 | Order flips when content is rebuilt | equal ZIndex siblings relying on creation order |
@@ -338,5 +338,10 @@ end)
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Cookbook - UI]] · [[Safe Area]] · [[Skill - Roblox UI Builder]] · [[Links - Containers]] · [[Readable Text and UI Scale]] · [[Links - UI elements]]
+[[Cookbook - UI]] · Safe Area · Skill - Roblox UI Builder · Links - Containers · Readable Text and UI Scale · Links - UI elements
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[AI Pitfalls - UI and Input]] · [[Safe Area]] · [[Readable Text and UI Scale]] · [[Shared Close Buttons and Headers Across Many Screens]] · [[UI and GUI Animation]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]]
+<!-- related:end -->

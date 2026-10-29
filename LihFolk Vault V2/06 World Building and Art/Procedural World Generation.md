@@ -1,5 +1,5 @@
 ---
-tags: [world-building, procedural, generation, noise, terrain, seeds, tooling]
+tags: [world-building, procedural, generation, noise, terrain, seeds, tooling, type/guide, area/world, level/intermediate, api/Terrain, area/procedural]
 ---
 # Procedural World Generation
 
@@ -12,7 +12,7 @@ tags: [world-building, procedural, generation, noise, terrain, seeds, tooling]
 > - Noise layered and masked; gameplay areas flat enough.
 > - Materials from rules; global terrain colours respected.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.5k tok. Read more: ## Runtime generation · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.6k tok. Read more: ## Runtime generation · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Procedural generation on Roblox comes in two very different forms:
@@ -284,5 +284,10 @@ The senior trade-off: procedural content scales content volume, not content qual
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Procedural Generation Start Here]] · [[Deterministic Simulation]] · [[Links - Terrain]] · [[Environment and Level Pipeline]] · [[Terrain Materials and Painting]] · [[MCP Workflows for Building Worlds]]
+[[Procedural Generation Start Here]] · Deterministic Simulation · Links - Terrain · Environment and Level Pipeline · Terrain Materials and Painting · MCP Workflows for Building Worlds
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Collision and Physics Geometry]] · [[Parts Unions and MeshParts]] · [[Grid Placement and Player Building Systems]] · [[Zone and Biome Art Direction]] · [[Materials MaterialVariants and SurfaceAppearance]] · [[Environment Art Styles]] · [[Art Budgets - Triangles Draw Calls Memory]]
+<!-- related:end -->

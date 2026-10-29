@@ -1,5 +1,5 @@
 ---
-tags: [game-design, genre, simulator, multipliers, pets, rebirth]
+tags: [game-design, genre, simulator, multipliers, pets, rebirth, type/guide, area/design, level/intermediate]
 ---
 # Genre Playbook - Simulators
 
@@ -12,7 +12,7 @@ tags: [game-design, genre, simulator, multipliers, pets, rebirth]
 > - Collect/sell rhythm measured: seconds to fill, walk share of the cycle.
 > - Multipliers stacked by category with caps; breakdown visible to players.
 >
-> Cost: TL;DR ~170 tok · whole note ~3.4k tok. Read more: ## 4. Multiplier stacking · ## 6. Pets and eggs · ## 10. Failure modes · ## 11. Checklist
+> Cost: TL;DR ~170 tok · whole note ~3.5k tok. Read more: ## 4. Multiplier stacking · ## 6. Pets and eggs · ## 10. Failure modes · ## 11. Checklist
 <!-- tldr:end -->
 
 "Simulator" on Roblox does not mean a realistic simulation. It means a **collect, sell, upgrade, expand, rebirth** game: swing a tool (or click, mine, lift, catch, dig), fill a capacity, cash it in, buy a better tool and a bigger bag, open the next area, hatch pets that multiply everything, and eventually reset for a permanent multiplier. The docs list Simulator among Roblox's common genres (Docs, "Design for Roblox"). This playbook explains why the formula works for this audience, the anatomy of a simulator, the multiplier maths that holds it together, and how to stand out in the most crowded genre on the platform.
@@ -233,5 +233,10 @@ The reference project's twist was replacing the click verb with **real-time swor
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Simulator and RNG Genre Teardown]] · [[Economy Inflation Sinks and Faucets Math]] · [[Pet Hatching and Following End to End]] · [[Paid Random Items and Odds Disclosure in Practice]] · [[Case Study - Pet Simulator 99]] · [[Power Curve]]
+[[Simulator and RNG Genre Teardown]] · [[Economy Inflation Sinks and Faucets Math]] · Pet Hatching and Following End to End · Paid Random Items and Odds Disclosure in Practice · Case Study - Pet Simulator 99 · Power Curve
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Paid Random Items and Odds Disclosure in Practice]] · [[Rarity Ladders and Drop Pacing Math]] · [[Retention and Return Hooks]] · [[Genre Playbook - Tower Defense]] · [[First-Time User Experience and Onboarding]] · [[Social Design and Multiplayer Play]] · [[Genre Playbook - Survival and Crafting]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Boss Fight Design Patterns]]
+<!-- related:end -->

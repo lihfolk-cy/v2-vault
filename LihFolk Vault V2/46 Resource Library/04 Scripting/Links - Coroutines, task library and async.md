@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, scripting]
+tags: [resources, links, scripting, type/reference, area/scripting, level/intermediate]
 ---
 # Links - Coroutines, task library and async
 
@@ -70,5 +70,5 @@ Part of [[Resource Library - Scripting]] in the [[Resource Library Start Here]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Task Library Coroutines and Yielding]] · [[Links - Script types]] · [[Links - Network ownership]] · [[Links - OOP and module design]] · [[Custom Schedulers and Coroutine Patterns]]
+[[Task Library Coroutines and Yielding]] · [[Links - Script types]] · [[Links - Network ownership]] · [[Links - OOP and module design]] · Custom Schedulers and Coroutine Patterns
 <!-- auto-links:end -->

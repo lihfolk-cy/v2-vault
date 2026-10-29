@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, input, game-feel, combat, controls]
+tags: [core-concept, input, game-feel, combat, controls, type/reference, area/gameplay, level/beginner]
 ---
 # Input Buffering
 
@@ -10,7 +10,7 @@ tags: [core-concept, input, game-feel, combat, controls]
 > - Buffer one action, latest wins (usually).
 > - Some actions should not buffer. Interacting with the wrong target or opening a menu after a fight are worse than a missed press.
 >
-> Cost: TL;DR ~120 tok · whole note ~850 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~120 tok · whole note ~930 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Input buffering** remembers a button press for a short window and performs it as soon as the action becomes possible. If a player presses attack 80 ms before the current swing ends, a buffered system fires the next swing on the first allowed frame instead of ignoring the press.
@@ -64,5 +64,10 @@ Related concepts: [[Anticipation]], [[Hit-Stop]], [[Rate Limiting]], [[Server Au
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Game Feel Start Here]] · [[Combat Animation Craft]] · [[2D Game Development Start Here]] · [[Core Concepts Start Here]] · [[Snippets - Playing Animations]] · [[Stance and Charge Moves]]
+[[Game Feel Start Here]] · Combat Animation Craft · 2D Game Development Start Here · [[Core Concepts Start Here]] · Snippets - Playing Animations · Stance and Charge Moves
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]] · [[Deterministic Simulation]] · [[Safe Area]] · [[Tween vs Spring]] · [[Frame Budget]] · [[Easing]] · [[Session Lock]] · [[Feature Flags]] · [[Core Loop]]
+<!-- related:end -->

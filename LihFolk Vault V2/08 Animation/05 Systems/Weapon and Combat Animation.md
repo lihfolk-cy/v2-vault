@@ -1,5 +1,5 @@
 ---
-tags: [systems, combat, weapons, abilities, hub]
+tags: [systems, combat, weapons, abilities, hub, type/hub, area/animation, level/intermediate, api/Motor6D, area/gameplay, api/Animator]
 ---
 # Weapon and Combat Animation
 
@@ -9,7 +9,7 @@ tags: [systems, combat, weapons, abilities, hub]
 > - Weapon parts animate in Studio only: Runtime-registered clip ids -> Publish, or play through a Lua player
 > - Arm sticks straight out over custom poses: Animate's tool-hold -> Fade it to 0.001
 >
-> Cost: TL;DR ~120 tok · whole note ~3.4k tok. Read more: ## How the weapon is held · ## Arm quality: what makes swings look broken · ## Common mistakes
+> Cost: TL;DR ~120 tok · whole note ~3.5k tok. Read more: ## How the weapon is held · ## Arm quality: what makes swings look broken · ## Common mistakes
 <!-- tldr:end -->
 
 This is the hub for everything a weapon does on a character: how it is held, how classes of weapon differ, how swings, guards, abilities, flourishes and deaths fit together, and which priorities and attributes keep them from fighting. Each big topic has its own note; this one gives the system map, the rules that span all of them, and the measured numbers from one live action game (the reference project).
@@ -176,3 +176,8 @@ See also: [[Combat Combo Systems]], [[Ability Kits Architecture]], [[Animation Q
 <!-- auto-links:start -->
 [[Spec-Driven Move Authoring]] · [[Modeling Weapons and Props]] · [[Posing and Silhouettes]] · [[Custom Locomotion Controller Design]] · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Pipeline - New Animated Weapon]] · [[Animation Review Checklist]] · [[Blade Grip and Wrist Limits]] · [[Animation Editor Workflow]] · [[Boss Animation and Phases]] · [[Animation Glossary]] · [[Weapon Design Rig Builder]] · [[Troubleshooting Table]]
+<!-- related:end -->

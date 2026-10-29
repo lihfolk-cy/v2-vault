@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, data, datastore, persistence]
+tags: [core-concept, data, datastore, persistence, type/reference, area/data, level/beginner, api/UpdateAsync, api/DataStore]
 ---
 # Session Lock
 
@@ -10,7 +10,7 @@ tags: [core-concept, data, datastore, persistence]
 > - Locks need expiry. A server that crashes never releases.
 > - Expiry has a trade-off. Too short and a slow but alive server loses its lock mid-session (a duplicate source).
 >
-> Cost: TL;DR ~130 tok · whole note ~950 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~1.0k tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 A **session lock** is a marker in a player's saved data that says "server X owns this profile right now". Only the owning server may write the profile; other servers wait, retry or refuse until the lock is released or expires.
@@ -63,5 +63,10 @@ Related concepts: [[Idempotency]], [[Data Schema Versioning]], [[Rate Limiting]]
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Cookbook - Data and Saving]] · [[Multiplayer Services Start Here]] · [[Links - DataStoreService]] · [[Trading Systems Without Duplication]] · [[Purchase Data and Receipts]] · [[Codes Redemption System End to End]] · [[Core Concepts Start Here]]
+[[Cookbook - Data and Saving]] · Multiplayer Services Start Here · Links - DataStoreService · Trading Systems Without Duplication · Purchase Data and Receipts · Codes Redemption System End to End · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[AI Pitfalls - Data and Monetization]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[Server Authority]] · [[Feature Flags]] · [[Dependency Injection in Luau]] · [[Telemetry Events]] · [[Instance Count]] · [[Streaming Radius]] · [[Pity Timer]] · [[Replication Boundary]]
+<!-- related:end -->

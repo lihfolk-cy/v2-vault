@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [luau, advanced-luau, hub, architecture, types, memory]
+tags: [luau, advanced-luau, hub, architecture, types, memory, type/hub, area/scripting, level/beginner, area/performance]
 ---
 # Advanced Luau Start Here
 
@@ -14,7 +14,7 @@ Each note starts where an older note stops and links back to it.
 |---|---|---|
 | [[Serialization Formats for Saves and Networking]] | What each boundary's serializer does to your data, JSON edge cases, a schema-driven binary codec, versioning when old and new servers read each other's saves, number precision, payload shaping | [[Buffers and Binary Data]], [[Data Schema Design and Migrations]] |
 | [[Advanced Types - Generics and Type Functions]] | How generic inference works, variance, generic classes, exhaustive unions with `never`, runtime validators that produce typed values, practical type functions and their limits | [[Luau Type System and Strict Mode]] |
-| [[Custom Schedulers and Coroutine Patterns]] | A heap-based timer queue with a pausable, scaled clock, fixed timestep simulation, budgeted coroutine jobs, structured cancellation scopes, fake clocks for tests | [[Task Library Coroutines and Yielding]], [[Luau Performance Patterns with Benchmarks]] |
+| [[Custom Schedulers and Coroutine Patterns]] | A heap-based timer queue with a pausable, scaled clock, [[fixed timestep]] simulation, budgeted coroutine jobs, structured cancellation scopes, fake clocks for tests | [[Task Library Coroutines and Yielding]], [[Luau Performance Patterns with Benchmarks]] |
 | [[Luau Garbage Collection and the Memory Model]] | What allocates and what does not, sticky table capacity, how the incremental collector paces itself, no finalizers and no ephemerons, Instance lifetimes and zombies, honest allocation measurement | [[Luau Performance and Native Codegen]], [[Memory Budgets and Leaks]] |
 | [[Module Design and Dependency Injection]] | Why reaching out for dependencies hurts, narrow interface types, injecting time and randomness, a small container that orders services and reports cycles, module surface rules | [[Module Scripts and Requiring]], [[Project Structure and Bootstrapping]] |
 | [[Building a Signal Library]] | Every design decision a signal makes, a reused runner thread, copy-on-write storage, deferred mode done correctly, twelve semantic tests, an observable value | [[Events Signals and Connections]] |
@@ -44,5 +44,5 @@ Collector and type function facts come from luau.org, engine limits from the Rob
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Dependency Injection in Luau]] · [[Resource Library - Scripting]] · [[Links - Luau language]] · [[Event Bus]] · [[Links - Coroutines, task library and async]] · [[Data Schema Versioning]]
+[[Dependency Injection in Luau]] · Resource Library - Scripting · Links - Luau language · Event Bus · Links - Coroutines, task library and async · Data Schema Versioning
 <!-- auto-links:end -->

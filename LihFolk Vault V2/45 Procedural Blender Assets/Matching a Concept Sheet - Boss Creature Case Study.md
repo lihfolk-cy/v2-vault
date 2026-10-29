@@ -1,5 +1,5 @@
 ---
-tags: [blender, creature, concept, rigging, case-study, low-poly]
+tags: [blender, creature, concept, rigging, case-study, low-poly, type/case-study, area/modeling, level/intermediate, area/animation]
 ---
 # Matching a Concept Sheet - Boss Creature Case Study
 
@@ -12,7 +12,7 @@ tags: [blender, creature, concept, rigging, case-study, low-poly]
 > - Main mass is one box-modelled surface, not stacked primitives.
 > - Appendages grown out of the mass (extrusion), not floated next to it.
 >
-> Cost: TL;DR ~180 tok · whole note ~2.4k tok. Read more: ## What worked: the vault workflow, done in code · ## Nuances and edge cases · ## Transferable checklist · ## Common mistakes
+> Cost: TL;DR ~180 tok · whole note ~2.5k tok. Read more: ## What worked: the vault workflow, done in code · ## Nuances and edge cases · ## Transferable checklist · ## Common mistakes
 <!-- tldr:end -->
 
 ![[p45_void_owl_front.png]]
@@ -102,5 +102,10 @@ Related: [[Posing and Silhouettes]], [[Concept Sheets]], [[Procedural Blender As
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Chibi Character Rules in Practice]] · [[Bones and Skinned Meshes]] · [[Low-Poly Creature From a Flat Reference Sheet]] · [[Skinning Weights]] · [[Rigging in Blender]] · [[Modeling Characters for R15 and Custom Rigs]]
+[[Chibi Character Rules in Practice]] · [[Bones and Skinned Meshes]] · [[Low-Poly Creature From a Flat Reference Sheet]] · Skinning Weights · Rigging in Blender · Modeling Characters for R15 and Custom Rigs
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Low-Poly Tree Set Worked Example]] · [[Stylised Weapons From a Concept]] · [[Mesh VFX Packs Built in Blender]] · [[Stylised Shop Stand Worked Example]] · [[Dash VFX Presentation on an R15 Rig]] · [[Blender 5 Python Gotchas for Headless Builds]] · [[Dramatic Showcase Renders in Eevee]]
+<!-- related:end -->

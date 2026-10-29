@@ -1,5 +1,5 @@
 ---
-tags: [field-notes, studio, playtest, httpservice, mcp, tooling, ui, datamodel]
+tags: [field-notes, studio, playtest, httpservice, mcp, tooling, ui, datamodel, type/guide, area/data, level/intermediate, api/HttpService]
 ---
 # Moving Data Out of a Play Session
 
@@ -12,7 +12,7 @@ tags: [field-notes, studio, playtest, httpservice, mcp, tooling, ui, datamodel]
 > - Studio-only export remote with an `IsStudio` guard.
 > - Payloads chunked; receiver reassembles and validates labels.
 >
-> Cost: TL;DR ~160 tok · whole note ~1.7k tok. Read more: ## 2. Bridge A: client to server to localhost · ## 4. Baking runtime-built GUIs into StarterGui · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~1.9k tok. Read more: ## 2. Bridge A: client to server to localhost · ## 4. Baking runtime-built GUIs into StarterGui · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Some of the most useful data only exists while the game runs: a GUI that code builds at runtime, tuned values from a live session, a dump of what the client actually sees. When you stop the session, it is gone, and the Edit view never had it. This note covers why, two reliable ways to get data out (a localhost bridge and chunked returns), and how to turn runtime-built GUIs into editable copies without losing the code that builds them. Tooling foundations are in [[Studio Plugins and Local HTTP Bridges]] and [[HttpService and External APIs]].
@@ -125,5 +125,10 @@ Instead, add a **mirror script** that applies designer edits on top of the runti
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Studio Plugins and Local HTTP Bridges]] · [[HttpService and External APIs]] · [[Testing Modes - Play Run and Multi-Client]] · [[Roblox Studio MCP Server]] · [[UI Asset Pipeline]] · [[Field Notes Start Here]]
+[[Studio Plugins and Local HTTP Bridges]] · HttpService and External APIs · Testing Modes - Play Run and Multi-Client · Roblox Studio MCP Server · UI Asset Pipeline · [[Field Notes Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Studio Automation Without Freezing Studio]] · [[Running Many AI Agents on One Roblox Place]] · [[Centre-Screen Announcements That Stay Centred]] · [[Springs That Survive Long Frames - dt Clamps and NaN Guards]] · [[ipairs Stops at the First nil - Cleanup Tables That Leak]] · [[UIStroke on Text - Glyph Counters and the Stroke Ratio]] · [[Resetting One Player's Data Safely]] · [[Shift-Lock Sprint and Gamepad B for Menus]]
+<!-- related:end -->

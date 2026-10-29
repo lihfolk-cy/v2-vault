@@ -1,5 +1,5 @@
 ---
-tags: [luau, cookbook, remotes, networking, security, recipes]
+tags: [luau, cookbook, remotes, networking, security, recipes, type/reference, area/scripting, level/intermediate, api/RemoteEvent, area/security, api/UnreliableRemoteEvent]
 ---
 # Cookbook - Remotes and Networking
 
@@ -12,7 +12,7 @@ tags: [luau, cookbook, remotes, networking, security, recipes]
 > - Every handler: rate limit, type checks, range checks, then logic.
 > - No client-supplied numbers that change economy or combat outcomes.
 >
-> Cost: TL;DR ~140 tok · whole note ~5.5k tok. Read more: ## 3. Rate limit per player with a token bucket · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~5.6k tok. Read more: ## 3. Rate limit per player with a token bucket · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Recipes for talking between server and client without opening holes. The rule behind all of them: the client is a request, never a fact. Every value that arrives at `OnServerEvent` or `OnServerInvoke` is typed `unknown` here on purpose, because an exploiter can send any type, any size, at any rate. Code is `--!strict` Luau, reviewed, not run. The why lives in [[RemoteEvents RemoteFunctions and Unreliable Remotes]], [[Server Authority and Validation]], [[Remote Abuse Patterns and Rate Limiting in Practice]] and [[How Exploits Work - The Client Boundary]].
@@ -489,5 +489,10 @@ end
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox Secure Remotes]] · [[Rate Limiting]] · [[Anti-Exploit Start Here]] · [[Replication Boundary]] · [[Debugging Client-Server Desync]] · [[Skill - Roblox Anti-Exploit Review]]
+[[Skill - Roblox Secure Remotes]] · Rate Limiting · Anti-Exploit Start Here · Replication Boundary · Debugging Client-Server Desync · Skill - Roblox Anti-Exploit Review
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[AI Pitfalls - Networking and Security]] · [[Rate Limiting]] · [[Debugging Client-Server Desync]] · [[Cookbook - Math CFrame and Vectors]] · [[Cookbook - Tables Strings and Time]] · [[Cookbook - UI]]
+<!-- related:end -->

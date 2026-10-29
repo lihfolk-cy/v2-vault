@@ -1,5 +1,5 @@
 ---
-tags: [blender, python, props, stylised, low-poly, environment, awning, export]
+tags: [blender, python, props, stylised, low-poly, environment, awning, export, type/guide, area/modeling, level/intermediate]
 ---
 # Stylised Shop Stand Worked Example
 
@@ -12,7 +12,7 @@ tags: [blender, python, props, stylised, low-poly, environment, awning, export]
 > - Every hard part bevelled with an angle limit
 > - Repeats varied in width and tone; small tilts everywhere
 >
-> Cost: TL;DR ~150 tok · whole note ~3.4k tok. Read more: ## The awning: the focal feature · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.5k tok. Read more: ## The awning: the focal feature · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 ![[p45_shop_stand.png]]
@@ -199,5 +199,10 @@ Export is GLB with `export_apply=True`, so the bevel modifiers are baked into th
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Proportion Exaggeration and Gameplay Distance]] · [[Style Bibles for Consistent Models]] · [[Mesh Optimization for Mobile]] · [[Spending Triangles Where the Camera Looks]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[Hard-Surface Modeling]]
+[[Proportion Exaggeration and Gameplay Distance]] · Style Bibles for Consistent Models · Mesh Optimization for Mobile · Spending Triangles Where the Camera Looks · Clean Stylised Shading - Weighted and Custom Normals · Hard-Surface Modeling
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Spending Triangles Where the Camera Looks]] · [[Style Bibles for Consistent Models]] · [[Stylised Weapons From a Concept]] · [[Dash VFX Presentation on an R15 Rig]] · [[Chibi Character Rules in Practice]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[Mesh VFX Packs Built in Blender]]
+<!-- related:end -->

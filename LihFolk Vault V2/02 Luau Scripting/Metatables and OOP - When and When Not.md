@@ -1,5 +1,5 @@
 ---
-tags: [luau, metatables, oop, architecture, composition, typing]
+tags: [luau, metatables, oop, architecture, composition, typing, type/guide, area/scripting, level/advanced, api/Model]
 ---
 # Metatables and OOP - When and When Not
 
@@ -12,10 +12,10 @@ tags: [luau, metatables, oop, architecture, composition, typing]
 > - Singletons are modules, not classes.
 > - Classes are used for many-instance or resource-owning objects only.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.9k tok. Read more: ## 1. Four ways to model a thing · ## 4. Metamethod tricks: clever, and what they cost · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.0k tok. Read more: ## 1. Four ways to model a thing · ## 4. Metamethod tricks: clever, and what they cost · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-[[Tables Metatables and OOP]] teaches the mechanics: metamethods, the class idiom, inheritance, weak tables, and what happens to tables at Roblox boundaries. This note is about judgement. It compares the four ways of modelling "things" in Luau (metatable classes, closure objects, plain data with module functions, and structure-of-arrays or ECS), shows where each one wins and where it hurts, covers the metamethod tricks that look clever and cause bugs (proxies, `__newindex` tracking, operator overloading), and finishes with lifecycle, typing and serialisation, which is where most OOP pain in Roblox games really comes from.
+[[Tables Metatables and OOP]] teaches the mechanics: metamethods, the class idiom, inheritance, weak tables, and what happens to tables at Roblox boundaries. This note is about judgement. It compares the four ways of modelling "things" in Luau (metatable classes, closure objects, plain data with module functions, and structure-of-arrays or [[Entity Component System|ECS]]), shows where each one wins and where it hurts, covers the metamethod tricks that look clever and cause bugs (proxies, `__newindex` tracking, operator overloading), and finishes with lifecycle, typing and serialisation, which is where most OOP pain in Roblox games really comes from.
 
 Performance statements come from the Luau performance page (luau.org, as of October 2026). Everything else is rule of thumb from production Roblox code, including one production game referred to as the reference project.
 
@@ -397,5 +397,10 @@ Question: "We need a reusable dialog widget with open, close, animations and but
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - OOP and module design]] · [[Luau Performance and Native Codegen]] · [[Luau Garbage Collection and the Memory Model]] · [[Links - Luau language]] · [[Advanced Luau Start Here]] · [[Advanced Types - Generics and Type Functions]]
+[[Links - OOP and module design]] · [[Luau Performance and Native Codegen]] · Luau Garbage Collection and the Memory Model · Links - Luau language · Advanced Luau Start Here · Advanced Types - Generics and Type Functions
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Luau Language Essentials]] · [[Instances Attributes and Tags]] · [[CollectionService Patterns]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Script Types and Run Context]] · [[Parallel Luau and Actors]] · [[Task Library Coroutines and Yielding]] · [[Error Handling and Retries]]
+<!-- related:end -->

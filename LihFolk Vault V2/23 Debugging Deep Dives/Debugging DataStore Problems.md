@@ -1,5 +1,5 @@
 ---
-tags: [debugging, datastores, persistence, throttling, session-locking, open-cloud]
+tags: [debugging, datastores, persistence, throttling, session-locking, open-cloud, type/guide, area/debugging, level/advanced, api/DataStore, area/data, api/DataStoreService]
 ---
 # Debugging DataStore Problems
 
@@ -12,7 +12,7 @@ tags: [debugging, datastores, persistence, throttling, session-locking, open-clo
 > - Budget logged periodically and before bursts.
 > - Autosaves staggered; leaderboards and counters batched.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.7k tok. Read more: ## 2. Throttling and budgets · ## 3. Stuck session locks · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.8k tok. Read more: ## 2. Throttling and budgets · ## 3. Stuck session locks · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 DataStore bugs are the most expensive bugs in a Roblox game: they lose progress, duplicate items, and generate support tickets you cannot answer. They are also hard to debug because the evidence (what is actually stored) lives in a cloud service, the failure often happened on a server that no longer exists, and Studio behaves differently from live. This note is a diagnostic guide: how to read throttling and budget problems, how to tell a stuck session lock from a real outage, how to look at the actual saved data safely, and how Studio access changes what you see.
@@ -317,5 +317,10 @@ Run it in Studio on every save and log problems; in live, run it on a sample, or
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Cookbook - Data and Saving]] · [[Skill - Roblox DataStore Safety]] · [[Session Lock]] · [[Saved Inventory End to End]] · [[Data Schema Versioning]] · [[Multiplayer Services Start Here]]
+[[Cookbook - Data and Saving]] · Skill - Roblox DataStore Safety · Session Lock · Saved Inventory End to End · Data Schema Versioning · Multiplayer Services Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Session Lock]] · [[AI Pitfalls - Data and Monetization]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[The Debugging Method - Reproduce Isolate Bisect]] · [[Debugging Race Conditions and Yield Order]] · [[Reading Luau Errors and Stack Traces]]
+<!-- related:end -->

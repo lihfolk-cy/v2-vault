@@ -1,5 +1,5 @@
 ---
-tags: [data, httpservice, web, secrets, json, rate-limits, external-services]
+tags: [data, httpservice, web, secrets, json, rate-limits, external-services, type/guide, area/data, level/intermediate, api/HttpService, api/BindToClose]
 ---
 # HttpService and External APIs
 
@@ -12,7 +12,7 @@ tags: [data, httpservice, web, secrets, json, rate-limits, external-services]
 > - Secrets in the secrets store with tight domains; local secrets for Studio.
 > - One helper with `pcall`, status checks, retry on 429/5xx only, backoff, `retry-after`.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.5k tok. Read more: ## A reliable request helper · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.6k tok. Read more: ## A reliable request helper · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 `HttpService` lets game servers talk to the outside world: your own backend, analytics and error trackers, Discord-style webhooks for moderation alerts, and a growing set of Roblox Open Cloud endpoints. It also hosts the JSON and GUID helpers every Roblox codebase uses. This note covers enabling it, the request API, the limits (500 requests per minute per server, a separate 2,500 per minute for Open Cloud), the secrets store, JSON edge cases, security, and patterns for reliable outbound calls. Open Cloud from outside Roblox is in [[Open Cloud APIs]].
@@ -265,5 +265,10 @@ The senior trade-off: an external backend adds power (web dashboards, cross-game
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Open Cloud and external APIs]] · [[Telemetry Events]] · [[Plugin Security and Permissions]] · [[DataStore Fundamentals]] · [[Clip Archive Server]] · [[Batch Processing Tools in Studio]]
+[[Links - Open Cloud and external APIs]] · Telemetry Events · Plugin Security and Permissions · [[DataStore Fundamentals]] · Clip Archive Server · Batch Processing Tools in Studio
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Data Loss Prevention and Recovery]] · [[Data Schema Design and Migrations]] · [[MemoryStore Service]] · [[OrderedDataStores and Leaderboards]] · [[Schema Migrations - Worked Case Studies]] · [[Session Locking and Profile Libraries]] · [[Purchase Data and Receipts]] · [[Trading Systems Without Duplication]]
+<!-- related:end -->

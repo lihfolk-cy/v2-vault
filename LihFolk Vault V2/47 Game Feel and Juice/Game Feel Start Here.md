@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [game-feel, juice, hub, start-here]
+tags: [game-feel, juice, hub, start-here, type/hub, area/game-feel, level/beginner]
 ---
 # Game Feel Start Here
 
@@ -14,7 +14,7 @@ The section builds on four older notes. Read them before the deep dives, because
 
 - [[Game Feel and Juice]]: the feedback stack, UI juice code, combat and audio juice, when juice becomes noise.
 - [[Hit Reactions Stagger and Hit-Stop]]: the reaction ladder and the catch-up hit-stop that stays in sync with clock-timed effects.
-- [[Camera Shake and Camera FX]]: envelopes that end at exactly zero, trauma shake, reduced motion, impact frames.
+- [[Camera Shake and Camera FX]]: envelopes that end at exactly zero, trauma shake, reduced motion, [[impact frames]].
 - [[Combat Sound Design and Feedback]]: the outcome matrix, who plays which sound over the network, telegraphs and voice stealing.
 
 ## The deep dives
@@ -54,5 +54,5 @@ The section builds on four older notes. Read them before the deep dives, because
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Hit-Stop]] · [[Anticipation]] · [[Input Buffering]] · [[Snippets - Camera Shake and FX]] · [[Frame Budget]] · [[Tween vs Spring]]
+[[Hit-Stop]] · Anticipation · Input Buffering · Snippets - Camera Shake and FX · Frame Budget · Tween vs Spring
 <!-- auto-links:end -->

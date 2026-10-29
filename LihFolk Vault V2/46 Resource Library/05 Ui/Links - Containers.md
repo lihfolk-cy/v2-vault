@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, ui]
+tags: [resources, links, ui, type/reference, area/ui, level/intermediate, api/SurfaceGui, api/BillboardGui, api/DisplayOrder, api/ZIndex]
 ---
 # Links - Containers
 
@@ -56,5 +56,5 @@ Part of [[Resource Library - Ui]] in the [[Resource Library Start Here]]. 38 lin
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Scale vs offset and responsive design]] · [[Links - Cross-platform UI]] · [[Links - Chat and text filtering]] · [[Links - StreamingEnabled]] · [[ScreenGui Fundamentals]] · [[Debugging UI Layout and Input]]
+[[Links - Scale vs offset and responsive design]] · [[Links - Cross-platform UI]] · [[Links - Chat and text filtering]] · [[Links - StreamingEnabled]] · [[ScreenGui Fundamentals]] · Debugging UI Layout and Input
 <!-- auto-links:end -->

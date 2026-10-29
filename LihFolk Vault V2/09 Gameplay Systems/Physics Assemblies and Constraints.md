@@ -1,5 +1,5 @@
 ---
-tags: [gameplay, physics, assemblies, constraints, collision, network-ownership]
+tags: [gameplay, physics, assemblies, constraints, collision, network-ownership, type/guide, area/gameplay, level/intermediate, api/Touched, area/physics, api/RigidConstraint]
 ---
 # Physics Assemblies and Constraints
 
@@ -12,7 +12,7 @@ tags: [gameplay, physics, assemblies, constraints, collision, network-ownership]
 > - Props welded to characters are Massless.
 > - Collision groups registered once at startup, under 32 per world, with a written group matrix.
 >
-> Cost: TL;DR ~170 tok · whole note ~5.1k tok. Read more: ## 4. Network ownership: who simulates what · ## 6. Collisions: CanCollide, CanTouch, CanQuery and collision groups · ## 9. Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.3k tok. Read more: ## 4. Network ownership: who simulates what · ## 6. Collisions: CanCollide, CanTouch, CanQuery and collision groups · ## 9. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox physics looks simple from the Properties window (tick Anchored, set Velocity, add a weld) and behaves in ways that surprise people as soon as a game has many players, moving NPCs and knockback. This note explains the unit the solver actually works on (the **assembly**), how the root part is chosen, how ownership decides *which computer* simulates an assembly, how rigid and mechanical constraints fit together, and how collision filtering works. Movers (LinearVelocity, AlignPosition and friends) and the physics character controller have their own note: [[Mover Constraints and Physics Controllers]].
@@ -298,5 +298,10 @@ For gameplay this means:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Debugging Physics and Network Ownership]] · [[Cars with Constraints - Suspension Steering and Drive]] · [[Ropes Chains and Soft Bodies]] · [[Links - Constraints]] · [[Links - Forces and movers]] · [[Rigs and Joints]]
+[[Debugging Physics and Network Ownership]] · Cars with Constraints - Suspension Steering and Drive · Ropes Chains and Soft Bodies · Links - Constraints · Links - Forces and movers · Rigs and Joints
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Cars with Constraints - Suspension Steering and Drive]] · [[Grabs, Carries and Throws - Moving Players Safely]] · [[Explosions - Radius Damage, Falloff and Cover Checks]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Custom Character Controllers]] · [[Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run]] · [[Pathfinding]]
+<!-- related:end -->

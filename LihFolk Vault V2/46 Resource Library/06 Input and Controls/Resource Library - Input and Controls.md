@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, hub]
+tags: [resources, links, hub, type/hub, level/intermediate]
 ---
 # Resource Library - Input and Controls
 

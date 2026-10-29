@@ -1,5 +1,5 @@
 ---
-tags: [worked-build, library, drop-in, luau, strict, datastore, remotes, monetization, odds, policyservice, testing]
+tags: [worked-build, library, drop-in, luau, strict, datastore, remotes, monetization, odds, policyservice, testing, type/guide]
 ---
 # LihFolk Systems Library
 
@@ -12,7 +12,7 @@ tags: [worked-build, library, drop-in, luau, strict, datastore, remotes, monetiz
 > - Config asserted at startup without errors (Output is clean on Play).
 > - Paid currencies, paid modifiers and restricted alternatives set.
 >
-> Cost: TL;DR ~170 tok · whole note ~2.4k tok. Read more: ## 2. What is in it · ## 3. Install and wiring order · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~2.5k tok. Read more: ## 2. What is in it · ## 3. Install and wiring order · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The LihFolk Systems Library is a set of drop-in, strict Luau modules (data, remotes, currency, shop, receipts, inventory, eggs, codes, daily rewards, rebirth, quests, leaderboards) that agents install and configure instead of writing these systems from scratch. The Worked Builds in this folder teach each system end to end; the library is the same knowledge packaged as reusable modules with one shared data layer, one remote layer and one receipt router, so a game built from several systems still has exactly one of each.
@@ -118,3 +118,8 @@ Combat ([[Melee Combat System End to End]]), player trading (use `Inventory.CanT
 
 ## See also
 [[LihFolk Systems - Data and Purchase Guarantees]] · [[Worked Builds Start Here]] · [[Saved Inventory End to End]] · [[Shop with Game Passes and Developer Products End to End]] · [[Pet Hatching and Following End to End]] · [[Session Locking and Profile Libraries]] · [[Developer Products and ProcessReceipt]] · [[Paid Random Items and Odds Disclosure in Practice]] · [[Roblox Policies Ratings and Compliance]] · [[Rate Limiting and Abuse Prevention]] · [[Automated Testing with TestEZ and Jest-Lua]]
+
+<!-- related:start -->
+## Related
+[[AI Pitfalls - Data and Monetization]] · [[Automated Luau Checks - LihFolk Hook and Audit]] · [[Daily Rewards System End to End]] · [[Global Leaderboards End to End]] · [[Rebirth and Prestige System End to End]] · [[Quest Chain System End to End]] · [[Round-Based Minigame Loop End to End]]
+<!-- related:end -->

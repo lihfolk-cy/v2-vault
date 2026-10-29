@@ -1,5 +1,5 @@
 ---
-tags: [blender, weapons, sword, stylized, materials]
+tags: [blender, weapons, sword, stylized, materials, type/guide, area/modeling, level/intermediate, area/gameplay]
 ---
 # Stylised Weapons From a Concept
 
@@ -12,7 +12,7 @@ tags: [blender, weapons, sword, stylized, materials]
 > - Point shape from the profile curves.
 > - Guard and pommel from extruded, bevelled silhouettes; ornament as relief, not floating tubes.
 >
-> Cost: TL;DR ~160 tok · whole note ~2.3k tok. Read more: ## What the rebuild did · ## Nuances and edge cases · ## Checklist for stylised weapons · ## Common mistakes
+> Cost: TL;DR ~160 tok · whole note ~2.4k tok. Read more: ## What the rebuild did · ## Nuances and edge cases · ## Checklist for stylised weapons · ## Common mistakes
 <!-- tldr:end -->
 
 A painted concept showed a wide curved falchion: a black blade full of stars, a glowing purple edge, magenta and green flame licks off the spine, an ornate silver guard with a spiked hook quillon, a purple wrapped grip and a silver pommel. The first build was rejected as "looks really bad". The second, rebuilt from proper forged forms, worked. The difference is the lesson.
@@ -91,5 +91,10 @@ Related: [[Modeling Weapons and Props]], [[Dramatic Showcase Renders in Eevee]],
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Bevels Chamfers and Edge Highlights Without Textures]] · [[Mesh VFX Packs Built in Blender]] · [[Hand-Painted and Stylized Texturing]] · [[Stylised vs Realistic Material Pipelines]] · [[Texturing and PBR Baking]] · [[Voxel and Blocky Modeling]]
+[[Bevels Chamfers and Edge Highlights Without Textures]] · [[Mesh VFX Packs Built in Blender]] · Hand-Painted and Stylized Texturing · Stylised vs Realistic Material Pipelines · Texturing and PBR Baking · Voxel and Blocky Modeling
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Stylised Shop Stand Worked Example]] · [[Dash VFX Presentation on an R15 Rig]] · [[Chibi Character Rules in Practice]] · [[Blender 5 Python Gotchas for Headless Builds]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[Low-Poly Tree Set Worked Example]] · [[Low-Poly Creature From a Flat Reference Sheet]]
+<!-- related:end -->

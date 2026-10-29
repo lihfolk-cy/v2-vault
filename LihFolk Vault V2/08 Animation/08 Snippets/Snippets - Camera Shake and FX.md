@@ -1,5 +1,5 @@
 ---
-tags: [snippets, luau, camera, fx, game-feel]
+tags: [snippets, luau, camera, fx, game-feel, type/reference, area/animation, level/intermediate, api/TweenService, area/scripting, api/BindToRenderStep, api/Camera]
 ---
 # Snippets: Camera Shake and FX
 
@@ -9,7 +9,7 @@ tags: [snippets, luau, camera, fx, game-feel]
 > - Avoid: Switching to `Scriptable` for gameplay shake.
 > - Avoid: Random per-frame jitter instead of noise.
 >
-> Cost: TL;DR ~90 tok · whole note ~5.2k tok. Read more: ## 2. The module · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~90 tok · whole note ~5.3k tok. Read more: ## 2. The module · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 A camera effects module built from **timed envelopes** that are summed, capped, applied after the camera scripts and **removed before them** the next frame, so effects never accumulate into drift. Includes trauma-based shake with noise, FOV punches, roll, camera-space kicks, blur and colour flashes, distance falloff for world events, reduced-motion handling, presets measured in one production game, and a letterbox that sits correctly on phones.
@@ -335,7 +335,7 @@ A data table of beats per move (`[kit][move][marker] = beat kind`) scales well: 
 
 ## Nuances and edge cases
 
-1. **Frame rate changes what "0.08 s" means.** At 60 FPS a 0.08 s impact frame is about 5 frames; at 30 FPS on a low-end phone it is 2 or 3; at 240 FPS with an unlocked frame rate (Roblox lets players raise the cap in settings, rule of thumb that more players do this every year) it is about 19. Envelopes keyed to `os.clock()` survive all of these, but anything counted in frames does not. Never write `for i = 1, 5 do RenderStepped:Wait() end` for a flash.
+1. **Frame rate changes what "0.08 s" means.** At 60 FPS a 0.08 s [[Impact Frames|impact frame]] is about 5 frames; at 30 FPS on a low-end phone it is 2 or 3; at 240 FPS with an unlocked frame rate (Roblox lets players raise the cap in settings, rule of thumb that more players do this every year) it is about 19. Envelopes keyed to `os.clock()` survive all of these, but anything counted in frames does not. Never write `for i = 1, 5 do RenderStepped:Wait() end` for a flash.
 2. **Noise frequency and high refresh rates.** `math.noise` sampled at 18 "Hz" looks smooth at 60 FPS and buttery at 144, but at 30 FPS the same curve is sampled so sparsely that it reads as stepping. If your analytics show a lot of low-end phones, drop default frequency to 12 to 14 and raise amplitude slightly instead.
 3. **Who else writes the camera.** The bind order trick (`Camera - 1` remove, `Camera + 1` apply) assumes only the default camera module writes `CFrame` between them. A custom over-the-shoulder camera bound at `Camera` works; one written in `Heartbeat` or `RenderStepped:Connect` without a priority does not have a guaranteed slot relative to your binds, so the remove step may undo someone else's change. Put every camera writer on `BindToRenderStep` with an explicit priority and document the order in one place.
 4. **Respawn and camera replacement.** `workspace.CurrentCamera` can be replaced (rare, but it happens when scripts destroy the camera or on some teleport arrival paths). The module reads `workspace.CurrentCamera` each frame, which is correct; caching the camera at require time is the classic bug.
@@ -371,5 +371,10 @@ The senior trade-off: every camera effect costs a little player control and a li
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Game Feel Start Here]] · [[Links - Cameras]] · [[Game Feel and Juice]] · [[Frame Order and RunService Timing]] · [[Hit-Stop]] · [[Accessibility]] · [[Animation Start Here]]
+[[Game Feel Start Here]] · Links - Cameras · Game Feel and Juice · [[Frame Order and RunService Timing]] · Hit-Stop · Accessibility · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Layering Camera Feedback on the Default Camera]] · [[Chase Cameras and Speed Effects for Vehicles]] · [[Snippets - Procedural Motion]] · [[Snippets - Lua Keyframe Player Core]] · [[Snippets - Animation Controller Module]] · [[Snippets - Ragdoll]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]]
+<!-- related:end -->

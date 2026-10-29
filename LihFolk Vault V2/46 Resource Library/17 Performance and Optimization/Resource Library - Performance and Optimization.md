@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, hub]
+tags: [resources, links, hub, type/hub, area/performance, level/intermediate]
 ---
 # Resource Library - Performance and Optimization
 

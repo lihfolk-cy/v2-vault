@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, characters-animation]
+tags: [resources, links, characters-animation, type/reference, area/animation, level/intermediate, api/Motor6D, api/Humanoid]
 ---
 # Links - Rigs
 

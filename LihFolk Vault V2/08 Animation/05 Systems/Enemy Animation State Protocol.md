@@ -1,5 +1,5 @@
 ---
-tags: [systems, enemies, networking, attributes, protocol, code]
+tags: [systems, enemies, networking, attributes, protocol, code, type/guide, area/animation, level/intermediate, api/Animator, area/networking]
 ---
 # Enemy Animation State Protocol
 
@@ -9,7 +9,7 @@ tags: [systems, enemies, networking, attributes, protocol, code]
 > - Wrong speed on first frames: Client read `Anim` before `AnimSpeed` -> Write `AnimT` last, react to it
 > - Late joiners see attacks restart: No offset -> `TimePosition = offset * speed`
 >
-> Cost: TL;DR ~110 tok · whole note ~3.4k tok. Read more: ## The attributes · ## Joining late · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~3.5k tok. Read more: ## The attributes · ## Joining late · ## Common mistakes
 <!-- tldr:end -->
 
 This note specifies a server-to-client protocol for enemy animation: the server writes a handful of replicated attributes with server timestamps; every client plays clips locally, joins late correctly, layers partial clips, detaches parts and fires marker effects. It is the protocol used for the enemy runtime of one live action game (the reference project), generalised. The attribute names below drop that project's prefix (it used `SixAnim`, `SixHurt` and so on); keep a prefix in your own game so attributes from different systems never collide.
@@ -222,5 +222,10 @@ See also: [[Enemy and NPC Animation]], [[Boss Animation and Phases]], [[Replicat
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Replication Rules]] · [[Animating Creatures and Monsters]] · [[Markers and Events]] · [[Custom Locomotion Controller Design]] · [[Case Study - Enemy Roster Rebuild]] · [[Behaviour Trees Utility AI and State Machines for NPCs]] · [[Animation Start Here]]
+[[Replication Rules]] · [[Animating Creatures and Monsters]] · [[Markers and Events]] · [[Custom Locomotion Controller Design]] · Case Study - Enemy Roster Rebuild · Behaviour Trees Utility AI and State Machines for NPCs · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Combat Combo Systems]] · [[Weapon and Combat Animation]] · [[Combat Animation Craft]] · [[Snippets - Playing Animations]] · [[Ability Kits Architecture]] · [[Procedural Death Knockdown and Hit Reactions]] · [[Locomotion Systems]] · [[AnimationTrack Reference]]
+<!-- related:end -->

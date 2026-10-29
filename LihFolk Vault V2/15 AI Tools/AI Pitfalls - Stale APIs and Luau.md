@@ -1,5 +1,5 @@
 ---
-tags: [ai-pitfalls, luau, deprecated-apis, async-rename, task-library, chat, fonts, type-solver, lint]
+tags: [ai-pitfalls, luau, deprecated-apis, async-rename, task-library, chat, fonts, type-solver, lint, type/guide, area/ai, level/intermediate]
 verified: 2026-10-28
 ---
 # AI Pitfalls - Stale APIs and Luau
@@ -13,7 +13,7 @@ verified: 2026-10-28
 > - Animator created on the server; tracks loaded once and reused.
 > - No chat code outside TextChatService.
 >
-> Cost: TL;DR ~150 tok · whole note ~2.0k tok. Read more: ## 2. Methods renamed with `Async` (January 14, 2026) · ## 10. Invented members · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~2.1k tok. Read more: ## 2. Methods renamed with `Async` (January 14, 2026) · ## 10. Invented members · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The most visible AI mistake is old API surface: code that was idiomatic in 2019, or correct until January 2026. Most of it still runs, which is why it survives review. This note lists each stale pattern, why a model produces it, the current form, and a grep to find it. Hub: [[What AI Models Get Wrong in Roblox]]. Change dates: [[Engine and API Changes 2025-2026]].
@@ -132,3 +132,8 @@ Models confidently write members that do not exist or live elsewhere:
 - [[Luau Language Essentials]]
 - [[Luau Type System and Strict Mode]]
 - [[Text Fonts and Rich Text]]
+
+<!-- related:start -->
+## Related
+[[Roblox Changes 2025-2026]] · [[AI Code Assistants for Luau]] · [[AI Pitfalls - Physics and Animation]] · [[AI Pitfalls - UI and Input]] · [[AI Pitfalls - Data and Monetization]] · [[AI Pitfalls - Networking and Security]] · [[Prompting and Verifying AI Output]] · [[Roblox Studio Assistant]]
+<!-- related:end -->

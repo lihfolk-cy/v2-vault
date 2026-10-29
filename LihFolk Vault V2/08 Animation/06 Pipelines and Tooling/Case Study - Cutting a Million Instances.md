@@ -1,5 +1,5 @@
 ---
-tags: [case-study, performance, memory, instances, baking]
+tags: [case-study, performance, memory, instances, baking, type/case-study, area/animation, level/intermediate, area/performance]
 ---
 # Case Study: Cutting a Million Instances
 
@@ -9,7 +9,7 @@ tags: [case-study, performance, memory, instances, baking]
 > - Avoid: Cleaning without a reader audit. Symptom: features silently break because a script walked the deleted Poses.
 > - Avoid: Assuming streaming solves ReplicatedStorage bloat.
 >
-> Cost: TL;DR ~110 tok · whole note ~3.6k tok. Read more: ## Step 5: stubs and buffers · ## Nuances and edge cases · ## Common mistakes in production
+> Cost: TL;DR ~110 tok · whole note ~3.7k tok. Read more: ## Step 5: stubs and buffers · ## Nuances and edge cases · ## Common mistakes in production
 <!-- tldr:end -->
 
 One live action game's place grew to about **2.36 million instances**, most of them animation data, and Studio crawled at about 15 fps. Over a few weeks a series of passes took it below a million, cut ReplicatedStorage (what every client downloads) by hundreds of thousands of instances, and did it without losing a single clip. This is the order of operations, the techniques, the numbers, and the rules that kept it safe. Mechanisms: [[Baked Clip Stubs and Archiving]], [[Clip Buffer Format]], [[Clip Archive Server]].
@@ -197,5 +197,10 @@ Figures come from different days and different folders, and new content kept arr
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Post-Mortem - Building a Melee Action Game]] · [[Animation Data from Blender to Roblox]] · [[Snippets - Building and Sampling Clips]] · [[Safe Changes in a Shared Place]] · [[Lessons Learned Index]] · [[Case Study - Building a Game with AI Agents]] · [[Animation Start Here]]
+[[Post-Mortem - Building a Melee Action Game]] · [[Animation Data from Blender to Roblox]] · [[Snippets - Building and Sampling Clips]] · Safe Changes in a Shared Place · Lessons Learned Index · Case Study - Building a Game with AI Agents · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Authoring Clips in Code]] · [[Weapon Rig Player]] · [[Publishing Animations]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Pipeline - Arm IK Baking and QA]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Pipeline - Importing Animated Enemies]] · [[Pipeline - New Animated Weapon]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [architecture, networking, physics, ownership, security]
+tags: [architecture, networking, physics, ownership, security, type/guide, area/networking, level/intermediate, api/SetNetworkOwner, area/security, api/Humanoid, api/Model]
 ---
 # Network Ownership
 
@@ -12,7 +12,7 @@ tags: [architecture, networking, physics, ownership, security]
 > - No valuable interaction relies on client-owned Touched or prompt position alone.
 > - Vehicles assign the driver and reset on exit.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.2k tok. Read more: ## When to set ownership manually · ## Security: what owned physics lets an exploiter do · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.3k tok. Read more: ## When to set ownership manually · ## Security: what owned physics lets an exploiter do · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox physics is **distributed**: each unanchored assembly is simulated by one machine, its **network owner**, and that machine's results are replicated to everyone else. Owner can be the server or any one client. Ownership is why your character feels instant, why a ball you kick responds immediately, and also why exploiters can fly, teleport, fling other players and fire Touched events from across the map. This note covers the documented rules, how automatic ownership behaves in practice, when and how to set ownership yourself, the security model, and the diagnosis tools.
@@ -282,5 +282,10 @@ Symptoms:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Debugging Physics and Network Ownership]] · [[Detecting Movement Exploits - Speed Fly Noclip Teleport]] · [[Links - Network ownership]] · [[Cars with Constraints - Suspension Steering and Drive]] · [[Racing Laps and Checkpoints End to End]] · [[How Exploits Work - The Client Boundary]]
+[[Debugging Physics and Network Ownership]] · Detecting Movement Exploits - Speed Fly Noclip Teleport · Links - Network ownership · Cars with Constraints - Suspension Steering and Drive · Racing Laps and Checkpoints End to End · How Exploits Work - The Client Boundary
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Detecting Movement Exploits - Speed Fly Noclip Teleport]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[RemoteEvents RemoteFunctions and Unreliable Remotes]] · [[Client Prediction and Reconciliation for Combat]] · [[Rate Limiting and Abuse Prevention]] · [[Instance Streaming]] · [[Remote Abuse Patterns and Rate Limiting in Practice]] · [[Teleporting and Multi-Place Games]]
+<!-- related:end -->

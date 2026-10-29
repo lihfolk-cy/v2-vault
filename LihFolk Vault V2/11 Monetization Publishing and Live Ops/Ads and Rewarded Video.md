@@ -1,5 +1,5 @@
 ---
-tags: [monetization, ads, rewarded-video, adservice, ads-manager, luau]
+tags: [monetization, ads, rewarded-video, adservice, ads-manager, luau, type/guide, area/monetization, level/intermediate, api/ProcessReceipt, area/scripting, api/RemoteEvent]
 ---
 # Ads and Rewarded Video
 
@@ -12,7 +12,7 @@ tags: [monetization, ads, rewarded-video, adservice, ads-manager, luau]
 > - Reward product is deterministic, not Robux, not random, not inflationary
 > - Availability checked right before offering; one check per play
 >
-> Cost: TL;DR ~190 tok · whole note ~3.5k tok. Read more: ## 2. The flow · ## 3. Rules for rewards and placements (Docs) · ## 7. Failure modes · ## 8. Checklist
+> Cost: TL;DR ~190 tok · whole note ~3.7k tok. Read more: ## 2. The flow · ## 3. Rules for rewards and placements (Docs) · ## 7. Failure modes · ## 8. Checklist
 <!-- tldr:end -->
 
 Ads touch a Roblox game in two directions:
@@ -247,5 +247,10 @@ Log each placement's offer rate, opt-in rate and post-ad session length. A place
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Sponsored Ads and Campaign Math]] · [[Links - Ads]] · [[Launch Strategy - The First Two Weeks]] · [[Marketing and Growth Start Here]] · [[Click-Through Rate]] · [[Shop with Game Passes and Developer Products End to End]]
+[[Sponsored Ads and Campaign Math]] · Links - Ads · Launch Strategy - The First Two Weeks · Marketing and Growth Start Here · Click-Through Rate · Shop with Game Passes and Developer Products End to End
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Robux Price Points and Offer Design]] · [[Pricing and Store Design]] · [[Subscriptions and Premium Payouts]] · [[Game Passes]] · [[Live Ops Events and Updates]] · [[Paid Random Items and Odds Disclosure in Practice]] · [[Community Building]]
+<!-- related:end -->

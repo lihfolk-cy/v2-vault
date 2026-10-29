@@ -1,5 +1,5 @@
 ---
-tags: [level-design, lobby, hub, social, teleport, proximity-prompt, performance, layout]
+tags: [level-design, lobby, hub, social, teleport, proximity-prompt, performance, layout, type/hub, area/world, level/intermediate, api/TeleportService]
 ---
 # Lobby and Hub Design
 
@@ -12,7 +12,7 @@ tags: [level-design, lobby, hub, social, teleport, proximity-prompt, performance
 > - First-time, return and loiter flows drawn; no crossings at chokes.
 > - Time budgets met: first station under 15 s, exit under 20 s for veterans.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.5k tok. Read more: ## 3. Stations and prompts: the hidden collision problem · ## 4. Queue pads, portals and teleports · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.7k tok. Read more: ## 3. Stations and prompts: the hidden collision problem · ## 4. Queue pads, portals and teleports · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 The hub (or lobby) is the space every player sees first and returns to most. [[Level Design for Roblox]] gives the layout patterns (radial plaza, street, courtyard with gates, vertical) and the hub rules that held up in one production game; [[Lobby and Hub Design]] covers how to swap a hub safely with a hook contract and staging copies. This note does neither again. It covers the design questions in between: what a hub is for and in what order, how long each job may take, how many players it must hold, how stations, prompts and queue pads interact, how returning players should flow, and what a hub may cost in performance.
@@ -264,5 +264,10 @@ Avoid hiding social nodes in corners: people stand where they can be seen. See [
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Arena Rounds with Teams and Spectating End to End]] · [[Spawning Teams and Rounds]] · [[Combat Arena and Encounter Layout]] · [[Multiplayer Services Start Here]] · [[Streaming Radius]] · [[Environment and Level Pipeline]]
+[[Arena Rounds with Teams and Spectating End to End]] · Spawning Teams and Rounds · [[Combat Arena and Encounter Layout]] · Multiplayer Services Start Here · Streaming Radius · Environment and Level Pipeline
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Playtest Heatmaps - Position and Death Maps]] · [[Instanced Interiors - Pooled House and Room Copies for Many Players]] · [[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Level of Detail and Model Streaming]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]] · [[ProximityPrompt Gamepad Keys and the Hidden PlayerList Tab]] · [[Obby and Platforming Level Design]]
+<!-- related:end -->

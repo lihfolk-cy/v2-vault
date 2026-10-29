@@ -1,5 +1,5 @@
 ---
-tags: [2d, screengui, game-loop, fixed-timestep, entities, rendering, object-pooling, performance, luau]
+tags: [2d, screengui, game-loop, fixed-timestep, entities, rendering, object-pooling, performance, luau, type/guide, area/2d, level/intermediate]
 ---
 # A 2D Engine in a ScreenGui - Game Loop Entities and Rendering
 
@@ -12,10 +12,10 @@ tags: [2d, screengui, game-loop, fixed-timestep, entities, rendering, object-poo
 > - Fixed timestep with accumulator, frame clamp, max steps per frame, and interpolation alpha.
 > - `prevX/prevY` copied at the start of every step; teleports set both.
 >
-> Cost: TL;DR ~190 tok · whole note ~5.9k tok. Read more: ## 2. The fixed-timestep loop · ## 5. Rendering: pooled views with dirty checks · ## 9. Common mistakes · ## 10. Checklist
+> Cost: TL;DR ~190 tok · whole note ~6.0k tok. Read more: ## 2. The fixed-timestep loop · ## 5. Rendering: pooled views with dirty checks · ## 9. Common mistakes · ## 10. Checklist
 <!-- tldr:end -->
 
-If you chose the GUI route in [[Choosing GUI 2D or Locked-Camera 2.5D]], you are building a small engine. This note is the skeleton of that engine: a fixed-timestep loop with interpolation, entities stored as plain data, a renderer that maps data onto pooled `ImageLabel`s, a camera, layers, culling and pixel snapping. Collision and movement are in [[2D Collision Physics and Platformer Movement]], sprite animation in [[Sprite Sheets and Frame Animation with ImageRectOffset]], levels and parallax in [[Tilemaps Cameras and Parallax for 2D Levels]].
+If you chose the GUI route in [[Choosing GUI 2D or Locked-Camera 2.5D]], you are building a small engine. This note is the skeleton of that engine: a [[Fixed Timestep|fixed-timestep]] loop with interpolation, entities stored as plain data, a renderer that maps data onto pooled `ImageLabel`s, a camera, layers, culling and pixel snapping. Collision and movement are in [[2D Collision Physics and Platformer Movement]], sprite animation in [[Sprite Sheets and Frame Animation with ImageRectOffset]], levels and [[parallax]] in [[Tilemaps Cameras and Parallax for 2D Levels]].
 
 The single idea behind everything here: **the simulation never touches Instances, and the renderer never makes gameplay decisions.** Data in, pixels out.
 
@@ -135,7 +135,7 @@ Pick one convention and never mix it:
 - **Positions are the top-left of the entity's box**, or the bottom-centre for characters (feet). Bottom-centre is friendlier for platformers (standing on a floor is `y = floorTop`), top-left is simpler for tiles. Whichever you choose, document it in the entity type.
 - **The camera is a world position** (top-left of the view). Screen position of an entity is `world - camera`.
 
-**Pixel snapping.** For pixel art, the rendered position must be a whole logical pixel, otherwise sprites shimmer as subpixel positions round differently from frame to frame. Snap **at render time only** (`math.round(x - camX)`), never in the simulation. Snapping the simulation breaks slow movement: an entity moving 0.4 pixels per step would never move at all. Snap the **camera** first and derive entity screen positions from the snapped camera; snapping entities and camera independently makes a followed player jitter one pixel back and forth.
+**Pixel snapping.** For [[pixel art]], the rendered position must be a whole logical pixel, otherwise sprites shimmer as subpixel positions round differently from frame to frame. Snap **at render time only** (`math.round(x - camX)`), never in the simulation. Snapping the simulation breaks slow movement: an entity moving 0.4 pixels per step would never move at all. Snap the **camera** first and derive entity screen positions from the snapped camera; snapping entities and camera independently makes a followed player jitter one pixel back and forth.
 
 ---
 
@@ -506,5 +506,10 @@ Notice what the step function does first: copy current positions into previous o
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Pixel Art Pipeline - Aseprite to Roblox Without Blur]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] · [[Object Pooling]] · [[Links - Containers]] · [[Frame Budget]] · [[Debugging UI Layout and Input]]
+[[Pixel Art Pipeline - Aseprite to Roblox Without Blur]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] · [[Object Pooling]] · Links - Containers · Frame Budget · Debugging UI Layout and Input
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Deterministic Simulation]] · [[Object Pooling]] · [[Frame Budget]] · [[Debugging UI Layout and Input]] · [[Performance Fundamentals]] · [[Textures Decals and Texture Memory]]
+<!-- related:end -->

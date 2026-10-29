@@ -1,5 +1,5 @@
 ---
-tags: [gameplay, combat, architecture, damage, knockback, guard, parry, server-authority]
+tags: [gameplay, combat, architecture, damage, knockback, guard, parry, server-authority, type/guide, area/gameplay, level/intermediate, api/RemoteEvent]
 ---
 # Combat Systems Architecture
 
@@ -12,7 +12,7 @@ tags: [gameplay, combat, architecture, damage, knockback, guard, parry, server-a
 > - One damage core and one player-damage entry point.
 > - Reactions have immunity windows after hard control.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.8k tok. Read more: ## 3. The damage pipeline · ## 4. Reactions: stagger, knockback, guard break · ## 8. Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.9k tok. Read more: ## 3. The damage pipeline · ## 4. Reactions: stagger, knockback, guard break · ## 8. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A combat system is not a damage function. It is a pipeline that starts with a button press on one client, produces instant feedback there, is validated and resolved on the server, changes state on several bodies, and ends with reactions, rewards, quests and analytics on many clients. When the pipeline is not explicit, every new feature (a shield, a crit, a dodge, a tutorial safety rule) is bolted onto whichever script was nearest, and the game ends up with three damage paths that disagree. This note describes a structure that held up in one live action game, with its real numbers, and the failure modes it ran into.
@@ -271,5 +271,10 @@ PvP breaks assumptions PvE can make:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Genre Playbook - Battlegrounds and Arena Fighters]] · [[Status Effects Buffs and Stacking Rules]] · [[Melee Combat System End to End]] · [[Boss Fight Design Patterns]] · [[Case Study - Enemy Roster Rebuild]] · [[Detecting Combat Exploits - Reach Rate and Aim]]
+[[Genre Playbook - Battlegrounds and Arena Fighters]] · [[Status Effects Buffs and Stacking Rules]] · Melee Combat System End to End · Boss Fight Design Patterns · Case Study - Enemy Roster Rebuild · Detecting Combat Exploits - Reach Rate and Aim
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations]] · [[Characters and Humanoids]] · [[Explosions - Radius Damage, Falloff and Cover Checks]] · [[Grabs, Carries and Throws - Moving Players Safely]] · [[Enemy Archetype Kit - Fodder, Tank, Ranged, Support and Exploder]] · [[AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses]] · [[Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers]]
+<!-- related:end -->

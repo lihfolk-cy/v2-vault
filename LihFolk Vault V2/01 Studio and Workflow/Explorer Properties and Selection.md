@@ -1,5 +1,5 @@
 ---
-tags: [studio, explorer, properties, selection, attributes, workflow]
+tags: [studio, explorer, properties, selection, attributes, workflow, type/guide, area/studio, level/intermediate, api/CollectionService, api/RemoteEvent]
 ---
 # Explorer Properties and Selection
 
@@ -12,7 +12,7 @@ tags: [studio, explorer, properties, selection, attributes, workflow]
 > - Use `is:`, `tag:` and `.` queries before writing a script.
 > - Review a bulk selection in Properties before typing a value.
 >
-> Cost: TL;DR ~150 tok · whole note ~3.9k tok. Read more: ## 3. Properties · ## 6. Safe bulk edits: the Pre-attribute pattern · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.1k tok. Read more: ## 3. Properties · ## 6. Safe bulk edits: the Pre-attribute pattern · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 The Explorer and Properties windows are where you spend most of your non-coding time in Studio. Used well, they replace dozens of throwaway scripts: the Explorer search language can find "every unanchored MeshPart under the map with CastShadow on" in one query, and Properties can edit all of them at once. Used carelessly, selection-driven edits are the most common way to damage a shared place. This note covers both windows in depth, the `Selection` service for scripts, and the reversible bulk-edit pattern the reference project used for every large pass. Facts are from the Studio docs as of October 2026 unless marked.
@@ -85,7 +85,7 @@ In a searched tree, `Ctrl A` and the select-all button select **only matches**, 
 
 The Properties window edits the selection, grouped into collapsible sections; collapse state is remembered per class (Docs). Key points:
 
-- **Filter** with `Ctrl Shift P`: typing "velo" shows AssemblyLinearVelocity and AssemblyAngularVelocity (Docs).
+- **Filter** with `Ctrl Shift P`: typing "velo" shows AssemblyLinearVelocity and [[AssemblyAngularVelocity]] (Docs).
 - **Vector entry**: type `4, 1, 2` into the parent field, or expand X, Y, Z (Docs). Fields accept arithmetic in practice (for example `*2`), but treat that as a convenience, not something to document for others (Rule of thumb, behaviour unverified in docs).
 - **Multi-select editing**: with several objects selected, only shared properties show, mixed values display blank, and typing a value sets it on all of them. This is the bulk editor; see the safety section below.
 - **Tags** section: add or remove CollectionService tags. Tags replicate to clients and save with the place (Docs).
@@ -275,5 +275,10 @@ Notes:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Studio Settings and Shortcuts]] · [[Selection Editing and Bulk Tools]] · [[Undo and ChangeHistoryService Done Right]] · [[Batch Processing Tools in Studio]] · [[Replication Rules]] · [[Plugin Development Start Here]]
+[[Studio Settings and Shortcuts]] · [[Selection Editing and Bulk Tools]] · Undo and ChangeHistoryService Done Right · Batch Processing Tools in Studio · Replication Rules · Plugin Development Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Team Create and Collaboration]] · [[Packages and Asset Reuse]] · [[Studio Assistant and AI Tools]] · [[Creator Store and Toolbox Safety]] · [[Testing Modes - Play Run and Multi-Client]] · [[Git and Source Control for Roblox]] · [[External Tooling - Rojo Wally Selene StyLua]]
+<!-- related:end -->

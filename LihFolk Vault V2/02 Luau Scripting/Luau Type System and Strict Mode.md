@@ -1,5 +1,5 @@
 ---
-tags: [luau, types, strict-mode, type-checking, generics]
+tags: [luau, types, strict-mode, type-checking, generics, type/guide, area/scripting, level/intermediate, api/Humanoid, api/Player]
 ---
 # Luau Type System and Strict Mode
 
@@ -12,7 +12,7 @@ tags: [luau, types, strict-mode, type-checking, generics]
 > - Remote handlers take `unknown` and narrow; no trust in annotations.
 > - `IsA` before `::`; no `:: any ::` chains.
 >
-> Cost: TL;DR ~160 tok · whole note ~5.2k tok. Read more: ## 1. Modes · ## Nuances and edge cases · ## Checklist · ## Common mistakes
+> Cost: TL;DR ~160 tok · whole note ~5.3k tok. Read more: ## 1. Modes · ## Nuances and edge cases · ## Checklist · ## Common mistakes
 <!-- tldr:end -->
 
 Luau has a gradual, structural type system. Types are checked by Studio's analyzer (and by external tools such as luau-lsp) **while you edit**; at runtime they are erased and do nothing, except that native code generation uses argument annotations as optimization hints ([[Luau Performance and Native Codegen]]). The value of types is catching the bug classes that dominate Roblox error logs: indexing `nil`, wrong payload shapes, typo'd properties, and calling functions that do not exist yet.
@@ -412,5 +412,10 @@ The senior trade-off: types catch mistakes before play-testing and document inte
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Advanced Luau Start Here]] · [[Links - Luau language]] · [[Metatables and OOP - When and When Not]] · [[Code Review for Luau Teams]] · [[Testing Strategies and Frameworks]] · [[Dependency Injection in Luau]]
+[[Advanced Luau Start Here]] · Links - Luau language · [[Metatables and OOP - When and When Not]] · Code Review for Luau Teams · Testing Strategies and Frameworks · Dependency Injection in Luau
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Luau Performance Patterns with Benchmarks]] · [[Events Signals and Connections]] · [[Error Handling and Retries]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Instances Attributes and Tags]] · [[Buffers and Binary Data]] · [[Strings Patterns and Formatting]] · [[Script Types and Run Context]]
+<!-- related:end -->

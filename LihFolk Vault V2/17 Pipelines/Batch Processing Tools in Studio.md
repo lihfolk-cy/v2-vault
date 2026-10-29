@@ -1,5 +1,5 @@
 ---
-tags: [pipelines, studio, tooling, batch, plugins, command-bar, http, automation]
+tags: [pipelines, studio, tooling, batch, plugins, command-bar, http, automation, type/guide, area/pipelines, level/intermediate, api/HttpService]
 ---
 # Batch Processing Tools in Studio
 
@@ -12,7 +12,7 @@ tags: [pipelines, studio, tooling, batch, plugins, command-bar, http, automation
 > - Return data, not prints
 > - Sliced work under about 1 s per call; no background loops
 >
-> Cost: TL;DR ~160 tok · whole note ~4.2k tok. Read more: ## Rule 2: slice long work under the call budget · ## Moving data: local HTTP servers · ## Failure modes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.3k tok. Read more: ## Rule 2: slice long work under the call budget · ## Moving data: local HTTP servers · ## Failure modes · ## Checklist
 <!-- tldr:end -->
 
 Sooner or later every game needs to change thousands of things at once: re-texture every rock, re-level every sound, re-bake every clip, delete every leftover backup, audit every screen. Doing that by hand is impossible; doing it with one giant command-bar script freezes Studio, cannot be undone safely and leaves no record. This note is how to build **batch tools that run inside Studio in Edit mode**: where they live, how they slice work so Studio stays responsive, how they move data in and out through local HTTP, how they stay reversible, and the gates they run. It is drawn from one production game that ran dozens of such tools, several at once, with people and AI agents sharing the same place. Background: [[Command Bar and Studio Scripting]], [[Plugins - Using and Writing]], [[Studio Plugins and Local HTTP Bridges]], [[Studio Tooling Architecture]].
@@ -123,7 +123,7 @@ Even collecting the item list can be too slow on a huge place; collect per top-l
 
 ## Rule 3: heavy computation goes offline
 
-Studio is the wrong place for maths: an IK solve per frame, an image filter, an audio analysis, a mesh decimation. Move data out, compute in Python (or Node, or Lune), move results back. The reference project's split (measured in one production game):
+Studio is the wrong place for maths: an IK solve per frame, an image filter, an audio analysis, a mesh decimation. Move data out, compute in Python (or Node, or [[Lune]]), move results back. The reference project's split (measured in one production game):
 
 - Studio does I/O only: read clips, write keyframes, read waveforms, write attributes;
 - Python does the maths, at most two processes per agent (one during installs), with `OMP_NUM_THREADS`, `OPENBLAS_NUM_THREADS` and `MKL_NUM_THREADS` set to 1 so numpy does not take every core;
@@ -297,5 +297,10 @@ See [[Multiple Agents in One Studio]] and [[Safety Rules for AI Agents in Studio
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI Agents and Autonomous Workflows]] · [[Writing Your Own MCP Server]] · [[MCP Workflows for Building Worlds]] · [[Version History and Backups]] · [[Case Study - Building a Game with AI Agents]] · [[Plugin Development Start Here]]
+[[AI Agents and Autonomous Workflows]] · Writing Your Own MCP Server · MCP Workflows for Building Worlds · Version History and Backups · Case Study - Building a Game with AI Agents · Plugin Development Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Case Study - Building a Game with AI Agents]] · [[Writing Your Own MCP Server]] · [[Code Pipeline - Rojo Git and CI]] · [[Icon and Thumbnail Rendering Pipeline]] · [[Build Test and Release Pipeline]] · [[Data and Config Pipeline - Spreadsheets to Game]] · [[Asset Upload Automation with Open Cloud]] · [[Character and Creature Pipeline]] · [[Environment and Level Pipeline]] · [[Art Pipeline - Concept to In-Game Asset]]
+<!-- related:end -->

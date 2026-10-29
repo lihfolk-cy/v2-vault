@@ -1,5 +1,5 @@
 ---
-tags: [modeling, blender, workflow, modifiers, export, python]
+tags: [modeling, blender, workflow, modifiers, export, python, type/guide, area/modeling, level/intermediate]
 ---
 # Blender Workflow for Roblox Creators
 
@@ -12,7 +12,7 @@ tags: [modeling, blender, workflow, modifiers, export, python]
 > - Character proxy and 1-stud grid in the scene.
 > - Front toward -Y; origin placed per asset type.
 >
-> Cost: TL;DR ~130 tok · whole note ~5.6k tok. Read more: ## 1. Scene setup once, saved as your startup file · ## 3. Modifiers: non-destructive modelling · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~5.8k tok. Read more: ## 1. Scene setup once, saved as your startup file · ## 3. Modifiers: non-destructive modelling · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Blender is the default modelling tool for Roblox creators: free, scriptable, and the one Roblox's own guides are written for. This note is a working setup and a modifier-by-modifier guide for building game meshes that arrive in Studio at the right size, facing the right way, with the right pivots and shading. It goes deeper than the overview in [[Modeling in Blender for Roblox]], and it stops at the mesh: unwrapping, texturing and export validation have their own notes ([[UV Unwrapping]], [[Texturing and PBR Baking]], [[Exporting and Validating Models for Roblox]]). Rigging is in the Animation section ([[Rigging in Blender]]).
@@ -179,7 +179,7 @@ Reduces triangles. *Collapse* ratio is "the ratio of faces to keep" computed on 
 ### Smooth by Angle and Weighted Normal
 
 - **Smooth by Angle** (Blender 4.1 and later, replacing the old mesh "Auto Smooth" setting) marks edges sharp above an angle. *Object > Shade Auto Smooth* adds it. The Python operator is `bpy.ops.object.shade_auto_smooth(angle=...)` (default 30 degrees).
-- **Weighted Normal** makes custom normals weighted by face area (or angle), so big flat faces stay flat and small bevels absorb the shading. Pair it with Bevel's *Harden Normals* or *Face Strength*. The standard low-poly hard-surface shading recipe.
+- **[[Weighted Normals|Weighted Normal]]** makes custom normals weighted by face area (or angle), so big flat faces stay flat and small bevels absorb the shading. Pair it with Bevel's *Harden Normals* or *Face Strength*. The standard low-poly hard-surface shading recipe.
 
 ### Triangulate
 
@@ -384,5 +384,10 @@ Windows gotcha (Measured): Blender and other native programs failed to open file
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Clean Stylised Shading - Weighted and Custom Normals]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Bevels Chamfers and Edge Highlights Without Textures]] · [[AI 3D Model Generation Outside Roblox]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Skill - Roblox Asset Import]]
+[[Clean Stylised Shading - Weighted and Custom Normals]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · Bevels Chamfers and Edge Highlights Without Textures · AI 3D Model Generation Outside Roblox · Faceted Low-Poly - Flat Normals and Facet Size · Skill - Roblox Asset Import
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[AI Pitfalls - Assets and Import]] · [[Modeling Characters for R15 and Custom Rigs]] · [[AI 3D Model Generation Outside Roblox]] · [[Modeling Weapons and Props]] · [[Curve-Based Modelling in Blender for Roblox]] · [[Organic and Creature Modeling]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Low-Poly and Stylized Modeling]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Mesh Optimization for Mobile]]
+<!-- related:end -->

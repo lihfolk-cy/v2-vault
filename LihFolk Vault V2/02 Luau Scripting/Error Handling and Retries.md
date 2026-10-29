@@ -1,5 +1,5 @@
 ---
-tags: [luau, errors, pcall, retries, reliability, logging]
+tags: [luau, errors, pcall, retries, reliability, logging, type/guide, area/scripting, level/intermediate, api/DataStore, area/gameplay, api/BindToClose]
 ---
 # Error Handling and Retries
 
@@ -12,7 +12,7 @@ tags: [luau, errors, pcall, retries, reliability, logging]
 > - Retries: capped, exponential, jittered, idempotent, re-validated after waits.
 > - No broad `pcall` around game logic; bugs fail loudly.
 >
-> Cost: TL;DR ~170 tok · whole note ~3.9k tok. Read more: ## 5. Retry with exponential backoff and jitter · ## 10. Failure policy by situation · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.0k tok. Read more: ## 5. Retry with exponential backoff and jitter · ## 10. Failure policy by situation · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox code fails in two very different ways. **Bugs** (indexing `nil`, wrong types, missing instances) should fail loudly and early so you find them. **Expected failures** (DataStore throttling, HTTP timeouts, a player leaving mid-teleport, a purchase prompt failing) must be caught, retried or handled, because they will happen in production every day. This note covers how errors propagate in Roblox's threaded model, `error`/`pcall`/`xpcall`/`assert`, tracebacks, retry with backoff and jitter, timeouts, result types, and the pre-save checks that keep whole classes of bugs out of live servers.
@@ -345,5 +345,10 @@ return Breaker
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Error Handling - pcall xpcall and Promise Patterns]] · [[Cookbook - Data and Saving]] · [[Links - Error handling and debugging]] · [[Reading Luau Errors and Stack Traces]] · [[Debugging DataStore Problems]] · [[Skill - Roblox DataStore Safety]]
+[[Error Handling - pcall xpcall and Promise Patterns]] · [[Cookbook - Data and Saving]] · Links - Error handling and debugging · Reading Luau Errors and Stack Traces · Debugging DataStore Problems · Skill - Roblox DataStore Safety
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Reading Luau Errors and Stack Traces]] · [[Functions Closures and Upvalues]] · [[Events Signals and Connections]] · [[Tables Metatables and OOP]] · [[Script Types and Run Context]] · [[Luau Performance Patterns with Benchmarks]] · [[Parallel Luau and Actors]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [game-design, combat, bosses, encounters, phases, telegraphs, multiplayer, rewards]
+tags: [game-design, combat, bosses, encounters, phases, telegraphs, multiplayer, rewards, type/guide, area/design, level/intermediate, area/networking]
 ---
 # Boss Fight Design Patterns
 
@@ -12,7 +12,7 @@ tags: [game-design, combat, bosses, encounters, phases, telegraphs, multiplayer,
 > - Every attack has a tell, a commit point and a punish window meeting minimums.
 > - Attacks drawn from phase pattern bags, filtered by range and cooldown, no repeats.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.2k tok. Read more: ## 2. Attack vocabulary: tell, commit, punish · ## 3. Phases · ## 9. Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.3k tok. Read more: ## 2. Attack vocabulary: tell, commit, punish · ## 3. Phases · ## 9. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A boss is a test the game has been preparing the player for. On Roblox it is also a test taken by a random group of strangers, many on phones, with no voice chat, joining and leaving mid-fight, holding wildly different gear. Patterns that work in a single-player action game (precise dodges, long learning by death, a fixed health pool) break here unless they are adapted. This note is the design side: how to structure a fight, how to time and teach attacks, how to scale health and damage to groups, how to reward losers as well as winners, and how to test a fight before players do.
@@ -294,5 +294,10 @@ Implementation notes: copies of an arena placed far from the map need their own 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Anticipation]] · [[Core Loops and Session Design]] · [[Combat Arena and Encounter Layout]] · [[Enemy and NPC Animation]] · [[Teaching Through Level Design]] · [[Animating Creatures and Monsters]]
+[[Anticipation]] · [[Core Loops and Session Design]] · Combat Arena and Encounter Layout · Enemy and NPC Animation · Teaching Through Level Design · Animating Creatures and Monsters
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Time-to-Kill Math and a Weapon Balance Sheet]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Party and Minigame Collections]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Genre Playbook - Battlegrounds and Arena Fighters]] · [[First-Time User Experience and Onboarding]] · [[Genre Playbook - Battle Royale]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [qa, release, checklist, testing, performance, live-ops]
+tags: [qa, release, checklist, testing, performance, live-ops, type/checklist, area/performance, level/intermediate, api/ProcessReceipt, area/liveops]
 ---
 # QA Checklists Before Release
 
@@ -9,7 +9,7 @@ tags: [qa, release, checklist, testing, performance, live-ops]
 > - Avoid: Ticks without evidence.
 > - Avoid: Testing only on the developer's PC.
 >
-> Cost: TL;DR ~90 tok · whole note ~3.1k tok. Read more: ## 8. G. Performance budgets ([[Performance Fundamentals]]) · ## 11. The "not play-tested" discipline · ## 12. One-page release checklist · ## Common mistakes
+> Cost: TL;DR ~90 tok · whole note ~3.3k tok. Read more: ## 8. G. Performance budgets ([[Performance Fundamentals]]) · ## 11. The "not play-tested" discipline · ## 12. One-page release checklist · ## Common mistakes
 <!-- tldr:end -->
 
 A release checklist is not bureaucracy; it is the memory of every bug that already shipped once. This note gives a tiered release process (hotfix, regular update, big launch), the gates each tier must pass, and the full checklists: code health, gameplay, multiplayer, data, monetisation, UI and devices, performance budgets, content hygiene, and the first hour after publishing. It ends with the "not play-tested" discipline that makes the checklists honest.
@@ -200,5 +200,10 @@ Decision at +1h: keep / hotfix / flag off / rollback
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Build Test and Release Pipeline]] · [[Mobile and Low-End Optimization]] · [[Multi-Client and Device Playtesting Protocols]] · [[Skill - Roblox Performance Audit]] · [[Live Incident Response and Post-Mortems]] · [[Data Schema Versioning]]
+[[Build Test and Release Pipeline]] · [[Mobile and Low-End Optimization]] · [[Multi-Client and Device Playtesting Protocols]] · Skill - Roblox Performance Audit · Live Incident Response and Post-Mortems · Data Schema Versioning
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Genre QA Passes - Test Checklists per Game Type]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[Hunting Memory Leaks Step by Step]] · [[Save Migration Tests - Fixture Saves and Golden Files]] · [[In-Game Bug Report Button with Automatic Context]] · [[Automated Luau Checks - LihFolk Hook and Audit]] · [[Gated Tester Commands and Debug Panels]] · [[Dupe Hunting Test Script - Trades, Gifts, Drops and Rejoins]]
+<!-- related:end -->

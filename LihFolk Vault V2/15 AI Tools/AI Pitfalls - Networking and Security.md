@@ -1,5 +1,5 @@
 ---
-tags: [ai-pitfalls, networking, security, remotes, validation, replication, streaming, network-ownership, server-authority, anti-exploit]
+tags: [ai-pitfalls, networking, security, remotes, validation, replication, streaming, network-ownership, server-authority, anti-exploit, type/guide, area/ai]
 verified: 2026-10-28
 ---
 # AI Pitfalls - Networking and Security
@@ -13,7 +13,7 @@ verified: 2026-10-28
 > - No client-sent price, damage, reward or position used as truth.
 > - No `InvokeClient`.
 >
-> Cost: TL;DR ~140 tok · whole note ~2.1k tok. Read more: ## 1. The server trusts numbers the client sends · ## 9. Network ownership misconceptions · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~2.2k tok. Read more: ## 1. The server trusts numbers the client sends · ## 9. Network ownership misconceptions · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Models write Roblox networking as if the client were a trusted UI for a single program. Every item below compiles and works in Play Solo; most are exploitable or race-prone live. Hub: [[What AI Models Get Wrong in Roblox]].
@@ -140,3 +140,8 @@ for _, p in Players:GetPlayers() do task.spawn(onPlayer, p) end
 - [[Remote Abuse Patterns and Rate Limiting in Practice]]
 - [[Exploits and Anti-Cheat]]
 - [[Debugging Client-Server Desync]]
+
+<!-- related:start -->
+## Related
+[[Cookbook - Remotes and Networking]] · [[Client-Server Model]] · [[Server Authority]] · [[AI Pitfalls - Physics and Animation]] · [[Replication Boundary]] · [[Rate Limiting]]
+<!-- related:end -->

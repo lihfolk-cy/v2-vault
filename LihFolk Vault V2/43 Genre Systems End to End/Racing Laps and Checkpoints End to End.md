@@ -1,5 +1,5 @@
 ---
-tags: [genre-system, racing, vehicles, checkpoints, worked-build, anti-cheat, timing, luau]
+tags: [genre-system, racing, vehicles, checkpoints, worked-build, anti-cheat, timing, luau, type/guide, area/gameplay, level/intermediate, api/ProximityPrompt]
 ---
 # Racing Laps and Checkpoints End to End
 
@@ -12,7 +12,7 @@ tags: [genre-system, racing, vehicles, checkpoints, worked-build, anti-cheat, ti
 > - Drive backwards over the start line: no lap.
 > - Drive at full speed through a tight chicane: no missed gates (lower `TickHz` to 10 to stress it).
 >
-> Cost: TL;DR ~140 tok · whole note ~7.6k tok. Read more: ## 4. The server: RaceService · ## 5. The client: RaceClient · ## 6. Edge cases and failure modes · ## 9. Test checklist
+> Cost: TL;DR ~140 tok · whole note ~7.7k tok. Read more: ## 4. The server: RaceService · ## 5. The client: RaceClient · ## 6. Edge cases and failure modes · ## 9. Test checklist
 <!-- tldr:end -->
 
 This note builds the race layer around a car: a grid, a countdown that cannot be jumped, gate crossing detected by swept segments so cars at 200 studs per second never tunnel through a checkpoint, crossing times interpolated between server frames, laps and finish order, live race positions, wrong-way detection, resets to the last gate, plausibility checks against the car's real top speed, ghost collisions between racers, a DNF timer, and best laps saved only for clean laps. The car itself is out of scope; build it with [[Cars with Constraints - Suspension Steering and Drive]]. [[Genre Playbook - Racing and Driving]] explains network ownership and why lap times must not come from the client; this note implements the server-side timing it describes and covers the geometry and timing details that decide whether close finishes are fair.
@@ -706,5 +706,10 @@ The driver owns the car, so a cheater can still drive slightly better than physi
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Obby Checkpoints and Stage Saves End to End]] · [[Dot and Cross Products in Gameplay]] · [[Links - Constraints]] · [[Boats Buoyancy and Water]] · [[Game Math Start Here]] · [[Genre Playbook - Obbies and Platformers]]
+[[Obby Checkpoints and Stage Saves End to End]] · [[Dot and Cross Products in Gameplay]] · Links - Constraints · Boats Buoyancy and Water · Game Math Start Here · Genre Playbook - Obbies and Platformers
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Race HUD - Position, Laps, Splits, Speedometer and Minimap]] · [[Racing AI on a Racing Line - Spline Following and Rubber-Banding]] · [[Tower Defense Waves and Placement End to End]] · [[Tycoon Plots and Droppers End to End]] · [[Arena Rounds with Teams and Spectating End to End]] · [[Horror Monster Chase AI End to End]]
+<!-- related:end -->

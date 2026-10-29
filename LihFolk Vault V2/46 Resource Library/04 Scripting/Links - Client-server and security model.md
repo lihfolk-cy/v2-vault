@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, scripting]
+tags: [resources, links, scripting, type/reference, area/security, level/intermediate, area/scripting]
 ---
 # Links - Client-server and security model
 

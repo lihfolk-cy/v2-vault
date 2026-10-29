@@ -1,5 +1,5 @@
 ---
-tags: [accessibility, captions, subtitles, audio, deaf, hard-of-hearing, haptics, volume, localization]
+tags: [accessibility, captions, subtitles, audio, deaf, hard-of-hearing, haptics, volume, localization, type/guide, area/accessibility, level/intermediate]
 ---
 # Captions and Audio Accessibility
 
@@ -407,5 +407,10 @@ See also: [[Accessibility Start Here]], [[Accessibility]], [[Sound Design for Ga
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI Audio - Voice Music and SFX]] · [[Voice Chat and Safety Features]] · [[Feedback Timing - Sound Visual and Haptic Sync]] · [[Audio Pipeline]] · [[Sound Fundamentals]] · [[Resource Library - Audio]]
+[[AI Audio - Voice Music and SFX]] · Voice Chat and Safety Features · Feedback Timing - Sound Visual and Haptic Sync · Audio Pipeline · Sound Fundamentals · Resource Library - Audio
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Voice Chat and Safety Features]] · [[Feedback Timing - Sound Visual and Haptic Sync]] · [[Audio Mixer Settings with SoundGroups]] · [[Audio Pipeline]] · [[Difficulty Options and Cognitive Load]] · [[Input Remapping and One-Handed Play]]
+<!-- related:end -->

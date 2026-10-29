@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, animation, ui, game-feel, math]
+tags: [core-concept, animation, ui, game-feel, math, type/reference, area/ui, level/beginner, area/animation]
 ---
 # Tween vs Spring
 
@@ -10,7 +10,7 @@ tags: [core-concept, animation, ui, game-feel, math]
 > - A spring's "duration" is a consequence. Designers think in seconds; expose frequency (how fast) and damping ratio (1 = no...
 > - Tweens on the server replicate every step.
 >
-> Cost: TL;DR ~120 tok · whole note ~910 tok. Read more: ## The decision · ## The nuance most people miss
+> Cost: TL;DR ~120 tok · whole note ~980 tok. Read more: ## The decision · ## The nuance most people miss
 <!-- tldr:end -->
 
 A **tween** moves a value from A to B over a fixed duration along an easing curve. A **spring** moves a value toward a target by simulating stiffness and damping each frame; it has no fixed duration, only a feel. Both animate the same things (UI positions, camera offsets, props), but they answer different questions.
@@ -67,5 +67,10 @@ Related concepts: [[Easing]], [[Anticipation]], [[Frame Budget]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Tweening and UI animation]] · [[Snippets - Procedural Motion]] · [[Game Feel Start Here]] · [[Hit-Stop]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Timing Spacing and Frame Charts]] · [[Core Concepts Start Here]]
+[[Links - Tweening and UI animation]] · Snippets - Procedural Motion · Game Feel Start Here · [[Hit-Stop]] · Multi-Bone IK - FABRIK and CCD · Timing Spacing and Frame Charts · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Accessibility Contrast]] · [[Deterministic Simulation]] · [[Expected Value]] · [[Variance]] · [[Input Buffering]] · [[Power Curve]] · [[Skinning Weights]] · [[Safe Area]]
+<!-- related:end -->

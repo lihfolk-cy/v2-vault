@@ -1,5 +1,5 @@
 ---
-tags: [platform-features, invites, referrals, share-links, socialservice, growth, launch-data, luau, strict]
+tags: [platform-features, invites, referrals, share-links, socialservice, growth, launch-data, luau, strict, type/guide, area/platform, level/intermediate]
 ---
 # Friend Invites Referrals and Experience Invites
 
@@ -12,12 +12,12 @@ tags: [platform-features, invites, referrals, share-links, socialservice, growth
 > - Invite placed at moments that benefit from company, behind the pop-up gate
 > - Notification string includes `{experienceName}`; prompt message short
 >
-> Cost: TL;DR ~160 tok · whole note ~5.2k tok. Read more: ## 1. The four mechanisms · ## 4. Designing referral rewards · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.3k tok. Read more: ## 1. The four mechanisms · ## 4. Designing referral rewards · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Roblox gives you four different ways for one player to bring another into your game, and they behave differently in ways that matter for rewards, attribution and abuse. This note separates them, explains the join data each one produces, and builds a referral reward system that survives the hard parts: the inviter is offline or in another server, launch data arrives late, the invitee may be an alt account, and you cannot see who was invited. The older notes [[Social Design and Multiplayer Play]] and [[Community Building]] cover *why* invites matter and the basic invite button; this note is the system behind it.
 
-Platform facts are labelled **Roblox docs (as of October 2026)** and were checked against the SocialService and ExperienceInviteOptions references and the Player invite prompts, Friend referral system and Share links guides on create.roblox.com. Strategy is rule of thumb.
+Platform facts are labelled **Roblox docs (as of October 2026)** and were checked against the [[SocialService]] and ExperienceInviteOptions references and the Player invite prompts, Friend referral system and Share links guides on create.roblox.com. Strategy is rule of thumb.
 
 ## 1. The four mechanisms
 
@@ -59,7 +59,7 @@ Invite prompts convert when the player has a reason to want company at that mome
 Avoid prompting on join (no context), mid-combat (interrupts), or repeatedly. Use the same pop-up gate as purchase prompts so a player never sees two platform prompts in a row ([[Pricing and Store Design]]).
 
 ### Targeted invites
-`InviteUser` plus `CanSendGameInviteAsync(player, friendId)` lets you build "invite this friend" buttons. A natural list is `Player:GetFriendsWhoPlayedAsync()` (friends who have played this game before, Roblox docs), which makes a "bring back your squad" panel: the prompt targets lapsed friends who already know the game. Lapsed returning users also count toward Creator Rewards' Audience Expansion as reactivated users; see [[Subscriptions and Premium Payouts]] for that program's rules rather than repeating them here.
+`InviteUser` plus `CanSendGameInviteAsync(player, friendId)` lets you build "invite this friend" buttons. A natural list is `Player:GetFriendsWhoPlayedAsync()` (friends who have played this game before, Roblox docs), which makes a "bring back your squad" panel: the prompt targets lapsed friends who already know the game. Lapsed returning users also count toward [[Creator Rewards]]' Audience Expansion as reactivated users; see [[Subscriptions and Premium Payouts]] for that program's rules rather than repeating them here.
 
 ## 3. Launch data: a hint, not a command
 
@@ -348,5 +348,10 @@ Because you cannot see sends, the funnel is:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Discovery and the Algorithm]] · [[Live Ops Events and Updates]] · [[Avatar Context Menus Profiles and Social Surfaces]] · [[Short-Form Video Marketing]] · [[Sponsored Ads and Campaign Math]] · [[Codes Redemption System End to End]]
+[[Discovery and the Algorithm]] · Live Ops Events and Updates · [[Avatar Context Menus Profiles and Social Surfaces]] · Short-Form Video Marketing · Sponsored Ads and Campaign Math · Codes Redemption System End to End
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Photo Mode and In-Game Screenshots with CaptureService]] · [[Subscriptions and Recurring Revenue]] · [[Discovery and Monetization Changes 2025-2026]] · [[Commerce and Physical Goods]] · [[Regional Compliance - Paid Random Items and Country Rules]] · [[Roblox Changes 2025-2026]]
+<!-- related:end -->

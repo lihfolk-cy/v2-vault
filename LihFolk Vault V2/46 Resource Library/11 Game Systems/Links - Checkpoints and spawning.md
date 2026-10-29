@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, game-systems]
+tags: [resources, links, game-systems, type/reference, level/intermediate]
 ---
 # Links - Checkpoints and spawning
 
@@ -42,5 +42,5 @@ Part of [[Resource Library - Game Systems]] in the [[Resource Library Start Here
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Roblox Studio]] · [[Links - Testing]] · [[Links - Leaderboards]] · [[Links - Script types]] · [[Spawn Points Safe Zones and Respawn Flow]] · [[Obby Checkpoints and Stage Saves End to End]]
+[[Links - Roblox Studio]] · [[Links - Testing]] · [[Links - Leaderboards]] · [[Links - Script types]] · [[Spawn Points Safe Zones and Respawn Flow]] · Obby Checkpoints and Stage Saves End to End
 <!-- auto-links:end -->

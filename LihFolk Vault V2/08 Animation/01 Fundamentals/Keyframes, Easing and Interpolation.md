@@ -1,5 +1,5 @@
 ---
-tags: [fundamentals, keyframes, easing, interpolation]
+tags: [fundamentals, keyframes, easing, interpolation, type/guide, area/animation, level/beginner, api/Animator]
 ---
 # Keyframes, Easing and Interpolation
 
@@ -9,7 +9,7 @@ tags: [fundamentals, keyframes, easing, interpolation]
 > - Avoid: Legacy `Cubic` -> `CubicV2`
 > - Avoid: Key-to-key turns near 180 deg -> Mid keys; stay under 120
 >
-> Cost: TL;DR ~80 tok · whole note ~3.0k tok. Read more: ## Easing styles and their real shapes · ## Rotation interpolation: not slerp · ## Common mistakes
+> Cost: TL;DR ~80 tok · whole note ~3.1k tok. Read more: ## Easing styles and their real shapes · ## Rotation interpolation: not slerp · ## Common mistakes
 <!-- tldr:end -->
 
 Between two keys, the Animator has to invent every frame. How it does that (which key's easing applies, what shape each easing has, how rotations are blended) decides whether your clip plays the way you authored it. Most of this is undocumented or documented wrongly, and one of the rules (rotation interpolation) changes depending on how your keyframes are spaced. This note is the practical guide; the raw measurements and the model code are in [[How the Animator Really Behaves]].
@@ -59,13 +59,13 @@ Measured: `In` jumps to the next value at the start of the segment, `Out` holds 
 
 Measured on the real Animator with `StepAnimations`:
 
-- **Quaternion nlerp (shortest way)** when **all keyframes in the sequence are evenly spaced** (marker-only keyframes count toward spacing) **and every key is Linear**.
+- **[[Quaternions|Quaternion]] nlerp (shortest way)** when **all keyframes in the sequence are evenly spaced** (marker-only keyframes count toward spacing) **and every key is Linear**.
 - Otherwise, a **linear blend of rotation vectors**: each key's rotation is turned into axis x angle relative to the joint's rest; of each key's two equivalent vectors (`v` and `v - 2*pi*axis`) the pair closest together is chosen; the vectors are lerped with the eased alpha and turned back into a rotation.
 - Even inside an evenly spaced sequence, an **eased** segment blends rotation vectors.
 
 ### Why it matters
 For small steps the two models are indistinguishable. For big turns of joints already far from rest they are not:
-- An off-hand shoulder swinging overhead differed by 9 to 12 degrees from slerp mid-segment.
+- An off-hand shoulder swinging overhead differed by 9 to 12 degrees from [[slerp]] mid-segment.
 - On 15 freshly played clips a rotation-vector model matched within 0.24 degrees everywhere, while a slerp model was up to 178 degrees off (a shoulder at 178; other moves at 146, 154, 175).
 
 Intuition: lerping rotation vectors traces a straight line in "axis x angle space" from rest, which is not the shortest arc between the two orientations unless one of them is the rest pose or both share an axis. The further both keys are from rest and the more their axes differ, the more the path bows.
@@ -74,7 +74,7 @@ Intuition: lerping rotation vectors traces a straight line in "axis x angle spac
 - Any tool that predicts playback (samplers, IK bakers, key thinners, QA) must use the same model, or its "verified" clip will play differently. Give the tool one switch for the interpolation model and default it to rotation vectors.
 - Keep every key-to-key turn **under about 120 degrees**. Add a mid key otherwise; one IK baker inserted a mid key on any segment over 120 degrees.
 - **Never key exactly 180 degrees** between neighbours. Both directions are equally short and the Animator effectively picks one at random; three enemy clips that did this were the only parity failures in a 350-clip test. Use 179, or add an in-between key that commits to a direction.
-- Watch overhead-to-floor swings: near 180 degrees the blade can "take the short way back over the head" and arrive pointing up on the impact frame. One team's fix was an explicit "chop" key bringing the blade over the front before the drive.
+- Watch overhead-to-floor swings: near 180 degrees the blade can "take the short way back over the head" and arrive pointing up on the [[Impact Frames|impact frame]]. One team's fix was an explicit "chop" key bringing the blade over the front before the drive.
 
 ### Even spacing is fragile
 The nlerp case needs **every** keyframe evenly spaced. If you bake at 30 fps and round keyframe times to 1 ms (as one builder did), the gaps become 0.033, 0.034, 0.033 s: in a strict test that is uneven, and one marker keyframe off the grid also breaks it. One Lua re-implementation used a 0.1 ms tolerance for "even". The real Animator's tolerance is unknown, so do not design anything that depends on getting the nlerp mode; just make your tools model rotation vectors for real-world clips and nlerp for strictly regular bakes.
@@ -150,5 +150,10 @@ A warning from the same project: one baker checked "does this easing reproduce t
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Snippets - Building and Sampling Clips]] · [[Weapon Rig Player]] · [[Animation Data from Blender to Roblox]] · [[Clip Buffer Format]] · [[Easing]] · [[Interpolation Easing and Curves Math]] · [[Animation Start Here]]
+[[Snippets - Building and Sampling Clips]] · [[Weapon Rig Player]] · [[Animation Data from Blender to Roblox]] · [[Clip Buffer Format]] · [[Easing]] · Interpolation Easing and Curves Math · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Lua Keyframe Player Internals]] · [[Engine Gotchas]] · [[Animation Editor Advanced]] · [[Animation Editor Workflow]] · [[CurveAnimation and Curve Channels]] · [[Animation Glossary]] · [[Pipeline - Arm IK Baking and QA]] · [[Snippets - Lua Keyframe Player Core]]
+<!-- related:end -->

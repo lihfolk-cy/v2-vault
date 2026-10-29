@@ -1,5 +1,5 @@
 ---
-tags: [world-building, art, parts, csg, unions, meshparts, geometry]
+tags: [world-building, art, parts, csg, unions, meshparts, geometry, type/guide, area/world, level/intermediate, api/Terrain, area/modeling]
 ---
 # Parts Unions and MeshParts
 
@@ -12,7 +12,7 @@ tags: [world-building, art, parts, csg, unions, meshparts, geometry]
 > - Repeated objects are one mesh asset, cloned.
 > - No mesh over 20,000 triangles; heavy objects split.
 >
-> Cost: TL;DR ~140 tok · whole note ~5.2k tok. Read more: ## Unions and solid modeling (CSG) · ## MeshParts · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~5.3k tok. Read more: ## Unions and solid modeling (CSG) · ## MeshParts · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Everything you see in a Roblox world is one of four kinds of geometry: **primitive Parts** (Block, Ball, Cylinder, Wedge, CornerWedge), **solid-model operations** (Unions, Intersects, Negates, all `PartOperation`s), **MeshParts** (imported triangle meshes) and **Terrain** (voxels, see [[Terrain Tools and Terrain API]]). Each has a different cost profile for rendering, physics, memory, place size and iteration speed. Picking the wrong one is the most common reason a map that looked fine in Studio stutters on a phone, or a build that looked "pro" in Blender looks cheap once it is in the game.
@@ -264,5 +264,10 @@ end
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Exporting and Validating Models for Roblox]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Links - Parts, unions and meshes]] · [[Skill - Roblox Asset Import]] · [[Art Pipeline - Concept to In-Game Asset]] · [[Low-Poly and Stylized Modeling]]
+[[Exporting and Validating Models for Roblox]] · Meshing Voxels for Roblox - Greedy Meshing and Export · Links - Parts, unions and meshes · Skill - Roblox Asset Import · Art Pipeline - Concept to In-Game Asset · Low-Poly and Stylized Modeling
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[AI Pitfalls - Assets and Import]] · [[Foliage Props and Scatter]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[Environment Art Styles]] · [[Procedural World Generation]] · [[Zone and Biome Art Direction]] · [[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Grid Placement and Player Building Systems]] · [[Water Sky and Atmosphere Art]]
+<!-- related:end -->

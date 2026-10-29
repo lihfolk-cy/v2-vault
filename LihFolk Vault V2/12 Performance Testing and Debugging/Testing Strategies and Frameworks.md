@@ -1,5 +1,5 @@
 ---
-tags: [testing, testez, jest-lua, ci, dry-run, qa, static-analysis]
+tags: [testing, testez, jest-lua, ci, dry-run, qa, static-analysis, type/guide, area/performance, level/intermediate]
 ---
 # Testing Strategies and Frameworks
 
@@ -12,7 +12,7 @@ tags: [testing, testez, jest-lua, ci, dry-run, qa, static-analysis]
 > - Pure modules for money, drops, curves, migrations and validation, with specs.
 > - Randomness injected and seeded in tests.
 >
-> Cost: TL;DR ~130 tok · whole note ~4.4k tok. Read more: ## 4. TestEZ · ## 5. Jest-Lua · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.5k tok. Read more: ## 4. TestEZ · ## 5. Jest-Lua · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox games are stateful, networked, visual and full of engine behaviour you do not control. That makes them hard to test from the outside, and many teams respond by testing nothing except "I played it and it seemed fine". This note lays out a layered strategy that works: static checks on every script, unit tests for pure logic (with TestEZ and Jest-Lua examples), Edit-mode dry runs and harnesses for things that touch instances, play tests for runtime behaviour, and an honest vocabulary ("Edit-tested", "not play-tested") so nobody mistakes one level of proof for another.
@@ -293,7 +293,7 @@ Either is fine. The tests matter more than the framework.
 ## 6. Running tests in CI
 
 Options as of October 2026:
-- **Pure modules under Lune** (a standalone Luau runtime): fastest, no Roblox needed, but only for code that touches no engine APIs. Use plain assertions or a small TestEZ-compatible shim.
+- **Pure modules under [[Lune]]** (a standalone Luau runtime): fastest, no Roblox needed, but only for code that touches no engine APIs. Use plain assertions or a small TestEZ-compatible shim.
 - **`run-in-roblox`**: opens a place in Studio on the CI machine and runs a script (needs Studio installed; Windows or macOS runners).
 - **Open Cloud Luau Execution**: an Open Cloud API that runs a Luau script against a place or a specific place version and returns output (Docs). Requests use an API key in the `x-api-key` header with the `universe.place.luau-execution-session:write` scope; task creation is asynchronous, so CI polls the task state; Docs list rate limits of 5 per minute per API key owner and 45 per minute per IP. Translated pages label it Beta while the English page labels it stable; treat stability as unverified. See [[Open Cloud APIs]].
 
@@ -371,5 +371,10 @@ Use cheat tooling to reach states quickly; route cheats through the same APIs pl
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Automated Testing with TestEZ and Jest-Lua]] · [[Code Pipeline - Rojo Git and CI]] · [[MCP Workflows for Scripting and Debugging]] · [[Build Test and Release Pipeline]] · [[Links - Testing]] · [[Dependency Injection in Luau]]
+[[Automated Testing with TestEZ and Jest-Lua]] · [[Code Pipeline - Rojo Git and CI]] · MCP Workflows for Scripting and Debugging · Build Test and Release Pipeline · Links - Testing · Dependency Injection in Luau
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[MCP Workflows for Scripting and Debugging]] · [[Automated Luau Checks - LihFolk Hook and Audit]] · [[Save Migration Tests - Fixture Saves and Golden Files]] · [[Genre QA Passes - Test Checklists per Game Type]] · [[UI Automation with VirtualInput and StudioTestService]] · [[Testing Time-Based Features with a Controllable Clock]] · [[Multi-Client and Device Playtesting Protocols]] · [[Dupe Hunting Test Script - Trades, Gifts, Drops and Rejoins]] · [[Gated Tester Commands and Debug Panels]]
+<!-- related:end -->

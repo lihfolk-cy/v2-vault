@@ -1,5 +1,5 @@
 ---
-tags: [systems, enemies, boss, phases, telegraph, dodge]
+tags: [systems, enemies, boss, phases, telegraph, dodge, type/guide, area/animation, level/intermediate, api/Animator]
 ---
 # Boss Animation and Phases
 
@@ -12,7 +12,7 @@ tags: [systems, enemies, boss, phases, telegraph, dodge]
 > - Only the last combo link gold.
 > - Root motion on a child joint; orbit pieces in code.
 >
-> Cost: TL;DR ~140 tok · whole note ~2.6k tok. Read more: ## Intros · ## Rigs for big creatures · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~2.7k tok. Read more: ## Intros · ## Rigs for big creatures · ## Checklist
 <!-- tldr:end -->
 
 A boss is an enemy whose animation carries the fight's structure: an intro that introduces it, telegraphs players must read and dodge, phase shifts that change its behaviour, and a death that pays off. Bosses are also physically large, so every rig, scale and camera problem gets bigger. This note covers boss intros, untouchable clips, phases, telegraphs and dodge windows, rigs for big creatures and the camera lanes they need. Numbers come from one live action game (the reference project). The general enemy protocol is in [[Enemy Animation State Protocol]].
@@ -157,5 +157,10 @@ See also: [[Enemy and NPC Animation]], [[Enemy Animation State Protocol]], [[Cin
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Snippets - Enemy Client Animator]] · [[Boss Fight Design Patterns]] · [[Genre Playbook - Combat and RPG]] · [[Case Study - Enemy Roster Rebuild]] · [[Anticipation]] · [[NPC AI and Behaviour]] · [[Animation Start Here]]
+[[Snippets - Enemy Client Animator]] · [[Boss Fight Design Patterns]] · Genre Playbook - Combat and RPG · Case Study - Enemy Roster Rebuild · Anticipation · NPC AI and Behaviour · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Weapon and Combat Animation]] · [[Procedural Death Knockdown and Hit Reactions]] · [[Creature Rig Conventions]] · [[Bones and Skinned Meshes]] · [[VFX Timing with Animation]] · [[Combat Combo Systems]] · [[Combat Animation Craft]] · [[Enemy Import Axis Fix]]
+<!-- related:end -->

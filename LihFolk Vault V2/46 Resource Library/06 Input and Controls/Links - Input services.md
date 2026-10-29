@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, input-controls]
+tags: [resources, links, input-controls, type/reference, level/intermediate, api/ContextActionService, api/UserInputService]
 ---
 # Links - Input services
 

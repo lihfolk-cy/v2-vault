@@ -1,5 +1,5 @@
 ---
-tags: [ui, billboardgui, surfacegui, world-space, nameplates, damage-numbers, performance]
+tags: [ui, billboardgui, surfacegui, world-space, nameplates, damage-numbers, performance, type/guide, area/ui, level/intermediate, api/BillboardGui, area/performance]
 ---
 # World-Space UI - BillboardGui and SurfaceGui
 
@@ -12,7 +12,7 @@ tags: [ui, billboardgui, surfacegui, world-space, nameplates, damage-numbers, pe
 > - Every billboard and surface gui has `MaxDistance`.
 > - Anchored to attachments or extents, not fixed offsets.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.0k tok. Read more: ## 1. BillboardGui · ## 3. Patterns · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.1k tok. Read more: ## 1. BillboardGui · ## 3. Patterns · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Some UI belongs in the world rather than on the screen: names over heads, enemy health bars, damage numbers, shop signs, interactive screens on a wall, a leaderboard on a pillar. Roblox offers two containers for this. A `BillboardGui` always faces the camera and follows a part or attachment. A `SurfaceGui` is painted onto a face of a part. Both use ordinary `GuiObject`s inside, so everything you know about layout applies, but their sizing, lighting, input and performance rules are different and are the source of most "my nameplate is giant", "my sign is blurry" and "the server lags with 200 enemies" problems.
@@ -310,5 +310,10 @@ See also: [[ScreenGui Fundamentals]], [[Text Fonts and Rich Text]], [[Game Feel 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Containers]] · [[Readable Text and UI Scale]] · [[Debugging UI Layout and Input]] · [[Layout - Scale Offset and Constraints]] · [[Links - UI elements]] · [[Accessibility Contrast]]
+[[Links - Containers]] · Readable Text and UI Scale · Debugging UI Layout and Input · [[Layout - Scale Offset and Constraints]] · Links - UI elements · Accessibility Contrast
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Nametags and Overhead Bars - Cost and Visibility Rules]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Safe Areas and Insets]] · [[UI Layout Objects - Lists Grids and Pages]] · [[HUD Design]] · [[Responsive UI for Phone Tablet Console and PC]] · [[UI Design Systems]]
+<!-- related:end -->

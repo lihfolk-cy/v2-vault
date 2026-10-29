@@ -1,5 +1,5 @@
 ---
-tags: [pipelines, audio, sound, loudness, mixing, automation]
+tags: [pipelines, audio, sound, loudness, mixing, automation, type/guide, area/pipelines, level/intermediate, area/audio]
 ---
 # Audio Pipeline
 
@@ -12,7 +12,7 @@ tags: [pipelines, audio, sound, loudness, mixing, automation]
 > - Offline prep: trimmed, faded, normalised, named by role
 > - Id map JSON per upload batch
 >
-> Cost: TL;DR ~150 tok · whole note ~4.2k tok. Read more: ## Stage 2: prepare offline · ## Stage 4: measure loudness in Studio · ## Failure modes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.3k tok. Read more: ## Stage 2: prepare offline · ## Stage 4: measure loudness in Studio · ## Failure modes · ## Checklist
 <!-- tldr:end -->
 
 Audio is the asset type where "it worked on my machine" is most literally true. Sounds come from many sources at wildly different loudness, they are uploaded one by one, players hear them through phone speakers and headphones, and nobody notices a badly levelled sound until fifty of them play at once. A good audio pipeline makes loudness a **measured number** rather than a slider somebody nudged, keeps a single table of every sound the game may play, and makes it impossible to ship a sound that is banned, unlevelled or missing.
@@ -294,5 +294,10 @@ Numbers make sounds consistent; only ears make them right. Listen on phone speak
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Combat Sound Design and Feedback]] · [[Resource Library - Audio]] · [[Asset Pipelines]] · [[Links - Audio creation and uploading]] · [[Links - Music and ambience]] · [[Captions and Audio Accessibility]]
+[[Combat Sound Design and Feedback]] · Resource Library - Audio · Asset Pipelines · Links - Audio creation and uploading · Links - Music and ambience · Captions and Audio Accessibility
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Sound Design Pitfalls - Reused Ids Onsets and Layered Loops]] · [[Icon and Thumbnail Rendering Pipeline]] · [[Build Test and Release Pipeline]] · [[Art Pipeline - Concept to In-Game Asset]] · [[UI Asset Pipeline]] · [[Blender Automation with Python]] · [[Character and Creature Pipeline]] · [[Environment and Level Pipeline]] · [[Code Pipeline - Rojo Git and CI]]
+<!-- related:end -->

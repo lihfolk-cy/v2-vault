@@ -1,5 +1,5 @@
 ---
-tags: [ai-pitfalls, ui, input, responsive, scale, safe-area, input-action-system, gamepad, touch, styling, fonts]
+tags: [ai-pitfalls, ui, input, responsive, scale, safe-area, input-action-system, gamepad, touch, styling, fonts, type/guide]
 verified: 2026-10-28
 ---
 # AI Pitfalls - UI and Input
@@ -97,3 +97,8 @@ Generated UI usually looks right on the one desktop viewport the model imagines 
 - [[Case Study - Phone UI Overhaul]]
 - [[HUD Design]]
 - [[Text Fonts and Rich Text]]
+
+<!-- related:start -->
+## Related
+[[Debugging UI Layout and Input]] · [[Cookbook - UI]] · [[UI Design Systems]] · [[ScreenGui Fundamentals]] · [[Safe Area]] · [[AI Pitfalls - Stale APIs and Luau]]
+<!-- related:end -->

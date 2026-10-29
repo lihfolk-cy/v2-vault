@@ -1,5 +1,5 @@
 ---
-tags: [procedural, look-at, aim, head, neck, turret, axes, luau]
+tags: [procedural, look-at, aim, head, neck, turret, axes, luau, type/guide, area/animation, level/intermediate, api/IKControl]
 ---
 # Look-At Aim and Head Tracking
 
@@ -9,7 +9,7 @@ tags: [procedural, look-at, aim, head, neck, turret, axes, luau]
 > - Head whips shoulder to shoulder: target crossing directly behind -> lose interest behind; hysteresis; unwrap
 > - Head jitters while the character runs: measuring in last frame's part CFrames -> FK this frame, or measure in the root's frame
 >
-> Cost: TL;DR ~130 tok · whole note ~3.2k tok. Read more: ## The core maths · ## A head tracker · ## Common mistakes
+> Cost: TL;DR ~130 tok · whole note ~3.4k tok. Read more: ## The core maths · ## A head tracker · ## Common mistakes
 <!-- tldr:end -->
 
 A head that turns toward the player who just walked up is the cheapest "this character is alive" trick in the book. Aim (a torso and arms pointing a weapon, a turret swinging onto a target) is the same maths with stricter accuracy. Neither is really IK: you are not reaching a point with an end effector, you are *rotating* one or more joints so an axis points somewhere. That makes it simpler, more stable and easier to clamp than IK, but it has its own traps, nearly all of them about axes and angle order.
@@ -194,7 +194,7 @@ Look-at is local. A `C0` or `Transform` written on a client stays on that client
 | Head whips shoulder to shoulder | target crossing directly behind | lose interest behind; hysteresis; unwrap |
 | Head jitters while the character runs | measuring in last frame's part CFrames | FK this frame, or measure in the root's frame |
 | Accessory stays put while the head turns | unjointed accessory parts | weld them to the body part |
-| Look-at works in Studio test, nothing on new avatars | code edits `Neck.C0` on a Motor6D that is now an AnimationConstraint | write `Transform` in `PreSimulation` |
+| Look-at works in Studio test, nothing on new avatars | code edits `Neck.C0` on a Motor6D that is now an [[AnimationConstraint]] | write `Transform` in `PreSimulation` |
 | Others never see your character look around | client-side only | replicate the target, compute on each client |
 | Aim lands above near targets | aiming from the neck pivot | correct for the eye or muzzle offset |
 
@@ -202,5 +202,10 @@ Related: [[Springs Damping and Smoothing]], [[IKControl Reference]], [[Procedura
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Motor6D Math and CFrame Composition]] · [[Cookbook - Math CFrame and Vectors]] · [[Rotations Angles and Quaternions]] · [[Snippets - IK]] · [[Math Vectors and CFrames]] · [[Links - Inverse kinematics]] · [[Animation Start Here]]
+[[Motor6D Math and CFrame Composition]] · [[Cookbook - Math CFrame and Vectors]] · Rotations Angles and Quaternions · [[Snippets - IK]] · Math Vectors and CFrames · Links - Inverse kinematics · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Two-Bone IK Math]] · [[Inverse Kinematics]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Rotations Angles and Quaternions]] · [[Elbow Poles Swivel and Joint Limits]] · [[Flight Flocks and Path Animation]] · [[Blender Armature and Bone Roll Conventions]] · [[Procedural Weapon Motion]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]]
+<!-- related:end -->

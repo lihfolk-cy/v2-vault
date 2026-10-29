@@ -1,5 +1,5 @@
 ---
-tags: [procedural, tweenservice, cframe, props, bulkmoveto, pivots, performance, luau]
+tags: [procedural, tweenservice, cframe, props, bulkmoveto, pivots, performance, luau, type/guide, area/animation, level/intermediate, api/BulkMoveTo]
 ---
 # Tween and CFrame Animation of Objects
 
@@ -9,7 +9,7 @@ tags: [procedural, tweenservice, cframe, props, bulkmoveto, pivots, performance,
 > - Door stops halfway: a second tween on the same property cancelled the first -> one controller per property; check `Completed` state
 > - Lid clips into the base on close: Back / Elastic overshoot not checked -> sample `GetValue` over the curve, check the range against geometry
 >
-> Cost: TL;DR ~130 tok · whole note ~4.8k tok. Read more: ## TweenService essentials · ## The Anim_ pattern: decorative animation as data · ## Common mistakes
+> Cost: TL;DR ~130 tok · whole note ~4.9k tok. Read more: ## TweenService essentials · ## The Anim_ pattern: decorative animation as data · ## Common mistakes
 <!-- tldr:end -->
 
 Most moving things in a Roblox world are not characters: doors, chests, lids, spinning crystals, floating rocks, rotating rings, swaying foliage, gates and portals. They do not need rigs, Animators or clips. They need a pivot, a formula or a tween, and a sensible update budget. This note covers TweenService properly, moving whole models, a worked hinge example with the overshoot checked, a data-driven pattern for hundreds of decorative animations, and `BulkMoveTo` for mass movement.
@@ -280,5 +280,10 @@ Related: [[UI and GUI Animation]], [[Procedural Animation]], [[Performance and M
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Tweening and UI animation]] · [[Custom Rigs - Weapons and Props]] · [[Tween vs Spring]] · [[Easing]] · [[UI Motion Language and Timing]] · [[Links - Forces and movers]] · [[Animation Start Here]]
+[[Links - Tweening and UI animation]] · [[Custom Rigs - Weapons and Props]] · Tween vs Spring · Easing · UI Motion Language and Timing · Links - Forces and movers · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Procedural Weapon Motion]] · [[Weapon Rig Player]] · [[Look-At Aim and Head Tracking]] · [[Springs Damping and Smoothing]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Rigs and Joints]] · [[Motor6D Math and CFrame Composition]] · [[Authoring Clips in Code]]
+<!-- related:end -->

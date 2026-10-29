@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [resources, links, hub]
+tags: [resources, links, hub, type/hub, level/beginner]
 ---
 # Resource Library Start Here
 

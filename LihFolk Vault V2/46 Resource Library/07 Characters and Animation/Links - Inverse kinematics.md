@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, characters-animation]
+tags: [resources, links, characters-animation, type/reference, area/animation, level/advanced, api/IKControl]
 ---
 # Links - Inverse kinematics
 

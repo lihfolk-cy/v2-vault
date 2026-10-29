@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, assets-creation]
+tags: [resources, links, assets-creation, type/reference, level/intermediate, api/SurfaceAppearance]
 ---
 # Links - Texturing
 
@@ -78,5 +78,5 @@ Part of [[Resource Library - Assets (creation)]] in the [[Resource Library Start
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - UVs and texture prep]] · [[Links - Props]] · [[Links - Topology]] · [[Links - Blender fundamentals for Roblox]] · [[Substance Painter and Texturing Tools]] · [[Materials and Surfaces Start Here]]
+[[Links - UVs and texture prep]] · [[Links - Props]] · [[Links - Topology]] · [[Links - Blender fundamentals for Roblox]] · [[Substance Painter and Texturing Tools]] · Materials and Surfaces Start Here
 <!-- auto-links:end -->

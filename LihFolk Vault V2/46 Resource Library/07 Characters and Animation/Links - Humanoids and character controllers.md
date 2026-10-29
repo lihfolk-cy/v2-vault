@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, characters-animation]
+tags: [resources, links, characters-animation, type/reference, area/animation, level/intermediate, api/Humanoid]
 ---
 # Links - Humanoids and character controllers
 
@@ -111,5 +111,5 @@ Part of [[Resource Library - Characters and Animation]] in the [[Resource Librar
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Rigs]] · [[Links - Custom characters and avatars]] · [[Links - Collisions]] · [[Links - Animation playback]] · [[Custom Character Controllers]] · [[Humanoid States and Animation]]
+[[Links - Rigs]] · [[Links - Custom characters and avatars]] · [[Links - Collisions]] · [[Links - Animation playback]] · [[Custom Character Controllers]] · Humanoid States and Animation
 <!-- auto-links:end -->

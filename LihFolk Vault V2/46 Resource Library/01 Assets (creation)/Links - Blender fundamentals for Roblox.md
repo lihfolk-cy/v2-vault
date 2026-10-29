@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, assets-creation]
+tags: [resources, links, assets-creation, type/reference, area/modeling, level/beginner]
 ---
 # Links - Blender fundamentals for Roblox
 

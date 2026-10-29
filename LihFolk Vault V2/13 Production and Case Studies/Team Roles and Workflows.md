@@ -1,5 +1,5 @@
 ---
-tags: [production, team, workflow, ownership, collaboration, case-study]
+tags: [production, team, workflow, ownership, collaboration, case-study, type/case-study, area/production, level/intermediate, area/monetization]
 ---
 # Team Roles and Workflows
 
@@ -12,7 +12,7 @@ tags: [production, team, workflow, ownership, collaboration, case-study]
 > - An ownership map exists, by path, and is kept current.
 > - Shared hot files have a written edit protocol.
 >
-> Cost: TL;DR ~150 tok · whole note ~3.5k tok. Read more: ## The ownership map · ## The daily loop · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.7k tok. Read more: ## The ownership map · ## The daily loop · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A Roblox game is usually made by a small group: an owner who decides taste and holds the account, one or more builders and scripters, sometimes an artist or animator, and testers who are often friends or the owner. Studio makes it easy for all of them to work in the same place at the same time ([[Team Create and Collaboration]]). It does not make it easy for them to avoid stepping on each other. This note is about roles, ownership and the daily loop that keeps several people (or several parallel workstreams) productive in one place.
@@ -192,5 +192,10 @@ Owners often bring in models, sounds or code from outside. Rules from the refere
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Scoping and Roles for Small Teams]] · [[Multiple Agents in One Studio]] · [[Team Collaboration Start Here]] · [[Post-Mortem - Building a Melee Action Game]] · [[Documentation and Onboarding New Developers]] · [[Evaluating AI Tools - A Practical Rubric]]
+[[Scoping and Roles for Small Teams]] · [[Multiple Agents in One Studio]] · Team Collaboration Start Here · [[Post-Mortem - Building a Melee Action Game]] · Documentation and Onboarding New Developers · Evaluating AI Tools - A Practical Rubric
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Case Study - Instance Cleanup and Place Size]] · [[Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts]] · [[Case Study - Enemy Roster Rebuild]] · [[Case Study - Building LihFolk V2 with AI Agents]] · [[Live Incident Response and Post-Mortems]] · [[Ship a Game in 30 Days - Week-by-Week Plan for a Solo Dev]] · [[Case Study - Fast Join and Deferred Loading]] · [[Template Reskin Checklist - One Codebase, New Game]]
+<!-- related:end -->

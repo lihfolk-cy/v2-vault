@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, performance, memory, world-building]
+tags: [core-concept, performance, memory, world-building, type/reference, area/performance, level/beginner, area/world]
 ---
 # Instance Count
 
@@ -10,7 +10,7 @@ tags: [core-concept, performance, memory, world-building]
 > - Copies multiply everything. A tree model with 30 parts placed 500 times is 15,000 instances.
 > - Streaming reduces what the client holds, not what the server holds.
 >
-> Cost: TL;DR ~130 tok · whole note ~850 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~920 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Instance count** is the number of objects in the DataModel: every Part, Attachment, Weld, Script, Sound, GuiObject, Value and Folder. Each one costs memory, adds to replication and join time, and is a candidate for engine work (property change tracking, physics, rendering, layout).
@@ -60,5 +60,10 @@ Related concepts: [[Draw Calls]], [[Frame Budget]], [[Object Pooling]], [[Stream
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Triangle Budget]] · [[Skill - Roblox Performance Audit]] · [[Core Concepts Start Here]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Performance Fundamentals]] · [[Instances Attributes and Tags]]
+[[Triangle Budget]] · [[Skill - Roblox Performance Audit]] · [[Core Concepts Start Here]] · Art Budgets - Triangles Draw Calls Memory · Performance Fundamentals · Instances Attributes and Tags
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Object Pooling]] · [[Replication Boundary]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Core Loop]] · [[Texel Density]] · [[Performance and Memory]]
+<!-- related:end -->

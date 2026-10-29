@@ -1,5 +1,5 @@
 ---
-tags: [studio, plugins, tooling, security, workflow]
+tags: [studio, plugins, tooling, security, workflow, type/guide, area/studio, level/intermediate, api/ChangeHistoryService, area/security, api/SetSetting, api/PluginGui]
 ---
 # Plugins - Using and Writing
 
@@ -12,7 +12,7 @@ tags: [studio, plugins, tooling, security, workflow]
 > - Async widget API, correct `DockWidgetPluginGuiInfo` order.
 > - Every change in a recording that always finishes.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.7k tok. Read more: ## 4. Anatomy of a correct plugin · ## 5. A complete example: Reversible Bulk Anchor · ## 7. Common mistakes · ## 8. Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.8k tok. Read more: ## 4. Anatomy of a correct plugin · ## 5. A complete example: Reversible Bulk Anchor · ## 7. Common mistakes · ## 8. Checklist
 <!-- tldr:end -->
 
 A plugin is Luau that runs inside Studio with access to the editor: the selection, the undo history, script sources, the file pickers, widgets docked beside the Explorer. Community plugins cover building, animation, UI and terrain; your own plugins turn repeated Command Bar snippets into buttons the whole team can use. Plugins also have enough power to rewrite every script in your place, which makes installing one a security decision. This note covers choosing and managing plugins safely, then writing them properly with the current APIs (as of October 2026: `CreateDockWidgetPluginGuiAsync`, `ChangeHistoryService` recordings, `ScriptEditorService`).
@@ -319,5 +319,10 @@ The senior trade-off: writing a plugin pays off when the same manual task happen
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Plugin Development Start Here]] · [[Links - Plugins and custom tools]] · [[Studio Interface Tour]] · [[Team Create and Collaboration]] · [[Resource Library - Safety (free models and plugins)]] · [[Writing Your Own MCP Server]]
+[[Plugin Development Start Here]] · Links - Plugins and custom tools · [[Studio Interface Tour]] · [[Team Create and Collaboration]] · Resource Library - Safety (free models and plugins) · Writing Your Own MCP Server
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Version History and Backups]] · [[Packages and Asset Reuse]] · [[Git and Source Control for Roblox]] · [[Studio Assistant and AI Tools]] · [[Places Universes and Experience Settings]] · [[Testing Modes - Play Run and Multi-Client]]
+<!-- related:end -->

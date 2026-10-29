@@ -1,5 +1,5 @@
 ---
-tags: [input, userinputservice, contextactionservice, input-action-system, touch, keyboard]
+tags: [input, userinputservice, contextactionservice, input-action-system, touch, keyboard, type/guide, area/ui, level/intermediate, api/ContextActionService, api/UserInputService, api/InputAction]
 ---
 # Input - UserInputService and ContextActionService
 
@@ -12,7 +12,7 @@ tags: [input, userinputservice, contextactionservice, input-action-system, touch
 > - Every `UserInputService` gameplay handler checks `gameProcessedEvent`.
 > - Actions have keyboard, gamepad and touch bindings.
 >
-> Cost: TL;DR ~130 tok · whole note ~3.9k tok. Read more: ## 4. ContextActionService · ## 5. The Input Action System · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.0k tok. Read more: ## 4. ContextActionService · ## 5. The Input Action System · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox has three generations of input API living side by side: `UserInputService` (raw events and device state), `ContextActionService` (named actions bound to inputs while a context is active, with automatic touch buttons), and the newer **Input Action System** (`InputContext`, `InputAction`, `InputBinding` instances configured at edit time). This note explains what each is for, how input flows between UI and the game, how to show the right prompt for the player's device, and the production traps (typing in chat triggers abilities, a held key stuck after a menu opens, touch buttons stacking on top of each other).
@@ -267,5 +267,10 @@ See also: [[Gamepad and Console UX]], [[Responsive UI for Phone Tablet Console a
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Input Remapping and One-Handed Play]] · [[Links - Input services]] · [[Input Responsiveness Buffering and Coyote Time]] · [[Links - Devices]] · [[Links - Cross-platform UI]] · [[Cookbook - UI]]
+[[Input Remapping and One-Handed Play]] · Links - Input services · Input Responsiveness Buffering and Coyote Time · Links - Devices · Links - Cross-platform UI · Cookbook - UI
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Rebinding Controls with the Input Action System]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]] · [[Shift-Lock Sprint and Gamepad B for Menus]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[UI Design Systems]]
+<!-- related:end -->

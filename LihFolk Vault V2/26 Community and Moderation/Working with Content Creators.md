@@ -1,5 +1,5 @@
 ---
-tags: [community, creators, influencers, marketing, safety, live-ops, luau]
+tags: [community, creators, influencers, marketing, safety, live-ops, luau, type/guide, area/community, level/intermediate, api/AnalyticsService, area/scripting]
 ---
 # Working with Content Creators
 
@@ -12,7 +12,7 @@ tags: [community, creators, influencers, marketing, safety, live-ops, luau]
 > - Creator fit checked: genre, audience age, conduct
 > - Written agreement with disclosure, honesty, payment and guardian terms
 >
-> Cost: TL;DR ~140 tok · whole note ~3.8k tok. Read more: ## 1. Safety first · ## 5. Deals and agreements · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.9k tok. Read more: ## 1. Safety first · ## 5. Deals and agreements · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 Video creators (long-form, short-form and live streamers) are the biggest single source of sudden traffic for Roblox games. One video can bring more players in an afternoon than a month of sponsored ads. Working with them well is part craft (making the game filmable), part relationship (finding the right creators and treating them fairly), part logistics (surviving the surge) and part ethics: their audiences are mostly children, and paid promotion aimed at children carries obligations. This note covers all four, plus how to measure what a collaboration did. The marketing side is expanded in [[Short-Form Video Marketing]] and [[Launch Strategy - The First Two Weeks]]; in-game social features in [[Community Building]].
@@ -27,7 +27,7 @@ Facts are labelled "Roblox docs (as of October 2026)", "Announcement", "measured
 - **Disclose paid promotion.** In many countries paid or gifted promotion must be clearly labelled as an ad (for example under consumer protection and advertising rules); platforms such as YouTube and TikTok have their own paid-promotion labels. Put "the creator must disclose the partnership using the platform's tools" in every agreement. Check the rules where you and the creator live.
 - **Many creators are minors.** Contracts, payments and NDAs with a minor need a parent or guardian ([[Commissions Pricing and Contracts]], [[Hiring Freelancers and Revenue Shares]]). Communicate with young creators where a parent can see, never in private DMs from an adult staff account.
 - **No off-platform funnels for children.** Do not ask creators to send their viewers to your Discord or anywhere else outside Roblox in a way that targets young viewers; social links are already restricted to age-checked 16+ on Roblox pages (Announcement, June 2026; [[Discord Servers for Roblox Games]]).
-- **No rule-breaking traffic.** The Creator Rewards program prohibits bots, automated tools, manipulated teleports, encouraging alt accounts and impersonation; violations can forfeit rewards or end in account termination (Roblox docs). A creator who promises "guaranteed players" with bots is a liability, not a partner.
+- **No rule-breaking traffic.** The [[Creator Rewards]] program prohibits bots, automated tools, manipulated teleports, encouraging alt accounts and impersonation; violations can forfeit rewards or end in account termination (Roblox docs). A creator who promises "guaranteed players" with bots is a liability, not a partner.
 - **No special in-game powers for creators.** Admin commands, invisible moderation tools or rigged luck for a creator's video mislead viewers and break trust. Give creators access to things players could also see (a private server, a preview build), not hidden advantages.
 
 ---
@@ -228,5 +228,10 @@ What a "good" result looks like depends on your game. A useful bar: did the coho
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Business and Careers Start Here]] · [[Legal Basics - IP Licenses and Assets]] · [[Sponsored Ads and Campaign Math]] · [[Subscriptions and Premium Payouts]] · [[Monetization Overview]] · [[Working with Contractors and Revenue Splits]]
+[[Business and Careers Start Here]] · Legal Basics - IP Licenses and Assets · Sponsored Ads and Campaign Math · Subscriptions and Premium Payouts · Monetization Overview · Working with Contractors and Revenue Splits
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Marketing to Kids and Teens - Age Rules and Paid-Promo Disclosure]] · [[Monetization Overview]] · [[Sponsored Ads and Campaign Math]] · [[Legal Basics - IP Licenses and Assets]] · [[Voice Chat and Safety Features]] · [[Text Chat Customization with TextChatService]]
+<!-- related:end -->

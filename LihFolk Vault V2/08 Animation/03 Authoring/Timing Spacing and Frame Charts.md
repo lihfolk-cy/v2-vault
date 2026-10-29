@@ -1,5 +1,5 @@
 ---
-tags: [authoring, craft, timing, spacing, frames]
+tags: [authoring, craft, timing, spacing, frames, type/guide, area/animation, level/intermediate]
 ---
 # Timing Spacing and Frame Charts
 
@@ -10,7 +10,7 @@ tags: [authoring, craft, timing, spacing, frames]
 > - Mark which segments must be fast (strike) and which slow (anticipation build, settle).
 > - Note where in-betweens should be denser (fast arcs need more samples; the reference project's baker sampled strike segments...
 >
-> Cost: TL;DR ~140 tok · whole note ~3.3k tok. Read more: ## Spacing: what easing does between two keys · ## Frame charts for common game actions
+> Cost: TL;DR ~140 tok · whole note ~3.4k tok. Read more: ## Spacing: what easing does between two keys · ## Frame charts for common game actions
 <!-- tldr:end -->
 
 **Timing** is how many frames an action takes. **Spacing** is how far things move from one frame to the next within that time. Two clips with identical timing (same key times) can feel completely different because of spacing (easing, breakdowns). Game animators reason in frames; Roblox stores seconds and plays at whatever frame rate the client runs. This note gives the conversions, the spacing maths of Roblox's easing styles, frame charts for typical game actions, and the Roblox-specific details that affect timing.
@@ -73,7 +73,7 @@ What this tells you:
 The enum has no "quadratic" or "sine". Options:
 1. **Add a breakdown key** with Linear easing on both sides and place it to shape the spacing yourself (for example at 60% of the move at 40% of the time for a gentle ease out).
 2. **Bake dense Linear keys** from any curve you like. The reference project did this for equip flourishes: keys joined by PCHIP per channel (no overshoot), then baked densely with Linear easing at a 0.3 degree tolerance, about 130 to 205 keys per clip. Expensive in instances; use only where it matters.
-3. Use a **CurveAnimation** with Cubic tangents (see [[Animation Editor Advanced]]), if your runtime plays curve animations.
+3. Use a **[[CurveAnimation]]** with Cubic tangents (see [[Animation Editor Advanced]]), if your runtime plays curve animations.
 
 ### A trap: the easing belongs to the leaving key
 If you want the arm to *slow into* the guard pose, the Out easing goes on the key **before** the guard pose. Putting it on the guard pose itself shapes the move *after* the guard. Code generators make this mistake constantly; the reference project's early generator wrote the easing listed on frame i+1 onto frame i's poses to honour the convention "a key's easing is the shape of the move into it".
@@ -176,12 +176,17 @@ Rules for charts:
 | Motion feels robotic | InOut on every key | mix Linear and one-sided easing; add breakdowns |
 | Pops at 60 fps but fine at 30 | a one-frame turn of 30+ degrees | add an in-between; spread the turn over more frames |
 | Floaty | keys too far apart with InOut; no holds or contrast | add contrast: faster strikes, longer holds |
-| Looks fine in editor, wrong in game | playback speed, priority or fade | check AdjustSpeed, fades and the clip end |
+| Looks fine in editor, wrong in game | playback speed, priority or fade | check [[AdjustSpeed]], fades and the clip end |
 
 ## See also
 [[Principles of Animation for Games]], [[Keyframes, Easing and Interpolation]], [[Combat Animation Craft]], [[Weapon Swing Design]], [[Animation Quality Standard]], [[Hit Reactions Stagger and Hit-Stop]], [[Locomotion Systems]], [[Spec-Driven Move Authoring]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animation Editor Workflow]] · [[Animation Review Checklist]] · [[Easing]] · [[Authoring Clips in Code]] · [[AI Animation and Motion from Video]] · [[Anticipation]] · [[Animation Start Here]]
+[[Animation Editor Workflow]] · [[Animation Review Checklist]] · [[Easing]] · [[Authoring Clips in Code]] · AI Animation and Motion from Video · Anticipation · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Locomotion and Melee Reference Numbers]] · [[Animating Creatures and Monsters]] · [[Combat Combo Systems]] · [[R15 Run Cycle Key Poses]] · [[Animation Capture and Mocap]] · [[Playback, Priorities and Blending]] · [[Snippets - Building and Sampling Clips]] · [[Animation Glossary]]
+<!-- related:end -->

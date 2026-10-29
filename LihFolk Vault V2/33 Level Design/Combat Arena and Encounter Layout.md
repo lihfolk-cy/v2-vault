@@ -1,5 +1,5 @@
 ---
-tags: [level-design, combat, arena, encounters, enemy-spawning, pvp, cover, telegraphs]
+tags: [level-design, combat, arena, encounters, enemy-spawning, pvp, cover, telegraphs, type/guide, area/world, level/intermediate, area/ui]
 ---
 # Combat Arena and Encounter Layout
 
@@ -12,7 +12,7 @@ tags: [level-design, combat, arena, encounters, enemy-spawning, pvp, cover, tele
 > - Every telegraph passes the dodge test or is a deliberate damage check.
 > - Arena radius leaves dodge room but keeps the fight on one screen.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.6k tok. Read more: ## 3. Where enemies come from · ## 4. Keeping fights in their space · ## 9. Common mistakes · ## 10. Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.7k tok. Read more: ## 3. Where enemies come from · ## 4. Keeping fights in their space · ## 9. Common mistakes · ## 10. Checklist
 <!-- tldr:end -->
 
 [[Level Design for Roblox]] sets the basic rules for combat spaces: clamp enemies to a walk box, keep colliding props out of it, use invisible tagged combat floors, keep boss spawns clear, seal arenas during fights and keep the floor readable. [[Boss Fight Design Patterns]] covers the fight itself, and [[Genre Playbook - Battlegrounds and Arena Fighters]] covers PvP as a genre. This note sits between them: how to size a space from the combat numbers, where enemies should enter, how cover and verticality interact with the Roblox camera and with pathfinding, how to lay out a PvP arena so it stays fair, and how to stop fights from spilling out of their space.
@@ -248,7 +248,7 @@ PvP adds one rule above all others: **no position should be strictly better than
 
 - **Symmetry.** Rotational symmetry (the arena looks the same rotated by 180 or 90 degrees) is the safest choice for free-for-all; mirror symmetry suits two teams. Asymmetric arenas are possible but need data to balance.
 - **Sightline parity.** Every long sightline should have a matching one. A single high ledge with a view over the whole arena becomes the only place anyone wants to stand.
-- **Spawn alcoves.** Players spawn in alcoves around the edge, out of the main sightlines, with a short protected exit. Measured in the reference project: the PvP colosseum used 8 spawn alcoves; after a knock-out (3 s) the player respawned at an alcove picked at the moment of death, kept unless another player stood within 24 studs, with a 2-second ForceField. Kill rewards had an anti-farm cap of 2 per victim per minute, because spawn layouts are what make farming possible.
+- **Spawn alcoves.** Players spawn in alcoves around the edge, out of the main sightlines, with a short protected exit. Measured in the reference project: the PvP colosseum used 8 spawn alcoves; after a knock-out (3 s) the player respawned at an alcove picked at the moment of death, kept unless another player stood within 24 studs, with a 2-second [[ForceField]]. Kill rewards had an anti-farm cap of 2 per victim per minute, because spawn layouts are what make farming possible.
 - **No spawn sightlines.** No alcove exit should be visible from another alcove or from the centre's best position, or spawn camping follows.
 - **Edges.** Ring-out deaths are fun only if they are intended. Unintended ones are knockback plus missing walls; use lips or invisible walls at the edge and a fall catch.
 
@@ -302,5 +302,10 @@ Outside arenas, zones carry ambient encounters. Rules of thumb:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Anticipation]] · [[Genre Playbook - Combat and RPG]] · [[Boss Animation and Phases]] · [[Dungeon and Room Generation]] · [[Horror Monster Chase AI End to End]] · [[Case Study - Enemy Roster Rebuild]]
+[[Anticipation]] · Genre Playbook - Combat and RPG · Boss Animation and Phases · Dungeon and Room Generation · Horror Monster Chase AI End to End · Case Study - Enemy Roster Rebuild
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Genre Playbook - Combat and RPG]] · [[Playtest Heatmaps - Position and Death Maps]] · [[Obby and Platforming Level Design]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]] · [[Boss Animation and Phases]] · [[Lobby and Hub Design]]
+<!-- related:end -->

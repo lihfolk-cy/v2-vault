@@ -1,5 +1,5 @@
 ---
-tags: [performance, memory, budgets, gotchas]
+tags: [performance, memory, budgets, gotchas, type/guide, area/animation, level/intermediate, api/Animator, area/performance, api/KeyframeSequence, api/Animation]
 ---
 # Performance and Memory
 
@@ -12,7 +12,7 @@ tags: [performance, memory, budgets, gotchas]
 > - Tracks cached per Animator; marker connections bounded.
 > - One shared update loop for Lua players and procedural motion.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.6k tok. Read more: ## 1. Instance counts: the hidden cost · ## 3. Per-frame CPU · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.7k tok. Read more: ## 1. Instance counts: the hidden cost · ## 3. Per-frame CPU · ## Checklist
 <!-- tldr:end -->
 
 Animation costs you in three places, and they need different fixes:
@@ -89,7 +89,7 @@ When NOT to stub: clips you will still edit in the Animation Editor this week (r
 ## 2. Clip data size on the wire
 
 When clips are streamed rather than replicated as Instances, measure bytes:
-- Enemy clips compiled to the buffer format (smallest-three quaternions, key thinning at 0.03 degrees): **19 to 235 KB per creature kit, about 1.6 MB for a full roster**. Each kit was sent once per client on a dedicated remote, then cached. The whole server-side build took 0.23 s.
+- Enemy clips compiled to the buffer format (smallest-three [[quaternions]], key thinning at 0.03 degrees): **19 to 235 KB per creature kit, about 1.6 MB for a full roster**. Each kit was sent once per client on a dedicated remote, then cached. The whole server-side build took 0.23 s.
 - Until a kit arrived, the rig held a simple procedural pose, and boss intros "joined late" once data arrived. Boss kits were prefetched by zone.
 
 Rules of thumb:
@@ -196,5 +196,10 @@ Animated content interacts with instance streaming:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Authoring Clips in Code]] · [[Animation Data from Blender to Roblox]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Debugging Animation Problems]] · [[Case Study - Fast Join and Deferred Loading]] · [[Case Study - Instance Cleanup and Place Size]] · [[Animation Start Here]]
+[[Authoring Clips in Code]] · [[Animation Data from Blender to Roblox]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Debugging Animation Problems]] · [[Case Study - Fast Join and Deferred Loading]] · Case Study - Instance Cleanup and Place Size · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Open Questions]] · [[Snippets - Building and Sampling Clips]] · [[Snippets - Lua Keyframe Player Core]] · [[Publishing Animations]] · [[Weapon Rig Player]] · [[Animator Deep Dive]] · [[Testing Animations in Studio]] · [[Animation Glossary]]
+<!-- related:end -->

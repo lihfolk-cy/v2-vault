@@ -1,5 +1,5 @@
 ---
-tags: [security, remotes, rate-limiting, validation, exploits, networking]
+tags: [security, remotes, rate-limiting, validation, exploits, networking, type/guide, area/networking, level/intermediate, api/DataStore, area/security, api/RemoteFunction]
 ---
 # Remote Abuse Patterns and Rate Limiting in Practice
 
@@ -12,7 +12,7 @@ tags: [security, remotes, rate-limiting, validation, exploits, networking]
 > - Numbers: finite, integral where needed, ranged.
 > - Strings: length cap, valid UTF-8, membership in fixed sets for keys.
 >
-> Cost: TL;DR ~140 tok · whole note ~5.2k tok. Read more: ## 2. Abuse patterns by payload · ## 3. Abuse patterns by behaviour · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~5.3k tok. Read more: ## 2. Abuse patterns by payload · ## 3. Abuse patterns by behaviour · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Rate Limiting and Abuse Prevention]] gives the algorithms (token bucket, sliding window, budgets) and production limits. [[Exploits and Anti-Cheat]] gives the threat model and the consequence ladder. [[Server Authority and Validation]] gives the validation layers. This note is the field guide that sits between them: the concrete shapes remote abuse takes, payload by payload, and a single guard layer that handles them in the right order. It also covers cost-weighted limits, re-entrancy (the race that validated code still loses), amplification, log flooding, shadow-mode tuning, and how to fuzz your own remotes before someone else does.
@@ -240,7 +240,7 @@ Cap every per-player table size and clear on `PlayerRemoving`.
 Exploit tools list every remote and fire each with guessed arguments. Assume every remote is known. Consequences:
 
 - **Studio-only or debug remotes must not exist in live servers**, or must check `RunService:IsStudio()` and an allowlist on the server ([[RemoteEvents RemoteFunctions and Unreliable Remotes]]).
-- **Honeypot remotes** (a remote no honest client ever fires) detect probing. A hit is a strong signal for the suspicion score ([[Exploits and Anti-Cheat]]).
+- **[[Honeypots|Honeypot]] remotes** (a remote no honest client ever fires) detect probing. A hit is a strong signal for the suspicion score ([[Exploits and Anti-Cheat]]).
 - Names do not matter for security. Obfuscated names only slow you down.
 
 ### 3.7 RemoteFunction abuse
@@ -461,5 +461,10 @@ What to look for on the server afterwards: errors in Output (each one is a missi
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Cookbook - Remotes and Networking]] · [[Skill - Roblox Secure Remotes]] · [[Testing Your Own Remotes - Fuzzing and Abuse Tests]] · [[Rate Limiting]] · [[How Exploits Work - The Client Boundary]] · [[Anti-Exploit Start Here]]
+[[Cookbook - Remotes and Networking]] · Skill - Roblox Secure Remotes · Testing Your Own Remotes - Fuzzing and Abuse Tests · Rate Limiting · How Exploits Work - The Client Boundary · Anti-Exploit Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[AI Pitfalls - Networking and Security]] · [[Testing Your Own Remotes - Fuzzing and Abuse Tests]] · [[Client-Server Model]] · [[Client Prediction and Reconciliation for Combat]] · [[Replication Rules]] · [[Cross-Server Messaging]] · [[Snapshot Interpolation for Custom Replication]]
+<!-- related:end -->

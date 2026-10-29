@@ -1,5 +1,5 @@
 ---
-tags: [game-design, genre, party, minigames, rounds, lobby, social, replayability]
+tags: [game-design, genre, party, minigames, rounds, lobby, social, replayability, type/guide, area/design, level/intermediate, area/gameplay]
 ---
 # Genre Playbook - Party and Minigame Collections
 
@@ -12,7 +12,7 @@ tags: [game-design, genre, party, minigames, rounds, lobby, social, replayabilit
 > - 10 or more minigames; recent-repeat avoidance in the picker.
 > - 100-round soak test in Studio: memory and connection count stable.
 >
-> Cost: TL;DR ~160 tok · whole note ~3.6k tok. Read more: ## 3. The framework you must build · ## 4. Minigame design · ## 9. Common mistakes · ## 10. Launch checklist
+> Cost: TL;DR ~160 tok · whole note ~3.7k tok. Read more: ## 3. The framework you must build · ## 4. Minigame design · ## 9. Common mistakes · ## 10. Launch checklist
 <!-- tldr:end -->
 
 A party game runs short rounds of different minigames for a whole server: a lobby, a vote or random pick, a 1 to 3 minute minigame, winners rewarded, back to the lobby. Variants include classic minigame rotations, elimination shows (last player standing across escalating rounds), "survive the disaster" rounds, hide and seek, tag variants, and social deduction (one hidden role among the players). The genre is native to Roblox: free-to-play friends joining a server together, short attention spans and a young audience all fit it.
@@ -269,5 +269,10 @@ Patterns, not copies:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Arena Rounds with Teams and Spectating End to End]] · [[Links - Rounds and matchmaking]] · [[Genre Playbook - Sports]] · [[Worked Builds Start Here]] · [[Genre Systems Start Here]] · [[Multiplayer Services Start Here]]
+[[Arena Rounds with Teams and Spectating End to End]] · Links - Rounds and matchmaking · [[Genre Playbook - Sports]] · Worked Builds Start Here · Genre Systems Start Here · Multiplayer Services Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Genre Playbook - Social Deduction and Murder Mystery]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Battle Royale]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Racing and Driving]] · [[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Boss Fight Design Patterns]] · [[Genre Playbook - Puzzle and Escape Rooms]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [monetization, robux, overview, business, live-ops]
+tags: [monetization, robux, overview, business, live-ops, type/guide, area/monetization, level/beginner, api/ProcessReceipt, area/liveops]
 ---
 # Monetization Overview
 
@@ -12,7 +12,7 @@ tags: [monetization, robux, overview, business, live-ops]
 > - Every product and pass created on the dashboard; no id 0 left visible as purchasable
 > - One server script owns `ProcessReceipt`, idempotent and data-store backed
 >
-> Cost: TL;DR ~160 tok · whole note ~3.8k tok. Read more: ## 1. The money map (October 2026) · ## 4. What the reference project sold · ## 7. Common mistakes · ## 8. Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.9k tok. Read more: ## 1. The money map (October 2026) · ## 4. What the reference project sold · ## 7. Common mistakes · ## 8. Checklist
 <!-- tldr:end -->
 
 This note maps every way a Roblox experience can earn, explains how each one actually pays, and gives a decision framework for choosing between them. It is the entry point for the folder. Each mechanism has its own deep note; this one is about the whole system and the trade-offs between parts.
@@ -37,7 +37,7 @@ The Creator Hub monetization overview (Docs, Oct 2026) lists these methods. The 
 | [[Developer Products and ProcessReceipt]] | A repeatable purchase | Robux share of each sale | Currency packs, boosts, revives, bundles |
 | [[Subscriptions and Premium Payouts]] (experience subscriptions) | Monthly recurring benefits | 70% in Robux (Robux priced); 70% then 100% (local currency) (Docs) | Daily stipends, ongoing perks |
 | Roblox Plus (platform subscription) | The player's Roblox-wide subscription | Sign-up bonus, private server payout, discounts covered by Roblox (Docs) | Every game; prompt in-game |
-| Creator Rewards | Nothing, the player just plays | Daily Engagement and Audience Expansion rewards (Docs) | Every game; replaced Premium Payouts |
+| [[Creator Rewards]] | Nothing, the player just plays | Daily Engagement and Audience Expansion rewards (Docs) | Every game; replaced Premium Payouts |
 | [[Ads and Rewarded Video]] | Watching an ad | Earnings per thousand impressions (EPM) (Docs) | Games with 2,000+ monthly unique visitors |
 | Immersive ads | Nothing; ad units in the world | Impression-based earnings (Docs) | Large worlds with natural billboard space |
 | Paid access (Robux or local currency) | Entry to the game | One-time fee | Premium, finished, niche games |
@@ -176,5 +176,10 @@ Concrete rules of thumb:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Robux Price Points and Offer Design]] · [[Skill - Roblox Monetization Compliance]] · [[Links - Subscriptions and payouts]] · [[Shop with Game Passes and Developer Products End to End]] · [[Subscriptions and Recurring Revenue]] · [[Limited-Time Offers - Design and Ethics]]
+[[Robux Price Points and Offer Design]] · [[Skill - Roblox Monetization Compliance]] · Links - Subscriptions and payouts · Shop with Game Passes and Developer Products End to End · Subscriptions and Recurring Revenue · Limited-Time Offers - Design and Ethics
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Discovery and Monetization Changes 2025-2026]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Shop with Game Passes and Developer Products End to End]] · [[Paid Random Items and Odds Disclosure in Practice]] · [[Refunds Chargebacks and Purchase Support]] · [[Economy Inflation Sinks and Faucets Math]] · [[Community Building]] · [[Publishing an Experience]] · [[Age Checks and Safety Features]]
+<!-- related:end -->

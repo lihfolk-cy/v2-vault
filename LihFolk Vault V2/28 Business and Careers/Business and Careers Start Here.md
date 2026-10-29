@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [business, careers, hub, devex, contracts, studio, portfolio, legal]
+tags: [business, careers, hub, devex, contracts, studio, portfolio, legal, type/hub, area/business, level/beginner, area/studio]
 ---
 # Business and Careers Start Here
 
@@ -48,5 +48,5 @@ Tax rates, tax thresholds, country-specific business structures and employment l
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Team Collaboration Start Here]] · [[Working with Contractors and Revenue Splits]] · [[Working with Content Creators]] · [[Publishing Selling and Updating Plugins]] · [[Documentation and Onboarding New Developers]] · [[Skill - Roblox Monetization Compliance]]
+[[Team Collaboration Start Here]] · Working with Contractors and Revenue Splits · Working with Content Creators · Publishing Selling and Updating Plugins · Documentation and Onboarding New Developers · Skill - Roblox Monetization Compliance
 <!-- auto-links:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, learning-hubs]
+tags: [resources, links, learning-hubs, type/reference, level/intermediate]
 ---
 # Links - Community
 

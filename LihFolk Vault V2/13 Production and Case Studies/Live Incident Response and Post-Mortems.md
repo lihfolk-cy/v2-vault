@@ -1,5 +1,5 @@
 ---
-tags: [production, live-ops, incidents, rollback, post-mortem, kill-switch, datastore, communication]
+tags: [production, live-ops, incidents, rollback, post-mortem, kill-switch, datastore, communication, type/case-study, area/production, level/intermediate, api/DataStoreService]
 ---
 # Live Incident Response and Post-Mortems
 
@@ -12,7 +12,7 @@ tags: [production, live-ops, incidents, rollback, post-mortem, kill-switch, data
 > - Containment applied (flag, read-only saves, prompts off, rollback, restart).
 > - Timeline started immediately with incident start time.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.8k tok. Read more: ## 3. Containment: stop the bleeding before you understand it · ## 7. The post-mortem · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.0k tok. Read more: ## 3. Containment: stop the bleeding before you understand it · ## 7. The post-mortem · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Something is wrong in the live game: players say their coins vanished, the shop takes Robux and gives nothing, a boss cannot be damaged, servers crash every ten minutes. [[Release Process and Rollbacks]] lists the rollback tools and [[Crash and Error Telemetry]] shows how to see errors. This note is about the hour when you need them: how to judge severity, contain the damage before you understand it, fix it, talk to players, and then learn from it with a post-mortem that changes something.
@@ -339,5 +339,10 @@ Practise once: pick a quiet hour, pretend a SEV1, and walk through the runbook o
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Server Shutdowns Soft Updates and Migration]] · [[Feature Flags and Staged Rollouts]] · [[Feature Flags]] · [[Live Ops Deep Dive Start Here]] · [[Build Test and Release Pipeline]] · [[Patch Notes and Player Communication]]
+[[Server Shutdowns Soft Updates and Migration]] · Feature Flags and Staged Rollouts · Feature Flags · Live Ops Deep Dive Start Here · Build Test and Release Pipeline · Patch Notes and Player Communication
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts]] · [[Ship a Game in 30 Days - Week-by-Week Plan for a Solo Dev]] · [[Template Reskin Checklist - One Codebase, New Game]] · [[Safe Changes in a Shared Place]] · [[Documentation and Knowledge Bases]] · [[Team Roles and Workflows]] · [[Planning and Scoping a Roblox Game]] · [[Case Study - Phone UI Overhaul]]
+<!-- related:end -->

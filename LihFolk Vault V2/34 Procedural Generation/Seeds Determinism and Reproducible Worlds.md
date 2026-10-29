@@ -1,5 +1,5 @@
 ---
-tags: [procedural, generation, seeds, determinism, random, hashing, testing, luau]
+tags: [procedural, generation, seeds, determinism, random, hashing, testing, luau, type/guide, area/procedural, level/intermediate, area/scripting]
 ---
 # Seeds Determinism and Reproducible Worlds
 
@@ -12,7 +12,7 @@ tags: [procedural, generation, seeds, determinism, random, hashing, testing, lua
 > - Coordinates are hash-combined, not added.
 > - `Random` streams are bounded to one job and seeded from a hash.
 >
-> Cost: TL;DR ~130 tok · whole note ~5.0k tok. Read more: ## The Hash module · ## Versioning generators · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~5.1k tok. Read more: ## The Hash module · ## Versioning generators · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Procedural World Generation]] gives the first rule of procedural work: use `Random.new(seed)`, one generator per purpose, and derive chunk seeds from coordinates. That rule gets you started. This note is about everything that breaks once a generator is real: seeds that collide, output that changes when you add one feature, dictionaries that iterate in a different order, floats that disagree between machines, saved worlds that no longer match after an update, and seeds that leak loot to exploiters. Every other note in this section builds on the small `Hash` module written here.
@@ -333,5 +333,10 @@ The general method is in [[The Debugging Method - Reproduce Isolate Bisect]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Deterministic Simulation]] · [[Dungeon and Room Generation]] · [[Wave Function Collapse on Roblox]] · [[Math Vectors and CFrames]] · [[Variance]] · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]]
+[[Deterministic Simulation]] · [[Dungeon and Room Generation]] · [[Wave Function Collapse on Roblox]] · Math Vectors and CFrames · Variance · 2D Multiplayer - Server Authority and Replicating GUI Worlds
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Math Vectors and CFrames]] · [[Cookbook - Tables Strings and Time]] · [[Dependency Injection in Luau]] · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]] · [[Tables Metatables and OOP]] · [[Testing Time-Based Features with a Controllable Clock]]
+<!-- related:end -->

@@ -13,7 +13,7 @@ verified: 2026-10-28
 > - No gameplay logic depends on `RenderFidelity`.
 > - Text uses `FontFace`.
 >
-> Cost: TL;DR ~150 tok · whole note ~2.9k tok. Read more: ## 1. Yielding methods renamed with `Async` (January 14, 2026) · ## 8. Smaller changes worth knowing · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.0k tok. Read more: ## 1. Yielding methods renamed with `Async` (January 14, 2026) · ## 8. Smaller changes worth knowing · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Engine and Studio API changes from January 2025 to October 2026 that matter when writing or reviewing code. Server Authority, replication and the Input Action System are big enough to have their own note: [[Server Authority and Input Migration 2026]]. Labels follow [[Roblox Changes 2025-2026]].
@@ -173,3 +173,8 @@ Impact: code that assumes `Humanoid.WalkSpeed`, `Humanoid.Jump` or `Humanoid:Cha
 - [[Text Fonts and Rich Text]]
 - [[Luau Type System and Strict Mode]]
 - [[Instance Streaming]]
+
+<!-- related:start -->
+## Related
+[[Data and Cloud Changes 2025-2026]] · [[Discovery and Monetization Changes 2025-2026]] · [[Policy and Age Rules 2026]] · [[Badges and Achievement Design]] · [[Avatar Context Menus Profiles and Social Surfaces]] · [[Console and VR Release Checklists]]
+<!-- related:end -->

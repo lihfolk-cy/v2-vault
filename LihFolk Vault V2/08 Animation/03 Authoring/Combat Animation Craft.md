@@ -1,5 +1,5 @@
 ---
-tags: [authoring, craft, combat, hit-stop, latency, markers]
+tags: [authoring, craft, combat, hit-stop, latency, markers, type/guide, area/animation, level/intermediate, api/AdjustSpeed, area/gameplay, api/AnimationTrack]
 ---
 # Combat Animation Craft
 
@@ -12,7 +12,7 @@ tags: [authoring, craft, combat, hit-stop, latency, markers]
 > - Anticipation 2 to 6 frames (light) / 6 to 15 (heavy); direction obvious
 > - Strike 1 to 3 frames with dense in-betweens and a trail window
 >
-> Cost: TL;DR ~150 tok · whole note ~4.3k tok. Read more: ## 4. The hit frame and markers · ## 6. Recovery and cancel windows · ## 11. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.4k tok. Read more: ## 4. The hit frame and markers · ## 6. Recovery and cancel windows · ## 11. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 Combat animation is where craft meets frame data. An attack must feel instant to the attacker, be readable to the target and bystanders, line up exactly with damage, survive network delay, and chain into the next action. This note covers the anatomy of an attack (anticipation, active frames, recovery), smears and trails, the hit frame and markers, hit-stop, cancel windows and combos, readability for other players, latency, and layering attacks on movement.
@@ -240,7 +240,7 @@ Animation length feeds design numbers. In the reference project an ability's dam
 |---|---|---|
 | Strike eases into contact | hit looks soft | arrive at speed, decelerate after contact |
 | Hit-stop baked into the clip | whiffs look like hits | runtime hit-stop only on confirmed hits |
-| No input buffer | dropped combo inputs | buffer during startup/active; execute at the cancel window |
+| No [[Input Buffering\|input buffer]] | dropped combo inputs | buffer during startup/active; execute at the cancel window |
 | Ending far from the idle | 0.3 s slide to idle | end on the class rest |
 | Full-body attacks while running | legs freeze mid-stride | upper-body copies |
 | Damage from client animation timing | inconsistent hits | server timing from data |
@@ -266,5 +266,10 @@ Animation length feeds design numbers. In the reference project an ability's dam
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Principles of Animation for Games]] · [[Hitboxes and Hit Detection]] · [[Hit-Stop]] · [[Anticipation]] · [[Input Responsiveness Buffering and Coyote Time]] · [[Melee Combat System End to End]] · [[Animation Start Here]]
+[[Principles of Animation for Games]] · [[Hitboxes and Hit Detection]] · Hit-Stop · Anticipation · Input Responsiveness Buffering and Coyote Time · Melee Combat System End to End · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Locomotion and Melee Reference Numbers]] · [[Spec-Driven Move Authoring]] · [[Posing and Silhouettes]] · [[Publishing Animations]] · [[Snippets - Playing Animations]] · [[Stance and Charge Moves]] · [[Idle Breathing and Secondary Motion]] · [[Equip Draw and Flourish Systems]]
+<!-- related:end -->

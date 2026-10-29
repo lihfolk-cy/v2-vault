@@ -1,5 +1,5 @@
 ---
-tags: [avatars, scale, body-types, collision, hitboxes, avatar-settings, gameplay, fairness]
+tags: [avatars, scale, body-types, collision, hitboxes, avatar-settings, gameplay, fairness, type/guide, area/avatars, level/intermediate, api/Humanoid]
 ---
 # Avatar Body Types and Scale in Gameplay
 
@@ -12,7 +12,7 @@ tags: [avatars, scale, body-types, collision, hitboxes, avatar-settings, gamepla
 > - Collision mode chosen; touch detection target decided for Single Collider.
 > - Character metrics measured on spawn, cached, used by camera and UI.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.4k tok. Read more: ## 2. Avatar Settings: the engine-level controls · ## 4. Hitboxes: separate gameplay from visuals · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.5k tok. Read more: ## 2. Avatar Settings: the engine-level controls · ## 4. Hitboxes: separate gameplay from visuals · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Players arrive in your game with very different bodies: a classic blocky avatar about 5 studs tall, a realistic-proportion body about 6 to 6.5 studs (docs), slender and wide builds, tiny heads, huge heads, layered coats that double their visual width, and wings that fill a doorway. For a hangout that variety is the point. For a shooter, an obby or a fighting game it is a fairness and level-design problem: small avatars are harder to hit, tall avatars see over cover, and a 6-stud doorway built for a 5-stud avatar feels cramped for some and roomy for others.
@@ -241,5 +241,10 @@ Whatever you choose, **tell players**. A short line in the settings or loading s
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Modeling Characters for R15 and Custom Rigs]] · [[Links - Custom characters and avatars]] · [[UGC Avatar Items and Accessories]] · [[Links - Avatars and UGC]] · [[Proportion Exaggeration and Gameplay Distance]] · [[Layered Clothing Cages and Animation]]
+[[Modeling Characters for R15 and Custom Rigs]] · Links - Custom characters and avatars · UGC Avatar Items and Accessories · Links - Avatars and UGC · Proportion Exaggeration and Gameplay Distance · Layered Clothing Cages and Animation
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Bundles Animation Packs and Emotes for Sale]] · [[Character Select and Class Systems with Different Rigs]] · [[Aim Assist and Generous Hitboxes]] · [[AvatarEditorService and In-Game Avatar Editors]] · [[Layered Clothing Creation Workflow]] · [[UGC Pricing Limiteds and Marketplace Rules]]
+<!-- related:end -->

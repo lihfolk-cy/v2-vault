@@ -1,5 +1,5 @@
 ---
-tags: [luau, advanced-luau, coroutines, scheduler, task, timers, time-slicing, concurrency]
+tags: [luau, advanced-luau, coroutines, scheduler, task, timers, time-slicing, concurrency, type/guide, area/scripting, level/advanced, area/economy]
 ---
 # Custom Schedulers and Coroutine Patterns
 
@@ -12,7 +12,7 @@ tags: [luau, advanced-luau, coroutines, scheduler, task, timers, time-slicing, c
 > - One engine connection drives each scheduler.
 > - Callbacks run by your scheduler must not yield, and the module says so.
 >
-> Cost: TL;DR ~190 tok · whole note ~5.6k tok. Read more: ## 2. A timer queue on a binary heap · ## 4. Cooperative jobs: coroutines as resumable work · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~5.7k tok. Read more: ## 2. A timer queue on a binary heap · ## 4. Cooperative jobs: coroutines as resumable work · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Task Library Coroutines and Yielding]] explains the engine's scheduler: `task.spawn`, `task.defer`, `task.delay`, `task.wait`, what yields, and how to resume threads safely. [[Luau Performance Patterns with Benchmarks]] shows a basic time-sliced loop with a millisecond budget. This note is about the cases where the engine's scheduler is not enough and you build your own on top of it: thousands of timers, pausable and time-scaled game clocks, fixed-step simulation, cooperative jobs that spread work over frames, structured cancellation, and deterministic tests. It also covers the failure modes that only appear once you mix your own resumes with the engine's.
@@ -255,7 +255,7 @@ Forgetting `cancelOwner` on death is a leak with a delay: the closures (and what
 
 ## 3. Fixed timestep simulation
 
-Heartbeat's `dt` varies with frame rate. Simulations that integrate velocity, apply damage over time, or run projectile physics in Luau give different results at 30 and 60 frames per second if they step by `dt` directly. A fixed timestep accumulates real time and steps in constant increments.
+Heartbeat's `dt` varies with frame rate. Simulations that integrate velocity, apply damage over time, or run projectile physics in Luau give different results at 30 and 60 frames per second if they step by `dt` directly. A [[fixed timestep]] accumulates real time and steps in constant increments.
 
 ```lua
 --!strict
@@ -516,5 +516,10 @@ Ten minutes of cooldown logic runs in microseconds, deterministically, without S
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Coroutines, task library and async]] · [[Functions Closures and Upvalues]] · [[Reading Luau Errors and Stack Traces]] · [[Error Handling and Retries]] · [[Debugger Breakpoints and Logging]] · [[Frame Budget]]
+[[Links - Coroutines, task library and async]] · Functions Closures and Upvalues · Reading Luau Errors and Stack Traces · Error Handling and Retries · Debugger Breakpoints and Logging · Frame Budget
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Reading Luau Errors and Stack Traces]] · [[Functions Closures and Upvalues]] · [[Script Performance]] · [[Error Handling and Retries]] · [[Advanced Types - Generics and Type Functions]] · [[Serialization Formats for Saves and Networking]]
+<!-- related:end -->

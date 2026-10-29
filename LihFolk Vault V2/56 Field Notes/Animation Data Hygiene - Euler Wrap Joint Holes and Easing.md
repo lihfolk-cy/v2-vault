@@ -1,5 +1,5 @@
 ---
-tags: [field-notes, animation, keyframes, euler, interpolation, easing, procedural, luau]
+tags: [field-notes, animation, keyframes, euler, interpolation, easing, procedural, luau, type/guide, area/data, level/intermediate, area/animation]
 ---
 # Animation Data Hygiene - Euler Wrap Joint Holes and Easing
 
@@ -12,7 +12,7 @@ tags: [field-notes, animation, keyframes, euler, interpolation, easing, procedur
 > - Every key complete after a load-time hole fill.
 > - Large short arcs avoid cubic ease-in or have a mid key.
 >
-> Cost: TL;DR ~170 tok · whole note ~1.6k tok. Read more: ## 1. Euler channels across plus or minus 180 degrees · ## 2. A joint missing from one key snaps to rest · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~1.7k tok. Read more: ## 1. Euler channels across plus or minus 180 degrees · ## 2. A joint missing from one key snaps to rest · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A custom keyframe player (a Luau module that samples poses and writes `Motor6D.Transform`, or a procedural layer that blends authored keys) inherits every flaw of its data. Three flaws caused most of the visible glitches in a shipped melee game: Euler angles blended the long way round across 180 degrees, joints missing from some keys snapping to rest, and a cubic ease-in that crammed a huge swing into two frames. None of them throws an error; all of them look like "the animation is broken". Player internals are in [[Lua Keyframe Player Internals]]; interpolation theory in [[Keyframes, Easing and Interpolation]] and [[Rotations Angles and Quaternions]].
@@ -120,5 +120,10 @@ Catch all three at load in Studio, not in playtests:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Lua Keyframe Player Internals]] · [[Keyframes, Easing and Interpolation]] · [[Rotations Angles and Quaternions]] · [[Timing Spacing and Frame Charts]] · [[Weapon Swing Design]] · [[Field Notes Start Here]]
+[[Lua Keyframe Player Internals]] · Keyframes, Easing and Interpolation · Rotations Angles and Quaternions · Timing Spacing and Frame Charts · Weapon Swing Design · [[Field Notes Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Snippets - Building and Sampling Clips]] · [[Animation Editor Advanced]] · [[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[Springs That Survive Long Frames - dt Clamps and NaN Guards]] · [[ipairs Stops at the First nil - Cleanup Tables That Leak]] · [[Layering Camera Feedback on the Default Camera]] · [[Client Hit Prediction for Melee Feedback]] · [[Streaming Joins - Frozen Players and Loading Screen Teardown]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [systems, equip, flourish, weapons, networking, procedural]
+tags: [systems, equip, flourish, weapons, networking, procedural, type/guide, area/animation, level/intermediate, area/networking]
 ---
 # Equip Draw and Flourish Systems
 
@@ -9,7 +9,7 @@ tags: [systems, equip, flourish, weapons, networking, procedural]
 > - Wrist snaps at the end: Flourish end pose differs from the hold -> One shared end pose (blade over shoulder)
 > - Toss looks too heavy: `workspace.Gravity` used -> Gravity scaled to character height
 >
-> Cost: TL;DR ~120 tok · whole note ~3.4k tok. Read more: ## Choosing and starting a flourish · ## The blade: procedural maths · ## Common mistakes
+> Cost: TL;DR ~120 tok · whole note ~3.5k tok. Read more: ## Choosing and starting a flourish · ## The blade: procedural maths · ## Common mistakes
 <!-- tldr:end -->
 
 An equip flourish is the short show-off a character performs when a weapon comes into the hand: a spin, a toss and catch, a salute, a katana draw. It is pure presentation, it runs constantly (every equip, every respawn), and every other player sees it, so it touches more systems than its size suggests: networking, priorities, cancel rules, procedural weapon motion, audio sync and energy-blade ignition. This note documents the system as built and iterated in one live action game (the reference project), through four versions.
@@ -134,7 +134,7 @@ Consequence for every other system: **nothing that is not an action may play at 
 ## Baking flourish body clips
 
 The flourish bodies were baked densely with **Linear easing** rather than using Roblox easing styles:
-- Keys are joined per channel (joint quaternions plus offsets) with PCHIP (monotone cubic, no overshoot); "stop" keys are dead stops.
+- Keys are joined per channel (joint [[quaternions]] plus offsets) with PCHIP (monotone cubic, no overshoot); "stop" keys are dead stops.
 - Baked adaptively at **0.3 degrees / 1.2 rad/s turn-rate** tolerance: about 130 to 205 keys per clip, about 6.5k instances per set (before clip stubbing removed the instance cost; see [[Baked Clip Stubs and Archiving]]).
 
 Why avoid Roblox easing here: the legacy `Cubic` pose easing runs backwards (In eases out, measured), and Elastic and Bounce directions were contradictory across measurements (see [[Keyframes, Easing and Interpolation]] and [[Open Questions]]). Dense Linear keys remove all of that ambiguity, at the cost of key count.
@@ -186,5 +186,10 @@ See also: [[Weapon and Combat Animation]], [[Procedural Weapon Motion]], [[Custo
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Weapon Swing Design]] · [[Troubleshooting Table]] · [[Playback, Priorities and Blending]] · [[Sound Design for Games]] · [[Modeling Weapons and Props]] · [[Tools and Inventory Systems]] · [[Animation Start Here]]
+[[Weapon Swing Design]] · [[Troubleshooting Table]] · [[Playback, Priorities and Blending]] · [[Sound Design for Games]] · Modeling Weapons and Props · Tools and Inventory Systems · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Snippets - Procedural Motion]] · [[Combat Animation Craft]] · [[Custom Locomotion Controller Design]] · [[Ability Kits Architecture]] · [[Pipeline - New Animated Weapon]] · [[Stance and Charge Moves]] · [[Animation Editor Workflow]] · [[Spec-Driven Move Authoring]]
+<!-- related:end -->

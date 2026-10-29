@@ -1,5 +1,5 @@
 ---
-tags: [animation, authoring, locomotion, gait, combat, melee, timing, hit-stop, parry, r15, reference]
+tags: [animation, authoring, locomotion, gait, combat, melee, timing, hit-stop, parry, r15, reference, type/reference]
 ---
 # Locomotion and Melee Reference Numbers
 
@@ -12,7 +12,7 @@ tags: [animation, authoring, locomotion, gait, combat, melee, timing, hit-stop, 
 > - Run lift 0.3-0.45 studs; pelvis pitch 8° or less; lean in the chest
 > - Light attack: hit on f6-8, ComboWindow ~f15 of 24
 >
-> Cost: TL;DR ~160 tok · whole note ~1.5k tok. Read more: ## 2. Locomotion targets · ## 3. Melee timing (30 fps) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~1.6k tok. Read more: ## 2. Locomotion targets · ## 3. Melee timing (30 fps) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The numbers to start from when keying a walk, run, sprint, jump or sword attack for a default-scale R15 character, and what they become at 30 fps. Gait biomechanics and fighting-game frame data say what real bodies and good games do. The R15 conversion covers what changes on a 5.5-stud character with short legs. Full citations are in `D:\LihFolk Build\research\animation-references.md`.
@@ -50,7 +50,7 @@ The numbers to start from when keying a walk, run, sprint, jump or sword attack 
 | LihFolk SwordHeavy | 0-16 (6 f held coil) | 16-21 | hit f21 | 21-33 | 33-52 | 52 |
 
 - **Reaction time** is about 0.25 s, so give 8 frames of telegraph or more on anything meant to be blocked or dodged.
-- **Combo windows** open at ~70% of recovery, with a 6-10 f input buffer. LihFolk lights put `ComboWindow` on f15.
+- **Combo windows** open at ~70% of recovery, with a 6-10 f [[Input Buffering|input buffer]]. LihFolk lights put `ComboWindow` on f15.
 - **Hit-stop** (**Expert practice**): Smash Melee's formula is floor(damage/3 + 3) frames at 60 fps, capped at 20. LihFolk recommends, on both attacker and victim, light 2-3 f, heavy 5-6 f, finisher 7-9 f. The clip JSON stores `hitstop_frames_recommended`.
 - **Parry windows**: Sekiro-style 12 f at 60 fps (0.2 s). LihFolk uses 0.20-0.30 s server-side (`ParryStart` f2 to `ParryEnd` f9), a 2 f snap into the pose, and a 10-15 f whiff recovery.
 - **Dash attacks** move the root in code between `DashStart` and `DashEnd`. Keep the feet airborne until the root stops, or they skate.
@@ -90,3 +90,8 @@ The numbers to start from when keying a walk, run, sprint, jump or sword attack 
 ## Connected notes
 
 [[Animation Start Here]] · [[Combat Animation Craft]] · [[Locomotion Systems]]
+
+<!-- related:start -->
+## Related
+[[Locomotion Readability - Lessons from Blind Panels]] · [[R15 Run Cycle Key Poses]] · [[Human Swing Biomechanics]] · [[Timing Spacing and Frame Charts]] · [[Posing and Silhouettes]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Spec-Driven Move Authoring]] · [[Animation Review Checklist]]
+<!-- related:end -->

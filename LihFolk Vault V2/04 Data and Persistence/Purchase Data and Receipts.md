@@ -1,5 +1,5 @@
 ---
-tags: [data, monetization, processreceipt, idempotency, purchases, receipts]
+tags: [data, monetization, processreceipt, idempotency, purchases, receipts, type/guide, area/data, level/intermediate, api/ProcessReceipt, area/monetization]
 ---
 # Purchase Data and Receipts
 
@@ -12,7 +12,7 @@ tags: [data, monetization, processreceipt, idempotency, purchases, receipts]
 > - Waits for the profile; refuses when it cannot save.
 > - Grant and `PurchaseId` recorded together, synchronously, in the same key.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.1k tok. Read more: ## The handler · ## Two-layer design for gifts (production lesson) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.2k tok. Read more: ## The handler · ## Two-layer design for gifts (production lesson) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A developer product purchase is the one write in your game where a bug costs a player real money or costs you a refund dispute. The rules come from two places: the exact guarantees `MarketplaceService.ProcessReceipt` gives (and does not give), and the data store's failure modes. This note covers both, then gives a complete idempotent receipt handler built on a session-locked profile, the extra ledger needed for gifting, and the production lessons from one game that sold boosts, bundles, gifts and one-time packs. The monetization side (pricing, product design) lives in [[Developer Products and ProcessReceipt]] and [[Monetization Overview]]; this note is about getting the data right.
@@ -260,5 +260,10 @@ Roblox can send a **Transaction Refunded** webhook (developer products, passes, 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Shop with Game Passes and Developer Products End to End]] · [[Idempotency]] · [[Refunds Chargebacks and Purchase Support]] · [[Skill - Roblox DataStore Safety]] · [[Skill - Roblox Monetization Compliance]] · [[Links - Developer products]]
+[[Shop with Game Passes and Developer Products End to End]] · Idempotency · Refunds Chargebacks and Purchase Support · Skill - Roblox DataStore Safety · Skill - Roblox Monetization Compliance · Links - Developer products
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Idempotency]] · [[Purchase Receipts and Purchase History in UI]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[Trading Systems Without Duplication]] · [[Player Privacy and Data Deletion]] · [[Schema Migrations - Worked Case Studies]] · [[DataStore Fundamentals]]
+<!-- related:end -->

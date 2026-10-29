@@ -1,5 +1,5 @@
 ---
-tags: [world-building, art, water, sky, skybox, atmosphere, clouds, environment]
+tags: [world-building, art, water, sky, skybox, atmosphere, clouds, environment, type/guide, area/world, level/intermediate, api/Atmosphere]
 ---
 # Water Sky and Atmosphere Art
 
@@ -12,7 +12,7 @@ tags: [world-building, art, water, sky, skybox, atmosphere, clouds, environment]
 > - Fake water: depth gradient, scrolling ripples, foam, buried edges.
 > - Waterfalls: sheet mesh, streak beams, foam, mist, distance sleep.
 >
-> Cost: TL;DR ~130 tok · whole note ~4.2k tok. Read more: ## Water · ## Atmosphere and clouds · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.3k tok. Read more: ## Water · ## Atmosphere and clouds · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Water, sky and air are the largest things on screen and the cheapest way to set mood. This note is the **art** side: choosing between terrain water and fake water, building waterfalls and rivers that read on phones, picking or painting skyboxes, and using `Atmosphere` and `Clouds` to tie a world's colours together. The lighting engine itself (technologies, post-processing, time of day) is covered in [[Lighting Technologies and Settings]], [[Atmosphere Sky Clouds and Post-Processing]] and [[Lighting Mood and Time of Day]]; this note links there instead of repeating it.
@@ -121,7 +121,7 @@ Art guidance (rule of thumb):
 
 ### Sky dressing
 
-Big, slow, distant objects sell a sky better than a detailed skybox: floating islands, a ringed moon, distant castle spires, giant planets. One production game's hub scale pass added castle-spire clusters on floating isles, a ringed moon and waterfalls on every isle. They are geometry, so they parallax as the camera moves, which a skybox cannot.
+Big, slow, distant objects sell a sky better than a detailed skybox: floating islands, a ringed moon, distant castle spires, giant planets. One production game's hub scale pass added castle-spire clusters on floating isles, a ringed moon and waterfalls on every isle. They are geometry, so they [[parallax]] as the camera moves, which a skybox cannot.
 
 Keep sky props **non-colliding, non-queryable, no shadows**, and consider whether they should be streamed (Persistent) so they never pop in.
 
@@ -261,5 +261,10 @@ The senior trade-off: water and sky are large screen areas, so small changes aff
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Materials and Surfaces Start Here]] · [[Lighting Untextured Art in Roblox]] · [[Links - Lighting]] · [[Zone and Biome Art Direction]] · [[Bevels Chamfers and Edge Highlights Without Textures]] · [[Environment and Level Pipeline]]
+[[Materials and Surfaces Start Here]] · Lighting Untextured Art in Roblox · Links - Lighting · [[Zone and Biome Art Direction]] · Bevels Chamfers and Edge Highlights Without Textures · Environment and Level Pipeline
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Level of Detail and Model Streaming]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Materials MaterialVariants and SurfaceAppearance]] · [[Foliage Props and Scatter]] · [[Modeling in Blender for Roblox]] · [[Level Design for Roblox]]
+<!-- related:end -->

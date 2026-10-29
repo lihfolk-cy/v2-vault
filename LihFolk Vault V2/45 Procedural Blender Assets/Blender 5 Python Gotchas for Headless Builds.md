@@ -1,5 +1,5 @@
 ---
-tags: [blender, python, bpy, bmesh, headless, gotchas]
+tags: [blender, python, bpy, bmesh, headless, gotchas, type/guide, area/modeling, level/intermediate]
 ---
 # Blender 5 Python Gotchas for Headless Builds
 
@@ -9,7 +9,7 @@ tags: [blender, python, bpy, bmesh, headless, gotchas]
 > - Avoid: Relying on operator context in `-b` mode.
 > - Avoid: Leaving a bmesh unflushed. Symptom: the script runs but the mesh is empty or unchanged on export.
 >
-> Cost: TL;DR ~110 tok · whole note ~2.5k tok. Read more: ## Rendering and compositing · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~2.6k tok. Read more: ## Rendering and compositing · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 Traps hit while building assets with `blender -b --factory-startup --python build.py` on Blender 5.2 (October 2026). Each cost a render or a crash; most are one-line fixes.
@@ -91,5 +91,10 @@ Related: [[Blender Workflow for Roblox Creators]], [[Modeling in Blender for Rob
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Dash VFX Presentation on an R15 Rig]] · [[Dramatic Showcase Renders in Eevee]] · [[Texturing and PBR Baking]] · [[Art Pipeline - Concept to In-Game Asset]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[Rigging in Blender]]
+[[Dash VFX Presentation on an R15 Rig]] · [[Dramatic Showcase Renders in Eevee]] · [[Texturing and PBR Baking]] · Art Pipeline - Concept to In-Game Asset · Clean Stylised Shading - Weighted and Custom Normals · Rigging in Blender
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Low-Poly Creature From a Flat Reference Sheet]] · [[Stylised Shop Stand Worked Example]] · [[Low-Poly Tree Set Worked Example]] · [[Stylised Weapons From a Concept]] · [[Mesh VFX Packs Built in Blender]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[Chibi Character Rules in Practice]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [avatars, ugc, avatar-editor, avatareditorservice, humanoiddescription, catalog, ui, security]
+tags: [avatars, ugc, avatar-editor, avatareditorservice, humanoiddescription, catalog, ui, security, type/guide, area/avatars, level/intermediate, api/AvatarEditorService]
 ---
 # AvatarEditorService and In-Game Avatar Editors
 
@@ -12,7 +12,7 @@ tags: [avatars, ugc, avatar-editor, avatareditorservice, humanoiddescription, ca
 > - Every `Async` getter is in `pcall`; every prompt waits on its `*Completed` event.
 > - Inventory permission requested only when needed; declined handled gracefully.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.6k tok. Read more: ## 3. Catalog browsing on the client · ## 4. Try-on: the server decides · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.7k tok. Read more: ## 3. Catalog browsing on the client · ## 4. Try-on: the server decides · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 An in-game avatar editor is one of the most requested features in hangout, roleplay and fashion games, and one of the easiest to build badly. The obvious version (a grid of catalog items, click to wear, a "Save" button) hides four separate systems: catalog browsing, server-side try-on, platform saving, and commerce. Each has its own permission model, failure modes and trust boundary. This note goes past the basics in [[UGC Avatar Items and Accessories]] and [[HumanoidDescription and Outfit Systems]] and covers how `AvatarEditorService` actually behaves, how to split work between client and server, and the edge cases that turn a pretty editor into a support queue.
@@ -384,5 +384,10 @@ Applying a description loads meshes, textures and cages, and on layered clothing
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Avatar Context Menus Profiles and Social Surfaces]] · [[Commerce and Physical Goods]] · [[Bundles Animation Packs and Emotes for Sale]] · [[Platform Features Start Here]] · [[Cookbook - Players and Characters]] · [[Links - Avatars and UGC]]
+[[Avatar Context Menus Profiles and Social Surfaces]] · Commerce and Physical Goods · [[Bundles Animation Packs and Emotes for Sale]] · Platform Features Start Here · Cookbook - Players and Characters · Links - Avatars and UGC
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Commerce and Physical Goods]] · [[Layered Clothing Creation Workflow]] · [[Character Select and Class Systems with Different Rigs]] · [[Emotes and Social Animation]] · [[Game Passes]] · [[Shop with Game Passes and Developer Products End to End]]
+<!-- related:end -->

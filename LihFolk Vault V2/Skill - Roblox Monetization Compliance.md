@@ -1,5 +1,5 @@
 ---
-tags: [ai, agents, ai-skill, monetization, compliance, live-ops]
+tags: [ai, agents, ai-skill, monetization, compliance, live-ops, type/guide, area/monetization, level/intermediate, area/ai]
 ---
 # Skill - Roblox Monetization Compliance
 
@@ -17,7 +17,7 @@ The agent:
 4. Checks prices: every on-screen price from `GetProductInfoAsync`, never hard-coded (regional pricing makes hard-coded labels wrong), and a comparison of the game's product list against the Creator Dashboard.
 5. Checks paid random items: all outcomes with numerical odds summing to 100%, flattened from the same tables the server rolls, never showing a non-zero chance as 0%, a worded "Odds" control on every surface, live-updating odds for luck boosts and pity, and a chi-square test in CI.
 6. Checks PolicyService: called on the server, failing closed, gating paid random items (`ArePaidRandomItemsRestricted`) and paid item trading (`IsPaidItemTradingAllowed`) in the server prompt path.
-7. Checks other rules: no simulated gambling, questionnaire kept current, Creator Rewards instead of the retired Premium Payouts.
+7. Checks other rules: no simulated gambling, questionnaire kept current, [[Creator Rewards]] instead of the retired Premium Payouts.
 
 ## When to use it
 
@@ -39,5 +39,5 @@ It cannot see the Creator Dashboard. It asks you for the product list or for you
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Shop with Game Passes and Developer Products End to End]] · [[Skill - Roblox System Builder]] · [[Resource Library - Monetization]] · [[Pity Timer]] · [[Genre Playbook - RNG and Collection Games]] · [[Links - Subscriptions and payouts]]
+[[Shop with Game Passes and Developer Products End to End]] · [[Skill - Roblox System Builder]] · Resource Library - Monetization · Pity Timer · Genre Playbook - RNG and Collection Games · Links - Subscriptions and payouts
 <!-- auto-links:end -->

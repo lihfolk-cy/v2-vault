@@ -1,5 +1,5 @@
 ---
-tags: [luau, functions, closures, upvalues, scope]
+tags: [luau, functions, closures, upvalues, scope, type/guide, area/scripting, level/intermediate, api/UserInputService, api/Player]
 ---
 # Functions Closures and Upvalues
 
@@ -12,7 +12,7 @@ tags: [luau, functions, closures, upvalues, scope]
 > - Handlers read current state, not state captured at script start.
 > - No closures or threads created per object per frame.
 >
-> Cost: TL;DR ~170 tok · whole note ~4.9k tok. Read more: ## 3. Closures and upvalues · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.0k tok. Read more: ## 3. Closures and upvalues · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Functions in Luau are values. They can be stored in tables, passed to other functions, returned, and they **capture** the local variables around them (upvalues). Almost every Roblox system is built from closures: event handlers, tween callbacks, ability kits, UI bindings. Understanding exactly what a closure captures, when it is allocated, and what keeps it alive explains a large share of real bugs: stale state, handlers that fire for the wrong object, memory that never frees, and the compile-time limits on upvalues.
@@ -392,5 +392,10 @@ The senior trade-off: closures are the clearest way to express "do this later wi
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Reading Luau Errors and Stack Traces]] · [[Luau Performance Patterns with Benchmarks]] · [[Metatables and OOP - When and When Not]] · [[Advanced Luau Start Here]] · [[Links - Coroutines, task library and async]] · [[Script Performance]]
+[[Reading Luau Errors and Stack Traces]] · [[Luau Performance Patterns with Benchmarks]] · [[Metatables and OOP - When and When Not]] · Advanced Luau Start Here · Links - Coroutines, task library and async · Script Performance
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Module Scripts and Requiring]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Error Handling and Retries]] · [[Instances Attributes and Tags]] · [[CollectionService Patterns]] · [[Strings Patterns and Formatting]] · [[Buffers and Binary Data]] · [[Parallel Luau and Actors]]
+<!-- related:end -->

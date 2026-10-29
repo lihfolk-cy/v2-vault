@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, assets-creation]
+tags: [resources, links, assets-creation, type/reference, level/intermediate]
 ---
 # Links - Image uploading and moderation
 

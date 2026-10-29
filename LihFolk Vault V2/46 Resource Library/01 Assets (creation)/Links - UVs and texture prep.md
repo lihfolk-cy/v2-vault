@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, assets-creation]
+tags: [resources, links, assets-creation, type/reference, area/modeling, level/intermediate]
 ---
 # Links - UVs and texture prep
 
@@ -65,5 +65,5 @@ Part of [[Resource Library - Assets (creation)]] in the [[Resource Library Start
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Topology]] · [[Links - Texturing]] · [[Links - Blender fundamentals for Roblox]] · [[Resource Library Link Check]] · [[UV Unwrapping]] · [[Texel Density]]
+[[Links - Topology]] · [[Links - Texturing]] · [[Links - Blender fundamentals for Roblox]] · [[Resource Library Link Check]] · [[UV Unwrapping]] · Texel Density
 <!-- auto-links:end -->

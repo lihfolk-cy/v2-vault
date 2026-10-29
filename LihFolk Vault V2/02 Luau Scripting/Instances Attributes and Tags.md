@@ -1,5 +1,5 @@
 ---
-tags: [luau, instances, attributes, tags, datamodel, replication]
+tags: [luau, instances, attributes, tags, datamodel, replication, type/guide, area/scripting, level/intermediate, api/CollectionService, area/networking, api/RemoteEvent]
 ---
 # Instances Attributes and Tags
 
@@ -12,7 +12,7 @@ tags: [luau, instances, attributes, tags, datamodel, replication]
 > - `Destroy` objects you are done with; pools use `Parent = nil` intentionally.
 > - Lookups that expect a class check `IsA`.
 >
-> Cost: TL;DR ~170 tok · whole note ~4.0k tok. Read more: ## 2. Finding instances · ## 3. Attributes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.1k tok. Read more: ## 2. Finding instances · ## 3. Attributes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Everything in a Roblox place is an `Instance` in one tree, the DataModel (`game`). Scripts create, find, clone, configure and destroy instances, and they attach their own data with **attributes** (typed key-value pairs) and **tags** (string labels). This note covers the instance lifecycle and lookup methods, the traps in naming and lookup, attributes (types, limits, replication, change signals, when they cause lag), tags, and how to choose between attributes, Value objects, tags and plain Luau tables.
@@ -266,5 +266,10 @@ To save a player-built structure, convert instances to plain data (class name, C
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Debugging Race Conditions and Yield Order]] · [[Debugging Client-Server Desync]] · [[Tables Metatables and OOP]] · [[Streaming Radius]] · [[Replication Boundary]] · [[RemoteEvents RemoteFunctions and Unreliable Remotes]]
+[[Debugging Race Conditions and Yield Order]] · Debugging Client-Server Desync · [[Tables Metatables and OOP]] · Streaming Radius · Replication Boundary · RemoteEvents RemoteFunctions and Unreliable Remotes
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Script Types and Run Context]] · [[Metatables and OOP - When and When Not]] · [[Functions Closures and Upvalues]] · [[Module Scripts and Requiring]] · [[Luau Type System and Strict Mode]] · [[Luau Performance and Native Codegen]] · [[Task Library Coroutines and Yielding]] · [[Luau Performance Patterns with Benchmarks]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [studio, version-history, backups, recovery, rbxm, workflow]
+tags: [studio, version-history, backups, recovery, rbxm, workflow, type/guide, area/studio, level/intermediate, api/HttpService, api/Script]
 ---
 # Version History and Backups
 
@@ -12,7 +12,7 @@ tags: [studio, version-history, backups, recovery, rbxm, workflow]
 > - Surgical snapshot (attributes, JSON, TerrainRegion, `.lua`) for the specific change.
 > - Removed content exported to disk, verified, listed in a manifest.
 >
-> Cost: TL;DR ~160 tok · whole note ~3.2k tok. Read more: ## 1. Version History · ## 6. Exporting `.rbxm` safely · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.4k tok. Read more: ## 1. Version History · ## 6. Exporting `.rbxm` safely · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Roblox keeps every saved and published version of every place in the cloud, which makes it tempting to think backups are solved. They are not. Version History restores a **whole place** to a point in time, which also throws away everything else that happened since; it does not cover player data, packages' other copies, configs or assets; and in a busy shared place the version you want is buried among auto-saves. A working backup strategy has layers: cloud versions for disasters, targeted snapshots for individual changes, local exports for anything you remove, and source control for code. This note covers the official tools (as of October 2026) and the layered strategy, including why backups must not live inside the place.
@@ -211,5 +211,10 @@ The "copy from an old version" technique is underused: open the old version as a
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Safe Changes in a Shared Place]] · [[Studio Interface Tour]] · [[Batch Processing Tools in Studio]] · [[Studio Settings and Shortcuts]] · [[Packages and Shared Assets Across Places]] · [[Team Create Permissions and Workflows]]
+[[Safe Changes in a Shared Place]] · [[Studio Interface Tour]] · Batch Processing Tools in Studio · [[Studio Settings and Shortcuts]] · Packages and Shared Assets Across Places · Team Create Permissions and Workflows
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Batch Processing Tools in Studio]] · [[Safety Rules for AI Agents in Studio]] · [[Plugins - Using and Writing]] · [[Places Universes and Experience Settings]] · [[Creator Store and Toolbox Safety]] · [[Studio Assistant and AI Tools]] · [[Testing Modes - Play Run and Multi-Client]] · [[External Tooling - Rojo Wally Selene StyLua]]
+<!-- related:end -->

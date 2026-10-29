@@ -1,5 +1,5 @@
 ---
-tags: [game-design, genre, shooter, fps, tps, hitscan, netcode, matchmaking, anti-cheat]
+tags: [game-design, genre, shooter, fps, tps, hitscan, netcode, matchmaking, anti-cheat, type/guide, area/design, level/intermediate]
 ---
 # Genre Playbook - Shooters FPS and TPS
 
@@ -12,7 +12,7 @@ tags: [game-design, genre, shooter, fps, tps, hitscan, netcode, matchmaking, ant
 > - Hit validation with rewind, line of sight, fire rate and ammo on the server; abuse-tested.
 > - Two-client tests at 50, 150 and 250 ms simulated latency.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.3k tok. Read more: ## 3. Weapons · ## 4. Hit registration: the core technical decision · ## 10. Common mistakes · ## 11. Launch checklist
+> Cost: TL;DR ~160 tok · whole note ~4.4k tok. Read more: ## 3. Weapons · ## 4. Hit registration: the core technical decision · ## 10. Common mistakes · ## 11. Launch checklist
 <!-- tldr:end -->
 
 Shooters on Roblox range from casual team deathmatch with blocky guns to tactical round-based games with recoil patterns, attachments and ranked play, and from first-person (FPS) to over-the-shoulder third-person (TPS). The genre has a large, loyal, older-skewing audience on Roblox, unusually high expectations (players compare you with console shooters), and the hardest anti-cheat problem on the platform: aimbots and wallhacks run entirely on the client, where you cannot see them.
@@ -264,5 +264,10 @@ Paid random crates fall under Roblox's paid random item rules: odds disclosure a
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Genre Playbook - Sports]] · [[Physics and Vehicles Start Here]] · [[Links - Cameras]] · [[Melee Combat System End to End]] · [[Tower Defense Waves and Placement End to End]] · [[Combat Arena and Encounter Layout]]
+[[Genre Playbook - Sports]] · [[Physics and Vehicles Start Here]] · Links - Cameras · Melee Combat System End to End · Tower Defense Waves and Placement End to End · Combat Arena and Encounter Layout
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers]] · [[Time-to-Kill Math and a Weapon Balance Sheet]] · [[Genre Playbook - Battle Royale]] · [[Weekend Build - Arena Shooter with Server-Checked Hits]] · [[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Genre Playbook - Social Deduction and Murder Mystery]]
+<!-- related:end -->

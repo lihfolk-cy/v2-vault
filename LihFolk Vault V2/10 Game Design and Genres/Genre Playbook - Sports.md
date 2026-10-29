@@ -1,5 +1,5 @@
 ---
-tags: [game-design, genre, sports, ball-physics, teams, network-ownership, competitive]
+tags: [game-design, genre, sports, ball-physics, teams, network-ownership, competitive, type/guide, area/design, level/intermediate, area/physics]
 ---
 # Genre Playbook - Sports
 
@@ -12,7 +12,7 @@ tags: [game-design, genre, sports, ball-physics, teams, network-ownership, compe
 > - Two-client tests at 50, 150 and 250 ms for passing, shooting and stealing.
 > - Goal and out-of-bounds decisions server-side; no premature "GOAL" banners.
 >
-> Cost: TL;DR ~170 tok · whole note ~3.9k tok. Read more: ## 3. The ball problem · ## 5. Systems you must build · ## 9. Common mistakes · ## 10. Launch checklist
+> Cost: TL;DR ~170 tok · whole note ~4.0k tok. Read more: ## 3. The ball problem · ## 5. Systems you must build · ## 9. Common mistakes · ## 10. Launch checklist
 <!-- tldr:end -->
 
 Sports games on Roblox cover team ball sports (soccer, basketball, volleyball, hockey, American football, dodgeball), individual sports (golf, tennis, bowling, skating), extreme sports (skate parks, parkour), and arcade sports with powers and abilities. They range from casual "kick the ball around" hangouts to competitive leagues with ranked play and community tournaments. The audience is large and social, and the best sports games become places where friends meet to play a game they already know.
@@ -246,5 +246,10 @@ Patterns, not copies:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Genre Playbook - Shooters FPS and TPS]] · [[Arena Rounds with Teams and Spectating End to End]] · [[Genre Systems Start Here]] · [[Skill - Roblox Anti-Exploit Review]] · [[Core Loop]] · [[Matchmaking Queues with MemoryStore]]
+[[Genre Playbook - Shooters FPS and TPS]] · [[Arena Rounds with Teams and Spectating End to End]] · Genre Systems Start Here · Skill - Roblox Anti-Exploit Review · Core Loop · Matchmaking Queues with MemoryStore
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Genre Playbook - Battle Royale]] · [[Genre Playbook - Social Deduction and Murder Mystery]] · [[Genre Playbook - Obbies and Platformers]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Open-World City and Crime Roleplay]] · [[Genre Playbook - Tycoons]] · [[Genre Playbook - Naval and Open-Sea Adventure]]
+<!-- related:end -->

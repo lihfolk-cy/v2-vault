@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, physics]
+tags: [resources, links, physics, type/reference, area/physics, level/intermediate, api/SetNetworkOwner, area/networking]
 ---
 # Links - Network ownership
 

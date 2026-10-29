@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [studio, plugins, tooling, hub]
+tags: [studio, plugins, tooling, hub, type/hub, area/studio, level/beginner]
 ---
 # Plugin Development Start Here
 
@@ -49,5 +49,5 @@ Suggested order: Building, then Undo, then Selection or UI as your tool needs, t
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Plugins and custom tools]] · [[Team Collaboration Start Here]] · [[Resource Library - Safety (free models and plugins)]] · [[Packages and Asset Reuse]] · [[Roblox Studio MCP Server]] · [[Code Pipeline - Rojo Git and CI]]
+[[Links - Plugins and custom tools]] · Team Collaboration Start Here · Resource Library - Safety (free models and plugins) · Packages and Asset Reuse · Roblox Studio MCP Server · Code Pipeline - Rojo Git and CI
 <!-- auto-links:end -->

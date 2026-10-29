@@ -1,5 +1,5 @@
 ---
-tags: [world-building, building, placement, grid, snapping, tycoon, housing, validation, datastore, luau]
+tags: [world-building, building, placement, grid, snapping, tycoon, housing, validation, datastore, luau, type/guide, area/world]
 ---
 # Grid Placement and Player Building Systems
 
@@ -12,7 +12,7 @@ tags: [world-building, building, placement, grid, snapping, tycoon, housing, val
 > - Placements stored as (itemId, x, y, z, r) in plot-local cells with a format version.
 > - Footprints rotate correctly; centre follows the cursor.
 >
-> Cost: TL;DR ~140 tok · whole note ~5.8k tok. Read more: ## 4. The client: ghost, input, feedback · ## 5. The server: validation and the occupancy grid · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~5.9k tok. Read more: ## 4. The client: ghost, input, feedback · ## 5. The server: validation and the occupancy grid · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Grids show up twice in Roblox development. Builders use them in Studio to assemble kits cleanly, and many games hand a grid to the **player**: tycoon plots, housing, base building, farm layouts, furniture placement. The two share the maths, but the runtime version adds everything that makes it hard: a ghost preview that follows a mouse, a finger or a thumbstick, rotation of non-square items, server validation against exploits, saving and loading hundreds of placed items per player, and keeping 20 players' builds inside an instance budget.
@@ -451,5 +451,10 @@ Roblox's `DragDetector` instances offer built-in runtime dragging with several d
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Voxel Scale Grids and Stud Alignment]] · [[Voxel Props Environments and Modular Tiles]] · [[Cookbook - Math CFrame and Vectors]] · [[Tycoon Plots and Droppers End to End]] · [[MCP Workflows for Building Worlds]] · [[Intersection and Collision Math]]
+[[Voxel Scale Grids and Stud Alignment]] · Voxel Props Environments and Modular Tiles · Cookbook - Math CFrame and Vectors · Tycoon Plots and Droppers End to End · MCP Workflows for Building Worlds · Intersection and Collision Math
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Foliage Props and Scatter]] · [[Terrain Tools and Terrain API]] · [[Procedural World Generation]] · [[Collision and Physics Geometry]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Zone and Biome Art Direction]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[Modeling in Blender for Roblox]]
+<!-- related:end -->

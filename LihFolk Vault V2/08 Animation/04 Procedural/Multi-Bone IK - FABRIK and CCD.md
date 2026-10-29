@@ -1,5 +1,5 @@
 ---
-tags: [procedural, ik, fabrik, ccd, tails, tentacles, spines, chains, luau]
+tags: [procedural, ik, fabrik, ccd, tails, tentacles, spines, chains, luau, type/guide, area/animation, level/advanced]
 ---
 # Multi-Bone IK - FABRIK and CCD
 
@@ -9,7 +9,7 @@ tags: [procedural, ik, fabrik, ccd, tails, tentacles, spines, chains, luau]
 > - Chain slowly stretches: lengths taken from the current pose, or drift from float error -> lengths from the rig, re-measured on scale change
 > - Chain jitters on a still target: not enough iterations, tight cone limits fighting the passes -> more iterations, looser limits, early-out
 >
-> Cost: TL;DR ~150 tok · whole note ~3.8k tok. Read more: ## FABRIK · ## CCD · ## Common mistakes
+> Cost: TL;DR ~150 tok · whole note ~3.9k tok. Read more: ## FABRIK · ## CCD · ## Common mistakes
 <!-- tldr:end -->
 
 Two-bone IK has a closed form. Chains of three or more joints (tails, tentacles, necks, spines, whips, flexible blades, ropes) do not: there are infinitely many poses that reach a target and no formula picks one. The two standard iterative answers are **FABRIK** (Forward And Backward Reaching IK) and **CCD** (Cyclic Coordinate Descent). This note explains both, adds joint limits, shows how to turn a solved chain into Roblox `Transform`s without twist flips, and covers the non-IK alternatives (springs, waves, verlet) that are often the better choice for creatures.
@@ -22,7 +22,7 @@ Two-bone IK has a closed form. Chains of three or more joints (tails, tentacles,
 | Tail *follows* the body with lag and overlap | spring chain or verlet (no IK) |
 | Tail sways while idle, curls into turns | travelling wave + turn distribution (no IK) |
 | Spine bends so the chest faces a target | aim distribution over 2-4 joints (see [[Look-At Aim and Head Tracking]]) |
-| Neck reaches down to drink | FABRIK with cone limits, or IKControl with a chain |
+| Neck reaches down to drink | FABRIK with cone limits, or [[IKControl]] with a chain |
 | Rope or chain hangs from two points | verlet with distance constraints |
 
 Most creature work is "follow", not "reach". The reference project's enemy reaction layer drove tails and dangling parts (capes, skirts, tentacles) with per-role damped springs and a travelling wave, never IK, and its flying creatures' necks and tails used waves plus a turn bias. Use IK when there is a target to touch.
@@ -278,5 +278,10 @@ Related: [[Inverse Kinematics]], [[Two-Bone IK Math]], [[Springs Damping and Smo
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Ropes Chains and Soft Bodies]] · [[IKControl Reference]] · [[Procedural Animation]] · [[Procedural Death Knockdown and Hit Reactions]] · [[Skeleton Library]] · [[Cookbook - Math CFrame and Vectors]] · [[Animation Start Here]]
+[[Ropes Chains and Soft Bodies]] · [[IKControl Reference]] · [[Procedural Animation]] · [[Procedural Death Knockdown and Hit Reactions]] · Skeleton Library · Cookbook - Math CFrame and Vectors · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Elbow Poles Swivel and Joint Limits]] · [[Foot Placement and Ground IK]] · [[Procedural Gait and Footstep Planning]] · [[Ragdolls and Physics-Based Animation]] · [[Ground Fitting Pipeline]] · [[Snippets - Procedural Motion]] · [[Idle Breathing and Secondary Motion]] · [[Animation Glossary]]
+<!-- related:end -->

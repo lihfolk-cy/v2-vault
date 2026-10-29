@@ -1,5 +1,5 @@
 ---
-tags: [performance, developer-console, stats, memory, overlays, debugging]
+tags: [performance, developer-console, stats, memory, overlays, debugging, type/guide, area/performance, level/intermediate, api/UserInputService, area/debugging, api/Animation]
 ---
 # Developer Console and Stats
 
@@ -12,7 +12,7 @@ tags: [performance, developer-console, stats, memory, overlays, debugging]
 > - Server output is checked in a live server after every release.
 > - Baseline memory per category recorded per release (client on a mid phone, server at full load).
 >
-> Cost: TL;DR ~180 tok · whole note ~4.6k tok. Read more: ## 3. Memory categories · ## 6. A gated debug overlay · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~4.7k tok. Read more: ## 3. Memory categories · ## 6. A gated debug overlay · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The Developer Console is the only debugging window that exists in a **live** game, on any device, including the server side of a real server. The `Stats` service is the scripting side of the same numbers. Together they let you answer "how much memory, in which category, how fast is the server ticking, what errors are firing" on a phone in a real server with real players, which Studio can never fully reproduce. This note covers the console's tools, the memory categories and what each means, the on-screen stat overlays, the `Stats` service API, and how to build your own gated debug overlay.
@@ -370,5 +370,10 @@ Docs: the server heartbeat is capped at 60; check Server Jobs, Heartbeat, Steps 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Hunting Memory Leaks Step by Step]] · [[Debugging Live Servers]] · [[Skill - Roblox Performance Audit]] · [[Links - Profiling]] · [[Studio Settings and Shortcuts]] · [[Links - Memory leaks and cleanup]]
+[[Hunting Memory Leaks Step by Step]] · [[Debugging Live Servers]] · Skill - Roblox Performance Audit · Links - Profiling · Studio Settings and Shortcuts · Links - Memory leaks and cleanup
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[Network Bandwidth Budgets and Measuring Them]] · [[Physics Performance]] · [[Rendering Performance]] · [[QA Checklists Before Release]] · [[Weather Performance Budgets and Quality Tiers]]
+<!-- related:end -->

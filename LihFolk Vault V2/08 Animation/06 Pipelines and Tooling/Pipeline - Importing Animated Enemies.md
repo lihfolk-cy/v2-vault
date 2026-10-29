@@ -1,5 +1,5 @@
 ---
-tags: [pipeline, import, enemies, blender, gltf]
+tags: [pipeline, import, enemies, blender, gltf, type/guide, area/animation, level/intermediate, api/Animator, area/modeling, api/KeyframeSequence, api/Humanoid]
 ---
 # Pipeline: Importing Animated Enemies
 
@@ -12,7 +12,7 @@ tags: [pipeline, import, enemies, blender, gltf]
 > - `SetIds` (with or without ids): model stored, clip sources moved out, definition patched, Tele / Hit present on every attack.
 > - Axis fix applied (clip attribute shows fixed or wrapped); facing checked against the root's LookVector in a test spawn.
 >
-> Cost: TL;DR ~170 tok · whole note ~3.2k tok. Read more: ## 1. Build in Blender (conventions that make import boring) · ## 3. Prepare (one idempotent function per enemy) · ## Checklist per new enemy
+> Cost: TL;DR ~170 tok · whole note ~3.3k tok. Read more: ## 1. Build in Blender (conventions that make import boring) · ## 3. Prepare (one idempotent function per enemy) · ## Checklist per new enemy
 <!-- tldr:end -->
 
 The route one production game used to bring a roster of Blender-built creatures (about 20 rigs and 350 clips in the first wave, later dozens of kits and well over a thousand clips) into Roblox with working markers, correct facing, ground contact and a small runtime footprint. It is a chain of small, idempotent tools around one manual step (the import). The single most important link, the axis fix, has its own note: [[Enemy Import Axis Fix]]. Ground contact: [[Ground Fitting Pipeline]]. Rig authoring conventions: [[Creature Rig Conventions]].
@@ -63,7 +63,7 @@ Blender build ──► GLB + clips table (marker times) ──► manual import
 3. **Welds.** Every other part gets a `WeldConstraint` to the root (named so a rerun replaces it) and is made non-colliding.
 4. **Animator.** An `AnimationController` with an `Animator`, no Humanoid. A Humanoid that came with the import is reported for manual deletion.
 5. **Alpha materials** where needed (wing cards: `SurfaceAppearance.AlphaMode = Transparency`).
-6. **Clips.** Every KeyframeSequence or CurveAnimation found on the model, in the importer's save folder, or in the clip-source folder is matched to the clips table by name (case-insensitive, after stripping `<Id>_` and `Armature_` prefixes and any `|` path). For each:
+6. **Clips.** Every KeyframeSequence or [[CurveAnimation]] found on the model, in the importer's save folder, or in the clip-source folder is matched to the clips table by name (case-insensitive, after stripping `<Id>_` and `Armature_` prefixes and any `|` path). For each:
    - `Loop` from the table;
    - `Priority`: `Attack*` -> Action; `Idle`, `Hover` -> Idle; names containing Walk / Run / Hop / Fly, or `HoverMove` -> Movement; anything else -> Action;
    - **markers** from the table: a `KeyframeMarker` is added to the keyframe within half a 30 fps frame (1/60 s) of the marker time, or to a new keyframe named `Marker_<name>` at that time. Existing markers of the same name are left alone, so reruns do not duplicate. CurveAnimations get a `MarkerCurve` instead.
@@ -99,7 +99,7 @@ The definition patch is what lets the server stay animation-free: AI timing come
 | one boss's forward / back root travel mirrored | a different importer quirk on that rig | flip the LowerTorso pose Z for that rig's clips |
 | prop-layer clips ignored by the Animator | pose path did not follow the bone path | normalise pose paths (part > Root > ... > parent bone) |
 | three clips occasionally play a limb the other way | keys at exactly 180 deg; the Animator itself flips a coin | re-key away from exactly 180 |
-| standing enemy's legs 0.5-1.5 studs into the floor | wrong HipHeight on templates | fix HipHeight per template (17 were fixed; the old value kept in an attribute) |
+| standing enemy's legs 0.5-1.5 studs into the floor | wrong [[HipHeight]] on templates | fix HipHeight per template (17 were fixed; the old value kept in an attribute) |
 | death clips sink limbs up to 9.4 studs into the floor | clips drop the root without folding limbs | [[Ground Fitting Pipeline]] |
 | colours missing | importer drops base colours | re-apply from a manifest |
 
@@ -137,5 +137,10 @@ See [[Enemy and NPC Animation]], [[Enemy Animation State Protocol]], [[Snippets 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Rigging in Blender]] · [[Blender Armature and Bone Roll Conventions]] · [[Animation Start Here]] · [[Moon Animator and Third-Party Tools]] · [[Skeleton Library]] · [[Character and Creature Pipeline]]
+[[Rigging in Blender]] · [[Blender Armature and Bone Roll Conventions]] · [[Animation Start Here]] · [[Moon Animator and Third-Party Tools]] · [[Skeleton Library]] · Character and Creature Pipeline
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Weapon Design Rig Builder]] · [[Animating Creatures and Monsters]] · [[Weight Painting and Skinning for Roblox]] · [[Retargeting Animations Between Rigs]] · [[Pipeline - New Animated Weapon]] · [[Animation Glossary]] · [[Boss Animation and Phases]] · [[Custom Rigs - Weapons and Props]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [math, game-math, vectors, dot-product, cross-product, gameplay, combat, movement, luau]
+tags: [math, game-math, vectors, dot-product, cross-product, gameplay, combat, movement, luau, type/guide, area/math, level/intermediate]
 ---
 # Dot and Cross Products in Gameplay
 
@@ -12,10 +12,10 @@ tags: [math, game-math, vectors, dot-product, cross-product, gameplay, combat, m
 > - Angle thresholds are precomputed cosines; no `acos` in hot paths.
 > - Signed angles use `atan2(cross, dot)`.
 >
-> Cost: TL;DR ~180 tok · whole note ~6.0k tok. Read more: ## 2. Backstabs, flanks and front-only blocks · ## 5. Lap progress and gate crossing · ## 10. Edge cases and failure modes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~6.1k tok. Read more: ## 2. Backstabs, flanks and front-only blocks · ## 5. Lap progress and gate crossing · ## 10. Edge cases and failure modes · ## Checklist
 <!-- tldr:end -->
 
-Two small operations answer a surprising share of gameplay questions. The dot product answers "how much of this points along that?", and the cross product answers "which way is perpendicular, and which side am I on?". The basics (the cone check, signed yaw, projection onto a plane, reflection) are already in [[Math Vectors and CFrames]] and [[Cookbook - Math CFrame and Vectors]]. This note goes further: backstabs and flanking, steering without jitter, closing speed for homing and aggro, lap progress and gate crossing, wall-running tangents, building stable frames, bounce pads with friction, and aim assist scoring. Each section shows the gameplay first, then the maths, then the way it breaks.
+Two small operations answer a surprising share of gameplay questions. The dot product answers "how much of this points along that?", and the [[cross product]] answers "which way is perpendicular, and which side am I on?". The basics (the cone check, signed yaw, projection onto a plane, reflection) are already in [[Math Vectors and CFrames]] and [[Cookbook - Math CFrame and Vectors]]. This note goes further: backstabs and flanking, steering without jitter, closing speed for homing and aggro, lap progress and gate crossing, wall-running tangents, building stable frames, bounce pads with friction, and aim assist scoring. Each section shows the gameplay first, then the maths, then the way it breaks.
 
 Conventions: Roblox is Y up, right-handed, and a `CFrame`'s `LookVector` is its negative Z axis (Roblox docs (as of October 2026)). `Vector3.xAxis:Cross(Vector3.yAxis)` is `Vector3.zAxis`, the usual right-handed rule.
 
@@ -387,5 +387,10 @@ Float notes. A dot product of two unit vectors can come out at `1.0000001`; feed
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Two-Bone IK Math]] · [[Racing Laps and Checkpoints End to End]] · [[Motor6D Math and CFrame Composition]] · [[Mover Constraints and Physics Controllers]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] · [[Elbow Poles Swivel and Joint Limits]]
+[[Two-Bone IK Math]] · Racing Laps and Checkpoints End to End · Motor6D Math and CFrame Composition · Mover Constraints and Physics Controllers · Side-Scroller in 3D - Locking Camera and Movement to a Plane · Elbow Poles Swivel and Joint Limits
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Interpolation Easing and Curves Math]] · [[Curves in Luau - Paths Beams and Motion]] · [[Motor6D Math and CFrame Composition]] · [[Mover Constraints and Physics Controllers]] · [[Big Numbers Precision and Formatting]] · [[Probability and Statistics for Designers]]
+<!-- related:end -->

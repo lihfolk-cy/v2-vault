@@ -1,5 +1,5 @@
 ---
-tags: [world-building, art, blender, modeling, meshes, pipeline, uv, trim-sheet]
+tags: [world-building, art, blender, modeling, meshes, pipeline, uv, trim-sheet, type/guide, area/world, level/intermediate, area/modeling]
 ---
 # Modeling in Blender for Roblox
 
@@ -12,7 +12,7 @@ tags: [world-building, art, blender, modeling, meshes, pipeline, uv, trim-sheet]
 > - Transforms applied; origin where the Studio pivot should be.
 > - Under 20,000 triangles per object; hidden faces removed.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.6k tok. Read more: ## Topology for real-time Roblox meshes · ## UVs: texel density, trim sheets and atlases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.7k tok. Read more: ## Topology for real-time Roblox meshes · ## UVs: texel density, trim sheets and atlases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Blender is the default modelling tool for Roblox creators: free, scriptable in Python, and supported by Roblox's own export docs and upload add-on. This note covers **static** environment and prop modelling: units, topology, triangle budgets, UVs, trim sheets and atlases, splitting a model into MeshParts, pivots, export, upload and the swap from blockout to final art. Rigging and animated characters live in the Animation section ([[Rigging in Blender]], [[Creature Rig Conventions]], [[Pipeline - Importing Animated Enemies]]); file-format details are in [[Exporting FBX vs GLB]] and importer options in [[3D Importer Settings Reference]].
@@ -46,7 +46,7 @@ Rule of thumb for scale: environment props read best a little **larger** than re
 Roblox does not subdivide or tessellate. What you export is what renders.
 
 - **Quads in the source, triangles in the export.** Keep quads while modelling; let the exporter triangulate, or triangulate yourself with a Triangulate modifier when you need control over diagonals on curved surfaces (one production game's rule: "controlled triangulation").
-- **Weighted normals for hard-surface.** A Weighted Normal modifier (with Auto Smooth or the "Smooth by Angle" node in newer Blender) makes bevelled props read crisp with few triangles. Without it, large flat faces shade with gradients.
+- **[[Weighted normals]] for hard-surface.** A Weighted Normal modifier (with Auto Smooth or the "Smooth by Angle" node in newer Blender) makes bevelled props read crisp with few triangles. Without it, large flat faces shade with gradients.
 - **Bevel the silhouette, not the interior.** One small bevel on outer edges catches light and makes props look finished. Interior edges nobody sees do not need it.
 - **Delete hidden faces.** The bottom of a rock sitting on the ground, the back of a wall module against a cliff, faces inside other meshes. They cost triangles and fill rate and contribute nothing.
 - **Avoid long thin triangles** on large flat surfaces (they shade and depth-sort badly at distance).
@@ -90,7 +90,7 @@ Texel density is texture pixels per stud on the surface. Keep it **consistent** 
 What happened in one production game:
 - A tiling stone sheet at **32 px/stud** looked right on gates seen from mid distance.
 - A cliff sheet at **1.85 px/stud** looked soft up close; the fix was a second sheet, not a bigger one.
-- A procedurally generated hub kit with low-resolution trim was judged "low detail / pixelated" next to the previous hub, which used painted per-family texture sheets over 118 modular pieces. The procedural hub was reverted within a day.
+- A procedurally generated hub kit with low-resolution trim was judged "low detail / pixelated" next to the previous hub, which used painted per-family texture sheets over 118 [[Modular Kits|modular pieces]]. The procedural hub was reverted within a day.
 
 Takeaway: texel density is the single biggest "looks professional" lever in environment art, and it is cheap to check. Use Blender's UV checker or a numbered grid texture, and look at it from the player's camera, not from a beauty camera.
 
@@ -242,5 +242,10 @@ Practical rules:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Modeling Fundamentals for Games]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Exporting and Validating Models for Roblox]] · [[Modular Environment Kits]] · [[Art Pipeline - Concept to In-Game Asset]]
+[[Modeling Fundamentals for Games]] · Flat Colour vs Gradient Atlas vs Vertex Colour · Trim Sheets Atlases and Vertex Colors · Exporting and Validating Models for Roblox · Modular Environment Kits · Art Pipeline - Concept to In-Game Asset
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Trim Sheets Atlases and Vertex Colors]] · [[Modular Environment Kits]] · [[Blender Workflow for Roblox Creators]] · [[Exporting and Validating Models for Roblox]] · [[Level Design for Roblox]] · [[Zone and Biome Art Direction]]
+<!-- related:end -->

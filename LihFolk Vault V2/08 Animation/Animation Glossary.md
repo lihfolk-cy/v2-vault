@@ -1,5 +1,5 @@
 ---
-tags: [reference, glossary]
+tags: [reference, glossary, type/reference, area/animation, level/beginner, api/Animator, api/Motor6D, api/IKControl, api/Animation]
 ---
 # Animation Glossary
 
@@ -9,7 +9,7 @@ tags: [reference, glossary]
 > - Avoid: Calling a stub an animation. Symptom: a stub plays nothing through the engine.
 > - Avoid: Confusing IKControl with a baked IK clip.
 >
-> Cost: TL;DR ~100 tok · whole note ~3.0k tok. Read more: ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~3.1k tok. Read more: ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 | Term | Meaning | Read more |
@@ -18,8 +18,8 @@ tags: [reference, glossary]
 | **Action, Action2-4** | The four highest animation priorities; abilities typically at Action4 | [[Playback, Priorities and Blending]] |
 | **Anchor (ultimate)** | Where the enemy's body centre must be at an ultimate's climax; enemies are pulled there before damage | [[Cinematic Ultimates]] |
 | **Animate script** | The default LocalScript that plays idle, walk, run, jump and so on for player characters | [[The Default Animate Script]] |
-| **AnimationClipProvider** | The documented replacement for KeyframeSequenceProvider | [[Animator Deep Dive]] |
-| **AnimationConstraint** | The joint type for R15 characters under the Avatar Joint Upgrade; animated through its `Transform` like a Motor6D | [[AnimationConstraint and Physically Simulated Characters]] |
+| **AnimationClipProvider** | The documented replacement for [[KeyframeSequenceProvider]] | [[Animator Deep Dive]] |
+| **[[AnimationConstraint]]** | The joint type for R15 characters under the Avatar Joint Upgrade; animated through its `Transform` like a Motor6D | [[AnimationConstraint and Physically Simulated Characters]] |
 | **AnimationController** | The Animator host for rigs without a Humanoid (weapons, props, creatures) | [[Animation Objects]] |
 | **AnimationTrack** | One loaded clip on one Animator | [[AnimationTrack Reference]] |
 | **Animator** | Plays tracks on a rig, mixes them and writes joint transforms | [[Animator Deep Dive]] |
@@ -35,9 +35,9 @@ tags: [reference, glossary]
 | **Chicken wing** | Elbow raised above the shoulder while the hand hangs low; reads as broken | [[Elbow Poles Swivel and Joint Limits]] |
 | **Critical (QA)** | A failure severe enough to block installing a clip | [[Arm QA Metrics Reference]] |
 | **CubicV2** | The correct smooth easing; legacy `Cubic` plays reversed | [[Keyframes, Easing and Interpolation]] |
-| **CurveAnimation** | The curve-based clip format (per-channel curves) | [[CurveAnimation and Curve Channels]] |
+| **[[CurveAnimation]]** | The curve-based clip format (per-channel curves) | [[CurveAnimation and Curve Channels]] |
 | **Design rig** | A weapon model rebuilt as Handle root + one Motor6D per hinge + AnimationController | [[Weapon Design Rig Builder]] |
-| **Dynamic head** | A skinned head driven by FACS controls through FaceControls | [[Facial Animation and Dynamic Heads]] |
+| **Dynamic head** | A skinned head driven by [[FACS]] controls through [[FaceControls]] | [[Facial Animation and Dynamic Heads]] |
 | **FACS** | Facial Action Coding System: the standard set of face poses dynamic heads use | [[Facial Animation and Dynamic Heads]] |
 | **FK / IK** | Forward kinematics (angles to positions) / inverse kinematics (target to angles) | [[Inverse Kinematics]] |
 | **Flip** | A joint rotating the wrong way between keys because the turn is too big (or exactly 180 degrees) | [[How the Animator Really Behaves]] |
@@ -46,16 +46,16 @@ tags: [reference, glossary]
 | **Ground fit** | Offsetting clips so the lowest point touches the floor | [[Ground Fitting Pipeline]] |
 | **Hit-stop** | A brief slow or freeze of attacker and target on impact | [[Hit Reactions Stagger and Hit-Stop]] |
 | **Quickdraw / stance move** | Hold a stance to charge, release into a fast strike | [[Stance and Charge Moves]] |
-| **IKControl** | Roblox's built-in runtime IK component | [[IKControl Reference]] |
+| **[[IKControl]]** | Roblox's built-in runtime IK component | [[IKControl Reference]] |
 | **Join late** | A client starting a clip part-way so it matches the server's start time | [[Enemy Animation State Protocol]] |
 | **Kinetic chain** | Hips, chest, shoulder, elbow, wrist, weapon, each about one frame later | [[Animation Quality Standard]] |
-| **KeyframeMarker** | A named event inside a clip, fired by `GetMarkerReachedSignal` | [[Markers and Events]] |
+| **[[KeyframeMarker]]** | A named event inside a clip, fired by `GetMarkerReachedSignal` | [[Markers and Events]] |
 | **KeyframeSequence (KS)** | The classic clip data: Keyframes containing Poses | [[KeyframeSequence Keyframe and Pose Reference]] |
 | **KSP** | KeyframeSequenceProvider; `RegisterKeyframeSequence` ids work only in Studio | [[Case Study - Abilities That Only Worked in Studio]] |
 | **LOD** | Updating distant or off-screen rigs less often | [[Animation LOD]] |
 | **Lua keyframe player** | Lua code that plays KS data by writing joint transforms, so clips need no publishing | [[Lua Keyframe Player]] |
 | **Motor6D** | A joint between two parts: `Part1 = Part0 * C0 * Transform * C1:Inverse()` | [[Motor6D Math and CFrame Composition]] |
-| **nlerp** | Normalised linear quaternion blend; the Animator uses it only for evenly spaced all-Linear clips | [[How the Animator Really Behaves]] |
+| **nlerp** | Normalised linear [[Quaternions\|quaternion]] blend; the Animator uses it only for evenly spaced all-Linear clips | [[How the Animator Really Behaves]] |
 | **Placeholder pose** | A Pose with Weight 0 that only holds the hierarchy | [[KeyframeSequence Keyframe and Pose Reference]] |
 | **Pole** | The direction an elbow or knee points in an IK solve | [[Elbow Poles Swivel and Joint Limits]] |
 | **Pop** | A joint turning far in a single frame; reads as a glitch | [[Arm QA Metrics Reference]] |
@@ -83,7 +83,7 @@ See [[Animation Start Here]].
 A glossary flattens terms into one line each. These are the places where that flattening misleads, and where two terms that sound alike behave differently.
 
 1. **Priority vs Weight.** Priority decides who gets weight first; weight decides how much a track takes within what is left. A weight 1 track at Action fully hides a weight 1 track at Movement on every joint the Action clip keys, and hides nothing on joints it does not key. "Turn the weight down" does not make a high-priority clip blend with a lower one unless total weight at the top is under 1.
-2. **Weight vs WeightCurrent vs WeightTarget.** Roblox docs (as of October 2026) list `WeightCurrent` and `WeightTarget` on `AnimationTrack` as not replicated, and `WeightTarget` as read only. Weight you set is a target reached over the fade time; reading `WeightCurrent` mid fade gives the blended value.
+2. **Weight vs [[WeightCurrent]] vs WeightTarget.** Roblox docs (as of October 2026) list `WeightCurrent` and `WeightTarget` on `AnimationTrack` as not replicated, and `WeightTarget` as read only. Weight you set is a target reached over the fade time; reading `WeightCurrent` mid fade gives the blended value.
 3. **Stopped vs Ended.** Roblox docs (as of October 2026) mark `Stopped` as deprecated; `Ended` fires once the track has finished affecting the rig, after the fade. Older vault notes and older community code use `Stopped`; read it as "stop requested", not "pose gone".
 4. **KeyframeSequence vs published Animation vs CurveAnimation.** A `KeyframeSequence` is data in the place; an `Animation` with an asset id is the published clip the engine plays live; a `CurveAnimation` is a different data format for the same purpose. Only the published form plays in live games through the engine Animator; the other two need Studio, publishing or your own player.
 5. **Motor6D vs AnimationConstraint vs Bone.** All three take a `Transform` written by the Animator, but they differ in physics: Motor6D is rigid, AnimationConstraint can be driven with force limits (physically simulated characters), Bones deform a skinned mesh and have no physics of their own. Code that assumes "every joint is a Motor6D" breaks on upgraded avatars.
@@ -111,5 +111,10 @@ A glossary flattens terms into one line each. These are the places where that fl
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Engine Gotchas]] · [[Troubleshooting Table]] · [[Snippets - Building and Sampling Clips]] · [[Animation Editor Advanced]] · [[AI Animation and Motion from Video]] · [[Skinning Weights]]
+[[Engine Gotchas]] · [[Troubleshooting Table]] · [[Snippets - Building and Sampling Clips]] · [[Animation Editor Advanced]] · [[AI Animation and Motion from Video]] · Skinning Weights
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Open Questions]] · [[Weapon Rig Player]] · [[Animation Data from Blender to Roblox]] · [[Snippets - IK]] · [[Procedural Animation]] · [[Snippets - Lua Keyframe Player Core]] · [[Animation Editor Workflow]] · [[Lua Keyframe Player Internals]]
+<!-- related:end -->

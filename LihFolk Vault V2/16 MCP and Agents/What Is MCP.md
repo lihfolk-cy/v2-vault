@@ -1,5 +1,5 @@
 ---
-tags: [mcp, ai, agents, protocol, tooling]
+tags: [mcp, ai, agents, protocol, tooling, type/guide, area/ai, level/beginner, area/studio]
 ---
 # What Is MCP
 
@@ -12,7 +12,7 @@ tags: [mcp, ai, agents, protocol, tooling]
 > - Which transport? If HTTP, is it bound to localhost?
 > - List its tools. Which ones write, delete, publish, upload or spend money?
 >
-> Cost: TL;DR ~160 tok · whole note ~4.7k tok. Read more: ## 4. Server features: tools, resources, prompts · ## 5. Transports: stdio and Streamable HTTP · ## 9. Common mistakes · ## 10. Checklist: understanding a new MCP server before you use it
+> Cost: TL;DR ~160 tok · whole note ~4.8k tok. Read more: ## 4. Server features: tools, resources, prompts · ## 5. Transports: stdio and Streamable HTTP · ## 9. Common mistakes · ## 10. Checklist: understanding a new MCP server before you use it
 <!-- tldr:end -->
 
 The Model Context Protocol (MCP) is an open protocol that lets an AI application (Claude Desktop, Claude Code, Cursor, VS Code, Codex CLI, Gemini CLI and many others) talk to external programs in a standard way. Those external programs are called **MCP servers**. A server can be Roblox Studio itself, Blender, a database, a file system, or a 60-line Python script you wrote this afternoon. Once a server speaks MCP, every MCP-capable AI client can use it without custom glue.
@@ -278,5 +278,10 @@ Roblox's own MCP page warns that connected clients can read and modify the conte
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Agent Review Loops and Guardrails in Practice]] · [[Roblox Studio Assistant]] · [[HttpService and External APIs]] · [[Open Cloud APIs]] · [[Plugin Security and Permissions]] · [[Batch Processing Tools in Studio]]
+[[Agent Review Loops and Guardrails in Practice]] · [[Roblox Studio Assistant]] · HttpService and External APIs · Open Cloud APIs · Plugin Security and Permissions · Batch Processing Tools in Studio
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]] · [[Plugin Security and Permissions]] · [[Windows Tooling Pitfalls for Agent Pipelines]] · [[AI in Roblox Development Overview]]
+<!-- related:end -->

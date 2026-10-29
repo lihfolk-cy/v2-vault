@@ -1,5 +1,5 @@
 ---
-tags: [pipelines, art, blender, meshes, assets, import]
+tags: [pipelines, art, blender, meshes, assets, import, type/guide, area/pipelines, level/intermediate, api/TextureID, area/modeling, api/SurfaceAppearance]
 ---
 # Art Pipeline - Concept to In-Game Asset
 
@@ -12,7 +12,7 @@ tags: [pipelines, art, blender, meshes, assets, import]
 > - Blockout measured in place, numbers written down
 > - Built by a script from a shared helper library
 >
-> Cost: TL;DR ~170 tok · whole note ~4.5k tok. Read more: ## Stage 3: build from a script, not by hand · ## Stage 7: install with an idempotent script · ## Failure modes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.6k tok. Read more: ## Stage 3: build from a script, not by hand · ## Stage 7: install with an idempotent script · ## Failure modes · ## Checklist
 <!-- tldr:end -->
 
 This is the end-to-end recipe for a static 3D asset (a prop, a weapon mesh, a station, a hero piece of scenery) from the first idea to a MeshPart in a published place that you can rebuild, re-texture or roll back. It assumes Blender, because that is what most Roblox creators use, but every stage maps to Maya or other tools. The principles behind it are in [[Pipeline Design Principles]]; the overview of production asset pipelines is [[Asset Pipelines]]; modelling technique is in [[Blender Workflow for Roblox Creators]] and [[Modeling Weapons and Props]]. Animated assets branch off at stage 6: see [[Character and Creature Pipeline]] and the Animation section's [[Pipeline - New Animated Weapon]].
@@ -272,5 +272,10 @@ Total wall clock was under an hour for the piece; the same scripted approach the
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Modeling in Blender for Roblox]] · [[Parts Unions and MeshParts]] · [[Modeling Fundamentals for Games]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Low-Poly and Stylized Modeling]] · [[Skill - Roblox Asset Import]]
+[[Modeling in Blender for Roblox]] · Parts Unions and MeshParts · Modeling Fundamentals for Games · Meshing Voxels for Roblox - Greedy Meshing and Export · Low-Poly and Stylized Modeling · Skill - Roblox Asset Import
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Modeling Fundamentals for Games]] · [[AI Pitfalls - Assets and Import]] · [[Build Test and Release Pipeline]] · [[Batch Processing Tools in Studio]] · [[Data and Config Pipeline - Spreadsheets to Game]] · [[Audio Pipeline]] · [[Code Pipeline - Rojo Git and CI]] · [[UI Asset Pipeline]] · [[Live Content Pipeline]]
+<!-- related:end -->

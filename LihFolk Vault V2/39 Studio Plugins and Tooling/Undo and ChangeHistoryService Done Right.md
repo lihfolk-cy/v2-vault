@@ -1,5 +1,5 @@
 ---
-tags: [studio, plugins, undo, changehistoryservice, tooling, safety]
+tags: [studio, plugins, undo, changehistoryservice, tooling, safety, type/guide, area/studio, level/intermediate, api/ChangeHistoryService]
 ---
 # Undo and ChangeHistoryService Done Right
 
@@ -12,7 +12,7 @@ tags: [studio, plugins, undo, changehistoryservice, tooling, safety]
 > - `recoverStale` runs at startup.
 > - No yields inside recordings; computation happens first.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.0k tok. Read more: ## 3. The recording helper every plugin should have · ## 4. Live edits: drags, sliders and brushes · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.1k tok. Read more: ## 3. The recording helper every plugin should have · ## 4. Live edits: drags, sliders and brushes · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 Users judge a Studio tool by one test before any other: press `Ctrl Z` after using it. If the change comes back cleanly in one step, the tool feels native. If undo takes forty presses, or reverts half the change, or reverts something the user did before the tool ran, the tool is uninstalled. `ChangeHistoryService` is the API behind that test. The docs are short, and the parts they leave out are where plugins go wrong.
@@ -311,5 +311,10 @@ The cost of option 2 is clutter: attributes left on thousands of instances. Give
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Studio Settings and Shortcuts]] · [[Batch Processing Tools in Studio]] · [[Links - Plugins and custom tools]] · [[Studio Interface Tour]] · [[Working with AI Assistants in Studio]] · [[Roblox Studio Assistant]]
+[[Studio Settings and Shortcuts]] · Batch Processing Tools in Studio · Links - Plugins and custom tools · Studio Interface Tour · Working with AI Assistants in Studio · Roblox Studio Assistant
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Batch Processing Tools in Studio]] · [[Plugin Security and Permissions]] · [[Writing Your Own MCP Server]] · [[Studio Interface Tour]] · [[Roblox Studio MCP Server]] · [[Publishing Selling and Updating Plugins]]
+<!-- related:end -->

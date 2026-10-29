@@ -1,5 +1,5 @@
 ---
-tags: [live-ops, events, notifications, updates, scheduling, luau]
+tags: [live-ops, events, notifications, updates, scheduling, luau, type/guide, area/monetization, level/intermediate, area/scripting]
 ---
 # Live Ops Events and Updates
 
@@ -12,7 +12,7 @@ tags: [live-ops, events, notifications, updates, scheduling, luau]
 > - Event claims idempotent per event id
 > - Event created in Creator Hub with unique thumbnail; event place set if needed
 >
-> Cost: TL;DR ~160 tok · whole note ~3.3k tok. Read more: ## 1. Platform tools · ## 2. Timed content in code · ## 5. Failure modes · ## 6. Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.4k tok. Read more: ## 1. Platform tools · ## 2. Timed content in code · ## 5. Failure modes · ## 6. Checklist
 <!-- tldr:end -->
 
 Live ops is everything you do after launch to keep a game fresh: content updates, timed events, rotating offers, codes, notifications. On Roblox it is also how you feed the recommendation signals that care about players returning on days 2 to 7 and 8 to 28 ([[Discovery and the Algorithm]]). This note covers the platform tools (Experience Events, update announcements, experience notifications), how to build timed content in code so it is correct across every server, and an operating rhythm. Platform facts verified against the Creator Hub "Experience events" and "Experience notifications" pages **as of October 2026**.
@@ -231,5 +231,10 @@ The point is predictability: players learn that Friday means something new, and 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Experience Notifications and Return Prompts]] · [[Update Cadence and Hype Cycles]] · [[Event Calendars and Content Planning]] · [[Daily Rewards System End to End]] · [[Notification and Toast Systems]] · [[Patch Notes and Player Communication]]
+[[Experience Notifications and Return Prompts]] · Update Cadence and Hype Cycles · Event Calendars and Content Planning · Daily Rewards System End to End · Notification and Toast Systems · Patch Notes and Player Communication
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Update Cadence and Hype Cycles]] · [[Event Calendars and Content Planning]] · [[Monetization Overview]] · [[Ads and Rewarded Video]] · [[Thumbnails Icons and Store Page]] · [[Robux Price Points and Offer Design]] · [[Pricing and Store Design]] · [[Subscriptions and Premium Payouts]]
+<!-- related:end -->

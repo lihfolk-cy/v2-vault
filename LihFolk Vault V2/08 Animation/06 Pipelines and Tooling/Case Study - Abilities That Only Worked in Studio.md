@@ -1,5 +1,5 @@
 ---
-tags: [case-study, debugging, keyframesequenceprovider, publishing, runtime]
+tags: [case-study, debugging, keyframesequenceprovider, publishing, runtime, type/case-study, area/animation, level/intermediate, api/RegisterKeyframeSequence, area/debugging, api/Animator]
 ---
 # Case Study: Abilities That Only Worked in Studio
 
@@ -12,7 +12,7 @@ tags: [case-study, debugging, keyframesequenceprovider, publishing, runtime]
 > - Every clip either has a published id or plays through a Lua player.
 > - Studio and live share one playback path.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.8k tok. Read more: ## Act 2: "abilities don't work in server" · ## Nuances and edge cases · ## Checklist · ## Common mistakes in production
+> Cost: TL;DR ~140 tok · whole note ~3.9k tok. Read more: ## Act 2: "abilities don't work in server" · ## Nuances and edge cases · ## Checklist · ## Common mistakes in production
 <!-- tldr:end -->
 
 Every ability in one live action game looked perfect in Studio play tests and did nothing in live servers. No errors, no warnings: characters simply did not animate their abilities, weapon parts stood still, and marker-driven effects never fired. The cause was one engine call, `KeyframeSequenceProvider:RegisterKeyframeSequence`, used at runtime as a substitute for publishing. The fix grew into a full Lua animation runtime. This note tells the story in order, because the way the bug hid is the useful part.
@@ -175,5 +175,10 @@ The specific trap here is one engine call, but the general lesson is "Studio is 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Ability Kits Architecture]] · [[Animation Objects]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Custom Locomotion Controller Design]] · [[Post-Mortem - Building a Melee Action Game]] · [[The Debugging Method - Reproduce Isolate Bisect]] · [[Animation Start Here]]
+[[Ability Kits Architecture]] · [[Animation Objects]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Custom Locomotion Controller Design]] · [[Post-Mortem - Building a Melee Action Game]] · The Debugging Method - Reproduce Isolate Bisect · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Pipeline - New Animated Weapon]] · [[Baked Clip Stubs and Archiving]] · [[Lua Keyframe Player Internals]] · [[Case Study - Cutting a Million Instances]] · [[Snippets - Lua Keyframe Player Core]] · [[Custom Rigs - Weapons and Props]] · [[Authoring Clips in Code]] · [[Animation Data from Blender to Roblox]]
+<!-- related:end -->

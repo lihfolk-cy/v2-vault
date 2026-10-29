@@ -1,5 +1,5 @@
 ---
-tags: [field-notes, characters, movement, watchdog, telemetry, datastore, debugging, luau]
+tags: [field-notes, characters, movement, watchdog, telemetry, datastore, debugging, luau, type/guide, area/data, level/intermediate, api/DataStore]
 ---
 # A Stuck Player Watchdog That Logs the Cause
 
@@ -12,7 +12,7 @@ tags: [field-notes, characters, movement, watchdog, telemetry, datastore, debugg
 > - Server re-checks state itself and rate-limits reports.
 > - Anchored root, WalkSpeed, PlatformStand, controls and stale locks handled.
 >
-> Cost: TL;DR ~170 tok · whole note ~2.1k tok. Read more: ## 1. Detect on the client, decide on the server · ## 2. Free the common causes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~2.2k tok. Read more: ## 1. Detect on the client, decide on the server · ## 2. Free the common causes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 In a large game many systems can stop a character moving: stuns, cutscenes, menus, mounts, attacks that root you, anti-cheat, loading code. Each one sets something and is supposed to clear it. Sooner or later one does not, and a player is stuck: pressing keys, going nowhere, and leaving. A watchdog that notices "trying to move but not moving", frees the common causes, and **records which cause it found** turns an unfixable "sometimes people get stuck" report into a ranked list of bugs. Related: [[Debugging Live Servers]], [[Telemetry Events]].
@@ -198,5 +198,10 @@ end)
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Debugging Live Servers]] · [[Telemetry Events]] · [[Status Effects Buffs and Stacking Rules]] · [[Server-Authoritative Freeze and Stun Timestamps]] · [[Streaming Joins - Frozen Players and Loading Screen Teardown]] · [[Field Notes Start Here]]
+[[Debugging Live Servers]] · Telemetry Events · Status Effects Buffs and Stacking Rules · [[Server-Authoritative Freeze and Stun Timestamps]] · [[Streaming Joins - Frozen Players and Loading Screen Teardown]] · [[Field Notes Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Resetting One Player's Data Safely]] · [[Hold-to-Attack Input That Never Sticks]] · [[Shift-Lock Sprint and Gamepad B for Menus]] · [[Layering Camera Feedback on the Default Camera]] · [[Client Hit Prediction for Melee Feedback]] · [[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[Running Many AI Agents on One Roblox Place]] · [[Centre-Screen Announcements That Stay Centred]]
+<!-- related:end -->

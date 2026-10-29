@@ -1,5 +1,5 @@
 ---
-tags: [testing, testez, jest-lua, ci, open-cloud, test-doubles, automation]
+tags: [testing, testez, jest-lua, ci, open-cloud, test-doubles, automation, type/guide, area/performance, level/intermediate, api/DataStore]
 ---
 # Automated Testing with TestEZ and Jest-Lua
 
@@ -12,7 +12,7 @@ tags: [testing, testez, jest-lua, ci, open-cloud, test-doubles, automation]
 > - Clock and randomness injected; no waits in unit tests.
 > - Fakes for DataStore and other services, able to simulate failures.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.8k tok. Read more: ## 3. Test patterns that pay off · ## 4. Where tests run · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.9k tok. Read more: ## 3. Test patterns that pay off · ## 4. Where tests run · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Testing Strategies and Frameworks]] introduces both frameworks, shows a first spec in each and compares them. This note is the next step: how to make a Roblox codebase testable, which tests actually pay for themselves in a game, how to write test doubles for engine services, and how to run the suite automatically, including on Roblox's own servers through Open Cloud. If you have never written a spec, read that note first.
@@ -237,7 +237,7 @@ There are four places a Roblox test can run. Each has a different reach.
 
 | Runner | Engine APIs | Speed | Set-up | Good for |
 |---|---|---|---|---|
-| Lune (standalone Luau runtime) | None (pure Luau only) | Fastest | Small | Pure modules on every push |
+| [[Lune]] (standalone Luau runtime) | None (pure Luau only) | Fastest | Small | Pure modules on every push |
 | Studio, from a plugin or the command bar | All, Edit mode | Fast | None | Developer loop while coding |
 | `run-in-roblox` on a CI machine | All, in a Studio instance | Medium | Studio installed on a Windows or macOS runner | Engine-dependent specs |
 | Open Cloud Luau Execution | Most, headless on a Roblox server | Slow (queued) | API key, a test place | Engine-dependent specs without a Studio machine |
@@ -372,5 +372,10 @@ Quarantine rather than delete: move a flaky test to a "known flaky" list that ru
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Dependency Injection in Luau]] · [[Module Design and Dependency Injection]] · [[Links - Testing]] · [[Testing Your Own Remotes - Fuzzing and Abuse Tests]] · [[Git and Source Control for Roblox]] · [[Data Schema Versioning]]
+[[Dependency Injection in Luau]] · Module Design and Dependency Injection · Links - Testing · Testing Your Own Remotes - Fuzzing and Abuse Tests · Git and Source Control for Roblox · Data Schema Versioning
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Save Migration Tests - Fixture Saves and Golden Files]] · [[UI Automation with VirtualInput and StudioTestService]] · [[Dupe Hunting Test Script - Trades, Gifts, Drops and Rejoins]] · [[Automated Luau Checks - LihFolk Hook and Audit]] · [[Genre QA Passes - Test Checklists per Game Type]] · [[Testing Time-Based Features with a Controllable Clock]] · [[Debugger Breakpoints and Logging]]
+<!-- related:end -->

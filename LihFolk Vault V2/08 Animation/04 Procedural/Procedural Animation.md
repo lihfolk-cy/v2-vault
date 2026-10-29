@@ -1,5 +1,5 @@
 ---
-tags: [procedural, runservice, motor6d, animationconstraint, transform, timing, hub]
+tags: [procedural, runservice, motor6d, animationconstraint, transform, timing, hub, type/hub, area/animation, level/intermediate, api/Animator, area/physics]
 ---
 # Procedural Animation
 
@@ -12,7 +12,7 @@ tags: [procedural, runservice, motor6d, animationconstraint, transform, timing, 
 > - Writes to animated joints happen in `PreSimulation`.
 > - Overlays compose with the animated value (`R * A` or `A * R`) and cannot compound.
 >
-> Cost: TL;DR ~200 tok · whole note ~4.4k tok. Read more: ## What code can write · ## Composing with the Animator · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~200 tok · whole note ~4.5k tok. Read more: ## What code can write · ## Composing with the Animator · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Procedural animation is motion computed by code every frame instead of read from a stored clip. In Roblox it is the layer that makes clips react: a head that follows the player, feet that stay planted on a slope, a blade that spins in the hand, a body that recoils from a hit, a dragon that banks into its turn. This note is the hub for the whole `04 Procedural` folder. It covers the part every technique shares and that most bugs come from: **where you write, when you write it, and how your write composes with the Animator's.**
@@ -30,7 +30,7 @@ If you only remember one thing: on an animated joint, write `Transform` in `RunS
 | Physics response (ragdoll, hit flinch) | approximates | springs or constraints | no |
 | Many identical objects (foliage, floating rocks) | too heavy | best, batched | no |
 
-The reference project (one live action game) used all three. Its player arms were **baked**: an offline solver searched 24 hand rolls x 36 elbow swivels per 60 Hz frame plus a clip-wide Viterbi pass, far too slow for runtime (see [[Elbow Poles Swivel and Joint Limits]] and [[Pipeline - Arm IK Baking and QA]]). Its feet, blade spins, tosses, hit reactions, deaths, props and flying creatures were **procedural at runtime**. It deliberately did not use `IKControl` because the clips were already baked, which is a valid choice, not a verdict on IKControl (see [[IKControl Reference]]).
+The reference project (one live action game) used all three. Its player arms were **baked**: an offline solver searched 24 hand rolls x 36 elbow swivels per 60 Hz frame plus a clip-wide Viterbi pass, far too slow for runtime (see [[Elbow Poles Swivel and Joint Limits]] and [[Pipeline - Arm IK Baking and QA]]). Its feet, blade spins, tosses, hit reactions, deaths, props and flying creatures were **procedural at runtime**. It deliberately did not use `IKControl` because the clips were already baked, which is a valid choice, not a verdict on [[IKControl]] (see [[IKControl Reference]]).
 
 Do not reach for procedural motion when an authored clip would read better. A procedural "attack" built from sines looks mechanical next to a keyed one. Procedural motion wins when it is *reacting* or when it is *cheap and endless*.
 
@@ -291,11 +291,16 @@ General rules:
 - [ ] Anything others must see is driven by replicated inputs, computed per client.
 - [ ] Distance and visibility gating; no per-frame allocations.
 - [ ] The layer has a weight and fades in and out (no pops when it starts or stops).
-- [ ] Tested on the real avatar type (scaled, AnimationConstraint) and in a live server.
+- [ ] Tested on the real avatar type (scaled, [[AnimationConstraint]]) and in a live server.
 
 Related: [[Frame Order and RunService Timing]], [[Motor6D Math and CFrame Composition]], [[Snippets - Procedural Motion]], [[Engine Gotchas]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animation Start Here]] · [[Animation Glossary]] · [[Snippets - IK]] · [[AnimationConstraint and Physically Simulated Characters]] · [[Links - Inverse kinematics]] · [[Script Performance]]
+[[Animation Start Here]] · [[Animation Glossary]] · [[Snippets - IK]] · [[AnimationConstraint and Physically Simulated Characters]] · [[Links - Inverse kinematics]] · Script Performance
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[Rigs and Joints]] · [[AI Pitfalls - Physics and Animation]] · [[Animator Deep Dive]] · [[Troubleshooting Table]] · [[Idle Breathing and Secondary Motion]] · [[Debugging Animation Problems]] · [[Snippets - Lua Keyframe Player Core]] · [[Custom Rigs - Weapons and Props]] · [[Open Questions]]
+<!-- related:end -->

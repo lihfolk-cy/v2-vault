@@ -1,5 +1,5 @@
 ---
-tags: [modeling, voxel, environment, props, modular, tiles, autotiling, kits, instancing, streaming, luau]
+tags: [modeling, voxel, environment, props, modular, tiles, autotiling, kits, instancing, streaming, luau, type/guide]
 ---
 # Voxel Props Environments and Modular Tiles
 
@@ -15,7 +15,7 @@ tags: [modeling, voxel, environment, props, modular, tiles, autotiling, kits, in
 > Cost: TL;DR ~200 tok · whole note ~4.2k tok. Read more: ## 3. Autotiling: picking edge and corner pieces automatically · ## 6. Cost of a tiled voxel world · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-Characters get the attention, but in a blocky game most of the triangles, instances and art hours go into the world: ground, cliffs, paths, buildings, trees, fences, crates, lamps. Building that world voxel by voxel does not scale. What scales is a small set of tiles and props, built on one grid, that snap together and repeat hundreds of times without the repetition showing. [[Modular Environment Kits]] covers modular kits in general and [[Grid Placement and Player Building Systems]] covers grid placement code. This note is the voxel-specific version: tile sizes that agree with Roblox's own grids, edge rules that make tiles join seamlessly, autotiling (choosing the right edge or corner piece automatically), variation without new assets, prop design at environment scale, and the instance, memory and streaming costs of a tiled voxel world.
+Characters get the attention, but in a blocky game most of the triangles, instances and art hours go into the world: ground, cliffs, paths, buildings, trees, fences, crates, lamps. Building that world voxel by voxel does not scale. What scales is a small set of tiles and props, built on one grid, that snap together and repeat hundreds of times without the repetition showing. [[Modular Environment Kits]] covers [[modular kits]] in general and [[Grid Placement and Player Building Systems]] covers grid placement code. This note is the voxel-specific version: tile sizes that agree with Roblox's own grids, edge rules that make tiles join seamlessly, autotiling (choosing the right edge or corner piece automatically), variation without new assets, prop design at environment scale, and the instance, memory and streaming costs of a tiled voxel world.
 
 ## 1. Tile size: agree with the grids you already have
 
@@ -174,7 +174,7 @@ Goal: a forest zone kit with grass plateaus, cliffs one tile high, and a dirt pa
 
 1. **Decide grid**: 4-stud tiles, 0.5-stud cells (8 x 8 cells per tile), cliff height 4 studs (8 cells), path inset one cell below grass.
 2. **Write edge profiles**: Grass-flat, Cliff-top (grass with a one-cell lit lip), Cliff-face (stone ramp, one-cell dark base), Path-flat.
-3. **Build the six cliff pieces** in MagicaVoxel in canonical orientation (Isolated, End, Corner, Straight, Tee, Fill). The Fill is a plain grass top; the others show cliff faces on their unconnected sides. Build three Fill variants with flowers placed at least one cell from the edges.
+3. **Build the six cliff pieces** in [[MagicaVoxel]] in canonical orientation (Isolated, End, Corner, Straight, Tee, Fill). The Fill is a plain grass top; the others show cliff faces on their unconnected sides. Build three Fill variants with flowers placed at least one cell from the edges.
 4. **Build the six path pieces** the same way; paths only change the top layer, so they are thin tiles that sit on grass Fill.
 5. **Mesh greedy, one mesh per colour, cell-unit UVs** ([[Meshing Voxels for Roblox - Greedy Meshing and Export]]), self-occlusion AO only, pivots at bottom centre. Export GLB, import with Scale Unit Studs.
 6. **Store the pieces** in a folder in ReplicatedStorage, named exactly as the autotiler expects.
@@ -218,5 +218,10 @@ Goal: a forest zone kit with grass plateaus, cliffs one tile high, and a dirt pa
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Voxel Modelling Start Here]] · [[Wave Function Collapse on Roblox]] · [[Noise Functions and Terrain Generation]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Voxel and Blocky Modeling]] · [[Environment and Level Pipeline]]
+[[Voxel Modelling Start Here]] · [[Wave Function Collapse on Roblox]] · Noise Functions and Terrain Generation · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · Voxel and Blocky Modeling · Environment and Level Pipeline
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Environment and Level Pipeline]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Noise Functions and Terrain Generation]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Low-Poly and Stylized Modeling]] · [[Voxel and Blocky Modeling]]
+<!-- related:end -->

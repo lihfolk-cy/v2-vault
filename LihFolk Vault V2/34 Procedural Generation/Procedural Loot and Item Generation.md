@@ -1,5 +1,5 @@
 ---
-tags: [procedural, generation, loot, items, affixes, economy, rng, datastores, luau]
+tags: [procedural, generation, loot, items, affixes, economy, rng, datastores, luau, type/guide, area/procedural, level/intermediate]
 ---
 # Procedural Loot and Item Generation
 
@@ -12,7 +12,7 @@ tags: [procedural, generation, loot, items, affixes, economy, rng, datastores, l
 > - Affix defs with tags, groups, ilvl gates, quantised ranges.
 > - Generator is pure; simulated at scale; perfect-roll odds converted to hours.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.5k tok. Read more: ## The generator · ## Storing generated items · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.6k tok. Read more: ## The generator · ## Storing generated items · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[RNG Drops and Luck Systems]] covers **whether** something drops: weighted tables, luck, pity, odds disclosure. [[Rarity Ladders and Drop Pacing Math]] covers how rare each tier should be. This note covers what happens after the roll says "a rare sword dropped": generating **the item itself**. Stat ranges, affixes, item level, power budgets, names, how to store generated items so a balance patch does not rewrite every inventory, how to keep them dupe-proof, and the economy consequences of near-infinite item variety. It is for action RPGs, looters, roguelikes and any game where two items of the same name can differ.
@@ -256,7 +256,7 @@ Generated items change how an economy behaves ([[Economy Inflation Sinks and Fau
 
 - **Prices spread.** Traders must inspect rolls; casual players get scammed more. A clear item tooltip with roll percentiles ("Damage 14, 80% of range") reduces this.
 - **Junk floods inventories.** Most drops are worse than what the player wears. Give junk a purpose: auto-salvage into crafting currency, with a rarity filter the player controls.
-- **Rerolling is a sink.** Crafting that rerolls one affix's value, or swaps one affix, is an excellent currency sink and a reason to keep a "nearly perfect" item. Price rerolls so expected cost to perfect an item is high but bounded.
+- **Rerolling is a sink.** Crafting that rerolls one affix's value, or swaps one affix, is an excellent [[Faucets and Sinks|currency sink]] and a reason to keep a "nearly perfect" item. Price rerolls so expected cost to perfect an item is high but bounded.
 - **Rerolls with Robux** are paid randomness: the same disclosure and policy rules apply as for crates. See [[Paid Random Items and Odds Disclosure in Practice]] and [[Roblox Policies Ratings and Compliance]].
 - **Power creep via ilvl.** If new zones raise ilvl, old gear becomes salvage automatically. That is intended, but tell players, or rare items feel worthless overnight.
 
@@ -306,5 +306,10 @@ Generated items change how an economy behaves ([[Economy Inflation Sinks and Fau
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Drop Tables Rarity and Pity Systems]] · [[Expected Value]] · [[Pity Timer]] · [[Variance]] · [[Progression Levels and Unlocks]] · [[Deterministic Simulation]]
+[[Drop Tables Rarity and Pity Systems]] · Expected Value · Pity Timer · Variance · Progression Levels and Unlocks · Deterministic Simulation
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Expected Value]] · [[Pity Timer]] · [[Probability and Statistics for Designers]] · [[Wave Function Collapse on Roblox]] · [[Infinite and Streamed Worlds]] · [[Noise Functions and Terrain Generation]]
+<!-- related:end -->

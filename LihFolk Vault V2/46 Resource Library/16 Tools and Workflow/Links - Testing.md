@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, tools-workflow]
+tags: [resources, links, tools-workflow, type/reference, level/intermediate]
 ---
 # Links - Testing
 

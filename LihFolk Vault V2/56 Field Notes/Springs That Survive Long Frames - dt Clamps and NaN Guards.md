@@ -1,5 +1,5 @@
 ---
-tags: [field-notes, springs, renderstepped, camera, nan, stability, game-feel, luau]
+tags: [field-notes, springs, renderstepped, camera, nan, stability, game-feel, luau, type/guide, area/gameplay, level/intermediate, area/scripting]
 ---
 # Springs That Survive Long Frames - dt Clamps and NaN Guards
 
@@ -12,7 +12,7 @@ tags: [field-notes, springs, renderstepped, camera, nan, stability, game-feel, l
 > - `dt` clamped to about 0.1 s before stepping.
 > - Value and velocity reset to target on `NaN` or runaway.
 >
-> Cost: TL;DR ~180 tok · whole note ~1.7k tok. Read more: ## A safe spring helper · ## Guard the write, not just the maths · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~1.8k tok. Read more: ## A safe spring helper · ## Guard the write, not just the maths · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A spring stepped with explicit Euler in `RenderStepped` is stable at 60 fps and explodes on the first long frame, and if its output feeds the camera the result is not a glitch but a permanent black screen. This note explains why that happens, shows the numbers, and gives a spring helper that survives load hitches, alt-tabs and 25 fps phones. The maths of springs is in [[Springs Damping and Smoothing]] and [[Tween vs Spring]]; this note is about the failure mode.
@@ -154,5 +154,10 @@ end -- otherwise keep last frame's camera and let the springs reset
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Springs Damping and Smoothing]] · [[Tween vs Spring]] · [[Camera Systems]] · [[Frame Order and RunService Timing]] · [[Layering Camera Feedback on the Default Camera]] · [[Field Notes Start Here]]
+[[Springs Damping and Smoothing]] · Tween vs Spring · Camera Systems · Frame Order and RunService Timing · [[Layering Camera Feedback on the Default Camera]] · [[Field Notes Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Animation Data Hygiene - Euler Wrap Joint Holes and Easing]] · [[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[Hold-to-Attack Input That Never Sticks]] · [[ipairs Stops at the First nil - Cleanup Tables That Leak]] · [[Client Hit Prediction for Melee Feedback]] · [[Resetting One Player's Data Safely]] · [[Streaming Joins - Frozen Players and Loading Screen Teardown]] · [[Moving Data Out of a Play Session]]
+<!-- related:end -->

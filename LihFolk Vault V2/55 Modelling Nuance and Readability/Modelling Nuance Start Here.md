@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [modeling, hub, readability, silhouette, proportion, style-bible, critique, start-here]
+tags: [modeling, hub, readability, silhouette, proportion, style-bible, critique, start-here, type/hub, area/modeling, level/beginner, area/gameplay]
 ---
 # Modelling Nuance Start Here
 
@@ -13,7 +13,7 @@ These existing notes hold the foundations this section builds on. Skim them befo
 1. [[Modeling Fundamentals for Games]]: silhouette first, the basic black silhouette test, why "it looks fine in Blender" is not a test.
 2. [[Low-Poly and Stylized Modeling]]: the basic shape language, proportion rules and segment counts for stylised art.
 3. [[Environment Art Styles]]: how a style is written down, palettes, and where detail goes in a world.
-4. [[Hard-Surface Modeling]]: the bevel and weighted normal workflow, bevel widths by object size.
+4. [[Hard-Surface Modeling]]: the bevel and [[Weighted Normals|weighted normal]] workflow, bevel widths by object size.
 5. [[Art Budgets - Triangles Draw Calls Memory]]: the totals that every model has to fit.
 6. [[Camera Systems]] and [[Avatar Body Types and Scale in Gameplay]]: the camera and avatars your models are judged against.
 
@@ -55,5 +55,5 @@ The camera note gives the numbers. The silhouette and proportion notes use them 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Keeping a Mixed Asset Library Consistent]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[Hand-Painted and Stylized Texturing]] · [[Texel Density]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]]
+[[Keeping a Mixed Asset Library Consistent]] · Voxel Shading - Baked AO Edges and Lighting · Clean Stylised Shading - Weighted and Custom Normals · Hand-Painted and Stylized Texturing · Texel Density · Flat Colour vs Gradient Atlas vs Vertex Colour
 <!-- auto-links:end -->

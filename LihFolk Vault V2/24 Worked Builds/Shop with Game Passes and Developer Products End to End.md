@@ -1,5 +1,5 @@
 ---
-tags: [worked-build, monetization, game-passes, developer-products, processreceipt, shop, ui, luau, strict]
+tags: [worked-build, monetization, game-passes, developer-products, processreceipt, shop, ui, luau, strict, type/guide, area/gameplay, level/intermediate]
 ---
 # Shop with Game Passes and Developer Products End to End
 
@@ -12,7 +12,7 @@ tags: [worked-build, monetization, game-passes, developer-products, processrecei
 > - `PurchaseId` and grant saved together; acknowledged only after save
 > - Grants cannot fail half-way (fallback to coins)
 >
-> Cost: TL;DR ~150 tok · whole note ~6.7k tok. Read more: ## 4. Server · ## 5. Client and UI · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~6.8k tok. Read more: ## 4. Server · ## 5. Client and UI · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A working in-game shop from an empty place: two game passes (VIP and Double Coins) whose benefits are derived from ownership, three coin packs and a starter pack sold as developer products and granted through one idempotent `ProcessReceipt`, prices read live for each player, and a shop window that refuses to sell while the player's data is not loaded. It is built on the foundation from [[Saved Inventory End to End]] (`PlayerData`, `Net`, `InventoryService`) and uses the `Receipts` field already in its `DataTemplate`.
@@ -591,5 +591,10 @@ Studio purchases are test purchases: the prompt says so and no Robux are charged
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Idempotency]] · [[Skill - Roblox Monetization Compliance]] · [[Links - Developer products]] · [[Links - Game passes]] · [[Limited-Time Offers - Design and Ethics]] · [[Currency Architecture - Soft Hard and Event Currencies]]
+[[Idempotency]] · Skill - Roblox Monetization Compliance · Links - Developer products · Links - Game passes · Limited-Time Offers - Design and Ethics · Currency Architecture - Soft Hard and Event Currencies
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Purchase Receipts and Purchase History in UI]] · [[AI Pitfalls - Data and Monetization]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[LihFolk Systems Library]] · [[Daily Rewards System End to End]] · [[Codes Redemption System End to End]] · [[Global Leaderboards End to End]]
+<!-- related:end -->

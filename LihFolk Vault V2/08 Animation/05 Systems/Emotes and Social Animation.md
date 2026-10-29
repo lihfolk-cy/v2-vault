@@ -1,5 +1,5 @@
 ---
-tags: [systems, emotes, social, humanoiddescription, networking]
+tags: [systems, emotes, social, humanoiddescription, networking, type/guide, area/animation, level/intermediate, api/HumanoidDescription, area/networking, api/Humanoid, api/Animator]
 ---
 # Emotes and Social Animation
 
@@ -9,7 +9,7 @@ tags: [systems, emotes, social, humanoiddescription, networking]
 > - Only arms move during an emote: Locomotion at higher priority than the emote asset -> Play emotes at Action yourself
 > - Emote survives into combat: No cancel hooks -> Central `stop()` from every gameplay action
 >
-> Cost: TL;DR ~130 tok · whole note ~4.1k tok. Read more: ## Roblox's built-in emotes · ## A custom emote layer · ## Common mistakes
+> Cost: TL;DR ~130 tok · whole note ~4.2k tok. Read more: ## Roblox's built-in emotes · ## A custom emote layer · ## Common mistakes
 <!-- tldr:end -->
 
 Social animation is everything a character does for other people rather than for gameplay: emotes, dances, waves, flourishes, synchronised moments, NPCs that acknowledge you. It is low-stakes per clip and high-stakes overall, because it is how players express themselves and what makes a server feel inhabited. This note covers Roblox's built-in emote system (with the APIs checked against the official docs), how to build your own emote layer when you replace locomotion, how emotes interact with weapons and combat, and synchronised social animation.
@@ -212,5 +212,10 @@ See also: [[The Default Animate Script]], [[Locomotion Systems]], [[Equip Draw a
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Avatars and UGC Start Here]] · [[Custom Locomotion Controller Design]] · [[Custom Characters and StarterCharacter]] · [[Snippets - Animation Controller Module]] · [[Avatar Context Menus Profiles and Social Surfaces]] · [[AI Animation and Motion from Video]] · [[Animation Start Here]]
+[[Avatars and UGC Start Here]] · [[Custom Locomotion Controller Design]] · [[Custom Characters and StarterCharacter]] · [[Snippets - Animation Controller Module]] · Avatar Context Menus Profiles and Social Surfaces · AI Animation and Motion from Video · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Playback, Priorities and Blending]] · [[Weapon and Combat Animation]] · [[Ability Kits Architecture]] · [[Combat Combo Systems]] · [[Enemy Animation State Protocol]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]] · [[Stance and Charge Moves]] · [[Scale and Animation]]
+<!-- related:end -->

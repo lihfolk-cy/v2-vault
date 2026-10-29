@@ -1,5 +1,5 @@
 ---
-tags: [modeling, modular, kits, environment, grid, pivots, blender, luau, level-design]
+tags: [modeling, modular, kits, environment, grid, pivots, blender, luau, level-design, type/guide, area/modeling, level/intermediate]
 ---
 # Modular Environment Kits
 
@@ -12,10 +12,10 @@ tags: [modeling, modular, kits, environment, grid, pivots, blender, luau, level-
 > - One pivot rule; origins on the ground; fronts toward -Y in Blender.
 > - Piece list with variants; seams hidden by pillars, trims or overlaps.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.1k tok. Read more: ## 4. Modelling pieces in Blender · ## 6. Placing pieces · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.3k tok. Read more: ## 4. Modelling pieces in Blender · ## 6. Placing pieces · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-A modular kit is a small set of pieces (walls, corners, floors, stairs, pillars, trims, props) designed to snap together on a grid, so a large world can be built from a few dozen meshes. On Roblox, kits are the single biggest lever for both production speed and performance: one artist builds 40 pieces, level designers (or scripts) build 40 zones, and the engine loads 40 meshes instead of 4,000 unique ones. The reference project built its second realm's canyon walls from **3 wall meshes placed 194 times**, and one hub from a **149-mesh package** placed by data exported from Blender.
+A [[Modular Kits|modular kit]] is a small set of pieces (walls, corners, floors, stairs, pillars, trims, props) designed to snap together on a grid, so a large world can be built from a few dozen meshes. On Roblox, kits are the single biggest lever for both production speed and performance: one artist builds 40 pieces, level designers (or scripts) build 40 zones, and the engine loads 40 meshes instead of 4,000 unique ones. The reference project built its second realm's canyon walls from **3 wall meshes placed 194 times**, and one hub from a **149-mesh package** placed by data exported from Blender.
 
 The craft is in rules that are boring to follow and expensive to break: grid size, pivot placement, dimensions, seams, texel density, naming. This note sets those rules, shows how to model and validate pieces in Blender, and how to place them in Studio by hand or by script.
 
@@ -290,5 +290,10 @@ Per-zone instance budgets in the project's revamp plan: at most 6,000 instances,
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Modeling in Blender for Roblox]] · [[Voxel Scale Grids and Stud Alignment]] · [[Modeling Fundamentals for Games]] · [[Exporting and Validating Models for Roblox]] · [[Voxel Props Environments and Modular Tiles]] · [[Grid Placement and Player Building Systems]]
+[[Modeling in Blender for Roblox]] · Voxel Scale Grids and Stud Alignment · [[Modeling Fundamentals for Games]] · [[Exporting and Validating Models for Roblox]] · Voxel Props Environments and Modular Tiles · Grid Placement and Player Building Systems
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Voxel Props Environments and Modular Tiles]] · [[Voxel Scale Grids and Stud Alignment]] · [[UV Unwrapping]] · [[Mesh Optimization for Mobile]] · [[Hard-Surface Modeling]] · [[Voxel and Blocky Modeling]] · [[Hand-Painted and Stylized Texturing]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Retopology and Decimation]] · [[Normal Maps and Detail Baking]]
+<!-- related:end -->

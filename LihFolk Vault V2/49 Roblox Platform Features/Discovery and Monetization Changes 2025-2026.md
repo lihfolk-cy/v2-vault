@@ -1,5 +1,5 @@
 ---
-tags: [delta, discovery, algorithm, recommended-for-you, thumbnails, monetization, devex, creator-rewards, roblox-plus, regional-pricing, creator-store]
+tags: [delta, discovery, algorithm, recommended-for-you, thumbnails, monetization, devex, creator-rewards, roblox-plus, regional-pricing, creator-store, type/guide]
 verified: 2026-10-28
 ---
 # Discovery and Monetization Changes 2025-2026
@@ -13,7 +13,7 @@ verified: 2026-10-28
 > - Analytics watched for first-play bounce and Day 8-28 retention.
 > - Prices shown via `GetProductInfoAsync`.
 >
-> Cost: TL;DR ~140 tok · whole note ~2.5k tok. Read more: ## 1. Recommended For You now values 28-day retention (June 15, 2026) · ## 5. Roblox Plus replaced Premium for new subscribers (April 30, 2026) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~2.6k tok. Read more: ## 1. Recommended For You now values 28-day retention (June 15, 2026) · ## 5. Roblox Plus replaced Premium for new subscribers (April 30, 2026) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 How games get recommended and how creators get paid both changed between mid-2025 and October 2026. Advice built on 2024 rules (optimise qualified play-through rate, design for Premium Payouts, assume one DevEx rate) is now wrong. Labels follow [[Roblox Changes 2025-2026]].
@@ -127,3 +127,8 @@ Impact: a pass's price differs by player. Display the price from `GetProductInfo
 - [[Pricing and Store Design]]
 - [[Robux Price Points and Offer Design]]
 - [[Creator Store and Toolbox Safety]]
+
+<!-- related:start -->
+## Related
+[[Monetization Overview]] · [[Sponsored Ads and Campaign Math]] · [[Policy and Age Rules 2026]] · [[Data and Cloud Changes 2025-2026]] · [[Engine and API Changes 2025-2026]] · [[Commerce and Physical Goods]] · [[Regional Compliance - Paid Random Items and Country Rules]]
+<!-- related:end -->

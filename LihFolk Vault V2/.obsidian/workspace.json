@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "cfc0bffbdd64ee03",
+        "id": "216dd08f79ca8af0",
         "type": "tabs",
         "children": [
           {
-            "id": "e4d269b04ee41947",
+            "id": "613b999d84a1c809",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -167,8 +167,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -176,12 +175,44 @@
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "3d-graph:3D Graph": false
     }
   },
-  "active": "e4d269b04ee41947",
+  "active": "613b999d84a1c809",
   "lastOpenFiles": [
-    "Untitled.base",
-    "000 Moon Map.canvas"
+    "07 Lighting VFX and Audio/Engine and Tyre Audio Driven by RPM and Slip.md",
+    "13 Production and Case Studies/Case Study - Building LihFolk V2 with AI Agents.md",
+    "06 World Building and Art/Roads, Rivers and Paths Carved Along Curves in Terrain.md",
+    "25 Physics and Vehicles/Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver.md",
+    "09 Gameplay Systems/Police Chases and Wanted Levels.md",
+    "07 Lighting VFX and Audio/Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop.md",
+    "07 Lighting VFX and Audio/Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur.md",
+    "07 Lighting VFX and Audio/Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools.md",
+    "12 Performance Testing and Debugging/Genre QA Passes - Test Checklists per Game Type.md",
+    "58 Player QoL and Game Tweaks/UI Scale HUD Hide and Compact Mode.md",
+    "58 Player QoL and Game Tweaks/Settings Menu Essentials and Persistence.md",
+    "58 Player QoL and Game Tweaks/Graphics and Performance Toggles for Low-End Devices.md",
+    "58 Player QoL and Game Tweaks/Comfort Toggles - Flashes Damage Numbers and Hit-Stop.md",
+    "58 Player QoL and Game Tweaks/Camera Settings - FOV Shake Sensitivity and Shift-Lock.md",
+    "58 Player QoL and Game Tweaks/Audio Mixer Settings with SoundGroups.md",
+    "58 Player QoL and Game Tweaks",
+    "25 Physics and Vehicles/Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer.md",
+    "05 UI and UX/Race HUD - Position, Laps, Splits, Speedometer and Minimap.md",
+    "33 Level Design/Instanced Interiors - Pooled House and Room Copies for Many Players.md",
+    "08 Animation/05 Systems/Mounts and Rideable Creatures.md",
+    "33 Level Design/Kill Planes, Map Boundaries and Out-of-Bounds Recovery.md",
+    "25 Physics and Vehicles/Steering Geometry and Arcade Drifting - Ackermann, Slip and Grip Tuning.md",
+    "49 Roblox Platform Features/Photo Mode and In-Game Screenshots with CaptureService.md",
+    "09 Gameplay Systems/Map Voting and Rotation for Round Games.md",
+    "25 Physics and Vehicles/Rides and Attractions - Roller Coasters, Ziplines, Elevators and Cable Cars.md",
+    "25 Physics and Vehicles/Multi-Seat Vehicles - Driver, Passenger and Gunner Roles.md",
+    "05 UI and UX/Off-Screen Objective Markers and Waypoint Arrows.md",
+    "57 API and Concept Atlas",
+    "_tools/link_builder.py",
+    "000 Moon Map.canvas",
+    "07 Lighting VFX and Audio/Slash VFX Recipes - Crescent and Ring.md.tmp.36400.37ed963ae00a",
+    "Untitled 1.base",
+    "Untitled.base"
   ]
 }

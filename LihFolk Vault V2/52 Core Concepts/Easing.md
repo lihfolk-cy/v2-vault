@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, animation, ui, math, game-feel]
+tags: [core-concept, animation, ui, math, game-feel, type/reference, area/ui, level/beginner, api/TweenService, area/animation]
 ---
 # Easing
 
@@ -10,7 +10,7 @@ tags: [core-concept, animation, ui, math, game-feel]
 > - Entrances and exits should not mirror. Exits are usually shorter (rule of thumb: about 70 to 80 percent of the entrance...
 > - Strong curves need shorter durations. Exponential and Quint Out spend most of the time in a tiny tail; at 0.5 s they feel...
 >
-> Cost: TL;DR ~140 tok · whole note ~900 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~140 tok · whole note ~970 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Easing** is the shape of change over time: a function that maps linear progress `t` (0 to 1) to eased progress. Linear motion moves at constant speed; eased motion speeds up, slows down, overshoots or bounces. Roblox exposes this as `Enum.EasingStyle` (Linear, Sine, Quad, Cubic, Quart, Quint, Exponential, Circular, Back, Bounce, Elastic) combined with `Enum.EasingDirection` (In, Out, InOut) (Roblox docs, as of October 2026).
@@ -57,5 +57,10 @@ Related concepts: [[Tween vs Spring]], [[Anticipation]], [[Hit-Stop]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[CurveAnimation and Curve Channels]] · [[Links - Tweening and UI animation]] · [[Game Feel Start Here]] · [[UI and GUI Animation]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Animation Editor Workflow]] · [[Core Concepts Start Here]]
+[[CurveAnimation and Curve Channels]] · Links - Tweening and UI animation · Game Feel Start Here · UI and GUI Animation · KeyframeSequence Keyframe and Pose Reference · Animation Editor Workflow · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Power Curve]] · [[Variance]] · [[Accessibility Contrast]] · [[Input Buffering]] · [[Core Loop]] · [[Expected Value]] · [[Skinning Weights]] · [[Thumbnail Contrast]]
+<!-- related:end -->

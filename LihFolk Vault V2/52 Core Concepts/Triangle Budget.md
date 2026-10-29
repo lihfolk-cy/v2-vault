@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, art, 3d-modeling, performance]
+tags: [core-concept, art, 3d-modeling, performance, type/reference, area/performance, level/beginner, area/modeling]
 ---
 # Triangle Budget
 
@@ -10,7 +10,7 @@ tags: [core-concept, art, 3d-modeling, performance]
 > - Copies multiply. A 2,000-triangle bush placed 400 times is 800,000 triangles if all are visible.
 > - Silhouette needs triangles; flat faces do not.
 >
-> Cost: TL;DR ~140 tok · whole note ~920 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~140 tok · whole note ~990 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 A **triangle budget** is the agreed maximum number of triangles for an asset or a scene: "a common enemy is 3,000 triangles", "a weapon is 1,500", "the whole visible scene stays under 300,000 on phones". Budgets turn "is this too heavy?" into a check anyone can run.
@@ -58,5 +58,10 @@ Related concepts: [[Draw Calls]], [[Texel Density]], [[Skinning Weights]], [[Ins
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Spending Triangles Where the Camera Looks]] · [[Modelling Nuance Start Here]] · [[Modeling in Blender for Roblox]] · [[AI 3D Model Generation Outside Roblox]] · [[Modeling Fundamentals for Games]] · [[Roblox Generative AI - Cube Mesh and Texture Generation]] · [[Core Concepts Start Here]]
+[[Spending Triangles Where the Camera Looks]] · Modelling Nuance Start Here · Modeling in Blender for Roblox · AI 3D Model Generation Outside Roblox · Modeling Fundamentals for Games · Roblox Generative AI - Cube Mesh and Texture Generation · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Frame Budget]] · [[Streaming Radius]] · [[Thumbnail Contrast]] · [[Object Pooling]] · [[Accessibility Contrast]] · [[Hit-Stop]] · [[Replication Boundary]] · [[Safe Area]]
+<!-- related:end -->

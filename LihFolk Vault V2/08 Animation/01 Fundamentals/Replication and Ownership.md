@@ -1,5 +1,5 @@
 ---
-tags: [fundamentals, replication, networking, ownership]
+tags: [fundamentals, replication, networking, ownership, type/guide, area/animation, level/beginner, api/Animator, area/networking, api/Humanoid]
 ---
 # Replication and Ownership
 
@@ -10,7 +10,7 @@ tags: [fundamentals, replication, networking, ownership]
 > - If the Animator is not under a player's character, tracks must be loaded and started on the server to replicate.
 > - Remote viewers see the same clip a little later, by roughly the owner-to-server-to-viewer latency.
 >
-> Cost: TL;DR ~140 tok · whole note ~2.7k tok. Read more: ## The documented rules · ## Architecture 3: server writes state, every client animates (scales)
+> Cost: TL;DR ~140 tok · whole note ~2.8k tok. Read more: ## The documented rules · ## Architecture 3: server writes state, every client animates (scales)
 <!-- tldr:end -->
 
 Who plays an animation decides who sees it, how late they see it, how much bandwidth it costs, and whether the server can trust its timing. This note covers the Animator's replication rules (documented), what does and does not replicate (including the parts the docs leave implicit), how ownership interacts with it, and the three architectures that scale: owner-plays, server-plays, and server-writes-state with client playback. Asset ownership (whether a clip is *allowed* to load at all) is a separate topic: see [[Animation Asset Permissions and Groups]].
@@ -94,7 +94,7 @@ For many NPCs, the server skips animation entirely and writes small replicated a
 | `Fade`, `Phase` | Fade-out on death, boss phase (texture swaps, clip sets) |
 
 How it works:
-- The server's AI decides "attack now" and writes the attribute with the server time. Its damage timing comes from **data** (mark times in the enemy definition, or KeyframeMarker times exported from the clip). It never loads the clip.
+- The server's AI decides "attack now" and writes the attribute with the server time. Its damage timing comes from **data** (mark times in the enemy definition, or [[KeyframeMarker]] times exported from the clip). It never loads the clip.
 - Each client reacts to the attribute change, plays the clip, and **joins late** by `TimePosition = (serverNow - AnimT) * AnimSpeed` so all clients are in sync regardless of when they received the update. Combos continue part-way into the next clip via a time-offset attribute.
 - Clients LOD the animation by distance and cull off-screen enemies.
 
@@ -147,5 +147,10 @@ One game used exactly this for a 4.4 s ceremonial spin. No streaming of CFrames,
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Snippets - Lua Keyframe Player Core]] · [[Animation Objects]] · [[Replication Rules]] · [[Engine Gotchas]] · [[Client-Server Model]] · [[Replication Boundary]] · [[Animation Start Here]]
+[[Snippets - Lua Keyframe Player Core]] · [[Animation Objects]] · [[Replication Rules]] · [[Engine Gotchas]] · Client-Server Model · Replication Boundary · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Client-Server Model]] · [[AnimationTrack Reference]] · [[Animation LOD]] · [[Snippets - Playing Animations]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Playback, Priorities and Blending]] · [[Debugging Animation Problems]] · [[How the Animator Really Behaves]] · [[Bones and Skinned Meshes]]
+<!-- related:end -->

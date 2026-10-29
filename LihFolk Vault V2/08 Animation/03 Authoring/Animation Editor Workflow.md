@@ -1,5 +1,5 @@
 ---
-tags: [authoring, animation-editor, studio, workflow]
+tags: [authoring, animation-editor, studio, workflow, type/guide, area/animation, level/intermediate, api/Motor6D, area/studio, api/KeyframeSequence, api/Animator]
 ---
 # Animation Editor Workflow
 
@@ -12,7 +12,7 @@ tags: [authoring, animation-editor, studio, workflow]
 > - Planned beats with times; gameplay hit time known
 > - Blocked in Constant; poses read in silhouette from the game camera
 >
-> Cost: TL;DR ~170 tok · whole note ~5.0k tok. Read more: ## Preparing the rig · ## A blocking-to-polish workflow · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.1k tok. Read more: ## Preparing the rig · ## A blocking-to-polish workflow · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The built-in Animation Editor is the default way to hand-key clips in Roblox Studio. It is good enough for most character work, it writes exactly the data the engine plays (`KeyframeSequence`, or `CurveAnimation` if you use the curve editor), and it is the tool every other pipeline eventually has to agree with. This note is the day-to-day workflow: setting up a rig, blocking, splining, saving, looping and exporting, plus the traps that cost real projects time. Advanced features (curve editor, IK, events, keyframe optimisation, capture) are in [[Animation Editor Advanced]].
@@ -229,5 +229,10 @@ A clip is never seen alone. It blends in from whatever was playing and hands bac
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Engine Gotchas]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Animation Glossary]] · [[Weapon Rig Player]] · [[AI Animation and Motion from Video]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Animation Start Here]]
+[[Engine Gotchas]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Animation Glossary]] · [[Weapon Rig Player]] · [[AI Animation and Motion from Video]] · Voxel Characters - Proportions Joints and Rigging · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Animation Data from Blender to Roblox]] · [[Snippets - Building and Sampling Clips]] · [[Spec-Driven Move Authoring]] · [[Testing Animations in Studio]] · [[Animation Objects]] · [[R15 Run Cycle Key Poses]] · [[Rigs and Joints]] · [[Weapon and Combat Animation]]
+<!-- related:end -->

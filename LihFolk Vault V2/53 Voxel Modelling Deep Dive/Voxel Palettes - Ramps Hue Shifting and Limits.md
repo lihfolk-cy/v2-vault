@@ -1,5 +1,5 @@
 ---
-tags: [modeling, voxel, palette, colour, ramps, hue-shifting, oklab, luau, art-direction]
+tags: [modeling, voxel, palette, colour, ramps, hue-shifting, oklab, luau, art-direction, type/reference, area/modeling, level/advanced]
 ---
 # Voxel Palettes - Ramps Hue Shifting and Limits
 
@@ -12,7 +12,7 @@ tags: [modeling, voxel, palette, colour, ramps, hue-shifting, oklab, luau, art-d
 > - Three steps per material by default; four only on large close surfaces.
 > - Hue shift tuned to each zone's lighting; tested at low and high quality on a phone.
 >
-> Cost: TL;DR ~200 tok · whole note ~4.3k tok. Read more: ## 7. Laying out the palette for cheap recolours · ## 9. Snapping a messy build onto a palette (OKLab quantiser) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~200 tok · whole note ~4.4k tok. Read more: ## 7. Laying out the palette for cheap recolours · ## 9. Snapping a messy build onto a palette (OKLab quantiser) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 In voxel art the palette is the texture. There are no painted details to hide a weak colour choice behind: every cell is one flat colour, and the only things that turn those flat colours into form are the steps between them and the engine's lighting. [[Voxel and Blocky Modeling]] gives a three-tone ramp (shadow, body, lit top) built by plain mixing. This note goes further: why straight mixing towards black and white gives dull ramps, how hue shifting fixes it and how far to push it under Roblox lighting, how many colours a game palette should have and why exact colour equality matters for merging, how to lay a palette out so recolours are cheap, and a Luau quantiser that snaps a messy build onto a palette using perceptual distance.
@@ -72,7 +72,7 @@ HSV is fine for picking hue rotations, but its "value" is not how bright a colou
 
 ## 6. How big should the palette be?
 
-**Tool limits.** MagicaVoxel stores 256 palette entries with index 0 meaning empty, so 255 colours per file (file format specification). Goxel stores 24-bit RGB per voxel. Roblox has no palette limit: a Part's `Color` and a MeshPart's `Color` are arbitrary `Color3` values, and vertex colours are arbitrary too.
+**Tool limits.** [[MagicaVoxel]] stores 256 palette entries with index 0 meaning empty, so 255 colours per file (file format specification). Goxel stores 24-bit RGB per voxel. Roblox has no palette limit: a Part's `Color` and a MeshPart's `Color` are arbitrary `Color3` values, and vertex colours are arbitrary too.
 
 **Practical limits** are set by consistency and merging, not tools (rules of thumb):
 
@@ -262,5 +262,10 @@ Run it inside a ChangeHistoryService recording if you use it as a plugin, so the
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Colour Scripts and Value Structure for Untextured Art]] · [[Voxel Modelling Start Here]] · [[The Gradient Palette Texture Workflow]] · [[Lighting Untextured Art in Roblox]] · [[Untextured Stylised Modelling Start Here]] · [[Hand-Painted and Stylized Texturing]]
+[[Colour Scripts and Value Structure for Untextured Art]] · [[Voxel Modelling Start Here]] · The Gradient Palette Texture Workflow · Lighting Untextured Art in Roblox · Untextured Stylised Modelling Start Here · Hand-Painted and Stylized Texturing
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[The Gradient Palette Texture Workflow]] · [[Lighting Untextured Art in Roblox]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Voxel Scale Grids and Stud Alignment]] · [[Voxel Props Environments and Modular Tiles]] · [[Voxel Characters - Proportions Joints and Rigging]]
+<!-- related:end -->

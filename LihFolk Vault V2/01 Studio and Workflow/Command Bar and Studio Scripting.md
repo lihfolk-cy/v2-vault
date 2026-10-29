@@ -1,5 +1,5 @@
 ---
-tags: [studio, command-bar, tooling, edit-mode, workflow, gotchas]
+tags: [studio, command-bar, tooling, edit-mode, workflow, gotchas, type/guide, area/studio, level/intermediate, api/HttpService, area/scripting, api/Terrain]
 ---
 # Command Bar and Studio Scripting
 
@@ -12,7 +12,7 @@ tags: [studio, command-bar, tooling, edit-mode, workflow, gotchas]
 > - Reads shared modules with clone-require.
 > - Resolves targets by path, tag or attribute, never Selection.
 >
-> Cost: TL;DR ~130 tok · whole note ~3.9k tok. Read more: ## 7. Never use undo in a shared place · ## 8. Editing script sources safely · ## 10. Common mistakes · ## 11. Checklist for a new Studio tool
+> Cost: TL;DR ~130 tok · whole note ~4.1k tok. Read more: ## 7. Never use undo in a shared place · ## 8. Editing script sources safely · ## 10. Common mistakes · ## 11. Checklist for a new Studio tool
 <!-- tldr:end -->
 
 The Command Bar runs Luau against the place you have open, with more permissions than game scripts. It is how senior developers do bulk edits, audits, generators, installers and one-off fixes without writing a plugin. It is also the place where a single line can damage hours of other people's work. This note covers the bar itself, the security context, and the patterns that make Studio scripting safe and repeatable: stale `require` and the clone-require fix, HTTP loaders for large tools, budgeted resumable loops, safe edits to script sources (including the 200,000 character `Source` limit), and why you never use undo in a shared place.
@@ -299,5 +299,10 @@ end
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Undo and ChangeHistoryService Done Right]] · [[Studio Settings and Shortcuts]] · [[Batch Processing Tools in Studio]] · [[Safety Rules for AI Agents in Studio]] · [[Studio Plugins and Local HTTP Bridges]] · [[Roblox Studio Assistant]]
+[[Undo and ChangeHistoryService Done Right]] · [[Studio Settings and Shortcuts]] · Batch Processing Tools in Studio · Safety Rules for AI Agents in Studio · Studio Plugins and Local HTTP Bridges · Roblox Studio Assistant
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Batch Processing Tools in Studio]] · [[Studio Plugins and Local HTTP Bridges]] · [[Team Create and Collaboration]] · [[Studio Interface Tour]] · [[Studio Assistant and AI Tools]] · [[External Tooling - Rojo Wally Selene StyLua]] · [[Packages and Asset Reuse]] · [[Creator Store and Toolbox Safety]] · [[Testing Modes - Play Run and Multi-Client]] · [[Places Universes and Experience Settings]]
+<!-- related:end -->

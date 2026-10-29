@@ -1,5 +1,5 @@
 ---
-tags: [worked-build, daily-rewards, retention, time, remotes, ui, luau, strict]
+tags: [worked-build, daily-rewards, retention, time, remotes, ui, luau, strict, type/guide, area/gameplay, level/intermediate, area/ui]
 ---
 # Daily Rewards System End to End
 
@@ -12,7 +12,7 @@ tags: [worked-build, daily-rewards, retention, time, remotes, ui, luau, strict]
 > - Missed-day policy decided and written down
 > - Claim takes no arguments, is rate-limited, never yields between check and mark
 >
-> Cost: TL;DR ~160 tok · whole note ~5.9k tok. Read more: ## 4. Server · ## 5. Client and UI · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~6.0k tok. Read more: ## 4. Server · ## 5. Client and UI · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A seven-day reward track with a streak: the player claims once per UTC day, consecutive days advance the track, a missed day resets it, and day 7 pays a bigger prize before the track loops. The server decides everything from its own clock; the client only displays state and asks to claim. This note builds it from an empty place on top of the foundation in [[Saved Inventory End to End]] (the `PlayerData`, `Net`, `RateLimiter` and `InventoryService` modules), and shows the UI, the tests, the attacks and the extensions.
@@ -533,5 +533,10 @@ Clear `DailyDayOffset` when done. It is read only in Studio, so a forgotten valu
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Live Ops Events and Updates]] · [[Skill - Roblox System Builder]] · [[Cookbook - Tables Strings and Time]] · [[Battle Pass and Season Design]] · [[Event Calendars and Content Planning]] · [[Idempotency]]
+[[Live Ops Events and Updates]] · Skill - Roblox System Builder · Cookbook - Tables Strings and Time · Battle Pass and Season Design · Event Calendars and Content Planning · Idempotency
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Testing Time-Based Features with a Controllable Clock]] · [[Global Leaderboards End to End]] · [[LihFolk Systems Library]] · [[Rebirth and Prestige System End to End]] · [[Quest Chain System End to End]] · [[Round-Based Minigame Loop End to End]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[Pet Hatching and Following End to End]]
+<!-- related:end -->

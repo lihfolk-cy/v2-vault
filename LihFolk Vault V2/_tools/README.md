@@ -10,6 +10,7 @@ Python 3, standard library only. Everything here is deterministic, and every che
 | `snippets.py` | Compiles every Luau code block with the official Luau compiler. | `python "LihFolk Vault V2/_tools/snippets.py" --strict` |
 | `consistency.py` | Finds notes that disagree on a number, and date stamps that are getting old. | `python "LihFolk Vault V2/_tools/consistency.py" --strict` |
 | `eval.py` | Scores the search on 90 hand-written tasks with known answers. | `python "LihFolk Vault V2/_tools/eval.py"` |
+| `link_builder.py` | Graph layer: `## Related` blocks (mostly same-section), the `57 API and Concept Atlas` notes, `area/ level/ type/ api/` tags and first-mention links. Run it before `build_index.py`. | `python "LihFolk Vault V2/_tools/link_builder.py"` (`--check`, `--no-inbound`) |
 
 Reports are written to `reports/`.
 

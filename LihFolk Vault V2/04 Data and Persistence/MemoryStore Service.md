@@ -1,5 +1,5 @@
 ---
-tags: [data, memorystore, matchmaking, queues, sorted-map, hash-map, cross-server]
+tags: [data, memorystore, matchmaking, queues, sorted-map, hash-map, cross-server, type/guide, area/data, level/intermediate, api/RemoveAsync, area/performance]
 ---
 # MemoryStore Service
 
@@ -12,7 +12,7 @@ tags: [data, memorystore, matchmaking, queues, sorted-map, hash-map, cross-serve
 > - Processed items are explicitly removed.
 > - Reads are cached per server and staggered.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.6k tok. Read more: ## Quotas and request units (Roblox docs, October 2026) · ## Patterns · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.8k tok. Read more: ## Quotas and request units (Roblox docs, October 2026) · ## Patterns · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 `MemoryStoreService` is Roblox's shared, fast, **expiring** storage: every server of an experience can read and write the same queues, sorted maps and hash maps with low latency, and every item disappears after its time to live (at most 45 days). It is the right tool for matchmaking, cross-server auctions and trading boards, live event leaderboards, server registries, and as a cache in front of data stores. It is the wrong tool for anything that must survive. This note lists the three structures, their exact quotas (October 2026), how request units are counted, sharding, failure codes, and working patterns.
@@ -277,5 +277,10 @@ Memory store data is **isolated between Studio and production**: Studio sessions
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Matchmaking Queues with MemoryStore]] · [[Links - MemoryStore]] · [[Server Browsers and Server Lists]] · [[Multiplayer Services Start Here]] · [[Cookbook - Data and Saving]] · [[Debugging DataStore Problems]]
+[[Matchmaking Queues with MemoryStore]] · Links - MemoryStore · Server Browsers and Server Lists · Multiplayer Services Start Here · Cookbook - Data and Saving · Debugging DataStore Problems
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Server Browsers and Server Lists]] · [[Saving Correctly - Autosave and BindToClose]] · [[Player Privacy and Data Deletion]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[HttpService and External APIs]] · [[Schema Migrations - Worked Case Studies]] · [[Data Loss Prevention and Recovery]] · [[Purchase Data and Receipts]] · [[Trading Systems Without Duplication]]
+<!-- related:end -->

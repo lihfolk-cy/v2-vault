@@ -1,5 +1,5 @@
 ---
-tags: [snippets, luau, playback, animator]
+tags: [snippets, luau, playback, animator, type/reference, area/animation, level/intermediate, api/AnimationTrack, area/scripting, api/Animator, api/AnimationPriority, api/Animation]
 ---
 # Snippets: Playing Animations
 
@@ -9,7 +9,7 @@ tags: [snippets, luau, playback, animator]
 > - Avoid: Setting `Priority` after `Play`.
 > - Avoid: Computing speed from `Length` before the clip has loaded (speed 0, frozen clip).
 >
-> Cost: TL;DR ~100 tok · whole note ~6.1k tok. Read more: ## 1. The module · ## 3. Swapping the default Animate clips · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~6.3k tok. Read more: ## 1. The module · ## 3. Swapping the default Animate clips · ## Common mistakes
 <!-- tldr:end -->
 
 Production patterns for playing clips through the engine `Animator`: finding the Animator, caching tracks, preloading, waiting for a clip to load, marker hooks that do not leak, fitting a clip to a gameplay window, hit-stop that survives overlapping hits, swapping the default Animate clips, phase-synced locomotion crossfades, and resolving a published id with a fallback.
@@ -473,5 +473,10 @@ Beware duplicates: if a full-body clip and its upper-body copy can both play, li
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Animation playback]] · [[Animation Objects]] · [[Troubleshooting Table]] · [[Lua Keyframe Player]] · [[Input Buffering]] · [[Hitboxes and Hit Detection]] · [[Animation Start Here]]
+[[Links - Animation playback]] · [[Animation Objects]] · [[Troubleshooting Table]] · [[Lua Keyframe Player]] · Input Buffering · Hitboxes and Hit Detection · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Snippets - Lua Keyframe Player Core]] · [[Snippets - Enemy Client Animator]] · [[Replication and Ownership]] · [[Combat Animation Craft]] · [[Custom Locomotion Controller Design]] · [[Snippets - Ragdoll]] · [[Debugging Animation Problems]] · [[Ability Kits Architecture]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [studio, interface, workflow, beginner, layout]
+tags: [studio, interface, workflow, beginner, layout, type/guide, area/studio, level/intermediate, area/ui]
 ---
 # Studio Interface Tour
 
@@ -12,7 +12,7 @@ tags: [studio, interface, workflow, beginner, layout]
 > - Team custom tab JSON copied into `CustomRibbonTabs`; Reload custom tabs.
 > - Output: Show Context and Show Source on.
 >
-> Cost: TL;DR ~170 tok · whole note ~4.5k tok. Read more: ## 2. The top of the window: mezzanine and toolbar · ## 4. The windows you will use every day · ## 9. Common mistakes · ## 10. Checklist: a new machine, ready in fifteen minutes
+> Cost: TL;DR ~170 tok · whole note ~4.6k tok. Read more: ## 2. The top of the window: mezzanine and toolbar · ## 4. The windows you will use every day · ## 9. Common mistakes · ## 10. Checklist: a new machine, ready in fifteen minutes
 <!-- tldr:end -->
 
 Roblox Studio is an editor, a test harness, a collaboration client, an asset browser and a script IDE in one window. This note walks the interface the way a senior developer uses it: what each region is for, which data model you are looking at, how to lay it out for different jobs, and the traps that make experienced people lose work. Menu paths and shortcuts were checked against the official Studio docs as of October 2026. Studio updates weekly, so labels drift; where a feature is beta it says so.
@@ -233,5 +233,10 @@ Studio performance is not game performance, but a slow editor slows the whole te
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Roblox Studio]] · [[Building a Studio Plugin End to End]] · [[Selection Editing and Bulk Tools]] · [[Team Create Permissions and Workflows]] · [[Links - Team Create]] · [[Roblox Studio Assistant]]
+[[Links - Roblox Studio]] · Building a Studio Plugin End to End · Selection Editing and Bulk Tools · Team Create Permissions and Workflows · Links - Team Create · Roblox Studio Assistant
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Building a Studio Plugin End to End]] · [[Team Create Permissions and Workflows]] · [[Roblox Studio Assistant]] · [[Selection Editing and Bulk Tools]] · [[Safety Rules for AI Agents in Studio]] · [[Working with AI Assistants in Studio]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [procedural, hit-reaction, death, knockdown, springs, combat, enemies, luau]
+tags: [procedural, hit-reaction, death, knockdown, springs, combat, enemies, luau, type/guide, area/animation, level/intermediate, api/LocalTransparencyModifier]
 ---
 # Procedural Death Knockdown and Hit Reactions
 
@@ -9,7 +9,7 @@ tags: [procedural, hit-reaction, death, knockdown, springs, combat, enemies, lua
 > - Every hit looks identical: one flinch clip -> directional clips, or springs with noise
 > - Reactions stack into jitter: flinches during stuns and knockups -> skip the flinch while a stronger reaction owns the body
 >
-> Cost: TL;DR ~120 tok · whole note ~3.6k tok. Read more: ## 1. Hit reactions · ## 2. Knockdowns and deaths · ## Common mistakes
+> Cost: TL;DR ~120 tok · whole note ~3.7k tok. Read more: ## 1. Hit reactions · ## 2. Knockdowns and deaths · ## Common mistakes
 <!-- tldr:end -->
 
 Reactions are where combat feels fair or cheap. A hit with no visible effect on the target reads as a miss; a death that clips into a hill reads as a bug; a knockback that ignores where the blow came from reads as canned. Reactions are also where clips struggle most, because they depend on things a clip cannot know: the direction of the hit, how hard, what the target was doing, the slope under it, the moment another player's ultimate peaks. This note covers three families and the numbers one live action game (the reference project) used for each:
@@ -184,7 +184,7 @@ So the same sequence drives a biped, a six-legged beast, a crab or a ghost: a cr
 
 Details that made it read well:
 
-- **Synchronised to the camera, not the network.** For the player casting the ultimate, the climax time came from their local cinematic (the same frame as the camera's cut and impact frames), if it was within 0.6 s of the server's; onlookers used the server's time. Otherwise the caster saw the blast one network trip early or late.
+- **Synchronised to the camera, not the network.** For the player casting the ultimate, the climax time came from their local cinematic (the same frame as the camera's cut and [[impact frames]]), if it was within 0.6 s of the server's; onlookers used the server's time. Otherwise the caster saw the blast one network trip early or late.
 - **Re-caught while held:** a second pull just moves the climax and extends the hold instead of restarting the sequence.
 - **Joints follow targets through the springs**, so overlap and follow-through come for free and a jolt is just another impulse.
 - **AI is locked** until 1.65 s after the climax; the full Caught behaviour always plays out (a longer hold extends it).
@@ -209,5 +209,10 @@ Related: [[Hit Reactions Stagger and Hit-Stop]], [[Enemy and NPC Animation]], [[
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animating Creatures and Monsters]] · [[Ground Fitting Pipeline]] · [[Procedural Animation]] · [[Creature Rig Conventions]] · [[Skeleton Library]] · [[Tween vs Spring]] · [[Animation Start Here]]
+[[Animating Creatures and Monsters]] · [[Ground Fitting Pipeline]] · [[Procedural Animation]] · [[Creature Rig Conventions]] · [[Skeleton Library]] · Tween vs Spring · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Multi-Bone IK - FABRIK and CCD]] · [[Snippets - Enemy Client Animator]] · [[Snippets - Procedural Motion]] · [[Boss Animation and Phases]] · [[Snippets - Ragdoll]] · [[Combat Animation Craft]] · [[Inverse Kinematics]] · [[Flight Flocks and Path Animation]]
+<!-- related:end -->

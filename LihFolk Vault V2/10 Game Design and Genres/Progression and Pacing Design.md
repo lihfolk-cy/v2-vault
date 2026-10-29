@@ -1,5 +1,5 @@
 ---
-tags: [game-design, progression, pacing, curves, rebirth, prestige, math]
+tags: [game-design, progression, pacing, curves, rebirth, prestige, math, type/guide, area/design, level/intermediate, area/math]
 ---
 # Progression and Pacing Design
 
@@ -12,7 +12,7 @@ tags: [game-design, progression, pacing, curves, rebirth, prestige, math]
 > - Each curve anchored to a design target and solved, not guessed.
 > - Rebirth time per rebirth rises gently, with new multiplier sources planned.
 >
-> Cost: TL;DR ~180 tok · whole note ~5.0k tok. Read more: ## 3. A worked zone ladder (reference project) · ## 5. Rebirth and prestige maths · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.2k tok. Read more: ## 3. A worked zone ladder (reference project) · ## 5. Rebirth and prestige maths · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 Progression is the shape of a player's growth over time; pacing is how that growth **feels** minute by minute. On Roblox the standard tools are exponential cost curves, zone or gate ladders, power numbers, and a reset loop (rebirth or prestige) that turns the late game into a faster replay of the early game. This note gives the maths, the reasons each curve behaves as it does, the production numbers from one game's zone ladder, and the traps (compounding sensitivity, number overflow, rebirths that get slower forever).
@@ -367,5 +367,10 @@ The server must still validate every purchase against these numbers; see [[Serve
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Power Curve]] · [[Rebirth and Prestige System End to End]] · [[Simulator and RNG Genre Teardown]] · [[Pricing Curves and Upgrade Costs]] · [[Economy Inflation Sinks and Faucets Math]] · [[Simulating an Economy Before Launch]]
+[[Power Curve]] · Rebirth and Prestige System End to End · [[Simulator and RNG Genre Teardown]] · Pricing Curves and Upgrade Costs · Economy Inflation Sinks and Faucets Math · Simulating an Economy Before Launch
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Pricing Curves and Upgrade Costs]] · [[Rarity Ladders and Drop Pacing Math]] · [[Economy Inflation Sinks and Faucets Math]] · [[Genre Playbook - Tycoons]] · [[Genre Playbook - Obbies and Platformers]] · [[Genre Playbook - Tower Defense]] · [[Boss Fight Design Patterns]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Social Design and Multiplayer Play]] · [[Ethical Design and Player Trust]]
+<!-- related:end -->

@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [hub, modeling, untextured, stylised, flat-colour, gradient-atlas, normals, lighting, art-direction]
+tags: [hub, modeling, untextured, stylised, flat-colour, gradient-atlas, normals, lighting, art-direction, type/hub, area/modeling, level/beginner]
 ---
 # Untextured Stylised Modelling Start Here
 
@@ -59,5 +59,5 @@ Roblox does not document several behaviours this section relies on. The notes la
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Bevels Chamfers and Edge Highlights Without Textures]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Style Bibles for Consistent Models]] · [[Baking Lighting and Detail into Textures]] · [[Hand-Painted and Stylized Texturing]] · [[Modeling in Blender for Roblox]]
+[[Bevels Chamfers and Edge Highlights Without Textures]] · Voxel Shading - Baked AO Edges and Lighting · Style Bibles for Consistent Models · Baking Lighting and Detail into Textures · Hand-Painted and Stylized Texturing · Modeling in Blender for Roblox
 <!-- auto-links:end -->

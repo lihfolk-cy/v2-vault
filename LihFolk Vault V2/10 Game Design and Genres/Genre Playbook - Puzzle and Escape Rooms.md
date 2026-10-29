@@ -1,5 +1,5 @@
 ---
-tags: [game-design, genre, puzzle, escape-room, co-op, hints, level-design, state]
+tags: [game-design, genre, puzzle, escape-room, co-op, hints, level-design, state, type/guide, area/design, level/intermediate, api/Player]
 ---
 # Genre Playbook - Puzzle and Escape Rooms
 
@@ -12,7 +12,7 @@ tags: [game-design, genre, puzzle, escape-room, co-op, hints, level-design, stat
 > - Answers and puzzle logic only on the server; guesses rate-limited and distance-checked.
 > - Group state synchronised; late joiners receive current state.
 >
-> Cost: TL;DR ~150 tok · whole note ~3.7k tok. Read more: ## 3. Puzzle design rules · ## 5. Systems you must build · ## 10. Common mistakes · ## 11. Launch checklist
+> Cost: TL;DR ~150 tok · whole note ~3.8k tok. Read more: ## 3. Puzzle design rules · ## 5. Systems you must build · ## 10. Common mistakes · ## 11. Launch checklist
 <!-- tldr:end -->
 
 Puzzle games on Roblox include escape rooms (find clues, solve locks, open the door before the timer runs out), co-op puzzle adventures (two or more players with separate abilities or separate views), physics puzzles, logic puzzles with a progression map, and story games where puzzles gate the plot. The genre has a smaller audience than simulators or combat, but it is loyal, social and less crowded, and it is one of the few genres where a small team with good ideas can compete with big studios, because the content is ideas rather than assets.
@@ -277,5 +277,10 @@ Patterns, not copies:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Difficulty Options and Cognitive Load]] · [[Dungeon and Room Generation]] · [[Voice Chat and Safety Features]] · [[Multiplayer Services Start Here]] · [[Teaching Through Level Design]] · [[Reserved and Private Servers in Practice]]
+[[Difficulty Options and Cognitive Load]] · Dungeon and Room Generation · Voice Chat and Safety Features · Multiplayer Services Start Here · Teaching Through Level Design · Reserved and Private Servers in Practice
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Puzzle Dependency Charts and Hint Systems]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Simulators]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - Party and Minigame Collections]] · [[Teaching Through Level Design]]
+<!-- related:end -->

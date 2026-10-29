@@ -1,5 +1,5 @@
 ---
-tags: [team, code-review, luau, quality, security, git, workflow, strict-mode]
+tags: [team, code-review, luau, quality, security, git, workflow, strict-mode, type/guide, area/production, level/intermediate, api/BindToClose]
 ---
 # Code Review for Luau Teams
 
@@ -12,7 +12,7 @@ tags: [team, code-review, luau, quality, security, git, workflow, strict-mode]
 > - Reviewer reads in risk order and asks "what if this runs twice?" for every grant.
 > - Every remote argument typed `unknown` and validated; rate limits present.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.6k tok. Read more: ## 2. The review order · ## 3. Luau smells with fixes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.7k tok. Read more: ## 2. The review order · ## 3. Luau smells with fixes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Code review on Roblox teams is usually either absent ("we all edit live, it's fine") or a rubber stamp on a pull request nobody reads. Neither catches what actually breaks Roblox games: a remote handler that trusts the client, a save that yields inside `PlayerRemoving` and is lost on shutdown, a connection that leaks once per round, a `::` cast that hides a nil. This note is a working review practice for small Luau teams: what to review in what order, the Luau-specific smells with before and after code, how to review when your code lives only in Studio, what to automate so humans do not argue about formatting, how to review AI-generated code, and how to keep review fast enough that people do not route around it.
@@ -324,5 +324,10 @@ Roblox teams change a lot that is not code: UI layouts, lighting, map areas, sou
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Team Collaboration Start Here]] · [[Agent Review Loops and Guardrails in Practice]] · [[Team Create Permissions and Workflows]] · [[Team Create and Collaboration]] · [[Links - External tooling]] · [[Testing Strategies and Frameworks]]
+[[Team Collaboration Start Here]] · [[Agent Review Loops and Guardrails in Practice]] · [[Team Create Permissions and Workflows]] · Team Create and Collaboration · Links - External tooling · Testing Strategies and Frameworks
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Automated Luau Checks - LihFolk Hook and Audit]] · [[MCP Workflows for Scripting and Debugging]] · [[Packages and Shared Assets Across Places]] · [[Team Create and Collaboration]] · [[Cookbook - Remotes and Networking]] · [[Working with Contractors and Revenue Splits]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [pipelines, release, testing, qa, publishing, rollback, environments]
+tags: [pipelines, release, testing, qa, publishing, rollback, environments, type/guide, area/pipelines, level/intermediate]
 ---
 # Build Test and Release Pipeline
 
@@ -12,7 +12,7 @@ tags: [pipelines, release, testing, qa, publishing, rollback, environments]
 > - Change list with tags, owners and honest statuses
 > - Shipping state checked: previews off, test flags cleared
 >
-> Cost: TL;DR ~160 tok · whole note ~3.6k tok. Read more: ## Stage 3: static checks · ## Stage 8: publish · ## Failure modes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.7k tok. Read more: ## Stage 3: static checks · ## Stage 8: publish · ## Failure modes · ## Checklist
 <!-- tldr:end -->
 
 Every other pipeline in this section ends with content in a place. This one takes the place to players: assembling a build, proving it works, publishing it, watching it, and rolling it back if it does not. On Roblox the moment of release is brutally simple (Publish, and new servers run the new version) which is exactly why the process around it matters. This note is a release pipeline for a small team, with the gates one production game used and the honesty rules it learned. Related: [[Release Process and Rollbacks]] (production view), [[QA Checklists Before Release]], [[Testing Strategies and Frameworks]], [[Multi-Client and Live Testing]], [[Server Lifecycle and Shutdown]], [[Publishing an Experience]].
@@ -116,7 +116,7 @@ These are described in [[UI Asset Pipeline]] and [[Audio Pipeline]]. A tutorial 
 
 ## Stage 5: automated tests
 
-- **Pure logic** (damage formulas, odds, economy maths, data migrations) as unit tests, runnable outside Roblox with Lune or inside with a test runner.
+- **Pure logic** (damage formulas, odds, economy maths, data migrations) as unit tests, runnable outside Roblox with [[Lune]] or inside with a test runner.
 - **Engine logic** in the cloud through Open Cloud Luau Execution against the test place (scripts up to 4 MB, 5-minute runs, at most 10 incomplete tasks per place, data model changes not persisted; Roblox docs). Recipe in [[Code Pipeline - Rojo Git and CI]].
 - **Data migrations**: load saved fixtures of old profile versions and check they migrate ([[Data Schema Design and Migrations]]).
 
@@ -217,5 +217,10 @@ Small, frequent releases are safer than big ones: fewer changes per release, eas
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Places Universes and Experience Settings]] · [[Git and Source Control for Roblox]] · [[Server Shutdowns Soft Updates and Migration]] · [[Feature Flags]] · [[Feature Flags and Staged Rollouts]] · [[Packages and Shared Assets Across Places]]
+[[Places Universes and Experience Settings]] · Git and Source Control for Roblox · Server Shutdowns Soft Updates and Migration · Feature Flags · Feature Flags and Staged Rollouts · Packages and Shared Assets Across Places
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Batch Processing Tools in Studio]] · [[Environment and Level Pipeline]] · [[Art Pipeline - Concept to In-Game Asset]] · [[Icon and Thumbnail Rendering Pipeline]] · [[Localization Pipeline]] · [[Character and Creature Pipeline]] · [[Blender Automation with Python]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [ui, declarative, react-lua, fusion, vide, state, architecture]
+tags: [ui, declarative, react-lua, fusion, vide, state, architecture, type/guide, area/ui, level/intermediate]
 ---
 # Declarative UI - React-Lua and Fusion
 
@@ -12,7 +12,7 @@ tags: [ui, declarative, react-lua, fusion, vide, state, architecture]
 > - Server-replicated data feeds one client store.
 > - Each property has exactly one owner.
 >
-> Cost: TL;DR ~110 tok · whole note ~3.6k tok. Read more: ## 2. React-Lua · ## 3. Fusion 0.3 · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~110 tok · whole note ~3.7k tok. Read more: ## 2. React-Lua · ## 3. Fusion 0.3 · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Imperative UI code says "when the gem count changes, find the label and set its text". Declarative UI code says "the label's text is the gem count", and a library keeps the instances in sync with your state. On Roblox the declarative options are community libraries, mainly **React-Lua** (a Luau port of React), **Fusion** (reactive state objects) and **Vide** (a smaller reactive library). This note explains how each works, when declarative UI is worth it and when it is not, how to combine it with Studio-authored art, and the performance traps.
@@ -267,5 +267,10 @@ See also: [[Project Structure and Bootstrapping]], [[Frameworks - Knit Matter an
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - UI frameworks]] · [[Tween vs Spring]] · [[Cookbook - UI]] · [[Plugin UI with DockWidgets]] · [[Tools and Inventory Systems]] · [[Code Pipeline - Rojo Git and CI]]
+[[Links - UI frameworks]] · Tween vs Spring · Cookbook - UI · Plugin UI with DockWidgets · Tools and Inventory Systems · Code Pipeline - Rojo Git and CI
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[HUD Design]] · [[Virtualized Lists and Large Inventories]] · [[UI Motion Language and Timing]] · [[Gamepad and Console UX]] · [[Layout - Scale Offset and Constraints]] · [[Input - UserInputService and ContextActionService]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]]
+<!-- related:end -->

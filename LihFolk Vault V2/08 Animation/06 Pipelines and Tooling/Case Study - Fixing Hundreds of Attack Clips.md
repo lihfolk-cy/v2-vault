@@ -1,5 +1,5 @@
 ---
-tags: [case-study, pipeline, arms, qa, ik]
+tags: [case-study, pipeline, arms, qa, ik, type/case-study, area/animation, level/advanced, api/Animator]
 ---
 # Case Study: Fixing Hundreds of Attack Clips
 
@@ -10,7 +10,7 @@ tags: [case-study, pipeline, arms, qa, ik]
 > - The wrist aiming the blade. Where the arm could not reach the required blade direction, the solver bent the wrist.
 > - The request was short: "arms in weird positions, especially in the Moves preview." The Moves preview plays each ability on a...
 >
-> Cost: TL;DR ~160 tok · whole note ~3.3k tok. Read more: ## Step 1: write the standard, then measure · ## Step 5: scale out, and what broke
+> Cost: TL;DR ~160 tok · whole note ~3.4k tok. Read more: ## Step 1: write the standard, then measure · ## Step 5: scale out, and what broke
 <!-- tldr:end -->
 
 How one live action game took its whole library of ability clips (several hundred moves across roughly a hundred weapon kits, built by several generations of tools) from "93% visibly broken arms" to zero criticals on everything it touched, without re-authoring the choreography. This is the story and the lessons; the workflow is [[Pipeline - Arm IK Baking and QA]], the algorithms [[Arm Baker Internals]], the metrics [[Arm QA Metrics Reference]].
@@ -100,7 +100,7 @@ Roughly **two thirds of the library** was installed as re-baked clips, all with 
 
 ## Step 6: the interpolation discovery
 
-Two installed moves stubbornly scored 9-12 deg worse in the Animator than the baker's model predicted, always on the off-hand shoulder raised overhead. Not a clamp, not easing. The investigation measured the Animator directly on fresh plays and found it does **not** slerp quaternions between keys. It blends **rotation vectors** linearly (axis times angle from the joint's rest, using the pair of representations closest together). For small steps and joints near rest the two models agree; they part on big key-to-key turns of joints far from rest.
+Two installed moves stubbornly scored 9-12 deg worse in the Animator than the baker's model predicted, always on the off-hand shoulder raised overhead. Not a clamp, not easing. The investigation measured the Animator directly on fresh plays and found it does **not** [[slerp]] [[quaternions]] between keys. It blends **rotation vectors** linearly (axis times angle from the joint's rest, using the pair of representations closest together). For small steps and joints near rest the two models agree; they part on big key-to-key turns of joints far from rest.
 
 | Model | Error vs the Animator (15 fresh clips) |
 |---|---|
@@ -162,5 +162,10 @@ All kit folders ended at or under 2,500 instances except four that were already 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Spec-Driven Move Authoring]] · [[Elbow Poles Swivel and Joint Limits]] · [[Inverse Kinematics]] · [[Weapon Swing Design]] · [[AI Animation and Motion from Video]] · [[Case Study - Building a Game with AI Agents]] · [[Animation Start Here]]
+[[Spec-Driven Move Authoring]] · [[Elbow Poles Swivel and Joint Limits]] · [[Inverse Kinematics]] · [[Weapon Swing Design]] · [[AI Animation and Motion from Video]] · Case Study - Building a Game with AI Agents · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Animation Review Checklist]] · [[Posing and Silhouettes]] · [[LihFolk R15 Keyframe Pipeline]] · [[Pipeline - New Animated Weapon]] · [[Human Swing Biomechanics]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Blade Grip and Wrist Limits]] · [[Keyframes, Easing and Interpolation]]
+<!-- related:end -->

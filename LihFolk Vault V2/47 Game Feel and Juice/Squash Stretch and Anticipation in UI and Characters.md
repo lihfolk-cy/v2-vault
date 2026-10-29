@@ -1,5 +1,5 @@
 ---
-tags: [game-feel, juice, squash-stretch, anticipation, ui, animation, springs, luau]
+tags: [game-feel, juice, squash-stretch, anticipation, ui, animation, springs, luau, type/guide, area/game-feel, level/intermediate, api/AnchorPoint]
 ---
 # Squash Stretch and Anticipation in UI and Characters
 
@@ -12,7 +12,7 @@ tags: [game-feel, juice, squash-stretch, anticipation, ui, animation, springs, l
 > - Text is never squashed; art and labels are separate layers.
 > - Pivot chosen by force direction (centre for presses, bottom for landings).
 >
-> Cost: TL;DR ~170 tok · whole note ~4.8k tok. Read more: ## 3. A volume-preserving squash spring · ## 6. Anticipation that hides latency · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.9k tok. Read more: ## 3. A volume-preserving squash spring · ## 6. Anticipation that hides latency · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Principles of Animation for Games]] explains squash, stretch and anticipation as animation principles, and notes that rigid R15 parts cannot squash. [[UI Motion Language and Timing]] gives UI motion verbs and durations, including a press squash. This note is the engineering layer between them: how to get real non-uniform squash on Roblox UI and props when `UIScale` is uniform and CFrames carry no scale, how to keep volume so squash looks elastic rather than broken, how to stretch along velocity, and how to use anticipation to **hide latency** instead of adding it. It ends with the cases where both principles make a game feel worse.
@@ -158,7 +158,7 @@ Usage: on press, `Squash.kick(button.Art, -0.12)`; for a cartoon reward card lan
 
 Two details worth noticing:
 
-- **The deformation is set instantly, then springs back.** The impact frame is the extreme pose. Tweening into the squash adds 50 to 100 ms of mush to the moment that should be sharpest.
+- **The deformation is set instantly, then springs back.** The [[Impact Frames|impact frame]] is the extreme pose. Tweening into the squash adds 50 to 100 ms of mush to the moment that should be sharpest.
 - **Sub-stepping.** Springs integrated with one Euler step per frame go unstable at low frame rates with stiff settings. At 4 Hz and 30 fps a single step is fine, but designers will push frequency up to 8 Hz for snappy buttons; sub-stepping to 120 Hz keeps it stable everywhere.
 
 ---
@@ -354,5 +354,10 @@ Enemy wind-ups are the player's dodge window. [[Combat Sound Design and Feedback
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Anticipation]] · [[Tween vs Spring]] · [[Game Feel Start Here]] · [[UI and GUI Animation]] · [[Snippets - Procedural Motion]] · [[Ropes Chains and Soft Bodies]]
+[[Anticipation]] · Tween vs Spring · [[Game Feel Start Here]] · UI and GUI Animation · Snippets - Procedural Motion · Ropes Chains and Soft Bodies
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Tween vs Spring]] · [[UI and GUI Animation]] · [[Snippets - Procedural Motion]] · [[Hit-Stop and Screen Shake Tuning by Numbers]] · [[Juice on a Budget - Mobile and Low-End]] · [[Feedback Timing - Sound Visual and Haptic Sync]]
+<!-- related:end -->

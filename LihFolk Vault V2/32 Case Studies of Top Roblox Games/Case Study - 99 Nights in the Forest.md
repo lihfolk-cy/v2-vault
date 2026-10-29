@@ -1,5 +1,5 @@
 ---
-tags: [case-study, top-games, survival, horror, co-op, live-ops, retention, monetization, marketing]
+tags: [case-study, top-games, survival, horror, co-op, live-ops, retention, monetization, marketing, type/case-study, area/design, level/intermediate]
 ---
 
 # Case Study - 99 Nights in the Forest
@@ -203,5 +203,10 @@ The monster's AI checks `isInsideLight` before chasing a target, and the client 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Case Study - Grow a Garden]] · [[Case Study - Steal a Brainrot]] · [[Top Games Case Studies Start Here]] · [[Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks]] · [[Links - Horror game mechanics]] · [[Links - Music and ambience]]
+[[Case Study - Grow a Garden]] · [[Case Study - Steal a Brainrot]] · [[Top Games Case Studies Start Here]] · [[Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks]] · [[Links - Horror game mechanics]] · Links - Music and ambience
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Case Study - Doors]] · [[Case Study - Pet Simulator 99]] · [[Case Study - Adopt Me]] · [[Case Study - Dress to Impress]] · [[Case Study - Fisch]] · [[Case Study - Blox Fruits]] · [[Case Study - Dead Rails]] · [[Case Study - Brookhaven RP]]
+<!-- related:end -->

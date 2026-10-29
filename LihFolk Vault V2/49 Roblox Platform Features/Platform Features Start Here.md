@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [platform-features, hub, badges, invites, notifications, subscriptions, commerce, social]
+tags: [platform-features, hub, badges, invites, notifications, subscriptions, commerce, social, type/hub, area/platform, level/beginner]
 ---
 # Platform Features Start Here
 
@@ -10,7 +10,7 @@ It builds on older notes. Read them first if the topic is new; the notes here go
 
 - [[Social Design and Multiplayer Play]]: why friends, co-play and visible status matter, and the basic invite call.
 - [[Monetization Overview]]: the money map, and where subscriptions and commissions fit among passes and products.
-- [[Subscriptions and Premium Payouts]]: subscription payouts and rules, Roblox Plus and Creator Rewards.
+- [[Subscriptions and Premium Payouts]]: subscription payouts and rules, Roblox Plus and [[Creator Rewards]].
 - [[Community Building]] and [[Retention and Return Hooks]]: the strategy behind invites, share links and notifications.
 - [[Links - Badges]]: outside resources on badges. There is no older badge note in the vault; [[Badges and Achievement Design]] is the first.
 
@@ -23,7 +23,7 @@ It builds on older notes. Read them first if the topic is new; the notes here go
 | [[Experience Notifications and Return Prompts]] | Reaching players after they leave | One notification per user per day, the 30-day opt-in prompt, engagement-driven reach, a MemoryStore due-time queue, update announcements, event RSVPs |
 | [[Subscriptions and Recurring Revenue]] | Subscriptions that earn trust and renew | Subscription state machine, grace period, per-cycle grants, churn and lifetime value arithmetic, honest cancellation, webhooks |
 | [[Commerce and Physical Goods]] | Selling real-world merchandise, or the digital alternative | Shopify-linked commerce products, US-only buyers 13+, digital benefit thresholds, revocation by webhook, 40% game-owner commission on in-game avatar item sales |
-| [[Avatar Context Menus Profiles and Social Surfaces]] | Safe, useful ways for players to act on each other | Avatar Context Menu options and theme, inspect menu modes, SetCore friend and block prompts, respecting blocks server-side, profile card data |
+| [[Avatar Context Menus Profiles and Social Surfaces]] | Safe, useful ways for players to act on each other | Avatar Context Menu options and theme, inspect menu modes, [[SetCore]] friend and block prompts, respecting blocks server-side, profile card data |
 
 ## Suggested reading paths
 
@@ -44,5 +44,5 @@ It builds on older notes. Read them first if the topic is new; the notes here go
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Subscriptions and payouts]] · [[Links - Community and social]] · [[Refunds Chargebacks and Purchase Support]] · [[Live Ops Events and Updates]] · [[Resource Library - Monetization]] · [[Discovery and the Algorithm]]
+[[Links - Subscriptions and payouts]] · Links - Community and social · Refunds Chargebacks and Purchase Support · Live Ops Events and Updates · Resource Library - Monetization · Discovery and the Algorithm
 <!-- auto-links:end -->

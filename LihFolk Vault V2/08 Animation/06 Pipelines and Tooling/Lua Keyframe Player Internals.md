@@ -1,5 +1,5 @@
 ---
-tags: [pipeline, runtime, keyframesequence, internals, interpolation, advanced]
+tags: [pipeline, runtime, keyframesequence, internals, interpolation, advanced, type/guide, area/animation, level/advanced, api/Animator, api/Pose]
 ---
 # Lua Keyframe Player Internals
 
@@ -10,7 +10,7 @@ tags: [pipeline, runtime, keyframesequence, internals, interpolation, advanced]
 > - `SampleCFrame(clip, joint, t, scale)` wraps this and returns a CFrame; it is how tools and procedural systems read clips...
 > - Track state: `TimePosition`, `Speed`, `Length`, `Looped`, `Priority` (and a numeric rank), `IsPlaying`, `WeightCurrent`...
 >
-> Cost: TL;DR ~160 tok · whole note ~4.9k tok. Read more: ## 1. The clip table · ## 3. Sampling one joint
+> Cost: TL;DR ~160 tok · whole note ~5.0k tok. Read more: ## 1. The clip table · ## 3. Sampling one joint
 <!-- tldr:end -->
 
 How the general Lua keyframe player ("KeyframePlayer") of one production game works inside: parsing, the interpolation dispatch, easing codes, sampling at the ends, the weight and priority mixer, fades and time, marker delivery, level of detail, replication, `Compose`, and the API. Read [[Lua Keyframe Player]] first for the why. Every behaviour below was matched against `Animator:StepAnimations` in Edit; where the code encodes a measurement, it says so. Copyable core: [[Snippets - Lua Keyframe Player Core]].
@@ -26,7 +26,7 @@ j     = { name, n, t = {times}, rv = {rotation vectors}, p = {offsets}, ease = {
           va, vb (closest rotation-vector pairs, always) }
 ```
 
-Rotations are stored as **rotation vectors** (`axis * angle`, from `CFrame:ToAxisAngle()`), not quaternions or CFrames, because the Animator's dominant interpolation mode blends rotation vectors and its weighting scales them. A NaN guard returns zero for identity (ToAxisAngle can yield a NaN angle there).
+Rotations are stored as **rotation vectors** (`axis * angle`, from `CFrame:ToAxisAngle()`), not [[quaternions]] or CFrames, because the Animator's dominant interpolation mode blends rotation vectors and its weighting scales them. A NaN guard returns zero for identity (ToAxisAngle can yield a NaN angle there).
 
 ### Parsing Poses
 
@@ -306,5 +306,10 @@ Security: the relay forwards client-authored data to other clients. Validate key
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Engine Gotchas]] · [[AnimationTrack Reference]] · [[Snippets - Building and Sampling Clips]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Rotations Angles and Quaternions]] · [[Buffers and Binary Data]] · [[Animation Start Here]]
+[[Engine Gotchas]] · [[AnimationTrack Reference]] · [[Snippets - Building and Sampling Clips]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Rotations Angles and Quaternions]] · Buffers and Binary Data · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Authoring Clips in Code]] · [[Baked Clip Stubs and Archiving]] · [[Animation Data from Blender to Roblox]] · [[Animation Glossary]] · [[Debugging Animation Problems]] · [[Animation Editor Advanced]] · [[Performance and Memory]] · [[Case Study - Abilities That Only Worked in Studio]]
+<!-- related:end -->

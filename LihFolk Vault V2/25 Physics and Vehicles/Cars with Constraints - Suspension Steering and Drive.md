@@ -1,5 +1,5 @@
 ---
-tags: [physics, vehicles, constraints, cars, suspension, network-ownership]
+tags: [physics, vehicles, constraints, cars, suspension, network-ownership, type/guide, area/physics, level/intermediate, api/SetNetworkOwner, area/networking, api/CollectionService]
 ---
 # Cars with Constraints - Suspension Steering and Drive
 
@@ -12,7 +12,7 @@ tags: [physics, vehicles, constraints, cars, suspension, network-ownership]
 > - One corner built and mirrored; constraint axes checked with visualisation.
 > - Spring stiffness, damping and free length computed from mass, frequency and damping ratio.
 >
-> Cost: TL;DR ~170 tok · whole note ~6.4k tok. Read more: ## 3. Suspension: compute it, do not guess · ## 4. Drive and steering from player input · ## 10. Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~6.6k tok. Read more: ## 3. Suspension: compute it, do not guess · ## 4. Drive and steering from player input · ## 10. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A drivable car on Roblox can be built with almost no code: a chassis, four wheels on hinges, springs and a `VehicleSeat`. It will also flip on the first bump, slide sideways like soap, stutter for passengers and let an exploiter drive it at 900 studs per second. This note goes past "attach a HingeConstraint" into the decisions that make a car feel good and stay fair: which constraint layout to use, how to compute spring numbers instead of guessing, how to drive and steer from player input, why the centre of mass matters more than the engine, who should simulate the car, and when to throw the physical wheels away and use raycast suspension.
@@ -475,5 +475,10 @@ Use a collision group so the rays ignore the car itself and other cars' visuals,
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Racing Laps and Checkpoints End to End]] · [[Links - Constraints]] · [[Ropes Chains and Soft Bodies]] · [[Rigs and Joints]] · [[Modeling Weapons and Props]] · [[Custom Rigs - Weapons and Props]]
+[[Racing Laps and Checkpoints End to End]] · Links - Constraints · [[Ropes Chains and Soft Bodies]] · Rigs and Joints · Modeling Weapons and Props · Custom Rigs - Weapons and Props
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Choosing a Car Chassis - Raycast Suspension vs Constraint Builds vs Community Kits]] · [[Centre of Mass, Anti-Flip and Self-Righting]] · [[Engine, Gearbox and Torque Curve Model for Arcade Cars]] · [[Steering Geometry and Arcade Drifting - Ackermann, Slip and Grip Tuning]] · [[Multi-Seat Vehicles - Driver, Passenger and Gunner Roles]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[Standing on Moving Vehicles and Platforms - Keeping Players Glued]] · [[Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver]]
+<!-- related:end -->

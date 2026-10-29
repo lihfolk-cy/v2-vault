@@ -1,5 +1,5 @@
 ---
-tags: [modeling, voxel, grid, scale, studs, alignment, pivots, export, luau, blender, magicavoxel]
+tags: [modeling, voxel, grid, scale, studs, alignment, pivots, export, luau, blender, magicavoxel, type/guide]
 ---
 # Voxel Scale Grids and Stud Alignment
 
@@ -12,10 +12,10 @@ tags: [modeling, voxel, grid, scale, studs, alignment, pivots, export, luau, ble
 > - All cell sizes are binary fractions (1, 0.5, 0.25, 0.125) and each divides the largest.
 > - Module size decided (4 studs if the game uses terrain).
 >
-> Cost: TL;DR ~220 tok · whole note ~4.7k tok. Read more: ## 3. How many pixels does one cell cover? · ## 8. Auditing alignment with a script · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~220 tok · whole note ~4.8k tok. Read more: ## 3. How many pixels does one cell cover? · ## 8. Auditing alignment with a script · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-Every voxel model starts with one number: how many studs wide a single cube is. Choose it badly and nothing else in this section can save you. Cells that are too small turn into shimmering noise on a phone and multiply your triangle count; cells that are too large make every character look like a placeholder; cells that are not a clean binary fraction of a stud drift off the grid after a few hundred placements and leave hairline cracks between tiles. [[Voxel and Blocky Modeling]] gives the starting grains by object type. This note goes underneath that table: the arithmetic of picking a cell size, how the voxel grid relates to the other grids already in Roblox (the stud, terrain cells, the old voxel lighting grid, Studio's snap increments), where pivots should sit, how scale survives the trip from MagicaVoxel or Blender into Studio, and how to audit a finished model for alignment with a script.
+Every voxel model starts with one number: how many studs wide a single cube is. Choose it badly and nothing else in this section can save you. Cells that are too small turn into shimmering noise on a phone and multiply your triangle count; cells that are too large make every character look like a placeholder; cells that are not a clean binary fraction of a stud drift off the grid after a few hundred placements and leave hairline cracks between tiles. [[Voxel and Blocky Modeling]] gives the starting grains by object type. This note goes underneath that table: the arithmetic of picking a cell size, how the voxel grid relates to the other grids already in Roblox (the stud, terrain cells, the old voxel lighting grid, Studio's snap increments), where pivots should sit, how scale survives the trip from [[MagicaVoxel]] or Blender into Studio, and how to audit a finished model for alignment with a script.
 
 ## 1. The units you are working against
 
@@ -100,7 +100,7 @@ Each tool has its own idea of a unit. The safe workflow is to fix the scale once
 
 - **MagicaVoxel** writes one voxel as one unit in its OBJ export (tool docs and community documentation; see [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]). Its view is Z-up.
 - **Blender** works best for Roblox with 1 Blender unit = 1 stud (vault convention; see [[Blender Workflow for Roblox Creators]]). Importing a MagicaVoxel OBJ, scale it by the cell size (0.25 for 0.25-stud voxels) and apply the scale.
-- **Blockbench** models in 16 units per block in many formats (tool docs); test its glTF output with a reference cube before trusting any scale.
+- **[[Blockbench]]** models in 16 units per block in many formats (tool docs); test its glTF output with a reference cube before trusting any scale.
 - **The Roblox 3D Importer** has a Scale Unit option that defaults to Studs, plus World Forward and World Up options for axis fixes (Roblox docs, as of October 2026).
 
 **Reference cube test.** Before building anything, make a cube of exactly 16 x 16 x 16 cells in your voxel tool. At 0.25-stud cells it must import as 4 x 4 x 4 studs. Put it next to a 4 x 4 x 4 Part in Studio and look along an edge: any gap or overlap means the pipeline scale is wrong. Keep this cube in every project's Blender file and re-run the test whenever you change exporter version or settings.
@@ -223,5 +223,10 @@ Notes on the script: a MeshPart's `Size` is its bounding box, so a voxel mesh wi
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Voxel Modelling Start Here]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Modeling Fundamentals for Games]] · [[Skill - Roblox Asset Import]] · [[Tilemaps Cameras and Parallax for 2D Levels]] · [[Exporting and Validating Models for Roblox]]
+[[Voxel Modelling Start Here]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Modeling Fundamentals for Games]] · Skill - Roblox Asset Import · Tilemaps Cameras and Parallax for 2D Levels · Exporting and Validating Models for Roblox
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Voxel Palettes - Ramps Hue Shifting and Limits]] · [[Modelling to the Roblox Camera and Player Scale]] · [[Exporting and Validating Models for Roblox]] · [[Bevels Chamfers and Edge Highlights Without Textures]] · [[Modeling in Blender for Roblox]] · [[Keeping a Mixed Asset Library Consistent]]
+<!-- related:end -->

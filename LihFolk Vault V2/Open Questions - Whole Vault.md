@@ -1,5 +1,5 @@
 ---
-tags: [index, unresolved, research]
+tags: [index, unresolved, research, type/guide, level/intermediate, api/DataStore, api/SurfaceAppearance, api/Terrain]
 ---
 # Open Questions - Whole Vault
 
@@ -19,7 +19,7 @@ Conflicts the writers found between Roblox's own documentation pages, between th
 | Server Authority mode (`Workspace.AuthorityMode`, `RunService:BindToSimulation`, client prediction) documented; docs call it beta in places | [[Client-Server Model]], [[Custom Character Controllers]] |
 | `KeyframeSequenceProvider` deprecated for `AnimationClipProvider` | [[Animator Deep Dive]] |
 | New Type Solver general release (Nov 2025); strict users opt in via `Workspace.UseNewLuauTypeSolver` | [[Luau Type System and Strict Mode]] |
-| Premium Payouts replaced by Creator Rewards (July 2025); Roblox Plus launched April 2026, Premium closed to new sign-ups, `PromptPremiumPurchase` deprecated | [[Subscriptions and Premium Payouts]] |
+| Premium Payouts replaced by [[Creator Rewards]] (July 2025); Roblox Plus launched April 2026, Premium closed to new sign-ups, `PromptPremiumPurchase` deprecated | [[Subscriptions and Premium Payouts]] |
 | Cross-game pass and product sales ended May 30, 2026 | [[Game Passes]] |
 | Maturity tiers now Kids 5-8, Select 9-15, 16+, Content May Vary, Restricted 18+ | [[Roblox Policies Ratings and Compliance]] |
 | External social links in experiences banned (January 2026); player text must go through `TextChatService` | [[Age Checks and Safety Features]] |
@@ -31,7 +31,7 @@ Conflicts the writers found between Roblox's own documentation pages, between th
 | Topic | Claim A | Claim B | Discussed in |
 |---|---|---|---|
 | Texture size | "up to 4096x4096" | "up to 1024x1024 pixel spaces for texture maps"; accessories capped at 2048; a performance page says keep images at 512 or below | [[Textures Decals and Texture Memory]], [[Texturing and PBR Baking]] |
-| ShadowSoftness | default 0.2, works with ShadowMap/Future | API dump default 0.5; guide says only with LightingStyle Realistic | [[Light Sources and Shadows]] |
+| [[ShadowSoftness]] | default 0.2, works with ShadowMap/Future | API dump default 0.5; guide says only with LightingStyle Realistic | [[Light Sources and Shadows]] |
 | Highlight.FillTransparency default | 0 (guide) | 0.5 (API dump) | [[Highlights and Selection Effects]] |
 | Flipbook texture | must be 1024x1024 (error message) | an exact multiple of the layout (reference) | [[Particle Emitters In Depth]] |
 | MicroProfiler shortcut | Ctrl+F6 | Ctrl+Alt+F6 | [[MicroProfiler Guide]] |
@@ -42,7 +42,7 @@ Conflicts the writers found between Roblox's own documentation pages, between th
 | `Model.LevelOfDetail` | `Automatic` currently behaves like `Disabled` | projects still pin `Disabled` in case the default changes | [[Level of Detail and Model Streaming]] |
 | Cyclic require | hangs with no error (reference) | errors "Requested module was required recursively" (guide) | [[Module Scripts and Requiring]] |
 | `Humanoid.MoveDirection`, `ControllerBase.Active` | read-only (description) | ReadWrite (API listing) | [[Characters and Humanoids]] |
-| ApplyImpulse on player characters | client or server may call it | in practice a server impulse arrives late or is overwritten | [[Mover Constraints and Physics Controllers]] |
+| [[ApplyImpulse]] on player characters | client or server may call it | in practice a server impulse arrives late or is overwritten | [[Mover Constraints and Physics Controllers]] |
 | DataStore experience limits | 300 + CCU x 40 / 20 (limits page) | 250 + CCU x 40 / 20; List 10 + CCU x 2 vs 300 + CCU x 2 (Extended Services) | [[DataStore Fundamentals]] |
 | DataStore storage | 500 MB + 1 MB per lifetime user | 100 MB + 1 MB | [[DataStore Fundamentals]] |
 | Open Cloud calls from HttpService | don't count toward 500/min | do count | [[HttpService and External APIs]], [[Open Cloud APIs]] |
@@ -154,7 +154,7 @@ See also: [[00 Start Here]], [[Glossary]], [[Open Questions]].
 ## Round 4 additions (October 2026)
 
 ### Platform changes found
-- **Async renames (2026):** many methods were deprecated in favour of `Async` versions: `ApplyDescription` / `ApplyDescriptionReset`, `GetHumanoidDescriptionFromUserId`, `CreateHumanoidModelFromDescription`, `LoadCharacterWithHumanoidDescription`, `LoadCharacter` (now `LoadCharacterAsync`), `PlayerOwnsAsset`, `GetProductInfo` (now `GetProductInfoAsync`), and AvatarEditorService getters such as `GetInventory`, `SearchCatalog` and `GetItemDetails`. Older notes and older code samples in this vault may still use the old names; they work for now but should be migrated. See [[HumanoidDescription and Outfit Systems]].
+- **Async renames (2026):** many methods were deprecated in favour of `Async` versions: `ApplyDescription` / `ApplyDescriptionReset`, `GetHumanoidDescriptionFromUserId`, `CreateHumanoidModelFromDescription`, `LoadCharacterWithHumanoidDescription`, `LoadCharacter` (now `LoadCharacterAsync`), `PlayerOwnsAsset`, `GetProductInfo` (now `GetProductInfoAsync`), and [[AvatarEditorService]] getters such as `GetInventory`, `SearchCatalog` and `GetItemDetails`. Older notes and older code samples in this vault may still use the old names; they work for now but should be migrated. See [[HumanoidDescription and Outfit Systems]].
 - `WrapLayer.Puffiness` and `ShrinkFactor` are deprecated.
 - `TextService:FilterAndTranslateStringAsync` is marked deprecated; [[Localization]] still presents it as an option. Use `FilterStringAsync`.
 - `Plugin:GetStudioUserId` is deprecated in favour of `StudioService:GetUserId`; [[Plugins - Using and Writing]] still lists the old call. The docs' own "Studio widgets" guide still shows the deprecated `CreateDockWidgetPluginGui`.
@@ -191,10 +191,10 @@ See also: [[00 Start Here]], [[Glossary]], [[Open Questions]].
 - "Saved Inventory End to End": reconcile refills non-empty template arrays, and PlayerData has no BeforeRelease pre-save hook, so writes at leave time race the leave save.
 
 **Materials and Surfaces**
-- How are same-key MaterialVariants resolved during a theme swap, and does MaterialService replicate to clients?
+- How are same-key MaterialVariants resolved during a theme swap, and does [[MaterialService]] replicate to clients?
 - Do different SurfaceAppearance.Color tints stop meshes from instancing together?
-- In what order do Decal UVScale and UVOffset combine with StudsPerTile?
-- Lighting.Technology is deprecated in favour of LightingStyle and PrioritizeLightingQuality. Older lighting notes still treat Technology as current.
+- In what order do Decal UVScale and UVOffset combine with [[StudsPerTile]]?
+- Lighting.Technology is deprecated in favour of LightingStyle and [[PrioritizeLightingQuality]]. Older lighting notes still treat Technology as current.
 - Textures can be uploaded at up to 4096 px, but PBR guidance still says 1024; the CC0 library note says 1024.
 
 ## Section 45 (Procedural Blender Assets)
@@ -215,9 +215,9 @@ See also: [[00 Start Here]], [[Glossary]], [[Open Questions]].
 
 ## Round 9 (sections 53 to 55, modelling)
 - Vertex colours on MeshParts: the importer keeps them and community guides say they multiply with MeshPart.Color, but the MeshPart reference does not document this or whether they show under a SurfaceAppearance. Older notes call it measured.
-- SurfaceAppearance.ResampleMode Pixelated: does it also stop mipmap blending at distance? MeshPart has no ResampleMode.
+- SurfaceAppearance.ResampleMode Pixelated: does it also stop mipmap blending at distance? MeshPart has no [[ResampleMode]].
 - Do MeshPart and SurfaceAppearance textures repeat when UVs go past 0 to 1? Greedy-meshed voxel faces with tiling studs depend on it.
-- Do custom or weighted normals survive automatic mesh LODs (RenderFidelity Automatic, bands under 250, 250 to 500 and over 500 studs)?
+- Do custom or [[weighted normals]] survive automatic mesh LODs (RenderFidelity Automatic, bands under 250, 250 to 500 and over 500 studs)?
 - Default camera zoom distances and the starting camera distance (about 12 to 13 studs) are set by the camera scripts and not documented on the StarterPlayer page.
 - Voxel grain: older voxel notes use 0.3 and 0.4 stud grains; [[Voxel Scale Grids and Stud Alignment]] prefers binary 0.25 and 0.5 for anything tiled or scripted. Both are reasonable; pick one per project.
-- MagicaVoxel's 256 voxels per axis limit and its OBJ exporter behaviour come from community sources; Blockbench glTF unit mapping and Goxel face merging are unconfirmed.
+- [[MagicaVoxel]]'s 256 voxels per axis limit and its OBJ exporter behaviour come from community sources; [[Blockbench]] glTF unit mapping and Goxel face merging are unconfirmed.

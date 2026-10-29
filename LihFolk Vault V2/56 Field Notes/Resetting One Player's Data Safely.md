@@ -1,5 +1,5 @@
 ---
-tags: [field-notes, datastore, data, reset, support, versioning, live-ops, luau]
+tags: [field-notes, datastore, data, reset, support, versioning, live-ops, luau, type/guide, area/data, level/intermediate, api/RemoveAsync]
 ---
 # Resetting One Player's Data Safely
 
@@ -12,7 +12,7 @@ tags: [field-notes, datastore, data, reset, support, versioning, live-ops, luau]
 > - Player kicked from all servers; session lock released.
 > - Current values dumped to disk before removal.
 >
-> Cost: TL;DR ~170 tok · whole note ~1.6k tok. Read more: ## 1. Find the exact stores and key formats in code · ## 3. Remove with RemoveAsync, which is recoverable · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~1.7k tok. Read more: ## 1. Find the exact stores and key formats in code · ## 3. Remove with RemoveAsync, which is recoverable · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 "Please reset my data" (or a tester who needs a fresh account, or a corrupted profile) sounds like one `RemoveAsync`. In a real game it is several stores with different key formats, a session system that will happily write the old data back, and purchase records that must not be touched. Done carelessly, the reset either does nothing (the next save restores everything) or does too much (the player is re-granted purchases). This note is the procedure that worked. Foundations: [[DataStore Fundamentals]], [[Session Locking and Profile Libraries]]; deletion requests: [[Player Privacy and Data Deletion]].
@@ -108,5 +108,10 @@ After the removal, have the player (or the tester account) join. Confirm the fre
 
 ## Connected notes
 <!-- auto-links:start -->
-[[DataStore Fundamentals]] · [[Session Locking and Profile Libraries]] · [[Player Privacy and Data Deletion]] · [[Debugging DataStore Problems]] · [[Developer Products and ProcessReceipt]] · [[Field Notes Start Here]]
+[[DataStore Fundamentals]] · Session Locking and Profile Libraries · Player Privacy and Data Deletion · Debugging DataStore Problems · Developer Products and ProcessReceipt · [[Field Notes Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Cookbook - Data and Saving]] · [[OrderedDataStores and Leaderboards]] · [[Running Many AI Agents on One Roblox Place]] · [[A Stuck Player Watchdog That Logs the Cause]] · [[Layering Camera Feedback on the Default Camera]] · [[Streaming Joins - Frozen Players and Loading Screen Teardown]]
+<!-- related:end -->

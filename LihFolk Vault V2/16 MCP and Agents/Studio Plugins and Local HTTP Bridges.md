@@ -1,5 +1,5 @@
 ---
-tags: [plugins, http, tooling, studio, bridges, mcp]
+tags: [plugins, http, tooling, studio, bridges, mcp, type/guide, area/ai, level/intermediate, api/HttpService, area/studio]
 ---
 # Studio Plugins and Local HTTP Bridges
 
@@ -12,7 +12,7 @@ tags: [plugins, http, tooling, studio, bridges, mcp]
 > - Receiver validates paths and sizes.
 > - Loader uses cache busting and readable chunk names.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.5k tok. Read more: ## 3. Pattern B: the receiver (post results out) · ## Nuances and edge cases · ## 9. Checklist · ## More common mistakes
+> Cost: TL;DR ~150 tok · whole note ~4.6k tok. Read more: ## 3. Pattern B: the receiver (post results out) · ## Nuances and edge cases · ## 9. Checklist · ## More common mistakes
 <!-- tldr:end -->
 
 Long before MCP, developers connected Roblox Studio to the outside world with a simple trick: Studio can make HTTP requests to a server on your own machine. A plugin or the command bar fetches code and data from `http://127.0.0.1`, and posts results back. Rojo works this way. Roblox's original MCP reference server worked this way. And even with the built-in [[Roblox Studio MCP Server]], the reference project relied on local HTTP every day, because MCP tool calls are the wrong pipe for megabytes of source, images and baked data.
@@ -262,5 +262,10 @@ MCP did not make these patterns obsolete. MCP is the right pipe for **decisions 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Plugin Development Start Here]] · [[What Is MCP]] · [[AI Agents and Autonomous Workflows]] · [[MCP Workflows for Building Worlds]] · [[Pipeline Design Principles]] · [[Version History and Backups]]
+[[Plugin Development Start Here]] · [[What Is MCP]] · AI Agents and Autonomous Workflows · [[MCP Workflows for Building Worlds]] · Pipeline Design Principles · Version History and Backups
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Moving Data Out of a Play Session]] · [[Multiple Agents in One Studio]] · [[MCP Workflows for Scripting and Debugging]] · [[Case Study - Building a Game with AI Agents]] · [[Setting Up MCP Clients]] · [[Blender MCP]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]] · [[Agent Review Loops and Guardrails in Practice]]
+<!-- related:end -->

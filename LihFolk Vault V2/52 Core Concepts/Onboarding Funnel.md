@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, analytics, onboarding, game-design, retention]
+tags: [core-concept, analytics, onboarding, game-design, retention, type/reference, area/design, level/beginner, api/AnalyticsService]
 ---
 # Onboarding Funnel
 
@@ -10,7 +10,7 @@ tags: [core-concept, analytics, onboarding, game-design, retention]
 > - Steps must be ordered and each logged once.
 > - The biggest drop is not always the one to fix.
 >
-> Cost: TL;DR ~110 tok · whole note ~890 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~110 tok · whole note ~960 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 An **onboarding funnel** is the ordered list of steps a new player should pass through in their first session (joined, loaded, moved, finished the first action, got the first reward, made the first upgrade), with the share of players who reach each step. Each drop between steps shows where new players give up.
@@ -59,5 +59,10 @@ Related concepts: [[Retention Cohorts]], [[Core Loop]], [[Telemetry Events]], [[
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Click-Through Rate]] · [[Links - Analytics]] · [[Discovery and the Algorithm]] · [[Core Loops and Session Design]] · [[Links - Quests and progression]] · [[Level Design Start Here]] · [[Core Concepts Start Here]]
+[[Click-Through Rate]] · [[Links - Analytics]] · Discovery and the Algorithm · Core Loops and Session Design · Links - Quests and progression · Level Design Start Here · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Variance]] · [[Faucets and Sinks]] · [[Feature Flags]] · [[Event Bus]] · [[Streaming Radius]] · [[Instance Count]] · [[Data Schema Versioning]] · [[Replication Boundary]]
+<!-- related:end -->

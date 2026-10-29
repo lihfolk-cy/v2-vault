@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, scripting]
+tags: [resources, links, scripting, type/reference, area/scripting, level/intermediate, area/debugging]
 ---
 # Links - Error handling and debugging
 
@@ -48,5 +48,5 @@ Part of [[Resource Library - Scripting]] in the [[Resource Library Start Here]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Roblox Studio]] · [[Links - Analytics]] · [[Links - Testing]] · [[Links - Game passes]] · [[Debugging Start Here]] · [[Debugger Breakpoints and Logging]]
+[[Links - Roblox Studio]] · [[Links - Analytics]] · [[Links - Testing]] · [[Links - Game passes]] · [[Debugging Start Here]] · Debugger Breakpoints and Logging
 <!-- auto-links:end -->

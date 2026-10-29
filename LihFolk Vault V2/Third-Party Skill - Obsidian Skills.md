@@ -1,5 +1,5 @@
 ---
-tags: [ai, agents, ai-skill, obsidian, third-party]
+tags: [ai, agents, ai-skill, obsidian, third-party, type/guide, area/ai, level/intermediate]
 ---
 # Third-Party Skill - Obsidian Skills
 
@@ -53,5 +53,5 @@ Other agents: copy the `skills` folder into the tool's skills path (Codex uses `
 
 ## Connected notes
 <!-- auto-links:start -->
-[[LICENSE]] · [[Skill - Roblox Debugging]] · [[LihFolk UI Design System]] · [[Studio Assistant and AI Tools]] · [[Setting Up MCP Clients]] · [[CHANGELOG]]
+[[LICENSE]] · [[Skill - Roblox Debugging]] · [[LihFolk UI Design System]] · Studio Assistant and AI Tools · Setting Up MCP Clients · [[CHANGELOG]]
 <!-- auto-links:end -->

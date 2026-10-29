@@ -1,5 +1,5 @@
 ---
-tags: [production, lessons, index, moc, case-study]
+tags: [production, lessons, index, moc, case-study, type/case-study, area/production, level/intermediate, area/monetization]
 ---
 # Lessons Learned Index
 
@@ -171,5 +171,10 @@ If you keep only five:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Team Collaboration Start Here]] · [[Case Study - Building a Game with AI Agents]] · [[Pipeline Design Principles]] · [[Scoping and Roles for Small Teams]] · [[AI Agents and Autonomous Workflows]] · [[Multiple Agents in One Studio]]
+[[Team Collaboration Start Here]] · Case Study - Building a Game with AI Agents · Pipeline Design Principles · [[Scoping and Roles for Small Teams]] · AI Agents and Autonomous Workflows · Multiple Agents in One Studio
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Case Study - Building a Game with AI Agents]] · [[Pipeline Design Principles]] · [[Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts]] · [[Case Study - Building LihFolk V2 with AI Agents]] · [[Live Incident Response and Post-Mortems]] · [[Ship a Game in 30 Days - Week-by-Week Plan for a Solo Dev]] · [[Template Reskin Checklist - One Codebase, New Game]]
+<!-- related:end -->

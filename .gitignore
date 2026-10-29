@@ -7,3 +7,8 @@ __pycache__/
 .DS_Store
 Thumbs.db
 LihFolk Vault V2/_tools/.cache/
+
+# third-party Obsidian plugins (installed locally from the community directory; never redistributed)
+LihFolk Vault V2/.obsidian/plugins/*
+!LihFolk Vault V2/.obsidian/plugins/celestial-vault/
+LihFolk Vault V2/.obsidian/community-plugins.json

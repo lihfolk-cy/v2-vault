@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, data, persistence, migrations]
+tags: [core-concept, data, persistence, migrations, type/reference, area/data, level/beginner]
 ---
 # Data Schema Versioning
 
@@ -10,7 +10,7 @@ tags: [core-concept, data, persistence, migrations]
 > - Never edit a shipped migration. If migration 4 to 5 had a bug, add migration 5 to 6 that repairs it.
 > - Old servers meet new data. During a rolling update, an old server can load a record that a new server already upgraded.
 >
-> Cost: TL;DR ~150 tok · whole note ~940 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~150 tok · whole note ~1.0k tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Data schema versioning** stores a version number inside every saved record and keeps a chain of migration functions that upgrade old records step by step to the current shape. A record saved at version 3 is run through migrations 3 to 4, 4 to 5 and so on when it is loaded.
@@ -67,5 +67,10 @@ Related concepts: [[Session Lock]], [[Idempotency]], [[Feature Flags]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Cookbook - Data and Saving]] · [[Skill - Roblox DataStore Safety]] · [[Core Concepts Start Here]] · [[Live Ops Deep Dive Start Here]] · [[Multiplayer Services Start Here]] · [[Links - DataStoreService]]
+[[Cookbook - Data and Saving]] · Skill - Roblox DataStore Safety · [[Core Concepts Start Here]] · Live Ops Deep Dive Start Here · Multiplayer Services Start Here · Links - DataStoreService
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Save Migration Tests - Fixture Saves and Golden Files]] · [[Faucets and Sinks]] · [[Replication Boundary]] · [[Dependency Injection in Luau]] · [[Telemetry Events]] · [[Deterministic Simulation]] · [[Server Authority]] · [[Core Loop]] · [[Onboarding Funnel]]
+<!-- related:end -->

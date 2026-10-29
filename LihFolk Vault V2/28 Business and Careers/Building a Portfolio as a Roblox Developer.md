@@ -1,5 +1,5 @@
 ---
-tags: [careers, portfolio, freelancing, job-search, showcase, minors]
+tags: [careers, portfolio, freelancing, job-search, showcase, minors, type/guide, area/business, level/intermediate]
 ---
 # Building a Portfolio as a Roblox Developer
 
@@ -12,7 +12,7 @@ tags: [careers, portfolio, freelancing, job-search, showcase, minors]
 > - Each piece: context, your role, problem, approach, numbers, media, lessons.
 > - Discipline-specific evidence (budgets, wireframes, code, flows, reels).
 >
-> Cost: TL;DR ~150 tok · whole note ~3.4k tok. Read more: ## 2. Format and where to host it · ## 3. By discipline: what to show · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.5k tok. Read more: ## 2. Format and where to host it · ## 3. By discipline: what to show · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 > **Not advice.** General career information. It is not legal or financial advice; job markets, contracts and working-age rules differ by country. If you are under 18, involve a parent or guardian before taking paid work or signing anything, and keep your personal information private.
@@ -225,5 +225,10 @@ The portfolio opens doors; how you work keeps them open.
 
 ## Connected notes
 <!-- auto-links:start -->
-[[DevEx and Cashing Out]] · [[Groups Roles and Permissions for Studios]] · [[Team Collaboration Start Here]] · [[Publishing Selling and Updating Plugins]] · [[Documentation and Onboarding New Developers]] · [[Working with Content Creators]]
+[[DevEx and Cashing Out]] · [[Groups Roles and Permissions for Studios]] · Team Collaboration Start Here · Publishing Selling and Updating Plugins · Documentation and Onboarding New Developers · Working with Content Creators
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Publishing Selling and Updating Plugins]] · [[Documentation and Onboarding New Developers]] · [[Working with Contractors and Revenue Splits]] · [[Working with Content Creators]] · [[Scoping and Roles for Small Teams]] · [[Open-Source Licenses for Roblox Libraries - Quick Reference]]
+<!-- related:end -->

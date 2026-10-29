@@ -1,5 +1,5 @@
 ---
-tags: [performance, networking, replication, remotes, bandwidth, ping]
+tags: [performance, networking, replication, remotes, bandwidth, ping, type/guide, area/performance, level/intermediate, api/UnreliableRemoteEvent, area/networking]
 ---
 # Network Performance
 
@@ -12,7 +12,7 @@ tags: [performance, networking, replication, remotes, bandwidth, ping]
 > - Data ping close to network ping under load.
 > - No large or frequently changing attributes on Player or broadly replicated instances.
 >
-> Cost: TL;DR ~160 tok · whole note ~3.5k tok. Read more: ## 2. Measuring · ## 4. Patterns that cut traffic · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.6k tok. Read more: ## 2. Measuring · ## 4. Patterns that cut traffic · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Network problems look like everything else: "lag", rubber-banding, hits that land late, a server that feels slow although its heartbeat is fine. The cause is usually **replicating more than needed, to more players than needed, more often than needed**. This note covers what goes over the wire, how to measure it, the limits that matter, and the patterns that cut traffic: results instead of simulation, batching, distance filtering, owner-only state, client-side effects, and load-time replication.
@@ -240,5 +240,10 @@ Unanchored assemblies replicate their motion from the owner to everyone else; ma
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Network Bandwidth Budgets and Measuring Them]] · [[Interest Management and Per-Player Replication]] · [[Replication Boundary]] · [[Performance Fundamentals]] · [[Debugging Client-Server Desync]] · [[Cookbook - Remotes and Networking]]
+[[Network Bandwidth Budgets and Measuring Them]] · [[Interest Management and Per-Player Replication]] · Replication Boundary · [[Performance Fundamentals]] · Debugging Client-Server Desync · Cookbook - Remotes and Networking
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Debugging Client-Server Desync]] · [[Replication Boundary]] · [[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]] · [[MicroProfiler Guide]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[Developer Console and Stats]] · [[Mobile and Low-End Optimization]] · [[Memory Budgets and Leaks]] · [[QA Checklists Before Release]] · [[Client Zone Culling for Interiors and Cities]]
+<!-- related:end -->

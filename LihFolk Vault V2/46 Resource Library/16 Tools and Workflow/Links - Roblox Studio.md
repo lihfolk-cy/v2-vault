@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, tools-workflow]
+tags: [resources, links, tools-workflow, type/reference, area/studio, level/intermediate]
 ---
 # Links - Roblox Studio
 

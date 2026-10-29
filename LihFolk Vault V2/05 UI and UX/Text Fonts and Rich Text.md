@@ -1,5 +1,5 @@
 ---
-tags: [ui, text, fonts, fontface, richtext, textservice, uistroke]
+tags: [ui, text, fonts, fontface, richtext, textservice, uistroke, type/guide, area/ui, level/intermediate, api/UIStroke]
 ---
 # Text Fonts and Rich Text
 
@@ -12,7 +12,7 @@ tags: [ui, text, fonts, fontface, richtext, textservice, uistroke]
 > - A written type scale with roles; two families at most.
 > - Variable-length text uses `AutomaticSize`; any `TextScaled` has a `UITextSizeConstraint`.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.5k tok. Read more: ## 1. Font versus Enum.Font · ## 2. Three ways to size text · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.6k tok. Read more: ## 1. Font versus Enum.Font · ## 2. Three ways to size text · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Text is the UI element players read most and the one most likely to break on another device or in another language. This note covers the `Font` data type and why the old `Enum.Font` names are a trap (Gotham is gone), the three ways to size text and which to choose, measuring text with `TextService`, rich text tags and their limits, text outlines with `UIStroke`, and the lessons from a production font sweep that had to be partly reverted.
@@ -331,5 +331,10 @@ See also: [[UI Design Systems]], [[Localization]], [[Accessibility]], [[Layout -
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Readable Text and UI Scale]] · [[LihFolk UI Design System]] · [[UI Asset Pipeline]] · [[Strings Patterns and Formatting]] · [[Links - UI elements]] · [[Accessibility Contrast]]
+[[Readable Text and UI Scale]] · LihFolk UI Design System · UI Asset Pipeline · Strings Patterns and Formatting · Links - UI elements · Accessibility Contrast
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Nametags and Overhead Bars - Cost and Visibility Rules]] · [[ScreenGui Fundamentals]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[Responsive UI for Phone Tablet Console and PC]] · [[Race HUD - Position, Laps, Splits, Speedometer and Minimap]] · [[UI Motion Language and Timing]] · [[UI Layout Objects - Lists Grids and Pages]] · [[Gamepad and Console UX]]
+<!-- related:end -->

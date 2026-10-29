@@ -1,5 +1,5 @@
 ---
-tags: [procedural, generation, wfc, wave-function-collapse, tiles, constraints, luau]
+tags: [procedural, generation, wfc, wave-function-collapse, tiles, constraints, luau, type/guide, area/procedural, level/intermediate, area/physics, api/Model]
 ---
 # Wave Function Collapse on Roblox
 
@@ -12,10 +12,10 @@ tags: [procedural, generation, wfc, wave-function-collapse, tiles, constraints, 
 > - Every socket has a filler tile; tile count fits the solver.
 > - Rotations generated and deduplicated.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.8k tok. Read more: ## Designing a tile set · ## A complete solver in strict Luau · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.9k tok. Read more: ## Designing a tile set · ## A complete solver in strict Luau · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-Wave function collapse (WFC) is a constraint solver dressed up with a physics name. You give it a set of tiles and rules about which tiles may sit next to which; it fills a grid so every rule holds. It is excellent at **local coherence** (roads connect, walls meet, rivers flow into rivers) and poor at **global structure** (a town with a centre, a dungeon with a boss at the end). This note explains the algorithm, gives a complete strict Luau implementation with bitmask domains, and covers the Roblox-specific parts: tile kits, rotations, performance, combining it with other generators, and when it is the wrong tool. It assumes the seed discipline of [[Seeds Determinism and Reproducible Worlds]].
+[[Wave function collapse]] (WFC) is a constraint solver dressed up with a physics name. You give it a set of tiles and rules about which tiles may sit next to which; it fills a grid so every rule holds. It is excellent at **local coherence** (roads connect, walls meet, rivers flow into rivers) and poor at **global structure** (a town with a centre, a dungeon with a boss at the end). This note explains the algorithm, gives a complete strict Luau implementation with bitmask domains, and covers the Roblox-specific parts: tile kits, rotations, performance, combining it with other generators, and when it is the wrong tool. It assumes the seed discipline of [[Seeds Determinism and Reproducible Worlds]].
 
 ## The algorithm in plain terms
 
@@ -374,5 +374,10 @@ WFC shines for towns, road networks, coastlines, interior decoration, dungeon dr
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Voxel Props Environments and Modular Tiles]] · [[Deterministic Simulation]] · [[Voxel Scale Grids and Stud Alignment]] · [[Level Design Principles - Flow Sightlines and Landmarks]] · [[Tilemaps Cameras and Parallax for 2D Levels]] · [[Terrain Tools and Terrain API]]
+[[Voxel Props Environments and Modular Tiles]] · Deterministic Simulation · Voxel Scale Grids and Stud Alignment · Level Design Principles - Flow Sightlines and Landmarks · Tilemaps Cameras and Parallax for 2D Levels · Terrain Tools and Terrain API
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Deterministic Simulation]] · [[Procedural Loot and Item Generation]] · [[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Terrain Materials and Painting]] · [[Voxel Scale Grids and Stud Alignment]] · [[Environment and Level Pipeline]]
+<!-- related:end -->

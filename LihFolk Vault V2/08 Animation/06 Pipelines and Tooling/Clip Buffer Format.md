@@ -1,5 +1,5 @@
 ---
-tags: [pipeline, data-format, buffer, compression, keyframesequence]
+tags: [pipeline, data-format, buffer, compression, keyframesequence, type/guide, area/animation, level/advanced, api/Animator, area/data]
 ---
 # Clip Buffer Format
 
@@ -9,10 +9,10 @@ tags: [pipeline, data-format, buffer, compression, keyframesequence]
 > - Avoid: Decoding on every play. Symptom: hitches on first play of each move, repeated.
 > - Avoid: Base64 decoding with a hand-written Luau function.
 >
-> Cost: TL;DR ~90 tok · whole note ~4.4k tok. Read more: ## Layout · ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~90 tok · whole note ~4.5k tok. Read more: ## Layout · ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
-The byte-level format ("v2") one production game used to store KeyframeSequence motion compactly: in a base64 attribute on Pose-less stubs ([[Baked Clip Stubs and Archiving]]), and as the payload streamed from server to clients for enemy kits ([[Lua Keyframe Player]]). It is designed around the Roblox `buffer` type, decodes in plain Luau, and plays back within 0.03 deg / 0.002 studs of the original clip in the player that reads it. This note documents every field, the easing codes, the thinning that decides which keys are written, and smallest-three quaternion packing, with a worked hex example.
+The byte-level format ("v2") one production game used to store KeyframeSequence motion compactly: in a base64 attribute on Pose-less stubs ([[Baked Clip Stubs and Archiving]]), and as the payload streamed from server to clients for enemy kits ([[Lua Keyframe Player]]). It is designed around the Roblox `buffer` type, decodes in plain Luau, and plays back within 0.03 deg / 0.002 studs of the original clip in the player that reads it. This note documents every field, the easing codes, the thinning that decides which keys are written, and smallest-three [[Quaternions|quaternion]] packing, with a worked hex example.
 
 All multi-byte values are little-endian, as the `buffer` library reads and writes them. `str` = a `u8` length followed by that many bytes (names longer than 255 bytes are truncated).
 
@@ -235,5 +235,10 @@ Stored in an attribute as base64 text (`buffer.tostring(EncodingService:Base64En
 
 ## Connected notes
 <!-- auto-links:start -->
-[[How the Animator Really Behaves]] · [[Authoring Clips in Code]] · [[Animation Data from Blender to Roblox]] · [[Snippets - Lua Keyframe Player Core]] · [[Easing]] · [[Big Numbers Precision and Formatting]] · [[Animation Start Here]]
+[[How the Animator Really Behaves]] · [[Authoring Clips in Code]] · [[Animation Data from Blender to Roblox]] · [[Snippets - Lua Keyframe Player Core]] · [[Easing]] · Big Numbers Precision and Formatting · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[KeyframeSequence Keyframe and Pose Reference]] · [[Case Study - Cutting a Million Instances]] · [[Weapon Design Rig Builder]] · [[Animation Editor Advanced]] · [[Engine Gotchas]] · [[Animation Editor Workflow]] · [[Animation Glossary]] · [[Pipeline - Arm IK Baking and QA]]
+<!-- related:end -->

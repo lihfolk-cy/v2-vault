@@ -1,5 +1,5 @@
 ---
-tags: [luau, advanced-luau, signals, events, coroutines, library-design, testing]
+tags: [luau, advanced-luau, signals, events, coroutines, library-design, testing, type/guide, area/scripting, level/advanced, area/design]
 ---
 # Building a Signal Library
 
@@ -12,7 +12,7 @@ tags: [luau, advanced-luau, signals, events, coroutines, library-design, testing
 > - Disconnect and connect during fire have defined, tested behaviour.
 > - Handlers run isolated from each other's errors and yields without allocating per call in the common case.
 >
-> Cost: TL;DR ~180 tok · whole note ~5.3k tok. Read more: ## 2. Where handlers run: the runner thread · ## 4. The library · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.4k tok. Read more: ## 2. Where handlers run: the runner thread · ## 4. The library · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Events Signals and Connections]] explains engine signals, Immediate versus Deferred handlers, connection leaks, and gives a compact pure-Luau signal that spawns a thread per handler. That signal is correct and fine for most uses. This note builds a production-grade one from first principles, and more importantly explains each design decision a signal library has to make, because those decisions are where custom signals cause bugs: what happens when a handler disconnects during a fire, connects during a fire, errors, or yields; what order handlers run in; how much each fire allocates; and how deferred mode differs. By the end you will have a typed library, a test list for it, and an observable value built on top.
@@ -414,5 +414,10 @@ Two nuances are in the comment and the type. NaN never equals itself, so a naive
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Functions Closures and Upvalues]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Reading Luau Errors and Stack Traces]] · [[Event Bus]] · [[Links - Coroutines, task library and async]] · [[Links - Events, signals and connections]]
+[[Functions Closures and Upvalues]] · Error Handling - pcall xpcall and Promise Patterns · Reading Luau Errors and Stack Traces · Event Bus · Links - Coroutines, task library and async · Links - Events, signals and connections
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Error Handling - pcall xpcall and Promise Patterns]] · [[Event Bus]] · [[Reading Luau Errors and Stack Traces]] · [[Tables Metatables and OOP]] · [[Luau Performance Patterns with Benchmarks]] · [[Serialization Formats for Saves and Networking]]
+<!-- related:end -->

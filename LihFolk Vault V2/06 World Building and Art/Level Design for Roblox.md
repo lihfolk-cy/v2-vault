@@ -1,5 +1,5 @@
 ---
-tags: [world-building, level-design, layout, hubs, zones, blockout, navigation]
+tags: [world-building, level-design, layout, hubs, zones, blockout, navigation, type/guide, area/world, level/intermediate, api/Terrain, area/ui]
 ---
 # Level Design for Roblox
 
@@ -12,7 +12,7 @@ tags: [world-building, level-design, layout, hubs, zones, blockout, navigation]
 > - Blockout playtested on PC and phone before art.
 > - Walk times measured and compared with a space players like.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.6k tok. Read more: ## Hub design · ## Zones and progression spaces · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.8k tok. Read more: ## Hub design · ## Zones and progression spaces · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Level design on Roblox is shaped by things most engines do not have: players join mid-session on phones and controllers, the default camera floats behind the character, characters jump about 7 studs high and run 16 studs/s by default, maps stream in around the player, and a single place often holds a hub plus every zone of the game. This note covers measurement, the blockout process, hub and zone layout, sight lines and gating, combat spaces, and the production lessons of one production game that built and rebuilt a hub and a ten-zone realm several times.
@@ -214,5 +214,10 @@ Every bulk change stored its "before" state as attributes (old pivots, old colou
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Lobby and Hub Design]] · [[Environment and Level Pipeline]] · [[Level Design Principles - Flow Sightlines and Landmarks]] · [[Zone and Biome Art Direction]] · [[Level Design Start Here]] · [[Combat Arena and Encounter Layout]]
+[[Lobby and Hub Design]] · Environment and Level Pipeline · Level Design Principles - Flow Sightlines and Landmarks · [[Zone and Biome Art Direction]] · Level Design Start Here · Combat Arena and Encounter Layout
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Level Design Principles - Flow Sightlines and Landmarks]] · [[Parts Unions and MeshParts]] · [[Water Sky and Atmosphere Art]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Textures Decals and Texture Memory]]
+<!-- related:end -->

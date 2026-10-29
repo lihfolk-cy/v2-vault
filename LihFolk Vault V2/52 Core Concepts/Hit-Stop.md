@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, game-feel, combat, animation]
+tags: [core-concept, game-feel, combat, animation, type/reference, area/animation, level/beginner, api/AdjustSpeed, area/gameplay]
 ---
 # Hit-Stop
 
@@ -10,7 +10,7 @@ tags: [core-concept, game-feel, combat, animation]
 > - Clock-timed systems drift during a stop.
 > - Frame rate quantises the stop. At 30 fps a 50 ms stop is one or two frames depending on timing, so light stops flicker between...
 >
-> Cost: TL;DR ~130 tok · whole note ~880 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~950 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Hit-stop** (also hit-pause or freeze frames) briefly freezes or slows the attacker and target at the moment of impact, typically for 30 to 120 ms (rule of thumb). The pause makes the hit read as contact with something solid instead of a weapon passing through air.
@@ -46,7 +46,7 @@ end
 
 - [[Hit-Stop and Screen Shake Tuning by Numbers]]: the numbers by strength tier.
 - [[Hit Reactions Stagger and Hit-Stop]]: the catch-up approach.
-- [[Combat Animation Craft]]: impact frames in animation.
+- [[Combat Animation Craft]]: [[impact frames]] in animation.
 - [[Feedback Timing - Sound Visual and Haptic Sync]]: syncing sound with the stop.
 - [[Camera Shake and Camera FX]]: the layer usually paired with it.
 - [[Combat Systems Architecture]]: where the client effect is triggered.
@@ -61,5 +61,10 @@ Related concepts: [[Anticipation]], [[Easing]], [[Input Buffering]], [[Frame Bud
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Game Feel Start Here]] · [[Game Feel and Juice]] · [[VFX Timing with Animation]] · [[Timing Spacing and Frame Charts]] · [[Snippets - Camera Shake and FX]] · [[Hitboxes and Hit Detection]] · [[Core Concepts Start Here]]
+[[Game Feel Start Here]] · Game Feel and Juice · VFX Timing with Animation · Timing Spacing and Frame Charts · Snippets - Camera Shake and FX · Hitboxes and Hit Detection · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Tween vs Spring]] · [[Input Buffering]] · [[Server Authority]] · [[Core Loop]] · [[Deterministic Simulation]] · [[Skinning Weights]] · [[Streaming Radius]] · [[Object Pooling]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, architecture, security, networking, server-authority]
+tags: [core-concept, architecture, security, networking, server-authority, type/reference, area/security, level/beginner, area/networking]
 ---
 # Server Authority
 
@@ -62,5 +62,10 @@ Related concepts: [[Replication Boundary]], [[Rate Limiting]], [[Idempotency]], 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Anti-Exploit Start Here]] · [[Skill - Roblox Anti-Exploit Review]] · [[Links - Server authority]] · [[Cookbook - Remotes and Networking]] · [[Links - Latency and prediction]] · [[Links - Client-server and security model]] · [[Core Concepts Start Here]]
+[[Anti-Exploit Start Here]] · Skill - Roblox Anti-Exploit Review · Links - Server authority · Cookbook - Remotes and Networking · Links - Latency and prediction · Links - Client-server and security model · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[AI Pitfalls - Networking and Security]] · [[Deterministic Simulation]] · [[Streaming Radius]] · [[Session Lock]] · [[Input Buffering]] · [[Anticipation]] · [[Event Bus]] · [[Hit-Stop]] · [[Data Schema Versioning]]
+<!-- related:end -->

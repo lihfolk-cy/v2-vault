@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, ui]
+tags: [resources, links, ui, type/reference, area/ui, level/intermediate, area/design]
 ---
 # Links - Scale vs offset and responsive design
 

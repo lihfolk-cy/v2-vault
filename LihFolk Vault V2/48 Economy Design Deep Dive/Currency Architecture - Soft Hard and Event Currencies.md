@@ -1,5 +1,5 @@
 ---
-tags: [economy, currency, soft-currency, premium-currency, event-currency, wallet, analytics, luau, design]
+tags: [economy, currency, soft-currency, premium-currency, event-currency, wallet, analytics, luau, design, type/guide, area/economy, level/advanced]
 ---
 # Currency Architecture - Soft Hard and Event Currencies
 
@@ -12,7 +12,7 @@ tags: [economy, currency, soft-currency, premium-currency, event-currency, walle
 > - Scale decided (flat or exponential); fixed-price content lives in a flat currency.
 > - Premium anchor fixed; every price and pack a multiple of a common unit.
 >
-> Cost: TL;DR ~170 tok · whole note ~5.8k tok. Read more: ## 3. Premium currency: the decisions that are hard to undo · ## 5. A wallet module with buckets, idempotency and analytics · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.9k tok. Read more: ## 3. Premium currency: the decisions that are hard to undo · ## 5. A wallet module with buckets, idempotency and analytics · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Economies and Currencies]] lists the kinds of currency a Roblox game can have and how to write a safe server transaction. [[Economy Inflation Sinks and Faucets Math]] gives the arithmetic of faucets, sinks and the premium currency anchor. [[Big Numbers Precision and Formatting]] covers doubles, integer limits and number formatting. This note sits between them and answers the architecture questions: how many currencies, what each one is for, how they convert, how an event currency is born and dies, how a wallet stores paid and free units separately, and how the whole set maps onto analytics before you log your first event.
@@ -392,5 +392,10 @@ Two subtleties:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Faucets and Sinks]] · [[Pricing and Store Design]] · [[Monetization Overview]] · [[Expected Value]] · [[Shop with Game Passes and Developer Products End to End]] · [[Rebirth and Prestige System End to End]]
+[[Faucets and Sinks]] · Pricing and Store Design · Monetization Overview · Expected Value · Shop with Game Passes and Developer Products End to End · Rebirth and Prestige System End to End
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Faucets and Sinks]] · [[Progression Levels and Unlocks]] · [[Pricing and Store Design]] · [[Shop with Game Passes and Developer Products End to End]] · [[Monetization Overview]] · [[Rebirth and Prestige System End to End]]
+<!-- related:end -->

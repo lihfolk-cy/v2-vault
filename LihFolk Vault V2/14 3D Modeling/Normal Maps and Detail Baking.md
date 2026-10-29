@@ -1,5 +1,5 @@
 ---
-tags: [modeling, normal-maps, baking, tangent-space, blender, surfaceappearance]
+tags: [modeling, normal-maps, baking, tangent-space, blender, surfaceappearance, type/guide, area/modeling, level/intermediate, api/SurfaceAppearance]
 ---
 # Normal Maps and Detail Baking
 
@@ -12,7 +12,7 @@ tags: [modeling, normal-maps, baking, tangent-space, blender, surfaceappearance]
 > - Hard edges are UV seams; triangulated low-poly; smoothing final.
 > - Exploded bake for close parts; cage when one extrusion cannot fit all.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.2k tok. Read more: ## 5. Baking a normal map in Blender, step by step · ## 9. Diagnosing artefacts · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.3k tok. Read more: ## 5. Baking a normal map in Blender, step by step · ## 9. Diagnosing artefacts · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A normal map lets a 2,000-triangle low-poly mesh shade like a 200,000-triangle sculpt by storing, per texel, which way the surface "really" faces. On Roblox, where every mesh is capped at 20,000 triangles and avatar items at 4,000 (Creator Hub, checked October 2026), normal maps are how detailed armour, weapons and creatures stay inside budget. They are also the map most often broken by invisible technical mismatches: wrong convention, wrong tangent basis, wrong smoothing, wrong bake distance. This note explains the mechanism, the Roblox convention, the Blender bake in detail, and how to diagnose every common artefact.
@@ -55,7 +55,7 @@ Identify a convention by eye: on a raised round rivet in a map, OpenGL has the l
 Bakers and renderers must compute tangents the same way. The industry standard is **MikkTSpace**. Blender bakes and computes tangents with MikkTSpace. Whether Roblox reconstructs tangents with MikkTSpace or reads tangents from the file is **not documented** (unverified as of October 2026). In practice, Blender-baked maps on Blender-exported meshes look correct in Studio on well-prepared meshes (measured in the reference project's armour and weapons). To keep the risk low:
 
 - **Triangulate before baking and exporting.** A quad can be split along either diagonal; if the baker splits one way and the importer the other, the tangent frame differs on that face and shows as a faint diagonal crease. Add a Triangulate modifier (Beauty or Fixed, the same one for bake and export), apply it on the export copy (rule of thumb, standard practice).
-- **Export the same normals you baked with.** If you bake with custom split normals or a Weighted Normal modifier, export with them. A change in smoothing after the bake invalidates the map.
+- **Export the same normals you baked with.** If you bake with custom split normals or a [[Weighted Normals|Weighted Normal]] modifier, export with them. A change in smoothing after the bake invalidates the map.
 - **Do not edit the low-poly after baking.** Moving vertices is fine in small amounts; changing smoothing, triangulation or UV islands is not.
 
 ## 4. Smoothing, hard edges and the bake
@@ -230,5 +230,10 @@ end)
 
 ## Connected notes
 <!-- auto-links:start -->
-[[SurfaceAppearance PBR Workflow]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Modeling in Blender for Roblox]] · [[Baking Lighting and Detail into Textures]] · [[Materials and Surfaces Start Here]] · [[Clean Stylised Shading - Weighted and Custom Normals]]
+[[SurfaceAppearance PBR Workflow]] · Voxel Shading - Baked AO Edges and Lighting · Modeling in Blender for Roblox · Baking Lighting and Detail into Textures · Materials and Surfaces Start Here · Clean Stylised Shading - Weighted and Custom Normals
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Blender Workflow for Roblox Creators]] · [[Modeling Fundamentals for Games]] · [[Baking Lighting and Detail into Textures]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Low-Poly and Stylized Modeling]] · [[UGC Avatar Items and Accessories]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Mesh Optimization for Mobile]] · [[Modular Environment Kits]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]]
+<!-- related:end -->

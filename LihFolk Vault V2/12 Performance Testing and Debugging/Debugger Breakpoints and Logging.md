@@ -1,5 +1,5 @@
 ---
-tags: [debugging, debugger, breakpoints, logging, logservice, traceback]
+tags: [debugging, debugger, breakpoints, logging, logservice, traceback, type/guide, area/performance, level/intermediate, area/debugging]
 ---
 # Debugger Breakpoints and Logging
 
@@ -12,7 +12,7 @@ tags: [debugging, debugger, breakpoints, logging, logservice, traceback]
 > - A shared logger with tags, levels and rate limiting.
 > - System boundaries use `xpcall` with traceback, and log failures.
 >
-> Cost: TL;DR ~150 tok · whole note ~3.6k tok. Read more: ## 1. The Studio debugger · ## 3. A logger worth keeping · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.7k tok. Read more: ## 1. The Studio debugger · ## 3. A logger worth keeping · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most Roblox debugging is done with `print`, and most of it is done badly: a print added, the game run, the print removed, the bug back next week. Studio has a real debugger (breakpoints, conditional breakpoints, logpoints, watches, call stacks, stepping) that most developers never open, and Luau has structured tools (`debug.traceback`, `debug.info`, `xpcall`) that make logs useful. This note covers the debugger, a logging approach that survives into production, error handling that keeps stack traces, and a method for bugs you cannot reproduce on demand, including client freezes.
@@ -295,5 +295,10 @@ end
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Debugging Live Servers]] · [[Links - Error handling and debugging]] · [[Debugging Start Here]] · [[Reading Luau Errors and Stack Traces]] · [[The Debugging Method - Reproduce Isolate Bisect]] · [[Error Handling - pcall xpcall and Promise Patterns]]
+[[Debugging Live Servers]] · Links - Error handling and debugging · Debugging Start Here · Reading Luau Errors and Stack Traces · The Debugging Method - Reproduce Isolate Bisect · Error Handling - pcall xpcall and Promise Patterns
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Reading Luau Errors and Stack Traces]] · [[The Debugging Method - Reproduce Isolate Bisect]] · [[In-Game Bug Report Button with Automatic Context]] · [[Hunting Memory Leaks Step by Step]] · [[Gated Tester Commands and Debug Panels]] · [[MicroProfiler Guide]] · [[Automated Luau Checks - LihFolk Hook and Audit]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[Automated Testing with TestEZ and Jest-Lua]] · [[Multi-Client and Device Playtesting Protocols]]
+<!-- related:end -->

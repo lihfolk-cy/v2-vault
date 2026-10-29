@@ -1,6 +1,6 @@
 ---
 cssclasses: [vault-hub]
-tags: [index, start]
+tags: [index, start, type/hub, area/animation, level/beginner, api/Animator, api/Motor6D]
 ---
 # Animation Start Here
 
@@ -62,7 +62,7 @@ A field guide to **everything about animation in Roblox**: how the engine really
 - [[AnimationTrack Reference]]: every member, defaults, lifecycle traps
 - [[KeyframeSequence Keyframe and Pose Reference]]: the classic clip format, instance by instance
 - [[CurveAnimation and Curve Channels]]: the curve-based clip format
-- [[Rigs and Joints]]: Motor6D, Bone, AnimationConstraint, R6 vs R15
+- [[Rigs and Joints]]: Motor6D, Bone, [[AnimationConstraint]], R6 vs R15
 - [[Motor6D Math and CFrame Composition]]: the joint equation, inverted and applied
 - [[Bones and Skinned Meshes]]
 - [[AnimationConstraint and Physically Simulated Characters]]: the Avatar Joint Upgrade
@@ -152,5 +152,5 @@ The snippets were reviewed carefully by hand against the API docs, but test them
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI Animation and Motion from Video]] · [[Links - Animation creation]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Links - Inverse kinematics]] · [[Skeleton Library]]
+[[AI Animation and Motion from Video]] · Links - Animation creation · Modeling Characters for R15 and Custom Rigs · Voxel Characters - Proportions Joints and Rigging · Links - Inverse kinematics · Skeleton Library
 <!-- auto-links:end -->

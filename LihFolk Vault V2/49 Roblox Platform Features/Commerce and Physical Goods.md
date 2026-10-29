@@ -1,5 +1,5 @@
 ---
-tags: [platform-features, commerce, merchandise, shopify, commerceservice, policyservice, avatar-items, monetization, luau, strict]
+tags: [platform-features, commerce, merchandise, shopify, commerceservice, policyservice, avatar-items, monetization, luau, strict, type/guide, area/platform]
 ---
 # Commerce and Physical Goods
 
@@ -12,7 +12,7 @@ tags: [platform-features, commerce, merchandise, shopify, commerceservice, polic
 > - Shopify products complete: description, returns, origin, metafield accordions
 > - Merch tab visible only to eligible players; prices from `DisplayPrice`
 >
-> Cost: TL;DR ~190 tok · whole note ~5.0k tok. Read more: ## 2. Who can sell, where, and to whom · ## 3. The in-game API · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~190 tok · whole note ~5.1k tok. Read more: ## 2. Who can sell, where, and to whom · ## 3. The in-game API · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Roblox now lets eligible creators sell **real-world products** (shirts, plushies, posters) inside their games, paid in real money and fulfilled through a Shopify store, optionally bundled with a digital item. It is a narrow feature with strict eligibility, a US-only buyer base and real-world obligations (shipping, returns, product claims) that do not exist for Robux products. This note explains the system end to end, where it fits and where it does not, and the "digital merch" route most creators actually use: selling avatar items in game for a commission. For Robux products see [[Developer Products and ProcessReceipt]] and [[Game Passes]]; for UGC pricing see [[UGC Pricing Limiteds and Marketplace Rules]].
@@ -267,5 +267,10 @@ Rules of thumb, aligned with the docs' standards:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Refunds Chargebacks and Purchase Support]] · [[Avatars and UGC Start Here]] · [[AvatarEditorService and In-Game Avatar Editors]] · [[DevEx and Cashing Out]] · [[Robux Price Points and Offer Design]] · [[Publishing an Experience]]
+[[Refunds Chargebacks and Purchase Support]] · Avatars and UGC Start Here · AvatarEditorService and In-Game Avatar Editors · DevEx and Cashing Out · Robux Price Points and Offer Design · Publishing an Experience
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Regional Compliance - Paid Random Items and Country Rules]] · [[Discovery and Monetization Changes 2025-2026]] · [[Policy and Age Rules 2026]] · [[Roblox Changes 2025-2026]] · [[Friend Invites Referrals and Experience Invites]] · [[Experience Notifications and Return Prompts]] · [[Badges and Achievement Design]]
+<!-- related:end -->

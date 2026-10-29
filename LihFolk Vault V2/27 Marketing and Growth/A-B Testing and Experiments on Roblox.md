@@ -1,5 +1,5 @@
 ---
-tags: [marketing, growth, experiments, ab-testing, configservice, analytics, statistics, luau]
+tags: [marketing, growth, experiments, ab-testing, configservice, analytics, statistics, luau, type/guide, area/marketing, level/intermediate, api/ConfigService]
 ---
 # A-B Testing and Experiments on Roblox
 
@@ -12,7 +12,7 @@ tags: [marketing, growth, experiments, ab-testing, configservice, analytics, sta
 > - MDE checked on the dashboard before starting; change bold enough to detect
 > - `GetConfigForPlayerAsync` + `GetValue` only at the moment of exposure
 >
-> Cost: TL;DR ~200 tok · whole note ~4.4k tok. Read more: ## 2. Configs and experiments: how they work (Roblox docs, as of October 2026) · ## 3. Wiring an experiment in strict Luau · ## 8. Failure modes · ## 9. Checklist
+> Cost: TL;DR ~200 tok · whole note ~4.6k tok. Read more: ## 2. Configs and experiments: how they work (Roblox docs, as of October 2026) · ## 3. Wiring an experiment in strict Luau · ## 8. Failure modes · ## 9. Checklist
 <!-- tldr:end -->
 
 An A-B test shows two versions of something to two random groups of players and measures which one does better. It is the only reliable way to know whether a change caused an effect, because everything else (school holidays, a competitor's update, a viral clip) hits both groups equally. Roblox now has a built-in experiments system tied to Configs, plus several narrower tools that run their own tests (thumbnail personalisation, price optimisation, ad placement experiments). This note covers how the built-in system works, how to wire it in strict Luau, the statistics that decide whether a small game can test at all, how to build your own split when the built-in one does not fit, and the mistakes that produce confident wrong answers.
@@ -131,7 +131,7 @@ return Experiments
 
 Notes:
 - **Type check against the default.** A config edited to the wrong type should not crash gameplay.
-- **Always have a code default** equal to the control. If ConfigService is unavailable, players get the control, which keeps the game playable (they may still be counted in a group by Roblox if enrolment happened; that is a reason to keep defaults identical to control).
+- **Always have a code default** equal to the control. If [[ConfigService]] is unavailable, players get the control, which keeps the game playable (they may still be counted in a group by Roblox if enrolment happened; that is a reason to keep defaults identical to control).
 - Snapshots are not refreshed here on purpose: during an experiment the enrolled value is stable, and for live tuning you may want a separate global snapshot with `UpdateAvailable` and `Refresh()`.
 - The `ConfigSnapshot` type name follows the docs' class name; if the type checker does not know it in your Studio version, annotate as `any` locally.
 
@@ -305,5 +305,10 @@ See [[Ethical Design and Player Trust]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Economy Telemetry and Balancing Live]] · [[Feature Flags and Staged Rollouts]] · [[Click-Through Rate]] · [[Links - Analytics]] · [[Economy Design Start Here]] · [[Discovery and the Algorithm]]
+[[Economy Telemetry and Balancing Live]] · Feature Flags and Staged Rollouts · Click-Through Rate · Links - Analytics · Economy Design Start Here · Discovery and the Algorithm
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Update Cadence and Hype Cycles]] · [[Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics]] · [[Sponsored Ads and Campaign Math]] · [[Short-Form Video Marketing]] · [[Game Icon Design - Readable at Small Sizes]] · [[Experience Description and Search Keywords]] · [[Marketing to Kids and Teens - Age Rules and Paid-Promo Disclosure]] · [[Game Trailers and Clean Footage - Capture, Freecam and Editing]]
+<!-- related:end -->

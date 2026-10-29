@@ -1,5 +1,5 @@
 ---
-tags: [game-design, core-loop, sessions, retention, roblox-audience]
+tags: [game-design, core-loop, sessions, retention, roblox-audience, type/guide, area/design, level/intermediate, api/AnalyticsService, api/Player]
 ---
 # Core Loops and Session Design
 
@@ -12,7 +12,7 @@ tags: [game-design, core-loop, sessions, retention, roblox-audience]
 > - The first reward lands within 30 seconds of control.
 > - Every output has at least one sink that changes the verb.
 >
-> Cost: TL;DR ~160 tok · whole note ~5.3k tok. Read more: ## 3. Fit the loop to the Roblox audience · ## 5. Session design · ## 9. Common mistakes · ## 10. Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.4k tok. Read more: ## 3. Fit the loop to the Roblox audience · ## 5. Session design · ## 9. Common mistakes · ## 10. Checklist
 <!-- tldr:end -->
 
 A Roblox game lives or dies on one question a player answers in their first few minutes: "what do I do here, and why do it again?" The **core loop** is the answer. This note explains how to design loops in layers, how to fit them to the Roblox audience (young, mostly on phones, playing with friends, arriving from a recommendation feed), how to shape a single session so it ends with a reason to come back, and how to tell when a loop is broken.
@@ -143,7 +143,7 @@ A **session** is one visit, from join to leave. Loop design decides what players
 | Phase | Typical length (rule of thumb) | What to give the player |
 |---|---|---|
 | Arrival | 0 to 30 s | Fast join, spawn facing the main action, no pop-up stack |
-| Re-orientation | 30 s to 2 min | "Here is where you were": a goal card, offline earnings, daily reward |
+| Re-orientation | 30 s to 2 min | "Here is where you were": a goal card, [[offline earnings]], daily reward |
 | Warm-up | 2 to 5 min | An easy, guaranteed win (a quest that is almost done, a free gift) |
 | Main push | 5 to 30 min | The short loop: next gate, next tier, next boss |
 | Peak | anywhere | One memorable moment: rare pull, boss kill, rebirth burst |
@@ -314,5 +314,10 @@ Notes:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Core Loop]] · [[Simulator and RNG Genre Teardown]] · [[Session Length]] · [[Onboarding Funnel]] · [[Quest Writing and Hooks]] · [[Faucets and Sinks]]
+[[Core Loop]] · [[Simulator and RNG Genre Teardown]] · Session Length · Onboarding Funnel · Quest Writing and Hooks · Faucets and Sinks
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Rarity Ladders and Drop Pacing Math]] · [[Boss Fight Design Patterns]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Genre Playbook - Survival and Crafting]] · [[Genre Playbook - Battlegrounds and Arena Fighters]] · [[Genre Playbook - Racing and Driving]]
+<!-- related:end -->

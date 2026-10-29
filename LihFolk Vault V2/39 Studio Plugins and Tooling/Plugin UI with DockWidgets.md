@@ -1,5 +1,5 @@
 ---
-tags: [studio, plugins, ui, dockwidget, theme, tooling]
+tags: [studio, plugins, ui, dockwidget, theme, tooling, type/guide, area/studio, level/intermediate, api/BindToClose, area/ui]
 ---
 # Plugin UI with DockWidgets
 
@@ -12,7 +12,7 @@ tags: [studio, plugins, ui, dockwidget, theme, tooling]
 > - Toolbar button synced to `Enabled` through the property signal.
 > - Every object themed by role; one `ThemeChanged` connection.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.8k tok. Read more: ## 1. What a dock widget is, mechanically · ## 3. Theming that actually works · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.9k tok. Read more: ## 1. What a dock widget is, mechanically · ## 3. Theming that actually works · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 Almost every plugin that outlives its first week grows a panel. A `DockWidgetPluginGui` is that panel: a Studio window you fill with ordinary `GuiObject`s, which users can dock beside the Explorer, float, resize and close. Building one is easy. Building one that opens where the user left it, reads well in both themes, stays responsive with ten thousand rows, never fights the user for keyboard focus, and costs nothing when hidden takes knowledge the basic examples skip. This note covers that knowledge.
@@ -323,5 +323,10 @@ Whatever you choose, keep scan logic out of components. A component that calls `
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Plugins and custom tools]] · [[Cookbook - UI]] · [[Studio Settings and Shortcuts]] · [[Links - UI elements]] · [[Studio Interface Tour]] · [[Debugging UI Layout and Input]]
+[[Links - Plugins and custom tools]] · Cookbook - UI · Studio Settings and Shortcuts · Links - UI elements · Studio Interface Tour · Debugging UI Layout and Input
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Undo and ChangeHistoryService Done Right]] · [[Cookbook - UI]] · [[Publishing Selling and Updating Plugins]] · [[Debugging UI Layout and Input]] · [[Gamepad and Console UX]] · [[Plugin Security and Permissions]]
+<!-- related:end -->

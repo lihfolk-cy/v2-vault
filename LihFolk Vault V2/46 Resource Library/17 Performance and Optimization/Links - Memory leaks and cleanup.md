@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, performance-optimization]
+tags: [resources, links, performance-optimization, type/reference, area/performance, level/advanced]
 ---
 # Links - Memory leaks and cleanup
 

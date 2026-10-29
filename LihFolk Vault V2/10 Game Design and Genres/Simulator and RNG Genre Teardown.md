@@ -1,5 +1,5 @@
 ---
-tags: [game-design, genre, simulator, rng, teardown, analysis, pacing, monetisation, case-study]
+tags: [game-design, genre, simulator, rng, teardown, analysis, pacing, monetisation, case-study, type/case-study, area/design, level/intermediate]
 ---
 # Simulator and RNG Genre Teardown
 
@@ -9,7 +9,7 @@ tags: [game-design, genre, simulator, rng, teardown, analysis, pacing, monetisat
 > - Avoid: Tearing down only on PC -> Phone first; most of the audience is there
 > - Avoid: Judging monetisation by price alone -> Map where each prompt sits in the loop and whether it interrupts
 >
-> Cost: TL;DR ~110 tok · whole note ~4.8k tok. Read more: ## 4. Number architecture · ## 5. Worked teardown: a combat-RNG hybrid · ## 8. Common mistakes
+> Cost: TL;DR ~110 tok · whole note ~5.0k tok. Read more: ## 4. Number architecture · ## 5. Worked teardown: a combat-RNG hybrid · ## 8. Common mistakes
 <!-- tldr:end -->
 
 The playbooks ([[Genre Playbook - Simulators]], [[Genre Playbook - RNG and Collection Games]]) say what the parts of these genres are. This note is about **taking them apart**: how to tear down a competitor (or your own game) with a stopwatch and a spreadsheet, what the loops' clocks look like when they work, how the number architecture holds together or fails, and a worked teardown of one production hybrid (combat plus rolling plus simulator structure) with what changed after real feedback. The aim is to replace "this game is popular, let's copy it" with "this game pays out a reward every 22 seconds, an upgrade every 3 minutes and a new zone every 25, and its prices grow 2.6x per zone against income growing 2.4x" (illustrative numbers).
@@ -32,7 +32,7 @@ A teardown is a structured play session with instruments. Do it on a phone first
 | Screen census | Every screen and button reachable from the HUD, how many taps deep, whether it is a shop |
 | Prompt log | Every monetisation touchpoint: where, when, what was offered, price, whether it interrupted play |
 | Social log | Other players visible, chat prompts, trading, broadcasts, group or friend boosts |
-| Return hooks | Timers, dailies, streaks, offline earnings, scheduled events, notifications offered |
+| Return hooks | Timers, dailies, streaks, [[offline earnings]], scheduled events, notifications offered |
 
 Play three sessions: **minutes 0 to 15** (onboarding), **one focused hour**, and **a return session the next day** (what pulls you back and what greets you). For a deeper teardown, buy the obvious starter purchase in a separate test account to see the paid path.
 
@@ -261,5 +261,10 @@ Compare clocks, not features. If your zone loop is 45 minutes and the competitor
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Progression Levels and Unlocks]] · [[Economy Inflation Sinks and Faucets Math]] · [[RNG Drops and Luck Systems]] · [[Core Loop]] · [[Rebirth and Prestige System End to End]] · [[Pricing Curves and Upgrade Costs]]
+[[Progression Levels and Unlocks]] · Economy Inflation Sinks and Faucets Math · RNG Drops and Luck Systems · Core Loop · Rebirth and Prestige System End to End · Pricing Curves and Upgrade Costs
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[RNG Drops and Luck Systems]] · [[Economy Inflation Sinks and Faucets Math]] · [[Genre Playbook - Combat and RPG]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Tycoons]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Genre Playbook - Survival and Crafting]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Genre Playbook - Party and Minigame Collections]]
+<!-- related:end -->

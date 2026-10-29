@@ -1,5 +1,5 @@
 ---
-tags: [architecture, networking, remotes, security, performance]
+tags: [architecture, networking, remotes, security, performance, type/guide, area/networking, level/intermediate, api/RemoteEvent, area/security, api/RemoteFunction, api/UnreliableRemoteEvent]
 ---
 # RemoteEvents RemoteFunctions and Unreliable Remotes
 
@@ -12,10 +12,10 @@ tags: [architecture, networking, remotes, security, performance]
 > - No `InvokeClient` anywhere.
 > - Every handler: type, value (NaN, inf, length), context, rate limit, then act.
 >
-> Cost: TL;DR ~160 tok · whole note ~5.5k tok. Read more: ## The three types · ## Organising remotes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.6k tok. Read more: ## The three types · ## Organising remotes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-Remotes are the explicit messages you send across the client-server boundary. Roblox has three kinds, each with different delivery promises, limits and failure modes. Choosing the wrong one gives you either lag (reliable traffic for data nobody needs), lost events (unreliable traffic for things that must happen), or a server thread that hangs forever (`InvokeClient`). This note covers the guarantees exactly as documented, the argument rules, the throttling and size limits, the RemoteFunction pitfalls, how to organise remotes in a project, and the production patterns that hold up: server-validated relays, request/response with timeouts, sequenced unreliable streams and honeypots.
+Remotes are the explicit messages you send across the client-server boundary. Roblox has three kinds, each with different delivery promises, limits and failure modes. Choosing the wrong one gives you either lag (reliable traffic for data nobody needs), lost events (unreliable traffic for things that must happen), or a server thread that hangs forever (`InvokeClient`). This note covers the guarantees exactly as documented, the argument rules, the throttling and size limits, the RemoteFunction pitfalls, how to organise remotes in a project, and the production patterns that hold up: server-validated relays, request/response with timeouts, sequenced unreliable streams and [[honeypots]].
 
 Validation of what arrives is covered in [[Server Authority and Validation]] and rate limits in [[Rate Limiting and Abuse Prevention]]. This note focuses on the transport.
 
@@ -392,5 +392,10 @@ Every remote shipped in a live game is callable by every player. Debug remotes (
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox Secure Remotes]] · [[Cookbook - Remotes and Networking]] · [[Remote Abuse Patterns and Rate Limiting in Practice]] · [[Network Bandwidth Budgets and Measuring Them]] · [[How Exploits Work - The Client Boundary]] · [[Links - Remote events and functions]]
+[[Skill - Roblox Secure Remotes]] · Cookbook - Remotes and Networking · [[Remote Abuse Patterns and Rate Limiting in Practice]] · Network Bandwidth Budgets and Measuring Them · How Exploits Work - The Client Boundary · Links - Remote events and functions
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Cookbook - Remotes and Networking]] · [[AI Pitfalls - Networking and Security]] · [[Interest Management and Per-Player Replication]] · [[Cross-Server Messaging]] · [[Snapshot Interpolation for Custom Replication]] · [[Network Ownership]] · [[Instance Streaming]] · [[Client Prediction and Reconciliation for Combat]] · [[Entity Component Systems]]
+<!-- related:end -->

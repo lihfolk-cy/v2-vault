@@ -1,5 +1,5 @@
 ---
-tags: [multiplayer, teleport, session, memorystore, datastore, session-locking, multi-place, luau, strict]
+tags: [multiplayer, teleport, session, memorystore, datastore, session-locking, multi-place, luau, strict, type/guide, area/networking, level/intermediate]
 ---
 # Session State Across Places
 
@@ -74,7 +74,7 @@ Why the source writes the envelope **before** releasing the profile: if the writ
 
 ## 3. Shared types and the profile gateway
 
-The handoff should not care which profile library you use. It needs three operations, so it takes them as a small interface. Wire it to ProfileStore or your own session-locked loader ([[Session Locking and Profile Libraries]]).
+The handoff should not care which profile library you use. It needs three operations, so it takes them as a small interface. Wire it to [[ProfileStore]] or your own session-locked loader ([[Session Locking and Profile Libraries]]).
 
 ```lua
 --!strict
@@ -538,5 +538,10 @@ A single-place game needs none of it. A multi-place game where places share noth
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Session Lock]] · [[Reserved and Private Servers in Practice]] · [[Debugging DataStore Problems]] · [[Trading Systems Without Duplication]] · [[Cookbook - Data and Saving]] · [[Links - Teleporting]]
+[[Session Lock]] · [[Reserved and Private Servers in Practice]] · Debugging DataStore Problems · Trading Systems Without Duplication · Cookbook - Data and Saving · Links - Teleporting
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Server Hop Rejoin and Server Lists with Ping]] · [[Server Browsers and Server Lists]] · [[Cookbook - Data and Saving]] · [[AI Pitfalls - Data and Monetization]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[Debugging DataStore Problems]]
+<!-- related:end -->

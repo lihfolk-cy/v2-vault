@@ -1,5 +1,5 @@
 ---
-tags: [ugc, bundles, emotes, animation-packs, marketplace, animation, avatars]
+tags: [ugc, bundles, emotes, animation-packs, marketplace, animation, avatars, type/guide, area/avatars, level/intermediate, api/CurveAnimation, area/animation]
 ---
 # Bundles Animation Packs and Emotes for Sale
 
@@ -12,7 +12,7 @@ tags: [ugc, bundles, emotes, animation-packs, marketplace, animation, avatars]
 > - Emote: under 10 s, root near origin, no frame pops, CurveAnimation, standard R15.
 > - Emote tested on several bodies and with bulky layered clothing.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.0k tok. Read more: ## 3. Emotes · ## 5. Games and emotes: three integration levels · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.1k tok. Read more: ## 3. Emotes · ## 5. Games and emotes: three integration levels · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Single accessories are only part of the avatar Marketplace. Bodies, dynamic heads, shoes and animation packs are sold as **bundles**, and emotes are sold as single animation assets that players equip into an eight-slot wheel. These products sit where modelling, animation and game code meet: an emote has to pass a validator that measures root motion, an animation pack has to work inside every game's Animate script, and a game that sells either has to cooperate with the default emote menu or replace it. This note covers what each product is, the creation rules that matter, who can sell what (as of October 2026), and how games integrate them.
@@ -25,9 +25,9 @@ The craft of emotes (timing, readability, synchronised social moments) is in [[E
 |---|---|---|---|
 | Rigid or layered accessory | One asset | Eligible UGC creators | [[UGC Avatar Items and Accessories]] |
 | Body bundle | 15 body part meshes, often with head, hair, eyebrows, eyelashes | Eligible UGC creators (bodies have their own advance) | Per-part triangle budgets, cages |
-| Dynamic head | FACS-rigged head, usually inside a body bundle | Eligible UGC creators | Head up to 4,000 triangles |
+| Dynamic head | [[FACS]]-rigged head, usually inside a body bundle | Eligible UGC creators | Head up to 4,000 triangles |
 | Shoes | Left and right shoe accessories grouped | Eligible UGC creators | Layered rules for each shoe |
-| Emote | One animation asset | Eligible UGC creators (emote advance 1,500 non-limited, 10,000 limited, per the older note) | Under 10 s, CurveAnimation, standard R15 |
+| Emote | One animation asset | Eligible UGC creators (emote advance 1,500 non-limited, 10,000 limited, per the older note) | Under 10 s, [[CurveAnimation]], standard R15 |
 | Animation pack | Idle, walk, run, jump, fall, climb, swim (and mood) as a bundle | **Closed pilot**: community reports say selling needs pilot access; creating and testing is open | Works with the Animate script |
 
 The animation-pack row is the one most creators get wrong: you can make and test a pack today, but **selling one requires pilot access** that, per a 2026 DevForum thread, is not expanding. That is a community answer, not an official statement, and was **not confirmed** against an announcement for this note.
@@ -248,5 +248,10 @@ Emotes are full-body animations that can hide attack tells, move the head and ar
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Avatars and UGC]] · [[Layered Clothing Cages and Animation]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Commerce and Physical Goods]] · [[Custom Characters and StarterCharacter]] · [[3D Importer Settings Reference]]
+[[Links - Avatars and UGC]] · Layered Clothing Cages and Animation · Modeling Characters for R15 and Custom Rigs · Commerce and Physical Goods · Custom Characters and StarterCharacter · 3D Importer Settings Reference
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[AvatarEditorService and In-Game Avatar Editors]] · [[Layered Clothing Cages and Animation]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Custom Characters and StarterCharacter]] · [[3D Importer Settings Reference]] · [[Animation Objects]]
+<!-- related:end -->

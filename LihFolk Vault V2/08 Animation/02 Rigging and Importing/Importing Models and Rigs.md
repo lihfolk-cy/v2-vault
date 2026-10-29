@@ -1,5 +1,5 @@
 ---
-tags: [import, rigging, studio, pipeline, prepare]
+tags: [import, rigging, studio, pipeline, prepare, type/guide, area/animation, level/intermediate, api/Animator, area/studio, api/AnimationController, api/Motor6D]
 ---
 # Importing Models and Rigs into Studio
 
@@ -12,7 +12,7 @@ tags: [import, rigging, studio, pipeline, prepare]
 > - Imported clips renamed, moved, axis-fixed, markers added.
 > - Pristine import kept somewhere outside the live hierarchy until verified, then removed.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.3k tok. Read more: ## 1. Three routes into Studio · ## 4. The prepare step · ## 7. Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.4k tok. Read more: ## 1. Three routes into Studio · ## 4. The prepare step · ## 7. Checklist
 <!-- tldr:end -->
 
 Getting a model into Studio takes one click. Getting it into a state where it animates, faces the right way, sits on the ground, survives being cloned by a spawner and can be rebuilt next week takes a pipeline. This note is that pipeline: the routes in, how to find what you imported, how to validate it, and the idempotent "prepare" step that turns a raw import into a game-ready rig. Option-by-option importer details are in [[3D Importer Settings Reference]].
@@ -236,7 +236,7 @@ local function prepare(model: Model, opts: PrepareOpts): { string }
 end
 ```
 
-A subtlety in step 4: adding a **marker-only keyframe** at a time that is not on the clip's existing key grid makes the keyframes unevenly spaced. The reference project measured that the Animator interpolates rotations by quaternion nlerp only when all keyframes are evenly spaced (marker-only keyframes count) and every key is Linear; otherwise it blends rotation vectors. On big turns far from rest the two differ by up to about 10 degrees. Prefer putting markers on existing keyframe times, or accept and verify the change. See [[How the Animator Really Behaves]].
+A subtlety in step 4: adding a **marker-only keyframe** at a time that is not on the clip's existing key grid makes the keyframes unevenly spaced. The reference project measured that the Animator interpolates rotations by [[Quaternions|quaternion]] nlerp only when all keyframes are evenly spaced (marker-only keyframes count) and every key is Linear; otherwise it blends rotation vectors. On big turns far from rest the two differ by up to about 10 degrees. Prefer putting markers on existing keyframe times, or accept and verify the change. See [[How the Animator Really Behaves]].
 
 ### Part rigs: build joints from a manifest
 
@@ -308,5 +308,10 @@ Every prepare and install tool in the project had a `Status()` that printed a ta
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animation Data from Blender to Roblox]] · [[Exporting and Validating Models for Roblox]] · [[Character and Creature Pipeline]] · [[Links - Importing into Studio]] · [[Skill - Roblox Asset Import]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Animation Start Here]]
+[[Animation Data from Blender to Roblox]] · [[Exporting and Validating Models for Roblox]] · Character and Creature Pipeline · Links - Importing into Studio · Skill - Roblox Asset Import · Modeling Characters for R15 and Custom Rigs · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Character and Creature Pipeline]] · [[Pipeline - New Animated Weapon]] · [[Retargeting Animations Between Rigs]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Custom Characters and StarterCharacter]] · [[Bones and Skinned Meshes]] · [[Weight Painting and Skinning for Roblox]] · [[Engine Gotchas]] · [[Moon Animator and Third-Party Tools]] · [[Baked Clip Stubs and Archiving]]
+<!-- related:end -->

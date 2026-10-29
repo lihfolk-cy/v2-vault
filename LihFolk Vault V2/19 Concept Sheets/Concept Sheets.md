@@ -1,5 +1,5 @@
 ---
-tags: [concept-art, reference, rigs]
+tags: [concept-art, reference, rigs, type/hub, area/art, level/intermediate]
 ---
 # Concept Sheets
 
@@ -26,5 +26,5 @@ tags: [concept-art, reference, rigs]
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Procedural Blender Assets Start Here]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[Low-Poly Creature From a Flat Reference Sheet]] · [[Character and Creature Pipeline]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Rigging in Blender]]
+[[Procedural Blender Assets Start Here]] · Matching a Concept Sheet - Boss Creature Case Study · Low-Poly Creature From a Flat Reference Sheet · Character and Creature Pipeline · Modeling Characters for R15 and Custom Rigs · Rigging in Blender
 <!-- auto-links:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [systems, locomotion, animate-script, gait, carry-layer]
+tags: [systems, locomotion, animate-script, gait, carry-layer, type/guide, area/animation, level/intermediate, api/Humanoid, api/Animator]
 ---
 # Locomotion Systems
 
@@ -12,7 +12,7 @@ tags: [systems, locomotion, animate-script, gait, carry-layer]
 > - The most common movement speed has a clip authored at that speed.
 > - For every gait, `[threshold_low, threshold_high]` is inside `[clamp_min, clamp_max] * GroundSpeed`.
 >
-> Cost: TL;DR ~190 tok · whole note ~5.1k tok. Read more: ## The universal set (one locomotion for everyone) · ## Gaits that cannot slide · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~5.2k tok. Read more: ## The universal set (one locomotion for everyone) · ## Gaits that cannot slide · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Locomotion is the animation the player sees most: every second they are not attacking, they are idling, walking, running, jumping or landing. It is also where small errors are most visible, because the eye locks onto feet. A swing that is 10% too fast is invisible; feet that skate 10% of their speed read as "cheap" instantly. This note covers how locomotion is built on Roblox, from the stock `Animate` script to a universal custom set with measured numbers from one live action game (the reference project). The design of the controller module itself is in [[Custom Locomotion Controller Design]].
@@ -258,5 +258,10 @@ See also: [[Custom Locomotion Controller Design]], [[The Default Animate Script]
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Troubleshooting Table]] · [[Idle Breathing and Secondary Motion]] · [[Timing Spacing and Frame Charts]] · [[Animation Glossary]] · [[Custom Character Controllers]] · [[Links - Humanoids and character controllers]] · [[Animation Start Here]]
+[[Troubleshooting Table]] · [[Idle Breathing and Secondary Motion]] · [[Timing Spacing and Frame Charts]] · [[Animation Glossary]] · [[Custom Character Controllers]] · Links - Humanoids and character controllers · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[R15 Run Cycle Key Poses]] · [[Locomotion and Melee Reference Numbers]] · [[Mounts and Rideable Creatures]] · [[Emotes and Social Animation]] · [[Equip Draw and Flourish Systems]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[Stance and Charge Moves]] · [[Hit Reactions Stagger and Hit-Stop]]
+<!-- related:end -->

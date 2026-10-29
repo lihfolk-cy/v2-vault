@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, scripting]
+tags: [resources, links, scripting, type/reference, area/scripting, level/intermediate]
 ---
 # Links - Script types
 
@@ -56,5 +56,5 @@ Part of [[Resource Library - Scripting]] in the [[Resource Library Start Here]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Cross-platform UI]] · [[Links - Analytics]] · [[Links - Leaderboards]] · [[Links - Network ownership]] · [[Module Scripts and Requiring]] · [[Script Types and Run Context]]
+[[Links - Cross-platform UI]] · [[Links - Analytics]] · [[Links - Leaderboards]] · [[Links - Network ownership]] · [[Module Scripts and Requiring]] · Script Types and Run Context
 <!-- auto-links:end -->

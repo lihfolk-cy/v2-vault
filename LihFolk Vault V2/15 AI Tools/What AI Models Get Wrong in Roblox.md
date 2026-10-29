@@ -1,5 +1,5 @@
 ---
-tags: [ai-pitfalls, ai, code-review, luau, roblox, verification, lint, deprecated-apis, security]
+tags: [ai-pitfalls, ai, code-review, luau, roblox, verification, lint, deprecated-apis, security, type/guide, area/ai, level/intermediate]
 verified: 2026-10-28
 ---
 # What AI Models Get Wrong in Roblox
@@ -13,7 +13,7 @@ verified: 2026-10-28
 > - Each RemoteEvent handler validated against AI Pitfalls - Networking and Security.
 > - Data and purchase code checked against AI Pitfalls - Data and Monetization.
 >
-> Cost: TL;DR ~100 tok · whole note ~2.0k tok. Read more: ## Why capable models fail here · ## A cheap lint pass for generated code · ## The ten most common mistakes · ## Checklist
+> Cost: TL;DR ~100 tok · whole note ~2.1k tok. Read more: ## Why capable models fail here · ## A cheap lint pass for generated code · ## The ten most common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Strong models write Luau that compiles, reads well and is wrong in ways specific to Roblox. This hub collects the failure patterns that show up even in good output, says why models produce them, and gives the correct pattern and a cheap way to detect each one. It assumes you already know Roblox; basics are skipped. Platform changes the model may not know about are in [[Roblox Changes 2025-2026]].
@@ -99,3 +99,8 @@ Run these over generated Luau before reading it in detail. Each hit is a questio
 - [[AI Code Assistants for Luau]]
 - [[Prompting and Verifying AI Output]]
 - [[Agent Review Loops and Guardrails in Practice]]
+
+<!-- related:start -->
+## Related
+[[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Roblox Studio Assistant]] · [[Evaluating AI Tools - A Practical Rubric]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[Benchmark - Does a Knowledge Vault Make AI Better at Roblox]] · [[AI in Roblox Development Overview]] · [[AI Agents and Autonomous Workflows]] · [[Token Cost Benchmarks]]
+<!-- related:end -->

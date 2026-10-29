@@ -1,5 +1,5 @@
 ---
-tags: [game-feel, juice, audio, haptics, timing, latency, sync, feedback, luau]
+tags: [game-feel, juice, audio, haptics, timing, latency, sync, feedback, luau, type/guide, area/game-feel, level/intermediate]
 ---
 # Feedback Timing - Sound Visual and Haptic Sync
 
@@ -12,7 +12,7 @@ tags: [game-feel, juice, audio, haptics, timing, latency, sync, feedback, luau]
 > - Scheduled sounds start early by their peak; reactive sounds are trimmed or skip their lead-in.
 > - Combat sounds are preloaded and pooled.
 >
-> Cost: TL;DR ~180 tok · whole note ~4.9k tok. Read more: ## 2. The hidden delays on a Roblox client · ## 4. One clock for all channels · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.0k tok. Read more: ## 2. The hidden delays on a Roblox client · ## 4. One clock for all channels · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 An impact is three signals: a picture, a sound and (on some devices) a vibration. When they arrive together the brain fuses them into one event with weight. When they drift apart by more than a few tens of milliseconds the same assets feel cheap, "floaty" or laggy, and nobody can say why. [[Combat Sound Design and Feedback]] covers which sounds play for which outcome and who plays them over the network; [[Captions and Audio Accessibility]] introduces haptics as an accessibility channel. This note is about **time**: how far apart the channels can drift before it shows, where the hidden delays come from on a Roblox client, how to schedule all three from one clock, and how to measure the result.
@@ -334,5 +334,10 @@ What to measure:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Game Feel Start Here]] · [[Hit-Stop]] · [[Sound Design for Games]] · [[Sound Fundamentals]] · [[Audio Pipeline]] · [[Camera Shake and Camera FX]]
+[[Game Feel Start Here]] · [[Hit-Stop]] · Sound Design for Games · Sound Fundamentals · Audio Pipeline · Camera Shake and Camera FX
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Game Feel and Juice]] · [[Sound Design Pitfalls - Reused Ids Onsets and Layered Loops]] · [[Hit-Stop and Screen Shake Tuning by Numbers]] · [[Juice on a Budget - Mobile and Low-End]] · [[Squash Stretch and Anticipation in UI and Characters]] · [[Input Responsiveness Buffering and Coyote Time]]
+<!-- related:end -->

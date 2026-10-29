@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, art, texturing, 3d-modeling, performance]
+tags: [core-concept, art, texturing, 3d-modeling, performance, type/reference, area/performance, level/beginner, area/modeling]
 ---
 # Texel Density
 
@@ -10,7 +10,7 @@ tags: [core-concept, art, texturing, 3d-modeling, performance]
 > - Big surfaces should tile. A 200-stud wall cannot get good density from one unique texture, even a 4K one.
 > - Scaling a mesh in Studio scales its density down.
 >
-> Cost: TL;DR ~130 tok · whole note ~1.0k tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~1.1k tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Texel density** is how many texture pixels (texels) cover one unit of surface in the world, for example 256 texels per stud. Consistent texel density means a crate, a wall and a sword all look equally sharp at the same viewing distance; inconsistent density makes some objects crisp and others blurry side by side.
@@ -51,5 +51,10 @@ Related concepts: [[Triangle Budget]], [[Draw Calls]], [[Thumbnail Contrast]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Materials and Surfaces Start Here]] · [[Stylised vs Realistic Material Pipelines]] · [[Modeling in Blender for Roblox]] · [[Baking Lighting and Detail into Textures]] · [[AI Material and Texture Generation]] · [[Links - UVs and texture prep]] · [[Core Concepts Start Here]]
+[[Materials and Surfaces Start Here]] · Stylised vs Realistic Material Pipelines · Modeling in Blender for Roblox · Baking Lighting and Detail into Textures · AI Material and Texture Generation · Links - UVs and texture prep · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Stylised vs Realistic Material Pipelines]] · [[Modeling in Blender for Roblox]] · [[Skinning Weights]] · [[Instance Count]] · [[Frame Budget]] · [[Accessibility Contrast]] · [[Streaming Radius]] · [[Click-Through Rate]] · [[Object Pooling]]
+<!-- related:end -->

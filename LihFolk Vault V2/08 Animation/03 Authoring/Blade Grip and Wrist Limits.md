@@ -1,5 +1,5 @@
 ---
-tags: [animation, weapons, sword, grip, wrist, authoring, r15, blender, tool-grip]
+tags: [animation, weapons, sword, grip, wrist, authoring, r15, blender, tool-grip, type/reference, area/animation, level/intermediate]
 ---
 # Blade Grip and Wrist Limits
 
@@ -12,7 +12,7 @@ tags: [animation, weapons, sword, grip, wrist, authoring, r15, blender, tool-gri
 > - Keys authored with `skey` (hand target + blade), never a raw hand rotation
 > - `qa.wrist.blade_err_max_deg` under 5; breakdown keys reviewed
 >
-> Cost: TL;DR ~180 tok · whole note ~2.1k tok. Read more: ## 4. The solve (lihanim/sword.py) · ## 5. Choosing blade directions per key · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~2.2k tok. Read more: ## 4. The solve (lihanim/sword.py) · ## 5. Choosing blade directions per key · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A sword clip looks wrong long before anyone can say why. The blade comes out of the fist at an odd angle, the crossguard points the wrong way, the wrist snaps 120 degrees between two frames, or the forearm passes through the chest. Almost always the cause is the same: the animator (or the AI) keyed **where the blade should point** and let a solver turn the hand by whatever amount got it there. This note gives the real grip geometry, the Roblox numbers that reproduce it, the wrist ranges, and the solve the LihFolk pipeline uses. Sources are in `D:\LihFolk Build\research\animation-references.md`.
@@ -103,3 +103,8 @@ The blade must sit **25 to 75 degrees off the shoulder-to-hand line, on the thum
 ## Connected notes
 
 [[Animation Start Here]] · [[Weapon Swing Design]] · [[Custom Rigs - Weapons and Props]] · [[Locomotion and Melee Reference Numbers]]
+
+<!-- related:start -->
+## Related
+[[Human Swing Biomechanics]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Animation Quality Standard]] · [[Elbow Poles Swivel and Joint Limits]] · [[Posing and Silhouettes]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[Spec-Driven Move Authoring]] · [[Case Study - Fixing Hundreds of Attack Clips]]
+<!-- related:end -->

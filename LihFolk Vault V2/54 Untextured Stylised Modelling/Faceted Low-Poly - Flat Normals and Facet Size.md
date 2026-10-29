@@ -1,5 +1,5 @@
 ---
-tags: [modeling, untextured, low-poly, faceted, flat-shading, normals, facet-size, blender, performance]
+tags: [modeling, untextured, low-poly, faceted, flat-shading, normals, facet-size, blender, performance, type/guide, area/modeling, level/intermediate]
 ---
 # Faceted Low-Poly - Flat Normals and Facet Size
 
@@ -12,7 +12,7 @@ tags: [modeling, untextured, low-poly, faceted, flat-shading, normals, facet-siz
 > - 5 to 12 facets across the silhouette; bigger on planes, smaller on curvature.
 > - Shade Flat (or deliberate sharp edges), triangulated, modifiers applied, normals exported.
 >
-> Cost: TL;DR ~230 tok · whole note ~3.7k tok. Read more: ## Facet size: measure it in pixels, not studs · ## Building a faceted rock, step by step · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~230 tok · whole note ~3.8k tok. Read more: ## Facet size: measure it in pixels, not studs · ## Building a faceted rock, step by step · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Faceted low-poly is the style where every triangle or polygon is a visible flat plane: gem-like rocks, origami trees, crystal mountains, polygon animals. With no texture detail, the facets *are* the surface detail, so two decisions carry the whole look: how the normals are set (every face flat, or a deliberate mix), and how big each facet is on screen. [[Low-Poly and Stylized Modeling]] introduces the style and its segment counts. This note goes deeper into flat normals as data (what they cost, how they survive export and import), facet size measured in on-screen pixels for the Roblox camera, how to distribute facets so a model reads as designed rather than random, and the cases where faceting is the wrong call.
@@ -176,5 +176,10 @@ Characters especially: faceted avatars or pets look good in renders but animate 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Bevels Chamfers and Edge Highlights Without Textures]] · [[Modeling Fundamentals for Games]] · [[Low-Poly Creature From a Flat Reference Sheet]] · [[Hard-Surface Modeling]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]]
+[[Bevels Chamfers and Edge Highlights Without Textures]] · Modeling Fundamentals for Games · Low-Poly Creature From a Flat Reference Sheet · Hard-Surface Modeling · Voxel Shading - Baked AO Edges and Lighting · Meshing Voxels for Roblox - Greedy Meshing and Export
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Modeling Fundamentals for Games]] · [[Hard-Surface Modeling]] · [[Spending Triangles Where the Camera Looks]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Colour Scripts and Value Structure for Untextured Art]]
+<!-- related:end -->

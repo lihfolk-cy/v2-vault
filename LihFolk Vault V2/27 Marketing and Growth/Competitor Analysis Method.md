@@ -1,5 +1,5 @@
 ---
-tags: [marketing, growth, competitor-analysis, research, game-design, benchmarks]
+tags: [marketing, growth, competitor-analysis, research, game-design, benchmarks, type/guide, area/marketing, level/intermediate, area/design]
 ---
 # Competitor Analysis Method
 
@@ -12,7 +12,7 @@ tags: [marketing, growth, competitor-analysis, research, game-design, benchmarks
 > - Watchlist set up in Creator Hub (up to nine games)
 > - Teardown template filled in live, on phone and PC, fresh account
 >
-> Cost: TL;DR ~160 tok · whole note ~3.7k tok. Read more: ## 3. Data sources and how far to trust them · ## 4. The play-through teardown · ## 9. Common mistakes · ## 10. Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.8k tok. Read more: ## 3. Data sources and how far to trust them · ## 4. The play-through teardown · ## 9. Common mistakes · ## 10. Checklist
 <!-- tldr:end -->
 
 Every Roblox genre has a few games that set what players expect: how fast the first reward comes, what the shop looks like, how often updates land, what the thumbnail promises. Studying them is how a small team avoids building a game that is already behind on day one. Studying them badly is how teams end up cloning a top game's surface, missing why it works, and competing head-on with a game that has years of content.
@@ -233,5 +233,10 @@ Mechanics and genre conventions (a tower placement grid, rolling for rarities, a
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Launch Strategy - The First Two Weeks]] · [[Click-Through Rate]] · [[Update Cadence and Hype Cycles]] · [[Monetization Overview]] · [[Top Games Case Studies Start Here]] · [[Core Loop]]
+[[Launch Strategy - The First Two Weeks]] · [[Click-Through Rate]] · [[Update Cadence and Hype Cycles]] · Monetization Overview · Top Games Case Studies Start Here · Core Loop
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics]] · [[Short-Form Video Marketing]] · [[Experience Description and Search Keywords]] · [[Sponsored Ads and Campaign Math]] · [[Game Icon Design - Readable at Small Sizes]] · [[Marketing to Kids and Teens - Age Rules and Paid-Promo Disclosure]] · [[Game Trailers and Clean Footage - Capture, Freecam and Editing]] · [[Roblox Communities as Your On-Platform Hub]]
+<!-- related:end -->

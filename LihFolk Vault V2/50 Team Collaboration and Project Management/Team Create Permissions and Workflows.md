@@ -1,5 +1,5 @@
 ---
-tags: [team, collaboration, team-create, permissions, drafts, workflow, groups, studio]
+tags: [team, collaboration, team-create, permissions, drafts, workflow, groups, studio, type/guide, area/production, level/intermediate, area/studio]
 ---
 # Team Create Permissions and Workflows
 
@@ -12,7 +12,7 @@ tags: [team, collaboration, team-create, permissions, drafts, workflow, groups, 
 > - Age-check compatibility confirmed for every collaborator before they are promised Team Create access.
 > - Access matches the project stage table; Publish limited to two leads.
 >
-> Cost: TL;DR ~180 tok · whole note ~5.9k tok. Read more: ## 3. Live scripting or drafts: choosing per team, not per person · ## 4. Claiming areas of a place · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~6.0k tok. Read more: ## 3. Live scripting or drafts: choosing per team, not per person · ## 4. Claiming areas of a place · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Team Create and Collaboration]] explains the features: permission levels, age checks, live scripting, drafts, comments, Script History, and the incidents that taught the reference project its shared-place rules. [[Safe Changes in a Shared Place]] is the playbook for one risky edit. [[Groups Roles and Permissions for Studios]] covers group roles and the permission list. This note sits between them and answers the operational questions a team lead faces every week: who gets which kind of access at which stage of a project, how to give a contractor somewhere to work without handing them the live game, how a team of four chooses and runs live scripting or drafts day to day, how to claim an area of a place so nobody deletes your work, and how to run the access audit that most teams never do.
@@ -339,5 +339,10 @@ Remember the blocked-collaborator rule from section 1: removing someone from the
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Team Collaboration Start Here]] · [[Links - Team Create]] · [[Animation Asset Permissions and Groups]] · [[Scoping and Roles for Small Teams]] · [[Version History and Backups]] · [[Git and Source Control for Roblox]]
+[[Team Collaboration Start Here]] · [[Links - Team Create]] · Animation Asset Permissions and Groups · Scoping and Roles for Small Teams · Version History and Backups · Git and Source Control for Roblox
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Animation Asset Permissions and Groups]] · [[Scoping and Roles for Small Teams]] · [[Version History and Backups]] · [[Creator Account Security and Takeover Recovery]] · [[Multiple Agents in One Studio]] · [[Roadmaps Milestones and Scope Control]]
+<!-- related:end -->

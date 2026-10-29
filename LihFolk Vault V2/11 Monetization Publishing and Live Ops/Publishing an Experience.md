@@ -1,5 +1,5 @@
 ---
-tags: [publishing, release, audience, kids-and-select, server-management, live-ops]
+tags: [publishing, release, audience, kids-and-select, server-management, live-ops, type/guide, area/monetization, level/intermediate, area/liveops]
 ---
 # Publishing an Experience
 
@@ -12,7 +12,7 @@ tags: [publishing, release, audience, kids-and-select, server-management, live-o
 > - Content question answered or full questionnaire completed accurately
 > - Audience decision made (16+ only, or all ages with fee/Plus and evaluation)
 >
-> Cost: TL;DR ~170 tok · whole note ~3.2k tok. Read more: ## 3. Release requirements (Docs, Oct 2026) · ## 4. Shipping updates · ## 6. Common mistakes · ## 7. Checklist
+> Cost: TL;DR ~170 tok · whole note ~3.4k tok. Read more: ## 3. Release requirements (Docs, Oct 2026) · ## 4. Shipping updates · ## 6. Common mistakes · ## 7. Checklist
 <!-- tldr:end -->
 
 Publishing used to be "File, Publish, set to Public". Since mid 2026 it is a gated release: age checks for the creator, a content question or full questionnaire, separate audiences (Roblox 16+, Roblox Select for ages 9 to 15, Roblox Kids for ages 5 to 8) with their own requirements, and an engagement evaluation before a game reaches younger players. This note walks through the whole path from first publish to shipping updates without hurting live players. Verified against the Creator Hub "Publish games and places", "Kids and Select" and "Release game updates" pages plus the Kids and Select launch announcement **as of October 2026**. The thresholds moved several times during 2026; the docs and the announcement disagree on some of them, and both are given.
@@ -166,5 +166,10 @@ Decide before launch. Group ownership survives team changes, lets you assign rol
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Sponsored Ads and Campaign Math]] · [[Ads and Rewarded Video]] · [[Monetization Overview]] · [[Links - Settings and publishing]] · [[Server Shutdowns Soft Updates and Migration]] · [[Launch Strategy - The First Two Weeks]]
+[[Sponsored Ads and Campaign Math]] · [[Ads and Rewarded Video]] · [[Monetization Overview]] · Links - Settings and publishing · Server Shutdowns Soft Updates and Migration · Launch Strategy - The First Two Weeks
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Community Building]] · [[Refunds Chargebacks and Purchase Support]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Analytics and Funnels]] · [[Robux Price Points and Offer Design]] · [[Pricing and Store Design]] · [[Game Passes]] · [[Economy Inflation Sinks and Faucets Math]]
+<!-- related:end -->

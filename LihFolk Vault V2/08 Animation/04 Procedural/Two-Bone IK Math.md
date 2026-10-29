@@ -1,5 +1,5 @@
 ---
-tags: [procedural, ik, math, two-bone, arms, legs, luau]
+tags: [procedural, ik, math, two-bone, arms, legs, luau, type/guide, area/animation, level/advanced, api/AnimationConstraint, area/scripting]
 ---
 # Two-Bone IK Math
 
@@ -9,7 +9,7 @@ tags: [procedural, ik, math, two-bone, arms, legs, luau]
 > - Forearm rolls as the arm bends: bones treated as straight sticks on slanted R15 bones -> solve the hinge in the elbow's own frame (section 4)
 > - Elbow bends backwards: wrong branch sign, or a ball-joint solve -> pick `s` per joint, clamp to the hinge range
 >
-> Cost: TL;DR ~130 tok · whole note ~4.6k tok. Read more: ## 2. The bend plane · ## 4. Slanted R15 bones and the pure-hinge elbow · ## Common mistakes
+> Cost: TL;DR ~130 tok · whole note ~4.7k tok. Read more: ## 2. The bend plane · ## 4. Slanted R15 bones and the pure-hinge elbow · ## Common mistakes
 <!-- tldr:end -->
 
 Two-bone IK is the workhorse: shoulder, elbow, wrist; hip, knee, ankle. It has an exact closed-form answer, runs in constant time, and (done right) can never bend an elbow backwards. This note derives it from the law of cosines, adds the bend plane (pole or swivel), shows how to turn solved geometry into Roblox joint `Transform`s, and then handles the two things textbook versions ignore: **R15 bones are slanted** (the joint pivots are not on a straight line along each part) and **an elbow is a pure hinge**, not a ball joint.
@@ -334,5 +334,10 @@ Related: [[Inverse Kinematics]], [[Elbow Poles Swivel and Joint Limits]], [[Foot
 
 ## Connected notes
 <!-- auto-links:start -->
-[[IKControl Reference]] · [[Arm Baker Internals]] · [[Animation Quality Standard]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Dot and Cross Products in Gameplay]] · [[Topology and Edge Flow]] · [[Animation Start Here]]
+[[IKControl Reference]] · [[Arm Baker Internals]] · [[Animation Quality Standard]] · [[Voxel Characters - Proportions Joints and Rigging]] · Dot and Cross Products in Gameplay · Topology and Edge Flow · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Look-At Aim and Head Tracking]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Procedural Gait and Footstep Planning]] · [[Arm QA Metrics Reference]] · [[Posing and Silhouettes]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Rigs and Joints]] · [[Blade Grip and Wrist Limits]]
+<!-- related:end -->

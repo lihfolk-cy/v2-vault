@@ -1,11 +1,11 @@
 ---
-tags: [gotchas, troubleshooting, reference]
+tags: [gotchas, troubleshooting, reference, type/reference, area/animation, level/intermediate, api/Animator, api/IKControl, api/StepAnimations]
 ---
 # Troubleshooting Table
 
 Symptom first, then the likely cause, how to confirm it, and the fix. Rows are grouped by where the symptom shows up. When several causes are listed for one symptom, they are in order of how often they were the answer in the reference project (one live action game). For the reasoning behind each, see [[Engine Gotchas]]; for an unfamiliar symptom, follow [[Debugging Animation Problems]].
 
-Shorthand: **KS** = KeyframeSequence, **KSP** = KeyframeSequenceProvider, **GPAT** = `Animator:GetPlayingAnimationTracks()`.
+Shorthand: **KS** = KeyframeSequence, **KSP** = [[KeyframeSequenceProvider]], **GPAT** = `Animator:GetPlayingAnimationTracks()`.
 
 ---
 
@@ -62,7 +62,7 @@ Shorthand: **KS** = KeyframeSequence, **KSP** = KeyframeSequenceProvider, **GPAT
 | C2 | Joint randomly flips one way or the other | Exactly 180 degree key | Dump shows 180.0 | Split or offset by 0.5 degrees |
 | C3 | Easing feels backwards | Legacy `Cubic` | Dump shows `Cubic` | Use `CubicV2` |
 | C4 | Easing on the wrong span | Easing placed on the destination key | Dump | Easing belongs on the key that starts the span |
-| C5 | Big turns differ from Blender or Moon previews | Animator blends rotation vectors, previews slerp | A/B diff | Smaller key gaps; predict with the Animator model |
+| C5 | Big turns differ from Blender or Moon previews | Animator blends rotation vectors, previews [[slerp]] | A/B diff | Smaller key gaps; predict with the Animator model |
 | C6 | Constant key behaves unlike expected | Constant In/Out/InOut differ (measured) | Test each | Pick one direction and verify ([[Open Questions]]) |
 | C7 | T-pose or rest flash mid-move | Identity keys written by a tool | Arm joints pass near 0 degrees between strong poses | Remove identity keys; QA "rest flash" |
 | C8 | Pose pops when one clip hands to the next | Clip's last pose far from the next clip's first | Compare end/start poses | End near the idle (75 deg), start within 90 |
@@ -106,7 +106,7 @@ Shorthand: **KS** = KeyframeSequence, **KSP** = KeyframeSequenceProvider, **GPAT
 | E5 | IK hand lags a frame behind the body | Reading `Part.CFrame` in `PreSimulation` (still last frame's) | Compare with FK | Compute the parent chain by FK from the root |
 | E6 | IK elbow inverts | Hinge sign or pole wrong | Elbow bends backwards | Fix hinge axis sign per limb ([[Two-Bone IK Math]]) |
 | E7 | IK snaps at full reach | Target past chain length | Distance > upper + lower | Clamp reach slightly short of straight |
-| E8 | IKControl does nothing | Missing ChainRoot/EndEffector/Target/Type, or not under Humanoid/AnimationController with Animator | Check properties | Set all four ([[IKControl Reference]]) |
+| E8 | [[IKControl]] does nothing | Missing ChainRoot/EndEffector/Target/Type, or not under Humanoid/AnimationController with Animator | Check properties | Set all four ([[IKControl Reference]]) |
 | E9 | IKControl at weight 0 still affects the pose | SmoothTime/Pole still apply (Docs) | n/a | Use `Enabled = false` |
 | E10 | Accessory does not follow a procedural head | Accessory part not welded | n/a | Weld it to the head |
 
@@ -159,3 +159,8 @@ That is 99 rows. If a symptom is not here, it is probably in the craft category 
 <!-- auto-links:start -->
 [[Snippets - IK]] · [[Animation Glossary]] · [[Playback, Priorities and Blending]] · [[Inverse Kinematics]] · [[Animation Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Authoring Clips in Code]] · [[Animator Deep Dive]] · [[Snippets - Lua Keyframe Player Core]] · [[How the Animator Really Behaves]] · [[Snippets - Playing Animations]] · [[Procedural Animation]] · [[AnimationTrack Reference]] · [[KeyframeSequence Keyframe and Pose Reference]]
+<!-- related:end -->

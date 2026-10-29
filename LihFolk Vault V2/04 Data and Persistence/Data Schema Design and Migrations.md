@@ -1,5 +1,5 @@
 ---
-tags: [data, schema, migrations, serialization, versioning]
+tags: [data, schema, migrations, serialization, versioning, type/guide, area/data, level/advanced, api/HttpService, area/design, api/DataStore]
 ---
 # Data Schema Design and Migrations
 
@@ -12,7 +12,7 @@ tags: [data, schema, migrations, serialization, versioning]
 > - Ordered, deterministic, non-yielding steps; never edited after release.
 > - Newer schema refused on load.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.3k tok. Read more: ## What a data store can hold · ## Versioning: the `Schema` field · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.4k tok. Read more: ## What a data store can hold · ## Versioning: the `Schema` field · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Saved data outlives the code that wrote it. A profile written in week one is still loaded by the release you ship in month six, and during every rollout old and new servers run side by side. This note covers how to shape a profile so it survives that, how JSON serialization actually treats Luau values (the edge cases that silently corrupt data), how to build a migration framework that is safe under rolling updates, and what one production game learned doing roughly a dozen migrations and three account resets.
@@ -307,5 +307,10 @@ Keep a folder of anonymised real profiles from each schema era (exported through
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Schema Migrations - Worked Case Studies]] · [[Data Schema Versioning]] · [[Skill - Roblox DataStore Safety]] · [[Cookbook - Data and Saving]] · [[Serialization Formats for Saves and Networking]] · [[Debugging DataStore Problems]]
+[[Schema Migrations - Worked Case Studies]] · [[Data Schema Versioning]] · Skill - Roblox DataStore Safety · Cookbook - Data and Saving · Serialization Formats for Saves and Networking · Debugging DataStore Problems
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Serialization Formats for Saves and Networking]] · [[Cookbook - Data and Saving]] · [[OrderedDataStores and Leaderboards]] · [[Trading Systems Without Duplication]] · [[Global State and Live Config]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[HttpService and External APIs]]
+<!-- related:end -->

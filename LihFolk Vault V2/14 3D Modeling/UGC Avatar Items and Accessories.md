@@ -1,5 +1,5 @@
 ---
-tags: [modeling, ugc, marketplace, accessories, layered-clothing, avatar]
+tags: [modeling, ugc, marketplace, accessories, layered-clothing, avatar, type/guide, area/modeling, level/intermediate, api/SurfaceAppearance, area/avatars]
 ---
 # UGC Avatar Items and Accessories
 
@@ -12,7 +12,7 @@ tags: [modeling, ugc, marketplace, accessories, layered-clothing, avatar]
 > - Budget: upload fee (80, or 500 emissive) plus the publishing advance for the type.
 > - Triangles at most 4,000; one mesh; watertight.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.3k tok. Read more: ## 2. Fees, advances and revenue share (as of October 2026) · ## 3. Item types and the two technical families · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.5k tok. Read more: ## 2. Fees, advances and revenue share (as of October 2026) · ## 3. Item types and the two technical families · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 UGC (user-generated content) avatar items are 3D accessories, layered clothing, bodies, heads and emotes that creators sell on the Roblox Marketplace. Making one is a modelling and texturing job with an unusually strict technical spec, an automated validator, human moderation, real Robux fees and a revenue share. This note collects the requirements, specs, fees and publishing flow, all checked against the Creator Hub and Roblox announcements **as of October 2026**. Marketplace rules change several times a year; before you spend Robux, re-read the linked official pages.
@@ -94,7 +94,7 @@ Only the first time an asset goes on sale counts. Paid Limiteds have a maximum q
 |---|---|---|
 | **Rigid accessory** | One mesh attached to one attachment point; moves rigidly with one body part | Hats, hair, face items, back items (wings, swords), shoulder pets, waist items |
 | **Layered accessory (layered clothing)** | One mesh skinned to the R15 armature, with inner and outer cages, that wraps onto any body and over other layers | Shirts, jackets, sweaters, pants, shorts, dresses, shoes, some hair |
-| Bodies and heads | Full avatar bodies, dynamic heads with FACS | Out of scope here; see [[Facial Animation and Dynamic Heads]] |
+| Bodies and heads | Full avatar bodies, dynamic heads with [[FACS]] | Out of scope here; see [[Facial Animation and Dynamic Heads]] |
 
 ### Rigid accessory specs (docs)
 
@@ -224,5 +224,10 @@ If you also run a game:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Layered Clothing Creation Workflow]] · [[Bundles Animation Packs and Emotes for Sale]] · [[UGC Pricing Limiteds and Marketplace Rules]] · [[Avatars and UGC Start Here]] · [[Links - Avatars and UGC]] · [[HumanoidDescription and Outfit Systems]]
+[[Layered Clothing Creation Workflow]] · Bundles Animation Packs and Emotes for Sale · UGC Pricing Limiteds and Marketplace Rules · Avatars and UGC Start Here · Links - Avatars and UGC · HumanoidDescription and Outfit Systems
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[UGC Pricing Limiteds and Marketplace Rules]] · [[Bundles Animation Packs and Emotes for Sale]] · [[Topology and Edge Flow]] · [[Normal Maps and Detail Baking]] · [[Blender Workflow for Roblox Creators]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Organic and Creature Modeling]] · [[Mesh Optimization for Mobile]] · [[Hand-Painted and Stylized Texturing]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]
+<!-- related:end -->

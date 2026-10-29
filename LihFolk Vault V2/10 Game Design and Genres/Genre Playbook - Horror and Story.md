@@ -1,5 +1,5 @@
 ---
-tags: [game-design, genre, horror, story, narrative, tension, cutscenes]
+tags: [game-design, genre, horror, story, narrative, tension, cutscenes, type/guide, area/design, level/intermediate, api/Atmosphere]
 ---
 # Genre Playbook - Horror and Story
 
@@ -12,7 +12,7 @@ tags: [game-design, genre, horror, story, narrative, tension, cutscenes]
 > - Tension curve planned with explicit release beats.
 > - Monster rules learnable; signature sound; telegraphs.
 >
-> Cost: TL;DR ~130 tok · whole note ~3.8k tok. Read more: ## 4. Monster design · ## 10. A tension director (sketch) · ## 12. Common mistakes · ## 13. Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.9k tok. Read more: ## 4. Monster design · ## 10. A tension director (sketch) · ## 12. Common mistakes · ## 13. Checklist
 <!-- tldr:end -->
 
 Horror and story games are Roblox's "event" genres: a group of friends enters a chapter, gets chased, screams, and comes out with a story to tell. Story games (escape, break-in, chapter adventures) share the same structure without (or with less) fear. Both are built around **authored moments** rather than systems, which makes them expensive per minute of content and extremely strong at producing clips, word of mouth and co-play. This playbook covers why the genres work on Roblox, tension design, monster design, round and chapter structures, narrative in short sessions, replay value, maturity and safety considerations, and a small "tension director" you can build on.
@@ -285,5 +285,10 @@ Do not use fear to push purchases ("buy a revive NOW" during a chase with a coun
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Horror Monster Chase AI End to End]] · [[Links - Horror game mechanics]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Case Study - Doors]] · [[Links - Music and ambience]] · [[Case Study - 99 Nights in the Forest]]
+[[Horror Monster Chase AI End to End]] · Links - Horror game mechanics · [[Genre Playbook - Puzzle and Escape Rooms]] · Case Study - Doors · Links - Music and ambience · Case Study - 99 Nights in the Forest
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Genre Playbook - Obbies and Platformers]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Combat and RPG]] · [[Genre Playbook - Survival and Crafting]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Social Deduction and Murder Mystery]] · [[Core Loops and Session Design]]
+<!-- related:end -->

@@ -1,0 +1,54 @@
+---
+tags: [atlas, api, type/atlas, area/animation, area/gameplay, api/CFrame]
+---
+# CFrame
+
+<!-- tldr:start -->
+> [!tldr] TL;DR
+> - `CFrame.Angles(rx, ry, rz)` equals `CFrame.fromEulerAnglesXYZ`, which is the product `Rx * Ry * Rz` (Docs).
+> - Avoid: Sampling with `CFrame:Lerp` and trusting it on big turns.
+> - Model's parts fly apart during a tween: tweening `Position` on a welded root -> tween `CFrame` (Tween and CFrame Animation of...
+> - Camera flips looking straight up: Pitch reaching 90 degrees, readback from CFrame -> Scalar yaw and pitch, clamp under 90.
+>
+> Cost: TL;DR ~150 tok · whole note ~2.5k tok. Read more: ## In short · ## Key facts
+<!-- tldr:end -->
+
+## In short
+
+`CFrame.Angles(rx, ry, rz)` equals `CFrame.fromEulerAnglesXYZ`, which is the product `Rx * Ry * Rz` (Docs). (from [[Math Vectors and CFrames]])
+
+API snapshot: Luau data type (`_tools/roblox_api.json`, docs build of 2026-10-27).
+
+## Key facts
+
+- Avoid: Sampling with `CFrame:Lerp` and trusting it on big turns. ([[Snippets - Building and Sampling Clips]])
+- Model's parts fly apart during a tween: tweening `Position` on a welded root -> tween `CFrame` ([[Tween and CFrame Animation of Objects]])
+- Camera flips looking straight up: Pitch reaching 90 degrees, readback from CFrame -> Scalar yaw and pitch, clamp under 90. ([[Rotations Angles and Quaternions]])
+- Tail corkscrews when it passes vertical: `CFrame.lookAt` with a world up vector per segment -> minimal rotation from the rest direction, root first. ([[Multi-Bone IK - FABRIK and CCD]])
+- Avoid: Shake written into `CFrame` without removal -> Apply at Camera+1, remove at Camera-1. ([[Camera Systems]])
+
+## Mentioned in
+
+230 notes in 38 sections. The 25 most relevant are linked:
+
+### 02 Luau Scripting
+[[Math Vectors and CFrames]]
+
+### 06 World Building and Art
+[[Grid Placement and Player Building Systems]]
+
+### 08 Animation
+[[Arm Baker Internals]] · [[Authoring Clips in Code]] · [[Bones and Skinned Meshes]] · [[CurveAnimation and Curve Channels]] · [[Enemy Import Axis Fix]] · [[Flight Flocks and Path Animation]] · [[IKControl Reference]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Look-At Aim and Head Tracking]] · [[Motor6D Math and CFrame Composition]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Procedural Animation]] · [[Procedural Weapon Motion]] · [[Snippets - Building and Sampling Clips]] · [[Snippets - IK]] · [[Snippets - Procedural Motion]] · [[Tween and CFrame Animation of Objects]] · [[Two-Bone IK Math]] · [[Weapon Design Rig Builder]]
+
+### 09 Gameplay Systems
+[[Camera Systems]]
+
+### 29 Luau Cookbook
+[[Cookbook - Math CFrame and Vectors]]
+
+### 40 Game Math
+[[Dot and Cross Products in Gameplay]] · [[Rotations Angles and Quaternions]]
+
+Also mentioned in (not linked): 00 Start Here · AI Animation and Motion from Video · AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses · AI Pitfalls - Data and Monetization · AI Pitfalls - Physics and Animation · Ability Kits Architecture · Accessories and Armor That Follow Animation · Advanced Types - Generics and Type Functions · Aircraft and Flight Models · Animation Data Hygiene - Euler Wrap Joint Holes and Easing · Animation Data from Blender to Roblox · Animation Editor Advanced · Animation Glossary · Animation Objects · Animation Start Here · AnimationConstraint and Physically Simulated Characters · Animator Deep Dive · Arm Twist and Grip Roll - Lessons from Baked Sword Clips · Art Pipeline - Concept to In-Game Asset · Asset Pipelines · Avatar Body Types and Scale in Gameplay · Baked Clip Stubs and Archiving · Beams and Trails · Benchmark - Does a Knowledge Vault Make AI Better at Roblox · Big Numbers Precision and Formatting · Blade Grip and Wrist Limits · Blender Armature and Bone Roll Conventions · Boats Buoyancy and Water · Boss Animation and Phases · Camera Shake and Camera FX · Cameras and Cutscenes · Centre of Mass, Anti-Flip and Self-Righting · Character Select and Class Systems with Different Rigs · Character and Creature Pipeline · Characters and Humanoids · Chase Cameras and Speed Effects for Vehicles · Choosing a Car Chassis - Raycast Suspension vs Constraint Builds vs Community Kits · Cinematic Ultimates · Clip Buffer Format · Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop · CollectionService Patterns · Combat Combo Systems · Command Bar and Studio Scripting · Cookbook - Players and Characters · Cookbook - Remotes and Networking · Curves in Luau - Paths Beams and Motion · Custom Character Controllers · Custom Characters and StarterCharacter · Custom Rigs - Weapons and Props · Data Schema Design and Migrations · Debugging Animation Problems · Debugging Physics and Network Ownership · Destruction and Fracture · Detecting Movement Exploits - Speed Fly Noclip Teleport · Documentation and Knowledge Bases · Easing · Elbow Poles Swivel and Joint Limits · Enemy and NPC Animation · Engine Gotchas · Environment and Level Pipeline · Equip Draw and Flourish Systems · Events Signals and Connections · Exploits and Anti-Cheat · Explorer Properties and Selection · Exporting FBX vs GLB · Exporting and Validating Models for Roblox · Field Notes Start Here · First-Person Viewmodels - Arms Rig, Sway and Camera Binding · Foliage Props and Scatter · Foot Placement and Ground IK · Frame Order and RunService Timing · Game Math Start Here · Genre Playbook - Obbies and Platformers · Genre Playbook - Sports · Genre Playbook - Survival and Crafting · Genre Playbook - Tower Defense · Genre Playbook - Tycoons · Grabs, Carries and Throws - Moving Players Safely · Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers · Held Weapons on Motor6D - Locking the Grip During Attacks · Hitboxes and Hit Detection · Horror Monster Chase AI End to End · How the Animator Really Behaves · Idle Breathing and Secondary Motion · Importing Models and Rigs · Instance Streaming · Instanced Interiors - Pooled House and Room Copies for Many Players · Instances Attributes and Tags · Interpolation Easing and Curves Math · Intersection and Collision Math · Inverse Kinematics · Juice on a Budget - Mobile and Low-End · Keyframes, Easing and Interpolation · Kill Planes, Map Boundaries and Out-of-Bounds Recovery · Layering Camera Feedback on the Default Camera · Level of Detail and Model Streaming · Lightning Strikes and Thunder - Procedural Bolts and Sound Delay · LihFolk R15 Keyframe Pipeline · Lobby and Hub Design · Lua Keyframe Player · Lua Keyframe Player Internals · Luau Cookbook Start Here · Luau Garbage Collection and the Memory Model · Luau Language Essentials · Luau Performance Patterns with Benchmarks · Luau Type System and Strict Mode · MCP Workflows for Building Worlds · Map Voting and Rotation for Round Games · Melee Combat System End to End · Memory Budgets and Leaks · Mesh VFX Packs Built in Blender · Metatables and OOP - When and When Not · Modeling Characters for R15 and Custom Rigs · Modeling Weapons and Props · Modeling in Blender for Roblox · Modular Environment Kits · Moon Animator and Third-Party Tools · Motion Sensitivity and Camera Comfort · Mover Constraints and Physics Controllers · Multi-Seat Vehicles - Driver, Passenger and Gunner Roles · Network Bandwidth Budgets and Measuring Them · Network Ownership · Network Performance · Obby Checkpoints and Stage Saves End to End · Obby and Platforming Level Design · Object Pooling · Open Questions · Open Questions - Whole Vault · Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run · Parts Unions and MeshParts · Performance Fundamentals · Performance and Memory · Pet Hatching and Following End to End · Physics Assemblies and Constraints · Physics Performance · Pipeline - Arm IK Baking and QA · Pipeline - New Animated Weapon · Pipeline Design Principles · Planning and Scoping a Roblox Game · Procedural Death Knockdown and Hit Reactions · Procedural World Generation · Projectiles and Ballistics · R15 Rig Anatomy and Attachments · R15 Run Cycle Key Poses · Racing Laps and Checkpoints End to End · Ragdolls and Physics-Based Animation · Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking · Reference - Purple Anime Settings UI (Claude + Figma) · Remote Abuse Patterns and Rate Limiting in Practice · RemoteEvents RemoteFunctions and Unreliable Remotes · Replication Rules · Replication and Ownership · Retargeting Animations Between Rigs · Rides and Attractions - Roller Coasters, Ziplines, Elevators and Cable Cars · Rigging in Blender · Rigs and Joints · Roads, Rivers and Paths Carved Along Curves in Terrain · Roblox Generative AI - Cube Mesh and Texture Generation · Round-Based Minigame Loop End to End · Safe Changes in a Shared Place · Selection Editing and Bulk Tools · Serialization Formats for Saves and Networking · Server Authority and Input Migration 2026 · Side-Scroller in 3D - Locking Camera and Movement to a Plane · Skeleton Library · Snapshot Interpolation for Custom Replication · Snippets - Camera Shake and FX · Snippets - Lua Keyframe Player Core · Snippets - Ragdoll · Spatial Audio and Mixing · Spawn Points Safe Zones and Respawn Flow · Spawning Teams and Rounds · Springs Damping and Smoothing · Springs That Survive Long Frames - dt Clamps and NaN Guards · Squash Stretch and Anticipation in UI and Characters · Standing on Moving Vehicles and Platforms - Keeping Players Glued · Studio Interface Tour · Studio Tooling Architecture · Terrain Tools and Terrain API · Testing Animations in Studio · Testing Your Own Remotes - Fuzzing and Abuse Tests · Tiling Trim Sheets and Decal Tricks · Tower Defense Waves and Placement End to End · Troubleshooting Table · Tween vs Spring · Tycoon Plots and Droppers End to End · UI and GUI Animation · UV Unwrapping · Undo and ChangeHistoryService Done Right · Vehicle Damage, Repair and Wreck States · Vehicle Ownership and Anti-Exploit - Server-Checked Driving · Vehicle Spawner and Garage - Spawn, Ownership, Despawn and Limits · Visual AI Debugging - State Labels, Path Lines and Perception Gizmos · Voxel Art - Studs Outlines and Style Kits · Voxel Characters - Proportions Joints and Rigging · Voxel Props Environments and Modular Tiles · Voxel Scale Grids and Stud Alignment · Voxel and Blocky Modeling · Water Sky and Atmosphere Art · Wave Function Collapse on Roblox · Weapon Rig Player · Weapon Swing Design · Weekend Build - Survival Gather, Craft and Place · Wildlife and Ambient Creature AI - Passive, Neutral and Hostile · Zone Detection - Area Enter and Exit for Music, Lighting and Ambience
+
+<!-- atlas:generated -->

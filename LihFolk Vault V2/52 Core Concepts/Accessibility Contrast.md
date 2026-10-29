@@ -1,5 +1,5 @@
 ---
-tags: [core-concept, accessibility, ui, art]
+tags: [core-concept, accessibility, ui, art, type/reference, area/ui, level/beginner, area/accessibility]
 ---
 # Accessibility Contrast
 
@@ -10,7 +10,7 @@ tags: [core-concept, accessibility, ui, art]
 > - Colour is not contrast. Red on green can have nearly the same brightness and becomes invisible for many colour-blind players.
 > - Never carry meaning by colour alone. Rarity, team and status need a second cue: a shape, an icon, a label or a pattern.
 >
-> Cost: TL;DR ~160 tok · whole note ~880 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~160 tok · whole note ~940 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Accessibility contrast** is the difference in brightness between text (or an important icon) and what is behind it, measured as a contrast ratio from 1:1 (identical) to 21:1 (black on white). The common web standard, WCAG, asks for at least 4.5:1 for normal text and 3:1 for large text and essential graphics (WCAG 2.x, an external standard, not a Roblox rule).
@@ -65,5 +65,10 @@ Related concepts: [[Safe Area]], [[Thumbnail Contrast]], [[Easing]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Accessibility Start Here]] · [[Stylized Lighting Recipes]] · [[Skill - Roblox UI Builder]] · [[Colour Scripts and Value Structure for Untextured Art]] · [[Highlights and Selection Effects]] · [[UI Asset Pipeline]] · [[Core Concepts Start Here]]
+[[Accessibility Start Here]] · Stylized Lighting Recipes · Skill - Roblox UI Builder · Colour Scripts and Value Structure for Untextured Art · Highlights and Selection Effects · UI Asset Pipeline · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Texel Density]] · [[Tween vs Spring]] · [[Draw Calls]] · [[Replication Boundary]] · [[Anticipation]] · [[Triangle Budget]] · [[Click-Through Rate]] · [[Hit-Stop]]
+<!-- related:end -->

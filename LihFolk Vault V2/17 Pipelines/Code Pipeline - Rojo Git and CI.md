@@ -1,5 +1,5 @@
 ---
-tags: [pipelines, code, rojo, git, ci, github-actions, open-cloud, testing]
+tags: [pipelines, code, rojo, git, ci, github-actions, open-cloud, testing, type/guide, area/pipelines, level/intermediate, api/SurfaceAppearance]
 ---
 # Code Pipeline - Rojo Git and CI
 
@@ -12,7 +12,7 @@ tags: [pipelines, code, rojo, git, ci, github-actions, open-cloud, testing]
 > - Tools pinned with Rokit; Wally for packages
 > - StyLua, Selene, luau-lsp, Rojo build in CI on every PR
 >
-> Cost: TL;DR ~160 tok · whole note ~4.6k tok. Read more: ## Stage 4: local checks before commit · ## Stage 5: tests in CI with Open Cloud Luau execution · ## Failure modes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.7k tok. Read more: ## Stage 4: local checks before commit · ## Stage 5: tests in CI with Open Cloud Luau execution · ## Failure modes · ## Checklist
 <!-- tldr:end -->
 
 Code is the content type with the best tooling outside Roblox and the worst inside it. Studio's script editor has no branches, no review and no diff between yesterday and today, and in Team Create two people can overwrite each other's script without a warning. The fix the community settled on is to keep code in files and sync it into Studio with **Rojo**, version it with **Git**, and check it with **CI**. This note is the full recipe, from repo layout to an automated publish, plus what to do when you cannot (yet) move to files. Tool introductions are in [[External Tooling - Rojo Wally Selene StyLua]] and [[Git and Source Control for Roblox]]; project structure in [[Project Structure and Bootstrapping]] and [[Module Scripts and Requiring]].
@@ -145,7 +145,7 @@ The heuristic only flags top-level statements, which is where the real crashes h
 
 ## Stage 5: tests in CI with Open Cloud Luau execution
 
-Unit tests for pure logic can run outside Roblox with **Lune** (a standalone Luau runtime) if your modules avoid engine APIs. Anything that touches the engine needs a real place. As of October 2026, Open Cloud offers **Luau Execution**: you POST a script to run against a place version on Roblox servers and poll for the result. Facts from the Roblox docs:
+Unit tests for pure logic can run outside Roblox with **[[Lune]]** (a standalone Luau runtime) if your modules avoid engine APIs. Anything that touches the engine needs a real place. As of October 2026, Open Cloud offers **Luau Execution**: you POST a script to run against a place version on Roblox servers and poll for the result. Facts from the Roblox docs:
 
 | Item | Value |
 |---|---|
@@ -325,5 +325,10 @@ This is a stepping stone. The moment more than one person edits code daily, move
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Code Review for Luau Teams]] · [[Places Universes and Experience Settings]] · [[Links - External tooling]] · [[Documentation and Onboarding New Developers]] · [[Packages and Asset Reuse]] · [[AI Code Assistants for Luau]]
+[[Code Review for Luau Teams]] · Places Universes and Experience Settings · Links - External tooling · Documentation and Onboarding New Developers · Packages and Asset Reuse · AI Code Assistants for Luau
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Live Content Pipeline]] · [[Batch Processing Tools in Studio]] · [[Icon and Thumbnail Rendering Pipeline]] · [[Blender Automation with Python]] · [[Art Pipeline - Concept to In-Game Asset]] · [[Localization Pipeline]] · [[Environment and Level Pipeline]] · [[Audio Pipeline]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [vfx, performance, budgets, culling, particles, mobile, optimization]
+tags: [vfx, performance, budgets, culling, particles, mobile, optimization, type/guide, area/vfx, level/intermediate, api/Beam, area/performance]
 ---
 # VFX Performance Budgets and Culling
 
@@ -12,7 +12,7 @@ tags: [vfx, performance, budgets, culling, particles, mobile, optimization]
 > - Cost estimation script run on every template; worst offenders listed.
 > - Gameplay effects flagged; never skipped, only simplified.
 >
-> Cost: TL;DR ~200 tok · whole note ~6.2k tok. Read more: ## 2. Budget units that actually work · ## 4. Culling and degrading: the governor · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~200 tok · whole note ~6.3k tok. Read more: ## 2. Budget units that actually work · ## 4. Culling and degrading: the governor · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[VFX Design Playbook]] tells you how to make an effect look good, and [[Particle Emitters In Depth]] covers the emitter properties and their traps. This note is about the other half of the job: keeping the frame rate when eight players fire their best effects at once on a mid-range phone. It covers where VFX cost actually goes, how to turn "it lags in big fights" into budgets you can count, how to cull and degrade effects by distance, view and importance, and how to measure all of it. The working code is a small client-side **governor** that decides, per effect, whether to play it in full, reduced or not at all.
@@ -417,5 +417,10 @@ See also: [[VFX Design Playbook]], [[Particle Emitters In Depth]], [[Beams and T
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Juice on a Budget - Mobile and Low-End]] · [[Object Pooling]] · [[VFX Timing with Animation]] · [[Resource Library - Visual Effects]] · [[Draw Calls]] · [[Links - Particle emitters]]
+[[Juice on a Budget - Mobile and Low-End]] · Object Pooling · VFX Timing with Animation · Resource Library - Visual Effects · Draw Calls · Links - Particle emitters
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Weather Performance Budgets and Quality Tiers]] · [[Graphics and Performance Toggles for Low-End Devices]] · [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Slash VFX Recipes - Crescent and Ring]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]]
+<!-- related:end -->

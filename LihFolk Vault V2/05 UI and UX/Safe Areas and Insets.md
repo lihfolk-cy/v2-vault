@@ -1,5 +1,5 @@
 ---
-tags: [ui, safe-area, screeninsets, topbar, notch, mobile]
+tags: [ui, safe-area, screeninsets, topbar, notch, mobile, type/guide, area/ui, level/intermediate]
 ---
 # Safe Areas and Insets
 
@@ -12,7 +12,7 @@ tags: [ui, safe-area, screeninsets, topbar, notch, mobile]
 > - `SafeAreaCompatibility = None` on new guis.
 > - Edge-to-edge art lives in a separate `None` gui, skipped by scalers.
 >
-> Cost: TL;DR ~130 tok · whole note ~3.7k tok. Read more: ## 7. Case study: the letterbox that would not reach the edge · ## 9. Aligning your own buttons with the top bar · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.8k tok. Read more: ## 7. Case study: the letterbox that would not reach the edge · ## 9. Aligning your own buttons with the top bar · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A phone screen is not a rectangle you fully own. Camera notches, rounded corners and home indicators cut into it, and on every device Roblox's own top bar (menu, chat and other controls) sits in the top-left. Roblox gives each `ScreenGui` a choice of which of these to avoid. Pick wrong and either your buttons hide under a notch, or your full-screen backgrounds and cinematic bars stop short of the edge with a gap the game world shows through.
@@ -255,5 +255,10 @@ See also: [[ScreenGui Fundamentals]], [[Responsive UI for Phone Tablet Console a
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Safe Area]] · [[Debugging UI Layout and Input]] · [[Skill - Roblox UI Builder]] · [[Links - Containers]] · [[Cookbook - UI]] · [[Camera Systems]]
+[[Safe Area]] · Debugging UI Layout and Input · Skill - Roblox UI Builder · Links - Containers · Cookbook - UI · Camera Systems
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Debugging UI Layout and Input]] · [[AI Pitfalls - UI and Input]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[UI Layout Objects - Lists Grids and Pages]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[Gamepad and Console UX]] · [[UI Design Systems]] · [[Accessibility]] · [[Menu Archetypes - Shop Settings Codes Rewards]]
+<!-- related:end -->

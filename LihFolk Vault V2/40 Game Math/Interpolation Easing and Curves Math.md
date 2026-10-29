@@ -1,5 +1,5 @@
 ---
-tags: [math, game-math, interpolation, easing, curves, bezier, splines, tweening, ui, camera, luau]
+tags: [math, game-math, interpolation, easing, curves, bezier, splines, tweening, ui, camera, luau, type/guide]
 ---
 # Interpolation Easing and Curves Math
 
@@ -12,10 +12,10 @@ tags: [math, game-math, interpolation, easing, curves, bezier, splines, tweening
 > - Engine easing is sampled with `TweenService:GetValue` before you rely on its exact shape.
 > - Out easing for responses, In for exits, InOut only for unchained moves.
 >
-> Cost: TL;DR ~180 tok · whole note ~5.8k tok. Read more: ## 2. Easing functions are just shapes of t · ## 5. Curves through space: Bezier and Catmull-Rom · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.9k tok. Read more: ## 2. Easing functions are just shapes of t · ## 5. Curves through space: Bezier and Catmull-Rom · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-Interpolation is how a game turns "from here to there" into motion, colour, damage falloff and difficulty ramps. [[Math Vectors and CFrames]] covers `math.lerp`, `math.map`, `CFrame:Lerp` and frame-rate independent exponential smoothing; [[Springs Damping and Smoothing]] covers springs; [[Keyframes, Easing and Interpolation]] covers how the Animator eases between poses, including its measured quirks. This note is the maths underneath and the gameplay uses on top: the three building blocks (lerp, inverse lerp, remap), easing functions as formulas you can reason about, overshoot budgets, envelopes, Bezier and Catmull-Rom curves, constant-speed travel along a curve, retargeting a motion mid-flight without a jolt, and interpolating things that are not plain numbers (angles, colours, scales).
+Interpolation is how a game turns "from here to there" into motion, colour, damage falloff and difficulty ramps. [[Math Vectors and CFrames]] covers `math.lerp`, `math.map`, `CFrame:Lerp` and frame-rate independent exponential smoothing; [[Springs Damping and Smoothing]] covers springs; [[Keyframes, Easing and Interpolation]] covers how the Animator eases between poses, including its measured quirks. This note is the maths underneath and the gameplay uses on top: the three building blocks (lerp, inverse lerp, remap), easing functions as formulas you can reason about, overshoot budgets, envelopes, [[Bezier Curves|Bezier]] and Catmull-Rom curves, constant-speed travel along a curve, retargeting a motion mid-flight without a jolt, and interpolating things that are not plain numbers (angles, colours, scales).
 
 ---
 
@@ -385,5 +385,10 @@ All of the above takes a `t`. Where `t` comes from is the second half of getting
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Easing]] · [[Tween vs Spring]] · [[CurveAnimation and Curve Channels]] · [[Flight Flocks and Path Animation]] · [[Cookbook - Math CFrame and Vectors]] · [[Timing Spacing and Frame Charts]]
+[[Easing]] · Tween vs Spring · CurveAnimation and Curve Channels · Flight Flocks and Path Animation · Cookbook - Math CFrame and Vectors · Timing Spacing and Frame Charts
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Curves in Luau - Paths Beams and Motion]] · [[Bezier Curves and Splines for Modellers]] · [[Tween vs Spring]] · [[Flight Flocks and Path Animation]] · [[Animation Data Hygiene - Euler Wrap Joint Holes and Easing]] · [[Cookbook - Math CFrame and Vectors]]
+<!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [field-notes, input, shift-lock, sprint, gamepad, menus, contextactionservice]
+tags: [field-notes, input, shift-lock, sprint, gamepad, menus, contextactionservice, type/guide, area/ui, level/intermediate, api/ContextActionService]
 ---
 # Shift-Lock Sprint and Gamepad B for Menus
 
@@ -12,7 +12,7 @@ tags: [field-notes, input, shift-lock, sprint, gamepad, menus, contextactionserv
 > - If the platform shift-lock is disabled, an alternative exists and releases for menus.
 > - B close-binding exists only while a panel is open, at high priority.
 >
-> Cost: TL;DR ~190 tok · whole note ~1.5k tok. Read more: ## 1. Shift-lock steals Shift · ## 2. Gamepad B: close menus only while a menu is open · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~1.6k tok. Read more: ## 1. Shift-lock steals Shift · ## 2. Gamepad B: close menus only while a menu is open · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Two binding conflicts every action game meets. On PC, Shift is the obvious sprint key, and Roblox's shift-lock (mouse lock) option already uses Shift, so pressing it both sprints and toggles the camera lock. On gamepad, B is the obvious "back" button for menus and also an obvious dash or dodge button, so a global "B closes menus" binding eats the dash. The fixes are about *who owns a key, and when*. General input patterns are in [[Input - UserInputService and ContextActionService]]; controller layout in [[Gamepad and Console UX]].
@@ -110,5 +110,10 @@ Details that matter:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Input - UserInputService and ContextActionService]] · [[Gamepad and Console UX]] · [[Input Remapping and One-Handed Play]] · [[ProximityPrompt Gamepad Keys and the Hidden PlayerList Tab]] · [[Hold-to-Attack Input That Never Sticks]] · [[Field Notes Start Here]]
+[[Input - UserInputService and ContextActionService]] · Gamepad and Console UX · Input Remapping and One-Handed Play · [[ProximityPrompt Gamepad Keys and the Hidden PlayerList Tab]] · [[Hold-to-Attack Input That Never Sticks]] · [[Field Notes Start Here]]
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Layering Camera Feedback on the Default Camera]] · [[A Stuck Player Watchdog That Logs the Cause]] · [[Server-Authoritative Freeze and Stun Timestamps]] · [[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[Shared Close Buttons and Headers Across Many Screens]] · [[Resetting One Player's Data Safely]]
+<!-- related:end -->

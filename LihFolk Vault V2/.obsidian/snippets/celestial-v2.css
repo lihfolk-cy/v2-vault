@@ -1,104 +1,579 @@
-/* Celestial V2: LihFolk Vault V2 layer on top of celestial-lite + celestial-fx + graph-cosmic.
-   Adds: glowing graph nodes, an orbiting planet-ring backdrop, twinkling stars, V2 marks.
-   Uses Celestial's own variables; turn this one snippet off to return to plain Celestial. */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+/* ==========================================================================================
+   CELESTIAL V2 : the LihFolk Vault V2 shell. Extends Celestial (celestial-lite, celestial-fx,
+   vault-folder-colors, graph-cosmic, vault-polish, lihfolk-home). Never edits those files.
+   Companion snippets: celestial-v2-notes.css (reading surface + home), celestial-v2-hud.css
+   (modals, palette, menus, popovers, settings, search, canvas, scrollbars, focus).
+   Turn the three celestial-v2* snippets off to get plain Celestial back.
 
-:root { --v2-violet: 155, 123, 255; --v2-cyan: 64, 217, 255; --v2-pink: 242, 115, 204; }
+   CHANGELOG
+   v2.3  2026-10-28  Full UI pass. Deep-space backdrop across the whole app; sidebars, ribbon,
+                     note pane and status bar float as glass HUD panels; orbit-pill tabs with a
+                     comet trail; mission-console status bar with orbiting planet + V2 mark;
+                     constellation file explorer with star lock-on; Sora + Figtree type;
+                     welcome planet fixed (container max-height 280px was shrinking the flex
+                     item to 18px) and rebuilt as a V2 launch screen; graph crescent moon made
+                     visible (graph-cosmic's !important background was hiding it) and orbit
+                     rings moved off graph-cosmic's pseudo-elements; split into 3 snippets.
+   v2.4  2026-10-28  Style Settings panel (glow, accents, glass, speed, stars, orbits, motion);
+                     styling for Smart Connections, Dataview, Advanced Tables, the 3D galaxy /
+                     orrery / extended-graph views and the Celestial Vault plugin when it is on.
+   v2.2  earlier     Graph glow, planet-ring backdrop, twinkle layer, V2 pill, hero halo.
+   ========================================================================================== */
 
-/* ---------- graph: neon glow on nodes and links (the graph is a canvas, so a filter lights it all) ---------- */
-.workspace-leaf-content[data-type="graph"] canvas,
-.workspace-leaf-content[data-type="localgraph"] canvas {
-  filter: saturate(1.3) drop-shadow(0 0 2px rgba(var(--v2-violet), .65)) drop-shadow(0 0 9px rgba(var(--v2-cyan), .22));
+/* @settings
+
+name: LihFolk Vault V2
+id: lihfolk-vault-v2
+settings:
+    -
+        id: v2-look
+        title: Look
+        type: heading
+        level: 2
+        collapsed: false
+    -
+        id: v2-glow
+        title: Glow strength
+        description: Multiplies every neon glow (panels, tabs, callouts, cards, graph). 0 = flat, 2 = maximum.
+        type: variable-number-slider
+        default: 1
+        min: 0
+        max: 2
+        step: 0.1
+    -
+        id: v2-glass-alpha
+        title: Panel glass opacity
+        description: How solid the floating panels are. Lower lets more of the nebula through.
+        type: variable-number-slider
+        default: 0.8
+        min: 0.5
+        max: 0.98
+        step: 0.02
+    -
+        id: v2-violet
+        title: Violet accent
+        type: variable-color
+        format: rgb-values
+        default: '#9b7bff'
+    -
+        id: v2-cyan
+        title: Cyan accent
+        type: variable-color
+        format: rgb-values
+        default: '#40d9ff'
+    -
+        id: v2-pink
+        title: Pink accent
+        type: variable-color
+        format: rgb-values
+        default: '#f273cc'
+    -
+        id: v2-space
+        title: Space
+        type: heading
+        level: 2
+        collapsed: false
+    -
+        id: v2-no-stars
+        title: Hide starfield and twinkle
+        description: Removes the star layers behind the app, notes and graph.
+        type: class-toggle
+        default: false
+    -
+        id: v2-no-orbits
+        title: Hide orbit rings
+        description: Removes the orbit rings and orbiting moons (graph, home hero, welcome tab).
+        type: class-toggle
+        default: false
+    -
+        id: v2-motion
+        title: Motion
+        type: heading
+        level: 2
+        collapsed: false
+    -
+        id: v2-speed
+        title: Animation speed
+        description: 1 = normal, 0.5 = half speed, 2 = double speed.
+        type: variable-number-slider
+        default: 1
+        min: 0.25
+        max: 3
+        step: 0.25
+    -
+        id: v2-reduce-motion
+        title: Reduce motion
+        description: Stops every animation and transition (the OS "reduce motion" setting does this too).
+        type: class-toggle
+        default: false
+*/
+
+/* ---------------------------------------------------------------- tokens (defaults on :root so Style Settings can override) */
+:root {
+  --v2-violet: 155, 123, 255; --v2-cyan: 64, 217, 255; --v2-pink: 242, 115, 204; --v2-gold: 255, 210, 122;
+  --v2-glow: 1; --v2-glass-alpha: .8; --v2-speed: 1;
+}
+body.theme-dark {
+  --v2-display: 'Sora', 'Segoe UI', sans-serif;
+  --v2-body: 'Figtree', 'Segoe UI', sans-serif;
+  --v2-ice: color-mix(in srgb, rgb(var(--v2-cyan)) 72%, white);
+  --v2-lilac: #c9b8ff;
+  --v2-glass: linear-gradient(180deg, rgba(24, 18, 48, var(--v2-glass-alpha)), rgba(10, 8, 22, calc(var(--v2-glass-alpha) + .04)));
+  --v2-glass-edge: rgba(var(--v2-violet), .24);
+  --v2-panel-shadow: inset 0 1px 0 rgba(255, 255, 255, .06), 0 0 0 1px rgba(0, 0, 0, .35),
+                     0 22px 50px -22px rgba(0, 0, 0, .9), 0 0 34px -16px rgba(var(--v2-violet), calc(.55 * var(--v2-glow)));
+  --v2-hairline: linear-gradient(90deg, transparent, rgba(var(--v2-cyan), .55) 30%, rgba(var(--v2-violet), .6) 70%, transparent);
+
+  /* type */
+  --font-text-theme: var(--v2-body);
+  --font-interface-theme: var(--v2-body);
+  --h1-font: var(--v2-display); --h2-font: var(--v2-display); --h3-font: var(--v2-display);
+  --h4-font: var(--v2-display); --h5-font: var(--v2-display); --h6-font: var(--v2-display);
+  --inline-title-font: var(--v2-display);
+  --h1-size: 2.15em; --h2-size: 1.6em; --h3-size: 1.28em; --h4-size: 1.06em;
+  --h1-weight: 700; --h2-weight: 650; --h3-weight: 600; --h4-weight: 600;
+  --h1-line-height: 1.18; --h2-line-height: 1.25;
+  --line-height-normal: 1.72;
+  --file-line-width: 900px;
+
+  /* interaction */
+  --text-selection: rgba(var(--v2-cyan), .22);
+  --background-modifier-border-focus: rgba(var(--v2-cyan), .6);
+  --caret-color: var(--v2-ice);
+  --tab-radius-active: 999px;
+  --nav-indentation-guide-color: transparent;
+  --nav-item-radius: 9px;
+
+  /* theme-proof palette: pins the core variables a community theme (e.g. Everforest) would otherwise
+     leak into the cosmic look. Celestial-lite already pins the main ones; these are the rest. */
+  --color-base-00: #07060d; --color-base-05: #0b0914; --color-base-10: #0e0c16; --color-base-20: #15121e; --color-base-25: #1b1728;
+  --color-base-30: #241e33; --color-base-35: #2f2842; --color-base-40: #4a3f6b; --color-base-50: #5c556e; --color-base-60: #8f86ad;
+  --color-base-70: #b3abc9; --color-base-100: #e2dcec;
+  --color-red-rgb: 255, 107, 129; --color-orange-rgb: 255, 160, 90; --color-yellow-rgb: 255, 210, 122; --color-green-rgb: 92, 230, 160;
+  --color-cyan-rgb: 64, 217, 255; --color-blue-rgb: 110, 160, 255; --color-purple-rgb: 155, 123, 255; --color-pink-rgb: 242, 115, 204;
+  --color-red: rgb(var(--color-red-rgb)); --color-orange: rgb(var(--color-orange-rgb)); --color-yellow: rgb(var(--color-yellow-rgb));
+  --color-green: rgb(var(--color-green-rgb)); --color-cyan: rgb(var(--color-cyan-rgb)); --color-blue: rgb(var(--color-blue-rgb));
+  --color-purple: rgb(var(--color-purple-rgb)); --color-pink: rgb(var(--color-pink-rgb));
+  --callout-default: var(--color-blue-rgb); --callout-note: var(--color-blue-rgb); --callout-info: var(--color-blue-rgb); --callout-todo: var(--color-blue-rgb);
+  --callout-summary: var(--color-cyan-rgb); --callout-tip: var(--color-cyan-rgb); --callout-important: var(--color-cyan-rgb);
+  --callout-success: var(--color-green-rgb); --callout-question: var(--color-yellow-rgb); --callout-warning: var(--color-orange-rgb);
+  --callout-caution: var(--color-orange-rgb); --callout-fail: var(--color-red-rgb); --callout-error: var(--color-red-rgb); --callout-bug: var(--color-red-rgb);
+  --callout-example: var(--color-purple-rgb); --callout-quote: 158, 150, 190;
+  --icon-color: #8f86ad; --icon-color-hover: #e2dcec; --icon-color-active: var(--v2-ice); --icon-color-focused: #e2dcec;
+  --nav-item-color: #b3abc9; --nav-item-color-hover: #f1ebfb; --nav-item-color-active: #ffffff;
+  --nav-item-background-hover: rgba(var(--v2-violet), .09); --nav-item-background-active: rgba(var(--v2-violet), .16); --nav-collapse-icon-color: #6f6690;
+  --tab-text-color: #8f86ad; --tab-text-color-active: #e2dcec; --tab-text-color-focused: #b3abc9; --tab-text-color-focused-active: #ffffff;
+  --tab-background-active: transparent; --tab-divider-color: transparent; --tab-container-background: transparent;
+  --titlebar-text-color: #8f86ad; --titlebar-text-color-focused: #e2dcec;
+  --h5-color: #9fe8ff; --h6-color: #9fe8ff; --h5-size: .95em; --h6-size: .9em; --h5-weight: 600; --h6-weight: 600;
+  --list-marker-color: #b9a2ff; --list-marker-color-hover: var(--v2-ice); --list-indentation-guide-color: rgba(var(--v2-violet), .18);
+  --checkbox-border-color: #b9a2ff; --checkbox-border-color-hover: var(--v2-ice); --checkbox-color-hover: #8f75f0;
+  --metadata-background: transparent; --metadata-border-color: rgba(var(--v2-violet), .16); --metadata-divider-color: rgba(var(--v2-violet), .1);
+  --metadata-label-text-color: #8f86ad; --metadata-input-text-color: #e2dcec; --metadata-input-background: transparent;
+  --metadata-input-background-hover: rgba(var(--v2-violet), .08); --metadata-property-background-hover: rgba(var(--v2-violet), .08);
+  --embed-background: rgba(12, 9, 26, .5); --embed-border-color: rgba(var(--v2-violet), .3);
+  --table-background: transparent; --table-row-alt-background: rgba(255, 255, 255, .018); --table-row-background-hover: rgba(var(--v2-cyan), .06);
+  --table-header-background: rgba(var(--v2-violet), .16); --table-header-background-hover: rgba(var(--v2-violet), .24); --table-border-color: rgba(var(--v2-violet), .14);
+  --search-result-background: transparent; --search-icon-color: var(--v2-ice); --search-clear-button-color: #8f86ad;
+  --text-highlight-bg: rgba(var(--v2-gold), .28); --text-highlight-bg-active: rgba(var(--v2-gold), .45);
+  --text-on-accent: #ffffff; --text-error: #ff8fa3; --text-success: #8fffc8; --text-warning: #ffcf8a;
+  --interactive-normal: rgba(24, 18, 48, .8); --interactive-hover: rgba(40, 30, 76, .9);
+  --link-color-hover: #ffffff; --link-external-color: #8fe3ff; --link-external-color-hover: #ffffff; --link-unresolved-opacity: .8;
+  --blockquote-color: #dcd3f0; --divider-color-hover: rgba(var(--v2-cyan), .5);
+  --canvas-background: transparent; --canvas-dot-pattern: rgba(201, 184, 255, .26); --canvas-card-label-color: #c9bcff;
+  --canvas-color-1: 255, 107, 129; --canvas-color-2: 255, 160, 90; --canvas-color-3: 255, 210, 122;
+  --canvas-color-4: 92, 230, 160; --canvas-color-5: 64, 217, 255; --canvas-color-6: 155, 123, 255;
+  --status-bar-text-color: #a99be0; --ribbon-background-collapsed: transparent;
+  --scrollbar-bg: transparent; --scrollbar-thumb-bg: rgba(var(--v2-violet), .4); --scrollbar-active-thumb-bg: rgba(var(--v2-cyan), .6);
+  --background-modifier-error: rgba(255, 107, 129, .25); --background-modifier-success: rgba(92, 230, 160, .25);
+  --background-modifier-form-field-highlighted: rgba(16, 12, 34, .9);
+}
+body.theme-dark .markdown-rendered mark { background-color: rgba(var(--v2-gold), .3); color: #fff; }
+
+/* ---------------------------------------------------------------- FRAME: deep space behind everything */
+body.theme-dark {
+  background-color: #05040a;
+  background-image:
+    radial-gradient(ellipse 55% 45% at 92% -8%, rgba(124, 82, 255, .26), transparent 70%),
+    radial-gradient(ellipse 42% 38% at -6% 104%, rgba(var(--v2-cyan), .13), transparent 70%),
+    radial-gradient(ellipse 38% 32% at 58% 112%, rgba(var(--v2-pink), .11), transparent 70%),
+    radial-gradient(ellipse 30% 24% at 18% 8%, rgba(98, 60, 200, .14), transparent 70%),
+    radial-gradient(ellipse 90% 70% at 50% 40%, #0d0a22, #05040a 82%);
+}
+/* star dust (static, cheap) + a twinkle layer that only animates opacity */
+body.theme-dark::before, body.theme-dark::after {
+  content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+}
+body.theme-dark::before {
+  opacity: .6;
+  background-image:
+    radial-gradient(1px 1px at 7% 13%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 19% 71%, #e9e2ff 50%, transparent 51%),
+    radial-gradient(1.3px 1.3px at 33% 37%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 46% 88%, #cfe0ff 50%, transparent 51%),
+    radial-gradient(1px 1px at 58% 9%, #ffd9f3 50%, transparent 51%), radial-gradient(1.3px 1.3px at 71% 52%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 83% 77%, #e9e2ff 50%, transparent 51%), radial-gradient(1px 1px at 94% 27%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 3% 49%, #cfe0ff 50%, transparent 51%), radial-gradient(1.2px 1.2px at 64% 95%, #fff 50%, transparent 51%);
+  background-size: 430px 430px;
+}
+body.theme-dark::after {
+  opacity: .5; will-change: opacity; animation: v2-breathe calc(6s / var(--v2-speed)) ease-in-out infinite;
+  background-image:
+    radial-gradient(1.6px 1.6px at 12% 22%, #fff 50%, transparent 51%), radial-gradient(1.8px 1.8px at 41% 64%, #7fe3ff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 77% 18%, #ffd9f3 50%, transparent 51%), radial-gradient(2px 2px at 88% 83%, #e9e2ff 50%, transparent 51%),
+    radial-gradient(1.4px 1.4px at 26% 92%, #fff 50%, transparent 51%);
+  background-size: 760px 620px;
+}
+@keyframes v2-breathe { 0%, 100% { opacity: .25; } 50% { opacity: .8; } }
+body.theme-dark > .app-container { position: relative; z-index: 1; }
+
+/* every structural layer goes transparent so the backdrop spans the app */
+body.theme-dark :is(.app-container, .horizontal-main-container, .workspace, .titlebar, .workspace-ribbon,
+  .workspace-split.mod-left-split, .workspace-split.mod-right-split, .workspace-split.mod-root,
+  .mod-root .workspace-tab-header-container, .mod-sidedock .workspace-tab-header-container) {
+  background: transparent !important; border-color: transparent !important;
+}
+body.theme-dark .mod-root .workspace-tab-header-container { border-bottom: none !important; }
+body.theme-dark .workspace-split.mod-root .view-content,
+body.theme-dark .mod-root :is(.workspace-leaf, .workspace-leaf-content, .view-header, .markdown-reading-view,
+  .markdown-preview-view, .markdown-source-view, .cm-editor, .cm-scroller, .cm-gutters) { background-color: transparent; }
+body.theme-dark .workspace-split.mod-root .workspace-leaf-content:is([data-type="markdown"], [data-type="empty"], [data-type="bases"], [data-type="image"], [data-type="pdf"]) .view-content {
+  background: radial-gradient(ellipse 60% 40% at 85% 0%, rgba(110, 70, 220, .07), transparent 70%) !important;
 }
 
-/* ---------- graph: tilted planet rings slowly orbiting behind the nodes ---------- */
-.workspace-leaf-content[data-type="graph"] .view-content { position: relative; overflow: hidden; }
-.workspace-leaf-content[data-type="graph"] .view-content::before,
-.workspace-leaf-content[data-type="graph"] .view-content::after {
-  content: ""; position: absolute; left: 50%; top: 50%; pointer-events: none; z-index: 0;
-  border-radius: 50%; transform-origin: center;
-}
-.workspace-leaf-content[data-type="graph"] .view-content::before {
-  width: 140vmin; height: 140vmin; margin: -70vmin 0 0 -70vmin;
-  border: 1px solid rgba(var(--v2-violet), .16);
-  box-shadow: 0 0 0 26px rgba(var(--v2-violet), .035), 0 0 0 58px rgba(var(--v2-cyan), .025);
-  animation: v2-orbit 140s linear infinite;
-}
-.workspace-leaf-content[data-type="graph"] .view-content::after {
-  width: 96vmin; height: 96vmin; margin: -48vmin 0 0 -48vmin;
-  border: 1px dashed rgba(var(--v2-cyan), .14);
-  animation: v2-orbit 90s linear infinite reverse;
-}
-.workspace-leaf-content[data-type="graph"] canvas { position: relative; z-index: 1; }
-@keyframes v2-orbit { from { transform: rotateX(68deg) rotateZ(0deg); } to { transform: rotateX(68deg) rotateZ(360deg); } }
-
-/* ---------- twinkle: a second star layer that breathes over Celestial's starfield ---------- */
-.workspace-leaf-content[data-type="markdown"] .view-content::after {
-  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0;
+/* ---------------------------------------------------------------- FRAME: the note pane is a floating glass viewport */
+body.theme-dark .mod-root .workspace-tabs .workspace-tab-container {
+  margin: 0 10px 10px 4px; border-radius: 20px; overflow: hidden; position: relative;
   background:
-    radial-gradient(1.5px 1.5px at 18% 22%, rgba(255,255,255,.7), transparent 60%),
-    radial-gradient(1.5px 1.5px at 66% 14%, rgba(var(--v2-cyan), .8), transparent 60%),
-    radial-gradient(1px 1px at 84% 58%, rgba(255,255,255,.6), transparent 60%),
-    radial-gradient(1.5px 1.5px at 36% 78%, rgba(var(--v2-pink), .7), transparent 60%),
-    radial-gradient(1px 1px at 52% 44%, rgba(255,255,255,.5), transparent 60%);
-  animation: v2-twinkle 7s ease-in-out infinite;
+    var(--v2-hairline) top / 100% 1px no-repeat,
+    linear-gradient(180deg, rgba(14, 10, 30, calc(var(--v2-glass-alpha) + .06)), rgba(7, 6, 16, calc(var(--v2-glass-alpha) + .1)));
+  border: 1px solid var(--v2-glass-edge);
+  box-shadow: var(--v2-panel-shadow);
 }
-@keyframes v2-twinkle { 0%, 100% { opacity: .35; } 50% { opacity: 1; } }
+body.theme-dark .mod-root .view-header { border-bottom: 1px solid rgba(var(--v2-violet), .1); }
+body.theme-dark .mod-root .view-header-title, body.theme-dark .mod-root .view-header-breadcrumb {
+  font-family: var(--v2-display); font-size: 12.5px; letter-spacing: .04em; color: #a99be0;
+}
+body.theme-dark .mod-root .view-header-title { color: #e7defc; }
+body.theme-dark .view-header .clickable-icon:hover, body.theme-dark .view-action:hover {
+  color: var(--v2-ice); background: rgba(var(--v2-cyan), .1); filter: drop-shadow(0 0 5px rgba(var(--v2-cyan), calc(.6 * var(--v2-glow))));
+}
 
-/* ---------- V2 marks ---------- */
-/* Vault name in the sidebar switcher gets a glowing V2 pill */
+/* ---------------------------------------------------------------- FRAME: sidebars as HUD panels */
+body.theme-dark .mod-sidedock > .workspace-tabs,
+body.theme-dark .mod-sidedock .workspace-split > .workspace-tabs {
+  margin: 8px 6px 6px 4px; border-radius: 20px; overflow: hidden;
+  background: var(--v2-hairline) top / 100% 1px no-repeat, var(--v2-glass) !important;
+  border: 1px solid var(--v2-glass-edge) !important;
+  box-shadow: var(--v2-panel-shadow);
+}
+body.theme-dark .mod-sidedock :is(.workspace-tab-container, .workspace-leaf, .workspace-leaf-content, .view-content,
+  .view-header, .nav-header, .nav-files-container, .search-input-container, .tree-item-self.is-being-dragged-over) { background-color: transparent !important; }
+/* the sidebar's tab strip (files / search / bookmarks) */
+body.theme-dark .mod-sidedock .workspace-tab-header-container { padding: 0 8px; border-bottom: 1px solid rgba(var(--v2-violet), .12) !important; }
+body.theme-dark .mod-sidedock .workspace-tab-header { border-radius: 10px; }
+body.theme-dark .mod-sidedock .workspace-tab-header .workspace-tab-header-inner-icon { color: #8f86ad; transition: color .2s, filter .2s; }
+body.theme-dark .mod-sidedock .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
+body.theme-dark .mod-sidedock .workspace-tab-header:hover .workspace-tab-header-inner-icon {
+  color: var(--v2-ice); filter: drop-shadow(0 0 5px rgba(var(--v2-cyan), calc(.75 * var(--v2-glow))));
+}
+body.theme-dark .mod-sidedock .workspace-tab-header.is-active { background: rgba(var(--v2-cyan), .08) !important; box-shadow: inset 0 -2px 0 rgba(var(--v2-cyan), .7); }
+body.theme-dark .nav-header .nav-buttons-container .clickable-icon { color: #8f86ad; border-radius: 8px; }
+body.theme-dark .nav-header .nav-buttons-container .clickable-icon:hover { color: var(--v2-ice); background: rgba(var(--v2-cyan), .1); }
+/* vault switcher at the bottom: a docking-bay pill */
+body.theme-dark .workspace-sidedock-vault-profile {
+  margin: 0 6px 8px 4px; border-radius: 16px; background: var(--v2-glass) !important;
+  border: 1px solid var(--v2-glass-edge); box-shadow: var(--v2-panel-shadow);
+}
+body.theme-dark .workspace-drawer-vault-name { font-family: var(--v2-display); font-weight: 600; letter-spacing: .02em; }
+
+/* ---------------------------------------------------------------- FRAME: ribbon, a glowing instrument strip */
+body.theme-dark .workspace-ribbon.mod-left { position: relative; }
+body.theme-dark .workspace-ribbon.mod-left::before { display: none; }
+body.theme-dark .side-dock-ribbon .side-dock-actions {
+  margin: 8px 4px 0; padding: 10px 0; gap: 8px; border-radius: 18px;
+  background: var(--v2-glass); border: 1px solid var(--v2-glass-edge); box-shadow: var(--v2-panel-shadow);
+}
+body.theme-dark .side-dock-ribbon-action { color: #b9a2ff; border-radius: 10px; transition: color .2s, background .2s, transform .2s; }
+body.theme-dark .side-dock-ribbon-action svg { filter: drop-shadow(0 0 4px rgba(var(--v2-violet), calc(.75 * var(--v2-glow)))); }
+body.theme-dark .side-dock-ribbon-action:hover { color: var(--v2-ice); background: rgba(var(--v2-cyan), .12); transform: scale(1.08); }
+body.theme-dark .side-dock-ribbon-action:hover svg { filter: drop-shadow(0 0 6px rgba(var(--v2-cyan), calc(.9 * var(--v2-glow)))); }
+/* a little ringed planet docked at the bottom of the ribbon */
+body.theme-dark .workspace-ribbon.mod-left::after {
+  content: ""; position: absolute; left: 50%; bottom: 18px; width: 30px; height: 30px; margin-left: -15px; pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cdefs%3E%3CradialGradient id='p' cx='.35' cy='.3' r='.8'%3E%3Cstop offset='0' stop-color='%23d8f4ff'/%3E%3Cstop offset='.45' stop-color='%239b7bff'/%3E%3Cstop offset='1' stop-color='%23261358'/%3E%3C/radialGradient%3E%3C/defs%3E%3Cg transform='rotate(-20 20 21)'%3E%3Cpath d='M2 21 A18 5 0 0 1 38 21' fill='none' stroke='%237fe3ff' stroke-opacity='.5' stroke-width='1.4'/%3E%3C/g%3E%3Ccircle cx='20' cy='20' r='9' fill='url(%23p)'/%3E%3Cg transform='rotate(-20 20 21)'%3E%3Cpath d='M2 21 A18 5 0 0 0 38 21' fill='none' stroke='%237fe3ff' stroke-width='1.8' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
+  filter: drop-shadow(0 0 6px rgba(var(--v2-violet), calc(.8 * var(--v2-glow)))); animation: v2-bob calc(7s / var(--v2-speed)) ease-in-out infinite;
+}
+@keyframes v2-bob { 0%, 100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-4px) rotate(4deg); } }
+body.theme-dark .sidebar-toggle-button .clickable-icon, body.theme-dark .titlebar-button { color: #8f86ad; }
+body.theme-dark .sidebar-toggle-button .clickable-icon:hover { color: var(--v2-ice); }
+
+/* ---------------------------------------------------------------- FRAME: orbit tabs with a comet trail */
+body.theme-dark .mod-root .workspace-tab-header-container { padding-left: 6px; }
+body.theme-dark .mod-root .workspace-tab-header { background: transparent !important; box-shadow: none !important; padding: 0 3px; }
+body.theme-dark .mod-root .workspace-tab-header::before { display: none !important; }
+body.theme-dark .mod-root .workspace-tab-header .workspace-tab-header-inner {
+  height: 30px; margin-top: 5px; padding: 0 10px 0 12px; border-radius: 999px; border: 1px solid transparent;
+  transition: background .2s, border-color .2s, box-shadow .2s;
+}
+body.theme-dark .mod-root .workspace-tab-header .workspace-tab-header-inner::after { display: none !important; } /* separators */
+body.theme-dark .mod-root .workspace-tab-header:hover .workspace-tab-header-inner {
+  background: rgba(var(--v2-violet), .08); border-color: rgba(var(--v2-violet), .2);
+}
+body.theme-dark .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner {
+  background: linear-gradient(135deg, rgba(124, 82, 255, .32), rgba(var(--v2-cyan), .10));
+  border-color: rgba(var(--v2-violet), .5);
+  box-shadow: 0 0 18px -5px rgba(var(--v2-violet), calc(.7 * var(--v2-glow))), inset 0 1px 0 rgba(255, 255, 255, .12);
+}
+body.theme-dark .mod-root .workspace-tab-header-inner-title {
+  font-family: var(--v2-display); font-size: 12.5px; font-weight: 500; letter-spacing: .01em; color: #8f86ad;
+}
+body.theme-dark .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-title { color: #f3eeff; }
+/* each tab carries a small planet; the active one glows ice-blue */
+body.theme-dark .mod-root .workspace-tab-header-inner-title::before {
+  content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 8px; vertical-align: 1px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fff, #9b7bff 60%); opacity: .55;
+}
+body.theme-dark .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner-title::before {
+  opacity: 1; background: radial-gradient(circle at 35% 35%, #fff, var(--v2-ice) 55%, #2b6fd6); box-shadow: 0 0 8px rgba(var(--v2-cyan), calc(.9 * var(--v2-glow)));
+}
+body.theme-dark .mod-root .workspace-tab-header-inner-icon + .workspace-tab-header-inner-title::before { display: none; }
+/* comet trail under the active tab (replaces celestial-fx's flowing underline) */
+body.theme-dark .mod-root .workspace-tab-header.is-active::after {
+  content: ""; display: block !important; position: absolute; left: 22px; right: 22px; bottom: 0; top: auto; width: auto; height: 2px;
+  border-radius: 2px; box-shadow: none; transform-origin: left center;
+  background:
+    radial-gradient(circle at 100% 50%, #fff 0 1.5px, transparent 3px),
+    linear-gradient(90deg, transparent, rgba(var(--v2-violet), .55) 45%, rgba(var(--v2-cyan), .95) 92%, #fff);
+  filter: drop-shadow(0 0 4px rgba(var(--v2-cyan), calc(.9 * var(--v2-glow))));
+  animation: v2-comet calc(4.5s / var(--v2-speed)) ease-in-out infinite;
+}
+@keyframes v2-comet { 0% { transform: scaleX(.15); opacity: 0; } 25% { opacity: 1; } 55%, 100% { transform: scaleX(1); opacity: 1; } }
+body.theme-dark .workspace-tab-header-new-tab .clickable-icon, body.theme-dark .workspace-tab-header-tab-list .clickable-icon { color: #8f86ad; border-radius: 999px; }
+body.theme-dark .workspace-tab-header-new-tab .clickable-icon:hover { color: var(--v2-ice); background: rgba(var(--v2-cyan), .1); }
+body.theme-dark .mod-root .workspace-tab-header-status-icon { color: var(--v2-ice); }
+
+/* ---------------------------------------------------------------- FRAME: mission-console status bar */
+body.theme-dark .status-bar {
+  bottom: 3px; right: 24px; padding: 4px 14px 4px 8px; gap: 2px; border-radius: 999px; min-height: 28px; align-items: center;
+  background: linear-gradient(90deg, rgba(26, 18, 52, .9), rgba(10, 12, 28, .9)) !important;
+  border: 1px solid rgba(var(--v2-violet), .32) !important;
+  box-shadow: 0 0 24px -6px rgba(var(--v2-violet), calc(.6 * var(--v2-glow))), inset 0 1px 0 rgba(255, 255, 255, .07), 0 8px 24px -10px rgba(0, 0, 0, .9);
+  font-family: var(--v2-display); font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: #a99be0;
+}
+body.theme-dark .status-bar-item { padding: 0 9px; border-left: 1px solid rgba(var(--v2-violet), .22); }
+body.theme-dark .status-bar-item.mod-clickable:hover { color: var(--v2-ice); background: rgba(var(--v2-cyan), .08); border-radius: 999px; }
+/* orbiting planet: a planet with a moon riding its ring */
+body.theme-dark .status-bar::before {
+  content: ""; order: -2; flex: none; width: 18px; height: 18px; margin-right: 4px; border-radius: 50%;
+  border: 1px solid rgba(var(--v2-cyan), .4);
+  background:
+    radial-gradient(circle at 50% 50%, #e0d4ff 0 2px, #9b7bff 3.5px, transparent 4.4px),
+    radial-gradient(circle at 50% 1.6px, #fff 0 1px, var(--v2-ice) 1.6px, transparent 2.4px);
+  box-shadow: 0 0 10px rgba(var(--v2-violet), calc(.55 * var(--v2-glow)));
+  animation: v2-spin calc(7s / var(--v2-speed)) linear infinite;
+}
+@keyframes v2-spin { to { transform: rotate(360deg); } }
+body.theme-dark .status-bar::after {
+  content: "LIHFOLK  \2022  VAULT V2"; order: -1; flex: none; padding: 0 10px 0 2px; font-weight: 700; letter-spacing: .2em; font-size: 10px;
+  background: linear-gradient(90deg, #e8e0ff, #b9a2ff 45%, var(--v2-ice)); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+/* ---------------------------------------------------------------- EXPLORER: constellation map */
+body.theme-dark .nav-files-container { padding: 6px 8px 40px; }
+body.theme-dark .nav-file-title, body.theme-dark .nav-folder-title { border-radius: 9px; transition: background .18s, color .18s, transform .18s, box-shadow .18s; }
+body.theme-dark .nav-file-title { color: #b3abc9; }
+body.theme-dark .nav-file-title:hover { color: #f1ebfb; background: rgba(var(--v2-violet), .09); transform: translateX(2px); }
+/* sections: the colour dot from vault-folder-colors becomes a four-point star with a comet trail behind the name */
+body.theme-dark .nav-folder-title[data-path]:not([data-path*="/"]) {
+  box-shadow: none; border-radius: 10px; margin: 2px 0; font-family: var(--v2-display); font-size: 12.5px; font-weight: 600; letter-spacing: .01em;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--vf-accent, transparent) 20%, transparent), color-mix(in srgb, var(--vf-accent, transparent) 5%, transparent) 55%, transparent 85%);
+}
+body.theme-dark .nav-folder-title[data-path]:not([data-path*="/"])::before {
+  width: 12px; height: 12px; margin-right: 7px; border-radius: 0; box-shadow: none;
+  background:
+    radial-gradient(circle, #fff 0 1px, var(--vf-accent, #9b7bff) 1.7px, transparent 3.3px),
+    linear-gradient(90deg, transparent 5%, var(--vf-accent, #9b7bff) 50%, transparent 95%) center / 100% 1px no-repeat,
+    linear-gradient(180deg, transparent 5%, var(--vf-accent, #9b7bff) 50%, transparent 95%) center / 1px 100% no-repeat;
+  filter: drop-shadow(0 0 3px var(--vf-accent, #9b7bff));
+  transition: transform .3s ease;
+}
+body.theme-dark .nav-folder-title[data-path]:not([data-path*="/"]):hover {
+  box-shadow: 0 0 18px -8px var(--vf-accent, transparent), inset 0 0 0 1px color-mix(in srgb, var(--vf-accent, transparent) 35%, transparent);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--vf-accent, transparent) 32%, transparent), transparent 90%);
+}
+body.theme-dark .nav-folder-title[data-path]:not([data-path*="/"]):hover::before { transform: rotate(45deg) scale(1.25); }
+body.theme-dark .nav-folder:not(.is-collapsed) > .nav-folder-title[data-path]:not([data-path*="/"])::before { transform: scale(1.2); }
+body.theme-dark .nav-folder-title[data-path^="_"] { opacity: .55; font-style: italic; }
+/* sub folders: a hollow star */
+body.theme-dark .nav-folder-title[data-path*="/"] { color: #c9bcff; }
+/* indentation guides become dotted constellation lines */
+body.theme-dark .nav-files-container .tree-item-children {
+  border-inline-start: 1px solid transparent !important; background-origin: border-box;
+  background-image: radial-gradient(circle at 1px 50%, rgba(var(--v2-violet), .6) 0 .9px, transparent 1.5px);
+  background-size: 3px 7px; background-repeat: repeat-y; background-position: 0 0;
+}
+/* the open note: a star lock-on (corner brackets + pulsing beacon) */
+body.theme-dark .nav-file-title.is-active {
+  position: relative; color: #ffffff !important; transform: none; border-radius: 2px !important;
+  background:
+    linear-gradient(var(--v2-ice), var(--v2-ice)) left top / 7px 1.5px no-repeat,
+    linear-gradient(var(--v2-ice), var(--v2-ice)) left top / 1.5px 7px no-repeat,
+    linear-gradient(var(--v2-ice), var(--v2-ice)) right top / 7px 1.5px no-repeat,
+    linear-gradient(var(--v2-ice), var(--v2-ice)) right top / 1.5px 7px no-repeat,
+    linear-gradient(var(--v2-ice), var(--v2-ice)) left bottom / 7px 1.5px no-repeat,
+    linear-gradient(var(--v2-ice), var(--v2-ice)) left bottom / 1.5px 7px no-repeat,
+    linear-gradient(var(--v2-ice), var(--v2-ice)) right bottom / 7px 1.5px no-repeat,
+    linear-gradient(var(--v2-ice), var(--v2-ice)) right bottom / 1.5px 7px no-repeat,
+    linear-gradient(90deg, rgba(var(--v2-cyan), .18), rgba(var(--v2-violet), .12) 60%, rgba(var(--v2-violet), .03)) !important;
+  box-shadow: 0 0 18px -6px rgba(var(--v2-cyan), calc(.6 * var(--v2-glow))) !important;
+  text-shadow: 0 0 10px rgba(var(--v2-cyan), calc(.45 * var(--v2-glow)));
+}
+body.theme-dark .nav-file-title.is-active::after {
+  content: ""; position: absolute; right: 10px; top: 50%; width: 6px; height: 6px; margin-top: -3px; border-radius: 50%;
+  background: var(--v2-ice); box-shadow: 0 0 0 0 rgba(var(--v2-cyan), calc(.7 * var(--v2-glow))); animation: v2-ping calc(2.4s / var(--v2-speed)) ease-out infinite;
+}
+@keyframes v2-ping { 0% { box-shadow: 0 0 0 0 rgba(var(--v2-cyan), calc(.7 * var(--v2-glow))); } 70%, 100% { box-shadow: 0 0 0 7px rgba(var(--v2-cyan), 0); } }
+body.theme-dark .nav-file-tag { font-family: var(--v2-display); font-size: 9px; letter-spacing: .14em; color: var(--v2-ice); background: rgba(var(--v2-cyan), .1); border-radius: 999px; }
+/* the root vault row keeps the V2 pill */
 .workspace-drawer-vault-name::after, .nav-folder.mod-root > .nav-folder-title .nav-folder-title-content::after {
-  content: "V2"; margin-left: 6px; padding: 0 6px; border-radius: 8px; font-size: .72em; font-weight: 700;
+  content: "V2"; margin-left: 6px; padding: 0 6px; border-radius: 8px; font-size: .72em; font-weight: 700; font-family: var(--v2-display, sans-serif);
   color: #fff; background: linear-gradient(90deg, rgb(var(--v2-cyan)), rgb(var(--v2-violet)), rgb(var(--v2-pink)));
-  box-shadow: 0 0 10px rgba(var(--v2-violet), .55);
+  box-shadow: 0 0 10px rgba(var(--v2-violet), calc(.55 * var(--v2-glow)));
 }
-/* Home page: a planet-ring halo behind the hero title */
-.lf-home .callout[data-callout="lf-hero"] { position: relative; overflow: hidden; }
-.lf-home .callout[data-callout="lf-hero"]::before {
-  content: ""; position: absolute; right: -60px; top: 50%; width: 360px; height: 360px; margin-top: -180px;
-  border-radius: 50%; border: 2px solid rgba(var(--v2-violet), .35);
-  box-shadow: 0 0 40px rgba(var(--v2-violet), .25), inset 0 0 40px rgba(var(--v2-cyan), .12);
-  transform: rotateX(70deg); animation: v2-orbit 60s linear infinite; pointer-events: none;
+
+/* ---------------------------------------------------------------- GRAPH: crescent moon, orbit rings, glowing nodes */
+/* the space scene moves to the leaf itself so graph-cosmic's nebula + stars layers (view-content ::before/::after) stay intact */
+body.theme-dark .workspace-leaf-content[data-type="graph"] { position: relative; isolation: isolate;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cdefs%3E%3CradialGradient id='g' cx='.38' cy='.36' r='.75'%3E%3Cstop offset='0' stop-color='%23fdfaff'/%3E%3Cstop offset='.55' stop-color='%23dccdff'/%3E%3Cstop offset='1' stop-color='%238f6ff0'/%3E%3C/radialGradient%3E%3CradialGradient id='h'%3E%3Cstop offset='.45' stop-color='%23b9a2ff' stop-opacity='.32'/%3E%3Cstop offset='1' stop-color='%23b9a2ff' stop-opacity='0'/%3E%3C/radialGradient%3E%3Cmask id='m'%3E%3Crect width='200' height='200' fill='%23fff'/%3E%3Ccircle cx='124' cy='82' r='50' fill='%23000'/%3E%3C/mask%3E%3Cfilter id='b' x='-50%25' y='-50%25' width='200%25' height='200%25'%3E%3CfeGaussianBlur stdDeviation='6'/%3E%3C/filter%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='98' fill='url(%23h)'/%3E%3Cg mask='url(%23m)'%3E%3Ccircle cx='100' cy='100' r='54' fill='%23c9b3ff' opacity='.8' filter='url(%23b)'/%3E%3Ccircle cx='100' cy='100' r='50' fill='url(%23g)'/%3E%3C/g%3E%3C/svg%3E") 9% 12% / min(38vmin, 380px) no-repeat,
+    radial-gradient(ellipse at 22% 30%, rgba(120, 70, 230, .22), transparent 42%),
+    radial-gradient(ellipse at 78% 68%, rgba(255, 90, 180, .14), transparent 45%),
+    radial-gradient(ellipse at 55% 10%, rgba(80, 150, 255, .12), transparent 40%),
+    radial-gradient(ellipse at 50% 50%, #100b22, #05040b 75%) !important;
 }
-.lf-home .callout[data-callout="lf-hero"] .callout-title-inner {
-  background: linear-gradient(90deg, rgb(var(--v2-cyan)), rgb(var(--v2-violet)) 40%, rgb(var(--v2-pink)) 70%, rgb(var(--v2-cyan)));
-  background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; color: transparent;
-  filter: drop-shadow(0 0 16px rgba(var(--v2-violet), .5)); animation: v2-shift 10s linear infinite;
+body.theme-dark .workspace-leaf-content[data-type="graph"] > .view-content { background: transparent !important; overflow: hidden; }
+/* undo the old v2 ring overrides so graph-cosmic's nebula + star layers come back */
+body.theme-dark .workspace-leaf-content[data-type="graph"] .view-content::before {
+  width: auto; height: auto; margin: 0; left: auto; top: auto; border: 0; border-radius: 0; box-shadow: none; inset: -25%;
+  animation: cv-graph-nebula calc(40s / var(--v2-speed)) ease-in-out infinite alternate;
+}
+body.theme-dark .workspace-leaf-content[data-type="graph"] .view-content::after {
+  width: auto; height: auto; margin: 0; left: auto; top: auto; border: 0; border-radius: 0; inset: 0;
+  animation: cv-graph-twinkle calc(6s / var(--v2-speed)) ease-in-out infinite alternate;
+}
+/* orbit rings: static tilted ellipses with a few planets riding them */
+body.theme-dark .workspace-leaf-content[data-type="graph"]::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: .95;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 600'%3E%3Cg transform='rotate(-12 500 300)' fill='none'%3E%3Cellipse cx='500' cy='300' rx='480' ry='150' stroke='%237fe3ff' stroke-opacity='.28' stroke-width='1.2' stroke-dasharray='2 7' stroke-linecap='round'/%3E%3Cellipse cx='500' cy='300' rx='360' ry='108' stroke='%23b9a2ff' stroke-opacity='.3' stroke-width='1.2'/%3E%3Cellipse cx='500' cy='300' rx='240' ry='70' stroke='%23ff8be0' stroke-opacity='.22' stroke-width='1' stroke-dasharray='6 6'/%3E%3C/g%3E%3Cg transform='rotate(-12 500 300)'%3E%3Ccircle cx='140' cy='300' r='5' fill='%23b9a2ff'/%3E%3Ccircle cx='140' cy='300' r='12' fill='%23b9a2ff' fill-opacity='.18'/%3E%3Ccircle cx='740' cy='364' r='4' fill='%23ff8be0'/%3E%3Ccircle cx='740' cy='364' r='10' fill='%23ff8be0' fill-opacity='.18'/%3E%3Ccircle cx='620' cy='151' r='3.5' fill='%237fe3ff'/%3E%3C/g%3E%3C/svg%3E") center 56% / min(115%, 1500px) auto no-repeat;
+}
+/* a moon riding the outer orbit (translate on X + transform on Y = an ellipse, both compositor-only) */
+body.theme-dark .workspace-leaf-content[data-type="graph"]::after {
+  content: ""; position: absolute; left: 50%; top: 56%; width: 12px; height: 12px; margin: -6px 0 0 -6px; z-index: 0; pointer-events: none; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fff, var(--v2-ice) 45%, #2b6fd6); box-shadow: 0 0 14px rgba(var(--v2-cyan), calc(.9 * var(--v2-glow)));
+  animation: v2-orbit-x calc(22s / var(--v2-speed)) ease-in-out infinite alternate, v2-orbit-y calc(22s / var(--v2-speed)) ease-in-out calc(-11s / var(--v2-speed)) infinite alternate;
+}
+@keyframes v2-orbit-x { from { translate: -36vw 0; } to { translate: 36vw 0; } }
+@keyframes v2-orbit-y { from { transform: translateY(-10vh); } to { transform: translateY(10vh); } }
+body.theme-dark .workspace-leaf-content[data-type="graph"] canvas {
+  position: relative; z-index: 1; filter: drop-shadow(0 0 3px rgba(var(--v2-violet), calc(.6 * var(--v2-glow)))) saturate(1.2);
+}
+body.theme-dark .workspace-leaf-content[data-type="graph"] .view-header { position: relative; z-index: 2; }
+/* controls panel: a HUD readout */
+body.theme-dark .graph-controls {
+  z-index: 3; border-radius: 16px !important; padding: 6px 4px;
+  background:
+    linear-gradient(var(--v2-ice), var(--v2-ice)) left top / 10px 1.5px no-repeat,
+    linear-gradient(var(--v2-ice), var(--v2-ice)) left top / 1.5px 10px no-repeat,
+    linear-gradient(var(--v2-ice), var(--v2-ice)) right bottom / 10px 1.5px no-repeat,
+    linear-gradient(var(--v2-ice), var(--v2-ice)) right bottom / 1.5px 10px no-repeat,
+    linear-gradient(180deg, rgba(14, 22, 44, .86), rgba(10, 8, 24, .9)) !important;
+  border: 1px solid rgba(var(--v2-cyan), .3) !important;
+  box-shadow: 0 0 30px -10px rgba(var(--v2-cyan), calc(.5 * var(--v2-glow))), inset 0 1px 0 rgba(255, 255, 255, .06);
+}
+body.theme-dark .graph-controls .graph-control-section .tree-item-inner,
+body.theme-dark .graph-controls .graph-control-section-header {
+  font-family: var(--v2-display); font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #9fe8ff !important;
+}
+body.theme-dark .graph-controls .setting-item-name { font-size: 12.5px; color: #c9bcff; }
+body.theme-dark .graph-controls .graph-control-section + .graph-control-section { border-top: 1px dashed rgba(var(--v2-cyan), .18); }
+
+/* ---------------------------------------------------------------- WELCOME (empty tab, plugin off): V2 launch screen */
+body:not(.cv-sky-on).theme-dark .workspace-leaf-content[data-type="empty"] .view-content {
+  background:
+    radial-gradient(ellipse 50% 40% at 50% 38%, rgba(98, 60, 200, .2), transparent 70%),
+    radial-gradient(ellipse 35% 25% at 50% 70%, rgba(var(--v2-cyan), .06), transparent 70%) !important;
+}
+body:not(.cv-sky-on).theme-dark .workspace-leaf-content[data-type="empty"] .empty-state-container {
+  position: relative; max-height: none !important; max-width: none; padding-top: 10px;
+  /* the orbit ellipse the moon rides, centred on the planet */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 320'%3E%3Cg fill='none'%3E%3Cellipse cx='260' cy='160' rx='240' ry='58' stroke='%237fe3ff' stroke-opacity='.4' stroke-width='1.2' stroke-dasharray='2 6' stroke-linecap='round'/%3E%3Cellipse cx='260' cy='160' rx='252' ry='66' stroke='%23b9a2ff' stroke-opacity='.14' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E") center 0 / 520px 320px no-repeat;
+}
+body:not(.cv-sky-on).theme-dark .workspace-leaf-content[data-type="empty"] .empty-state-container::before {
+  flex: none !important; width: 300px !important; height: 300px !important; margin: 10px 0 -18px !important; position: relative; z-index: 1;
+  filter: drop-shadow(0 0 34px rgba(155, 123, 255, .5));
+}
+/* moon: ellipse orbit around the planet centre (top 10px + 150px), passes behind the planet on the far side */
+body:not(.cv-sky-on).theme-dark .workspace-leaf-content[data-type="empty"] .empty-state-container::after {
+  content: ""; position: absolute; top: 160px; left: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fff, #7fe3ff 45%, #2b6fd6 100%); box-shadow: 0 0 16px rgba(64, 217, 255, .9);
+  animation: v2-moon-x calc(12s / var(--v2-speed)) ease-in-out infinite alternate, v2-moon-y calc(12s / var(--v2-speed)) ease-in-out calc(-6s / var(--v2-speed)) infinite alternate, v2-moon-z calc(24s / var(--v2-speed)) steps(1) calc(-6s / var(--v2-speed)) infinite;
+}
+@keyframes v2-moon-x { from { translate: -232px 0; } to { translate: 232px 0; } }
+@keyframes v2-moon-y { from { transform: translateY(58px) scale(1.15); } to { transform: translateY(-58px) scale(.8); } }
+@keyframes v2-moon-z { 0% { z-index: 2; } 50% { z-index: 0; } }
+body:not(.cv-sky-on).theme-dark .workspace-leaf-content[data-type="empty"] .empty-state-title::before {
+  content: "Welcome, Traveler."; font-family: var(--v2-display); font-size: 54px; font-weight: 700; letter-spacing: -.01em; line-height: 1.1;
+  background: linear-gradient(90deg, #f4efff, #c4b0ff 30%, #7fe3ff 55%, #ffc9f0 80%, #f4efff); background-size: 200% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: none;
+  filter: drop-shadow(0 0 22px rgba(155, 123, 255, .45)); animation: v2-shift calc(10s / var(--v2-speed)) linear infinite;
+}
+body:not(.cv-sky-on).theme-dark .workspace-leaf-content[data-type="empty"] .empty-state-title::after {
+  content: "\2726  L I H F O L K   V A U L T   V 2  \2726"; margin-top: 12px; font-family: var(--v2-display); font-size: 12px; font-weight: 600;
+  color: #b9a2ff; letter-spacing: .12em; text-shadow: 0 0 14px rgba(155, 123, 255, .8);
 }
 @keyframes v2-shift { from { background-position: 0% 50%; } to { background-position: 200% 50%; } }
-/* Banner gently drifts like it's floating in orbit */
-.lf-home img[alt="banner"] { animation: v2-float 12s ease-in-out infinite; }
-@keyframes v2-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+body:not(.cv-sky-on).theme-dark .workspace-leaf-content[data-type="empty"] .empty-state-action-list {
+  position: relative; margin-top: 48px; gap: 12px; flex-direction: row !important; flex-wrap: nowrap !important; width: max-content; max-width: 90vw;
+}
+body:not(.cv-sky-on).theme-dark .workspace-leaf-content[data-type="empty"] .empty-state-action-list::before {
+  content: "\25C8  CHOOSE YOUR LAUNCH  \25C8"; position: absolute; top: -28px; left: 0; right: 0; text-align: center; white-space: pre;
+  font-family: var(--v2-display); font-size: 10px; letter-spacing: .3em; color: rgba(127, 227, 255, .65);
+}
+body:not(.cv-sky-on).theme-dark .workspace-leaf-content[data-type="empty"] .empty-state-action {
+  width: auto !important; max-width: none !important; flex: none; white-space: nowrap;
+  padding: 9px 18px; border-radius: 999px; font-family: var(--v2-display); font-size: 12.5px; letter-spacing: .02em;
+  background: linear-gradient(135deg, rgba(40, 28, 80, .7), rgba(14, 12, 30, .8)); border: 1px solid rgba(var(--v2-violet), .35);
+  color: #d6ccf5 !important; box-shadow: 0 0 18px -8px rgba(var(--v2-violet), calc(.7 * var(--v2-glow))), inset 0 1px 0 rgba(255, 255, 255, .07);
+  transition: transform .2s, border-color .2s, box-shadow .2s, color .2s;
+}
+body:not(.cv-sky-on).theme-dark .workspace-leaf-content[data-type="empty"] .empty-state-action:hover {
+  transform: translateY(-3px); border-color: rgba(var(--v2-cyan), .6); color: #fff !important;
+  box-shadow: 0 10px 26px -10px rgba(var(--v2-cyan), .7), inset 0 1px 0 rgba(255, 255, 255, .1);
+}
+body:not(.cv-sky-on).theme-dark .workspace-leaf-content[data-type="empty"] .empty-state-action svg { color: var(--v2-ice); filter: drop-shadow(0 0 4px rgba(var(--v2-cyan), calc(.7 * var(--v2-glow)))); }
 
-
-/* ---------- V2 welcome (empty tab, no plugin): big ringed planet, orbiting moon, V2 title ---------- */
-body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-container::before {
-  width: 280px !important; height: 280px !important; margin-bottom: 0 !important;
-  filter: drop-shadow(0 0 30px rgba(155, 123, 255, .45));
-}
-body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-container { position: relative; }
-body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-container::after {
-  content: ""; position: absolute; top: 132px; left: 50%; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #fff, #7fe3ff 45%, #2b6fd6 100%); box-shadow: 0 0 14px rgba(64, 217, 255, .8);
-  animation: v2-moon 9s linear infinite;
-}
-@keyframes v2-moon { from { transform: rotate(0deg) translateX(165px) rotate(0deg) scaleY(1); } to { transform: rotate(360deg) translateX(165px) rotate(-360deg); } }
-body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-title::before {
-  content: "Welcome, Traveler."; font-size: 46px;
-  background: linear-gradient(90deg, #efe9fb, #b9a2ff 35%, #7fe3ff 60%, #ffc9f0 85%, #efe9fb); background-size: 200% 100%;
-  -webkit-background-clip: text; background-clip: text; color: transparent; animation: v2-shift 9s linear infinite;
-}
-body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-title::after {
-  content: "\2726   L I H F O L K   V A U L T   V 2   \2726"; color: #b9a2ff; font-size: 12px; letter-spacing: .5px;
-  text-shadow: 0 0 12px rgba(155, 123, 255, .7);
-}
-
-/* ---------- graph: a glowing crescent moon rising behind the nodes ---------- */
-.workspace-leaf-content[data-type="graph"] .view-content {
-  background-image:
-    radial-gradient(circle at 70% 30%, rgba(5, 4, 14, 1) 0 17vmin, transparent 17.2vmin),
-    radial-gradient(circle at 64% 36%, rgba(235, 228, 255, .16) 0 19vmin, rgba(155, 123, 255, .10) 21vmin, transparent 30vmin);
-}
+/* ---------------------------------------------------------------- motion preferences */
 @media (prefers-reduced-motion: reduce) {
-  .workspace-leaf-content .view-content::before, .workspace-leaf-content .view-content::after,
-  .lf-home img[alt="banner"], .lf-home .callout::before, .lf-home .callout-title-inner { animation: none !important; }
+  body.theme-dark::after, body.theme-dark .workspace-ribbon.mod-left::after, body.theme-dark .status-bar::before,
+  body.theme-dark .mod-root .workspace-tab-header.is-active::after, body.theme-dark .nav-file-title.is-active::after,
+  body.theme-dark .workspace-leaf-content[data-type="graph"]::after, body.theme-dark .workspace-leaf-content[data-type="graph"] .view-content::before,
+  body.theme-dark .workspace-leaf-content[data-type="graph"] .view-content::after,
+  body.theme-dark .workspace-leaf-content[data-type="empty"] .empty-state-container::after,
+  body.theme-dark .workspace-leaf-content[data-type="empty"] .empty-state-title::before { animation: none !important; }
+  body.theme-dark .nav-file-title:hover, body.theme-dark .side-dock-ribbon-action:hover { transform: none; }
 }
+
+/* ---------------------------------------------------------------- Style Settings toggles */
+body.v2-no-stars::before, body.v2-no-stars::after,
+body.v2-no-stars .workspace-leaf-content[data-type="markdown"] .view-content::before,
+body.v2-no-stars .workspace-leaf-content[data-type="graph"] .view-content::after,
+body.v2-no-stars .workspace-leaf-content[data-type="localgraph"] .view-content::after { display: none !important; }
+body.v2-no-orbits .workspace-leaf-content[data-type="graph"]::before, body.v2-no-orbits .workspace-leaf-content[data-type="graph"]::after,
+body.v2-no-orbits .lf-home .callout[data-callout="lf-hero"]::before, body.v2-no-orbits .lf-home .callout[data-callout="lf-hero"]::after,
+body.v2-no-orbits .workspace-leaf-content[data-type="empty"] .empty-state-container::after { display: none !important; }
+body.v2-no-orbits .workspace-leaf-content[data-type="empty"] .empty-state-container { background: none !important; }
+body.v2-reduce-motion *, body.v2-reduce-motion *::before, body.v2-reduce-motion *::after,
+body.v2-reduce-motion::before, body.v2-reduce-motion::after { animation: none !important; transition: none !important; }
+
+body:not(.cv-sky-on).theme-dark .workspace-leaf-content[data-type="empty"] .empty-state-action > * { overflow: visible; text-overflow: clip; max-width: none; }

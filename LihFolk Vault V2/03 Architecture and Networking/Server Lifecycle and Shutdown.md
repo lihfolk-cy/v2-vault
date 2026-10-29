@@ -1,5 +1,5 @@
 ---
-tags: [architecture, server, lifecycle, shutdown, bindtoclose, live-ops]
+tags: [architecture, server, lifecycle, shutdown, bindtoclose, live-ops, type/guide, area/networking, level/intermediate, api/BindToClose, area/liveops, api/ServerRestartScheduled]
 ---
 # Server Lifecycle and Shutdown
 
@@ -12,7 +12,7 @@ tags: [architecture, server, lifecycle, shutdown, bindtoclose, live-ops]
 > - Per-player saves are serialised and idempotent; profiles are session-locked.
 > - `ServerRestartScheduled` warns players and triggers early saves.
 >
-> Cost: TL;DR ~180 tok · whole note ~3.8k tok. Read more: ## BindToClose: the rules · ## The soft-shutdown pattern (and when you still need it) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~3.9k tok. Read more: ## BindToClose: the rules · ## The soft-shutdown pattern (and when you still need it) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A Roblox game server is born when matchmaking needs one, lives while players are in it, and dies when it empties, when you restart servers for an update, when Roblox does maintenance, when it runs out of memory, or when the experience is moderated. Most data loss and most "the update kicked everyone and lost their last ten minutes" incidents happen at the end of that life. This note covers the stages of a server's life, the exact shutdown rules (`BindToClose`, `CloseReason`, the 30 second window), restarting servers for updates (`ServerRestartScheduled`, bleed-off, Roblox's automatic migration), the soft-shutdown pattern, and long-running server health.
@@ -260,5 +260,10 @@ Log a heartbeat every few minutes with uptime, player count, memory and key coun
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Server Shutdowns Soft Updates and Migration]] · [[Places Universes and Experience Settings]] · [[Cookbook - Data and Saving]] · [[Live Incident Response and Post-Mortems]] · [[Reserved and Private Servers in Practice]] · [[Multiplayer Services Start Here]]
+[[Server Shutdowns Soft Updates and Migration]] · Places Universes and Experience Settings · Cookbook - Data and Saving · Live Incident Response and Post-Mortems · Reserved and Private Servers in Practice · Multiplayer Services Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Places Universes and Experience Settings]] · [[Cross-Server Messaging]] · [[Cookbook - Data and Saving]] · [[Live Incident Response and Post-Mortems]] · [[Client-Server Model]] · [[RemoteEvents RemoteFunctions and Unreliable Remotes]]
+<!-- related:end -->

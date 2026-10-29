@@ -1,5 +1,5 @@
 ---
-tags: [ai, llm, npc, textgenerator, httpservice, safety, moderation]
+tags: [ai, llm, npc, textgenerator, httpservice, safety, moderation, type/guide, area/ai, level/intermediate, api/HttpService, area/procedural]
 ---
 # In-Game AI - LLM NPCs and Text Generation
 
@@ -12,7 +12,7 @@ tags: [ai, llm, npc, textgenerator, httpservice, safety, moderation]
 > - Output filtered and sent to the interacting player only (or filtered for broadcast on purpose).
 > - AI notice visible at the start and throughout.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.4k tok. Read more: ## 1. Route A: `TextGenerator` · ## 2. Route B: a third-party LLM through `HttpService` · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~4.5k tok. Read more: ## 1. Route A: `TextGenerator` · ## 2. Route B: a third-party LLM through `HttpService` · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 An NPC that answers anything a player says is the most requested AI feature in Roblox and the one with the most obligations attached. You can build it two ways: Roblox's own `TextGenerator` (an engine API with built-in moderation and a free baseline during its beta) or a third-party LLM called through `HttpService` (your model choice, your bill, your responsibility for every word). Either way you must filter text, disclose AI use, rate the experience correctly, protect minors, and survive latency, failures and abuse.
@@ -314,5 +314,10 @@ Patterns that tend to fail: open-ended companions with memory for a young audien
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI in Roblox Development Overview]] · [[Roblox Generative AI - Cube Mesh and Texture Generation]] · [[Dialogue System End to End]] · [[Writing Dialogue for Roblox Players]] · [[Narrative Start Here]] · [[Community and Moderation Start Here]]
+[[AI in Roblox Development Overview]] · [[Roblox Generative AI - Cube Mesh and Texture Generation]] · [[Dialogue System End to End]] · Writing Dialogue for Roblox Players · Narrative Start Here · Community and Moderation Start Here
 <!-- auto-links:end -->
+
+<!-- related:start -->
+## Related
+[[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[Roblox Studio Assistant]] · [[Evaluating AI Tools - A Practical Rubric]] · [[AI Code Assistants for Luau]] · [[AI Pitfalls - Networking and Security]] · [[AI Image Generation for Icons Thumbnails and Concepts]] · [[Prompting and Verifying AI Output]]
+<!-- related:end -->
