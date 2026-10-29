@@ -14,7 +14,7 @@ Claude Code runs the hook after the Write, Edit or MultiEdit tool succeeds (`"ma
 
 Exit code 2 with stderr would also reach Claude, but JSON lets the hook choose between the strong and the soft channel. The hook never fails the session: if `awk` is missing, the input is unreadable or the file is not Luau, it exits 0 silently.
 
-Each finding names the line, the rule id, the reason, a fix hint and the LihFolk note to read (`knowledge/...`). Up to 15 findings are listed per edit (`LIHFOLK_HOOK_MAX`), errors first.
+Each finding names the line, the rule id, the reason, a fix hint and the LihFolk note to read (`LihFolk Vault V2/...`). Up to 15 findings are listed per edit (`LIHFOLK_HOOK_MAX`), errors first.
 
 **Edit scope.** After a Write the whole file is reported. After an Edit or MultiEdit only findings on lines the edit produced are reported (file-level findings count when one of their evidence lines was touched), so old code does not nag on every small change. `LIHFOLK_HOOK_SCOPE=file` reports the whole file every time.
 
@@ -38,7 +38,7 @@ Tested on Git Bash (bash, POSIX sh, dash) and Windows PowerShell 5.1 with no `sh
 
 ## Checks
 
-Severity: **error** = will lose data, money or freeze; **warning** = likely bug or exploit; **info** = robustness. Notes are under `knowledge/`.
+Severity: **error** = will lose data, money or freeze; **warning** = likely bug or exploit; **info** = robustness. Notes are under `LihFolk Vault V2/`.
 
 | id | sev | flags | LihFolk note |
 |---|---|---|---|

@@ -476,7 +476,7 @@ if ($Scan) {
 		$vis = Get-Visible
 		$te += $script:NE; $tw += $script:NW; $ti += $script:NI
 		foreach ($f in $vis) {
-			[void]$Out.Append("$($p):$($f.ln): $($SEV[$f.id]) $($f.id): $($MSG[$f.id])$(DetailOf $f) | fix: $($FIX[$f.id]) | note: knowledge/$($REF[$f.id])`n")
+			[void]$Out.Append("$($p):$($f.ln): $($SEV[$f.id]) $($f.id): $($MSG[$f.id])$(DetailOf $f) | fix: $($FIX[$f.id]) | note: LihFolk Vault V2/$($REF[$f.id])`n")
 		}
 	}
 	[void]$Out.Append("LihFolk check: $nf file(s) scanned, $te error(s), $tw warning(s), $ti info.`n")
@@ -514,9 +514,9 @@ try {
 	foreach ($f in $vis) {
 		if ($shown -ge $maxshow) { $text += "`n- ... $($vis.Count - $shown) more; run /lihfolk:audit for the full list."; break }
 		$shown++
-		$text += "`n- line $($f.ln) [$($SEV[$f.id])] $($f.id)$(DetailOf $f): $($MSG[$f.id])`n  Fix: $($FIX[$f.id])`n  Note: knowledge/$($REF[$f.id])"
+		$text += "`n- line $($f.ln) [$($SEV[$f.id])] $($f.id)$(DetailOf $f): $($MSG[$f.id])`n  Fix: $($FIX[$f.id])`n  Note: LihFolk Vault V2/$($REF[$f.id])"
 	}
-	if ($env:CLAUDE_PLUGIN_ROOT) { $text += "`nLihFolk notes live under $($env:CLAUDE_PLUGIN_ROOT)/knowledge/ ." }
+	if ($env:CLAUDE_PLUGIN_ROOT) { $text += "`nLihFolk notes live under $($env:CLAUDE_PLUGIN_ROOT)/LihFolk Vault V2/ ." }
 	if ($script:NE + $script:NW -gt 0) { [Console]::Out.Write('{"decision":"block","reason":"' + (JEsc $text) + '"}' + "`n") }
 	else { [Console]::Out.Write('{"hookSpecificOutput":{"hookEventName":"PostToolUse","additionalContext":"' + (JEsc $text) + '"}}' + "`n") }
 	exit 0

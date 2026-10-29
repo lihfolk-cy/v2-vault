@@ -1,12 +1,12 @@
 """One-call search for LihFolk Vault V2: the best notes for a task, with their TL;DRs.
 
-Usage (stdlib only, no network; paths are under knowledge/):
-    python knowledge/_tools/vault.py "hit camera shake goes black"      # top 3 notes + TL;DRs + matching symptoms
-    python knowledge/_tools/vault.py -k 5 "datastore session lock"      # top 5
-    python knowledge/_tools/vault.py --paths "slash vfx"                # titles and paths only (cheapest)
-    python knowledge/_tools/vault.py --json "processreceipt"            # machine-readable
-    python knowledge/_tools/vault.py --read "DataStore Fundamentals" "UpdateAsync"   # print one ## section
-    python knowledge/_tools/vault.py --sections "DataStore Fundamentals"             # list its ## headings
+Usage (stdlib only, no network; paths are under LihFolk Vault V2/):
+    python "LihFolk Vault V2/_tools/vault.py" "hit camera shake goes black"      # top 3 notes + TL;DRs + matching symptoms
+    python "LihFolk Vault V2/_tools/vault.py" -k 5 "datastore session lock"      # top 5
+    python "LihFolk Vault V2/_tools/vault.py" --paths "slash vfx"                # titles and paths only (cheapest)
+    python "LihFolk Vault V2/_tools/vault.py" --json "processreceipt"            # machine-readable
+    python "LihFolk Vault V2/_tools/vault.py" --read "DataStore Fundamentals" "UpdateAsync"   # print one ## section
+    python "LihFolk Vault V2/_tools/vault.py" --sections "DataStore Fundamentals"             # list its ## headings
 
 Ranking is BM25F over title, tags, TL;DR, headings and body, plus links from SYMPTOMS.md, so a bug
 described in everyday words ("screen goes black when I get hit") still finds the note. The index is
@@ -20,7 +20,7 @@ import re
 import sys
 from collections import Counter, defaultdict
 
-KB = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # knowledge/
+KB = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # LihFolk Vault V2/
 CACHE = os.path.join(KB, "_tools", ".cache", "search.json")
 START, END = "<!-- tldr:start -->", "<!-- tldr:end -->"
 SKIP_ROOT = {"INDEX.md", "INDEX_SLIM.md", "ROUTER.md", "SYMPTOMS.md", "LICENSE.md", "000 Home.md"}
@@ -295,7 +295,7 @@ def main():
                           "symptoms": [s["line"] for s in symptoms]}, indent=1))
         return
     if not results:
-        print("no match; try other words or grep knowledge/INDEX_SLIM.md")
+        print("no match; try other words or grep LihFolk Vault V2/INDEX_SLIM.md")
         return
     for s, d in results:
         if mode == "paths":
@@ -310,7 +310,7 @@ def main():
             print("- " + s["line"])
         print()
     if mode == "full":
-        print('Next: python knowledge/_tools/vault.py --read "<title>" "<heading words>"  (one section only)')
+        print('Next: python "LihFolk Vault V2/_tools/vault.py" --read "<title>" "<heading words>"  (one section only)')
 
 
 if __name__ == "__main__":

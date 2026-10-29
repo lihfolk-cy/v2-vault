@@ -1,7 +1,7 @@
 # Rubric: Skybox (Roblox `Sky`, six faces) + Lighting preset
 
-Sources: `knowledge/07 Lighting VFX and Audio/` (Atmosphere Sky Clouds and Post-Processing, Stylized Lighting Recipes,
-Lighting Mood and Time of Day) and `knowledge/06 World Building and Art/Water Sky and Atmosphere Art.md`.
+Sources: `LihFolk Vault V2/07 Lighting VFX and Audio/` (Atmosphere Sky Clouds and Post-Processing, Stylized Lighting Recipes,
+Lighting Mood and Time of Day) and `LihFolk Vault V2/06 World Building and Art/Water Sky and Atmosphere Art.md`.
 Generator and gate code: `tools/pack/gen_skies.py`, `tools/pack/packutil.py`.
 Evidence: the six `Sky*.png` faces, `preview.png` (two game-camera views at the horizon with a neutral test ground,
 plus the unfolded cube cross), `lighting.json`, and the family sheet in `_sheets/`.

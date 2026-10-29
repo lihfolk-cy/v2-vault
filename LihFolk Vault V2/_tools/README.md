@@ -4,23 +4,23 @@ Python 3, standard library only. Everything here is deterministic, and every che
 
 | Tool | What it does | Command |
 |---|---|---|
-| `vault.py` | One-call search: the best 3 notes for a task or bug, with their TL;DRs and matching symptom lines. Reads one section of a note on request. | `python knowledge/_tools/vault.py "screen goes black when I get hit"` |
-| `build_index.py` | Regenerates TL;DRs, `INDEX.md`, `INDEX_SLIM.md` and `ROUTER.md` from the notes. | `python knowledge/_tools/build_index.py` (`--check` in CI) |
-| `api_check.py` | Checks every Roblox and Luau API name in the notes against the real API. | `python knowledge/_tools/api_check.py --strict` |
-| `snippets.py` | Compiles every Luau code block with the official Luau compiler. | `python knowledge/_tools/snippets.py --strict` |
-| `consistency.py` | Finds notes that disagree on a number, and date stamps that are getting old. | `python knowledge/_tools/consistency.py --strict` |
-| `eval.py` | Scores the search on 90 hand-written tasks with known answers. | `python knowledge/_tools/eval.py` |
+| `vault.py` | One-call search: the best 3 notes for a task or bug, with their TL;DRs and matching symptom lines. Reads one section of a note on request. | `python "LihFolk Vault V2/_tools/vault.py" "screen goes black when I get hit"` |
+| `build_index.py` | Regenerates TL;DRs, `INDEX.md`, `INDEX_SLIM.md` and `ROUTER.md` from the notes. | `python "LihFolk Vault V2/_tools/build_index.py"` (`--check` in CI) |
+| `api_check.py` | Checks every Roblox and Luau API name in the notes against the real API. | `python "LihFolk Vault V2/_tools/api_check.py" --strict` |
+| `snippets.py` | Compiles every Luau code block with the official Luau compiler. | `python "LihFolk Vault V2/_tools/snippets.py" --strict` |
+| `consistency.py` | Finds notes that disagree on a number, and date stamps that are getting old. | `python "LihFolk Vault V2/_tools/consistency.py" --strict` |
+| `eval.py` | Scores the search on 90 hand-written tasks with known answers. | `python "LihFolk Vault V2/_tools/eval.py"` |
 
 Reports are written to `reports/`.
 
 ## vault.py: one-call search
 
 ```
-python knowledge/_tools/vault.py "datastore session lock"                 # best 3 notes + TL;DRs + symptom lines
-python knowledge/_tools/vault.py --paths "slash vfx"                      # titles and paths only
-python knowledge/_tools/vault.py -k 5 --json "processreceipt"             # machine-readable
-python knowledge/_tools/vault.py --sections "DataStore Fundamentals"      # list a note's ## headings
-python knowledge/_tools/vault.py --read "DataStore Fundamentals" "UpdateAsync"   # print one section
+python "LihFolk Vault V2/_tools/vault.py" "datastore session lock"                 # best 3 notes + TL;DRs + symptom lines
+python "LihFolk Vault V2/_tools/vault.py" --paths "slash vfx"                      # titles and paths only
+python "LihFolk Vault V2/_tools/vault.py" -k 5 --json "processreceipt"             # machine-readable
+python "LihFolk Vault V2/_tools/vault.py" --sections "DataStore Fundamentals"      # list a note's ## headings
+python "LihFolk Vault V2/_tools/vault.py" --read "DataStore Fundamentals" "UpdateAsync"   # print one section
 ```
 
 Ranking is BM25F over each note's title, tags, TL;DR, headings, body and the `SYMPTOMS.md` lines that link to it. A small synonym map turns everyday words into vault vocabulary (lag → performance, save → datastore, buy → purchase). Link lists, short glossary notes and hubs are ranked below full explanations. The index is cached in `.cache/` (git-ignored) and rebuilt when any note changes. A cold run takes about 2 s, and a cached run about 0.3 s.
@@ -84,10 +84,10 @@ Every mention is compared with the agreed value. The first run found one real co
 ## build_index.py
 
 ```
-python knowledge/_tools/build_index.py              # regenerate everything (run after adding or editing notes)
-python knowledge/_tools/build_index.py --check      # exit 1 if anything is out of date (CI)
-python knowledge/_tools/build_index.py --measure    # 8-task token comparison of the grep protocols
-python knowledge/_tools/build_index.py --no-tldr-in "56 Field Notes"   # don't touch that section's notes
+python "LihFolk Vault V2/_tools/build_index.py"              # regenerate everything (run after adding or editing notes)
+python "LihFolk Vault V2/_tools/build_index.py" --check      # exit 1 if anything is out of date (CI)
+python "LihFolk Vault V2/_tools/build_index.py" --measure    # 8-task token comparison of the grep protocols
+python "LihFolk Vault V2/_tools/build_index.py" --no-tldr-in "56 Field Notes"   # don't touch that section's notes
 ```
 
 - **TL;DR blocks:** every prose note gets one under its title, between `<!-- tldr:start -->` and `<!-- tldr:end -->`. It holds 3-6 bullets taken from the note's own "Common mistakes" (`Avoid: X -> fix`) and "Checklist", shortened with no new claims, then `Read more (N KB note): ## <sections>`. Only the text between the markers is ever rewritten.

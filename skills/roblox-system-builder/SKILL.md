@@ -8,7 +8,7 @@ A feature is finished when its decisions are written down, the server owns every
 
 ## Inputs
 
-- `VAULT`: LihFolk Vault V2, the knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
+- `VAULT`: LihFolk Vault V2, the knowledge base at `../../LihFolk Vault V2/` relative to this file (plugin root `LihFolk Vault V2/`). Start with `VAULT/INDEX.md` to find notes fast.
 - The feature request and the existing project layout (if any).
 - Whether the project already has a data layer, remote helper and rate limiter (the Saved Inventory build provides all three).
 

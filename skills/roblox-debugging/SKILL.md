@@ -8,7 +8,7 @@ A fix without a reproduction is a guess. A `task.wait` or a silent `pcall` is no
 
 ## Inputs
 
-- `VAULT`: LihFolk Vault V2, the knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
+- `VAULT`: LihFolk Vault V2, the knowledge base at `../../LihFolk Vault V2/` relative to this file (plugin root `LihFolk Vault V2/`). Start with `VAULT/INDEX.md` to find notes fast.
 - The symptom, the error text if any, and where it happens (Studio, live, which device, how often).
 
 ## Procedure

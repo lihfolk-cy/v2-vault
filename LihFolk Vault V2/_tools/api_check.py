@@ -2,9 +2,9 @@
 or silently deprecated API.
 
 Usage (stdlib only, no network):
-    python knowledge/_tools/api_check.py               # check, print summary, write _tools/reports/api_check.md
-    python knowledge/_tools/api_check.py --strict      # exit 1 on any finding not in api_allow.txt (CI)
-    python knowledge/_tools/api_check.py --refresh     # rebuild roblox_api.json from the local Studio install
+    python "LihFolk Vault V2/_tools/api_check.py"               # check, print summary, write _tools/reports/api_check.md
+    python "LihFolk Vault V2/_tools/api_check.py" --strict      # exit 1 on any finding not in api_allow.txt (CI)
+    python "LihFolk Vault V2/_tools/api_check.py" --refresh     # rebuild roblox_api.json from the local Studio install
                                                        # (or: --refresh --dump API-Dump.json --docs en-us.json)
 
 What it checks, in code blocks and `inline code`:

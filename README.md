@@ -6,7 +6,7 @@
 
 ### 1. Obsidian vault (read and browse)
 1. Download this repo (green **Code** button, then **Download ZIP**, or `git clone`).
-2. In Obsidian: **Open folder as vault**, then pick the `knowledge` folder.
+2. In Obsidian: **Open folder as vault**, then pick the `LihFolk Vault V2` folder.
 3. Start at **000 Home**. The Celestial Vault theme and graph colours load automatically. If Obsidian asks, turn on community plugins to enable the bundled Celestial Vault plugin (starfield welcome tab, journal banners, moon calendar).
 
 ### 2. Claude Code plugin (your AI builds like a pro)
@@ -35,17 +35,17 @@ Point your tool at this folder. `AGENTS.md` tells any agent how to search the va
 
 ## Built to be trusted by AI agents
 
-- **One-call search:** `python knowledge/_tools/vault.py "my sword floats away from the hand when I attack"` returns the 3 best notes with their TL;DRs. It understands bugs described in everyday words through `knowledge/SYMPTOMS.md`, which has 250+ symptom → cause → fix lines. On a held-out test set of hand-written tasks, the right note is in the top 3 **93%** of the time, against 57% for grepping the index. The average answer costs about 700 tokens.
+- **One-call search:** `python "LihFolk Vault V2/_tools/vault.py" "my sword floats away from the hand when I attack"` returns the 3 best notes with their TL;DRs. It understands bugs described in everyday words through `LihFolk Vault V2/SYMPTOMS.md`, which has 250+ symptom → cause → fix lines. On a held-out test set of hand-written tasks, the right note is in the top 3 **93%** of the time, against 57% for grepping the index. The average answer costs about 700 tokens.
 - **No made-up APIs:** every Roblox and Luau API name in the notes is checked against a dated snapshot of the real API, including deprecations. The first run caught a few dozen uses of methods Roblox had renamed to `...Async`, and they are fixed.
 - **Code that compiles:** all 1,600+ Luau code blocks are compiled with the official Luau compiler on every push.
 - **Notes that agree:** numbers repeated across notes, such as limits, defaults and ratios, are cross-checked, and stale date stamps are flagged.
-- **Checked on every push:** `.github/workflows/vault-checks.yml` runs all of it. Details and numbers are in `knowledge/_tools/README.md`.
+- **Checked on every push:** `.github/workflows/vault-checks.yml` runs all of it. Details and numbers are in `LihFolk Vault V2/_tools/README.md`.
 
 ## Trust labels
 Every claim is marked **Roblox docs** (official), **Measured** (tested in a real project), **Rule of thumb** (craft knowledge) or **Unverified** (not confirmed yet). Roblox changes fast, so dated claims say "as of".
 
 ## What's inside
-- `knowledge/`: the vault (52 sections, index, home page, theme)
+- `LihFolk Vault V2/`: the vault (52 sections, index, home page, theme)
 - `skills/`, `agents/`, `commands/`: the Claude Code plugin
 - `.claude-plugin/`: plugin and marketplace manifests
 

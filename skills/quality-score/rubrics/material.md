@@ -1,7 +1,7 @@
 # Rubric: PBR material set (Roblox MaterialVariant / SurfaceAppearance)
 
-Sources: `knowledge/44 Materials and Surfaces/` (SurfaceAppearance PBR Workflow, MaterialService and Custom Materials,
-Stylised vs Realistic Material Pipelines) and `knowledge/14 3D Modeling/Texturing and PBR Baking.md` (value ranges).
+Sources: `LihFolk Vault V2/44 Materials and Surfaces/` (SurfaceAppearance PBR Workflow, MaterialService and Custom Materials,
+Stylised vs Realistic Material Pipelines) and `LihFolk Vault V2/14 3D Modeling/Texturing and PBR Baking.md` (value ranges).
 Generator and gate code: `tools/pack/gen_materials.py`, `tools/pack/packutil.py` (`material_gates`).
 Evidence: `meta.json` gate report, `preview.png` (tiled ground 3x3, sphere, cube under neutral sun + sky, plus a 2x2
 colour tile and the normal map), and the family sheet in `_sheets/`.

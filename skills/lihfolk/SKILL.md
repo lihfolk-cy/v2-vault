@@ -5,7 +5,7 @@ description: 'LihFolk: Roblox knowledge router (800+ notes, also answers "check 
 
 # LihFolk Roblox Knowledge Router
 
-LihFolk Vault V2, the knowledge base, lives in `../../knowledge/` relative to this file (the plugin root's `knowledge/` folder). It contains 800+ notes written for AI agents.
+LihFolk Vault V2, the knowledge base, lives in `../../LihFolk Vault V2/` relative to this file (the plugin root's `LihFolk Vault V2/` folder). It contains 800+ notes written for AI agents.
 
 ## How to use it (cheap by default)
 
@@ -17,8 +17,8 @@ Scale the lookup to the task. The goal is the few lines that change what you do,
 | Normal (a feature, a bug, a review) | One `vault.py` search (prints the best notes' TL;DRs); open nothing else unless needed |
 | Big or unfamiliar (new system, security, money, data, publishing) | Up to 3-4 notes; TL;DRs first, then the one full section that applies, still not whole notes |
 
-1. **One call first:** `python <plugin root>/knowledge/_tools/vault.py "<task or bug in plain words>"` (the plugin root is two folders above this file). It prints the best 3 notes with their TL;DRs and, for bugs, matching `SYMPTOMS.md` lines (symptom | cause | fix | note). Top-3 hit rate on a held-out test set: 93%.
-2. **Fallback:** if Python is unavailable or the search misses, grep `../../knowledge/INDEX_SLIM.md` (`title | path | tags`) for exact API names and `../../knowledge/SYMPTOMS.md` for the symptom. `../../knowledge/ROUTER.md` (about 5 KB) only at the start of a long multi-topic session.
+1. **One call first:** `python <plugin root>/LihFolk Vault V2/_tools/vault.py "<task or bug in plain words>"` (the plugin root is two folders above this file). It prints the best 3 notes with their TL;DRs and, for bugs, matching `SYMPTOMS.md` lines (symptom | cause | fix | note). Top-3 hit rate on a held-out test set: 93%.
+2. **Fallback:** if Python is unavailable or the search misses, grep `../../LihFolk Vault V2/INDEX_SLIM.md` (`title | path | tags`) for exact API names and `../../LihFolk Vault V2/SYMPTOMS.md` for the symptom. `../../LihFolk Vault V2/ROUTER.md` (about 5 KB) only at the start of a long multi-topic session.
 3. **TL;DR first:** every prose note opens with a TL;DR block (3-6 rules from its Common mistakes and Checklist, plus `Read more: ## <sections>`). Read only that: `Grep pattern="tldr:start" glob="**/<note title>.md" output_mode=content -A 10`, or Read the note with `limit: 20`.
 4. **Sections, not files:** only when the TL;DR isn't enough, `vault.py --read "<title>" "<heading words>"` prints just the section it points to (or grep `^## ` and read that range). Never read whole large notes.
 5. **Reuse within the session:** don't re-read a note you've already used for the same topic.
@@ -29,7 +29,7 @@ Scale the lookup to the task. The goal is the few lines that change what you do,
 
 ## Where things are
 
-| Need | Look in `knowledge/` |
+| Need | Look in `LihFolk Vault V2/` |
 |---|---|
 | Studio, tooling, Rojo, plugins | 01, 39 |
 | Luau language, patterns, cookbook | 02, 29, 35, 40 |

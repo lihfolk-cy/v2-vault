@@ -168,7 +168,7 @@ function buildWelcome(name, actions) {
 		h('div', 'cv-welcome-center', [
 			h('div', 'cv-logo'),
 			h('div', 'cv-hello', [h('span', 'cv-br', '[['), typed, h('span', 'cv-caret'), h('span', 'cv-br', ']]')]),
-			h('div', 'cv-sub', '✦  Celestial Vault  ✦'),
+			h('div', 'cv-sub', '✦  LihFolk Vault V2  ✦'),
 			h('div', 'cv-keys', actions.map((a) => h('button', 'cv-key', [h('kbd', null, a.keys.replace('Mod', mod)), a.label], { on: click(a.run) }))),
 		]),
 	]);

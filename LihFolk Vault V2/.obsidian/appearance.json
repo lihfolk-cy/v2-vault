@@ -1,0 +1,14 @@
+{
+  "enabledCssSnippets": [
+    "celestial-lite",
+    "celestial-fx",
+    "vault-folder-colors",
+    "graph-cosmic",
+    "vault-polish",
+    "lihfolk-home",
+    "celestial-v2"
+  ],
+  "theme": "obsidian",
+  "cssTheme": "",
+  "accentColor": "#9b7bff"
+}

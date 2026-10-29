@@ -8,7 +8,7 @@ UI is done when it passes measured rules on every target screen, not when it loo
 
 ## Inputs
 
-- `VAULT`: LihFolk Vault V2, the knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
+- `VAULT`: LihFolk Vault V2, the knowledge base at `../../LihFolk Vault V2/` relative to this file (plugin root `LihFolk Vault V2/`). Start with `VAULT/INDEX.md` to find notes fast.
 - What to build (screen, menu archetype, HUD element) and the target platforms.
 - Whether the game uses the LihFolk house style (the `lihfolk-ui` skill, for a cartoon or simulator look) or its own design system.
 

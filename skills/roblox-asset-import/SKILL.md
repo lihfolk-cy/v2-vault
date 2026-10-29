@@ -8,7 +8,7 @@ Most import problems are decided before the file reaches Studio: units, applied 
 
 ## Inputs
 
-- `VAULT`: LihFolk Vault V2, the knowledge base at `../../knowledge/` relative to this file (plugin root `knowledge/`). Start with `VAULT/INDEX.md` to find notes fast.
+- `VAULT`: LihFolk Vault V2, the knowledge base at `../../LihFolk Vault V2/` relative to this file (plugin root `LihFolk Vault V2/`). Start with `VAULT/INDEX.md` to find notes fast.
 - The source file(s) and what they are for (prop, kit piece, character, weapon, terrain material).
 - The target device class (assume mid-range phones unless told otherwise).
 

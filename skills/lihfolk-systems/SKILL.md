@@ -10,7 +10,7 @@ Strict Luau modules that already pass the hard gates of `quality-score/rubrics/s
 
 ## Inputs
 
-- `LIB`: this folder (`skills/lihfolk-systems/`). `VAULT`: `../../knowledge/` (start with `VAULT/INDEX.md`).
+- `LIB`: this folder (`skills/lihfolk-systems/`). `VAULT`: `../../LihFolk Vault V2/` (start with `VAULT/INDEX.md`).
 - The user's project: Rojo tree or Studio place, existing data module, existing `ProcessReceipt`, existing remotes.
 
 ## Layout and install paths

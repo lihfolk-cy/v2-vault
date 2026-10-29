@@ -15,17 +15,17 @@ jobs:
         with:
           python-version: "3.12"
       - name: Indexes and TL;DRs are up to date
-        run: python knowledge/_tools/build_index.py --check
+        run: python "LihFolk Vault V2/_tools/build_index.py" --check
       - name: Every Roblox and Luau API name is real and current
-        run: python knowledge/_tools/api_check.py --strict
+        run: python "LihFolk Vault V2/_tools/api_check.py" --strict
       - name: Install Luau
         run: |
           curl -sSL -o luau.zip "https://github.com/luau-lang/luau/releases/download/${LUAU_VERSION}/luau-ubuntu.zip"
           unzip -q luau.zip -d "$HOME/luau"
           echo "LUAU_COMPILE=$HOME/luau/luau-compile" >> "$GITHUB_ENV"
       - name: Every Luau snippet compiles
-        run: python knowledge/_tools/snippets.py --strict
+        run: python "LihFolk Vault V2/_tools/snippets.py" --strict
       - name: No contradicting numbers between notes
-        run: python knowledge/_tools/consistency.py --strict
+        run: python "LihFolk Vault V2/_tools/consistency.py" --strict
       - name: Search finds the right note (held-out test set, top 3)
-        run: python knowledge/_tools/eval.py --min-hit3 0.85
+        run: python "LihFolk Vault V2/_tools/eval.py" --min-hit3 0.85

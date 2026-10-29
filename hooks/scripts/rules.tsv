@@ -1,5 +1,5 @@
 # LihFolk Roblox checker rules. Shared by lihfolk-check.awk (macOS, Linux, Git Bash) and lihfolk-check.ps1 (Windows PowerShell).
-# Columns (TAB separated): id	severity	message (the reason)	fix hint	LihFolk note (path under knowledge/)
+# Columns (TAB separated): id	severity	message (the reason)	fix hint	LihFolk note (path under LihFolk Vault V2/)
 # Detection logic lives in the two engines; keep ids in sync with them and with hooks/README.md.
 deprecated-wait	warning	wait() is deprecated: it is throttled, imprecise and can resume late.	Use task.wait(seconds).	02 Luau Scripting/Task Library Coroutines and Yielding.md
 deprecated-spawn	warning	spawn() is deprecated: it delays the start by a frame or more and is replaced by the task library.	Use task.spawn(fn, ...) or task.defer(fn, ...).	02 Luau Scripting/Task Library Coroutines and Yielding.md

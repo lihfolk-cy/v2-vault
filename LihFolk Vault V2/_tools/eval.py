@@ -1,9 +1,9 @@
 """Score vault.py search on the hand-written retrieval test set (eval/tasks.jsonl).
 
 Usage:
-    python knowledge/_tools/eval.py                 # dev + test scores, plus a title/tags-only baseline
-    python knowledge/_tools/eval.py --misses dev    # list the dev tasks whose answer is not in the top 3
-    python knowledge/_tools/eval.py --min-hit3 0.8  # exit 1 if test hit@3 drops below 0.8 (CI)
+    python "LihFolk Vault V2/_tools/eval.py"                 # dev + test scores, plus a title/tags-only baseline
+    python "LihFolk Vault V2/_tools/eval.py" --misses dev    # list the dev tasks whose answer is not in the top 3
+    python "LihFolk Vault V2/_tools/eval.py" --min-hit3 0.8  # exit 1 if test hit@3 drops below 0.8 (CI)
 
 Each task lists 1-3 acceptable notes, chosen by reading the notes (not by running the search). The "dev" split
 may be used to tune the search; "test" must not be, so its score is the honest one.

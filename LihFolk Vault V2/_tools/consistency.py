@@ -1,9 +1,9 @@
 """Find notes that disagree with each other on a number, and notes whose facts are getting old.
 
 Usage (stdlib only):
-    python knowledge/_tools/consistency.py                 # report to stdout and _tools/reports/consistency.md
-    python knowledge/_tools/consistency.py --strict        # exit 1 on any contradiction (CI)
-    python knowledge/_tools/consistency.py --max-age 12    # flag "as of <month year>" stamps older than 12 months
+    python "LihFolk Vault V2/_tools/consistency.py"                 # report to stdout and _tools/reports/consistency.md
+    python "LihFolk Vault V2/_tools/consistency.py" --strict        # exit 1 on any contradiction (CI)
+    python "LihFolk Vault V2/_tools/consistency.py" --max-age 12    # flag "as of <month year>" stamps older than 12 months
 
 Contradictions: each FACT is a platform number many notes repeat (DataStore value size, default WalkSpeed, ...).
 Every mention is captured and compared with the agreed value; a different number is a contradiction unless the

@@ -1,8 +1,8 @@
 """Compile every ```lua / ```luau code block in the vault with the official Luau compiler.
 
 Usage (needs luau-compile from https://github.com/luau-lang/luau/releases; set LUAU_COMPILE or put it on PATH):
-    python knowledge/_tools/snippets.py              # compile all, print summary, write _tools/reports/snippets.md
-    python knowledge/_tools/snippets.py --strict     # exit 1 on any failure not in snippet_allow.txt (CI)
+    python "LihFolk Vault V2/_tools/snippets.py"              # compile all, print summary, write _tools/reports/snippets.md
+    python "LihFolk Vault V2/_tools/snippets.py" --strict     # exit 1 on any failure not in snippet_allow.txt (CI)
 
 A block that is a deliberate fragment (pseudo-code, a "before" example, a partial table) is listed in
 snippet_allow.txt by note path and block hash, with a reason. Syntax only: API names are api_check.py's job.

@@ -501,7 +501,7 @@ function scanMain(    p, files, nf, tot, te, tw, ti, cnt, j, k) {
 		cnt = orderFindings()
 		for (j = 1; j <= cnt; j++) {
 			k = ORD[j]
-			printf "%s:%d: %s %s: %s%s | fix: %s | note: knowledge/%s\n", p, F_ln[k], SEV[F_id[k]], F_id[k], MSG[F_id[k]], detailOf(k), FIX[F_id[k]], REF[F_id[k]]
+			printf "%s:%d: %s %s: %s%s | fix: %s | note: LihFolk Vault V2/%s\n", p, F_ln[k], SEV[F_id[k]], F_id[k], MSG[F_id[k]], detailOf(k), FIX[F_id[k]], REF[F_id[k]]
 		}
 	}
 	printf "LihFolk check: %d file(s) scanned, %d error(s), %d warning(s), %d info.\n", nf, te, tw, ti
@@ -569,10 +569,10 @@ function hookMain(    J, l, path, tool, n, a, i, t, cnt, j, k, text, root, shown
 	for (j = 1; j <= cnt; j++) {
 		if (shown >= maxshow) { text = text "\n- ... " (cnt - shown) " more; run /lihfolk:audit for the full list."; break }
 		k = ORD[j]; shown++
-		text = text "\n- line " F_ln[k] " [" SEV[F_id[k]] "] " F_id[k] detailOf(k) ": " MSG[F_id[k]] "\n  Fix: " FIX[F_id[k]] "\n  Note: knowledge/" REF[F_id[k]]
+		text = text "\n- line " F_ln[k] " [" SEV[F_id[k]] "] " F_id[k] detailOf(k) ": " MSG[F_id[k]] "\n  Fix: " FIX[F_id[k]] "\n  Note: LihFolk Vault V2/" REF[F_id[k]]
 	}
 	root = ENVIRON["CLAUDE_PLUGIN_ROOT"]
-	if (root != "") text = text "\nLihFolk notes live under " root "/knowledge/ ."
+	if (root != "") text = text "\nLihFolk notes live under " root "/LihFolk Vault V2/ ."
 	if (NE + NW > 0) printf "{\"decision\":\"block\",\"reason\":\"%s\"}\n", jesc(text)
 	else printf "{\"hookSpecificOutput\":{\"hookEventName\":\"PostToolUse\",\"additionalContext\":\"%s\"}}\n", jesc(text)
 }

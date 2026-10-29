@@ -17,7 +17,7 @@ tags: [ai, tokens, cost, benchmarks, plugin, router, lihfolk]
 
 verified: 2026-10-28
 
-What LihFolk Vault V2 costs an AI to use, measured on the vault itself, and how to read it cheaply **without losing accuracy**. Every number below is **Measured** on this repo with `knowledge/_tools/build_index.py --measure` and direct file sizes. Tokens are estimated as **bytes ÷ 4**: English Markdown runs at about 3.5-4.5 bytes per token, so treat every figure as ±15%.
+What LihFolk Vault V2 costs an AI to use, measured on the vault itself, and how to read it cheaply **without losing accuracy**. Every number below is **Measured** on this repo with `LihFolk Vault V2/_tools/build_index.py --measure` and direct file sizes. Tokens are estimated as **bytes ÷ 4**: English Markdown runs at about 3.5-4.5 bytes per token, so treat every figure as ±15%.
 
 ## 1. Fixed cost per session (always loaded)
 
@@ -91,7 +91,7 @@ Savings never justify a wrong answer. TL;DR blocks are **extractive**: their bul
 - [ ] TL;DR first, then only the sections you need
 - [ ] High-stakes topic? Read full Common mistakes + Checklist + the numbers section
 - [ ] Router only for long, multi-topic sessions
-- [ ] Re-run `py knowledge/_tools/build_index.py --measure` after big vault changes and update this note
+- [ ] Re-run `py "LihFolk Vault V2/_tools/build_index.py" --measure` after big vault changes and update this note
 
 ## See also
 

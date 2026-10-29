@@ -67,3 +67,15 @@ seams were gone, but the blind score did NOT beat the 22-shell loft build (7.7).
 | Small forms (toe grooves, bib fluff points, brow ridge) at 5k tris | Read as "torn hem", "pinched toes", "lumpy brow" (V5 cap). Only add small forms where the mesh has density for them; otherwise keep the small tier to eyes, glints, nose |
 | Colour shows grey/drab in renders | Workbench uses AgX by default; set `scene.view_settings.view_transform = "Standard"` before `render_review` so renders show the exact vertex-colour hexes Roblox will show |
 | Reviewers disagree on style per round (head size, tufts, tail) | Proportion asks changed every review (bigger head -> "ears fennec-like"); V2/V3 stayed 1 across 7 fox reviews. Lock a reference sheet (side + front) before modelling so proportion is designed, not iterated |
+## Kits (tools/kits, 2026-10-28: 26 generator types, ~90 blind reviews, 3-reviewer panels decide pass/fail)
+| Miss | Fix / lesson |
+|---|---|
+| V5 faceted pommels / balls / rivets / collars (the #1 blind complaint) | Small round parts get their own 24-step lathe (pommel split from the 16-18-step grip), rivets as 7-pt domes; fit the rest to the class target |
+| V7 = 1 silently costs 0.3 | Fit loops (`fit_hilt`: 22 -> 14 steps until under target) + ship filter: a variant over its class target is not shipped |
+| V3 "realistic, lanky" hafted weapons (spear/staff 6.0-7.3) | Chunky: haft r 0.18-0.23, head ~1/3 of length, shorter haft, taper toward the head: 8.7-10.0 |
+| V4/V8 razor facets on gems and faceted props | Angle-limited 0.025-0.03 bevel modifier + weighted normals (`finalize(bevel=)`) + Triangulate (bevel turns pole fans into n-gons): gem 7.7 -> 9.3, vial 8.3 -> 10.0 |
+| Small round props stuck at 8.0-8.3 (potion: 16-22 steps under the 600 target) | Make the polygon a design choice: 6/8 flat sides + chamfers (vial, tokens) instead of a low-step "round" lathe |
+| V2 no small tier on plain lathes (barrel 8.0) | Model detail on existing rings: stave grooves = every 3rd lathe vertex pulled in 0.035, thick chamfered hoops + ink nails: 9.3 |
+| A17 after join although every part is clean | Coincident poles of two lathes (stem top = hub top) weld into one shell in cleanup; offset by 0.03 |
+| glTF (Blender 5.2) exports EVERY colour attribute as COLOR_n | Keep only "Col" on the mesh while exporting each colourway |
+| Reviewer types weight-1 grades as 1 (= "1/1") | Re-read grades from the evidence lines (3 of ~90 reviews) |

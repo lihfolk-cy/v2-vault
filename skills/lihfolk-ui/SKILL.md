@@ -11,7 +11,7 @@ The kit is in `src/` and runs as is. The examples in `examples/` build the five 
 
 ## Inputs
 
-- `VAULT`: the LihFolk knowledge base at `../../knowledge/` (plugin root `knowledge/`). The overview and the full spec are in `VAULT/21 LihFolk UI Design System/`.
+- `VAULT`: the LihFolk knowledge base at `../../LihFolk Vault V2/` (plugin root `LihFolk Vault V2/`). The overview and the full spec are in `VAULT/21 LihFolk UI Design System/`.
 - Kit: `src/LihFolkUITheme.luau`, `src/LihFolkUIIcons.luau`, `src/LihFolkUIComponents.luau`, `src/LihFolkUIController.luau`.
 - Examples: `examples/ShopMenu`, `CodesMenu`, `RebirthMenu`, `SettingsMenu`, `DailyRewardsMenu`, `ButtonsShowcase` (all `.client.luau`).
 - Quality bar: `../quality-score/rubrics/ui.md`. The minimum is **8.5**.
