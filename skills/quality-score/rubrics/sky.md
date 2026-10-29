@@ -16,9 +16,9 @@ Up and Dn in-plane rotation is configurable (`--updn-rot`) and **unverified in S
   touching edge pixel of its neighbour, mapped through the face convention above) divided by the mean step between the
   two pixel rows just inside each face (+0.0015 floor). Worst of the 24 one-sided seam measurements **<= 1.6**.
   (No absolute cap: star fields have large steps everywhere; the ratio is what exposes a seam.)
-- S3 No pole pinching: on Up and Dn, the median angular (around the pole) pixel gradient on a ring of radius 0.03
-  divided by the same on a ring of radius 0.25 (face half-width = 1). Must be **<= 1.8**. Median, so one star on the
-  ring is not a pinch; a lat-long-mapped sky converges everywhere round the pole and scores far higher.
+- S3 No pole pinching: on Up and Dn (2x downsampled), the median angular pixel gradient on rings close to the pole
+  (r = 0.04, 0.06, 0.08 of the face half-width) divided by rings further out (r = 0.2, 0.25, 0.3). Must be **<= 2.5**.
+  A lat-long-mapped sky converges all round the pole (gradient ~1/r, ratio well above 3); a direction-based sky is ~1.
 - S4 One sun: if a sun disc is painted, `lighting.json` sets `Sky.CelestialBodiesShown = false`; otherwise no disc is painted.
 - S5 `lighting.json` present, valid, and every value inside the ranges in the Stylized Lighting Recipes note
   (Atmosphere.Density 0.2-0.7, Haze 0-3, Brightness 0-4, Ambient not near black at night).
