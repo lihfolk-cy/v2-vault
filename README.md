@@ -1,6 +1,6 @@
 # LihFolk Vault V2: Roblox game dev knowledge for humans and AI
 
-**Read it as a vault. Install it as a plugin.** 1,290+ expert notes on making Roblox games, written so both you and your AI can use them. Each note has trust labels, common mistakes and checklists.
+**Read it as a vault. Install it as a plugin.** 1,340+ expert notes on making Roblox games, written so both you and your AI can use them. Each note has trust labels, common mistakes and checklists.
 
 ## Two ways to use it
 
@@ -27,6 +27,8 @@ After that, Roblox tasks automatically use the knowledge base. You also get:
 | **Systems library** | 19 drop-in typed Luau modules: validated remotes, session-locked data, idempotent purchases, shop, eggs with 2026 odds rules, codes, daily rewards, rebirth, quests, leaderboards (`/lihfolk:new-system`) |
 | **Asset pack** | Finds original models, materials, skies, animations and VFX in the separately downloaded LihFolk Asset Pack by catalogue search, shippable rows only, with import steps (`/lihfolk:assets`, set `LIHFOLK_ASSETS`) |
 | **Sound effects** | Layered, varied combat and UI sounds: a pooled Luau module with volume buses and animation-marker sync matched to the VFX presets, sourced only from premium, properly licensed sounds (Roblox-licensed Creator Store audio first, then a library you own) with a quality checklist and editing pipeline (`lihfolk-sfx`) |
+| **Worldbuilding** | Builds maps, levels, towns, dungeons and lobbies that read as designed: brief, five build passes, composition, lighting moods and budgets, with a placement and audit toolkit (`lihfolk-worldbuilding`) |
+| **Tutorials** | Onboarding that keeps first-time players: teach by doing, early rewards, stuck-only hints, skip and resume, device-aware prompts and funnel analytics, with a ready Luau module (`lihfolk-tutorial`) |
 | **Code checks** | A hook scans every Luau file the AI writes for 17 known Roblox mistakes and makes it fix them (`.lua` files are checked inside Roblox projects); `/lihfolk:audit` reviews a whole project |
 | **LihFolk UI** | Original cartoon/simulator menu kit with Luau components |
 | **2025-2026 knowledge** | What changed on Roblox since most models were trained, and what AI models get wrong |
@@ -47,7 +49,7 @@ Point your tool at this folder. `AGENTS.md` tells any agent how to search the va
 Every claim is marked **Roblox docs** (official), **Measured** (tested in a real project), **Rule of thumb** (craft knowledge) or **Unverified** (awaiting confirmation). Roblox changes fast, so dated claims say "as of".
 
 ## What's inside
-- `LihFolk Vault V2/`: the vault (55 sections, index, home page, theme)
+- `LihFolk Vault V2/`: the vault (57 sections, index, home page, theme)
 - `benchmark/`: the v2 benchmark (questions, answers, blind grades) and the script that reproduces the results
 - `REVIEWERS.md`: every claim and the command that checks it
 - `skills/`, `agents/`, `commands/`: the Claude Code plugin

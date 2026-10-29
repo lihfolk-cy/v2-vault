@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/world, area/modeling]
 > - Right: apply transforms before export; origin at the bottom for floor props, back for wall props, a corner for modular pieces...
 > - House Construction Method - Modular Kit Workflow (the same session's building and modelling lessons) (Blind Review Scores...
 >
-> Cost: TL;DR ~170 tok · whole note ~470 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~170 tok · whole note ~490 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,7 +26,7 @@ A modular kit is a small set of pieces (walls, corners, floors, stairs, pillars,
 
 ## Mentioned in
 
-12 notes in 7 sections. The 12 most relevant are linked:
+13 notes in 8 sections. The 13 most relevant are linked:
 
 ### 06 World Building and Art
 [[Grid Placement and Player Building Systems]] · [[House Construction Method - Modular Kit Workflow]] · [[Modeling in Blender for Roblox]]
@@ -48,5 +48,8 @@ A modular kit is a small set of pieces (walls, corners, floors, stairs, pillars,
 
 ### 56 Field Notes
 [[Blind Review Scores - Noise, Panels and Shipping the Best Version]]
+
+### 60 High-Craft Game Teardowns
+[[Teardown - Welcome to Bloxburg]]
 
 <!-- atlas:generated -->

@@ -112,5 +112,5 @@ Sources: https://games.roblox.com/v1/games?universeIds=7018190066 ; https://game
 
 <!-- related:start -->
 ## Related
-[[Case Study - Tower Defense Simulator]] · [[Case Study - Forsaken]] · [[Case Study - Jailbreak]] · [[Case Study - The Strongest Battlegrounds]] · [[Case Study - Rivals]] · [[Case Study - Murder Mystery 2]] · [[Case Study - Brookhaven RP]] · [[Case Study - Blox Fruits]]
+[[Case Study - Tower Defense Simulator]] · [[Case Study - Forsaken]] · [[Case Study - Jailbreak]] · [[Case Study - The Strongest Battlegrounds]] · [[Case Study - Rivals]] · [[Case Study - Murder Mystery 2]] · [[Case Study - Brookhaven RP]] · [[Case Study - Doors]]
 <!-- related:end -->

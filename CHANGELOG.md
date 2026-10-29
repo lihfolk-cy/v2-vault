@@ -1,5 +1,21 @@
 # Changelog
 
+## 2.4.0 (2026-10-29): Worlds, onboarding and top-game teardowns
+
+**Highlights:** a worldbuilding skill and a tutorial skill, 33 new teardowns of top Roblox games, leaner token use with higher search accuracy, and the Celestial look across the whole app.
+
+### Added
+- **Worldbuilding (`lihfolk-worldbuilding`):** brief and world pillars, five build passes with numbers and checkpoints, composition, lighting moods, materials and terrain, budgets for PC and phone, and a Luau toolkit (`placeOnGround`, `isAreaClear`, Poisson-disk `scatter`, `faceToward`, `budgetReport`, `auditWorld`). Plus a village-square example and the note **World Composition and Set Dressing**.
+- **Tutorials (`lihfolk-tutorial`):** onboarding that keeps first-time players, with a data-driven Luau step module (server-owned progress and rewards, skip and resume, stuck-only hints, device-aware prompts, guidance arrows, funnel analytics), a tutorial review rubric and five new pages on FTUE, step design, onboarding by genre, measuring onboarding and cross-device prompts.
+- **59 Viral and Trend Game Teardowns:** 15 teardowns (Steal An Egg, Plants vs Brainrots, +1 Speed Keyboard Escape, Escape Tsunami for Brainrots, Fish It, Ride A Pet, Tap Simulator REBORN, Sol's RNG, Ink Game, Bee Swarm Simulator, Build A Boat For Treasure, Natural Disaster Survival, Fling Things and People, Tower of Hell, PLS DONATE) and **Viral Game Anatomy - Hooks, Loops and Timing**.
+- **60 High-Craft Game Teardowns:** 16 teardowns (Pressure, Grace, Dandy's World, Piggy, Evade, Apocalypse Rising 2, Phantom Forces, Arsenal, BedWars, Blade Ball, Jujutsu Shenanigans, Deepwoken, Welcome to Bloxburg, Funky Friday, Anime Vanguards, Driving Empire) and **What Craft Looks Like on Roblox - Lessons from Top Studios**.
+- **Celestial chrome:** the file list, side panels, ribbon, tab bar, status bar, menus, dialogs and scrollbars now share the cosmic look; the graph page has twinkling stars and moon rocks drifting across the sky.
+
+### Improved
+- **Leaner and sharper (benchmark v2.1):** always-loaded skill descriptions from about 1,720 to 1,120 tokens, the router from about 1,610 to 720 tokens, and search output from 745 to 594 tokens per lookup. Search accuracy on practice questions rose from 85% to 92% top-3, the held-out set stays at 93%, and benchmark scores held under the same graders (set A 56.2 vs 55.4, set B 61.6 vs 60.7). Lookups also run about a third faster. See `benchmark/RESULTS_v2.1.md`.
+- **Lookup agent:** leads with dated facts, renames, deprecations and limits, retries with exact API names, and finds a working Python launcher first.
+- **Search:** 10 new symptom lines in `SYMPTOMS.md`; `vault.py --brief` and `--full` options.
+
 ## Unreleased: leaner context, same accuracy
 
 ### Improved

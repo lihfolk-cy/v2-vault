@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/2d, area/game-feel]
 > - Coyote time quietly smooths these too, which is a feature: a jump pressed on a staircase works.
 > - Coyote time and jump buffer on the local character.
 >
-> Cost: TL;DR ~110 tok · whole note ~570 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~110 tok · whole note ~610 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ Coyote time is the mirror image. Buffering forgives pressing too early; coyote t
 
 ## Mentioned in
 
-25 notes in 8 sections. The 25 most relevant are linked:
+30 notes in 10 sections. The 25 most relevant are linked:
 
 ### 08 Animation
 [[Frame Order and RunService Timing]] · [[Snippets - Playing Animations]] · [[Stance and Charge Moves]]
@@ -40,7 +40,7 @@ Coyote time is the mirror image. Buffering forgives pressing too early; coyote t
 [[Game Feel Start Here]] · [[Hit-Stop and Screen Shake Tuning by Numbers]] · [[Input Responsiveness Buffering and Coyote Time]] · [[Squash Stretch and Anticipation in UI and Characters]]
 
 ### 51 2D Game Development
-[[2D Collision Physics and Platformer Movement]] · [[2D Game Development Start Here]] · [[A 2D Engine in a ScreenGui - Game Loop Entities and Rendering]] · [[Choosing GUI 2D or Locked-Camera 2.5D]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]]
+[[2D Collision Physics and Platformer Movement]] · [[A 2D Engine in a ScreenGui - Game Loop Entities and Rendering]] · [[Choosing GUI 2D or Locked-Camera 2.5D]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]]
 
 ### 52 Core Concepts
 [[Input Buffering]] · [[Rate Limiting]]
@@ -49,9 +49,11 @@ Coyote time is the mirror image. Buffering forgives pressing too early; coyote t
 [[Hold-to-Attack Input That Never Sticks]]
 
 ### 58 Player QoL and Game Tweaks
-[[Accessibility Cross-Links for QoL Settings]] · [[Aim Assist and Generous Hitboxes]] · [[Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots]] · [[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]] · [[Player QoL Start Here]] · [[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]]
+[[Accessibility Cross-Links for QoL Settings]] · [[Aim Assist and Generous Hitboxes]] · [[Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots]] · [[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]] · [[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]]
 
-### Root notes
-[[00 Start Here]]
+### 60 High-Craft Game Teardowns
+[[Teardown - Blade Ball]] · [[Teardown - Evade]] · [[Teardown - Grace]]
+
+Also mentioned in (not linked): 00 Start Here · 2D Game Development Start Here · Player QoL Start Here · Teardown - Fish It · Teardown - Fling Things and People
 
 <!-- atlas:generated -->

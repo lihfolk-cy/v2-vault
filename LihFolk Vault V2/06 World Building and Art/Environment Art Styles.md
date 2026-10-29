@@ -184,5 +184,5 @@ One production game's "game-ready" material pass also tuned `EnvironmentSpecular
 
 <!-- related:start -->
 ## Related
-[[Stylized Lighting Recipes]] · [[Colour Scripts and Value Structure for Untextured Art]] · [[Zone and Biome Art Direction]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Parts Unions and MeshParts]] · [[Textures Decals and Texture Memory]] · [[House Construction Method - Modular Kit Workflow]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[Terrain Tools and Terrain API]]
+[[Stylized Lighting Recipes]] · [[Colour Scripts and Value Structure for Untextured Art]] · [[Zone and Biome Art Direction]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Parts Unions and MeshParts]] · [[Textures Decals and Texture Memory]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[House Construction Method - Modular Kit Workflow]] · [[Terrain Tools and Terrain API]]
 <!-- related:end -->

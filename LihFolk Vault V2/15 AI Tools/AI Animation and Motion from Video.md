@@ -220,5 +220,5 @@ Publishing the final clips and play-testing stayed manual, done by the owner.
 
 <!-- related:start -->
 ## Related
-[[Moon Animator and Third-Party Tools]] · [[AI Pitfalls - Physics and Animation]] · [[AI 3D Model Generation Outside Roblox]] · [[Prompting and Verifying AI Output]] · [[AI Image Generation for Icons Thumbnails and Concepts]] · [[AI Agents and Autonomous Workflows]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Roblox Studio Assistant]] · [[AI Pitfalls - Assets and Import]]
+[[Moon Animator and Third-Party Tools]] · [[Authoring Clips in Code]] · [[AI Pitfalls - Physics and Animation]] · [[AI 3D Model Generation Outside Roblox]] · [[Prompting and Verifying AI Output]] · [[AI Image Generation for Icons Thumbnails and Concepts]] · [[AI Agents and Autonomous Workflows]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Roblox Studio Assistant]] · [[AI Pitfalls - Assets and Import]]
 <!-- related:end -->

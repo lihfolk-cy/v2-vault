@@ -153,5 +153,5 @@ The server applies damage. It fires one remote to the damaged player with `amoun
 
 <!-- related:start -->
 ## Related
-[[Comfort Toggles - Flashes Damage Numbers and Hit-Stop]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Stylized Lighting Recipes]] · [[Highlights and Selection Effects]] · [[Lighting Mood and Time of Day]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Combat Sound Design and Feedback]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[Lighting Technologies and Settings]]
+[[Comfort Toggles - Flashes Damage Numbers and Hit-Stop]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Stylized Lighting Recipes]] · [[Highlights and Selection Effects]] · [[Lighting Mood and Time of Day]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Lighting Technologies and Settings]] · [[Combat Sound Design and Feedback]] · [[VFX Readability and Value - Lessons from Blind Reviews]]
 <!-- related:end -->

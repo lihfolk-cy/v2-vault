@@ -158,5 +158,5 @@ Source: https://create.roblox.com/docs/reference/engine/classes/PolicyService (r
 
 <!-- related:start -->
 ## Related
-[[AI Pitfalls - Data and Monetization]] · [[LihFolk Systems Library]] · [[Monetization Overview]] · [[Ethical Design and Player Trust]] · [[Roblox Changes 2025-2026]] · [[Discovery and Monetization Changes 2025-2026]]
+[[AI Pitfalls - Data and Monetization]] · [[LihFolk Systems Library]] · [[Monetization Overview]] · [[Pricing and Store Design]] · [[Roblox Changes 2025-2026]] · [[Discovery and Monetization Changes 2025-2026]]
 <!-- related:end -->

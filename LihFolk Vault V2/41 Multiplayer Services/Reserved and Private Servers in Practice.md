@@ -421,5 +421,5 @@ A reserved server is the standard "holding pen" for the soft-shutdown pattern in
 
 <!-- related:start -->
 ## Related
-[[Joining Friends Parties and Private Servers]] · [[Server Hop Rejoin and Server Lists with Ping]] · [[Cross-Server Messaging]] · [[AI Pitfalls - Data and Monetization]] · [[Genre Playbook - Battle Royale]] · [[Session Lock]]
+[[Joining Friends Parties and Private Servers]] · [[Server Hop Rejoin and Server Lists with Ping]] · [[Cross-Server Messaging]] · [[Session Lock]] · [[Genre Playbook - Battle Royale]] · [[AI Pitfalls - Data and Monetization]]
 <!-- related:end -->

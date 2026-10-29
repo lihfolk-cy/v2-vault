@@ -295,5 +295,5 @@ The senior trade-off: streaming saves client memory and join time but makes ever
 
 <!-- related:start -->
 ## Related
-[[Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver]] · [[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]] · [[Foliage Props and Scatter]] · [[Textures Decals and Texture Memory]] · [[Procedural World Generation]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[Terrain Tools and Terrain API]] · [[Modeling in Blender for Roblox]]
+[[Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver]] · [[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]] · [[Foliage Props and Scatter]] · [[Textures Decals and Texture Memory]] · [[Procedural World Generation]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Terrain Tools and Terrain API]] · [[Modeling in Blender for Roblox]] · [[Grid Placement and Player Building Systems]]
 <!-- related:end -->

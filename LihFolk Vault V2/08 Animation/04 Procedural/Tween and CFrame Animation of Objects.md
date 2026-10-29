@@ -285,5 +285,5 @@ Related: [[UI and GUI Animation]], [[Procedural Animation]], [[Performance and M
 
 <!-- related:start -->
 ## Related
-[[Procedural Weapon Motion]] · [[Weapon Rig Player]] · [[Look-At Aim and Head Tracking]] · [[Springs Damping and Smoothing]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Rigs and Joints]] · [[Motor6D Math and CFrame Composition]] · [[Authoring Clips in Code]]
+[[Procedural Weapon Motion]] · [[Weapon Rig Player]] · [[Look-At Aim and Head Tracking]] · [[Springs Damping and Smoothing]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Rigs and Joints]] · [[Snippets - Enemy Client Animator]] · [[Motor6D Math and CFrame Composition]]
 <!-- related:end -->

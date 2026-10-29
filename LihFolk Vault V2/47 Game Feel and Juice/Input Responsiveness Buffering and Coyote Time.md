@@ -358,5 +358,5 @@ Rules that hold up (rule of thumb, consistent with [[Server Authority and Valida
 
 <!-- related:start -->
 ## Related
-[[Input Buffering]] · [[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]] · [[2D Collision Physics and Platformer Movement]] · [[Anticipation]] · [[Hold-to-Attack Input That Never Sticks]] · [[Combat Animation Craft]]
+[[Input Buffering]] · [[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]] · [[Anticipation]] · [[2D Collision Physics and Platformer Movement]] · [[Hold-to-Attack Input That Never Sticks]] · [[Combat Animation Craft]]
 <!-- related:end -->

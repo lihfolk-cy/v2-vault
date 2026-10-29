@@ -960,5 +960,5 @@ The general rules behind these live in [[Server Authority and Validation]], [[Re
 
 <!-- related:start -->
 ## Related
-[[Arena Rounds with Teams and Spectating End to End]] · [[Saved Inventory End to End]] · [[Rebirth and Prestige System End to End]] · [[Pet Hatching and Following End to End]] · [[Map Voting and Rotation for Round Games]] · [[Weekend Build - Arena Shooter with Server-Checked Hits]] · [[Daily Rewards System End to End]]
+[[Arena Rounds with Teams and Spectating End to End]] · [[Saved Inventory End to End]] · [[Rebirth and Prestige System End to End]] · [[Pet Hatching and Following End to End]] · [[Weekend Build - Arena Shooter with Server-Checked Hits]] · [[Daily Rewards System End to End]] · [[Codes Redemption System End to End]]
 <!-- related:end -->

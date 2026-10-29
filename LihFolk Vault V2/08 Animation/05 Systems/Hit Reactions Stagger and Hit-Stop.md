@@ -196,5 +196,5 @@ See also: [[Combat Combo Systems]], [[Ability Kits Architecture]], [[Enemy Anima
 
 <!-- related:start -->
 ## Related
-[[Cinematic Ultimates]] · [[Markers and Events]] · [[Custom Locomotion Controller Design]] · [[Playback, Priorities and Blending]] · [[Animating Creatures and Monsters]] · [[Stance and Charge Moves]] · [[Locomotion Systems]] · [[Equip Draw and Flourish Systems]]
+[[Cinematic Ultimates]] · [[Markers and Events]] · [[Custom Locomotion Controller Design]] · [[Playback, Priorities and Blending]] · [[Animating Creatures and Monsters]] · [[Locomotion Systems]] · [[Stance and Charge Moves]] · [[Equip Draw and Flourish Systems]]
 <!-- related:end -->

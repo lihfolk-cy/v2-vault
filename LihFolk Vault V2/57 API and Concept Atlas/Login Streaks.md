@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/vfx, area/design]
 > - Streaks are more common than people think.
 > - Avoid: Waterfall as one flat card -> Stepped sheet + streak beams + foam + mist.
 >
-> Cost: TL;DR ~120 tok · whole note ~1000 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~1.0k tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,7 +27,7 @@ Streaks need "claimed yesterday" logic: `dayIndex(now) == lastClaimDay + 1` cont
 
 ## Mentioned in
 
-64 notes in 25 sections. The 25 most relevant are linked:
+65 notes in 26 sections. The 25 most relevant are linked:
 
 ### 06 World Building and Art
 [[Water Sky and Atmosphere Art]]
@@ -74,6 +74,6 @@ Streaks need "claimed yesterday" logic: `dayIndex(now) == lastClaimDay + 1` cont
 ### 54 Untextured Stylised Modelling
 [[Flat Colour vs Gradient Atlas vs Vertex Colour]]
 
-Also mentioned in (not linked): A 2D Engine in a ScreenGui - Game Loop Entities and Rendering · Bevels Chamfers and Edge Highlights Without Textures · Blender 5 Python Gotchas for Headless Builds · Blender Workflow for Roblox Creators · Case Study - Blox Fruits · Case Study - Brookhaven RP · Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop · Core Loops and Session Design · Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations · Difficulty Options and Cognitive Load · Discovery and the Algorithm · Dramatic Showcase Renders in Eevee · Drop Tables Rarity and Pity Systems · Environment and Level Pipeline · Equip Draw and Flourish Systems · Experience Notifications and Return Prompts · Game Math Start Here · Genre Playbook - Tower Defense · Hard-Surface Modeling · Kill Credit, Assists, Kill Feed and Death Recaps · Launch Strategy - The First Two Weeks · LihFolk Systems Library · Live Ops Events and Updates · Menu Archetypes - Shop Settings Codes Rewards · Modeling in Blender for Roblox · Module Design and Dependency Injection · Pet Hatching and Following End to End · Pity Timer · Procedural Creatures - Fused Shells, Quad Cages and Faceting · RNG Drops and Luck Systems · Simulator and RNG Genre Teardown · Subscriptions and Premium Payouts · Textures Decals and Texture Memory · Trim Sheets Atlases and Vertex Colors · VFX Design Playbook · VFX Previews in Blender for Roblox - Colour and Framing · VFX Readability and Value - Lessons from Blind Reviews · Weather Performance Budgets and Quality Tiers · Worked Builds Start Here
+Also mentioned in (not linked): A 2D Engine in a ScreenGui - Game Loop Entities and Rendering · Bevels Chamfers and Edge Highlights Without Textures · Blender 5 Python Gotchas for Headless Builds · Blender Workflow for Roblox Creators · Case Study - Blox Fruits · Case Study - Brookhaven RP · Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop · Core Loops and Session Design · Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations · Difficulty Options and Cognitive Load · Discovery and the Algorithm · Dramatic Showcase Renders in Eevee · Drop Tables Rarity and Pity Systems · Environment and Level Pipeline · Equip Draw and Flourish Systems · Experience Notifications and Return Prompts · Game Math Start Here · Genre Playbook - Tower Defense · Hard-Surface Modeling · Kill Credit, Assists, Kill Feed and Death Recaps · Launch Strategy - The First Two Weeks · LihFolk Systems Library · Live Ops Events and Updates · Menu Archetypes - Shop Settings Codes Rewards · Modeling in Blender for Roblox · Module Design and Dependency Injection · Pet Hatching and Following End to End · Pity Timer · Procedural Creatures - Fused Shells, Quad Cages and Faceting · RNG Drops and Luck Systems · Simulator and RNG Genre Teardown · Subscriptions and Premium Payouts · Teardown - Funky Friday · Textures Decals and Texture Memory · Trim Sheets Atlases and Vertex Colors · VFX Design Playbook · VFX Previews in Blender for Roblox - Colour and Framing · VFX Readability and Value - Lessons from Blind Reviews · Weather Performance Budgets and Quality Tiers · Worked Builds Start Here
 
 <!-- atlas:generated -->

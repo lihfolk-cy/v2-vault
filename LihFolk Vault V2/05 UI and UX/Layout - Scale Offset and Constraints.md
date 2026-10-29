@@ -310,5 +310,5 @@ See also: [[ScreenGui Fundamentals]], [[UI Layout Objects - Lists Grids and Page
 
 <!-- related:start -->
 ## Related
-[[Debugging UI Layout and Input]] · [[UI Design Systems]] · [[AI Pitfalls - UI and Input]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Virtualized Lists and Large Inventories]] · [[Gamepad and Console UX]] · [[UI Motion Language and Timing]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[Race HUD - Position, Laps, Splits, Speedometer and Minimap]] · [[Menu Archetypes - Shop Settings Codes Rewards]]
+[[Debugging UI Layout and Input]] · [[UI Design Systems]] · [[AI Pitfalls - UI and Input]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Virtualized Lists and Large Inventories]] · [[Gamepad and Console UX]] · [[UI Motion Language and Timing]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[Race HUD - Position, Laps, Splits, Speedometer and Minimap]] · [[UI Style Directions - A Visual Vocabulary for Briefs]]
 <!-- related:end -->

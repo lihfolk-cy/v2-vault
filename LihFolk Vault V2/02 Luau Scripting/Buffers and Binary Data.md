@@ -347,5 +347,5 @@ The senior trade-off: binary formats trade developer time and debuggability for 
 
 <!-- related:start -->
 ## Related
-[[Tables Metatables and OOP]] · [[Luau Type System and Strict Mode]] · [[Luau Language Essentials]] · [[Functions Closures and Upvalues]] · [[Metatables and OOP - When and When Not]] · [[Instances Attributes and Tags]] · [[Parallel Luau and Actors]] · [[Module Scripts and Requiring]]
+[[Tables Metatables and OOP]] · [[Luau Type System and Strict Mode]] · [[Luau Language Essentials]] · [[Metatables and OOP - When and When Not]] · [[Functions Closures and Upvalues]] · [[Instances Attributes and Tags]] · [[Parallel Luau and Actors]] · [[Module Scripts and Requiring]]
 <!-- related:end -->

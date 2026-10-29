@@ -290,5 +290,5 @@ The senior trade-off: cross-server features (global events, shouts, live config)
 
 <!-- related:start -->
 ## Related
-[[RemoteEvents RemoteFunctions and Unreliable Remotes]] · [[Remote Abuse Patterns and Rate Limiting in Practice]] · [[Client-Server Model]] · [[Interest Management and Per-Player Replication]] · [[Replication Rules]] · [[Instance Streaming]] · [[Snapshot Interpolation for Custom Replication]] · [[Project Structure and Bootstrapping]]
+[[RemoteEvents RemoteFunctions and Unreliable Remotes]] · [[Remote Abuse Patterns and Rate Limiting in Practice]] · [[Client-Server Model]] · [[Interest Management and Per-Player Replication]] · [[Replication Rules]] · [[Instance Streaming]] · [[Project Structure and Bootstrapping]] · [[Server Authority and Validation]]
 <!-- related:end -->

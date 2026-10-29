@@ -163,5 +163,5 @@ end)
 
 <!-- related:start -->
 ## Related
-[[Off-Screen Objective Markers and Waypoint Arrows]] · [[Text Fonts and Rich Text]] · [[UI Design Systems]] · [[Layout - Scale Offset and Constraints]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[ScreenGui Fundamentals]] · [[Safe Areas and Insets]] · [[UI Motion Language and Timing]]
+[[Off-Screen Objective Markers and Waypoint Arrows]] · [[Text Fonts and Rich Text]] · [[UI Design Systems]] · [[Layout - Scale Offset and Constraints]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[ScreenGui Fundamentals]] · [[Safe Areas and Insets]] · [[Tutorial Step Design Patterns - Teach by Doing]]
 <!-- related:end -->

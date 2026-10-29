@@ -133,5 +133,5 @@ Cheap, local, reversible:
 
 <!-- related:start -->
 ## Related
-[[Experience Notifications and Return Prompts]] · [[Console and VR Release Checklists]] · [[Roblox Changes 2025-2026]] · [[Server Authority and Input Migration 2026]] · [[Regional Compliance - Paid Random Items and Country Rules]] · [[Badges and Achievement Design]] · [[Discovery and Monetization Changes 2025-2026]]
+[[Experience Notifications and Return Prompts]] · [[Console and VR Release Checklists]] · [[Roblox Changes 2025-2026]] · [[Server Authority and Input Migration 2026]] · [[Regional Compliance - Paid Random Items and Country Rules]] · [[Badges and Achievement Design]]
 <!-- related:end -->

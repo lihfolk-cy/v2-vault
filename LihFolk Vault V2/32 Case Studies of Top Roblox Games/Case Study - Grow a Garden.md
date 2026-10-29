@@ -206,5 +206,5 @@ Store `plantedAt` with `os.time()` when the server accepts the plant request. On
 
 <!-- related:start -->
 ## Related
-[[Case Study - Adopt Me]] · [[Case Study - Blox Fruits]] · [[Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks]] · [[Case Study - Pet Simulator 99]] · [[Case Study - Doors]] · [[Case Study - Brookhaven RP]] · [[Case Study - Fisch]] · [[Case Study - Dead Rails]]
+[[Case Study - Adopt Me]] · [[Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks]] · [[Case Study - Blox Fruits]] · [[Case Study - Pet Simulator 99]] · [[Case Study - Doors]] · [[Case Study - Brookhaven RP]] · [[Case Study - Fisch]] · [[Case Study - Dead Rails]]
 <!-- related:end -->

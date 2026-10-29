@@ -266,5 +266,5 @@ Compare clocks, not features. If your zone loop is 45 minutes and the competitor
 
 <!-- related:start -->
 ## Related
-[[RNG Drops and Luck Systems]] · [[Economy Inflation Sinks and Faucets Math]] · [[Genre Playbook - Combat and RPG]] · [[Genre Playbook - Tycoons]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Genre Playbook - Survival and Crafting]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Zombie and Wave Survival Co-op]]
+[[RNG Drops and Luck Systems]] · [[Economy Inflation Sinks and Faucets Math]] · [[Onboarding by Genre - The First Five Minutes]] · [[Genre Playbook - Combat and RPG]] · [[Genre Playbook - Tycoons]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Genre Playbook - Survival and Crafting]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Party and Minigame Collections]]
 <!-- related:end -->

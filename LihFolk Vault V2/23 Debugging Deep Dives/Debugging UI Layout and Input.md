@@ -343,5 +343,5 @@ end)
 
 <!-- related:start -->
 ## Related
-[[AI Pitfalls - UI and Input]] · [[Safe Area]] · [[Readable Text and UI Scale]] · [[Shared Close Buttons and Headers Across Many Screens]] · [[UI and GUI Animation]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]]
+[[AI Pitfalls - UI and Input]] · [[Readable Text and UI Scale]] · [[Safe Area]] · [[Shared Close Buttons and Headers Across Many Screens]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[UI and GUI Animation]]
 <!-- related:end -->

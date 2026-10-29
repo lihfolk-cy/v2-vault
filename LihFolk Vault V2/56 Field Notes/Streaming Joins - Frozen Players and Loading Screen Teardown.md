@@ -121,5 +121,5 @@ Things to avoid in the ready check: `WaitForChild` without a timeout on anything
 
 <!-- related:start -->
 ## Related
-[[Loading Screen Skip and First-Session Goals]] · [[Server-Authoritative Freeze and Stun Timestamps]] · [[ipairs Stops at the First nil - Cleanup Tables That Leak]] · [[Centre-Screen Announcements That Stay Centred]] · [[Resetting One Player's Data Safely]] · [[Hold-to-Attack Input That Never Sticks]] · [[Client Hit Prediction for Melee Feedback]]
+[[Loading Screen Skip and First-Session Goals]] · [[Server-Authoritative Freeze and Stun Timestamps]] · [[ipairs Stops at the First nil - Cleanup Tables That Leak]] · [[Centre-Screen Announcements That Stay Centred]] · [[Resetting One Player's Data Safely]] · [[Hold-to-Attack Input That Never Sticks]] · [[Client Hit Prediction for Melee Feedback]] · [[Animation Data Hygiene - Euler Wrap Joint Holes and Easing]] · [[Held Weapons on Motor6D - Locking the Grip During Attacks]]
 <!-- related:end -->

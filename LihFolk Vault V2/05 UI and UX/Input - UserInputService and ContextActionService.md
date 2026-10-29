@@ -272,5 +272,5 @@ See also: [[Gamepad and Console UX]], [[Responsive UI for Phone Tablet Console a
 
 <!-- related:start -->
 ## Related
-[[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Rebinding Controls with the Input Action System]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]] · [[Shift-Lock Sprint and Gamepad B for Menus]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[UI Design Systems]]
+[[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Rebinding Controls with the Input Action System]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]] · [[Onboarding Accessibility and Cross-Device Prompts]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[UI Design Systems]]
 <!-- related:end -->

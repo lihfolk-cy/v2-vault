@@ -117,5 +117,5 @@ Build per-weapon loops from layers (body, low, and a separate high "swing whine"
 
 <!-- related:start -->
 ## Related
-[[Sound Fundamentals]] · [[Audio Mixer Settings with SoundGroups]] · [[Client Hit Prediction for Melee Feedback]] · [[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[Hold-to-Attack Input That Never Sticks]] · [[Running Many AI Agents on One Roblox Place]] · [[Layering Camera Feedback on the Default Camera]]
+[[Client Hit Prediction for Melee Feedback]] · [[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[Running Many AI Agents on One Roblox Place]] · [[Hold-to-Attack Input That Never Sticks]] · [[Layering Camera Feedback on the Default Camera]] · [[Animation Data Hygiene - Euler Wrap Joint Holes and Easing]]
 <!-- related:end -->

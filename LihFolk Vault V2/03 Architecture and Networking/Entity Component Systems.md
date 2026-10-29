@@ -308,5 +308,5 @@ The senior trade-off: ECS makes "do X to everything with Y" trivial and makes "w
 
 <!-- related:start -->
 ## Related
-[[Snapshot Interpolation for Custom Replication]] · [[Client-Server Model]] · [[RemoteEvents RemoteFunctions and Unreliable Remotes]] · [[Project Structure and Bootstrapping]] · [[Instance Streaming]] · [[Network Ownership]] · [[Client Prediction and Reconciliation for Combat]] · [[Server Lifecycle and Shutdown]]
+[[Snapshot Interpolation for Custom Replication]] · [[Client-Server Model]] · [[RemoteEvents RemoteFunctions and Unreliable Remotes]] · [[Project Structure and Bootstrapping]] · [[Instance Streaming]] · [[Network Ownership]] · [[Client Prediction and Reconciliation for Combat]] · [[Remote Abuse Patterns and Rate Limiting in Practice]]
 <!-- related:end -->

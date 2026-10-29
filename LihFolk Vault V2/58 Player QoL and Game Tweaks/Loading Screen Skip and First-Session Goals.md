@@ -129,6 +129,7 @@ The worst first ten seconds: loading screen, then daily reward popup, then "Like
 - [[Case Study - Fast Join and Deferred Loading]]
 - [[Streaming Joins - Frozen Players and Loading Screen Teardown]]
 - [[First-Time User Experience and Onboarding]]
+- [[Onboarding and FTUE - Tutorials That Keep Players]]
 - [[Core Loops and Session Design]]
 
 ## Connected notes
@@ -138,5 +139,5 @@ The worst first ten seconds: loading screen, then daily reward popup, then "Like
 
 <!-- related:start -->
 ## Related
-[[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]] · [[Joining Friends Parties and Private Servers]] · [[UI Scale HUD Hide and Compact Mode]] · [[Feedback - Autosave Indicator Ping Display and Error Toasts]] · [[Accessibility Cross-Links for QoL Settings]] · [[Server Hop Rejoin and Server Lists with Ping]] · [[Confirmation and Undo Patterns for Destructive and Paid Actions]]
+[[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]] · [[Joining Friends Parties and Private Servers]] · [[UI Scale HUD Hide and Compact Mode]] · [[Accessibility Cross-Links for QoL Settings]] · [[Feedback - Autosave Indicator Ping Display and Error Toasts]] · [[Server Hop Rejoin and Server Lists with Ping]] · [[Confirmation and Undo Patterns for Destructive and Paid Actions]]
 <!-- related:end -->

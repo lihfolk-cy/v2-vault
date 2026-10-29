@@ -378,5 +378,5 @@ Roblox does not arbitrate disagreements between group members; the group owner's
 
 <!-- related:start -->
 ## Related
-[[Creator Account Security and Takeover Recovery]] · [[Legal Basics - IP Licenses and Assets]] · [[Working with Content Creators]] · [[Community Building]] · [[Building a Portfolio as a Roblox Developer]] · [[Roblox Communities as Your On-Platform Hub]]
+[[Legal Basics - IP Licenses and Assets]] · [[Creator Account Security and Takeover Recovery]] · [[Working with Content Creators]] · [[Community Building]] · [[Plugin Security and Permissions]] · [[Building a Portfolio as a Roblox Developer]]
 <!-- related:end -->

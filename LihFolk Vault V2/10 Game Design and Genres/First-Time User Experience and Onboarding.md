@@ -12,7 +12,7 @@ tags: [game-design, ftue, onboarding, tutorial, funnel, retention, type/guide, a
 > - First verb by 30 s, first big reward by 40 s.
 > - Core loop closed three or more times in 5 minutes.
 >
-> Cost: TL;DR ~160 tok · whole note ~5.6k tok. Read more: ## 6. Case study: five versions of one tutorial · ## 7. Implementation: a server-side onboarding state machine · ## 9. Common mistakes · ## 10. Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.7k tok. Read more: ## 6. Case study: five versions of one tutorial · ## 7. Implementation: a server-side onboarding state machine · ## 9. Common mistakes · ## 10. Checklist
 <!-- tldr:end -->
 
 The **first-time user experience (FTUE)** is everything a new player sees from the moment the game starts loading to the moment they understand the core loop and want more. On Roblox it is the single highest-leverage piece of design: discovery measures it directly, and a player who bounces in minute one never sees your best content. This note covers the first 60 seconds, the first 5 minutes, tutorial gating and HUD reveals, the techniques Roblox recommends, and a long case study of one production game's tutorial going through five versions.
@@ -362,6 +362,7 @@ Match the gamepad labels to your real bindings; see [[Gamepad and Console UX]] a
 - [[HUD Design]], [[Menu Archetypes - Shop Settings Codes Rewards]], [[UI and GUI Animation]], [[Responsive UI for Phone Tablet Console and PC]]
 - [[Quests and Objectives]], [[Analytics and Funnels]], [[Discovery and the Algorithm]]
 - [[Case Study - Fast Join and Deferred Loading]], [[Ethical Design and Player Trust]]
+- Companion notes: [[Onboarding and FTUE - Tutorials That Keep Players]] (principles and numbers), [[Tutorial Step Design Patterns - Teach by Doing]], [[Onboarding by Genre - The First Five Minutes]], [[Measuring Onboarding - Funnels, Drop-off and A-B Tests]], [[Onboarding Accessibility and Cross-Device Prompts]]. Plugin skill: `lihfolk-tutorial`.
 
 ## Connected notes
 <!-- auto-links:start -->
@@ -370,5 +371,5 @@ Match the gamepad labels to your real bindings; see [[Gamepad and Console UX]] a
 
 <!-- related:start -->
 ## Related
-[[Skippable Tutorials and Replayable Tips]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Combat and RPG]] · [[Genre Playbook - RNG and Collection Games]] · [[Genre Playbook - Tycoons]] · [[Social Design and Multiplayer Play]] · [[Balancing with Spreadsheets and Data]] · [[Boss Fight Design Patterns]] · [[Rarity Ladders and Drop Pacing Math]]
+[[Genre Playbook - Simulators]] · [[Genre Playbook - Combat and RPG]] · [[Genre Playbook - RNG and Collection Games]] · [[Genre Playbook - Tycoons]] · [[Social Design and Multiplayer Play]] · [[Balancing with Spreadsheets and Data]] · [[Boss Fight Design Patterns]] · [[Rarity Ladders and Drop Pacing Math]]
 <!-- related:end -->

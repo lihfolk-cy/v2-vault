@@ -137,5 +137,5 @@ Gotcha: overlapping pulses where the first one's `task.delay` stops the second e
 
 <!-- related:start -->
 ## Related
-[[Console and VR Release Checklists]] · [[Accessibility Cross-Links for QoL Settings]] · [[QoL Audit Checklist]] · [[Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots]] · [[Settings Menu Essentials and Persistence]] · [[Top 25 QoL Wins by Effort]] · [[Colourblind Palettes Text Size and Tooltips]] · [[UI Scale HUD Hide and Compact Mode]] · [[Skippable Tutorials and Replayable Tips]]
+[[Console and VR Release Checklists]] · [[Onboarding Accessibility and Cross-Device Prompts]] · [[Accessibility Cross-Links for QoL Settings]] · [[QoL Audit Checklist]] · [[Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots]] · [[Settings Menu Essentials and Persistence]] · [[Top 25 QoL Wins by Effort]] · [[Colourblind Palettes Text Size and Tooltips]] · [[UI Scale HUD Hide and Compact Mode]] · [[Skippable Tutorials and Replayable Tips]]
 <!-- related:end -->

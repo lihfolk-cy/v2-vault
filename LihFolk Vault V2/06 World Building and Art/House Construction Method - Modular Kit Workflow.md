@@ -240,5 +240,5 @@ return groundHouse
 
 <!-- related:start -->
 ## Related
-[[Parts Unions and MeshParts]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Zone and Biome Art Direction]] · [[Foliage Props and Scatter]] · [[Materials MaterialVariants and SurfaceAppearance]] · [[Terrain Tools and Terrain API]] · [[Level Design for Roblox]] · [[Terrain Deep Dive - Materials Water and Performance]]
+[[Parts Unions and MeshParts]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Zone and Biome Art Direction]] · [[Foliage Props and Scatter]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Materials MaterialVariants and SurfaceAppearance]] · [[Terrain Tools and Terrain API]] · [[Level Design for Roblox]]
 <!-- related:end -->

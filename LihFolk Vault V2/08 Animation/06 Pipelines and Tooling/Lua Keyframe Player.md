@@ -154,5 +154,5 @@ Everything that used to listen to Animator signals must listen to the Lua player
 
 <!-- related:start -->
 ## Related
-[[Authoring Clips in Code]] · [[Publishing Animations]] · [[Animation Glossary]] · [[Animator Deep Dive]] · [[Animation Data from Blender to Roblox]] · [[Snippets - Building and Sampling Clips]] · [[Debugging Animation Problems]] · [[Troubleshooting Table]]
+[[Authoring Clips in Code]] · [[Publishing Animations]] · [[Animation Glossary]] · [[Animation Data from Blender to Roblox]] · [[Animator Deep Dive]] · [[Debugging Animation Problems]] · [[Snippets - Building and Sampling Clips]] · [[Troubleshooting Table]]
 <!-- related:end -->

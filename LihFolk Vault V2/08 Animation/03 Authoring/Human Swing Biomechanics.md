@@ -81,5 +81,5 @@ Measured strikes (kendo, batting, tennis, golf) agree on one pattern: a swing is
 
 <!-- related:start -->
 ## Related
-[[Animation Quality Standard]] · [[Elbow Poles Swivel and Joint Limits]] · [[Animation Review Checklist]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[Arm QA Metrics Reference]] · [[Posing and Silhouettes]] · [[Locomotion Clip Lessons - Jump, Sprint, Idle]] · [[Case Study - Fixing Hundreds of Attack Clips]]
+[[Animation Quality Standard]] · [[Animation Review Checklist]] · [[Elbow Poles Swivel and Joint Limits]] · [[Arm QA Metrics Reference]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[Posing and Silhouettes]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Locomotion Clip Lessons - Jump, Sprint, Idle]]
 <!-- related:end -->

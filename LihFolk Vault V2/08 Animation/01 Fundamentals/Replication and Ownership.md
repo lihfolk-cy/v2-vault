@@ -152,5 +152,5 @@ One game used exactly this for a 4.4 s ceremonial spin. No streaming of CFrames,
 
 <!-- related:start -->
 ## Related
-[[Client-Server Model]] · [[AnimationTrack Reference]] · [[Animation LOD]] · [[Snippets - Playing Animations]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Playback, Priorities and Blending]] · [[Debugging Animation Problems]] · [[How the Animator Really Behaves]] · [[Bones and Skinned Meshes]]
+[[Client-Server Model]] · [[AnimationTrack Reference]] · [[Animation LOD]] · [[Snippets - Playing Animations]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Debugging Animation Problems]] · [[Playback, Priorities and Blending]] · [[How the Animator Really Behaves]] · [[Performance and Memory]]
 <!-- related:end -->

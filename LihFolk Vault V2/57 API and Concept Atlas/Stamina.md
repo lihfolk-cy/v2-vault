@@ -22,11 +22,11 @@ Stamina is the most common addition and the easiest to make feel bad. (from [[Cu
 - Stamina has regen delay and exhausted lockout; bar always readable. ([[Custom Character Controllers]])
 - Held attacks faster than clicking: Loop bypasses pace or stamina gates -> Loop calls the same `tryAttack` ([[Hold-to-Attack Input That Never Sticks]])
 - HP and stamina bars draw 1.85 times larger on phones, with 15 px labels on 30 px bars. ([[HUD Design]])
-- Keep chase speed slightly below or equal to player sprint, with stamina on the player side, so escapes depend on decisions (doors, hiding) rather than raw speed. ([[Genre Playbook - Horror and Story]])
+- If the player can tell why they died (bad parry timing, out of stamina), they come back. ([[Teardown - Deepwoken]])
 
 ## Mentioned in
 
-15 notes in 12 sections. The 15 most relevant are linked:
+17 notes in 13 sections. The 17 most relevant are linked:
 
 ### 03 Architecture and Networking
 [[Client Prediction and Reconciliation for Combat]]
@@ -63,5 +63,8 @@ Stamina is the most common addition and the easiest to make feel bad. (from [[Cu
 
 ### 58 Player QoL and Game Tweaks
 [[Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots]]
+
+### 60 High-Craft Game Teardowns
+[[Teardown - Dandy's World]] · [[Teardown - Deepwoken]]
 
 <!-- atlas:generated -->

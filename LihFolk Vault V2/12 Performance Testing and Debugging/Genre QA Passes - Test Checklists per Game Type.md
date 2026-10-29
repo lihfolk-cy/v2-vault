@@ -144,5 +144,5 @@ Run [[Dupe Hunting Test Script - Trades, Gifts, Drops and Rejoins]] in full. A t
 
 <!-- related:start -->
 ## Related
-[[Multi-Client and Live Testing]] · [[Testing Time-Based Features with a Controllable Clock]] · [[Automated Luau Checks - LihFolk Hook and Audit]] · [[UI Automation with VirtualInput and StudioTestService]] · [[Save Migration Tests - Fixture Saves and Golden Files]] · [[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]] · [[In-Game Bug Report Button with Automatic Context]] · [[Hunting Memory Leaks Step by Step]]
+[[Onboarding by Genre - The First Five Minutes]] · [[Multi-Client and Live Testing]] · [[Testing Time-Based Features with a Controllable Clock]] · [[Automated Luau Checks - LihFolk Hook and Audit]] · [[UI Automation with VirtualInput and StudioTestService]] · [[Save Migration Tests - Fixture Saves and Golden Files]] · [[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]] · [[In-Game Bug Report Button with Automatic Context]]
 <!-- related:end -->

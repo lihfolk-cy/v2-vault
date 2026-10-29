@@ -287,5 +287,5 @@ The reference project posed the rig straight from the `KeyframeSequence` with th
 
 <!-- related:start -->
 ## Related
-[[Open Questions]] · [[Authoring Clips in Code]] · [[Weapon Rig Player]] · [[Animation Data from Blender to Roblox]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Procedural Animation]] · [[Playback, Priorities and Blending]] · [[Motor6D Math and CFrame Composition]]
+[[Open Questions]] · [[Authoring Clips in Code]] · [[Weapon Rig Player]] · [[Animation Data from Blender to Roblox]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Procedural Animation]] · [[Motor6D Math and CFrame Composition]] · [[Playback, Priorities and Blending]]
 <!-- related:end -->

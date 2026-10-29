@@ -12,7 +12,7 @@ tags: [qol, accessibility, cross-links, settings, inclusive-design, map, type/re
 > - Platform preferences read and respected.
 > - Settings reachable from the loading screen.
 >
-> Cost: TL;DR ~170 tok · whole note ~1.6k tok. Read more: ## 1. Map: QoL setting → accessibility need · ## 2. Shared rules (do these once) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~1.7k tok. Read more: ## 1. Map: QoL setting → accessibility need · ## 2. Shared rules (do these once) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most QoL settings double as accessibility features, and most accessibility features are QoL for everyone: captions help players in noisy rooms, remapping helps left-handed players, reduced motion helps people on a bus. Section 42 ([[Accessibility Start Here]]) covers accessibility in depth. This note does **not** repeat it; it maps each QoL setting in this section to the accessibility note that explains the need, so you build each feature once and serve both goals.
@@ -88,5 +88,5 @@ These apply to every setting in this section; section 42 explains each in depth.
 
 <!-- related:start -->
 ## Related
-[[Top 25 QoL Wins by Effort]] · [[Graphics and Performance Toggles for Low-End Devices]] · [[Quick Respawn and Spawn Protection]] · [[Loading Screen Skip and First-Session Goals]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Console and VR Release Checklists]]
+[[Top 25 QoL Wins by Effort]] · [[Onboarding Accessibility and Cross-Device Prompts]] · [[Loading Screen Skip and First-Session Goals]] · [[Graphics and Performance Toggles for Low-End Devices]] · [[Quick Respawn and Spawn Protection]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Feedback - Autosave Indicator Ping Display and Error Toasts]]
 <!-- related:end -->

@@ -10,7 +10,7 @@ tags: [core-concept, analytics, onboarding, game-design, retention, type/referen
 > - Steps must be ordered and each logged once.
 > - The biggest drop is not always the one to fix.
 >
-> Cost: TL;DR ~110 tok · whole note ~960 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~110 tok · whole note ~1.0k tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 An **onboarding funnel** is the ordered list of steps a new player should pass through in their first session (joined, loaded, moved, finished the first action, got the first reward, made the first upgrade), with the share of players who reach each step. Each drop between steps shows where new players give up.
@@ -44,6 +44,8 @@ end
 ## Where this shows up
 
 - [[First-Time User Experience and Onboarding]]: designing the first session.
+- [[Onboarding and FTUE - Tutorials That Keep Players]]: the principles and target numbers in one place.
+- [[Measuring Onboarding - Funnels, Drop-off and A-B Tests]]: what to log per step and how to read drop-off.
 - [[Analytics and Funnels]]: funnels across the game.
 - [[Teaching Through Level Design]]: teaching without text.
 - [[Case Study - Fast Join and Deferred Loading]]: fixing the earliest drop.
@@ -64,5 +66,5 @@ Related concepts: [[Retention Cohorts]], [[Core Loop]], [[Telemetry Events]], [[
 
 <!-- related:start -->
 ## Related
-[[Variance]] · [[Faucets and Sinks]] · [[Feature Flags]] · [[Event Bus]] · [[Streaming Radius]] · [[Instance Count]] · [[Data Schema Versioning]] · [[Replication Boundary]]
+[[Variance]] · [[Faucets and Sinks]] · [[Feature Flags]] · [[Event Bus]] · [[Anticipation]] · [[Streaming Radius]] · [[Data Schema Versioning]] · [[Instance Count]]
 <!-- related:end -->

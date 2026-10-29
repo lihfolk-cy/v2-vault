@@ -357,5 +357,5 @@ Direct-purchase exclusives (no randomness) are the cleanest monetisation in an R
 
 <!-- related:start -->
 ## Related
-[[Pity Timer]] · [[Simulator and RNG Genre Teardown]] · [[Drop Tables Rarity and Pity Systems]] · [[Retention and Return Hooks]] · [[Social Design and Multiplayer Play]] · [[Genre Playbook - Tower Defense]] · [[Core Loops and Session Design]] · [[Genre Playbook - Tycoons]] · [[First-Time User Experience and Onboarding]] · [[Genre Playbook - Zombie and Wave Survival Co-op]]
+[[Pity Timer]] · [[Simulator and RNG Genre Teardown]] · [[Drop Tables Rarity and Pity Systems]] · [[Retention and Return Hooks]] · [[Social Design and Multiplayer Play]] · [[Core Loops and Session Design]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Tycoons]] · [[First-Time User Experience and Onboarding]] · [[Genre Playbook - Zombie and Wave Survival Co-op]]
 <!-- related:end -->

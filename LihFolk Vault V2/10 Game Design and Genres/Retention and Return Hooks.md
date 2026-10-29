@@ -346,6 +346,7 @@ Fixes:
 
 ## See also
 - [[Core Loops and Session Design]], [[First-Time User Experience and Onboarding]], [[Progression and Pacing Design]]
+- [[Onboarding and FTUE - Tutorials That Keep Players]], [[Onboarding by Genre - The First Five Minutes]]
 - [[Quests and Objectives]], [[Menu Archetypes - Shop Settings Codes Rewards]], [[Economies and Currencies]]
 - [[Live Ops Events and Updates]], [[Analytics and Funnels]], [[Discovery and the Algorithm]], [[Community Building]]
 - [[Ethical Design and Player Trust]], [[Session Locking and Profile Libraries]], [[Rate Limiting and Abuse Prevention]]

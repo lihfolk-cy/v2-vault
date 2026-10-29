@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/world, area/design]
 > - Sightline parity. Every long sightline should have a matching one.
 > - Sightline length should match the roster: no 400-stud sightlines if there are no long-range weapons.
 >
-> Cost: TL;DR ~150 tok · whole note ~590 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~640 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,10 +26,10 @@ Sightlines are what the player actually sees from a spot; they also leak locked 
 
 ## Mentioned in
 
-23 notes in 9 sections. The 23 most relevant are linked:
+26 notes in 10 sections. The 25 most relevant are linked:
 
 ### 06 World Building and Art
-[[Foliage Props and Scatter]] · [[Level Design for Roblox]] · [[Procedural World Generation]] · [[Zone and Biome Art Direction]]
+[[Foliage Props and Scatter]] · [[Level Design for Roblox]] · [[Procedural World Generation]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Zone and Biome Art Direction]]
 
 ### 10 Game Design and Genres
 [[Genre Playbook - Battle Royale]] · [[Genre Playbook - Shooters FPS and TPS]]
@@ -50,9 +50,14 @@ Sightlines are what the player actually sees from a spot; they also leak locked 
 [[2D Game Development Start Here]] · [[Tilemaps Cameras and Parallax for 2D Levels]]
 
 ### 55 Modelling Nuance and Readability
-[[Modelling Nuance Start Here]] · [[Modelling to the Roblox Camera and Player Scale]]
+[[Modelling to the Roblox Camera and Player Scale]]
+
+### 60 High-Craft Game Teardowns
+[[Teardown - Evade]] · [[What Craft Looks Like on Roblox - Lessons from Top Studios]]
 
 ### Root notes
 [[00 Start Here]]
+
+Also mentioned in (not linked): Modelling Nuance Start Here
 
 <!-- atlas:generated -->

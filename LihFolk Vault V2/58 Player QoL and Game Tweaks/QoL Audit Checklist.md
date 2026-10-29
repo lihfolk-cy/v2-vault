@@ -140,5 +140,5 @@ Count fails per section. Fix in this order (**Rule of thumb**): anything that lo
 
 <!-- related:start -->
 ## Related
-[[Genre QA Passes - Test Checklists per Game Type]] · [[Console and VR Release Checklists]] · [[Multi-Client and Device Playtesting Protocols]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Shift-Lock Sprint and Gamepad B for Menus]]
+[[Genre QA Passes - Test Checklists per Game Type]] · [[Console and VR Release Checklists]] · [[Onboarding and FTUE - Tutorials That Keep Players]] · [[Onboarding Accessibility and Cross-Device Prompts]] · [[Multi-Client and Device Playtesting Protocols]] · [[Tutorial Step Design Patterns - Teach by Doing]]
 <!-- related:end -->

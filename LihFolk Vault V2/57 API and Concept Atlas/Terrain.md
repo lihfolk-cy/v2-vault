@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/world, area/vfx, api/Terrain]
 > - Terrain versus meshes decided per area and written down.
 > - Terrain snapshot before any bulk write; owner OK for area regeneration.
 >
-> Cost: TL;DR ~140 tok · whole note ~1.1k tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~1.2k tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -31,7 +31,7 @@ API snapshot: class, inherits `BasePart`, not creatable with `Instance.new` (`_t
 
 ## Mentioned in
 
-79 notes in 25 sections. The 25 most relevant are linked:
+80 notes in 26 sections. The 25 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[Command Bar and Studio Scripting]]
@@ -69,6 +69,6 @@ API snapshot: class, inherits `BasePart`, not creatable with `Instance.new` (`_t
 ### 53 Voxel Modelling Deep Dive
 [[Voxel Props Environments and Modular Tiles]] · [[Voxel Scale Grids and Stud Alignment]]
 
-Also mentioned in (not linked): 00 Start Here · AI Agents and Autonomous Workflows · Asset Pipelines · Atmosphere Sky Clouds and Post-Processing · Beams and Trails · Case Study - Instance Cleanup and Place Size · Characters and Humanoids · Collision and Physics Geometry · Combat Sound Design and Feedback · Custom Character Sounds - Replacing Default Footstep and Jump Sounds · Deterministic Simulation · Faceted Low-Poly - Flat Normals and Facet Size · Genre Playbook - Naval and Open-Sea Adventure · Genre Playbook - Survival and Crafting · Impact Decals and Material-Aware Hit Sparks · Instance Streaming · Lessons Learned Index · Level Design Start Here · Links - Materials and MaterialVariants · Low-Poly Tree Set Worked Example · Low-Poly and Stylized Modeling · MaterialService and Custom Materials · Meshing Voxels for Roblox - Greedy Meshing and Export · Modular Environment Kits · Multi-Client and Live Testing · Multiple Agents in One Studio · Music and Adaptive Audio · Open Questions - Whole Vault · Physics and Vehicles Start Here · Pipeline Design Principles · Procedural Generation Start Here · Rain - Camera-Local Particles, Splashes and Wet Surfaces · Raycasts Shapecasts and Spatial Queries · Resource Library - Building and World · Roblox Studio Assistant · Roblox Studio MCP Server · Safety Rules for AI Agents in Studio · Seeds Determinism and Reproducible Worlds · Selection Editing and Bulk Tools · Side-Scroller in 3D - Locking Camera and Movement to a Plane · Snippets - IK · Studio Interface Tour · Stylised vs Realistic Material Pipelines · SurfaceAppearance PBR Workflow · Team Create and Collaboration · Team Roles and Workflows · Textures Decals and Texture Memory · UV Unwrapping · Undo and ChangeHistoryService Done Right · Version History and Backups · Voxel Modelling Start Here · Wave Function Collapse on Roblox · Working with AI Assistants in Studio · Zone and Biome Art Direction
+Also mentioned in (not linked): 00 Start Here · AI Agents and Autonomous Workflows · Asset Pipelines · Atmosphere Sky Clouds and Post-Processing · Beams and Trails · Case Study - Instance Cleanup and Place Size · Characters and Humanoids · Collision and Physics Geometry · Combat Sound Design and Feedback · Custom Character Sounds - Replacing Default Footstep and Jump Sounds · Deterministic Simulation · Faceted Low-Poly - Flat Normals and Facet Size · Genre Playbook - Naval and Open-Sea Adventure · Genre Playbook - Survival and Crafting · Impact Decals and Material-Aware Hit Sparks · Instance Streaming · Lessons Learned Index · Level Design Start Here · Links - Materials and MaterialVariants · Low-Poly Tree Set Worked Example · Low-Poly and Stylized Modeling · MaterialService and Custom Materials · Meshing Voxels for Roblox - Greedy Meshing and Export · Modular Environment Kits · Multi-Client and Live Testing · Multiple Agents in One Studio · Music and Adaptive Audio · Open Questions - Whole Vault · Physics and Vehicles Start Here · Pipeline Design Principles · Procedural Generation Start Here · Rain - Camera-Local Particles, Splashes and Wet Surfaces · Raycasts Shapecasts and Spatial Queries · Resource Library - Building and World · Roblox Studio Assistant · Roblox Studio MCP Server · Safety Rules for AI Agents in Studio · Seeds Determinism and Reproducible Worlds · Selection Editing and Bulk Tools · Side-Scroller in 3D - Locking Camera and Movement to a Plane · Snippets - IK · Studio Interface Tour · Stylised vs Realistic Material Pipelines · SurfaceAppearance PBR Workflow · Team Create and Collaboration · Team Roles and Workflows · Teardown - Driving Empire · Textures Decals and Texture Memory · UV Unwrapping · Undo and ChangeHistoryService Done Right · Version History and Backups · Voxel Modelling Start Here · Wave Function Collapse on Roblox · Working with AI Assistants in Studio · Zone and Biome Art Direction
 
 <!-- atlas:generated -->

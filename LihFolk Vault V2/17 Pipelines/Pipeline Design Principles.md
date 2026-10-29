@@ -276,5 +276,5 @@ Fill this in before you write code. It is a page of text and it will save days.
 
 <!-- related:start -->
 ## Related
-[[Command Bar and Studio Scripting]] · [[Working with AI Assistants in Studio]] · [[MCP Workflows for Building Worlds]] · [[Character and Creature Pipeline]] · [[Live Content Pipeline]] · [[Localization Pipeline]]
+[[Command Bar and Studio Scripting]] · [[Working with AI Assistants in Studio]] · [[MCP Workflows for Building Worlds]] · [[Live Content Pipeline]] · [[Character and Creature Pipeline]] · [[Localization Pipeline]]
 <!-- related:end -->

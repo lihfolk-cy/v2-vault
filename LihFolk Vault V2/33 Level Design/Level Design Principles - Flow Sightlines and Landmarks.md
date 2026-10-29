@@ -294,5 +294,5 @@ In production you would not keep this table forever; ship a sampled version that
 
 <!-- related:start -->
 ## Related
-[[Playtest Heatmaps - Position and Death Maps]] · [[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Camera Obstruction Handling - Occlusion Modes, Fades and Collision]] · [[Instanced Interiors - Pooled House and Room Copies for Many Players]] · [[Proportion Exaggeration and Gameplay Distance]] · [[Obby and Platforming Level Design]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]]
+[[World Composition and Set Dressing - Designed, Not Scattered]] · [[Playtest Heatmaps - Position and Death Maps]] · [[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Camera Obstruction Handling - Occlusion Modes, Fades and Collision]] · [[Instanced Interiors - Pooled House and Room Copies for Many Players]] · [[Obby and Platforming Level Design]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]]
 <!-- related:end -->

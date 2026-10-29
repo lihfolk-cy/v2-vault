@@ -319,5 +319,5 @@ Notes:
 
 <!-- related:start -->
 ## Related
-[[Rarity Ladders and Drop Pacing Math]] · [[Boss Fight Design Patterns]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Genre Playbook - Survival and Crafting]] · [[Genre Playbook - Battlegrounds and Arena Fighters]] · [[Genre Playbook - Racing and Driving]]
+[[Onboarding by Genre - The First Five Minutes]] · [[Boss Fight Design Patterns]] · [[Rarity Ladders and Drop Pacing Math]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Genre Playbook - Survival and Crafting]] · [[Genre Playbook - Battlegrounds and Arena Fighters]]
 <!-- related:end -->

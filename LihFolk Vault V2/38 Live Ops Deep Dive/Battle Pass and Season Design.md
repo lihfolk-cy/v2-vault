@@ -353,5 +353,5 @@ Use [[Analytics and Funnels]] custom events for tier reached and claim, and [[A-
 
 <!-- related:start -->
 ## Related
-[[Currency Architecture - Soft Hard and Event Currencies]] · [[Shop with Game Passes and Developer Products End to End]] · [[Subscriptions and Recurring Revenue]] · [[Pricing and Store Design]] · [[Patch Notes and Player Communication]] · [[Feature Flags and Staged Rollouts]]
+[[Shop with Game Passes and Developer Products End to End]] · [[Currency Architecture - Soft Hard and Event Currencies]] · [[Subscriptions and Recurring Revenue]] · [[Pricing and Store Design]] · [[Patch Notes and Player Communication]] · [[Feature Flags and Staged Rollouts]]
 <!-- related:end -->

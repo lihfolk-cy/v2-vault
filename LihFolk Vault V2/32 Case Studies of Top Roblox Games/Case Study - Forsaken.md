@@ -119,5 +119,5 @@ Sources: https://games.roblox.com/v1/games?universeIds=6331902150 ; https://game
 
 <!-- related:start -->
 ## Related
-[[Case Study - The Strongest Battlegrounds]] · [[Case Study - Rivals]] · [[Case Study - Tower Defense Simulator]] · [[Case Study - Dead Rails]] · [[Case Study - Jailbreak]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - Brookhaven RP]] · [[Case Study - Blox Fruits]]
+[[Case Study - The Strongest Battlegrounds]] · [[Teardown - Piggy]] · [[Case Study - Rivals]] · [[Case Study - Tower Defense Simulator]] · [[Case Study - Dead Rails]] · [[Case Study - Jailbreak]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - Brookhaven RP]] · [[Case Study - Steal a Brainrot]]
 <!-- related:end -->

@@ -149,5 +149,5 @@ A "buyback" shop tab (sold items purchasable back at the sale price for the sess
 
 <!-- related:start -->
 ## Related
-[[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]] · [[Feedback - Autosave Indicator Ping Display and Error Toasts]] · [[Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots]] · [[Notification Queues and Limits]] · [[Quick Respawn and Spawn Protection]] · [[Loading Screen Skip and First-Session Goals]] · [[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]]
+[[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]] · [[Feedback - Autosave Indicator Ping Display and Error Toasts]] · [[Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots]] · [[Quick Respawn and Spawn Protection]] · [[Notification Queues and Limits]] · [[Loading Screen Skip and First-Session Goals]] · [[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]]
 <!-- related:end -->

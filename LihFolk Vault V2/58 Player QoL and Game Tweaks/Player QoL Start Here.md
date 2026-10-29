@@ -39,6 +39,8 @@ Foundations elsewhere: [[Server Authority and Validation]], [[Session Locking an
 **Onboarding**
 - [[Skippable Tutorials and Replayable Tips]]: per-step saves, server-side skip with grants, tips page.
 - [[Loading Screen Skip and First-Session Goals]]: ready signal, timeout, preload discipline, first goals.
+- [[Onboarding and FTUE - Tutorials That Keep Players]]: ranked principles and target numbers for tutorials that keep players.
+- [[Tutorial Step Design Patterns - Teach by Doing]]: nine step patterns and which guidance tool to use.
 
 **Respawn and idle**
 - [[Quick Respawn and Spawn Protection]]: server-controlled respawn, death recap, abuse-proof protection.

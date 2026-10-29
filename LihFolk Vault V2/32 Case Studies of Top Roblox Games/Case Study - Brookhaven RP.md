@@ -226,5 +226,5 @@ One district (6 to 8 purpose buildings), 10 free houses with a claim and lock sy
 
 <!-- related:start -->
 ## Related
-[[Case Study - Pet Simulator 99]] · [[Case Study - Steal a Brainrot]] · [[Case Study - Grow a Garden]] · [[Case Study - Jailbreak]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - Dead Rails]] · [[Case Study - Forsaken]] · [[Case Study - The Strongest Battlegrounds]]
+[[Case Study - Pet Simulator 99]] · [[Case Study - Steal a Brainrot]] · [[Case Study - Jailbreak]] · [[Case Study - Grow a Garden]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - Dead Rails]] · [[Case Study - Forsaken]] · [[Case Study - Murder Mystery 2]]
 <!-- related:end -->

@@ -344,5 +344,5 @@ See also: [[Layout - Scale Offset and Constraints]], [[Responsive UI for Phone T
 
 <!-- related:start -->
 ## Related
-[[Cookbook - UI]] · [[Debugging UI Layout and Input]] · [[HUD Design]] · [[Safe Areas and Insets]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[UI Design Systems]] · [[UI Motion Language and Timing]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]]
+[[Cookbook - UI]] · [[Debugging UI Layout and Input]] · [[HUD Design]] · [[Safe Areas and Insets]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[UI Design Systems]] · [[UI Motion Language and Timing]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[Text Fonts and Rich Text]]
 <!-- related:end -->

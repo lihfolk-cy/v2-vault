@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/design, area/monetization]
 > - Show the diff and confirm. A live-ops tool that writes without a confirmation step will eventually write the wrong thing.
 > - Keep daily mission state keyed by UTC day number so every server agrees when the day rolls (see the schedule module in Live...
 >
-> Cost: TL;DR ~170 tok · whole note ~1.1k tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~170 tok · whole note ~1.2k tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,7 +26,7 @@ Live ops is everything you do after launch to keep a game fresh: content updates
 
 ## Mentioned in
 
-79 notes in 24 sections. The 25 most relevant are linked:
+89 notes in 26 sections. The 25 most relevant are linked:
 
 ### 03 Architecture and Networking
 [[Cross-Server Messaging]]
@@ -70,6 +70,6 @@ Live ops is everything you do after launch to keep a game fresh: content updates
 ### Root notes
 [[00 Start Here]]
 
-Also mentioned in (not linked): 000 Home · A-B Testing and Experiments on Roblox · Build Test and Release Pipeline · Case Study - Blox Fruits · Case Study - Brookhaven RP · Case Study - Grow a Garden · Case Study - Jailbreak · Case Study - Steal a Brainrot · Case Study - Tower Defense Simulator · Commissions Pricing and Contracts · Community Building · Crash and Error Telemetry · Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks · Currency Architecture - Soft Hard and Event Currencies · Documentation and Knowledge Bases · Economy Design Start Here · Economy Inflation Sinks and Faucets Math · Economy Resets and Seasonal Wipes · Feature Flags · Feature Flags and Staged Rollouts · Gated Tester Commands and Debug Panels · Genre Playbook - Roleplay and Social Hangouts · In-Game Bug Report Button with Automatic Context · Launch Strategy - The First Two Weeks · Lighting Mood and Time of Day · Links - Analytics · Links - Badges · Links - Community and social · Links - Settings and publishing · Links - Store page · Live Incident Response and Post-Mortems · Lobby and Hub Design · Marketing and Growth Start Here · MemoryStore Service · Monetization Overview · Multiplayer Services Start Here · Notification and Toast Systems · OrderedDataStores and Leaderboards · Platform Features Start Here · Publishing an Experience · QA Checklists Before Release · Quest Writing and Hooks · Release Process and Rollbacks · Resource Library Start Here · Roadmaps Milestones and Scope Control · Roblox Policies Ratings and Compliance · Scoping and Roles for Small Teams · Server Lifecycle and Shutdown · Server Shutdowns Soft Updates and Migration · Short-Form Video Marketing · Testing Time-Based Features with a Controllable Clock · Top Games Case Studies Start Here · Weather System Architecture - State Machine, Transitions and Replication · Working with Content Creators
+Also mentioned in (not linked): 000 Home · A-B Testing and Experiments on Roblox · Build Test and Release Pipeline · Case Study - Blox Fruits · Case Study - Brookhaven RP · Case Study - Grow a Garden · Case Study - Jailbreak · Case Study - Steal a Brainrot · Case Study - Tower Defense Simulator · Commissions Pricing and Contracts · Community Building · Crash and Error Telemetry · Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks · Currency Architecture - Soft Hard and Event Currencies · Documentation and Knowledge Bases · Economy Design Start Here · Economy Inflation Sinks and Faucets Math · Economy Resets and Seasonal Wipes · Feature Flags · Feature Flags and Staged Rollouts · Gated Tester Commands and Debug Panels · Genre Playbook - Roleplay and Social Hangouts · High-Craft Teardowns Start Here · In-Game Bug Report Button with Automatic Context · Launch Strategy - The First Two Weeks · Lighting Mood and Time of Day · Links - Analytics · Links - Badges · Links - Community and social · Links - Settings and publishing · Links - Store page · Live Incident Response and Post-Mortems · Lobby and Hub Design · Marketing and Growth Start Here · MemoryStore Service · Monetization Overview · Multiplayer Services Start Here · Notification and Toast Systems · OrderedDataStores and Leaderboards · Platform Features Start Here · Publishing an Experience · QA Checklists Before Release · Quest Writing and Hooks · Release Process and Rollbacks · Resource Library Start Here · Roadmaps Milestones and Scope Control · Roblox Policies Ratings and Compliance · Scoping and Roles for Small Teams · Server Lifecycle and Shutdown · Server Shutdowns Soft Updates and Migration · Short-Form Video Marketing · Teardown - BedWars · Teardown - Escape Tsunami for Brainrots · Teardown - Jujutsu Shenanigans · Teardown - Plants vs Brainrots · Teardown - Sol's RNG · Teardown - Tower of Hell · Testing Time-Based Features with a Controllable Clock · Top Games Case Studies Start Here · Viral Game Anatomy - Hooks, Loops and Timing · Viral and Trend Teardowns Start Here · Weather System Architecture - State Machine, Transitions and Replication · What Craft Looks Like on Roblox - Lessons from Top Studios · Working with Content Creators
 
 <!-- atlas:generated -->

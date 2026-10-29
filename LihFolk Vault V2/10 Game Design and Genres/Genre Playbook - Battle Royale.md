@@ -133,5 +133,5 @@ Everything in the shooter playbook applies, with more players and longer ranges:
 
 <!-- related:start -->
 ## Related
-[[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Battlegrounds and Arena Fighters]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Open-World City and Crime Roleplay]] · [[Genre Playbook - Naval and Open-Sea Adventure]] · [[Genre Playbook - Sports]] · [[Genre Playbook - Social Deduction and Murder Mystery]]
+[[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Battlegrounds and Arena Fighters]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Naval and Open-Sea Adventure]] · [[Genre Playbook - Open-World City and Crime Roleplay]] · [[Genre Playbook - Sports]] · [[Genre Playbook - Social Deduction and Murder Mystery]]
 <!-- related:end -->

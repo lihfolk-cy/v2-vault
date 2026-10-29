@@ -167,5 +167,5 @@ Timestamps from `GetServerTimeNow` follow the same pattern as [[Server-Authorita
 
 <!-- related:start -->
 ## Related
-[[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]] · [[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]] · [[Accessibility Cross-Links for QoL Settings]] · [[UI Scale HUD Hide and Compact Mode]] · [[Settings Menu Essentials and Persistence]] · [[Joining Friends Parties and Private Servers]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]]
+[[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]] · [[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]] · [[Accessibility Cross-Links for QoL Settings]] · [[UI Scale HUD Hide and Compact Mode]] · [[Joining Friends Parties and Private Servers]] · [[Settings Menu Essentials and Persistence]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]]
 <!-- related:end -->

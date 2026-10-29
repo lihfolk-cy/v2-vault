@@ -299,5 +299,5 @@ Players do not judge the distribution; they judge their own stories. Some rules 
 
 <!-- related:start -->
 ## Related
-[[Drop Tables Rarity and Pity Systems]] · [[Expected Value]] · [[Pity Timer]] · [[Economy Telemetry and Balancing Live]] · [[Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations]] · [[Simulating an Economy Before Launch]]
+[[Expected Value]] · [[Drop Tables Rarity and Pity Systems]] · [[Pity Timer]] · [[Economy Telemetry and Balancing Live]] · [[Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations]] · [[Simulating an Economy Before Launch]]
 <!-- related:end -->

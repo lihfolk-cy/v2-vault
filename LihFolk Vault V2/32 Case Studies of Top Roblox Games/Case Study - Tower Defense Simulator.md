@@ -127,5 +127,5 @@ Sources: https://games.roblox.com/v1/games?universeIds=1176784616 ; https://game
 
 <!-- related:start -->
 ## Related
-[[Case Study - Dead Rails]] · [[Case Study - Rivals]] · [[Case Study - Murder Mystery 2]] · [[Case Study - Forsaken]] · [[Case Study - The Strongest Battlegrounds]] · [[Case Study - Jailbreak]] · [[Case Study - Doors]] · [[Case Study - 99 Nights in the Forest]]
+[[Case Study - Dead Rails]] · [[Case Study - Rivals]] · [[Case Study - Forsaken]] · [[Case Study - The Strongest Battlegrounds]] · [[Case Study - Murder Mystery 2]] · [[Case Study - Jailbreak]] · [[Case Study - Doors]] · [[Case Study - 99 Nights in the Forest]]
 <!-- related:end -->

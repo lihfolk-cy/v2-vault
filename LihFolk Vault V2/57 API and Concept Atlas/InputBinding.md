@@ -1,5 +1,5 @@
 ---
-tags: [atlas, api, type/atlas, area/ui, area/ai, api/InputBinding]
+tags: [atlas, api, type/atlas, area/accessibility, area/ui, api/InputBinding]
 ---
 # InputBinding
 
@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/ui, area/ai, api/InputBinding]
 > - `InputBinding`: one hardware mapping. (Input - UserInputService and ContextActionService)
 > - Input Action System: set the action's touch `InputBinding.UIButton` to your `GuiButton` (Roblox docs), so pressing it drives...
 >
-> Cost: TL;DR ~150 tok · whole note ~390 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~410 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,7 +27,7 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 
 ## Mentioned in
 
-9 notes in 7 sections. The 9 most relevant are linked:
+10 notes in 7 sections. The 10 most relevant are linked:
 
 ### 05 UI and UX
 [[Input - UserInputService and ContextActionService]]
@@ -39,7 +39,7 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 [[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]]
 
 ### 42 Accessibility and Inclusive Design
-[[Input Remapping and One-Handed Play]]
+[[Input Remapping and One-Handed Play]] · [[Onboarding Accessibility and Cross-Device Prompts]]
 
 ### 49 Roblox Platform Features
 [[Server Authority and Input Migration 2026]]

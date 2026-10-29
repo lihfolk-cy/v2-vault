@@ -13,7 +13,7 @@ verified: 2026-10-28
 > - Drawn text 12 px or more, taps 44 px or more, gaps 8 px or more.
 > - Safe-area insets set on interactive HUDs.
 >
-> Cost: TL;DR ~150 tok · whole note ~1.6k tok. Read more: ## 1. Offset sizes, or Scale with no aspect control · ## 5. Keyboard-only input on the old stack · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~1.7k tok. Read more: ## 1. Offset sizes, or Scale with no aspect control · ## 5. Keyboard-only input on the old stack · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Generated UI usually looks right on the one desktop viewport the model imagines and breaks on a phone, a console or a notched screen. Input code is keyboard-first and built on APIs Roblox is moving away from. Hub: [[What AI Models Get Wrong in Roblox]].
@@ -100,5 +100,5 @@ Generated UI usually looks right on the one desktop viewport the model imagines 
 
 <!-- related:start -->
 ## Related
-[[Debugging UI Layout and Input]] · [[Cookbook - UI]] · [[UI Design Systems]] · [[ScreenGui Fundamentals]] · [[Safe Area]] · [[AI Pitfalls - Stale APIs and Luau]]
+[[Debugging UI Layout and Input]] · [[Cookbook - UI]] · [[Onboarding Accessibility and Cross-Device Prompts]] · [[UI Design Systems]] · [[ScreenGui Fundamentals]] · [[AI Pitfalls - Stale APIs and Luau]]
 <!-- related:end -->

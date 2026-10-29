@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/vfx, area/physics, api/Beam]
 > - Beam chains share one attachment per point; `FaceCamera` on for lines and cables.
 > - Sheet or arc: a `Beam` with a scrolling texture (`TextureSpeed`) curved via `CurveSize0/1`, or a swept mesh.
 >
-> Cost: TL;DR ~150 tok · whole note ~600 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~650 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,10 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 
 ## Mentioned in
 
-19 notes in 10 sections. The 19 most relevant are linked:
+22 notes in 12 sections. The 22 most relevant are linked:
+
+### 05 UI and UX
+[[Tutorial Step Design Patterns - Teach by Doing]]
 
 ### 06 World Building and Art
 [[Roads, Rivers and Paths Carved Along Curves in Terrain]]
@@ -52,12 +55,15 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 [[Curves in Luau - Paths Beams and Motion]]
 
 ### 42 Accessibility and Inclusive Design
-[[Colour-Blind Safe Design]]
+[[Colour-Blind Safe Design]] · [[Onboarding Accessibility and Cross-Device Prompts]]
 
 ### 45 Procedural Blender Assets
 [[Dash VFX Presentation on an R15 Rig]]
 
 ### 46 Resource Library
 [[Links - Beams and trails]]
+
+### 59 Viral and Trend Game Teardowns
+[[Teardown - Fling Things and People]]
 
 <!-- atlas:generated -->

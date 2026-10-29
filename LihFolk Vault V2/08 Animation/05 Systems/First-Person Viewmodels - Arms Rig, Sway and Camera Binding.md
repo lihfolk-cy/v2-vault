@@ -151,5 +151,5 @@ Other players see the character, not the viewmodel. Make it match:
 
 <!-- related:start -->
 ## Related
-[[Accessories and Armor That Follow Animation]] · [[Procedural Animation]] · [[Cameras and Cutscenes]] · [[Rigs and Joints]] · [[Mounts and Rideable Creatures]] · [[Snippets - Procedural Motion]] · [[Snippets - Camera Shake and FX]] · [[Motor6D Math and CFrame Composition]]
+[[Teardown - Phantom Forces]] · [[Procedural Animation]] · [[Accessories and Armor That Follow Animation]] · [[Rigs and Joints]] · [[Cameras and Cutscenes]] · [[Mounts and Rideable Creatures]] · [[Snippets - Procedural Motion]] · [[Motor6D Math and CFrame Composition]] · [[Snippets - Camera Shake and FX]]
 <!-- related:end -->

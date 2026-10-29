@@ -269,5 +269,5 @@ Paid random crates fall under Roblox's paid random item rules: odds disclosure a
 
 <!-- related:start -->
 ## Related
-[[Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers]] · [[Time-to-Kill Math and a Weapon Balance Sheet]] · [[Genre Playbook - Battle Royale]] · [[Weekend Build - Arena Shooter with Server-Checked Hits]] · [[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Genre Playbook - Social Deduction and Murder Mystery]]
+[[Teardown - Phantom Forces]] · [[Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers]] · [[Time-to-Kill Math and a Weapon Balance Sheet]] · [[Genre Playbook - Battle Royale]] · [[Weekend Build - Arena Shooter with Server-Checked Hits]] · [[Genre Playbook - Zombie and Wave Survival Co-op]]
 <!-- related:end -->

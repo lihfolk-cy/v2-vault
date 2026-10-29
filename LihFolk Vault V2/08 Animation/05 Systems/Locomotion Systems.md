@@ -263,5 +263,5 @@ See also: [[Custom Locomotion Controller Design]], [[The Default Animate Script]
 
 <!-- related:start -->
 ## Related
-[[R15 Run Cycle Key Poses]] · [[Locomotion and Melee Reference Numbers]] · [[Mounts and Rideable Creatures]] · [[Emotes and Social Animation]] · [[Equip Draw and Flourish Systems]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[Stance and Charge Moves]] · [[Hit Reactions Stagger and Hit-Stop]]
+[[R15 Run Cycle Key Poses]] · [[Locomotion and Melee Reference Numbers]] · [[Mounts and Rideable Creatures]] · [[Emotes and Social Animation]] · [[Equip Draw and Flourish Systems]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[Hit Reactions Stagger and Hit-Stop]] · [[Stance and Charge Moves]]
 <!-- related:end -->

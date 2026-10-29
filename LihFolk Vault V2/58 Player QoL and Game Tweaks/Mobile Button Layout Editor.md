@@ -129,5 +129,5 @@ Test on at least a small phone, a large phone and a tablet, in both landscape or
 
 <!-- related:start -->
 ## Related
-[[Safe Area]] · [[UI Scale HUD Hide and Compact Mode]] · [[AI Pitfalls - UI and Input]] · [[QoL Audit Checklist]] · [[Accessibility Cross-Links for QoL Settings]] · [[Colourblind Palettes Text Size and Tooltips]] · [[Graphics and Performance Toggles for Low-End Devices]] · [[Top 25 QoL Wins by Effort]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Aim Assist and Generous Hitboxes]]
+[[UI Scale HUD Hide and Compact Mode]] · [[Safe Area]] · [[Onboarding Accessibility and Cross-Device Prompts]] · [[QoL Audit Checklist]] · [[Accessibility Cross-Links for QoL Settings]] · [[Colourblind Palettes Text Size and Tooltips]] · [[Graphics and Performance Toggles for Low-End Devices]] · [[Top 25 QoL Wins by Effort]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Aim Assist and Generous Hitboxes]]
 <!-- related:end -->

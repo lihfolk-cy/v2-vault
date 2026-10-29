@@ -343,5 +343,5 @@ See also: [[Accessibility Start Here]], [[Accessibility]], [[Text Fonts and Rich
 
 <!-- related:start -->
 ## Related
-[[UIStroke on Text - Glyph Counters and the Stroke Ratio]] · [[Colourblind Palettes Text Size and Tooltips]] · [[AI Pitfalls - UI and Input]] · [[Cookbook - UI]] · [[Captions and Audio Accessibility]] · [[Input Remapping and One-Handed Play]]
+[[UIStroke on Text - Glyph Counters and the Stroke Ratio]] · [[Colourblind Palettes Text Size and Tooltips]] · [[AI Pitfalls - UI and Input]] · [[Onboarding Accessibility and Cross-Device Prompts]] · [[Captions and Audio Accessibility]] · [[Input Remapping and One-Handed Play]]
 <!-- related:end -->

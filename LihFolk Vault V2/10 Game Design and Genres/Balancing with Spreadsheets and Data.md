@@ -351,5 +351,5 @@ Add similar checks for item tables (probabilities sum to 1, rarer items have hig
 
 <!-- related:start -->
 ## Related
-[[Economy Inflation Sinks and Faucets Math]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - Simulators]] · [[Expected Value]] · [[Genre Playbook - Combat and RPG]] · [[Retention and Return Hooks]] · [[Genre Playbook - Tycoons]] · [[Genre Playbook - Tower Defense]] · [[First-Time User Experience and Onboarding]] · [[Time-to-Kill Math and a Weapon Balance Sheet]]
+[[Economy Inflation Sinks and Faucets Math]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - Simulators]] · [[Simulating an Economy Before Launch]] · [[Genre Playbook - Combat and RPG]] · [[Retention and Return Hooks]] · [[Genre Playbook - Tycoons]] · [[Genre Playbook - Tower Defense]] · [[First-Time User Experience and Onboarding]] · [[Time-to-Kill Math and a Weapon Balance Sheet]]
 <!-- related:end -->

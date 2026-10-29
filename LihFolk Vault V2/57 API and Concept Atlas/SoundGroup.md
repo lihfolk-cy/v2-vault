@@ -8,9 +8,9 @@ tags: [atlas, api, type/atlas, area/vfx, area/production, api/SoundGroup]
 > - `SoundGroup.Volume` accepts 0 to 10 (Roblox docs); keep your mapped maximum at the authored level (usually 1) so 100% means...
 > - Music slider leaves some music audible: Track has no `SoundGroup` -> Assign groups at creation; audit script.
 > - Every sound, including runtime ones, has a `SoundGroup`.
-> - `SoundGroup.Volume` (default 0.5, range 0 to 10) multiplies its members' volume: a 0.5 sound in a 0.5 group plays at 0.25.
+> - Avoid: Warning sounds on the music bus -> put warnings on their own SoundGroup that the music slider cannot mute.
 >
-> Cost: TL;DR ~150 tok · whole note ~460 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~440 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -23,12 +23,11 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 
 - Music slider leaves some music audible: Track has no `SoundGroup` -> Assign groups at creation; audit script. ([[Audio Mixer Settings with SoundGroups]])
 - Every sound, including runtime ones, has a `SoundGroup`. ([[Audio Mixer Settings with SoundGroups]])
-- `SoundGroup.Volume` (default 0.5, range 0 to 10) multiplies its members' volume: a 0.5 sound in a 0.5 group plays at 0.25. ([[Sound Fundamentals]])
-- Buses. Weapon sounds, enemy sounds and UI sounds each go through their own `SoundGroup` so settings sliders work per category. ([[Asset Pipelines]])
+- Avoid: Warning sounds on the music bus -> put warnings on their own SoundGroup that the music slider cannot mute. ([[Teardown - Pressure]])
 
 ## Mentioned in
 
-14 notes in 8 sections. The 14 most relevant are linked:
+15 notes in 9 sections. The 15 most relevant are linked:
 
 ### 07 Lighting VFX and Audio
 [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Combat Sound Design and Feedback]] · [[Engine and Tyre Audio Driven by RPM and Slip]] · [[Sound Fundamentals]] · [[Spatial Audio and Mixing]] · [[The Audio API - Players Emitters Wires and Effects]]
@@ -50,6 +49,9 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 
 ### 58 Player QoL and Game Tweaks
 [[Audio Mixer Settings with SoundGroups]] · [[Top 25 QoL Wins by Effort]]
+
+### 60 High-Craft Game Teardowns
+[[Teardown - Pressure]]
 
 ### Root notes
 [[Open Questions - Whole Vault]]

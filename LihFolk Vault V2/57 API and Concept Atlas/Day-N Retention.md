@@ -1,5 +1,5 @@
 ---
-tags: [atlas, concept, type/atlas, area/design, area/monetization]
+tags: [atlas, concept, type/atlas, area/monetization, area/design]
 ---
 # Day-N Retention
 
@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/design, area/monetization]
 > - Low CPP, terrible D1 for ad players: Creative over-promises, or the ad audience is broad and casual -> Change creative to show...
 > - D1 for the soft-launch cohort. Small samples are noisy; treat it as a direction, not a number.
 >
-> Cost: TL;DR ~130 tok · whole note ~500 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~530 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,16 +28,16 @@ D1 / D7 / D30: Retention: share of new players returning on day 1, 7, 30. (from 
 
 ## Mentioned in
 
-25 notes in 8 sections. The 25 most relevant are linked:
+27 notes in 9 sections. The 25 most relevant are linked:
 
 ### 08 Animation
 [[Engine Gotchas]] · [[Open Questions]] · [[Troubleshooting Table]]
 
 ### 10 Game Design and Genres
-[[Core Loops and Session Design]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Simulators]] · [[Retention and Return Hooks]] · [[Simulator and RNG Genre Teardown]] · [[Social Design and Multiplayer Play]]
+[[Core Loops and Session Design]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Simulators]] · [[Retention and Return Hooks]] · [[Simulator and RNG Genre Teardown]]
 
 ### 11 Monetization Publishing and Live Ops
-[[Ads and Rewarded Video]] · [[Analytics and Funnels]] · [[Discovery and the Algorithm]] · [[Live Ops Events and Updates]] · [[Monetization Overview]] · [[Robux Price Points and Offer Design]]
+[[Ads and Rewarded Video]] · [[Analytics and Funnels]] · [[Discovery and the Algorithm]] · [[Live Ops Events and Updates]] · [[Measuring Onboarding - Funnels, Drop-off and A-B Tests]] · [[Monetization Overview]] · [[Robux Price Points and Offer Design]]
 
 ### 27 Marketing and Growth
 [[A-B Testing and Experiments on Roblox]] · [[Launch Strategy - The First Two Weeks]] · [[Short-Form Video Marketing]] · [[Sponsored Ads and Campaign Math]] · [[Update Cadence and Hype Cycles]]
@@ -53,5 +53,7 @@ D1 / D7 / D30: Retention: share of new players returning on day 1, 7, 30. (from 
 
 ### Root notes
 [[Glossary]]
+
+Also mentioned in (not linked): Social Design and Multiplayer Play · Viral Game Anatomy - Hooks, Loops and Timing
 
 <!-- atlas:generated -->

@@ -12,7 +12,7 @@ tags: [data, open-cloud, api-keys, automation, datastore, messaging, webhooks, t
 > - Rate limiter in every script; 429 and `retry-after` handled.
 > - Edits only to offline players, logged, reversible.
 >
-> Cost: TL;DR ~150 tok · whole note ~3.9k tok. Read more: ## The data endpoints · ## Budgets: Open Cloud and your game share them · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.8k tok. Read more: ## The data endpoints · ## Budgets: Open Cloud and your game share them · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Open Cloud is Roblox's public web API: the same data stores, memory stores, messaging, configs, bans, products and places your game uses, reachable from any program that can send HTTPS requests. It turns a Roblox game into something you can operate: support portals that fix a player's inventory, scripts that migrate data, release pipelines that snapshot data and publish places, live-ops dashboards that announce events to every server, and right-to-erasure bots. This note covers authentication, the data-related endpoints, how Open Cloud shares budgets with live servers, rate limiting, webhooks, and operational patterns. Calling Open Cloud from inside a game is in [[HttpService and External APIs]].
@@ -195,5 +195,5 @@ Split the tooling by permission: most support staff need a read-only key (`objec
 
 <!-- related:start -->
 ## Related
-[[Data and Cloud Changes 2025-2026]] · [[Data Schema Design and Migrations]] · [[Saving Correctly - Autosave and BindToClose]] · [[OrderedDataStores and Leaderboards]] · [[Schema Migrations - Worked Case Studies]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[Purchase Data and Receipts]] · [[Trading Systems Without Duplication]]
+[[Data Schema Design and Migrations]] · [[Saving Correctly - Autosave and BindToClose]] · [[OrderedDataStores and Leaderboards]] · [[Schema Migrations - Worked Case Studies]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[Purchase Data and Receipts]] · [[Trading Systems Without Duplication]]
 <!-- related:end -->

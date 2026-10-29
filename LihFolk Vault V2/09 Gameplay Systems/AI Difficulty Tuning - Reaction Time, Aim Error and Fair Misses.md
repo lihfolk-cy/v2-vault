@@ -153,5 +153,5 @@ Log per encounter: hits taken per minute, time-to-first-hit after detection, dea
 
 <!-- related:start -->
 ## Related
-[[Hitboxes and Hit Detection]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Combat Systems Architecture]] · [[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]] · [[Weather That Changes Gameplay - Grip, Visibility and Hearing]] · [[Behaviour Trees Utility AI and State Machines for NPCs]] · [[Wildlife and Ambient Creature AI - Passive, Neutral and Hostile]] · [[Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations]]
+[[Hitboxes and Hit Detection]] · [[Combat Systems Architecture]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]] · [[Weather That Changes Gameplay - Grip, Visibility and Hearing]] · [[Behaviour Trees Utility AI and State Machines for NPCs]] · [[Wildlife and Ambient Creature AI - Passive, Neutral and Hostile]] · [[Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations]]
 <!-- related:end -->

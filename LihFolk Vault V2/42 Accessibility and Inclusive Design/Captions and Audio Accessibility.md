@@ -412,5 +412,5 @@ See also: [[Accessibility Start Here]], [[Accessibility]], [[Sound Design for Ga
 
 <!-- related:start -->
 ## Related
-[[Voice Chat and Safety Features]] · [[Feedback Timing - Sound Visual and Haptic Sync]] · [[Audio Mixer Settings with SoundGroups]] · [[Audio Pipeline]] · [[Difficulty Options and Cognitive Load]] · [[Input Remapping and One-Handed Play]]
+[[Voice Chat and Safety Features]] · [[Feedback Timing - Sound Visual and Haptic Sync]] · [[Audio Mixer Settings with SoundGroups]] · [[Onboarding Accessibility and Cross-Device Prompts]] · [[Difficulty Options and Cognitive Load]] · [[Input Remapping and One-Handed Play]]
 <!-- related:end -->

@@ -120,5 +120,5 @@ Previews show three views for sword clips: three-quarter from the front-left (th
 
 <!-- related:start -->
 ## Related
-[[Human Swing Biomechanics]] · [[R15 Run Cycle Key Poses]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[Pipeline - Arm IK Baking and QA]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Spin and Whole-Body Rotation Moves]] · [[Arm QA Metrics Reference]]
+[[Human Swing Biomechanics]] · [[R15 Run Cycle Key Poses]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[Pipeline - Arm IK Baking and QA]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Arm QA Metrics Reference]] · [[Spin and Whole-Body Rotation Moves]]
 <!-- related:end -->

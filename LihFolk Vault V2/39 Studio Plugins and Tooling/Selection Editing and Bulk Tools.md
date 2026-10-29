@@ -409,5 +409,5 @@ For edits too big for interactive use (whole-map passes, hundreds of thousands o
 
 <!-- related:start -->
 ## Related
-[[Studio Interface Tour]] · [[Studio Settings and Shortcuts]] · [[Plugin Security and Permissions]] · [[Version History and Backups]] · [[Team Create and Collaboration]] · [[Publishing Selling and Updating Plugins]]
+[[Studio Interface Tour]] · [[Plugin Security and Permissions]] · [[Studio Settings and Shortcuts]] · [[Version History and Backups]] · [[Team Create and Collaboration]] · [[Publishing Selling and Updating Plugins]]
 <!-- related:end -->

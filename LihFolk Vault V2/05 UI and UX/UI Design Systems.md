@@ -326,5 +326,5 @@ See also: [[Menu Archetypes - Shop Settings Codes Rewards]], [[HUD Design]], [[T
 
 <!-- related:start -->
 ## Related
-[[UI Style Directions - A Visual Vocabulary for Briefs]] · [[LihFolk UI Design System]] · [[Layout - Scale Offset and Constraints]] · [[AI Pitfalls - UI and Input]] · [[UI Motion Language and Timing]] · [[UI Layout Objects - Lists Grids and Pages]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Virtualized Lists and Large Inventories]] · [[Safe Areas and Insets]] · [[Input - UserInputService and ContextActionService]]
+[[UI Style Directions - A Visual Vocabulary for Briefs]] · [[Layout - Scale Offset and Constraints]] · [[LihFolk UI Design System]] · [[AI Pitfalls - UI and Input]] · [[UI Motion Language and Timing]] · [[UI Layout Objects - Lists Grids and Pages]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Virtualized Lists and Large Inventories]] · [[Safe Areas and Insets]] · [[Input - UserInputService and ContextActionService]]
 <!-- related:end -->

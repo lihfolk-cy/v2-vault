@@ -241,5 +241,5 @@ The trade-off a senior developer weighs: an archive server is one more process t
 
 <!-- related:start -->
 ## Related
-[[Lua Keyframe Player]] · [[Weapon Rig Player]] · [[Enemy Import Axis Fix]] · [[Pipeline - Importing Animated Enemies]] · [[Animation Data from Blender to Roblox]] · [[Pipeline - Arm IK Baking and QA]] · [[Snippets - Building and Sampling Clips]] · [[Case Study - Fixing Hundreds of Attack Clips]]
+[[Lua Keyframe Player]] · [[Weapon Rig Player]] · [[Enemy Import Axis Fix]] · [[Pipeline - Importing Animated Enemies]] · [[Pipeline - Arm IK Baking and QA]] · [[Animation Data from Blender to Roblox]] · [[Snippets - Building and Sampling Clips]] · [[Animation Asset Permissions and Groups]]
 <!-- related:end -->

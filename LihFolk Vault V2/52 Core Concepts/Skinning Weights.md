@@ -57,5 +57,5 @@ Related concepts: [[Triangle Budget]], [[Texel Density]], [[Anticipation]].
 
 <!-- related:start -->
 ## Related
-[[Hit-Stop]] · [[Tween vs Spring]] · [[Draw Calls]] · [[Thumbnail Contrast]] · [[Instance Count]] · [[Easing]] · [[Pity Timer]] · [[Feature Flags]]
+[[Hit-Stop]] · [[Tween vs Spring]] · [[Thumbnail Contrast]] · [[Draw Calls]] · [[Instance Count]] · [[Pity Timer]] · [[Easing]] · [[Feature Flags]]
 <!-- related:end -->

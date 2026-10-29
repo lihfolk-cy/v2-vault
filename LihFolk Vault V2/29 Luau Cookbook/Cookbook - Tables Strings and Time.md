@@ -431,5 +431,5 @@ end
 
 <!-- related:start -->
 ## Related
-[[Testing Time-Based Features with a Controllable Clock]] · [[Cookbook - Remotes and Networking]] · [[Cookbook - Players and Characters]] · [[Data and Config Pipeline - Spreadsheets to Game]] · [[Cookbook - Math CFrame and Vectors]] · [[Drop Tables Rarity and Pity Systems]]
+[[Testing Time-Based Features with a Controllable Clock]] · [[Cookbook - Remotes and Networking]] · [[Cookbook - Players and Characters]] · [[Data and Config Pipeline - Spreadsheets to Game]] · [[Cookbook - Math CFrame and Vectors]] · [[Deterministic Simulation]]
 <!-- related:end -->

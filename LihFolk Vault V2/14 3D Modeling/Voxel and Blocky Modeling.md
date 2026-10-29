@@ -378,5 +378,5 @@ Faces between two different colours are culled too (any neighbour hides the face
 
 <!-- related:start -->
 ## Related
-[[Voxel Scale Grids and Stud Alignment]] · [[Hand-Painted and Stylized Texturing]] · [[Organic and Creature Modeling]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Hard-Surface Modeling]] · [[Modular Environment Kits]] · [[Mesh Optimization for Mobile]] · [[UV Unwrapping]] · [[Retopology and Decimation]] · [[Modeling Characters for R15 and Custom Rigs]]
+[[Voxel Scale Grids and Stud Alignment]] · [[Hand-Painted and Stylized Texturing]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Organic and Creature Modeling]] · [[Hard-Surface Modeling]] · [[Modular Environment Kits]] · [[Mesh Optimization for Mobile]] · [[UV Unwrapping]] · [[Retopology and Decimation]] · [[Modeling Characters for R15 and Custom Rigs]]
 <!-- related:end -->

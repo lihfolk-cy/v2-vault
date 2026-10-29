@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/animation, area/physics, api/StreamingEnable
 > - Turning it on forces StreamingEnabled, deferred signals and fixed-step simulation.
 > - Tested with StreamingEnabled on, on a phone, and with a vehicle crossing borders fast.
 >
-> Cost: TL;DR ~110 tok · whole note ~850 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~110 tok · whole note ~880 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ API snapshot: member of `Workspace` (`_tools/roblox_api.json`, docs build of 202
 
 ## Mentioned in
 
-39 notes in 18 sections. The 25 most relevant are linked:
+42 notes in 19 sections. The 25 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[External Tooling - Rojo Wally Selene StyLua]]
@@ -78,6 +78,6 @@ API snapshot: member of `Workspace` (`_tools/roblox_api.json`, docs build of 202
 ### 58 Player QoL and Game Tweaks
 [[Graphics and Performance Toggles for Low-End Devices]]
 
-Also mentioned in (not linked): Racing AI on a Racing Line - Spline Following and Rubber-Banding · Replication Boundary · Resource Library - Building and World · Rigs and Joints · Roblox Changes 2025-2026 · Round-Based Minigame Loop End to End · Side-Scroller in 3D - Locking Camera and Movement to a Plane · Snippets - Procedural Motion · Snippets - Ragdoll · Streaming Radius · Terrain Deep Dive - Materials Water and Performance · Testing Modes - Play Run and Multi-Client · The Debugging Method - Reproduce Isolate Bisect · What AI Models Get Wrong in Roblox
+Also mentioned in (not linked): Racing AI on a Racing Line - Spline Following and Rubber-Banding · Replication Boundary · Resource Library - Building and World · Rigs and Joints · Roblox Changes 2025-2026 · Round-Based Minigame Loop End to End · Side-Scroller in 3D - Locking Camera and Movement to a Plane · Snippets - Procedural Motion · Snippets - Ragdoll · Streaming Radius · Teardown - Apocalypse Rising 2 · Teardown - Driving Empire · Terrain Deep Dive - Materials Water and Performance · Testing Modes - Play Run and Multi-Client · The Debugging Method - Reproduce Isolate Bisect · What AI Models Get Wrong in Roblox · What Craft Looks Like on Roblox - Lessons from Top Studios
 
 <!-- atlas:generated -->

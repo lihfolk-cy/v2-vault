@@ -1,5 +1,5 @@
 ---
-tags: [atlas, api, type/atlas, area/networking, area/gameplay, api/ProximityPrompt]
+tags: [atlas, api, type/atlas, area/networking, area/ui, api/ProximityPrompt]
 ---
 # ProximityPrompt
 
@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/networking, area/gameplay, api/ProximityProm
 > - Avoid: Client-reported revives -> `ProximityPrompt.Triggered` with server checks.
 > - Run it in its own thread if the caller should not yield (a ProximityPrompt handler can spawn it).
 >
-> Cost: TL;DR ~140 tok · whole note ~770 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~800 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,16 +28,13 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 
 ## Mentioned in
 
-35 notes in 17 sections. The 25 most relevant are linked:
+37 notes in 18 sections. The 25 most relevant are linked:
 
 ### 02 Luau Scripting
 [[CollectionService Patterns]]
 
 ### 03 Architecture and Networking
 [[Client-Server Model]] · [[Exploits and Anti-Cheat]] · [[Instance Streaming]]
-
-### 05 UI and UX
-[[Input - UserInputService and ContextActionService]]
 
 ### 08 Animation
 [[Enemy and NPC Animation]]
@@ -63,6 +60,9 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 ### 36 Narrative and Worldbuilding
 [[Dialogue System End to End]] · [[Lore Delivery Without Walls of Text]]
 
+### 42 Accessibility and Inclusive Design
+[[Onboarding Accessibility and Cross-Device Prompts]]
+
 ### 43 Genre Systems End to End
 [[Arena Rounds with Teams and Spectating End to End]] · [[Horror Monster Chase AI End to End]] · [[Racing Laps and Checkpoints End to End]]
 
@@ -75,6 +75,6 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 ### 58 Player QoL and Game Tweaks
 [[Controller Support QoL]]
 
-Also mentioned in (not linked): Field Notes Start Here · Instanced Interiors - Pooled House and Room Copies for Many Players · Lobby and Hub Design · Mounts and Rideable Creatures · Network Ownership · Open Questions - Whole Vault · Remote Abuse Patterns and Rate Limiting in Practice · Replication Rules · Skill - Roblox Secure Remotes · World-Space UI - BillboardGui and SurfaceGui
+Also mentioned in (not linked): Field Notes Start Here · Input - UserInputService and ContextActionService · Instanced Interiors - Pooled House and Room Copies for Many Players · Lobby and Hub Design · Mounts and Rideable Creatures · Network Ownership · Open Questions - Whole Vault · Remote Abuse Patterns and Rate Limiting in Practice · Replication Rules · Skill - Roblox Secure Remotes · Tutorial Step Design Patterns - Teach by Doing · World-Space UI - BillboardGui and SurfaceGui
 
 <!-- atlas:generated -->

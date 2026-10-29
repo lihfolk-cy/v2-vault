@@ -170,5 +170,5 @@ Skinned rigs have no part boxes to test. A bone adapter samples a **3 x 3** grou
 
 <!-- related:start -->
 ## Related
-[[Bones and Skinned Meshes]] · [[LihFolk R15 Keyframe Pipeline]] · [[Enemy Import Axis Fix]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Arm Baker Internals]] · [[Inverse Kinematics]] · [[Retargeting Animations Between Rigs]]
+[[Bones and Skinned Meshes]] · [[Enemy Import Axis Fix]] · [[LihFolk R15 Keyframe Pipeline]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Arm Baker Internals]] · [[Retargeting Animations Between Rigs]] · [[Inverse Kinematics]]
 <!-- related:end -->

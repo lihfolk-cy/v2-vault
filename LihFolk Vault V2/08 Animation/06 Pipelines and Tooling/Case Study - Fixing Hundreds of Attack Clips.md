@@ -167,5 +167,5 @@ All kit folders ended at or under 2,500 instances except four that were already 
 
 <!-- related:start -->
 ## Related
-[[Animation Review Checklist]] · [[Posing and Silhouettes]] · [[LihFolk R15 Keyframe Pipeline]] · [[Pipeline - New Animated Weapon]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Human Swing Biomechanics]] · [[Blade Grip and Wrist Limits]] · [[Keyframes, Easing and Interpolation]]
+[[Animation Review Checklist]] · [[Posing and Silhouettes]] · [[LihFolk R15 Keyframe Pipeline]] · [[Pipeline - New Animated Weapon]] · [[Human Swing Biomechanics]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Blade Grip and Wrist Limits]] · [[Keyframes, Easing and Interpolation]]
 <!-- related:end -->

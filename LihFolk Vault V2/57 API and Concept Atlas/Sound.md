@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/vfx, area/world, api/Sound]
 > - Hits feel floaty with good assets: Sound files have 30 to 80 ms lead-ins -> Measure onset and peak; schedule early or trim.
 > - First hit of the session is silent or late: Sound not loaded -> Preload combat sounds; pool instances.
 >
-> Cost: TL;DR ~150 tok · whole note ~740 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~750 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -31,10 +31,10 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 
 ## Mentioned in
 
-27 notes in 15 sections. The 25 most relevant are linked:
+28 notes in 16 sections. The 25 most relevant are linked:
 
 ### 06 World Building and Art
-[[Terrain Deep Dive - Materials Water and Performance]] · [[Zone and Biome Art Direction]]
+[[Zone and Biome Art Direction]]
 
 ### 07 Lighting VFX and Audio
 [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Combat Sound Design and Feedback]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[Engine and Tyre Audio Driven by RPM and Slip]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Sound Design for Games]] · [[Sound Fundamentals]] · [[Spatial Audio and Mixing]] · [[The Audio API - Players Emitters Wires and Effects]]
@@ -72,6 +72,9 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 ### 58 Player QoL and Game Tweaks
 [[Audio Mixer Settings with SoundGroups]]
 
-Also mentioned in (not linked): Open Questions - Whole Vault · Zone Detection - Area Enter and Exit for Music, Lighting and Ambience
+### 60 High-Craft Game Teardowns
+[[Teardown - Funky Friday]]
+
+Also mentioned in (not linked): Open Questions - Whole Vault · Terrain Deep Dive - Materials Water and Performance · Zone Detection - Area Enter and Exit for Music, Lighting and Ambience
 
 <!-- atlas:generated -->

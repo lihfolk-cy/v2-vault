@@ -1,5 +1,5 @@
 ---
-tags: [atlas, api, type/atlas, area/physics, area/platform, api/InputAction]
+tags: [atlas, api, type/atlas, area/physics, area/accessibility, api/InputAction]
 ---
 # InputAction
 
@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/physics, area/platform, api/InputAction]
 > - `InputAction`: one mechanic ("Sprint", "Shoot", "CameraRotate").
 > - Show the right glyphs. `InputAction.PreferredBinding` tells you which binding matches the active device so hints show "RT" or...
 >
-> Cost: TL;DR ~140 tok · whole note ~480 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~500 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 
 ## Mentioned in
 
-12 notes in 8 sections. The 12 most relevant are linked:
+13 notes in 8 sections. The 13 most relevant are linked:
 
 ### 03 Architecture and Networking
 [[Client Prediction and Reconciliation for Combat]]
@@ -43,7 +43,7 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 [[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]]
 
 ### 42 Accessibility and Inclusive Design
-[[Input Remapping and One-Handed Play]]
+[[Input Remapping and One-Handed Play]] · [[Onboarding Accessibility and Cross-Device Prompts]]
 
 ### 46 Resource Library
 [[Links - Input services]]

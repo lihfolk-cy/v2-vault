@@ -478,5 +478,5 @@ Beware duplicates: if a full-body clip and its upper-body copy can both play, li
 
 <!-- related:start -->
 ## Related
-[[Snippets - Lua Keyframe Player Core]] · [[Snippets - Enemy Client Animator]] · [[Replication and Ownership]] · [[Combat Animation Craft]] · [[Custom Locomotion Controller Design]] · [[Snippets - Ragdoll]] · [[Debugging Animation Problems]] · [[Ability Kits Architecture]]
+[[Snippets - Lua Keyframe Player Core]] · [[Snippets - Enemy Client Animator]] · [[Replication and Ownership]] · [[Combat Animation Craft]] · [[Custom Locomotion Controller Design]] · [[Snippets - Ragdoll]] · [[Debugging Animation Problems]] · [[Enemy Animation State Protocol]]
 <!-- related:end -->

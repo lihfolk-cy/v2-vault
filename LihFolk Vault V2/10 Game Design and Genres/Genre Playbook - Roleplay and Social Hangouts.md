@@ -265,5 +265,5 @@ The reference project is a combat game, but two of its social decisions transfer
 
 <!-- related:start -->
 ## Related
-[[Genre Playbook - Open-World City and Crime Roleplay]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Survival and Crafting]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Tycoons]] · [[Genre Playbook - Social Deduction and Murder Mystery]] · [[Genre Playbook - Horror and Story]] · [[Simulator and RNG Genre Teardown]]
+[[Genre Playbook - Open-World City and Crime Roleplay]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Survival and Crafting]] · [[Onboarding by Genre - The First Five Minutes]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Tycoons]] · [[Genre Playbook - Horror and Story]] · [[Genre Playbook - Social Deduction and Murder Mystery]]
 <!-- related:end -->

@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/design, area/world]
 > - Roblox games, especially simulators, RPGs and tycoons, are built on visible numbers going up.
 > - Ends a stage with a big reveal (a floor appears, a roof, a vehicle), the tycoon's version of a boss kill.
 >
-> Cost: TL;DR ~140 tok · whole note ~650 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~720 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,7 +26,7 @@ Tycoon is one of the genres the docs list as common on the platform (Docs, "Desi
 
 ## Mentioned in
 
-32 notes in 19 sections. The 25 most relevant are linked:
+40 notes in 21 sections. The 25 most relevant are linked:
 
 ### 03 Architecture and Networking
 [[Frameworks - Knit Matter and Others]]
@@ -41,7 +41,7 @@ Tycoon is one of the genres the docs list as common on the platform (Docs, "Desi
 [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]] · [[Lighting Technologies and Settings]]
 
 ### 10 Game Design and Genres
-[[Core Loops and Session Design]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Survival and Crafting]] · [[Genre Playbook - Tycoons]]
+[[Core Loops and Session Design]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Survival and Crafting]] · [[Genre Playbook - Tycoons]] · [[Onboarding by Genre - The First Five Minutes]]
 
 ### 11 Monetization Publishing and Live Ops
 [[Discovery and the Algorithm]]
@@ -54,9 +54,6 @@ Tycoon is one of the genres the docs list as common on the platform (Docs, "Desi
 
 ### 32 Case Studies of Top Roblox Games
 [[Case Study - Grow a Garden]] · [[Case Study - Steal a Brainrot]] · [[Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks]]
-
-### 36 Narrative and Worldbuilding
-[[Lore Delivery Without Walls of Text]]
 
 ### 37 Avatars and UGC
 [[Avatar Body Types and Scale in Gameplay]]
@@ -71,8 +68,11 @@ Tycoon is one of the genres the docs list as common on the platform (Docs, "Desi
 [[Choosing GUI 2D or Locked-Camera 2.5D]]
 
 ### 52 Core Concepts
-[[Core Loop]] · [[Instance Count]] · [[Object Pooling]] · [[Power Curve]]
+[[Core Loop]] · [[Instance Count]]
 
-Also mentioned in (not linked): 00 Start Here · Genre Systems Start Here · Short-Form Video Marketing · Top Games Case Studies Start Here · Tween and CFrame Animation of Objects · Voice Chat and Safety Features · Weekend Build - Survival Gather, Craft and Place
+### 59 Viral and Trend Game Teardowns
+[[Teardown - Steal An Egg]] · [[Viral Game Anatomy - Hooks, Loops and Timing]]
+
+Also mentioned in (not linked): 00 Start Here · Genre Systems Start Here · Lore Delivery Without Walls of Text · Object Pooling · Power Curve · Short-Form Video Marketing · Teardown - Bee Swarm Simulator · Teardown - Escape Tsunami for Brainrots · Teardown - Plants vs Brainrots · Teardown - Ride A Pet · Teardown - Welcome to Bloxburg · Top Games Case Studies Start Here · Tween and CFrame Animation of Objects · Voice Chat and Safety Features · Weekend Build - Survival Gather, Craft and Place
 
 <!-- atlas:generated -->

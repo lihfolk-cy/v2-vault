@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/animation, area/gameplay, api/CharacterAdded
 > - Every `CharacterAdded` handler also handles an existing character.
 > - Avoid: Relying on random SpawnLocation choice -> Place in `CharacterAdded` (Spawning Teams and Rounds)
 >
-> Cost: TL;DR ~130 tok · whole note ~770 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~790 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,7 +27,7 @@ API snapshot: member of `Player` (`_tools/roblox_api.json`, docs build of 2026-1
 
 ## Mentioned in
 
-37 notes in 19 sections. The 25 most relevant are linked:
+38 notes in 19 sections. The 25 most relevant are linked:
 
 ### 02 Luau Scripting
 [[Events Signals and Connections]] · [[Functions Closures and Upvalues]]
@@ -74,6 +74,6 @@ API snapshot: member of `Player` (`_tools/roblox_api.json`, docs build of 2026-1
 ### 58 Player QoL and Game Tweaks
 [[Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots]]
 
-Also mentioned in (not linked): Horror Monster Chase AI End to End · Kill Planes, Map Boundaries and Out-of-Bounds Recovery · Locomotion Systems · Making Numbers Feel Good - Cooldowns Buffering and Coyote Time · Multiplayer Cutscene Sync - Server Clock, Late Joiners and Skip Votes · Obby Checkpoints and Stage Saves End to End · Quest Chain System End to End · ScreenGui Fundamentals · Shop with Game Passes and Developer Products End to End · Side-Scroller in 3D - Locking Camera and Movement to a Plane · Snippets - Animation Controller Module · Tycoon Plots and Droppers End to End
+Also mentioned in (not linked): Horror Monster Chase AI End to End · Kill Planes, Map Boundaries and Out-of-Bounds Recovery · Locomotion Systems · Making Numbers Feel Good - Cooldowns Buffering and Coyote Time · Multiplayer Cutscene Sync - Server Clock, Late Joiners and Skip Votes · Obby Checkpoints and Stage Saves End to End · Quest Chain System End to End · ScreenGui Fundamentals · Shop with Game Passes and Developer Products End to End · Side-Scroller in 3D - Locking Camera and Movement to a Plane · Snippets - Animation Controller Module · Tutorial Step Design Patterns - Teach by Doing · Tycoon Plots and Droppers End to End
 
 <!-- atlas:generated -->

@@ -345,5 +345,5 @@ Scams are not duplication, but they generate more support tickets than dupes do.
 
 <!-- related:start -->
 ## Related
-[[Economy Exploits - Dupes Races and Purchase Abuse]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[Purchase Data and Receipts]] · [[Dupe Hunting Test Script - Trades, Gifts, Drops and Rejoins]] · [[Data Loss Prevention and Recovery]] · [[Global State and Live Config]] · [[OrderedDataStores and Leaderboards]]
+[[Economy Exploits - Dupes Races and Purchase Abuse]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[Purchase Data and Receipts]] · [[Developer Products and ProcessReceipt]] · [[Data Loss Prevention and Recovery]] · [[Global State and Live Config]] · [[OrderedDataStores and Leaderboards]]
 <!-- related:end -->

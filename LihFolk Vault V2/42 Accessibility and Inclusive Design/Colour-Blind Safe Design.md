@@ -425,5 +425,5 @@ See also: [[Accessibility Start Here]], [[Accessibility]], [[Readable Text and U
 
 <!-- related:start -->
 ## Related
-[[Accessibility Contrast]] · [[Colour Scripts and Value Structure for Untextured Art]] · [[Stylized Lighting Recipes]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Environment Art Styles]] · [[Captions and Audio Accessibility]]
+[[Accessibility Contrast]] · [[Colour Scripts and Value Structure for Untextured Art]] · [[Stylized Lighting Recipes]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Captions and Audio Accessibility]] · [[Onboarding Accessibility and Cross-Device Prompts]]
 <!-- related:end -->

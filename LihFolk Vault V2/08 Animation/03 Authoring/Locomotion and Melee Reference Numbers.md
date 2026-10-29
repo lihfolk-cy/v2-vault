@@ -93,5 +93,5 @@ The numbers to start from when keying a walk, run, sprint, jump or sword attack 
 
 <!-- related:start -->
 ## Related
-[[Locomotion Readability - Lessons from Blind Panels]] · [[R15 Run Cycle Key Poses]] · [[Human Swing Biomechanics]] · [[Timing Spacing and Frame Charts]] · [[Locomotion Clip Lessons - Jump, Sprint, Idle]] · [[Spin and Whole-Body Rotation Moves]] · [[Posing and Silhouettes]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]]
+[[Locomotion Readability - Lessons from Blind Panels]] · [[R15 Run Cycle Key Poses]] · [[Human Swing Biomechanics]] · [[Timing Spacing and Frame Charts]] · [[Locomotion Clip Lessons - Jump, Sprint, Idle]] · [[Posing and Silhouettes]] · [[Spin and Whole-Body Rotation Moves]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]]
 <!-- related:end -->

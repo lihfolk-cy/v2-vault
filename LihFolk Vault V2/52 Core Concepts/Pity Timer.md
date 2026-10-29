@@ -64,5 +64,5 @@ Related concepts: [[Expected Value]], [[Variance]], [[Faucets and Sinks]].
 
 <!-- related:start -->
 ## Related
-[[Expected Value]] · [[Balancing with Spreadsheets and Data]] · [[Genre Playbook - Simulators]] · [[Roblox Policies Ratings and Compliance]] · [[Faucets and Sinks]] · [[Simulator and RNG Genre Teardown]]
+[[Expected Value]] · [[Balancing with Spreadsheets and Data]] · [[Genre Playbook - Simulators]] · [[Faucets and Sinks]] · [[Teardown - Ride A Pet]] · [[Roblox Policies Ratings and Compliance]]
 <!-- related:end -->

@@ -12,7 +12,7 @@ tags: [narrative, lore, worldbuilding, environmental-storytelling, codex, collec
 > - Curious layer: item one-liners, optional NPC lines, a few notes per zone.
 > - Obsessed layer: deliberate gaps, rare events, collectible sets (only if the game suits it).
 >
-> Cost: TL;DR ~170 tok · whole note ~5.7k tok. Read more: ## 2. Channels other than text · ## 4. Collectibles and a codex · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.8k tok. Read more: ## 2. Channels other than text · ## 4. Collectibles and a codex · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 Lore is the history, rules and mysteries that make a world feel like it existed before the player arrived. Most Roblox players will never read a paragraph of it, and that is fine: good lore is designed so that a player who reads nothing still feels it (in the names, the ruins, the enemy designs, the music) while a player who goes looking finds more, and a small group of obsessed players finds enough to build a wiki and argue about theories. This note is about that layered delivery: the channels you can use besides text, how much to put in each layer, how to build a codex that rewards exploration without leaking spoilers to exploiters, how to keep lore consistent across a live game, and when to leave lore out entirely.
@@ -352,5 +352,5 @@ The strongest lore delivery in a live game is a change to the world itself: the 
 
 <!-- related:start -->
 ## Related
-[[Story State Flags and Chapter Saves]] · [[Puzzle Dependency Charts and Hint Systems]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Multiplayer Cutscene Sync - Server Clock, Late Joiners and Skip Votes]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Localization Pipeline]]
+[[Story State Flags and Chapter Saves]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Puzzle Dependency Charts and Hint Systems]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Multiplayer Cutscene Sync - Server Clock, Late Joiners and Skip Votes]] · [[Genre Playbook - Roleplay and Social Hangouts]]
 <!-- related:end -->

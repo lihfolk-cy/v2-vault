@@ -274,5 +274,5 @@ Patterns, not copies:
 
 <!-- related:start -->
 ## Related
-[[Genre Playbook - Social Deduction and Murder Mystery]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Battle Royale]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Racing and Driving]] · [[Boss Fight Design Patterns]] · [[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Genre Playbook - Puzzle and Escape Rooms]]
+[[Genre Playbook - Social Deduction and Murder Mystery]] · [[Teardown - Ink Game]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Battle Royale]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Racing and Driving]] · [[Boss Fight Design Patterns]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Genre Playbook - Zombie and Wave Survival Co-op]]
 <!-- related:end -->

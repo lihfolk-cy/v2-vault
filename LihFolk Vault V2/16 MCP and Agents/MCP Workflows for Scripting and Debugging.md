@@ -298,5 +298,5 @@ See [[Prompting and Verifying AI Output]].
 
 <!-- related:start -->
 ## Related
-[[AI Agents and Autonomous Workflows]] · [[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]] · [[Writing Your Own MCP Server]] · [[Setting Up MCP Clients]] · [[What Is MCP]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[Blender MCP]]
+[[AI Agents and Autonomous Workflows]] · [[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]] · [[Writing Your Own MCP Server]] · [[What Is MCP]] · [[Setting Up MCP Clients]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[Blender MCP]]
 <!-- related:end -->

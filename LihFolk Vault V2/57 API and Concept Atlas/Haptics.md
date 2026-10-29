@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/animation, area/ui]
 > - Rate limit. No more than about 8 to 10 haptic starts per second; at higher rates pulses smear into a constant buzz and drain...
 > - Haptics through `HapticEffects` for dramatic events and UI feedback, not constant buzzing (Haptics).
 >
-> Cost: TL;DR ~150 tok · whole note ~570 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~620 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,7 +26,7 @@ Haptics are more forgiving in absolute terms (touch is a slower sense and motors
 
 ## Mentioned in
 
-22 notes in 12 sections. The 22 most relevant are linked:
+26 notes in 13 sections. The 25 most relevant are linked:
 
 ### 05 UI and UX
 [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[Gamepad and Console UX]] · [[Input - UserInputService and ContextActionService]]
@@ -61,7 +61,9 @@ Haptics are more forgiving in absolute terms (touch is a slower sense and motors
 ### 58 Player QoL and Game Tweaks
 [[Controller Support QoL]] · [[Player QoL Start Here]]
 
-### Root notes
-[[00 Start Here]]
+### 60 High-Craft Game Teardowns
+[[Teardown - Blade Ball]] · [[Teardown - Dandy's World]] · [[Teardown - Funky Friday]] · [[What Craft Looks Like on Roblox - Lessons from Top Studios]]
+
+Also mentioned in (not linked): 00 Start Here
 
 <!-- atlas:generated -->

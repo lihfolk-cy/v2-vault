@@ -433,5 +433,5 @@ Every feature built on EditableImage should have a "unavailable" path that still
 
 <!-- related:start -->
 ## Related
-[[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Textures Decals and Texture Memory]] · [[2D Collision Physics and Platformer Movement]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] · [[Luau Performance Patterns with Benchmarks]] · [[Infinite and Streamed Worlds]]
+[[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Textures Decals and Texture Memory]] · [[2D Collision Physics and Platformer Movement]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] · [[Infinite and Streamed Worlds]] · [[Luau Performance Patterns with Benchmarks]]
 <!-- related:end -->

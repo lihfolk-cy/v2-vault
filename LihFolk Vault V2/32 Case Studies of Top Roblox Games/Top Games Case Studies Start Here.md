@@ -39,11 +39,17 @@ Every game note follows the same six parts: Snapshot, Click-through, First five 
 - **Making a horror or survival game:** Doors, then 99 Nights in the Forest. Pair with [[Genre Playbook - Horror and Story]], [[Genre Playbook - Survival and Crafting]] and [[Horror Monster Chase AI End to End]].
 - **Making a social or roleplay game:** Brookhaven RP, Adopt Me, Dress to Impress. Pair with [[Genre Playbook - Roleplay and Social Hangouts]] and [[Social Design and Multiplayer Play]].
 - **Making a long-term grind or collection game:** Blox Fruits, then Fisch. Pair with [[Progression and Pacing Design]] and [[RNG Drops and Luck Systems]].
+- **Designing your tutorial:** read the "first minutes" part of the case study for your genre, then [[Onboarding by Genre - The First Five Minutes]] and [[Onboarding and FTUE - Tutorials That Keep Players]].
 - **Working on your store page:** start with the cross-game note, then [[Thumbnails Icons and Store Page]] and [[Discovery and the Algorithm]].
 
 ## Before you start your own teardown
 
 Use [[Competitor Analysis Method]] to study a game that is not covered here. Record the date of every number, separate what you observed from what you inferred, and check the game's store page again a week later: titles, icons and thumbnails change with every update, and the change itself tells you what the studio is testing.
+
+## See also
+
+- [[Viral and Trend Teardowns Start Here]]: a companion section with fifteen deeper teardowns of fast-to-build viral and trend games not covered here, including Steal An Egg, Plants vs Brainrots, Escape Tsunami for Brainrots, +1 Speed Keyboard Escape, Fish It, Ride A Pet, Sol's RNG, Ink Game and classics such as Bee Swarm Simulator, Tower of Hell and Natural Disaster Survival.
+- [[Viral Game Anatomy - Hooks, Loops and Timing]]: the patterns those games share, from the first 60 seconds to clone waves.
 
 ## Connected notes
 <!-- auto-links:start -->

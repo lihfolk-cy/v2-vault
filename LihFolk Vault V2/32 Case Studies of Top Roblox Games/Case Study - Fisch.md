@@ -147,5 +147,5 @@ Read the table as a design: most passes sell "anywhere", meaning they remove a w
 
 <!-- related:start -->
 ## Related
-[[Case Study - Adopt Me]] · [[Case Study - Steal a Brainrot]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - Grow a Garden]] · [[Case Study - Dress to Impress]] · [[Case Study - Jailbreak]] · [[Case Study - Dead Rails]] · [[Case Study - The Strongest Battlegrounds]]
+[[Teardown - Fish It]] · [[Case Study - Adopt Me]] · [[Case Study - Steal a Brainrot]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - Grow a Garden]] · [[Case Study - Dress to Impress]] · [[Case Study - Jailbreak]] · [[Case Study - Dead Rails]] · [[Case Study - The Strongest Battlegrounds]]
 <!-- related:end -->

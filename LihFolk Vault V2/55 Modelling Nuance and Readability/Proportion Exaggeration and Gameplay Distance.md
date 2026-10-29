@@ -187,5 +187,5 @@ Goal: a stall for a hub plaza, seen from 15 to 60 studs, with an interactable co
 
 <!-- related:start -->
 ## Related
-[[Keeping a Mixed Asset Library Consistent]] · [[Modeling Fundamentals for Games]] · [[House Construction Method - Modular Kit Workflow]] · [[Hard-Surface Modeling]] · [[Mesh Optimization for Mobile]] · [[Art-Direction Nitpicks - The Principles Behind Them]]
+[[Keeping a Mixed Asset Library Consistent]] · [[Modeling Fundamentals for Games]] · [[House Construction Method - Modular Kit Workflow]] · [[Hard-Surface Modeling]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[Art-Direction Nitpicks - The Principles Behind Them]]
 <!-- related:end -->

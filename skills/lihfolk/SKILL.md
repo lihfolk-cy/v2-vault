@@ -28,4 +28,4 @@ Scale to the task: trivial = none; normal (feature, bug, review) = one search; b
 
 **Accuracy over savings:** a TL;DR is a pointer. For player data, purchases and receipts, paid random items and policy, remotes and security, or anything shipping to live players, read the note's `Common mistakes` and `Checklist` sections and the section holding the exact numbers or API rules you use. Never cite a number seen only in a TL;DR.
 
-Folder map by topic, the asset pack path, the specialist skill list and reference images: `<base directory>/references/vault-map.md`.
+For building a map or level use `lihfolk-worldbuilding`; for tutorials and onboarding use `lihfolk-tutorial`. Folder map by topic, the asset pack path, the specialist skill list and reference images: `<base directory>/references/vault-map.md`.

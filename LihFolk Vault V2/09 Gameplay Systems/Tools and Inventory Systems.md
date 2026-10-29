@@ -245,5 +245,5 @@ Trading multiplies every inventory risk. Minimum rules: both players confirm the
 
 <!-- related:start -->
 ## Related
-[[Quests and Objectives]] · [[Character Select and Class Systems with Different Rigs]] · [[Spawning Teams and Rounds]] · [[Characters and Humanoids]] · [[Status Effects Buffs and Stacking Rules]] · [[Downed, Revive and Bleed-Out States]] · [[Hitboxes and Hit Detection]] · [[Custom Character Controllers]]
+[[Quests and Objectives]] · [[Character Select and Class Systems with Different Rigs]] · [[Spawning Teams and Rounds]] · [[Characters and Humanoids]] · [[Status Effects Buffs and Stacking Rules]] · [[Downed, Revive and Bleed-Out States]] · [[Custom Character Controllers]] · [[Camera Systems]]
 <!-- related:end -->

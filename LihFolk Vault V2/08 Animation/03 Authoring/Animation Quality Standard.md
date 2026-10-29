@@ -232,5 +232,5 @@ The scorer exposed patterns in authored choreography that no solver can fully re
 
 <!-- related:start -->
 ## Related
-[[Blade Grip and Wrist Limits]] · [[Human Swing Biomechanics]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Principles of Animation for Games]] · [[Authoring Clips in Code]] · [[Snippets - IK]] · [[Weapon and Combat Animation]] · [[Animation Editor Workflow]]
+[[Blade Grip and Wrist Limits]] · [[Human Swing Biomechanics]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Principles of Animation for Games]] · [[Authoring Clips in Code]] · [[Snippets - IK]] · [[Animation Editor Workflow]] · [[Weapon and Combat Animation]]
 <!-- related:end -->

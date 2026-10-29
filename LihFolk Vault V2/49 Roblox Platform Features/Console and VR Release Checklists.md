@@ -133,5 +133,5 @@ Roblox VR uses OpenXR for all devices, so one implementation runs on Quest and P
 
 <!-- related:start -->
 ## Related
-[[Controller Support QoL]] · [[AI Pitfalls - UI and Input]] · [[QoL Audit Checklist]] · [[Safe Area]] · [[Input - UserInputService and ContextActionService]] · [[Roblox Changes 2025-2026]]
+[[Controller Support QoL]] · [[AI Pitfalls - UI and Input]] · [[Safe Area]] · [[QoL Audit Checklist]] · [[Onboarding Accessibility and Cross-Device Prompts]] · [[Roblox Changes 2025-2026]]
 <!-- related:end -->

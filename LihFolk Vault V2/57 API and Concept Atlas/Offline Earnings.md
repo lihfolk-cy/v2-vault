@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/design, area/gameplay]
 > - Offline earnings capped, a fraction of active income, only after onboarding.
 > - Offline earnings from server timestamps, capped.
 >
-> Cost: TL;DR ~130 tok · whole note ~400 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~440 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,7 +26,7 @@ Offline earnings ("your vault filled while you were away") turn absence into a r
 
 ## Mentioned in
 
-11 notes in 6 sections. The 11 most relevant are linked:
+14 notes in 7 sections. The 14 most relevant are linked:
 
 ### 10 Game Design and Genres
 [[Balancing with Spreadsheets and Data]] · [[Core Loops and Session Design]] · [[Ethical Design and Player Trust]] · [[Retention and Return Hooks]] · [[Simulator and RNG Genre Teardown]]
@@ -45,5 +45,8 @@ Offline earnings ("your vault filled while you were away") turn absence into a r
 
 ### 58 Player QoL and Game Tweaks
 [[AFK Detection Idle Kicks and AFK Reward Rules]]
+
+### 59 Viral and Trend Game Teardowns
+[[Teardown - Sol's RNG]] · [[Teardown - Steal An Egg]] · [[Viral Game Anatomy - Hooks, Loops and Timing]]
 
 <!-- atlas:generated -->

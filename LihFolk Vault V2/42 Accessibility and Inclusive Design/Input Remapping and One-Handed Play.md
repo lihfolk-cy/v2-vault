@@ -517,5 +517,5 @@ See also: [[Accessibility Start Here]], [[Accessibility]], [[Input - UserInputSe
 
 <!-- related:start -->
 ## Related
-[[Rebinding Controls with the Input Action System]] · [[Mobile Button Layout Editor]] · [[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Shift-Lock Sprint and Gamepad B for Menus]] · [[AI Pitfalls - UI and Input]] · [[ProximityPrompt Gamepad Keys and the Hidden PlayerList Tab]]
+[[Rebinding Controls with the Input Action System]] · [[Onboarding Accessibility and Cross-Device Prompts]] · [[Mobile Button Layout Editor]] · [[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Shift-Lock Sprint and Gamepad B for Menus]] · [[AI Pitfalls - UI and Input]]
 <!-- related:end -->

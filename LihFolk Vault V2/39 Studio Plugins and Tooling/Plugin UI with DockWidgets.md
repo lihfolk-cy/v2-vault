@@ -328,5 +328,5 @@ Whatever you choose, keep scan logic out of components. A component that calls `
 
 <!-- related:start -->
 ## Related
-[[Undo and ChangeHistoryService Done Right]] · [[Cookbook - UI]] · [[Publishing Selling and Updating Plugins]] · [[Debugging UI Layout and Input]] · [[Gamepad and Console UX]] · [[Plugin Security and Permissions]]
+[[Undo and ChangeHistoryService Done Right]] · [[Cookbook - UI]] · [[Publishing Selling and Updating Plugins]] · [[Debugging UI Layout and Input]] · [[Studio Interface Tour]] · [[Plugin Security and Permissions]]
 <!-- related:end -->

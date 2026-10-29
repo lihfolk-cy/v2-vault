@@ -237,5 +237,5 @@ See [[Live Ops Events and Updates]] and [[Localization]].
 
 <!-- related:start -->
 ## Related
-[[Post-Mortem - Building a Melee Action Game]] · [[Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts]] · [[Scoping and Roles for Small Teams]] · [[Asset Pipelines]] · [[Case Study - Building LihFolk V2 with AI Agents]] · [[Case Study - Phone UI Overhaul]] · [[Case Study - Enemy Roster Rebuild]] · [[Live Incident Response and Post-Mortems]]
+[[Post-Mortem - Building a Melee Action Game]] · [[Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts]] · [[Scoping and Roles for Small Teams]] · [[Asset Pipelines]] · [[Case Study - Building LihFolk V2 with AI Agents]] · [[Case Study - Phone UI Overhaul]] · [[Template Reskin Checklist - One Codebase, New Game]] · [[Case Study - Enemy Roster Rebuild]]
 <!-- related:end -->

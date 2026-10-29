@@ -159,5 +159,5 @@ What to look for: the target jumping (a bad input, not a bad solver), the pole p
 
 <!-- related:start -->
 ## Related
-[[Motor6D Math and CFrame Composition]] · [[Spec-Driven Move Authoring]] · [[Troubleshooting Table]] · [[Animation Editor Advanced]] · [[Posing and Silhouettes]] · [[Retargeting Animations Between Rigs]] · [[Ragdolls and Physics-Based Animation]] · [[Springs Damping and Smoothing]]
+[[Motor6D Math and CFrame Composition]] · [[Spec-Driven Move Authoring]] · [[Animation Editor Advanced]] · [[Troubleshooting Table]] · [[Posing and Silhouettes]] · [[Ragdolls and Physics-Based Animation]] · [[Retargeting Animations Between Rigs]] · [[Springs Damping and Smoothing]]
 <!-- related:end -->

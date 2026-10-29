@@ -279,5 +279,5 @@ The senior trade-off: accurate collision costs authoring time and physics time; 
 
 <!-- related:start -->
 ## Related
-[[Exporting and Validating Models for Roblox]] · [[Level of Detail and Model Streaming]] · [[Procedural World Generation]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Grid Placement and Player Building Systems]] · [[Materials MaterialVariants and SurfaceAppearance]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[Modeling in Blender for Roblox]]
+[[Exporting and Validating Models for Roblox]] · [[Level of Detail and Model Streaming]] · [[Procedural World Generation]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Grid Placement and Player Building Systems]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Modeling in Blender for Roblox]] · [[Materials MaterialVariants and SurfaceAppearance]]
 <!-- related:end -->

@@ -283,5 +283,5 @@ Related: [[Inverse Kinematics]], [[Two-Bone IK Math]], [[Springs Damping and Smo
 
 <!-- related:start -->
 ## Related
-[[Elbow Poles Swivel and Joint Limits]] · [[Foot Placement and Ground IK]] · [[Procedural Gait and Footstep Planning]] · [[Ragdolls and Physics-Based Animation]] · [[Ground Fitting Pipeline]] · [[Snippets - Procedural Motion]] · [[Idle Breathing and Secondary Motion]] · [[Animation Glossary]]
+[[Elbow Poles Swivel and Joint Limits]] · [[Foot Placement and Ground IK]] · [[Procedural Gait and Footstep Planning]] · [[Ground Fitting Pipeline]] · [[Ragdolls and Physics-Based Animation]] · [[Snippets - Procedural Motion]] · [[Idle Breathing and Secondary Motion]] · [[Animation Glossary]]
 <!-- related:end -->

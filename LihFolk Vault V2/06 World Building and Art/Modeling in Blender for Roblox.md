@@ -248,5 +248,5 @@ Practical rules:
 
 <!-- related:start -->
 ## Related
-[[Modular Environment Kits]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Blender Workflow for Roblox Creators]] · [[Exporting and Validating Models for Roblox]] · [[Zone and Biome Art Direction]] · [[Level Design for Roblox]]
+[[Modular Environment Kits]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Blender Workflow for Roblox Creators]] · [[Exporting and Validating Models for Roblox]] · [[Level Design for Roblox]] · [[Zone and Biome Art Direction]]
 <!-- related:end -->

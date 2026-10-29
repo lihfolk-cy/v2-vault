@@ -287,5 +287,5 @@ Plan content in **reusable units**: shared base rigs per body type (biped, quadr
 
 <!-- related:start -->
 ## Related
-[[Time-to-Kill Math and a Weapon Balance Sheet]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - Battlegrounds and Arena Fighters]] · [[Core Loops and Session Design]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Shooters FPS and TPS]] · [[Genre Playbook - Horror and Story]]
+[[Time-to-Kill Math and a Weapon Balance Sheet]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - Battlegrounds and Arena Fighters]] · [[Core Loops and Session Design]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Shooters FPS and TPS]] · [[Genre Playbook - Horror and Story]]
 <!-- related:end -->

@@ -66,5 +66,5 @@ Related concepts: [[Replication Boundary]], [[Instance Count]], [[Frame Budget]]
 
 <!-- related:start -->
 ## Related
-[[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]] · [[Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver]] · [[Server Authority]] · [[Object Pooling]] · [[Triangle Budget]] · [[Deterministic Simulation]] · [[Event Bus]] · [[Texel Density]] · [[Draw Calls]] · [[Rate Limiting]]
+[[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]] · [[Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver]] · [[Server Authority]] · [[Object Pooling]] · [[Triangle Budget]] · [[Deterministic Simulation]] · [[Event Bus]] · [[Texel Density]] · [[Draw Calls]] · [[Onboarding Funnel]]
 <!-- related:end -->

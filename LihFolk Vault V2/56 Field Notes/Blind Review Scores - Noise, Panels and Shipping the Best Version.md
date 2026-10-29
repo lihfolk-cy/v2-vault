@@ -61,5 +61,5 @@ When AI reviewers score assets (animation clips, VFX, models) against a rubric, 
 
 <!-- related:start -->
 ## Related
-[[Case Study - Building LihFolk V2 with AI Agents]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Spin and Whole-Body Rotation Moves]] · [[Procedural Materials and Skies - Lessons]] · [[Benchmark - Does a Knowledge Vault Make AI Better at Roblox]]
+[[Case Study - Building LihFolk V2 with AI Agents]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Spin and Whole-Body Rotation Moves]] · [[Procedural Materials and Skies - Lessons]] · [[Evaluating AI Tools - A Practical Rubric]]
 <!-- related:end -->

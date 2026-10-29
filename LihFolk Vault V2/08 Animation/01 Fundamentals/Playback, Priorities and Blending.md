@@ -151,5 +151,5 @@ Real games have several systems playing tracks on one character: locomotion, com
 
 <!-- related:start -->
 ## Related
-[[R15 Run Cycle Key Poses]] · [[Animation Glossary]] · [[Snippets - Lua Keyframe Player Core]] · [[AI Pitfalls - Physics and Animation]] · [[Combat Animation Craft]] · [[Troubleshooting Table]] · [[Lua Keyframe Player]] · [[Animation Objects]] · [[Timing Spacing and Frame Charts]]
+[[R15 Run Cycle Key Poses]] · [[Animation Glossary]] · [[Snippets - Lua Keyframe Player Core]] · [[AI Pitfalls - Physics and Animation]] · [[Combat Animation Craft]] · [[Troubleshooting Table]] · [[Animation Objects]] · [[Timing Spacing and Frame Charts]] · [[Lua Keyframe Player]]
 <!-- related:end -->

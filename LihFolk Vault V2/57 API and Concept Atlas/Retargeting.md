@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/animation, area/math]
 > - Avoid: Leaving tiny translations on every limb after retargeting.
 > - Avoid: Root translation not retargeted -> Scale translation by the height ratio.
 >
-> Cost: TL;DR ~120 tok · whole note ~580 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~590 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,7 +27,7 @@ Retargeting: Making a clip from one rig play correctly on another. (from [[Anima
 
 ## Mentioned in
 
-38 notes in 10 sections. The 25 most relevant are linked:
+39 notes in 11 sections. The 25 most relevant are linked:
 
 ### 05 UI and UX
 [[UI Motion Language and Timing]]
@@ -50,6 +50,6 @@ Retargeting: Making a clip from one rig play correctly on another. (from [[Anima
 ### 40 Game Math
 [[Curves in Luau - Paths Beams and Motion]] · [[Interpolation Easing and Curves Math]]
 
-Also mentioned in (not linked): 00 Start Here · Animation Start Here · Game Math Start Here · How the Animator Really Behaves · Luau Performance and Native Codegen · Moon Animator and Third-Party Tools · Motor6D Math and CFrame Composition · Pipeline - Importing Animated Enemies · Publishing Animations · R15 Rig Anatomy and Attachments · Rigs and Joints · Thumbnails Icons and Store Page · Tween and CFrame Animation of Objects
+Also mentioned in (not linked): 00 Start Here · Animation Start Here · Game Math Start Here · How the Animator Really Behaves · Luau Performance and Native Codegen · Moon Animator and Third-Party Tools · Motor6D Math and CFrame Composition · Pipeline - Importing Animated Enemies · Publishing Animations · R15 Rig Anatomy and Attachments · Rigs and Joints · Teardown - Blade Ball · Thumbnails Icons and Store Page · Tween and CFrame Animation of Objects
 
 <!-- atlas:generated -->

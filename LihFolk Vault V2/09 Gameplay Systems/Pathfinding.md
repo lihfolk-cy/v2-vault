@@ -308,5 +308,5 @@ The senior trade-off: built-in pathfinding is excellent for occasional, varied r
 
 <!-- related:start -->
 ## Related
-[[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]] · [[Police Chases and Wanted Levels]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Squad AI - Attack Tokens, Flanking and Attacker Limits]] · [[Camera Obstruction Handling - Occlusion Modes, Fades and Collision]] · [[Weather That Changes Gameplay - Grip, Visibility and Hearing]] · [[Spawning Teams and Rounds]]
+[[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]] · [[Police Chases and Wanted Levels]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Squad AI - Attack Tokens, Flanking and Attacker Limits]] · [[Spawning Teams and Rounds]] · [[Weather That Changes Gameplay - Grip, Visibility and Hearing]] · [[Camera Obstruction Handling - Occlusion Modes, Fades and Collision]]
 <!-- related:end -->

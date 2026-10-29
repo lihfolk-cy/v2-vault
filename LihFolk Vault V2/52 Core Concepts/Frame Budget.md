@@ -67,5 +67,5 @@ Related concepts: [[Draw Calls]], [[Instance Count]], [[Object Pooling]], [[Dete
 
 <!-- related:start -->
 ## Related
-[[Object Pooling]] · [[Hit-Stop]] · [[Streaming Radius]] · [[Variance]] · [[Texel Density]] · [[Tween vs Spring]] · [[Session Length]] · [[Safe Area]]
+[[Object Pooling]] · [[Hit-Stop]] · [[Streaming Radius]] · [[Texel Density]] · [[Variance]] · [[Tween vs Spring]] · [[Input Buffering]] · [[Safe Area]]
 <!-- related:end -->

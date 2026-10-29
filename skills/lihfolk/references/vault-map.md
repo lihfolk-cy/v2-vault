@@ -10,15 +10,15 @@ Loaded on demand by the `lihfolk` router. `<VAULT>` is the absolute vault path t
 | Luau language, patterns, cookbook | 02, 29, 35, 40 |
 | Client/server, remotes, architecture | 03, 41 |
 | Saving, DataStores, sessions | 04 |
-| UI / UX (house cartoon/simulator menu style: the `lihfolk-ui` skill) | 05, 42 |
-| Worldbuilding, level design, terrain | 06, 33, 34, 36 |
+| UI / UX (house cartoon/simulator menu style: the `lihfolk-ui` skill); tutorials and onboarding (the `lihfolk-tutorial` skill) | 05, 42 |
+| Worldbuilding, level design, terrain (the `lihfolk-worldbuilding` skill) | 06, 33, 34, 36 |
 | Lighting, VFX, audio | 07 |
 | Animation, rigs | 08, 18 |
 | Gameplay systems, genre systems | 09, 43, 25 |
 | Game design, economy, game feel | 10, 47, 48 |
 | Monetization, publishing, live ops | 11, 38, 27, 49 |
 | Performance, debugging, testing | 12, 23 |
-| Case studies of top games | 13, 32 |
+| Case studies and teardowns of top games (viral/trend, high-craft) | 13, 32, 59, 60 |
 | 3D modeling, materials, styles | 14, 44, 45, 53, 54, 55, 19 |
 | AI tools, MCP, pipelines | 15, 16, 17 |
 | Security, anti-exploit | 22 |
@@ -28,7 +28,7 @@ Loaded on demand by the `lihfolk` router. `<VAULT>` is the absolute vault path t
 
 ## Specialist skills in this plugin
 
-Prefer these when the task matches: `quality-score` (every generated asset or system must score at least 8.5/10), `council-method` (objective verdicts; the user-facing command is `/lihfolk:council`), `lihfolk-ui` (house menu style), `lihfolk-assets` (original models, materials, skies, animations and VFX from the local asset pack: search its catalogues before modelling from scratch), `lihfolk-vfx`, `lihfolk-sfx` (layered, pooled combat and UI sounds synced to the same markers, sourced only from premium licensed sounds: Roblox-licensed Creator Store audio or a library the user owns), `lihfolk-systems`, `roblox-blender-modeling`, `roblox-trend-game`, `roblox-system-builder`, `roblox-ui-builder`, `roblox-secure-remotes`, `roblox-datastore-safety`, `roblox-performance-audit`, `roblox-debugging`, `roblox-anti-exploit-review`, `roblox-monetization-compliance`, `roblox-asset-import`.
+Prefer these when the task matches: `quality-score` (every generated asset or system must score at least 8.5/10), `council-method` (objective verdicts; the user-facing command is `/lihfolk:council`), `lihfolk-ui` (house menu style), `lihfolk-assets` (original models, materials, skies, animations and VFX from the local asset pack: search its catalogues before modelling from scratch), `lihfolk-vfx`, `lihfolk-sfx` (layered, pooled combat and UI sounds synced to the same markers, sourced only from premium licensed sounds: Roblox-licensed Creator Store audio or a library the user owns), `lihfolk-systems`, `lihfolk-worldbuilding` (maps, levels, biomes, towns, dungeons, lobbies, obby areas, terrain: layout, composition and dressing with a placement and audit toolkit), `lihfolk-tutorial` (tutorials, onboarding and FTUE that keep first-time players), `roblox-blender-modeling`, `roblox-trend-game`, `roblox-system-builder`, `roblox-ui-builder`, `roblox-secure-remotes`, `roblox-datastore-safety`, `roblox-performance-audit`, `roblox-debugging`, `roblox-anti-exploit-review`, `roblox-monetization-compliance`, `roblox-asset-import`.
 
 ## Reference images
 

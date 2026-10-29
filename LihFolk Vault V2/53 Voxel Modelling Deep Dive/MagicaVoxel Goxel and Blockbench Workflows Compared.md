@@ -163,5 +163,5 @@ Many blocky games mix tools: environment in a voxel editor, characters in Blockb
 
 <!-- related:start -->
 ## Related
-[[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Modeling in Blender for Roblox]] · [[Substance Painter and Texturing Tools]] · [[UV Unwrapping]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Voxel Props Environments and Modular Tiles]]
+[[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Modeling in Blender for Roblox]] · [[Substance Painter and Texturing Tools]] · [[UV Unwrapping]] · [[Voxel Props Environments and Modular Tiles]] · [[Voxel Art - Studs Outlines and Style Kits]]
 <!-- related:end -->

@@ -283,5 +283,5 @@ See also: [[Safe Areas and Insets]], [[Responsive UI for Phone Tablet Console an
 
 <!-- related:start -->
 ## Related
-[[UI Asset Pipeline]] · [[Gamepad and Console UX]] · [[UI Layout Objects - Lists Grids and Pages]] · [[UI Motion Language and Timing]] · [[Declarative UI - React-Lua and Fusion]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[Virtualized Lists and Large Inventories]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]]
+[[UI Asset Pipeline]] · [[Gamepad and Console UX]] · [[UI Layout Objects - Lists Grids and Pages]] · [[UI Motion Language and Timing]] · [[Declarative UI - React-Lua and Fusion]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[Tutorial Step Design Patterns - Teach by Doing]] · [[Virtualized Lists and Large Inventories]]
 <!-- related:end -->

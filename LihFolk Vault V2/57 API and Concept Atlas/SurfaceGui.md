@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/ui, area/gameplay, api/SurfaceGui]
 > - SurfaceGui with a Pixelated ImageLabel. A SurfaceGui on a part renders GUI objects on the surface, and ImageLabel keeps its...
 > - The 2D game lives inside a 3D game. A minigame on an arcade cabinet (a `SurfaceGui` on a part), a lockpicking bar, a fishing...
 >
-> Cost: TL;DR ~160 tok · whole note ~710 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~160 tok · whole note ~720 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ API snapshot: class, inherits `SurfaceGuiBase` (`_tools/roblox_api.json`, docs b
 
 ## Mentioned in
 
-30 notes in 20 sections. The 25 most relevant are linked:
+31 notes in 20 sections. The 25 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[Packages and Asset Reuse]]
@@ -84,6 +84,6 @@ API snapshot: class, inherits `SurfaceGuiBase` (`_tools/roblox_api.json`, docs b
 ### 52 Core Concepts
 [[Accessibility Contrast]]
 
-Also mentioned in (not linked): 00 Start Here · Replication Boundary · ScreenGui Fundamentals · Text Fonts and Rich Text · Tycoon Plots and Droppers End to End
+Also mentioned in (not linked): 00 Start Here · Replication Boundary · ScreenGui Fundamentals · Text Fonts and Rich Text · Tutorial Step Design Patterns - Teach by Doing · Tycoon Plots and Droppers End to End
 
 <!-- atlas:generated -->

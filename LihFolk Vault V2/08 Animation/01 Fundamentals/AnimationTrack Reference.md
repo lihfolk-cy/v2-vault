@@ -214,5 +214,5 @@ A 1.2 s stance clip that must fit a 0.7 s window plays at `1.2 / 0.7 ≈ 1.71`. 
 
 <!-- related:start -->
 ## Related
-[[KeyframeSequence Keyframe and Pose Reference]] · [[Lua Keyframe Player Internals]] · [[Animation Glossary]] · [[Troubleshooting Table]] · [[Debugging Animation Problems]] · [[CurveAnimation and Curve Channels]] · [[Custom Locomotion Controller Design]] · [[Keyframes, Easing and Interpolation]]
+[[KeyframeSequence Keyframe and Pose Reference]] · [[Lua Keyframe Player Internals]] · [[Animation Glossary]] · [[Troubleshooting Table]] · [[Debugging Animation Problems]] · [[Custom Locomotion Controller Design]] · [[CurveAnimation and Curve Channels]] · [[Keyframes, Easing and Interpolation]]
 <!-- related:end -->

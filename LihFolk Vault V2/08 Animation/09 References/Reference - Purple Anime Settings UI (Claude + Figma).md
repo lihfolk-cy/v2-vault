@@ -141,5 +141,5 @@ Rebuilding a static design like this in Roblox is where the real decisions are. 
 
 <!-- related:start -->
 ## Related
-[[Cookbook - UI]] · [[Layout - Scale Offset and Constraints]] · [[Accessibility]] · [[LihFolk UI Design System]] · [[UI Motion Language and Timing]] · [[LihFolk UI Spec]]
+[[Cookbook - UI]] · [[Accessibility]] · [[Layout - Scale Offset and Constraints]] · [[UI Motion Language and Timing]] · [[LihFolk UI Design System]] · [[Cameras and Cutscenes]]
 <!-- related:end -->

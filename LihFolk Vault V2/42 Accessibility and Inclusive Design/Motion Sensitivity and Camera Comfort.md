@@ -420,5 +420,5 @@ See also: [[Accessibility Start Here]], [[Accessibility]], [[Camera Shake and Ca
 
 <!-- related:start -->
 ## Related
-[[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Comfort Toggles - Flashes Damage Numbers and Hit-Stop]] · [[Chase Cameras and Speed Effects for Vehicles]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Accessibility Cross-Links for QoL Settings]] · [[Layering Camera Feedback on the Default Camera]]
+[[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Comfort Toggles - Flashes Damage Numbers and Hit-Stop]] · [[Chase Cameras and Speed Effects for Vehicles]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Accessibility Cross-Links for QoL Settings]] · [[Onboarding Accessibility and Cross-Device Prompts]]
 <!-- related:end -->

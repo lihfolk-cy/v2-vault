@@ -168,5 +168,5 @@ Other interiors and the exterior are still in Workspace. Streaming handles dista
 
 <!-- related:start -->
 ## Related
-[[Spawn Points Safe Zones and Respawn Flow]] · [[Level Design Principles - Flow Sightlines and Landmarks]] · [[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Combat Arena and Encounter Layout]] · [[Playtest Heatmaps - Position and Death Maps]] · [[Teaching Through Level Design]]
+[[Teardown - Welcome to Bloxburg]] · [[Weekend Build - Roleplay Town with Jobs and Paychecks]] · [[Spawn Points Safe Zones and Respawn Flow]] · [[Level Design Principles - Flow Sightlines and Landmarks]] · [[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Combat Arena and Encounter Layout]] · [[Playtest Heatmaps - Position and Death Maps]]
 <!-- related:end -->

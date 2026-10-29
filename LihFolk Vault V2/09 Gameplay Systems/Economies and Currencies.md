@@ -223,5 +223,5 @@ See [[HUD Design]].
 
 <!-- related:start -->
 ## Related
-[[Currency Architecture - Soft Hard and Event Currencies]] · [[Faucets and Sinks]] · [[Progression and Pacing Design]] · [[Economy Telemetry and Balancing Live]] · [[Robux Price Points and Offer Design]] · [[Tools and Inventory Systems]]
+[[Currency Architecture - Soft Hard and Event Currencies]] · [[Faucets and Sinks]] · [[Progression and Pacing Design]] · [[Economy Telemetry and Balancing Live]] · [[Robux Price Points and Offer Design]] · [[Pricing Curves and Upgrade Costs]]
 <!-- related:end -->

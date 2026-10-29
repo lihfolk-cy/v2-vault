@@ -336,5 +336,5 @@ The senior trade-off: tight limits reduce abuse and anger honest players with ba
 
 <!-- related:start -->
 ## Related
-[[Cookbook - Remotes and Networking]] · [[Client-Server Model]] · [[Client Prediction and Reconciliation for Combat]] · [[Replication Rules]] · [[Interest Management and Per-Player Replication]] · [[Network Ownership]] · [[Snapshot Interpolation for Custom Replication]] · [[Teleporting and Multi-Place Games]] · [[Frameworks - Knit Matter and Others]]
+[[Cookbook - Remotes and Networking]] · [[Autoclicker and Macro Detection for Combat Remotes]] · [[Client Prediction and Reconciliation for Combat]] · [[Client-Server Model]] · [[Interest Management and Per-Player Replication]] · [[Replication Rules]] · [[Network Ownership]] · [[Snapshot Interpolation for Custom Replication]] · [[Teleporting and Multi-Place Games]] · [[Frameworks - Knit Matter and Others]]
 <!-- related:end -->

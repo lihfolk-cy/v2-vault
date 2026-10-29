@@ -72,5 +72,5 @@ Related concepts: [[Faucets and Sinks]], [[Expected Value]], [[Core Loop]].
 
 <!-- related:start -->
 ## Related
-[[Faucets and Sinks]] · [[Expected Value]] · [[Telemetry Events]] · [[Variance]] · [[Easing]] · [[Pity Timer]]
+[[Faucets and Sinks]] · [[Expected Value]] · [[Telemetry Events]] · [[Easing]] · [[Variance]] · [[Pity Timer]]
 <!-- related:end -->

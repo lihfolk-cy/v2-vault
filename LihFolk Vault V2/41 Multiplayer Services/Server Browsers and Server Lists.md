@@ -475,5 +475,5 @@ Reserved and private servers do not belong in the public registry: you cannot jo
 
 <!-- related:start -->
 ## Related
-[[Server Hop Rejoin and Server Lists with Ping]] · [[Session State Across Places]] · [[Joining Friends Parties and Private Servers]] · [[Genre Playbook - Battle Royale]] · [[OrderedDataStores and Leaderboards]] · [[Experience Notifications and Return Prompts]]
+[[Server Hop Rejoin and Server Lists with Ping]] · [[Session State Across Places]] · [[Joining Friends Parties and Private Servers]] · [[Genre Playbook - Battle Royale]] · [[OrderedDataStores and Leaderboards]] · [[Debugging Live Servers]]
 <!-- related:end -->

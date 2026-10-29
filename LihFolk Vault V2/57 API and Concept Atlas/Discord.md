@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/community, area/marketing]
 > - Avoid: Codes only on Discord. (Discord Servers for Roblox Games)
 > - Avoid: Owner account used daily for plugins, Discord files and testing.
 >
-> Cost: TL;DR ~120 tok · whole note ~600 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~630 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -25,7 +25,7 @@ Discord changes its settings and names often; check menu names against the curre
 
 ## Mentioned in
 
-27 notes in 15 sections. The 25 most relevant are linked:
+29 notes in 16 sections. The 25 most relevant are linked:
 
 ### 03 Architecture and Networking
 [[Cross-Server Messaging]]
@@ -49,7 +49,7 @@ Discord changes its settings and names often; check menu names against the curre
 [[Creator Account Security and Takeover Recovery]]
 
 ### 26 Community and Moderation
-[[Community and Moderation Start Here]] · [[Discord Servers for Roblox Games]] · [[Groups Roles and Permissions for Studios]] · [[Text Chat Customization with TextChatService]] · [[Working with Content Creators]]
+[[Community and Moderation Start Here]] · [[Discord Servers for Roblox Games]] · [[Groups Roles and Permissions for Studios]] · [[Working with Content Creators]]
 
 ### 27 Marketing and Growth
 [[Launch Strategy - The First Two Weeks]] · [[Marketing to Kids and Teens - Age Rules and Paid-Promo Disclosure]] · [[Roblox Communities as Your On-Platform Hub]]
@@ -67,8 +67,11 @@ Discord changes its settings and names often; check menu names against the curre
 [[Friend Invites Referrals and Experience Invites]]
 
 ### 50 Team Collaboration and Project Management
-[[Documentation and Onboarding New Developers]] · [[Working with Contractors and Revenue Splits]]
+[[Documentation and Onboarding New Developers]]
 
-Also mentioned in (not linked): 00 Start Here · Marketing and Growth Start Here
+### 60 High-Craft Game Teardowns
+[[Teardown - Blade Ball]] · [[What Craft Looks Like on Roblox - Lessons from Top Studios]]
+
+Also mentioned in (not linked): 00 Start Here · Marketing and Growth Start Here · Text Chat Customization with TextChatService · Working with Contractors and Revenue Splits
 
 <!-- atlas:generated -->

@@ -316,5 +316,5 @@ Players follow creators into games (Docs). Features that help:
 
 <!-- related:start -->
 ## Related
-[[Genre Playbook - RNG and Collection Games]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Tycoons]] · [[Genre Playbook - Survival and Crafting]] · [[Boss Fight Design Patterns]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - Tower Defense]]
+[[Genre Playbook - RNG and Collection Games]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Tycoons]] · [[Boss Fight Design Patterns]] · [[Genre Playbook - Survival and Crafting]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - Battlegrounds and Arena Fighters]]
 <!-- related:end -->

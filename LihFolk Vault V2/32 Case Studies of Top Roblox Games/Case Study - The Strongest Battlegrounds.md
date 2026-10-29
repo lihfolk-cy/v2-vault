@@ -120,5 +120,5 @@ Sources: https://games.roblox.com/v1/games?universeIds=3808081382 ; https://game
 
 <!-- related:start -->
 ## Related
-[[Case Study - Forsaken]] · [[Case Study - Tower Defense Simulator]] · [[Case Study - Dead Rails]] · [[Case Study - Murder Mystery 2]] · [[Case Study - Blox Fruits]] · [[Case Study - Jailbreak]] · [[Case Study - Steal a Brainrot]] · [[Case Study - Doors]]
+[[Teardown - Jujutsu Shenanigans]] · [[Case Study - Forsaken]] · [[Case Study - Tower Defense Simulator]] · [[Case Study - Dead Rails]] · [[Case Study - Murder Mystery 2]] · [[Case Study - Jailbreak]] · [[Case Study - Blox Fruits]] · [[Case Study - Steal a Brainrot]]
 <!-- related:end -->

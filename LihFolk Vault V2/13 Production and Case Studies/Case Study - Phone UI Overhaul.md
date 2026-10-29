@@ -242,5 +242,5 @@ The overhaul ran over about five days of a UI workstream, interleaved with other
 
 <!-- related:start -->
 ## Related
-[[Debugging UI Layout and Input]] · [[AI Pitfalls - UI and Input]] · [[Team Roles and Workflows]] · [[Case Study - Fast Join and Deferred Loading]] · [[Case Study - Instance Cleanup and Place Size]] · [[Release Process and Rollbacks]] · [[Documentation and Knowledge Bases]] · [[Case Study - Enemy Roster Rebuild]] · [[Planning and Scoping a Roblox Game]] · [[Working with AI Assistants in Studio]]
+[[Debugging UI Layout and Input]] · [[AI Pitfalls - UI and Input]] · [[Team Roles and Workflows]] · [[Case Study - Fast Join and Deferred Loading]] · [[Case Study - Instance Cleanup and Place Size]] · [[Release Process and Rollbacks]] · [[Documentation and Knowledge Bases]] · [[Planning and Scoping a Roblox Game]] · [[Case Study - Enemy Roster Rebuild]] · [[Working with AI Assistants in Studio]]
 <!-- related:end -->

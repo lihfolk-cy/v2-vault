@@ -12,7 +12,7 @@ tags: [game-design, genre, tower-defense, waves, co-op, units, economy, performa
 > - Worst wave of the hardest mode measured: server frame time, bandwidth per player, client memory on a low-end device.
 > - Placement remote validates loadout, cash, caps, bounds, footprint and surface; fuzzed with bad inputs.
 >
-> Cost: TL;DR ~190 tok · whole note ~4.9k tok. Read more: ## 3. Systems you must build · ## 5. The technical risk: enemy count · ## 8. Common mistakes · ## 9. Launch checklist
+> Cost: TL;DR ~190 tok · whole note ~5.0k tok. Read more: ## 3. Systems you must build · ## 5. The technical risk: enemy count · ## 8. Common mistakes · ## 9. Launch checklist
 <!-- tldr:end -->
 
 Tower defense (TD) on Roblox means a team of one to four players placing units ("towers") beside a fixed path while waves of enemies walk it toward a base. It sits between a strategy game and a collection game: the match is a puzzle about placement and money, and the meta-game around it is usually a unit roster you pull, upgrade and evolve. That combination gives TD some of the longest sessions on the platform and some of the hardest technical problems, because a late wave can put hundreds of moving enemies and dozens of firing towers into one server at once.
@@ -261,5 +261,5 @@ Descriptions of common patterns, not copies of any one game:
 
 <!-- related:start -->
 ## Related
-[[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Genre Playbook - Battle Royale]] · [[Genre Playbook - Tycoons]] · [[Genre Playbook - Survival and Crafting]] · [[Genre Playbook - Battlegrounds and Arena Fighters]]
+[[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Teardown - Anime Vanguards]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Party and Minigame Collections]] · [[Onboarding by Genre - The First Five Minutes]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Genre Playbook - Battle Royale]] · [[Genre Playbook - Tycoons]] · [[Genre Playbook - Survival and Crafting]]
 <!-- related:end -->

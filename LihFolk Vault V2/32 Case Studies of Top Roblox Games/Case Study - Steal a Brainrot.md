@@ -13,7 +13,7 @@ tags: [case-study, top-games, simulator, tycoon, idle, pvp, live-ops, monetizati
 > - Are new players protected from much richer players for their first sessions?
 > - Are all steals and purchases validated on the server?
 >
-> Cost: TL;DR ~130 tok · whole note ~4.3k tok. Read more: ## 2. Click-through: title, icon and thumbnails · ## 6. What to copy and what not to copy · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.4k tok. Read more: ## 2. Click-through: title, icon and thumbnails · ## 6. What to copy and what not to copy · ## Checklist
 <!-- tldr:end -->
 
 Steal a Brainrot holds the record for the most concurrent players any single game has ever had. It mixes three familiar ideas: an idle tycoon (things on your base earn money every second), a shop that scrolls past on a conveyor belt, and capture the flag (you can run into another player's base, grab their best unit and carry it home). The theme is "Italian brainrot", a family of absurd AI-generated meme characters that were already viral on TikTok when the game launched.
@@ -209,5 +209,5 @@ Use `workspace:GetServerTimeNow()` for `now` so lock timers shown on clients mat
 
 <!-- related:start -->
 ## Related
-[[Case Study - Adopt Me]] · [[Case Study - Pet Simulator 99]] · [[Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks]] · [[Case Study - Brookhaven RP]] · [[Case Study - Doors]] · [[Case Study - Fisch]] · [[Case Study - Dead Rails]] · [[Case Study - The Strongest Battlegrounds]]
+[[Teardown - Escape Tsunami for Brainrots]] · [[Teardown - Plants vs Brainrots]] · [[Case Study - Adopt Me]] · [[Case Study - Pet Simulator 99]] · [[Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks]] · [[Case Study - Brookhaven RP]] · [[Case Study - Doors]] · [[Case Study - Fisch]] · [[Case Study - Dead Rails]] · [[Case Study - The Strongest Battlegrounds]]
 <!-- related:end -->

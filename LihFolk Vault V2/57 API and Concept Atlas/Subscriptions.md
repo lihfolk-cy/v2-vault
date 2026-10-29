@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/monetization, area/platform]
 > - Subscription benefits distinct from passes; same on every platform.
 > - Transaction Refunded (and Subscription Refunded if relevant) webhooks configured with a secret.
 >
-> Cost: TL;DR ~130 tok · whole note ~870 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~880 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -29,7 +29,7 @@ A subscription stipend is a faucet that never turns off. (from [[Subscriptions a
 
 ## Mentioned in
 
-56 notes in 20 sections. The 25 most relevant are linked:
+57 notes in 21 sections. The 25 most relevant are linked:
 
 ### 03 Architecture and Networking
 [[Cross-Server Messaging]]
@@ -61,6 +61,6 @@ A subscription stipend is a faucet that never turns off. (from [[Subscriptions a
 ### 52 Core Concepts
 [[Event Bus]]
 
-Also mentioned in (not linked): 00 Start Here · Analytics and Funnels · Business and Careers Start Here · Case Study - Brookhaven RP · Case Study - Pet Simulator 99 · Commerce and Physical Goods · Competitor Analysis Method · Creator Account Security and Takeover Recovery · Debugging Client-Server Desync · Debugging Race Conditions and Yield Order · Evaluating AI Tools - A Practical Rubric · Experience Description and Search Keywords · Game Passes · Global State and Live Config · Glossary · Groups Roles and Permissions for Studios · Interest Management and Per-Player Replication · Limited-Time Offers - Design and Ethics · Local vs Cloud AI - Keeping Unreleased Game Code Private · Open Cloud APIs · Open Questions - Whole Vault · Policy and Age Rules 2026 · Resource Library - Monetization · Roblox Studio Assistant · Session Length · Skill - Roblox Monetization Compliance · Sponsored Ads and Campaign Math · Substance Painter and Texturing Tools · Template Reskin Checklist - One Codebase, New Game · Threat Modeling a Roblox Game · Working with Contractors and Revenue Splits
+Also mentioned in (not linked): 00 Start Here · Analytics and Funnels · Business and Careers Start Here · Case Study - Brookhaven RP · Case Study - Pet Simulator 99 · Commerce and Physical Goods · Competitor Analysis Method · Creator Account Security and Takeover Recovery · Debugging Client-Server Desync · Debugging Race Conditions and Yield Order · Evaluating AI Tools - A Practical Rubric · Experience Description and Search Keywords · Game Passes · Global State and Live Config · Glossary · Groups Roles and Permissions for Studios · Interest Management and Per-Player Replication · Limited-Time Offers - Design and Ethics · Local vs Cloud AI - Keeping Unreleased Game Code Private · Open Cloud APIs · Open Questions - Whole Vault · Policy and Age Rules 2026 · Resource Library - Monetization · Roblox Studio Assistant · Session Length · Skill - Roblox Monetization Compliance · Sponsored Ads and Campaign Math · Substance Painter and Texturing Tools · Teardown - PLS DONATE · Template Reskin Checklist - One Codebase, New Game · Threat Modeling a Roblox Game · Working with Contractors and Revenue Splits
 
 <!-- atlas:generated -->

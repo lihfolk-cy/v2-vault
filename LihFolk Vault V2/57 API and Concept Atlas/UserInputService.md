@@ -28,7 +28,7 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 
 ## Mentioned in
 
-77 notes in 30 sections. The 25 most relevant are linked:
+78 notes in 30 sections. The 25 most relevant are linked:
 
 ### 05 UI and UX
 [[Gamepad and Console UX]] · [[Input - UserInputService and ContextActionService]] · [[Notification and Toast Systems]] · [[Responsive UI for Phone Tablet Console and PC]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]]
@@ -46,7 +46,7 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 [[First-Time User Experience and Onboarding]]
 
 ### 12 Performance Testing and Debugging
-[[In-Game Bug Report Button with Automatic Context]] · [[Mobile and Low-End Optimization]] · [[UI Automation with VirtualInput and StudioTestService]]
+[[In-Game Bug Report Button with Automatic Context]] · [[Mobile and Low-End Optimization]]
 
 ### 13 Production and Case Studies
 [[Case Study - Phone UI Overhaul]]
@@ -61,7 +61,7 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 [[Dialogue System End to End]]
 
 ### 42 Accessibility and Inclusive Design
-[[Input Remapping and One-Handed Play]] · [[Readable Text and UI Scale]]
+[[Input Remapping and One-Handed Play]] · [[Onboarding Accessibility and Cross-Device Prompts]] · [[Readable Text and UI Scale]]
 
 ### 46 Resource Library
 [[Links - Input services]]
@@ -78,6 +78,6 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 ### 58 Player QoL and Game Tweaks
 [[Controller Support QoL]] · [[Mobile Button Layout Editor]] · [[Rebinding Controls with the Input Action System]]
 
-Also mentioned in (not linked): 00 Start Here · 2D Collision Physics and Platformer Movement · 2D Multiplayer - Server Authority and Replicating GUI Worlds · A 2D Engine in a ScreenGui - Game Loop Entities and Rendering · Accessibility Start Here · Aim Assist and Generous Hitboxes · Aircraft and Flight Models · Arena Rounds with Teams and Spectating End to End · Camera Settings - FOV Shake Sensitivity and Shift-Lock · Choosing GUI 2D or Locked-Camera 2.5D · Choosing a Car Chassis - Raycast Suspension vs Constraint Builds vs Community Kits · Client Prediction and Reconciliation for Combat · Colourblind Palettes Text Size and Tooltips · Console and VR Release Checklists · Cookbook - UI · Custom Character Controllers · Developer Console and Stats · Drag-and-Drop Inventories and Sliders with UIDragDetector · Emotes and Social Animation · Events Signals and Connections · Field Notes Start Here · First-Person Viewmodels - Arms Rig, Sway and Camera Binding · Functions Closures and Upvalues · Genre Playbook - Battlegrounds and Arena Fighters · Genre Playbook - Shooters FPS and TPS · Genre Playbook - Sports · Graphics and Performance Toggles for Low-End Devices · HUD Design · Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots · Input Buffering · Links - Devices · Making Numbers Feel Good - Cooldowns Buffering and Coyote Time · Melee Combat System End to End · Multi-Seat Vehicles - Driver, Passenger and Gunner Roles · Player QoL Start Here · Plugin UI with DockWidgets · Plugins - Using and Writing · Racing Laps and Checkpoints End to End · ScreenGui Fundamentals · Script Types and Run Context · Server Authority and Input Migration 2026 · Server Authority and Validation · Settings Menu Essentials and Persistence · Shift-Lock Sprint and Gamepad B for Menus · Short-Form Video Marketing · Stance and Charge Moves · Teaching Through Level Design · Testing Modes - Play Run and Multi-Client · Tools and Inventory Systems · Tower Defense Waves and Placement End to End · Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer · Weather Performance Budgets and Quality Tiers
+Also mentioned in (not linked): 00 Start Here · 2D Collision Physics and Platformer Movement · 2D Multiplayer - Server Authority and Replicating GUI Worlds · A 2D Engine in a ScreenGui - Game Loop Entities and Rendering · Accessibility Start Here · Aim Assist and Generous Hitboxes · Aircraft and Flight Models · Arena Rounds with Teams and Spectating End to End · Camera Settings - FOV Shake Sensitivity and Shift-Lock · Choosing GUI 2D or Locked-Camera 2.5D · Choosing a Car Chassis - Raycast Suspension vs Constraint Builds vs Community Kits · Client Prediction and Reconciliation for Combat · Colourblind Palettes Text Size and Tooltips · Console and VR Release Checklists · Cookbook - UI · Custom Character Controllers · Developer Console and Stats · Drag-and-Drop Inventories and Sliders with UIDragDetector · Emotes and Social Animation · Events Signals and Connections · Field Notes Start Here · First-Person Viewmodels - Arms Rig, Sway and Camera Binding · Functions Closures and Upvalues · Genre Playbook - Battlegrounds and Arena Fighters · Genre Playbook - Shooters FPS and TPS · Genre Playbook - Sports · Graphics and Performance Toggles for Low-End Devices · HUD Design · Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots · Input Buffering · Links - Devices · Making Numbers Feel Good - Cooldowns Buffering and Coyote Time · Melee Combat System End to End · Multi-Seat Vehicles - Driver, Passenger and Gunner Roles · Player QoL Start Here · Plugin UI with DockWidgets · Plugins - Using and Writing · Racing Laps and Checkpoints End to End · ScreenGui Fundamentals · Script Types and Run Context · Server Authority and Input Migration 2026 · Server Authority and Validation · Settings Menu Essentials and Persistence · Shift-Lock Sprint and Gamepad B for Menus · Short-Form Video Marketing · Stance and Charge Moves · Teaching Through Level Design · Testing Modes - Play Run and Multi-Client · Tools and Inventory Systems · Tower Defense Waves and Placement End to End · UI Automation with VirtualInput and StudioTestService · Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer · Weather Performance Budgets and Quality Tiers
 
 <!-- atlas:generated -->

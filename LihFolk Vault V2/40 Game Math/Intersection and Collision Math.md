@@ -442,5 +442,5 @@ This ignores `Rotation` on the GUI objects and any clipping by parents; for a dr
 
 <!-- related:start -->
 ## Related
-[[Rotations Angles and Quaternions]] · [[Math Vectors and CFrames]] · [[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]] · [[Curves in Luau - Paths Beams and Motion]] · [[Interpolation Easing and Curves Math]] · [[Probability and Statistics for Designers]]
+[[Math Vectors and CFrames]] · [[Rotations Angles and Quaternions]] · [[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]] · [[Curves in Luau - Paths Beams and Motion]] · [[Interpolation Easing and Curves Math]] · [[Probability and Statistics for Designers]]
 <!-- related:end -->

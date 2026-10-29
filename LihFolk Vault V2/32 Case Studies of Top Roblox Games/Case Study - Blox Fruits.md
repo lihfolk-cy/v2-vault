@@ -213,5 +213,5 @@ Two factions, three islands with quest givers and one boss each, a level cap of 
 
 <!-- related:start -->
 ## Related
-[[Case Study - Fisch]] · [[Case Study - Pet Simulator 99]] · [[Case Study - Steal a Brainrot]] · [[Case Study - Doors]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - The Strongest Battlegrounds]] · [[Case Study - Jailbreak]] · [[Case Study - Dead Rails]]
+[[Case Study - Pet Simulator 99]] · [[Case Study - Fisch]] · [[Case Study - Steal a Brainrot]] · [[Case Study - Doors]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - Jailbreak]] · [[Case Study - The Strongest Battlegrounds]] · [[Case Study - Murder Mystery 2]]
 <!-- related:end -->

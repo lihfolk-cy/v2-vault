@@ -235,5 +235,5 @@ Keep a human on: taste, play-testing, publishing, and anything irreversible.
 
 <!-- related:start -->
 ## Related
-[[MCP Workflows for Building Worlds]] · [[MCP Workflows for Scripting and Debugging]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[AI Code Assistants for Luau]] · [[Evaluating AI Tools - A Practical Rubric]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Agent Orchestration - Sub-Agents, Hooks and Skill Costs]] · [[Windows Tooling Pitfalls for Agent Pipelines]] · [[AI Asset Pipelines - Scoring, Reviewers and Spot Checks]]
+[[MCP Workflows for Building Worlds]] · [[MCP Workflows for Scripting and Debugging]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[AI Code Assistants for Luau]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Evaluating AI Tools - A Practical Rubric]] · [[Agent Orchestration - Sub-Agents, Hooks and Skill Costs]] · [[Windows Tooling Pitfalls for Agent Pipelines]] · [[AI Asset Pipelines - Scoring, Reviewers and Spot Checks]] · [[AI Image Generation for Icons Thumbnails and Concepts]]
 <!-- related:end -->

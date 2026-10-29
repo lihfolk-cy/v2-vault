@@ -6,7 +6,7 @@ tags: [index, start, type/hub, level/beginner, api/Terrain, api/Animator, api/Da
 
 A field guide to **every aspect of making games in Roblox Studio**, written at senior-developer depth: Studio and workflow, Luau, architecture and networking, data, UI, world building, lighting/VFX/audio, animation, gameplay systems, game design, monetization and live ops, performance and testing, production, 3D modeling, AI tools, MCP and AI agents, and pipelines.
 
-About 1,290 notes (roughly twenty-five thick textbooks of original LihFolk writing), plus 9 skeleton rigs, 10 concept sheets, procedural Blender assets, and the LihFolk Claude Code plugin with 19 AI skills. The visual home page is [[000 Home]].
+About 1,340 notes (roughly twenty-five thick textbooks of original LihFolk writing), plus 9 skeleton rigs, 10 concept sheets, procedural Blender assets, and the LihFolk Claude Code plugin with 21 AI skills. The visual home page is [[000 Home]].
 
 ## How to read the labels
 - **Roblox docs**: the official engine reference and Creator Hub guides, checked in October 2026. Roblox changes fast, so anything marked "as of October 2026" (prices, payouts, policies, betas) is worth rechecking.

@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/design, area/monetization]
 > - Every paid random item and luck modifier shows numeric odds summing to 100% before purchase.
 > - Any paid random item shows numerical odds for every outcome before purchase.
 >
-> Cost: TL;DR ~140 tok · whole note ~1.0k tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~1.2k tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -25,7 +25,7 @@ A paid random item is a random outcome bought directly or indirectly with Robux,
 
 ## Mentioned in
 
-75 notes in 24 sections. The 25 most relevant are linked:
+98 notes in 26 sections. The 25 most relevant are linked:
 
 ### 10 Game Design and Genres
 [[Ethical Design and Player Trust]] · [[Genre Playbook - RNG and Collection Games]] · [[Genre Playbook - Shooters FPS and TPS]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Tower Defense]] · [[Retention and Return Hooks]]
@@ -40,7 +40,7 @@ A paid random item is a random outcome bought directly or indirectly with Robux,
 [[AI Pitfalls - Data and Monetization]]
 
 ### 24 Worked Builds
-[[LihFolk Systems - Data and Purchase Guarantees]] · [[LihFolk Systems Library]] · [[Pet Hatching and Following End to End]]
+[[Pet Hatching and Following End to End]]
 
 ### 27 Marketing and Growth
 [[Competitor Analysis Method]]
@@ -57,9 +57,12 @@ A paid random item is a random outcome bought directly or indirectly with Robux,
 ### 49 Roblox Platform Features
 [[Policy and Age Rules 2026]] · [[Regional Compliance - Paid Random Items and Country Rules]]
 
-### 52 Core Concepts
-[[Pity Timer]]
+### 59 Viral and Trend Game Teardowns
+[[Teardown - Fish It]] · [[Teardown - Tap Simulator REBORN]]
 
-Also mentioned in (not linked): 00 Start Here · A-B Testing and Experiments on Roblox · AvatarEditorService and In-Game Avatar Editors · Avatars and UGC Start Here · Balancing with Spreadsheets and Data · Case Study - Adopt Me · Case Study - Grow a Garden · Case Study - Murder Mystery 2 · Case Study - Pet Simulator 99 · Case Study - Steal a Brainrot · Case Study - The Strongest Battlegrounds · Case Study - Tower Defense Simulator · Commissions Pricing and Contracts · Confirmation and Undo Patterns for Destructive and Paid Actions · Cookbook - Tables Strings and Time · Developer Products and ProcessReceipt · Economy Design Start Here · Expected Value · Game Feel Start Here · Game Passes · Genre Playbook - Roleplay and Social Hangouts · Genre Playbook - Social Deduction and Murder Mystery · Genre Playbook - Zombie and Wave Survival Co-op · Live Ops Deep Dive Start Here · Making Numbers Feel Good - Cooldowns Buffering and Coyote Time · Monetization Overview · Open Questions - Whole Vault · Patch Notes and Player Communication · Player-Driven Trading Economies · Pricing and Store Design · Probability and Statistics for Designers · Procedural Loot and Item Generation · QA Checklists Before Release · RNG Drops and Luck Systems · Rarity Ladders and Drop Pacing Math · Reward Moments and Celebrations · Roadmaps Milestones and Scope Control · Roblox Changes 2025-2026 · Running a Small Studio as a Business · Ship a Game in 30 Days - Week-by-Week Plan for a Solo Dev · Shop with Game Passes and Developer Products End to End · Simulator and RNG Genre Teardown · Skill - Roblox Monetization Compliance · Social Design and Multiplayer Play · Template Reskin Checklist - One Codebase, New Game · Threat Modeling a Roblox Game · Token Cost Benchmarks · Trading Systems Without Duplication · Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback · What AI Models Get Wrong in Roblox
+### 60 High-Craft Game Teardowns
+[[Teardown - Anime Vanguards]]
+
+Also mentioned in (not linked): 00 Start Here · A-B Testing and Experiments on Roblox · AvatarEditorService and In-Game Avatar Editors · Avatars and UGC Start Here · Balancing with Spreadsheets and Data · Case Study - Adopt Me · Case Study - Grow a Garden · Case Study - Murder Mystery 2 · Case Study - Pet Simulator 99 · Case Study - Steal a Brainrot · Case Study - The Strongest Battlegrounds · Case Study - Tower Defense Simulator · Commissions Pricing and Contracts · Confirmation and Undo Patterns for Destructive and Paid Actions · Cookbook - Tables Strings and Time · Developer Products and ProcessReceipt · Economy Design Start Here · Expected Value · Game Feel Start Here · Game Passes · Genre Playbook - Roleplay and Social Hangouts · Genre Playbook - Social Deduction and Murder Mystery · Genre Playbook - Zombie and Wave Survival Co-op · High-Craft Teardowns Start Here · LihFolk Systems - Data and Purchase Guarantees · LihFolk Systems Library · Live Ops Deep Dive Start Here · Making Numbers Feel Good - Cooldowns Buffering and Coyote Time · Monetization Overview · Open Questions - Whole Vault · Patch Notes and Player Communication · Pity Timer · Player-Driven Trading Economies · Pricing and Store Design · Probability and Statistics for Designers · Procedural Loot and Item Generation · QA Checklists Before Release · RNG Drops and Luck Systems · Rarity Ladders and Drop Pacing Math · Reward Moments and Celebrations · Roadmaps Milestones and Scope Control · Roblox Changes 2025-2026 · Running a Small Studio as a Business · Ship a Game in 30 Days - Week-by-Week Plan for a Solo Dev · Shop with Game Passes and Developer Products End to End · Simulator and RNG Genre Teardown · Skill - Roblox Monetization Compliance · Social Design and Multiplayer Play · Teardown - +1 Speed Keyboard Escape · Teardown - Apocalypse Rising 2 · Teardown - BedWars · Teardown - Bee Swarm Simulator · Teardown - Blade Ball · Teardown - Build A Boat For Treasure · Teardown - Escape Tsunami for Brainrots · Teardown - Ink Game · Teardown - PLS DONATE · Teardown - Phantom Forces · Teardown - Piggy · Teardown - Plants vs Brainrots · Teardown - Pressure · Teardown - Ride A Pet · Teardown - Sol's RNG · Teardown - Steal An Egg · Template Reskin Checklist - One Codebase, New Game · Threat Modeling a Roblox Game · Token Cost Benchmarks · Trading Systems Without Duplication · Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback · Viral Game Anatomy - Hooks, Loops and Timing · Viral and Trend Teardowns Start Here · What AI Models Get Wrong in Roblox · What Craft Looks Like on Roblox - Lessons from Top Studios
 
 <!-- atlas:generated -->

@@ -60,5 +60,5 @@ Related concepts: [[Thumbnail Contrast]], [[Onboarding Funnel]], [[Retention Coh
 
 <!-- related:start -->
 ## Related
-[[Launch Strategy - The First Two Weeks]] · [[Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics]] · [[Session Length]] · [[Telemetry Events]] · [[Core Loop]] · [[Feature Flags]] · [[Expected Value]] · [[Safe Area]] · [[Texel Density]] · [[Draw Calls]]
+[[Launch Strategy - The First Two Weeks]] · [[Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics]] · [[Session Length]] · [[Telemetry Events]] · [[Core Loop]] · [[Expected Value]] · [[Feature Flags]] · [[Safe Area]] · [[Texel Density]] · [[Draw Calls]]
 <!-- related:end -->

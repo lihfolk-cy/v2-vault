@@ -368,5 +368,5 @@ See also: [[Sound Design for Games]], [[Sound Fundamentals]], [[The Audio API - 
 
 <!-- related:start -->
 ## Related
-[[Audio Mixer Settings with SoundGroups]] · [[Feedback Timing - Sound Visual and Haptic Sync]] · [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Engine and Tyre Audio Driven by RPM and Slip]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[VFX Design Playbook]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Music Licensing and Audio Upload Rules for 2026]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]]
+[[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Audio Mixer Settings with SoundGroups]] · [[Feedback Timing - Sound Visual and Haptic Sync]] · [[Engine and Tyre Audio Driven by RPM and Slip]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[VFX Design Playbook]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Music Licensing and Audio Upload Rules for 2026]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]]
 <!-- related:end -->

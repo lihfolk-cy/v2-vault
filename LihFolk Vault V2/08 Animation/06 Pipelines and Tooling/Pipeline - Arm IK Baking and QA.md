@@ -220,5 +220,5 @@ These came out of reading hundreds of failing strips. They are authoring rules a
 
 <!-- related:start -->
 ## Related
-[[Pipeline - New Animated Weapon]] · [[LihFolk R15 Keyframe Pipeline]] · [[Testing Animations in Studio]] · [[Authoring Clips in Code]] · [[Keyframes, Easing and Interpolation]] · [[Animation Data from Blender to Roblox]] · [[Baked Clip Stubs and Archiving]] · [[Blade Grip and Wrist Limits]]
+[[Pipeline - New Animated Weapon]] · [[LihFolk R15 Keyframe Pipeline]] · [[Authoring Clips in Code]] · [[Testing Animations in Studio]] · [[Keyframes, Easing and Interpolation]] · [[Animation Data from Blender to Roblox]] · [[Baked Clip Stubs and Archiving]] · [[Blade Grip and Wrist Limits]]
 <!-- related:end -->

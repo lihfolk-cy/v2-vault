@@ -171,5 +171,5 @@ Route music tracks into `MusicDuck` (a child of Music), so the player's slider a
 
 <!-- related:start -->
 ## Related
-[[Combat Sound Design and Feedback]] · [[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]] · [[Accessibility Cross-Links for QoL Settings]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Graphics and Performance Toggles for Low-End Devices]] · [[UI Scale HUD Hide and Compact Mode]] · [[Mobile Button Layout Editor]] · [[Block and Mute Respecting Platform Rules]]
+[[Combat Sound Design and Feedback]] · [[QoL Audit Checklist]] · [[Accessibility Cross-Links for QoL Settings]] · [[Top 25 QoL Wins by Effort]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Graphics and Performance Toggles for Low-End Devices]] · [[UI Scale HUD Hide and Compact Mode]] · [[Mobile Button Layout Editor]] · [[Block and Mute Respecting Platform Rules]]
 <!-- related:end -->

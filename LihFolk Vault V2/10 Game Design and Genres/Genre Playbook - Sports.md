@@ -251,5 +251,5 @@ Patterns, not copies:
 
 <!-- related:start -->
 ## Related
-[[Genre Playbook - Battle Royale]] · [[Genre Playbook - Social Deduction and Murder Mystery]] · [[Genre Playbook - Obbies and Platformers]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Open-World City and Crime Roleplay]] · [[Genre Playbook - Naval and Open-Sea Adventure]] · [[Genre Playbook - Tycoons]]
+[[Genre Playbook - Battle Royale]] · [[Genre Playbook - Social Deduction and Murder Mystery]] · [[Genre Playbook - Obbies and Platformers]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Naval and Open-Sea Adventure]] · [[Genre Playbook - Open-World City and Crime Roleplay]] · [[Genre Playbook - Tycoons]]
 <!-- related:end -->

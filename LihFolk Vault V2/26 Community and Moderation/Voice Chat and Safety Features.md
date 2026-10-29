@@ -221,5 +221,5 @@ Enable Camera (Experience Settings, Communication) lets eligible players animate
 
 <!-- related:start -->
 ## Related
-[[Block and Mute Respecting Platform Rules]] · [[Working with Content Creators]] · [[AI Audio - Voice Music and SFX]] · [[Community Building]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[In-Game AI - LLM NPCs and Text Generation]]
+[[Block and Mute Respecting Platform Rules]] · [[AI Audio - Voice Music and SFX]] · [[Working with Content Creators]] · [[Community Building]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Policy and Age Rules 2026]]
 <!-- related:end -->

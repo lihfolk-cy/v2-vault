@@ -281,5 +281,5 @@ Rule of thumb: one module per system or concept, typically 100 to 1,500 lines. M
 
 <!-- related:start -->
 ## Related
-[[Dependency Injection in Luau]] · [[Luau Type System and Strict Mode]] · [[Metatables and OOP - When and When Not]] · [[Events Signals and Connections]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Luau Performance and Native Codegen]] · [[CollectionService Patterns]] · [[Task Library Coroutines and Yielding]] · [[Error Handling and Retries]]
+[[Dependency Injection in Luau]] · [[Luau Type System and Strict Mode]] · [[Metatables and OOP - When and When Not]] · [[Events Signals and Connections]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Luau Performance and Native Codegen]] · [[CollectionService Patterns]] · [[Task Library Coroutines and Yielding]] · [[Instances Attributes and Tags]]
 <!-- related:end -->

@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/networking, area/performance, api/PlayerRemo
 > - Avoid: `BindToClose` and `PlayerRemoving` saving the same profile... -> Per-player save serialisation; idempotent saves.
 > - Avoid: Per-player tables with no `PlayerRemoving` cleanup.
 >
-> Cost: TL;DR ~150 tok · whole note ~910 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~930 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -29,7 +29,7 @@ API snapshot: member of `Players` (`_tools/roblox_api.json`, docs build of 2026-
 
 ## Mentioned in
 
-48 notes in 19 sections. The 25 most relevant are linked:
+50 notes in 20 sections. The 25 most relevant are linked:
 
 ### 02 Luau Scripting
 [[Events Signals and Connections]] · [[Functions Closures and Upvalues]] · [[Metatables and OOP - When and When Not]]
@@ -73,6 +73,6 @@ API snapshot: member of `Players` (`_tools/roblox_api.json`, docs build of 2026-
 ### 50 Team Collaboration and Project Management
 [[Code Review for Luau Teams]]
 
-Also mentioned in (not linked): Developer Products and ProcessReceipt · Genre Systems Start Here · Horror Monster Chase AI End to End · In-Game Bug Report Button with Automatic Context · Instanced Interiors - Pooled House and Room Copies for Many Players · LihFolk Systems - Data and Purchase Guarantees · Load and Soak Testing Servers - Long Sessions and Many Clients · Luau Cookbook Start Here · Luau Garbage Collection and the Memory Model · Luau Performance and Native Codegen · Map Voting and Rotation for Round Games · Matchmaking Queues with MemoryStore · Physics Performance · Rate Limiting · Remote Abuse Patterns and Rate Limiting in Practice · RemoteEvents RemoteFunctions and Unreliable Remotes · Round-Based Minigame Loop End to End · Session Locking and Profile Libraries · Squad AI - Attack Tokens, Flanking and Attacker Limits · Teleporting and Multi-Place Games · Testing Your Own Remotes - Fuzzing and Abuse Tests · Trading Systems Without Duplication · Weekend Build - Roleplay Town with Jobs and Paychecks
+Also mentioned in (not linked): Developer Products and ProcessReceipt · Genre Systems Start Here · Horror Monster Chase AI End to End · In-Game Bug Report Button with Automatic Context · Instanced Interiors - Pooled House and Room Copies for Many Players · LihFolk Systems - Data and Purchase Guarantees · Load and Soak Testing Servers - Long Sessions and Many Clients · Luau Cookbook Start Here · Luau Garbage Collection and the Memory Model · Luau Performance and Native Codegen · Map Voting and Rotation for Round Games · Matchmaking Queues with MemoryStore · Measuring Onboarding - Funnels, Drop-off and A-B Tests · Physics Performance · Rate Limiting · Remote Abuse Patterns and Rate Limiting in Practice · RemoteEvents RemoteFunctions and Unreliable Remotes · Round-Based Minigame Loop End to End · Session Locking and Profile Libraries · Squad AI - Attack Tokens, Flanking and Attacker Limits · Teardown - Tap Simulator REBORN · Teleporting and Multi-Place Games · Testing Your Own Remotes - Fuzzing and Abuse Tests · Trading Systems Without Duplication · Weekend Build - Roleplay Town with Jobs and Paychecks
 
 <!-- atlas:generated -->

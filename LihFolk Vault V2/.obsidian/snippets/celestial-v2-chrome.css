@@ -1,0 +1,129 @@
+/* LihFolk Vault V2: Celestial chrome.
+   Carries the cosmic look into the rest of the app: side panels (file list, search, bookmarks, backlinks,
+   outline), the ribbon, tab bar, status bar, menus, modals and scrollbars. Twinkling stars and soft nebula,
+   glassy surfaces, glowing active items. Extends the Celestial snippets; motion follows reduced-motion. */
+
+body.theme-dark {
+  --lf-stars: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='480' viewBox='0 0 320 480'%3E%3Ccircle cx='239' cy='315' r='0.9' fill='%23ffd9f3'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='2.5s' begin='3.5s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='5' cy='175' r='1.1' fill='%23ffd36e'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='2.3s' begin='2.2s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='317' cy='360' r='0.5' fill='%23c79bff'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='3.3s' begin='2.8s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='233' cy='373' r='1.1' fill='%23cfe0ff'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='2.6s' begin='0.2s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='69' cy='261' r='0.5' fill='%237dffbf'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='4.4s' begin='3.2s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='54' cy='472' r='0.9' fill='%23cfe0ff'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='4.4s' begin='2.9s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='217' cy='457' r='0.5' fill='%237dffbf'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='2.9s' begin='0.8s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='145' cy='176' r='0.5' fill='%23cfe0ff'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='4.5s' begin='0.0s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='212' cy='30' r='1.1' fill='%237dffbf'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='3.7s' begin='0.1s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='219' cy='378' r='0.5' fill='%23ffd36e'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='2.0s' begin='3.1s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='103' cy='460' r='0.7' fill='%23ffd9f3'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='2.0s' begin='0.3s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='278' cy='471' r='0.5' fill='%23ffd36e'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='2.3s' begin='2.0s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='103' cy='217' r='0.5' fill='%237fe3ff'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='2.7s' begin='3.1s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='298' cy='76' r='0.7' fill='%23ffd36e'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='4.5s' begin='0.2s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='140' cy='286' r='0.7' fill='%23c79bff'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='2.9s' begin='4.0s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='19' cy='64' r='1.1' fill='%23cfe0ff'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='2.6s' begin='2.0s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='189' cy='434' r='0.5' fill='%237dffbf'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='3.2s' begin='3.5s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='301' cy='189' r='1.1' fill='%23cfe0ff'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='3.4s' begin='3.9s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='296' cy='383' r='0.5' fill='%237fe3ff'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='4.8s' begin='1.3s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='223' cy='59' r='0.7' fill='%23cfe0ff'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='3.6s' begin='1.3s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='47' cy='159' r='0.9' fill='%23ffffff'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='3.8s' begin='0.2s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='197' cy='401' r='1.1' fill='%237fe3ff'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='3.2s' begin='3.1s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='291' cy='379' r='0.5' fill='%237fe3ff'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='4.3s' begin='0.4s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='207' cy='263' r='0.9' fill='%237dffbf'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='4.0s' begin='0.6s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='150' cy='89' r='0.9' fill='%23ffffff'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='2.2s' begin='3.9s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='90' cy='136' r='0.7' fill='%23ffffff'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='4.1s' begin='0.0s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='33' cy='232' r='0.7' fill='%237dffbf'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='3.4s' begin='2.4s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='183' cy='147' r='0.7' fill='%237fe3ff'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='4.0s' begin='0.5s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='46' cy='384' r='0.9' fill='%23c79bff'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='2.4s' begin='1.7s' repeatCount='indefinite'/%3E%3C/circle%3E%3Ccircle cx='74' cy='362' r='1.1' fill='%23ffd36e'%3E%3Canimate attributeName='opacity' values='.85%3B.15%3B.85' dur='5.1s' begin='0.7s' repeatCount='indefinite'/%3E%3C/circle%3E%3Cpath d='M150 402Q150.5 404.5 153 405Q150.5 405.5 150 408Q149.5 405.5 147 405Q149.5 404.5 150 402Z' fill='%23ffd36e'%3E%3Canimate attributeName='opacity' values='1%3B.2%3B1' dur='3.7s' begin='0.3s' repeatCount='indefinite'/%3E%3C/path%3E%3Cpath d='M34 148Q34.5 150.5 37 151Q34.5 151.5 34 154Q33.5 151.5 31 151Q33.5 150.5 34 148Z' fill='%23cfe0ff'%3E%3Canimate attributeName='opacity' values='1%3B.2%3B1' dur='2.9s' begin='1.9s' repeatCount='indefinite'/%3E%3C/path%3E%3Cpath d='M53 91Q53.4 92.6 55 93Q53.4 93.4 53 95Q52.6 93.4 51 93Q52.6 92.6 53 91Z' fill='%237dffbf'%3E%3Canimate attributeName='opacity' values='1%3B.2%3B1' dur='2.5s' begin='0.5s' repeatCount='indefinite'/%3E%3C/path%3E%3Cpath d='M243 309Q243.5 311.5 246 312Q243.5 312.5 243 315Q242.5 312.5 240 312Q242.5 311.5 243 309Z' fill='%23ffd36e'%3E%3Canimate attributeName='opacity' values='1%3B.2%3B1' dur='3.5s' begin='0.5s' repeatCount='indefinite'/%3E%3C/path%3E%3Cpath d='M256 310.5Q256.4 312.6 258.5 313Q256.4 313.4 256 315.5Q255.6 313.4 253.5 313Q255.6 312.6 256 310.5Z' fill='%23ffd36e'%3E%3Canimate attributeName='opacity' values='1%3B.2%3B1' dur='2.7s' begin='2.0s' repeatCount='indefinite'/%3E%3C/path%3E%3C/svg%3E");
+  --lf-panel: linear-gradient(180deg, rgba(22, 14, 46, .92), rgba(9, 7, 22, .96));
+  --lf-glass: rgba(24, 16, 52, .62);
+  --lf-edge: rgba(185, 162, 255, .22);
+  --lf-glow-violet: 155, 123, 255;
+  --lf-glow-cyan: 127, 227, 255;
+  --lf-glow-pink: 255, 120, 220;
+}
+
+/* side panels: starfield over a violet-to-midnight nebula */
+body.theme-dark .workspace-split.mod-left-split,
+body.theme-dark .workspace-split.mod-right-split {
+  background:
+    var(--lf-stars) 0 0 / 320px 480px repeat,
+    radial-gradient(ellipse 120% 40% at 0% 0%, rgba(124, 82, 255, .22), transparent 70%),
+    radial-gradient(ellipse 120% 35% at 100% 100%, rgba(255, 90, 200, .12), transparent 70%),
+    radial-gradient(ellipse 100% 30% at 50% 55%, rgba(64, 200, 255, .07), transparent 70%),
+    var(--lf-panel) !important;
+}
+body.theme-dark .workspace-split.mod-left-split .workspace-leaf-content,
+body.theme-dark .workspace-split.mod-right-split .workspace-leaf-content,
+body.theme-dark .workspace-split.mod-left-split .view-content,
+body.theme-dark .workspace-split.mod-right-split .view-content,
+body.theme-dark .workspace-split.mod-left-split .workspace-tab-container,
+body.theme-dark .workspace-split.mod-right-split .workspace-tab-container,
+body.theme-dark .workspace-split.mod-left-split .workspace-leaf,
+body.theme-dark .workspace-split.mod-right-split .workspace-leaf,
+body.theme-dark .nav-files-container { background: transparent !important; }
+
+/* panel header strip and nav buttons: glass */
+body.theme-dark .workspace-split.mod-left-split .workspace-tab-header-container,
+body.theme-dark .workspace-split.mod-right-split .workspace-tab-header-container,
+body.theme-dark .nav-header {
+  background: var(--lf-glass) !important; backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--lf-edge) !important;
+}
+body.theme-dark .nav-action-button:hover, body.theme-dark .clickable-icon:hover {
+  background: rgba(var(--lf-glow-violet), .18) !important; box-shadow: 0 0 12px -2px rgba(var(--lf-glow-violet), .55);
+}
+
+/* file list: soft hover shimmer and a glowing active file */
+body.theme-dark .nav-file-title, body.theme-dark .nav-folder-title { border-radius: 8px; transition: background .2s, box-shadow .2s; }
+body.theme-dark .nav-file-title:hover, body.theme-dark .nav-folder-title:hover {
+  background: linear-gradient(90deg, rgba(var(--lf-glow-violet), .20), rgba(var(--lf-glow-cyan), .08) 70%, transparent) !important;
+}
+body.theme-dark .nav-file-title.is-active {
+  background: linear-gradient(90deg, rgba(var(--lf-glow-pink), .28), rgba(var(--lf-glow-violet), .22) 55%, rgba(var(--lf-glow-cyan), .10)) !important;
+  box-shadow: inset 2px 0 0 #ff8be0, 0 0 14px -4px rgba(var(--lf-glow-pink), .7);
+  color: #fff !important;
+}
+body.theme-dark .tree-item-children { border-left-color: rgba(var(--lf-glow-violet), .22) !important; }
+
+/* ribbon: a thin column of night sky */
+body.theme-dark .workspace-ribbon.mod-left {
+  background: var(--lf-stars) 0 0 / 320px 480px repeat, linear-gradient(180deg, #1a1036, #07061a) !important;
+  border-right: 1px solid var(--lf-edge) !important;
+}
+body.theme-dark .side-dock-ribbon-action:hover { color: #fff !important; filter: drop-shadow(0 0 6px rgba(var(--lf-glow-cyan), .9)); }
+
+/* tab bar: glass strip, active tab with an aurora underline */
+body.theme-dark .mod-root .workspace-tab-header-container {
+  background: linear-gradient(90deg, rgba(30, 18, 64, .85), rgba(12, 10, 30, .9)) !important;
+  border-bottom: 1px solid var(--lf-edge) !important;
+}
+body.theme-dark .mod-root .workspace-tab-header.is-active {
+  background: linear-gradient(180deg, rgba(var(--lf-glow-violet), .22), rgba(var(--lf-glow-violet), .06)) !important;
+}
+body.theme-dark .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner { position: relative; }
+body.theme-dark .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner::after {
+  content: ""; position: absolute; left: 10%; right: 10%; bottom: 0; height: 2px; border-radius: 2px; pointer-events: none;
+  background: linear-gradient(90deg, #7fe3ff, #c79bff, #ff8be0, #ffd36e, #7fe3ff); background-size: 300% 100%;
+  box-shadow: 0 0 10px rgba(var(--lf-glow-violet), .9);
+  animation: lf-aurora 6s linear infinite;
+}
+@keyframes lf-aurora { to { background-position: 300% 0; } }
+
+/* status bar: floating glass pill */
+body.theme-dark .status-bar {
+  background: rgba(20, 14, 44, .72) !important; backdrop-filter: blur(10px);
+  border: 1px solid var(--lf-edge) !important; border-radius: 12px 0 0 0;
+  box-shadow: 0 0 22px -6px rgba(var(--lf-glow-violet), .6);
+}
+
+/* menus, popovers, command palette, suggestion lists and modals: starry glass */
+body.theme-dark .menu, body.theme-dark .popover, body.theme-dark .suggestion-container, body.theme-dark .prompt, body.theme-dark .modal {
+  background: var(--lf-stars) 0 0 / 320px 480px repeat, linear-gradient(160deg, rgba(30, 18, 66, .96), rgba(10, 8, 26, .97)) !important;
+  border: 1px solid var(--lf-edge) !important;
+  box-shadow: 0 18px 48px -12px rgba(0, 0, 0, .8), 0 0 30px -8px rgba(var(--lf-glow-violet), .55) !important;
+}
+body.theme-dark .menu-item.selected, body.theme-dark .suggestion-item.is-selected {
+  background: linear-gradient(90deg, rgba(var(--lf-glow-violet), .30), rgba(var(--lf-glow-cyan), .12)) !important;
+}
+body.theme-dark .modal-bg { background: radial-gradient(ellipse at 50% 40%, rgba(60, 30, 120, .45), rgba(4, 3, 12, .82)) !important; }
+
+/* search and backlink results */
+body.theme-dark .search-result-file-title:hover, body.theme-dark .tree-item-self.is-clickable:hover {
+  background: rgba(var(--lf-glow-violet), .16) !important;
+}
+body.theme-dark .search-result-file-matched-text { background: rgba(255, 211, 110, .28) !important; color: #fff3cf !important; border-radius: 3px; }
+
+/* scrollbars: thin comet-trail thumbs */
+body.theme-dark ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(127, 227, 255, .55), rgba(199, 155, 255, .55), rgba(255, 139, 224, .55)) !important;
+  border-radius: 8px; border: 2px solid transparent; background-clip: padding-box;
+}
+body.theme-dark ::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #7fe3ff, #c79bff, #ff8be0) !important; background-clip: padding-box; }
+
+@media (prefers-reduced-motion: reduce) {
+  body.theme-dark .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner::after { animation: none; }
+}
+
+/* the side panels are drawn as rounded HUD cards (celestial-v2-hud): put the starfield inside the card,
+   keeping its top accent line */
+body.theme-dark .workspace-split.mod-left-split .workspace-tabs,
+body.theme-dark .workspace-split.mod-right-split .workspace-tabs {
+  background:
+    linear-gradient(90deg, transparent, rgba(64, 217, 255, .55) 30%, rgba(155, 123, 255, .6) 70%, transparent) top / 100% 1px no-repeat,
+    var(--lf-stars) 0 0 / 320px 480px repeat,
+    radial-gradient(ellipse 130% 35% at 0% 0%, rgba(124, 82, 255, .30), transparent 70%),
+    radial-gradient(ellipse 130% 30% at 100% 100%, rgba(255, 90, 200, .16), transparent 70%),
+    radial-gradient(ellipse 110% 25% at 50% 55%, rgba(64, 200, 255, .09), transparent 70%),
+    linear-gradient(180deg, rgba(26, 18, 56, .9), rgba(10, 8, 24, .94)) !important;
+}

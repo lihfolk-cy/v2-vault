@@ -106,5 +106,5 @@ The blade must sit **25 to 75 degrees off the shoulder-to-hand line, on the thum
 
 <!-- related:start -->
 ## Related
-[[Human Swing Biomechanics]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Animation Quality Standard]] · [[Elbow Poles Swivel and Joint Limits]] · [[Posing and Silhouettes]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[Spec-Driven Move Authoring]] · [[Spin and Whole-Body Rotation Moves]]
+[[Human Swing Biomechanics]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Animation Quality Standard]] · [[Elbow Poles Swivel and Joint Limits]] · [[Posing and Silhouettes]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[Spec-Driven Move Authoring]] · [[Case Study - Fixing Hundreds of Attack Clips]]
 <!-- related:end -->

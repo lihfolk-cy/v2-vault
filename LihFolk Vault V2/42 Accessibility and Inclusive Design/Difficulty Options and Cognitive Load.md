@@ -329,5 +329,5 @@ See also: [[Accessibility Start Here]], [[Accessibility]], [[First-Time User Exp
 
 <!-- related:start -->
 ## Related
-[[Accessibility Cross-Links for QoL Settings]] · [[Core Loops and Session Design]] · [[Captions and Audio Accessibility]] · [[Readable Text and UI Scale]] · [[Motion Sensitivity and Camera Comfort]] · [[Colour-Blind Safe Design]]
+[[Accessibility Cross-Links for QoL Settings]] · [[Onboarding Accessibility and Cross-Device Prompts]] · [[Obby and Platforming Level Design]] · [[Captions and Audio Accessibility]] · [[Readable Text and UI Scale]] · [[Motion Sensitivity and Camera Comfort]] · [[Colour-Blind Safe Design]]
 <!-- related:end -->

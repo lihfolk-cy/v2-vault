@@ -69,5 +69,5 @@ Related concepts: [[Variance]], [[Pity Timer]], [[Faucets and Sinks]], [[Power C
 
 <!-- related:start -->
 ## Related
-[[Faucets and Sinks]] · [[Core Loop]] · [[Deterministic Simulation]] · [[Telemetry Events]] · [[Retention Cohorts]] · [[Server Authority]] · [[Click-Through Rate]] · [[Tween vs Spring]]
+[[Faucets and Sinks]] · [[Core Loop]] · [[Deterministic Simulation]] · [[Telemetry Events]] · [[Retention Cohorts]] · [[Click-Through Rate]] · [[Server Authority]] · [[Tween vs Spring]]
 <!-- related:end -->

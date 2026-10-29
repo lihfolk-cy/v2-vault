@@ -13,7 +13,7 @@ tags: [case-study, top-games, thumbnails, icons, titles, marketing, discovery, c
 > - Icon is a face, readable at 50 pixels.
 > - Thumbnails share one template; key text is clear of the bottom edge.
 >
-> Cost: TL;DR ~180 tok · whole note ~4.3k tok. Read more: ## The snapshot · ## Pattern 1: the title is a fixed skeleton with one moving part · ## Common mistakes this comparison exposes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~4.4k tok. Read more: ## The snapshot · ## Pattern 1: the title is a fixed skeleton with one moving part · ## Common mistakes this comparison exposes · ## Checklist
 <!-- tldr:end -->
 
 This note compares how the games in this section present themselves on a Roblox card: the title string, the square icon and the 16:9 thumbnails. Everything was captured on the same day, 27 October 2026, from Roblox's public games and thumbnails APIs, which return the current title and the first three active thumbnails for each game. That week was unusual: Roblox's platform Halloween event, The Hollow, had started on 22 or 23 October 2026 depending on time zone (Press, Katadata, 21 October 2026), and most games were in Halloween dress. That makes the snapshot a good look at seasonal habits and a poor look at everyday art. Treat it as one frame of a moving picture.
@@ -141,6 +141,11 @@ Not a card element, but it lives one click away. Fisch's description is a four-l
 - [ ] Event and seasonal art have expiry dates.
 - [ ] Decisions are made on QPTR and session time, not impressions.
 
+## See also
+
+- [[Viral and Trend Teardowns Start Here]]: fifteen teardowns of fast-to-build viral and trend games (Steal An Egg, Plants vs Brainrots, Escape Tsunami for Brainrots, +1 Speed Keyboard Escape, Fish It and classics such as Tower of Hell and Bee Swarm Simulator).
+- [[Viral Game Anatomy - Hooks, Loops and Timing]]: section 4 compares the title formulas of the 2025-2026 trend wave (verb + noun, "for Brainrots", "+1", relaunch words).
+
 ## Connected notes
 <!-- auto-links:start -->
 [[Top Games Case Studies Start Here]] · [[Click-Through Rate]] · Core Loop · Thumbnail Contrast · Launch Strategy - The First Two Weeks · Marketing and Growth Start Here
@@ -148,5 +153,5 @@ Not a card element, but it lives one click away. Fisch's description is a four-l
 
 <!-- related:start -->
 ## Related
-[[Case Study - Dead Rails]] · [[Case Study - Jailbreak]] · [[Case Study - Tower Defense Simulator]] · [[Case Study - Forsaken]] · [[Case Study - Murder Mystery 2]] · [[Case Study - The Strongest Battlegrounds]] · [[Case Study - Rivals]]
+[[Case Study - Dead Rails]] · [[Case Study - Jailbreak]] · [[Case Study - Tower Defense Simulator]] · [[Case Study - Forsaken]] · [[Case Study - Murder Mystery 2]] · [[Case Study - The Strongest Battlegrounds]]
 <!-- related:end -->

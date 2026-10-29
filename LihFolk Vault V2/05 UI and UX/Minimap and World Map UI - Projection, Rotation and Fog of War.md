@@ -141,5 +141,5 @@ The full-screen map is the same projection with a different zoom and drag/pinch 
 
 <!-- related:start -->
 ## Related
-[[Race HUD - Position, Laps, Splits, Speedometer and Minimap]] · [[Layout - Scale Offset and Constraints]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]] · [[Safe Areas and Insets]] · [[Virtualized Lists and Large Inventories]] · [[UI Layout Objects - Lists Grids and Pages]] · [[UI Design Systems]] · [[Gamepad and Console UX]]
+[[Race HUD - Position, Laps, Splits, Speedometer and Minimap]] · [[Layout - Scale Offset and Constraints]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]] · [[Virtualized Lists and Large Inventories]] · [[Safe Areas and Insets]] · [[UI Layout Objects - Lists Grids and Pages]] · [[UI Design Systems]] · [[Gamepad and Console UX]]
 <!-- related:end -->

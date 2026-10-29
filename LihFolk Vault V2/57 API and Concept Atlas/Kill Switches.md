@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/production, area/liveops]
 > - Kill switches for risky systems. (Global State and Live Config)
 > - Avoid: No kill switches, so the only containment is a full rollback.
 >
-> Cost: TL;DR ~100 tok · whole note ~580 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~100 tok · whole note ~610 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ A kill switch is the most valuable flag. Every risky system (trading, purchases 
 
 ## Mentioned in
 
-28 notes in 12 sections. The 25 most relevant are linked:
+30 notes in 13 sections. The 25 most relevant are linked:
 
 ### 04 Data and Persistence
 [[Global State and Live Config]]
@@ -66,6 +66,6 @@ A kill switch is the most valuable flag. Every risky system (trading, purchases 
 ### 52 Core Concepts
 [[Feature Flags]]
 
-Also mentioned in (not linked): Core Concepts Start Here · Live Ops Deep Dive Start Here · Multiplayer Services Start Here
+Also mentioned in (not linked): Core Concepts Start Here · Live Ops Deep Dive Start Here · Multiplayer Services Start Here · Teardown - Jujutsu Shenanigans · What Craft Looks Like on Roblox - Lessons from Top Studios
 
 <!-- atlas:generated -->

@@ -614,5 +614,5 @@ Prizes for top places need care: decide the cutoff time in UTC, freeze by readin
 
 <!-- related:start -->
 ## Related
-[[Daily Rewards System End to End]] · [[Rebirth and Prestige System End to End]] · [[Shop with Game Passes and Developer Products End to End]] · [[LihFolk Systems Library]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[Round-Based Minigame Loop End to End]] · [[Weekend Build - Survival Gather, Craft and Place]] · [[Quest Chain System End to End]]
+[[Daily Rewards System End to End]] · [[Rebirth and Prestige System End to End]] · [[Shop with Game Passes and Developer Products End to End]] · [[LihFolk Systems Library]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[Round-Based Minigame Loop End to End]] · [[Quest Chain System End to End]] · [[Weekend Build - Survival Gather, Craft and Place]]
 <!-- related:end -->

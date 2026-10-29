@@ -294,7 +294,7 @@ Use a new session id per shop open. If 3 to 4 is weak, price or prompt timing is
 - [ ] Every release date annotated
 
 ## See also
-[[Discovery and the Algorithm]] · [[Economies and Currencies]] · [[Balancing with Spreadsheets and Data]] · [[First-Time User Experience and Onboarding]] · [[Retention and Return Hooks]] · [[Pricing and Store Design]] · [[Crash and Error Telemetry]] · [[Live Ops Events and Updates]]
+[[Discovery and the Algorithm]] · [[Economies and Currencies]] · [[Balancing with Spreadsheets and Data]] · [[First-Time User Experience and Onboarding]] · [[Measuring Onboarding - Funnels, Drop-off and A-B Tests]] · [[Retention and Return Hooks]] · [[Pricing and Store Design]] · [[Crash and Error Telemetry]] · [[Live Ops Events and Updates]]
 
 ## Connected notes
 <!-- auto-links:start -->

@@ -355,5 +355,5 @@ Nuance: a SurfaceAppearance on a mesh that only needs flat colour is the most co
 
 <!-- related:start -->
 ## Related
-[[Hand-Painted and Stylized Texturing]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Textures Decals and Texture Memory]] · [[Procedural Materials and Skies - Lessons]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[The Gradient Palette Texture Workflow]]
+[[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Hand-Painted and Stylized Texturing]] · [[Textures Decals and Texture Memory]] · [[Procedural Materials and Skies - Lessons]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[The Gradient Palette Texture Workflow]]
 <!-- related:end -->

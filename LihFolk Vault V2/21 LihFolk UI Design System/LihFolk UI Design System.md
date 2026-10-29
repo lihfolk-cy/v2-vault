@@ -119,5 +119,5 @@ License: this note is CC BY 4.0 (LihFolk). The LihFolk UI code is free to use an
 
 <!-- related:start -->
 ## Related
-[[UI Asset Pipeline]] · [[UI Style Directions - A Visual Vocabulary for Briefs]] · [[Accessibility Contrast]] · [[Glossy Icon Style - Owner Reference]] · [[Cookbook - UI]] · [[HUD Design]]
+[[UI Asset Pipeline]] · [[UI Style Directions - A Visual Vocabulary for Briefs]] · [[Accessibility Contrast]] · [[Cookbook - UI]] · [[Glossy Icon Style - Owner Reference]] · [[HUD Design]]
 <!-- related:end -->

@@ -122,5 +122,5 @@ Sources: https://games.roblox.com/v1/games?universeIds=6035872082 ; https://game
 
 <!-- related:start -->
 ## Related
-[[Case Study - Tower Defense Simulator]] · [[Case Study - Forsaken]] · [[Case Study - Murder Mystery 2]] · [[Case Study - Jailbreak]] · [[Case Study - Dead Rails]] · [[Case Study - Doors]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - Blox Fruits]]
+[[Case Study - Tower Defense Simulator]] · [[Case Study - Forsaken]] · [[Case Study - Murder Mystery 2]] · [[Case Study - Jailbreak]] · [[Case Study - Dead Rails]] · [[Case Study - Doors]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - Steal a Brainrot]]
 <!-- related:end -->

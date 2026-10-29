@@ -118,5 +118,5 @@ Play all three looped once at mount time and only adjust weights. Weight 0.001 i
 
 <!-- related:start -->
 ## Related
-[[Locomotion Systems]] · [[Snippets - Animation Controller Module]] · [[Custom Characters and StarterCharacter]] · [[Scale and Animation]] · [[R15 Run Cycle Key Poses]] · [[Playback, Priorities and Blending]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]] · [[Foot Placement and Ground IK]]
+[[Locomotion Systems]] · [[Snippets - Animation Controller Module]] · [[Custom Characters and StarterCharacter]] · [[R15 Run Cycle Key Poses]] · [[Scale and Animation]] · [[Playback, Priorities and Blending]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]] · [[Enemy and NPC Animation]]
 <!-- related:end -->

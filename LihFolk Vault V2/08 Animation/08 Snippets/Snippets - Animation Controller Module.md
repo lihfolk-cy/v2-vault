@@ -529,5 +529,5 @@ The trade-off a senior developer weighs is breadth against ownership: a controll
 
 <!-- related:start -->
 ## Related
-[[Snippets - Ragdoll]] · [[Snippets - Lua Keyframe Player Core]] · [[Ability Kits Architecture]] · [[R15 Run Cycle Key Poses]] · [[Replication and Ownership]] · [[Emotes and Social Animation]] · [[Mounts and Rideable Creatures]] · [[Combat Animation Craft]]
+[[Snippets - Ragdoll]] · [[Snippets - Lua Keyframe Player Core]] · [[Ability Kits Architecture]] · [[R15 Run Cycle Key Poses]] · [[Replication and Ownership]] · [[Emotes and Social Animation]] · [[Mounts and Rideable Creatures]] · [[Snippets - Procedural Motion]]
 <!-- related:end -->

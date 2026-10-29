@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/data, area/networking, api/MessagingService]
 > - Avoid: Relying on MessagingService alone (Servers that miss a message stay wrong forever) (Global State and Live Config)
 > - The MessagingService nudge is best effort (Cross-Server Messaging).
 >
-> Cost: TL;DR ~140 tok · whole note ~700 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~710 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -30,7 +30,7 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 
 ## Mentioned in
 
-29 notes in 18 sections. The 25 most relevant are linked:
+30 notes in 19 sections. The 25 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[Places Universes and Experience Settings]]
@@ -80,6 +80,6 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 ### 56 Field Notes
 [[Resetting One Player's Data Safely]]
 
-Also mentioned in (not linked): Glossary · Multiplayer Services Start Here · Open Questions - Whole Vault · Working with Contractors and Revenue Splits
+Also mentioned in (not linked): Glossary · Multiplayer Services Start Here · Open Questions - Whole Vault · Viral Game Anatomy - Hooks, Loops and Timing · Working with Contractors and Revenue Splits
 
 <!-- atlas:generated -->

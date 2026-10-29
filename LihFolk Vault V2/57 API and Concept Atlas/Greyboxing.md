@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/modeling, area/world]
 > - Blockout playtested on PC and phone before art.
 > - Blockout in Parts with names and pivots that the final meshes can map onto.
 >
-> Cost: TL;DR ~110 tok · whole note ~580 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~110 tok · whole note ~590 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,7 +27,7 @@ A blockout is the level built from grey Parts with no art. (from [[Level Design 
 
 ## Mentioned in
 
-28 notes in 13 sections. The 25 most relevant are linked:
+29 notes in 13 sections. The 25 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[Explorer Properties and Selection]] · [[Packages and Asset Reuse]] · [[Studio Assistant and AI Tools]]
@@ -65,6 +65,6 @@ A blockout is the level built from grey Parts with no art. (from [[Level Design 
 ### 55 Modelling Nuance and Readability
 [[Critiquing a Model - Paintovers and Iteration]]
 
-Also mentioned in (not linked): Concept Sheets · Procedural Blender Assets Start Here · UGC Avatar Items and Accessories
+Also mentioned in (not linked): Concept Sheets · Procedural Blender Assets Start Here · UGC Avatar Items and Accessories · World Composition and Set Dressing - Designed, Not Scattered
 
 <!-- atlas:generated -->

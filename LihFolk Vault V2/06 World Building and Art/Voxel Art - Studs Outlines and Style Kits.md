@@ -213,5 +213,5 @@ See [[Case Study - Enemy Roster Rebuild]] and [[Pipeline - Importing Animated En
 
 <!-- related:start -->
 ## Related
-[[Voxel Shading - Baked AO Edges and Lighting]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Zone and Biome Art Direction]] · [[Water Sky and Atmosphere Art]] · [[House Construction Method - Modular Kit Workflow]] · [[Terrain Tools and Terrain API]] · [[Collision and Physics Geometry]] · [[Foliage Props and Scatter]]
+[[Voxel Shading - Baked AO Edges and Lighting]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Zone and Biome Art Direction]] · [[Water Sky and Atmosphere Art]] · [[House Construction Method - Modular Kit Workflow]] · [[Terrain Tools and Terrain API]] · [[Foliage Props and Scatter]] · [[Collision and Physics Geometry]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Grid Placement and Player Building Systems]]
 <!-- related:end -->

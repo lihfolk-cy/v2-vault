@@ -130,5 +130,5 @@ Impact: a pass's price differs by player. Display the price from `GetProductInfo
 
 <!-- related:start -->
 ## Related
-[[Monetization Overview]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Policy and Age Rules 2026]] · [[Data and Cloud Changes 2025-2026]] · [[Engine and API Changes 2025-2026]] · [[Commerce and Physical Goods]]
+[[Monetization Overview]] · [[Sponsored Ads and Campaign Math]] · [[Policy and Age Rules 2026]] · [[Data and Cloud Changes 2025-2026]] · [[Engine and API Changes 2025-2026]] · [[Commerce and Physical Goods]]
 <!-- related:end -->

@@ -315,5 +315,5 @@ The senior trade-off: splitting a game into places allows bigger worlds and sepa
 
 <!-- related:start -->
 ## Related
-[[Joining Friends Parties and Private Servers]] · [[Server Hop Rejoin and Server Lists with Ping]] · [[Client-Server Model]] · [[RemoteEvents RemoteFunctions and Unreliable Remotes]] · [[Network Ownership]] · [[Rate Limiting and Abuse Prevention]] · [[Project Structure and Bootstrapping]] · [[Replication Rules]]
+[[Joining Friends Parties and Private Servers]] · [[Server Hop Rejoin and Server Lists with Ping]] · [[Client-Server Model]] · [[Network Ownership]] · [[RemoteEvents RemoteFunctions and Unreliable Remotes]] · [[Project Structure and Bootstrapping]] · [[Rate Limiting and Abuse Prevention]] · [[Replication Rules]]
 <!-- related:end -->

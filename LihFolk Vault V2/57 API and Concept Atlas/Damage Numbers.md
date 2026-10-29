@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/ui, area/gameplay]
 > - Avoid: Trusting client damage numbers -> Server computes damage from server stats.
 > - Pool on the client for visuals. Most pooled things (tracers, hit sparks, damage numbers) should exist only on the client.
 >
-> Cost: TL;DR ~140 tok · whole note ~650 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~680 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -25,7 +25,7 @@ Damage numbers are not a comfort issue for most players but a clutter issue; som
 
 ## Mentioned in
 
-36 notes in 16 sections. The 25 most relevant are linked:
+39 notes in 18 sections. The 25 most relevant are linked:
 
 ### 02 Luau Scripting
 [[Instances Attributes and Tags]]
@@ -66,6 +66,6 @@ Damage numbers are not a comfort issue for most players but a clutter issue; som
 ### 58 Player QoL and Game Tweaks
 [[Accessibility Cross-Links for QoL Settings]] · [[Colourblind Palettes Text Size and Tooltips]] · [[Comfort Toggles - Flashes Damage Numbers and Hit-Stop]] · [[QoL Audit Checklist]]
 
-Also mentioned in (not linked): Making Numbers Feel Good - Cooldowns Buffering and Coyote Time · Melee Combat System End to End · Memory Budgets and Leaks · Network Bandwidth Budgets and Measuring Them · Performance Fundamentals · Player QoL Start Here · Reference - Purple Anime Settings UI (Claude + Figma) · Rendering Performance · ScreenGui Fundamentals · Settings Menu Essentials and Persistence · Top 25 QoL Wins by Effort
+Also mentioned in (not linked): Making Numbers Feel Good - Cooldowns Buffering and Coyote Time · Melee Combat System End to End · Memory Budgets and Leaks · Network Bandwidth Budgets and Measuring Them · Performance Fundamentals · Player QoL Start Here · Reference - Purple Anime Settings UI (Claude + Figma) · Rendering Performance · ScreenGui Fundamentals · Settings Menu Essentials and Persistence · Teardown - Natural Disaster Survival · Teardown - Pressure · Top 25 QoL Wins by Effort · What Craft Looks Like on Roblox - Lessons from Top Studios
 
 <!-- atlas:generated -->

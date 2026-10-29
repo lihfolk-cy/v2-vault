@@ -330,5 +330,5 @@ The texture costs follow [[Textures Decals and Texture Memory]]: pixels, not fil
 
 <!-- related:start -->
 ## Related
-[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[AI Material and Texture Generation]] · [[Stylised vs Realistic Material Pipelines]] · [[SurfaceAppearance PBR Workflow]] · [[Procedural Materials and Skies - Lessons]] · [[Baking Lighting and Detail into Textures]] · [[Tiling Trim Sheets and Decal Tricks]]
+[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[AI Material and Texture Generation]] · [[Stylised vs Realistic Material Pipelines]] · [[Procedural Materials and Skies - Lessons]] · [[SurfaceAppearance PBR Workflow]] · [[Baking Lighting and Detail into Textures]] · [[Tiling Trim Sheets and Decal Tricks]]
 <!-- related:end -->

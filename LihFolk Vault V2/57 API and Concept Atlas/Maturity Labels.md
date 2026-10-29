@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/monetization, area/ai]
 > - Does using it change your content maturity questionnaire answers?
 > - Games without content maturity information are unplayable for all players.
 >
-> Cost: TL;DR ~120 tok · whole note ~510 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~530 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,7 +26,7 @@ Maturity labels decide which age groups see you on Home and Charts (Docs). (from
 
 ## Mentioned in
 
-21 notes in 9 sections. The 21 most relevant are linked:
+22 notes in 10 sections. The 22 most relevant are linked:
 
 ### 07 Lighting VFX and Audio
 [[Gore Policy and Kid-Friendly Hit Feedback]]
@@ -54,5 +54,8 @@ Maturity labels decide which age groups see you on Home and Charts (Docs). (from
 
 ### 49 Roblox Platform Features
 [[Commerce and Physical Goods]] · [[Console and VR Release Checklists]] · [[Policy and Age Rules 2026]] · [[Roblox Changes 2025-2026]]
+
+### 60 High-Craft Game Teardowns
+[[Teardown - Pressure]]
 
 <!-- atlas:generated -->

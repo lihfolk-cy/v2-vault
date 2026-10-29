@@ -179,5 +179,5 @@ A good split: **agents do volume and verification; the human does judgement and 
 
 <!-- related:start -->
 ## Related
-[[MCP Workflows for Scripting and Debugging]] · [[Batch Processing Tools in Studio]] · [[Writing Your Own MCP Server]] · [[Case Study - Instance Cleanup and Place Size]] · [[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]] · [[What Is MCP]] · [[Setting Up MCP Clients]]
+[[MCP Workflows for Scripting and Debugging]] · [[Batch Processing Tools in Studio]] · [[Writing Your Own MCP Server]] · [[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]] · [[What Is MCP]] · [[Setting Up MCP Clients]]
 <!-- related:end -->

@@ -188,5 +188,5 @@ Rules for charts:
 
 <!-- related:start -->
 ## Related
-[[Locomotion and Melee Reference Numbers]] · [[Animating Creatures and Monsters]] · [[Combat Combo Systems]] · [[R15 Run Cycle Key Poses]] · [[Animation Capture and Mocap]] · [[Playback, Priorities and Blending]] · [[Snippets - Building and Sampling Clips]] · [[Animation Glossary]]
+[[Locomotion and Melee Reference Numbers]] · [[Animating Creatures and Monsters]] · [[Combat Combo Systems]] · [[R15 Run Cycle Key Poses]] · [[Animation Capture and Mocap]] · [[Snippets - Building and Sampling Clips]] · [[Playback, Priorities and Blending]] · [[Animation Glossary]]
 <!-- related:end -->

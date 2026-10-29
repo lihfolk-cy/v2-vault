@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/animation, area/vfx]
 > - Impact frames play inside the hit-stop: 1 or 2 frames of a high-contrast or negative image, at 1/30 s per frame (at least one...
 > - Anything that covers a large part of the screen with a sudden brightness change goes through the gate: impact frames, white...
 >
-> Cost: TL;DR ~150 tok · whole note ~540 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~560 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,7 +26,7 @@ Impact frames are cheap in Roblox: a full-screen `Frame` (white, or an `ImageLab
 
 ## Mentioned in
 
-19 notes in 8 sections. The 19 most relevant are linked:
+20 notes in 9 sections. The 20 most relevant are linked:
 
 ### 05 UI and UX
 [[Accessibility]]
@@ -51,5 +51,8 @@ Impact frames are cheap in Roblox: a full-screen `Frame` (white, or an `ImageLab
 
 ### 58 Player QoL and Game Tweaks
 [[Comfort Toggles - Flashes Damage Numbers and Hit-Stop]]
+
+### 60 High-Craft Game Teardowns
+[[Teardown - Jujutsu Shenanigans]]
 
 <!-- atlas:generated -->

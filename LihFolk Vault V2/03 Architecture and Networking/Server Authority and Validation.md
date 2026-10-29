@@ -397,5 +397,5 @@ It changes the trade-offs in this note: movement validation largely disappears, 
 
 <!-- related:start -->
 ## Related
-[[Cookbook - Remotes and Networking]] · [[Network Ownership]] · [[Project Structure and Bootstrapping]] · [[Replication Rules]] · [[Interest Management and Per-Player Replication]] · [[Snapshot Interpolation for Custom Replication]] · [[Frameworks - Knit Matter and Others]] · [[Teleporting and Multi-Place Games]]
+[[Cookbook - Remotes and Networking]] · [[Network Ownership]] · [[Project Structure and Bootstrapping]] · [[Replication Rules]] · [[Interest Management and Per-Player Replication]] · [[Frameworks - Knit Matter and Others]] · [[Snapshot Interpolation for Custom Replication]] · [[Teleporting and Multi-Place Games]]
 <!-- related:end -->

@@ -219,5 +219,5 @@ When you do use store content (prototypes, jams, solo projects):
 
 <!-- related:start -->
 ## Related
-[[Publishing Selling and Updating Plugins]] · [[Legal Basics - IP Licenses and Assets]] · [[Version History and Backups]] · [[Team Create and Collaboration]] · [[Studio Assistant and AI Tools]] · [[Explorer Properties and Selection]] · [[Studio Interface Tour]] · [[Studio Settings and Shortcuts]]
+[[Publishing Selling and Updating Plugins]] · [[Legal Basics - IP Licenses and Assets]] · [[Version History and Backups]] · [[Team Create and Collaboration]] · [[Studio Assistant and AI Tools]] · [[Studio Interface Tour]] · [[Explorer Properties and Selection]] · [[Studio Settings and Shortcuts]]
 <!-- related:end -->

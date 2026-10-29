@@ -237,5 +237,5 @@ Animation in UI follows the same rule as styling: one module, used everywhere. T
 
 <!-- related:start -->
 ## Related
-[[LihFolk UI Design System]] · [[Build Test and Release Pipeline]] · [[Environment and Level Pipeline]] · [[Blender Automation with Python]] · [[Art Pipeline - Concept to In-Game Asset]] · [[Data and Config Pipeline - Spreadsheets to Game]] · [[Audio Pipeline]] · [[Live Content Pipeline]] · [[Asset Upload Automation with Open Cloud]]
+[[LihFolk UI Design System]] · [[Build Test and Release Pipeline]] · [[Environment and Level Pipeline]] · [[Blender Automation with Python]] · [[Live Content Pipeline]] · [[Art Pipeline - Concept to In-Game Asset]] · [[Data and Config Pipeline - Spreadsheets to Game]] · [[Audio Pipeline]] · [[Asset Upload Automation with Open Cloud]]
 <!-- related:end -->

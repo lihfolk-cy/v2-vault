@@ -766,5 +766,5 @@ The blink to a patrol point only happens when no player can see the monster and 
 
 <!-- related:start -->
 ## Related
-[[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Police Chases and Wanted Levels]] · [[Tycoon Plots and Droppers End to End]] · [[Obby Checkpoints and Stage Saves End to End]] · [[Racing Laps and Checkpoints End to End]] · [[Arena Rounds with Teams and Spectating End to End]]
+[[Teardown - Piggy]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Tycoon Plots and Droppers End to End]] · [[Obby Checkpoints and Stage Saves End to End]] · [[Racing Laps and Checkpoints End to End]] · [[Arena Rounds with Teams and Spectating End to End]]
 <!-- related:end -->

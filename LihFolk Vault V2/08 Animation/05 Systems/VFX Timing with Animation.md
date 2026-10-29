@@ -189,5 +189,5 @@ See also: [[Markers and Events]], [[Combat Combo Systems]], [[Hit Reactions Stag
 
 <!-- related:start -->
 ## Related
-[[Slash VFX Recipes - Crescent and Ring]] · [[Mesh VFX Packs Built in Blender]] · [[Stance and Charge Moves]] · [[Enemy and NPC Animation]] · [[Boss Animation and Phases]] · [[Custom Locomotion Controller Design]] · [[Timing Spacing and Frame Charts]] · [[Camera Shake and Camera FX]] · [[Enemy Animation State Protocol]] · [[Pipeline - New Animated Weapon]]
+[[Slash VFX Recipes - Crescent and Ring]] · [[Mesh VFX Packs Built in Blender]] · [[Stance and Charge Moves]] · [[Enemy and NPC Animation]] · [[Boss Animation and Phases]] · [[Custom Locomotion Controller Design]] · [[Timing Spacing and Frame Charts]] · [[Enemy Animation State Protocol]] · [[Pipeline - New Animated Weapon]] · [[Camera Shake and Camera FX]]
 <!-- related:end -->

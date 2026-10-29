@@ -259,5 +259,5 @@ Moderation also applies to everything inside the item: textures and meshes must 
 
 <!-- related:start -->
 ## Related
-[[Limited-Time Offers - Design and Ethics]] · [[Player-Driven Trading Economies]] · [[Subscriptions and Premium Payouts]] · [[HumanoidDescription and Outfit Systems]] · [[Layered Clothing Creation Workflow]] · [[Avatar Body Types and Scale in Gameplay]]
+[[Player-Driven Trading Economies]] · [[Limited-Time Offers - Design and Ethics]] · [[Subscriptions and Premium Payouts]] · [[HumanoidDescription and Outfit Systems]] · [[Layered Clothing Creation Workflow]] · [[Avatar Body Types and Scale in Gameplay]]
 <!-- related:end -->

@@ -173,5 +173,5 @@ The quality tier multiplies `layers` rates; the air values stay the same on ever
 
 <!-- related:start -->
 ## Related
-[[Stylized Lighting Recipes]] · [[VFX Design Playbook]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Lighting Technologies and Settings]] · [[Light Sources and Shadows]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[Music and Adaptive Audio]] · [[Slash VFX Recipes - Crescent and Ring]]
+[[Stylized Lighting Recipes]] · [[VFX Design Playbook]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Lighting Technologies and Settings]] · [[Light Sources and Shadows]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[Slash VFX Recipes - Crescent and Ring]] · [[Music and Adaptive Audio]]
 <!-- related:end -->

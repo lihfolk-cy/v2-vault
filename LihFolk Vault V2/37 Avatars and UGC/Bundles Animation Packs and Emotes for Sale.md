@@ -253,5 +253,5 @@ Emotes are full-body animations that can hide attack tells, move the head and ar
 
 <!-- related:start -->
 ## Related
-[[AvatarEditorService and In-Game Avatar Editors]] · [[Layered Clothing Cages and Animation]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Custom Characters and StarterCharacter]] · [[3D Importer Settings Reference]] · [[Animation Objects]]
+[[Layered Clothing Cages and Animation]] · [[AvatarEditorService and In-Game Avatar Editors]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Custom Characters and StarterCharacter]] · [[3D Importer Settings Reference]] · [[Animation Objects]]
 <!-- related:end -->

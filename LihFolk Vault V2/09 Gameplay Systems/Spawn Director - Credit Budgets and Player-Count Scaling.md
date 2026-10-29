@@ -152,5 +152,5 @@ Author spawn points as tagged parts (`CollectionService` tag `SpawnPoint`) with 
 
 <!-- related:start -->
 ## Related
-[[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Pathfinding Edge Cases and Fallbacks]] · [[AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses]] · [[Combat Systems Architecture]] · [[Behaviour Trees Utility AI and State Machines for NPCs]] · [[Status Effects Buffs and Stacking Rules]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Downed, Revive and Bleed-Out States]]
+[[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses]] · [[Pathfinding Edge Cases and Fallbacks]] · [[Combat Systems Architecture]] · [[Behaviour Trees Utility AI and State Machines for NPCs]] · [[Status Effects Buffs and Stacking Rules]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]]
 <!-- related:end -->

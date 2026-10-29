@@ -227,5 +227,5 @@ See [[Art Budgets - Triangles Draw Calls Memory]] and [[Level of Detail and Mode
 
 <!-- related:start -->
 ## Related
-[[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Roblox Studio Assistant]] · [[Agent Review Loops and Guardrails in Practice]] · [[Setting Up MCP Clients]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[What Is MCP]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]]
+[[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Roblox Studio Assistant]] · [[Setting Up MCP Clients]] · [[Agent Review Loops and Guardrails in Practice]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[What Is MCP]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]]
 <!-- related:end -->

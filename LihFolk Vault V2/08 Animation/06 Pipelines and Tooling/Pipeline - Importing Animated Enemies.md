@@ -142,5 +142,5 @@ See [[Enemy and NPC Animation]], [[Enemy Animation State Protocol]], [[Snippets 
 
 <!-- related:start -->
 ## Related
-[[Weapon Design Rig Builder]] · [[Animating Creatures and Monsters]] · [[Weight Painting and Skinning for Roblox]] · [[Retargeting Animations Between Rigs]] · [[Animation Glossary]] · [[Pipeline - New Animated Weapon]] · [[Boss Animation and Phases]] · [[Custom Rigs - Weapons and Props]]
+[[Weapon Design Rig Builder]] · [[Animating Creatures and Monsters]] · [[Weight Painting and Skinning for Roblox]] · [[Retargeting Animations Between Rigs]] · [[Pipeline - New Animated Weapon]] · [[Animation Glossary]] · [[Boss Animation and Phases]] · [[Custom Rigs - Weapons and Props]]
 <!-- related:end -->

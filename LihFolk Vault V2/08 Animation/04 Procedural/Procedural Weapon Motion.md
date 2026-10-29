@@ -235,5 +235,5 @@ Related: [[Equip Draw and Flourish Systems]], [[Weapon and Combat Animation]], [
 
 <!-- related:start -->
 ## Related
-[[Blade Grip and Wrist Limits]] · [[Procedural Animation]] · [[Two-Bone IK Math]] · [[Elbow Poles Swivel and Joint Limits]] · [[Tween and CFrame Animation of Objects]] · [[Look-At Aim and Head Tracking]] · [[Procedural Death Knockdown and Hit Reactions]] · [[Multi-Bone IK - FABRIK and CCD]]
+[[Blade Grip and Wrist Limits]] · [[Procedural Animation]] · [[Two-Bone IK Math]] · [[Elbow Poles Swivel and Joint Limits]] · [[Tween and CFrame Animation of Objects]] · [[Look-At Aim and Head Tracking]] · [[Procedural Death Knockdown and Hit Reactions]] · [[LihFolk R15 Keyframe Pipeline]]
 <!-- related:end -->

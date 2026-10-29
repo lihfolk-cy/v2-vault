@@ -38,6 +38,7 @@ It builds on three older notes. Read them first; the notes here go deeper withou
 - Text and language: [[Localization]], [[Localization-Ready Writing]], [[Text Chat Customization with TextChatService]].
 - Settings that persist: [[Data Schema Design and Migrations]], [[Saving Correctly - Autosave and BindToClose]].
 - Testing: [[Multi-Client and Device Playtesting Protocols]], [[QA Checklists Before Release]].
+- Tutorials: [[Onboarding Accessibility and Cross-Device Prompts]] (device-aware prompt text, safe areas, guidance without colour or motion).
 
 ## Conventions used in this section
 

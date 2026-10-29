@@ -215,5 +215,5 @@ Rule of thumb: if two briefs mention the same script or folder, they are one job
 
 <!-- related:start -->
 ## Related
-[[Running Many AI Agents on One Roblox Place]] · [[MCP Workflows for Scripting and Debugging]] · [[Pipeline Design Principles]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[Studio Plugins and Local HTTP Bridges]] · [[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[What Is MCP]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]] · [[Setting Up MCP Clients]] · [[Blender MCP]]
+[[Running Many AI Agents on One Roblox Place]] · [[MCP Workflows for Scripting and Debugging]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[Studio Plugins and Local HTTP Bridges]] · [[Roblox Studio Assistant]] · [[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[What Is MCP]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]] · [[Setting Up MCP Clients]] · [[Blender MCP]]
 <!-- related:end -->

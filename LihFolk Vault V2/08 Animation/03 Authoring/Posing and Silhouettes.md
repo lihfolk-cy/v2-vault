@@ -175,5 +175,5 @@ See [[Animating Creatures and Monsters]].
 
 <!-- related:start -->
 ## Related
-[[Blade Grip and Wrist Limits]] · [[Locomotion Clip Lessons - Jump, Sprint, Idle]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[R15 Run Cycle Key Poses]] · [[Idle Breathing and Secondary Motion]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Human Swing Biomechanics]] · [[Animation Editor Workflow]]
+[[Blade Grip and Wrist Limits]] · [[Locomotion Clip Lessons - Jump, Sprint, Idle]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[R15 Run Cycle Key Poses]] · [[Idle Breathing and Secondary Motion]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Human Swing Biomechanics]] · [[Locomotion Readability - Lessons from Blind Panels]]
 <!-- related:end -->

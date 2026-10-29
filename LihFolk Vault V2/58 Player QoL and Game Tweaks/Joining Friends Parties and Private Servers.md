@@ -128,5 +128,5 @@ A social lobby with clear "play together" spots (portals that gather a group, a 
 
 <!-- related:start -->
 ## Related
-[[QoL Audit Checklist]] · [[Loading Screen Skip and First-Session Goals]] · [[Top 25 QoL Wins by Effort]] · [[Quick Respawn and Spawn Protection]] · [[Notification Queues and Limits]] · [[Purchase Receipts and Purchase History in UI]] · [[Feedback - Autosave Indicator Ping Display and Error Toasts]] · [[Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots]]
+[[QoL Audit Checklist]] · [[Loading Screen Skip and First-Session Goals]] · [[Top 25 QoL Wins by Effort]] · [[Quick Respawn and Spawn Protection]] · [[Purchase Receipts and Purchase History in UI]] · [[Notification Queues and Limits]] · [[Feedback - Autosave Indicator Ping Display and Error Toasts]] · [[Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots]]
 <!-- related:end -->

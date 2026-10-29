@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/animation, area/gameplay]
 > - Avoid: Arena too large -> Keep the edge within about 3 telegraph radii.
 > - Enemy telegraphs must outlast latency plus reaction time.
 >
-> Cost: TL;DR ~120 tok · whole note ~820 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~880 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,7 +27,7 @@ Telegraph (Tele): A readable wind-up warning before an enemy attack. (from [[Ani
 
 ## Mentioned in
 
-54 notes in 15 sections. The 25 most relevant are linked:
+60 notes in 17 sections. The 25 most relevant are linked:
 
 ### 03 Architecture and Networking
 [[Client Prediction and Reconciliation for Combat]]
@@ -42,7 +42,7 @@ Telegraph (Tele): A readable wind-up warning before an enemy attack. (from [[Ani
 [[AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses]] · [[Behaviour Trees Utility AI and State Machines for NPCs]] · [[Hitboxes and Hit Detection]] · [[NPC AI and Behaviour]] · [[Squad AI - Attack Tokens, Flanking and Attacker Limits]]
 
 ### 10 Game Design and Genres
-[[Boss Fight Design Patterns]] · [[Genre Playbook - Combat and RPG]] · [[Genre Playbook - Horror and Story]]
+[[Boss Fight Design Patterns]] · [[Genre Playbook - Combat and RPG]]
 
 ### 13 Production and Case Studies
 [[Case Study - Enemy Roster Rebuild]]
@@ -59,6 +59,9 @@ Telegraph (Tele): A readable wind-up warning before an enemy attack. (from [[Ani
 ### 52 Core Concepts
 [[Anticipation]]
 
-Also mentioned in (not linked): AI Animation and Motion from Video · Accessibility · Accessibility Start Here · Animation Capture and Mocap · Animation LOD · Emotes and Social Animation · Enemy Archetype Kit - Fodder, Tank, Ranged, Support and Exploder · Explosions - Radius Damage, Falloff and Cover Checks · Feedback Timing - Sound Visual and Haptic Sync · Game Feel Start Here · Genre Playbook - Tower Defense · Graphics and Performance Toggles for Low-End Devices · Interest Management and Per-Player Replication · Level Design Start Here · Level Design for Roblox · Lightning Strikes and Thunder - Procedural Bolts and Sound Delay · Locomotion and Melee Reference Numbers · Markers and Events · Mobile and Low-End Optimization · Pipeline - Importing Animated Enemies · Post-Mortem - Building a Melee Action Game · QoL Audit Checklist · Stance and Charge Moves · Timing Spacing and Frame Charts · Troubleshooting Table · VFX Design Playbook · Weather Performance Budgets and Quality Tiers · Weather System Architecture - State Machine, Transitions and Replication · Weather That Changes Gameplay - Grip, Visibility and Hearing
+### 60 High-Craft Game Teardowns
+[[Teardown - Deepwoken]]
+
+Also mentioned in (not linked): AI Animation and Motion from Video · Accessibility · Accessibility Start Here · Animation Capture and Mocap · Animation LOD · Emotes and Social Animation · Enemy Archetype Kit - Fodder, Tank, Ranged, Support and Exploder · Explosions - Radius Damage, Falloff and Cover Checks · Feedback Timing - Sound Visual and Haptic Sync · Game Feel Start Here · Genre Playbook - Horror and Story · Genre Playbook - Tower Defense · Graphics and Performance Toggles for Low-End Devices · Interest Management and Per-Player Replication · Level Design Start Here · Level Design for Roblox · Lightning Strikes and Thunder - Procedural Bolts and Sound Delay · Locomotion and Melee Reference Numbers · Markers and Events · Mobile and Low-End Optimization · Pipeline - Importing Animated Enemies · Post-Mortem - Building a Melee Action Game · QoL Audit Checklist · Stance and Charge Moves · Teardown - Escape Tsunami for Brainrots · Teardown - Grace · Teardown - Natural Disaster Survival · Teardown - Pressure · Timing Spacing and Frame Charts · Troubleshooting Table · VFX Design Playbook · Weather Performance Budgets and Quality Tiers · Weather System Architecture - State Machine, Transitions and Replication · Weather That Changes Gameplay - Grip, Visibility and Hearing · What Craft Looks Like on Roblox - Lessons from Top Studios
 
 <!-- atlas:generated -->

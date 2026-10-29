@@ -300,5 +300,5 @@ Lune runs Luau outside Roblox with filesystem, process, network and a `roblox` l
 
 <!-- related:start -->
 ## Related
-[[Team Create and Collaboration]] · [[Command Bar and Studio Scripting]] · [[Studio Interface Tour]] · [[Version History and Backups]] · [[Explorer Properties and Selection]] · [[Creator Store and Toolbox Safety]]
+[[Team Create and Collaboration]] · [[Command Bar and Studio Scripting]] · [[Studio Interface Tour]] · [[Version History and Backups]] · [[Creator Store and Toolbox Safety]] · [[Explorer Properties and Selection]]
 <!-- related:end -->

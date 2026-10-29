@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/narrative, area/production]
 > - If you use real names, the tier colour, the frame and the item card must carry the rarity, and the lore line can carry the...
 > - Proper-noun-heavy lore. A codex entry full of invented names will translate oddly no matter what.
 >
-> Cost: TL;DR ~150 tok · whole note ~520 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~620 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,10 +26,19 @@ Lore is the history, rules and mysteries that make a world feel like it existed 
 
 ## Mentioned in
 
-21 notes in 11 sections. The 21 most relevant are linked:
+27 notes in 15 sections. The 25 most relevant are linked:
+
+### 05 UI and UX
+[[Onboarding and FTUE - Tutorials That Keep Players]]
+
+### 06 World Building and Art
+[[World Composition and Set Dressing - Designed, Not Scattered]]
 
 ### 08 Animation
 [[Cameras and Cutscenes]] · [[Pipeline - New Animated Weapon]]
+
+### 10 Game Design and Genres
+[[Onboarding by Genre - The First Five Minutes]]
 
 ### 13 Production and Case Studies
 [[Asset Pipelines]] · [[Post-Mortem - Building a Melee Action Game]] · [[Template Reskin Checklist - One Codebase, New Game]]
@@ -50,7 +59,7 @@ Lore is the history, rules and mysteries that make a world feel like it existed 
 [[Localization-Ready Writing]] · [[Lore Delivery Without Walls of Text]] · [[Naming Items Zones and Abilities]] · [[Narrative Start Here]] · [[Quest Writing and Hooks]] · [[Writing Dialogue for Roblox Players]]
 
 ### 42 Accessibility and Inclusive Design
-[[Accessibility Start Here]] · [[Difficulty Options and Cognitive Load]]
+[[Difficulty Options and Cognitive Load]]
 
 ### 52 Core Concepts
 [[Onboarding Funnel]]
@@ -58,7 +67,9 @@ Lore is the history, rules and mysteries that make a world feel like it existed 
 ### 58 Player QoL and Game Tweaks
 [[Skippable Tutorials and Replayable Tips]]
 
-### Root notes
-[[00 Start Here]]
+### 60 High-Craft Game Teardowns
+[[Teardown - Deepwoken]] · [[Teardown - Pressure]] · [[What Craft Looks Like on Roblox - Lessons from Top Studios]]
+
+Also mentioned in (not linked): 00 Start Here · Accessibility Start Here
 
 <!-- atlas:generated -->

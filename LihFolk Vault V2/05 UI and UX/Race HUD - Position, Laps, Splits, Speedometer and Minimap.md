@@ -135,5 +135,5 @@ For open-world races, use the general minimap from the minimap note and draw the
 
 <!-- related:start -->
 ## Related
-[[Off-Screen Objective Markers and Waypoint Arrows]] · [[UI Style Directions - A Visual Vocabulary for Briefs]] · [[Notification and Toast Systems]] · [[UI Design Systems]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[ScreenGui Fundamentals]] · [[Virtualized Lists and Large Inventories]]
+[[Off-Screen Objective Markers and Waypoint Arrows]] · [[UI Style Directions - A Visual Vocabulary for Briefs]] · [[Notification and Toast Systems]] · [[UI Design Systems]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[ScreenGui Fundamentals]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]]
 <!-- related:end -->

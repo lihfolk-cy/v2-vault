@@ -34,7 +34,7 @@ Live operations is everything a game does after launch to stay alive: seasons, e
 ## Related notes elsewhere in the vault
 
 - Platform and schedules: [[Live Ops Events and Updates]], [[Global State and Live Config]], [[Live Content Pipeline]], [[Cross-Server Messaging]], [[MemoryStore Service]]
-- Cadence and growth: [[Update Cadence and Hype Cycles]], [[A-B Testing and Experiments on Roblox]], [[Discovery and the Algorithm]], [[Retention and Return Hooks]], [[Analytics and Funnels]]
+- Cadence and growth: [[Update Cadence and Hype Cycles]], [[A-B Testing and Experiments on Roblox]], [[Discovery and the Algorithm]], [[Retention and Return Hooks]], [[Analytics and Funnels]], [[Measuring Onboarding - Funnels, Drop-off and A-B Tests]]
 - Money: [[Robux Price Points and Offer Design]], [[Pricing and Store Design]], [[Developer Products and ProcessReceipt]], [[Game Passes]], [[Paid Random Items and Odds Disclosure in Practice]], [[Refunds Chargebacks and Purchase Support]], [[Ethical Design and Player Trust]]
 - Economy and data: [[Economy Inflation Sinks and Faucets Math]], [[Economies and Currencies]], [[Data Schema Design and Migrations]], [[OrderedDataStores and Leaderboards]], [[Session Locking and Profile Libraries]]
 - Releases: [[Release Process and Rollbacks]], [[Server Lifecycle and Shutdown]], [[Live Incident Response and Post-Mortems]]

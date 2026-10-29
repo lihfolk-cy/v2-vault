@@ -372,5 +372,5 @@ The server must still validate every purchase against these numbers; see [[Serve
 
 <!-- related:start -->
 ## Related
-[[Rarity Ladders and Drop Pacing Math]] · [[Pricing Curves and Upgrade Costs]] · [[Economy Inflation Sinks and Faucets Math]] · [[Genre Playbook - Tycoons]] · [[Genre Playbook - Obbies and Platformers]] · [[Genre Playbook - Tower Defense]] · [[Boss Fight Design Patterns]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Social Design and Multiplayer Play]] · [[Ethical Design and Player Trust]]
+[[Pricing Curves and Upgrade Costs]] · [[Rarity Ladders and Drop Pacing Math]] · [[Economy Inflation Sinks and Faucets Math]] · [[Genre Playbook - Tycoons]] · [[Genre Playbook - Obbies and Platformers]] · [[Genre Playbook - Tower Defense]] · [[Boss Fight Design Patterns]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Ethical Design and Player Trust]] · [[Onboarding by Genre - The First Five Minutes]]
 <!-- related:end -->

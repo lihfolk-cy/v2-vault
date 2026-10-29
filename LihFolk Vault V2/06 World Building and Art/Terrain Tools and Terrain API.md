@@ -303,5 +303,5 @@ Terrain water is real: it has swimming, buoyancy, waves and refraction. It is al
 
 <!-- related:start -->
 ## Related
-[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[MCP Workflows for Building Worlds]] · [[Noise Functions and Terrain Generation]] · [[Parts Unions and MeshParts]] · [[Zone and Biome Art Direction]] · [[Voxel Art - Studs Outlines and Style Kits]]
+[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[MCP Workflows for Building Worlds]] · [[Noise Functions and Terrain Generation]] · [[Parts Unions and MeshParts]] · [[Zone and Biome Art Direction]] · [[Grid Placement and Player Building Systems]] · [[Voxel Art - Studs Outlines and Style Kits]]
 <!-- related:end -->

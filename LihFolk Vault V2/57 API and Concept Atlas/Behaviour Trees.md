@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/gameplay, area/animation]
 > - NPC AI and Behaviour, Pathfinding, Pathfinding Edge Cases and Fallbacks, Behaviour Trees Utility AI and State Machines for NPCs.
 > - A small state machine is enough (Behaviour Trees Utility AI and State Machines for NPCs).
 >
-> Cost: TL;DR ~120 tok · whole note ~440 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~460 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,7 +26,7 @@ A behaviour tree is ticked from the root. (from [[Behaviour Trees Utility AI and
 
 ## Mentioned in
 
-16 notes in 6 sections. The 16 most relevant are linked:
+17 notes in 7 sections. The 17 most relevant are linked:
 
 ### 08 Animation
 [[Snippets - Animation Controller Module]]
@@ -42,6 +42,9 @@ A behaviour tree is ticked from the root. (from [[Behaviour Trees Utility AI and
 
 ### 43 Genre Systems End to End
 [[Horror Monster Chase AI End to End]] · [[Tower Defense Waves and Placement End to End]]
+
+### 60 High-Craft Game Teardowns
+[[Teardown - Dandy's World]]
 
 ### Root notes
 [[00 Start Here]]

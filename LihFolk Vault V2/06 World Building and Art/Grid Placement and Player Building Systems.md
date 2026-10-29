@@ -456,5 +456,5 @@ Roblox's `DragDetector` instances offer built-in runtime dragging with several d
 
 <!-- related:start -->
 ## Related
-[[Foliage Props and Scatter]] · [[Terrain Tools and Terrain API]] · [[Procedural World Generation]] · [[Collision and Physics Geometry]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Modeling in Blender for Roblox]] · [[Zone and Biome Art Direction]] · [[Terrain Deep Dive - Materials Water and Performance]]
+[[Foliage Props and Scatter]] · [[Terrain Tools and Terrain API]] · [[Procedural World Generation]] · [[Collision and Physics Geometry]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Modeling in Blender for Roblox]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Zone and Biome Art Direction]]
 <!-- related:end -->

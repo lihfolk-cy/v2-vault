@@ -244,5 +244,5 @@ Many "rigging bugs" are topology bugs. Before blaming weights in [[Weight Painti
 
 <!-- related:start -->
 ## Related
-[[Voxel Characters - Proportions Joints and Rigging]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Curve-Based Modelling in Blender for Roblox]] · [[UGC Avatar Items and Accessories]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Exporting and Validating Models for Roblox]] · [[Modeling Weapons and Props]] · [[Low-Poly and Stylized Modeling]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]
+[[Voxel Characters - Proportions Joints and Rigging]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Curve-Based Modelling in Blender for Roblox]] · [[UGC Avatar Items and Accessories]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Exporting and Validating Models for Roblox]] · [[Low-Poly and Stylized Modeling]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Modeling Weapons and Props]]
 <!-- related:end -->

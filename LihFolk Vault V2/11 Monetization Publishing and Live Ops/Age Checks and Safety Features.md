@@ -225,5 +225,5 @@ If your game is cooperative and chat matters, the Text Chat matchmaking signal h
 
 <!-- related:start -->
 ## Related
-[[Policy and Age Rules 2026]] · [[Voice Chat and Safety Features]] · [[Paid Random Items and Odds Disclosure in Practice]] · [[Monetization Overview]] · [[Ads and Rewarded Video]] · [[Discovery and the Algorithm]] · [[Live Ops Events and Updates]]
+[[Policy and Age Rules 2026]] · [[Voice Chat and Safety Features]] · [[Discord Servers for Roblox Games]] · [[Paid Random Items and Odds Disclosure in Practice]] · [[Monetization Overview]] · [[Ads and Rewarded Video]]
 <!-- related:end -->

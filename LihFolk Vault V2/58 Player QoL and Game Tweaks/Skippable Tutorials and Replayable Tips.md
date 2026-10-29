@@ -153,5 +153,5 @@ Players who come back after weeks forget controls and systems added since. Show 
 
 <!-- related:start -->
 ## Related
-[[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]] · [[Accessibility Cross-Links for QoL Settings]] · [[Settings Menu Essentials and Persistence]] · [[Mobile Button Layout Editor]] · [[Controller Support QoL]] · [[UI Scale HUD Hide and Compact Mode]] · [[Purchase Receipts and Purchase History in UI]]
+[[Onboarding and FTUE - Tutorials That Keep Players]] · [[Tutorial Step Design Patterns - Teach by Doing]] · [[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]] · [[Accessibility Cross-Links for QoL Settings]] · [[Settings Menu Essentials and Persistence]]
 <!-- related:end -->

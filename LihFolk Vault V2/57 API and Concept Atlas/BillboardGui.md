@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/ui, area/gameplay, api/BillboardGui]
 > - World-Space UI - BillboardGui and SurfaceGui: labels over any background.
 > - Pooled labels so a 30-player fight does not create thousands of `BillboardGui` instances.
 >
-> Cost: TL;DR ~130 tok · whole note ~640 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~650 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ API snapshot: class, inherits `LayerCollector` (`_tools/roblox_api.json`, docs b
 
 ## Mentioned in
 
-26 notes in 15 sections. The 25 most relevant are linked:
+27 notes in 15 sections. The 25 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[Packages and Asset Reuse]]
@@ -37,7 +37,7 @@ API snapshot: class, inherits `LayerCollector` (`_tools/roblox_api.json`, docs b
 [[OrderedDataStores and Leaderboards]]
 
 ### 05 UI and UX
-[[Nametags and Overhead Bars - Cost and Visibility Rules]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[ScreenGui Fundamentals]] · [[Text Fonts and Rich Text]] · [[World-Space UI - BillboardGui and SurfaceGui]]
+[[Nametags and Overhead Bars - Cost and Visibility Rules]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[ScreenGui Fundamentals]] · [[Text Fonts and Rich Text]] · [[Tutorial Step Design Patterns - Teach by Doing]] · [[World-Space UI - BillboardGui and SurfaceGui]]
 
 ### 06 World Building and Art
 [[Textures Decals and Texture Memory]]
@@ -46,7 +46,7 @@ API snapshot: class, inherits `LayerCollector` (`_tools/roblox_api.json`, docs b
 [[Highlights and Selection Effects]]
 
 ### 09 Gameplay Systems
-[[Behaviour Trees Utility AI and State Machines for NPCs]] · [[Downed, Revive and Bleed-Out States]] · [[Quests and Objectives]] · [[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]]
+[[Behaviour Trees Utility AI and State Machines for NPCs]] · [[Downed, Revive and Bleed-Out States]] · [[Quests and Objectives]]
 
 ### 23 Debugging Deep Dives
 [[Debugging UI Layout and Input]]
@@ -72,6 +72,6 @@ API snapshot: class, inherits `LayerCollector` (`_tools/roblox_api.json`, docs b
 ### 58 Player QoL and Game Tweaks
 [[Comfort Toggles - Flashes Damage Numbers and Hit-Stop]]
 
-Also mentioned in (not linked): 00 Start Here
+Also mentioned in (not linked): 00 Start Here · Visual AI Debugging - State Labels, Path Lines and Perception Gizmos
 
 <!-- atlas:generated -->

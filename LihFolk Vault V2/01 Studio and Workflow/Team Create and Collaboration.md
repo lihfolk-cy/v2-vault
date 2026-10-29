@@ -192,5 +192,5 @@ These are the reference project's rules, generalised. See also [[Safe Changes in
 
 <!-- related:start -->
 ## Related
-[[Studio Settings and Shortcuts]] · [[Multiple Agents in One Studio]] · [[Packages and Shared Assets Across Places]] · [[Plugins - Using and Writing]] · [[Explorer Properties and Selection]] · [[Studio Assistant and AI Tools]] · [[Creator Store and Toolbox Safety]]
+[[Studio Settings and Shortcuts]] · [[Multiple Agents in One Studio]] · [[Plugins - Using and Writing]] · [[Packages and Shared Assets Across Places]] · [[Explorer Properties and Selection]] · [[Studio Assistant and AI Tools]] · [[Creator Store and Toolbox Safety]]
 <!-- related:end -->

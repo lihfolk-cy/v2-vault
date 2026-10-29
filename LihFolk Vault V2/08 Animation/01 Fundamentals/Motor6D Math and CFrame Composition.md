@@ -257,5 +257,5 @@ A climbing system wants the right hand on a ledge point while the climb clip pla
 
 <!-- related:start -->
 ## Related
-[[Procedural Animation]] · [[Inverse Kinematics]] · [[Animator Deep Dive]] · [[AI Pitfalls - Physics and Animation]] · [[Snippets - Building and Sampling Clips]] · [[R15 Rig Anatomy and Attachments]] · [[Animation Glossary]] · [[Snippets - IK]] · [[Weapon Design Rig Builder]]
+[[Procedural Animation]] · [[Inverse Kinematics]] · [[AI Pitfalls - Physics and Animation]] · [[Animator Deep Dive]] · [[Snippets - Building and Sampling Clips]] · [[R15 Rig Anatomy and Attachments]] · [[Animation Glossary]] · [[Snippets - IK]] · [[Weapon Design Rig Builder]]
 <!-- related:end -->

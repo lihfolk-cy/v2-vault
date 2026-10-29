@@ -310,5 +310,5 @@ Rule of thumb: 1.25x to 1.5x per tier, plus within-tier variation from a fitted 
 
 <!-- related:start -->
 ## Related
-[[Pity Timer]] · [[Probability and Statistics for Designers]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Combat and RPG]] · [[Core Loops and Session Design]] · [[Retention and Return Hooks]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Tycoons]] · [[Time-to-Kill Math and a Weapon Balance Sheet]]
+[[Pity Timer]] · [[Probability and Statistics for Designers]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Combat and RPG]] · [[Core Loops and Session Design]] · [[Retention and Return Hooks]] · [[Genre Playbook - Tycoons]] · [[Genre Playbook - Tower Defense]] · [[Time-to-Kill Math and a Weapon Balance Sheet]]
 <!-- related:end -->

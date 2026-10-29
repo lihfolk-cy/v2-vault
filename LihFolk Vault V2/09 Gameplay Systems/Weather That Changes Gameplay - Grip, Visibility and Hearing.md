@@ -12,7 +12,7 @@ tags: [weather, gameplay, vehicles, ai, perception, movement, anti-exploit, type
 > - Server decisions use server state; clients use it only for prediction and UI.
 > - Shelter factor from the same zone volumes as the rain renderer.
 >
-> Cost: TL;DR ~160 tok · whole note ~3.1k tok. Read more: ## 1. One source of truth: multipliers · ## 2. Grip: vehicles and movement · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~3.0k tok. Read more: ## 1. One source of truth: multipliers · ## 2. Grip: vehicles and movement · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Cosmetic weather is easy. Weather that changes the game (cars slide in rain, guards see less in fog, footsteps are masked by a storm) is where architecture mistakes become exploits or unfair moments. The rule that drives everything here: **gameplay effects read the server's weather state and server-owned multipliers, never what the client renders.** Fog, rain particles and sound are local and can be deleted by an exploiter; a sight multiplier on the server cannot. This note shows how to expose weather as a few multipliers, then wires them into movement, vehicles, NPC perception, stealth and ranged combat, with the fairness rules that keep players from feeling cheated.
@@ -160,5 +160,5 @@ Players who mute weather ambience or use captions must not gain or lose informat
 
 <!-- related:start -->
 ## Related
-[[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Chase Cameras and Speed Effects for Vehicles]] · [[NPC AI and Behaviour]] · [[Police Chases and Wanted Levels]] · [[AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses]] · [[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Squad AI - Attack Tokens, Flanking and Attacker Limits]] · [[Pathfinding Edge Cases and Fallbacks]]
+[[Chase Cameras and Speed Effects for Vehicles]] · [[NPC AI and Behaviour]] · [[Police Chases and Wanted Levels]] · [[AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]] · [[Squad AI - Attack Tokens, Flanking and Attacker Limits]] · [[Pathfinding Edge Cases and Fallbacks]]
 <!-- related:end -->

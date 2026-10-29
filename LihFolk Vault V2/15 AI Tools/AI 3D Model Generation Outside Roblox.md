@@ -216,5 +216,5 @@ Rules of thumb that reduce cleanup:
 
 <!-- related:start -->
 ## Related
-[[AI Pitfalls - Assets and Import]] · [[AI Material and Texture Generation]] · [[Who Owns AI-Generated Code and Assets]] · [[Evaluating AI Tools - A Practical Rubric]] · [[AI Audio - Voice Music and SFX]] · [[AI Animation and Motion from Video]] · [[Roblox Studio Assistant]] · [[AI Agents and Autonomous Workflows]]
+[[Modeling in Blender for Roblox]] · [[AI Pitfalls - Assets and Import]] · [[AI Material and Texture Generation]] · [[Who Owns AI-Generated Code and Assets]] · [[Evaluating AI Tools - A Practical Rubric]] · [[AI Animation and Motion from Video]] · [[AI Audio - Voice Music and SFX]] · [[Roblox Studio Assistant]] · [[AI Agents and Autonomous Workflows]]
 <!-- related:end -->

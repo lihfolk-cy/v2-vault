@@ -9,7 +9,7 @@ tags: [atlas, api, type/atlas, area/design, area/monetization, api/AnalyticsServ
 > - Roblox gives you built-in channels: `AnalyticsService` has methods for economy events, progression events, funnel steps and...
 > - Funnel logged with `AnalyticsService` onboarding steps.
 >
-> Cost: TL;DR ~120 tok · whole note ~660 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~670 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,7 +27,7 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 
 ## Mentioned in
 
-27 notes in 15 sections. The 25 most relevant are linked:
+28 notes in 15 sections. The 25 most relevant are linked:
 
 ### 04 Data and Persistence
 [[Data Loss Prevention and Recovery]] · [[Schema Migrations - Worked Case Studies]]
@@ -39,7 +39,7 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 [[Balancing with Spreadsheets and Data]] · [[Core Loops and Session Design]] · [[First-Time User Experience and Onboarding]] · [[Genre Playbook - Obbies and Platformers]] · [[Progression and Pacing Design]]
 
 ### 11 Monetization Publishing and Live Ops
-[[Analytics and Funnels]] · [[Developer Products and ProcessReceipt]] · [[Economy Inflation Sinks and Faucets Math]] · [[Robux Price Points and Offer Design]]
+[[Analytics and Funnels]] · [[Developer Products and ProcessReceipt]] · [[Economy Inflation Sinks and Faucets Math]] · [[Measuring Onboarding - Funnels, Drop-off and A-B Tests]] · [[Robux Price Points and Offer Design]]
 
 ### 12 Performance Testing and Debugging
 [[Crash and Error Telemetry]]
@@ -63,7 +63,7 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 [[Teaching Through Level Design]]
 
 ### 48 Economy Design Deep Dive
-[[Currency Architecture - Soft Hard and Event Currencies]] · [[Economy Design Start Here]] · [[Economy Telemetry and Balancing Live]]
+[[Currency Architecture - Soft Hard and Event Currencies]] · [[Economy Telemetry and Balancing Live]]
 
 ### 49 Roblox Platform Features
 [[Friend Invites Referrals and Experience Invites]]
@@ -71,6 +71,6 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 ### 52 Core Concepts
 [[Onboarding Funnel]] · [[Telemetry Events]]
 
-Also mentioned in (not linked): Links - Analytics · Marketing and Growth Start Here
+Also mentioned in (not linked): Economy Design Start Here · Links - Analytics · Marketing and Growth Start Here
 
 <!-- atlas:generated -->

@@ -1177,5 +1177,5 @@ What it does not stop on its own: dupes through a future trading feature, and ec
 
 <!-- related:start -->
 ## Related
-[[LihFolk Systems - Data and Purchase Guarantees]] · [[LihFolk Systems Library]] · [[Pet Hatching and Following End to End]] · [[Round-Based Minigame Loop End to End]] · [[Rebirth and Prestige System End to End]] · [[Quest Chain System End to End]] · [[Weekend Build - Survival Gather, Craft and Place]]
+[[LihFolk Systems - Data and Purchase Guarantees]] · [[LihFolk Systems Library]] · [[Pet Hatching and Following End to End]] · [[Rebirth and Prestige System End to End]] · [[Round-Based Minigame Loop End to End]] · [[Quest Chain System End to End]] · [[Weekend Build - Survival Gather, Craft and Place]]
 <!-- related:end -->

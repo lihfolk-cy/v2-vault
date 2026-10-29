@@ -295,5 +295,5 @@ See also: [[UI Design Systems]], [[HUD Design]], [[Pricing and Store Design]], [
 
 <!-- related:start -->
 ## Related
-[[Gamepad and Console UX]] · [[UI Style Directions - A Visual Vocabulary for Briefs]] · [[Responsive UI for Phone Tablet Console and PC]] · [[Notification and Toast Systems]] · [[Layout - Scale Offset and Constraints]] · [[UI Motion Language and Timing]] · [[Virtualized Lists and Large Inventories]] · [[Off-Screen Objective Markers and Waypoint Arrows]]
+[[UI Style Directions - A Visual Vocabulary for Briefs]] · [[Gamepad and Console UX]] · [[Responsive UI for Phone Tablet Console and PC]] · [[Tutorial Step Design Patterns - Teach by Doing]] · [[Notification and Toast Systems]] · [[Layout - Scale Offset and Constraints]] · [[UI Motion Language and Timing]] · [[Onboarding and FTUE - Tutorials That Keep Players]]
 <!-- related:end -->
