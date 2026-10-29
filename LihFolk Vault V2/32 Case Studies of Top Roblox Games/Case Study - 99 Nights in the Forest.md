@@ -41,7 +41,7 @@ Roblox does not publish CTR, retention or revenue for other people's games. Clic
 | Likes | 5,493,430 up, 577,306 down (about 90% positive) | Roblox game API, October 27, 2026 |
 | Playing now | 157,745 at 3:42 pm US Eastern, Tuesday October 27, 2026 | Roblox game API, single snapshot |
 | Typical level mid-2026 | About 250,000 concurrent (July 18, 2026) | Public stats site (Profitable.app, data to July 30, 2026) |
-| Server size (root place) | 25 | Roblox game API. The root place is the lobby; the size of a forest run is set separately and I did not confirm it |
+| Server size (root place) | 25 | Roblox game API. The root place is the lobby; the size of a forest run is set separately and we did not confirm it |
 | Awards | Best Adventure Experience and Best Horror Experience, 2025 Roblox Innovation Awards | Press (Wikipedia list) |
 | Beyond Roblox | Film adaptation in development at 20th Century Studios (announced April 2026); a Fortnite collaboration announced August 2026 | Press (TheWrap, AV Club, Wikipedia) |
 
@@ -73,7 +73,7 @@ See [[Thumbnails Icons and Store Page]], [[Genre Playbook - Horror and Story]] a
 
 ## 3. First five minutes
 
-From guides (rblxguide.com beginner guide, May 20, 2026; Item Level Gaming, July 1, 2025) and the store description. I could not confirm the exact lobby flow from a primary source.
+From guides (rblxguide.com beginner guide, May 20, 2026; Item Level Gaming, July 1, 2025) and the store description. We could not confirm the exact lobby flow from a primary source.
 
 1. You join a lobby (the root place) and go into a run with others; the run itself is a separate server in the forest.
 2. You land at a small camp with a campfire and a crafting bench. You start with an axe and a small sack that holds only a few items (5, per the May 2026 guide).
@@ -208,5 +208,5 @@ The monster's AI checks `isInsideLight` before chasing a target, and the client 
 
 <!-- related:start -->
 ## Related
-[[Case Study - Doors]] · [[Case Study - Pet Simulator 99]] · [[Case Study - Adopt Me]] · [[Case Study - Dress to Impress]] · [[Case Study - Fisch]] · [[Case Study - Blox Fruits]] · [[Case Study - Dead Rails]] · [[Case Study - Brookhaven RP]]
+[[Case Study - Doors]] · [[Case Study - Pet Simulator 99]] · [[Case Study - Adopt Me]] · [[Case Study - Dress to Impress]] · [[Case Study - Blox Fruits]] · [[Case Study - Fisch]] · [[Case Study - Dead Rails]] · [[Case Study - Brookhaven RP]]
 <!-- related:end -->

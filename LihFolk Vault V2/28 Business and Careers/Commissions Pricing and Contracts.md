@@ -282,5 +282,5 @@ Quote: midpoint 29 hours x hourly rate x 1.2 risk factor, as a fixed price, in t
 
 <!-- related:start -->
 ## Related
-[[Groups Roles and Permissions for Studios]] · [[Publishing Selling and Updating Plugins]] · [[Working with Content Creators]] · [[Documentation and Onboarding New Developers]] · [[Monetization Overview]] · [[Open-Source Licenses for Roblox Libraries - Quick Reference]]
+[[Groups Roles and Permissions for Studios]] · [[Working with Content Creators]] · [[Publishing Selling and Updating Plugins]] · [[Documentation and Onboarding New Developers]] · [[Monetization Overview]] · [[Open-Source Licenses for Roblox Libraries - Quick Reference]]
 <!-- related:end -->

@@ -389,5 +389,5 @@ Applying a description loads meshes, textures and cages, and on layered clothing
 
 <!-- related:start -->
 ## Related
-[[Commerce and Physical Goods]] · [[Layered Clothing Creation Workflow]] · [[Character Select and Class Systems with Different Rigs]] · [[Emotes and Social Animation]] · [[Game Passes]] · [[Shop with Game Passes and Developer Products End to End]]
+[[Commerce and Physical Goods]] · [[Character Select and Class Systems with Different Rigs]] · [[Layered Clothing Creation Workflow]] · [[Emotes and Social Animation]] · [[Game Passes]] · [[Shop with Game Passes and Developer Products End to End]]
 <!-- related:end -->

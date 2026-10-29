@@ -276,5 +276,5 @@ PvP breaks assumptions PvE can make:
 
 <!-- related:start -->
 ## Related
-[[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations]] · [[Characters and Humanoids]] · [[Explosions - Radius Damage, Falloff and Cover Checks]] · [[Grabs, Carries and Throws - Moving Players Safely]] · [[Enemy Archetype Kit - Fodder, Tank, Ranged, Support and Exploder]] · [[AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses]] · [[Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers]]
+[[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations]] · [[Characters and Humanoids]] · [[Grabs, Carries and Throws - Moving Players Safely]] · [[Explosions - Radius Damage, Falloff and Cover Checks]] · [[Enemy Archetype Kit - Fodder, Tank, Ranged, Support and Exploder]] · [[AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses]] · [[Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers]]
 <!-- related:end -->

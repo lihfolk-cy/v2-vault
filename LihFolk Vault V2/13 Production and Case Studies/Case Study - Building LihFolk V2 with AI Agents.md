@@ -1,5 +1,6 @@
 ---
 tags: [case-study, ai, agents, lihfolk, pipeline, quality, review, type/case-study, area/production, area/ai, level/advanced]
+verified: 2026-10-28
 ---
 # Case Study - Building LihFolk V2 with AI Agents
 
@@ -14,8 +15,6 @@ tags: [case-study, ai, agents, lihfolk, pipeline, quality, review, type/case-stu
 >
 > Cost: TL;DR ~150 tok · whole note ~1.8k tok. Read more: ## 1. What was built · ## 3. Headline lessons · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
-verified: 2026-10-28
 
 LihFolk V2 is a Roblox toolkit built almost entirely by AI agents: a knowledge vault of several hundred notes, a Claude Code plugin with skills and hooks, and an asset pack of procedural models, PBR materials, skyboxes, VFX and R15 animation clips. This note is the post-mortem. It records what the build taught about running agents on creative and technical work at scale, and points to the detailed lesson notes. Numbers marked **Measured** were measured in this project; everything else is a judgement from doing the work.
 
@@ -98,5 +97,5 @@ Details: [[AI Asset Pipelines - Scoring, Reviewers and Spot Checks]].
 
 <!-- related:start -->
 ## Related
-[[Team Roles and Workflows]] · [[Documentation and Knowledge Bases]] · [[Post-Mortem - Building a Melee Action Game]] · [[Case Study - Enemy Roster Rebuild]] · [[Working with AI Assistants in Studio]] · [[Ship a Game in 30 Days - Week-by-Week Plan for a Solo Dev]] · [[Planning and Scoping a Roblox Game]] · [[Scoping and Roles for Small Teams]]
+[[Blind Review Scores - Noise, Panels and Shipping the Best Version]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Evaluating AI Tools - A Practical Rubric]]
 <!-- related:end -->

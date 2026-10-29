@@ -86,5 +86,5 @@ Related: [[Beams and Trails]], [[Particle Emitters In Depth]], [[Dramatic Showca
 
 <!-- related:start -->
 ## Related
-[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Slash VFX Recipes - Crescent and Ring]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[Low-Poly Tree Set Worked Example]] · [[Blender 5 Python Gotchas for Headless Builds]] · [[Chibi Character Rules in Practice]]
+[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Slash VFX Recipes - Crescent and Ring]] · [[Low-Poly Tree Set Worked Example]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[Stylised Log Cabin Worked Example]] · [[Blender 5 Python Gotchas for Headless Builds]] · [[Chibi Character Rules in Practice]]
 <!-- related:end -->

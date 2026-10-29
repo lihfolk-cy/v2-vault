@@ -39,7 +39,7 @@ Source labels used below: **Observed in the live game (October 2026)** means the
 | Monthly users | Rose from 30 million to 60+ million between January 2020 and January 2021 | Studio statement (press release, 11 May 2021) |
 | Team size | About 40 staff, remote first, self funded (May 2021) | Studio statement (press release, 11 May 2021) |
 
-Things I could not verify: a current typical daily concurrent figure from a reliable tracker (RoMonitor's page did not render for a text fetch, and RoWatcher lists a 1.9M peak dated April 2026 that conflicts with the studio's own April 2021 record, so I treat that tracker date as an error). Revenue: Wikipedia repeats a "US$60 million a year" figure from 2020 era coverage; the studio itself only said revenue grew over 400% year on year in 2020. Treat any dollar figure as unverified.
+Things we could not verify: a current typical daily concurrent figure from a reliable tracker (RoMonitor's page did not render for a text fetch, and RoWatcher lists a 1.9M peak dated April 2026 that conflicts with the studio's own April 2021 record, so I treat that tracker date as an error). Revenue: Wikipedia repeats a "US$60 million a year" figure from 2020 era coverage; the studio itself only said revenue grew over 400% year on year in 2020. Treat any dollar figure as unverified.
 
 ### The history that matters for design
 
@@ -75,13 +75,13 @@ Roblox does not publish CTR for other creators' experiences. Everything here is 
 
 Compare this with the action-heavy approach in [[Case Study - Blox Fruits]] and the template-frame approach in [[Case Study - Brookhaven RP]]. The general rules live in [[Thumbnails Icons and Store Page]] and the cross-game comparison in [[Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks]].
 
-Unverified: whether Uplift uses Roblox's thumbnail A/B testing or sponsored ads. I found no public statement either way.
+Unverified: whether Uplift uses Roblox's thumbnail A/B testing or sponsored ads. We found no public statement either way.
 
 ---
 
 ## 3. The first five minutes
 
-Sources: the public fan wiki (Starter Egg page, read via a mirror) and beginner guides, plus the store description. I did not play.
+Sources: the public fan wiki (Starter Egg page, read via a mirror) and beginner guides, plus the store description. Not played first-hand.
 
 1. **Choose a role.** On first join the player picks Parent or Baby. This is a roleplay framing choice, not a class: babies have needs that parents look after, and the game pairs them loosely.
 2. **Starter Egg.** Every new player can collect one Starter Egg at the Nursery, from an NPC dog in a suit. It can only hatch a Dog or a Cat, and it can only be claimed once (fan wiki). Per the wiki, the player must be in the Parent role to claim it.
@@ -121,7 +121,7 @@ The **trade loop** sits across all of it: rarity tiers (common, uncommon, rare, 
 
 ### Daily and timed systems
 
-From guides (Press, weak sources; verify in game): a Task Board that refreshes daily with three quests paying small Bucks rewards and a chance at an egg for completing all three; a Daily Free Egg feature reported live from 14 November 2025; and login rewards. Eggs in the Nursery rotate, with one guide reporting an egg launched 28 February 2026 at 750 Bucks or 5 tasks. I could not confirm these numbers from the studio.
+From guides (Press, weak sources; verify in game): a Task Board that refreshes daily with three quests paying small Bucks rewards and a chance at an egg for completing all three; a Daily Free Egg feature reported live from 14 November 2025; and login rewards. Eggs in the Nursery rotate, with one guide reporting an egg launched 28 February 2026 at 750 Bucks or 5 tasks. We could not confirm these numbers from the studio.
 
 ### Events and cadence
 
@@ -156,7 +156,7 @@ Observed in the live game (27 October 2026), from the public game passes endpoin
 
 So only 6 of 24 passes are currently for sale. The others have been retired, which turns them into status items for players who bought them while they were available. That is a deliberate scarcity lever: passes become "limited" without being Roblox Limited items.
 
-Beyond passes, the game sells Robux-only pets and eggs as developer products (Press: Entertainment Focus, March 2021, says some pets can only be bought with Robux). I could not read developer product prices from a public endpoint; one undated guide lists older Ocean and Royal egg prices in Robux, and another reports a bundle of four event eggs for 99 Robux in 2026. Treat those as unverified.
+Beyond passes, the game sells Robux-only pets and eggs as developer products (Press: Entertainment Focus, March 2021, says some pets can only be bought with Robux). We could not read developer product prices from a public endpoint; one undated guide lists older Ocean and Royal egg prices in Robux, and another reports a bundle of four event eggs for 99 Robux in 2026. Treat those as unverified.
 
 Price shape: cheap event pass (50) to get almost everyone over the "first purchase" line during an event, mid passes in the 285 to 480 band for permanent quality of life and status (VIP, plots, pet pen slot), and 765 to 795 for big bundles. Compare with [[Robux Price Points and Offer Design]].
 
@@ -220,5 +220,5 @@ If you want the lesson without the risk: one pet type family (5 rarity tiers), a
 
 <!-- related:start -->
 ## Related
-[[Case Study - Steal a Brainrot]] · [[Case Study - Fisch]] · [[Case Study - Doors]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - Murder Mystery 2]] · [[Case Study - Jailbreak]] · [[Case Study - Tower Defense Simulator]] · [[Case Study - Rivals]]
+[[Case Study - Steal a Brainrot]] · [[Case Study - Doors]] · [[Case Study - Fisch]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - Murder Mystery 2]] · [[Case Study - Jailbreak]] · [[Case Study - Tower Defense Simulator]] · [[Case Study - Dead Rails]]
 <!-- related:end -->

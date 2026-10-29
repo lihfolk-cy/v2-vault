@@ -103,5 +103,5 @@ Effort: **S** = under half a day, **M** = one to three days, **L** = a week or m
 
 <!-- related:start -->
 ## Related
-[[Accessibility Cross-Links for QoL Settings]] · [[Block and Mute Respecting Platform Rules]] · [[Ship a Game in 30 Days - Week-by-Week Plan for a Solo Dev]] · [[Shift-Lock Sprint and Gamepad B for Menus]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Difficulty Options and Cognitive Load]]
+[[Accessibility Cross-Links for QoL Settings]] · [[Block and Mute Respecting Platform Rules]] · [[Ship a Game in 30 Days - Week-by-Week Plan for a Solo Dev]] · [[Shift-Lock Sprint and Gamepad B for Menus]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Genre QA Passes - Test Checklists per Game Type]]
 <!-- related:end -->

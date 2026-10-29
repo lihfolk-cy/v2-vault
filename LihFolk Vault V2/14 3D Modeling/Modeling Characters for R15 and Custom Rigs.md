@@ -248,5 +248,5 @@ Part-based (Motor6D) custom rigs follow the segmented modelling rules: one objec
 
 <!-- related:start -->
 ## Related
-[[3D Importer Settings Reference]] · [[Bones and Skinned Meshes]] · [[Blender Workflow for Roblox Creators]] · [[Modeling Weapons and Props]] · [[Modeling Fundamentals for Games]] · [[Exporting and Validating Models for Roblox]] · [[UV Unwrapping]] · [[Hard-Surface Modeling]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Voxel and Blocky Modeling]]
+[[3D Importer Settings Reference]] · [[Rigs and Joints]] · [[Blender Workflow for Roblox Creators]] · [[Modeling Weapons and Props]] · [[Modeling Fundamentals for Games]] · [[Exporting and Validating Models for Roblox]] · [[UV Unwrapping]] · [[Hard-Surface Modeling]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Voxel and Blocky Modeling]]
 <!-- related:end -->

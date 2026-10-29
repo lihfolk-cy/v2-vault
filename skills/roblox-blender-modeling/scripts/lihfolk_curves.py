@@ -30,7 +30,7 @@ Mesh builders (one watertight mesh, quads + fan-triangle caps, no n-gons, one UV
     lc.paint(ob, fn), lc.vertex_color_material(ob), lc.hex_rgb   vertex-colour palettes (one white material)
     lc.curve_object(...), lc.measure_curve_tris(ob)       editable Blender curves and their mesh cost
 
-Tested by D:/LihFolk Build/tools/curves/test_lihfolk_curves.py (maths/budget checks, extrude outline cases,
+Tested by test_lihfolk_curves.py, kept outside this repo (maths/budget checks, extrude outline cases,
 symmetry/alignment checks + 7 gated assets).
 
 Every builder takes cls= (a lihfolk_bpy.BUDGETS key). It estimates triangles first and, with

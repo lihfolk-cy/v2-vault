@@ -105,5 +105,5 @@ Asset mistakes come from unit and default mismatches between tools that a model 
 
 <!-- related:start -->
 ## Related
-[[Modeling Fundamentals for Games]] · [[Blender Workflow for Roblox Creators]] · [[AI Material and Texture Generation]] · [[Roblox Generative AI - Cube Mesh and Texture Generation]] · [[AI Pitfalls - Physics and Animation]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Roblox Studio Assistant]] · [[Benchmark - Does a Knowledge Vault Make AI Better at Roblox]] · [[AI Image Generation for Icons Thumbnails and Concepts]]
+[[Modeling Fundamentals for Games]] · [[Blender Workflow for Roblox Creators]] · [[AI Material and Texture Generation]] · [[Roblox Generative AI - Cube Mesh and Texture Generation]] · [[AI Pitfalls - Physics and Animation]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Roblox Studio Assistant]]
 <!-- related:end -->

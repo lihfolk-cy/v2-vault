@@ -102,5 +102,5 @@ Sources: https://games.roblox.com/v1/games?universeIds=66654135 ; https://games.
 
 <!-- related:start -->
 ## Related
-[[Case Study - Forsaken]] · [[Case Study - Tower Defense Simulator]] · [[Case Study - Rivals]] · [[Case Study - The Strongest Battlegrounds]] · [[Case Study - Jailbreak]] · [[Case Study - Dead Rails]] · [[Case Study - Pet Simulator 99]] · [[Case Study - Blox Fruits]]
+[[Case Study - Forsaken]] · [[Case Study - Rivals]] · [[Case Study - Tower Defense Simulator]] · [[Case Study - The Strongest Battlegrounds]] · [[Case Study - Jailbreak]] · [[Case Study - Dead Rails]] · [[Case Study - Blox Fruits]] · [[Case Study - Pet Simulator 99]]
 <!-- related:end -->

@@ -482,5 +482,5 @@ The networking side (who owns what, how enemies replicate) is the same as any Ro
 
 <!-- related:start -->
 ## Related
-[[Chase Cameras and Speed Effects for Vehicles]] · [[Layering Camera Feedback on the Default Camera]] · [[Modelling to the Roblox Camera and Player Scale]] · [[Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run]] · [[Sprite Sheets and Frame Animation with ImageRectOffset]] · [[EditableImage for Pixel Buffers and Procedural 2D]]
+[[Chase Cameras and Speed Effects for Vehicles]] · [[Layering Camera Feedback on the Default Camera]] · [[Modelling to the Roblox Camera and Player Scale]] · [[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Sprite Sheets and Frame Animation with ImageRectOffset]] · [[EditableImage for Pixel Buffers and Procedural 2D]]
 <!-- related:end -->

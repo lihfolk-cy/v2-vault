@@ -1,5 +1,6 @@
 ---
 tags: [modeling, blender, creatures, procedural, topology, subdivision, sdf, decimate, faceting, lihfolk, type/case-study, area/modeling, level/advanced]
+verified: 2026-10-28
 ---
 # Procedural Creatures - Fused Shells, Quad Cages and Faceting
 
@@ -14,8 +15,6 @@ tags: [modeling, blender, creatures, procedural, topology, subdivision, sdf, dec
 >
 > Cost: TL;DR ~130 tok · whole note ~1.4k tok. Read more: ## 1. Three methods, three plateaus · ## 2. Fused beats stacked, but topology decides smoothness · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
-verified: 2026-10-28
 
 What happened when AI agents built a stylised creature (a fox) in Blender by script, and three construction methods were scored by blind reviewers. The short version: stacked shells plateau because of seams, a fused shell fixes the seams, and smooth faceting needs a designed quad cage with subdivision, not more triangles. All scores are blind rubric scores out of 10 (pass bar 8.5), **Measured** in this project.
 
@@ -93,5 +92,5 @@ Across seven fox reviews proportion requests changed every round: bigger head, t
 
 <!-- related:start -->
 ## Related
-[[Modeling Fundamentals for Games]] · [[Blender Workflow for Roblox Creators]] · [[Curve-Based Modelling in Blender for Roblox]] · [[Hard-Surface Modeling]] · [[Normal Maps and Detail Baking]] · [[Modeling Characters for R15 and Custom Rigs]] · [[UV Unwrapping]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]
+[[Modeling Fundamentals for Games]] · [[Blender Workflow for Roblox Creators]] · [[Curve-Based Modelling in Blender for Roblox]] · [[Hard-Surface Modeling]] · [[Normal Maps and Detail Baking]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[UV Unwrapping]]
 <!-- related:end -->

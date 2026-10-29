@@ -126,7 +126,7 @@ Practical setup:
 ### Why share links matter financially
 [[Creator Rewards]]' **Audience Expansion** pays the creator a **35% revenue share on a new or reactivated user's first $100 of qualifying purchases** anywhere on Roblox in their first 60 days, when the user arrives through your Share Link (or a direct link or a name search) and plays 10+ minutes that day; reactivated users must have been inactive for 60 consecutive days; the experience must average 100+ DAU for the 60 days after; one reward per user; you need an ID-verified account in good standing (Roblox docs, as of October 2026). Qualifying purchases are Robux, Premium and UGC subscriptions.
 
-So a video that brings genuinely new players to Roblox through your share link can earn you money even if those players never buy anything in your game, provided they meet the rules. That changes the value of short-form traffic compared with sponsored ads, where I could not confirm that ad-acquired users qualify (see that note). The docs say the framework may change; check the Creator Rewards page before planning around it.
+So a video that brings genuinely new players to Roblox through your share link can earn you money even if those players never buy anything in your game, provided they meet the rules. That changes the value of short-form traffic compared with sponsored ads, where we could not confirm that ad-acquired users qualify (see that note). The docs say the framework may change; check the Creator Rewards page before planning around it.
 
 ---
 
@@ -219,5 +219,5 @@ The underlying principle: short-form views are not a Roblox metric. The Roblox m
 
 <!-- related:start -->
 ## Related
-[[Game Trailers and Clean Footage - Capture, Freecam and Editing]] · [[Marketing to Kids and Teens - Age Rules and Paid-Promo Disclosure]] · [[Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics]] · [[Competitor Analysis Method]] · [[Experience Description and Search Keywords]] · [[A-B Testing and Experiments on Roblox]] · [[Game Icon Design - Readable at Small Sizes]] · [[Roblox Communities as Your On-Platform Hub]]
+[[Game Trailers and Clean Footage - Capture, Freecam and Editing]] · [[Marketing to Kids and Teens - Age Rules and Paid-Promo Disclosure]] · [[Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics]] · [[Experience Description and Search Keywords]] · [[Competitor Analysis Method]] · [[A-B Testing and Experiments on Roblox]] · [[Game Icon Design - Readable at Small Sizes]] · [[Roblox Communities as Your On-Platform Hub]]
 <!-- related:end -->

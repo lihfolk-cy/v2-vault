@@ -12,7 +12,7 @@ tags: [field-notes, ai, agents, mcp, coordination, studio, workflow, backups, ty
 > - Claim files with `claimed_by`, `claimed_at`, status and expiry for batch work.
 > - Every edit preceded by a fresh read and guarded by a changed-since-read check.
 >
-> Cost: TL;DR ~170 tok · whole note ~1.6k tok. Read more: ## 2. Claim files for batch jobs · ## 3. Re-read before every edit · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~1.7k tok. Read more: ## 2. Claim files for batch jobs · ## 3. Re-read before every edit · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Multiple Agents in One Studio]] covers what agents share in one Studio window and the rules that keep them from colliding. This note adds the operational lessons that only showed up after weeks of many agents editing one large place: ownership that is written down, claim files for batch jobs, why "re-read before edit" is not optional, where backups belong, who holds Play mode, the autosave restart trap, and tagging every edit so it can be found again. Safety rules are in [[Safety Rules for AI Agents in Studio]]; the wider story in [[Case Study - Building a Game with AI Agents]].
@@ -103,5 +103,5 @@ Every edit an agent makes carries a short marker comment, such as `-- [agent-ui-
 
 <!-- related:start -->
 ## Related
-[[AI Agents and Autonomous Workflows]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[Roblox Studio MCP Server]] · [[Resetting One Player's Data Safely]] · [[Moving Data Out of a Play Session]] · [[Server-Authoritative Freeze and Stun Timestamps]]
+[[AI Agents and Autonomous Workflows]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[Resetting One Player's Data Safely]] · [[Moving Data Out of a Play Session]] · [[Blind Review Scores - Noise, Panels and Shipping the Best Version]] · [[Server-Authoritative Freeze and Stun Timestamps]]
 <!-- related:end -->

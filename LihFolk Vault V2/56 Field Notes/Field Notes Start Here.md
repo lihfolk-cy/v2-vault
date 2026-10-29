@@ -53,6 +53,7 @@ The foundations these notes build on live elsewhere:
 - [[Studio Automation Without Freezing Studio]]: backtracking patterns, chunking, the source size cap, compile checks, AutoRecovery.
 - [[Moving Data Out of a Play Session]]: separate data models, a localhost bridge, chunked returns, baking runtime GUIs.
 - [[Running Many AI Agents on One Roblox Place]]: ownership, claim files, fresh reads, disk backups, Play as a lock, edit markers.
+- [[Blind Review Scores - Noise, Panels and Shipping the Best Version]]: single reviewers run about 1 point high, panels differ by about 1; back up every version and ship the best panel score.
 
 ## Quick rules from this section
 

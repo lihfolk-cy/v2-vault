@@ -167,5 +167,5 @@ Captured motion is dense by nature. On Roblox:
 
 <!-- related:start -->
 ## Related
-[[Free Mocap and Mixamo Licensing for Roblox]] · [[Posing and Silhouettes]] · [[Authoring Clips in Code]] · [[R15 Run Cycle Key Poses]] · [[Spec-Driven Move Authoring]] · [[Animation Glossary]] · [[LihFolk R15 Keyframe Pipeline]] · [[Idle Breathing and Secondary Motion]]
+[[Free Mocap and Mixamo Licensing for Roblox]] · [[Posing and Silhouettes]] · [[Authoring Clips in Code]] · [[R15 Run Cycle Key Poses]] · [[Spec-Driven Move Authoring]] · [[Animation Glossary]] · [[LihFolk R15 Keyframe Pipeline]] · [[Spin and Whole-Body Rotation Moves]]
 <!-- related:end -->

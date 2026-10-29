@@ -7,7 +7,7 @@ description: 'LihFolk: make Roblox-ready models in Blender with an automatic qua
 
 Goal: every model ships at top-tier quality, correctly scaled, within budget, and imports cleanly into Roblox Studio. A model that fails the gate or scores below the rubric is not finished.
 
-Sources: `references/quality-research.md` (sourced, labelled research: Roblox docs, measured Blender 5.2 behaviour, expert practice). Helpers: `scripts/lihfolk_bpy.py` (tested on Blender 5.2).
+Sources: `references/quality-research.md` (sourced, labelled research: Roblox docs, measured Blender 5.2 behaviour, expert practice). Helpers: `scripts/lihfolk_bpy.py` (tested on Blender 5.2), `scripts/lihfolk_curves.py` (curves, sweeps, outlines) and `scripts/lihfolk_house.py` (house and building modules).
 
 ## Load the helpers
 
@@ -18,6 +18,16 @@ import importlib, lihfolk_bpy as lf; importlib.reload(lf)
 lf.setup_scene()   # 1 Blender unit = 1 stud
 ```
 Headless: `blender -b --factory-startup --python my_script.py`. Never modify the user's open scene destructively; build in a new collection or a temporary scene and confirm before deleting anything that existed.
+
+## Houses and buildings: `scripts/lihfolk_house.py`
+
+For any house, cabin, cottage, shop, tower or hut, build from the parameterised builders instead of starting from scratch (`import lihfolk_house as lh`). The method, the scale numbers and the style-swap table are in the vault note `House Construction Method - Modular Kit Workflow` (06 World Building and Art).
+- Frame: footprint centred on the origin, ridge along Y, eave walls on x = +-hx, gable walls on y = +-hy. `lh.Gable(hx, eave_z, pitch)` is the one roof-underside function that walls, roof, chimney and icicles all read.
+- Walls: `lh.log_walls` (interlocking round logs, gable logs cut by the roof) or `lh.coursed_walls` (stone / brick blocks, corner bond, quoins, lintels). Both cut real openings, so interiors work later.
+- Openings: plan them first with `lh.opening_footprint` and `lh.check_wall_layout` (frames and shutters must fit between the corners). Then add `lh.window`, `lh.door` and `lh.steps` on a `Face`.
+- Roof: `lh.gable_roof` (slab or shingle rows, ridge cap, optional snow with a lip) and `lh.icicle_row(z_at=roof["snow_under"])`. Add `lh.chimney`, `lh.foundation` and `lh.plank_deck` as needed.
+- Pipeline: put one module in each `lh.MeshBuilder`. Then run `lh.recentre` (one shared bottom-centre origin), `lh.finish_modules` (adds Triangulate for n-gons after the bevel), `lh.gate_modules`, `lh.floating_shells` (a whole-house scan; it must report 0), `lh.render_preview` and `lh.export_modules`.
+- Verified headless on Blender 5.2: a stone cottage (7 modules, every gate passed, 0 of 317 shells floating) and a log cabin (6 modules, every gate passed, 0 of 161 floating).
 
 ## Pipeline (do every step)
 

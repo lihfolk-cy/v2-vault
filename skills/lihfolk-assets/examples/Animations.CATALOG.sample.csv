@@ -1,0 +1,3 @@
+name,category,frames,fps,loop,priority,markers,score,status,rbxmx,preview
+SwordHeavy,Combat,53,30,False,Action,TrailOn@20;Hit@23;TrailOff@28;CanCancel@40,8.7,shipped,Animations/Combat/SwordHeavy.rbxmx,Animations/Combat/SwordHeavy_sheet.png
+SwordLight1,Combat,25,30,False,Action,TrailOn@7;Hit@10;TrailOff@13;ComboWindow@17,9.0,shipped,Animations/Combat/SwordLight1.rbxmx,Animations/Combat/SwordLight1_sheet.png

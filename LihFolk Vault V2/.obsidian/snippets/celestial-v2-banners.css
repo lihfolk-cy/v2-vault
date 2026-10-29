@@ -1,0 +1,223 @@
+/* CELESTIAL V2 : banners, moons and calendars. The visuals of the old Celestial Vault plugin (painted
+   daily-journal banners, moon calendar, streak planet, shooting stars) rebuilt as pure CSS, so they load
+   from this snippet with no plugin. Part of the Celestial V2 layer; extends celestial-lite / celestial-fx.
+
+   HOW TO USE (frontmatter `cssclasses`, any note):
+     banner-dusk    banner-dawn    banner-tide    banner-amber    banner-meadow    banner-ember    banner-moon
+     (weekday aliases, same palettes as the plugin: banner-sunday ... banner-saturday; cv-daily = banner-moon)
+       -> a painted skyline banner over the note: sky, sun or moon glow, towers with lit windows,
+          rooftops with lanterns, a blossom tree, water with the sun's reflection. The title floats on it,
+          and rules, bullets and bold text take the palette accent.
+     moon-new  moon-waxing-crescent  moon-first-quarter  moon-waxing-gibbous  moon-full
+     moon-waning-gibbous  moon-last-quarter  moon-waning-crescent
+       -> a static moon in that phase, top right (inside the banner when there is one).
+     moon-calendar  (or the plugin's old cv-month)
+       -> a 7-column markdown table becomes a month calendar; ==12== marks today, a [[link]] in a cell
+          adds a dot (a day with a note).
+     callout  > [!orb] 7-day streak  -> the streak planet with your own label.
+   Templates: _templates/Celestial Day.md and _templates/Celestial Month.md.                      */
+
+/* ================================================================ BANNER PALETTES (from the plugin's DAYS table) */
+:is(.banner-dusk, .banner-sunday) {
+  --bn-s0: #1d1233; --bn-s1: #9c4f78; --bn-s2: #f3b07a; --bn-sun: #ffe2a8; --bn-accent: #f4b183; --bn-far: #35203f; --bn-near: #170d1e; --bn-sx: 52%; --bn-sy: 55%; }
+:is(.banner-dawn, .banner-monday) {
+  --bn-s0: #0b1433; --bn-s1: #34539e; --bn-s2: #a3c4ea; --bn-sun: #eef4ff; --bn-accent: #93b6ff; --bn-far: #1b2850; --bn-near: #0b1126; --bn-sx: 64%; --bn-sy: 54%; }
+:is(.banner-tide, .banner-tuesday) {
+  --bn-s0: #08191e; --bn-s1: #2c767d; --bn-s2: #a9e0d2; --bn-sun: #effff6; --bn-accent: #72d5c6; --bn-far: #123a40; --bn-near: #071619; --bn-sx: 44%; --bn-sy: 56%; }
+:is(.banner-amber, .banner-wednesday) {
+  --bn-s0: #2b1d0e; --bn-s1: #c08537; --bn-s2: #f6d68c; --bn-sun: #fff2c4; --bn-accent: #e9c47a; --bn-far: #4a3420; --bn-near: #1e140b; --bn-sx: 70%; --bn-sy: 53%; }
+:is(.banner-meadow, .banner-thursday) {
+  --bn-s0: #0f2016; --bn-s1: #4c8657; --bn-s2: #dbe8aa; --bn-sun: #fbffe2; --bn-accent: #a9d98f; --bn-far: #1f3a26; --bn-near: #0b170f; --bn-sx: 38%; --bn-sy: 55%; }
+:is(.banner-ember, .banner-friday) {
+  --bn-s0: #240c18; --bn-s1: #a3324b; --bn-s2: #f2896a; --bn-sun: #ffd4b2; --bn-accent: #f27f7f; --bn-far: #3a1424; --bn-near: #16080f; --bn-sx: 58%; --bn-sy: 57%; }
+:is(.banner-moon, .banner-saturday, .cv-daily) {
+  --bn-s0: #06051a; --bn-s1: #2f2470; --bn-s2: #8a5fd0; --bn-sun: #f4eaff; --bn-accent: #b89cff; --bn-far: #1a1440; --bn-near: #0a0820; --bn-sx: 66%; --bn-sy: 28%;
+  --bn-sun-r: 20px;
+  --bn-stars:
+    radial-gradient(1px 1px at 6% 12%, #fff 50%, transparent 51%), radial-gradient(1.2px 1.2px at 17% 34%, #fff 50%, transparent 51%),
+    radial-gradient(.9px .9px at 27% 8%, #e9e2ff 50%, transparent 51%), radial-gradient(1.4px 1.4px at 36% 26%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 44% 44%, #ffd9f3 50%, transparent 51%), radial-gradient(1.1px 1.1px at 53% 15%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 61% 40%, #cfe0ff 50%, transparent 51%), radial-gradient(1.3px 1.3px at 74% 9%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 82% 31%, #e9e2ff 50%, transparent 51%), radial-gradient(1.2px 1.2px at 91% 18%, #fff 50%, transparent 51%),
+    radial-gradient(.9px .9px at 97% 42%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 12% 48%, #cfe0ff 50%, transparent 51%);
+}
+
+/* ================================================================ BANNER ARTWORK
+   One element per note (the sizer's ::before in reading view and live preview). The skyline is a single
+   shared silhouette in black at partial opacity, so it tints itself from each palette's sky. */
+.workspace-leaf-content :is(.markdown-preview-view, .markdown-source-view.mod-cm6):is(.banner-dusk, .banner-dawn, .banner-tide, .banner-amber, .banner-meadow, .banner-ember, .banner-moon,
+  .banner-sunday, .banner-monday, .banner-tuesday, .banner-wednesday, .banner-thursday, .banner-friday, .banner-saturday, .cv-daily) {
+  --cv-day: var(--bn-accent);
+  --bn-on: 1;
+}
+.workspace-leaf-content :is(.markdown-preview-view, .markdown-source-view.mod-cm6):is(.banner-dusk, .banner-dawn, .banner-tide, .banner-amber, .banner-meadow, .banner-ember, .banner-moon,
+  .banner-sunday, .banner-monday, .banner-tuesday, .banner-wednesday, .banner-thursday, .banner-friday, .banner-saturday, .cv-daily) :is(.markdown-preview-sizer, .cm-sizer)::before {
+  content: ""; display: block; position: relative; z-index: 0; width: 100%; aspect-ratio: 4 / 1; margin: 6px 0 0; border-radius: 16px; pointer-events: none;
+  background:
+    /* sun reflection on the water */
+    repeating-linear-gradient(180deg, color-mix(in srgb, var(--bn-sun) 50%, transparent) 0 2px, transparent 2px 9px)
+      var(--bn-sx) 100% / 11% 27% no-repeat,
+    /* water: from the sky's middle tone down to the near shore */
+    linear-gradient(180deg, color-mix(in srgb, var(--bn-s1) 55%, transparent), var(--bn-far) 50%, var(--bn-near)) 0 100% / 100% 29% no-repeat,
+    /* blossom tree trunk over the blossoms */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 300' preserveAspectRatio='none'%3E%3Cpath d='M120 213C128 160 110 120 140 70M132 140C160 120 190 110 215 95' stroke='%23000' stroke-opacity='.72' stroke-width='9' fill='none'/%3E%3C/svg%3E") 0 0 / 100% 100% no-repeat,
+    radial-gradient(circle 39px at 13.8% 26.6%, color-mix(in srgb, var(--bn-accent) 31%, transparent) 60%, transparent 100%),
+    radial-gradient(circle 31px at 19.6% 28.0%, color-mix(in srgb, var(--bn-accent) 43%, transparent) 60%, transparent 100%),
+    radial-gradient(circle 25px at 12.5% 15.4%, color-mix(in srgb, var(--bn-accent) 50%, transparent) 60%, transparent 100%),
+    radial-gradient(circle 37px at 14.9% 19.3%, color-mix(in srgb, var(--bn-accent) 35%, transparent) 60%, transparent 100%),
+    radial-gradient(circle 38px at 1.7% 32.8%, color-mix(in srgb, var(--bn-accent) 36%, transparent) 60%, transparent 100%),
+    radial-gradient(circle 45px at 3.3% 11.4%, color-mix(in srgb, var(--bn-accent) 32%, transparent) 60%, transparent 100%),
+    radial-gradient(circle 29px at 16.7% 33.2%, color-mix(in srgb, var(--bn-accent) 28%, transparent) 60%, transparent 100%),
+    radial-gradient(circle 37px at 7.7% 18.5%, color-mix(in srgb, var(--bn-accent) 52%, transparent) 60%, transparent 100%),
+    radial-gradient(circle 35px at 19.8% 18.8%, color-mix(in srgb, var(--bn-accent) 54%, transparent) 60%, transparent 100%),
+    radial-gradient(circle 38px at 14.9% 33.7%, color-mix(in srgb, var(--bn-accent) 32%, transparent) 60%, transparent 100%),
+    radial-gradient(circle 21px at 7.6% 11.3%, color-mix(in srgb, var(--bn-accent) 31%, transparent) 60%, transparent 100%),
+    radial-gradient(circle 44px at 5.0% 17.9%, color-mix(in srgb, var(--bn-accent) 44%, transparent) 60%, transparent 100%),
+    /* lanterns on the rooftops */
+    radial-gradient(circle 9px at 2.2% 70.6%, var(--bn-sun) 0 2.6px, color-mix(in srgb, var(--bn-accent) 30%, transparent) 3.4px, transparent 9px),
+    radial-gradient(circle 9px at 8.7% 63.5%, var(--bn-sun) 0 2.6px, color-mix(in srgb, var(--bn-accent) 30%, transparent) 3.4px, transparent 9px),
+    radial-gradient(circle 9px at 49.0% 67.9%, var(--bn-sun) 0 2.6px, color-mix(in srgb, var(--bn-accent) 30%, transparent) 3.4px, transparent 9px),
+    radial-gradient(circle 9px at 86.4% 66.0%, var(--bn-sun) 0 2.6px, color-mix(in srgb, var(--bn-accent) 30%, transparent) 3.4px, transparent 9px),
+    radial-gradient(circle 9px at 94.5% 71.6%, var(--bn-sun) 0 2.6px, color-mix(in srgb, var(--bn-accent) 30%, transparent) 3.4px, transparent 9px),
+    /* far towers with lit windows, then the near rooftops */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 300' preserveAspectRatio='none'%3E%3Cpath d='M-10 205V98h58V205M49 205V147h54V205M104 205V161h60V205M168 205V158h49V205M217 205V156h54V205M271 205V118h53V205M326 205V160h45V205M376 205V140h59V205M439 205V141h38V205M478 205V157h50V205M529 205V122h55V205M585 205V165h52V205M640 205V112h32V205M674 205V155h29V205M707 205V143h67V205M779 205V169h49V205M830 205V79h74V205M909 205V154h54V205M965 205V123h29V205M997 205V132h56V205M1058 205V149h65V205M1127 205V174h40V205M1172 205V147h51V205' fill='%23000' fill-opacity='.42'/%3E%3Cpath d='M2 143h3v4h-3zM28 182h3v4h-3zM174 203h3v4h-3zM235 188h3v4h-3zM275 137h3v4h-3zM293 150h3v4h-3zM349 192h3v4h-3zM361 205h3v4h-3zM428 159h3v4h-3zM389 185h3v4h-3zM446 147h3v4h-3zM448 186h3v4h-3zM499 163h3v4h-3zM512 176h3v4h-3zM485 189h3v4h-3zM509 202h3v4h-3zM655 144h3v4h-3zM945 160h3v4h-3zM913 199h3v4h-3zM987 168h3v4h-3zM1070 155h3v4h-3zM1160 193h3v4h-3zM1198 166h3v4h-3z' fill='%23fff2cc' fill-opacity='.6'/%3E%3Cpath d='M0 213L0 195L41 185L82 195L82 169L108 159L134 169L134 184L178 174L222 184L222 187L273 177L324 187L324 179L353 169L381 179L381 164L414 154L446 164L446 172L491 162L535 172L535 182L579 172L624 182L624 188L674 178L724 188L724 189L754 179L783 189L783 194L827 184L870 194L870 167L937 157L1004 167L1004 179L1057 169L1109 179L1109 192L1135 182L1162 192L1162 176L1200 166L1239 176L1200 213Z' fill='%23000' fill-opacity='.72'/%3E%3C/svg%3E") 0 0 / 100% 100% no-repeat,
+    /* sun (or moon) disc and its glow */
+    radial-gradient(circle var(--bn-sun-r, 30px) at var(--bn-sx) var(--bn-sy), var(--bn-sun) 97%, transparent 100%),
+    radial-gradient(circle 170px at var(--bn-sx) var(--bn-sy), color-mix(in srgb, var(--bn-sun) 90%, transparent), color-mix(in srgb, var(--bn-sun) 35%, transparent) 25%, transparent 100%),
+    /* soft cloud bands */
+    radial-gradient(ellipse 18% 4% at 22% 22%, color-mix(in srgb, var(--bn-s2) 22%, transparent), transparent 100%),
+    radial-gradient(ellipse 14% 3% at 71% 34%, color-mix(in srgb, var(--bn-s2) 18%, transparent), transparent 100%),
+    radial-gradient(ellipse 20% 5% at 48% 46%, color-mix(in srgb, var(--bn-s2) 16%, transparent), transparent 100%),
+    var(--bn-stars, linear-gradient(transparent, transparent)),
+    /* the sky */
+    linear-gradient(180deg, var(--bn-s0) 0%, var(--bn-s1) 41%, var(--bn-s2) 70%);
+  -webkit-mask-image: linear-gradient(180deg, #000 52%, transparent 100%), linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+  -webkit-mask-composite: source-in; mask-composite: intersect;
+          mask-image: linear-gradient(180deg, #000 52%, transparent 100%), linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+}
+/* the title floats on the lower edge of the banner */
+.workspace-leaf-content :is(.markdown-preview-view, .markdown-source-view.mod-cm6):is(.banner-dusk, .banner-dawn, .banner-tide, .banner-amber, .banner-meadow, .banner-ember, .banner-moon,
+  .banner-sunday, .banner-monday, .banner-tuesday, .banner-wednesday, .banner-thursday, .banner-friday, .banner-saturday, .cv-daily) .inline-title {
+  position: relative; z-index: 1; margin-top: -2.4em; padding-left: 6px;
+  background: linear-gradient(90deg, #ffffff, color-mix(in srgb, var(--bn-accent) 70%, white) 55%, var(--bn-accent)) !important;
+  -webkit-background-clip: text !important; background-clip: text !important; color: transparent !important; animation: none !important;
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, .7)) drop-shadow(0 0 18px color-mix(in srgb, var(--bn-accent) 45%, transparent)) !important;
+}
+.theme-dark :is(.banner-dusk, .banner-dawn, .banner-tide, .banner-amber, .banner-meadow, .banner-ember, .banner-moon,
+  .banner-sunday, .banner-monday, .banner-tuesday, .banner-wednesday, .banner-thursday, .banner-friday, .banner-saturday, .cv-daily) :is(strong, .cm-strong) { color: color-mix(in srgb, var(--bn-accent) 70%, white); }
+
+/* the plugin's daily notes: properties fade back until hovered; its code blocks no longer render, so hide them */
+.cv-daily .metadata-container { opacity: .45; transition: opacity .2s; }
+.cv-daily .metadata-container:hover { opacity: 1; }
+.markdown-rendered pre:has(> code:is(.language-celestial-day, .language-celestial-today, .language-celestial-month)) { display: none; }
+
+/* ================================================================ MOON PHASES (static, opt-in) */
+.workspace-leaf-content :is(.markdown-preview-view, .markdown-source-view.mod-cm6):is(.moon-new, .moon-waxing-crescent, .moon-first-quarter, .moon-waxing-gibbous, .moon-full,
+  .moon-waning-gibbous, .moon-last-quarter, .moon-waning-crescent) :is(.markdown-preview-sizer, .cm-sizer) { position: relative; }
+.workspace-leaf-content :is(.markdown-preview-view, .markdown-source-view.mod-cm6):is(.moon-new, .moon-waxing-crescent, .moon-first-quarter, .moon-waxing-gibbous, .moon-full,
+  .moon-waning-gibbous, .moon-last-quarter, .moon-waning-crescent) :is(.markdown-preview-sizer, .cm-sizer)::after {
+  --mn-lit: #f4eaff; --mn-dark: #1a1440;
+  --mn-size: clamp(24px, 6.5%, 56px);
+  content: ""; position: absolute; z-index: 1; top: 24px; right: 7%; width: var(--mn-size); aspect-ratio: 1; border-radius: 50%; pointer-events: none;
+  background: var(--mn-phase, var(--mn-lit));
+  box-shadow: inset -3px -3px 8px rgba(0, 0, 0, .25), 0 0 26px color-mix(in srgb, var(--mn-lit) 45%, transparent), 0 0 70px rgba(var(--v2-violet, 155, 123, 255), .3);
+}
+.moon-new              { --mn-phase: radial-gradient(circle at 50% 50%, #1a1440 66%, #4a3d78 70%, #1a1440 72%); }
+.moon-waxing-crescent  { --mn-phase: radial-gradient(circle at 30% 50%, #1a1440 0 58%, transparent 59%), #f4eaff; }
+.moon-first-quarter    { --mn-phase: linear-gradient(90deg, #1a1440 50%, #f4eaff 50%); }
+.moon-waxing-gibbous   { --mn-phase: radial-gradient(circle at 64% 50%, #f4eaff 0 58%, transparent 59%), linear-gradient(90deg, #1a1440 50%, #f4eaff 50%); }
+.moon-full             { --mn-phase: radial-gradient(circle at 36% 34%, #ffffff, #f4eaff 40%, #d9ccff 100%); }
+.moon-waning-gibbous   { --mn-phase: radial-gradient(circle at 36% 50%, #f4eaff 0 58%, transparent 59%), linear-gradient(90deg, #f4eaff 50%, #1a1440 50%); }
+.moon-last-quarter     { --mn-phase: linear-gradient(90deg, #f4eaff 50%, #1a1440 50%); }
+.moon-waning-crescent  { --mn-phase: radial-gradient(circle at 70% 50%, #1a1440 0 58%, transparent 59%), #f4eaff; }
+/* faint craters on top of any phase */
+.workspace-leaf-content :is(.moon-waxing-crescent, .moon-first-quarter, .moon-waxing-gibbous, .moon-full, .moon-waning-gibbous, .moon-last-quarter, .moon-waning-crescent) :is(.markdown-preview-sizer, .cm-sizer)::after {
+  background: radial-gradient(circle 5px at 40% 36%, rgba(120, 100, 180, .22), transparent), radial-gradient(circle 7px at 62% 64%, rgba(120, 100, 180, .18), transparent),
+    radial-gradient(circle 4px at 70% 30%, rgba(120, 100, 180, .2), transparent), var(--mn-phase);
+}
+/* with a banner, the moon takes the painted sun's place (raised into the sky; the sun disc is hidden, its glow stays).
+   Percentage margins resolve against the sizer width, and the banner is width/4 tall, so sy * .25 = the sun's height. */
+:is(.moon-new, .moon-waxing-crescent, .moon-first-quarter, .moon-waxing-gibbous, .moon-full, .moon-waning-gibbous, .moon-last-quarter, .moon-waning-crescent) {
+  --bn-sun-r: 0px; --bn-sy: 30%;
+}
+.workspace-leaf-content :is(.markdown-preview-view, .markdown-source-view.mod-cm6):is(.banner-dusk, .banner-dawn, .banner-tide, .banner-amber, .banner-meadow, .banner-ember, .banner-moon,
+  .banner-sunday, .banner-monday, .banner-tuesday, .banner-wednesday, .banner-thursday, .banner-friday, .banner-saturday, .cv-daily):is(.moon-new, .moon-waxing-crescent,
+  .moon-first-quarter, .moon-waxing-gibbous, .moon-full, .moon-waning-gibbous, .moon-last-quarter, .moon-waning-crescent) :is(.markdown-preview-sizer, .cm-sizer)::after {
+  top: 6px; right: auto; left: var(--bn-sx); margin: calc(var(--bn-sy) * .25 - var(--mn-size) / 2) 0 0 calc(var(--mn-size) / -2);
+}
+
+/* ================================================================ MOON CALENDAR (a 7-column table) */
+:is(.moon-calendar, .cv-month) .inline-title::before { content: "\2727  "; color: var(--v2-ice, #b89cff); -webkit-text-fill-color: currentColor; }
+.workspace-leaf-content :is(.moon-calendar, .cv-month) table {
+  width: 100%; max-width: 640px; table-layout: fixed; border-collapse: separate !important; border-spacing: 4px; padding: 12px;
+  border: 1px solid rgba(var(--v2-violet, 155, 123, 255), .3) !important; border-radius: 18px;
+  background: linear-gradient(180deg, rgba(24, 18, 48, .7), rgba(10, 8, 22, .8)); box-shadow: 0 0 34px -16px rgba(var(--v2-violet, 155, 123, 255), .6);
+}
+:is(.moon-calendar, .cv-month) table thead tr { background: none !important; }
+:is(.moon-calendar, .cv-month) table th {
+  border: none !important; background: none !important; text-align: center !important; padding: 2px 0 6px !important;
+  font-size: .68em; letter-spacing: .14em; text-transform: uppercase; color: var(--v2-ice, #9fe8ff) !important; opacity: .75;
+}
+:is(.moon-calendar, .cv-month) table td {
+  position: relative; border: none !important; text-align: center !important; padding: 10px 0 13px !important; border-radius: 999px;
+  color: var(--text-muted); font-variant-numeric: tabular-nums; transition: background .15s, color .15s;
+}
+:is(.moon-calendar, .cv-month) table td:hover { background: rgba(155, 123, 255, .1); color: var(--text-normal); }
+:is(.moon-calendar, .cv-month) table td:empty { opacity: 0; }
+:is(.moon-calendar, .cv-month) table td:has(a.internal-link)::after {
+  content: ""; position: absolute; left: 50%; bottom: 4px; width: 4px; height: 4px; margin-left: -2px; border-radius: 50%;
+  background: var(--v2-ice, #b89cff); box-shadow: 0 0 5px var(--v2-ice, #b89cff);
+}
+:is(.moon-calendar, .cv-month) table td a.internal-link { color: var(--text-normal); background-image: none; }
+:is(.moon-calendar, .cv-month) table td:has(mark) {
+  background: linear-gradient(135deg, #7b5ee8, #3fb9e8); box-shadow: 0 0 14px -2px rgba(64, 217, 255, .7);
+}
+:is(.moon-calendar, .cv-month) table td mark { background: none; color: #fff; font-weight: 700; }
+
+/* ================================================================ STREAK PLANET  > [!orb] 7-day streak */
+.callout[data-callout="orb"] {
+  --callout-color: 232, 196, 122; --callout-icon: lucide-orbit;
+  position: relative; display: flex; flex-direction: column; align-items: center; width: 220px; padding: 150px 12px 14px !important; text-align: center;
+  border-radius: 20px !important;
+}
+.callout[data-callout="orb"]::before {
+  content: ""; position: absolute; top: 20px; left: 50%; width: 112px; height: 112px; margin-left: -56px; border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 28%, rgba(255, 255, 255, .28), transparent 38%),
+    radial-gradient(circle at 70% 75%, rgba(0, 0, 0, .65), transparent 60%),
+    radial-gradient(ellipse 34px 20px at 18% 38%, #c9b07a 70%, transparent 72%),
+    radial-gradient(ellipse 30px 24px at 60% 26%, #e2cc96 70%, transparent 72%),
+    radial-gradient(ellipse 46px 22px at 44% 70%, #b5a0d8 70%, transparent 72%),
+    radial-gradient(ellipse 28px 18px at 86% 58%, #d6bd84 70%, transparent 72%),
+    #3a3468;
+  background-size: 100% 100%, 100% 100%, 224px 112px, 224px 112px, 224px 112px, 224px 112px, auto;
+  box-shadow: inset -14px -10px 26px rgba(0, 0, 0, .65), 0 0 28px rgba(232, 196, 122, .3);
+  animation: cvb-orb-spin 26s linear infinite;
+}
+.callout[data-callout="orb"]::after {
+  content: ""; position: absolute; top: 134px; left: 50%; width: 170px; height: 22px; margin-left: -85px; pointer-events: none;
+  background: radial-gradient(ellipse at 50% 0, rgba(184, 156, 255, .22), transparent 70%); border-top: 1px solid rgba(184, 156, 255, .12);
+}
+@keyframes cvb-orb-spin { to { background-position: 0 0, 0 0, 224px 0, 224px 0, 224px 0, 224px 0, 0 0; } }
+.callout[data-callout="orb"] .callout-title { justify-content: center; }
+.callout[data-callout="orb"] .callout-icon { display: none; }
+.callout[data-callout="orb"] .callout-title-inner { color: #ffe2a0; font-weight: 700; text-shadow: 0 0 14px rgba(255, 200, 120, .5); }
+.callout[data-callout="orb"] .callout-content { font-size: .8em; color: var(--text-faint); }
+
+/* ================================================================ SHOOTING STAR on the welcome tab (the plugin drew these on canvas) */
+body:not(.cv-sky-on).theme-dark .workspace-leaf-content[data-type="empty"] .empty-state::after {
+  content: ""; position: absolute; top: 14%; left: 72%; width: 110px; height: 1.6px; border-radius: 2px; pointer-events: none; opacity: 0;
+  background: linear-gradient(90deg, #ffffff, rgba(180, 140, 255, 0)); rotate: -28deg; transform-origin: 0 50%;
+  animation: cvb-shoot calc(11s / var(--v2-speed, 1)) ease-in 3s infinite;
+}
+@keyframes cvb-shoot {
+  0%   { opacity: 0; translate: 0 0; }
+  2%   { opacity: .9; }
+  9%   { opacity: 0; translate: -420px 220px; }
+  100% { opacity: 0; translate: -420px 220px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .callout[data-callout="orb"]::before,
+  body.theme-dark .workspace-leaf-content[data-type="empty"] .empty-state::after { animation: none !important; }
+}

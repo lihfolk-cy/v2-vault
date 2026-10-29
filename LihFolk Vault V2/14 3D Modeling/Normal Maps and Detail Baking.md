@@ -235,5 +235,5 @@ end)
 
 <!-- related:start -->
 ## Related
-[[Blender Workflow for Roblox Creators]] · [[Modeling Fundamentals for Games]] · [[Baking Lighting and Detail into Textures]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Low-Poly and Stylized Modeling]] · [[UGC Avatar Items and Accessories]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Mesh Optimization for Mobile]] · [[Modular Environment Kits]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]]
+[[Blender Workflow for Roblox Creators]] · [[Modeling Fundamentals for Games]] · [[Baking Lighting and Detail into Textures]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Low-Poly and Stylized Modeling]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[UGC Avatar Items and Accessories]] · [[Mesh Optimization for Mobile]] · [[Modular Environment Kits]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]]
 <!-- related:end -->

@@ -376,5 +376,5 @@ The senior trade-off: every camera effect costs a little player control and a li
 
 <!-- related:start -->
 ## Related
-[[Layering Camera Feedback on the Default Camera]] · [[Chase Cameras and Speed Effects for Vehicles]] · [[Snippets - Procedural Motion]] · [[Snippets - Lua Keyframe Player Core]] · [[Snippets - Animation Controller Module]] · [[Snippets - Ragdoll]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]]
+[[Layering Camera Feedback on the Default Camera]] · [[Chase Cameras and Speed Effects for Vehicles]] · [[Snippets - Procedural Motion]] · [[Snippets - Lua Keyframe Player Core]] · [[Snippets - Animation Controller Module]] · [[Snippets - Ragdoll]]
 <!-- related:end -->

@@ -273,5 +273,5 @@ Splitting also helps culling (off-screen pieces are skipped) and lets the engine
 
 <!-- related:start -->
 ## Related
-[[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Mesh Optimization for Mobile]] · [[UV Unwrapping]] · [[Low-Poly and Stylized Modeling]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Exporting and Validating Models for Roblox]] · [[Modular Environment Kits]] · [[Curve-Based Modelling in Blender for Roblox]]
+[[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Mesh Optimization for Mobile]] · [[Low-Poly and Stylized Modeling]] · [[UV Unwrapping]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Exporting and Validating Models for Roblox]] · [[Modular Environment Kits]] · [[Curve-Based Modelling in Blender for Roblox]]
 <!-- related:end -->

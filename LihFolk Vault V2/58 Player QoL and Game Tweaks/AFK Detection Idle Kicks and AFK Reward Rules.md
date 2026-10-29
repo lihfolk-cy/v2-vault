@@ -102,7 +102,7 @@ Offline earnings: store `lastSeen = os.time()` on save; on join compute `math.mi
 ## 5. Anti-idle tricks and platform rules
 
 - **Do not fake input** to prevent Roblox's idle disconnect for your players (for example simulating user activity from scripts). Even if it works technically, it keeps empty avatars in servers and inflates engagement artificially. Treat it as off-limits (**Rule of thumb**).
-- Claims that Roblox discovery or engagement-based payouts discount idle time circulate on the DevForum; I could not confirm the exact current policy, so treat any specific claim as **Unverified** and check the latest Roblox announcements and [[Discovery and the Algorithm]] before designing around it.
+- Claims that Roblox discovery or engagement-based payouts discount idle time circulate on the DevForum; we could not confirm the exact current policy, so treat any specific claim as **Unverified** and check the latest Roblox announcements and [[Discovery and the Algorithm]] before designing around it.
 - Exploiters run anti-AFK scripts client-side; your server-side activity model, not the engine's `Idled`, should decide reward eligibility.
 
 ## Common mistakes

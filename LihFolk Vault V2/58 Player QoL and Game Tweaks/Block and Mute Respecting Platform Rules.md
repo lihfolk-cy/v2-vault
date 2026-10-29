@@ -156,5 +156,5 @@ Requests from friends can bypass "non-friends only" filters. All request-type ig
 
 <!-- related:start -->
 ## Related
-[[QoL Audit Checklist]] · [[Notification Queues and Limits]] · [[Top 25 QoL Wins by Effort]] · [[Feedback - Autosave Indicator Ping Display and Error Toasts]] · [[AFK Detection Idle Kicks and AFK Reward Rules]] · [[Audio Mixer Settings with SoundGroups]] · [[Server Hop Rejoin and Server Lists with Ping]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]]
+[[QoL Audit Checklist]] · [[Notification Queues and Limits]] · [[Feedback - Autosave Indicator Ping Display and Error Toasts]] · [[Top 25 QoL Wins by Effort]] · [[AFK Detection Idle Kicks and AFK Reward Rules]] · [[Audio Mixer Settings with SoundGroups]] · [[Server Hop Rejoin and Server Lists with Ping]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]]
 <!-- related:end -->

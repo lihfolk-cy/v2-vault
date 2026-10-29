@@ -140,5 +140,5 @@ Count fails per section. Fix in this order (**Rule of thumb**): anything that lo
 
 <!-- related:start -->
 ## Related
-[[Console and VR Release Checklists]] · [[Genre QA Passes - Test Checklists per Game Type]] · [[Multi-Client and Device Playtesting Protocols]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[Shift-Lock Sprint and Gamepad B for Menus]]
+[[Genre QA Passes - Test Checklists per Game Type]] · [[Console and VR Release Checklists]] · [[Multi-Client and Device Playtesting Protocols]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Shift-Lock Sprint and Gamepad B for Menus]]
 <!-- related:end -->

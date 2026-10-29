@@ -8,9 +8,9 @@ tags: [atlas, concept, type/atlas, area/community, area/marketing]
 > - Discord changes its settings and names often; check menu names against the current Discord help pages.
 > - Avoid: "Join our Discord" text in game UI (not allowed).
 > - Avoid: Codes only on Discord. (Discord Servers for Roblox Games)
-> - External failures must not become game failures.
+> - Avoid: Owner account used daily for plugins, Discord files and testing.
 >
-> Cost: TL;DR ~110 tok · whole note ~660 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~600 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -21,8 +21,7 @@ Discord changes its settings and names often; check menu names against the curre
 
 - Avoid: "Join our Discord" text in game UI (not allowed). ([[Discord Servers for Roblox Games]])
 - Avoid: Codes only on Discord. ([[Discord Servers for Roblox Games]])
-- External failures must not become game failures. A third-party API going down should degrade a feature (no leaderboard on the website, no Discord post), never block saving, joining or purchases. ([[HttpService and External APIs]])
-- Your Discord or video channel is no longer reachable for most young players from Roblox. ([[Community Building]])
+- Avoid: Owner account used daily for plugins, Discord files and testing. ([[Creator Account Security and Takeover Recovery]])
 
 ## Mentioned in
 

@@ -186,5 +186,5 @@ License: this note is CC BY 4.0 (LihFolk). The LihFolk UI code is free to use an
 
 <!-- related:start -->
 ## Related
-[[UI Asset Pipeline]] · [[UIStroke on Text - Glyph Counters and the Stroke Ratio]] · [[Accessibility]] · [[Layout - Scale Offset and Constraints]] · [[Debugging UI Layout and Input]] · [[Reference - Purple Anime Settings UI (Claude + Figma)]]
+[[UI Asset Pipeline]] · [[UIStroke on Text - Glyph Counters and the Stroke Ratio]] · [[Accessibility]] · [[Layout - Scale Offset and Constraints]] · [[Debugging UI Layout and Input]] · [[Glossy Icon Style - Owner Reference]]
 <!-- related:end -->

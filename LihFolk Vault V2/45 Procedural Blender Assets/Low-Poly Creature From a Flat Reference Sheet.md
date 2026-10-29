@@ -235,5 +235,5 @@ Export is GLB with `export_yup=True` and animations on. [[Exporting FBX vs GLB]]
 
 <!-- related:start -->
 ## Related
-[[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Topology and Edge Flow]] · [[Stylised Shop Stand Worked Example]] · [[Chibi Character Rules in Practice]] · [[Low-Poly Tree Set Worked Example]] · [[Dash VFX Presentation on an R15 Rig]]
+[[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Topology and Edge Flow]] · [[Stylised Shop Stand Worked Example]] · [[Chibi Character Rules in Practice]] · [[Low-Poly Tree Set Worked Example]] · [[Dash VFX Presentation on an R15 Rig]] · [[Stylised Log Cabin Worked Example]]
 <!-- related:end -->

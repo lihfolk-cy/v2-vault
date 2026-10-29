@@ -231,5 +231,5 @@ How Roblox's own easing differs from Blender's, and how the LihFolk pipeline bak
 
 <!-- related:start -->
 ## Related
-[[Modeling Fundamentals for Games]] · [[Normal Maps and Detail Baking]] · [[Blender Workflow for Roblox Creators]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Procedural Model Kits - Lessons]] · [[Hand-Painted and Stylized Texturing]] · [[UV Unwrapping]]
+[[Modeling Fundamentals for Games]] · [[Normal Maps and Detail Baking]] · [[Blender Workflow for Roblox Creators]] · [[Procedural Model Kits - Lessons]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Hand-Painted and Stylized Texturing]] · [[UV Unwrapping]]
 <!-- related:end -->

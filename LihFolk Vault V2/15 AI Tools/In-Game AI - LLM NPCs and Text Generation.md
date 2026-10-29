@@ -319,5 +319,5 @@ Patterns that tend to fail: open-ended companions with memory for a young audien
 
 <!-- related:start -->
 ## Related
-[[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[Roblox Studio Assistant]] · [[Evaluating AI Tools - A Practical Rubric]] · [[AI Code Assistants for Luau]] · [[AI Pitfalls - Networking and Security]] · [[AI Image Generation for Icons Thumbnails and Concepts]] · [[Prompting and Verifying AI Output]]
+[[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[Roblox Studio Assistant]] · [[Evaluating AI Tools - A Practical Rubric]] · [[AI Code Assistants for Luau]] · [[AI Pitfalls - Networking and Security]] · [[AI Image Generation for Icons Thumbnails and Concepts]] · [[AI Material and Texture Generation]]
 <!-- related:end -->

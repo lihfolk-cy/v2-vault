@@ -15,7 +15,7 @@ tags: [animation, authoring, locomotion, gait, combat, melee, timing, hit-stop, 
 > Cost: TL;DR ~160 tok · whole note ~1.6k tok. Read more: ## 2. Locomotion targets · ## 3. Melee timing (30 fps) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-The numbers to start from when keying a walk, run, sprint, jump or sword attack for a default-scale R15 character, and what they become at 30 fps. Gait biomechanics and fighting-game frame data say what real bodies and good games do. The R15 conversion covers what changes on a 5.5-stud character with short legs. Full citations are in `D:\LihFolk Build\research\animation-references.md`.
+The numbers to start from when keying a walk, run, sprint, jump or sword attack for a default-scale R15 character, and what they become at 30 fps. Gait biomechanics and fighting-game frame data say what real bodies and good games do. The R15 conversion covers what changes on a 5.5-stud character with short legs. Full citations are kept in the maintainer's research notes, outside this vault.
 
 ## 1. R15 proportions change the gaits
 
@@ -93,5 +93,5 @@ The numbers to start from when keying a walk, run, sprint, jump or sword attack 
 
 <!-- related:start -->
 ## Related
-[[Locomotion Readability - Lessons from Blind Panels]] · [[R15 Run Cycle Key Poses]] · [[Human Swing Biomechanics]] · [[Timing Spacing and Frame Charts]] · [[Posing and Silhouettes]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Spec-Driven Move Authoring]] · [[Animation Review Checklist]]
+[[Locomotion Readability - Lessons from Blind Panels]] · [[R15 Run Cycle Key Poses]] · [[Human Swing Biomechanics]] · [[Timing Spacing and Frame Charts]] · [[Locomotion Clip Lessons - Jump, Sprint, Idle]] · [[Spin and Whole-Body Rotation Moves]] · [[Posing and Silhouettes]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]]
 <!-- related:end -->

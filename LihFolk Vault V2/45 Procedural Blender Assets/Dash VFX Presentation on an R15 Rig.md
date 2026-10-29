@@ -218,5 +218,5 @@ The render is a presentation, but each layer maps to an in-game part (rule of th
 
 <!-- related:start -->
 ## Related
-[[Slash VFX Recipes - Crescent and Ring]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Stylised Shop Stand Worked Example]] · [[Stylised Weapons From a Concept]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[Chibi Character Rules in Practice]] · [[Low-Poly Tree Set Worked Example]]
+[[Slash VFX Recipes - Crescent and Ring]] · [[Stylised Shop Stand Worked Example]] · [[Stylised Weapons From a Concept]] · [[Stylised Log Cabin Worked Example]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[Chibi Character Rules in Practice]] · [[Low-Poly Tree Set Worked Example]]
 <!-- related:end -->

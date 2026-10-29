@@ -144,5 +144,5 @@ See [[Genre Playbook - Racing and Driving]] for handling models.
 
 <!-- related:start -->
 ## Related
-[[Police Chases and Wanted Levels]] · [[Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver]] · [[Vehicle Spawner and Garage - Spawn, Ownership, Despawn and Limits]] · [[Genre Playbook - Battle Royale]] · [[Case Study - Brookhaven RP]] · [[Genre Playbook - Naval and Open-Sea Adventure]]
+[[Police Chases and Wanted Levels]] · [[Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver]] · [[Genre Playbook - Battle Royale]] · [[Vehicle Spawner and Garage - Spawn, Ownership, Despawn and Limits]] · [[Case Study - Brookhaven RP]] · [[Genre Playbook - Naval and Open-Sea Adventure]]
 <!-- related:end -->

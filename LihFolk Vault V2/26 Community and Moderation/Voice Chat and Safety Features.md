@@ -49,9 +49,9 @@ Voice is subject to the Community Standards exactly like text. Things to hold to
 | Chat groups | `VoiceChatService:GetChatGroupsAsync(players)` and `TextChatService:GetChatGroupsAsync(players)`: players with a matching group id can communicate (Roblox reference) |
 | Speech to text | Requires voice chat enabled (Roblox docs) |
 
-The 2026 age-check work (chat groups by age band, the Kids and Select audiences) sits on top of this. Players under 13 do not get voice. Exactly how age-band rules apply to voice between, say, a 16-year-old and an adult was not documented on the developer pages I could check; treat it as Roblox's job and do not design around guesses (unverified, see report).
+The 2026 age-check work (chat groups by age band, the Kids and Select audiences) sits on top of this. Players under 13 do not get voice. Exactly how age-band rules apply to voice between, say, a 16-year-old and an adult was not documented on the developer pages we could check; treat it as Roblox's job and do not design around guesses (unverified, see report).
 
-**Moderation.** Roblox moderates voice under the Community Standards and players can report a voice user through the platform report menu. Roblox has publicly described automated voice safety systems, and it applies consequences such as voice timeouts to accounts (Announcement, earlier years). The specific current thresholds and durations are not published for developers and I could not confirm them for October 2026.
+**Moderation.** Roblox moderates voice under the Community Standards and players can report a voice user through the platform report menu. Roblox has publicly described automated voice safety systems, and it applies consequences such as voice timeouts to accounts (Announcement, earlier years). The specific current thresholds and durations are not published for developers and we could not confirm them for October 2026.
 
 ---
 
@@ -166,7 +166,7 @@ In a typical all-ages server, most players have no voice: under 13, not verified
 
 Balance check: if a team with voice wins far more often than a team without, your game rewards a feature that young players cannot have. Measure win rate by "fraction of team with voice active" in your analytics ([[Analytics and Funnels]]); if the gap is large, add stronger non-voice coordination.
 
-Matchmaking: the 2026 announcements describe a Text Chat matchmaking signal. A similar voice signal was not confirmed on the pages I checked (unverified). Do not try to sort servers by voice yourself with teleports; you would be inferring eligibility, which is close to inferring age.
+Matchmaking: the 2026 announcements describe a Text Chat matchmaking signal. A similar voice signal was not confirmed on the pages checked (unverified). Do not try to sort servers by voice yourself with teleports; you would be inferring eligibility, which is close to inferring age.
 
 ---
 

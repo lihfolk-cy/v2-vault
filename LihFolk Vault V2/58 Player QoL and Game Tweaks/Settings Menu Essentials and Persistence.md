@@ -123,7 +123,7 @@ end
 
 Fetching with a `RemoteFunction` invoked by the client avoids the race where the server fires settings before the client's listener exists.
 
-The settings ride on the profile's normal autosave. Never call `SetAsync` per slider move: DataStores allow roughly one write per key every 6 seconds (**Roblox docs**, limits page), and a slider fires dozens of changes a second. See [[Saving Correctly - Autosave and BindToClose]] and [[Session Locking and Profile Libraries]].
+The settings ride on the profile's normal autosave. Never call `SetAsync` per slider move: each key has a write throughput limit (4 MB per minute per key on the current limits page, **Roblox docs**) and every write spends the experience-wide budget, and a slider fires dozens of changes a second. See [[Saving Correctly - Autosave and BindToClose]] and [[Session Locking and Profile Libraries]].
 
 ## 4. The client: apply instantly, send later
 

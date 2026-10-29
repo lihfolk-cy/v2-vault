@@ -1,0 +1,386 @@
+{
+  "meta": {
+    "name": "lihfolk-vault-v2-bench",
+    "version": "1.0",
+    "created": "2026-10-28",
+    "purpose": "Blind A/B(/C) benchmark: does the LihFolk Vault V2 plugin make an AI better at Roblox development than the same model without it?",
+    "task_count": 24,
+    "total_points": 64,
+    "categories": {
+      "post_training": "2025-2026 Roblox platform, API and policy changes",
+      "classic_gotcha": "Long-standing behaviours strong models still get wrong",
+      "practical": "Short code, outline or debug-from-symptom tasks"
+    },
+    "answer_length_rule": "Each task is answerable in under about 200 words or a short Luau snippet. Do not reward length.",
+    "key_provenance": "Every answer_key item was checked on 2026-10-28 against the listed primary sources (create.roblox.com docs, including their .md renderings and the official Roblox/creator-docs GitHub source; official DevForum announcements; Roblox newsroom; for G7, Blender's official manual and Python API reference). Keys were written from those sources, not from vault wording.",
+    "grading": "See grading.md"
+  },
+  "tasks": [
+    {
+      "id": "P1",
+      "category": "post_training",
+      "prompt": "As of late 2026, what are the current recommended names for these Roblox methods, and does each old name still work? Player:LoadCharacter, BadgeService:AwardBadge, MarketplaceService:GetProductInfo, Instance:WaitForChild, RemoteFunction:InvokeServer.",
+      "answer_key": [
+        "LoadCharacterAsync, AwardBadgeAsync and GetProductInfoAsync are the current names: they were renamed with an Async suffix in a January 2026 announcement.",
+        "The old names are deprecated but still work. Roblox said they will not be changed or removed.",
+        "Instance:WaitForChild and RemoteFunction:InvokeServer were deliberately NOT renamed and keep their current names."
+      ],
+      "points": 2,
+      "sources": [
+        "https://devforum.roblox.com/t/psa-several-common-yielding-methods-have-been-renamed/4257585"
+      ]
+    },
+    {
+      "id": "P2",
+      "category": "post_training",
+      "prompt": "How do you turn on Roblox's Server Authority mode, which other settings does it force, and where should gameplay logic that the client predicts live? Say which clock that logic should use.",
+      "answer_key": [
+        "Enable it by setting Workspace.AuthorityMode to Server.",
+        "It forces these settings: NextGenerationReplication enabled, PlayerScriptsUseInputActionSystem enabled, SignalBehavior Deferred, UseFixedSimulation enabled, StreamingEnabled enabled. Naming at least 3 of the 5 earns full credit; 1-2 earns partial.",
+        "Core logic goes in functions bound with RunService:BindToSimulation(), in a ModuleScript that runs on both client and server. The client predicts ahead of the server and rolls back and resimulates when it mispredicts.",
+        "Use time(), which is synchronised, fixed-step and rewinds during resimulation, not tick()/os.clock()/os.time(). Instance:Destroy(), reparenting and UserInputService events are not allowed inside the bound simulation; use InputActions for input."
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/projects/server-authority"
+      ]
+    },
+    {
+      "id": "P3",
+      "category": "post_training",
+      "prompt": "Roblox is converting its default player scripts (character controls) to the Input Action System. Which property controls this, what is the rollout timeline, and what existing code is at risk of breaking?",
+      "answer_key": [
+        "The property is Workspace.PlayerScriptsUseInputActionSystem. Setting it to Enabled opts in; in phase 1, after the June 2026 IAS full release, it defaults to Disabled.",
+        "Timeline: in phase 2 (ETA early 2027) the default becomes Enabled, which is potentially breaking. In phase 3 (ETA mid 2027) the property is removed and every place gets the new scripts.",
+        "At risk: code that references the old player scripts or legacy PlayerModule internals (for example require(PlayerModule):GetControls()), and code that relies on old input-sinking behaviour. Forked player scripts need StarterPlayer.CreateDefaultPlayerModule set to Disabled to keep custom controls."
+      ],
+      "points": 3,
+      "sources": [
+        "https://devforum.roblox.com/t/full-release-input-action-system-ias-newly-converted-player-scripts/4678416",
+        "https://create.roblox.com/docs/input/input-action-system"
+      ]
+    },
+    {
+      "id": "P4",
+      "category": "post_training",
+      "prompt": "What did Roblox's October 2026 TextChatService update change for games that read chat message text or use a custom chat UI, and what is the rollout timeline?",
+      "answer_key": [
+        "You opt in by setting TextChatService.PlatformIntegratedChat to Enabled. Once opted in, code cannot read message content: TextChatMessage.Text (and .Translation) return an empty string (not nil) and a warning appears in Output.",
+        "OnIncomingMessage and Player.Chatted are unsupported; use TextChatCommands instead. TextChatMessage.PrefixText is also unsupported, and an official prefix system is planned.",
+        "Custom chat UI should move to TextChannelWindow, a native window you can place and size and point at a TextChannel through its Target property.",
+        "Timeline: test now. In February 2027 all games are opted in automatically, with an opt-out available. From May 2027 the updated TextChatService is the only way to have custom chat."
+      ],
+      "points": 3,
+      "sources": [
+        "https://devforum.roblox.com/t/important-textchatservice-updates-how-to-test-and-what%E2%80%99s-next/4948433"
+      ],
+      "grader_notes": "Do not require an opt-out deadline: the source post says both 'before March 2027' and 'until May 2027'. Do not penalise either date."
+    },
+    {
+      "id": "P5",
+      "category": "post_training",
+      "prompt": "Since mid-2026, how are DataStore request limits and storage limits calculated for a Roblox experience? Give the write-request budget formula and say how UpdateAsync counts against the budgets.",
+      "answer_key": [
+        "Request budgets are experience-wide: they scale with total CCU across all servers and, since 29 July 2026, are shared with Open Cloud requests. Per-server limits still exist and can be configured, for example with SetRateLimitForRequestType.",
+        "Per-minute formula is base + CCU x multiplier: write = 300 + 20 x CCU and read = 300 + 40 x CCU (list = 300 + 2 x CCU, remove = 300 + 40 x CCU). Full credit needs the correct write multiplier and base 300; a base of 250 earns partial credit (see README, disputed items).",
+        "Each UpdateAsync call uses one read and one write.",
+        "Storage limit = 500 MB + 1 MB x lifetime users, up from a 100 MB baseline. Only the latest version of each key counts toward it."
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/cloud-services/data-stores/error-codes-and-limits",
+        "https://devforum.roblox.com/t/unifying-data-stores-open-cloud-and-game-apis-and-increasing-storage-limits/4739240"
+      ]
+    },
+    {
+      "id": "P6",
+      "category": "post_training",
+      "prompt": "My Roblox game sells loot crates for Gems. Gems can be bought with Robux, and there is also a 'Luck Potion' developer product that improves crate odds. What do Roblox's paid random item rules require me to show players, and what must I check for each player?",
+      "answer_key": [
+        "The rules apply because Gems can be bought with Robux. Indirect purchases count too, including in-game currency bought with Robux, keys, re-roll tokens and spin tickets.",
+        "Before the player spends, show every possible outcome with its numerical odds as a percentage. The percentages must sum to exactly 100%; rounding is allowed if a disclaimer is shown. Long lists can sit behind a descriptively labelled pop-up, such as a 'Details' button, but not a bare (i) icon.",
+        "Luck Potion: explain its numerical effect before purchase, and update the displayed odds dynamically while it is active.",
+        "Per player, check PolicyService:GetPolicyInfoForPlayerAsync(). If ArePaidRandomItemsRestricted is true, block the purchase or use a permitted alternative (free earnable path, fixed disclosed order, sell items directly). If IsPaidItemTradingAllowed is false, don't let that player trade paid outcomes."
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/production/monetization/paid-random-items"
+      ]
+    },
+    {
+      "id": "P7",
+      "category": "post_training",
+      "prompt": "What are Roblox Kids and Roblox Select accounts, and what do a creator and a game need in order to be available to those users?",
+      "answer_key": [
+        "Roblox Kids covers ages 5-8 and Roblox Select covers ages 9-15. Both were announced in April 2026 and rolled out from early June 2026; exact ages vary by region.",
+        "Kids accounts can only play games with Minimal or Mild content maturity labels. Select accounts can play games up to and including Moderate.",
+        "The creator must be ID-verified, have two-step verification enabled and keep an active Roblox Plus subscription.",
+        "The game must pass a three-step selection process, which includes real-time evaluation of how users aged 16+ interact with it. Social hangouts, games about sensitive issues and free-form drawing games are excluded by default."
+      ],
+      "points": 3,
+      "sources": [
+        "https://about.roblox.com/newsroom/2026/04/introducing-roblox-kids-and-select-accounts",
+        "https://create.roblox.com/docs/production/promotion/content-maturity"
+      ]
+    },
+    {
+      "id": "P8",
+      "category": "post_training",
+      "prompt": "How does Roblox's Creator Rewards program pay creators, and what are the current DevEx rates (the standard rate and the 2026 US 18+ rate)?",
+      "answer_key": [
+        "Creator Rewards replaced Engagement-Based Payouts (and Creator Affiliates). The Daily Engagement Reward, which started 24 July 2025, pays 5 Robux per day for each Active Spender who plays at least 10 minutes, where the game is one of the first 3 they launch that day. An Active Spender has made at least USD 9.99 of qualifying purchases in the past 60 days and is not a new or reactivated user.",
+        "Audience Expansion Reward: 35% of the first USD 100 of a new or reactivated user's qualifying purchases during their first 60 days. Conditions: the user joins through the creator's Share Link (or a first-session join), plays 10+ minutes, the game averages 100+ DAU and the owner is ID-verified. Rewards are held for 60 days.",
+        "Standard DevEx rate: USD 0.0038 per Robux (USD 0.38 per 100).",
+        "US 18+ rate: USD 0.0054 per Robux (USD 0.54 per 100), from 8 June 2026. It applies to spend by age-checked 18+ US players on passes, developer products, subscriptions and private servers in games that meet the R15 avatar requirement. Avatar items do not qualify."
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/creator-rewards",
+        "https://devforum.roblox.com/t/introducing-the-us-18-devex-rate-earn-42-more-on-spend-from-18-us-players/4607091"
+      ],
+      "grader_notes": "For the R15 condition, accept 'Avatar Settings R15 Only' or the custom-avatar options (human-form rig with 15+ joints, non-human rig, or no visible characters); the source states both."
+    },
+    {
+      "id": "G1",
+      "category": "classic_gotcha",
+      "prompt": "What are the correctness rules for a Roblox developer product ProcessReceipt callback? Explain why players sometimes get charged and receive nothing, or receive an item twice.",
+      "answer_key": [
+        "Return Enum.ProductPurchaseDecision.PurchaseGranted only after the benefit has been granted and durably saved. Return NotProcessedYet on any failure, such as data not loaded, a failed save or the player not being in the server.",
+        "The callback can run again for the same purchase: on rejoin, on the next purchase, and even on two servers at once if the user joins another server before it returns. So it must be idempotent: record the PurchaseId and skip granting if that purchase was already handled.",
+        "Set ProcessReceipt only once, in a single server-side Script, and handle every product there. Using the newer MarketplaceService:BindReceiptHandler (which returns ReceiptDecision.Processed or NotProcessedYet) also earns full credit.",
+        "Never grant from PromptProductPurchaseFinished or any other client signal: it does not mean the purchase succeeded and can be spoofed."
+      ],
+      "points": 4,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/MarketplaceService#ProcessReceipt",
+        "https://create.roblox.com/docs/production/monetization/developer-products",
+        "https://create.roblox.com/docs/scripting/security/client-server-boundary"
+      ]
+    },
+    {
+      "id": "G2",
+      "category": "classic_gotcha",
+      "prompt": "When should you use UpdateAsync instead of SetAsync for Roblox player data, and what rules must the UpdateAsync transform function follow?",
+      "answer_key": [
+        "SetAsync overwrites without looking at the current value, so two servers setting the same key at once can make data inconsistent. UpdateAsync reads the current value first, which makes it safer when several servers may write the same key.",
+        "The transform function can be called several times (it reruns if another server updated the key in between), so it must have no side effects outside its return value.",
+        "The transform function cannot yield: no task.wait() and no other yielding calls inside it.",
+        "Returning nil cancels the update. The function receives the current value and a DataStoreKeyInfo."
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/GlobalDataStore#UpdateAsync",
+        "https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/engine/classes/GlobalDataStore.yaml"
+      ]
+    },
+    {
+      "id": "G3",
+      "category": "classic_gotcha",
+      "prompt": "Is this server-side trade-offer validation safe? If not, why not, and how do you fix it?\n\n```lua\nofferRemote.OnServerEvent:Connect(function(player, gold)\n    if typeof(gold) ~= \"number\" then return end\n    if gold < 0 or gold > player.Gold.Value then return end\n    createOffer(player, gold)\nend)\n```",
+      "answer_key": [
+        "It is not safe. NaN has type 'number' and every comparison with it is false, so a NaN offer passes both checks (+/-inf is also a problem).",
+        "Fix: reject non-finite numbers with math.isfinite(gold), or detect NaN with gold ~= gold, then check range (and integer if needed) against server-held state.",
+        "General rule: treat every remote argument except the automatic first Player argument as attacker-controlled."
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/scripting/security/client-server-boundary",
+        "https://create.roblox.com/docs/scripting/security/security-tactics"
+      ]
+    },
+    {
+      "id": "G4",
+      "category": "classic_gotcha",
+      "prompt": "I have a turret model (not a player character) whose joints are Motor6Ds driven by an AnimationController with an Animator. My script writes motor.Transform in a RunService.Heartbeat loop to aim the barrel, but while the idle animation plays the aim is wiped out. Why? Where and how should procedural joint offsets be written, and when would you edit C0 instead?",
+      "answer_key": [
+        "The Animator overwrites Motor6D.Transform every frame, after RunService.PreAnimation and before PreSimulation. Values written elsewhere in the frame, such as Heartbeat (post-simulation), are replaced before they take effect.",
+        "Write Transform in RunService.PreSimulation (after the Animator), every frame, composing with the animated value. Transform changes are applied as a batch just before physics, not immediately.",
+        "Roblox recommends animating with Transform rather than C0/C1. C0/C1 define the joint's base offset and apply immediately, so edit them for persistent rest-pose changes, not per-frame animation."
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/Motor6D#Transform",
+        "https://create.roblox.com/docs/reference/engine/classes/JointInstance#C0"
+      ],
+      "grader_notes": "Prompt is scoped to a non-avatar rig on purpose: with StarterPlayer.AvatarJointUpgrade (default for new experiences) R15 player characters use AnimationConstraints instead of Motor6Ds. Mentioning this is fine but not required."
+    },
+    {
+      "id": "G5",
+      "category": "classic_gotcha",
+      "prompt": "A sword-swing animation and the default walk animation both animate the right arm. While walking, the swing looks weak or doesn't show. Explain how Roblox decides which animation wins on a limb, and how weights work.",
+      "answer_key": [
+        "Priority order from lowest to highest: Core < Idle < Movement < Action < Action2 < Action3 < Action4. Core is the lowest even though its enum value is 1000.",
+        "On each limb, the highest-priority playing track wins. Set the swing to Action or higher, in the Animation Editor or through AnimationTrack.Priority.",
+        "Tracks with the same priority are blended by weight, set through AnimationTrack:Play(fadeTime, weight) or AdjustWeight (WeightTarget defaults to 1; weight 0 shows nothing)."
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/AnimationTrack#Priority",
+        "https://create.roblox.com/docs/reference/engine/enums/AnimationPriority"
+      ]
+    },
+    {
+      "id": "G6",
+      "category": "classic_gotcha",
+      "prompt": "My Blender model imports into Roblox Studio as an FBX about 100 times too big. Why, and what export settings does Roblox recommend?",
+      "answer_key": [
+        "With default settings, Blender's FBX export often imports into Studio at an unexpectedly large scale (a unit-scale mismatch).",
+        "Recommended fix: in the FBX exporter, set Transform > Apply Scalings to 'FBX Unit Scale' and leave every other scale value at 1.0.",
+        "Alternatives: an export Transform Scale of 0.01, or a scene Unit Scale of 0.01. Caveats: re-imports into other tools may need scaling back up, working at 0.01 can cause Blender camera issues, and methods should not be stacked.",
+        "glTF/GLB export does not need these extra scaling settings."
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/art/blender",
+        "https://create.roblox.com/docs/art/modeling/export-requirements"
+      ]
+    },
+    {
+      "id": "G7",
+      "category": "classic_gotcha",
+      "prompt": "I exported a .glb from Blender. In Roblox Studio my Mirror and Bevel modifiers are missing: only half the mesh is there and the edges are sharp. Why, and what is the catch with fixing it in the exporter?",
+      "answer_key": [
+        "Blender's glTF exporter option 'Apply Modifiers' (export_apply) is off by default, so the base mesh is exported without the modifiers evaluated.",
+        "Enable Apply Modifiers (under Data > Mesh) to export the evaluated mesh. It applies all modifiers except Armature, so skinning still exports.",
+        "Catch: enabling Apply Modifiers prevents shape keys (morph targets) from being exported. Meshes that need shape keys must have those modifiers handled another way, for example applied manually beforehand."
+      ],
+      "points": 2,
+      "sources": [
+        "https://docs.blender.org/api/current/bpy.ops.export_scene.html#bpy.ops.export_scene.gltf",
+        "https://docs.blender.org/manual/en/4.2/addons/import_export/scene_gltf2.html"
+      ]
+    },
+    {
+      "id": "G8",
+      "category": "classic_gotcha",
+      "prompt": "A Roblox HUD frame sized with UDim2.fromScale(0.3, 0.3) looks right on my monitor but stretched or squashed on other screens, and a button in the top-left corner is hidden by the notch or the Roblox top bar on phones. Explain both problems and give the fixes.",
+      "answer_key": [
+        "Scale is relative to the parent's width and height separately, so the frame's shape follows the screen's aspect ratio. Fix: add a UIAspectRatioConstraint (AspectRatio = width/height); it enforces the ratio even on Scale-sized objects.",
+        "Fix the hidden button with ScreenGui.ScreenInsets = CoreUISafeInsets (the default when IgnoreGuiInset is false), which avoids both device cutouts and Roblox core UI such as the top bar. DeviceSafeInsets only avoids cutouts (IgnoreGuiInset = true switches to it). None is only for non-interactive backgrounds."
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/UIAspectRatioConstraint",
+        "https://create.roblox.com/docs/reference/engine/enums/ScreenInsets",
+        "https://create.roblox.com/docs/reference/engine/classes/ScreenGui#ScreenInsets"
+      ]
+    },
+    {
+      "id": "T1",
+      "category": "practical",
+      "prompt": "Write a short server-side Luau handler for a RemoteEvent named BuyItem. The client fires it with (itemId, quantity) to buy an item with in-game coins. Make it exploit-resistant.",
+      "answer_key": [
+        "Uses OnServerEvent's automatic first `player` parameter, and takes the price from a server-side catalogue. A price or player sent by the client is never trusted.",
+        "Validates type and structure: itemId must exist in the server catalogue; quantity must be a number that is finite (math.isfinite or a NaN check), an integer and within sane bounds (> 0, capped).",
+        "Checks context against server-held state before acting: enough coins for the total cost (plus any other conditions, such as distance to the shop). Coins are deducted and the item granted on the server.",
+        "Rate-limits each player on the server (cooldown or token bucket). Client-side limits alone are not enough."
+      ],
+      "points": 4,
+      "sources": [
+        "https://create.roblox.com/docs/scripting/security/client-server-boundary",
+        "https://create.roblox.com/docs/scripting/security/security-tactics",
+        "https://create.roblox.com/docs/scripting/events/remote"
+      ]
+    },
+    {
+      "id": "T2",
+      "category": "practical",
+      "prompt": "Outline, in pseudocode or short Luau, a session-locked Roblox player-data system that prevents item duplication when players teleport or rejoin quickly.",
+      "answer_key": [
+        "Load and lock atomically in one UpdateAsync: write a lock (server or job id / GUID, plus a timestamp) into the data or the key's metadata. If another server holds a lock that hasn't expired, don't proceed; retry or wait.",
+        "The lock expires. Refresh it regularly, for example in the autosave loop (Roblox's sample uses 180 s), so another server can take over a crashed server's lock once it expires.",
+        "Every read and write goes through UpdateAsync and checks that this server still owns the lock. The final save on PlayerRemoving writes the data and releases the lock in the same call.",
+        "game:BindToClose saves all remaining players in parallel, within the 30-second shutdown window."
+      ],
+      "points": 4,
+      "sources": [
+        "https://create.roblox.com/docs/cloud-services/data-stores/player-data-purchasing",
+        "https://create.roblox.com/docs/reference/engine/classes/DataModel#BindToClose"
+      ]
+    },
+    {
+      "id": "T3",
+      "category": "practical",
+      "prompt": "Write a Roblox LocalScript that creates a HUD with a square 'Shop' button near the top-left corner. The button must not be hidden by phone notches or the Roblox top bar and must keep its square shape on any screen. Also add a full-screen decorative background image behind the HUD.",
+      "answer_key": [
+        "Creates the HUD ScreenGui under the LocalPlayer's PlayerGui from the LocalScript, with ScreenInsets = CoreUISafeInsets (or IgnoreGuiInset = false, which implies it).",
+        "Sizes and positions the button with Scale and adds a UIAspectRatioConstraint with AspectRatio = 1 to keep it square.",
+        "Puts the decorative background in a separate ScreenGui with ScreenInsets = None so it reaches the screen edges (allowed because it is non-interactive), layered behind the HUD."
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/enums/ScreenInsets",
+        "https://create.roblox.com/docs/reference/engine/classes/ScreenGui",
+        "https://create.roblox.com/docs/reference/engine/classes/UIAspectRatioConstraint"
+      ]
+    },
+    {
+      "id": "T4",
+      "category": "practical",
+      "prompt": "Debug this. The client runs `remote:FireServer(game.Players.LocalPlayer, 50)`. The server runs `remote.OnServerEvent:Connect(function(player, amount) print(amount + 1) end)` and errors with 'attempt to perform arithmetic on a Instance value'. Diagnose and fix it.",
+      "answer_key": [
+        "OnServerEvent automatically passes the sending Player as the first parameter, so the server receives (player, LocalPlayer, 50) and `amount` is the Player instance.",
+        "Fix: call FireServer(50) without the player; the server keeps (player, amount) and validates amount."
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/scripting/events/remote"
+      ]
+    },
+    {
+      "id": "T5",
+      "category": "practical",
+      "prompt": "Debug this. A server Script connects Players.PlayerAdded to create leaderstats. It works on live servers, but in Studio solo playtests my leaderstats sometimes never appear. Why, and what is the standard fix?",
+      "answer_key": [
+        "In a solo playtest the player can be created before the script runs and connects, so PlayerAdded never fires for them. The same happens if the script is added after players have joined.",
+        "Fix: connect PlayerAdded and also loop over Players:GetPlayers(), calling the same handler for players already in the server."
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/Players#PlayerAdded",
+        "https://create.roblox.com/docs/reference/engine/classes/Players#GetPlayers"
+      ]
+    },
+    {
+      "id": "T6",
+      "category": "practical",
+      "prompt": "Write a short server-side Luau function that awards badge 123456 when a player finishes an obby. Use the current (2026) API names and handle failures.",
+      "answer_key": [
+        "Uses BadgeService:AwardBadgeAsync, not the deprecated AwardBadge, from server-side code (a Script or a ModuleScript it requires), never a LocalScript. The player must be in the server.",
+        "Wraps the yielding call(s) in pcall and handles failure. Optionally checks UserHasBadgeAsync first and/or GetBadgeInfoAsync().IsEnabled; the badge must be enabled and belong to this experience."
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/BadgeService#AwardBadgeAsync",
+        "https://devforum.roblox.com/t/psa-several-common-yielding-methods-have-been-renamed/4257585"
+      ]
+    },
+    {
+      "id": "T7",
+      "category": "practical",
+      "prompt": "Using Roblox's Input Action System (not UserInputService or ContextActionService), set up a cross-platform Sprint action for keyboard, gamepad and a touch button, plus the script that doubles WalkSpeed while it is held. Describe the instance hierarchy and give the key code lines.",
+      "answer_key": [
+        "Hierarchy: an InputContext (for example in an Inputs folder in ReplicatedStorage) contains an InputAction of Type Bool (the default), which contains one InputBinding per platform: KeyCode LeftShift for keyboard, a gamepad button (for example ButtonY), and a binding whose UIButton property points at an on-screen GuiButton for touch.",
+        "The script connects InputAction.Pressed to double WalkSpeed and InputAction.Released to restore it (or uses StateChanged with true/false)."
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/input/input-action-system"
+      ]
+    },
+    {
+      "id": "T8",
+      "category": "practical",
+      "prompt": "Debug this. I set MeshPart.RenderFidelity = Precise on my hero meshes, but in my published game they still drop to lower detail at a distance, and changing the property seems to do nothing. What is going on?",
+      "answer_key": [
+        "Workspace.MeshStreamingAndImprovedLoDs (mesh streaming with improved cloud LoDs, opt-in since April 2026) is Enabled. In that mode RenderFidelity is ignored on every MeshPart and meshes go through the new transcoder instead.",
+        "RenderFidelity is planned for removal in a later phase (Default is planned to map to Enabled). To compare, toggle the Workspace property (Studio asks for a restart), test in Studio, and report broken meshes with asset IDs."
+      ],
+      "points": 2,
+      "sources": [
+        "https://devforum.roblox.com/t/introducing-mesh-streaming-and-improved-cloud-lods-in-published-experiences-opt-in-phase/4601232"
+      ],
+      "grader_notes": "Whether Phase 2 (default on) has shipped is unconfirmed. Accept either 'you enabled it' or 'it may now be on by default'."
+    }
+  ]
+}

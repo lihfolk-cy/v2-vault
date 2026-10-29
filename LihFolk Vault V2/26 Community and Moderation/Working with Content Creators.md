@@ -146,7 +146,7 @@ Coordinate the date. Ask the creator to tell you when the video goes live; a sur
 ## 7. Measuring a collaboration
 
 Signals, in order of trust (rule of thumb):
-1. **Share link analytics**: clicks, signups, reactivations and estimated payout per link (Roblox docs, Creator Rewards). Whether you can create a separate share link per creator for clean attribution was not something I could confirm on the docs page (unverified); if you can, do it.
+1. **Share link analytics**: clicks, signups, reactivations and estimated payout per link (Roblox docs, Creator Rewards). Whether you can create a separate share link per creator for clean attribution was not something we could confirm on the docs page (unverified); if you can, do it.
 2. **Creator codes**: a code per creator is a clean attribution signal for players who redeem it. Log redemptions as a custom analytics event.
 3. **CCU and new-user curves** around the video's publish time ([[Analytics and Funnels]]).
 4. **Retention of the cohort**: day-1 and day-7 retention of users who joined in the 24 hours after the video, compared with your baseline.

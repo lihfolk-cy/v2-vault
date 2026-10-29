@@ -260,5 +260,5 @@ The companion note [[Snippets - Camera Shake and FX]] covers implementation edge
 
 <!-- related:start -->
 ## Related
-[[Layering Camera Feedback on the Default Camera]] · [[VFX Timing with Animation]] · [[Ability Kits Architecture]] · [[Boss Animation and Phases]] · [[Combat Combo Systems]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]] · [[Procedural Death Knockdown and Hit Reactions]] · [[Custom Locomotion Controller Design]] · [[Enemy and NPC Animation]]
+[[Layering Camera Feedback on the Default Camera]] · [[VFX Timing with Animation]] · [[Ability Kits Architecture]] · [[Boss Animation and Phases]] · [[Combat Combo Systems]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]] · [[Procedural Death Knockdown and Hit Reactions]] · [[Custom Locomotion Controller Design]]
 <!-- related:end -->

@@ -217,5 +217,5 @@ See also: [[The Default Animate Script]], [[Locomotion Systems]], [[Equip Draw a
 
 <!-- related:start -->
 ## Related
-[[Playback, Priorities and Blending]] · [[Weapon and Combat Animation]] · [[Ability Kits Architecture]] · [[Combat Combo Systems]] · [[Enemy Animation State Protocol]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]] · [[Stance and Charge Moves]] · [[Scale and Animation]]
+[[Playback, Priorities and Blending]] · [[Weapon and Combat Animation]] · [[Ability Kits Architecture]] · [[Combat Combo Systems]] · [[Enemy Animation State Protocol]] · [[Stance and Charge Moves]] · [[Scale and Animation]] · [[Cameras and Cutscenes]]
 <!-- related:end -->

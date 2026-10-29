@@ -155,5 +155,5 @@ Log per node: time on frontier per group, hint tiers used, wrong attempts, and a
 
 <!-- related:start -->
 ## Related
-[[Dialogue System End to End]] · [[Multiplayer Cutscene Sync - Server Clock, Late Joiners and Skip Votes]] · [[Lore Delivery Without Walls of Text]] · [[Writing Dialogue for Roblox Players]] · [[Quest Writing and Hooks]] · [[Naming Items Zones and Abilities]]
+[[Dialogue System End to End]] · [[Multiplayer Cutscene Sync - Server Clock, Late Joiners and Skip Votes]] · [[Lore Delivery Without Walls of Text]] · [[Writing Dialogue for Roblox Players]] · [[Naming Items Zones and Abilities]] · [[Quest Writing and Hooks]] · [[Localization-Ready Writing]]
 <!-- related:end -->

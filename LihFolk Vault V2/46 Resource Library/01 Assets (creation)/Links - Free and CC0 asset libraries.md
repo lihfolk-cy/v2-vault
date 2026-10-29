@@ -53,5 +53,5 @@ Part of [[Resource Library - Assets (creation)]] in the [[Resource Library Start
 
 ## Connected notes
 <!-- auto-links:start -->
-[[LICENSE]] · [[Links - Audio creation and uploading]] · [[Resource Library Link Check]] · [[Links - Topology]] · [[CHANGELOG]] · Legal Basics - IP Licenses and Assets
+[[LICENSE]] · [[Links - Audio creation and uploading]] · [[Resource Library Link Check]] · [[Links - Topology]] · Legal Basics - IP Licenses and Assets
 <!-- auto-links:end -->

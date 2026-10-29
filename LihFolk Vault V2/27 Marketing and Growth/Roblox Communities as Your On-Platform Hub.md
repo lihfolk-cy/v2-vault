@@ -1,5 +1,5 @@
 ---
-tags: [type/guide, area/marketing, level/intermediate, api/Player]
+tags: [type/guide, area/marketing, level/intermediate, api/Player, api/GetRolesInGroupAsync]
 ---
 <!-- tldr:start -->
 > [!tldr] TL;DR

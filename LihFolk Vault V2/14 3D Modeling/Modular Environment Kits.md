@@ -286,7 +286,7 @@ Per-zone instance budgets in the project's revamp plan: at most 6,000 instances,
 
 ## See also
 
-[[Level Design for Roblox]] · [[Environment and Level Pipeline]] · [[Packages and Asset Reuse]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Low-Poly and Stylized Modeling]] · [[Collision and Physics Geometry]] · [[Procedural World Generation]] · [[Batch Processing Tools in Studio]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Modeling Weapons and Props]]
+[[House Construction Method - Modular Kit Workflow]] · [[Level Design for Roblox]] · [[Environment and Level Pipeline]] · [[Packages and Asset Reuse]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Low-Poly and Stylized Modeling]] · [[Collision and Physics Geometry]] · [[Procedural World Generation]] · [[Batch Processing Tools in Studio]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Modeling Weapons and Props]]
 
 ## Connected notes
 <!-- auto-links:start -->
@@ -295,5 +295,5 @@ Per-zone instance budgets in the project's revamp plan: at most 6,000 instances,
 
 <!-- related:start -->
 ## Related
-[[Voxel Props Environments and Modular Tiles]] · [[Voxel Scale Grids and Stud Alignment]] · [[UV Unwrapping]] · [[Mesh Optimization for Mobile]] · [[Hard-Surface Modeling]] · [[Voxel and Blocky Modeling]] · [[Hand-Painted and Stylized Texturing]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Retopology and Decimation]] · [[Normal Maps and Detail Baking]]
+[[Voxel Props Environments and Modular Tiles]] · [[Voxel Scale Grids and Stud Alignment]] · [[UV Unwrapping]] · [[Mesh Optimization for Mobile]] · [[Hard-Surface Modeling]] · [[Voxel and Blocky Modeling]] · [[Hand-Painted and Stylized Texturing]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Normal Maps and Detail Baking]] · [[Retopology and Decimation]]
 <!-- related:end -->

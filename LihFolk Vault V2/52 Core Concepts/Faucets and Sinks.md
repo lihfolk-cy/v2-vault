@@ -62,5 +62,5 @@ Related concepts: [[Power Curve]], [[Expected Value]], [[Telemetry Events]], [[C
 
 <!-- related:start -->
 ## Related
-[[Expected Value]] · [[Pity Timer]] · [[Data Schema Versioning]] · [[Session Length]] · [[Variance]] · [[Onboarding Funnel]] · [[Server Authority]] · [[Event Bus]]
+[[Expected Value]] · [[Pity Timer]] · [[Data Schema Versioning]] · [[Variance]] · [[Session Length]] · [[Onboarding Funnel]] · [[Server Authority]] · [[Event Bus]]
 <!-- related:end -->

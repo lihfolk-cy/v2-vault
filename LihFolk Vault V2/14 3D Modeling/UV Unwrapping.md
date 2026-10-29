@@ -273,5 +273,5 @@ A quick in-Studio test: assign a checker texture (a uniform grid image) as the `
 
 <!-- related:start -->
 ## Related
-[[The Gradient Palette Texture Workflow]] · [[Low-Poly and Stylized Modeling]] · [[Modular Environment Kits]] · [[Hard-Surface Modeling]] · [[AI Material and Texture Generation]] · [[Mesh Optimization for Mobile]] · [[Retopology and Decimation]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Voxel and Blocky Modeling]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]
+[[The Gradient Palette Texture Workflow]] · [[Low-Poly and Stylized Modeling]] · [[Hard-Surface Modeling]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Modular Environment Kits]] · [[Mesh Optimization for Mobile]] · [[Retopology and Decimation]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Voxel and Blocky Modeling]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]
 <!-- related:end -->

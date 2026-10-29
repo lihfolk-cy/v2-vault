@@ -68,7 +68,7 @@ Three nuances:
 
 ### Retention targets
 
-Teams like to quote "good" day-1 and day-7 retention numbers. Benchmarks published by third parties vary widely by genre and change with the platform; I could not confirm current official Roblox benchmarks for this note. Set targets from your own soft launch and improve week over week, rather than from a number seen in a video ([[Retention and Return Hooks]]).
+Teams like to quote "good" day-1 and day-7 retention numbers. Benchmarks published by third parties vary widely by genre and change with the platform; we could not confirm current official Roblox benchmarks for this note. Set targets from your own soft launch and improve week over week, rather than from a number seen in a video ([[Retention and Return Hooks]]).
 
 ---
 

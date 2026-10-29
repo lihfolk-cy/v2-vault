@@ -1,5 +1,6 @@
 ---
 tags: [animation, r15, locomotion, walk, run, sprint, idle, review, lihfolk, type/guide, area/animation, level/advanced]
+verified: 2026-10-28
 ---
 # Locomotion Readability - Lessons from Blind Panels
 
@@ -14,8 +15,6 @@ tags: [animation, r15, locomotion, walk, run, sprint, idle, review, lihfolk, typ
 >
 > Cost: TL;DR ~130 tok · whole note ~1.4k tok. Read more: ## 3. Run and sprint (5.3 -> 9.0 and 7.7) · ## 4. Idle (6.3 -> 8.3, never passed) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
-verified: 2026-10-28
 
 What made scripted R15 walk, run, sprint and idle clips readable to blind reviewers looking at a contact sheet and a QA JSON. These clips went through six versions in the LihFolk V2 build; each row below records a change and its effect on the 3-reviewer panel median (**Measured**).
 
@@ -83,6 +82,7 @@ Idle is subtle by nature. If three rounds don't pass, add a clearly separate sec
 
 ## See also
 
+- [[Locomotion Clip Lessons - Jump, Sprint, Idle]] (follow-up round: jump, sprint 9.0, idle re-pose, quick fix vs re-author)
 - [[R15 Run Cycle Key Poses]]
 - [[Locomotion and Melee Reference Numbers]]
 - [[Locomotion Systems]]
@@ -94,5 +94,5 @@ Idle is subtle by nature. If three rounds don't pass, add a clearly separate sec
 
 <!-- related:start -->
 ## Related
-[[Blade Grip and Wrist Limits]] · [[Human Swing Biomechanics]] · [[Posing and Silhouettes]] · [[Procedural Gait and Footstep Planning]] · [[Timing Spacing and Frame Charts]] · [[Animation Quality Standard]] · [[Foot Placement and Ground IK]] · [[Snippets - IK]]
+[[Spin and Whole-Body Rotation Moves]] · [[Human Swing Biomechanics]] · [[Blade Grip and Wrist Limits]] · [[Posing and Silhouettes]] · [[Procedural Gait and Footstep Planning]] · [[Timing Spacing and Frame Charts]] · [[Foot Placement and Ground IK]] · [[Animation Quality Standard]]
 <!-- related:end -->

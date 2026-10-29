@@ -229,5 +229,5 @@ Remove the highlights before publishing. Highlights are cheap individually, but 
 
 <!-- related:start -->
 ## Related
-[[Style Bibles for Consistent Models]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Voxel and Blocky Modeling]] · [[Chibi Character Rules in Practice]] · [[Hand-Painted and Stylized Texturing]] · [[Matching a Concept Sheet - Boss Creature Case Study]]
+[[Style Bibles for Consistent Models]] · [[Art-Direction Nitpicks - The Principles Behind Them]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Voxel and Blocky Modeling]] · [[Chibi Character Rules in Practice]] · [[Hand-Painted and Stylized Texturing]]
 <!-- related:end -->

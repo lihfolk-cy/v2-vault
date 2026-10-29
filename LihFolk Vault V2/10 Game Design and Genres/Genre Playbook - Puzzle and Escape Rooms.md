@@ -282,5 +282,5 @@ Patterns, not copies:
 
 <!-- related:start -->
 ## Related
-[[Puzzle Dependency Charts and Hint Systems]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Simulators]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - Party and Minigame Collections]] · [[Teaching Through Level Design]]
+[[Puzzle Dependency Charts and Hint Systems]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Simulators]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Tycoons]] · [[Teaching Through Level Design]]
 <!-- related:end -->

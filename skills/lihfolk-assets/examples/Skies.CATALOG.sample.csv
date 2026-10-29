@@ -1,0 +1,3 @@
+id,family,theme,tags,colors,score,family_score,family_status,celestial_bodies_shown,path
+clear_day_azure_000,clear_day,azure,clear_day;azure,#8ea7c0;#528bdf;#b9d2ea;#f2f6fc,8.6,8.6,pass,False,Skies/clear_day_azure_000
+golden_hour_peach_005,golden_hour,peach,golden_hour;peach,#eacabc;#836e7b;#7d81b9;#bf9d9f,9.5,9.1,pass,False,Skies/golden_hour_peach_005

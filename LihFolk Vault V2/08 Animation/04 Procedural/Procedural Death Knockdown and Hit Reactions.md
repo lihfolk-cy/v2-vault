@@ -214,5 +214,5 @@ Related: [[Hit Reactions Stagger and Hit-Stop]], [[Enemy and NPC Animation]], [[
 
 <!-- related:start -->
 ## Related
-[[Multi-Bone IK - FABRIK and CCD]] · [[Snippets - Enemy Client Animator]] · [[Snippets - Procedural Motion]] · [[Boss Animation and Phases]] · [[Snippets - Ragdoll]] · [[Combat Animation Craft]] · [[Inverse Kinematics]] · [[Flight Flocks and Path Animation]]
+[[Multi-Bone IK - FABRIK and CCD]] · [[Snippets - Enemy Client Animator]] · [[Snippets - Procedural Motion]] · [[Boss Animation and Phases]] · [[Snippets - Ragdoll]] · [[Combat Animation Craft]] · [[Inverse Kinematics]] · [[Procedural Weapon Motion]]
 <!-- related:end -->

@@ -33,5 +33,5 @@ Sources are limited to official Roblox (create.roblox.com, about.roblox.com), Lu
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Plugins and custom tools]] · [[Links - Quests and progression]] · [[Links - Testing]] · [[CHANGELOG]]
+[[Links - Plugins and custom tools]] · [[Links - Quests and progression]] · [[Links - Testing]]
 <!-- auto-links:end -->

@@ -236,6 +236,7 @@ Practical rules:
 
 ## See also
 
+- [[House Construction Method - Modular Kit Workflow]]: houses and buildings as modules, with a style-swap table
 - [[Parts Unions and MeshParts]], [[Materials MaterialVariants and SurfaceAppearance]], [[Textures Decals and Texture Memory]]
 - [[Voxel Art - Studs Outlines and Style Kits]], [[Environment Art Styles]], [[Art Budgets - Triangles Draw Calls Memory]]
 - [[Exporting FBX vs GLB]], [[3D Importer Settings Reference]], [[Rigging in Blender]], [[Asset Pipelines]]
@@ -247,5 +248,5 @@ Practical rules:
 
 <!-- related:start -->
 ## Related
-[[Trim Sheets Atlases and Vertex Colors]] · [[Modular Environment Kits]] · [[Blender Workflow for Roblox Creators]] · [[Exporting and Validating Models for Roblox]] · [[Level Design for Roblox]] · [[Zone and Biome Art Direction]]
+[[Modular Environment Kits]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Blender Workflow for Roblox Creators]] · [[Exporting and Validating Models for Roblox]] · [[Zone and Biome Art Direction]] · [[Level Design for Roblox]]
 <!-- related:end -->

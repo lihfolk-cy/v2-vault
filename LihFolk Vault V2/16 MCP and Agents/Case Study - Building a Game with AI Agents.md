@@ -170,6 +170,7 @@ A good split: **agents do volume and verification; the human does judgement and 
 - [[Safety Rules for AI Agents in Studio]], [[Multiple Agents in One Studio]], [[Roblox Studio MCP Server]], [[Blender MCP]]
 - [[Pipeline - New Animated Weapon]], [[Studio Tooling Architecture]], [[Case Study - Cutting a Million Instances]]
 - [[AI Agents and Autonomous Workflows]], [[Pipeline Design Principles]]
+- [[Case Study - Building LihFolk V2 with AI Agents]] (the same approach applied to building this vault and its asset pack)
 
 ## Connected notes
 <!-- auto-links:start -->
@@ -178,5 +179,5 @@ A good split: **agents do volume and verification; the human does judgement and 
 
 <!-- related:start -->
 ## Related
-[[MCP Workflows for Scripting and Debugging]] · [[Batch Processing Tools in Studio]] · [[Writing Your Own MCP Server]] · [[Case Study - Instance Cleanup and Place Size]] · [[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[What Is MCP]] · [[Setting Up MCP Clients]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]]
+[[MCP Workflows for Scripting and Debugging]] · [[Batch Processing Tools in Studio]] · [[Writing Your Own MCP Server]] · [[Case Study - Instance Cleanup and Place Size]] · [[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]] · [[Setting Up MCP Clients]] · [[What Is MCP]]
 <!-- related:end -->

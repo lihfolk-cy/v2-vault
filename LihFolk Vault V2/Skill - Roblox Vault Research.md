@@ -29,7 +29,7 @@ Trigger phrases in its description include "check the vault", "what does the vau
 
 ## What it will not do
 
-It does not edit notes, it does not upgrade a rule of thumb into a fact, and it says plainly when the vault does not cover something. It also skips the asset folders (`20 CC0 Library`, `30 Models and Environment Kits`) and the skill files themselves when searching prose.
+It does not edit notes, it does not upgrade a rule of thumb into a fact, and it says plainly when the vault does not cover something. It also skips asset folders (`_assets`, image folders) and the skill files themselves when searching prose.
 
 ## Why it matters
 
@@ -43,5 +43,5 @@ AI agents are confident even when wrong. The habit of citing notes and flagging 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Third-Party Skill - Obsidian Skills]] · [[Skill - Roblox DataStore Safety]] · [[Skill - Roblox Performance Audit]] · [[Skill - Roblox Debugging]] · [[CHANGELOG]] · [[Resource Library Start Here]]
+[[Third-Party Skill - Obsidian Skills]] · [[Skill - Roblox DataStore Safety]] · [[Skill - Roblox Performance Audit]] · [[Skill - Roblox Debugging]] · [[Resource Library Start Here]]
 <!-- auto-links:end -->

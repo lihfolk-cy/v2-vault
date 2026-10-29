@@ -247,5 +247,5 @@ Patterns, not copies:
 
 <!-- related:start -->
 ## Related
-[[Case Study - The Strongest Battlegrounds]] · [[Genre Playbook - Battle Royale]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Open-World City and Crime Roleplay]] · [[Boss Fight Design Patterns]] · [[Time-to-Kill Math and a Weapon Balance Sheet]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Genre Playbook - Obbies and Platformers]]
+[[Case Study - The Strongest Battlegrounds]] · [[Genre Playbook - Battle Royale]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Open-World City and Crime Roleplay]] · [[Boss Fight Design Patterns]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Time-to-Kill Math and a Weapon Balance Sheet]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Obbies and Platformers]]
 <!-- related:end -->

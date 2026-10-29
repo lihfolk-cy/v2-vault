@@ -6,9 +6,10 @@
     "graph-cosmic",
     "vault-polish",
     "lihfolk-home",
-    "celestial-v2",
     "celestial-v2-notes",
-    "celestial-v2-hud"
+    "celestial-v2-hud",
+    "celestial-v2-banners",
+    "celestial-v2"
   ],
   "theme": "obsidian",
   "cssTheme": "Everforest",

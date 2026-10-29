@@ -1,0 +1,362 @@
+[
+ {
+  "id": "B1",
+  "scores": {
+   "R1": 3.0,
+   "R2": 2.5,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 2.5,
+   "R6": 3.0,
+   "R7": 3.0,
+   "R8": 2.5,
+   "R9": 3.0
+  },
+  "notes": "R2/R5/R8 do not state server-only awarding"
+ },
+ {
+  "id": "B2",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0,
+   "R8": 3.0,
+   "R9": 3.0
+  },
+  "notes": "All: streaming cause, WaitForChild/tags, ModelStreamingMode or server"
+ },
+ {
+  "id": "B3",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0,
+   "R8": 3.0,
+   "R9": 3.0
+  },
+  "notes": "All list unconditional Granted, no PurchaseId dedupe, non-atomic Get+Set, nil plr"
+ },
+ {
+  "id": "B4",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0,
+   "R8": 3.0,
+   "R9": 3.0
+  },
+  "notes": "All correct on metatable stripping, ServerStorage nil, rebuild via shared module"
+ },
+ {
+  "id": "B5",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0,
+   "R8": 2.0,
+   "R9": 2.0
+  },
+  "notes": "All identify 1-stud ray, scale direction, nil check"
+ },
+ {
+  "id": "B6",
+  "scores": {
+   "R1": 1.67,
+   "R2": 1.33,
+   "R3": 1.33,
+   "R4": 1.67,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0,
+   "R8": 2.0,
+   "R9": 2.0
+  },
+  "notes": "R1/R4 no Studio guard; R2/R3 no pcall/retry"
+ },
+ {
+  "id": "B7",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 2.25,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0,
+   "R8": 3.0,
+   "R9": 3.0
+  },
+  "notes": "R3 does not validate arguments (comment only)"
+ },
+ {
+  "id": "B8",
+  "scores": {
+   "R1": 4.0,
+   "R2": 4.0,
+   "R3": 2.0,
+   "R4": 4.0,
+   "R5": 4.0,
+   "R6": 4.0,
+   "R7": 4.0,
+   "R8": 4.0,
+   "R9": 3.0
+  },
+  "notes": "R3 grants when player absent and omits single-assignment; R9 omits single-assignment"
+ },
+ {
+  "id": "B9",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0,
+   "R8": 2.0,
+   "R9": 2.0
+  },
+  "notes": "All correct TweenService usage and Completed-based hide"
+ },
+ {
+  "id": "B10",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0,
+   "R8": 3.0,
+   "R9": 3.0
+  },
+  "notes": "All correct Exclude params, Unit*200, nil check, TakeDamage, validation"
+ },
+ {
+  "id": "B11",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0,
+   "R8": 3.0,
+   "R9": 3.0
+  },
+  "notes": "All correct GetTagged/Added/Removed with per-instance connections"
+ },
+ {
+  "id": "B12",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 2.63,
+   "R7": 3.0,
+   "R8": 3.0,
+   "R9": 3.0
+  },
+  "notes": "R6 treats Unauthorized as transient/retryable"
+ },
+ {
+  "id": "B13",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.25,
+   "R3": 2.25,
+   "R4": 2.25,
+   "R5": 2.25,
+   "R6": 2.25,
+   "R7": 2.25,
+   "R8": 2.25,
+   "R9": 2.25
+  },
+  "notes": "None explicitly state identifying caller via OnServerEvent's first Player arg"
+ },
+ {
+  "id": "B14",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0,
+   "R8": 3.0,
+   "R9": 3.0
+  },
+  "notes": "All: teleport data client-visible, coins in DataStore, MemoryStore for transient"
+ },
+ {
+  "id": "B15",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0,
+   "R8": 3.0,
+   "R9": 3.0
+  },
+  "notes": "All give tag-driven systems with GetTagged/Added/Removed and attributes"
+ },
+ {
+  "id": "B16",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.25,
+   "R3": 2.25,
+   "R4": 2.25,
+   "R5": 2.25,
+   "R6": 2.25,
+   "R7": 2.25,
+   "R8": 2.25,
+   "R9": 2.25
+  },
+  "notes": "None mention ownership changes causing jitter"
+ },
+ {
+  "id": "B17",
+  "scores": {
+   "R1": 3.0,
+   "R2": 2.63,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 2.63,
+   "R6": 3.0,
+   "R7": 3.0,
+   "R8": 3.0,
+   "R9": 2.63
+  },
+  "notes": "R2/R5/R9 give ~900-byte limit instead of 1,000"
+ },
+ {
+  "id": "B18",
+  "scores": {
+   "R1": 2.63,
+   "R2": 2.63,
+   "R3": 2.63,
+   "R4": 2.63,
+   "R5": 2.63,
+   "R6": 2.63,
+   "R7": 2.63,
+   "R8": 2.63,
+   "R9": 2.63
+  },
+  "notes": "None mention require() disallowed in desynchronized phase"
+ },
+ {
+  "id": "B19",
+  "scores": {
+   "R1": 1.67,
+   "R2": 1.67,
+   "R3": 1.67,
+   "R4": 1.67,
+   "R5": 1.67,
+   "R6": 1.67,
+   "R7": 1.67,
+   "R8": 1.67,
+   "R9": 1.67
+  },
+  "notes": "None mention ModelStreamingBehavior Improved"
+ },
+ {
+  "id": "B20",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0,
+   "R8": 2.0,
+   "R9": 2.0
+  },
+  "notes": "All explain budget/queue-full 302 and staggered dirty saves with retries"
+ },
+ {
+  "id": "B21",
+  "scores": {
+   "R1": 1.67,
+   "R2": 1.67,
+   "R3": 1.33,
+   "R4": 1.67,
+   "R5": 1.0,
+   "R6": 1.67,
+   "R7": 1.33,
+   "R8": 1.0,
+   "R9": 1.67
+  },
+  "notes": "R5/R8 point to File > Studio Settings; few mention stdio/studio_id"
+ },
+ {
+  "id": "B22",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.25,
+   "R3": 2.25,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 2.25,
+   "R8": 3.0,
+   "R9": 2.25
+  },
+  "notes": "R1/R2/R3/R7/R9 omit Workspace.PlayerScriptsUseInputActionSystem"
+ },
+ {
+  "id": "B23",
+  "scores": {
+   "R1": 3.0,
+   "R2": 2.5,
+   "R3": 2.5,
+   "R4": 2.5,
+   "R5": 2.5,
+   "R6": 2.5,
+   "R7": 2.5,
+   "R8": 2.5,
+   "R9": 3.0
+  },
+  "notes": "Only R1/R9 cover UI-modifier and @query selectors"
+ },
+ {
+  "id": "B24",
+  "scores": {
+   "R1": 2.0,
+   "R2": 1.0,
+   "R3": 1.0,
+   "R4": 2.0,
+   "R5": 1.0,
+   "R6": 1.0,
+   "R7": 2.0,
+   "R8": 2.0,
+   "R9": 1.75
+  },
+  "notes": "R2/R3/R5/R6 give examples letting 13-15 chat with 16-17 (contradicts key)"
+ }
+]

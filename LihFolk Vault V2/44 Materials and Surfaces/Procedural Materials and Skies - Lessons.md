@@ -1,5 +1,6 @@
 ---
 tags: [materials, pbr, tiling, procedural, skybox, sky, lighting, blender, qa, lihfolk, type/guide, area/materials, area/lighting, level/advanced]
+verified: 2026-10-28
 ---
 # Procedural Materials and Skies - Lessons
 
@@ -14,8 +15,6 @@ tags: [materials, pbr, tiling, procedural, skybox, sky, lighting, blender, qa, l
 >
 > Cost: TL;DR ~120 tok · whole note ~1.5k tok. Read more: ## 1. Proving a material tiles · ## 4. Skyboxes: seams and poles · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
-verified: 2026-10-28
 
 How a scripted generator produced tiling PBR material sets (for `MaterialVariant` / `SurfaceAppearance`) and six-face Roblox skyboxes that pass measured gates and a blind review panel. From the LihFolk V2 asset pack: 99 material and 46 sky ledger entries (**Measured**). Scores are blind rubric scores out of 10, pass bar 8.5, median of three reviewers.
 
@@ -93,5 +92,5 @@ Face convention used: Roblox space, Y up, front = -Z. `SkyFt` -Z, `SkyBk` +Z, `S
 
 <!-- related:start -->
 ## Related
-[[Baking Lighting and Detail into Textures]] · [[Stylised vs Realistic Material Pipelines]] · [[Case Study - Building LihFolk V2 with AI Agents]] · [[Texturing and PBR Baking]] · [[Hand-Painted and Stylized Texturing]] · [[Terrain Materials and Painting]]
+[[Baking Lighting and Detail into Textures]] · [[Stylised vs Realistic Material Pipelines]] · [[Texturing and PBR Baking]] · [[Hand-Painted and Stylized Texturing]] · [[Case Study - Building LihFolk V2 with AI Agents]] · [[Terrain Materials and Painting]]
 <!-- related:end -->

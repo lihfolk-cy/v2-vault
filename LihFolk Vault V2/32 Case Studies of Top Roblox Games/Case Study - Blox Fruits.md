@@ -43,7 +43,7 @@ Source labels used below: **Observed in the live game (October 2026)** means the
 | Kitsune update | Over 800,000 concurrent on launch day, 15 September 2024 | Public stats site (RoWatcher timeline; weak) |
 | Awards | Best Action RPG, 2024 Roblox Innovation Awards | Press (IGN, 8 September 2024, via Wikipedia) |
 
-Things I could not verify: the exact peak (two trackers disagree by about 13,000, and one RoWatcher page claims an unrelated "3.7 million in 2023" record, which contradicts its own later figure; I ignore it). The exact rename date. Any revenue figure. I could not open the fan wiki (blocked), so update dates come from search summaries of it and from guides.
+Things we could not verify: the exact peak (two trackers disagree by about 13,000, and one RoWatcher page claims an unrelated "3.7 million in 2023" record, which contradicts its own later figure; I ignore it). The exact rename date. Any revenue figure. We could not open the fan wiki (blocked), so update dates come from search summaries of it and from guides.
 
 ### Update history in one paragraph
 
@@ -69,13 +69,13 @@ No CTR data is public. Reasoning from assets downloaded from the public thumbnai
 4. **Tiny seasonal touch.** Swapping the logo "O" for a pumpkin is a cheap way to look "current" without redrawing everything.
 5. **Consistent logo placement.** Bottom right, same size, on every image.
 
-What I would question: no gallery video. For a combat game, a short clip of a fruit ability could sell better than stills. I could not find any statement on why they skip it. See [[Thumbnails Icons and Store Page]] and [[Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks]].
+What we would question: no gallery video. For a combat game, a short clip of a fruit ability could sell better than stills. We could not find any statement on why they skip it. See [[Thumbnails Icons and Store Page]] and [[Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks]].
 
 ---
 
 ## 3. The first five minutes
 
-Sources: beginner guides (Press, 2024 to 2026; Keengamer, rblxguide, Earnaldo and others; mixed quality). I did not play.
+Sources: beginner guides (Press, 2024 to 2026; Keengamer, rblxguide, Earnaldo and others; mixed quality). Not played first-hand.
 
 1. **Pick a side.** On first join the player chooses Pirates or Marines and spawns on that side's starter island.
 2. **Talk to the quest giver.** A starter NPC on the island (a Bandit quest giver for pirates, a Marine leader for marines) offers a level 0 quest: defeat a number of nearby enemies.
@@ -112,7 +112,7 @@ This is a textbook layered ladder: level gates zones, zones gate items, items ga
 
 ### Daily and timed systems
 
-- **Shared stock rotation.** Fan trackers (several, unofficial, 2025 and 2026) report that the normal fruit dealer's stock refreshes every 4 hours on a fixed UTC grid (00:00, 04:00, 08:00 and so on), the same on every server, and that a second "Mirage" dealer on a hard-to-reach island refreshes every 2 hours with rarer fruits. Discord bots exist just to post the current stock. I could not confirm this from the studio; it matches the in-game countdown according to guides.
+- **Shared stock rotation.** Fan trackers (several, unofficial, 2025 and 2026) report that the normal fruit dealer's stock refreshes every 4 hours on a fixed UTC grid (00:00, 04:00, 08:00 and so on), the same on every server, and that a second "Mirage" dealer on a hard-to-reach island refreshes every 2 hours with rarer fruits. Discord bots exist just to post the current stock. We could not confirm this from the studio; it matches the in-game countdown according to guides.
 - **World fruit spawns** on a timer and **boss respawns** give reasons to be online at certain times.
 - **Events** around big updates (for example a celebration event for 50 billion visits in August 2025, and Halloween updates).
 
@@ -141,7 +141,7 @@ Observed in the live game (27 October 2026), from the public game passes endpoin
 | Dark Blade | 1200 |
 | Fruit Notifier | 2700 |
 
-The main revenue is not passes. It is **fruits sold for Robux by the dealer**, as developer products. Guides (Press, 2025 and 2026) list permanent fruit prices from tens of Robux for the commonest (Rocket 50, Spin 75 per Dotesports) up to 5,000 Robux for permanent Dragon (Timesaver list, September 2026; also Eldorado). Physical (one-time, tradable) fruits from the dealer's stock can also be bought for Robux or Beli. I could not read developer product prices from a public endpoint; the official fan wiki was not reachable. Treat individual prices as guide-reported.
+The main revenue is not passes. It is **fruits sold for Robux by the dealer**, as developer products. Guides (Press, 2025 and 2026) list permanent fruit prices from tens of Robux for the commonest (Rocket 50, Spin 75 per Dotesports) up to 5,000 Robux for permanent Dragon (Timesaver list, September 2026; also Eldorado). Physical (one-time, tradable) fruits from the dealer's stock can also be bought for Robux or Beli. We could not read developer product prices from a public endpoint; the official fan wiki was not reachable. Treat individual prices as guide-reported.
 
 What the price shape shows:
 

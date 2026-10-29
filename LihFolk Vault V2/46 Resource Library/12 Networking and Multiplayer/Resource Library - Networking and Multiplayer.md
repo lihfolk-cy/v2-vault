@@ -16,5 +16,5 @@ Part of [[Resource Library Start Here]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Resource Library - Tools and Workflow]] · [[Resource Library - Characters and Animation]] · [[Resource Library - Building and World]] · [[Resource Library - Game Systems]] · [[Multiplayer Services Start Here]] · [[CHANGELOG]]
+[[Resource Library - Tools and Workflow]] · [[Resource Library - Characters and Animation]] · [[Resource Library - Building and World]] · [[Resource Library - Game Systems]] · [[Multiplayer Services Start Here]]
 <!-- auto-links:end -->

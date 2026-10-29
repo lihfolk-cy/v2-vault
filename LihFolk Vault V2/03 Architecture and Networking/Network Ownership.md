@@ -287,5 +287,5 @@ Symptoms:
 
 <!-- related:start -->
 ## Related
-[[Detecting Movement Exploits - Speed Fly Noclip Teleport]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[RemoteEvents RemoteFunctions and Unreliable Remotes]] · [[Client Prediction and Reconciliation for Combat]] · [[Rate Limiting and Abuse Prevention]] · [[Instance Streaming]] · [[Remote Abuse Patterns and Rate Limiting in Practice]] · [[Teleporting and Multi-Place Games]]
+[[Detecting Movement Exploits - Speed Fly Noclip Teleport]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[RemoteEvents RemoteFunctions and Unreliable Remotes]] · [[Client Prediction and Reconciliation for Combat]] · [[Rate Limiting and Abuse Prevention]] · [[Instance Streaming]] · [[Remote Abuse Patterns and Rate Limiting in Practice]] · [[Teleporting and Multi-Place Games]] · [[Snapshot Interpolation for Custom Replication]]
 <!-- related:end -->

@@ -301,5 +301,5 @@ For "statues of top players" or "your friend's avatar", use `GetHumanoidDescript
 
 <!-- related:start -->
 ## Related
-[[Character Select and Class Systems with Different Rigs]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Emotes and Social Animation]] · [[R15 Rig Anatomy and Attachments]] · [[UGC Pricing Limiteds and Marketplace Rules]] · [[Character and Creature Pipeline]]
+[[Character Select and Class Systems with Different Rigs]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Emotes and Social Animation]] · [[R15 Rig Anatomy and Attachments]] · [[UGC Pricing Limiteds and Marketplace Rules]] · [[Avatar Context Menus Profiles and Social Surfaces]]
 <!-- related:end -->

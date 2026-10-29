@@ -154,5 +154,5 @@ A quick slot binds a consumable or ability to a key/button without opening the i
 
 <!-- related:start -->
 ## Related
-[[QoL Audit Checklist]] · [[Accessibility Cross-Links for QoL Settings]] · [[Top 25 QoL Wins by Effort]] · [[Quick Respawn and Spawn Protection]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Inventory QoL - Sort Filter Search Stack and Lock]] · [[Aim Assist and Generous Hitboxes]] · [[Settings Menu Essentials and Persistence]]
+[[QoL Audit Checklist]] · [[Accessibility Cross-Links for QoL Settings]] · [[Quick Respawn and Spawn Protection]] · [[Top 25 QoL Wins by Effort]] · [[Inventory QoL - Sort Filter Search Stack and Lock]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Aim Assist and Generous Hitboxes]] · [[Settings Menu Essentials and Persistence]]
 <!-- related:end -->

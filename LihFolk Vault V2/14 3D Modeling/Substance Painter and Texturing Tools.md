@@ -178,5 +178,5 @@ Plugin note: SurfaceAppearance map properties are Plugin security, so a Studio p
 
 <!-- related:start -->
 ## Related
-[[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Stylised vs Realistic Material Pipelines]] · [[Blender Workflow for Roblox Creators]] · [[Modeling Fundamentals for Games]] · [[Low-Poly and Stylized Modeling]] · [[Mesh Optimization for Mobile]] · [[Modular Environment Kits]] · [[Voxel and Blocky Modeling]] · [[Hard-Surface Modeling]] · [[Procedural Model Kits - Lessons]]
+[[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Baking Lighting and Detail into Textures]] · [[Blender Workflow for Roblox Creators]] · [[Modeling Fundamentals for Games]] · [[Low-Poly and Stylized Modeling]] · [[Mesh Optimization for Mobile]] · [[Modular Environment Kits]] · [[Voxel and Blocky Modeling]] · [[Hard-Surface Modeling]] · [[Procedural Model Kits - Lessons]]
 <!-- related:end -->

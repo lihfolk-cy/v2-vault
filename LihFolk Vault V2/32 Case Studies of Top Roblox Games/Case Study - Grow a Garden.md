@@ -41,14 +41,14 @@ Roblox does not publish click-through rate (CTR), session length or revenue for 
 | Favourites | 11,458,473 | Roblox game API, October 27, 2026 |
 | Likes | 9,440,910 up, 1,055,641 down (about 90% positive) | Roblox game API, October 27, 2026 |
 | Playing now | 13,651 at 3:42 pm US Eastern on Tuesday, October 27, 2026 | Roblox game API, single snapshot |
-| Server size | Listed as 4 players per server | Roblox game API, October 27, 2026 (press in 2025 described larger servers; I could not confirm when this changed) |
+| Server size | Listed as 4 players per server | Roblox game API, October 27, 2026 (press in 2025 described larger servers; we could not confirm when this changed) |
 | Fastest to 1 billion visits | 33 days | Press (PocketGamer.biz, June 2, 2025) |
 
 Two numbers in that table tell the main story. The peak was 22.3 million concurrent players. On a Tuesday afternoon in October 2026 the game had about 13,600. A tracker reported daily concurrent figures of roughly 31,000 to 48,000 in late July 2026 (Profitable.app, July 2026). That is still a large Roblox game by normal standards, and its visit count (36 billion) is among the highest on the platform, but it is a fall of more than 99% from the record.
 
-Things I could not verify:
-- A widely repeated claim that the game earned $12 million in May 2025. I found no primary source. The studio has declined to share revenue (Press, IGN via Wikipedia).
-- Who runs day-to-day development in late 2026. Guide sites say the original leads stepped back in early 2026 and that a sequel exists, but I found no studio statement. A "Grow a Garden 2" experience exists on Roblox under a different group with about 1,000 players on October 27, 2026 (Roblox search API); I could not confirm it is an official sequel.
+Things we could not verify:
+- A widely repeated claim that the game earned $12 million in May 2025. We found no primary source. The studio has declined to share revenue (Press, IGN via Wikipedia).
+- Who runs day-to-day development in late 2026. Guide sites say the original leads stepped back in early 2026 and that a sequel exists, but we found no studio statement. A "Grow a Garden 2" experience exists on Roblox under a different group with about 1,000 players on October 27, 2026 (Roblox search API); we could not confirm it is an official sequel.
 - Bot accusations. An analyst (TD Cowen) alleged in 2025 that bot activity inflated the game's discovery ranking, then withdrew the manipulation claim. Roblox said its own analysis showed real players (Press, PC Gamer, IGN, Game File via Wikipedia). Treat the peak numbers as real but note the dispute.
 
 ## 2. Click-through: title, icon and thumbnails
@@ -56,7 +56,7 @@ Things I could not verify:
 ### What is visible today (Observed, October 2026)
 
 - **Title:** `[🎃] Grow a Garden 🌶️`. Two emoji, one in a bracket tag at the front and one at the end. The bracket tag is seasonal (pumpkin for Halloween). The trailing chilli marks the current content theme.
-- **Icon:** a farmer avatar in front of a giant blocky plant, with the words "GROW OFFLINE" in heavy white outlined text at the top. The whole icon sits inside a red, spiky frame branded "The Hollow", the name of Roblox's 2026 Halloween platform event. I could not confirm whether the game is an official participant in The Hollow (the event's published roster of nine games does not list it, per games.gg, October 22, 2026), so the frame may be a seasonal style choice or a partnership I could not trace.
+- **Icon:** a farmer avatar in front of a giant blocky plant, with the words "GROW OFFLINE" in heavy white outlined text at the top. The whole icon sits inside a red, spiky frame branded "The Hollow", the name of Roblox's 2026 Halloween platform event. We could not confirm whether the game is an official participant in The Hollow (the event's published roster of nine games does not list it, per games.gg, October 22, 2026), so the frame may be a seasonal style choice or a partnership we could not trace.
 - **Thumbnails:** 10 images in the carousel (the maximum this API returned). The first shows a huge exploding yellow fruit with a rainbow-coloured "$95,643,734,647" across the top, in the same red frame. The second shows a giant glowing jack-o'-lantern crop with "GROW OFFLINE" in large text.
 - **Description:** short, with emoji section headers, four "How To Plant" bullets, and the line that your garden "literally grows while you are offline".
 
@@ -72,7 +72,7 @@ Roblox does not publish CTR for this game, so this is reasoning, not data.
 
 ### How it changed over time (Press and public trackers)
 
-The game's titles tracked updates throughout 2025: named updates such as "Blood Moon" (May 18, 2025), "Bizzy Bees" (May 31), "Working Bees" (June 14), "Summer" (June 21) and the "Corruption" update with an NFL player cameo (July 26) each came with new seeds and events (Press, PCGamesN, Game Rant, PC Gamer, IGN, Eurogamer via Wikipedia). The pattern was a weekly update with its theme reflected in the store page. I could not recover a dated archive of every title and thumbnail change, so the exact wording of past tags is not recorded here.
+The game's titles tracked updates throughout 2025: named updates such as "Blood Moon" (May 18, 2025), "Bizzy Bees" (May 31), "Working Bees" (June 14), "Summer" (June 21) and the "Corruption" update with an NFL player cameo (July 26) each came with new seeds and events (Press, PCGamesN, Game Rant, PC Gamer, IGN, Eurogamer via Wikipedia). The pattern was a weekly update with its theme reflected in the store page. We could not recover a dated archive of every title and thumbnail change, so the exact wording of past tags is not recorded here.
 
 See [[Thumbnails Icons and Store Page]], [[Discovery and the Algorithm]] and the cross-game comparison note in this section.
 
@@ -82,7 +82,7 @@ From the game's own description and press coverage (Wikipedia gameplay section, 
 
 1. You spawn next to your own empty plot of brown soil. Each player in a server gets one plot, visible to everyone else.
 2. You have a small amount of the soft currency (Sheckles) and the first thing you can afford is a carrot seed.
-3. The seed shop is a few steps away. Its stock is shared by everyone in the server and refreshes on a short timer (a guide reported every 5 minutes in July 2026; I could not confirm the current value).
+3. The seed shop is a few steps away. Its stock is shared by everyone in the server and refreshes on a short timer (a guide reported every 5 minutes in July 2026; we could not confirm the current value).
 4. You equip the seed, click a brown plot tile, and a sprout appears immediately. Fast crops are ready within the first minute or two.
 5. You harvest, walk to the sell stand, and see a number go up. Then you buy a better seed.
 
@@ -102,7 +102,7 @@ Notice what is missing: no combat, no class selection, no lobby, no loading into
 
 1. **Offline growth.** Crops keep growing while you are away (Studio statement: Jandel called the persistent world novel for Roblox, GamesBeat, September 2025). This turns "log off" from a loss into an investment. Every return session starts with a reward.
 2. **Restock timer.** A shared, frequent shop restock creates a reason to stay "just five more minutes" for a rare seed. Because the stock is the same for everyone in the server, a rare restock becomes a social event: players run to the shop together.
-3. **Weather and mutations.** Weather events (rain, thunderstorms, meteor showers and many more) apply mutations to crops that multiply their sell value. Guides list Gold at 20x and Rainbow at 50x, with rare weather such as thunderstorms appearing roughly once per 40 restocks (guide sites, mid-2025 to July 2026; I could not verify current values). Weather is a variable-ratio reward on top of a deterministic loop: you know your carrots will grow, but you do not know whether lightning will make one worth 100 times more.
+3. **Weather and mutations.** Weather events (rain, thunderstorms, meteor showers and many more) apply mutations to crops that multiply their sell value. Guides list Gold at 20x and Rainbow at 50x, with rare weather such as thunderstorms appearing roughly once per 40 restocks (guide sites, mid-2025 to July 2026; we could not verify current values). Weather is a variable-ratio reward on top of a deterministic loop: you know your carrots will grow, but you do not know whether lightning will make one worth 100 times more.
 4. **Admin events.** Developers trigger special weather or giveaways live, usually before an update. These are announced on social media and become appointment viewing. The August 23, 2025 mock "admin war" with Steal a Brainrot pushed both games to records (Press, IGN and PocketGamer.biz).
 5. **Weekly updates and limited items.** New seeds, pets and events arrived weekly in 2025. Exclusive items had to be claimed while online during the event (Press, Morning Brew and NYT via Wikipedia).
 6. **Social visibility.** Every plot is visible to everyone. A huge mutated crop is a status symbol you can walk up to. The description literally says "Flex fruits and finds on friends".

@@ -270,5 +270,5 @@ The senior trade-off: an external backend adds power (web dashboards, cross-game
 
 <!-- related:start -->
 ## Related
-[[Data Loss Prevention and Recovery]] · [[Data Schema Design and Migrations]] · [[MemoryStore Service]] · [[OrderedDataStores and Leaderboards]] · [[Schema Migrations - Worked Case Studies]] · [[Session Locking and Profile Libraries]] · [[Purchase Data and Receipts]] · [[Trading Systems Without Duplication]]
+[[Data Loss Prevention and Recovery]] · [[Data Schema Design and Migrations]] · [[MemoryStore Service]] · [[OrderedDataStores and Leaderboards]] · [[Schema Migrations - Worked Case Studies]] · [[Session Locking and Profile Libraries]] · [[Purchase Data and Receipts]] · [[Serial-Numbered Limited Items - Atomic Counters]]
 <!-- related:end -->

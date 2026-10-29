@@ -12,10 +12,10 @@ tags: [terrain, materials, painting, materialvariant, terraindetail, procedural,
 > - Three to five materials per view; path lighter than surroundings in grayscale.
 > - Natural terrain uses a TerrainDetail override (top and side) where possible.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.2k tok. Read more: ## 2. Let the material paint slopes: TerrainDetail · ## 4. Procedural painting by slope, height and noise · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.3k tok. Read more: ## 2. Let the material paint slopes: TerrainDetail · ## 4. Procedural painting by slope, height and noise · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-The vault already covers terrain's data model and API ([[Terrain Tools and Terrain API]]), and what is global versus local about terrain materials, water, Expanded Terrain limits and performance ([[Terrain Deep Dive - Materials Water and Performance]]). This note is about **the craft of painting**: choosing a small palette of ground materials that reads well, letting `TerrainDetail` do slope painting for you, painting by hand without the result looking like a paint program, painting procedurally by slope, height and noise with a correct and chunked script, importing a colormap, and dressing terrain with the vault's own CC0 textures. The goal is ground that tells the player where to walk, not ground that shows off how many materials exist.
+The vault already covers terrain's data model and API ([[Terrain Tools and Terrain API]]), and what is global versus local about terrain materials, water, Expanded Terrain limits and performance ([[Terrain Deep Dive - Materials Water and Performance]]). This note is about **the craft of painting**: choosing a small palette of ground materials that reads well, letting `TerrainDetail` do slope painting for you, painting by hand without the result looking like a paint program, painting procedurally by slope, height and noise with a correct and chunked script, importing a colormap, and dressing terrain with free CC0 textures. The goal is ground that tells the player where to walk, not ground that shows off how many materials exist.
 
 ## 1. Paint for gameplay first
 
@@ -44,7 +44,7 @@ That means a single material can be **grass on top and rock on the sides**. Pain
 
 ### Building one from the CC0 library
 
-Using sets from [[CC0 Texture and HDRI Library]]:
+Using CC0 sets (sources in [[Links - Free and CC0 asset libraries]]):
 
 | Face | Source set | Maps | Size | [[StudsPerTile]] (start) |
 |---|---|---|---|---|
@@ -321,7 +321,7 @@ The texture costs follow [[Textures Decals and Texture Memory]]: pixels, not fil
 
 ## See also
 
-[[Materials and Surfaces Start Here]] · [[Terrain Tools and Terrain API]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[MaterialService and Custom Materials]] · [[CC0 Texture and HDRI Library]] · [[Procedural World Generation]] · [[Noise Functions and Terrain Generation]] · [[Zone and Biome Art Direction]] · [[Level Design for Roblox]] · [[Foliage Props and Scatter]] · [[Environment Art Styles]] · [[Textures Decals and Texture Memory]]
+[[Materials and Surfaces Start Here]] · [[Terrain Tools and Terrain API]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[MaterialService and Custom Materials]] · [[Links - Free and CC0 asset libraries]] · [[Procedural World Generation]] · [[Noise Functions and Terrain Generation]] · [[Zone and Biome Art Direction]] · [[Level Design for Roblox]] · [[Foliage Props and Scatter]] · [[Environment Art Styles]] · [[Textures Decals and Texture Memory]]
 
 ## Connected notes
 <!-- auto-links:start -->

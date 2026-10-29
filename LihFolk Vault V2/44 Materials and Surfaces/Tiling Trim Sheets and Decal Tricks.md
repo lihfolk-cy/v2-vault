@@ -36,7 +36,7 @@ The ContentId versions of the PBR maps are hidden and Plugin security; the refer
 
 ## 2. Making a texture that actually tiles
 
-A tiling texture is one whose right edge continues into its left edge and whose top continues into its bottom. The CC0 sets in [[CC0 Texture and HDRI Library]] are already seamless, which is one reason they are so useful. When you make or edit your own:
+A tiling texture is one whose right edge continues into its left edge and whose top continues into its bottom. Most CC0 PBR sets from the libraries in [[Links - Free and CC0 asset libraries]] are already seamless, which is one reason they are so useful. When you make or edit your own:
 
 1. **Offset by half.** In any image editor, offset the image by 50 percent horizontally and vertically (wrap around). The seams are now a cross in the middle where you can see and paint them out.
 2. **Paint out the cross**, then offset back.
@@ -288,7 +288,7 @@ Count per view, not per place. One corridor with 30 decals is worse than a city 
 
 ## See also
 
-[[Materials and Surfaces Start Here]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Textures Decals and Texture Memory]] · [[MaterialService and Custom Materials]] · [[SurfaceAppearance PBR Workflow]] · [[CC0 Texture and HDRI Library]] · [[Modular Environment Kits]] · [[UV Unwrapping]] · [[Rendering Performance]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Parts Unions and MeshParts]]
+[[Materials and Surfaces Start Here]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Textures Decals and Texture Memory]] · [[MaterialService and Custom Materials]] · [[SurfaceAppearance PBR Workflow]] · [[Links - Free and CC0 asset libraries]] · [[Modular Environment Kits]] · [[UV Unwrapping]] · [[Rendering Performance]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Parts Unions and MeshParts]]
 
 ## Connected notes
 <!-- auto-links:start -->

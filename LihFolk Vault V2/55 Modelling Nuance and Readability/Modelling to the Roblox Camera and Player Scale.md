@@ -226,5 +226,5 @@ Note that the Studio field of view may differ if your game sets `FieldOfView` or
 
 <!-- related:start -->
 ## Related
-[[Bevels Chamfers and Edge Highlights Without Textures]] · [[Voxel Scale Grids and Stud Alignment]] · [[Camera Obstruction Handling - Occlusion Modes, Fades and Collision]] · [[Blender Workflow for Roblox Creators]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] · [[Choosing GUI 2D or Locked-Camera 2.5D]]
+[[Bevels Chamfers and Edge Highlights Without Textures]] · [[Camera Obstruction Handling - Occlusion Modes, Fades and Collision]] · [[Voxel Scale Grids and Stud Alignment]] · [[Blender Workflow for Roblox Creators]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] · [[Art-Direction Nitpicks - The Principles Behind Them]]
 <!-- related:end -->

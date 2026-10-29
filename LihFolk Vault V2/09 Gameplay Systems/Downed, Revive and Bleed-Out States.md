@@ -157,5 +157,5 @@ If every alive player in the group is downed or dead, the encounter is lost: end
 
 <!-- related:start -->
 ## Related
-[[Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations]] · [[Enemy Archetype Kit - Fodder, Tank, Ranged, Support and Exploder]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Spawning Teams and Rounds]] · [[Character Select and Class Systems with Different Rigs]] · [[Hitboxes and Hit Detection]] · [[Squad AI - Attack Tokens, Flanking and Attacker Limits]] · [[Quests and Objectives]]
+[[Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations]] · [[Enemy Archetype Kit - Fodder, Tank, Ranged, Support and Exploder]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Spawning Teams and Rounds]] · [[Hitboxes and Hit Detection]] · [[Character Select and Class Systems with Different Rigs]] · [[Squad AI - Attack Tokens, Flanking and Attacker Limits]] · [[Quests and Objectives]]
 <!-- related:end -->

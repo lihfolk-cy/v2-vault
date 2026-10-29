@@ -1,5 +1,6 @@
 ---
 tags: [ai, tokens, cost, benchmarks, plugin, router, lihfolk, type/guide, area/ai, level/intermediate, area/studio]
+verified: 2026-10-28
 ---
 # Token Cost Benchmarks
 
@@ -14,8 +15,6 @@ tags: [ai, tokens, cost, benchmarks, plugin, router, lihfolk, type/guide, area/a
 >
 > Cost: TL;DR ~150 tok · whole note ~1.5k tok. Read more: ## 2. Size of each thing an agent might read · ## 3. Lookup benchmarks (8 typical tasks) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
-verified: 2026-10-28
 
 What LihFolk Vault V2 costs an AI to use, measured on the vault itself, and how to read it cheaply **without losing accuracy**. Every number below is **Measured** on this repo with `LihFolk Vault V2/_tools/build_index.py --measure` and direct file sizes. Tokens are estimated as **bytes ÷ 4**: English Markdown runs at about 3.5-4.5 bytes per token, so treat every figure as ±15%.
 
@@ -77,7 +76,7 @@ Savings never justify a wrong answer. TL;DR blocks are **extractive**: their bul
 - **Never cite a number** seen only in a TL;DR; open its section.
 - **Read further** whenever the TL;DR leaves doubt.
 
-**Unverified:** whether TL;DR-first reading changes the *quality* of AI output. A with/without-plugin A/B test, scored blind, is prepared (`D:\LihFolk Build\eval\run_ab.ps1`) but hasn't been run yet. Until it has, this note proves cost, not quality.
+**Unverified:** whether TL;DR-first reading changes the *quality* of AI output. A with/without-plugin A/B test, scored blind, is prepared (outside this repo) but hasn't been run yet. Until it has, this note proves cost, not quality.
 
 ## Common mistakes
 

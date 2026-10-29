@@ -222,5 +222,5 @@ Small, frequent releases are safer than big ones: fewer changes per release, eas
 
 <!-- related:start -->
 ## Related
-[[Batch Processing Tools in Studio]] · [[Environment and Level Pipeline]] · [[Art Pipeline - Concept to In-Game Asset]] · [[Icon and Thumbnail Rendering Pipeline]] · [[Localization Pipeline]] · [[Character and Creature Pipeline]] · [[Blender Automation with Python]]
+[[Batch Processing Tools in Studio]] · [[Art Pipeline - Concept to In-Game Asset]] · [[Environment and Level Pipeline]] · [[Icon and Thumbnail Rendering Pipeline]] · [[Localization Pipeline]] · [[Character and Creature Pipeline]] · [[Blender Automation with Python]]
 <!-- related:end -->

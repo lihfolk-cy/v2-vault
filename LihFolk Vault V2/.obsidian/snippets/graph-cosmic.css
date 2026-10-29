@@ -2,15 +2,15 @@
    backdrop with nebula glow, and a vignette. With the Celestial Vault sky on, the animated stars show
    through behind the graph. Toggle in Settings > Appearance > CSS snippets (graph-cosmic). */
 
-.graph-view.color-fill { color: #9fd8ff; }                 /* notes: icy cyan stars */
+.graph-view.color-fill { color: #c9c2ff; }                 /* uncoloured notes and orphans: pale starlight */
 .graph-view.color-fill-focused { color: #ffffff; }         /* hovered / active note */
-.graph-view.color-fill-highlight { color: #ff8be0; }       /* neighbours of the hovered note */
+.graph-view.color-fill-highlight { color: #ffb36b; }       /* neighbours of the hovered note */
 .graph-view.color-fill-tag { color: #ff5fb4; }             /* tag nodes: magenta */
 .graph-view.color-fill-attachment { color: #ffd27a; }      /* images and files: gold dust */
 .graph-view.color-fill-unresolved { color: #4a3f6b; }
-.graph-view.color-circle { color: #b89cff; }               /* ring around the focused node */
-.graph-view.color-line { color: rgba(150, 120, 255, 0.22); }
-.graph-view.color-line-highlight { color: #ff8be0; }
+.graph-view.color-circle { color: #c79bff; }               /* ring around the focused node */
+.graph-view.color-line { color: rgba(170, 140, 255, 0.20); }       /* lavender threads; the LihFolk Graph plugin re-tints each link to its note colour */
+.graph-view.color-line-highlight { color: #c79bff; }
 .graph-view.color-text { color: #e6defc; }
 .graph-view.color-arrow { color: #b89cff; }
 

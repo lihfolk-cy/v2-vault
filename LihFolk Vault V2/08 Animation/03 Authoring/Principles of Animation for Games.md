@@ -188,5 +188,5 @@ Every keyframe costs instances on Roblox, every clip costs memory and load time,
 
 <!-- related:start -->
 ## Related
-[[Animation Capture and Mocap]] · [[Human Swing Biomechanics]] · [[Authoring Clips in Code]] · [[Locomotion and Melee Reference Numbers]] · [[Animation Editor Advanced]] · [[R15 Run Cycle Key Poses]] · [[Weapon and Combat Animation]] · [[Locomotion Readability - Lessons from Blind Panels]]
+[[Animation Capture and Mocap]] · [[Human Swing Biomechanics]] · [[Authoring Clips in Code]] · [[Locomotion and Melee Reference Numbers]] · [[Animation Editor Advanced]] · [[Locomotion Clip Lessons - Jump, Sprint, Idle]] · [[R15 Run Cycle Key Poses]] · [[Weapon and Combat Animation]]
 <!-- related:end -->

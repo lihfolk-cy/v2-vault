@@ -775,7 +775,7 @@ while true do
 		for _, player in Players:GetPlayers() do
 			if player:GetAttribute("InRound") then
 				player:SetAttribute("InRound", false)
-				task.spawn(player.LoadCharacter, player)
+				task.spawn(player.LoadCharacterAsync, player)
 			end
 		end
 		task.wait(3)

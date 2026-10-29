@@ -8,9 +8,9 @@ tags: [atlas, api, type/atlas, area/2d, area/ui, api/ResampleMode]
 > - `ResampleMode` has `Default` (bilinear filtering) and `Pixelated` (nearest-neighbour, "keeps sharp pixel edges") per the docs.
 > - Blockbench pixel art looks blurry in game: Bilinear filtering on `TextureID` -> SurfaceAppearance ColorMap with `ResampleMode...
 > - Sprite soft everywhere: `ResampleMode` left at Default -> Property on the ImageLabel itself, not a parent.
-> - `ResampleMode` (`Enum.ResamplerMode`, items `Default` and `Pixelated`): by default "the image smooths out texturing when...
+> - `ResampleMode = Pixelated` and `ScaleType = Stretch` on sprite labels.
 >
-> Cost: TL;DR ~160 tok · whole note ~520 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~490 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -23,7 +23,7 @@ API snapshot: member of `Decal`, `ImageButton`, `ImageLabel`, `SurfaceAppearance
 
 - Blockbench pixel art looks blurry in game: Bilinear filtering on `TextureID` -> SurfaceAppearance ColorMap with `ResampleMode = Pixelated` ([[MagicaVoxel Goxel and Blockbench Workflows Compared]])
 - Sprite soft everywhere: `ResampleMode` left at Default -> Property on the ImageLabel itself, not a parent. ([[Pixel Art Pipeline - Aseprite to Roblox Without Blur]])
-- `ResampleMode` (`Enum.ResamplerMode`, items `Default` and `Pixelated`): by default "the image smooths out texturing when displayed on the screen larger or smaller than its size in texture memory. ([[Sprite Sheets and Frame Animation with ImageRectOffset]])
+- `ResampleMode = Pixelated` and `ScaleType = Stretch` on sprite labels. ([[Sprite Sheets and Frame Animation with ImageRectOffset]])
 - `SurfaceAppearance` with ColorMap = the palette: allows `Color` tinting (TintMask) or base-colour reveal (Overlay with alpha), and exposes `ResampleMode`. ([[The Gradient Palette Texture Workflow]])
 
 ## Mentioned in

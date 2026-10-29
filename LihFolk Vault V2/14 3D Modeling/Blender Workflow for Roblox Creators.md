@@ -389,5 +389,5 @@ Windows gotcha (Measured): Blender and other native programs failed to open file
 
 <!-- related:start -->
 ## Related
-[[AI Pitfalls - Assets and Import]] · [[Modeling Characters for R15 and Custom Rigs]] · [[AI 3D Model Generation Outside Roblox]] · [[Modeling Weapons and Props]] · [[Curve-Based Modelling in Blender for Roblox]] · [[Organic and Creature Modeling]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Low-Poly and Stylized Modeling]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Mesh Optimization for Mobile]]
+[[AI Pitfalls - Assets and Import]] · [[Modeling Characters for R15 and Custom Rigs]] · [[AI 3D Model Generation Outside Roblox]] · [[Modeling Weapons and Props]] · [[Curve-Based Modelling in Blender for Roblox]] · [[Organic and Creature Modeling]] · [[Low-Poly and Stylized Modeling]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Mesh Optimization for Mobile]]
 <!-- related:end -->

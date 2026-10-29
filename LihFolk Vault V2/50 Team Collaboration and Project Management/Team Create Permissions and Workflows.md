@@ -297,7 +297,7 @@ Remember the blocked-collaborator rule from section 1: removing someone from the
 
 ## 8. What is announced, and what is unconfirmed
 
-- **Native branching and merging** for collaborative editing was reported from the Roblox Developers Conference in September 2026 as planned for early 2027, along with package overrides. That report comes from a third-party summary of the keynote; I could not find the official announcement post. Treat it as **unconfirmed** and design today's workflow without it. If it ships, the sandbox-experience pattern in section 2 becomes less necessary for code but stays necessary for access control.
+- **Native branching and merging** for collaborative editing was reported from the Roblox Developers Conference in September 2026 as planned for early 2027, along with package overrides. That report comes from a third-party summary of the keynote; we could not find the official announcement post. Treat it as **unconfirmed** and design today's workflow without it. If it ships, the sandbox-experience pattern in section 2 becomes less necessary for code but stays necessary for access control.
 - **Whether Edit on a user-owned experience includes publishing** is not stated on the collaboration page. Test with a friend account before relying on either answer.
 - **Maximum number of simultaneous collaborators** is not stated on the collaboration page. Very large sessions are rare on Roblox; if you plan more than about ten simultaneous editors, test the place's responsiveness first (rule of thumb).
 - The universe-wide reach of Edit in section 2 follows from the docs granting permissions per experience; verify with a test account before you rely on it as a security boundary.

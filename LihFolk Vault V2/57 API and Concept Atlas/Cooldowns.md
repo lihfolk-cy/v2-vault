@@ -6,11 +6,11 @@ tags: [atlas, concept, type/atlas, area/gameplay, area/networking]
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - A cooldown has two clocks: the client's (starts when the button is pressed) and the server's (starts when the request arrives...
+> - Cooldown sweep lags behind: Waits for server reply -> Predict, then correct to server time.
+> - Ability used twice on lag: Client-owned cooldown -> Server timestamp gate.
 > - Server cooldowns have a small tolerance; cooldown ends are sent in server time.
-> - Rules (costs, cooldowns, shapes) live in one shared module.
-> - Avoid: Client-trusted hits -> Validate range, cooldown, state and target count.
 >
-> Cost: TL;DR ~130 tok · whole note ~1.6k tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~1.6k tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -19,12 +19,11 @@ A cooldown has two clocks: the client's (starts when the button is pressed) and 
 
 ## Key facts
 
+- Cooldown sweep lags behind: Waits for server reply -> Predict, then correct to server time. ([[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]])
+- Ability used twice on lag: Client-owned cooldown -> Server timestamp gate. ([[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]])
 - Server cooldowns have a small tolerance; cooldown ends are sent in server time. ([[Client Prediction and Reconciliation for Combat]])
 - Rules (costs, cooldowns, shapes) live in one shared module. ([[Client Prediction and Reconciliation for Combat]])
 - Avoid: Client-trusted hits -> Validate range, cooldown, state and target count. ([[Genre Playbook - Battlegrounds and Arena Fighters]])
-- Registry entry (moves, labels, cooldowns) and Info descriptions; icons. ([[Ability Kits Architecture]])
-- Avoid: No trade cooldown -> Cooldown on newly acquired items. ([[Player-Driven Trading Economies]])
-- Trade cooldown on new acquisitions; requirements and receive caps for new accounts. ([[Player-Driven Trading Economies]])
 
 ## Mentioned in
 

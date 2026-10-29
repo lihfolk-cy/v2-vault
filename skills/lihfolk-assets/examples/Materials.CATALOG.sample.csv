@@ -1,0 +1,3 @@
+id,family,theme,tags,colors,score,family_score,family_status,roblox_base_material,path
+cobble_blue_002,cobble,blue,stone;floor;path;street;blue,#889bbb;#7788a8;#394157;#596681,9.6,9.2,pass,Cobblestone,Materials/cobble/cobble_blue_002
+fabric_stripe_006,fabric,stripe,fabric;cloth;textile;weave;stripe,#c5c1b2;#2d4a78;#ac3835;#a39e94,10.0,9.4,pass,Fabric,Materials/fabric/fabric_stripe_006

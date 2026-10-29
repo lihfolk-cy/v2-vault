@@ -7,7 +7,7 @@ tags: [atlas, api, type/atlas, area/networking, area/gameplay, api/ProximityProm
 > [!tldr] TL;DR
 > - `ProximityPrompt.GamepadKeyCode` defaults to `Enum.KeyCode.ButtonX` and `KeyboardKeyCode` to `E` (Roblox docs).
 > - Egg model names match `PetConfig.Eggs` keys; each egg has a ProximityPrompt and a PrimaryPart.
-> - `ProximityPrompt.Triggered` gives you the player; never trust a client "I revived X" remote.
+> - Avoid: Client-reported revives -> `ProximityPrompt.Triggered` with server checks.
 > - Run it in its own thread if the caller should not yield (a ProximityPrompt handler can spawn it).
 >
 > Cost: TL;DR ~140 tok · whole note ~770 tok. Read more: ## In short · ## Key facts
@@ -22,7 +22,7 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 ## Key facts
 
 - Egg model names match `PetConfig.Eggs` keys; each egg has a ProximityPrompt and a PrimaryPart. ([[Pet Hatching and Following End to End]])
-- `ProximityPrompt.Triggered` gives you the player; never trust a client "I revived X" remote. ([[Downed, Revive and Bleed-Out States]])
+- Avoid: Client-reported revives -> `ProximityPrompt.Triggered` with server checks. ([[Downed, Revive and Bleed-Out States]])
 - Run it in its own thread if the caller should not yield (a ProximityPrompt handler can spawn it). ([[Instance Streaming]])
 - The pickup is a server-side `ProximityPrompt.Triggered` handler with a distance check, so there is no "I found entry X" remote to abuse (the same rule as Quest Chain System End to End). ([[Lore Delivery Without Walls of Text]])
 

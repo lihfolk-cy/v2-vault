@@ -204,5 +204,5 @@ Export is GLB with `export_apply=True`, so the bevel modifiers are baked into th
 
 <!-- related:start -->
 ## Related
-[[Spending Triangles Where the Camera Looks]] · [[Style Bibles for Consistent Models]] · [[Stylised Weapons From a Concept]] · [[Dash VFX Presentation on an R15 Rig]] · [[Chibi Character Rules in Practice]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[Mesh VFX Packs Built in Blender]]
+[[Stylised Log Cabin Worked Example]] · [[Spending Triangles Where the Camera Looks]] · [[Style Bibles for Consistent Models]] · [[Stylised Weapons From a Concept]] · [[Dash VFX Presentation on an R15 Rig]] · [[Chibi Character Rules in Practice]]
 <!-- related:end -->

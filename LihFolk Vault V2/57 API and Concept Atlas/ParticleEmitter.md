@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/vfx, area/animation, api/ParticleEmitter]
 > - No particles. `ParticleEmitter` needs a 3D parent.
 > - Glint, not glow. A periodic star sparkle (one `ParticleEmitter:Emit(1)` every 1.5 to 3 s, random per item) reads better and...
 >
-> Cost: TL;DR ~140 tok · whole note ~680 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~700 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 
 ## Mentioned in
 
-28 notes in 14 sections. The 25 most relevant are linked:
+29 notes in 15 sections. The 25 most relevant are linked:
 
 ### 06 World Building and Art
 [[Foliage Props and Scatter]]
@@ -37,7 +37,7 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Light Sources and Shadows]] · [[Particle Emitters In Depth]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Slash VFX Recipes - Crescent and Ring]] · [[VFX Design Playbook]] · [[VFX Performance Budgets and Culling]] · [[VFX Previews in Blender for Roblox - Colour and Framing]]
 
 ### 08 Animation
-[[Engine Gotchas]] · [[Scale and Animation]] · [[UI and GUI Animation]] · [[VFX Timing with Animation]]
+[[Engine Gotchas]] · [[Scale and Animation]] · [[UI and GUI Animation]]
 
 ### 09 Gameplay Systems
 [[Chase Cameras and Speed Effects for Vehicles]]
@@ -57,6 +57,9 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 ### 42 Accessibility and Inclusive Design
 [[Colour-Blind Safe Design]]
 
+### 45 Procedural Blender Assets
+[[Stylised Log Cabin Worked Example]]
+
 ### 47 Game Feel and Juice
 [[Juice on a Budget - Mobile and Low-End]]
 
@@ -69,6 +72,6 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 ### 58 Player QoL and Game Tweaks
 [[Graphics and Performance Toggles for Low-End Devices]]
 
-Also mentioned in (not linked): Links - Particle emitters · Voxel Art - Studs Outlines and Style Kits · Voxel and Blocky Modeling
+Also mentioned in (not linked): Links - Particle emitters · VFX Timing with Animation · Voxel Art - Studs Outlines and Style Kits · Voxel and Blocky Modeling
 
 <!-- atlas:generated -->

@@ -79,7 +79,7 @@ A friend boost (for example +X% luck or cash per friend in the server, capped) t
 ```lua
 --!strict
 -- Server: count friends in the server and publish a boost multiplier.
--- Player:IsFriendsWith yields (web call): cache results and call it in pcall.
+-- Player:IsFriendsWithAsync yields (web call): cache results and call it in pcall.
 local Players = game:GetService("Players")
 
 local PER_FRIEND = 0.10 -- +10% per friend (example value)
@@ -95,7 +95,7 @@ local function isFriend(a: Player, b: Player): boolean
 	end
 	local known = cache[b.UserId]
 	if known ~= nil then return known end
-	local ok, result = pcall(a.IsFriendsWith, a, b.UserId)
+	local ok, result = pcall(a.IsFriendsWithAsync, a, b.UserId) -- IsFriendsWith is deprecated
 	local value = ok and result == true
 	cache[b.UserId] = value
 	return value
@@ -316,5 +316,5 @@ Players follow creators into games (Docs). Features that help:
 
 <!-- related:start -->
 ## Related
-[[Genre Playbook - RNG and Collection Games]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Tycoons]] · [[Boss Fight Design Patterns]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - Survival and Crafting]] · [[First-Time User Experience and Onboarding]]
+[[Genre Playbook - RNG and Collection Games]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Tycoons]] · [[Simulator and RNG Genre Teardown]] · [[Boss Fight Design Patterns]] · [[Genre Playbook - Survival and Crafting]] · [[First-Time User Experience and Onboarding]]
 <!-- related:end -->

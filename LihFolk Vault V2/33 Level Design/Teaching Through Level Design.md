@@ -307,5 +307,5 @@ Funnel volumes: courtyard entrance (step 10), tunnel below the cracked tile (ste
 
 <!-- related:start -->
 ## Related
-[[Playtest Heatmaps - Position and Death Maps]] · [[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Lobby and Hub Design]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]] · [[Skippable Tutorials and Replayable Tips]] · [[Core Loops and Session Design]] · [[Instanced Interiors - Pooled House and Room Copies for Many Players]]
+[[Playtest Heatmaps - Position and Death Maps]] · [[Lobby and Hub Design]] · [[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]] · [[Skippable Tutorials and Replayable Tips]] · [[Core Loops and Session Design]]
 <!-- related:end -->

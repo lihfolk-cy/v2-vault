@@ -8,9 +8,9 @@ tags: [atlas, api, type/atlas, area/gameplay, area/physics, api/Raycast]
 > - Raycast car: root friction 0, rounded collider, chosen mass, massless visuals.
 > - Avoid: Constraint wheels for a 200 studs/s racer -> Raycast.
 > - Avoid: Raycast car root with default friction -> Friction 0 on the root collider.
-> - Shapecast always excludes the part being cast and is not thread-safe; Raycast, Blockcast, Spherecast and the three overlap...
+> - Assist locks through walls: No line-of-sight check -> Raycast before assisting.
 >
-> Cost: TL;DR ~130 tok · whole note ~900 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~860 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -23,12 +23,11 @@ API snapshot: member of `WorldRoot` (`_tools/roblox_api.json`, docs build of 202
 
 - Avoid: Constraint wheels for a 200 studs/s racer -> Raycast. ([[Choosing a Car Chassis - Raycast Suspension vs Constraint Builds vs Community Kits]])
 - Avoid: Raycast car root with default friction -> Friction 0 on the root collider. ([[Choosing a Car Chassis - Raycast Suspension vs Constraint Builds vs Community Kits]])
-- Shapecast always excludes the part being cast and is not thread-safe; Raycast, Blockcast, Spherecast and the three overlap methods are safe to call in parallel (Docs tags them "Write Parallel"). ([[Raycasts Shapecasts and Spatial Queries]])
-- Raycast down from 40 studs above each point. ([[Rain - Camera-Local Particles, Splashes and Wet Surfaces]])
+- Assist locks through walls: No line-of-sight check -> Raycast before assisting. ([[Aim Assist and Generous Hitboxes]])
 
 ## Mentioned in
 
-48 notes in 20 sections. The 25 most relevant are linked:
+49 notes in 20 sections. The 25 most relevant are linked:
 
 ### 02 Luau Scripting
 [[Parallel Luau and Actors]]
@@ -72,6 +71,6 @@ API snapshot: member of `WorldRoot` (`_tools/roblox_api.json`, docs build of 202
 ### 58 Player QoL and Game Tweaks
 [[Aim Assist and Generous Hitboxes]]
 
-Also mentioned in (not linked): Foliage Props and Scatter · Foot Placement and Ground IK · Genre Playbook - Shooters FPS and TPS · Grid Placement and Player Building Systems · Horror Monster Chase AI End to End · Intersection and Collision Math · Level Design for Roblox · Melee Combat System End to End · MicroProfiler Guide · Modular Environment Kits · Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run · Pathfinding Edge Cases and Fallbacks · Pet Hatching and Following End to End · Physics Performance · Police Chases and Wanted Levels · Prompting and Verifying AI Output · Selection Editing and Bulk Tools · Spawn Points Safe Zones and Respawn Flow · Standing on Moving Vehicles and Platforms - Keeping Players Glued · Terrain Tools and Terrain API · Undo and ChangeHistoryService Done Right · Vehicle Ownership and Anti-Exploit - Server-Checked Driving · What AI Models Get Wrong in Roblox
+Also mentioned in (not linked): Foliage Props and Scatter · Foot Placement and Ground IK · Genre Playbook - Shooters FPS and TPS · Grid Placement and Player Building Systems · Horror Monster Chase AI End to End · House Construction Method - Modular Kit Workflow · Intersection and Collision Math · Level Design for Roblox · Melee Combat System End to End · MicroProfiler Guide · Modular Environment Kits · Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run · Pathfinding Edge Cases and Fallbacks · Pet Hatching and Following End to End · Physics Performance · Police Chases and Wanted Levels · Prompting and Verifying AI Output · Selection Editing and Bulk Tools · Spawn Points Safe Zones and Respawn Flow · Standing on Moving Vehicles and Platforms - Keeping Players Glued · Terrain Tools and Terrain API · Undo and ChangeHistoryService Done Right · Vehicle Ownership and Anti-Exploit - Server-Checked Driving · What AI Models Get Wrong in Roblox
 
 <!-- atlas:generated -->

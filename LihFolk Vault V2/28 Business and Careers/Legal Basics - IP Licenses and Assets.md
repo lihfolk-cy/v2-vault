@@ -78,7 +78,7 @@ Being on the Creator Store does not prove an asset is clean. Someone can upload 
 | Source | What to check |
 |---|---|
 | Free 3D model sites | The exact licence per model; commercial use allowed? attribution required? |
-| Texture and HDRI libraries | Many are CC0 (public domain dedication, no conditions); confirm per asset ([[CC0 Texture and HDRI Library]]) |
+| Texture and HDRI libraries | Many are CC0 (public domain dedication, no conditions); confirm per asset ([[Links - Free and CC0 asset libraries]]) |
 | Fonts | Roblox ships a set of fonts; outside fonts need a licence that allows the use |
 | Music and sound effects | Licences differ a lot; "royalty free" means no per-play fee, not "free to use" |
 | Code libraries | The licence file in the repository (section 4) |
@@ -256,7 +256,7 @@ After the fixes, the studio can answer "yes" with evidence. Each fix was easier 
 
 ## See also
 
-[[Business and Careers Start Here]], [[Commissions Pricing and Contracts]], [[Hiring Freelancers and Revenue Shares]], [[Running a Small Studio as a Business]], [[Creator Store and Toolbox Safety]], [[Animation Asset Permissions and Groups]], [[Packages and Asset Reuse]], [[Roblox Policies Ratings and Compliance]], [[Roblox Policies on AI-Generated Content]], [[Plugins - Using and Writing]], [[UGC Avatar Items and Accessories]], [[CC0 Texture and HDRI Library]]
+[[Business and Careers Start Here]], [[Commissions Pricing and Contracts]], [[Hiring Freelancers and Revenue Shares]], [[Running a Small Studio as a Business]], [[Creator Store and Toolbox Safety]], [[Animation Asset Permissions and Groups]], [[Packages and Asset Reuse]], [[Roblox Policies Ratings and Compliance]], [[Roblox Policies on AI-Generated Content]], [[Plugins - Using and Writing]], [[UGC Avatar Items and Accessories]], [[Links - Free and CC0 asset libraries]]
 
 ## Connected notes
 <!-- auto-links:start -->
@@ -265,5 +265,5 @@ After the fixes, the studio can answer "yes" with evidence. Each fix was easier 
 
 <!-- related:start -->
 ## Related
-[[Open-Source Licenses for Roblox Libraries - Quick Reference]] · [[Who Owns AI-Generated Code and Assets]] · [[Music Licensing and Audio Upload Rules for 2026]] · [[Groups Roles and Permissions for Studios]] · [[Working with Contractors and Revenue Splits]] · [[Free Mocap and Mixamo Licensing for Roblox]]
+[[Open-Source Licenses for Roblox Libraries - Quick Reference]] · [[Who Owns AI-Generated Code and Assets]] · [[Music Licensing and Audio Upload Rules for 2026]] · [[Groups Roles and Permissions for Studios]] · [[Free Mocap and Mixamo Licensing for Roblox]] · [[Working with Contractors and Revenue Splits]]
 <!-- related:end -->

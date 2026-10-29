@@ -90,7 +90,9 @@ end
 - **Right:**
 
 ```lua
-local function onPlayer(p) ... end
+local function onPlayer(p: Player)
+	-- per-player setup
+end
 Players.PlayerAdded:Connect(onPlayer)
 for _, p in Players:GetPlayers() do task.spawn(onPlayer, p) end
 ```

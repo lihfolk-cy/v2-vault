@@ -155,5 +155,5 @@ Read the table as a design: five of thirteen passes sell luck, three sell capaci
 
 <!-- related:start -->
 ## Related
-[[Case Study - Blox Fruits]] · [[Case Study - Grow a Garden]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - Brookhaven RP]] · [[Case Study - Dress to Impress]] · [[Case Study - Jailbreak]] · [[Case Study - Murder Mystery 2]] · [[Case Study - Tower Defense Simulator]]
+[[Case Study - Blox Fruits]] · [[Case Study - Grow a Garden]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - Brookhaven RP]] · [[Case Study - Dress to Impress]] · [[Case Study - Jailbreak]] · [[Case Study - Murder Mystery 2]] · [[Case Study - The Strongest Battlegrounds]]
 <!-- related:end -->

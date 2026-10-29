@@ -419,5 +419,5 @@ That last pattern is worth copying everywhere agents share a place: a tool that 
 
 <!-- related:start -->
 ## Related
-[[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Case Study - Building a Game with AI Agents]] · [[MCP Workflows for Scripting and Debugging]] · [[Pipeline Design Principles]] · [[Command Bar and Studio Scripting]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]] · [[Agent Handoff Notes - Project State and Resume Templates]]
+[[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Case Study - Building a Game with AI Agents]] · [[MCP Workflows for Scripting and Debugging]] · [[Pipeline Design Principles]] · [[Command Bar and Studio Scripting]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]]
 <!-- related:end -->

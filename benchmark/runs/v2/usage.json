@@ -1,0 +1,74 @@
+{
+    "plain_r1_A":  {
+                       "seconds":  144,
+                       "tokens":  45712
+                   },
+    "plain_r1_B":  {
+                       "seconds":  144,
+                       "tokens":  45712
+                   },
+    "plain_r2_A":  {
+                       "seconds":  114,
+                       "tokens":  42346
+                   },
+    "plain_r2_B":  {
+                       "seconds":  114,
+                       "tokens":  42346
+                   },
+    "plain_r3_A":  {
+                       "seconds":  130,
+                       "tokens":  43544
+                   },
+    "plain_r3_B":  {
+                       "seconds":  130,
+                       "tokens":  43544
+                   },
+    "direct_r1_A":  {
+                        "seconds":  248,
+                        "tokens":  70482
+                    },
+    "direct_r1_B":  {
+                        "seconds":  248,
+                        "tokens":  70482
+                    },
+    "direct_r2_A":  {
+                        "seconds":  180,
+                        "tokens":  65964
+                    },
+    "direct_r2_B":  {
+                        "seconds":  180,
+                        "tokens":  65964
+                    },
+    "direct_r3_A":  {
+                        "seconds":  216,
+                        "tokens":  65464
+                    },
+    "direct_r3_B":  {
+                        "seconds":  216,
+                        "tokens":  65464
+                    },
+    "lookup_r1_A":  {
+                        "seconds":  184,
+                        "tokens":  45414
+                    },
+    "lookup_r1_B":  {
+                        "seconds":  184,
+                        "tokens":  45414
+                    },
+    "lookup_r2_A":  {
+                        "seconds":  232,
+                        "tokens":  54328
+                    },
+    "lookup_r2_B":  {
+                        "seconds":  232,
+                        "tokens":  54328
+                    },
+    "lookup_r3_A":  {
+                        "seconds":  176,
+                        "tokens":  46334
+                    },
+    "lookup_r3_B":  {
+                        "seconds":  176,
+                        "tokens":  46334
+                    }
+}

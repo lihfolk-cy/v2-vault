@@ -45,3 +45,132 @@
 .callout[data-callout="lf-pipeline"] { --callout-color: 96, 165, 250;  --callout-icon: lucide-bot; }
 .callout[data-callout="lf-ai"]       { --callout-color: 155, 123, 255; --callout-icon: lucide-brain-circuit; }
 .callout[data-callout="lf-legend"]   { --callout-color: 133, 146, 184; --callout-icon: lucide-badge-check; }
+
+/* ==================================================================== V2 PLANET (hero, right side)
+   A tilted, ringed two-tone gas giant: plum/indigo night side, ember and sand bands on the lit side,
+   a teal atmosphere rim with a polar aurora, a banded ring with a Cassini gap, and a small ice moon on
+   an inclined orbit. Pure CSS (gradients, shadows, masks, keyframes). Replaces the hero horizon,
+   orbit line and moon from celestial-v2-notes; `.lf-home.lf-home` lifts specificity over that file.
+   Layers (inside the hero's isolated stacking context, so all of them sit under the text):
+     hero::before            planet body + turbulence bands (the bands drift = rotation)
+     hero::after             ring, masked so its far half disappears behind the planet
+     .callout-title::before  moon (z flips so it passes behind the planet)
+     .callout-title::after   polar aurora                                                       */
+body.theme-dark .lf-home.lf-home .callout[data-callout="lf-hero"] {
+  --p-d: 156px;                 /* planet diameter */
+  --p-x: 190px;                 /* planet centre, measured from the hero's right edge */
+  --p-tilt: -18deg;
+  min-height: 270px; padding-right: calc(var(--p-x) + var(--p-d) / 2 + 24px);
+  background:
+    radial-gradient(circle at calc(100% - var(--p-x)) 50%, rgba(255, 150, 96, .16), rgba(var(--v2-violet), .14) 18%, transparent 34%),
+    radial-gradient(1.2px 1.2px at 12% 20%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 34% 70%, #e9e2ff 50%, transparent 51%),
+    radial-gradient(1.4px 1.4px at 58% 18%, #fff 50%, transparent 51%), radial-gradient(1px 1px at 72% 62%, #cfe0ff 50%, transparent 51%),
+    radial-gradient(1.2px 1.2px at 88% 30%, #ffd9f3 50%, transparent 51%), radial-gradient(1px 1px at 22% 48%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 93% 82%, #fff 50%, transparent 51%), radial-gradient(1.3px 1.3px at 64% 88%, #7fe3ff 50%, transparent 51%),
+    radial-gradient(ellipse 60% 90% at 0% 0%, rgba(124, 82, 255, .3), transparent 60%),
+    radial-gradient(ellipse 50% 80% at 100% 100%, rgba(64, 217, 255, .1), transparent 60%),
+    linear-gradient(135deg, rgba(30, 20, 66, .9), rgba(9, 8, 22, .92)) !important;
+}
+body.theme-dark .lf-home.lf-home .callout[data-callout="lf-hero"] .callout-content { max-width: none; }
+
+/* planet body */
+body.theme-dark .lf-home.lf-home .callout[data-callout="lf-hero"]::before {
+  content: ""; display: block; position: absolute; z-index: -2; pointer-events: none;
+  top: 50%; right: calc(var(--p-x) - var(--p-d) / 2); left: auto; width: var(--p-d); height: var(--p-d);
+  margin: calc(var(--p-d) / -2) 0 0 0; border: 0; border-radius: 50%;
+  transform: rotate(var(--p-tilt)); translate: none;
+  background:
+    /* light + night side (static) */
+    radial-gradient(circle at 33% 28%, rgba(255, 244, 228, .55), rgba(255, 220, 190, .12) 26%, transparent 46%),
+    radial-gradient(circle at 78% 82%, rgba(5, 3, 16, .92), rgba(5, 3, 16, .55) 38%, transparent 66%),
+    /* ring shadow falling just below the equator (static) */
+    linear-gradient(180deg, transparent 57%, rgba(8, 4, 22, .5) 59%, rgba(8, 4, 22, .5) 63%, transparent 65%),
+    /* drifting turbulence: storm eye + swirls, tiled so the drift loops */
+    radial-gradient(ellipse 22px 11px at 30% 66%, #fff1d6 0 18%, #ff8a5c 40%, rgba(255, 138, 92, 0) 72%),
+    radial-gradient(ellipse 44px 7px at 72% 30%, rgba(255, 214, 160, .55), transparent 70%),
+    radial-gradient(ellipse 60px 6px at 12% 44%, rgba(64, 217, 255, .32), transparent 70%),
+    radial-gradient(ellipse 50px 5px at 58% 80%, rgba(46, 18, 88, .55), transparent 70%),
+    /* the bands (static; they tilt with the planet) */
+    linear-gradient(180deg,
+      #2a1458 0%, #4b2a8f 9%, #8b5fd6 15%, #f2b58a 21%, #ffd9a8 25%, #e47a55 31%, #7c3f8f 37%,
+      #f7c793 43%, #ffe6c2 47%, #f08a5d 52%, #a24a6e 58%, #4d2a86 64%, #6a52c8 70%, #3fb9c8 76%,
+      #2d6fa8 82%, #2a1a63 90%, #160b38 100%);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 312px 100%, 312px 100%, 312px 100%, 312px 100%, 100% 100%;
+  box-shadow:
+    inset -18px -14px 34px rgba(4, 2, 14, .75), inset 6px 6px 18px rgba(255, 230, 200, .18),
+    0 0 0 1px rgba(127, 227, 255, .22), 0 0 18px 2px rgba(64, 217, 255, calc(.38 * var(--v2-glow))),
+    0 0 46px 6px rgba(var(--v2-violet), calc(.4 * var(--v2-glow))), 0 0 90px 10px rgba(255, 138, 92, calc(.12 * var(--v2-glow)));
+  animation: v2p-spin calc(48s / var(--v2-speed)) linear infinite, v2p-breathe calc(7s / var(--v2-speed)) ease-in-out infinite;
+}
+@keyframes v2p-spin {
+  from { background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0; }
+  to   { background-position: 0 0, 0 0, 0 0, -312px 0, -312px 0, -312px 0, -312px 0, 0 0; }
+}
+@keyframes v2p-breathe { 50% { filter: brightness(1.08) saturate(1.1); } }
+
+/* ring: an elliptical annulus sharing the planet centre and tilt. The far (upper) half is masked out
+   wherever it crosses the planet disc, so the ring reads as passing behind it. */
+body.theme-dark .lf-home.lf-home .callout[data-callout="lf-hero"]::after {
+  content: ""; display: block; position: absolute; z-index: -1; pointer-events: none;
+  top: 50%; right: calc(var(--p-x) - var(--p-d) * 1.15); left: auto;
+  width: calc(var(--p-d) * 2.3); height: calc(var(--p-d) * .56);
+  margin: calc(var(--p-d) * -.28) 0 0 0; border: 0; border-radius: 0; box-shadow: none;
+  transform: rotate(var(--p-tilt)); translate: none; animation: v2p-ring calc(9s / var(--v2-speed)) ease-in-out infinite;
+  background: radial-gradient(closest-side,
+    transparent 0 57%, rgba(255, 214, 170, 0) 57.5%, rgba(255, 214, 170, .6) 60%, rgba(255, 236, 210, .9) 63.5%,
+    rgba(240, 138, 93, .7) 66%, rgba(120, 80, 200, .12) 68%, rgba(120, 80, 200, .12) 70%,
+    rgba(185, 162, 255, .75) 72%, rgba(155, 123, 255, .55) 79%, rgba(127, 227, 255, .45) 86%, rgba(127, 227, 255, .12) 93%, transparent 98%);
+  -webkit-mask-image: linear-gradient(180deg, transparent 50%, #000 50%), radial-gradient(circle calc(var(--p-d) / 2) at 50% 50%, transparent 98%, #000 100%);
+          mask-image: linear-gradient(180deg, transparent 50%, #000 50%), radial-gradient(circle calc(var(--p-d) / 2) at 50% 50%, transparent 98%, #000 100%);
+  -webkit-mask-composite: source-over; mask-composite: add;
+  filter: drop-shadow(0 0 6px rgba(var(--v2-violet), calc(.55 * var(--v2-glow))));
+}
+@keyframes v2p-ring { 50% { filter: drop-shadow(0 0 10px rgba(127, 227, 255, calc(.6 * var(--v2-glow)))); } }
+
+/* moon: inclined elliptical orbit around the planet centre; dips behind the planet on the far pass */
+body.theme-dark .lf-home.lf-home .callout[data-callout="lf-hero"] .callout-title::before {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+  top: 50%; right: var(--p-x); width: 13px; height: 13px; margin: -6.5px -6.5px 0 0; border-radius: 50%;
+  background: radial-gradient(circle at 35% 32%, #ffffff, #cfeaff 30%, #7fa6d8 62%, #2b2a5e 100%);
+  box-shadow: inset -2px -2px 4px rgba(10, 6, 30, .7), 0 0 12px rgba(127, 227, 255, calc(.75 * var(--v2-glow)));
+  animation: v2p-moon-x calc(16s / var(--v2-speed)) ease-in-out infinite alternate,
+             v2p-moon-y calc(16s / var(--v2-speed)) ease-in-out calc(-8s / var(--v2-speed)) infinite alternate,
+             v2p-moon-z calc(32s / var(--v2-speed)) steps(1) infinite;
+}
+@keyframes v2p-moon-x { from { translate: 150px 0; } to { translate: -150px 0; } }
+@keyframes v2p-moon-y { from { transform: translateY(46px) scale(1.12); } to { transform: translateY(-58px) scale(.78); } }
+/* far pass (moving right to left, high on screen) = behind the planet; near pass = in front */
+@keyframes v2p-moon-z { 0% { z-index: -3; } 50% { z-index: -1; } }
+
+/* polar aurora: a soft teal-violet arc hugging the north limb */
+body.theme-dark .lf-home.lf-home .callout[data-callout="lf-hero"] .callout-title::after {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+  top: 50%; right: calc(var(--p-x) - var(--p-d) * .45); width: calc(var(--p-d) * .9); height: calc(var(--p-d) * .32);
+  margin-top: calc(var(--p-d) * -.6);
+  background: radial-gradient(ellipse 50% 100% at 50% 100%, transparent 64%, rgba(92, 230, 200, .6) 74%, rgba(155, 123, 255, .35) 86%, transparent 100%);
+  transform: rotate(var(--p-tilt)); transform-origin: 50% calc(var(--p-d) * .6);
+  mix-blend-mode: screen; opacity: .8;
+  animation: v2p-aurora calc(6s / var(--v2-speed)) ease-in-out infinite alternate;
+}
+@keyframes v2p-aurora { from { opacity: .45; filter: blur(2px) hue-rotate(0deg); } to { opacity: .95; filter: blur(3px) hue-rotate(-35deg); } }
+
+/* Style Settings "Hide orbit rings" hides only the moon; the planet and its ring stay */
+body.v2-no-orbits.theme-dark .lf-home.lf-home .callout[data-callout="lf-hero"]::before,
+body.v2-no-orbits.theme-dark .lf-home.lf-home .callout[data-callout="lf-hero"]::after { display: block !important; }
+body.v2-no-orbits .lf-home .callout[data-callout="lf-hero"] .callout-title::before { display: none; }
+
+/* narrow windows: smaller planet above the title, text keeps the full width */
+@media (max-width: 1000px) {
+  body.theme-dark .lf-home.lf-home .callout[data-callout="lf-hero"] { --p-d: 104px; --p-x: 110px; padding-right: 36px; padding-top: 150px; }
+  body.theme-dark .lf-home.lf-home .callout[data-callout="lf-hero"]::before,
+  body.theme-dark .lf-home.lf-home .callout[data-callout="lf-hero"]::after,
+  body.theme-dark .lf-home.lf-home .callout[data-callout="lf-hero"] .callout-title::after { top: 84px; }
+  body.theme-dark .lf-home.lf-home .callout[data-callout="lf-hero"] .callout-title::before { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.theme-dark .lf-home.lf-home .callout[data-callout="lf-hero"]::before,
+  body.theme-dark .lf-home.lf-home .callout[data-callout="lf-hero"]::after,
+  body.theme-dark .lf-home.lf-home .callout[data-callout="lf-hero"] .callout-title::before,
+  body.theme-dark .lf-home.lf-home .callout[data-callout="lf-hero"] .callout-title::after { animation: none !important; }
+}

@@ -211,7 +211,7 @@ A subtle drop shadow (a duplicated label offset by 1 to 2 px in a dark colour) i
 Numbers are often the most important text on a Roblox screen (currency, damage, timers). Make them readable at a glance:
 
 - Abbreviate consistently ("12.4K", "3.1M"), with the suffix in the same size as the digits. [[Big Numbers Precision and Formatting]] has the formatting code.
-- Use tabular (fixed-width) digits for counters that tick, so the number does not jitter horizontally. `TextLabel.OpenTypeFeatures` accepts a comma-separated list of OpenType feature tags (Roblox docs, as of October 2026); `tnum` is the standard tabular-figures tag, but whether a given Roblox font supports it is font-dependent and not something I could confirm per font. Check `OpenTypeFeaturesError` after setting it.
+- Use tabular (fixed-width) digits for counters that tick, so the number does not jitter horizontally. `TextLabel.OpenTypeFeatures` accepts a comma-separated list of OpenType feature tags (Roblox docs, as of October 2026); `tnum` is the standard tabular-figures tag, but whether a given Roblox font supports it is font-dependent and not something we could confirm per font. Check `OpenTypeFeaturesError` after setting it.
 - Do not animate a counter so fast that the player cannot read the final value. Under reduced motion, show the final value at once.
 
 ---

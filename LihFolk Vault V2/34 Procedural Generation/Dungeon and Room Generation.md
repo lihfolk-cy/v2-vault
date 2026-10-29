@@ -319,5 +319,5 @@ Generation pays off when replayability is the core loop ([[Genre Playbook - Comb
 
 <!-- related:start -->
 ## Related
-[[Infinite and Streamed Worlds]] · [[Voxel Props Environments and Modular Tiles]] · [[Combat Arena and Encounter Layout]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Puzzle Dependency Charts and Hint Systems]] · [[Tilemaps Cameras and Parallax for 2D Levels]]
+[[Infinite and Streamed Worlds]] · [[Voxel Props Environments and Modular Tiles]] · [[Combat Arena and Encounter Layout]] · [[Puzzle Dependency Charts and Hint Systems]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Tilemaps Cameras and Parallax for 2D Levels]]
 <!-- related:end -->

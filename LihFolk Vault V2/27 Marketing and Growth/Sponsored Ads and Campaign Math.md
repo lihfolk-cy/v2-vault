@@ -33,7 +33,7 @@ This note covers the platform mechanics (Roblox docs, as of October 2026), the m
 ### Budget and bidding
 - **Auto-bidding only**: you set a budget and a schedule; Roblox calculates bids. No manual CPM or CPC bids are documented.
 - Budget is **daily** (cap per day) or **lifetime** (cap for the campaign).
-- Pay with a card (18+) or **ad credits** converted from Robux (13+). Conversion is permanent; credits can only be spent in Ads Manager; Robux earned at the US 18+ rate converts first. Unused credits are returned after the campaign ends. The page does not state a Robux to credit conversion ratio that I could confirm; check the conversion screen.
+- Pay with a card (18+) or **ad credits** converted from Robux (13+). Conversion is permanent; credits can only be spent in Ads Manager; Robux earned at the US 18+ rate converts first. Unused credits are returned after the campaign ends. The page does not state a Robux to credit conversion ratio that we could confirm; check the conversion screen.
 - First-time card users see a $5 USD charge on first submission, applied to the first bill.
 - **Invalid traffic**: campaigns are analysed 14 days after they end; refunds for invalid traffic are applied at 16 days.
 
@@ -146,7 +146,7 @@ Creator Rewards add a second, separate income line that ads might touch (Roblox 
 - **Daily Engagement**: 5 Robux per qualifying active spender (spent $9.99+ in the past 60 days) per day, for players who spend 10+ minutes in your game and whose day's first three launched games include yours.
 - **Audience Expansion**: 35% revenue share on a new or reactivated user's first $100 of qualifying purchases (Robux, Premium, UGC subscriptions) anywhere on Roblox in their first 60 days, when they arrive by your Share Link, direct link or name search and play 10+ minutes that day; the game must average 100+ DAU for the 60 days after. Reactivated means inactive for 60 consecutive days. The definition excludes users who joined "through a Roblox promotional or marketing campaign".
 
-I could not confirm whether a player who first arrives from a sponsored ad tile counts as joining through a "Roblox promotional or marketing campaign" for Audience Expansion. **Assume ad-acquired users do not earn Audience Expansion rewards** until you see otherwise in your own dashboard. Share links from your own off-platform channels are the documented route ([[Short-Form Video Marketing]]).
+We could not confirm whether a player who first arrives from a sponsored ad tile counts as joining through a "Roblox promotional or marketing campaign" for Audience Expansion. **Assume ad-acquired users do not earn Audience Expansion rewards** until you see otherwise in your own dashboard. Share links from your own off-platform channels are the documented route ([[Short-Form Video Marketing]]).
 
 ---
 

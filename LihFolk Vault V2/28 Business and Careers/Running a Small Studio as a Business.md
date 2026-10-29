@@ -59,7 +59,7 @@ Revenue on Roblox comes from several programs ([[Monetization Overview]]):
 |---|---|
 | Passes, developer products, private servers | Plan on 70% of listed price as Earned Robux for in-experience sales (Roblox docs, as of October 2026) |
 | Experience subscriptions | Different shares by pricing type ([[Subscriptions and Premium Payouts]]) |
-| Engagement-based payouts | Held 60 days ([[Subscriptions and Premium Payouts]]) |
+| Creator Rewards (replaced engagement-based payouts in July 2025) | Held 60 days ([[Subscriptions and Premium Payouts]]) |
 | Rewarded video ads | Eligibility rules apply ([[Ads and Rewarded Video]]) |
 | UGC avatar items | Separate program and rules ([[UGC Avatar Items and Accessories]]) |
 | Creator Store sales (models, plugins) | Paid in USD through a separate seller program; group-owned assets cannot be sold (Roblox docs, as of October 2026; see [[Legal Basics - IP Licenses and Assets]]) |
@@ -267,5 +267,5 @@ None of these fixes was hard. All of them were cheaper before money was large.
 
 <!-- related:start -->
 ## Related
-[[Working with Content Creators]] · [[Publishing Selling and Updating Plugins]] · [[Creator Account Security and Takeover Recovery]] · [[Team Create Permissions and Workflows]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Open-Source Licenses for Roblox Libraries - Quick Reference]]
+[[Working with Content Creators]] · [[Publishing Selling and Updating Plugins]] · [[Creator Account Security and Takeover Recovery]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Team Create Permissions and Workflows]] · [[Open-Source Licenses for Roblox Libraries - Quick Reference]]
 <!-- related:end -->

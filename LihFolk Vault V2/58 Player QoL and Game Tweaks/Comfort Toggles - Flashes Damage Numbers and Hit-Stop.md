@@ -141,5 +141,5 @@ Even players who keep numbers on benefit from:
 
 <!-- related:start -->
 ## Related
-[[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[QoL Audit Checklist]] · [[Settings Menu Essentials and Persistence]] · [[Top 25 QoL Wins by Effort]] · [[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]] · [[Colourblind Palettes Text Size and Tooltips]] · [[UI Scale HUD Hide and Compact Mode]] · [[Feedback - Autosave Indicator Ping Display and Error Toasts]] · [[Controller Support QoL]]
+[[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Settings Menu Essentials and Persistence]] · [[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]] · [[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]] · [[Colourblind Palettes Text Size and Tooltips]] · [[UI Scale HUD Hide and Compact Mode]] · [[Feedback - Autosave Indicator Ping Display and Error Toasts]] · [[Controller Support QoL]]
 <!-- related:end -->

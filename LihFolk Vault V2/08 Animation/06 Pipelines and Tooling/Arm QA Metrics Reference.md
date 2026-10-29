@@ -307,5 +307,5 @@ A verifier samples the baker's own after-dump through the offline Animator model
 
 <!-- related:start -->
 ## Related
-[[Inverse Kinematics]] · [[LihFolk R15 Keyframe Pipeline]] · [[Human Swing Biomechanics]] · [[Two-Bone IK Math]] · [[Blade Grip and Wrist Limits]] · [[Snippets - IK]] · [[Testing Animations in Studio]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]]
+[[Inverse Kinematics]] · [[Human Swing Biomechanics]] · [[LihFolk R15 Keyframe Pipeline]] · [[Two-Bone IK Math]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Snippets - IK]] · [[Blade Grip and Wrist Limits]] · [[Testing Animations in Studio]]
 <!-- related:end -->

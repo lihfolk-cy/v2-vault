@@ -1,5 +1,6 @@
 ---
 tags: [ai, agents, sub-agents, hooks, skills, claude-code, git, tokens, lihfolk, type/guide, area/ai, level/advanced]
+verified: 2026-10-28
 ---
 # Agent Orchestration - Sub-Agents, Hooks and Skill Costs
 
@@ -14,8 +15,6 @@ tags: [ai, agents, sub-agents, hooks, skills, claude-code, git, tokens, lihfolk,
 >
 > Cost: TL;DR ~140 tok · whole note ~1.6k tok. Read more: ## 2. Concurrency limits stall review pipelines · ## 3. Hooks should block only on errors · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
-verified: 2026-10-28
 
 Practical rules for running many AI agents on one Roblox project: when to spawn sub-agents, how to keep concurrency from stalling a pipeline, what hooks should and should not block, why skill descriptions cost tokens in every session, and how to merge work from parallel copies. Learned while building LihFolk V2 with Claude Code; **Measured** marks numbers from that build.
 

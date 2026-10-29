@@ -190,5 +190,5 @@ Goal: a toy-proportioned blocky character, 5 studs tall, 0.25-stud cells (20 cel
 
 <!-- related:start -->
 ## Related
-[[Organic and Creature Modeling]] · [[Rigs and Joints]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Voxel Props Environments and Modular Tiles]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Voxel Palettes - Ramps Hue Shifting and Limits]]
+[[Organic and Creature Modeling]] · [[Rigs and Joints]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Voxel Props Environments and Modular Tiles]] · [[Voxel Palettes - Ramps Hue Shifting and Limits]]
 <!-- related:end -->

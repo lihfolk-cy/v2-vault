@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/animation, area/math]
 > - Quaternion to matrix: `CFrame.new(x, y, z, qX, qY, qZ, qW)` (Roblox docs (as of October 2026)).
 > - Quaternions: the conversion preserves the motion exactly.
 >
-> Cost: TL;DR ~140 tok · whole note ~680 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~690 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,7 +26,7 @@ Quaternions keep the motion identical and avoid gimbal problems on shoulders and
 
 ## Mentioned in
 
-46 notes in 6 sections. The 25 most relevant are linked:
+47 notes in 6 sections. The 25 most relevant are linked:
 
 ### 02 Luau Scripting
 [[Buffers and Binary Data]]
@@ -40,6 +40,6 @@ Quaternions keep the motion identical and avoid gimbal problems on shoulders and
 ### 56 Field Notes
 [[Animation Data Hygiene - Euler Wrap Joint Holes and Easing]]
 
-Also mentioned in (not linked): 00 Start Here · Arm Baker Internals · Arm QA Metrics Reference · Arm Twist and Grip Roll - Lessons from Baked Sword Clips · Baked Clip Stubs and Archiving · Cookbook - Math CFrame and Vectors · CurveAnimation and Curve Channels · Curves in Luau - Paths Beams and Motion · Dot and Cross Products in Gameplay · Elbow Poles Swivel and Joint Limits · Enemy and NPC Animation · Equip Draw and Flourish Systems · Game Math Start Here · Importing Models and Rigs · KeyframeSequence Keyframe and Pose Reference · Lua Keyframe Player · Math Vectors and CFrames · Moon Animator and Third-Party Tools · Open Questions · R15 Run Cycle Key Poses · Snippets - Procedural Motion
+Also mentioned in (not linked): 00 Start Here · Arm Baker Internals · Arm QA Metrics Reference · Arm Twist and Grip Roll - Lessons from Baked Sword Clips · Baked Clip Stubs and Archiving · Cookbook - Math CFrame and Vectors · CurveAnimation and Curve Channels · Curves in Luau - Paths Beams and Motion · Dot and Cross Products in Gameplay · Elbow Poles Swivel and Joint Limits · Enemy and NPC Animation · Equip Draw and Flourish Systems · Game Math Start Here · Importing Models and Rigs · KeyframeSequence Keyframe and Pose Reference · Lua Keyframe Player · Math Vectors and CFrames · Moon Animator and Third-Party Tools · Open Questions · R15 Run Cycle Key Poses · Snippets - Procedural Motion · Spin and Whole-Body Rotation Moves
 
 <!-- atlas:generated -->

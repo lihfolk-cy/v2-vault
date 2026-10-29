@@ -155,5 +155,5 @@ Asymmetry rule (**Rule of thumb**): being hit should feel fair too. Make hurtbox
 
 <!-- related:start -->
 ## Related
-[[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]] · [[Accessibility Cross-Links for QoL Settings]] · [[Settings Menu Essentials and Persistence]] · [[Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots]] · [[Mobile Button Layout Editor]] · [[Colourblind Palettes Text Size and Tooltips]] · [[Rebinding Controls with the Input Action System]]
+[[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]] · [[Accessibility Cross-Links for QoL Settings]] · [[Settings Menu Essentials and Persistence]] · [[Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots]] · [[Mobile Button Layout Editor]] · [[Confirmation and Undo Patterns for Destructive and Paid Actions]] · [[Colourblind Palettes Text Size and Tooltips]]
 <!-- related:end -->

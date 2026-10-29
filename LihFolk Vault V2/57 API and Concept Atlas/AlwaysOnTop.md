@@ -6,9 +6,9 @@ tags: [atlas, api, type/atlas, area/ui, area/studio, api/AlwaysOnTop]
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - AlwaysOnTop is information. A Highlight that shows enemies through walls is a gameplay feature (a wallhack) if the player...
+> - Avoid: Enemy tags with `AlwaysOnTop` -> LOS check or no enemy tags.
 > - `Occluded` by default; `AlwaysOnTop` only when seeing through walls is intended.
 > - `AlwaysOnTop`: draw over 3D geometry (visible through walls).
-> - AlwaysOnTop BillboardGuis are not drawn (health bars, name tags).
 >
 > Cost: TL;DR ~130 tok · whole note ~390 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
@@ -21,10 +21,10 @@ API snapshot: member of `BillboardGui`, `HandleAdornment`, `SurfaceGui` (`_tools
 
 ## Key facts
 
+- Avoid: Enemy tags with `AlwaysOnTop` -> LOS check or no enemy tags. ([[Nametags and Overhead Bars - Cost and Visibility Rules]])
 - `Occluded` by default; `AlwaysOnTop` only when seeing through walls is intended. ([[Highlights and Selection Effects]])
 - `AlwaysOnTop`: draw over 3D geometry (visible through walls). ([[World-Space UI - BillboardGui and SurfaceGui]])
 - AlwaysOnTop BillboardGuis are not drawn (health bars, name tags). ([[Roblox Studio MCP Server]])
-- Viewport captures can come back black when Studio is not the focused window, and may not draw `AlwaysOnTop` BillboardGuis. ([[Studio Assistant and AI Tools]])
 
 ## Mentioned in
 

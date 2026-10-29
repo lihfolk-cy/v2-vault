@@ -256,5 +256,5 @@ See also: [[Atmosphere Sky Clouds and Post-Processing]], [[Light Sources and Sha
 
 <!-- related:start -->
 ## Related
-[[Voxel Shading - Baked AO Edges and Lighting]] · [[Baking Lighting and Detail into Textures]] · [[Weather System Architecture - State Machine, Transitions and Replication]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Particle Emitters In Depth]] · [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[VFX Performance Budgets and Culling]]
+[[Voxel Shading - Baked AO Edges and Lighting]] · [[Baking Lighting and Detail into Textures]] · [[Weather System Architecture - State Machine, Transitions and Replication]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Particle Emitters In Depth]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[VFX Performance Budgets and Culling]]
 <!-- related:end -->

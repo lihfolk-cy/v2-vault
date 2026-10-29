@@ -1,5 +1,6 @@
 ---
 tags: [ai, agents, review, rubric, quality, pipeline, assets, lihfolk, type/guide, area/ai, area/pipelines, level/advanced]
+verified: 2026-10-28
 ---
 # AI Asset Pipelines - Scoring, Reviewers and Spot Checks
 
@@ -12,10 +13,8 @@ tags: [ai, agents, review, rubric, quality, pipeline, assets, lihfolk, type/guid
 > - Reviewer sees evidence and rubric only, plus calibration anchors
 > - Grades re-added by script from evidence lines
 >
-> Cost: TL;DR ~150 tok · whole note ~1.7k tok. Read more: ## 1. Two layers: gates, then judgement · ## 3. Variance: median of three · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~1.6k tok. Read more: ## 1. Two layers: gates, then judgement · ## 3. Variance: median of three · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
-verified: 2026-10-28
 
 How to make AI-generated assets (models, materials, skies, VFX, animation clips) reach a known quality bar without a human looking at every one. The method was built and tuned on the LihFolk V2 asset pack. Figures marked **Measured** come from its ledgers.
 
@@ -104,5 +103,5 @@ Each review is a full agent run. The platform allows a limited number of concurr
 
 <!-- related:start -->
 ## Related
-[[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Procedural Materials and Skies - Lessons]] · [[Benchmark - Does a Knowledge Vault Make AI Better at Roblox]] · [[Obsidian Vaults for AI Agents - Structure, Graph and Theming]] · [[Windows Tooling Pitfalls for Agent Pipelines]] · [[Token Cost Benchmarks]] · [[AI Agents and Autonomous Workflows]] · [[AI in Roblox Development Overview]] · [[AI Material and Texture Generation]] · [[What AI Models Get Wrong in Roblox]]
+[[Blind Review Scores - Noise, Panels and Shipping the Best Version]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Procedural Materials and Skies - Lessons]] · [[Benchmark - Does a Knowledge Vault Make AI Better at Roblox]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[Obsidian Vaults for AI Agents - Structure, Graph and Theming]]
 <!-- related:end -->

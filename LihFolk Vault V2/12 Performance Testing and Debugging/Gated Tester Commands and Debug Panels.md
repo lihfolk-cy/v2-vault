@@ -12,7 +12,7 @@ tags: [testing, qa, debug, admin, security, remotes, type/guide, area/testing, a
 > - Per-command minimum role and test-only flag.
 > - Strict argument validation in each command.
 >
-> Cost: TL;DR ~130 tok · whole note ~2.2k tok. Read more: ## 1. The rules · ## 2. Server command registry · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~2.3k tok. Read more: ## 1. The rules · ## 2. Server command registry · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Testers need powers players must never have: grant currency, teleport to stage 40, spawn a boss, skip a day, force an egg result, show hitboxes. Without them, QA either wastes hours grinding or someone edits live code "just for a test". With them done badly, an exploiter finds the remote and gives themselves a billion coins. This note is how to build a tester command layer and debug panel whose security does not depend on nobody finding it.
@@ -24,7 +24,7 @@ Labels as marked. Security reasoning follows [[Server Authority and Validation]]
 ## 1. The rules
 
 1. **The server decides who is a tester, every call.** The client may hide or show a panel, but hiding is cosmetic. Exploiters can fire any remote with any arguments.
-2. **Allowlist by stable identity.** `UserId` or group rank (`player:GetRankInGroup(groupId)`, Roblox docs: [Player](https://create.roblox.com/docs/reference/engine/classes/Player)). Never by display name or username (both can change) and never by a value the client sends.
+2. **Allowlist by stable identity.** `UserId` or group rank (`GroupService:GetRolesInGroupAsync(userId, groupId)`; the older `Player:GetRankInGroup` is deprecated). Never by display name or username (both can change) and never by a value the client sends.
 3. **Default deny, per command.** Each command names the minimum role. A "viewer" tester can show hitboxes but not grant currency.
 4. **Environment gating on top of identity.** Economy-changing commands only work in test places or Studio. In the live game, even a developer should not casually mint currency; if live ops needs grants, they go through an audited tool.
 5. **Log every call.** Who, what, arguments, place, time. A tester command that leaves no trace is an exploit waiting for a motive.
@@ -39,6 +39,7 @@ Labels as marked. Security reasoning follows [[Server Authority and Validation]]
 -- ServerScriptService/QA/TesterCommands
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
+local GroupService = game:GetService("GroupService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Economy = require(game.ServerScriptService.Services.Economy) -- your economy module
 
@@ -51,7 +52,10 @@ local TEST_PLACES: { [number]: boolean } = {} -- [placeId] = true
 local function roleOf(player: Player): number
 	local explicit = USER_ALLOW[player.UserId]
 	if explicit then return explicit end
-	local ok, rank = pcall(player.GetRankInGroup, player, GROUP_ID)
+	local ok, rank = pcall(function() -- GetRankInGroup(Async) is deprecated
+		local info = GroupService:GetRolesInGroupAsync(player.UserId, GROUP_ID)
+		return if info.IsMember and info.Roles[1] then info.Roles[1].Rank else 0
+	end)
 	if not ok then return 0 end
 	for _, r in ROLE_BY_RANK do
 		if rank >= r.rank then return r.role end
@@ -108,7 +112,7 @@ Players.PlayerRemoving:Connect(function(p) roleCache[p] = nil end)
 Notes:
 
 - The same reply ("denied") for unknown commands and missing permission, so probing reveals nothing.
-- `GetRankInGroup` is a web call; wrap it in `pcall` and cache per session.
+- `GetRolesInGroupAsync` is a web call; wrap it in `pcall` and cache per session.
 - Arguments are validated inside each command as strictly as any player remote. A tester account can be compromised.
 - `Economy.grant` records a source tag, so QA-minted currency is visible in audits ([[Economy Exploits - Dupes Races and Purchase Abuse]]).
 - `table.concat` on args assumes strings and numbers; coerce with `tostring` in real code.
@@ -171,5 +175,5 @@ A client ScreenGui that only builds itself after the server confirms a role:
 
 <!-- related:start -->
 ## Related
-[[Admin Commands Done Safely - Permissions and Audit Logs]] · [[Dupe Hunting Test Script - Trades, Gifts, Drops and Rejoins]] · [[Automated Luau Checks - LihFolk Hook and Audit]] · [[Multi-Client and Live Testing]] · [[QA Checklists Before Release]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[Save Migration Tests - Fixture Saves and Golden Files]] · [[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]]
+[[Admin Commands Done Safely - Permissions and Audit Logs]] · [[Dupe Hunting Test Script - Trades, Gifts, Drops and Rejoins]] · [[Automated Luau Checks - LihFolk Hook and Audit]] · [[Multi-Client and Live Testing]] · [[QA Checklists Before Release]] · [[Save Migration Tests - Fixture Saves and Golden Files]] · [[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]]
 <!-- related:end -->

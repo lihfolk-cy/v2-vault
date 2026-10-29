@@ -68,7 +68,7 @@ Stylised is not free either:
 
 ## 5. Turning realistic CC0 sets into stylised materials
 
-The vault ships 869 realistic PBR sets ([[CC0 Texture and HDRI Library]]). A stylised project can still use them as a starting point. The conversion is about removing information, not adding it:
+Free CC0 libraries offer many realistic PBR sets ([[Links - Free and CC0 asset libraries]]). A stylised project can still use them as a starting point. The conversion is about removing information, not adding it:
 
 1. **Simplify colour.** Reduce colour variation: blur at a radius of a few pixels, then posterize to 4 to 8 value bands per hue, then shift the palette towards your style's hues.
 2. **Lower normal intensity.** Scale the normal map towards flat (127, 127, 255) by 40 to 70 percent so small pores disappear and only large forms (stones, planks) remain.
@@ -221,7 +221,7 @@ Answer these in order; the first strong answer usually decides:
 
 ## See also
 
-[[Materials and Surfaces Start Here]] · [[Environment Art Styles]] · [[Hand-Painted and Stylized Texturing]] · [[Low-Poly and Stylized Modeling]] · [[Baking Lighting and Detail into Textures]] · [[MaterialService and Custom Materials]] · [[SurfaceAppearance PBR Workflow]] · [[Terrain Materials and Painting]] · [[Tiling Trim Sheets and Decal Tricks]] · [[CC0 Texture and HDRI Library]] · [[Stylized Lighting Recipes]] · [[Lighting Technologies and Settings]] · [[Mobile and Low-End Optimization]] · [[Art Pipeline - Concept to In-Game Asset]]
+[[Materials and Surfaces Start Here]] · [[Environment Art Styles]] · [[Hand-Painted and Stylized Texturing]] · [[Low-Poly and Stylized Modeling]] · [[Baking Lighting and Detail into Textures]] · [[MaterialService and Custom Materials]] · [[SurfaceAppearance PBR Workflow]] · [[Terrain Materials and Painting]] · [[Tiling Trim Sheets and Decal Tricks]] · [[Links - Free and CC0 asset libraries]] · [[Stylized Lighting Recipes]] · [[Lighting Technologies and Settings]] · [[Mobile and Low-End Optimization]] · [[Art Pipeline - Concept to In-Game Asset]]
 
 ## Connected notes
 <!-- auto-links:start -->
@@ -230,5 +230,5 @@ Answer these in order; the first strong answer usually decides:
 
 <!-- related:start -->
 ## Related
-[[Texel Density]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Lighting Untextured Art in Roblox]] · [[Procedural Materials and Skies - Lessons]] · [[Substance Painter and Texturing Tools]] · [[Bevels Chamfers and Edge Highlights Without Textures]]
+[[Texel Density]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Procedural Materials and Skies - Lessons]] · [[Lighting Untextured Art in Roblox]] · [[Substance Painter and Texturing Tools]] · [[Materials MaterialVariants and SurfaceAppearance]]
 <!-- related:end -->

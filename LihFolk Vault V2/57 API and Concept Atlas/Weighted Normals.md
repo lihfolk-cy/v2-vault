@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/modeling, area/ai]
 > - Weighted Normal last in the stack, Face Area, Keep Sharp, Threshold 0.01.
 > - Avoid: Smooth shading a low poly with no normal fix -> Weighted Normal / Harden Normals.
 >
-> Cost: TL;DR ~150 tok · whole note ~540 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~560 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,7 +27,7 @@ Weighted Normal makes custom normals weighted by face area (or angle), so big fl
 
 ## Mentioned in
 
-21 notes in 6 sections. The 21 most relevant are linked:
+22 notes in 7 sections. The 22 most relevant are linked:
 
 ### 06 World Building and Art
 [[Modeling in Blender for Roblox]]
@@ -37,6 +37,9 @@ Weighted Normal makes custom normals weighted by face area (or angle), so big fl
 
 ### 15 AI Tools
 [[AI 3D Model Generation Outside Roblox]] · [[AI Pitfalls - Assets and Import]]
+
+### 45 Procedural Blender Assets
+[[Stylised Log Cabin Worked Example]]
 
 ### 54 Untextured Stylised Modelling
 [[Clean Stylised Shading - Weighted and Custom Normals]] · [[Keeping a Mixed Asset Library Consistent]]

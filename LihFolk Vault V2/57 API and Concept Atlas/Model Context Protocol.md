@@ -7,9 +7,9 @@ tags: [atlas, concept, type/atlas, area/ai, area/pipelines]
 > [!tldr] TL;DR
 > - MCP is the right pipe for decisions and small results (the agent asks, Studio answers in a few lines).
 > - Studio updated; MCP enabled; green indicator shows the client.
-> - `command` + `args` start a stdio server: the host launches this process and talks to it over stdin and stdout (What Is MCP).
+> - Tool names checked against the current MCP tool list.
 >
-> Cost: TL;DR ~120 tok · whole note ~840 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~100 tok · whole note ~840 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -21,9 +21,9 @@ MCP is versioned by date (2024-11-05, 2025-03-26, 2025-06-18, 2025-11-25, 2026-0
 ## Key facts
 
 - Studio updated; MCP enabled; green indicator shows the client. ([[Roblox Studio MCP Server]])
+- Tool names checked against the current MCP tool list. ([[Roblox Built-In AI Tools Timeline 2023-2026]])
 - Spec: the MCP specification at modelcontextprotocol.io (revisions 2025-06-18 and 2026-07-28 were read for this note). ([[What Is MCP]])
 - `command` + `args` start a stdio server: the host launches this process and talks to it over stdin and stdout (What Is MCP). ([[Setting Up MCP Clients]])
-- Tool names checked against the current MCP tool list. ([[Roblox Built-In AI Tools Timeline 2023-2026]])
 
 ## Mentioned in
 

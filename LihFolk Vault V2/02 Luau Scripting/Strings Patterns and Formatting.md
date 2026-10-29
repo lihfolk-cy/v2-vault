@@ -366,5 +366,5 @@ The senior trade-off: strings are the easiest data type to get working and the e
 
 <!-- related:start -->
 ## Related
-[[Tables Metatables and OOP]] · [[Luau Performance Patterns with Benchmarks]] · [[Luau Performance and Native Codegen]] · [[Functions Closures and Upvalues]] · [[Luau Type System and Strict Mode]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Metatables and OOP - When and When Not]] · [[Module Scripts and Requiring]]
+[[Tables Metatables and OOP]] · [[Luau Performance Patterns with Benchmarks]] · [[Functions Closures and Upvalues]] · [[Luau Performance and Native Codegen]] · [[Luau Type System and Strict Mode]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Metatables and OOP - When and When Not]] · [[Module Scripts and Requiring]]
 <!-- related:end -->

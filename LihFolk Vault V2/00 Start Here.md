@@ -6,7 +6,7 @@ tags: [index, start, type/hub, level/beginner, api/Terrain, api/Animator, api/Da
 
 A field guide to **every aspect of making games in Roblox Studio**, written at senior-developer depth: Studio and workflow, Luau, architecture and networking, data, UI, world building, lighting/VFX/audio, animation, gameplay systems, game design, monetization and live ops, performance and testing, production, 3D modeling, AI tools, MCP and AI agents, and pipelines.
 
-About 800 notes (roughly fifteen thick textbooks of original LihFolk writing), plus 9 skeleton rigs, 10 concept sheets, procedural Blender assets, and the LihFolk Claude Code plugin with 15+ AI skills. The visual home page is [[000 Home]].
+About 1,290 notes (roughly twenty-five thick textbooks of original LihFolk writing), plus 9 skeleton rigs, 10 concept sheets, procedural Blender assets, and the LihFolk Claude Code plugin with 19 AI skills. The visual home page is [[000 Home]].
 
 ## How to read the labels
 - **Roblox docs**: the official engine reference and Creator Hub guides, checked in October 2026. Roblox changes fast, so anything marked "as of October 2026" (prices, payouts, policies, betas) is worth rechecking.
@@ -745,6 +745,6 @@ Start at [[Resource Library Start Here]]: 19 chapters, one note per topic.
 Start at [[Field Notes Start Here]]: 20 hard-won lessons from a shipped action RPG (camera, UI, input, animation, audio, data, Studio automation, many-agent workflows).
 
 ### Reference
-- [[Using This Vault in Obsidian]] (search, speed, AI tools)
+- [[Obsidian Vaults for AI Agents - Structure, Graph and Theming]] (how this vault is structured and searched)
 - [[Glossary]], [[Animation Glossary]]
 - [[Open Questions - Whole Vault]]

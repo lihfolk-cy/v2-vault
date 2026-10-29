@@ -43,7 +43,7 @@ Append one JSON line to `.lihfolk/ledger.jsonl` (create `.lihfolk/` if missing):
  "fixes":[{"criterion":"V4","fix":"bevel 0.08->0.15, 1 seg, harden normals","delta":0.9}],
  "params":{"style":"soft","bevel":0.15,"tris":44},"notes":"weighted normals fixed shading"}
 ```
-Keep fields short; it's data, not prose.
+Keep fields short; it's data, not prose. `examples/ledger.sample.jsonl` shows five sample lines (model, animation, vfx, system, ui), including a gate-capped first draft and a run logged below 8.5.
 
 ### 5. Distill (every ~10 entries of a type, or on `/lihfolk:learn`)
 Read the ledger for that type and update `.lihfolk/recipes.md`:

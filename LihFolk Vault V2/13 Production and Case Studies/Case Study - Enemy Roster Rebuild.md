@@ -159,7 +159,7 @@ Tutorial enemies were exempt. The deeper lesson: when one side of combat scales 
 
 ## The look rebuild: about fifty creatures in a day
 
-At the end of the period the owner asked for every enemy in the first area to be replaced: "all new enemies, way cooler and more intimidating; no tiny enemies". The pipeline made this a look-only change:
+At the end of the period the owner asked for every enemy in the first area to be replaced with larger, more intimidating designs. The pipeline made this a look-only change:
 
 - Each of the **roughly fifty slots** (regulars, elites, megas, bosses) kept its **id, skeleton (bones and pivots), clips, AI role, zone and attacks**.
 - New creatures were designed as Blender Python scripts on a shared helper library (three-tone colour ramps, a stud atlas, seam lines), rendered from three angles for a contact sheet, uploaded as packages, and installed with a tool that rebuilt the rig from a manifest and re-measured root and ground heights (and hover height for flyers).

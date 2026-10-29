@@ -1,5 +1,6 @@
 ---
 tags: [ai, agents, windows, powershell, encoding, utf-8, paths, tooling, lihfolk, type/troubleshooting, area/ai, area/studio, level/intermediate]
+verified: 2026-10-28
 ---
 # Windows Tooling Pitfalls for Agent Pipelines
 
@@ -12,10 +13,8 @@ tags: [ai, agents, windows, powershell, encoding, utf-8, paths, tooling, lihfolk
 > - Mojibake grep after any bulk text edit
 > - Every path quoted; forward slashes in Bash
 >
-> Cost: TL;DR ~140 tok · whole note ~1.5k tok. Read more: ## 1. PowerShell 5.1 and UTF-8 mojibake · ## 3. Renaming the vault folder breaks every path · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~1.4k tok. Read more: ## 1. PowerShell 5.1 and UTF-8 mojibake · ## 3. Renaming the vault folder breaks every path · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
-verified: 2026-10-28
 
 Most Roblox developers work on Windows, and AI agents driving their tools hit a recurring set of traps: text encoding in Windows PowerShell 5.1, paths with spaces, the Microsoft Store `python` alias, and hard-coded paths that break when a folder moves. Each item below was hit while building LihFolk V2 (**Measured** where noted).
 
@@ -38,10 +37,10 @@ Fixes, in order of preference:
 
 ## 2. Paths with spaces
 
-Project folders like `D:\LihFolk Build\LihFolk Plugin` break any command that does not quote paths.
+Project folders like `D:\My Game\Roblox Plugin` break any command that does not quote paths.
 
 - Quote every path in shell commands, including inside scripts written by the agent.
-- In Bash on Windows, use forward slashes (`/d/LihFolk Build/...`) and quotes.
+- In Bash on Windows, use forward slashes (`/d/My Game/...`) and quotes.
 - Pass paths as arguments, not by string-concatenating them into a command line.
 
 ## 3. Renaming the vault folder breaks every path
@@ -104,5 +103,5 @@ Agents on Windows often have both Git Bash and PowerShell. Common slips:
 
 <!-- related:start -->
 ## Related
-[[Token Cost Benchmarks]] · [[Benchmark - Does a Knowledge Vault Make AI Better at Roblox]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[AI Asset Pipelines - Scoring, Reviewers and Spot Checks]] · [[AI Code Assistants for Luau]] · [[Roblox Studio Assistant]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[AI in Roblox Development Overview]]
+[[Token Cost Benchmarks]] · [[Benchmark - Does a Knowledge Vault Make AI Better at Roblox]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[AI Code Assistants for Luau]] · [[AI Asset Pipelines - Scoring, Reviewers and Spot Checks]] · [[Roblox Studio Assistant]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[AI in Roblox Development Overview]]
 <!-- related:end -->

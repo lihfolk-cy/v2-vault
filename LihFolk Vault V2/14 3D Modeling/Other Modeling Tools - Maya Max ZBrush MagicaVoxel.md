@@ -204,5 +204,5 @@ Every hand-off between tools can lose scale, axes, pivots, normals, UVs or names
 
 <!-- related:start -->
 ## Related
-[[Voxel Scale Grids and Stud Alignment]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Organic and Creature Modeling]] · [[Normal Maps and Detail Baking]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Mesh Optimization for Mobile]] · [[Modular Environment Kits]] · [[Topology and Edge Flow]] · [[UV Unwrapping]] · [[Hard-Surface Modeling]]
+[[Voxel Scale Grids and Stud Alignment]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Organic and Creature Modeling]] · [[Normal Maps and Detail Baking]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Mesh Optimization for Mobile]] · [[Topology and Edge Flow]] · [[Modular Environment Kits]] · [[UV Unwrapping]] · [[Hard-Surface Modeling]]
 <!-- related:end -->

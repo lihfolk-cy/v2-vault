@@ -171,5 +171,5 @@ Rules:
 
 <!-- related:start -->
 ## Related
-[[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]] · [[Confirmation and Undo Patterns for Destructive and Paid Actions]] · [[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]] · [[Settings Menu Essentials and Persistence]] · [[Loading Screen Skip and First-Session Goals]] · [[Block and Mute Respecting Platform Rules]] · [[AFK Detection Idle Kicks and AFK Reward Rules]]
+[[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]] · [[Confirmation and Undo Patterns for Destructive and Paid Actions]] · [[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]] · [[Loading Screen Skip and First-Session Goals]] · [[Settings Menu Essentials and Persistence]] · [[Block and Mute Respecting Platform Rules]] · [[AFK Detection Idle Kicks and AFK Reward Rules]]
 <!-- related:end -->

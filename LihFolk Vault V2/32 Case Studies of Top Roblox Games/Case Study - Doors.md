@@ -141,5 +141,5 @@ What is notable is what is absent: no paid power, no gacha, no paid luck. Revive
 
 <!-- related:start -->
 ## Related
-[[Case Study - 99 Nights in the Forest]] · [[Case Study - Blox Fruits]] · [[Case Study - Brookhaven RP]] · [[Case Study - Steal a Brainrot]] · [[Case Study - Grow a Garden]] · [[Case Study - Forsaken]] · [[Case Study - Tower Defense Simulator]] · [[Case Study - Jailbreak]]
+[[Case Study - 99 Nights in the Forest]] · [[Case Study - Blox Fruits]] · [[Case Study - Brookhaven RP]] · [[Case Study - Steal a Brainrot]] · [[Case Study - Grow a Garden]] · [[Case Study - Forsaken]] · [[Case Study - Tower Defense Simulator]] · [[Case Study - Dead Rails]]
 <!-- related:end -->

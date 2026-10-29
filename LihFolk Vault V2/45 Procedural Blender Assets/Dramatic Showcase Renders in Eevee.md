@@ -96,5 +96,5 @@ Related: [[Stylized Lighting Recipes]], [[VFX Design Playbook]], [[Stylised Weap
 
 <!-- related:start -->
 ## Related
-[[Stylised Shop Stand Worked Example]] · [[Low-Poly Tree Set Worked Example]] · [[Hand-Painted and Stylized Texturing]] · [[Voxel and Blocky Modeling]] · [[Chibi Character Rules in Practice]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[Low-Poly Creature From a Flat Reference Sheet]]
+[[Stylised Shop Stand Worked Example]] · [[Low-Poly Tree Set Worked Example]] · [[Chibi Character Rules in Practice]] · [[Stylised Log Cabin Worked Example]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[Low-Poly Creature From a Flat Reference Sheet]]
 <!-- related:end -->

@@ -164,5 +164,5 @@ The client owns its character's physics and its Animator: clips the client plays
 
 <!-- related:start -->
 ## Related
-[[Voxel Characters - Proportions Joints and Rigging]] · [[Character Select and Class Systems with Different Rigs]] · [[3D Importer Settings Reference]] · [[Rigs and Joints]] · [[Importing Models and Rigs]] · [[Bones and Skinned Meshes]] · [[Creature Rig Conventions]] · [[Blender Armature and Bone Roll Conventions]] · [[Enemy and NPC Animation]] · [[Animation Data from Blender to Roblox]]
+[[Voxel Characters - Proportions Joints and Rigging]] · [[Characters and Humanoids]] · [[3D Importer Settings Reference]] · [[Rigs and Joints]] · [[Importing Models and Rigs]] · [[Bones and Skinned Meshes]] · [[Creature Rig Conventions]] · [[Blender Armature and Bone Roll Conventions]] · [[Enemy and NPC Animation]] · [[Weight Painting and Skinning for Roblox]]
 <!-- related:end -->

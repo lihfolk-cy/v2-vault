@@ -6,9 +6,9 @@ tags: [hub, type/hub, level/intermediate]
 ![[lihfolk_banner.png|banner]]
 
 > [!lf-hero] LIHFOLK V2
-> **The Roblox game studio in a vault.** 800+ original expert notes, written for builders and for AI agents.
+> **The Roblox game studio in a vault.** 1,290+ original expert notes, written for builders and for AI agents.
 >
-> `800+ notes` · `52 sections` · `16 AI skills` · `8.5+ quality bar` · `anti-bias council` · `Blender pipeline` · `LihFolk UI kit` · `trend-game playbook`
+> `1,290+ notes` · `55 sections` · `19 AI skills` · `8.5+ quality bar` · `anti-bias council` · `Blender pipeline` · `VFX + SFX kits` · `original asset pack` · `LihFolk UI kit` · `trend-game playbook`
 
 > [!lf-strip] Start in 60 seconds
 > **New to Roblox** → [[Studio Interface Tour]] · [[Luau Language Essentials]] · [[Client-Server Model]] · [[Publishing an Experience]]

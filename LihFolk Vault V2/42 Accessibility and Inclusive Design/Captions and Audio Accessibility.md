@@ -28,7 +28,7 @@ Sources: **Roblox docs (as of October 2026)** for `HapticEffect`, `HapticService
 - **Players with auditory processing difficulties.** They hear the sound but struggle to separate speech from music and effects. Volume categories and clear mixing help them more than captions.
 - **Players in noisy places** and players who do not speak the voice-over language.
 
-Roblox docs (as of October 2026) recommend pairing in-game events conveyed by sound with visual cues, and giving players separate volume controls for groups such as sound effects, music and speech. Docs do not describe a built-in captioning system for in-experience audio that I could find, so captions are yours to build.
+Roblox docs (as of October 2026) recommend pairing in-game events conveyed by sound with visual cues, and giving players separate volume controls for groups such as sound effects, music and speech. Docs do not describe a built-in captioning system for in-experience audio that we could find, so captions are yours to build.
 
 ---
 
@@ -299,7 +299,7 @@ Design notes:
 - **Five categories is the useful maximum.** Music, effects, speech, UI, ambient. Fewer is fine; more becomes noise in the settings menu.
 - **Ducking is an accessibility feature.** Automatically lowering music and ambient while speech plays (see [[Spatial Audio and Mixing]]) helps everyone parse dialogue. Make the duck stronger for speech than for effects.
 - **A "speech clarity" preset** (music 30%, ambient 40%, speech 100%) is a one-tap option for players who do not want to tune five sliders.
-- **Mono audio.** Players with hearing loss in one ear miss sounds panned to the other side. Some platforms provide a system-level mono switch. I could not confirm an engine setting on Roblox that downmixes game audio to mono, so the in-game fallback is the directional indicator and captions, which carry the left/right information visually.
+- **Mono audio.** Players with hearing loss in one ear miss sounds panned to the other side. Some platforms provide a system-level mono switch. We could not confirm an engine setting on Roblox that downmixes game audio to mono, so the in-game fallback is the directional indicator and captions, which carry the left/right information visually.
 - **Save the values** with the player's other settings so they follow them across devices.
 
 ---
@@ -342,7 +342,7 @@ end
 return Haptics
 ```
 
-Parenting the effect somewhere it can play on the client matters; I could not confirm from the reference page which parents are valid, so test this on a real controller and a real phone before relying on it. Treat haptics as optional reinforcement: many players have no haptic device, and some find vibration uncomfortable, so it must have its own on/off and intensity setting.
+Parenting the effect somewhere it can play on the client matters; we could not confirm from the reference page which parents are valid, so test this on a real controller and a real phone before relying on it. Treat haptics as optional reinforcement: many players have no haptic device, and some find vibration uncomfortable, so it must have its own on/off and intensity setting.
 
 ---
 

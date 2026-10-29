@@ -88,7 +88,7 @@ def refresh(dump_path, docs_path):
     luau = luau_libs()  # the Luau runtime is newer than the Studio docs file (coroutine.finally, ...)
     for k in luau:
         globs.setdefault(k, 0)
-    snap = {"source": {"luau": f"{len(luau)} library members from {LUAU_EXE}" if luau else "","dump": os.path.basename(os.path.dirname(os.path.dirname(dump_path))) + "/API-Dump.json",
+    snap = {"source": {"luau": f"{len(luau)} library members from {os.path.basename(LUAU_EXE)}" if luau else "","dump": os.path.basename(os.path.dirname(os.path.dirname(dump_path))) + "/API-Dump.json",
                        "docs": (os.path.basename(os.path.dirname(os.path.dirname(os.path.dirname(docs_path))))
                                 if docs_path else ""),
                        "dump_date": _date(dump_path), "docs_date": _date(docs_path) if docs_path else ""},

@@ -195,5 +195,5 @@ Related: [[Two-Bone IK Math]], [[Procedural Gait and Footstep Planning]], [[Proc
 
 <!-- related:start -->
 ## Related
-[[R15 Run Cycle Key Poses]] · [[Ragdolls and Physics-Based Animation]] · [[Locomotion and Melee Reference Numbers]] · [[Scale and Animation]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Enemy and NPC Animation]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[LihFolk R15 Keyframe Pipeline]]
+[[R15 Run Cycle Key Poses]] · [[Ragdolls and Physics-Based Animation]] · [[Locomotion and Melee Reference Numbers]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Scale and Animation]] · [[Enemy and NPC Animation]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[LihFolk R15 Keyframe Pipeline]]
 <!-- related:end -->

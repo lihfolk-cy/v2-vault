@@ -29,12 +29,12 @@ Roblox docs (as of October 2026), `ImageLabel`:
 
 - `ImageRectOffset` (`Vector2`): "the pixel offset (from the top-left) of the image area to be displayed."
 - `ImageRectSize` (`Vector2`): "the pixel size of the image area to be displayed. If either dimension is set to `0`, the entire image is displayed instead."
-- `ResampleMode` (`Enum.ResamplerMode`, items `Default` and `Pixelated`): by default "the image smooths out texturing when displayed on the screen larger or smaller than its size in texture memory. When set to Enum.ResamplerMode.Pixelated, the image preserves the sharp edges of pixels."
+- `ResampleMode` (`Enum.ResamplerMode`, items `Default` and `Pixelated`): `Default` filters (blurs) the image whenever it is drawn larger or smaller than its stored size; `Pixelated` keeps hard pixel edges, which is what pixel-art sprites want (Roblox docs).
 
 Consequences that are easy to miss:
 
 1. **Units are image pixels, not GUI pixels.** The rectangle is measured on the image as stored, independent of the label's on-screen size. A 32 x 32 frame stays `Vector2.new(32, 32)` whether the label is 32 or 256 pixels wide on screen. Using the label's own size here is a classic mistake (reported on the DevForum as "my flip or crop does nothing").
-2. **"As stored" means after upload processing.** If the uploaded sheet is larger than the size Roblox keeps, it is downscaled, and every offset you computed from your source file now points at the wrong place. The ceiling is widely reported on the DevForum as 1024 pixels on the longest side, and the vault's existing art notes treat 1024 as the practical ceiling ([[Textures Decals and Texture Memory]]). I could not find the exact upload cap stated on a current official docs page in October 2026, so keep sheets at or below 1024 x 1024 and you never have to care.
+2. **"As stored" means after upload processing.** If the uploaded sheet is larger than the size Roblox keeps, it is downscaled, and every offset you computed from your source file now points at the wrong place. The ceiling is widely reported on the DevForum as 1024 pixels on the longest side, and the vault's existing art notes treat 1024 as the practical ceiling ([[Textures Decals and Texture Memory]]). We could not find the exact upload cap stated on a current official docs page in October 2026, so keep sheets at or below 1024 x 1024 and you never have to care.
 3. **Zero means "whole image".** A frame table with a missing size (nil becomes `Vector2.zero` in some data paths) shows the entire sheet for a frame: the "my character turned into a grid of tiny copies" bug.
 4. **`ScaleType` should be `Stretch`.** The cropped rectangle is then stretched to the label size. `Fit` and `Crop` change the effective area and are rarely what you want for sprites; `Tile` and `Slice` have their own semantics (see [[ScreenGui Fundamentals]]).
 5. **Resampling applies to the cropped area.** With `Default`, a 16 x 16 frame shown at 64 x 64 is bilinear-smoothed and looks blurry; with `Pixelated` it is crisp. For [[pixel art]], `Pixelated` is mandatory.
@@ -397,5 +397,5 @@ Simple tools beat clever ones: a debug overlay that draws hitboxes as translucen
 
 <!-- related:start -->
 ## Related
-[[UV Unwrapping]] · [[The Gradient Palette Texture Workflow]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]]
+[[UV Unwrapping]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[The Gradient Palette Texture Workflow]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]]
 <!-- related:end -->

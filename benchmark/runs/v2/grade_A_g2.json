@@ -1,0 +1,362 @@
+[
+ {
+  "id": "P1",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 0.67,
+   "R4": 1.67,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0,
+   "R8": 1.67,
+   "R9": 2.0
+  },
+  "notes": "R3 says InvokeServer renamed (wrong); R4/R8 hedged on non-renamed"
+ },
+ {
+  "id": "P2",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 1.13,
+   "R5": 3.0,
+   "R6": 2.25,
+   "R7": 3.0,
+   "R8": 2.25,
+   "R9": 1.13
+  },
+  "notes": "R4/R9 reject time(); R4/R9 settings partial; R8 no time()"
+ },
+ {
+  "id": "P3",
+  "scores": {
+   "R1": 0.5,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 2.0,
+   "R8": 3.0,
+   "R9": 0.5
+  },
+  "notes": "R1/R9 say StarterPlayer property, vague timeline; R7 hedged name"
+ },
+ {
+  "id": "P4",
+  "scores": {
+   "R1": 2.63,
+   "R2": 0.0,
+   "R3": 3.0,
+   "R4": 0.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 0.0,
+   "R8": 3.0,
+   "R9": 3.0
+  },
+  "notes": "R2/R7 hedged no details; R4 says Text is filtered string (wrong); R1 no property name"
+ },
+ {
+  "id": "P5",
+  "scores": {
+   "R1": 3.0,
+   "R2": 1.13,
+   "R3": 0.38,
+   "R4": 2.63,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 0.38,
+   "R8": 3.0,
+   "R9": 3.0
+  },
+  "notes": "R2/R3/R7 old formulas, 100MB storage; R4 no Open Cloud"
+ },
+ {
+  "id": "P6",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 1.88,
+   "R6": 3.0,
+   "R7": 3.0,
+   "R8": 2.25,
+   "R9": 2.63
+  },
+  "notes": "R5/R8 missing % sum/pre-purchase potion explanation; R9 no trading check"
+ },
+ {
+  "id": "P7",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.63,
+   "R3": 3.0,
+   "R4": 2.63,
+   "R5": 0.0,
+   "R6": 0.38,
+   "R7": 3.0,
+   "R8": 2.63,
+   "R9": 0.38
+  },
+  "notes": "R5/R6/R9 vague hedged, wrong label limits; R1 creator reqs differ from key; several miss 16+ evaluation"
+ },
+ {
+  "id": "P8",
+  "scores": {
+   "R1": 1.13,
+   "R2": 3.0,
+   "R3": 1.13,
+   "R4": 0.38,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0,
+   "R8": 3.0,
+   "R9": 2.25
+  },
+  "notes": "R1/R3/R4 hedged 0.0045 US rate, vague engagement; R4 wrong mechanism; R9 no audience expansion"
+ },
+ {
+  "id": "G1",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 4.0,
+   "R4": 4.0,
+   "R5": 4.0,
+   "R6": 3.0,
+   "R7": 3.0,
+   "R8": 4.0,
+   "R9": 3.0
+  },
+  "notes": "R1/R2/R6/R7/R9 omit PromptProductPurchaseFinished warning"
+ },
+ {
+  "id": "G2",
+  "scores": {
+   "R1": 2.63,
+   "R2": 2.63,
+   "R3": 2.63,
+   "R4": 2.63,
+   "R5": 3.0,
+   "R6": 2.63,
+   "R7": 2.63,
+   "R8": 3.0,
+   "R9": 2.63
+  },
+  "notes": "Most omit DataStoreKeyInfo argument"
+ },
+ {
+  "id": "G3",
+  "scores": {
+   "R1": 1.33,
+   "R2": 1.33,
+   "R3": 1.33,
+   "R4": 1.33,
+   "R5": 1.33,
+   "R6": 1.33,
+   "R7": 1.33,
+   "R8": 1.33,
+   "R9": 1.33
+  },
+  "notes": "All catch NaN and fix; none state general all-args-attacker-controlled rule"
+ },
+ {
+  "id": "G4",
+  "scores": {
+   "R1": 3.0,
+   "R2": 2.5,
+   "R3": 2.5,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0,
+   "R8": 3.0,
+   "R9": 2.5
+  },
+  "notes": "R2/R3 vague on frame order; R9 says animation steps during PreSimulation"
+ },
+ {
+  "id": "G5",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0,
+   "R8": 2.0,
+   "R9": 2.0
+  },
+  "notes": "All give correct priority order, highest wins, same-priority weight blending"
+ },
+ {
+  "id": "G6",
+  "scores": {
+   "R1": 1.5,
+   "R2": 1.5,
+   "R3": 1.25,
+   "R4": 1.0,
+   "R5": 1.75,
+   "R6": 2.0,
+   "R7": 1.25,
+   "R8": 1.5,
+   "R9": 1.0
+  },
+  "notes": "Many stack scene 0.01 with FBX Units Scale; only R6 gives alternatives with caveats"
+ },
+ {
+  "id": "G7",
+  "scores": {
+   "R1": 1.33,
+   "R2": 1.0,
+   "R3": 1.33,
+   "R4": 1.33,
+   "R5": 1.33,
+   "R6": 1.33,
+   "R7": 1.33,
+   "R8": 1.0,
+   "R9": 1.0
+  },
+  "notes": "Several wrongly say exporter bakes Armature; shape-key catch often hedged either/or"
+ },
+ {
+  "id": "G8",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0,
+   "R8": 2.0,
+   "R9": 2.0
+  },
+  "notes": "All give UIAspectRatioConstraint and CoreUISafeInsets"
+ },
+ {
+  "id": "T1",
+  "scores": {
+   "R1": 4.0,
+   "R2": 4.0,
+   "R3": 4.0,
+   "R4": 4.0,
+   "R5": 4.0,
+   "R6": 4.0,
+   "R7": 4.0,
+   "R8": 4.0,
+   "R9": 4.0
+  },
+  "notes": "All cover server price, NaN/integer/range, balance check, rate limit"
+ },
+ {
+  "id": "T2",
+  "scores": {
+   "R1": 4.0,
+   "R2": 3.5,
+   "R3": 4.0,
+   "R4": 4.0,
+   "R5": 3.5,
+   "R6": 3.5,
+   "R7": 3.5,
+   "R8": 3.5,
+   "R9": 3.5
+  },
+  "notes": "Most omit parallel BindToClose saves"
+ },
+ {
+  "id": "T3",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0,
+   "R8": 3.0,
+   "R9": 3.0
+  },
+  "notes": "All correct: CoreUISafeInsets HUD, AspectRatio 1, separate None background"
+ },
+ {
+  "id": "T4",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0,
+   "R8": 2.0,
+   "R9": 2.0
+  },
+  "notes": "All diagnose implicit player arg and fix"
+ },
+ {
+  "id": "T5",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0,
+   "R8": 2.0,
+   "R9": 2.0
+  },
+  "notes": "All give race + GetPlayers loop"
+ },
+ {
+  "id": "T6",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0,
+   "R8": 2.0,
+   "R9": 2.0
+  },
+  "notes": "All use AwardBadgeAsync server-side with pcall"
+ },
+ {
+  "id": "T7",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0,
+   "R8": 2.0,
+   "R9": 2.0
+  },
+  "notes": "All give correct IAS hierarchy and Pressed/Released or StateChanged"
+ },
+ {
+  "id": "T8",
+  "scores": {
+   "R1": 0.0,
+   "R2": 0.0,
+   "R3": 2.0,
+   "R4": 0.0,
+   "R5": 2.0,
+   "R6": 0.0,
+   "R7": 0.0,
+   "R8": 2.0,
+   "R9": 0.5
+  },
+  "notes": "Only R3/R5/R8 identify MeshStreamingAndImprovedLoDs; R9 vague hint; R4 claims Precise keeps full detail"
+ }
+]

@@ -165,6 +165,25 @@ Interruption: opening and closing are driven by state (`entry.open`). A reopen d
 
 `LihFolkUIIcons.Assets` ships **empty**. Every name (close, coin, gem, robux, shop, codes, rebirth, settings, daily, lock, check, star and others) draws a fallback: a coloured circle, square or diamond with an ink outline and a glyph. Menus therefore work and read correctly with no art. To add art, upload your own square PNGs and paste `"rbxassetid://<id>"` into the registry, or call `Icons.register("coin", id)` at runtime. Never paste ids you have not uploaded or checked. For Robux, use Roblox's official icon under their brand rules. You can also register a `pattern` tile and a `sunburst` image to replace the procedural versions.
 
+### Icon art style (owner reference: the glossy pointer)
+
+When drawing icon art, match this look. It's a chunky, toylike object with a hard-candy shine.
+
+- **Silhouette:** one bold, simple shape with a slight tilt (about 15-25°) for energy. Chunky proportions with rounded corners, readable at 32 px. The icon fills about 75% of its tile.
+- **Outline:** a thick dark-navy ink line (about #1c2440; 6-8% of the icon width) around the whole shape. The outline is uniform, never black, never thin.
+- **Two-tone faceting:** split the body along its main ridge. The lit facet (top or left) is near-white. The shade facet (bottom or right) is a cool pale blue-grey (about #b9c6d8 to #8fa0b8). The split is a crisp edge, not a blur: the object reads as a carved solid.
+- **The shine:**
+  - Add a bright white specular streak along the lit edge just inside the outline: a thin, tapering band that follows the contour from the tip and fades out halfway along.
+  - Add a small hot-spot glint near the tip.
+  - Give the shade facet a faint lighter rim where it meets the outline, a reflected-light bounce that keeps the dark side from going flat.
+  - The highlights are pure white with hard inner edges and a soft fade at the tail. That combination is what makes it look glossy instead of matte.
+- **Light direction:** always top-left, the same on every icon in a set.
+- **Shadow:** at most a small, soft, offset drop shadow below and right in the outline colour at low opacity. No glow, no gradients outside the shape.
+- **Palette:** keep to the object's base colour plus white highlights, a darker shade of the base for the shade facet, and the navy ink. A coloured icon (coin, gem) uses the same recipe with its hue in place of the blue-grey.
+- **Tile:** sits on a white rounded-square button with a soft grey bottom gradient and a thin dark border, so the icon's ink outline separates it from the white.
+
+Checklist for a new icon: thick navy outline · crisp two-tone split · white specular streak plus tip glint · bounce rim on the shade side · top-left light · readable at 32 px.
+
 ## Procedure
 
 1. **Pre-flight** (as `quality-score` requires): open `../quality-score/recipes/ui.md` and the project ledger if one exists. Write 3 to 6 lines covering which archetype this is, its one focal action, the menu theme, the device list to test, and which known misses this draft avoids.

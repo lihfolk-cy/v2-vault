@@ -103,5 +103,5 @@ Related: [[Procedural Blender Assets Start Here]], [[Hand-Painted and Stylized T
 
 <!-- related:start -->
 ## Related
-[[Low-Poly Creature From a Flat Reference Sheet]] · [[Low-Poly Tree Set Worked Example]] · [[Stylised Weapons From a Concept]] · [[Dramatic Showcase Renders in Eevee]] · [[Stylised Shop Stand Worked Example]] · [[Dash VFX Presentation on an R15 Rig]] · [[Mesh VFX Packs Built in Blender]] · [[Blender 5 Python Gotchas for Headless Builds]]
+[[Low-Poly Creature From a Flat Reference Sheet]] · [[Low-Poly Tree Set Worked Example]] · [[Stylised Weapons From a Concept]] · [[Dramatic Showcase Renders in Eevee]] · [[Stylised Shop Stand Worked Example]] · [[Stylised Log Cabin Worked Example]] · [[Dash VFX Presentation on an R15 Rig]] · [[Mesh VFX Packs Built in Blender]]
 <!-- related:end -->

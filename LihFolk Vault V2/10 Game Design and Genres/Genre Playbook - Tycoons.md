@@ -280,5 +280,5 @@ The reference project is not a tycoon, but its economy lessons transfer:
 
 <!-- related:start -->
 ## Related
-[[Core Loop]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - Obbies and Platformers]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - RNG and Collection Games]] · [[First-Time User Experience and Onboarding]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Retention and Return Hooks]] · [[Genre Playbook - Zombie and Wave Survival Co-op]]
+[[Core Loop]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Obbies and Platformers]] · [[Genre Playbook - RNG and Collection Games]] · [[First-Time User Experience and Onboarding]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Retention and Return Hooks]] · [[Genre Playbook - Racing and Driving]]
 <!-- related:end -->

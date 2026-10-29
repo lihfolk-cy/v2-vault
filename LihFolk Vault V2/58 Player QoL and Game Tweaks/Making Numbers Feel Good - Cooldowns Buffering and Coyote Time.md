@@ -170,5 +170,5 @@ Rebind on `CharacterAdded`. Coyote time is client-side feel for the local charac
 
 <!-- related:start -->
 ## Related
-[[Input Buffering]] · [[Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots]] · [[Top 25 QoL Wins by Effort]] · [[QoL Audit Checklist]] · [[Accessibility Cross-Links for QoL Settings]] · [[Quick Respawn and Spawn Protection]] · [[Feedback - Autosave Indicator Ping Display and Error Toasts]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Confirmation and Undo Patterns for Destructive and Paid Actions]]
+[[Input Buffering]] · [[Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots]] · [[Top 25 QoL Wins by Effort]] · [[QoL Audit Checklist]] · [[Quick Respawn and Spawn Protection]] · [[Accessibility Cross-Links for QoL Settings]] · [[Feedback - Autosave Indicator Ping Display and Error Toasts]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Confirmation and Undo Patterns for Destructive and Paid Actions]]
 <!-- related:end -->

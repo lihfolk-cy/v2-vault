@@ -1,5 +1,6 @@
 ---
 tags: [vfx, animation, ice, projectile, explosion, recipe, cast, lihfolk, type/guide, area/vfx, level/intermediate, area/animation]
+verified: 2026-10-29
 ---
 # Ice Ball Cast to Explosion: Approved Recipe
 
@@ -14,8 +15,6 @@ tags: [vfx, animation, ice, projectile, explosion, recipe, cast, lihfolk, type/g
 >
 > Cost: TL;DR ~140 tok · whole note ~1.3k tok. Read more: ## Timing (30 fps, 3.7 s) · ## What made v2 work (v1 → v2, Measured) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
-verified: 2026-10-29
 
 A full spell sequence (charge in hand, throw, flight, ice explosion, recover) that the LihFolk owner approved as the reference for future ability VFX ("ice ball v2 is awesome"). Use it as the template for any cast-and-throw ability: fireball, void orb, lightning spear. Clip: `IceCastThrow` (LihFolk Asset Pack, Animations/Combat). Luau: `LihFolkVFX.playIceBallCast(track, character)` in the `lihfolk-vfx` skill, **untested in Studio**. Preview: `VFX/Previews/IceBall_Cast_to_Explosion.mp4`.
 
@@ -69,6 +68,8 @@ For ball-forming charges the owner prefers a **two-handed, grounded charge** ove
 
 ## See also
 
+- [[VFX Readability and Value - Lessons from Blind Reviews]] (the general rules behind this recipe: small late flash, forward-biased release burst, saturated ink)
+- [[Escalation and Grandeur Without Clutter]]
 - [[Slash VFX Recipes - Crescent and Ring]]
 - [[Human Swing Biomechanics]]
 - [[VFX Previews in Blender for Roblox - Colour and Framing]]
@@ -79,5 +80,5 @@ For ball-forming charges the owner prefers a **two-handed, grounded charge** ove
 
 <!-- related:start -->
 ## Related
-[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Light Sources and Shadows]] · [[Beams and Trails]] · [[Stylized Lighting Recipes]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]]
+[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Light Sources and Shadows]] · [[Beams and Trails]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Stylized Lighting Recipes]] · [[Particle Emitters In Depth]] · [[Game Feel and Juice]]
 <!-- related:end -->

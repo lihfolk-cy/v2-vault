@@ -274,5 +274,5 @@ The general lesson: fix the model, then derive every price from it again. Patchi
 
 <!-- related:start -->
 ## Related
-[[Pricing Curves and Upgrade Costs]] · [[Simulating an Economy Before Launch]] · [[Monetization Overview]] · [[Pricing and Store Design]] · [[Roblox Policies Ratings and Compliance]] · [[Game Passes]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Refunds Chargebacks and Purchase Support]] · [[Discovery and the Algorithm]]
+[[Pricing Curves and Upgrade Costs]] · [[Simulating an Economy Before Launch]] · [[Monetization Overview]] · [[Pricing and Store Design]] · [[Roblox Policies Ratings and Compliance]] · [[Game Passes]] · [[Refunds Chargebacks and Purchase Support]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Discovery and the Algorithm]]
 <!-- related:end -->

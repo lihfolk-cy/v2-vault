@@ -12,7 +12,7 @@ tags: [game-design, genre, obby, platformer, checkpoints, difficulty, type/guide
 > - Teach, test, twist for every new obstacle type.
 > - Sawtooth difficulty with breather stages.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.0k tok. Read more: ## 4. Stage design · ## 5. Checkpoints and saving · ## 11. Common mistakes · ## 12. Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.9k tok. Read more: ## 4. Stage design · ## 5. Checkpoints and saving · ## 11. Common mistakes · ## 12. Checklist
 <!-- tldr:end -->
 
 The **obby** (obstacle course) is Roblox's oldest native genre and still one of its biggest: jump across platforms, avoid kill bricks, reach the next checkpoint. It needs no text, no tutorial and no economy, which makes it perfect for a young, mobile, international audience, and brutally competitive because thousands exist. The docs list Obby among the platform's common genres (Docs, "Design for Roblox"). This playbook covers the variants, stage and difficulty design, the movement numbers you design against, checkpoints and saving, mobile fairness, moving platforms (a classic engine trap), anti-cheat for timed runs, and monetisation that does not ruin the challenge.
@@ -302,5 +302,5 @@ The ethical line: **do not tune stages to be unfair so that skips sell**. Player
 
 <!-- related:start -->
 ## Related
-[[Obby Checkpoints and Stage Saves End to End]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Racing and Driving]] · [[Genre Playbook - Tycoons]] · [[Genre Playbook - Tower Defense]] · [[Progression and Pacing Design]] · [[Genre Playbook - Combat and RPG]] · [[Genre Playbook - Battlegrounds and Arena Fighters]]
+[[Obby Checkpoints and Stage Saves End to End]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Racing and Driving]] · [[Genre Playbook - Tycoons]] · [[Progression and Pacing Design]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Combat and RPG]] · [[Genre Playbook - Simulators]]
 <!-- related:end -->

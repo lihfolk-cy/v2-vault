@@ -352,5 +352,5 @@ Bulk uploading is available through Studio's Asset Manager and through Open Clou
 
 <!-- related:start -->
 ## Related
-[[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[SurfaceAppearance PBR Workflow]] · [[Texel Density]] · [[2D Collision Physics and Platformer Movement]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]]
+[[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[SurfaceAppearance PBR Workflow]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[2D Collision Physics and Platformer Movement]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]]
 <!-- related:end -->

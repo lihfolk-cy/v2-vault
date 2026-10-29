@@ -1,5 +1,6 @@
 ---
 tags: [modeling, blender, procedural, qa, gates, symmetry, topology, bmesh, triangulation, lihfolk, type/guide, area/modeling, level/advanced]
+verified: 2026-10-28
 ---
 # Mesh Gates for Generated Models - Symmetry, Seating and Caps
 
@@ -14,8 +15,6 @@ tags: [modeling, blender, procedural, qa, gates, symmetry, topology, bmesh, tria
 >
 > Cost: TL;DR ~120 tok · whole note ~1.4k tok. Read more: ## 1. A15 - symmetry · ## 2. A16 - alignment and seating · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
-verified: 2026-10-28
 
 Four automatic checks that catch the defects AI-generated and scripted meshes produce most often, and that humans and reviewers notice instantly: lopsided "symmetric" objects (A15), off-centre or floating features (A16), shells folding through themselves (A17), and broken flat caps (A18). They extend the usual export gates (tri ceiling, watertight, normals, no n-gons, transforms applied, one UV map, one material). Every example here is **Measured** in the LihFolk V2 model kit.
 
@@ -93,5 +92,5 @@ Common causes:
 
 <!-- related:start -->
 ## Related
-[[Blender Workflow for Roblox Creators]] · [[Retopology and Decimation]] · [[Hard-Surface Modeling]] · [[Modeling Fundamentals for Games]] · [[Normal Maps and Detail Baking]] · [[Organic and Creature Modeling]] · [[UV Unwrapping]] · [[Modeling Weapons and Props]]
+[[Blender Workflow for Roblox Creators]] · [[Hard-Surface Modeling]] · [[Retopology and Decimation]] · [[Modeling Fundamentals for Games]] · [[Normal Maps and Detail Baking]] · [[Organic and Creature Modeling]] · [[UV Unwrapping]] · [[Modeling Weapons and Props]]
 <!-- related:end -->

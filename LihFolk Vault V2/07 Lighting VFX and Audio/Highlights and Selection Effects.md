@@ -255,5 +255,5 @@ See also: [[VFX Design Playbook]], [[Game Feel and Juice]], [[Light Sources and 
 
 <!-- related:start -->
 ## Related
-[[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[VFX Performance Budgets and Culling]] · [[Gore Policy and Kid-Friendly Hit Feedback]] · [[Particle Emitters In Depth]] · [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]] · [[Beams and Trails]] · [[Stylized Lighting Recipes]] · [[Atmosphere Sky Clouds and Post-Processing]]
+[[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[VFX Performance Budgets and Culling]] · [[Gore Policy and Kid-Friendly Hit Feedback]] · [[Particle Emitters In Depth]] · [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]] · [[Beams and Trails]] · [[Stylized Lighting Recipes]]
 <!-- related:end -->

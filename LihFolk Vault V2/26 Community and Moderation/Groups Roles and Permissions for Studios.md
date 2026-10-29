@@ -54,7 +54,7 @@ Rule of thumb: any game with more than one editor, or any intent to pay anyone, 
 - Only the owner, or members with role-management permissions, can manage roles.
 - Roles can be managed programmatically through Open Cloud Groups endpoints (and from game servers through `HttpService` calling Open Cloud, as the docs note).
 - Roles made on the old Groups pages keep running on the legacy system and are managed through the legacy workflow.
-- In-game, `Player:GetRankInGroup(groupId)` returns a rank number and `Player:GetRoleInGroup(groupId)` a role name. Ranks run 0 (not a member) to 255 (owner) (long-standing behaviour; the 2026 groups page does not restate the numbers, so verify in your group settings).
+- In-game, `GroupService:GetRolesInGroupAsync(userId, groupId)` returns membership and the user's roles (each with a `Rank` and name); the older `Player:GetRankInGroup` and `GetRoleInGroup` are deprecated. Ranks run 0 (not a member) to 255 (owner) (long-standing behaviour; the 2026 groups page does not restate the numbers, so verify in your group settings).
 
 Multiple roles per member are new compared with the single-rank system many tutorials describe. In code, the rank you read is the member's primary rank; if your game logic depends on "is this person a Tester", read it from a dedicated mechanism (a rank threshold you control, or a list in live config), not from assumptions about which role is primary (rule of thumb; check behaviour with a test account holding two roles).
 

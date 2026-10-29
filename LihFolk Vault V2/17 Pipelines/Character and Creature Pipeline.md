@@ -268,5 +268,5 @@ Edit-mode gotchas from the reference project: `CreateHumanoidModelFromDescriptio
 
 <!-- related:start -->
 ## Related
-[[Asset Pipelines]] · [[Environment and Level Pipeline]] · [[Icon and Thumbnail Rendering Pipeline]] · [[Batch Processing Tools in Studio]] · [[Data and Config Pipeline - Spreadsheets to Game]] · [[Audio Pipeline]] · [[Build Test and Release Pipeline]] · [[UI Asset Pipeline]]
+[[Asset Pipelines]] · [[Bones and Skinned Meshes]] · [[Environment and Level Pipeline]] · [[Icon and Thumbnail Rendering Pipeline]] · [[Batch Processing Tools in Studio]] · [[Data and Config Pipeline - Spreadsheets to Game]] · [[Audio Pipeline]] · [[Build Test and Release Pipeline]] · [[UI Asset Pipeline]]
 <!-- related:end -->

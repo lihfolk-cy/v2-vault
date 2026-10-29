@@ -55,5 +55,5 @@ Related concepts: [[Click-Through Rate]], [[Accessibility Contrast]], [[Texel De
 
 <!-- related:start -->
 ## Related
-[[Game Icon Design - Readable at Small Sizes]] · [[Draw Calls]] · [[Safe Area]] · [[Triangle Budget]] · [[Shape Language and Silhouette Testing]] · [[Voxel and Blocky Modeling]]
+[[Game Icon Design - Readable at Small Sizes]] · [[Draw Calls]] · [[Safe Area]] · [[Triangle Budget]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[Shape Language and Silhouette Testing]]
 <!-- related:end -->

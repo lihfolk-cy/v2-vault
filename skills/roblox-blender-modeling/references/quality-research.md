@@ -7,7 +7,7 @@ Research for the LihFolk plugin's Blender skill. Compiled 2026-10-28.
 | Label | Meaning |
 |---|---|
 | **Roblox docs** | Stated on create.roblox.com, the Roblox/creator-docs GitHub source, or an official Roblox staff or announcement post |
-| **Measured** | Verified in this session by running bpy in a live **Blender 5.2.0 LTS** instance: operator defaults read via `get_rna_type()`, test meshes built and exported, and the exported FBX/GLB files parsed |
+| **Measured** | Verified by running bpy in a live **Blender 5.2.0 LTS** instance: operator defaults read via `get_rna_type()`, test meshes built and exported, and the exported FBX/GLB files parsed |
 | **Expert practice (source)** | From a named artist, DevForum author, Polycount, 80.lv, and similar. Treat it as convention, not a rule |
 | **Derived** | Arithmetic on documented numbers (the working is shown) |
 | **Proposed** | A LihFolk default chosen by this report where no source gives a number. Tune it by measurement |

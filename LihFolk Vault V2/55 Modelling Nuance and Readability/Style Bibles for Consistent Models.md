@@ -252,5 +252,5 @@ That page is enough for a new modeller to produce a matching barrel on their fir
 
 <!-- related:start -->
 ## Related
-[[Low-Poly and Stylized Modeling]] · [[Shape Language and Silhouette Testing]] · [[Stylised Shop Stand Worked Example]] · [[Hard-Surface Modeling]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[Modeling in Blender for Roblox]]
+[[Low-Poly and Stylized Modeling]] · [[Shape Language and Silhouette Testing]] · [[Stylised Shop Stand Worked Example]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[Hard-Surface Modeling]] · [[Art-Direction Nitpicks - The Principles Behind Them]]
 <!-- related:end -->

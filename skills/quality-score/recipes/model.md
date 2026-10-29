@@ -88,3 +88,30 @@ seams were gone, but the blind score did NOT beat the 22-shell loft build (7.7).
 | Modular snapping | `lf.tile_check` / `lf.grid_check` (T1) + tools/kits/snap_check.py on the shipped .blends; first/last rows must share joints for Y tiling |
 | Fused puff canopies / bushes stay at 6-7 | Radial smooth-union blobs on a UV grid read as "lumpy blob, grid faceting" whatever the colour scheme (4 rounds); pine as ONE lathe passed (8.7) |
 | Organic plant parts (stump skirts, grass blades, petals, dead-tree branches) stuck at 6-7.7 | Single-shell lathe skirts read as "lampshade"; plugged-in branches read as unfused. Needs real fused topology (quad cage + subsurf), not more tuning |
+## Buildings and houses (log cabin blind 8.0 + stone cottage helper test, 2026-10-29)
+Stats: 1 blind-scored house (first 8.0, weighted from 14/18; maker re-score 16/18 unverified), 0 at 9 first try. Builders: `roblox-blender-modeling/scripts/lihfolk_house.py`; method: vault `House Construction Method - Modular Kit Workflow`.
+
+**Defaults that win (first draft):**
+- Scale from the avatar: door 3.6-4 x 7.5-8 studs, storey 10-12 studs to the eave, walls 1-1.4 thick (logs r 0.6), sill or plinth 0.5-0.9.
+- Split by Roblox need: walls / roof / chimney / trim / glow / porch-door / base. Every module's origin is the whole building's bottom centre (`lh.recentre`).
+- One roof function `lh.Gable(hx, eave_z, pitch)` drives the gable courses, the roof, the chimney base and the icicle seats. For block walls put hx on the outer face line.
+- Pitch 45-50, overhang 1.4-1.9 eave and 1.2-1.65 gable; real openings snapped to course lines, plus lintels and sills.
+- Budget per module, measured: walls 4.7-9.2k (building), roof 1.1-2.1k, trim 0.7-2.9k (medium), chimney about 0.75k, glow under 100.
+
+**Pre-empt (missed on the first try):**
+- A4: the soft bevel turns fan caps and box corners into n-gons. `lh.finish_modules` adds Triangulate (min_vertices 5, keep custom normals).
+- Floating parts inside one module (icicles, knobs, firewood): the gate cannot see them. `lh.floating_shells` must report 0.
+- A1 on block walls: count tris before modelling (blocks x about 44 tris after the bevel). Use longer blocks and taller courses, or split the walls into two modules.
+- A5: parts thinner than 3x the bevel width collapse into degenerate faces. Keep bevel_width <= 1/3 of the thinnest part.
+- Layout: frames and shutters running past the corner. Run `lh.check_wall_layout` and keep shutters for walls with room.
+- V5: centre-to-rim end grain reads as "gradients on flat faces" to blind reviewers. Use two flat rings if the style bible says flat colour.
+- V7: 13.4k tris over the building target. Use 8-sided logs, plank decks as one slab, and firewood as one block for villages.
+
+| Miss | Fix |
+|---|---|
+| Gable logs or courses poke through or gap under the roof | Derive each course's half-length from `Gable.half_width_at(z_top)`, never by hand |
+| Logs collide at corners | Offset the gable walls half a course; block walls alternate which wall runs through the corner |
+| Dark squares at block-wall corners | Mortar core strips stop gap/2 + 0.03 behind the end blocks |
+| Icicles hang in the air under the snow lip | Seat them from `roof["snow_under"](x)` just inside the lip, embedded 0.45 |
+| Snow reads as a white board | Rounded chevron (`lc.round_corners` 0.75-1.1) with a 0.45 lip, coloured by normal (top, side, under) |
+| Glowing windows but dark snow in game | Glass in its own module with Neon, plus real Surface or Point lights |

@@ -205,5 +205,5 @@ Three must-fix notes, three paintovers, about 25 minutes of review. The same fee
 
 <!-- related:start -->
 ## Related
-[[Low-Poly and Stylized Modeling]] · [[Keeping a Mixed Asset Library Consistent]] · [[The Gradient Palette Texture Workflow]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Voxel Palettes - Ramps Hue Shifting and Limits]] · [[Clean Stylised Shading - Weighted and Custom Normals]]
+[[Art-Direction Nitpicks - The Principles Behind Them]] · [[Low-Poly and Stylized Modeling]] · [[Keeping a Mixed Asset Library Consistent]] · [[The Gradient Palette Texture Workflow]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Voxel Palettes - Ramps Hue Shifting and Limits]]
 <!-- related:end -->

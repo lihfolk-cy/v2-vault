@@ -37,7 +37,7 @@ All inherit from `Light` (Docs): `Brightness` (default 1), `Color`, `Enabled`, `
 
 **Brightness does not extend range** (Docs). A light with Range 12 and Brightness 50 still stops at 12 studs; it just burns out the middle of its circle. If a light "does not reach", raise `Range`, not `Brightness`.
 
-**Parent to an `Attachment`** for point-specific emission (Docs recommend it for PointLight). An attachment gives you a precise position and orientation without a dedicated part, and SpotLights on attachments aim along the attachment. SurfaceLight needs a `BasePart` face.
+**Parent to an `Attachment`** for point-specific emission (Docs recommend it for PointLight). An attachment gives you a precise position and orientation without a dedicated part, and SpotLights on attachments aim along the attachment. [[SurfaceLight]] needs a `BasePart` face.
 
 Turn on **Show Light Guides** in Studio Settings to see each light's colour and cone (Docs). It removes guesswork when placing spotlights.
 
@@ -274,5 +274,5 @@ See also: [[Lighting Technologies and Settings]], [[Lighting Mood and Time of Da
 
 <!-- related:start -->
 ## Related
-[[Particle Emitters In Depth]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Atmosphere Sky Clouds and Post-Processing]] · [[Beams and Trails]] · [[Slash VFX Recipes - Crescent and Ring]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]]
+[[Particle Emitters In Depth]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[Atmosphere Sky Clouds and Post-Processing]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Beams and Trails]] · [[Slash VFX Recipes - Crescent and Ring]] · [[Escalation and Grandeur Without Clutter]]
 <!-- related:end -->

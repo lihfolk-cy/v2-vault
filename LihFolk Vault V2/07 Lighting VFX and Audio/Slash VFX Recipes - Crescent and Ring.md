@@ -12,7 +12,7 @@ tags: [vfx, slash, crescent, sweep, thrust, cleave, dash, afterimage, impact, ch
 > - Three tones present in every frame: white edge, element body, dark smear
 > - Sweep 3 to 5 frames, hold 1 to 2, erode 10 to 15 (at 30 fps)
 >
-> Cost: TL;DR ~220 tok · whole note ~4.2k tok. Read more: ## 1. The layer recipe · ## 5. Wave 2 presets (same layer approach) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~220 tok · whole note ~4.4k tok. Read more: ## 1. The layer recipe · ## 5. Wave 2 presets (same layer approach) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A stylised sword slash is not one shape. It is a short stack of layers that each do one job: a bright rim that says *where the blade went*, a coloured body that says *what element this is*, a dark smear that gives the bright parts something to stand against, and small debris that says *how hard it hit*. This note gives the layer recipe with numbers for two slash looks (a crescent and a full spin ring), how to build them in Roblox, and what went wrong while building the LihFolk versions. The implementation is the `lihfolk-vfx` skill (`skills/lihfolk-vfx/src/LihFolkVFX.luau`); textures, meshes and previews are in the LihFolk Asset Pack under `VFX/`.
@@ -29,6 +29,11 @@ caster reads as an aura, hides the character and seems to hit behind the back, w
 wave-1 350 deg `SlashRing` reached a 10.0 median after its fixes and was still retired for this reason; the heavy is now
 `SlashSweep` (two layered crescents across the front). The LihFolk module clamps every arc to the front, and the VFX rubric
 scores it as X6 "reads as a frontal attack". Explosions, auras and dashes may be radial or path-shaped.
+
+The one exception is a move that is **explicitly a spin** (the character turns 360 deg or more, such as a whirlwind or a
+3-spin attack): there the effect follows the blade around the body. Even then, make each turn's layer distinct and
+escalating rather than stacking identical rings, keep large layers off the body, and send the finisher forward
+([[Escalation and Grandeur Without Clutter]], [[Spin and Whole-Body Rotation Moves]]).
 
 ## 1. The layer recipe
 
@@ -178,9 +183,9 @@ ring read as a solid pool (use a frosted, broken, fringed ring card); a 9-stud f
 - [ ] Texture and mesh ids are uploads you own (empty until uploaded, never guessed)
 - [ ] Judged in Studio at game distance, not only in a preview render
 
-See also: [[VFX Design Playbook]], [[Beams and Trails]], [[Particle Emitters In Depth]], [[VFX Timing with Animation]], [[VFX Performance Budgets and Culling]], [[Mesh VFX Packs Built in Blender]], [[Dash VFX Presentation on an R15 Rig]].
+See also: [[VFX Readability and Value - Lessons from Blind Reviews]] (general value, clutter, flash and light rules), [[Escalation and Grandeur Without Clutter]] (multi-beat and spin moves), [[VFX Design Playbook]], [[Beams and Trails]], [[Particle Emitters In Depth]], [[VFX Timing with Animation]], [[VFX Performance Budgets and Culling]], [[Mesh VFX Packs Built in Blender]], [[Dash VFX Presentation on an R15 Rig]].
 
 <!-- related:start -->
 ## Related
-[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Ice Ball Cast to Explosion - Approved Recipe]] · [[Light Sources and Shadows]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Hand-Painted and Stylized Texturing]]
+[[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Ice Ball Cast to Explosion - Approved Recipe]] · [[Light Sources and Shadows]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Glossy Icon Style - Owner Reference]] · [[Trim Sheets Atlases and Vertex Colors]]
 <!-- related:end -->

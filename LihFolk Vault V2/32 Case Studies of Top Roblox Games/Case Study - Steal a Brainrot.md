@@ -48,7 +48,7 @@ Compare the visit count with Grow a Garden. In October 2025 Steal a Brainrot had
 
 Not verified:
 - Revenue. No primary figure found.
-- Exact peak date in October 2025. PocketGamer.biz did not give one; RoWatcher attributes a 25.8 million figure to a "Yin Yang" event. The two numbers differ and I could not reconcile them.
+- Exact peak date in October 2025. PocketGamer.biz did not give one; RoWatcher attributes a 25.8 million figure to a "Yin Yang" event. The two numbers differ and we could not reconcile them.
 - Rarity ladder. Guide sites list different tier sets (eight or nine tiers, names such as Common, Rare, Epic, Legendary, Mythic, Brainrot God, Secret, OG). I describe the shape, not a definitive list.
 
 ## 2. Click-through: title, icon and thumbnails
@@ -71,7 +71,7 @@ Not verified:
 
 ### How it changes per update (Press and public trackers)
 
-The game ships a named update roughly every week (RoWatcher counted Update 44 by early 2026) and the thumbnails always show the newest unit. Event peaks coincide with announced "admin abuse" events, crossovers and concerts, each pre-announced on social media. I could not recover a dated archive of every title variant.
+The game ships a named update roughly every week (RoWatcher counted Update 44 by early 2026) and the thumbnails always show the newest unit. Event peaks coincide with announced "admin abuse" events, crossovers and concerts, each pre-announced on social media. We could not recover a dated archive of every title variant.
 
 See [[Thumbnails Icons and Store Page]], [[Short-Form Video Marketing]] and [[Update Cadence and Hype Cycles]].
 

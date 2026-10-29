@@ -48,7 +48,7 @@ function Director.new(roster: { EnemyDef }, maxAlive: number): Director
 	}, Director)
 end
 
-function Director.tick(self: Director, dt: number, rate: number, spawn: (EnemyDef) -> boolean)
+function Director.tick(self: Director, dt: number, rate: number, trySpawn: (EnemyDef) -> boolean)
 	self.credits = math.min(self.cap, self.credits + rate * dt)
 	if self.alive >= self.maxAlive then return end
 
@@ -65,7 +65,7 @@ function Director.tick(self: Director, dt: number, rate: number, spawn: (EnemyDe
 	for _, e in options do
 		roll -= e.weight
 		if roll <= 0 then
-			if spawn(e) then
+			if trySpawn(e) then
 				self.credits -= e.cost
 				self.alive += 1
 			end
@@ -77,7 +77,7 @@ end
 return Director
 ```
 
-`spawn` returns false when no valid spawn point exists, so credits are not burned. Decrement `alive` on despawn as well as death.
+`trySpawn` returns false when no valid spawn point exists, so credits are not burned. Decrement `alive` on despawn as well as death.
 
 ## 2. Intensity and pacing
 
@@ -152,5 +152,5 @@ Author spawn points as tagged parts (`CollectionService` tag `SpawnPoint`) with 
 
 <!-- related:start -->
 ## Related
-[[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses]] · [[Pathfinding Edge Cases and Fallbacks]] · [[Combat Systems Architecture]] · [[Status Effects Buffs and Stacking Rules]] · [[Behaviour Trees Utility AI and State Machines for NPCs]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Downed, Revive and Bleed-Out States]]
+[[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Pathfinding Edge Cases and Fallbacks]] · [[AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses]] · [[Combat Systems Architecture]] · [[Behaviour Trees Utility AI and State Machines for NPCs]] · [[Status Effects Buffs and Stacking Rules]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Downed, Revive and Bleed-Out States]]
 <!-- related:end -->

@@ -181,5 +181,5 @@ Concrete rules of thumb:
 
 <!-- related:start -->
 ## Related
-[[Discovery and Monetization Changes 2025-2026]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Shop with Game Passes and Developer Products End to End]] · [[Paid Random Items and Odds Disclosure in Practice]] · [[Refunds Chargebacks and Purchase Support]] · [[Economy Inflation Sinks and Faucets Math]] · [[Community Building]] · [[Publishing an Experience]] · [[Age Checks and Safety Features]]
+[[Discovery and Monetization Changes 2025-2026]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[AI Pitfalls - Data and Monetization]] · [[Paid Random Items and Odds Disclosure in Practice]] · [[Refunds Chargebacks and Purchase Support]] · [[Economy Inflation Sinks and Faucets Math]] · [[Community Building]] · [[Publishing an Experience]] · [[Age Checks and Safety Features]]
 <!-- related:end -->

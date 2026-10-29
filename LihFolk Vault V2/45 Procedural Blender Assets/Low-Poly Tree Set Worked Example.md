@@ -89,5 +89,5 @@ Related: [[Foliage Props and Scatter]], [[Procedural Blender Assets Start Here]]
 
 <!-- related:start -->
 ## Related
-[[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Stylised Shop Stand Worked Example]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[Dramatic Showcase Renders in Eevee]] · [[Chibi Character Rules in Practice]] · [[Low-Poly Creature From a Flat Reference Sheet]] · [[Blender 5 Python Gotchas for Headless Builds]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[Mesh VFX Packs Built in Blender]] · [[Stylised Weapons From a Concept]]
+[[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Stylised Shop Stand Worked Example]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[Stylised Log Cabin Worked Example]] · [[Dramatic Showcase Renders in Eevee]] · [[Chibi Character Rules in Practice]] · [[Low-Poly Creature From a Flat Reference Sheet]] · [[Blender 5 Python Gotchas for Headless Builds]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[Mesh VFX Packs Built in Blender]]
 <!-- related:end -->

@@ -497,5 +497,5 @@ The reference project's backpack was a fixed 1160 x 720 panel scaled to fit 84% 
 
 <!-- related:start -->
 ## Related
-[[Inventory QoL - Sort Filter Search Stack and Lock]] · [[Layout - Scale Offset and Constraints]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Declarative UI - React-Lua and Fusion]] · [[HUD Design]] · [[Safe Areas and Insets]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[Notification and Toast Systems]]
+[[Inventory QoL - Sort Filter Search Stack and Lock]] · [[Layout - Scale Offset and Constraints]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Declarative UI - React-Lua and Fusion]] · [[HUD Design]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[Safe Areas and Insets]] · [[Notification and Toast Systems]]
 <!-- related:end -->

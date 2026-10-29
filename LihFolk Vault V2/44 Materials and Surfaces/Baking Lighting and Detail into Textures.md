@@ -67,7 +67,7 @@ Two refinements that help a lot:
 
 ### Using the CC0 AO maps
 
-Most texture sets in [[CC0 Texture and HDRI Library]] include `_ao_2k.jpg`, and the `_arm_2k.jpg` file packs AO in its red channel. Roblox ignores both, so combine them into the colour map before upload. For tiling MaterialVariants keep strength low (0.2 to 0.3): tiled AO repeats with the tile and becomes part of the pattern you are trying to hide.
+Most CC0 PBR texture sets (sources in [[Links - Free and CC0 asset libraries]]) include `_ao_2k.jpg`, and the `_arm_2k.jpg` file packs AO in its red channel. Roblox ignores both, so combine them into the colour map before upload. For tiling MaterialVariants keep strength low (0.2 to 0.3): tiled AO repeats with the tile and becomes part of the pattern you are trying to hide.
 
 ### A Blender script for the composite
 
@@ -163,7 +163,7 @@ The catch is avatars and anything that moves: they are lit by the engine, not by
 
 ### Match the bake environment to the game sky
 
-If the bake uses Blender's default grey world, bounce light will be neutral grey while the Roblox sky is blue and warm. Use the same HDRI for the Blender world that you convert into the game's `Sky` (the vault's 997 HDRIs are in [[CC0 Texture and HDRI Library]]). Baked bounce colour then agrees with the sky the player sees.
+If the bake uses Blender's default grey world, bounce light will be neutral grey while the Roblox sky is blue and warm. Use the same HDRI for the Blender world that you convert into the game's `Sky` (free CC0 HDRI sources are in [[Links - Free and CC0 asset libraries]]). Baked bounce colour then agrees with the sky the player sees.
 
 ## 7. Consolidation bakes: many materials into one set
 
@@ -222,7 +222,7 @@ Run every baked asset through four checks:
 
 ## See also
 
-[[Materials and Surfaces Start Here]] · [[Texturing and PBR Baking]] · [[Normal Maps and Detail Baking]] · [[Hand-Painted and Stylized Texturing]] · [[Trim Sheets Atlases and Vertex Colors]] · [[CC0 Texture and HDRI Library]] · [[Lighting Technologies and Settings]] · [[Stylized Lighting Recipes]] · [[Light Sources and Shadows]] · [[Blender Automation with Python]] · [[SurfaceAppearance PBR Workflow]] · [[Stylised vs Realistic Material Pipelines]]
+[[Materials and Surfaces Start Here]] · [[Texturing and PBR Baking]] · [[Normal Maps and Detail Baking]] · [[Hand-Painted and Stylized Texturing]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Links - Free and CC0 asset libraries]] · [[Lighting Technologies and Settings]] · [[Stylized Lighting Recipes]] · [[Light Sources and Shadows]] · [[Blender Automation with Python]] · [[SurfaceAppearance PBR Workflow]] · [[Stylised vs Realistic Material Pipelines]]
 
 ## Connected notes
 <!-- auto-links:start -->

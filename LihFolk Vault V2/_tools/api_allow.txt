@@ -13,3 +13,17 @@
 08 Animation/08 Snippets/Snippets - Building and Sampling Clips.md | AnimationConstraint.C0  # listed as a mistake
 08 Animation/01 Fundamentals/The Default Animate Script.md | wait()  # quotes Roblox's own Animate script
 10 Game Design and Genres/Genre Playbook - Tycoons.md | wait()  # a maths formula wait(k), not the Luau global
+15 AI Tools/AI Pitfalls - Stale APIs and Luau.md | :SetPrimaryPartCFrame()  # left column of the "stale -> current" table; PivotTo is the recommendation
+15 AI Tools/AI Pitfalls - Stale APIs and Luau.md | MarketplaceService:UserOwnsGamePass  # a name AI models invent; the table gives the real UserOwnsGamePassAsync
+49 Roblox Platform Features/Engine and API Changes 2025-2026.md | Player:LoadCharacter  # deprecated-name column of the Async rename table / "before" example
+49 Roblox Platform Features/Engine and API Changes 2025-2026.md | Player:IsInGroup  # deprecated-name column of the Async rename table / "before" example
+49 Roblox Platform Features/Engine and API Changes 2025-2026.md | Player:IsFriendsWith  # deprecated-name column of the Async rename table / "before" example
+49 Roblox Platform Features/Engine and API Changes 2025-2026.md | Humanoid:ApplyDescription  # deprecated-name column of the Async rename table / "before" example
+49 Roblox Platform Features/Engine and API Changes 2025-2026.md | Players:CreateHumanoidModelFromDescription  # deprecated-name column of the Async rename table / "before" example
+49 Roblox Platform Features/Engine and API Changes 2025-2026.md | Players:GetHumanoidDescriptionFromUserId  # deprecated-name column of the Async rename table / "before" example
+49 Roblox Platform Features/Engine and API Changes 2025-2026.md | TeleportService:ReserveServer  # deprecated-name column of the Async rename table / "before" example
+49 Roblox Platform Features/Engine and API Changes 2025-2026.md | Plugin:CreateDockWidgetPluginGui  # deprecated-name column of the Async rename table / "before" example
+49 Roblox Platform Features/Engine and API Changes 2025-2026.md | StudioService:PromptImportFile  # deprecated-name column of the Async rename table / "before" example
+49 Roblox Platform Features/Engine and API Changes 2025-2026.md | MarketplaceService:GetProductInfo  # deprecated-name column of the Async rename table / "before" example
+49 Roblox Platform Features/Engine and API Changes 2025-2026.md | :PromptImportFile()  # deprecated-name column of the Async rename table
+49 Roblox Platform Features/Engine and API Changes 2025-2026.md | :GetProductInfo()  # the "-- before" half of a before/after migration example

@@ -40,7 +40,7 @@ Source labels used below: **Observed in the live game (October 2026)** means the
 | Earlier peak | Over 1.1 million concurrent around Christmas 2024 | Public stats site (RoWatcher news article; weak source) |
 | Visits at acquisition | About 60 billion | Press (Voldex release coverage, February 2025) |
 
-Things I could not verify: I could not open the Business Wire release directly (the fetch was blocked), so the acquisition facts come from search result summaries of that release and secondary coverage; the date (4 February 2025) and the 60 billion visits figure agree across sources. RoWatcher's own game page lists a 1.2M peak in "July 2025", which conflicts with both its own news article and Rolimons, so I use the 19 December 2025 record. Typical daily concurrency outside events is reported by trackers as roughly 300,000 to 500,000, which matches the 334,292 snapshot I read, but no source gives a reliable average. Revenue: one tracker shows a monthly estimate with low confidence; I do not repeat it.
+Things we could not verify: We could not open the Business Wire release directly (the fetch was blocked), so the acquisition facts come from search result summaries of that release and secondary coverage; the date (4 February 2025) and the 60 billion visits figure agree across sources. RoWatcher's own game page lists a 1.2M peak in "July 2025", which conflicts with both its own news article and Rolimons, so I use the 19 December 2025 record. Typical daily concurrency outside events is reported by trackers as roughly 300,000 to 500,000, which matches the 334,292 snapshot I read, but no source gives a reliable average. Revenue: one tracker shows a monthly estimate with low confidence; I do not repeat it.
 
 ### Ownership history and why it matters
 
@@ -74,7 +74,7 @@ Unverified: Voldex's use of sponsored ads or thumbnail A/B tests for this game. 
 
 ## 3. The first five minutes
 
-Sources: beginner guides (Press, mixed quality, 2024 to 2026) and the store description. I did not play.
+Sources: beginner guides (Press, mixed quality, 2024 to 2026) and the store description. Not played first-hand.
 
 1. **Spawn into the town with no tutorial gate.** There is no forced tutorial and nothing to complete before you can move. You are standing in a living town with up to 29 other players.
 2. **One menu does everything.** Guides describe a single menu (keyboard shortcut or a side toolbar; guides disagree on layout across versions) with tabs for Houses, Vehicles, Avatar and more.
@@ -112,7 +112,7 @@ There are very few, by design. What keeps players coming back:
 
 ### Daily and timed systems
 
-Brookhaven largely avoids daily login streaks and timers. Its timed systems are **events**. Observed in the live game (October 2026): the description advertises a Halloween event where players "Collect Candy Corn to unlock special Halloween Tools, Props, Vehicles and a House". Guides for this event (Press, October 2026) report 60 candy corn pieces hidden around the map with rewards unlocking at milestones, an event window of 23 October to 6 November 2026, and a Candy Corn Radar that can be unlocked for 9 Robux **or by watching an ad**. That last detail is notable: a rewarded video ad as an alternative to a tiny purchase. I could not confirm the radar details from the owner; treat them as guide-reported.
+Brookhaven largely avoids daily login streaks and timers. Its timed systems are **events**. Observed in the live game (October 2026): the description advertises a Halloween event where players "Collect Candy Corn to unlock special Halloween Tools, Props, Vehicles and a House". Guides for this event (Press, October 2026) report 60 candy corn pieces hidden around the map with rewards unlocking at milestones, an event window of 23 October to 6 November 2026, and a Candy Corn Radar that can be unlocked for 9 Robux **or by watching an ad**. That last detail is notable: a rewarded video ad as an alternative to a tiny purchase. We could not confirm the radar details from the owner; treat them as guide-reported.
 
 The event structure is a **collectible hunt across the existing map**, which reuses the town instead of adding a new area, rewards exploration, and gives players a reason to visit corners they never use. See [[Ads and Rewarded Video]] and [[Live Ops Events and Updates]].
 
@@ -166,7 +166,7 @@ What the list shows:
 4. **Private servers as a product.** The long private server benefit list in the description is a sales page for private servers, which Roblox sells on behalf of the creator. Check current private server pricing rules in [[Subscriptions and Premium Payouts]] and [[Monetization Overview]].
 5. **Free core.** Houses, cars and clothes are free; Press coverage notes no essential content is locked behind passes. That keeps the stage full, which is what paying players need too (a roleplay town with empty servers is worthless).
 
-I could not see developer products from a public endpoint. The 9 Robux event radar reported by guides suggests small developer products are used for events.
+We could not see developer products from a public endpoint. The 9 Robux event radar reported by guides suggests small developer products are used for events.
 
 ---
 
@@ -226,5 +226,5 @@ One district (6 to 8 purpose buildings), 10 free houses with a claim and lock sy
 
 <!-- related:start -->
 ## Related
-[[Case Study - Pet Simulator 99]] · [[Case Study - Steal a Brainrot]] · [[Case Study - Jailbreak]] · [[Case Study - Grow a Garden]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - Dead Rails]] · [[Case Study - Forsaken]] · [[Case Study - The Strongest Battlegrounds]]
+[[Case Study - Pet Simulator 99]] · [[Case Study - Steal a Brainrot]] · [[Case Study - Grow a Garden]] · [[Case Study - Jailbreak]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - Dead Rails]] · [[Case Study - Forsaken]] · [[Case Study - The Strongest Battlegrounds]]
 <!-- related:end -->

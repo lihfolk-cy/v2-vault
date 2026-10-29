@@ -151,5 +151,5 @@ Humanoid zombies at scale cost physics, replication and pathfinding time. Patter
 
 <!-- related:start -->
 ## Related
-[[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Genre Playbook - Battle Royale]] · [[Genre Playbook - Horror and Story]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Social Deduction and Murder Mystery]] · [[Genre Playbook - Tycoons]] · [[Genre Playbook - Naval and Open-Sea Adventure]] · [[Genre Playbook - RNG and Collection Games]] · [[Simulator and RNG Genre Teardown]]
+[[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Genre Playbook - Battle Royale]] · [[Genre Playbook - Horror and Story]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Tycoons]] · [[Genre Playbook - Social Deduction and Murder Mystery]] · [[Genre Playbook - Naval and Open-Sea Adventure]] · [[Genre Playbook - RNG and Collection Games]] · [[Genre Playbook - Puzzle and Escape Rooms]]
 <!-- related:end -->

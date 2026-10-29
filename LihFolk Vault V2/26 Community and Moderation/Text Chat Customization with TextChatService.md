@@ -7,12 +7,12 @@ tags: [community, moderation, chat, textchatservice, safety, luau, ui, type/guid
 > [!tldr] TL;DR
 > - Tags or colours vanish after adding a module: Two scripts assigned the same callback slot
 > - Some players "never answer": They cannot see each other's chat because of age groups; design for it
-> - Admin command works in Studio, fails live: Rank check against the wrong group id, or `GetRankInGroup` failing...
+> - Admin command works in Studio, fails live: Rank check against the wrong group id, or the group lookup...
 > - No player text travels through remotes; all chat via `TextChatService`
 > - No code reads, logs or reacts to message text (except `TextChatCommand`)
 > - Each callback owned by exactly one module; no yields inside
 >
-> Cost: TL;DR ~170 tok · whole note ~5.3k tok. Read more: ## 2. Platform-integrated chat (Announcement and Roblox docs, October 2026) · ## 3. The object model · ## 11. Common mistakes and how to spot them · ## 12. Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.4k tok. Read more: ## 2. Platform-integrated chat (Announcement and Roblox docs, October 2026) · ## 3. The object model · ## 11. Common mistakes and how to spot them · ## 12. Checklist
 <!-- tldr:end -->
 
 Text chat is where players talk to each other, which makes it the single most safety-sensitive feature in most games. This note goes past the basics in [[Age Checks and Safety Features]] (all player text through `TextChatService`, filtering, direct-chat eligibility) and covers what you can actually customize: channels, delivery rules, chat tags, commands, bubbles, system messages, and the October 2026 change called **platform-integrated chat**, which removes your code's access to message text and will be required for every game in 2027. If you are designing a chat feature today, read section 2 before you write a line, because some popular customizations are on a deprecation clock.
@@ -204,6 +204,7 @@ Commands are the one chat-reading feature that survives platform-integrated chat
 -- Reviewed, not run. Connect on the server; never trust a client-side rank check.
 local TextChatService = game:GetService("TextChatService")
 local Players = game:GetService("Players")
+local GroupService = game:GetService("GroupService")
 
 local GROUP_ID = 0 -- your group
 local MIN_RANK = 200 -- your moderator rank
@@ -216,7 +217,9 @@ command.Parent = TextChatService
 
 local function isModerator(player: Player): boolean
 	local ok, rank = pcall(function()
-		return player:GetRankInGroup(GROUP_ID)
+		-- highest role's Rank; Player:GetRankInGroup(Async) is deprecated
+		local info = GroupService:GetRolesInGroupAsync(player.UserId, GROUP_ID)
+		return if info.IsMember and info.Roles[1] then info.Roles[1].Rank else 0
 	end)
 	return ok and rank >= MIN_RANK
 end
@@ -325,7 +328,7 @@ Party and guild channels need a server-created `TextChannel`, members added with
 |---|---|
 | Tags or colours vanish after adding a module | Two scripts assigned the same callback slot |
 | Some players "never answer" | They cannot see each other's chat because of age groups; design for it |
-| Admin command works in Studio, fails live | Rank check against the wrong group id, or `GetRankInGroup` failing without `pcall` |
+| Admin command works in Studio, fails live | Rank check against the wrong group id, or the group lookup (`GroupService:GetRolesInGroupAsync`) failing without `pcall` |
 | Chat freezes for everyone | A yielding call inside a callback |
 | Warning spam about empty `Text` | Platform-integrated chat enabled while code still reads `Text` |
 | Quick-chat wheel stopped sending | `SendAsync` used for presets; move to Quick Words |

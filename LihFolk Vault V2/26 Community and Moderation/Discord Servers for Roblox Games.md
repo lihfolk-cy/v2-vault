@@ -144,7 +144,7 @@ Keep them separate by default. A Discord ban for spam should not ban someone fro
 Developers often want game events in Discord (rare drops, reports, errors).
 - **Never post player data** (names with report details, chat, anything about a minor) to a Discord channel. Moderation evidence belongs in your own store with access control ([[Player Reports and In-Game Moderation]]).
 - **Server errors and telemetry** go to a staff-only channel, or better to a proper telemetry pipeline ([[Crash and Error Telemetry]]).
-- **Discord webhooks from Roblox game servers**: historically Discord limited or blocked requests from Roblox servers and developers used proxies. I could not confirm the current state for October 2026 (unverified). If you use a proxy, you are sending data through a third party; keep it to non-personal data, store the webhook URL in experience secrets, and rate-limit ([[HttpService and External APIs]]).
+- **Discord webhooks from Roblox game servers**: historically Discord limited or blocked requests from Roblox servers and developers used proxies. We could not confirm the current state for October 2026 (unverified). If you use a proxy, you are sending data through a third party; keep it to non-personal data, store the webhook URL in experience secrets, and rate-limit ([[HttpService and External APIs]]).
 - **Public feeds** of in-game achievements are better shown in-game, where every player sees them.
 
 ---

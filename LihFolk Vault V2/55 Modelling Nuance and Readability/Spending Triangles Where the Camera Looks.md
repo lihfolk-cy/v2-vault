@@ -200,5 +200,5 @@ Typical findings: a "bottom" share above about 10 percent on a grounded prop mea
 
 <!-- related:start -->
 ## Related
-[[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Proportion Exaggeration and Gameplay Distance]] · [[Modeling Fundamentals for Games]] · [[Stylised Shop Stand Worked Example]] · [[Keeping a Mixed Asset Library Consistent]] · [[Critiquing a Model - Paintovers and Iteration]]
+[[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Proportion Exaggeration and Gameplay Distance]] · [[Modeling Fundamentals for Games]] · [[Stylised Shop Stand Worked Example]] · [[Critiquing a Model - Paintovers and Iteration]] · [[Art-Direction Nitpicks - The Principles Behind Them]]
 <!-- related:end -->

@@ -1,5 +1,6 @@
 ---
 tags: [ai, benchmark, evaluation, vault, knowledge-base, accuracy, tokens, lihfolk, type/reference, area/ai, level/intermediate]
+verified: 2026-10-28
 ---
 # Benchmark - Does a Knowledge Vault Make AI Better at Roblox
 
@@ -14,8 +15,6 @@ tags: [ai, benchmark, evaluation, vault, knowledge-base, accuracy, tokens, lihfo
 >
 > Cost: TL;DR ~140 tok · whole note ~1.3k tok. Read more: ## 4. What this means for using a vault · ## 5. Designing your own benchmark · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
-verified: 2026-10-28
 
 Does giving an AI model a curated Roblox knowledge vault make its answers better, and what does that cost? This note reports LihFolk Benchmark v1, run on this vault. All numbers are **Measured** in this project from a single run per arm, so treat small differences as noise.
 
@@ -92,5 +91,5 @@ Does giving an AI model a curated Roblox knowledge vault make its answers better
 
 <!-- related:start -->
 ## Related
-[[AI Asset Pipelines - Scoring, Reviewers and Spot Checks]] · [[Agent Orchestration - Sub-Agents, Hooks and Skill Costs]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Windows Tooling Pitfalls for Agent Pipelines]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[AI Pitfalls - Assets and Import]] · [[Who Owns AI-Generated Code and Assets]] · [[AI Agents and Autonomous Workflows]]
+[[AI Asset Pipelines - Scoring, Reviewers and Spot Checks]] · [[Agent Orchestration - Sub-Agents, Hooks and Skill Costs]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[Windows Tooling Pitfalls for Agent Pipelines]] · [[AI Pitfalls - Assets and Import]] · [[Who Owns AI-Generated Code and Assets]] · [[AI Agents and Autonomous Workflows]]
 <!-- related:end -->

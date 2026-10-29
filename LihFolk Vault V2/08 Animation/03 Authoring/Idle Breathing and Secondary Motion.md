@@ -210,5 +210,5 @@ Upper-body attacks and casts play over the idle's legs. If the idle has big hip 
 
 <!-- related:start -->
 ## Related
-[[Timing Spacing and Frame Charts]] · [[R15 Run Cycle Key Poses]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[Spec-Driven Move Authoring]] · [[Combat Animation Craft]] · [[Animating Creatures and Monsters]] · [[Animation Quality Standard]] · [[Multi-Bone IK - FABRIK and CCD]]
+[[Timing Spacing and Frame Charts]] · [[R15 Run Cycle Key Poses]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[Spec-Driven Move Authoring]] · [[Locomotion Clip Lessons - Jump, Sprint, Idle]] · [[Combat Animation Craft]] · [[Animating Creatures and Monsters]] · [[Animation Quality Standard]]
 <!-- related:end -->

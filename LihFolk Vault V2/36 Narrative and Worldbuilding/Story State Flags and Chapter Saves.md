@@ -130,5 +130,5 @@ A dev panel (admin only) that shows a player's chapter, checkpoint and flags gro
 
 <!-- related:start -->
 ## Related
-[[Writing Dialogue for Roblox Players]] · [[Skippable Tutorials and Replayable Tips]] · [[Naming Items Zones and Abilities]] · [[Cookbook - Data and Saving]] · [[Server Shutdowns Soft Updates and Migration]] · [[Localization-Ready Writing]]
+[[Writing Dialogue for Roblox Players]] · [[Skippable Tutorials and Replayable Tips]] · [[Naming Items Zones and Abilities]] · [[Cookbook - Data and Saving]] · [[Session Lock]] · [[Localization-Ready Writing]]
 <!-- related:end -->

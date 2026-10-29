@@ -7,10 +7,10 @@ tags: [atlas, api, type/atlas, area/physics, area/gameplay, api/SetNetworkOwner]
 > [!tldr] TL;DR
 > - `SetNetworkOwner` needs the part unanchored and in the workspace.
 > - Avoid: Leaving boss NPCs on automatic ownership -> `SetNetworkOwner(nil)` after spawn.
+> - Avoid: Weld without ownership change -> Root priority plus `SetNetworkOwner(grabber)` (Grabs, Carries and Throws - Moving...
 > - Avoid: Elevator on automatic ownership -> `SetNetworkOwner(nil)` (Standing on Moving Vehicles and Platforms - Keeping Players...
-> - Either `SetNetworkOwner(nil)` or anchor parked cars.
 >
-> Cost: TL;DR ~130 tok · whole note ~690 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~660 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -22,9 +22,8 @@ API snapshot: member of `BasePart` (`_tools/roblox_api.json`, docs build of 2026
 ## Key facts
 
 - Avoid: Leaving boss NPCs on automatic ownership -> `SetNetworkOwner(nil)` after spawn. ([[Network Ownership]])
+- Avoid: Weld without ownership change -> Root priority plus `SetNetworkOwner(grabber)` ([[Grabs, Carries and Throws - Moving Players Safely]])
 - Avoid: Elevator on automatic ownership -> `SetNetworkOwner(nil)` ([[Standing on Moving Vehicles and Platforms - Keeping Players Glued]])
-- Either `SetNetworkOwner(nil)` or anchor parked cars. ([[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]])
-- Ownership: after welding, call `SetNetworkOwner(grabberPlayer)` on the grabber's root (the assembly root). ([[Grabs, Carries and Throws - Moving Players Safely]])
 
 ## Mentioned in
 

@@ -6,11 +6,11 @@ tags: [atlas, concept, type/atlas, area/animation, area/vfx]
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - Impact frames are cheap in Roblox: a full-screen `Frame` (white, or an `ImageLabel` with a negative-looking texture) shown for...
+> - Avoid: Flash on the impact frame hiding the landing.
 > - Impact frames play inside the hit-stop: 1 or 2 frames of a high-contrast or negative image, at 1/30 s per frame (at least one...
 > - Anything that covers a large part of the screen with a sudden brightness change goes through the gate: impact frames, white...
-> - Impact frames, screen-wide white flashes, and strobing rarity reveals are the risky effects in Roblox games.
 >
-> Cost: TL;DR ~170 tok · whole note ~540 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~540 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -19,10 +19,10 @@ Impact frames are cheap in Roblox: a full-screen `Frame` (white, or an `ImageLab
 
 ## Key facts
 
+- Avoid: Flash on the impact frame hiding the landing. ([[Ice Ball Cast to Explosion - Approved Recipe]])
 - Impact frames play inside the hit-stop: 1 or 2 frames of a high-contrast or negative image, at 1/30 s per frame (at least one rendered frame). ([[Camera Shake and Camera FX]])
 - Anything that covers a large part of the screen with a sudden brightness change goes through the gate: impact frames, white flashes, lightning on the sky, full-screen colour inversions, strobe reveals. ([[Motion Sensitivity and Camera Comfort]])
 - Impact frames, screen-wide white flashes, and strobing rarity reveals are the risky effects in Roblox games. ([[Accessibility]])
-- Use `Squash` sparingly for impact frames. ([[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]])
 
 ## Mentioned in
 

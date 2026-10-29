@@ -12,7 +12,7 @@ tags: [gameplay, characters, classes, character-select, rigs, morphs, humanoidde
 > - Look applied by the right method per class, with pcall and fallbacks.
 > - Custom rigs complete; character scripts present; ownership and camera correct.
 >
-> Cost: TL;DR ~160 tok · whole note ~2.4k tok. Read more: ## 2. Three ways to apply a look · ## 3. Swapping to a custom rig · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~2.3k tok. Read more: ## 2. Three ways to apply a look · ## 3. Swapping to a custom rig · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A class system (knight, mage, ranger) or a character roster (pick a hero) changes three things at once: **stats and abilities** (data), **appearance** (avatar or a custom rig) and sometimes **skeleton** (R15 avatar vs a custom creature). Each has a different Roblox mechanism and different traps. [[Custom Characters and StarterCharacter]] covers a single custom rig for everyone; this note covers choosing per player at runtime: the class data model, the three ways to apply a look, swapping rigs safely, respawn flow, and saving the choice.
@@ -45,8 +45,8 @@ Everything downstream (combat, UI, sounds, hitboxes) reads the class id from one
 
 | Method | How | Keeps the player's avatar? | Use for |
 |---|---|---|---|
-| **Outfit over avatar** | `Humanoid:ApplyDescription(desc)` on the server, modifying only some fields (clothing, accessories, colours, body scale) | Partially | Classes that are "you, in knight gear" |
-| **Full HumanoidDescription** | `player:LoadCharacterWithHumanoidDescription(desc)` | No | Fixed hero looks on standard R15 |
+| **Outfit over avatar** | `Humanoid:ApplyDescriptionAsync(desc)` on the server, modifying only some fields (clothing, accessories, colours, body scale) | Partially | Classes that are "you, in knight gear" |
+| **Full HumanoidDescription** | `player:LoadCharacterWithHumanoidDescriptionAsync(desc)` | No | Fixed hero looks on standard R15 |
 | **Custom rig** | Clone a rig model and assign it as `player.Character` | No | Creatures, non-humanoid skeletons, stylised heroes |
 
 References (**Roblox docs**): https://create.roblox.com/docs/reference/engine/classes/Humanoid#ApplyDescription, https://create.roblox.com/docs/reference/engine/classes/Player#LoadCharacterWithHumanoidDescription, https://create.roblox.com/docs/characters/appearance.
@@ -68,7 +68,7 @@ Players.CharacterAutoLoads = false -- we spawn characters ourselves
 local function spawnAs(player: Player, def: { id: string, customRig: string?, stats: { maxHealth: number, walkSpeed: number } }, at: CFrame)
 	local template = def.customRig and ServerStorage.Rigs:FindFirstChild(def.customRig)
 	if not (template and template:IsA("Model")) then
-		player:LoadCharacter() -- fall back to the avatar
+		player:LoadCharacterAsync() -- fall back to the avatar
 		return
 	end
 	local rig = template:Clone()
@@ -77,7 +77,7 @@ local function spawnAs(player: Player, def: { id: string, customRig: string?, st
 	local root = rig:FindFirstChild("HumanoidRootPart")
 	if not (hum and root and root:IsA("BasePart")) then
 		rig:Destroy()
-		player:LoadCharacter()
+		player:LoadCharacterAsync()
 		return
 	end
 	hum.MaxHealth = def.stats.maxHealth
@@ -152,5 +152,5 @@ Changing class mid-match: only at spawn points or between rounds; changing on th
 
 <!-- related:start -->
 ## Related
-[[HumanoidDescription and Outfit Systems]] · [[Downed, Revive and Bleed-Out States]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Tools and Inventory Systems]] · [[Combat Systems Architecture]] · [[Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers]] · [[Spawning Teams and Rounds]] · [[Grabs, Carries and Throws - Moving Players Safely]]
+[[HumanoidDescription and Outfit Systems]] · [[Cookbook - Players and Characters]] · [[Downed, Revive and Bleed-Out States]] · [[Tools and Inventory Systems]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers]] · [[Spawning Teams and Rounds]]
 <!-- related:end -->

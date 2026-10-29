@@ -27,12 +27,13 @@ The short version:
 | [[Low-Poly Tree Set Worked Example]] | Oak, pine and birch at 126-578 triangles following the vault tree recipe, and the icosphere subdivision trap |
 | [[Low-Poly Creature From a Flat Reference Sheet]] | A quadruped from a three-view sheet: lofted sections, voxel fuse, carved facets, palette atlas colour, reach-normalised skinning, rotations-only walk |
 | [[Stylised Shop Stand Worked Example]] | A market stand in about 110 bevelled parts: varied planks, small tilts, a scalloped striped awning, font-curve sign, the slope sign and brace length fixes |
+| [[Stylised Log Cabin Worked Example]] | A snowy log cabin in 8 modules (13.4k tris): interlocking log courses, gable logs cut by the roof, rounded snow with seated icicles, triangulate-after-bevel and a whole-model floating-shell scan. The general method for any house is [[House Construction Method - Modular Kit Workflow]] |
 | [[Dash VFX Presentation on an R15 Rig]] | A dash ability clip on the R15_Blocky rig: additive glow, afterimages, UV-gradient ribbons, burst, camera shake, bloom, MP4 output |
 | [[Blender 5 Python Gotchas for Headless Builds]] | API changes and traps hit during these builds (compositor, glare, icosphere levels, bmesh faces, edits) |
 
 ## Build scripts
 
-The `scripts` folder holds the build scripts behind these notes (boss owl and its pose, chibi chicken, cosmic sword scene, celestial gate scene, tree set, mesh VFX pack, quadruped wolf, shop stand, dash presentation; the dash script loads the rig from `18 Rigs and Skeletons/R15_Blocky`). Run any of them with `blender -b --factory-startup --python <script>.py`; renders and exports land in a `scripts/out` folder. Treat the code as reviewed working examples: it ran in Blender 5.2 for these builds, but read it before running.
+The `scripts` folder holds the build scripts behind these notes (boss owl and its pose, chibi chicken, cosmic sword scene, celestial gate scene, tree set, mesh VFX pack, quadruped wolf, shop stand, log cabin, dash presentation; the dash script loads the rig from `18 Rigs and Skeletons/R15_Blocky`). Run any of them with `blender -b --factory-startup --python <script>.py`; renders and exports land in a `scripts/out` folder. Treat the code as reviewed working examples: it ran in Blender 5.2 for these builds, but read it before running.
 
 ## Related notes elsewhere
 

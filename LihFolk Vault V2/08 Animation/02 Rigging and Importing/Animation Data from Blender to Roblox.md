@@ -311,5 +311,5 @@ Clips do not have to exist as Pose instances at all. The reference project shipp
 
 <!-- related:start -->
 ## Related
-[[Weapon Rig Player]] · [[Pipeline - Importing Animated Enemies]] · [[Engine Gotchas]] · [[Animation Editor Advanced]] · [[3D Importer Settings Reference]] · [[Animation Glossary]] · [[Performance and Memory]] · [[Animation Editor Workflow]]
+[[Weapon Rig Player]] · [[Engine Gotchas]] · [[Pipeline - Importing Animated Enemies]] · [[Animation Editor Advanced]] · [[3D Importer Settings Reference]] · [[Animation Glossary]] · [[Performance and Memory]] · [[Animation Editor Workflow]]
 <!-- related:end -->

@@ -1,5 +1,6 @@
 ---
-tags: [animation, r15, sword, arm-twist, pronation, wrist, tool-grip, blender, baking, lihfolk, type/guide, area/animation, level/advanced]
+tags: [animation, r15, sword, arm-twist, pronation, wrist, wrist-pop, edge-lead, tool-grip, blender, baking, lihfolk, type/guide, area/animation, level/advanced]
+verified: 2026-10-29
 ---
 # Arm Twist and Grip Roll - Lessons from Baked Sword Clips
 
@@ -12,10 +13,8 @@ tags: [animation, r15, sword, arm-twist, pronation, wrist, tool-grip, blender, b
 > - Per-frame pronation and swivel plan after baking; one direction per segment
 > - Windup posed so the strike rolls one way
 >
-> Cost: TL;DR ~130 tok · whole note ~1.6k tok. Read more: ## 3. The fix: one planned pronation curve per swing · ## 4. Edge lead is a grip problem, not a wrist problem · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~2.5k tok. Read more: ## 3. The fix: one planned pronation curve per swing · ## 4. Edge lead is a grip problem, not a wrist problem · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
-verified: 2026-10-28
 
 Two problems decided whether scripted R15 sword clips looked human: the forearm "randomly twisting" during a swing, and the blade's true edge not leading the cut. Both were solved during the LihFolk V2 animation work, and neither fix was where we first looked. Numbers marked **Measured** come from the clip QA and the blind 3-reviewer panels.
 
@@ -70,7 +69,38 @@ Caveats:
 - Under +45 a falling backhand cannot lead with either edge; it needs a redesign. A pure vertical chop needs supination past the limit; re-author it as a steep forehand diagonal.
 - With a rolled grip, lower the default edge weight (the grip presents the edge) and raise the strike key's pronation band.
 
-## 5. Reviewers and evidence
+## 5. Pre-pronation: hide the roll where nobody looks (v7)
+
+Even with one planned roll direction, a clip can still show a **wrist pop**: a single frame where most of the roll happens. **Cause:** each authored key pins the forearm roll close to what that key's blade needs, so when the windup key and the contact key need very different rolls, all of the difference is forced into the frames between them, often one frame.
+
+**Fix (Measured, SwordLight3 7.7 -> 8.7 panel, peak hand roll 54.8 -> 21.1 deg/frame, 0 reversals):**
+
+1. **Pronate early, during the windup and the hang**, where the arm is slow and the roll is invisible. Give the windup keys a pronation band already part-way to the contact roll.
+2. **Remove the separate strike key** between the hang and contact. Hang -> contact -> follow-through is enough; the extra key was the one forcing the burst.
+3. **Lay the contact blade so contact sits mid-roll**, not at the end of the roll.
+4. **Finish the roll after contact**, in the follow-through, where real pronation peaks anyway ([[Human Swing Biomechanics]]).
+
+General rule, any weapon: if a joint needs to rotate a lot, spread the rotation over the slow frames on either side of the fast frame, instead of letting the keys force it into the fast frame.
+
+## 6. Per-clip grip roll
+
+The shared +45 deg grip suits forehand cuts but can **block** others: on the dash slash the wrist hit its ulnar limit before the edge could lead. Use a **per-clip grip roll** instead of bending the clip around the shared grip.
+
+- In the LihFolk pipeline a clip module declares `GRIP_ROLL = <deg>` (PIPELINE.md section 2E). Clips without it keep the shared default. The clip JSON then records `tool_grip_roll_deg`.
+- **Game code must set the matching `Tool.Grip` while that track plays** and restore the shared grip when it stops; otherwise the game shows a different blade angle from the one that was authored and scored.
+- A per-clip roll is a tool for reachability, not a goal in itself; see section 7 before chasing a perfect edge lead.
+
+## 7. Blade readability depends on the gameplay camera
+
+**Measured (counter-example):** a SwordDashSlash redesign with a level wide cut, the edge leading perfectly and a 20 deg grip roll scored **worse** (5.7 panel, down from 7.7). A level cut with the edge leading turns the blade's **thin edge toward a slightly raised three-quarter camera**, so the blade vanishes exactly at Hit, and a follow-through pointing at the camera read as dropping the blade to the floor.
+
+- Choose contact angles that show the **flat of the blade to the gameplay camera**. Readability at the game camera beats geometric correctness.
+- **Accept about 15-30 deg of edge-lead error** when that is what it takes to keep the flat visible.
+- After contact, **do not let the sword arm cross the torso in the front view**; it hides both.
+- **Pull the off arm clearly back** so it separates from the torso and balances the cut.
+- Check every cut from the real game camera (raised three-quarter) as well as the review side camera.
+
+## 8. Reviewers and evidence
 
 - Side camera on the side the cut finishes, so the follow-through blade is visible.
 - Single reviewers over-scored sword clips by about 0.7 against the panel. Only the median of three decides.
@@ -84,6 +114,9 @@ Caveats:
 - One-frame blade flips at contact.
 - Forcing edge lead at the wrist instead of rolling the grip.
 - Expecting one grip roll to suit every clip.
+- A separate strike key between hang and contact forcing all the roll into one frame (wrist pop).
+- Chasing a perfect edge lead that turns the blade's thin edge to the game camera.
+- Setting a per-clip `GRIP_ROLL` without setting the matching `Tool.Grip` in game.
 
 ## Checklist
 
@@ -93,9 +126,14 @@ Caveats:
 - [ ] Strike spread over 2 frames
 - [ ] Grip rolled (+45 for forehand-heavy sets); conflicting clips re-authored
 - [ ] Panel median, side camera on the finishing side
+- [ ] Pronation started in the windup/hang; no separate strike key; contact mid-roll; roll finished after contact
+- [ ] Blade flat visible from the gameplay camera at Hit (edge error up to 15-30 deg accepted)
+- [ ] Per-clip `GRIP_ROLL` mirrored by `Tool.Grip` in game code while the track plays
 
 ## See also
 
+- [[Spin and Whole-Body Rotation Moves]]
+- [[Blind Review Scores - Noise, Panels and Shipping the Best Version]]
 - [[Blade Grip and Wrist Limits]]
 - [[Human Swing Biomechanics]]
 - [[Weapon Swing Design]]
@@ -108,5 +146,5 @@ Caveats:
 
 <!-- related:start -->
 ## Related
-[[Animation Quality Standard]] · [[Elbow Poles Swivel and Joint Limits]] · [[Posing and Silhouettes]] · [[Locomotion and Melee Reference Numbers]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Spec-Driven Move Authoring]] · [[Inverse Kinematics]] · [[Animation Review Checklist]]
+[[Elbow Poles Swivel and Joint Limits]] · [[Animation Quality Standard]] · [[Locomotion Clip Lessons - Jump, Sprint, Idle]] · [[Posing and Silhouettes]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Locomotion and Melee Reference Numbers]] · [[Spec-Driven Move Authoring]] · [[Animation Review Checklist]]
 <!-- related:end -->

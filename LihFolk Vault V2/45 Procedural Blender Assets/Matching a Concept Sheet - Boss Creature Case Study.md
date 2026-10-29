@@ -107,5 +107,5 @@ Related: [[Posing and Silhouettes]], [[Concept Sheets]], [[Procedural Blender As
 
 <!-- related:start -->
 ## Related
-[[Low-Poly Tree Set Worked Example]] · [[Stylised Weapons From a Concept]] · [[Mesh VFX Packs Built in Blender]] · [[Stylised Shop Stand Worked Example]] · [[Dash VFX Presentation on an R15 Rig]] · [[Blender 5 Python Gotchas for Headless Builds]] · [[Dramatic Showcase Renders in Eevee]]
+[[Low-Poly Tree Set Worked Example]] · [[Stylised Weapons From a Concept]] · [[Mesh VFX Packs Built in Blender]] · [[Stylised Shop Stand Worked Example]] · [[Dash VFX Presentation on an R15 Rig]] · [[Stylised Log Cabin Worked Example]] · [[Blender 5 Python Gotchas for Headless Builds]] · [[Dramatic Showcase Renders in Eevee]]
 <!-- related:end -->

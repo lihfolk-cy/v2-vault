@@ -102,5 +102,5 @@ Lock from the moment the attack request is accepted (not the first animation mar
 
 <!-- related:start -->
 ## Related
-[[Procedural Animation]] · [[Animation Data Hygiene - Euler Wrap Joint Holes and Easing]] · [[Springs That Survive Long Frames - dt Clamps and NaN Guards]] · [[Layering Camera Feedback on the Default Camera]] · [[Hold-to-Attack Input That Never Sticks]] · [[Sound Design Pitfalls - Reused Ids Onsets and Layered Loops]] · [[Shared Close Buttons and Headers Across Many Screens]] · [[Server-Authoritative Freeze and Stun Timestamps]] · [[Client Hit Prediction for Melee Feedback]]
+[[Procedural Animation]] · [[Animation Data Hygiene - Euler Wrap Joint Holes and Easing]] · [[Springs That Survive Long Frames - dt Clamps and NaN Guards]] · [[Layering Camera Feedback on the Default Camera]] · [[Hold-to-Attack Input That Never Sticks]] · [[Blind Review Scores - Noise, Panels and Shipping the Best Version]] · [[Sound Design Pitfalls - Reused Ids Onsets and Layered Loops]] · [[Shared Close Buttons and Headers Across Many Screens]] · [[Server-Authoritative Freeze and Stun Timestamps]]
 <!-- related:end -->

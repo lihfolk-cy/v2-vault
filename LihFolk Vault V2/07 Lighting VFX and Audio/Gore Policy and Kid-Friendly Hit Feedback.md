@@ -12,7 +12,7 @@ tags: [vfx, gore, blood, maturity, content-maturity, policy, hit-feedback, comba
 > - Questionnaire answered for the most extreme content reachable, including settings and modes.
 > - Default hit feedback uses non-blood colours and no persistent marks (for Minimal or Mild targets).
 >
-> Cost: TL;DR ~180 tok · whole note ~2.0k tok. Read more: ## What the label rules say about blood and violence · ## Feedback that hits hard without blood · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~2.1k tok. Read more: ## What the label rules say about blood and violence · ## Feedback that hits hard without blood · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Blood is one of the few visual choices that directly changes who can find and play your game. On Roblox, how much blood you show and how realistic it looks feeds the content maturity label, and the label gates audiences (including the Roblox Kids and Roblox Select audiences announced in 2026). This note maps the label rules to concrete VFX decisions and gives hit-feedback alternatives that feel just as punchy without moving you up a label.
@@ -139,5 +139,5 @@ Source: https://create.roblox.com/docs/production/promotion/content-maturity (re
 
 <!-- related:start -->
 ## Related
-[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[VFX Design Playbook]] · [[Slash VFX Recipes - Crescent and Ring]] · [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Light Sources and Shadows]] · [[VFX Performance Budgets and Culling]] · [[Particle Emitters In Depth]]
+[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[VFX Design Playbook]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]] · [[Slash VFX Recipes - Crescent and Ring]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Light Sources and Shadows]] · [[VFX Performance Budgets and Culling]]
 <!-- related:end -->

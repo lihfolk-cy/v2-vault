@@ -160,7 +160,7 @@ On a small team, one person (the owner, designer or lead) decides taste. Every p
 
 How long a zone takes to cross, how many hits an enemy takes, how many minutes of income a gate costs: these are design numbers, but they also decide how much content you need. The reference project's numbers moved a lot:
 
-- Zones were shrunk to 40% length because "players have to run for too long", then restored the same day because the owner wanted larger zones. A later change shrank only the starting zone, cutting the portal-to-first-gate walk from about 460 to about 227 studs (measured).
+- Zones were shrunk to 40% length because the runs felt too long, then restored the same day because the owner wanted larger zones. A later change shrank only the starting zone, cutting the portal-to-first-gate walk from about 460 to about 227 studs (measured).
 - A difficulty pass made progression about 2x slower: about 2.5x power between rarity tiers, enemy health x1.8, damage x1.35, cash x0.55, gate prices roughly doubled, and a full save wipe (measured). The upgrade costs were later re-priced as "minutes of income at the zone that unlocks them" (ring 1 about 1 to 2 minutes, capstones about 1 to 2 hours), which is the right way to express them because it survives economy changes.
 - After a playtest showed players quitting at boss fights, a whole new structure (a linear stage corridor) was planned and built in a day, then reverted.
 
@@ -229,5 +229,5 @@ A plan should have a risk list with a mitigation for each. From the reference pr
 
 <!-- related:start -->
 ## Related
-[[Case Study - Instance Cleanup and Place Size]] · [[Working with AI Assistants in Studio]] · [[Asset Pipelines]] · [[Ship a Game in 30 Days - Week-by-Week Plan for a Solo Dev]] · [[Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts]] · [[Case Study - Phone UI Overhaul]] · [[Template Reskin Checklist - One Codebase, New Game]] · [[Live Incident Response and Post-Mortems]]
+[[Case Study - Instance Cleanup and Place Size]] · [[Working with AI Assistants in Studio]] · [[Asset Pipelines]] · [[Ship a Game in 30 Days - Week-by-Week Plan for a Solo Dev]] · [[Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts]] · [[Template Reskin Checklist - One Codebase, New Game]] · [[Case Study - Phone UI Overhaul]] · [[Live Incident Response and Post-Mortems]]
 <!-- related:end -->

@@ -33,7 +33,7 @@ FACTS = [
     ("HttpService request budget per server", r"(?i)(?:httpservice|http requests?)[^.|\n]{0,60}?\b(\d[\d,]*) (?:http )?requests? (?:per|a|/) ?min",
      {"500"}, r"(?i)backend|servers|TextGenerator|Open Cloud|API key", "HttpService and External APIs"),
     ("MemoryStore item size", r"(?i)memorystore[^.|\n]{0,60}?\b(\d+) ?KB", {"32"}, r"(?i)\bMB\b|quota", "MemoryStore"),
-    ("DataStore key name length", r"(?i)key\b[^.|\n]{0,30}?\b(\d+) characters", {"50"}, None,
+    ("DataStore key name length", r"(?i)key\b[^.|\n]{0,30}?(?<![\d,.])\b(\d+) characters", {"50"}, None,
      "DataStore Fundamentals"),
     # Text stroke size: 8-15% is the general guide, but rounded heavy fonts fill their counters above ~7%.
     ("UIStroke on text: ratio guidance mentions the rounded-font limit",

@@ -257,7 +257,7 @@ Prevention is cheaper: the first rule in [[Packages and Asset Reuse]] (create un
 
 ## 7. Announced changes (unconfirmed)
 
-A third-party summary of the Roblox Developers Conference keynote in September 2026 reported **package overrides** (local and global changes with auto-update and persistent local overrides) as launching later in 2026. I could not find the official announcement or a docs page, so treat it as **unconfirmed** as of October 2026. If it ships, the dev and stable package pair in section 3 may become optional, and the "editing a copy forks it forever" problem may soften. Re-read the packages page before relying on either.
+A third-party summary of the Roblox Developers Conference keynote in September 2026 reported **package overrides** (local and global changes with auto-update and persistent local overrides) as launching later in 2026. We could not find the official announcement or a docs page, so treat it as **unconfirmed** as of October 2026. If it ships, the dev and stable package pair in section 3 may become optional, and the "editing a copy forks it forever" problem may soften. Re-read the packages page before relying on either.
 
 ---
 

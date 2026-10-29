@@ -237,7 +237,7 @@ body.theme-dark .advanced-tables-buttons .widget-icon { fill: #b9a2ff; filter: d
 body.theme-dark .advanced-tables-buttons .widget-icon:hover { fill: var(--v2-ice); transform: scale(1.12); }
 body.theme-dark .advanced-tables-row-label { font-family: var(--v2-display); font-size: 11px; color: #a99be0; }
 
-/* ================================================================ CELESTIAL VAULT PLUGIN (when switched on) */
+/* ================================================================ CELESTIAL VAULT PLUGIN (legacy: retired, its look is now CSS in celestial-v2-banners.css; these rules only apply if it is ever reinstalled) */
 /* sky mode: lighter note pane so the plugin's sky planet shows through */
 body.cv-sky-on.theme-dark .mod-root .workspace-tabs .workspace-tab-container {
   background: var(--v2-hairline) top / 100% 1px no-repeat, linear-gradient(180deg, rgba(14, 10, 30, calc(var(--v2-glass-alpha) - .2)), rgba(7, 6, 16, calc(var(--v2-glass-alpha) - .14)));

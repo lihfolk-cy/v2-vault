@@ -344,5 +344,5 @@ A single-place game with no persistent schema change and no long activities can 
 
 <!-- related:start -->
 ## Related
-[[Server Browsers and Server Lists]] · [[Server Hop Rejoin and Server Lists with Ping]] · [[Publishing an Experience]] · [[Matchmaking Queues with MemoryStore]] · [[Patch Notes and Player Communication]] · [[Build Test and Release Pipeline]]
+[[Server Browsers and Server Lists]] · [[Publishing an Experience]] · [[Server Hop Rejoin and Server Lists with Ping]] · [[Matchmaking Queues with MemoryStore]] · [[Patch Notes and Player Communication]] · [[Build Test and Release Pipeline]]
 <!-- related:end -->

@@ -1,0 +1,356 @@
+[
+  {
+    "id": "B1",
+    "category": "debugging",
+    "prompt": "A coin pickup script gives players 10 coins, but stepping on the part once often gives 30-50 coins. Code:\n```lua\nlocal part = script.Parent\npart.Touched:Connect(function(hit)\n    local plr = game.Players:GetPlayerFromCharacter(hit.Parent)\n    if plr then\n        plr.leaderstats.Coins.Value += 10\n        part:Destroy()\n    end\nend)\n```\nExplain the cause and give a fix.",
+    "answer_key": [
+      "Touched fires repeatedly/multiple times in quick succession (once per touching body part / physics contact), so the handler runs several times",
+      "Fix: add a debounce/cooldown or 'already collected' flag checked and set at the top of the handler before awarding (per-part flag, or per-player timestamp table)",
+      "Award on the server only; the flag is set synchronously before any yield so re-entrant events cannot double-grant"
+    ],
+    "points": 3,
+    "sources": [
+      "https://create.roblox.com/docs/reference/engine/classes/BasePart"
+    ]
+  },
+  {
+    "id": "B2",
+    "category": "debugging",
+    "prompt": "A LocalScript in StarterPlayerScripts does:\n```lua\nlocal door = workspace.Map.Buildings.Hotel.Door\ndoor.Touched:Connect(onTouch)\n```\nIn a large map players report 'Door is not a valid member of Model' errors, mostly for doors far from spawn. StreamingEnabled is on. Diagnose and give two valid fixes.",
+    "answer_key": [
+      "Cause: with StreamingEnabled, instances outside the streaming radius are not replicated to the client yet (or have streamed out), so the path does not exist when the script runs",
+      "Fix 1: use WaitForChild (or ChildAdded / CollectionService added signal) rather than direct indexing, and tolerate parts streaming in/out",
+      "Fix 2: set the model's ModelStreamingMode to Atomic (WaitForChild the model) or Persistent (wait for Workspace.PersistentLoaded), or move the logic to a server script; Persistent should be used sparingly"
+    ],
+    "points": 3,
+    "sources": [
+      "https://create.roblox.com/docs/workspace/streaming"
+    ]
+  },
+  {
+    "id": "B3",
+    "category": "debugging",
+    "prompt": "Players report that after buying a developer product they were sometimes charged but received nothing, and sometimes received double coins. Code:\n```lua\nlocal MPS = game:GetService('MarketplaceService')\nMPS.ProcessReceipt = function(info)\n    local plr = game.Players:GetPlayerByUserId(info.PlayerId)\n    local ok = pcall(function()\n        store:SetAsync(plr.UserId, (store:GetAsync(plr.UserId) or 0) + 100)\n    end)\n    return Enum.ProductPurchaseDecision.PurchaseGranted\nend\n```\nList the bugs and the corrected behavior.",
+    "answer_key": [
+      "Returns PurchaseGranted unconditionally: if the DataStore call fails (ok == false) or the player has left (plr is nil), it must return NotProcessedYet so the receipt is retried",
+      "Not idempotent: receipts can be re-delivered, so record info.PurchaseId and skip the grant if already processed (ideally inside one UpdateAsync)",
+      "Uses non-atomic Get+Set instead of UpdateAsync, and plr is not nil-checked (errors when the player left)"
+    ],
+    "points": 3,
+    "sources": [
+      "https://create.roblox.com/docs/reference/engine/classes/MarketplaceService",
+      "https://create.roblox.com/docs/cloud-services/data-stores"
+    ]
+  },
+  {
+    "id": "B4",
+    "category": "debugging",
+    "prompt": "A server script sends a custom class instance and a ServerStorage part to the client:\n```lua\nlocal Weapon = {}; Weapon.__index = Weapon\nfunction Weapon:Fire() end\nlocal w = setmetatable({Name = 'Rifle', Ammo = 30}, Weapon)\nremote:FireClient(plr, w, game.ServerStorage.Muzzle)\n```\nOn the client, `w:Fire()` errors ('attempt to call a nil value') and the second argument is nil. Explain both and the fix.",
+    "answer_key": [
+      "Metatables are not transmitted over remotes; only the table's own fields arrive (methods are lost), so the client receives a plain table copy",
+      "Instances not replicable to the receiving side (e.g. ServerStorage descendants) arrive as nil",
+      "Fix: send plain data (id/name/numbers) and rebuild the object client-side via a shared module; keep needed instances in ReplicatedStorage/Workspace or send an identifier"
+    ],
+    "points": 3,
+    "sources": [
+      "https://create.roblox.com/docs/scripting/events/remote"
+    ]
+  },
+  {
+    "id": "B5",
+    "category": "debugging",
+    "prompt": "A hitscan gun uses this and almost never registers hits, even point-blank:\n```lua\nlocal dir = (target - origin).Unit\nlocal r = workspace:Raycast(origin, dir)\nif r then print(r.Instance) end\n```\nWhat is wrong and how do you fix it?",
+    "answer_key": [
+      "The direction vector's magnitude is the ray length; a unit vector gives a 1-stud ray",
+      "Fix: scale the direction by the range (dir * range) or pass (target - origin) unnormalized; max length is 15,000 studs",
+      "Check the result for nil before using it (no hit returns nil)"
+    ],
+    "points": 2,
+    "sources": [
+      "https://create.roblox.com/docs/workspace/raycasting"
+    ]
+  },
+  {
+    "id": "B6",
+    "category": "debugging",
+    "prompt": "If a player is the last one in a server when it shuts down, their recent progress is lost. Saving happens only in Players.PlayerRemoving with SetAsync. What is the cause and the standard fix?",
+    "answer_key": [
+      "On shutdown the server may close before PlayerRemoving save requests finish; use game:BindToClose to save all remaining players' data",
+      "The BindToClose callback must yield until all saves finish (e.g. per-player threads plus a counter), and guard Studio with RunService:IsStudio() to avoid stalling test sessions",
+      "Wrap DataStore calls in pcall (with retry) since requests can fail"
+    ],
+    "points": 2,
+    "sources": [
+      "https://create.roblox.com/docs/reference/engine/classes/DataModel",
+      "https://create.roblox.com/docs/cloud-services/data-stores"
+    ]
+  },
+  {
+    "id": "B7",
+    "category": "code-writing",
+    "prompt": "Write a Luau server-side handler for a RemoteEvent `UseAbility` that enforces a 2-second per-player cooldown, ignores spam, and does not leak memory.",
+    "answer_key": [
+      "First parameter of OnServerEvent is the Player; cooldown keyed per player (table[player] = os.clock()) and handler returns early if now - last < 2",
+      "Timestamp is written before running the ability logic / any yield",
+      "Cleanup in Players.PlayerRemoving (set entry to nil) or use a weak-key table",
+      "Validates remaining arguments server-side (type checks) rather than trusting the client"
+    ],
+    "points": 3,
+    "sources": [
+      "https://create.roblox.com/docs/scripting/events/remote"
+    ]
+  },
+  {
+    "id": "B8",
+    "category": "code-writing",
+    "prompt": "Write the server-side purchase flow for a developer product 'Gems100' (ProductId = 123456): a ProcessReceipt implementation that is idempotent per PurchaseId, uses a DataStore safely, handles the player having left, and returns the correct decisions.",
+    "answer_key": [
+      "Assign MarketplaceService.ProcessReceipt exactly once, in one server script",
+      "Look up the player via Players:GetPlayerByUserId(info.PlayerId); if absent return Enum.ProductPurchaseDecision.NotProcessedYet",
+      "Use DataStore:UpdateAsync inside pcall, recording info.PurchaseId so a repeated receipt does not grant twice; the grant code inside the UpdateAsync callback must not yield",
+      "Dispatch on info.ProductId; return PurchaseGranted only after the grant is recorded; return NotProcessedYet on any error"
+    ],
+    "points": 4,
+    "sources": [
+      "https://create.roblox.com/docs/reference/engine/classes/MarketplaceService",
+      "https://create.roblox.com/docs/cloud-services/data-stores"
+    ]
+  },
+  {
+    "id": "B9",
+    "category": "code-writing",
+    "prompt": "Write a LocalScript snippet that slides a Frame `menu` in from off-screen (Position {0.5,0,1.5,0} to {0.5,0,0.5,0}) over 0.4 seconds with Quad Out easing, and hides it again on close (slide out, then set Visible = false only after the tween finishes).",
+    "answer_key": [
+      "Uses TweenService:Create(menu, TweenInfo.new(0.4, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = ...}) and :Play()",
+      "The goal table is a dictionary of property names to target values (UDim2)",
+      "Close path tweens out and sets Visible = false in tween.Completed (or after Completed:Wait()), not immediately"
+    ],
+    "points": 2,
+    "sources": [
+      "https://create.roblox.com/docs/reference/engine/classes/TweenService"
+    ]
+  },
+  {
+    "id": "B10",
+    "category": "code-writing",
+    "prompt": "Write a server function `shoot(player, targetPos)` for a hitscan weapon: ray from the player's head toward targetPos with max range 200 studs, ignoring the shooter's own character, applying 20 damage if the ray hits a Humanoid's character. Include nil handling.",
+    "answer_key": [
+      "Builds RaycastParams with FilterType = Enum.RaycastFilterType.Exclude and FilterDescendantsInstances = {player.Character}",
+      "Direction is (targetPos - origin).Unit * 200 (magnitude equals range) and calls workspace:Raycast(origin, direction, params)",
+      "Checks the result is not nil, finds the Humanoid via the hit Instance's ancestor Model and calls Humanoid:TakeDamage(20)",
+      "Validates player/character/head exist; origin comes from server-known position"
+    ],
+    "points": 3,
+    "sources": [
+      "https://create.roblox.com/docs/workspace/raycasting"
+    ]
+  },
+  {
+    "id": "B11",
+    "category": "code-writing",
+    "prompt": "Using CollectionService, write a server Script that makes every Part tagged 'KillBrick' kill the Humanoid that touches it, works for bricks added later and cleans up when the tag is removed.",
+    "answer_key": [
+      "Defines a setup function and calls it for each instance in CollectionService:GetTagged('KillBrick')",
+      "Connects CollectionService:GetInstanceAddedSignal('KillBrick') to the same setup function",
+      "Stores connections per instance and disconnects them in a GetInstanceRemovedSignal handler",
+      "Touch handler finds the Humanoid (e.g. hit.Parent:FindFirstChildOfClass('Humanoid')) and sets Health = 0 or calls TakeDamage"
+    ],
+    "points": 3,
+    "sources": [
+      "https://create.roblox.com/docs/reference/engine/classes/CollectionService"
+    ]
+  },
+  {
+    "id": "B12",
+    "category": "code-writing",
+    "prompt": "Write a server-side `safeTeleport(placeId, players, teleportData)` that retries on failure and also handles TeleportService.TeleportInitFailed. Keep it short but correct.",
+    "answer_key": [
+      "Uses TeleportService:TeleportAsync(placeId, players, options) from the server with a TeleportOptions (SetTeleportData for data)",
+      "Wraps the call in pcall and retries a bounded number of attempts with a delay",
+      "Connects TeleportService.TeleportInitFailed to handle failures that do not throw (e.g. retry on Failure, back off on Flooded)",
+      "Does not put sensitive/trusted data in teleport data (it is visible and unencrypted)"
+    ],
+    "points": 3,
+    "sources": [
+      "https://create.roblox.com/docs/projects/teleporting"
+    ]
+  },
+  {
+    "id": "B13",
+    "category": "architecture",
+    "prompt": "A shop UI must (a) let the player buy a sword with in-game coins and (b) update the on-screen coin counter afterward. Which remote objects would you use for each direction, where do validation and the balance live, and why not use a RemoteFunction invoked from the server to the client for the UI update?",
+    "answer_key": [
+      "Client to server: RemoteEvent (or RemoteFunction) carrying only an item id; the server is source of truth, reads price/balance itself and validates; never trust a client-sent price or balance",
+      "Server to client UI update: a one-way RemoteEvent (or replicated value/attribute)",
+      "Avoid server InvokeClient: client errors propagate to the server, a disconnect throws, and a client that never returns yields the server thread forever",
+      "OnServerEvent's first argument is the Player, so identify the caller from it, not from the payload"
+    ],
+    "points": 3,
+    "sources": [
+      "https://create.roblox.com/docs/scripting/events/remote"
+    ]
+  },
+  {
+    "id": "B14",
+    "category": "architecture",
+    "prompt": "You move players between a lobby place and a match place in one experience and must carry their coin balance and chosen loadout. Compare teleport data against DataStores/MemoryStores for this and say what you would choose.",
+    "answer_key": [
+      "Teleport data is visible to the client and unencrypted, so unsuitable for trusted values like currency/inventory",
+      "Persistent progress (coins, loadout) belongs in DataStores (keyed by UserId) loaded by the destination server; MemoryStores for short-lived cross-server state",
+      "Teleport data is acceptable only for non-sensitive hints (e.g. selected mode) that the destination validates"
+    ],
+    "points": 3,
+    "sources": [
+      "https://create.roblox.com/docs/projects/teleporting",
+      "https://create.roblox.com/docs/cloud-services/data-stores"
+    ]
+  },
+  {
+    "id": "B15",
+    "category": "architecture",
+    "prompt": "A map has 400 doors, 150 pickups and 60 turrets. Compare giving every instance its own Script with a tag-driven architecture, and describe the recommended structure including how newly spawned or streamed-in instances are handled.",
+    "answer_key": [
+      "Use CollectionService tags (e.g. 'Door', 'Pickup', 'Turret') with one controller script/ModuleScript per behavior instead of hundreds of duplicated scripts",
+      "Initialize with GetTagged for existing instances plus GetInstanceAddedSignal for later ones, and GetInstanceRemovedSignal for cleanup of connections/state",
+      "Benefits: single code path, easier updates, works with cloned/streamed instances; per-instance config via attributes"
+    ],
+    "points": 3,
+    "sources": [
+      "https://create.roblox.com/docs/reference/engine/classes/CollectionService"
+    ]
+  },
+  {
+    "id": "B16",
+    "category": "architecture",
+    "prompt": "You are building a racing game with drivable cars. Decide who should have network ownership of the car, what the security risk is, and what the server must still validate.",
+    "answer_key": [
+      "The driver's client should own the car for responsive physics (SetNetworkOwner on the server when seated; release to automatic when empty); the server always owns anchored parts",
+      "Client ownership means Roblox cannot verify the physics: exploiters can teleport parts or move them through walls, and Touched events on owned parts can be fired by that client",
+      "Server must validate critical outcomes (checkpoints, lap times, speed/position plausibility, damage); use SetNetworkOwner(nil) for gameplay-critical parts",
+      "Use ownership changes sparingly because they can cause jitter"
+    ],
+    "points": 3,
+    "sources": [
+      "https://create.roblox.com/docs/physics/network-ownership"
+    ]
+  },
+  {
+    "id": "B17",
+    "category": "performance",
+    "prompt": "A shooter sends each player's aim direction and position to the server 30 times per second via a RemoteEvent, causing bandwidth and queue pressure. Recommend a better transport and describe its constraints and how to handle them.",
+    "answer_key": [
+      "Use UnreliableRemoteEvent for frequent, ephemeral state where the latest value matters",
+      "Payloads over 1,000 bytes may be dropped, so keep messages small",
+      "Messages can be dropped or arrive out of order and are dropped when no handler is connected: include a sequence number/timestamp and ignore stale ones",
+      "Keep important one-off events (damage, purchases) on reliable RemoteEvents"
+    ],
+    "points": 3,
+    "sources": [
+      "https://create.roblox.com/docs/scripting/events/remote",
+      "https://create.roblox.com/docs/reference/engine/classes/UnreliableRemoteEvent"
+    ]
+  },
+  {
+    "id": "B18",
+    "category": "performance",
+    "prompt": "Server frame time spikes because 200 NPCs each do several raycasts and path scoring every Heartbeat on the main thread. How would you use Parallel Luau for this, and what limitations must you design around?",
+    "answer_key": [
+      "Split NPC logic across multiple Actors (scripts under one Actor run serially, so parallelism needs several Actors)",
+      "Use task.desynchronize() (or ConnectParallel) for the heavy read/compute work such as raycasts, then task.synchronize() before modifying the data model",
+      "Most property writes/functions are unsafe in parallel so results are applied in a serial phase; require() cannot be called in a desynchronized phase",
+      "Use SendMessage/BindToMessageParallel or SharedTable for cross-Actor data; avoid long unyielding computations"
+    ],
+    "points": 3,
+    "sources": [
+      "https://create.roblox.com/docs/scripting/multithreading"
+    ]
+  },
+  {
+    "id": "B19",
+    "category": "performance",
+    "prompt": "An open-world game has long join times and high client memory on mobile. StreamingEnabled is off. What do you change in Workspace, which defaults/radii are sensible, and what do you do to scripts that assumed everything is loaded?",
+    "answer_key": [
+      "Turn StreamingEnabled on (default for new places); keep default StreamingMinRadius 64 and StreamingTargetRadius 1024 unless profiling says otherwise (target larger than min)",
+      "Prefer ModelStreamingBehavior Improved and Opportunistic StreamOutBehavior; use Atomic for models that must arrive whole, Persistent only sparingly",
+      "Update client scripts to use WaitForChild/PersistentLoaded and tolerate parts streaming in/out, or move logic to the server; raycasts can miss unstreamed parts"
+    ],
+    "points": 2,
+    "sources": [
+      "https://create.roblox.com/docs/workspace/streaming"
+    ]
+  },
+  {
+    "id": "B20",
+    "category": "performance",
+    "prompt": "Your game autosaves every player's data with SetAsync every 5 seconds. With 80 players you see DataStore queue warnings and sometimes lost saves (queue full, error code 302). Explain the cause and a better design.",
+    "answer_key": [
+      "Requests are throttled by per-server and per-experience budgets that scale with player count; exceeding them queues requests, and a full queue (30 requests) drops them with codes such as 302 for SetAsync",
+      "Reduce frequency (autosave every few minutes, staggered), save only changed data, and combine fields into one key rather than many keys",
+      "Wrap calls in pcall with retry/backoff, and always save on PlayerRemoving/BindToClose"
+    ],
+    "points": 2,
+    "sources": [
+      "https://create.roblox.com/docs/cloud-services/data-stores/error-codes-and-limits"
+    ]
+  },
+  {
+    "id": "B21",
+    "category": "recent-platform",
+    "prompt": "Studio now ships a built-in MCP server so external AI clients (Claude Code, Cursor, Codex CLI, etc.) can work with an open Studio session. Where do you enable it, and name at least four of the tools it exposes.",
+    "answer_key": [
+      "Enable it from Assistant: the ... menu > Manage MCP Servers > 'Enable Studio as MCP server'",
+      "Names at least four real tools from the documented set, e.g. script_read, multi_edit, script_grep, execute_luau, start_stop_play, get_console_output, search_game_tree, inspect_instance, screen_capture, insert_asset, generate_procedural_model",
+      "Runs locally over stdio transport; each tool call takes a studio_id to target a specific Studio instance"
+    ],
+    "points": 2,
+    "sources": [
+      "https://create.roblox.com/docs/studio/mcp",
+      "https://devforum.roblox.com/t/creator-roadmap-2026-spring-update/4625473"
+    ]
+  },
+  {
+    "id": "B22",
+    "category": "recent-platform",
+    "prompt": "Describe Roblox's Input Action System: its three core instance types, how an action signals a press, and how a menu context is made to take precedence over the default player scripts.",
+    "answer_key": [
+      "Core instances: InputContext (group of actions; Enabled and Priority), InputAction (has a Type such as Bool/Direction1D/2D/3D/ViewportPosition), InputBinding (maps hardware input to an action)",
+      "Bool actions fire Pressed and Released; StateChanged fires for all action types",
+      "Higher context Priority processes input first; enabling Sink consumes bound KeyCodes and blocks lower-priority contexts",
+      "Enabled per project with the Workspace property PlayerScriptsUseInputActionSystem"
+    ],
+    "points": 3,
+    "sources": [
+      "https://create.roblox.com/docs/input/input-action-system"
+    ]
+  },
+  {
+    "id": "B23",
+    "category": "recent-platform",
+    "prompt": "What is Roblox's CSS-like UI styling system? Name the main instances and explain how styles reach the UI and how a value is shared via tokens.",
+    "answer_key": [
+      "Instances: StyleSheet (rules, tokens, themes), StyleRule (Selector + SetProperties), StyleLink (links a StyleSheet to a ScreenGui and its descendants), StyleDerive (inherit another sheet's tokens/themes)",
+      "Selectors can match class, tag (CollectionService), name, UI modifiers (e.g. UICorner), GuiState (e.g. Hover), and queries with '@'",
+      "Tokens are attributes on a token StyleSheet referenced with a '$' prefix (e.g. '$FrameColor'); themes are sets of tokens; only one StyleSheet applies to a given tree"
+    ],
+    "points": 3,
+    "sources": [
+      "https://create.roblox.com/docs/ui/styling"
+    ]
+  },
+  {
+    "id": "B24",
+    "category": "recent-platform",
+    "prompt": "In late 2025 / early 2026 Roblox began requiring age checks for chat. What method does the check use, what age groups are used, and how does it restrict who can chat with whom?",
+    "answer_key": [
+      "Facial age estimation via the app camera (ID verification as an alternative for older users); under-9 users also need parental approval",
+      "Age groups: under 9, 9-12, 13-15, 16-17, 18-20, 21+",
+      "Chat is limited to users in the same or similar (adjacent) age groups, e.g. a 13-15 user can chat with those 15 or younger but not the 16+ groups",
+      "Rollout began in select regions in December 2025 and extended worldwide where chat is available in January 2026"
+    ],
+    "points": 2,
+    "sources": [
+      "https://about.roblox.com/newsroom/2026/01/roblox-age-checks-required-to-chat",
+      "https://about.roblox.com/newsroom/2025/11/roblox-requires-age-checks-limits-minor-and-adult-chat"
+    ]
+  }
+]

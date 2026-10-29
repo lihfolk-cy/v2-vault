@@ -1,0 +1,9 @@
+{
+  "id": "lihfolk-graph",
+  "name": "LihFolk Graph",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "Colours each graph link with its note's colour group, so the LihFolk Vault V2 graph shows rainbow threads.",
+  "author": "LihFolk",
+  "isDesktopOnly": false
+}

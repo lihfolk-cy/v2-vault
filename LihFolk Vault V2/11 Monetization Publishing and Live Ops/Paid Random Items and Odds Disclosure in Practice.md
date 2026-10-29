@@ -223,7 +223,7 @@ Percentages for rare outcomes get tiny: 1 in 5,000,000 is 0.00002%. The docs all
 
 ## 9. Restricted players: the alternatives in numbers
 
-When `ArePaidRandomItemsRestricted` is true, the docs list six options: a free earnable path, a predetermined disclosed order, direct sale priced at expected value, removing or hiding the item, blocking with an error, or keeping the player out of areas with paid random items (Roblox docs, as of October 2026). Fetch the policy on the server, fail closed, and gate on the server ([[Roblox Policies Ratings and Compliance]]).
+When `ArePaidRandomItemsRestricted` is true, the docs list six options: a free earnable path, a predetermined disclosed order, direct sale priced at [[expected value]], removing or hiding the item, blocking with an error, or keeping the player out of areas with paid random items (Roblox docs, as of October 2026). Fetch the policy on the server, fail closed, and gate on the server ([[Roblox Policies Ratings and Compliance]]).
 
 **Direct sale at expected value.** The docs' example: a 10 Robux lootbox with a 5% chance of a rare sword means the sword sells directly for 200 Robux. In general:
 
@@ -335,5 +335,5 @@ Put it in CI ([[Testing Strategies and Frameworks]]). A config change that edits
 
 <!-- related:start -->
 ## Related
-[[Drop Tables Rarity and Pity Systems]] · [[Regional Compliance - Paid Random Items and Country Rules]] · [[Monetization Overview]] · [[Game Passes]] · [[Ads and Rewarded Video]] · [[Refunds Chargebacks and Purchase Support]] · [[Age Checks and Safety Features]] · [[Subscriptions and Premium Payouts]] · [[Community Building]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]]
+[[Drop Tables Rarity and Pity Systems]] · [[Monetization Overview]] · [[Genre Playbook - Simulators]] · [[Game Passes]] · [[Ads and Rewarded Video]] · [[Refunds Chargebacks and Purchase Support]] · [[Age Checks and Safety Features]] · [[Subscriptions and Premium Payouts]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Community Building]]
 <!-- related:end -->

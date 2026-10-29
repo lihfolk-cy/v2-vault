@@ -12,7 +12,7 @@ tags: [ai, luau, scripting, code-assistants, tooling, type/guide, area/ai, level
 > - Project memory file with hard rules and checks.
 > - Docs access (llms.txt, `.md` reference pages, `http_get`) and an instruction to use it.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.0k tok. Read more: ## 2. Set the project up for AI · ## 3. What AI gets wrong in Luau specifically · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.1k tok. Read more: ## 2. Set the project up for AI · ## 3. What AI gets wrong in Luau specifically · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 This note covers using AI to write Luau: which kinds of tools exist, how to set up a project so they work well, what they get wrong about Luau and Roblox specifically, and the checks that catch those errors. The verification method is expanded in [[Prompting and Verifying AI Output]]; agent setups in [[AI Agents and Autonomous Workflows]].
@@ -241,5 +241,5 @@ Models often know an obscure API correctly. Do not reject unfamiliar code on ins
 
 <!-- related:start -->
 ## Related
-[[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[What AI Models Get Wrong in Roblox]] · [[AI Pitfalls - Stale APIs and Luau]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Evaluating AI Tools - A Practical Rubric]] · [[Windows Tooling Pitfalls for Agent Pipelines]] · [[Agent Orchestration - Sub-Agents, Hooks and Skill Costs]] · [[In-Game AI - LLM NPCs and Text Generation]]
+[[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[Roblox Studio MCP Server]] · [[What AI Models Get Wrong in Roblox]] · [[AI Pitfalls - Stale APIs and Luau]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Evaluating AI Tools - A Practical Rubric]] · [[Windows Tooling Pitfalls for Agent Pipelines]] · [[Agent Orchestration - Sub-Agents, Hooks and Skill Costs]] · [[In-Game AI - LLM NPCs and Text Generation]]
 <!-- related:end -->

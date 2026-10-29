@@ -12,7 +12,7 @@ tags: [vfx, design, playbook, combat, particles, beams, budgets, type/guide, are
 > - White core, colour edge, dark rim; one dark layer per bright stack.
 > - Tier ladder written and audited.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.2k tok. Read more: ## 1. Design before Studio · ## 5. Budgets and architecture · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.3k tok. Read more: ## 1. Design before Studio · ## 5. Budgets and architecture · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 This is the method for designing effects that look professional in Roblox, distilled from decoding several open-source effect packs (slashes, glass combos, lightning hand charges, water explosions, staggered beam slashes, auras) and from shipping hundreds of ability effects in one live action game (the reference project). The individual tools are covered elsewhere: [[Particle Emitters In Depth]], [[Beams and Trails]], [[Highlights and Selection Effects]], [[Light Sources and Shadows]]. Timing against animation is in [[VFX Timing with Animation]]. This note is about **design**: how to decide what layers an effect needs, what numbers make them read, how to scale effects by importance, and how to keep a fight readable and fast.
@@ -60,6 +60,7 @@ The reference project's own ladder, phrased the same way: anticipation, flash fr
 - **Palette:** one base hue (often dark, on emitters at high brightness), one hot accent (orange or white), white for wind and foam. Saturated colours read better than pastel in motion.
 - **Every bright stack gets one dark layer:** a black-coloured ring at LightEmission 0.25, negative LightEmission (-0.4 to -2) on smoke and debris, a black Neon shell, or grey smoke at LightEmission 0 under additive smoke. Without it, additive layers sum to white and the effect has no shape.
 - **Brightness inversely proportional to screen area** (numbers in [[Particle Emitters In Depth]]).
+- **Dark layers stay saturated** (blue-black thinning to blue, deep oxblood under fire), never grey: grey ink is what reviewers call "muddy". Add **one** contrasting accent hue at most. Blind-review lessons on value, clutter, smoke, flashes, effect lights and character tinting are collected in [[VFX Readability and Value - Lessons from Blind Reviews]]; multi-beat moves in [[Escalation and Grandeur Without Clutter]].
 
 ---
 
@@ -262,7 +263,7 @@ Lesson from its rollout: the first bake was too dark for dark zones; the second 
 - [ ] Textures preloaded, own uploads, permissions verified live.
 - [ ] Reviewed slowed, at distance, on phone, in dark and bright zones, with a full party.
 
-See also: [[Particle Emitters In Depth]], [[Beams and Trails]], [[Highlights and Selection Effects]], [[VFX Timing with Animation]], [[Game Feel and Juice]], [[Ability Kits Architecture]], [[Cinematic Ultimates]], [[Combat Systems Architecture]], [[Textures Decals and Texture Memory]], [[Rendering Performance]].
+See also: [[VFX Readability and Value - Lessons from Blind Reviews]], [[Escalation and Grandeur Without Clutter]], [[Particle Emitters In Depth]], [[Beams and Trails]], [[Highlights and Selection Effects]], [[VFX Timing with Animation]], [[Game Feel and Juice]], [[Ability Kits Architecture]], [[Cinematic Ultimates]], [[Combat Systems Architecture]], [[Textures Decals and Texture Memory]], [[Rendering Performance]].
 
 ## Connected notes
 <!-- auto-links:start -->
@@ -271,5 +272,5 @@ See also: [[Particle Emitters In Depth]], [[Beams and Trails]], [[Highlights and
 
 <!-- related:start -->
 ## Related
-[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Slash VFX Recipes - Crescent and Ring]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]]
+[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Slash VFX Recipes - Crescent and Ring]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Ice Ball Cast to Explosion - Approved Recipe]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]]
 <!-- related:end -->

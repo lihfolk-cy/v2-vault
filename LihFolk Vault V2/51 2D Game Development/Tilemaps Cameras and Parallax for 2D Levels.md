@@ -426,7 +426,7 @@ Vertical parallax is often much smaller than horizontal (factorY around a quarte
 
 In a locked-camera 3D side-scroller ([[Side-Scroller in 3D - Locking Camera and Movement to a Plane]]) you can still author levels as tilemaps and build parts from them, which gives you a fast level editor and data you can validate.
 
-**Greedy merging.** One part per solid tile is wasteful: a 300 by 40 level with half its cells solid is 6,000 parts, each with collision and replication cost ([[Rendering Performance]], [[Physics Performance]]). Merge horizontal runs of the same tile into one part, then merge identical runs on consecutive rows into rectangles. Typical platformer levels drop by an order of magnitude (rule of thumb). Visual detail then comes from textures or decorative meshes, not from part count. Community reports put the maximum part size at 2,048 studs per axis; I could not confirm this in the official docs, so cap merged parts well below it.
+**Greedy merging.** One part per solid tile is wasteful: a 300 by 40 level with half its cells solid is 6,000 parts, each with collision and replication cost ([[Rendering Performance]], [[Physics Performance]]). Merge horizontal runs of the same tile into one part, then merge identical runs on consecutive rows into rectangles. Typical platformer levels drop by an order of magnitude (rule of thumb). Visual detail then comes from textures or decorative meshes, not from part count. Community reports put the maximum part size at 2,048 studs per axis; we could not confirm this in the official docs, so cap merged parts well below it.
 
 ```lua
 --!strict
@@ -546,5 +546,5 @@ Each rectangle becomes a part sized `w * tileStuds` by `h * tileStuds` on the ga
 
 <!-- related:start -->
 ## Related
-[[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Textures Decals and Texture Memory]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Voxel Props Environments and Modular Tiles]] · [[Modular Environment Kits]] · [[Dungeon and Room Generation]]
+[[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Textures Decals and Texture Memory]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Voxel Props Environments and Modular Tiles]] · [[Dungeon and Room Generation]] · [[Modular Environment Kits]]
 <!-- related:end -->

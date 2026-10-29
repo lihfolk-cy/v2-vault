@@ -317,5 +317,5 @@ The senior trade-off: a living day cycle adds atmosphere and makes screenshots v
 
 <!-- related:start -->
 ## Related
-[[Weather System Architecture - State Machine, Transitions and Replication]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[VFX Design Playbook]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]]
+[[Weather System Architecture - State Machine, Transitions and Replication]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[VFX Design Playbook]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[VFX Readability and Value - Lessons from Blind Reviews]]
 <!-- related:end -->

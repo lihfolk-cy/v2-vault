@@ -8,7 +8,7 @@ Part of [[Resource Library - Monetization]] in the [[Resource Library Start Here
 ## Subscriptions
 - https://create.roblox.com/docs/production/monetization/subscriptions
 - https://devforum.roblox.com/t/creator-documentation-subscription-design/2652494
-## Premium payouts
+## Premium payouts (historical; replaced by Creator Rewards on July 24, 2025)
 - https://create.roblox.com/docs/production/monetization/engagement-based-payouts
 - https://devforum.roblox.com/t/shorten-the-hold-period-of-engagement-payouts-or-restore-the-old-premium-payouts-system/3956591
 - https://devforum.roblox.com/t/how-do-premium-payouts-work/1634335

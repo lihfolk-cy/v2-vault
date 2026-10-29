@@ -37,13 +37,37 @@ Elements: `teal`, `violet`, `fire`, `ice`, `lightning`, `void` (inverted: dark b
   Every part: Anchored, CanCollide/CanQuery/CanTouch false, CastShadow false.
 - Recolour with `Elements` or `palette = {...}`; textures stay white/greyscale. Roles: main, hot, dark, glow, spark, debris, deep.
 
+## General rules (any element, weapon or style; from blind reviews 2026-10-29)
+Apply these to every new effect, not only the presets above. Detail: vault notes "VFX Readability and Value - Lessons from
+Blind Reviews" and "Escalation and Grandeur Without Clutter".
+- **Value:** saturated dark ink (blue-black thinning to blue, never grey = "muddy"), element body, white only as a thin
+  core, at most one contrasting accent hue. White bits on a pale floor get a thin dark outline or tint.
+- **No clutter:** never repeat an identical layer per beat; each repeat bigger, brighter, faster and different; later
+  layers shorter; ground rings expand while fading (no stamps); sparks short, draggy, directional, in frame.
+- **Smoke:** textured puffs, lighter tops, darker cores, rolling motion; never flat soft blobs.
+- **Character stays clean:** large translucent layers spawn ahead of the body; rims, not washes; glow parts and effect
+  lights off the character (lights above/behind, low power; one per effect).
+- **Flash:** small (~0.6x body), 1-2 frames, 1 frame after contact, at the blade or crescent head ahead of the body.
+- **Beams:** hairline streaks need low Brightness (bloom fattens them); ribbons read thicker with lower body brightness and
+  a thin white core. Light shafts only as additive tapered textures (falloff along and across), radial from the source; else cut.
+- **Dark elements (void):** near-black body, rim only at the silhouette (shell scale ~1.02, transparency ~0.45).
+- **Direction:** release bursts biased forward, away from the caster's torso. Slashes frontal; only an explicit spin move
+  may wrap round the body, and its finisher still goes forward.
+- **Grandeur = escalate a FEW layers, cut or shrink others as you add.** Spin attack v2.1 added vortex + rune circle +
+  smoke + rings and dropped 8.1 -> 7.7: spins 2-3 cluttered and buried the silhouette (particles were only ~150; the
+  limit is the screen, not the 900 PC / 360 mobile caps). Re-check the character silhouette at game distance after every
+  added layer. At most one growing element (vortex or sigil). The finisher is the clear payoff: one bigger, brighter forward
+  arc than the spins, on the contact frame, blade high and edge leading. Smoke puffs vary in size/drift and fade fast.
+- **Previews match the game:** fix the effect, never hide a flaw with a preview-only pass; emulate effect lights.
+- **Scoring:** 3 blind reviewers, median per criterion, bar 8.5; one-shot requests are fine but still panel-scored if scored.
+
 ## Files
 
 | Path | What |
 |---|---|
 | `src/LihFolkVFX.luau` | the module |
 | `examples/SwordVFXClient.client.luau` | wiring for our sword clips |
-| `D:\LihFolk Build\LihFolk Asset Pack\VFX\Textures\*.png` | textures (`_textures.json` lists role and use) |
+| `<LihFolk Asset Pack>\VFX\Textures\*.png` (separate local pack, not in this repo) | textures (`_textures.json` lists role and use) |
 | `...\VFX\Meshes\*.glb` | meshes (`_gate_report.json`): crescents (+ `crescent_single_thick_hd`), rings, `ground_ring`, `crystal`, `ice_mound`, `shard`, `petal` |
 | `...\VFX\Previews\` | one MP4 + one frame strip per preset, mesh and texture contact sheets |
 | `...\Dataset\vfx\` | review renders per preset (`rN_strip.png`, `review.json`), calibration anchors, wave-1 before/after |

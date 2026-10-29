@@ -48,7 +48,7 @@ The design goal is not to remove motion from the game. It is to keep motion **pl
 | Field of view | `Camera.FieldOfView`, clamped 1 to 120, default 70; `FieldOfViewMode` chooses which axis is held constant | Expose a range; keep one owner for FOV |
 | Camera sensitivity | `UserGameSettings.MouseSensitivity` and `GamepadCameraSensitivity` are Roblox's own settings | Do not override them; respect them in custom cameras |
 | Invert Y | `UserGameSettings:GetCameraYInvertValue()` | Multiply your custom camera pitch input by it |
-| Camera shake setting | None at platform level that I could find | Build your own |
+| Camera shake setting | None at platform level that we could find | Build your own |
 | Flash limiting | None | Build your own |
 
 Reading `UserGameSettings` is done through `UserSettings():GetService("UserGameSettings")` on the client. Its sensitivity and invert members carry the Input capability in docs, which suggests they are readable by game scripts; if you write a fully custom camera (see [[Custom Character Controllers]]), apply them so that players do not have to set sensitivity twice.

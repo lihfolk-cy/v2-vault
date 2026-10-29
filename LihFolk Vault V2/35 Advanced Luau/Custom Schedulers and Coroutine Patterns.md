@@ -521,5 +521,5 @@ Ten minutes of cooldown logic runs in microseconds, deterministically, without S
 
 <!-- related:start -->
 ## Related
-[[Reading Luau Errors and Stack Traces]] · [[Functions Closures and Upvalues]] · [[Script Performance]] · [[Error Handling and Retries]] · [[Advanced Types - Generics and Type Functions]] · [[Serialization Formats for Saves and Networking]]
+[[Functions Closures and Upvalues]] · [[Reading Luau Errors and Stack Traces]] · [[Script Performance]] · [[Error Handling and Retries]] · [[Advanced Types - Generics and Type Functions]] · [[Serialization Formats for Saves and Networking]]
 <!-- related:end -->

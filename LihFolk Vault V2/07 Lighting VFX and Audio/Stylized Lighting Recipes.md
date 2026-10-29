@@ -404,5 +404,5 @@ See also: [[Lighting Technologies and Settings]], [[Atmosphere Sky Clouds and Po
 
 <!-- related:start -->
 ## Related
-[[Colour Scripts and Value Structure for Untextured Art]] · [[Zone and Biome Art Direction]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Weather System Architecture - State Machine, Transitions and Replication]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Particle Emitters In Depth]] · [[Slash VFX Recipes - Crescent and Ring]]
+[[Colour Scripts and Value Structure for Untextured Art]] · [[Zone and Biome Art Direction]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Weather System Architecture - State Machine, Transitions and Replication]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Particle Emitters In Depth]]
 <!-- related:end -->

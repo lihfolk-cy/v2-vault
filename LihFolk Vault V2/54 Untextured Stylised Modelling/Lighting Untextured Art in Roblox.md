@@ -27,7 +27,7 @@ A simplified model of what players see on an opaque, flat-coloured face (rule of
 - **Ambient light**: `OutdoorAmbient` outdoors and `Ambient` in sky-occluded areas (Roblox docs describe `Ambient` as a hue for the whole game and `OutdoorAmbient` as a hue for outdoor areas). Faces facing away from the sun also pick up `ColorShift_Bottom`.
 - **Environment diffuse**: with `EnvironmentDiffuseScale` above 0, ambient light is "derived from the environment" (Roblox docs), so upward faces take on sky colour and side faces a mix. This is a free, directional ambient gradient.
 - **Environment specular**: with `EnvironmentSpecularScale` near 1, smooth objects "better reflect the environment" (Roblox docs).
-- **Local lights**: PointLight, SpotLight and SurfaceLight.
+- **Local lights**: PointLight, SpotLight and [[SurfaceLight]].
 - Then **bloom**, **colour correction** and **atmosphere** on the whole image.
 
 For a face with no texture, the difference between its lit side and its shadow side is the only thing showing its form. Everything below is about controlling that difference.

@@ -362,5 +362,5 @@ Numbers are rules of thumb for a small team. The point is that the expensive uni
 
 <!-- related:start -->
 ## Related
-[[Stylized Lighting Recipes]] · [[Water Sky and Atmosphere Art]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Terrain Tools and Terrain API]] · [[Modeling in Blender for Roblox]] · [[Parts Unions and MeshParts]] · [[Procedural World Generation]]
+[[Stylized Lighting Recipes]] · [[Water Sky and Atmosphere Art]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Terrain Tools and Terrain API]] · [[Modeling in Blender for Roblox]] · [[Parts Unions and MeshParts]] · [[House Construction Method - Modular Kit Workflow]] · [[Procedural World Generation]]
 <!-- related:end -->

@@ -143,5 +143,5 @@ Silhouette distinct at 60 studs; colour accent tied to archetype (consistent acr
 
 <!-- related:start -->
 ## Related
-[[Combat Systems Architecture]] · [[Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations]] · [[Behaviour Trees Utility AI and State Machines for NPCs]] · [[Downed, Revive and Bleed-Out States]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Pathfinding Edge Cases and Fallbacks]] · [[Spawning Teams and Rounds]] · [[Hitboxes and Hit Detection]]
+[[Combat Systems Architecture]] · [[Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations]] · [[Behaviour Trees Utility AI and State Machines for NPCs]] · [[Downed, Revive and Bleed-Out States]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Pathfinding Edge Cases and Fallbacks]] · [[Spawning Teams and Rounds]] · [[Characters and Humanoids]]
 <!-- related:end -->

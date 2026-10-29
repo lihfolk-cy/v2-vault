@@ -142,5 +142,5 @@ If the sword is a `Tool`, the stock Animate script plays `toolnone` on the right
 
 <!-- related:start -->
 ## Related
-[[Locomotion Readability - Lessons from Blind Panels]] · [[LihFolk R15 Keyframe Pipeline]] · [[Retargeting Animations Between Rigs]] · [[Posing and Silhouettes]] · [[Snippets - IK]] · [[Spec-Driven Move Authoring]] · [[Authoring Clips in Code]] · [[Scale and Animation]]
+[[Locomotion Readability - Lessons from Blind Panels]] · [[LihFolk R15 Keyframe Pipeline]] · [[Retargeting Animations Between Rigs]] · [[Locomotion Clip Lessons - Jump, Sprint, Idle]] · [[Posing and Silhouettes]] · [[Snippets - IK]] · [[Authoring Clips in Code]] · [[Spec-Driven Move Authoring]]
 <!-- related:end -->

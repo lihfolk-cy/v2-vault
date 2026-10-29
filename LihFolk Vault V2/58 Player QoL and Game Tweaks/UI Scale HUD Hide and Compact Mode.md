@@ -140,5 +140,5 @@ Most HUD complaints are about too much on screen by default. Before adding toggl
 
 <!-- related:start -->
 ## Related
-[[Mobile Button Layout Editor]] · [[Safe Area]] · [[Cookbook - UI]] · [[Accessibility Cross-Links for QoL Settings]] · [[QoL Audit Checklist]] · [[Graphics and Performance Toggles for Low-End Devices]] · [[Top 25 QoL Wins by Effort]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Loading Screen Skip and First-Session Goals]] · [[Quick Respawn and Spawn Protection]]
+[[Mobile Button Layout Editor]] · [[Safe Area]] · [[Cookbook - UI]] · [[Accessibility Cross-Links for QoL Settings]] · [[Graphics and Performance Toggles for Low-End Devices]] · [[QoL Audit Checklist]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Top 25 QoL Wins by Effort]] · [[Loading Screen Skip and First-Session Goals]] · [[Quick Respawn and Spawn Protection]]
 <!-- related:end -->

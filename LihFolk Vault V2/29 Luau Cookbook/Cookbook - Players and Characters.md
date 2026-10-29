@@ -465,5 +465,5 @@ end
 
 <!-- related:start -->
 ## Related
-[[Character Select and Class Systems with Different Rigs]] · [[Cookbook - UI]] · [[Snippets - Ragdoll]] · [[AI Pitfalls - Networking and Security]] · [[Cookbook - Tables Strings and Time]] · [[Downed, Revive and Bleed-Out States]]
+[[Character Select and Class Systems with Different Rigs]] · [[Cookbook - UI]] · [[Snippets - Ragdoll]] · [[AI Pitfalls - Networking and Security]] · [[Cookbook - Tables Strings and Time]] · [[Functions Closures and Upvalues]]
 <!-- related:end -->

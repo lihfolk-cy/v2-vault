@@ -168,5 +168,5 @@ Move procedures (how to add a new item, how to release) into skills or path-scop
 
 <!-- related:start -->
 ## Related
-[[MCP Workflows for Scripting and Debugging]] · [[Agent Orchestration - Sub-Agents, Hooks and Skill Costs]] · [[Multiple Agents in One Studio]] · [[What Is MCP]] · [[Writing Your Own MCP Server]] · [[Studio Plugins and Local HTTP Bridges]] · [[Blender MCP]] · [[MCP Workflows for Building Worlds]]
+[[MCP Workflows for Scripting and Debugging]] · [[Agent Orchestration - Sub-Agents, Hooks and Skill Costs]] · [[Multiple Agents in One Studio]] · [[What Is MCP]] · [[Writing Your Own MCP Server]] · [[Blender MCP]] · [[Studio Plugins and Local HTTP Bridges]] · [[MCP Workflows for Building Worlds]]
 <!-- related:end -->

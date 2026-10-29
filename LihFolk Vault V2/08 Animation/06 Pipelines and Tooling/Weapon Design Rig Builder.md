@@ -299,5 +299,5 @@ A rig where "0 of N joints moved" usually means a naming mismatch between clip p
 
 <!-- related:start -->
 ## Related
-[[Pipeline - Importing Animated Enemies]] · [[Snippets - Building and Sampling Clips]] · [[Accessories and Armor That Follow Animation]] · [[Bones and Skinned Meshes]] · [[Blender Armature and Bone Roll Conventions]] · [[Baked Clip Stubs and Archiving]] · [[Clip Buffer Format]] · [[Weapon and Combat Animation]]
+[[Pipeline - Importing Animated Enemies]] · [[Snippets - Building and Sampling Clips]] · [[Accessories and Armor That Follow Animation]] · [[Bones and Skinned Meshes]] · [[Blender Armature and Bone Roll Conventions]] · [[Baked Clip Stubs and Archiving]] · [[Weapon and Combat Animation]] · [[Clip Buffer Format]]
 <!-- related:end -->

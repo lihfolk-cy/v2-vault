@@ -1,13 +1,13 @@
 # LihFolk Vault V2: Roblox game dev knowledge for humans and AI
 
-**Read it as a vault. Install it as a plugin.** 800+ expert notes on making Roblox games, written so both you and your AI can use them. Each note has trust labels, common mistakes and checklists.
+**Read it as a vault. Install it as a plugin.** 1,290+ expert notes on making Roblox games, written so both you and your AI can use them. Each note has trust labels, common mistakes and checklists.
 
 ## Two ways to use it
 
 ### 1. Obsidian vault (read and browse)
 1. Download this repo (green **Code** button, then **Download ZIP**, or `git clone`).
 2. In Obsidian: **Open folder as vault**, then pick the `LihFolk Vault V2` folder.
-3. Start at **000 Home**. The Celestial Vault theme and graph colours load automatically. If Obsidian asks, turn on community plugins to enable the bundled Celestial Vault plugin (starfield welcome tab, journal banners, moon calendar).
+3. Start at **000 Home**. The Celestial look (starry backdrop, V2 home planet, journal banners, moon calendar) and the graph colours load automatically from the CSS snippets in `.obsidian/snippets`, which are already switched on in `appearance.json`. No community plugin is needed, and the snippets still work if Obsidian opens the vault in Restricted mode. One small optional plugin of our own, **LihFolk Graph**, is bundled and colours each graph link by its note; turn on community plugins to use it. Journal and month templates live in `_templates`.
 
 ### 2. Claude Code plugin (your AI builds like a pro)
 In Claude Code:
@@ -25,6 +25,8 @@ After that, Roblox tasks automatically use the knowledge base. You also get:
 | **Blender modelling** | Roblox-ready modelling with an automatic quality gate and correct export (no 100x scale, no lost bevels) |
 | **Trend games** | The 2025-2026 trend-game playbook with the new Roblox rules (`/lihfolk:trend-game`) |
 | **Systems library** | 19 drop-in typed Luau modules: validated remotes, session-locked data, idempotent purchases, shop, eggs with 2026 odds rules, codes, daily rewards, rebirth, quests, leaderboards (`/lihfolk:new-system`) |
+| **Asset pack** | Finds original models, materials, skies, animations and VFX in the separately downloaded LihFolk Asset Pack by catalogue search, shippable rows only, with import steps (`/lihfolk:assets`, set `LIHFOLK_ASSETS`) |
+| **Sound effects** | Layered, varied combat and UI sounds: a pooled Luau module with volume buses and animation-marker sync matched to the VFX presets, sourced only from premium, properly licensed sounds (Roblox-licensed Creator Store audio first, then a library you own) with a quality checklist and editing pipeline (`lihfolk-sfx`) |
 | **Code checks** | A hook scans every Luau file the AI writes for 17 known Roblox mistakes and makes it fix them; `/lihfolk:audit` reviews a whole project |
 | **LihFolk UI** | Original cartoon/simulator menu kit with Luau components |
 | **2025-2026 knowledge** | What changed on Roblox since most models were trained, and what AI models get wrong |
@@ -35,9 +37,9 @@ Point your tool at this folder. `AGENTS.md` tells any agent how to search the va
 
 ## Built to be trusted by AI agents
 
-- **One-call search:** `python "LihFolk Vault V2/_tools/vault.py" "my sword floats away from the hand when I attack"` returns the 3 best notes with their TL;DRs. It understands bugs described in everyday words through `LihFolk Vault V2/SYMPTOMS.md`, which has 250+ symptom → cause → fix lines. On a held-out test set of hand-written tasks, the right note is in the top 3 **93%** of the time, against 57% for grepping the index. The average answer costs about 700 tokens.
+- **One-call search:** `python "LihFolk Vault V2/_tools/vault.py" "my sword floats away from the hand when I attack"` returns the 3 best notes with their TL;DRs (on Windows use `py` if `python` isn't on your PATH). It understands bugs described in everyday words through `LihFolk Vault V2/SYMPTOMS.md`, which has 250+ symptom → cause → fix lines. On a held-out test set of hand-written tasks, the right note is in the top 3 **93%** of the time, against 57% for grepping the index. The average answer costs about 700 tokens.
 - **No made-up APIs:** every Roblox and Luau API name in the notes is checked against a dated snapshot of the real API, including deprecations. The first run caught a few dozen uses of methods Roblox had renamed to `...Async`, and they are fixed.
-- **Code that compiles:** all 1,600+ Luau code blocks are compiled with the official Luau compiler on every push.
+- **Code that compiles:** all 1,800+ Luau code blocks are compiled with the official Luau compiler on every push.
 - **Notes that agree:** numbers repeated across notes, such as limits, defaults and ratios, are cross-checked, and stale date stamps are flagged.
 - **Checked on every push:** `.github/workflows/vault-checks.yml` runs all of it. Details and numbers are in `LihFolk Vault V2/_tools/README.md`.
 
@@ -45,11 +47,15 @@ Point your tool at this folder. `AGENTS.md` tells any agent how to search the va
 Every claim is marked **Roblox docs** (official), **Measured** (tested in a real project), **Rule of thumb** (craft knowledge) or **Unverified** (not confirmed yet). Roblox changes fast, so dated claims say "as of".
 
 ## What's inside
-- `LihFolk Vault V2/`: the vault (52 sections, index, home page, theme)
+- `LihFolk Vault V2/`: the vault (55 sections, index, home page, theme)
+- `benchmark/`: the v2 benchmark (questions, answers, blind grades) and the script that reproduces the results
+- `REVIEWERS.md`: every claim and the command that checks it
 - `skills/`, `agents/`, `commands/`: the Claude Code plugin
 - `.claude-plugin/`: plugin and marketplace manifests
 
 ## License
-Notes, images and scripts: **CC BY 4.0**. Credit "LihFolk Vault V2" and link back. Code snippets inside notes may be used in your games without attribution. See [LICENSE.md](LICENSE.md).
+Notes, images and scripts: **CC BY 4.0**. Credit "LihFolk Vault V2" and link back. Code snippets inside notes may be used in your games without attribution.
+
+LihFolk Asset Pack (download from [Releases](https://github.com/lihfolk-cy/v2-vault/releases), including a small sample zip): free to use and modify in your own games, commercial ones included, with no credit needed; you may not resell or redistribute the assets themselves. Full terms in [LICENSE.md](LICENSE.md).
 
 Not affiliated with or endorsed by Roblox Corporation.

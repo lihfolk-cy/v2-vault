@@ -191,5 +191,5 @@ See also: [[Weapon and Combat Animation]], [[Procedural Weapon Motion]], [[Custo
 
 <!-- related:start -->
 ## Related
-[[Snippets - Procedural Motion]] · [[Combat Animation Craft]] · [[Custom Locomotion Controller Design]] · [[Ability Kits Architecture]] · [[Pipeline - New Animated Weapon]] · [[Stance and Charge Moves]] · [[Animation Editor Workflow]] · [[Spec-Driven Move Authoring]]
+[[Snippets - Procedural Motion]] · [[Combat Animation Craft]] · [[Custom Locomotion Controller Design]] · [[Ability Kits Architecture]] · [[Pipeline - New Animated Weapon]] · [[Stance and Charge Moves]] · [[Animation Editor Workflow]] · [[Timing Spacing and Frame Charts]]
 <!-- related:end -->

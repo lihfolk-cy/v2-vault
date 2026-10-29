@@ -114,5 +114,5 @@ Sources: https://games.roblox.com/v1/games?universeIds=245662005 ; https://games
 
 <!-- related:start -->
 ## Related
-[[Police Chases and Wanted Levels]] · [[Case Study - Rivals]] · [[Case Study - Dead Rails]] · [[Case Study - Forsaken]] · [[Case Study - Murder Mystery 2]] · [[Case Study - Tower Defense Simulator]] · [[Case Study - The Strongest Battlegrounds]] · [[Case Study - Adopt Me]] · [[Case Study - Pet Simulator 99]]
+[[Police Chases and Wanted Levels]] · [[Case Study - Dead Rails]] · [[Case Study - Rivals]] · [[Case Study - Forsaken]] · [[Case Study - Murder Mystery 2]] · [[Case Study - Tower Defense Simulator]] · [[Case Study - The Strongest Battlegrounds]] · [[Case Study - Adopt Me]] · [[Case Study - Pet Simulator 99]]
 <!-- related:end -->

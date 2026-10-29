@@ -10,5 +10,9 @@ LihFolk Vault V2/_tools/.cache/
 
 # third-party Obsidian plugins (installed locally from the community directory; never redistributed)
 LihFolk Vault V2/.obsidian/plugins/*
-!LihFolk Vault V2/.obsidian/plugins/celestial-vault/
-LihFolk Vault V2/.obsidian/community-plugins.json
+!LihFolk Vault V2/.obsidian/plugins/lihfolk-graph/
+
+# local Obsidian plugin caches (Smart Connections embeddings etc.)
+LihFolk Vault V2/.smart-env/
+/.obsidian/
+*.bak

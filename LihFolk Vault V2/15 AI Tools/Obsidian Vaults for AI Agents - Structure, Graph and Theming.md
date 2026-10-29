@@ -1,5 +1,6 @@
 ---
 tags: [ai, obsidian, vault, knowledge-base, graph, css, theming, documentation, lihfolk, type/guide, area/ai, level/intermediate]
+verified: 2026-10-28
 ---
 # Obsidian Vaults for AI Agents - Structure, Graph and Theming
 
@@ -14,8 +15,6 @@ tags: [ai, obsidian, vault, knowledge-base, graph, css, theming, documentation, 
 >
 > Cost: TL;DR ~140 tok · whole note ~1.6k tok. Read more: ## 2. Graph shape follows link structure · ## 3. Theming with CSS snippets · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
-verified: 2026-10-28
 
 How to build an Obsidian vault that serves two readers at once: AI agents that search and read notes as plain Markdown, and humans who browse it in Obsidian with a graph and a custom theme. Lessons from building LihFolk Vault V2; **Measured** marks things observed in this project.
 
@@ -90,5 +89,5 @@ Skills, hooks, CI and scripts address the vault by path. Renaming the vault fold
 
 <!-- related:start -->
 ## Related
-[[AI Asset Pipelines - Scoring, Reviewers and Spot Checks]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[AI Agents and Autonomous Workflows]] · [[Roblox Studio Assistant]] · [[AI in Roblox Development Overview]] · [[Prompting and Verifying AI Output]] · [[AI Code Assistants for Luau]]
+[[AI Asset Pipelines - Scoring, Reviewers and Spot Checks]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[AI Agents and Autonomous Workflows]] · [[Roblox Studio Assistant]] · [[AI in Roblox Development Overview]] · [[AI Code Assistants for Luau]] · [[Prompting and Verifying AI Output]]
 <!-- related:end -->

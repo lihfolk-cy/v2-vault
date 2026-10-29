@@ -172,5 +172,5 @@ When several agents share a place ([[Multiple Agents in One Studio]]), add an **
 
 <!-- related:start -->
 ## Related
-[[Running Many AI Agents on One Roblox Place]] · [[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[What Is MCP]] · [[MCP Workflows for Building Worlds]] · [[MCP Workflows for Scripting and Debugging]] · [[Writing Your Own MCP Server]] · [[Setting Up MCP Clients]] · [[Blender MCP]] · [[Studio Plugins and Local HTTP Bridges]]
+[[Running Many AI Agents on One Roblox Place]] · [[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[What Is MCP]] · [[MCP Workflows for Building Worlds]] · [[MCP Workflows for Scripting and Debugging]] · [[Setting Up MCP Clients]] · [[Writing Your Own MCP Server]] · [[Blender MCP]] · [[Studio Plugins and Local HTTP Bridges]]
 <!-- related:end -->

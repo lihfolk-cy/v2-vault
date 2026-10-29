@@ -12,7 +12,7 @@ tags: [vfx, post-processing, damage, vignette, hit-flash, blur, colorcorrection,
 > - Hits are pulses; low health is a level; both capped.
 > - Damage effects driven by server-confirmed events, with source position for a directional indicator.
 >
-> Cost: TL;DR ~150 tok · whole note ~2.1k tok. Read more: ## Architecture: one owner, many requests · ## Accessibility and comfort · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~2.2k tok. Read more: ## Architecture: one owner, many requests · ## Accessibility and comfort · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Screen-space damage feedback tells the player "you were hit" and "you are in danger" without them reading a health bar. Done badly it blinds phones, stacks into a white screen in multi-hit fights, and triggers motion or photosensitivity problems. This note is the client-side pattern: one owner for every screen effect, additive "requests" from gameplay, and accessibility toggles that scale everything to zero.
@@ -151,5 +151,5 @@ The server applies damage. It fires one remote to the damaged player with `amoun
 
 <!-- related:start -->
 ## Related
-[[Comfort Toggles - Flashes Damage Numbers and Hit-Stop]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Stylized Lighting Recipes]] · [[Highlights and Selection Effects]] · [[Lighting Mood and Time of Day]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Combat Sound Design and Feedback]] · [[Lighting Technologies and Settings]]
+[[Comfort Toggles - Flashes Damage Numbers and Hit-Stop]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Stylized Lighting Recipes]] · [[Highlights and Selection Effects]] · [[Lighting Mood and Time of Day]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Combat Sound Design and Feedback]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[Lighting Technologies and Settings]]
 <!-- related:end -->

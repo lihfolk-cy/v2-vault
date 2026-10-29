@@ -421,5 +421,5 @@ The Studio writer reads `strip`, `keys` and `thin`, builds the clip with parents
 
 <!-- related:start -->
 ## Related
-[[Snippets - IK]] · [[LihFolk R15 Keyframe Pipeline]] · [[Pipeline - New Animated Weapon]] · [[IKControl Reference]] · [[Blade Grip and Wrist Limits]] · [[Posing and Silhouettes]] · [[Animation Review Checklist]] · [[Clip Buffer Format]]
+[[Snippets - IK]] · [[Pipeline - New Animated Weapon]] · [[LihFolk R15 Keyframe Pipeline]] · [[IKControl Reference]] · [[Blade Grip and Wrist Limits]] · [[Posing and Silhouettes]] · [[Animation Review Checklist]] · [[Clip Buffer Format]]
 <!-- related:end -->

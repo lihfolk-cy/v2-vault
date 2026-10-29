@@ -258,5 +258,5 @@ Related: [[Two-Bone IK Math]], [[Inverse Kinematics]], [[Arm Baker Internals]], 
 
 <!-- related:start -->
 ## Related
-[[Blade Grip and Wrist Limits]] · [[Spec-Driven Move Authoring]] · [[Posing and Silhouettes]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Human Swing Biomechanics]] · [[Look-At Aim and Head Tracking]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Animation Review Checklist]]
+[[Blade Grip and Wrist Limits]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Spec-Driven Move Authoring]] · [[Posing and Silhouettes]] · [[Human Swing Biomechanics]] · [[Look-At Aim and Head Tracking]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Animation Review Checklist]]
 <!-- related:end -->

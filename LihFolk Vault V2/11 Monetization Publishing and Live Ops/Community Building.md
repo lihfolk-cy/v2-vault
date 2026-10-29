@@ -109,7 +109,7 @@ Players.PlayerAdded:Connect(refreshGroupPerk)
 Rule of thumb: the perk should be noticeable but not mandatory. A 1.5x luck in a luck-driven game is strong; make sure non-members are not locked out of anything.
 
 ### Group roles and access
-Use group roles for testers (Playtest access), moderators (an in-game admin panel checking rank with `player:GetRankInGroup(groupId)` on the server) and contributors. Never trust a client claim of rank. See [[Server Authority and Validation]].
+Use group roles for testers (Playtest access), moderators (an in-game admin panel checking rank with `GroupService:GetRolesInGroupAsync(userId, groupId)` on the server) and contributors. Never trust a client claim of rank. See [[Server Authority and Validation]].
 
 ---
 
@@ -221,5 +221,5 @@ Write the message where players will see it: the group wall, an update announcem
 
 <!-- related:start -->
 ## Related
-[[Roblox Communities as Your On-Platform Hub]] · [[Discord Servers for Roblox Games]] · [[Monetization Overview]] · [[Ads and Rewarded Video]] · [[Robux Price Points and Offer Design]] · [[Refunds Chargebacks and Purchase Support]] · [[Game Passes]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Thumbnails Icons and Store Page]] · [[Economy Inflation Sinks and Faucets Math]]
+[[Roblox Communities as Your On-Platform Hub]] · [[Groups Roles and Permissions for Studios]] · [[Monetization Overview]] · [[Robux Price Points and Offer Design]] · [[Ads and Rewarded Video]] · [[Refunds Chargebacks and Purchase Support]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Game Passes]] · [[Thumbnails Icons and Store Page]]
 <!-- related:end -->

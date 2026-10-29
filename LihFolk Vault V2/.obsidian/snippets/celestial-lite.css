@@ -1,10 +1,10 @@
 /* Celestial Lite: the vault's dark violet theme and animated welcome tab, as one CSS snippet.
-   Loads automatically, no plugin or trust prompt. The full Celestial Vault plugin (journal, calendar)
-   is included but off; turn it on in Settings > Community plugins if you want it. */
+   Loads automatically, no plugin or trust prompt. The old Celestial Vault plugin is retired; its banners,
+   moon calendar and streak planet now live in celestial-v2-banners.css. */
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap');
 /* Celestial Vault: the whole look ships in this one file (theme + components + sky). */
 /* Celestial: near-black night sky, violet accent, book serif, card-style sidebar panes.
-   Pairs with the Celestial Vault plugin (welcome tab, daily banners, calendar, streak planet). */
+   (Was paired with the Celestial Vault plugin; everything it drew is now CSS, see celestial-v2-banners.css.) */
 
 .theme-dark {
 	--cv-serif: 'Source Serif 4', 'Source Serif Pro', Georgia, serif;
@@ -240,7 +240,7 @@ body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-con
 /* the greeting replaces "No file is open" */
 body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-title { font-size: 0 !important; margin: 0; }
 body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-title::before {
-	content: "Welcome, Traveler."; display: block; font-size: 42px; font-family: var(--cv-serif); font-weight: 600; color: #efe9fb;
+	content: "Income Multiplier."; display: block; font-size: 42px; font-family: var(--cv-serif); font-weight: 600; color: #efe9fb;
 	text-shadow: 0 0 22px rgba(170, 130, 255, .25); animation: cvl-breathe 5s ease-in-out infinite; }
 body:not(.cv-sky-on) .workspace-leaf-content[data-type="empty"] .empty-state-title::after {
 	content: "\2726   R O B L O X   G A M E   D E V   V A U L T   \2726"; display: block; margin-top: 6px; font-size: 11px; white-space: pre;

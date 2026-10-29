@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/pipelines, area/studio]
 > - StyLua, Selene, luau-lsp, Rojo build in CI on every PR.
 > - Schema validation plus cross-table references in CI.
 >
-> Cost: TL;DR ~120 tok · whole note ~960 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~1000 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -22,6 +22,7 @@ CI runs `stylua --check`, `selene`, `luau-lsp analyze`, `rojo build`. (from [[Ex
 - CI green, game broken: tests did not touch engine behaviour -> cloud tests for engine logic, play test for feel. ([[Code Pipeline - Rojo Git and CI]])
 - StyLua, Selene, luau-lsp, Rojo build in CI on every PR. ([[Code Pipeline - Rojo Git and CI]])
 - Schema validation plus cross-table references in CI. ([[Data and Config Pipeline - Spreadsheets to Game]])
+- Validator checks reachability, cycles, consumables, areas and hint completeness in CI. ([[Puzzle Dependency Charts and Hint Systems]])
 
 ## Mentioned in
 

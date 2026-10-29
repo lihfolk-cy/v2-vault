@@ -353,5 +353,5 @@ Because you cannot see sends, the funnel is:
 
 <!-- related:start -->
 ## Related
-[[Photo Mode and In-Game Screenshots with CaptureService]] · [[Subscriptions and Recurring Revenue]] · [[Discovery and Monetization Changes 2025-2026]] · [[Commerce and Physical Goods]] · [[Regional Compliance - Paid Random Items and Country Rules]] · [[Roblox Changes 2025-2026]]
+[[Photo Mode and In-Game Screenshots with CaptureService]] · [[Subscriptions and Recurring Revenue]] · [[Discovery and Monetization Changes 2025-2026]] · [[Commerce and Physical Goods]] · [[Roblox Changes 2025-2026]] · [[Regional Compliance - Paid Random Items and Country Rules]]
 <!-- related:end -->

@@ -1,5 +1,6 @@
 ---
 tags: [modeling, blender, procedural, kits, weapons, props, lathe, bevel, faceting, gltf, vertex-colors, lihfolk, type/guide, area/modeling, level/advanced]
+verified: 2026-10-28
 ---
 # Procedural Model Kits - Lessons
 
@@ -14,8 +15,6 @@ tags: [modeling, blender, procedural, kits, weapons, props, lathe, bevel, faceti
 >
 > Cost: TL;DR ~130 tok · whole note ~1.5k tok. Read more: ## 1. Faceting on small round parts is the number one complaint · ## 5. Blades · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
-verified: 2026-10-28
 
 What made scripted Blender generators produce Roblox props and weapons that pass a blind quality panel. The kit had 26 generator types (swords, spears, staffs, gems, potions, barrels, medals, tokens and more) and went through about 90 blind reviews (**Measured**). Scores below are blind rubric scores out of 10, pass bar 8.5, all **Measured** in this project.
 
@@ -113,5 +112,5 @@ Two lathes whose poles coincide (a stem top equal to a hub top) weld into one sh
 
 <!-- related:start -->
 ## Related
-[[Curve-Based Modelling in Blender for Roblox]] · [[Hard-Surface Modeling]] · [[Low-Poly and Stylized Modeling]] · [[Blender Workflow for Roblox Creators]] · [[Modeling Fundamentals for Games]] · [[Modular Environment Kits]] · [[Normal Maps and Detail Baking]] · [[Topology and Edge Flow]]
+[[Curve-Based Modelling in Blender for Roblox]] · [[Hard-Surface Modeling]] · [[Low-Poly and Stylized Modeling]] · [[Blender Workflow for Roblox Creators]] · [[Modeling Fundamentals for Games]] · [[Normal Maps and Detail Baking]] · [[Topology and Edge Flow]] · [[Modular Environment Kits]]
 <!-- related:end -->

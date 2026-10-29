@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/vfx, area/physics, api/Beam]
 > - Beam chains share one attachment per point; `FaceCamera` on for lines and cables.
 > - Sheet or arc: a `Beam` with a scrolling texture (`TextureSpeed`) curved via `CurveSize0/1`, or a swept mesh.
 >
-> Cost: TL;DR ~150 tok · whole note ~550 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~600 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -24,17 +24,17 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 - Beam missing: One attachment missing, same attachment twice, or not in Workspace -> Two distinct attachments in Workspace. ([[Beams and Trails]])
 - Beam chains share one attachment per point; `FaceCamera` on for lines and cables. ([[Curves in Luau - Paths Beams and Motion]])
 - Sheet or arc: a `Beam` with a scrolling texture (`TextureSpeed`) curved via `CurveSize0/1`, or a swept mesh. ([[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]])
-- Draw a `Beam` along the blade, or between shoulder and target, to see IK goals. ([[Debugging Animation Problems]])
+- Hairline streaks need low Beam brightness. Bloom fattens bright thin Beams into bars; keep `Brightness` low and let `LightEmission` and the texture do the work (Measured, void impact). ([[VFX Readability and Value - Lessons from Blind Reviews]])
 
 ## Mentioned in
 
-18 notes in 10 sections. The 18 most relevant are linked:
+19 notes in 10 sections. The 19 most relevant are linked:
 
 ### 06 World Building and Art
 [[Roads, Rivers and Paths Carved Along Curves in Terrain]]
 
 ### 07 Lighting VFX and Audio
-[[Beams and Trails]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Light Sources and Shadows]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Slash VFX Recipes - Crescent and Ring]] · [[VFX Design Playbook]] · [[VFX Performance Budgets and Culling]] · [[VFX Previews in Blender for Roblox - Colour and Framing]]
+[[Beams and Trails]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Light Sources and Shadows]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Slash VFX Recipes - Crescent and Ring]] · [[VFX Design Playbook]] · [[VFX Performance Budgets and Culling]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[VFX Readability and Value - Lessons from Blind Reviews]]
 
 ### 08 Animation
 [[Debugging Animation Problems]]

@@ -179,5 +179,5 @@ See also: [[Combat Combo Systems]], [[Ability Kits Architecture]], [[Animation Q
 
 <!-- related:start -->
 ## Related
-[[Pipeline - New Animated Weapon]] · [[Animation Review Checklist]] · [[Blade Grip and Wrist Limits]] · [[Animation Editor Workflow]] · [[Boss Animation and Phases]] · [[Animation Glossary]] · [[Weapon Design Rig Builder]] · [[Troubleshooting Table]]
+[[Pipeline - New Animated Weapon]] · [[Animation Review Checklist]] · [[Blade Grip and Wrist Limits]] · [[Boss Animation and Phases]] · [[Animation Editor Workflow]] · [[Weapon Design Rig Builder]] · [[Animation Glossary]] · [[Troubleshooting Table]]
 <!-- related:end -->

@@ -1,0 +1,362 @@
+[
+ {
+  "id": "P1",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 0.67,
+   "R4": 1.67,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2,
+   "R8": 1.67,
+   "R9": 2
+  },
+  "notes": "R3 says InvokeServer renamed (-1 item3); R4/R8 hedged on no-rename"
+ },
+ {
+  "id": "P2",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 0.13,
+   "R5": 3,
+   "R6": 2.63,
+   "R7": 3,
+   "R8": 2.63,
+   "R9": 1.13
+  },
+  "notes": "R4 wrong forced settings (PhysicsSteppingMethod, ownership) and says not time(); R9 says not time()"
+ },
+ {
+  "id": "P3",
+  "scores": {
+   "R1": 0.5,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 0.5,
+   "R8": 3,
+   "R9": 0.5
+  },
+  "notes": "R1/R7/R9 wrong property location (StarterPlayer), vague timeline"
+ },
+ {
+  "id": "P4",
+  "scores": {
+   "R1": 2.63,
+   "R2": 0,
+   "R3": 3,
+   "R4": -0.75,
+   "R5": 3,
+   "R6": 3,
+   "R7": 0,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "R2/R4/R7 do not know update; R4 says Text is filtered string (wrong)"
+ },
+ {
+  "id": "P5",
+  "scores": {
+   "R1": 3,
+   "R2": -0.38,
+   "R3": -0.38,
+   "R4": 2.63,
+   "R5": 3,
+   "R6": 3,
+   "R7": 0.75,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "R2/R3/R7 give 100MB and 60+10xCCU style numbers; R2/R3 wrong"
+ },
+ {
+  "id": "P6",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 1.88,
+   "R6": 3,
+   "R7": 3,
+   "R8": 2.25,
+   "R9": 2.63
+  },
+  "notes": "R5/R8 no 100%/trade check; R9 lacks trading flag"
+ },
+ {
+  "id": "P7",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.63,
+   "R3": 3,
+   "R4": 2.63,
+   "R5": 0.38,
+   "R6": 0.38,
+   "R7": 3,
+   "R8": 2.25,
+   "R9": 0.38
+  },
+  "notes": "R5/R6/R9 vague or invented requirements"
+ },
+ {
+  "id": "P8",
+  "scores": {
+   "R1": 1.5,
+   "R2": 3,
+   "R3": 1.5,
+   "R4": 1.5,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 3,
+   "R9": 2.25
+  },
+  "notes": "R1/R3/R4 old mechanics, guessed 0.0045; R9 omits audience expansion"
+ },
+ {
+  "id": "G1",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 4,
+   "R4": 4,
+   "R5": 4,
+   "R6": 3,
+   "R7": 3,
+   "R8": 4,
+   "R9": 3
+  },
+  "notes": "Item4 PromptProductPurchaseFinished mentioned only by R3,R4,R5,R8"
+ },
+ {
+  "id": "G2",
+  "scores": {
+   "R1": 3,
+   "R2": 2.63,
+   "R3": 2.63,
+   "R4": 2.63,
+   "R5": 3,
+   "R6": 2.63,
+   "R7": 2.63,
+   "R8": 3,
+   "R9": 2.63
+  },
+  "notes": "keyInfo mention only R1,R5,R8"
+ },
+ {
+  "id": "G3",
+  "scores": {
+   "R1": 1.67,
+   "R2": 1.67,
+   "R3": 1.67,
+   "R4": 1.67,
+   "R5": 1.67,
+   "R6": 1.67,
+   "R7": 1.67,
+   "R8": 1.67,
+   "R9": 1.67
+  },
+  "notes": "all find NaN and fix; none state general attacker-controlled rule explicitly (0.5)"
+ },
+ {
+  "id": "G4",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 3,
+   "R9": 2.5
+  },
+  "notes": "R9 muddled Animator stage"
+ },
+ {
+  "id": "G5",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2,
+   "R8": 2,
+   "R9": 2
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "G6",
+  "scores": {
+   "R1": 2,
+   "R2": 1.5,
+   "R3": 2,
+   "R4": 1.5,
+   "R5": 1.5,
+   "R6": 2,
+   "R7": 2,
+   "R8": 1.75,
+   "R9": 2
+  },
+  "notes": "missing 0.01 alternative or glTF in some"
+ },
+ {
+  "id": "G7",
+  "scores": {
+   "R1": 1.67,
+   "R2": 1.0,
+   "R3": 1.33,
+   "R4": 1.67,
+   "R5": 1.0,
+   "R6": 1.33,
+   "R7": 1.0,
+   "R8": 1.0,
+   "R9": 1.0
+  },
+  "notes": "many wrongly say Armature modifier gets baked; shape-key catch hedged"
+ },
+ {
+  "id": "G8",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 1.5,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2,
+   "R8": 2,
+   "R9": 2
+  },
+  "notes": "R4 wrongly says default leaves notch overlap and prefers DeviceSafeInsets"
+ },
+ {
+  "id": "T1",
+  "scores": {
+   "R1": 4,
+   "R2": 4,
+   "R3": 4,
+   "R4": 4,
+   "R5": 4,
+   "R6": 4,
+   "R7": 4,
+   "R8": 4,
+   "R9": 4
+  },
+  "notes": "all meet checklist"
+ },
+ {
+  "id": "T2",
+  "scores": {
+   "R1": 4,
+   "R2": 3.5,
+   "R3": 4,
+   "R4": 4,
+   "R5": 3.5,
+   "R6": 3.5,
+   "R7": 3.5,
+   "R8": 3.5,
+   "R9": 3.5
+  },
+  "notes": "parallel BindToClose stated only by R1,R3,R4"
+ },
+ {
+  "id": "T3",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "all meet checklist"
+ },
+ {
+  "id": "T4",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2,
+   "R8": 2,
+   "R9": 2
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "T5",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2,
+   "R8": 2,
+   "R9": 2
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "T6",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2,
+   "R8": 2,
+   "R9": 2
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "T7",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2,
+   "R8": 2,
+   "R9": 2
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "T8",
+  "scores": {
+   "R1": 0,
+   "R2": 0,
+   "R3": 2,
+   "R4": 0,
+   "R5": 2,
+   "R6": 0,
+   "R7": 0,
+   "R8": 2,
+   "R9": 0.5
+  },
+  "notes": "only R3,R5,R8 name MeshStreamingAndImprovedLoDs"
+ }
+]

@@ -8,9 +8,9 @@ tags: [atlas, concept, type/atlas, area/animation, area/gameplay]
 > - Hitboxes change with rigs; competitive games normalise with uniform hitbox parts per class so a small creature is not...
 > - Avoid: Relying on MeshPart collision for animated limbs -> Hitbox parts on bones, or data-driven hits.
 > - Every move defined in data with frame data, hitbox and damage.
-> - Avoid: Meshes collidable or queryable. Symptom: slashes block players, trip hitbox raycasts or shift physics.
+> - Avoid: Cosmetics that change hitboxes or reach.
 >
-> Cost: TL;DR ~140 tok · whole note ~1.1k tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~1.1k tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -21,6 +21,7 @@ Hitboxes change with rigs; competitive games normalise with uniform hitbox parts
 
 - Avoid: Relying on MeshPart collision for animated limbs -> Hitbox parts on bones, or data-driven hits. ([[Bones and Skinned Meshes]])
 - Every move defined in data with frame data, hitbox and damage. ([[Genre Playbook - Battlegrounds and Arena Fighters]])
+- Avoid: Cosmetics that change hitboxes or reach. ([[Case Study - Murder Mystery 2]])
 - Avoid: Meshes collidable or queryable. Symptom: slashes block players, trip hitbox raycasts or shift physics. ([[Mesh VFX Packs Built in Blender]])
 
 ## Mentioned in

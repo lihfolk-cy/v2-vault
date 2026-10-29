@@ -81,5 +81,5 @@ Copy the shape of any skill here: a `description` that names the task and the ph
 
 ## Connected notes
 <!-- auto-links:start -->
-[[LihFolk UI Design System]] · Studio Assistant and AI Tools · [[CHANGELOG]] · [[LICENSE]] · Case Study - Building a Game with AI Agents · Setting Up MCP Clients
+[[LihFolk UI Design System]] · Studio Assistant and AI Tools · [[LICENSE]] · Case Study - Building a Game with AI Agents · Setting Up MCP Clients
 <!-- auto-links:end -->

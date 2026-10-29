@@ -7,10 +7,10 @@ tags: [atlas, api, type/atlas, area/data, area/scripting, api/DataStore]
 > [!tldr] TL;DR
 > - DataStore bugs are the most expensive bugs in a Roblox game: they lose progress, duplicate items, and generate support tickets...
 > - Every DataStore call is in `pcall` with bounded retries.
-> - Avoid: Rate limit after expensive parsing or DataStore calls -> Rate limit first.
-> - Avoid: Quoting per-server DataStore budgets as the limit, or the "6 second" per-key rule.
+> - Avoid: MemoryStore as the counter -> DataStore authority; MemoryStore mirror only.
+> - Counter in a DataStore key updated only with `UpdateAsync`; supply enforced inside the transform.
 >
-> Cost: TL;DR ~130 tok · whole note ~1.8k tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~1.8k tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -22,10 +22,10 @@ API snapshot: class, inherits `GlobalDataStore`, not creatable with `Instance.ne
 ## Key facts
 
 - Every DataStore call is in `pcall` with bounded retries. ([[Cookbook - Data and Saving]])
+- Avoid: MemoryStore as the counter -> DataStore authority; MemoryStore mirror only. ([[Serial-Numbered Limited Items - Atomic Counters]])
+- Counter in a DataStore key updated only with `UpdateAsync`; supply enforced inside the transform. ([[Serial-Numbered Limited Items - Atomic Counters]])
 - Avoid: Rate limit after expensive parsing or DataStore calls -> Rate limit first. ([[Rate Limiting and Abuse Prevention]])
 - Avoid: Quoting per-server DataStore budgets as the limit, or the "6 second" per-key rule. ([[Data and Cloud Changes 2025-2026]])
-- DataStore throttling cascades: Immediate retries in a loop -> Backoff with jitter; attempt cap. ([[Error Handling and Retries]])
-- Avoid: Wrapping a DataStore call in `pcall` but ignoring the success flag, then saving over data that failed to load. ([[Automated Luau Checks - LihFolk Hook and Audit]])
 
 ## Mentioned in
 

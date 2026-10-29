@@ -171,5 +171,5 @@ Out of several hundred attack clips: wrist problems in **97%**, arms in body in 
 
 <!-- related:start -->
 ## Related
-[[Pipeline - Arm IK Baking and QA]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Idle Breathing and Secondary Motion]] · [[Human Swing Biomechanics]] · [[Authoring Clips in Code]] · [[Weapon and Combat Animation]] · [[Animation Capture and Mocap]] · [[R15 Run Cycle Key Poses]]
+[[Pipeline - Arm IK Baking and QA]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Idle Breathing and Secondary Motion]] · [[Human Swing Biomechanics]] · [[Authoring Clips in Code]] · [[Weapon and Combat Animation]] · [[Animation Capture and Mocap]] · [[Animation Editor Advanced]]
 <!-- related:end -->

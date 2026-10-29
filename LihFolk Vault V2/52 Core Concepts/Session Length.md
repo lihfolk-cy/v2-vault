@@ -5,19 +5,19 @@ tags: [core-concept, game-design, analytics, retention, type/reference, area/des
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
-> - Roblox's recommendation systems consider engagement, and premium payouts are based on Premium members' time in your experience...
+> - Roblox's recommendation systems consider engagement (Recommended For You now weighs retention over 28 days), and Creator...
 > - Average hides the shape. An average of 15 minutes can be half the players leaving at 1 minute and the other half staying 29.
 > - Length bought with friction is fake. Long walks, slow timers and forced waits raise session length and lower satisfaction and...
 > - Natural stopping points help retention. A game that offers a satisfying place to stop ("quest done, come back tomorrow for the...
 >
-> Cost: TL;DR ~170 tok · whole note ~920 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~170 tok · whole note ~940 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Session length** is how long a player stays in one visit, from join to leave. Averaged across players it becomes one of the main engagement numbers in the Creator Dashboard (reported as average session time or playtime per user; names change, check your dashboard) (Roblox docs, "Analytics", as of October 2026).
 
 ## Why it matters on Roblox
 
-Roblox's recommendation systems consider engagement, and premium payouts are based on Premium members' time in your experience (Roblox docs, "Premium payouts", as of October 2026). Longer sessions usually also mean more chances to reach the next goal and more chances to buy something. It is easy to conclude that longer is always better. It is not.
+Roblox's recommendation systems consider engagement (Recommended For You now weighs retention over 28 days), and [[Creator Rewards]], which replaced Premium Payouts on July 24, 2025, pay for qualifying users who spend at least 10 minutes in your game (Roblox docs, as of October 2026). Longer sessions usually also mean more chances to reach the next goal and more chances to buy something. It is easy to conclude that longer is always better. It is not.
 
 ## The nuance most people miss
 

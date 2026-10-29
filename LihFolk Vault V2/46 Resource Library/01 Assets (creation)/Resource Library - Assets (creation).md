@@ -23,5 +23,5 @@ Part of [[Resource Library Start Here]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Resource Library - Audio]] · [[Resource Library - Characters and Animation]] · [[Resource Library - Tools and Workflow]] · [[Resource Library - Security and Moderation]] · [[CHANGELOG]] · [[Skill - Roblox Asset Import]]
+[[Resource Library - Audio]] · [[Resource Library - Characters and Animation]] · [[Resource Library - Tools and Workflow]] · [[Resource Library - Security and Moderation]] · [[Skill - Roblox Asset Import]]
 <!-- auto-links:end -->

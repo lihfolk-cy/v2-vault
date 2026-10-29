@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/modeling, area/world]
 > - Patchy triangle streaks that no `Color` or `Material` change removes: Unwanted generator vertex colours multiplying -> Ignore...
 > - Baked AO blotchy on big faces: AO baked to vertex colours on greedy rectangles -> Texture AO for greedy meshes, or per-cell...
 >
-> Cost: TL;DR ~160 tok · whole note ~950 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~160 tok · whole note ~980 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,16 +27,16 @@ Vertex colours store an RGB (and optionally alpha) value per face corner on the 
 
 ## Mentioned in
 
-59 notes in 14 sections. The 25 most relevant are linked:
+61 notes in 14 sections. The 25 most relevant are linked:
 
 ### 06 World Building and Art
-[[Modeling in Blender for Roblox]] · [[Parts Unions and MeshParts]]
+[[House Construction Method - Modular Kit Workflow]] · [[Modeling in Blender for Roblox]] · [[Parts Unions and MeshParts]]
 
 ### 08 Animation
 [[3D Importer Settings Reference]] · [[Exporting FBX vs GLB]]
 
 ### 14 3D Modeling
-[[Exporting and Validating Models for Roblox]] · [[Hand-Painted and Stylized Texturing]] · [[Low-Poly and Stylized Modeling]] · [[Modeling Fundamentals for Games]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Texturing and PBR Baking]] · [[Trim Sheets Atlases and Vertex Colors]] · [[UV Unwrapping]]
+[[Exporting and Validating Models for Roblox]] · [[Hand-Painted and Stylized Texturing]] · [[Low-Poly and Stylized Modeling]] · [[Modeling Fundamentals for Games]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Texturing and PBR Baking]] · [[Trim Sheets Atlases and Vertex Colors]]
 
 ### 15 AI Tools
 [[AI Pitfalls - Assets and Import]]
@@ -45,7 +45,10 @@ Vertex colours store an RGB (and optionally alpha) value per face corner on the 
 [[Art Pipeline - Concept to In-Game Asset]] · [[Environment and Level Pipeline]]
 
 ### 44 Materials and Surfaces
-[[Baking Lighting and Detail into Textures]] · [[Tiling Trim Sheets and Decal Tricks]]
+[[Baking Lighting and Detail into Textures]]
+
+### 45 Procedural Blender Assets
+[[Stylised Log Cabin Worked Example]]
 
 ### 53 Voxel Modelling Deep Dive
 [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Voxel Shading - Baked AO Edges and Lighting]]
@@ -56,6 +59,6 @@ Vertex colours store an RGB (and optionally alpha) value per face corner on the 
 ### 55 Modelling Nuance and Readability
 [[Bevels Chamfers and Edge Highlights Without Textures]] · [[Style Bibles for Consistent Models]]
 
-Also mentioned in (not linked): 00 Start Here · AI 3D Model Generation Outside Roblox · AI Material and Texture Generation · Blender Automation with Python · Case Study - Building LihFolk V2 with AI Agents · Draw Calls · Glossary · Hard-Surface Modeling · Importing Models and Rigs · Lighting Untextured Art in Roblox · Low-Poly Creature From a Flat Reference Sheet · Low-Poly Tree Set Worked Example · Materials and Surfaces Start Here · Mesh Optimization for Mobile · Meshing Voxels for Roblox - Greedy Meshing and Export · Modelling Nuance Start Here · Modular Environment Kits · Normal Maps and Detail Baking · Open Questions - Whole Vault · Pixel Art Pipeline - Aseprite to Roblox Without Blur · Procedural Model Kits - Lessons · Spending Triangles Where the Camera Looks · Stylised vs Realistic Material Pipelines · Substance Painter and Texturing Tools · SurfaceAppearance PBR Workflow · Texel Density · Textures Decals and Texture Memory · UGC Avatar Items and Accessories · Voxel Art - Studs Outlines and Style Kits · Voxel Modelling Start Here · Voxel Palettes - Ramps Hue Shifting and Limits · Voxel and Blocky Modeling · Water Sky and Atmosphere Art · What AI Models Get Wrong in Roblox
+Also mentioned in (not linked): 00 Start Here · AI 3D Model Generation Outside Roblox · AI Material and Texture Generation · Blender Automation with Python · Case Study - Building LihFolk V2 with AI Agents · Draw Calls · Glossary · Hard-Surface Modeling · Importing Models and Rigs · Lighting Untextured Art in Roblox · Low-Poly Creature From a Flat Reference Sheet · Low-Poly Tree Set Worked Example · Materials and Surfaces Start Here · Mesh Optimization for Mobile · Meshing Voxels for Roblox - Greedy Meshing and Export · Modelling Nuance Start Here · Modular Environment Kits · Normal Maps and Detail Baking · Open Questions - Whole Vault · Pixel Art Pipeline - Aseprite to Roblox Without Blur · Procedural Model Kits - Lessons · Spending Triangles Where the Camera Looks · Stylised vs Realistic Material Pipelines · Substance Painter and Texturing Tools · SurfaceAppearance PBR Workflow · Texel Density · Textures Decals and Texture Memory · Tiling Trim Sheets and Decal Tricks · UGC Avatar Items and Accessories · UV Unwrapping · Voxel Art - Studs Outlines and Style Kits · Voxel Modelling Start Here · Voxel Palettes - Ramps Hue Shifting and Limits · Voxel and Blocky Modeling · Water Sky and Atmosphere Art · What AI Models Get Wrong in Roblox
 
 <!-- atlas:generated -->

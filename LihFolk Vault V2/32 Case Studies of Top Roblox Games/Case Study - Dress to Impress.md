@@ -41,7 +41,7 @@ Source labels used below: **Observed in the live game (October 2026)** means the
 | Later level | About 75,000 to 100,000 concurrent in May 2026 | Press (Lootbar blog; weak source) and consistent with the 97,684 snapshot above |
 | Awards | 2024 Roblox Innovation Awards: Builderman Choice of Excellence, Best Creative Direction, Best New Experience | Press (New York Times, via Wikipedia) |
 
-Things I could not verify: the exact all-time peak and its date from a strong source (trackers agree on about 1.7M in December 2024 but I could not open a tracker page that renders the number). Any revenue figure. Whether the monthly VIP option guides describe (299 Robux for 30 days) is still sold; the public pass list only shows the permanent VIP Pass.
+Things we could not verify: the exact all-time peak and its date from a strong source (trackers agree on about 1.7M in December 2024 but we could not open a tracker page that renders the number). Any revenue figure. Whether the monthly VIP option guides describe (299 Robux for 30 days) is still sold; the public pass list only shows the permanent VIP Pass.
 
 ### The shape of the curve
 
@@ -65,7 +65,7 @@ No CTR data is public. This is reasoning from assets downloaded from the public 
 
 1. **The thumbnail is the fantasy, not the gameplay.** DTI sells "look amazing". A close-up face with makeup and a styled outfit is that promise in one image; showing a crowded runway would read as noise.
 2. **Tag the reason to return.** "[NEW QUEST]" tells lapsed players exactly why to come back now. DTI's quests are story chapters (the Lana storyline, below), so the tag points at the part players talk about.
-3. **Platform event tie-in.** The Hollow frame on the icon links DTI to a Roblox-wide event, which plausibly earns placement in event sorts and catches players browsing for that event. I could not confirm DTI's chart placement from the event; this is inference from the frame.
+3. **Platform event tie-in.** The Hollow frame on the icon links DTI to a Roblox-wide event, which plausibly earns placement in event sorts and catches players browsing for that event. We could not confirm DTI's chart placement from the event; this is inference from the frame.
 4. **Milestone art.** A "10B" visits image is social proof: "this is the big one". Cheap to make, and it doubles as a celebration post.
 5. **Theme-specific scenes.** "Summer in Brazil" shows that each themed update gets its own hero image with a location and outfit, which keeps the gallery from going stale.
 
@@ -75,7 +75,7 @@ A risk worth naming: the thumbnail faces are much more detailed than what player
 
 ## 3. The first five minutes
 
-Sources: Wikipedia (citing Game Rant, Eurogamer, Kotaku, The Escapist), beginner guides (Press, 2024 to 2026). I did not play.
+Sources: Wikipedia (citing Game Rant, Eurogamer, Kotaku, The Escapist), beginner guides (Press, 2024 to 2026). Not played first-hand.
 
 1. **Lobby with a timer.** You join a small server (13 players) already cycling rounds. During lobby intermission, the next theme is announced.
 2. **Theme and countdown.** The theme stays on screen with a timer during dressing. Press (Game Rant, October 2024) reported 360 seconds to build an outfit; current timing may differ.
@@ -152,7 +152,7 @@ What the list shows:
 1. **Outfit sets are the main product.** Eight of fourteen passes are named clothing sets in the 279 to 449 band. They are the in-game equivalent of a fashion collection drop, and each is a direct, visible advantage in a game judged on looks, but only in style, not in mechanics.
 2. **Creative tools.** Custom Makeup, Materials+ and Increased Item Limit (more items per outfit) give more options rather than better stats.
 3. **One currency multiplier.** x2 Money at 399.
-4. **VIP at 799.** Guides (Press, 2025 and 2026) list a VIP room with more private dressing rooms and salon seats, exclusive items, a tag, and VIP-only modes, and mention a monthly option at 299 Robux that I could not see in the public pass list. Unverified.
+4. **VIP at 799.** Guides (Press, 2025 and 2026) list a VIP room with more private dressing rooms and salon seats, exclusive items, a tag, and VIP-only modes, and mention a monthly option at 299 Robux that we could not see in the public pass list. Unverified.
 5. **Run Faster at 149.** In a timed dressing round, getting between racks faster is a small real advantage. It is the one pass here that changes the competition, and the price is low.
 6. **Robux items and codes.** Press (Wikipedia, citing Kotaku and PC Gamer) notes items can be bought with Cash or Robux, plus code items.
 
@@ -217,5 +217,5 @@ A round manager (lobby 20 s, create 180 s, show 8 s per player, vote, podium), o
 
 <!-- related:start -->
 ## Related
-[[Case Study - Brookhaven RP]] · [[Case Study - Doors]] · [[Case Study - Pet Simulator 99]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - Fisch]] · [[Case Study - Murder Mystery 2]] · [[Case Study - Tower Defense Simulator]] · [[Case Study - Jailbreak]]
+[[Case Study - Brookhaven RP]] · [[Case Study - Doors]] · [[Case Study - Pet Simulator 99]] · [[Case Study - 99 Nights in the Forest]] · [[Case Study - Fisch]] · [[Case Study - Murder Mystery 2]] · [[Case Study - Forsaken]] · [[Case Study - Tower Defense Simulator]]
 <!-- related:end -->

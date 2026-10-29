@@ -1,5 +1,6 @@
 ---
 tags: [vfx, blender, preview, color, srgb, linear, slash, explosion, review, lihfolk, type/guide, area/vfx, level/advanced]
+verified: 2026-10-29
 ---
 # VFX Previews in Blender for Roblox - Colour and Framing
 
@@ -12,10 +13,8 @@ tags: [vfx, blender, preview, color, srgb, linear, slash, explosion, review, lih
 > - View transform set to Standard
 > - Camera at game distance; floor at ground height; neutral stage
 >
-> Cost: TL;DR ~130 tok · whole note ~1.4k tok. Read more: ## 1. Convert Roblox sRGB colours to linear · ## 3. Slashes stay frontal, explosions are radial · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~1.9k tok. Read more: ## 1. Convert Roblox sRGB colours to linear · ## 6. Previews must match the game (no preview-only fixes) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
-
-verified: 2026-10-28
 
 Rendering Roblox VFX previews outside Studio (for example in Blender, so an AI reviewer can score frame sequences without opening Studio) is fast and scriptable, but the preview has to show what Roblox will show. Two things went wrong repeatedly in the LihFolk V2 VFX work: colours came out washed out, and attack effects were framed or shaped in ways that read wrong in game. **Measured** marks results from that work.
 
@@ -65,6 +64,22 @@ Shape language must match what the player expects from an attack.
 
 The Blender emulator only approximates Roblox. Before shipping, capture the real effect in Studio once and compare it with the preview frame by frame. If they disagree, fix the emulator first, then re-review.
 
+## 6. Previews must match the game (no preview-only fixes)
+
+The reverse mistake is as costly: changing the **preview** so a reviewer stops complaining, while the game still shows the problem.
+
+- **Never hide a flaw with a preview-only pass.** Example (**Measured**, spin attack): big translucent layers tinted the character, and rendering the character in a separate "clean" pass would have removed the complaint from the preview but not from the game. Fix the effect instead: spawn large layers ahead of the body, use rims instead of washes, keep glow parts off the character ([[VFX Readability and Value - Lessons from Blind Reviews]]).
+- Allowed preview-only changes are the ones that make the preview **more** like Roblox: sRGB conversion, floor height, view transform, game camera, bloom approximated like the game's.
+- Preview cameras may push in, shake and pull back to show escalation ([[Escalation and Grandeur Without Clutter]]), but the base framing stays at game distance.
+
+## 7. Effect lights in previews and in game
+
+Emulate every effect `PointLight` or `SpotLight` in the preview, because they change how the character looks.
+
+- **Measured:** an effect point light at blade or floor height tinted the character's shins green in the preview, and it would have done the same in Studio.
+- Place effect lights **above and behind** the effect (or ahead of it, away from the body), at **low power** and short range.
+- If the preview shows the character tinted, check lights first, then large translucent layers in front of the body.
+
 ## Common mistakes
 
 - Feeding Roblox `Color3` sRGB numbers into Blender as linear values.
@@ -73,6 +88,8 @@ The Blender emulator only approximates Roblox. Before shipping, capture the real
 - A preview floor that does not match character ground height.
 - 360-degree slash rings or trails behind the back.
 - Treating a reviewer's colour complaint as an art problem before checking the preview pipeline.
+- Hiding an effect flaw with a preview-only pass (a clean character render) instead of fixing the effect.
+- Effect lights at blade or floor height tinting the character.
 
 ## Checklist
 
@@ -82,9 +99,13 @@ The Blender emulator only approximates Roblox. Before shipping, capture the real
 - [ ] Slash arcs within +-100 degrees of LookVector; explosions radial
 - [ ] Ink layer visible over the body
 - [ ] One side-by-side check against a Studio capture
+- [ ] No preview-only fixes: every change either fixes the effect or makes the preview closer to Roblox
+- [ ] Effect lights emulated, placed above/behind at low power
 
 ## See also
 
+- [[VFX Readability and Value - Lessons from Blind Reviews]]
+- [[Escalation and Grandeur Without Clutter]]
 - [[Slash VFX Recipes - Crescent and Ring]]
 - [[VFX Design Playbook]]
 - [[Mesh VFX Packs Built in Blender]]
@@ -96,5 +117,5 @@ The Blender emulator only approximates Roblox. Before shipping, capture the real
 
 <!-- related:start -->
 ## Related
-[[Ice Ball Cast to Explosion - Approved Recipe]] · [[Case Study - Building LihFolk V2 with AI Agents]] · [[Beams and Trails]] · [[Light Sources and Shadows]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[VFX Performance Budgets and Culling]] · [[Gore Policy and Kid-Friendly Hit Feedback]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]]
+[[Ice Ball Cast to Explosion - Approved Recipe]] · [[Beams and Trails]] · [[Light Sources and Shadows]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[VFX Performance Budgets and Culling]]
 <!-- related:end -->

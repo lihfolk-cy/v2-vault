@@ -104,7 +104,7 @@ Listing user ids lets clients show "friends here", but think about privacy: show
 ## 3. Ping: what you can and cannot show
 
 - **Current server ping** is measurable: `Player:GetNetworkPing()` on the client returns the player's network latency to their current server in seconds (**Roblox docs**). Show it in ms in a corner or the server panel ([[Feedback - Autosave Indicator Ping Display and Error Toasts]]).
-- **Ping to other servers is not measurable** before joining. Do not invent numbers. You can show a **region hint** only if you have a trustworthy source; Roblox does not give game scripts a documented server-region API that I could confirm (**Unverified**). Third-party IP geolocation via `HttpService` is fragile and has privacy implications.
+- **Ping to other servers is not measurable** before joining. Do not invent numbers. You can show a **region hint** only if you have a trustworthy source; Roblox does not give game scripts a documented server-region API that we could confirm (**Unverified**). Third-party IP geolocation via `HttpService` is fragile and has privacy implications.
 - A useful proxy: **average ping of players in that server**, reported by each server from its players' measurements (server-side `GetNetworkPing` on each player). It says "players here are having a good time" rather than "you will have 40 ms".
 
 ## 4. Server-hop etiquette

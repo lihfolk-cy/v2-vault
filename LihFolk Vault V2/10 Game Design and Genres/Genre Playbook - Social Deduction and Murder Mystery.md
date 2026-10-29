@@ -135,5 +135,5 @@ Friends joining the same server and telling each other roles over Discord or voi
 
 <!-- related:start -->
 ## Related
-[[Case Study - Forsaken]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Genre Playbook - Battle Royale]] · [[Genre Playbook - Shooters FPS and TPS]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Sports]] · [[Genre Playbook - Naval and Open-Sea Adventure]] · [[Genre Playbook - Open-World City and Crime Roleplay]]
+[[Case Study - Forsaken]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Genre Playbook - Battle Royale]] · [[Genre Playbook - Sports]] · [[Genre Playbook - Shooters FPS and TPS]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Naval and Open-Sea Adventure]] · [[Genre Playbook - Tycoons]]
 <!-- related:end -->
