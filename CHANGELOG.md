@@ -2,7 +2,7 @@
 
 ## 2.4.0 (2026-10-29): Worlds, onboarding and top-game teardowns
 
-**Highlights:** a worldbuilding skill and a tutorial skill, 33 new teardowns of top Roblox games, leaner token use with higher search accuracy, and the Celestial look across the whole app.
+**Highlights:** a worldbuilding skill and a tutorial skill, 31 new teardowns of top Roblox games, leaner token use with higher search accuracy, and the Celestial look across the whole app.
 
 ### Added
 - **Worldbuilding (`lihfolk-worldbuilding`):** brief and world pillars, five build passes with numbers and checkpoints, composition, lighting moods, materials and terrain, budgets for PC and phone, and a Luau toolkit (`placeOnGround`, `isAreaClear`, Poisson-disk `scatter`, `faceToward`, `budgetReport`, `auditWorld`). Plus a village-square example and the note **World Composition and Set Dressing**.
@@ -15,16 +15,6 @@
 - **Leaner and sharper (benchmark v2.1):** always-loaded skill descriptions from about 1,720 to 1,120 tokens, the router from about 1,610 to 720 tokens, and search output from 745 to 594 tokens per lookup. Search accuracy on practice questions rose from 85% to 92% top-3, the held-out set stays at 93%, and benchmark scores held under the same graders (set A 56.2 vs 55.4, set B 61.6 vs 60.7). Lookups also run about a third faster. See `benchmark/RESULTS_v2.1.md`.
 - **Lookup agent:** leads with dated facts, renames, deprecations and limits, retries with exact API names, and finds a working Python launcher first.
 - **Search:** 10 new symptom lines in `SYMPTOMS.md`; `vault.py --brief` and `--full` options.
-
-## Unreleased: leaner context, same accuracy
-
-### Improved
-- **Smaller always-loaded footprint:** skill, agent and command descriptions trimmed from about 1,720 to 1,120 tokens, with the same routing on a 30-request test.
-- **Leaner router:** the `lihfolk` skill body went from about 1,610 to 720 tokens; the folder map, specialist list and extra tips now live in `skills/lihfolk/references/vault-map.md`.
-- **Compact search output:** `vault.py` prints TL;DR bullets and section lists without boilerplate, about 594 tokens per task instead of 745. `--full` keeps the old output and `--brief` is cheaper still.
-- **Sharper lookup agent:** replies lead with dated facts, renames, deprecations and limits, retry once with exact API names, and check the Python launcher once.
-- **Better search:** 10 new symptom lines (dev hit@3 85% to 92%, held-out test unchanged at 93%), including mesh streaming overriding `RenderFidelity`.
-- **Benchmark v2.1:** lookup arm re-graded blind next to the original answers: 56.2 vs 55.4 on set A and 61.6 vs 60.7 on set B under the same graders (`benchmark/RESULTS_v2.1.md`).
 
 ## 2.3.0 (2026-10-29): Assets, sound and combat
 
