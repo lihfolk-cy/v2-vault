@@ -124,7 +124,7 @@ Details and worked examples: [[Playback, Priorities and Blending]].
 - Edit has no physics; `Transform` writes do not move parts. Read `Transform`s and compute part CFrames by FK.
 - ViewportFrame rigs cannot be stepped in Edit.
 - A KeyframeSequenceProvider-registered clip that has not loaded plays nothing; one QA run reported a 117 degree "error" that was just a fresh, unloaded clip.
-- `Players:CreateHumanoidModelFromDescription` in Edit returned a rig without Motor6Ds; build test rigs from rig attachments.
+- `Players:CreateHumanoidModelFromDescriptionAsync` in Edit returned a rig without Motor6Ds; build test rigs from rig attachments.
 
 ## 9. Frame placement
 The Animator evaluates after `RunService.PreAnimation` and before `PreSimulation`; the resulting `Transform`s are applied to parts in a batched job just before physics (docs). A Lua player that wants to layer on top of the real Animator therefore steps in `PreSimulation`, treats any joint whose `Transform` differs from its own last write (`FuzzyEq` 1e-4) as freshly written by the Animator this frame, and uses that as the base under its own tracks. See [[Frame Order and RunService Timing]].

@@ -106,7 +106,7 @@ Keep each command-bar call short. The reference project's rule was every Studio 
 ## 3. Test dummies that actually animate
 
 ### The Edit-mode rig trap
-Measured: `Players:CreateHumanoidModelFromDescription` in Edit returns a rig **without Motor6Ds**, and `Humanoid:BuildRigFromAttachments` on it fails quietly. The rig looks right and nothing animates.
+Measured: `Players:CreateHumanoidModelFromDescriptionAsync` in Edit returns a rig **without Motor6Ds**, and `Humanoid:BuildRigFromAttachments` on it fails quietly. The rig looks right and nothing animates.
 
 Build the R15 joints yourself from the `*RigAttachment` pairs:
 

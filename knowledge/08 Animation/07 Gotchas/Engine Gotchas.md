@@ -223,7 +223,7 @@ Writing `Motor6D.Transform` from a script changes only that machine. If you play
 | `Animator:StepAnimations(dt)` | yes, from the command bar or a plugin | not from game scripts |
 | ViewportFrame animation | does not advance (measured) | advances |
 | `require` of an edited module | may return a stale cached copy (measured, plugin context) | fresh per session |
-| `Players:CreateHumanoidModelFromDescription` | returns a rig without Motor6Ds (measured) | normal rig |
+| `Players:CreateHumanoidModelFromDescriptionAsync` | returns a rig without Motor6Ds (measured) | normal rig |
 | ParticleEmitter `Rate` | does not emit in captures (measured) | emits |
 
 Notes:

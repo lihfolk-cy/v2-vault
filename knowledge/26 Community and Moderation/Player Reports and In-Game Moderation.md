@@ -205,7 +205,7 @@ Choose the mildest action that stops the harm. Kicks escalate tempers; a muted g
 
 ### Powers (rule of thumb)
 - Give the smallest set: kick, game mute, restrict, view rule reports. Bans by senior staff only.
-- **Server-checked rank on every action.** Read the rank with `Player:GetRankInGroup` on the server; the panel UI is cosmetic ([[Groups Roles and Permissions for Studios]]).
+- **Server-checked rank on every action.** Read the rank with `GroupService:GetRolesInGroupAsync` (highest role's `Rank`) on the server; the panel UI is cosmetic ([[Groups Roles and Permissions for Studios]]).
 - **Log every action**: moderator id, target id, action, reason code, server job id, time. Review weekly. A moderator abusing power destroys trust faster than any exploiter ([[Community Building]]).
 - **Two-person rule** for permanent bans and data changes in bigger teams.
 
@@ -229,7 +229,9 @@ local ModAction = ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("ModAct
 
 local function rankOf(p: Player): number
 	local ok, rank = pcall(function()
-		return p:GetRankInGroup(GROUP_ID)
+		-- highest public role; Roles is ordered highest first (GetRankInGroupAsync is deprecated)
+		local info = game:GetService("GroupService"):GetRolesInGroupAsync(p.UserId, GROUP_ID)
+		return if info.IsMember and info.Roles[1] then info.Roles[1].Rank else 0
 	end)
 	return if ok then rank else 0
 end

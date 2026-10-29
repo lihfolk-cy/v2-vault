@@ -94,7 +94,7 @@ local function refreshGroupPerk(player: Player)
 		return
 	end
 	local ok, isMember = pcall(function()
-		return player:IsInGroup(GROUP_ID)
+		return player:IsInGroupAsync(GROUP_ID)
 	end)
 	if ok then
 		player:SetAttribute("GroupMember", isMember)

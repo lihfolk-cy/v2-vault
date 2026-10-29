@@ -81,7 +81,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 
 ## 05 UI and UX
 
-- Accessibility | 05 UI and UX/Accessibility.md | ui, accessibility, reduced-motion, text-size, contrast, colour-blindness | ~3.4k tok
+- Accessibility | 05 UI and UX/Accessibility.md | ui, accessibility, reduced-motion, text-size, contrast, colour-blindness | ~3.5k tok
 - Declarative UI - React-Lua and Fusion | 05 UI and UX/Declarative UI - React-Lua and Fusion.md | ui, declarative, react-lua, fusion, vide, state, architecture | ~3.6k tok
 - Gamepad and Console UX | 05 UI and UX/Gamepad and Console UX.md | ui, gamepad, console, selection, guiservice, ten-foot | ~3.6k tok
 - HUD Design | 05 UI and UX/HUD Design.md | ui, hud, layout, overlap, popups, mobile | ~3.7k tok
@@ -528,7 +528,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 
 - Community and Moderation Start Here | 26 Community and Moderation/Community and Moderation Start Here.md | community, moderation, safety, hub | ~1.2k tok
 - Discord Servers for Roblox Games | 26 Community and Moderation/Discord Servers for Roblox Games.md | community, discord, moderation, safety, live-ops, social | ~3.6k tok
-- Groups Roles and Permissions for Studios | 26 Community and Moderation/Groups Roles and Permissions for Studios.md | community, groups, permissions, studio, team, security, moderation, luau | ~4.0k tok
+- Groups Roles and Permissions for Studios | 26 Community and Moderation/Groups Roles and Permissions for Studios.md | community, groups, permissions, studio, team, security, moderation, luau | ~4.1k tok
 - Player Reports and In-Game Moderation | 26 Community and Moderation/Player Reports and In-Game Moderation.md | community, moderation, safety, reports, ban-api, luau, live-ops | ~4.6k tok
 - Text Chat Customization with TextChatService | 26 Community and Moderation/Text Chat Customization with TextChatService.md | community, moderation, chat, textchatservice, safety, luau, ui | ~5.2k tok
 - Voice Chat and Safety Features | 26 Community and Moderation/Voice Chat and Safety Features.md | community, moderation, voice-chat, safety, audio-api, luau | ~3.7k tok

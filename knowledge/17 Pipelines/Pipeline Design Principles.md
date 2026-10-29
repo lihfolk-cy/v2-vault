@@ -97,7 +97,7 @@ function Pass.revert(root: Instance, pass: string): number
 		for key, old in inst:GetAttributes() do
 			if string.sub(key, 1, #prefix) == prefix then
 				local prop = string.sub(key, #prefix + 1)
-				(inst :: any)[prop] = old
+				;(inst :: any)[prop] = old
 				inst:SetAttribute(key, nil)
 				restored += 1
 			end

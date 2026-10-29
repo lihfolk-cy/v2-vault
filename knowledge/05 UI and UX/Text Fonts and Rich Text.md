@@ -239,7 +239,7 @@ The legacy `TextStrokeTransparency` / `TextStrokeColor3` give a thin 1 px outlin
 
 Rules of thumb from production cartoon UI:
 
-- A cartoon kit standard specifies 2.0 to 3.5 px black strokes for 13 to 38 px text (about 8 to 15% of the text size).
+- A cartoon kit standard specifies 2.0 to 3.5 px black strokes for 13 to 38 px text (about 8 to 15% of the text size). Rounded heavy fonts such as Fredoka One need less: above about 7% the stroke fills the holes in 0, a and e ([[UIStroke on Text - Glyph Counters and the Stroke Ratio]]).
 - Another style guide used by the reference project specifies navy strokes at about 11% of the text size.
 - Headers used heavier ratios (a 4.5 px stroke on a 54 px title, 8%).
 

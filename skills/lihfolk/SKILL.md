@@ -14,13 +14,13 @@ Scale the lookup to the task. The goal is the few lines that change what you do,
 | Task | Lookup |
 |---|---|
 | Trivial (rename, typo, one-line fix, a question you already know cold) | None |
-| Normal (a feature, a bug, a review) | Grep `INDEX_SLIM`, then read **only** the TL;DR blocks of the 1-2 best notes |
+| Normal (a feature, a bug, a review) | One `vault.py` search (prints the best notes' TL;DRs); open nothing else unless needed |
 | Big or unfamiliar (new system, security, money, data, publishing) | Up to 3-4 notes; TL;DRs first, then the one full section that applies, still not whole notes |
 
-1. **Router only when it pays:** read `../../knowledge/ROUTER.md` (about 5 KB) once at the start of a long multi-topic session, or when the index grep is empty or ambiguous; skip it for a single quick lookup (it costs more than it saves). It maps core topics (remotes, DataStores, ProcessReceipt, UI, VFX, animation, physics, performance, security, debugging, Blender, worldbuilding, economy, publishing) to their best notes.
-2. **Grep the index first, don't read it:** grep `../../knowledge/INDEX_SLIM.md` (`title | path | tags`) for the exact API names and topics (`DataStore`, `ProcessReceipt`, `UIScale`, `terrain`). `INDEX.md` is the same plus a first sentence. Never read a whole index or browse folders.
+1. **One call first:** `python <plugin root>/knowledge/_tools/vault.py "<task or bug in plain words>"` (the plugin root is two folders above this file). It prints the best 3 notes with their TL;DRs and, for bugs, matching `SYMPTOMS.md` lines (symptom | cause | fix | note). Top-3 hit rate on a held-out test set: 93%.
+2. **Fallback:** if Python is unavailable or the search misses, grep `../../knowledge/INDEX_SLIM.md` (`title | path | tags`) for exact API names and `../../knowledge/SYMPTOMS.md` for the symptom. `../../knowledge/ROUTER.md` (about 5 KB) only at the start of a long multi-topic session.
 3. **TL;DR first:** every prose note opens with a TL;DR block (3-6 rules from its Common mistakes and Checklist, plus `Read more: ## <sections>`). Read only that: `Grep pattern="tldr:start" glob="**/<note title>.md" output_mode=content -A 10`, or Read the note with `limit: 20`.
-4. **Sections, not files:** only when the TL;DR isn't enough, grep the note for `^## ` with line numbers and read just the section it points to. Never read whole large notes.
+4. **Sections, not files:** only when the TL;DR isn't enough, `vault.py --read "<title>" "<heading words>"` prints just the section it points to (or grep `^## ` and read that range). Never read whole large notes.
 5. **Reuse within the session:** don't re-read a note you've already used for the same topic.
 6. **Apply and cite** the note titles briefly.
 7. **Trust labels:** `Roblox docs` and `Measured` beat `Rule of thumb`; check `Unverified` before relying on it. If nothing matches, say so and use the official Roblox docs. Never invent APIs or asset ids.

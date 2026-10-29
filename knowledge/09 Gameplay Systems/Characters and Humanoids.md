@@ -39,7 +39,7 @@ A player character is a `Model` with:
 
 The character is one rigid assembly rooted at `HumanoidRootPart` (see [[Physics Assemblies and Constraints]]) and it is **owned by its player's client**. That single fact explains most of this note: the client simulates the body, so the client decides where it is, and anything the server does to its physics arrives late or is overwritten.
 
-**Measured.** In Edit mode, `Players:CreateHumanoidModelFromDescription` produced rigs with `AnimationConstraint` joints and no Motor6Ds in the reference project. Code that walks a character's joints should accept both kinds.
+**Measured.** In Edit mode, `Players:CreateHumanoidModelFromDescriptionAsync` produced rigs with `AnimationConstraint` joints and no Motor6Ds in the reference project. Code that walks a character's joints should accept both kinds.
 
 ---
 

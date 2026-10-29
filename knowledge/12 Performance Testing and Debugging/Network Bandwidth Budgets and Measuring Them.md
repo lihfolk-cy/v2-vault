@@ -200,12 +200,12 @@ end
 
 function NetStats.fireClient(remote: RemoteEvent | UnreliableRemoteEvent, player: Player, ...: any)
 	record(remote.Name, 1, ...)
-	(remote :: any):FireClient(player, ...) -- both remote types share this method
+	;(remote :: any):FireClient(player, ...) -- both remote types share this method
 end
 
 function NetStats.fireAll(remote: RemoteEvent | UnreliableRemoteEvent, playerCount: number, ...: any)
 	record(remote.Name, playerCount, ...)
-	(remote :: any):FireAllClients(...)
+	;(remote :: any):FireAllClients(...)
 end
 
 -- Print the top talkers every interval, then reset.

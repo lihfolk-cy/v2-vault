@@ -24,7 +24,7 @@ Facts from the official documentation (Characters > Emotes, and the `Humanoid`, 
 - **Stop loading user-owned emotes** with `StarterPlayer.UserEmotesEnabled = false`. This is set in Studio (StarterPlayer > Character), not by scripts.
 - **Custom emotes** go into the character's `HumanoidDescription`: `SetEmotes(table)` maps emote names to arrays of asset ids; `SetEquippedEmotes(list)` equips names to the wheel. **Up to 8** can be equipped. They show in the order given, starting at the top of the wheel and going clockwise, with the names as written.
 - Other members: `AddEmote(name, assetId)`, `RemoveEmote(name)`, `GetEmotes()`, `GetEquippedEmotes()`, and the events `EmotesChanged` and `EquippedEmotesChanged`.
-- **Playing from code**: `Humanoid:PlayEmote(emoteName)` returns `true` if the emote played. The emote must be in the character's `HumanoidDescription`. The current API reference lists `PlayEmote` as **deprecated** in favour of `Humanoid:PlayEmoteAsync(emoteName)`, which yields, returns `true` on success and errors if the emote is not in the description. Use the async version in new code.
+- **Playing from code**: `Humanoid:PlayEmoteAsync(emoteName)` returns `true` if the emote played. The emote must be in the character's `HumanoidDescription`. The current API reference lists `PlayEmoteAsync` as **deprecated** in favour of `Humanoid:PlayEmoteAsync(emoteName)`, which yields, returns `true` on success and errors if the emote is not in the description. Use the async version in new code.
 
 ```lua
 -- LocalScript in StarterPlayer.StarterCharacterScripts (pattern from the official emotes guide).
@@ -50,7 +50,7 @@ end
 
 ### How emotes are actually played (and why custom controllers break them)
 
-In the stock setup, the default `Animate` script plays the emote animation on the character (it contains a `PlayEmote` handler that `Humanoid:PlayEmote` calls into). This is from the default `Animate` script's source rather than the API reference, so check your copy. The practical consequence:
+In the stock setup, the default `Animate` script plays the emote animation on the character (it contains a `PlayEmoteAsync` handler that `Humanoid:PlayEmoteAsync` calls into). This is from the default `Animate` script's source rather than the API reference, so check your copy. The practical consequence:
 
 - **If you delete or heavily replace `Animate`, built-in emotes stop working**, even though the wheel still opens. Either keep `Animate` (the recommended "replace partly" approach in [[Locomotion Systems]]), or reimplement emote playback in your controller and disable the built-in menu.
 - **Your own locomotion can bury emotes.** If your locomotion plays at Movement priority and the emote asset was published at a lower priority (Core or Idle), your gait wins and the emote is invisible except for the joints your gait does not key. Check the priority of the emote assets you rely on, or play emotes yourself at a known priority.

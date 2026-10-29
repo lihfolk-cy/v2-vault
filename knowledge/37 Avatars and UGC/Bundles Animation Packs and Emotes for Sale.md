@@ -119,7 +119,7 @@ Controls (docs):
 - `StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.EmotesMenu, false)` disables the menu. **It does not stop chat-command emotes.**
 - `StarterPlayer.UserEmotesEnabled = false` stops user-owned emotes from loading; it can only be changed in Studio, not by scripts.
 - `GuiService:SetEmotesMenuOpen(bool)` and `GuiService:GetEmotesMenuOpen()` open, close and query the menu.
-- `Humanoid:PlayEmote(name)` plays an emote that is in the character's description and returns true if it played.
+- `Humanoid:PlayEmoteAsync(name)` plays an emote that is in the character's description and returns true if it played.
 
 ### Curating Marketplace emotes
 

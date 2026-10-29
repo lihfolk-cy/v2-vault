@@ -185,7 +185,7 @@ A "was 400, now 250" display needs `referencePrice` to be a price you actually c
 
 - The reference price must have been the live price for at least 30 days before the sale.
 - An item cannot be "on sale" most of the time. If a bundle has been discounted for three of the last four weeks, the discount price is the real price.
-- With **managed pricing** (regional pricing and price optimisation), the price a player sees may differ by region or experiment arm. Read live prices with `MarketplaceService:GetProductInfo` rather than hard-coding Robux numbers; the developer products doc says scripts showing prices under price optimisation should run on the client so players see their personalised price. A hard-coded "was 400" next to a regionally priced current price can show a fake discount, or a negative one. Safest: show the discount as a percentage computed from the same source, or do not show a "was" price at all for regionally priced products ([[Pricing and Store Design]]).
+- With **managed pricing** (regional pricing and price optimisation), the price a player sees may differ by region or experiment arm. Read live prices with `MarketplaceService:GetProductInfoAsync` rather than hard-coding Robux numbers; the developer products doc says scripts showing prices under price optimisation should run on the client so players see their personalised price. A hard-coded "was 400" next to a regionally priced current price can show a fake discount, or a negative one. Safest: show the discount as a percentage computed from the same source, or do not show a "was" price at all for regionally priced products ([[Pricing and Store Design]]).
 
 ## 5. Quantity limits done properly
 

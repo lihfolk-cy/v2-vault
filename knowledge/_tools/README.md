@@ -1,60 +1,99 @@
 # Vault tools
 
-## build_index.py
+Python 3, standard library only. Everything here is deterministic, and every check runs on GitHub on each push (`.github/workflows/vault-checks.yml`).
 
-Rebuilds the vault's token-saving layer from the notes. Python 3, standard library only, no network. It is deterministic and idempotent: a second run changes nothing.
+| Tool | What it does | Command |
+|---|---|---|
+| `vault.py` | One-call search: the best 3 notes for a task or bug, with their TL;DRs and matching symptom lines. Reads one section of a note on request. | `python knowledge/_tools/vault.py "screen goes black when I get hit"` |
+| `build_index.py` | Regenerates TL;DRs, `INDEX.md`, `INDEX_SLIM.md` and `ROUTER.md` from the notes. | `python knowledge/_tools/build_index.py` (`--check` in CI) |
+| `api_check.py` | Checks every Roblox and Luau API name in the notes against the real API. | `python knowledge/_tools/api_check.py --strict` |
+| `snippets.py` | Compiles every Luau code block with the official Luau compiler. | `python knowledge/_tools/snippets.py --strict` |
+| `consistency.py` | Finds notes that disagree on a number, and date stamps that are getting old. | `python knowledge/_tools/consistency.py --strict` |
+| `eval.py` | Scores the search on 90 hand-written tasks with known answers. | `python knowledge/_tools/eval.py` |
+
+Reports are written to `reports/`.
+
+## vault.py: one-call search
+
+```
+python knowledge/_tools/vault.py "datastore session lock"                 # best 3 notes + TL;DRs + symptom lines
+python knowledge/_tools/vault.py --paths "slash vfx"                      # titles and paths only
+python knowledge/_tools/vault.py -k 5 --json "processreceipt"             # machine-readable
+python knowledge/_tools/vault.py --sections "DataStore Fundamentals"      # list a note's ## headings
+python knowledge/_tools/vault.py --read "DataStore Fundamentals" "UpdateAsync"   # print one section
+```
+
+Ranking is BM25F over each note's title, tags, TL;DR, headings, body and the `SYMPTOMS.md` lines that link to it. A small synonym map turns everyday words into vault vocabulary (lag → performance, save → datastore, buy → purchase). Link lists, short glossary notes and hubs are ranked below full explanations. The index is cached in `.cache/` (git-ignored) and rebuilt when any note changes. A cold run takes about 2 s, and a cached run about 0.3 s.
+
+## Measured retrieval quality (`eval.py`)
+
+`eval/tasks.jsonl` holds 90 tasks written by an agent that never saw the search code. Each task lists 1-3 acceptable notes, chosen by reading the notes. The mix is about 34% feature requests, 30% bugs described in everyday words, 20% API questions and 16% art, build and design tasks, spread over 46 sections. Search weights were tuned only on the 60 `dev` tasks. The 30 `test` tasks were not used for tuning, so their score is the honest one.
+
+| Split | Tasks | hit@1 | hit@3 | MRR@3 | Baseline hit@3 |
+|---|---:|---:|---:|---:|---:|
+| dev | 60 | 60% | 85% | 0.71 | 52% |
+| **test (held out)** | 30 | **80%** | **93%** | 0.86 | 57% |
+
+- **Baseline:** the same ranking on titles and tags only, which is roughly what grepping `INDEX_SLIM.md` finds.
+- **Cost per task:** an agent reads about 716 tokens of output: three TL;DRs plus any symptom lines.
+- **Older protocol:** grep the index, then read "Common mistakes" and "Checklist" from 2 notes. That costs about 1,600 tokens per task (see `--measure` below) and needs 3-5 tool calls instead of one.
+
+## api_check.py: no made-up or deprecated APIs
+
+The script checks these names in code blocks and `inline code`:
+- `Instance.new("X")` and `GetService("X")`
+- `Enum.A.B`
+- library members, for example `math.x`, `task.x`, `table.clone` and `CFrame.lookAt`
+- `Class.Member` and `Class:Method`
+- deprecated globals and lower-case aliases
+
+The reference is `roblox_api.json`, a committed and dated snapshot (944 classes, 656 enums, 885 globals). It is built by `--refresh` from three local sources:
+- Studio's own API docs file;
+- the Roblox API dump;
+- the standard-library members reported by a local `luau` binary (set `LUAU`).
+
+A deprecated name is accepted when the text around it says it is deprecated or legacy. Reviewed exceptions go in `api_allow.txt` with a reason.
+
+The first run found 30 problems in 24 notes, all now fixed:
+- calls to methods Roblox has renamed with an `Async` suffix, such as `LoadCharacter`, `CreateHumanoidModelFromDescription`, `GetProductInfo`, `PlayEmote` and `IsInGroup`;
+- `GetRankInGroup`, whose `Async` version is itself deprecated in favour of `GroupService:GetRolesInGroupAsync`;
+- `TeleportToPlaceInstance`, replaced by `TeleportAsync` with `ServerInstanceId`;
+- `plugin:GetStudioUserId()`;
+- `GuiService:AddSelectionParent`;
+- a misspelt `Vector3.fromNormalId`.
+
+## snippets.py: every Luau block compiles
+
+Needs `luau-compile` from https://github.com/luau-lang/luau/releases (set `LUAU_COMPILE`; CI downloads 0.744). It covers all 1,603 `lua`/`luau` blocks:
+- 1,592 compile;
+- 11 are deliberate excerpts, such as one entry of a migrations table, listed in `snippet_allow.txt` by block hash with a reason;
+- 3 real bugs were found and fixed: statements starting with `(` after a call, which Luau rejects as ambiguous syntax.
+
+This is a syntax and compile check. API names are `api_check.py`'s job, and there is no full type check against Roblox's type definitions.
+
+## consistency.py: notes agree with each other
+
+`FACTS` lists numbers many notes repeat:
+- DataStore value size;
+- default `WalkSpeed`, `JumpPower` and `Gravity`;
+- the HttpService budget and MemoryStore item size;
+- the text stroke ratio.
+
+Every mention is compared with the agreed value. The first run found one real conflict: 3 notes recommended 8-15% text strokes without the limit of about 7% for rounded heavy fonts. Those notes now carry the limit and link to the Field Note. The script also flags "as of <month year>" stamps older than 12 months. All 900+ stamps are currently October 2026.
+
+## build_index.py
 
 ```
 python knowledge/_tools/build_index.py              # regenerate everything (run after adding or editing notes)
-python knowledge/_tools/build_index.py --check      # exit 1 if anything is out of date (CI-friendly)
-python knowledge/_tools/build_index.py --measure    # print the 8-task token comparison below
+python knowledge/_tools/build_index.py --check      # exit 1 if anything is out of date (CI)
+python knowledge/_tools/build_index.py --measure    # 8-task token comparison of the grep protocols
 python knowledge/_tools/build_index.py --no-tldr-in "56 Field Notes"   # don't touch that section's notes
-python knowledge/_tools/build_index.py -v           # also list every file it changed
 ```
 
-New notes are picked up automatically: any `.md` under a section folder gets indexed, mapped and (if it is prose) a TL;DR.
+- **TL;DR blocks:** every prose note gets one under its title, between `<!-- tldr:start -->` and `<!-- tldr:end -->`. It holds 3-6 bullets taken from the note's own "Common mistakes" (`Avoid: X -> fix`) and "Checklist", shortened with no new claims, then `Read more (N KB note): ## <sections>`. Only the text between the markers is ever rewritten.
+- **`INDEX.md`:** one line per note, `title | path | tags | first sentence`.
+- **`INDEX_SLIM.md`:** the same without the first sentence, for grepping.
+- **`ROUTER.md`:** 5 KB of reading rules plus core topics mapped to their best notes.
+- **Not indexed:** link lists in `46 Resource Library`, `Start Here` hubs and root pointer notes get no TL;DR. `SYMPTOMS.md` is an index, not a note.
 
-### What it generates
-
-| Output | What it is |
-|---|---|
-| `knowledge/ROUTER.md` | The first file an agent reads (5 KB, capped at 6 KB). Core topics (remotes, DataStores, ProcessReceipt, UI, VFX, animation, combat, physics, performance, security, debugging, Blender, worldbuilding, economy, publishing) map to their section and 3 best notes. The other sections are listed with their most distinctive tags. The keyword map is `CORE` in the script, and titles are checked on every run. |
-| `knowledge/INDEX.md` | `title \| path \| tags \| first sentence`, one line per note, same format as before. First sentences are cut to 110 characters and tags are deduplicated. |
-| `knowledge/INDEX_SLIM.md` | `title \| path \| tags`, for grepping. |
-| TL;DR blocks | In every prose note, under the title, between `<!-- tldr:start -->` and `<!-- tldr:end -->`. They hold 3 to 6 bullets taken from the note's own "Common mistakes" (`Avoid: X -> fix`) and "Checklist" items, shortened and with no new claims, then `Read more (N KB note): ## <sections>`. Notes with neither section get the first items or sentences of their key headings instead. Only the text between the markers is ever rewritten. |
-| `knowledge/_maps/<section> - Map.md` | One line per note: its title and the first TL;DR bullet (or its first sentence). |
-
-Skipped on purpose:
-- `.obsidian`, `_assets`, `_tools` and `_maps`, and non-Markdown files.
-- Link lists in `46 Resource Library`.
-- `Start Here` hubs and the root skill-pointer notes.
-- Three table-only reference notes with no prose to distil: `08 Animation/07 Gotchas/Open Questions.md`, `08 Animation/07 Gotchas/Troubleshooting Table.md` and `13 Production and Case Studies/Lessons Learned Index.md`.
-
-### Reading protocol for agents
-
-1. Grep `INDEX_SLIM.md` first; read `ROUTER.md` only at the start of a long multi-topic session or when the grep is ambiguous (on a single lookup it costs more than it saves).
-2. If it doesn't name the notes, grep `INDEX_SLIM.md`.
-3. Read only the TL;DR: `Grep pattern="tldr:start" glob="**/<title>.md" output_mode=content -A 10`, or `grep -A 10 "tldr:start" "<path>"`.
-4. Only if that isn't enough, `grep -n "^## "` the note and read just the section the TL;DR points to.
-5. Never read whole notes, and cite titles.
-
-### Measured savings (`--measure`, tokens ≈ bytes / 4)
-
-- **Old protocol:** grep `INDEX.md`, then read "Common mistakes" + "Checklist" of 2 notes, plus one section.
-- **New protocol:** `ROUTER.md`, grep `INDEX_SLIM.md`, then read 2 TL;DRs, plus the same section.
-
-| Task | Old tok | New tok, router already read | Saved |
-|---|---:|---:|---:|
-| secure a RemoteEvent for buying | 1,224 | 846 | 31% |
-| DataStore session locking | 1,810 | 1,170 | 36% |
-| ProcessReceipt | 1,872 | 1,424 | 24% |
-| mobile-safe ScreenGui | 1,355 | 875 | 36% |
-| slash VFX | 1,980 | 1,392 | 30% |
-| hitbox | 1,132 | 805 | 29% |
-| memory leak | 1,955 | 1,463 | 26% |
-| Blender export scale | 1,693 | 1,003 | 41% |
-| **All 8** | **13,023** | **8,980** | **32%** |
-
-- **The router costs about 1,260 tokens and is read once per session.** For the whole 8-task session that gives 10,238 tokens instead of 13,023 (22% saved). When the router already names the notes, so no index grep is needed, it is 8,732 tokens (33% saved).
-- **The router doesn't pay off on a single isolated task:** that task costs 33 to 82% more.
-- **The notes part alone shrinks from 5,629 to 2,675 tokens (53% saved),** comparing the TL;DR with the "Common mistakes" + "Checklist" sections it replaces. The one full section read is the same in both protocols and is now the largest cost.
+`--measure` compares two ways of reading notes. The old way reads "Common mistakes" and "Checklist" in full. The TL;DR way reads only the TL;DR blocks, which is 53% fewer tokens, or 32% fewer per lookup including the index grep and one section.

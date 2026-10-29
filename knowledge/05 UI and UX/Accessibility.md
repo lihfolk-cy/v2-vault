@@ -12,7 +12,7 @@ tags: [ui, accessibility, reduced-motion, text-size, contrast, colour-blindness]
 > - Every screen tested at `Largest` text size.
 > - Contrast at least 4.5:1 for body text (or outlined text on art).
 >
-> Cost: TL;DR ~130 tok · whole note ~3.4k tok. Read more: ## 1. The three platform preferences · ## 2. Contrast · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~3.5k tok. Read more: ## 1. The three platform preferences · ## 2. Contrast · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Accessible UI is UI more players can use: players with low vision, colour blindness, motion sensitivity, hearing loss, limited dexterity, or simply a small phone in bright sunlight. Docs cite that over 26% of people have some type of disability and over 5% have some form of colour blindness. On Roblox there is also a platform side: players set **Text Size**, **Background Transparency** and **Reduce Motion** in Roblox's settings, and your UI is expected to honour them. This note covers those three settings and their exact engine behaviour, contrast and colour rules, motion and flashing, input accessibility, and the reference project's reduced-motion implementation.
@@ -163,7 +163,7 @@ Docs ask for "sufficient color contrast" without numbers; the public WCAG 2.x gu
 
 Game UI often puts text over busy art, gradients or the 3D world, where a single contrast ratio is not defined. The practical tools:
 
-- **Outlines.** White text with a dark `UIStroke` (8 to 15% of the text size) stays legible over almost anything; the cartoon style uses it everywhere.
+- **Outlines.** White text with a dark `UIStroke` (8 to 15% of the text size; at most about 7% on rounded heavy fonts, where thicker strokes fill the letter holes, see [[UIStroke on Text - Glyph Counters and the Stroke Ratio]]) stays legible over almost anything; the cartoon style uses it everywhere.
 - **Plates.** Put text on a solid or near-solid panel rather than directly on the world.
 - **Avoid pastel on white and grey on grey.** The reference project's style rule banned pastel or pale lime text colours for this reason.
 

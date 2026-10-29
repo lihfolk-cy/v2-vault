@@ -14,7 +14,7 @@ tags: [rigging, r15, humanoid, attachments, reference]
 
 The R15 rig is the contract that the default Animate script, emotes, layered clothing, accessories, the Animation Editor and most community tooling assume. Knowing its exact parts, joints and attachment offsets lets you build IK that hits the real pivots, write procedural code that works on any body, import custom bodies that animate, and diagnose "why is my arm offset" problems in minutes.
 
-All positions below were **measured in Studio (October 2026)** on a rig made by `Players:CreateHumanoidModelFromDescription` from a default `HumanoidDescription` (blocky body, default scales). Other bodies (Rthro, custom bundles) have different sizes and offsets but the same names, hierarchy and conventions.
+All positions below were **measured in Studio (October 2026)** on a rig made by `Players:CreateHumanoidModelFromDescriptionAsync` from a default `HumanoidDescription` (blocky body, default scales). Other bodies (Rthro, custom bundles) have different sizes and offsets but the same names, hierarchy and conventions.
 
 ## 1. The parts
 

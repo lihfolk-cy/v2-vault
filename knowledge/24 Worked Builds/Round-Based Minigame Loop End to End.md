@@ -727,7 +727,7 @@ local function runRound(mapName: string, minigame: Types.Minigame)
 		player:SetAttribute("InRound", false)
 		task.spawn(function()
 			if player.Parent == Players then
-				player:LoadCharacter()
+				player:LoadCharacterAsync()
 			end
 		end)
 	end

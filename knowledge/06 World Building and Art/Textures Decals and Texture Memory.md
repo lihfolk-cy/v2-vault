@@ -54,7 +54,7 @@ local function addStudOverlay(root: Instance)
 		local best: Enum.NormalId? = nil
 		local bestDot = 0.9 -- only nearly flat faces
 		for _, face in Enum.NormalId:GetEnumItems() do
-			local worldNormal = p.CFrame:VectorToWorldSpace(Vector3.fromNormalId(face))
+			local worldNormal = p.CFrame:VectorToWorldSpace(Vector3.FromNormalId(face))
 			local d = worldNormal:Dot(Vector3.yAxis)
 			if d > bestDot then
 				best, bestDot = face, d

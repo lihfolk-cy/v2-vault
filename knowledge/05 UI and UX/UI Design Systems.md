@@ -29,7 +29,7 @@ Sources: **Docs** ("UI styling", "UI appearance modifiers", `UIStroke`, `UICorne
 | Type scale | Families, weights, sizes per role | title 38, section 24, button 26, body 15 |
 | Spacing | A step scale for padding and gaps | 4, 8, 12, 16, 24, 32 |
 | Radii | Corner steps | 4 (cards), 12 (buttons), 18 (cards in a softer look), 0.5 scale (pills) |
-| Strokes | Thickness per role and per text size | 3 to 3.5 px panel outlines; text strokes 8 to 15% of size |
+| Strokes | Thickness per role and per text size | 3 to 3.5 px panel outlines; text strokes 8 to 15% of size (at most ~7% on rounded heavy fonts) |
 | Components | Button, close button, tab, card, header, progress bar, toggle, pill, toast | each with all states |
 | States | Default, hover, pressed, selected (gamepad), disabled, claimed, locked | colours, scale, sounds |
 | Motion | Durations, easings, scale factors, reduced-motion rules | hover 1.05 in 0.08 s |

@@ -1,0 +1,316 @@
+---
+tags: [symptoms, debugging, troubleshooting, index]
+---
+# Symptom Index
+
+Look up a bug by what you see, not by API name. Grep this file for the words you would use to describe the problem ("black screen", "blurry", "twice", "rollback", "slides", "T-pose", "nothing happens"), then open the linked note for the full explanation. Each line is `symptom | likely cause | fix | [[note]]`; causes and fixes are short summaries of the linked note, so read the note before changing code.
+
+## Camera
+
+- black screen after getting hit, teleporting or a big hitch, only a rejoin fixes it | Camera spring exploded on a long frame and writes a NaN CFrame every frame | Clamp dt, sub-step, reset on NaN and guard the camera write | [[Springs That Survive Long Frames - dt Clamps and NaN Guards]] [[Layering Camera Feedback on the Default Camera]]
+- camera shake or recoil effect never shows up | Step bound before or at Camera priority, so the default camera overwrites it | Bind with BindToRenderStep at Enum.RenderPriority.Camera.Value + 1 | [[Layering Camera Feedback on the Default Camera]]
+- view keeps zooming out more and more while sprinting | FieldOfView += applied every frame | Track and replace your own FOV contribution instead of adding each frame | [[Layering Camera Feedback on the Default Camera]]
+- camera slowly tilts up or turns a bit after every hit or dash | Additive pitch or yaw offset not undone before the camera step | Undo at Camera.Value - 1, re-apply after; offsets use translation and roll only | [[Layering Camera Feedback on the Default Camera]] [[Cameras and Cutscenes]]
+- FOV ends up stuck or a degree off after a while | Several systems write FieldOfView; exponential decays never reach 0 | One FOV owner summing effects; finite envelopes that end at exactly 0 | [[Camera Systems]] [[Camera Shake and Camera FX]]
+- camera stuck and player cannot look around after a cutscene or death | CameraType left Scriptable; restore not hooked to Died or CharacterRemoving | Restore on every exit path, hook both events, add a watchdog | [[Cameras and Cutscenes]]
+- setting the camera from a server script does nothing | The camera is client-side; server writes have no effect | Send a remote and set it on the client | [[Camera Systems]]
+- camera flips or spins when looking straight up or down | lookAt up vector parallel to the direction; Euler gimbal lock | Use an alternative up vector; keep scalar yaw and pitch state | [[Math Vectors and CFrames]]
+- camera ends up inside a pillar or wall during an ultimate | No wall raycast, or arena props in the camera lane | Raycast from the eyes; keep camera lanes clear | [[Cameras and Cutscenes]]
+- players feel sick or complain of nausea | Constant camera roll, shake and flashes | Rare, short, optional shake; caps and a reduced-motion setting | [[Camera Shake and Camera FX]] [[Motion Sensitivity and Camera Comfort]]
+
+## Lighting, sky and rendering
+
+- two surfaces flicker where parts overlap (z-fighting) | Coplanar faces of two parts | Offset one by 0.01 to 0.05 studs, or delete the hidden face | [[Parts Unions and MeshParts]]
+- fog settings do nothing | An Atmosphere in Lighting makes Fog properties ignored | Tune Atmosphere.Density and Haze, or remove the Atmosphere | [[Lighting Technologies and Settings]] [[Atmosphere Sky Clouds and Post-Processing]]
+- everything glows, even plain white walls | Bloom Threshold below 1 with bright surfaces | Bloom Threshold 1.5 to 2; let VFX Brightness exceed it | [[Atmosphere Sky Clouds and Post-Processing]]
+- screen stays blurry after closing a menu | BlurEffect not tied to the menu's lifetime | Destroy the blur in the menu's cleanup | [[Atmosphere Sky Clouds and Post-Processing]]
+- indoors is as bright as outdoors | GlobalShadows off, or Ambient above OutdoorAmbient | Turn shadows on; keep Ambient at or below OutdoorAmbient per channel | [[Lighting Technologies and Settings]]
+- metal looks like grey plastic | EnvironmentSpecularScale left at 0 | Raise EnvironmentSpecularScale toward 1 for scenes with metal | [[Lighting Technologies and Settings]] [[SurfaceAppearance PBR Workflow]]
+- looks great on PC, flat and muddy on phone | Look depends on shadows; phones below quality 4 have none | Build contrast from colour shifts and ambient tint; test at lowest quality | [[Stylized Lighting Recipes]] [[Lighting Technologies and Settings]]
+- lighting looks different from yesterday or wrong at Play start | An Edit preview left Lighting or Atmosphere changed | Snapshot and restore around every preview | [[Lighting Technologies and Settings]]
+- day/night or zone lighting flickers at borders | Two scripts write ClockTime, Ambient or other Lighting properties | One owner per Lighting property, blend weights | [[Lighting Mood and Time of Day]] [[Lighting Technologies and Settings]]
+- my screen effect (blur, colour grade) shows for every player | Effect parented to Lighting from the server | Parent personal effects to CurrentCamera on the client | [[Atmosphere Sky Clouds and Post-Processing]]
+- image sharp in Studio, blurry on phone | Lower texture quality on low-memory devices | Expected; design for it and compare px per stud | [[Textures Decals and Texture Memory]]
+
+## UI, text, layout and mobile
+
+- text looks bolder or wraps differently than the design (GothamBlack) | Gotham fonts were removed and now map to Montserrat | Use Font.new or Font.fromName with a current family; re-fit text measured for Gotham | [[Text Fonts and Rich Text]]
+- "10" reads as "1" plus a blob, letters look filled in | UIStroke too thick closes the glyph counters | Stroke at or below 7% of text size for rounded fonts | [[UIStroke on Text - Glyph Counters and the Stroke Ratio]]
+- text flickers or lags when it pulses | Tweening UIStroke.Thickness re-renders glyph sizes every frame | Pulse a UIScale instead | [[UIStroke on Text - Glyph Counters and the Stroke Ratio]] [[Text Fonts and Rich Text]]
+- text sizes inconsistent and ignore the player's text size setting | TextScaled used everywhere | Fixed TextSize for content; reserve TextScaled | [[Readable Text and UI Scale]] [[Text Fonts and Rich Text]]
+- CanvasGroup content looks blurry or pixelated | CanvasGroups render to a texture with resolution limits | Use CanvasGroups only where needed | [[Debugging UI Layout and Input]]
+- setting ZIndex = 100 on a button does nothing | Sibling ZIndexBehavior: the button's ancestor is under another branch | Raise the ancestor, or move the button | [[Debugging UI Layout and Input]]
+- popup or modal sometimes appears under the HUD | Two ScreenGuis with equal DisplayOrder; ZIndex does not cross ScreenGuis | Set explicit DisplayOrder on every ScreenGui | [[Debugging UI Layout and Input]] [[ScreenGui Fundamentals]]
+- top bar or chat covers my button | UI inside the inset area (ScreenInsets None or IgnoreGuiInset) | Keep interactive UI in the device-safe area | [[Debugging UI Layout and Input]] [[Safe Areas and Insets]]
+- clicking a button does nothing in one area | Invisible GuiObject with Active = true sits on top | Find the overlay; set Active = false on decorative frames | [[Debugging UI Layout and Input]]
+- clicks in the 3D world never register | Full-screen frame with Active = true sinks them | Active = false on decorative full-screen frames | [[Debugging UI Layout and Input]]
+- button ignores every click and tap | Interactable false, hidden ancestor, disabled ScreenGui, or off screen | Check Interactable, every ancestor's Visible and ScreenGui.Enabled | [[Debugging UI Layout and Input]]
+- close X button cut in half, top half not tappable | ClipsDescendants on the header or panel clips art and input | Clip only the inner content frame | [[Shared Close Buttons and Headers Across Many Screens]]
+- phone text is unreadably tiny | One global UIScale with no lower clamp | Give the UIScale a floor | [[Responsive UI for Phone Tablet Console and PC]] [[Layout - Scale Offset and Constraints]]
+- tweening Position of a list item does nothing | Child is positioned by a UIListLayout or grid | Animate an inner frame, never the layout slot | [[UI Layout Objects - Lists Grids and Pages]] [[Squash Stretch and Anticipation in UI and Characters]]
+- panel opens then vanishes when reopened quickly | Hiding on Tween.Completed without checking state | Check Enum.PlaybackState.Completed and the current intent | [[UI Motion Language and Timing]]
+- text steps and siblings jitter during a pop animation | Tweening Size for a pop | Tween a UIScale | [[UI Motion Language and Timing]]
+- UI shows the value from join and never updates | Value read once in setup, never subscribed | Listen for changes while the UI is open | [[Debugging Client-Server Desync]]
+- UI right for the first character, wrong after respawn | Listeners bound to the old character's Humanoid | Re-bind on respawn | [[Debugging Client-Server Desync]] [[Debugging Race Conditions and Yield Order]]
+- menus reset every time the player respawns | ScreenGuis in StarterGui folders or with ResetOnSpawn on | ResetOnSpawn = false for persistent UI, no folders in StarterGui | [[ScreenGui Fundamentals]] [[Script Types and Run Context]]
+
+## Input and controls
+
+- world clicks or attacks fire while the shop is open | Input handler ignores gameProcessedEvent | Return early when gameProcessedEvent is true | [[Debugging UI Layout and Input]] [[Input - UserInputService and ContextActionService]]
+- ContextActionService action never fires | Another higher-priority binding returned Sink | Check binding priorities and return values | [[Debugging UI Layout and Input]]
+- gamepad player stuck when a menu opens, nothing selected | Nothing set GuiService.SelectedObject | Select the primary button when the menu opens | [[Debugging UI Layout and Input]] [[Gamepad and Console UX]]
+- gamepad selection escapes the menu into the HUD | Selection free to move anywhere selectable | GuiService:AddSelectionParent or SelectionGroup on the menu | [[Debugging UI Layout and Input]]
+- pressing an ability on console opens a nearby shop | ProximityPrompt default ButtonX shared with the ability | Remap every prompt's GamepadKeyCode | [[ProximityPrompt Gamepad Keys and the Hidden PlayerList Tab]]
+- Tab does not open the player list | PlayerList CoreGui disabled | Bind Tab to toggle it or your own list | [[ProximityPrompt Gamepad Keys and the Hidden PlayerList Tab]]
+- camera snaps into shift-lock when sprinting | Sprint and mouse lock both bound to Shift | Move sprint, or disable the option and provide your own lock | [[Shift-Lock Sprint and Gamepad B for Menus]]
+- character keeps attacking after alt-tab | No input End event arrived | Reset held state on WindowFocusReleased | [[Hold-to-Attack Input That Never Sticks]]
+- input handlers multiply after each respawn | Character or GUI scripts re-run; old connections leaked | Disconnect on removal; ResetOnSpawn = false for persistent UI | [[Script Types and Run Context]]
+- "I pressed jump on the edge" | No coyote time | Coyote window on walk-offs only | [[Input Responsiveness Buffering and Coyote Time]]
+- my F key does nothing during a Studio test | Studio shortcuts swallow game keys | Adjust "Respect Studio shortcuts when game has focus" or rebind | [[Studio Settings and Shortcuts]]
+
+## Animation and rigs
+
+- animation works in Studio but nothing plays on a live server | Id came from RegisterKeyframeSequence, which is Studio-only | Publish the clip, or play it with a Lua keyframe player | [[Troubleshooting Table]] [[Publishing Animations]]
+- animation plays for me but not in the group game | Animation asset owned by a different user or group than the experience | Re-upload or publish under the experience owner | [[Troubleshooting Table]] [[Publishing Animations]]
+- nothing plays on a custom rig | No Animator under the Humanoid or AnimationController | Create the Animator on the server | [[Troubleshooting Table]]
+- some limbs never move | Pose names do not match the rig's Part1 names, or no joint | Rename parts or retarget the clip; add missing Motor6Ds | [[Troubleshooting Table]] [[Retargeting Animations Between Rigs]]
+- animation plays but the character does not move | Keys only on weight-0 placeholders or the top-level root pose | Key the child joints with weight 1 | [[Troubleshooting Table]]
+- animations stop playing after many uses | 256-track limit from calling LoadAnimation per use | Cache tracks per Animator | [[Troubleshooting Table]]
+- NPC animates for one player only | NPC clip played from a LocalScript | Play NPC tracks on the server, or drive every client from attributes | [[Troubleshooting Table]] [[Enemy Animation State Protocol]]
+- first use of an attack animation is seconds late | Animation asset loads on first play | Preload with ContentProvider:PreloadAsync on equip; load tracks early | [[Troubleshooting Table]]
+- right arm sticks straight out when holding a tool | Default Animate toolnone hold | Fade toolnone to about 0 or replace its id | [[Troubleshooting Table]] [[The Default Animate Script]]
+- pose looks like a mix of two animations | Both tracks at the same priority, weights averaged | Distinct priorities or a proper crossfade | [[Troubleshooting Table]]
+- animation stuck on its first frame | Play called every frame | Call Play only on state change | [[Troubleshooting Table]]
+- joint spins the long way round or flips randomly | Key-to-key turn over about 120 degrees, or exactly 180 | Add an in-between key; offset 180 degree keys by 0.5 | [[Troubleshooting Table]]
+- forearm spins for one frame in the middle of a swing | Euler lerp across the 180-degree boundary | Wrapped delta, or convert to CFrame and Lerp | [[Animation Data Hygiene - Euler Wrap Joint Holes and Easing]]
+- T-pose or rest flash in the middle of a move | Identity keys written by a tool | Remove identity keys; QA for rest flash | [[Troubleshooting Table]]
+- markers fire twice, double damage or double VFX | Full-body and upper-body copies of the clip both fire markers | Tag upper-body copies and skip them in listeners | [[Troubleshooting Table]] [[VFX Timing with Animation]]
+- feet slide while walking | Playback rate not matched to ground speed | rate = speed / GroundSpeed, per clip | [[Troubleshooting Table]] [[Locomotion Systems]]
+- procedural Motor6D offset has no effect | Written in PreRender or Heartbeat and overwritten by the next animation step | Write Motor6D.Transform in PreSimulation | [[Troubleshooting Table]] [[Held Weapons on Motor6D - Locking the Grip During Attacks]]
+- late joiner sees enemies in T-pose or the wrong clip | Animation state was only sent as an event | Attributes with clip name plus server start time | [[Troubleshooting Table]] [[Enemy Animation State Protocol]]
+- death animation never plays, body falls apart | BreakJointsOnDeath left true | Set BreakJointsOnDeath = false before death | [[Humanoid States and Animation]] [[Ragdolls and Physics-Based Animation]]
+- skinned mesh crumples at shoulders and hips, fine in Blender | More than 4 bone influences per vertex | Limit Total 4, Normalize All, re-export | [[Weight Painting and Skinning for Roblox]]
+- blade twists inside the hand during swings | Grip correction spring active during attacks | Lock the grip during attack clips | [[Held Weapons on Motor6D - Locking the Grip During Attacks]]
+
+## VFX, particles, beams and highlights
+
+- particle effect dark in caves and grey in shade | LightInfluence 1 (Studio insert default) | Set LightInfluence 0 explicitly | [[Particle Emitters In Depth]]
+- particle burst is invisible | Lifetime 0, or emitter destroyed right after Emit | Lifetime above 0; delay cleanup | [[Particle Emitters In Depth]]
+- particle effect does nothing in Edit mode | Rate emission does not run in Edit | Test in Play, or temporarily emit bursts | [[Particle Emitters In Depth]]
+- beam or trail shows a solid coloured slab | Texture not loaded, or invalid id | Preload; new uploads need about a minute | [[Beams and Trails]]
+- beam is missing entirely | One attachment missing, same attachment twice, or not in Workspace | Two distinct attachments in Workspace | [[Beams and Trails]]
+- streak across the body when a weapon trail turns on | Trail not cleared before enabling | Trail:Clear() then enable | [[Beams and Trails]] [[VFX Timing with Animation]]
+- trail wraps the character like a sheet | Trail on through a wide sweep or the wind-up | Window the trail on markers, or crescents for sweeps over 120 degrees | [[Beams and Trails]] [[VFX Timing with Animation]]
+- effect looks like a white blob | All additive, no dark layer, big bright sprites | Add a dark contrast layer; set brightness by area | [[VFX Design Playbook]]
+- effect blank the first time it plays | Textures not preloaded or freshly uploaded | Preload with the owner; wait out new uploads | [[VFX Design Playbook]]
+- VFX works in Studio, not in the live game | Built on EditableImage/EditableMesh or unapproved assets | Bake offline; check asset permissions | [[VFX Design Playbook]]
+- sparks appear before the blade arrives after hit-stop | Plain freeze hit-stop with wall-clock VFX | Catch-up hit-stop | [[VFX Timing with Animation]] [[Hit Reactions Stagger and Hit-Stop]]
+- new Highlights or hit flashes stop appearing | Highlight slot limit reached, often by disabled highlights | Destroy unused highlights; pool and cap them | [[Highlights and Selection Effects]] [[Troubleshooting Table]]
+- enemies visible through walls with an outline | Highlight DepthMode default AlwaysOnTop | Use Occluded unless intended | [[Highlights and Selection Effects]]
+- glowing particle does not light the floor | LightEmission is blending, not lighting | Add one small PointLight | [[Light Sources and Shadows]]
+- attack telegraph missing on phones or low settings | Gameplay effect culled or scaled as decoration | Flag gameplay effects; simplify, never skip | [[VFX Performance Budgets and Culling]] [[Juice on a Budget - Mobile and Low-End]]
+
+## Audio
+
+- sound is silent in the live game only | Experience lacks permission to the audio asset | Upload under the experience owner; test live | [[Sound Fundamentals]]
+- first hit sound after joining is late or silent | Sound not preloaded | Preload combat sounds at spawn; pool instances | [[Combat Sound Design and Feedback]] [[Feedback Timing - Sound Visual and Haptic Sync]]
+- every player hears my UI and feedback sounds | Sounds played from the server | Play feedback sounds on clients | [[Sound Fundamentals]]
+- SoundGroup volume has no effect | Sound parented under the group but not assigned | Set Sound.SoundGroup | [[Sound Fundamentals]]
+- distant fights audible across the whole map | Default 10,000-stud max distance | Per-category max distances | [[Spatial Audio and Mixing]]
+- hit sounds feel late or floaty | Sound files have 30 to 80 ms lead-ins; started on the beat | Start at beat minus peak time, or trim | [[Feedback Timing - Sound Visual and Haptic Sync]] [[Sound Design for Games]]
+- looping sound never stops and gets louder | ipairs over a cleanup list stops at a nil | track() helper that skips nil, or table.pack(...).n | [[ipairs Stops at the First nil - Cleanup Tables That Leak]]
+- hollow, doubled sound in fast combos | Same sound overlapping itself | One voice per key per source, pitch variance | [[Sound Design Pitfalls - Reused Ids Onsets and Layered Loops]]
+- 3D sound silent with the new Audio API | No AudioListener, or listener not wired to output | Create and wire a listener | [[The Audio API - Players Emitters Wires and Effects]]
+- music stems drift out of sync | Stems started one by one or with task.delay | Play(atTime) on mixer time | [[Music and Adaptive Audio]] [[The Audio API - Players Emitters Wires and Effects]]
+- attacker hears every hit twice | Server echo of a locally predicted hit not suppressed | Per-target echo window | [[Client Hit Prediction for Melee Feedback]]
+
+## Physics, movement and network ownership
+
+- NPCs jitter or freeze briefly when players come close | NPC on automatic network ownership flipping between clients | SetNetworkOwner(nil) after spawn | [[Debugging Physics and Network Ownership]] [[Physics Assemblies and Constraints]]
+- players get flung or launched when spawning or teleporting | Overlapping collision at the moment of spawn or teleport | Spawn above ground; check overlap with GetPartsInPart | [[Debugging Physics and Network Ownership]]
+- character slides and cannot stop | Heavy attached parts; Massless missing on accessories or weapons | Set Massless on attached visuals; check HipHeight | [[Debugging Physics and Network Ownership]]
+- character stuck in PlatformStand or a physics state after an ability | Ability did not restore Humanoid state on every exit path | Restore state on death and interruption too | [[Debugging Physics and Network Ownership]]
+- character tips over or walks oddly while holding a big prop | Welded prop became the AssemblyRootPart | Massless = true on the prop, or raise RootPriority on the root | [[Physics Assemblies and Constraints]]
+- knockback on players is late or missing | Server applies the impulse to a client-owned character | Server decides; the owning client applies it | [[Physics Assemblies and Constraints]] [[Combat Systems Architecture]]
+- character slides forever after a dash | Mover constraint never destroyed | task.delay cleanup plus cleanup on death | [[Mover Constraints and Physics Controllers]]
+- LinearVelocity or other mover does nothing, no error | Mover has no attachment | Assert Attachment0 exists and is parented | [[Mover Constraints and Physics Controllers]]
+- dash pushes through thin walls or launches other players | Mover with no force limit | ForceLimitsEnabled plus mass-scaled MaxForce | [[Mover Constraints and Physics Controllers]]
+- SetStateEnabled has no effect on a player | Called on the server for a client-owned character | Run it on the client | [[Characters and Humanoids]] [[Humanoid States and Animation]]
+- character floats above or sinks into the ground | HipHeight wrong after scaling or a custom rig | Recompute HipHeight from the rest model | [[Characters and Humanoids]] [[Custom Characters and StarterCharacter]]
+- NPC freezes on a blocked waypoint | Waiting on MoveToFinished forever | Per-waypoint timeout | [[Pathfinding]]
+- pathfinding returns NoPath | Goal inside a part, or the player's root while jumping | Project the goal down onto the floor | [[Pathfinding]] [[Pathfinding Edge Cases and Fallbacks]]
+- zone exit is detected late or never | TouchEnded used for zone exits | Spatial queries on a timer or server region checks | [[Debugging Physics and Network Ownership]]
+
+## Combat and hitboxes
+
+- sword hits randomly miss or hit twice | Touched-based sword hitbox | Spatial query at the swing's hit time | [[Hitboxes and Hit Detection]] [[Physics Assemblies and Constraints]]
+- one swing deals 15x damage on R15 characters | Damage applied per part hit | Dedupe by character model per swing | [[Hitboxes and Hit Detection]] [[Raycasts Shapecasts and Spatial Queries]]
+- hits register late on the server | Server waits the full hit time after receipt | Subtract clamped one-way latency | [[Hitboxes and Hit Detection]]
+- "it hit me outside the circle" | Telegraph and hit shapes differ | One shared shape module | [[Hitboxes and Hit Detection]]
+- hits land before or after the blade visually | Animation retimed, hit data not | Test that data hit time equals the marker time | [[Hitboxes and Hit Detection]]
+- hits feel like they land at the end of the animation | Feedback waits for a server round trip | Play hit feel locally at the contact frame | [[Client Hit Prediction for Melee Feedback]]
+- damage numbers change after appearing | Damage numbers predicted locally | Show numbers only from the server | [[Client Hit Prediction for Melee Feedback]]
+- shields block swings but not abilities | Several separate damage paths | One damage core with one hurt function | [[Combat Systems Architecture]]
+- clicks get eaten in a combo | Early presses dropped | One-press buffer of 0.1 to 0.2 s | [[Combat Combo Systems]] [[Input Responsiveness Buffering and Coyote Time]]
+- attacks animate but do nothing on bad Wi-Fi | Strict server cooldown vs jittered arrival | Grace and rolling-rate checks | [[Input Responsiveness Buffering and Coyote Time]]
+- player frozen forever after an error | Unfreeze depended on a delayed callback | Freeze end timestamp that expires by itself | [[Server-Authoritative Freeze and Stun Timestamps]]
+- slows get stuck or wrong WalkSpeed restored | Effects write WalkSpeed or Health directly | Modifiers plus one owner that recomputes | [[Status Effects Buffs and Stacking Rules]]
+- enemy keeps attacking through stun | Interrupts duplicated per state, one forgot stagger | Global transitions in a parent state | [[Behaviour Trees Utility AI and State Machines for NPCs]]
+- bullets miss or tunnel through walls | Unanchored part plus Touched used for bullets | Simulated point with swept casts | [[Projectiles and Ballistics]]
+
+## Remotes, networking and replication
+
+- server threads hang forever on InvokeClient | Malicious or crashed client never returns | Use an event plus a reply event with a timeout | [[RemoteEvents RemoteFunctions and Unreliable Remotes]]
+- effects get stuck on because the "stop" never arrived | Unreliable remote used for state changes | Reliable remote or attribute for state | [[RemoteEvents RemoteFunctions and Unreliable Remotes]]
+- unreliable remote messages silently vanish | Payload over 1,000 bytes is dropped | Smaller payloads or a reliable remote | [[RemoteEvents RemoteFunctions and Unreliable Remotes]] [[Network Bandwidth Budgets and Measuring Them]]
+- remote or click handler fires twice, two objects react to one event | Class created twice; old one never destroyed | Destroy method that disconnects everything | [[Tables Metatables and OOP]]
+- one-shot handler runs twice | Connect plus self-disconnect under Deferred events | Use Once | [[Events Signals and Connections]]
+- my change works for me but reverts on rejoin, others see old values | Client changed leaderstats or an attribute locally | Send a request; the server changes it | [[Client-Server Model]] [[Replication Rules]]
+- effects out of sync by seconds between players | Timers built on os.clock() across client and server | Use workspace:GetServerTimeNow() | [[Client-Server Model]]
+- late joiners see the wrong state | State sent as one-off events | Attributes or properties set by the server | [[Debugging Client-Server Desync]] [[Replication Rules]]
+- remote handler errors because children are not there yet | Handler assumes children have replicated | Pass the data in the remote or react to ChildAdded | [[Replication Rules]]
+- entities flicker in and out at range | Single interest radius | Enter and leave hysteresis | [[Interest Management and Per-Player Replication]]
+- private values visible on other players' clients | Data stored as attributes on the character or Player | PlayerGui holder or FireClient to the owner | [[Interest Management and Per-Player Replication]]
+- server and client "share" a module table but values differ | Each side runs its own copy of the module | Use remotes or attributes | [[Module Scripts and Requiring]]
+- methods missing on an object after sending it to the client | Metatables dropped through remotes | Send plain data; rebuild objects client-side | [[Tables Metatables and OOP]]
+
+## DataStores, data loss and dupes
+
+- player's whole save replaced by defaults, data lost on rejoin | A nil load after an error treated as a new player | Distinguish "no data" from "call failed"; kick or retry | [[DataStore Fundamentals]] [[Error Handling and Retries]]
+- progress rolled back by minutes or hours | Save never reached the store, or a stale overwrite | Read that key's version history | [[Debugging DataStore Problems]]
+- occasional rollbacks and duplicated items after server hops | GetAsync then SetAsync for player data | UpdateAsync plus session locking | [[DataStore Fundamentals]]
+- player cannot load after a server crash, works a few minutes later | Stuck session lease | Read the lease; never clear it by hand while the owner may live | [[Debugging DataStore Problems]]
+- save looks like it failed when checked right after | GetAsync 4 second cache | Re-read with UseCache = false | [[Debugging DataStore Problems]] [[DataStore Fundamentals]]
+- saves take 10 to 30 s then error 301 to 306 | Throttling and a full request queue | Buffer in memory and autosave; log budgets; no instant retries | [[Debugging DataStore Problems]] [[DataStore Fundamentals]]
+- save fails with 104 CantStoreValue | Vector3 or CFrame saved directly | Save plain numbers instead of Roblox types | [[Data Schema Design and Migrations]] [[Debugging DataStore Problems]]
+- "Callbacks cannot yield" error when saving | Yield inside the UpdateAsync transform | Compute everything before calling UpdateAsync | [[DataStore Fundamentals]]
+- Studio test sessions overwrite real player saves | Studio API access on the live game with no guard | Separate test experience, or a Studio-only test key | [[DataStore Fundamentals]] [[Places Universes and Experience Settings]]
+- last players lose progress when the server shuts down or updates | No BindToClose, or saving one by one inside it | Parallel saves with a deadline in BindToClose | [[Saving Correctly - Autosave and BindToClose]] [[Server Lifecycle and Shutdown]]
+- data bleeds between players, new players edit each other's data | One shared DEFAULT table | Return a fresh default table for every player | [[Data Schema Design and Migrations]]
+- items duplicated after trades or crashes | Missing lease or fencing, or a trade race | Version history and audit log; server-owned trades with immediate saves | [[Debugging DataStore Problems]] [[Trading Systems Without Duplication]]
+- items duplicated by spamming a button | Yield between check and write in the handler | Mark state before yielding; synchronous commit | [[Economy Exploits - Dupes Races and Purchase Abuse]] [[RemoteEvents RemoteFunctions and Unreliable Remotes]]
+- data reset did nothing for an online player | Session save wrote the old data back | Kick, wait for lock release, then remove | [[Resetting One Player's Data Safely]]
+- data restore gets overwritten | Restored with SetAsync while the player was online | Restore only while the player is offline and unlocked | [[Data Loss Prevention and Recovery]] [[Resetting One Player's Data Safely]]
+
+## Monetization and receipts
+
+- player paid Robux but got nothing | PurchaseGranted returned before saving, or profile failed to load | Save first, then return PurchaseGranted; never grant into an unloaded profile | [[Developer Products and ProcessReceipt]] [[Purchase Data and Receipts]]
+- one system's developer products never grant | Two scripts assign ProcessReceipt; only the last wins | One owner script that dispatches by product | [[Developer Products and ProcessReceipt]] [[Purchase Data and Receipts]]
+- purchase granted twice | Grant without checking PurchaseId, or receipt records removed | Save the PurchaseId with the grant; never touch receipt stores | [[Purchase Data and Receipts]] [[Resetting One Player's Data Safely]]
+- items granted to players who cancelled the prompt | Granting in PromptProductPurchaseFinished | Grant in ProcessReceipt only | [[Developer Products and ProcessReceipt]] [[Monetization Overview]]
+- Store-tab purchase stuck until the player rejoins | NotProcessedYet returned while the profile was still loading | Wait for the profile to load before answering | [[Purchase Data and Receipts]]
+- shown price is wrong for some players | Hard-coded prices ignore regional, test and Plus pricing | Look prices up with GetProductInfoAsync | [[Developer Products and ProcessReceipt]] [[Pricing and Store Design]]
+- game pass perk missing after respawn | Character-based pass benefits not reapplied | Reapply benefits on every spawn | [[Game Passes]]
+- shown odds do not add up to 100% | Tier odds shown instead of final outcomes | Flatten tiers into item odds | [[Paid Random Items and Odds Disclosure in Practice]]
+- displayed odds do not match what players roll | Display table separate from the roll table | One source of truth; roll from the flattened table | [[Paid Random Items and Odds Disclosure in Practice]] [[RNG Drops and Luck Systems]]
+- analytics revenue disagrees with payouts | Revenue computed from config prices | Use receipt amounts (CurrencySpent) | [[Robux Price Points and Offer Design]] [[Analytics and Funnels]]
+
+## Performance, memory and lag
+
+- lag that grows over hours of uptime | Leak: per-player tables or connections never cleaned up | Measure a memory slope after warm-up; explicit teardown on PlayerRemoving | [[Hunting Memory Leaks Step by Step]] [[Memory Budgets and Leaks]]
+- memory grows every round or every spawn | Short-lived object connected to a long-lived signal | Disconnect on teardown; cleanup bag | [[Events Signals and Connections]]
+- memory not freed after removing UI or objects | Parent = nil with live connections | Call Destroy instead | [[Instances Attributes and Tags]] [[Events Signals and Connections]]
+- periodic hitches with nothing obvious happening | Garbage collection from per-frame allocations | Reuse tables; fewer closures and threads | [[Luau Performance and Native Codegen]]
+- hitch every few seconds in long fights | Effects cloned and destroyed per hit | Pools with a cap | [[VFX Performance Budgets and Culling]] [[Juice on a Budget - Mobile and Low-End]]
+- frame cost grows with the number of objects | One connection or Heartbeat per object | One shared loop over a set | [[Luau Performance and Native Codegen]] [[CollectionService Patterns]]
+- server spikes every few frames with many NPCs | All NPC brains think every frame on the same frame | 10 Hz brains, distance gating, staggering | [[NPC AI and Behaviour]] [[Luau Performance and Native Codegen]]
+- fine alone, lags in a full server | No onlooker share or global VFX cap | Governor with a global cap; onlookers at half or less | [[VFX Performance Budgets and Culling]]
+- FPS dies when looking at foliage | Overlapping alpha cards, DoubleSided transparency | Modelled clumps, opaque styles, fewer overlaps | [[Mesh Optimization for Mobile]] [[Foliage Props and Scatter]]
+- low triangle count but still slow | Draw calls from unique meshes and textures | Reuse meshes; clone in Studio, do not re-import | [[Mesh Optimization for Mobile]] [[Art Budgets - Triangles Draw Calls Memory]]
+- frame spikes when many animated NPCs are on screen | Every rig updates every frame | Distance and screen animation LOD | [[Troubleshooting Table]] [[Animation LOD]]
+- very long join times | Hundreds of thousands of Pose instances in ReplicatedStorage | Thin, stub and publish clips | [[Troubleshooting Table]] [[Performance and Memory]]
+- game smooth at first, laggy after 15 minutes on phones | Thermal throttling | Quality governor all session; test after 15 to 20 minutes | [[Juice on a Budget - Mobile and Low-End]] [[Mobile and Low-End Optimization]]
+- memory looks huge in Studio | Studio numbers include Studio itself | Measure on the real device | [[Developer Console and Stats]]
+- lag scales with player count | Large attributes on Player rewritten often | Owner-only containers, deltas, lower frequency | [[Instances Attributes and Tags]] [[Network Performance]]
+
+## Scripts, errors and load order
+
+- "Infinite yield possible" warning | Wrong name, never created, streamed out, or server-only | Fix the path; pass a timeout; shared things in ReplicatedStorage | [[Instances Attributes and Tags]] [[Debugging Race Conditions and Yield Order]]
+- WaitForChild waits forever after respawn | Waiting on the old character or GUI | Re-acquire the parent on respawn | [[Debugging Race Conditions and Yield Order]]
+- first player in Studio gets nothing on join | PlayerAdded connected without looping existing players | Handle players already present as well | [[Project Structure and Bootstrapping]] [[Characters and Humanoids]]
+- edits to a module have no effect in a test | Cached require in the same VM or the command bar | Clone the ModuleScript and require the clone; restart the test | [[Module Scripts and Requiring]] [[Command Bar and Studio Scripting]]
+- "Unable to assign property Source" | Script source over the 200,000-character cap | Split into child modules | [[Module Scripts and Requiring]] [[Studio Automation Without Freezing Studio]]
+- script refuses to compile after adding one line | 200 active locals in the main chunk | Split into modules or group locals in tables | [[Luau Language Essentials]]
+- "attempt to call a nil value (global)" on a rare path | Local function used above its declaration | Reorder or forward-declare | [[Luau Language Essentials]]
+- every button prints the same name | Shared outer loop variable captured | Per-iteration local | [[Functions Closures and Upvalues]]
+- LocalScript does nothing | LocalScript placed in Workspace or ReplicatedStorage | Put it in a Starter container, or use a Client RunContext Script | [[Script Types and Run Context]]
+- client code runs twice | Client-context Script inside a Starter container | Use a LocalScript there, or move it to ReplicatedStorage | [[Script Types and Run Context]]
+- pcall returned true but an error still printed | Error happened in a spawned thread or handler | Report back from the thread | [[Error Handling - pcall xpcall and Promise Patterns]]
+- output flooded with dozens of errors | Later errors are consequences of the first | Fix the first error, not the latest | [[Reading Luau Errors and Stack Traces]]
+- part disappears or flies to huge coordinates | NaN from .Unit of a zero vector or divide by zero | Guard magnitude; validate inputs | [[Math Vectors and CFrames]]
+
+## Studio, tooling, plugins and MCP agents
+
+- Studio frozen for minutes during a script search | Leading [^\n]* or .- patterns in gmatch over big sources | Plain find first, or split into lines | [[Studio Automation Without Freezing Studio]]
+- Studio unresponsive during bulk edits | Long job with no yielding | task.wait() every ~50 ms; paged jobs | [[Studio Automation Without Freezing Studio]] [[Command Bar and Studio Scripting]]
+- hours of edits vanished | Worked in an AutoRecovery copy | Check game.PlaceId before working | [[Studio Automation Without Freezing Studio]]
+- a fix disappears after another agent's change | Two agents writing one module | Single owner per area | [[Running Many AI Agents on One Roblox Place]]
+- agent edits silently revert recent work | Edit based on a stale read | Fresh read and a changed-since-read check | [[Running Many AI Agents on One Roblox Place]] [[MCP Workflows for Scripting and Debugging]]
+- screenshot comes back black | Edit-mode captures are black when Studio is not focused | Never accept a black screenshot as evidence; check numbers | [[Cameras and Cutscenes]] [[Roblox Studio MCP Server]]
+- MCP tools fail or hit the wrong Studio after a restart | Cached studio_id; the id changes on every restart | Call list_roblox_studios first each session | [[Roblox Studio MCP Server]]
+- MCP server does not show up after editing the config | Host not restarted | Restart the host, and Studio | [[Setting Up MCP Clients]] [[What Is MCP]]
+- plugin actions fire twice after a reload | Plugin connections never cleaned | One Janitor cleaned on Unloading | [[Building a Studio Plugin End to End]]
+- plugin cannot record undo again until reload | Recording never finished on an error path | Cancel the recording on every failure path | [[Plugins - Using and Writing]] [[Undo and ChangeHistoryService Done Right]]
+- teammates' work rolled back after pressing undo | Undo in a shared Team Create session | Snapshots instead of undo | [[Command Bar and Studio Scripting]] [[Team Create and Collaboration]]
+- Rojo deleted the hand-built map on connect | $path on Workspace without ignoring unknown instances | Map code containers only, or $ignoreUnknownInstances: true | [[External Tooling - Rojo Wally Selene StyLua]]
+- every Studio test feels laggy | Network emulation left on | Zero it after network tests | [[Studio Settings and Shortcuts]]
+- tuned values lost when pressing Stop | Values tuned during a play test | Copy, Stop, paste; or tune attributes in Edit | [[Studio Interface Tour]] [[Testing Modes - Play Run and Multi-Client]]
+
+## Building, importing and modelling
+
+- model 100x too big or too small after import | Scene in metres, or mixed FBX scale methods | 1 unit = 1 stud; one FBX scale method, or use GLB | [[Modeling in Blender for Roblox]] [[Blender Workflow for Roblox Creators]]
+- model faces backwards after GLB import | Front modelled toward +Y in Blender | Model the front toward -Y | [[Blender Workflow for Roblox Creators]]
+- holes or black faces in Studio, fine in Blender | Flipped normals hidden by Blender's back-face rendering | Face Orientation overlay; Recalculate Outside | [[Hard-Surface Modeling]] [[Modeling Fundamentals for Games]]
+- rotated, skewed parts or wrong pivots after import | Unapplied transforms | Apply rotation and scale before export | [[Modeling in Blender for Roblox]] [[Exporting and Validating Models for Roblox]]
+- one prop imports as dozens of MeshParts | Several material slots on one object | One material per mesh; atlas or trim sheet | [[Modeling Fundamentals for Games]] [[Modeling in Blender for Roblox]]
+- mesh import fails or is rejected | Mesh over 20,000 triangles | Split by material or part, or decimate | [[Modeling Fundamentals for Games]] [[Mesh Optimization for Mobile]]
+- dents look like bumps, lighting looks inverted | DirectX normal map | Flip the green channel to OpenGL | [[Modeling in Blender for Roblox]] [[Normal Maps and Detail Baking]]
+- some pieces look blurry next to sharp ones | Inconsistent texel density | Checker texture, shared density target | [[Modeling in Blender for Roblox]] [[Modular Environment Kits]]
+- changing Material on a MeshPart does nothing | TextureID wins over Material | Clear TextureID first | [[Parts Unions and MeshParts]] [[Materials MaterialVariants and SurfaceAppearance]]
+- changing CollisionFidelity by script does nothing | Cannot change it on a loaded part | Properties window, or CreateMeshPartAsync | [[Collision and Physics Geometry]] [[Exporting and Validating Models for Roblox]]
+- players snag and jitter walking on mesh floors | Visual mesh used as the floor collider | Primitive box colliders | [[Collision and Physics Geometry]] [[Parts Unions and MeshParts]]
+- ground raycasts hit props, props stacked on props | Decoration blocks queries; exclude-list ground cast | CanQuery false on decoration; include-list ground casts | [[Collision and Physics Geometry]] [[Raycasts Shapecasts and Spatial Queries]]
+- assets will not load in the group game | Uploaded under the wrong creator | Upload under the experience owner | [[Exporting and Validating Models for Roblox]]
+- terrain turned bright purple | Custom terrain material deleted while still in use | Replace it first, then delete | [[Terrain Deep Dive - Materials Water and Performance]]
+- recolouring grass in one area changes the whole place | Terrain material colours are global | Use a different material | [[Terrain Tools and Terrain API]]
+- weapon held at the wrong point | Origin at the pommel or bounding-box centre | Origin at the grip centre | [[Modeling Weapons and Props]]
+
+## Streaming and loading
+
+- "attempt to index nil" in a LocalScript on join | Direct indexing into Workspace with streaming on | WaitForChild with timeout, Atomic models, tags | [[Instance Streaming]]
+- player falls through the floor after a teleport | Destination not streamed in yet | RequestStreamAroundAsync before moving | [[Instance Streaming]] [[Level of Detail and Model Streaming]]
+- interactable only works after walking near it twice | Setup ran once at start and missed late arrivals | Use the tag added signal | [[Instance Streaming]]
+- effects keep playing on objects far away | References to streamed-out parts never cleaned | Tag removed signal and AncestryChanged | [[Instance Streaming]]
+- memory keeps growing on phones with streaming | LowMemory never streams out until pressure | StreamOutBehavior Opportunistic | [[Instance Streaming]]
+- world pops in when turning around | StreamingTargetRadius too small for the view | Raise the target radius, or hide edges with fog and LOD | [[Instance Streaming]]
+- half-built buildings pop in | Nonatomic building models | ModelStreamingMode Atomic | [[Level of Detail and Model Streaming]]
+- loading screen never goes away for some players | WaitForChild without timeout on a streamed instance | Timeouts plus a watchdog | [[Streaming Joins - Frozen Players and Loading Screen Teardown]]
+- other players hang frozen in mid-air after spawning | Their client has not started simulating yet | Expected; spawn on the ground, optional cosmetic fade | [[Streaming Joins - Frozen Players and Loading Screen Teardown]]
+- players stuck after a join fix | Server anchored roots and missed the unanchor | Never anchor to hide join poses | [[Streaming Joins - Frozen Players and Loading Screen Teardown]]
+
+## Security and exploits
+
+- exploiters one-shot bosses | Client computes damage and sends it | Server computes damage from server-side stats | [[Client-Server Model]] [[Hitboxes and Hit Detection]]
+- exploiters read anti-cheat thresholds, odds or prices | Server modules or secrets in ReplicatedStorage | Move them to ServerScriptService or ServerStorage | [[Module Scripts and Requiring]] [[How Exploits Work - The Client Boundary]]
+- exploiters place items anywhere or pass range checks | NaN passes every comparison | Check x == x and integers | [[Remote Abuse Patterns and Rate Limiting in Practice]] [[Grid Placement and Player Building Systems]]
+- a remote lets someone pay or hurt any player | Payload userId used as identity | Use the injected sender player | [[Remote Abuse Patterns and Rate Limiting in Practice]]
+- remote spam becomes server CPU load | Expensive lookup before the rate limit | Rate limit first | [[Remote Abuse Patterns and Rate Limiting in Practice]] [[Rate Limiting and Abuse Prevention]]
+- honest players kicked on bad connections | Kicking on a single violation | Suspicion scores and a consequence ladder | [[Remote Abuse Patterns and Rate Limiting in Practice]] [[False Positives Lag and Fair Enforcement]]
+- players flagged for speed after the game teleports them | Server moves have no exemption | Route every server move through one helper | [[Detecting Movement Exploits - Speed Fly Noclip Teleport]]
+- wall-climbing exploits | FloorMaterial used as "grounded" | Verify with a server raycast | [[Detecting Movement Exploits - Speed Fly Noclip Teleport]] [[Characters and Humanoids]]
+- other clients spammed or crashed by relayed effects | Raw client arguments relayed with FireAllClients | Validate, rate-limit, relay server-built values | [[RemoteEvents RemoteFunctions and Unreliable Remotes]] [[How Exploits Work - The Client Boundary]]
+- backdoor or spam appeared after inserting a free model | Toolbox model inserted into the live place | Scratch place first; read every script | [[Creator Store and Toolbox Safety]]
+- key gameplay item moved across the map by an attacker | Unowned prop on automatic network ownership | Server ownership or anchoring | [[How Exploits Work - The Client Boundary]] [[Network Ownership]]
+- debug or admin remotes abused in live servers | Debug remotes left in production | Studio gate plus allowlist, or remove them | [[Remote Abuse Patterns and Rate Limiting in Practice]]
+
+## Publishing and live issues
+
+- works in Studio, broken in the live game | Real latency, devices, asset permissions, streaming and teleports differ live | Find the server and moment; check load-order races | [[Debugging Live Servers]] [[Debugging Race Conditions and Yield Order]]
+- players never see my change | Save treated as Publish | Publish, then restart servers when needed | [[Studio Interface Tour]]
+- players on mixed versions for hours after an update | Old servers keep running the old version | Restart outdated servers | [[Places Universes and Experience Settings]] [[Server Lifecycle and Shutdown]]
+- old servers write data in the old format | Data format change shipped without restarting servers | Restart outdated servers; migrations tolerant both ways | [[Places Universes and Experience Settings]]
+- publish overwrote the wrong place | Plain Publish used when changing the start place | Publish As and choose the current start place | [[Places Universes and Experience Settings]] [[Publishing an Experience]]
+- live players get test behaviour | Test flags left on | IsStudio guard on every flag; boot warning | [[Testing Modes - Play Run and Multi-Client]] [[Project Structure and Bootstrapping]]
+- teleports fail when testing in Studio | Teleports are unsupported in Studio | Publish and test live | [[Teleporting and Multi-Place Games]]
+- live bug reports cannot be matched to a server | No job id or version in logs | Log JobId and place version | [[Debugging Live Servers]]
+- error report fragments into thousands of unique errors | Error messages contain ids and numbers | Normalise numbers, ids and quotes before reporting | [[Error Handling - pcall xpcall and Promise Patterns]] [[Crash and Error Telemetry]]

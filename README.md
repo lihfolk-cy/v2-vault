@@ -31,7 +31,15 @@ After that, Roblox tasks automatically use the knowledge base. You also get:
 | **Specialist skills** | Secure remotes, DataStore safety, UI, performance, debugging, anti-exploit, monetisation compliance, asset import, system builder |
 
 ### Other AI tools (Cursor, Codex, ChatGPT and others)
-Point your tool at this folder. `AGENTS.md` tells any agent how to search `knowledge/INDEX.md` and apply the notes.
+Point your tool at this folder. `AGENTS.md` tells any agent how to search the vault and apply the notes.
+
+## Built to be trusted by AI agents
+
+- **One-call search:** `python knowledge/_tools/vault.py "my sword floats away from the hand when I attack"` returns the 3 best notes with their TL;DRs. It understands bugs described in everyday words through `knowledge/SYMPTOMS.md`, which has 250+ symptom → cause → fix lines. On a held-out test set of hand-written tasks, the right note is in the top 3 **93%** of the time, against 57% for grepping the index. The average answer costs about 700 tokens.
+- **No made-up APIs:** every Roblox and Luau API name in the notes is checked against a dated snapshot of the real API, including deprecations. The first run caught a few dozen uses of methods Roblox had renamed to `...Async`, and they are fixed.
+- **Code that compiles:** all 1,600+ Luau code blocks are compiled with the official Luau compiler on every push.
+- **Notes that agree:** numbers repeated across notes, such as limits, defaults and ratios, are cross-checked, and stale date stamps are flagged.
+- **Checked on every push:** `.github/workflows/vault-checks.yml` runs all of it. Details and numbers are in `knowledge/_tools/README.md`.
 
 ## Trust labels
 Every claim is marked **Roblox docs** (official), **Measured** (tested in a real project), **Rule of thumb** (craft knowledge) or **Unverified** (not confirmed yet). Roblox changes fast, so dated claims say "as of".

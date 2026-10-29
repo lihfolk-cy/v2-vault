@@ -168,7 +168,7 @@ Good loops repeat the actions that create and remove things:
 
 | Action | Catches |
 |---|---|
-| Respawn (`player:LoadCharacter()` from the server) | Per-character connections, per-character tables, animation tracks |
+| Respawn (`player:LoadCharacterAsync()` from the server) | Per-character connections, per-character tables, animation tracks |
 | Equip and unequip a tool | Tool scripts that connect on equip and never disconnect |
 | Open and close every menu | UI rebuilt per open, button connections |
 | Enter and leave a zone | Zone setup and teardown, streamed-in handlers |
@@ -191,7 +191,7 @@ local function respawnSoak(player: Player, cycles: number)
 	end
 	-- Warm up: the first few respawns load modules and fill pools.
 	for _ = 1, 5 do
-		player:LoadCharacter()
+		player:LoadCharacterAsync()
 		task.wait(1)
 	end
 	local h0, s0, i0 = sample()
@@ -199,7 +199,7 @@ local function respawnSoak(player: Player, cycles: number)
 		if player.Parent == nil then
 			return -- the player left; stop cleanly
 		end
-		player:LoadCharacter()
+		player:LoadCharacterAsync()
 		task.wait(1) -- let character scripts run their setup
 	end
 	local h1, s1, i1 = sample()

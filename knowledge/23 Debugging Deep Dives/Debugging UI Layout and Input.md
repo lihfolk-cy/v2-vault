@@ -277,7 +277,7 @@ Gamepad bugs are invisible to anyone testing with a mouse. Test with a controlle
 | Symptom | Cause | Fix |
 |---|---|---|
 | Opening a menu selects nothing; the player is stuck | nothing set `GuiService.SelectedObject` (Docs) | select the primary button when a menu opens |
-| Selection jumps to the HUD behind the menu | selection is free to move anywhere selectable | `GuiService:AddSelectionParent` / `SelectionGroup` on the menu container to keep selection inside (Docs) |
+| Selection jumps to the HUD behind the menu | selection is free to move anywhere selectable | `SelectionGroup = true` on the menu container (`GuiService:AddSelectionParent` is deprecated) to keep selection inside (Docs) |
 | Selection lands on an invisible element | a hidden but `Selectable` object | set `Selectable = false` on hidden elements, or hide with `Visible = false` (not transparency) |
 | D-pad navigation goes in surprising directions | automatic neighbour detection in irregular layouts | set `NextSelectionUp/Down/Left/Right` explicitly on tricky elements (Docs) |
 | Selection lost after rebuilding a list | the selected object was destroyed | after rebuild, reselect the equivalent item by id |

@@ -6,3 +6,4 @@ __pycache__/
 .lihfolk/
 .DS_Store
 Thumbs.db
+knowledge/_tools/.cache/
