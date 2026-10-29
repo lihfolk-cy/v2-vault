@@ -9,7 +9,7 @@ tags: [rigging, r15, humanoid, attachments, reference]
 > - Avoid: IK uses part centres or vertical arm length -> Use RigAttachment positions (slanted upper arm)
 > - Avoid: Root motion keyed on HumanoidRootPart -> Key LowerTorso
 >
-> Cost: TL;DR ~100 tok · whole note ~4.0k tok. Read more: ## 2. The joints · ## 3. Accessory and grip attachments · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~4.3k tok. Read more: ## 1. The parts · ## 2. The joints · ## Common mistakes
 <!-- tldr:end -->
 
 The R15 rig is the contract that the default Animate script, emotes, layered clothing, accessories, the Animation Editor and most community tooling assume. Knowing its exact parts, joints and attachment offsets lets you build IK that hits the real pivots, write procedural code that works on any body, import custom bodies that animate, and diagnose "why is my arm offset" problems in minutes.
@@ -18,22 +18,34 @@ All positions below were **measured in Studio (October 2026)** on a rig made by 
 
 ## 1. The parts
 
-15 body parts plus the `HumanoidRootPart`. Positions are part centres relative to the HumanoidRootPart (studs; +X right, +Y up, -Z forward).
+15 body parts plus the `HumanoidRootPart`. Positions are part centres relative to the HumanoidRootPart (studs; +X right, +Y up, -Z forward). There are **two different sets of centres, and both are real** (measured on a default `CreateHumanoidModelFromDescriptionAsync` R15 rig, October 2026):
 
-| Part | Size (X, Y, Z) | Centre |
-|---|---|---|
-| HumanoidRootPart | 2.000, 2.000, 1.000 | 0, 0, 0 |
-| Head | 1.159, 1.182, 1.161 | 0, 1.586, 0 |
-| UpperTorso | 1.943, 1.698, 1.004 | 0, 0.200, 0 |
-| LowerTorso | 1.991, 0.401, 1.004 | 0, -0.800, 0 |
-| Left/RightUpperArm | 1.001, 1.242, 1.002 | -/+1.500, 0.369, 0 |
-| Left/RightLowerArm | 1.001, 1.118, 1.002 | -/+1.500, -0.224, 0 |
-| Left/RightHand | 0.984, 0.316, 1.028 | -/+1.500, -0.850, 0 |
-| Left/RightUpperLeg | 0.993, 1.363, 0.973 | -/+0.500, -1.421, 0 |
-| Left/RightLowerLeg | 0.993, 1.301, 0.973 | -/+0.500, -2.201, 0 |
-| Left/RightFoot | 1.009, 0.312, 1.001 | -/+0.500, -2.850, 0 |
+- **Stored:** where the parts sit in the model as built, before any joint is solved. This is what you see when you inspect the model in Edit mode.
+- **Jointed:** where the joints put them, `Part1 = Part0 * att0 * att1^-1` from the RigAttachments in section 2. This is the rest pose of a running character. It is what the Animator poses from, and what physics stands on the ground.
 
-Derived: the head top is about 2.18 studs above the HumanoidRootPart centre and the soles about 3.01 below, so the default character is roughly **5.2 studs** tall. `Humanoid.HipHeight` was 2.19. (The reference project's players were scaled 1.6x through body scales, about 9 studs tall, which made its hip about 3.5 studs above ground: 2.19 x 1.6.)
+The two differ by up to 0.19 studs: the stored layout has small gaps at the shoulders, hips and knees. For animation, FK, IK and foot placement, use **jointed**.
+
+| Part | Size (X, Y, Z) | Centre, stored | Centre, jointed |
+|---|---|---|---|
+| HumanoidRootPart | 2.000, 2.000, 1.000 | 0, 0, 0 | 0, 0, 0 |
+| Head | 1.159, 1.182, 1.161 | 0, 1.586, 0 | 0, 1.674, 0 |
+| UpperTorso | 1.943, 1.698, 1.004 | 0, 0.200, 0 | 0, 0.249, 0 |
+| LowerTorso | 1.991, 0.401, 1.004 | 0, -0.800, 0 | 0, -0.800, 0 |
+| Left/RightUpperArm | 1.001, 1.242, 1.002 | -/+1.500, 0.369, 0 | -/+1.473, 0.428, 0 |
+| Left/RightLowerArm | 1.001, 1.118, 1.002 | -/+1.500, -0.224, 0 | -/+1.473, -0.202, 0 |
+| Left/RightHand | 0.984, 0.316, 1.028 | -/+1.500, -0.850, 0 | -/+1.473, -0.866, 0 |
+| Left/RightUpperLeg | 0.993, 1.363, 0.973 | -/+0.500, -1.421, 0 | -/+0.500, -1.471, 0 |
+| Left/RightLowerLeg | 0.993, 1.301, 0.973 | -/+0.500, -2.201, 0 | -/+0.500, -2.333, 0 |
+| Left/RightFoot | 1.009, 0.312, 1.001 | -/+0.500, -2.850, 0 | -/+0.500, -3.035, 0 |
+
+Derived heights:
+
+| | Head top above root | Soles below root | Total height |
+|---|---|---|---|
+| Stored | 2.18 | 3.01 | about 5.2 studs |
+| Jointed (in game) | 2.27 | 3.19 | about 5.5 studs |
+
+The jointed value agrees with `Humanoid.HipHeight` (measured 2.192): the root centre stands HipHeight + half the root's height (2.192 + 1 = 3.19) above the ground. A pose solved against the stored 3.01 floats its feet 0.18 studs off the ground in game. (The reference project's players were scaled 1.6x through body scales, about 9 studs tall, with the hip about 3.5 studs above ground: 2.19 x 1.6.) If a body type or scale differs, re-measure on the rig with `root.CFrame:ToObjectSpace(part.CFrame)`.
 
 Every body part carries an `OriginalSize` Vector3Value (the unscaled size), used by the scaling system.
 

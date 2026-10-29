@@ -174,9 +174,9 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Facial Animation and Dynamic Heads | 08 Animation/02 Rigging and Importing/Facial Animation and Dynamic Heads.md | rigging, facial, dynamic-heads, facs, facecontrols, blender | ~3.0k tok
 - Importing Models and Rigs | 08 Animation/02 Rigging and Importing/Importing Models and Rigs.md | import, rigging, studio, pipeline, prepare | ~4.3k tok
 - Layered Clothing Cages and Animation | 08 Animation/02 Rigging and Importing/Layered Clothing Cages and Animation.md | rigging, layered-clothing, cages, wraplayer, avatar | ~2.7k tok
-- R15 Rig Anatomy and Attachments | 08 Animation/02 Rigging and Importing/R15 Rig Anatomy and Attachments.md | rigging, r15, humanoid, attachments, reference | ~4.0k tok
+- R15 Rig Anatomy and Attachments | 08 Animation/02 Rigging and Importing/R15 Rig Anatomy and Attachments.md | rigging, r15, humanoid, attachments, reference | ~4.3k tok
 - Retargeting Animations Between Rigs | 08 Animation/02 Rigging and Importing/Retargeting Animations Between Rigs.md | retargeting, rigging, math, keyframesequence, clips | ~3.5k tok
-- Rigging in Blender | 08 Animation/02 Rigging and Importing/Rigging in Blender.md | rigging, blender, import, workflow, hub | ~4.1k tok
+- Rigging in Blender | 08 Animation/02 Rigging and Importing/Rigging in Blender.md | rigging, blender, import, workflow, hub | ~4.2k tok
 - Weight Painting and Skinning for Roblox | 08 Animation/02 Rigging and Importing/Weight Painting and Skinning for Roblox.md | rigging, blender, skinning, weights, deformation | ~3.6k tok
 - Animating Creatures and Monsters | 08 Animation/03 Authoring/Animating Creatures and Monsters.md | authoring, craft, creatures, enemies, quadrupeds, flyers, telegraphs | ~4.2k tok
 - Animation Capture and Mocap | 08 Animation/03 Authoring/Animation Capture and Mocap.md | authoring, mocap, animation-capture, video, face | ~3.3k tok
@@ -194,6 +194,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Posing and Silhouettes | 08 Animation/03 Authoring/Posing and Silhouettes.md | authoring, craft, posing, silhouette, r15 | ~3.2k tok
 - Principles of Animation for Games | 08 Animation/03 Authoring/Principles of Animation for Games.md | authoring, craft, principles, game-animation | ~3.8k tok
 - Publishing Animations | 08 Animation/03 Authoring/Publishing Animations.md | authoring, publishing, release, assets, permissions | ~3.5k tok
+- R15 Run Cycle Key Poses | 08 Animation/03 Authoring/R15 Run Cycle Key Poses.md | authoring, locomotion, run, run-cycle, r15, key-poses, keyframesequence, swordsman, sprint, foot-sliding | ~2.3k tok
 - Spec-Driven Move Authoring | 08 Animation/03 Authoring/Spec-Driven Move Authoring.md | authoring, code, specs, ik, baking, combat | ~4.5k tok
 - Timing Spacing and Frame Charts | 08 Animation/03 Authoring/Timing Spacing and Frame Charts.md | authoring, craft, timing, spacing, frames | ~3.3k tok
 - Weapon Swing Design | 08 Animation/03 Authoring/Weapon Swing Design.md | authoring, craft, weapons, swords, two-handed, arcs | ~4.0k tok
@@ -388,7 +389,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Low-Poly and Stylized Modeling | 14 3D Modeling/Low-Poly and Stylized Modeling.md | modeling, low-poly, stylized, palette, vertex-colors, blender, art-style | ~3.4k tok
 - Mesh Optimization for Mobile | 14 3D Modeling/Mesh Optimization for Mobile.md | modeling, optimization, mobile, performance, meshes, draw-calls, blender, budgets | ~5.7k tok
 - Modeling Characters for R15 and Custom Rigs | 14 3D Modeling/Modeling Characters for R15 and Custom Rigs.md | modeling, characters, r15, avatar, custom-rigs, proportions, blender, python | ~4.2k tok
-- Modeling Fundamentals for Games | 14 3D Modeling/Modeling Fundamentals for Games.md | modeling, 3d, fundamentals, meshes, budgets, topology | ~4.7k tok
+- Modeling Fundamentals for Games | 14 3D Modeling/Modeling Fundamentals for Games.md | modeling, 3d, fundamentals, meshes, budgets, topology | ~4.8k tok
 - Modeling Weapons and Props | 14 3D Modeling/Modeling Weapons and Props.md | modeling, weapons, props, grip, pivots, blender, tools, conventions | ~4.2k tok
 - Modular Environment Kits | 14 3D Modeling/Modular Environment Kits.md | modeling, modular, kits, environment, grid, pivots, blender, luau, level-design | ~4.1k tok
 - Normal Maps and Detail Baking | 14 3D Modeling/Normal Maps and Detail Baking.md | modeling, normal-maps, baking, tangent-space, blender, surfaceappearance | ~4.2k tok

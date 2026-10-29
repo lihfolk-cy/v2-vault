@@ -12,7 +12,7 @@ tags: [rigging, blender, import, workflow, hub]
 > - Character faces -Y, feet on Z = 0, final stud height.
 > - Root bone at origin, no weights on it, motion on its first child.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.1k tok. Read more: ## 1. The three questions to answer before you add a bone · ## 3. Building the armature · ## Checklist before export · ## Common mistakes
+> Cost: TL;DR ~160 tok · whole note ~4.2k tok. Read more: ## 1. The three questions to answer before you add a bone · ## 3. Building the armature · ## Checklist before export · ## Common mistakes
 <!-- tldr:end -->
 
 This is the hub note for building rigs in Blender that survive the trip into Roblox and animate correctly once they get there. It covers the decisions you make before the first bone exists, the scene setup that makes every later step predictable, and the rules that one live action game (the "reference project") learned by shipping about 20 creature rigs, 150+ weapon rigs, pets, bosses and an armour kit through this pipeline. The detail lives in the linked notes; this one tells you which decision to make when, and why.
@@ -65,7 +65,7 @@ A hybrid is normal and often best: a skinned body plus rigid props (weapons, shi
 | Character facing | **-Y** (the character looks out of the Front view at you) | With glTF export (+Y up) and the importer's measured 180 degree turn, -Y lands on Roblox's `LookVector` (-Z). See [[Blender Armature and Bone Roll Conventions]]. |
 | Up | +Z in Blender | Converted to +Y on export |
 | Author height | Final in-game stud height | Avoids scale objects in the hierarchy, and root translations in clips are then already in studs |
-| A player reference | A proxy of the player at game scale next to your model | The project's players are 1.6x scale, about 9 studs tall; a default R15 is about 5.2 studs (measured). Size bosses and doorways against it. |
+| A player reference | A proxy of the player at game scale next to your model | The project's players are 1.6x scale, about 9 studs tall; a default R15 is about 5.2 studs as stored and 5.5 once its joints solve (measured). Size bosses and doorways against it. |
 | Frame rate | 30 fps | The Roblox Animation Editor works at 30 fps; clip tables in the project are seconds at 30 fps |
 
 The Roblox Blender guide also documents FBX-specific scale settings (FBX unit scale, or a 0.01 export scale); glTF needs none of them. The full comparison is in [[Exporting FBX vs GLB]].
