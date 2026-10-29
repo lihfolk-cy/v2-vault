@@ -56,5 +56,5 @@ Related concepts: [[Frame Budget]], [[Triangle Budget]], [[Texel Density]], [[In
 
 <!-- related:start -->
 ## Related
-[[Textures Decals and Texture Memory]] · [[Object Pooling]] · [[Thumbnail Contrast]] · [[Accessibility Contrast]] · [[Streaming Radius]] · [[Click-Through Rate]] · [[Onboarding Funnel]] · [[Skinning Weights]] · [[Hit-Stop]]
+[[Textures Decals and Texture Memory]] · [[Object Pooling]] · [[Thumbnail Contrast]] · [[Streaming Radius]] · [[Accessibility Contrast]] · [[Click-Through Rate]] · [[Onboarding Funnel]] · [[Skinning Weights]] · [[Hit-Stop]]
 <!-- related:end -->

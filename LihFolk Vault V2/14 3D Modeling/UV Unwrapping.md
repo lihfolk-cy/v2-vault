@@ -268,10 +268,10 @@ A quick in-Studio test: assign a checker texture (a uniform grid image) as the `
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Texel Density]] · Links - UVs and texture prep · Materials and Surfaces Start Here · The Gradient Palette Texture Workflow · Tiling Trim Sheets and Decal Tricks · Baking Lighting and Detail into Textures
+[[Texel Density]] · Official Docs - Asset Creation · Materials and Surfaces Start Here · The Gradient Palette Texture Workflow · Tiling Trim Sheets and Decal Tricks · Baking Lighting and Detail into Textures
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[The Gradient Palette Texture Workflow]] · [[Low-Poly and Stylized Modeling]] · [[Hard-Surface Modeling]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Modular Environment Kits]] · [[Mesh Optimization for Mobile]] · [[Retopology and Decimation]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Voxel and Blocky Modeling]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]
+[[The Gradient Palette Texture Workflow]] · [[Low-Poly and Stylized Modeling]] · [[Modular Environment Kits]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Hard-Surface Modeling]] · [[Mesh Optimization for Mobile]] · [[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]] · [[Retopology and Decimation]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Voxel and Blocky Modeling]]
 <!-- related:end -->

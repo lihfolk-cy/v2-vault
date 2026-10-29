@@ -233,7 +233,7 @@ Studio performance is not game performance, but a slow editor slows the whole te
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Roblox Studio]] · Building a Studio Plugin End to End · Selection Editing and Bulk Tools · Team Create Permissions and Workflows · Links - Team Create · Roblox Studio Assistant
+[[Official Docs - Studio and Tooling]] · Building a Studio Plugin End to End · Selection Editing and Bulk Tools · Team Create Permissions and Workflows · Roblox Studio Assistant
 <!-- auto-links:end -->
 
 <!-- related:start -->

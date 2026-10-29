@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/animation, area/modeling]
 > - Facial keys drive the head's FACS controls; see Facial Animation and Dynamic Heads.
 > - `FaceControls`: about 50 numeric FACS properties on dynamic heads, animated through FloatCurves or NumberPoses (see Facial...
 >
-> Cost: TL;DR ~160 tok · whole note ~570 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~160 tok · whole note ~620 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ Dynamic head: A skinned head driven by FACS controls through FaceControls. (from
 
 ## Mentioned in
 
-25 notes in 7 sections. The 25 most relevant are linked:
+27 notes in 8 sections. The 25 most relevant are linked:
 
 ### 08 Animation
 [[3D Importer Settings Reference]] · [[Animation Capture and Mocap]] · [[Animation Glossary]] · [[Animation Objects]] · [[Animation Start Here]] · [[CurveAnimation and Curve Channels]] · [[Exporting FBX vs GLB]] · [[Facial Animation and Dynamic Heads]] · [[Layered Clothing Cages and Animation]] · [[Look-At Aim and Head Tracking]] · [[R15 Rig Anatomy and Attachments]] · [[Rigs and Joints]] · [[Weight Painting and Skinning for Roblox]]
@@ -40,15 +40,20 @@ Dynamic head: A skinned head driven by FACS controls through FaceControls. (from
 [[AI Animation and Motion from Video]]
 
 ### 36 Narrative and Worldbuilding
-[[Dialogue System End to End]] · [[Narrative Start Here]]
+[[Dialogue System End to End]]
 
 ### 37 Avatars and UGC
-[[Avatars and UGC Start Here]] · [[Bundles Animation Packs and Emotes for Sale]] · [[HumanoidDescription and Outfit Systems]]
+[[Bundles Animation Packs and Emotes for Sale]] · [[HumanoidDescription and Outfit Systems]]
 
 ### 45 Procedural Blender Assets
 [[Chibi Character Rules in Practice]]
 
+### 61 Thumbnails and CTR
+[[Making Thumbnails in Studio and Blender - Capture, Lighting and Posing]] · [[Thumbnail Composition for High CTR - Focal Point, Contrast and Readability]]
+
 ### Root notes
 [[00 Start Here]]
+
+Also mentioned in (not linked): Avatars and UGC Start Here · Narrative Start Here
 
 <!-- atlas:generated -->

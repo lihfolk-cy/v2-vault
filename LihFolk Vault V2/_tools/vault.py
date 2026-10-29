@@ -8,13 +8,15 @@ Usage (stdlib only, no network; paths are under LihFolk Vault V2/):
     python "LihFolk Vault V2/_tools/vault.py" --json "processreceipt"            # machine-readable
     python "LihFolk Vault V2/_tools/vault.py" --read "DataStore Fundamentals" "UpdateAsync"   # print one ## section
     python "LihFolk Vault V2/_tools/vault.py" --sections "DataStore Fundamentals"             # list its ## headings
+    python "LihFolk Vault V2/_tools/vault.py" --api TeleportService.ReserveServer AwardBadge  # current / deprecated -> replacement / unknown
 
 Ranking is BM25F over title, tags, TL;DR, headings and body, plus links from SYMPTOMS.md, so a bug
 described in everyday words ("screen goes black when I get hit") still finds the note. The index is
 cached in _tools/.cache/ and rebuilt automatically when any note changes.
 
 Default output is compact: each note's TL;DR bullets and section list without the callout header, cost
-line or path, then matching symptom lines. --full prints the raw TL;DR blocks with paths and sizes;
+line or path (section list for the top note only), deprecation notes for API names in the query
+from the dated API snapshot, then matching symptom lines. Bullets repeated across notes print once. --full prints the raw TL;DR blocks with paths and sizes;
 --brief keeps only the first two TL;DR lines of notes #2 and #3 (cheapest, but can hide facts).
 """
 import hashlib
@@ -55,6 +57,11 @@ SYN = {
     "map": ["level", "world"], "blender": ["blender", "export"], "model": ["mesh", "model"],
     "remote": ["remoteevent"], "remotes": ["remoteevent"], "server": ["server"], "lobby": ["hub", "lobby"],
     "shop": ["shop", "store"], "pets": ["pet"], "eggs": ["egg", "hatch"], "leaderboard": ["leaderboard", "ordereddatastore"],
+    "pass": ["gamepass"], "passes": ["gamepass"], "gamepass": ["game", "pass"], "gamepasses": ["game", "pass"],
+    "leave": ["playerremoving", "bindtoclose"], "leaves": ["playerremoving", "bindtoclose"], "quit": ["playerremoving"],
+    "servers": ["crossserver", "messagingservice"], "touches": ["touched"], "touch": ["touched"],
+    "click": ["clickdetector", "mouseclick"], "clicks": ["clickdetector", "mouseclick"],
+    "filter": ["textservice", "filterstringasync"], "timer": ["countdown", "round"], "round": ["round", "intermission"],
 }
 
 
@@ -287,6 +294,55 @@ def tldr_parts(d):
     return bullets, more
 
 
+_API = None
+
+
+def api_index():
+    """name -> [(class or None, status)] from the dated API snapshot; status 0 = current, 1 = deprecated, str = replacement."""
+    global _API
+    if _API is None:
+        _API = defaultdict(list)
+        try:
+            d = json.load(open(os.path.join(KB, "_tools", "roblox_api.json"), encoding="utf-8"))
+        except OSError:
+            return _API
+        for cls, info in d.get("classes", {}).items():
+            _API[cls].append((None, info.get("deprecated", 0)))
+            for m, st in info.get("members", {}).items():
+                _API[m].append((cls, st))
+        try:  # newer doc deprecations than the snapshot knows
+            over = json.load(open(os.path.join(KB, "_tools", "api_overrides.json"), encoding="utf-8"))
+        except OSError:
+            over = {}
+        for key, st in over.items():
+            if key.startswith("_") or "." not in key:
+                continue
+            cls, m = key.split(".", 1)
+            rows = _API[m]
+            rows[:] = [r for r in rows if r[0] != cls] + [(cls, st)]
+    return _API
+
+
+def api_status(cls, mem):
+    """Rows for Class.Member, or for a bare name on any class."""
+    return [r for r in api_index().get(mem or cls, []) if mem is None or r[0] == cls]
+
+
+def api_notes(text):
+    """One line per deprecated or renamed API named in the text, quiet for current or unknown names."""
+    out, seen = [], set()
+    for m in re.finditer(r"\b([A-Z][A-Za-z0-9]+)(?:[.:]([A-Z][A-Za-z0-9]+))?\b", text):
+        cls, mem = m.group(1), m.group(2)
+        rows = api_status(cls, mem)
+        name = mem or cls
+        if not rows or name in seen or not all(st for _, st in rows):
+            continue
+        seen.add(name)
+        c, st = rows[0]
+        out.append(f"- {c + '.' if c else ''}{name}: deprecated" + (f", use {st}" if isinstance(st, str) else ""))
+    return out
+
+
 def main():
     try:  # Windows consoles default to cp1252, and notes contain arrows and dashes
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -302,6 +358,16 @@ def main():
         return
     if args[0] == "--sections":
         print_section(args[1], None, idx)
+        return
+    if args[0] == "--api":  # check API names against the dated snapshot: --api TeleportService.ReserveServer AwardBadge
+        for m in re.finditer(r"([A-Za-z0-9]+)(?:[.:]([A-Za-z0-9]+))?", " ".join(args[1:])):
+            cls, mem = m.group(1), m.group(2)
+            rows = api_status(cls, mem)
+            if not rows:
+                print(f"{m.group(0)}: not in the API snapshot (check the name)")
+            for c, st in rows[:4]:
+                state = "current" if not st else "deprecated" + (f", use {st}" if isinstance(st, str) else "")
+                print(f"{c + '.' if c else ''}{mem or cls}: {state}")
         return
     k, mode, words = 3, "compact", []
     it = iter(args)
@@ -337,13 +403,21 @@ def main():
             print()
         print('Next: python "LihFolk Vault V2/_tools/vault.py" --read "<title>" "<heading words>"  (one section only)')
         return
+    shown = set()
     for rank, (s, d) in enumerate(results, 1):
         bullets, more = tldr_parts(d)
         print(f"{rank}. {d['title']}")
         brief = mode == "brief" and rank > 1
-        print("\n".join(bullets[:2] if brief else bullets))
-        if more and not brief:
+        bullets = [b for b in (bullets[:2] if brief else bullets) if b not in shown]  # no repeats across notes
+        shown.update(bullets)
+        if bullets:
+            print("\n".join(bullets))
+        if more and rank == 1:  # --sections lists any other note's headings
             print("Sections: " + more)
+    notes = api_notes(" ".join(words))
+    if notes:
+        print("API status (snapshot):")
+        print("\n".join(notes))
     if symptoms:
         print("Symptoms (symptom | cause | fix | note):")
         for s in symptoms:

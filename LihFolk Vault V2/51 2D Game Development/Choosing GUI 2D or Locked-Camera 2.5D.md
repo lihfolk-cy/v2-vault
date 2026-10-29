@@ -244,10 +244,10 @@ For the 2.5D route, none of this is needed for the world; the HUD still follows 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[EditableImage for Pixel Buffers and Procedural 2D]] · [[Modelling to the Roblox Camera and Player Scale]] · Debugging UI Layout and Input · World-Space UI - BillboardGui and SurfaceGui · Cookbook - UI · Links - Containers
+[[EditableImage for Pixel Buffers and Procedural 2D]] · [[Modelling to the Roblox Camera and Player Scale]] · Debugging UI Layout and Input · World-Space UI - BillboardGui and SurfaceGui · Cookbook - UI · Official Docs - UI
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Debugging UI Layout and Input]] · [[Cookbook - UI]] · [[Layout - Scale Offset and Constraints]] · [[AI Pitfalls - UI and Input]] · [[Off-Screen Objective Markers and Waypoint Arrows]]
+[[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Debugging UI Layout and Input]] · [[Cookbook - UI]] · [[Layout - Scale Offset and Constraints]] · [[AI Pitfalls - UI and Input]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]]
 <!-- related:end -->

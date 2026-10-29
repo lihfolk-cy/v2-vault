@@ -134,5 +134,5 @@ Tze's Shenanigans group (team size Unverified). Large themed updates, with a rec
 
 <!-- related:start -->
 ## Related
-[[Teardown - Blade Ball]] · [[Teardown - BedWars]] · [[Teardown - Phantom Forces]] · [[Teardown - Funky Friday]] · [[Teardown - Evade]] · [[Teardown - Arsenal]] · [[Teardown - Grace]] · [[Teardown - Apocalypse Rising 2]]
+[[Teardown - Blade Ball]] · [[Teardown - BedWars]] · [[Teardown - Phantom Forces]] · [[Teardown - Funky Friday]] · [[Teardown - Evade]] · [[Teardown - Arsenal]] · [[Teardown - Grace]] · [[Teardown - Dandy's World]]
 <!-- related:end -->

@@ -354,5 +354,5 @@ The senior trade-off: structure has a cost in ceremony (more files, more indirec
 
 <!-- related:start -->
 ## Related
-[[Replication Rules]] · [[Server Authority and Validation]] · [[Entity Component Systems]] · [[Teleporting and Multi-Place Games]] · [[Server Lifecycle and Shutdown]] · [[Interest Management and Per-Player Replication]] · [[Cross-Server Messaging]] · [[Rate Limiting and Abuse Prevention]]
+[[Replication Rules]] · [[Server Authority and Validation]] · [[Entity Component Systems]] · [[Teleporting and Multi-Place Games]] · [[Server Lifecycle and Shutdown]] · [[Interest Management and Per-Player Replication]] · [[Cross-Server Messaging]] · [[Exploits and Anti-Cheat]]
 <!-- related:end -->

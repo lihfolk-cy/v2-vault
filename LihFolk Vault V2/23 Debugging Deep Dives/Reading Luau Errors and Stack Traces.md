@@ -309,7 +309,7 @@ A good habit: after each play test, the Output should have **zero** errors and z
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Error handling and debugging]] · Functions Closures and Upvalues · Building a Signal Library · Custom Schedulers and Coroutine Patterns · Tables Metatables and OOP · Skill - Roblox Debugging
+[[Official Docs - Scripting and Luau]] · Functions Closures and Upvalues · Building a Signal Library · Custom Schedulers and Coroutine Patterns · Tables Metatables and OOP · Skill - Roblox Debugging
 <!-- auto-links:end -->
 
 <!-- related:start -->

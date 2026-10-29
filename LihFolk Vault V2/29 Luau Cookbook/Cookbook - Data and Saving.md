@@ -438,7 +438,7 @@ end
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox DataStore Safety]] · Session Lock · Data Schema Versioning · Error Handling and Retries · Links - DataStoreService · Server Lifecycle and Shutdown
+[[Skill - Roblox DataStore Safety]] · Session Lock · Data Schema Versioning · Error Handling and Retries · Official Docs - Data and Persistence · Server Lifecycle and Shutdown
 <!-- auto-links:end -->
 
 <!-- related:start -->

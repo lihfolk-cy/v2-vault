@@ -983,10 +983,10 @@ Background: [[Server Authority and Validation]], [[Testing Your Own Remotes - Fu
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Narrative Start Here]] · Links - Quests and progression · Menu Archetypes - Shop Settings Codes Rewards · Core Loops and Session Design · Onboarding Funnel · Skill - Roblox System Builder
+[[Narrative Start Here]] · Official Docs - Game Systems · Menu Archetypes - Shop Settings Codes Rewards · Core Loops and Session Design · Onboarding Funnel · Skill - Roblox System Builder
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[LihFolk Systems Library]] · [[Codes Redemption System End to End]] · [[Global Leaderboards End to End]] · [[Shop with Game Passes and Developer Products End to End]] · [[Weekend Build - Survival Gather, Craft and Place]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[Weekend Build - Arena Shooter with Server-Checked Hits]] · [[Weekend Build - Roleplay Town with Jobs and Paychecks]]
+[[LihFolk Systems Library]] · [[Codes Redemption System End to End]] · [[Global Leaderboards End to End]] · [[Weekend Build - Survival Gather, Craft and Place]] · [[Shop with Game Passes and Developer Products End to End]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[Weekend Build - Arena Shooter with Server-Checked Hits]] · [[Weekend Build - Roleplay Town with Jobs and Paychecks]]
 <!-- related:end -->

@@ -12,7 +12,7 @@ tags: [ui, layout, uilistlayout, flex, uigridlayout, uipagelayout, scrollingfram
 > - Laid-out slots are static; animation happens on inner faces.
 > - Tab bars use flex `Fill`; card rows with uneven content use `Stretch`.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.4k tok. Read more: ## 3. Flex layouts · ## 7. ScrollingFrame with layouts · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.5k tok. Read more: ## 3. Flex layouts · ## 7. ScrollingFrame with layouts · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Layout objects arrange the siblings they sit next to. Insert a `UIListLayout` into a frame and every other `GuiObject` child of that frame is positioned (and possibly sized) by the layout instead of by its own `Position`. This note covers `UIListLayout` (including wrapping and flex), `UIFlexItem`, `UIGridLayout`, `UIPageLayout`, `UITableLayout` and `ScrollingFrame` with automatic canvas size, plus the performance and ordering traps that show up in shops and inventories with hundreds of entries.
@@ -57,7 +57,7 @@ Core properties (Docs):
 - Always use `SortOrder = LayoutOrder` in production. Sorting by `Name` means renaming an item reorders the menu.
 - Leave gaps: order items 10, 20, 30, not 1, 2, 3, so a new item can slot in at 15 without renumbering.
 - To reverse a horizontal list (right to left), negate the orders (Docs suggest `0, -1, -2, -3`).
-- Ties are not a stable contract. Give every item a unique `LayoutOrder`.
+- Ties fall back to the order the objects were added in (**Roblox docs**, GuiObject.LayoutOrder). That order changes when items are re-parented or rebuilt, so give every item a unique `LayoutOrder` when the order matters.
 
 ### Wrapping: grids without UIGridLayout
 
@@ -339,10 +339,10 @@ See also: [[Layout - Scale Offset and Constraints]], [[Responsive UI for Phone T
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Layouts and constraints]] · [[Virtualized Lists and Large Inventories]] · Cookbook - UI · Debugging UI Layout and Input · Case Study - Phone UI Overhaul · Links - UI elements
+[[Official Docs - UI]] · [[Virtualized Lists and Large Inventories]] · Cookbook - UI · Debugging UI Layout and Input · Case Study - Phone UI Overhaul
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Cookbook - UI]] · [[Debugging UI Layout and Input]] · [[HUD Design]] · [[Safe Areas and Insets]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[UI Design Systems]] · [[UI Motion Language and Timing]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[Text Fonts and Rich Text]]
+[[ScrollingFrame - Engine Reference Card]] · [[Figma Property Mapping for Roblox UI]] · [[Designing Roblox UI in Figma - Frames, Safe Areas and Tokens]] · [[Settings Menu Design for Roblox - Layout, Controls and Motion]] · [[HUD Design]] · [[Figma to Roblox UI - Pipeline and Handoff]] · [[Safe Areas and Insets]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[UI Design Systems]]
 <!-- related:end -->

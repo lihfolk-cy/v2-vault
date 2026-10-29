@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/animation, area/gameplay, api/HipHeight]
 > - Floating or sinking: Clips not ground-fitted; wrong HipHeight -> Fit per clip; set HipHeight; runtime slope clamp.
 > - Wrong standing height: incorrect HipHeight on 17 enemy templates (one rig's legs 1.5 studs into the floor at idle; others...
 >
-> Cost: TL;DR ~140 tok · whole note ~430 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~450 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,7 +27,7 @@ API snapshot: member of `Humanoid` (`_tools/roblox_api.json`, docs build of 2026
 
 ## Mentioned in
 
-19 notes in 6 sections. The 19 most relevant are linked:
+20 notes in 7 sections. The 20 most relevant are linked:
 
 ### 08 Animation
 [[Animating Creatures and Monsters]] · [[Custom Characters and StarterCharacter]] · [[Enemy and NPC Animation]] · [[Foot Placement and Ground IK]] · [[Ground Fitting Pipeline]] · [[Humanoid States and Animation]] · [[Importing Models and Rigs]] · [[Mounts and Rideable Creatures]] · [[Pipeline - Importing Animated Enemies]] · [[R15 Rig Anatomy and Attachments]] · [[Scale and Animation]] · [[Snippets - IK]] · [[The Default Animate Script]]
@@ -46,5 +46,8 @@ API snapshot: member of `Humanoid` (`_tools/roblox_api.json`, docs build of 2026
 
 ### 53 Voxel Modelling Deep Dive
 [[Voxel Characters - Proportions Joints and Rigging]]
+
+### 62 Engine Reference Cards
+[[Humanoid - Engine Reference Card]]
 
 <!-- atlas:generated -->

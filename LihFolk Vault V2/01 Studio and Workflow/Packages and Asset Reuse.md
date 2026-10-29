@@ -210,7 +210,7 @@ A common use is keeping shared pieces (a lobby kiosk, a settings menu `ScreenGui
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Packages and Shared Assets Across Places]] · Links - Models, Toolbox and Creator Store · [[Git and Source Control for Roblox]] · [[Team Create and Collaboration]] · Code Pipeline - Rojo Git and CI · Animation Asset Permissions and Groups
+[[Packages and Shared Assets Across Places]] · Official Docs - Building and World · [[Git and Source Control for Roblox]] · [[Team Create and Collaboration]] · Code Pipeline - Rojo Git and CI · Animation Asset Permissions and Groups
 <!-- auto-links:end -->
 
 <!-- related:start -->

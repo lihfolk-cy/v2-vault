@@ -8,12 +8,12 @@ verified: 2026-10-28
 > [!tldr] TL;DR
 > - Avoid: Turning on `AuthorityMode = Server` in a non-streaming game and debugging "missing parts" for a day.
 > - Avoid: Using `os.clock()`, `tick()` or `task.wait()` timing inside simulation code.
-> - Avoid: Calling `:Destroy()` inside `BindToSimulation`.
-> - Simulation code is in `BindToSimulation`, uses `time()`, and has no Destroy, reparent, EquipTool or UserInputService calls.
+> - Avoid: Forked player scripts without `StarterPlayer.CreateDefaultPlayerModule = Disabled` (the engine overrides them).
+> - `AuthorityMode = Server` forces StreamingEnabled, NextGenerationReplication, IAS scripts, UseFixedSimulation, Deferred signals.
+> - `BindToSimulation` code sits in a ModuleScript both sides run; uses `time()`; no Destroy, reparent or UserInputService.
 > - Predicted state lives in at most 64 attributes with short names and short strings.
-> - VFX and sounds tolerate a rollback.
 >
-> Cost: TL;DR ~170 tok · whole note ~2.7k tok. Read more: ## 1. Server Authority (full release July 9, 2026) · ## 4. Input Action System and the converted player scripts · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~210 tok · whole note ~2.8k tok. Read more: ## 1. Server Authority (full release July 9, 2026) · ## 4. Input Action System and the converted player scripts · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 In 2026 Roblox shipped three linked changes: **Server Authority** (server-authoritative simulation with client prediction and rollback), a **rewrite of physics replication**, and the **Input Action System** (IAS), which now drives the default player scripts. Each one changes code that every pre-2026 model writes by reflex. Labels follow [[Roblox Changes 2025-2026]].
@@ -38,7 +38,7 @@ So turning on Server Authority also brings every StreamingEnabled and deferred-s
 
 ### Rules for code under Server Authority (Roblox docs, guide page)
 
-- Simulation-affecting code goes in a function registered with `RunService:BindToSimulation(fn)`. It runs on client and server and **can be re-run** during resimulation, so it must be deterministic and side-effect-free apart from simulated state.
+- Simulation-affecting code goes in a function registered with `RunService:BindToSimulation(fn)`, inside a ModuleScript that both client and server initialise (for example in ReplicatedStorage). It runs on client and server and **can be re-run** during resimulation, so it must be deterministic and side-effect-free apart from simulated state.
 - Use **`time()`** for simulation timing. `tick()`, `os.time()` and `os.clock()` are local clocks that do not roll back.
 - Read input from **`InputAction`** objects, not `UserInputService.InputBegan`. `InputContext`s must be descendants of the `Player`.
 - Sync custom state with **attributes** on predicted instances, written only inside bound functions. Only the first **64 attributes** replicate; names and string values are limited to **50 characters**.
@@ -153,6 +153,7 @@ Players.PlayerAdded:Connect(function(p) template:Clone().Parent = p end)
 
 - Turning on `AuthorityMode = Server` in a non-streaming game and debugging "missing parts" for a day. It forces StreamingEnabled.
 - Using `os.clock()`, `tick()` or `task.wait()` timing inside simulation code.
+- Forked player scripts without `StarterPlayer.CreateDefaultPlayerModule = Disabled` (the engine overrides them).
 - Calling `:Destroy()` inside `BindToSimulation`.
 - Holding an `AnimationTrack` in an upvalue across frames.
 - Treating `SetNetworkOwner(nil)` as "server authority".
@@ -162,7 +163,8 @@ Players.PlayerAdded:Connect(function(p) template:Clone().Parent = p end)
 
 ## Checklist
 
-- [ ] Simulation code is in `BindToSimulation`, uses `time()`, and has no Destroy, reparent, EquipTool or UserInputService calls.
+- [ ] `AuthorityMode = Server` forces StreamingEnabled, NextGenerationReplication, IAS scripts, UseFixedSimulation, Deferred signals.
+- [ ] `BindToSimulation` code sits in a ModuleScript both sides run; uses `time()`; no Destroy, reparent or UserInputService. No EquipTool either.
 - [ ] Predicted state lives in at most 64 attributes with short names and short strings.
 - [ ] VFX and sounds tolerate a rollback.
 - [ ] No remote is used as a property fence.
@@ -183,5 +185,5 @@ Players.PlayerAdded:Connect(function(p) template:Clone().Parent = p end)
 
 <!-- related:start -->
 ## Related
-[[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[Data and Cloud Changes 2025-2026]] · [[Console and VR Release Checklists]] · [[Discovery and Monetization Changes 2025-2026]] · [[Policy and Age Rules 2026]]
+[[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[API Renames and Deprecations 2025-2026]] · [[Data and Cloud Changes 2025-2026]] · [[Console and VR Release Checklists]] · [[Discovery and Monetization Changes 2025-2026]] · [[Policy and Age Rules 2026]]
 <!-- related:end -->

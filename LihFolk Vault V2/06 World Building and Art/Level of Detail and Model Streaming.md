@@ -166,7 +166,7 @@ Avatars have their own switch, `Workspace.EnableSLIMAvatars` (docs).
 ## Layer 4: scripted LOD
 
 Some things the engine cannot decide for you:
-- **Effects sleep by distance.** Waterfalls slept beyond 650 studs; voxel showpiece particles paused beyond about 150 studs and halved on low graphics settings (one style study's numbers).
+- **Effects sleep by distance.** Waterfalls slept beyond 650 studs; decorative particles on voxel showpieces can pause beyond about 150 studs and halve on low graphics settings (Rule of thumb).
 - **Animation LOD.** Distant NPCs update less often ([[Animation LOD]]).
 - **Swap detailed models for simple ones** when there are many copies (crowds of the same prop).
 
@@ -290,7 +290,7 @@ The senior trade-off: streaming saves client memory and join time but makes ever
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Streaming Radius]] · Links - StreamingEnabled · Interest Management and Per-Player Replication · Performance and Memory · Network Performance · Retopology and Decimation
+[[Streaming Radius]] · Official Docs - Building and World · Interest Management and Per-Player Replication · Performance and Memory · Network Performance · Retopology and Decimation
 <!-- auto-links:end -->
 
 <!-- related:start -->

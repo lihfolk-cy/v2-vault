@@ -437,10 +437,10 @@ This ignores `Rotation` on the GUI objects and any clipping by parents; for a dr
 
 ## Connected notes
 <!-- auto-links:start -->
-[[2D Collision Physics and Platformer Movement]] · Links - Raycasting and spatial queries · Physics Performance · Voxel Scale Grids and Stud Alignment · Links - Combat · Physics Assemblies and Constraints
+[[2D Collision Physics and Platformer Movement]] · Official Docs - Physics · Physics Performance · Voxel Scale Grids and Stud Alignment · Official Docs - Game Systems · Physics Assemblies and Constraints
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Math Vectors and CFrames]] · [[Rotations Angles and Quaternions]] · [[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]] · [[Curves in Luau - Paths Beams and Motion]] · [[Interpolation Easing and Curves Math]] · [[Probability and Statistics for Designers]]
+[[Rotations Angles and Quaternions]] · [[Math Vectors and CFrames]] · [[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]] · [[Curves in Luau - Paths Beams and Motion]] · [[Interpolation Easing and Curves Math]] · [[Probability and Statistics for Designers]]
 <!-- related:end -->

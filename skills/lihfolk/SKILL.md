@@ -1,6 +1,6 @@
 ---
 name: lihfolk
-description: 'LihFolk: Roblox knowledge router (1,300+ notes, also answers "check the vault"). Use before non-trivial Roblox work: Luau, Studio, remotes, data, UI, building, modelling, VFX, animation, design, money, performance, security, publishing.'
+description: 'LihFolk Roblox knowledge router (1,300+ notes; "check the vault"). Use before non-trivial Roblox work: Luau, Studio, remotes, data, UI, building, VFX, animation, design, money, performance, security, publishing.'
 ---
 
 # LihFolk Roblox Knowledge Router
@@ -14,7 +14,9 @@ LihFolk Vault V2 (1,300+ notes written for AI agents) lives in the plugin root's
 ## Default: delegate the lookup
 
 For a Roblox question that needs the vault, spawn the `lihfolk-lookup` agent with a prompt whose first line is `VAULT=<absolute vault path>`, then the question (batch related questions in one call). It searches on a small model and returns only facts, gotchas and note titles, keeping the main context clean. Look things up yourself (below) only to quote a long code pattern verbatim or when the agent says "not in vault".
-- Skip lookups for work you know cold (plain Luau, well-known APIs). One lookup per topic per session; reuse the answer.
+- **Always look up** limits, quotas, defaults, prices, policy, dates and anything changed or renamed in 2025-2026: training data lags there, and that is where answers go wrong. Batch them, at most 6 questions per lookup call, and run several calls in parallel when there are more (bigger batches squeeze each answer and drop facts).
+- When the lookup's dated facts or API names differ from what you remember, use the lookup's; put its exact numbers, names and dates into the answer.
+- Skip lookups for plain Luau logic, math and long-stable APIs you know cold. One lookup per topic per session; reuse the answer.
 - `quality-score` and `council-method` are for work the user asked to have scored or reviewed, not ordinary coding.
 
 ## Looking it up yourself
@@ -28,4 +30,4 @@ Scale to the task: trivial = none; normal (feature, bug, review) = one search; b
 
 **Accuracy over savings:** a TL;DR is a pointer. For player data, purchases and receipts, paid random items and policy, remotes and security, or anything shipping to live players, read the note's `Common mistakes` and `Checklist` sections and the section holding the exact numbers or API rules you use. Never cite a number seen only in a TL;DR.
 
-For building a map or level use `lihfolk-worldbuilding`; for tutorials and onboarding use `lihfolk-tutorial`. Folder map by topic, the asset pack path, the specialist skill list and reference images: `<base directory>/references/vault-map.md`.
+For building a map or level use `lihfolk-worldbuilding`; for tutorials and onboarding use `lihfolk-tutorial`; for Figma designs use `lihfolk-figma`. Folder map by topic, the asset pack path, the specialist skill list and reference images: `<base directory>/references/vault-map.md`.

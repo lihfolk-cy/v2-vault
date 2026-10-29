@@ -69,5 +69,5 @@ Related concepts: [[Anticipation]], [[Hit-Stop]], [[Rate Limiting]], [[Server Au
 
 <!-- related:start -->
 ## Related
-[[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]] · [[Deterministic Simulation]] · [[Frame Budget]] · [[Safe Area]] · [[Tween vs Spring]] · [[Easing]] · [[Session Lock]] · [[Feature Flags]] · [[Core Loop]]
+[[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]] · [[Deterministic Simulation]] · [[Frame Budget]] · [[Tween vs Spring]] · [[Safe Area]] · [[Easing]] · [[Session Lock]] · [[Core Loop]] · [[Feature Flags]]
 <!-- related:end -->

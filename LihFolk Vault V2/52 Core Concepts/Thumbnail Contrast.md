@@ -10,7 +10,7 @@ tags: [core-concept, marketing, art, thumbnails, ui, type/reference, area/ui, le
 > - Value contrast beats colour. Two different hues of the same brightness blur together, especially for colour-blind viewers.
 > - One subject, big. A character or object filling 50 to 70 percent of the frame (rule of thumb from studying top games) reads; a...
 >
-> Cost: TL;DR ~150 tok · whole note ~930 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~150 tok · whole note ~950 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Thumbnail contrast** is how strongly the subject of an icon or thumbnail separates from its background and from neighbouring tiles: value contrast (light against dark), colour contrast (complementary hues), and shape contrast (a clear silhouette). It decides whether a tile can be read at a glance at small size.
@@ -55,5 +55,5 @@ Related concepts: [[Click-Through Rate]], [[Accessibility Contrast]], [[Texel De
 
 <!-- related:start -->
 ## Related
-[[Game Icon Design - Readable at Small Sizes]] · [[Draw Calls]] · [[Safe Area]] · [[Triangle Budget]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[Shape Language and Silhouette Testing]]
+[[Game Icon Design - Readable at Small Sizes]] · [[Thumbnail Composition for High CTR - Focal Point, Contrast and Readability]] · [[Making Thumbnails in Studio and Blender - Capture, Lighting and Posing]] · [[Draw Calls]] · [[Safe Area]] · [[Triangle Budget]]
 <!-- related:end -->

@@ -176,10 +176,10 @@ Concrete rules of thumb:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Robux Price Points and Offer Design]] · [[Skill - Roblox Monetization Compliance]] · Links - Subscriptions and payouts · Shop with Game Passes and Developer Products End to End · Subscriptions and Recurring Revenue · Limited-Time Offers - Design and Ethics
+[[Robux Price Points and Offer Design]] · [[Skill - Roblox Monetization Compliance]] · Official Docs - Monetization · Shop with Game Passes and Developer Products End to End · Subscriptions and Recurring Revenue · Limited-Time Offers - Design and Ethics
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Discovery and Monetization Changes 2025-2026]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Shop with Game Passes and Developer Products End to End]] · [[Paid Random Items and Odds Disclosure in Practice]] · [[Refunds Chargebacks and Purchase Support]] · [[Economy Inflation Sinks and Faucets Math]] · [[Community Building]] · [[Publishing an Experience]]
+[[Discovery and Monetization Changes 2025-2026]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[DevEx and Cashing Out]] · [[Paid Random Items and Odds Disclosure in Practice]] · [[Refunds Chargebacks and Purchase Support]] · [[Economy Inflation Sinks and Faucets Math]] · [[Community Building]] · [[Publishing an Experience]]
 <!-- related:end -->

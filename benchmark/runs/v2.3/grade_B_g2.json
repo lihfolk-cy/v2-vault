@@ -1,0 +1,362 @@
+[
+ {
+  "id": "B1",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 2.5,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 2.5,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "All debounce before grant; R3/R7 don't state server-side."
+ },
+ {
+  "id": "B2",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "All: streaming cause, WaitForChild/tags, Atomic/Persistent or server."
+ },
+ {
+  "id": "B3",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "All list unconditional Granted, no PurchaseId idempotency, Get+Set and nil plr."
+ },
+ {
+  "id": "B4",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "All: metatables stripped, ServerStorage instance nil, send data + shared module."
+ },
+ {
+  "id": "B5",
+  "scores": {
+   "R1": 1.67,
+   "R2": 1.67,
+   "R3": 1.67,
+   "R4": 2,
+   "R5": 1.67,
+   "R6": 1.67,
+   "R7": 1.67,
+   "R8": 1.67,
+   "R9": 1.67
+  },
+  "notes": "All explain unit vector 1-stud ray and scale; none give 15,000 max; only R4 states nil-on-miss explicitly."
+ },
+ {
+  "id": "B6",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 1.33,
+   "R4": 2,
+   "R5": 1.33,
+   "R6": 2,
+   "R7": 2,
+   "R8": 2,
+   "R9": 2
+  },
+  "notes": "R3/R5 omit pcall/retry."
+ },
+ {
+  "id": "B7",
+  "scores": {
+   "R1": 2.63,
+   "R2": 3,
+   "R3": 3,
+   "R4": 2.63,
+   "R5": 3,
+   "R6": 3,
+   "R7": 2.63,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "R1/R4/R7 only comment 'validate args here' without real type checks."
+ },
+ {
+  "id": "B8",
+  "scores": {
+   "R1": 4,
+   "R2": 4,
+   "R3": 4,
+   "R4": 4,
+   "R5": 4,
+   "R6": 4,
+   "R7": 3.5,
+   "R8": 2.5,
+   "R9": 4
+  },
+  "notes": "R7 doesn't state single assignment; R8 grants when player absent instead of NotProcessedYet and doesn't state single assignment."
+ },
+ {
+  "id": "B9",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2,
+   "R8": 2,
+   "R9": 2
+  },
+  "notes": "All correct tween + Completed hide."
+ },
+ {
+  "id": "B10",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "All complete."
+ },
+ {
+  "id": "B11",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "All complete."
+ },
+ {
+  "id": "B12",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 2.25,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 3,
+   "R9": 2.63
+  },
+  "notes": "R4 omits teleport-data sensitivity; R9 InitFailed handler has no real Flooded/Failure distinction."
+ },
+ {
+  "id": "B13",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.25,
+   "R3": 2.25,
+   "R4": 2.25,
+   "R5": 2.25,
+   "R6": 2.25,
+   "R7": 2.25,
+   "R8": 2.25,
+   "R9": 2.25
+  },
+  "notes": "None mention identifying caller via OnServerEvent's Player arg."
+ },
+ {
+  "id": "B14",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "B15",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "B16",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.25,
+   "R3": 2.25,
+   "R4": 2.25,
+   "R5": 2.25,
+   "R6": 2.25,
+   "R7": 3,
+   "R8": 2.25,
+   "R9": 2.63
+  },
+  "notes": "Only R7 notes ownership changes cause jitter; R9 partial (avoid auto changes)."
+ },
+ {
+  "id": "B17",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 2.63,
+   "R9": 3
+  },
+  "notes": "R8 gives ~900-byte limit vs key 1,000."
+ },
+ {
+  "id": "B18",
+  "scores": {
+   "R1": 2.63,
+   "R2": 2.63,
+   "R3": 3,
+   "R4": 3,
+   "R5": 2.63,
+   "R6": 2.63,
+   "R7": 3,
+   "R8": 2.63,
+   "R9": 3
+  },
+  "notes": "R1/R2/R5/R6/R8 omit that require can't run in a desynchronized phase."
+ },
+ {
+  "id": "B19",
+  "scores": {
+   "R1": 1.67,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2,
+   "R8": 2,
+   "R9": 2
+  },
+  "notes": "R1 lacks Opportunistic/Improved streaming behaviour."
+ },
+ {
+  "id": "B20",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2,
+   "R8": 2,
+   "R9": 2
+  },
+  "notes": "All cover budgets/queue 302, staggered dirty saves, retry + PlayerRemoving/BindToClose."
+ },
+ {
+  "id": "B21",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 1.67,
+   "R5": 1.33,
+   "R6": 1.33,
+   "R7": 2,
+   "R8": 1.33,
+   "R9": 1.67
+  },
+  "notes": "Partial/zero for missing stdio transport and studio_id per call."
+ },
+ {
+  "id": "B22",
+  "scores": {
+   "R1": 2.25,
+   "R2": 3,
+   "R3": 2.25,
+   "R4": 3,
+   "R5": 2.25,
+   "R6": 2.25,
+   "R7": 3,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "R1/R3/R5/R6 omit Workspace.PlayerScriptsUseInputActionSystem."
+ },
+ {
+  "id": "B23",
+  "scores": {
+   "R1": 2.5,
+   "R2": 2.5,
+   "R3": 3,
+   "R4": 3,
+   "R5": 2.5,
+   "R6": 2.5,
+   "R7": 3,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "R1/R2/R5/R6 selector coverage misses UI modifiers and @ queries."
+ },
+ {
+  "id": "B24",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 1.75,
+   "R7": 1.75,
+   "R8": 2,
+   "R9": 1.5
+  },
+  "notes": "R6 omits under-9 parental approval; R7 no parental consent; R9 no rollout timeline."
+ }
+]

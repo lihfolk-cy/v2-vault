@@ -136,10 +136,10 @@ What is notable is what is absent: no paid power, no gacha, no paid luck. Revive
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Case Study - Fisch]] · [[Case Study - Pet Simulator 99]] · [[Case Study - Adopt Me]] · [[Case Study - Dress to Impress]] · [[Links - Horror game mechanics]] · Marketing and Growth Start Here · [[Top Games Case Studies Start Here]]
+[[Case Study - Fisch]] · [[Case Study - Pet Simulator 99]] · [[Case Study - Adopt Me]] · [[Case Study - Dress to Impress]] · [[Official Docs - Game Systems]] · Marketing and Growth Start Here · [[Top Games Case Studies Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Case Study - 99 Nights in the Forest]] · [[Case Study - Blox Fruits]] · [[Case Study - Brookhaven RP]] · [[Case Study - Steal a Brainrot]] · [[Case Study - Grow a Garden]] · [[Case Study - Forsaken]] · [[Case Study - Tower Defense Simulator]] · [[Case Study - Dead Rails]]
+[[Case Study - 99 Nights in the Forest]] · [[Case Study - Blox Fruits]] · [[Case Study - Brookhaven RP]] · [[Case Study - Steal a Brainrot]] · [[Case Study - Grow a Garden]] · [[Case Study - Forsaken]] · [[Case Study - Tower Defense Simulator]] · [[Case Study - Jailbreak]]
 <!-- related:end -->

@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/ui, area/animation]
 > - A "flashes" setting is separate from reduced motion.
 > - `Motion.to` returns `nil` when there is nothing to animate (reduced motion with only motion properties).
 >
-> Cost: TL;DR ~120 tok · whole note ~660 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~670 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,16 +27,16 @@ Reduced motion is a spectrum. `ReducedMotionEnabled` is binary, but players who 
 
 ## Mentioned in
 
-36 notes in 11 sections. The 25 most relevant are linked:
+37 notes in 11 sections. The 25 most relevant are linked:
 
 ### 05 UI and UX
-[[Accessibility]] · [[Declarative UI - React-Lua and Fusion]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[UI Motion Language and Timing]]
+[[Accessibility]] · [[Declarative UI - React-Lua and Fusion]] · [[Figma to Roblox UI - Pipeline and Handoff]] · [[Settings Menu Design for Roblox - Layout, Controls and Motion]] · [[UI Motion Language and Timing]]
 
 ### 07 Lighting VFX and Audio
 [[Game Feel and Juice]]
 
 ### 08 Animation
-[[Camera Shake and Camera FX]] · [[Hit Reactions Stagger and Hit-Stop]] · [[Reference - Purple Anime Settings UI (Claude + Figma)]] · [[Snippets - Camera Shake and FX]] · [[UI and GUI Animation]]
+[[Camera Shake and Camera FX]] · [[Hit Reactions Stagger and Hit-Stop]] · [[Snippets - Camera Shake and FX]] · [[UI and GUI Animation]]
 
 ### 09 Gameplay Systems
 [[Camera Systems]] · [[Custom Character Controllers]]
@@ -59,6 +59,6 @@ Reduced motion is a spectrum. `ReducedMotionEnabled` is binary, but players who 
 ### 58 Player QoL and Game Tweaks
 [[Accessibility Cross-Links for QoL Settings]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Comfort Toggles - Flashes Damage Numbers and Hit-Stop]]
 
-Also mentioned in (not linked): Game Feel Start Here · Narrative Start Here · Notification and Toast Systems · Onboarding and FTUE - Tutorials That Keep Players · QA Checklists Before Release · QoL Audit Checklist · Readable Text and UI Scale · Settings Menu Essentials and Persistence · Tutorial Step Design Patterns - Teach by Doing · UI Design Systems · Writing Dialogue for Roblox Players
+Also mentioned in (not linked): Game Feel Start Here · Menu Archetypes - Shop Settings Codes Rewards · Narrative Start Here · Notification and Toast Systems · Onboarding and FTUE - Tutorials That Keep Players · QA Checklists Before Release · QoL Audit Checklist · Readable Text and UI Scale · Settings Menu Essentials and Persistence · Tutorial Step Design Patterns - Teach by Doing · UI Design Systems · Writing Dialogue for Roblox Players
 
 <!-- atlas:generated -->

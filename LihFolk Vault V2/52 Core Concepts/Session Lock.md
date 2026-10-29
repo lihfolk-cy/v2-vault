@@ -63,7 +63,7 @@ Related concepts: [[Idempotency]], [[Data Schema Versioning]], [[Rate Limiting]]
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Cookbook - Data and Saving]] · Multiplayer Services Start Here · Links - DataStoreService · Trading Systems Without Duplication · Purchase Data and Receipts · Codes Redemption System End to End · [[Core Concepts Start Here]]
+[[Cookbook - Data and Saving]] · Multiplayer Services Start Here · Official Docs - Data and Persistence · Trading Systems Without Duplication · Purchase Data and Receipts · Codes Redemption System End to End · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->

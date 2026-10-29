@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/platform, area/networking, api/SocialService
 > - `SocialService.ShareSheetClosed` fires on the server when the sheet closes.
 > - Roblox also exposes platform party data (`SocialService:GetPartyAsync`, `Player.PartyId`); check the current docs and...
 >
-> Cost: TL;DR ~140 tok · whole note ~400 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~420 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,7 +27,7 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 
 ## Mentioned in
 
-10 notes in 7 sections. The 10 most relevant are linked:
+11 notes in 7 sections. The 11 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[Testing Modes - Play Run and Multi-Client]]
@@ -42,10 +42,10 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 [[Multiplayer Services Start Here]] · [[Parties and Group Teleports]]
 
 ### 46 Resource Library
-[[Links - Community and social]]
+[[Official Docs - Publishing and Live Ops]]
 
 ### 49 Roblox Platform Features
-[[Avatar Context Menus Profiles and Social Surfaces]] · [[Experience Notifications and Return Prompts]] · [[Friend Invites Referrals and Experience Invites]]
+[[API Renames and Deprecations 2025-2026]] · [[Avatar Context Menus Profiles and Social Surfaces]] · [[Experience Notifications and Return Prompts]] · [[Friend Invites Referrals and Experience Invites]]
 
 ### 58 Player QoL and Game Tweaks
 [[Joining Friends Parties and Private Servers]]

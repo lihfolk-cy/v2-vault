@@ -479,7 +479,7 @@ When you use Rojo, set **ReloadLocalPluginsOnChange** so a rebuild reloads the p
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Studio Settings and Shortcuts]] · Links - Plugins and custom tools · Studio Interface Tour · Links - Roblox Studio · Writing Your Own MCP Server · Script Types and Run Context
+[[Studio Settings and Shortcuts]] · Official Docs - Asset Creation · Studio Interface Tour · Official Docs - Studio and Tooling · Writing Your Own MCP Server · Script Types and Run Context
 <!-- auto-links:end -->
 
 <!-- related:start -->

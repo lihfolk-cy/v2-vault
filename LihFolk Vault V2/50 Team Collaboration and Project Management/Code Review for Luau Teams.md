@@ -324,10 +324,10 @@ Roblox teams change a lot that is not code: UI layouts, lighting, map areas, sou
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Team Collaboration Start Here]] · [[Agent Review Loops and Guardrails in Practice]] · [[Team Create Permissions and Workflows]] · Team Create and Collaboration · Links - External tooling · Testing Strategies and Frameworks
+[[Team Collaboration Start Here]] · [[Agent Review Loops and Guardrails in Practice]] · [[Team Create Permissions and Workflows]] · Team Create and Collaboration · Official Docs - Studio and Tooling · Testing Strategies and Frameworks
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Automated Luau Checks - LihFolk Hook and Audit]] · [[MCP Workflows for Scripting and Debugging]] · [[Packages and Shared Assets Across Places]] · [[Team Create and Collaboration]] · [[Cookbook - Remotes and Networking]] · [[Working with Contractors and Revenue Splits]]
+[[Automated Luau Checks - LihFolk Hook and Audit]] · [[MCP Workflows for Scripting and Debugging]] · [[Team Create and Collaboration]] · [[Packages and Shared Assets Across Places]] · [[Cookbook - Remotes and Networking]] · [[Working with Contractors and Revenue Splits]]
 <!-- related:end -->

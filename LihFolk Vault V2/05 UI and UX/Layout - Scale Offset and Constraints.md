@@ -82,7 +82,7 @@ The trap with pure Offset is that a 400 px panel that looks right at 1920 x 1080
 
 `UIScale.Scale` multiplies the parent's `AbsoluteSize`, and with it every descendant, including `UIStroke` thickness and `UICorner` radius (Docs). That makes a powerful pattern:
 
-1. Author a panel entirely in Offset at a **design resolution** (for example 1920 x 1080, or a smaller baseline like 1050 x 620).
+1. Author a panel entirely in Offset at a **design resolution** (for example 1920 x 1080, or a smaller laptop-sized baseline such as 1280 x 720).
 2. Put one `UIScale` on the panel root.
 3. Set `Scale = min(viewportX / designX, viewportY / designY)`, clamped.
 
@@ -147,9 +147,9 @@ return Scaler
 
 ### Choosing the design resolution and clamps
 
-Two real configurations:
+Two workable configurations:
 
-- **A cartoon simulator UI kit** uses a 1050 x 620 baseline clamped to `[0.52, 1.18]` (rule of thumb from that kit). The low baseline means panels are drawn at roughly the size they will appear on a laptop, and the clamp stops them becoming tiny on phones or giant on monitors.
+- **A laptop-sized baseline** (rule of thumb: about 1280 x 720) with a scale clamp of roughly `[0.6, 1.2]`. Panels are drawn at about the size they will appear on a laptop, and the clamp stops them becoming tiny on phones or giant on monitors.
 - **The reference project** uses 1920 x 1080 for its popups (tooltips use a 1300 x 800 reference so they stay readable) and a separate phone path that is not just a smaller scale (see [[Responsive UI for Phone Tablet Console and PC]]).
 
 The clamp floor is the important number. On a 667 x 375 phone, `min(667/1920, 375/1080) = 0.347`. A panel whose body text was authored at 18 px draws at 6.2 px: unreadable. That is why the reference project's phone pass set a hard rule of **at least 12 px drawn text** and **at least 44 px drawn tap targets**, and checked it with a tool (numbers measured there; Apple's and Google's touch guidance is in the same 44 to 48 point range). Solve for the floor: `scale_min = 12 / smallestAuthoredText`. With 15 px body text the floor is 0.8, which means panels cannot simply shrink on phones; they need phone layouts.
@@ -305,10 +305,10 @@ See also: [[ScreenGui Fundamentals]], [[UI Layout Objects - Lists Grids and Page
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Readable Text and UI Scale]] · Links - Layouts and constraints · Debugging UI Layout and Input · Cookbook - UI · Case Study - Phone UI Overhaul · Skill - Roblox UI Builder
+[[Readable Text and UI Scale]] · Official Docs - UI · Debugging UI Layout and Input · Cookbook - UI · Case Study - Phone UI Overhaul · Skill - Roblox UI Builder
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Debugging UI Layout and Input]] · [[UI Design Systems]] · [[AI Pitfalls - UI and Input]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Virtualized Lists and Large Inventories]] · [[Gamepad and Console UX]] · [[UI Motion Language and Timing]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[Race HUD - Position, Laps, Splits, Speedometer and Minimap]] · [[UI Style Directions - A Visual Vocabulary for Briefs]]
+[[Figma Property Mapping for Roblox UI]] · [[Debugging UI Layout and Input]] · [[AI Pitfalls - UI and Input]] · [[UI Design Systems]] · [[Designing Roblox UI in Figma - Frames, Safe Areas and Tokens]] · [[Settings Menu Design for Roblox - Layout, Controls and Motion]] · [[Figma to Roblox UI - Pipeline and Handoff]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Gamepad and Console UX]] · [[Virtualized Lists and Large Inventories]]
 <!-- related:end -->

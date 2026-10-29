@@ -1,5 +1,5 @@
 ---
-tags: [vfx, particles, particleemitter, flipbooks, performance, type/guide, area/vfx, level/intermediate, api/LightInfluence, area/performance, api/ParticleEmitter]
+tags: [vfx, particles, particleemitter, flipbooks, performance, type/guide, area/vfx, level/intermediate, api/LightInfluence, area/performance, api/ParticleEmitter, api/Emit]
 ---
 # Particle Emitters In Depth
 
@@ -12,14 +12,14 @@ tags: [vfx, particles, particleemitter, flipbooks, performance, type/guide, area
 > - Brightness chosen by screen area; one dark contrast layer per bright stack.
 > - Bursts via `Emit` with your own quality scaling; streams capped.
 >
-> Cost: TL;DR ~180 tok · whole note ~5.4k tok. Read more: ## 2. Property reference with traps · ## 5. Motion recipes (studied packs) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.5k tok. Read more: ## 2. Property reference with traps · ## 5. Motion recipes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 `ParticleEmitter` is the workhorse of Roblox VFX: sparks, smoke, slash cards, ground rings, flashes, rain, auras and magic dust are all camera-facing (or velocity-aligned) textured quads with a few curves. It looks simple, and that is the danger: most of its properties have a non-obvious rule (which ones affect live particles, which only new ones, which are world space, which silently cap), and a professional-looking effect is almost always a stack of six to twenty tuned emitters rather than one clever one.
 
 This note goes property by property with the traps, then covers bursts versus streams, flipbooks, performance budgets, pooling and testing. Design method and recipes are in [[VFX Design Playbook]]; timing to animation is in [[VFX Timing with Animation]].
 
-Source labels: **Docs** (October 2026), **API dump** (defaults), **Reference project** (one production combat game and its studied VFX packs), **Rule of thumb**.
+Source labels: **Docs** (October 2026), **API dump** (defaults), **Reference project** (one production combat game built with this vault), **Rule of thumb**.
 
 ---
 
@@ -85,7 +85,7 @@ Defaults from the API dump (what `Instance.new` gives). **Inserting through Stud
 | `LockedToPart` | false | Live particles move rigidly with the parent. Auras, charge-ups, rising energy around a moving character. |
 | `WindAffectsDrag` | false | Follows `Workspace.GlobalWind`, only if `Drag > 0` (Docs). Rain and leaves that sway with the world's wind. |
 
-**About `Drag`.** The docs describe it as the rate at which particles lose half their speed via exponential decay. In practice treat it as a decay rate: bigger means faster stopping. A model consistent with studied packs is that speed roughly halves every `1/Drag` seconds (rule of thumb; the exact formula is not documented). Check against a real pack: zip streaks at Speed 1200 with Drag about 200 and life 0.05 to 0.09 s travel a short, sharp distance and stop, exactly what the model predicts. Sparks at Speed 68 to 170 with Drag 4.8 and gravity -129 burst out and fall.
+**About `Drag`.** The docs describe it as the rate at which particles lose half their speed via exponential decay. In practice treat it as a decay rate: bigger means faster stopping. A useful mental model is that speed roughly halves every `1/Drag` seconds (rule of thumb; the exact formula is not documented). It explains the two classic uses: a very high speed paired with a very high drag gives a streak that shoots out a short, fixed distance and stops dead, while a moderate speed with a little drag and gravity gives sparks that burst out and then fall.
 
 **`LockedToPart` vs `VelocityInheritance = 1`.** Locked particles stay glued to the emitter forever (an aura orbiting the body). Inherited velocity only gives the starting speed; particles then drift free (dust kicked from a running foot). Use locked for anything that must stay "on" the caster; inherited for anything that should trail behind.
 
@@ -96,7 +96,7 @@ Defaults from the API dump (what `Instance.new` gives). **Inserting through Stud
 | `FlipbookLayout` | `None`, `Grid2x2` (4 frames), `Grid4x4` (16), `Grid8x8` (64), `Custom` (with `FlipbookSizeX/Y`). |
 | `FlipbookMode` | `Loop`, `OneShot` (once across the particle's lifetime: frame rate = frame count / lifetime, `FlipbookFramerate` ignored), `PingPong`, `Random` (random order with crossfades). |
 | `FlipbookFramerate` | Range, **maximum 30 fps**. |
-| `FlipbookStartRandom` | Each particle starts on a random frame. With framerate 0 (studied packs use 0.001), every particle shows one random static frame. |
+| `FlipbookStartRandom` | Each particle starts on a random frame. With a framerate at or near 0, every particle shows one random static frame, a cheap way to get variety from one sheet. |
 | `FlipbookBlendFrames` | Crossfade between frames (default true) or hard swap. |
 
 Texture rules:
@@ -171,30 +171,32 @@ The `MinDetail` attribute lets an artist mark which layers are essential (flash,
 
 ## 4. Brightness, blending and contrast
 
-Rules distilled from decoded professional packs (reference project study):
+Rule of thumb, from building and reviewing effects for the reference project:
 
 - **`LightInfluence = 0` on all VFX.** Otherwise effects go dark in dark zones and colourless in shade.
 - **`LightEmission = 1` is additive glow**; `LightEmission = 0` with high `Brightness` gives solid saturated colour that does not wash to white.
-- **Brightness inversely proportional to screen area.** Big sprites (5 to 20 studs) at LightEmission 1 need tiny brightness (0.001 to 0.1) or they white out the screen; mid sprites (1 to 4 studs) 0.2 to 1; specks under 0.5 studs 5 to 30; sub-0.1 s flashes 10 to 40 with bloom (Threshold around 2) to catch them.
-- **Every bright stack gets one dark layer.** Black-coloured rings at LightEmission 0.25, grey smoke (84, 84, 84) at LightEmission 0 under additive smoke, or negative LightEmission (-0.4 to -2) on smoke, debris and splash layers. Negative values darken and densify; they are outside the documented 0 to 1 description, so treat them as an undocumented technique that works today, and verify after engine updates.
-- **Water and dense matter** use LightEmission slightly negative (-0.1 to -0.5) with high Brightness (10 to 45): saturated, opaque-looking water.
+- **The bigger the sprite on screen, the lower its brightness.** Additive light adds up per pixel, so a large glowing card quickly turns the whole screen white while a tiny spark needs a lot of brightness to be noticed at all. Start large sprites well below 1, mid-size ones around 1, and small specks or one-frame flashes several times higher, then tune with bloom on.
+- **Give every bright stack one dark layer.** A darker ring, a grey smoke puff with `LightEmission = 0`, or a shadowed debris layer gives the glow something to read against. Some creators also push `LightEmission` below 0 to darken and thicken smoke or water; that is outside the documented 0 to 1 range, so treat it as undocumented and re-check it after engine updates.
+- **Water and dense matter** look solid when they are not additive: low or zero `LightEmission`, a saturated colour and enough brightness to stay vivid.
 
 ---
 
-## 5. Motion recipes (studied packs)
+## 5. Motion recipes
+
+All rows are **Rule of thumb** starting points; tune speeds and sizes to your character scale.
 
 | Effect | Recipe |
 |---|---|
-| Sparks | `VelocityParallel`, Speed 68 to 170, Acceleration (0, -129, 0), Drag 4.8, Size 3.5 to 0 |
-| Debris that bursts then hangs | Speed 80 to 100, Drag 7, gravity about -31 |
-| Zip streaks | Speed 1200, Drag 200, Lifetime 0.05 to 0.09 |
-| Rising energy | `LockedToPart`, Speed 12 to 24, Drag 4.7, Acceleration +30 Y |
-| Pull in, then float | Negative Speed plus an equal upward Acceleration |
-| Split spray | Mirrored emitter pairs with Acceleration (+15, -20, +15) and (-15, -20, -15) |
-| Twinkle | Size double hump 0, 1.9, 0, 1.6, 0 and Drag 5 |
-| Flat card (slash, ground ring) | `VelocityPerpendicular`, Speed 0.001 (direction only), SpreadAngle 0; `EmissionDirection` Top or Bottom mirrors the card |
-| Random 3D cards | `VelocityParallel` with SpreadAngle 360 |
-| Ground ring | Flat card on a Disc, Size 0 to 25 to 35 eased out, RotSpeed -1050 to -100, TimeScale 0.7 to 0.8, Brightness at most 0.15 when big |
+| Sparks | `VelocityParallel` so they stretch along their path, a wide speed range, some drag, gravity pulling down, size shrinking to 0 |
+| Debris that bursts then hangs | Fast start, higher drag, weak gravity: it pops out and lingers before settling |
+| Streaks | Very high speed with very high drag and a very short lifetime: a sharp line that stops at a fixed distance |
+| Rising energy | `LockedToPart`, slow speed, a gentle upward acceleration, fade in and out |
+| Pull in, then float | Negative speed (particles move toward the emitter) plus a small upward acceleration |
+| Split spray | Two emitters with mirrored sideways acceleration, so the spray parts like a bow wave |
+| Twinkle | A size curve with two bumps (grow, shrink, grow, shrink) over a short life |
+| Flat card (slash, ground ring) | `VelocityPerpendicular`, a tiny speed (direction only), `SpreadAngle` 0; `EmissionDirection` Top or Bottom mirrors the card |
+| Random 3D cards | `VelocityParallel` with `SpreadAngle` 360 |
+| Ground ring | Flat card on a Disc shape, size growing fast and easing out, a little rotation, low brightness once it is large |
 
 The flat-card trick is the most important one to understand: `VelocityPerpendicular` orients the quad perpendicular to its velocity, and a tiny speed (0.001) gives the card a direction without moving it. Point the attachment along the card's normal and you have a flat slash or ring in any plane.
 
@@ -224,12 +226,12 @@ end
 
 | Preset | Keypoints (time, value) |
 |---|---|
-| Fast fade, long tail | (0, 0) (0.24, 0.49) (0.83, 0.94) (1, 1) |
-| Hold then fade | (0, 0) (0.34, 0.25) (0.74, 0.81) (1, 1) |
+| Fast fade, long tail | (0, 0) (0.25, 0.5) (0.8, 0.9) (1, 1) |
+| Hold then fade | (0, 0) (0.4, 0.2) (0.75, 0.8) (1, 1) |
 | Breathing sprite | (0, 1) (0.5, 0) (1, 1) |
 | Fade in and out card | (0, 1) (0.2, 0) (0.7, 0) (1, 1) |
 
-A trick from studied packs: a final keypoint value **above 1** (for example 1.5) is invalid as transparency but makes the interpolated curve reach 1 earlier, an early fade without extra keypoints. It relies on undocumented clamping; prefer explicit keypoints if you want to be safe.
+Add a keypoint rather than bending the curve: if a particle should be invisible before the end of its life, put a keypoint with value 1 at that time and another at the end. Explicit keypoints stay correct whatever the engine does with out-of-range values.
 
 ---
 
@@ -329,10 +331,10 @@ See also: [[VFX Design Playbook]], [[Beams and Trails]], [[VFX Timing with Anima
 
 ## Connected notes
 <!-- auto-links:start -->
-[[VFX Performance Budgets and Culling]] · [[Links - Particle emitters]] · [[Light Sources and Shadows]] · Mesh VFX Packs Built in Blender · Juice on a Budget - Mobile and Low-End · Dash VFX Presentation on an R15 Rig
+[[VFX Performance Budgets and Culling]] · [[Official Docs - Visual Effects]] · [[Light Sources and Shadows]] · Mesh VFX Packs Built in Blender · Juice on a Budget - Mobile and Low-End · Dash VFX Presentation on an R15 Rig
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Slash VFX Recipes - Crescent and Ring]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Atmosphere Sky Clouds and Post-Processing]] · [[VFX Previews in Blender for Roblox - Colour and Framing]]
+[[ParticleEmitter - Engine Reference Card]] · [[Designing VFX Textures and Flipbooks in Figma]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Slash VFX Recipes - Crescent and Ring]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[Projectile VFX - Muzzle, Travel and Impact]] · [[VFX Readability and Value - Lessons from Blind Reviews]]
 <!-- related:end -->

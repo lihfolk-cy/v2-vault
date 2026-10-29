@@ -346,10 +346,10 @@ The senior trade-off: a strict round loop is predictable and fair but empties qu
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Rounds and matchmaking]] · Links - Checkpoints and spawning · Combat Arena and Encounter Layout · Level Design Start Here · Lobby and Hub Design · Cookbook - Players and Characters
+[[Official Docs - Game Systems]] · Combat Arena and Encounter Layout · Level Design Start Here · Lobby and Hub Design · Cookbook - Players and Characters
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Quick Respawn and Spawn Protection]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Map Voting and Rotation for Round Games]] · [[Quests and Objectives]] · [[Behaviour Trees Utility AI and State Machines for NPCs]] · [[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Downed, Revive and Bleed-Out States]] · [[Pathfinding Edge Cases and Fallbacks]]
+[[Quick Respawn and Spawn Protection]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Map Voting and Rotation for Round Games]] · [[Quests and Objectives]] · [[Behaviour Trees Utility AI and State Machines for NPCs]] · [[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Downed, Revive and Bleed-Out States]] · [[Pathfinding]]
 <!-- related:end -->

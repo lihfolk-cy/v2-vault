@@ -115,3 +115,15 @@ Stats: 1 blind-scored house (first 8.0, weighted from 14/18; maker re-score 16/1
 | Icicles hang in the air under the snow lip | Seat them from `roof["snow_under"](x)` just inside the lip, embedded 0.45 |
 | Snow reads as a white board | Rounded chevron (`lc.round_corners` 0.75-1.1) with a 0.45 lip, coloured by normal (top, side, under) |
 | Glowing windows but dark snow in game | Glass in its own module with Neon, plus real Surface or Point lights |
+## Stylized creatures (Puffling, 2026-10-29: blind 8.33 -> 8.67 model PASS in 4 rounds; swim clip 5.0 -> 5.33, below bar)
+Builder: `roblox-blender-modeling/scripts/lihfolk_creature.py` (SDF -> surface nets -> QuadriFlow -> half + mirror). Method: vault `Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs`.
+| Miss | Fix / lesson |
+|---|---|
+| A17/A18 thin midline fins fold after projection | Fin half-thickness >= 0.6x quad edge; retry QuadriFlow seeds until 0 self-intersections (builder does it) |
+| A2 open seam after the half-mirror | Snap every boundary vertex of the half to x = 0, not only those within a tolerance |
+| V5 dark disc around the eyes | AO bake sees the lens shells: fade AO by an eye-near weight (1 - 0.9 w) |
+| V5 seam down a forked tail | Two overlapping fin parts: blend paint coordinates by soft-min weights, or build one fan fin with a carved notch |
+| V5 block of fin colour on the body | Smart UV Project folded a cluster (spine at a fin root): count UV overlaps, remove the cause |
+| V1 front view "plain disc", "rabbit ears" | Splay paired fins forward/out so they pass the head outline; median fins low, broad, swept back |
+| V8 blurry painted look | Mirrored overlapping UVs (texel 168 -> 210 px/stud), 3-step banded top light, tinted AO |
+| Animation P2/P3 stuck at 1 | Tail1/Tail2 inside a round body hide the wave; give a visible tail stalk (>= 25 % of length), holds at extremes; review with onion skins |

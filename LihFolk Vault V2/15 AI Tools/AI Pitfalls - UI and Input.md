@@ -100,5 +100,5 @@ Generated UI usually looks right on the one desktop viewport the model imagines 
 
 <!-- related:start -->
 ## Related
-[[Debugging UI Layout and Input]] · [[Cookbook - UI]] · [[Onboarding Accessibility and Cross-Device Prompts]] · [[UI Design Systems]] · [[ScreenGui Fundamentals]] · [[AI Pitfalls - Stale APIs and Luau]]
+[[Cookbook - UI]] · [[Debugging UI Layout and Input]] · [[Onboarding Accessibility and Cross-Device Prompts]] · [[UI Design Systems]] · [[Safe Area]] · [[AI Pitfalls - Stale APIs and Luau]]
 <!-- related:end -->

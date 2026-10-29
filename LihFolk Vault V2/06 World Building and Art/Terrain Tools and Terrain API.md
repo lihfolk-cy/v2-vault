@@ -298,10 +298,10 @@ Terrain water is real: it has swimming, buoyancy, waves and refraction. It is al
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Terrain Deep Dive - Materials Water and Performance]] · [[Terrain Materials and Painting]] · Links - Terrain · MCP Workflows for Building Worlds · Noise Functions and Terrain Generation · Environment and Level Pipeline
+[[Terrain Deep Dive - Materials Water and Performance]] · [[Terrain Materials and Painting]] · Official Docs - Building and World · MCP Workflows for Building Worlds · Noise Functions and Terrain Generation · Environment and Level Pipeline
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[MCP Workflows for Building Worlds]] · [[Noise Functions and Terrain Generation]] · [[Parts Unions and MeshParts]] · [[Zone and Biome Art Direction]] · [[Grid Placement and Player Building Systems]] · [[Voxel Art - Studs Outlines and Style Kits]]
+[[Terrain - Engine Reference Card]] · [[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[MCP Workflows for Building Worlds]] · [[Noise Functions and Terrain Generation]] · [[Environment and Level Pipeline]] · [[Parts Unions and MeshParts]]
 <!-- related:end -->

@@ -1,6 +1,6 @@
 ---
 name: roblox-system-builder
-description: 'Design and build a custom gameplay system end to end (rounds, combat, trading, bespoke progression): config, server, client, remotes, saving, UI, tests. Ready-made LihFolk modules: lihfolk-systems.'
+description: 'Build a custom gameplay system end to end (rounds, combat, trading, progression): config, server, client, remotes, saving, UI, tests. Ready-made modules: lihfolk-systems.'
 ---
 # LihFolk System Builder
 

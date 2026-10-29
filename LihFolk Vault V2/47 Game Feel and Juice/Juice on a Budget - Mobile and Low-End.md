@@ -415,7 +415,7 @@ Tag each effect in your data as `info` or `decor`. The governor only ever scales
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Game Feel Start Here]] · [[Object Pooling]] · Rendering Performance · Links - Post-processing · UI and GUI Animation · Frame Budget
+[[Game Feel Start Here]] · [[Object Pooling]] · Rendering Performance · Official Docs - Visual Effects · UI and GUI Animation · Frame Budget
 <!-- auto-links:end -->
 
 <!-- related:start -->

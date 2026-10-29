@@ -238,5 +238,5 @@ The reference project's twist was replacing the click verb with **real-time swor
 
 <!-- related:start -->
 ## Related
-[[Teardown - Tap Simulator REBORN]] · [[Paid Random Items and Odds Disclosure in Practice]] · [[Rarity Ladders and Drop Pacing Math]] · [[Retention and Return Hooks]] · [[Onboarding by Genre - The First Five Minutes]] · [[Genre Playbook - Tower Defense]] · [[First-Time User Experience and Onboarding]] · [[Genre Playbook - Survival and Crafting]] · [[Social Design and Multiplayer Play]] · [[Genre Playbook - Puzzle and Escape Rooms]]
+[[Paid Random Items and Odds Disclosure in Practice]] · [[Teardown - Tap Simulator REBORN]] · [[Rarity Ladders and Drop Pacing Math]] · [[Retention and Return Hooks]] · [[Onboarding by Genre - The First Five Minutes]] · [[Genre Playbook - Tower Defense]] · [[First-Time User Experience and Onboarding]] · [[Social Design and Multiplayer Play]] · [[Genre Playbook - Survival and Crafting]] · [[Genre Playbook - Puzzle and Escape Rooms]]
 <!-- related:end -->

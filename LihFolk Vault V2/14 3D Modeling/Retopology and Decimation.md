@@ -268,10 +268,10 @@ Splitting also helps culling (off-screen pieces are skipped) and lets the engine
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Modeling Fundamentals for Games]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Hard-Surface Modeling]] · Links - Topology · Modeling in Blender for Roblox · Clean Stylised Shading - Weighted and Custom Normals
+[[Modeling Fundamentals for Games]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Hard-Surface Modeling]] · Official Docs - Asset Creation · Modeling in Blender for Roblox · Clean Stylised Shading - Weighted and Custom Normals
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Mesh Optimization for Mobile]] · [[Low-Poly and Stylized Modeling]] · [[UV Unwrapping]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Exporting and Validating Models for Roblox]] · [[Modular Environment Kits]] · [[Curve-Based Modelling in Blender for Roblox]]
+[[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Mesh Optimization for Mobile]] · [[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]] · [[Low-Poly and Stylized Modeling]] · [[UV Unwrapping]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Exporting and Validating Models for Roblox]] · [[Modular Environment Kits]]
 <!-- related:end -->

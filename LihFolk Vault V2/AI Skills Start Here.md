@@ -71,9 +71,9 @@ Skills make an agent more consistent, not infallible. Keep the habits from [[Saf
 
 The LihFolk UI design system in section 21 has its own skill, `lihfolk-ui`, with exact sizes, colours, components and motion. `roblox-ui-builder` defers to it for those values and adds the vault's layout, motion and accessibility rules on top.
 
-## Third-party skills
+## Using skills from other sources
 
-Skills from outside the vault can sit beside these. [[Third-Party Skill - Caveman Token Saver]] covers Caveman, an open-source skill and proxy that shortens agent replies and compresses tool output to save tokens on long sessions. Install it from its own repository; it is not in the `skills` folder. [[Third-Party Skill - Obsidian Skills]] covers the six Obsidian skills by Steph Ango (Markdown, Bases, Canvas, CLI, Defuddle, Knap), which come preinstalled in the vault's hidden `.claude/skills/` folder so Claude Code opened in the vault can edit notes, bases and canvases correctly.
+Skills from elsewhere can sit beside these. Before installing one, read its instructions in full, check what it is allowed to run, and test it on a copy of your place or vault. Keep the vault's rules in charge: a skill that changes how an agent writes or talks does not change Edit-mode safety, server authority or DataStore discipline. Measure any token-saving claim on your own work ([[Token Cost Benchmarks]]).
 
 ## Writing your own
 

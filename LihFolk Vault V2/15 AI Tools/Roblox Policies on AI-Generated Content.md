@@ -173,7 +173,7 @@ Assistant, mesh generation, procedural models, Material Generator and Texture Ge
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI in Roblox Development Overview]] · [[Roblox Generative AI - Cube Mesh and Texture Generation]] · [[Legal Basics - IP Licenses and Assets]] · Community and Moderation Start Here · Publishing an Experience · Links - Moderation compliance
+[[AI in Roblox Development Overview]] · [[Roblox Generative AI - Cube Mesh and Texture Generation]] · [[Legal Basics - IP Licenses and Assets]] · Community and Moderation Start Here · Publishing an Experience · Official Docs - Security and Moderation
 <!-- auto-links:end -->
 
 <!-- related:start -->

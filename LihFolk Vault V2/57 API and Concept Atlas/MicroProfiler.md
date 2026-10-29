@@ -26,7 +26,7 @@ MicroProfiler (Ctrl+F6 in Play) shows the animation step and your `PreSimulation
 
 ## Mentioned in
 
-75 notes in 26 sections. The 25 most relevant are linked:
+76 notes in 27 sections. The 25 most relevant are linked:
 
 ### 02 Luau Scripting
 [[Luau Performance Patterns with Benchmarks]] · [[Luau Performance and Native Codegen]] · [[Parallel Luau and Actors]]
@@ -61,8 +61,8 @@ MicroProfiler (Ctrl+F6 in Play) shows the animation step and your `PreSimulation
 ### 35 Advanced Luau
 [[Luau Garbage Collection and the Memory Model]]
 
-### 47 Game Feel and Juice
-[[Juice on a Budget - Mobile and Low-End]]
+### 46 Resource Library
+[[Official Docs - Performance]]
 
 ### 51 2D Game Development
 [[A 2D Engine in a ScreenGui - Game Loop Entities and Rendering]] · [[EditableImage for Pixel Buffers and Procedural 2D]]
@@ -70,6 +70,6 @@ MicroProfiler (Ctrl+F6 in Play) shows the animation step and your `PreSimulation
 ### 52 Core Concepts
 [[Frame Budget]]
 
-Also mentioned in (not linked): 00 Start Here · 2D Game Development Start Here · AI Skills Start Here · AvatarEditorService and In-Game Avatar Editors · Behaviour Trees Utility AI and State Machines for NPCs · Choosing GUI 2D or Locked-Camera 2.5D · Debugging Start Here · Genre Playbook - Zombie and Wave Survival Co-op · Glossary · Horror Monster Chase AI End to End · Hunting Memory Leaks Step by Step · Layered Clothing Cages and Animation · Light Sources and Shadows · Lighting Technologies and Settings · Load and Soak Testing Servers - Long Sessions and Many Clients · Materials MaterialVariants and SurfaceAppearance · Math Vectors and CFrames · Melee Combat System End to End · Memory Budgets and Leaks · Mesh Optimization for Mobile · Mobile and Low-End Optimization · NPC AI and Behaviour · Nametags and Overhead Bars - Cost and Visibility Rules · Network Performance · Notification and Toast Systems · Open Questions - Whole Vault · Pet Hatching and Following End to End · Physics Performance · Physics and Vehicles Start Here · Rain - Camera-Local Particles, Splashes and Wet Surfaces · Reading Luau Errors and Stack Traces · Ropes Chains and Soft Bodies · Skill - Roblox Performance Audit · Snippets - Camera Shake and FX · Snippets - Lua Keyframe Player Core · Snippets - Procedural Motion · Spawn Director - Credit Budgets and Player-Count Scaling · Springs That Survive Long Frames - dt Clamps and NaN Guards · Studio Assistant and AI Tools · Studio Interface Tour · SurfaceAppearance PBR Workflow · Terrain Deep Dive - Materials Water and Performance · Testing Your Own Remotes - Fuzzing and Abuse Tests · Textures Decals and Texture Memory · Tower Defense Waves and Placement End to End · Troubleshooting Table · Tycoon Plots and Droppers End to End · UI Motion Language and Timing · VFX Performance Budgets and Culling · Virtualized Lists and Large Inventories
+Also mentioned in (not linked): 00 Start Here · 2D Game Development Start Here · AI Skills Start Here · AvatarEditorService and In-Game Avatar Editors · Behaviour Trees Utility AI and State Machines for NPCs · Choosing GUI 2D or Locked-Camera 2.5D · Debugging Start Here · Genre Playbook - Zombie and Wave Survival Co-op · Glossary · Horror Monster Chase AI End to End · Hunting Memory Leaks Step by Step · Juice on a Budget - Mobile and Low-End · Layered Clothing Cages and Animation · Light Sources and Shadows · Lighting Technologies and Settings · Load and Soak Testing Servers - Long Sessions and Many Clients · Materials MaterialVariants and SurfaceAppearance · Math Vectors and CFrames · Melee Combat System End to End · Memory Budgets and Leaks · Mesh Optimization for Mobile · Mobile and Low-End Optimization · NPC AI and Behaviour · Nametags and Overhead Bars - Cost and Visibility Rules · Network Performance · Notification and Toast Systems · Open Questions - Whole Vault · Pet Hatching and Following End to End · Physics Performance · Physics and Vehicles Start Here · Rain - Camera-Local Particles, Splashes and Wet Surfaces · Reading Luau Errors and Stack Traces · Ropes Chains and Soft Bodies · Skill - Roblox Performance Audit · Snippets - Camera Shake and FX · Snippets - Lua Keyframe Player Core · Snippets - Procedural Motion · Spawn Director - Credit Budgets and Player-Count Scaling · Springs That Survive Long Frames - dt Clamps and NaN Guards · Studio Assistant and AI Tools · Studio Interface Tour · SurfaceAppearance PBR Workflow · Terrain Deep Dive - Materials Water and Performance · Testing Your Own Remotes - Fuzzing and Abuse Tests · Textures Decals and Texture Memory · Tower Defense Waves and Placement End to End · Troubleshooting Table · Tycoon Plots and Droppers End to End · UI Motion Language and Timing · VFX Performance Budgets and Culling · Virtualized Lists and Large Inventories
 
 <!-- atlas:generated -->

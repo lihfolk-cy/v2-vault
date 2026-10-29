@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/animation, area/gameplay, api/FieldOfView]
 > - FOV resets after sprinting: Sprint writes `FieldOfView` directly -> One FOV owner with named kicks.
 > - Effects fight sprint FOV: Two writers of FieldOfView -> One owner adds the stack's delta.
 >
-> Cost: TL;DR ~130 tok · whole note ~480 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~520 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -29,7 +29,7 @@ API snapshot: member of `Camera`, `RenderingTest` (`_tools/roblox_api.json`, doc
 
 ## Mentioned in
 
-13 notes in 9 sections. The 13 most relevant are linked:
+15 notes in 11 sections. The 15 most relevant are linked:
 
 ### 05 UI and UX
 [[Minimap and World Map UI - Projection, Rotation and Fog of War]]
@@ -57,5 +57,11 @@ API snapshot: member of `Camera`, `RenderingTest` (`_tools/roblox_api.json`, doc
 
 ### 58 Player QoL and Game Tweaks
 [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]]
+
+### 61 Thumbnails and CTR
+[[Making Thumbnails in Studio and Blender - Capture, Lighting and Posing]]
+
+### 62 Engine Reference Cards
+[[Camera - Engine Reference Card]]
 
 <!-- atlas:generated -->

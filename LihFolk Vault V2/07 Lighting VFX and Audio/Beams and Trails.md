@@ -1,5 +1,5 @@
 ---
-tags: [vfx, beams, trails, slashes, bezier, type/guide, area/vfx, level/intermediate, api/Beam, api/LightInfluence, api/Texture]
+tags: [vfx, beams, trails, slashes, bezier, type/guide, area/vfx, level/intermediate, api/Beam, api/LightInfluence, api/Texture, api/FaceCamera]
 ---
 # Beams and Trails
 
@@ -12,12 +12,12 @@ tags: [vfx, beams, trails, slashes, bezier, type/guide, area/vfx, level/intermed
 > - Arcs built with 4/3 r handles and enough segments.
 > - VFX ribbons at LightInfluence 0 with appropriate LightEmission.
 >
-> Cost: TL;DR ~180 tok · whole note ~4.4k tok. Read more: ## 1. Beam fundamentals · ## 2. Slash crescents with beams · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~4.5k tok. Read more: ## 1. Beam fundamentals · ## 2. Slash crescents with beams · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Particles are points; beams and trails are ribbons. A `Beam` draws a textured ribbon along a cubic [[Bezier Curves|Bézier curve]] between two attachments: lasers, lightning arcs, waterfalls, force-field skins, slash crescents, tractor beams, tutorial guide lines. A `Trail` records where two attachments have been and fills the space between: sword trails, dash streaks, limb afterimages, tyre marks. Both are cheap, both are easy to make ugly, and both have a handful of rules that explain nearly every bug.
 
-Source labels: **Docs** (October 2026), **API dump** (defaults), **Reference project** (one live action game and its studied VFX packs), **Rule of thumb**.
+Source labels: **Docs** (October 2026), **API dump** (defaults), **Reference project** (one live action game built with this vault), **Rule of thumb**.
 
 ---
 
@@ -38,14 +38,14 @@ So the curve's shape comes from the **orientation** of the attachments as much a
 
 ### Exact arcs
 
-A cubic Bézier approximates a circular arc of angle θ when the handles are `k = 4/3 * tan(θ/4) * r` long. For a semicircle (θ = 180°) that is `k = 4/3 * r`, the number used by the studied slash packs (end attachments at ±r, `CurveSize0 = CurveSize1 = 1.333 * r`, handles both pointing toward the bulge). A full ring is two semicircle beams sharing the end attachments with the bulge on opposite sides.
+A cubic Bézier approximates a circular arc of angle θ when the handles are `k = 4/3 * tan(θ/4) * r` long. For a semicircle (θ = 180°) that is `k = 4/3 * r`: put the end attachments at ±r, set `CurveSize0 = CurveSize1 = 1.333 * r`, and point both handles toward the bulge. A full ring is two semicircle beams sharing the end attachments with the bulge on opposite sides.
 
 ### Width, segments, texture
 
 | Property | Default (API dump) | Notes (Docs unless stated) |
 |---|---|---|
 | `Width0`, `Width1` | 1, 1 | Studs at each end, linear in between. Negative values are reset to 0. Width0 large and Width1 0 = a crescent or comet taper. |
-| `Segments` | 10 | Straight pieces approximating the curve. More = smoother curve. Colour and transparency need at least n - 1 segments for n keypoints. Arcs in studied packs used 50 to 360. |
+| `Segments` | 10 | Straight pieces approximating the curve. More = smoother curve. Colour and transparency need at least n - 1 segments for n keypoints. Rule of thumb: 40 to 80 for a smooth arc; go higher only for very large rings. |
 | `Texture` | none | If unset, invalid **or not loaded yet**, the beam draws as a **solid** colour ribbon. |
 | `TextureMode` | `Stretch` | `Stretch`: texture repeats `TextureLength` times over the whole beam. `Wrap` and `Static`: repeats every `TextureLength` studs. |
 | `TextureLength` | 1 | Meaning depends on mode (above). |
@@ -71,20 +71,20 @@ Because an unloaded texture renders as a solid ribbon (Docs), the first time a s
 
 How a texture maps onto the ribbon is a frequent source of confusion. The reference project recorded that the texture's Y axis runs along the beam and that the ribbon's width follows the attachments' orientation; it also saw faint hairlines at the joins where several beams meet. Do not author a sheet on faith: test with an asymmetric arrow texture first, and overlap beam ends slightly (or hide joins under a flash) when chaining.
 
-`FaceCamera = true` sidesteps most width-orientation problems for VFX ribbons, which is why slash arcs in the studied packs use it. Use `FaceCamera = false` when the ribbon must lie on a surface (a force-field skin, a waterfall sheet, smoke dragging along the ground).
+`FaceCamera = true` sidesteps most width-orientation problems for VFX ribbons, so it is the usual starting point for slash arcs (Rule of thumb). Use `FaceCamera = false` when the ribbon must lie on a surface (a force-field skin, a waterfall sheet, smoke dragging along the ground).
 
 ---
 
 ## 2. Slash crescents with beams
 
-In the reference project, wide melee swings drew **crescents** instead of trails (see section 4 for why). A crescent is a semicircular beam in the swing's plane that appears on the hit and sweeps or fades within 0.18 to 0.3 s. Recipe from the studied packs:
+In the reference project, wide melee swings drew **crescents** instead of trails (see section 4 for why). A crescent is a semicircular beam in the swing's plane that appears on the hit and sweeps or fades within a fraction of a second. A starting recipe (Rule of thumb, tune by eye):
 
-- End attachments at ±r on the pivot's X axis, handles 4/3 r toward the bulge.
-- Main beam `Width0 = 30`, `Width1 = 0` (crescent taper), `FaceCamera = true`, `Segments = 50` or more, `LightEmission = 1`.
-- "Band" copies of the same beam with transparency opaque only over 35 to 70% of the length read as a travelling highlight streak.
-- Sweep: rotate the pivot about 175 degrees (linear) over 0.18 to 0.25 s while widths shrink from about 3x to 0.
-- 4 to 6 smaller filament arcs tilted 6 to 10 degrees and offset 1 to 2 studs add richness.
-- Copy the impact stack to the far end of the arc with a 0.1 s delay so the hit "travels".
+- Build the arc from section 1: end attachments at ±r on the pivot's X axis, handles 4/3 r toward the bulge.
+- Taper it: wide `Width0`, `Width1 = 0`, `FaceCamera = true`, enough `Segments` for a smooth curve, `LightEmission = 1`.
+- Give the eye one bright travelling highlight: a second, thinner copy of the arc whose transparency sequence is opaque over only part of its length.
+- Sweep the pivot through roughly the swing's own angle while the width shrinks to 0; short is better than long.
+- One or two thin secondary arcs, slightly tilted and offset, add depth; more than that turns into clutter ([[VFX Readability and Value - Lessons from Blind Reviews]]).
+- Let the impact land where the arc ends, a beat after it starts, so the hit reads as travelling.
 
 Attachments must be parented to a `BasePart` (or `Terrain`), not to other attachments, so the pivot is an invisible anchored part:
 
@@ -176,11 +176,11 @@ Reference numbers: crescent radius about 15 studs at 1.6x character scale, one c
 | Pattern | Construction |
 |---|---|
 | Laser | Straight beam, `Width` small, `TextureSpeed` 2 to 5 with a noise texture, `LightEmission 1`, a `PointLight` at the impact end |
-| Lightning arc | Several straight beams between jittered attachments, re-jittered every 0.05 to 0.1 s; or scripted Neon segments (studied pack: 5 segments, ±3 stud jitter, width swell then pinch over 0.35 s, 10 ms between segments) |
+| Lightning arc | Several straight beams between jittered attachments, re-jittered every 0.05 to 0.1 s; or a chain of thin Neon parts between random points along the path, shown for a few frames and then replaced (Rule of thumb: a handful of segments, jitter about a tenth of the arc length) |
 | Tractor or guide line | Beam from player to target, `TextureMode = Wrap`, chevron texture, `TextureSpeed` positive toward the target. The reference project's tutorial guide used a gold sparkle beam from player to target |
 | Spiral | Ring halves with attachments at different heights |
 | Waterfall sheet | `FaceCamera = false`, wide beam down the fall, `TextureSpeed` scrolling the water texture; 2 overlapping layers at different speeds |
-| Aura cage | Beams along a limb's box edges plus face "skins" flaring past the limb (studied aura pack) |
+| Aura outline | Beams with `FaceCamera = false` laid along a limb's edges, slightly larger than the limb, with a slow `TextureSpeed` so the outline shimmers (Rule of thumb) |
 | Smoke drag | Beam with a smoke texture, `FaceCamera = false`, `TextureSpeed` 0.5, Brightness tweened up then down |
 
 Animating beams: tween `Width0/Width1`, `Transparency` (build a new `NumberSequence` each step), `Brightness`, or the attachments. Sequences cannot be tweened by `TweenService` directly; drive them from a `RunService` loop or tween a `NumberValue` and rebuild the sequence on `Changed`.
@@ -229,7 +229,7 @@ end
 
 ### Afterimages with trails
 
-A studied pack built limb afterimages with four trails sharing one `Attachment0` (on the torso) and each `Attachment1` on a hand or foot: Lifetime 0.3, WidthScale 0.3 to 0, transparency 0.5, LightEmission 1, very low Brightness. Blade trails in the same pack: Lifetime 0.2, LightEmission 1.
+For limb afterimages, give each limb its own short trail between two attachments along that limb, so the ribbon traces the limb's sweep rather than a line from the body. Rule of thumb: keep `Lifetime` short (well under half a second), taper with `WidthScale`, keep it semi-transparent and dim so it reads as motion rather than as a solid object, and enable it only during the move. Blade trails follow the same idea with an even shorter lifetime.
 
 ### Trails on fast movers
 
@@ -256,7 +256,7 @@ A studied pack built limb afterimages with four trails sharing one `Attachment0`
 | Beam missing | One attachment missing, same attachment twice, or not in Workspace | Two distinct attachments in Workspace. |
 | Gradient looks stepped | Too few segments for the keypoints | Segments at least keypoints - 1, more for curves. |
 | Arc is lopsided | Handles not 4/3 r, or attachments not oriented toward the bulge | Use the arc construction above. |
-| Ribbon invisible edge-on | `FaceCamera` false on a VFX ribbon | Turn on FaceCamera for camera-facing effects. |
+| Ribbon invisible edge-on | `FaceCamera` false on a VFX ribbon | Turn on [[FaceCamera]] for camera-facing effects. |
 | Streak across the body when a trail starts | Trail not cleared before enabling | `Clear()` then enable. |
 | Sheet wrapped around the character | Trail on for a wide sweep or wind-up | Window it, or crescents for sweeps over about 120 degrees. |
 | Trail vanishes when retargeted | Changing attachments clears segments | Keep attachments fixed; move them instead. |
@@ -275,10 +275,10 @@ See also: [[Particle Emitters In Depth]], [[VFX Design Playbook]], [[VFX Timing 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Beams and trails]] · Mesh VFX Packs Built in Blender · [[Light Sources and Shadows]] · Dash VFX Presentation on an R15 Rig · Mover Constraints and Physics Controllers · Water Sky and Atmosphere Art
+[[Official Docs - Visual Effects]] · Mesh VFX Packs Built in Blender · [[Light Sources and Shadows]] · Dash VFX Presentation on an R15 Rig · Mover Constraints and Physics Controllers · Water Sky and Atmosphere Art
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Slash VFX Recipes - Crescent and Ring]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[Escalation and Grandeur Without Clutter]] · [[VFX Performance Budgets and Culling]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]]
+[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Slash VFX Recipes - Crescent and Ring]] · [[Projectile VFX - Muzzle, Travel and Impact]] · [[Designing VFX Textures and Flipbooks in Figma]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Escalation and Grandeur Without Clutter]] · [[VFX Performance Budgets and Culling]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]]
 <!-- related:end -->

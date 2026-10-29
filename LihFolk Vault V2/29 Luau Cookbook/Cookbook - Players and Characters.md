@@ -321,12 +321,14 @@ end
 
 ```lua
 --!strict
-local PhysicsService = game:GetService("PhysicsService")
 local Players = game:GetService("Players")
 
+-- Collision groups live on WorldRoot (workspace) since September 2026; PhysicsService versions are deprecated.
 local GROUP = "Players"
-PhysicsService:RegisterCollisionGroup(GROUP)
-PhysicsService:CollisionGroupSetCollidable(GROUP, GROUP, false)
+if not workspace:IsCollisionGroupRegistered(GROUP) then
+	workspace:RegisterCollisionGroup(GROUP)
+end
+workspace:CollisionGroupSetCollidable(GROUP, GROUP, false)
 
 local function setGroup(instance: Instance)
 	if instance:IsA("BasePart") then
@@ -460,10 +462,10 @@ end
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Debugging Race Conditions and Yield Order]] · Links - Humanoids and character controllers · [[Cookbook - Data and Saving]] · Obby Checkpoints and Stage Saves End to End · Links - Checkpoints and spawning · Round-Based Minigame Loop End to End
+[[Debugging Race Conditions and Yield Order]] · Official Docs - Characters and Animation · [[Cookbook - Data and Saving]] · Obby Checkpoints and Stage Saves End to End · Official Docs - Game Systems · Round-Based Minigame Loop End to End
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Character Select and Class Systems with Different Rigs]] · [[Cookbook - UI]] · [[Snippets - Ragdoll]] · [[AI Pitfalls - Networking and Security]] · [[Cookbook - Tables Strings and Time]] · [[Functions Closures and Upvalues]]
+[[Character Select and Class Systems with Different Rigs]] · [[Cookbook - UI]] · [[Players - Engine Reference Card]] · [[Humanoid - Engine Reference Card]] · [[Snippets - Ragdoll]] · [[Cookbook - Tables Strings and Time]]
 <!-- related:end -->

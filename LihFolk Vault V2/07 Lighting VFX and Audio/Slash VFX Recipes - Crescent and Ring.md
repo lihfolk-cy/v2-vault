@@ -88,7 +88,7 @@ Author **flipbooks at exactly 1024 x 1024** ([[Particle Emitters In Depth]]). Ke
 | Layer | Instance | Why |
 |---|---|---|
 | Body, ink, ground ring | `Part` + `SpecialMesh` (FileMesh) | `MeshId` and `TextureId` are settable from scripts, `VertexColor` tints the texture, `Scale` animates cheaply. Body Material Neon, ink SmoothPlastic |
-| Hot edge | `Beam` (FaceCamera, 24 segments, LightEmission 1) on two attachments whose X axes follow the arc tangent, `CurveSize = 4/3 * tan(band/4) * r` | exact arc, additive, re-placed each frame to ride the head ([[Beams and Trails]]) |
+| Hot edge | `Beam` ([[FaceCamera]], 24 segments, LightEmission 1) on two attachments whose X axes follow the arc tangent, `CurveSize = 4/3 * tan(band/4) * r` | exact arc, additive, re-placed each frame to ride the head ([[Beams and Trails]]) |
 | Glow card, ink card, ground disc | `ParticleEmitter`, `VelocityPerpendicular`, Speed 0.001, `EmissionDirection` Top, `Emit(1)` | a flat card in the swing plane |
 | Sparks, glints, petals, squares | `ParticleEmitter`, `Emit(k)` while the attachment is moved to the head | world-space bursts along the swing |
 | Light | `PointLight`, shadows off, 0.3 to 0.35 s | colour spill on the floor |
@@ -187,5 +187,5 @@ See also: [[VFX Readability and Value - Lessons from Blind Reviews]] (general va
 
 <!-- related:start -->
 ## Related
-[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Ice Ball Cast to Explosion - Approved Recipe]] · [[Light Sources and Shadows]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Glossy Icon Style - Owner Reference]] · [[Trim Sheets Atlases and Vertex Colors]]
+[[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Designing VFX Textures and Flipbooks in Figma]] · [[Ice Ball Cast to Explosion - Approved Recipe]] · [[Projectile VFX - Muzzle, Travel and Impact]] · [[Auras, Shields and Status Effects]] · [[AoE Telegraphs - Readable Ground Warnings]] · [[Light Sources and Shadows]]
 <!-- related:end -->

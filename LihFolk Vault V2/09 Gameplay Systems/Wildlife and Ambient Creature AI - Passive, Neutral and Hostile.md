@@ -146,5 +146,5 @@ The O(n squared) neighbour loop is fine for flocks of 10 to 30; larger flocks ne
 
 <!-- related:start -->
 ## Related
-[[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Behaviour Trees Utility AI and State Machines for NPCs]] · [[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]] · [[AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses]] · [[Pathfinding Edge Cases and Fallbacks]] · [[Pathfinding]] · [[Weather That Changes Gameplay - Grip, Visibility and Hearing]] · [[Downed, Revive and Bleed-Out States]]
+[[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Behaviour Trees Utility AI and State Machines for NPCs]] · [[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]] · [[Pathfinding Edge Cases and Fallbacks]] · [[AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses]] · [[Pathfinding]] · [[Weather That Changes Gameplay - Grip, Visibility and Hearing]] · [[Spawning Teams and Rounds]]
 <!-- related:end -->

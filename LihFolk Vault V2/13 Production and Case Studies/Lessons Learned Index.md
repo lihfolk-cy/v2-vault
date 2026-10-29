@@ -176,5 +176,5 @@ If you keep only five:
 
 <!-- related:start -->
 ## Related
-[[Case Study - Building a Game with AI Agents]] · [[Pipeline Design Principles]] · [[Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts]] · [[Case Study - Building LihFolk V2 with AI Agents]] · [[Live Incident Response and Post-Mortems]] · [[Ship a Game in 30 Days - Week-by-Week Plan for a Solo Dev]] · [[Template Reskin Checklist - One Codebase, New Game]]
+[[Case Study - Building a Game with AI Agents]] · [[Pipeline Design Principles]] · [[Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts]] · [[Live Incident Response and Post-Mortems]] · [[Ship a Game in 30 Days - Week-by-Week Plan for a Solo Dev]] · [[Case Study - Building LihFolk V2 with AI Agents]] · [[Template Reskin Checklist - One Codebase, New Game]]
 <!-- related:end -->

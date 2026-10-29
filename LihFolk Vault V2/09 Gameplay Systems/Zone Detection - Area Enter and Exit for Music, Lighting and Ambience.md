@@ -175,5 +175,5 @@ With hundreds of zones (plots, city blocks), bucket each zone into every 2D grid
 
 <!-- related:start -->
 ## Related
-[[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Client Zone Culling for Interiors and Cities]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]] · [[Pathfinding Edge Cases and Fallbacks]] · [[Weather That Changes Gameplay - Grip, Visibility and Hearing]] · [[Spawning Teams and Rounds]]
+[[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Client Zone Culling for Interiors and Cities]] · [[Clickable and Interactive Parts - ClickDetector, ProximityPrompt and Touched]] · [[Pathfinding Edge Cases and Fallbacks]] · [[Weather That Changes Gameplay - Grip, Visibility and Hearing]] · [[Spawning Teams and Rounds]]
 <!-- related:end -->

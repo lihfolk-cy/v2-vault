@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/data, area/debugging, api/IncrementAsync]
 > - `SetAsync`, `IncrementAsync`, `UpdateAsync`, `GetAsync`, `RemoveAsync` work as on a normal store, on integer values.
 > - Every 60 s (jittered), one `IncrementAsync` per server adds its local delta to one of N shard keys (`Hatched_0..Hatched_7`...
 >
-> Cost: TL;DR ~150 tok · whole note ~350 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~390 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,12 +28,18 @@ API snapshot: member of `GlobalDataStore`, `MemoryStoreDistributedCounter` (`_to
 
 ## Mentioned in
 
-5 notes in 2 sections. The 5 most relevant are linked:
+7 notes in 4 sections. The 7 most relevant are linked:
 
 ### 04 Data and Persistence
 [[DataStore Fundamentals]] · [[Global State and Live Config]] · [[OrderedDataStores and Leaderboards]] · [[Serial-Numbered Limited Items - Atomic Counters]]
 
 ### 23 Debugging Deep Dives
 [[Debugging DataStore Problems]]
+
+### 49 Roblox Platform Features
+[[Engine Limits, Quotas and Defaults - Cheat Sheet]]
+
+### 62 Engine Reference Cards
+[[DataStoreService - Engine Reference Card]]
 
 <!-- atlas:generated -->

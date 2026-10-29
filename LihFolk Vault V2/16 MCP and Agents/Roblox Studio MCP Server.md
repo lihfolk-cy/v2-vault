@@ -8,11 +8,11 @@ tags: [mcp, studio, ai, agents, tooling, type/guide, area/ai, level/intermediate
 > - Avoid: Using a cached `studio_id` after a Studio restart.
 > - Avoid: Calling `start_stop_play` in a Studio someone else is testing in.
 > - Avoid: One huge `execute_luau` that builds a whole level in a single call.
-> - Studio updated; MCP enabled; green indicator shows the client.
+> - Studio updated; Assistant > ... > Manage MCP Servers > Enable Studio as MCP server (local, stdio); green indicator shows the...
 > - `list_roblox_studios` called; correct place id chosen.
 > - `get_studio_state` says Edit.
 >
-> Cost: TL;DR ~130 tok · whole note ~4.6k tok. Read more: ## 1. History: from a plugin bridge to a built-in server · ## 3. The tool set · ## 7. Common mistakes · ## 8. Checklist before an agent session in Studio
+> Cost: TL;DR ~150 tok · whole note ~4.6k tok. Read more: ## 1. History: from a plugin bridge to a built-in server · ## 3. The tool set · ## 7. Common mistakes · ## 8. Checklist before an agent session in Studio
 <!-- tldr:end -->
 
 Roblox Studio ships with a built-in MCP server. Turn it on, point an MCP client at it, and an AI agent can explore your data model, read and edit scripts, run Luau in Edit, Server or Client contexts, start and stop play tests, read the Output, take screenshots, simulate player input, search and insert Creator Store assets, upload images and call Roblox's generative tools. This note covers how to enable it, what each tool does, how it behaves in practice, and the gotchas the reference project hit while building a whole game through it.
@@ -270,7 +270,7 @@ The pattern that worked: **Studio is an I/O device and a ground-truth oracle; he
 
 ## 8. Checklist before an agent session in Studio
 
-- [ ] Studio updated; MCP enabled; green indicator shows the client.
+- [ ] Studio updated; Assistant > ... > Manage MCP Servers > Enable Studio as MCP server (local, stdio); green indicator shows the client.
 - [ ] `list_roblox_studios` called; correct place id chosen.
 - [ ] `get_studio_state` says Edit.
 - [ ] Version History has a recent save (publish or save to Roblox before big changes).
@@ -292,5 +292,5 @@ The pattern that worked: **Studio is an I/O device and a ground-truth oracle; he
 
 <!-- related:start -->
 ## Related
-[[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Agent Review Loops and Guardrails in Practice]] · [[Batch Processing Tools in Studio]] · [[AI in Roblox Development Overview]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]]
+[[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Agent Review Loops and Guardrails in Practice]] · [[Batch Processing Tools in Studio]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[AI in Roblox Development Overview]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]]
 <!-- related:end -->

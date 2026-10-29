@@ -6,11 +6,11 @@ tags: [atlas, api, type/atlas, area/scripting, area/security, api/RemoteFunction
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - RemoteFunction callbacks that yield can return responses out of order.
+> - `RemoteEvent` for state changes, `UnreliableRemoteEvent` for replaceable cosmetic or positional updates, `RemoteFunction` only...
 > - RemoteFunction with no client-side timeout plan.
 > - Never return error text to the client. A RemoteFunction that errors on the server propagates an error to the invoking client.
-> - The admin panel sends `(commandName, args)` over a single `RemoteFunction` or `RemoteEvent`, validated by type and capability...
 >
-> Cost: TL;DR ~140 tok · whole note ~810 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~820 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -21,13 +21,13 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 
 ## Key facts
 
+- `RemoteEvent` for state changes, `UnreliableRemoteEvent` for replaceable cosmetic or positional updates, `RemoteFunction` only... ([[RemoteEvent - Engine Reference Card]])
 - RemoteFunction with no client-side timeout plan. Symptom: UI hangs forever when the server handler errors. ([[Cookbook - Remotes and Networking]])
 - Never return error text to the client. A RemoteFunction that errors on the server propagates an error to the invoking client. ([[Error Handling - pcall xpcall and Promise Patterns]])
-- The admin panel sends `(commandName, args)` over a single `RemoteFunction` or `RemoteEvent`, validated by type and capability, rate-limited per caller (Remote Abuse Patterns and Rate Limiting in Practice). ([[Admin Commands Done Safely - Permissions and Audit Logs]])
 
 ## Mentioned in
 
-40 notes in 19 sections. The 25 most relevant are linked:
+43 notes in 20 sections. The 25 most relevant are linked:
 
 ### 02 Luau Scripting
 [[Error Handling - pcall xpcall and Promise Patterns]] · [[Error Handling and Retries]]
@@ -51,7 +51,7 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 [[AI Pitfalls - Networking and Security]]
 
 ### 22 Anti-Exploit and Security
-[[Admin Commands Done Safely - Permissions and Audit Logs]] · [[Economy Exploits - Dupes Races and Purchase Abuse]] · [[Testing Your Own Remotes - Fuzzing and Abuse Tests]]
+[[Admin Commands Done Safely - Permissions and Audit Logs]] · [[Testing Your Own Remotes - Fuzzing and Abuse Tests]]
 
 ### 23 Debugging Deep Dives
 [[Debugging Client-Server Desync]] · [[Debugging Live Servers]] · [[Debugging Race Conditions and Yield Order]]
@@ -62,11 +62,8 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 ### 29 Luau Cookbook
 [[Cookbook - Remotes and Networking]]
 
-### 46 Resource Library
-[[Links - Remote events and functions]]
-
 ### 49 Roblox Platform Features
-[[Commerce and Physical Goods]]
+[[API Renames and Deprecations 2025-2026]] · [[Commerce and Physical Goods]]
 
 ### 50 Team Collaboration and Project Management
 [[Documentation and Onboarding New Developers]]
@@ -74,6 +71,9 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 ### 58 Player QoL and Game Tweaks
 [[Confirmation and Undo Patterns for Destructive and Paid Actions]] · [[Settings Menu Essentials and Persistence]]
 
-Also mentioned in (not linked): Engine and API Changes 2025-2026 · Events Signals and Connections · Functions Closures and Upvalues · Gated Tester Commands and Debug Panels · Glossary · How Exploits Work - The Client Boundary · Input Responsiveness Buffering and Coyote Time · Replication Rules · Serialization Formats for Saves and Networking · Server Browsers and Server Lists · Skill - Roblox Secure Remotes · Squash Stretch and Anticipation in UI and Characters · Task Library Coroutines and Yielding · Threat Modeling a Roblox Game · Working with Contractors and Revenue Splits
+### 62 Engine Reference Cards
+[[RemoteEvent - Engine Reference Card]]
+
+Also mentioned in (not linked): Economy Exploits - Dupes Races and Purchase Abuse · Engine and API Changes 2025-2026 · Events Signals and Connections · Functions Closures and Upvalues · Gated Tester Commands and Debug Panels · Glossary · How Exploits Work - The Client Boundary · Input Responsiveness Buffering and Coyote Time · Official Docs - Scripting and Luau · Replication Rules · Serialization Formats for Saves and Networking · Server Browsers and Server Lists · Skill - Roblox Secure Remotes · Squash Stretch and Anticipation in UI and Characters · Task Library Coroutines and Yielding · Text Filtering - TextService for Names, Signs and Messages · Threat Modeling a Roblox Game · Working with Contractors and Revenue Splits
 
 <!-- atlas:generated -->

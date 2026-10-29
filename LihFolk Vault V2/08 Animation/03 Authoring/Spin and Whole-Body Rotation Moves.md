@@ -93,5 +93,5 @@ How to author moves where the whole character rotates: spin attacks and whirlwin
 
 <!-- related:start -->
 ## Related
-[[Locomotion Readability - Lessons from Blind Panels]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Locomotion and Melee Reference Numbers]] · [[R15 Run Cycle Key Poses]] · [[Blade Grip and Wrist Limits]] · [[Animation Review Checklist]] · [[Animation Quality Standard]] · [[Authoring Clips in Code]]
+[[Locomotion Readability - Lessons from Blind Panels]] · [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Locomotion and Melee Reference Numbers]] · [[R15 Run Cycle Key Poses]] · [[Animation Review Checklist]] · [[Blade Grip and Wrist Limits]] · [[Animation Quality Standard]] · [[Authoring Clips in Code]]
 <!-- related:end -->

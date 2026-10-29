@@ -12,7 +12,7 @@ It builds on older notes. Read them first if the topic is new; the notes here go
 - [[Monetization Overview]]: the money map, and where subscriptions and commissions fit among passes and products.
 - [[Subscriptions and Premium Payouts]]: subscription payouts and rules, Roblox Plus and [[Creator Rewards]].
 - [[Community Building]] and [[Retention and Return Hooks]]: the strategy behind invites, share links and notifications.
-- [[Links - Badges]]: outside resources on badges. There is no older badge note in the vault; [[Badges and Achievement Design]] is the first.
+- [[Official Docs - Publishing and Live Ops]]: the official badge docs. There is no older badge note in the vault; [[Badges and Achievement Design]] is the first.
 
 ## The six notes
 
@@ -44,5 +44,5 @@ It builds on older notes. Read them first if the topic is new; the notes here go
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Subscriptions and payouts]] · Links - Community and social · Refunds Chargebacks and Purchase Support · Live Ops Events and Updates · Resource Library - Monetization · Discovery and the Algorithm
+[[Official Docs - Monetization]] · Official Docs - Publishing and Live Ops · Refunds Chargebacks and Purchase Support · Live Ops Events and Updates · Discovery and the Algorithm
 <!-- auto-links:end -->

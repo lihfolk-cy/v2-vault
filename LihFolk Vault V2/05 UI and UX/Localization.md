@@ -5,14 +5,14 @@ tags: [ui, localization, translation, localizationservice, translator, i18n, typ
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
+> - Avoid: Translating scripted text once. Symptom: quest lines stay in the old language after the player switches language.
 > - Avoid: Dynamic labels with `AutoLocalize` on: tables full of "Gems: 1,240".
 > - Avoid: String concatenation for sentences with numbers.
-> - Avoid: Rich text tags in translatable strings (stripped in translation).
+> - Scripted text via `GetTranslatorForPlayerAsync` (in `pcall`) + `FormatByKey`; re-translated when the translator's `LocaleId`...
 > - Source and supported languages set; translated content enabled.
 > - `AutoLocalize = false` on names, numbers and script-filled labels.
-> - Parameters and format specifiers instead of concatenation.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.8k tok. Read more: ## 3. Layout for other languages · ## 5. Scripted localization · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.0k tok. Read more: ## 3. Layout for other languages · ## 5. Scripted localization · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox players speak many languages, and Roblox will translate your game's text for some of them even if you do nothing: every user has an **Automatic Translations** account setting, and Docs state that if it is on, "all game names, game descriptions, and in-game text will be translated for them, even if you have not explicitly enabled translation". That is a free audience boost and a source of layout bugs at the same time. This note covers how automatic translation and capture work, what you must keep out of translation, scripted localization with `LocalizationService` and `Translator`, parameters and formatting, layout for text expansion, and the interactions with rich text and fonts.
@@ -209,6 +209,8 @@ Add a keyed entry whose source and translations are **asset ids** (Docs example:
 
 ---
 
+When the player changes language, the translator's `LocaleId` changes but text your scripts already set does not update itself. Connect `translator:GetPropertyChangedSignal("LocaleId")` and re-run the code that builds each scripted string.
+
 ## 6. Server-side text
 
 The server can use translators too (for example to localise messages it sends), but most games translate on the client, where the player's locale is known and changes are visible. Messages the server sends should be **keys plus parameters**, not finished English sentences, so each client formats them in its own language. This is also cleaner for analytics and for changing wording later.
@@ -232,6 +234,7 @@ Player-generated text (chat, pet names, trade notes) is never translated by your
 
 ## Common mistakes
 
+- Avoid: Translating scripted text once. Symptom: quest lines stay in the old language after the player switches language.
 - Dynamic labels with `AutoLocalize` on: tables full of "Gems: 1,240".
 - String concatenation for sentences with numbers.
 - Rich text tags in translatable strings (stripped in translation).
@@ -243,6 +246,7 @@ Player-generated text (chat, pet names, trade notes) is never translated by your
 
 ## Checklist
 
+- [ ] Scripted text via `GetTranslatorForPlayerAsync` (in `pcall`) + `FormatByKey`; re-translated when the translator's `LocaleId` changes.
 - [ ] Source and supported languages set; translated content enabled.
 - [ ] `AutoLocalize = false` on names, numbers and script-filled labels.
 - [ ] Parameters and format specifiers instead of concatenation.
@@ -260,5 +264,5 @@ See also: [[Text Fonts and Rich Text]], [[Layout - Scale Offset and Constraints]
 
 <!-- related:start -->
 ## Related
-[[Localization-Ready Writing]] · [[Dialogue System End to End]] · [[Readable Text and UI Scale]] · [[Strings Patterns and Formatting]] · [[Notification and Toast Systems]] · [[Experience Description and Search Keywords]]
+[[Localization-Ready Writing]] · [[Dialogue System End to End]] · [[Readable Text and UI Scale]] · [[Notification and Toast Systems]] · [[Strings Patterns and Formatting]] · [[Thumbnail Specs, Rules and Upload - Sizes, Count and Policy]]
 <!-- related:end -->

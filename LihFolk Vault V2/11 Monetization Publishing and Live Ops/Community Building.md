@@ -216,10 +216,10 @@ Write the message where players will see it: the group wall, an update announcem
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Friend Invites Referrals and Experience Invites]] · Community and Moderation Start Here · Discord Servers for Roblox Games · Groups Roles and Permissions for Studios · Links - Community and social · Working with Content Creators
+[[Friend Invites Referrals and Experience Invites]] · Community and Moderation Start Here · Discord Servers for Roblox Games · Groups Roles and Permissions for Studios · Official Docs - Publishing and Live Ops · Working with Content Creators
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Roblox Communities as Your On-Platform Hub]] · [[Groups Roles and Permissions for Studios]] · [[Monetization Overview]] · [[Robux Price Points and Offer Design]] · [[Ads and Rewarded Video]] · [[Refunds Chargebacks and Purchase Support]] · [[Game Passes]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]]
+[[Roblox Communities as Your On-Platform Hub]] · [[Groups Roles and Permissions for Studios]] · [[Monetization Overview]] · [[Robux Price Points and Offer Design]] · [[Ads and Rewarded Video]] · [[Game Passes]] · [[Refunds Chargebacks and Purchase Support]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Thumbnails Icons and Store Page]]
 <!-- related:end -->

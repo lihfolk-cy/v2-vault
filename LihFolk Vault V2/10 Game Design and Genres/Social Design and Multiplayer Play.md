@@ -311,10 +311,10 @@ Players follow creators into games (Docs). Features that help:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Community and Moderation Start Here]] · Robux Price Points and Offer Design · Friend Invites Referrals and Experience Invites · Platform Features Start Here · Trading Systems Without Duplication · Links - Community and social
+[[Community and Moderation Start Here]] · Robux Price Points and Offer Design · Friend Invites Referrals and Experience Invites · Platform Features Start Here · Trading Systems Without Duplication · Official Docs - Publishing and Live Ops
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Genre Playbook - RNG and Collection Games]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Tycoons]] · [[Boss Fight Design Patterns]] · [[Genre Playbook - Survival and Crafting]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - Battlegrounds and Arena Fighters]]
+[[Genre Playbook - RNG and Collection Games]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Party and Minigame Collections]] · [[Boss Fight Design Patterns]] · [[Genre Playbook - Tycoons]] · [[Genre Playbook - Survival and Crafting]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - Battlegrounds and Arena Fighters]]
 <!-- related:end -->

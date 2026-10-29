@@ -117,5 +117,5 @@ Emulate every effect `PointLight` or `SpotLight` in the preview, because they ch
 
 <!-- related:start -->
 ## Related
-[[Ice Ball Cast to Explosion - Approved Recipe]] · [[Beams and Trails]] · [[Light Sources and Shadows]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[VFX Performance Budgets and Culling]]
+[[Ice Ball Cast to Explosion - Approved Recipe]] · [[Designing VFX Textures and Flipbooks in Figma]] · [[Projectile VFX - Muzzle, Travel and Impact]] · [[Beams and Trails]] · [[Light Sources and Shadows]] · [[Auras, Shields and Status Effects]] · [[AoE Telegraphs - Readable Ground Warnings]] · [[Impact Decals and Material-Aware Hit Sparks]]
 <!-- related:end -->

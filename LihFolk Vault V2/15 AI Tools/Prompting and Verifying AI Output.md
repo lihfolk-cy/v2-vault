@@ -236,5 +236,5 @@ Rules of thumb from the reference project:
 
 <!-- related:start -->
 ## Related
-[[Evaluating AI Tools - A Practical Rubric]] · [[What AI Models Get Wrong in Roblox]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[AI Animation and Motion from Video]] · [[AI Asset Pipelines - Scoring, Reviewers and Spot Checks]] · [[Agent Orchestration - Sub-Agents, Hooks and Skill Costs]] · [[Token Cost Benchmarks]] · [[AI Audio - Voice Music and SFX]]
+[[Evaluating AI Tools - A Practical Rubric]] · [[What AI Models Get Wrong in Roblox]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[AI Animation and Motion from Video]] · [[AI Asset Pipelines - Scoring, Reviewers and Spot Checks]] · [[Agent Orchestration - Sub-Agents, Hooks and Skill Costs]] · [[Token Cost Benchmarks]] · [[Roblox Built-In AI Tools Timeline 2023-2026]]
 <!-- related:end -->

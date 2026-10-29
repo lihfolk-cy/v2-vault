@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/modeling, area/animation]
 > - Avoid: Treating decimation output as final topology.
 > - Fast, automatic, keeps UVs mostly intact, makes triangle soup topology.
 >
-> Cost: TL;DR ~130 tok · whole note ~780 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~770 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ Topology: How a mesh's polygons are arranged; decides how it deforms. (from [[Gl
 
 ## Mentioned in
 
-46 notes in 17 sections. The 25 most relevant are linked:
+45 notes in 16 sections. The 25 most relevant are linked:
 
 ### 06 World Building and Art
 [[Modeling in Blender for Roblox]]
@@ -60,6 +60,6 @@ Topology: How a mesh's polygons are arranged; decides how it deforms. (from [[Gl
 ### 55 Modelling Nuance and Readability
 [[Spending Triangles Where the Camera Looks]]
 
-Also mentioned in (not linked): 00 Start Here · Clean Stylised Shading - Weighted and Custom Normals · Evaluating AI Tools - A Practical Rubric · Exporting and Validating Models for Roblox · Glossary · Ground Fitting Pipeline · Keeping a Mixed Asset Library Consistent · Mesh Gates for Generated Models - Symmetry, Seating and Caps · Mesh Optimization for Mobile · Pathfinding · Procedural Blender Assets Start Here · Procedural Model Kits - Lessons · Resource Library - Assets (creation) · Retargeting Animations Between Rigs · Skinning Weights · Studio Assistant and AI Tools · Texturing and PBR Baking · The Gradient Palette Texture Workflow · Triangle Budget · Untextured Stylised Modelling Start Here · Voxel Modelling Start Here
+Also mentioned in (not linked): 00 Start Here · Clean Stylised Shading - Weighted and Custom Normals · Evaluating AI Tools - A Practical Rubric · Exporting and Validating Models for Roblox · Glossary · Ground Fitting Pipeline · Keeping a Mixed Asset Library Consistent · Mesh Gates for Generated Models - Symmetry, Seating and Caps · Mesh Optimization for Mobile · Pathfinding · Procedural Blender Assets Start Here · Procedural Model Kits - Lessons · Retargeting Animations Between Rigs · Skinning Weights · Studio Assistant and AI Tools · Texturing and PBR Baking · The Gradient Palette Texture Workflow · Triangle Budget · Untextured Stylised Modelling Start Here · Voxel Modelling Start Here
 
 <!-- atlas:generated -->

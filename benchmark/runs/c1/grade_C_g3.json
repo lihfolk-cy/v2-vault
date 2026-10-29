@@ -1,0 +1,290 @@
+[
+ {
+  "id": "C1",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "all cover timeout/reached, pathfinding waypoints, Jump + Blocked"
+ },
+ {
+  "id": "C2",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "C3",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "C4",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "C5",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "C6",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "C7",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "C8",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3.5,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "item2 half where no NotProcessedYet for absent player (R1 R2 R4 R6); item4 half for 'retries on rejoin', R5 only 'retries later' =0"
+ },
+ {
+  "id": "C9",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 2,
+   "R6": 3
+  },
+  "notes": "all items full; R5 -1 for claiming you can still filter with offline author's UserId"
+ },
+ {
+  "id": "C10",
+  "scores": {
+   "R1": 2.5,
+   "R2": 2.5,
+   "R3": 2.5,
+   "R4": 2.5,
+   "R5": 2.5,
+   "R6": 2.5
+  },
+  "notes": "none give 50-char key limit; item3 half"
+ },
+ {
+  "id": "C11",
+  "scores": {
+   "R1": 1.5,
+   "R2": 1.5,
+   "R3": 2,
+   "R4": 1.5,
+   "R5": 1.5,
+   "R6": 1.5
+  },
+  "notes": "AwardBadge without deprecation note=0.5 per notes; R3 names AwardBadgeAsync"
+ },
+ {
+  "id": "C12",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "C13",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 2.5,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "R3 no 45-day max on expiration"
+ },
+ {
+  "id": "C14",
+  "scores": {
+   "R1": 3.5,
+   "R2": 3.5,
+   "R3": 3.5,
+   "R4": 3.5,
+   "R5": 3.5,
+   "R6": 3.5
+  },
+  "notes": "all use ReserveServer/AccessCode or ShouldReserveServer, no ReservedServerId GUID -> item2 0.5"
+ },
+ {
+  "id": "C15",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "C16",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 2,
+   "R5": 3,
+   "R6": 2
+  },
+  "notes": "R4 R6 miss LocaleId change re-translate"
+ },
+ {
+  "id": "C17",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 2.5,
+   "R5": 3,
+   "R6": 2.5
+  },
+  "notes": "R4 R6 give ~900 bytes vs 1000"
+ },
+ {
+  "id": "C18",
+  "scores": {
+   "R1": 2.5,
+   "R2": 2.5,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2.5,
+   "R6": 2
+  },
+  "notes": "item3 anchored/SetNetworkOwnershipAuto: partial R1 R2 R5, missing R3 R4 R6"
+ },
+ {
+  "id": "C19",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "C20",
+  "scores": {
+   "R1": 2,
+   "R2": 1.5,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "R2 no StreamingIntegrityMode"
+ },
+ {
+  "id": "C21",
+  "scores": {
+   "R1": 2.5,
+   "R2": 3,
+   "R3": 2.5,
+   "R4": 3,
+   "R5": 2.5,
+   "R6": 3
+  },
+  "notes": "R1 puts property on StarterPlayer not Workspace; R3 R5 no opt-in property/default flip"
+ },
+ {
+  "id": "C22",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 1.5,
+   "R6": 2
+  },
+  "notes": "none name CanUsersDirectChatAsync requirement for custom chat; R5 no retirement date"
+ },
+ {
+  "id": "C23",
+  "scores": {
+   "R1": 2,
+   "R2": 1.5,
+   "R3": 2,
+   "R4": 1.5,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "R2 R4 miss 0.0054 US 18+ rate"
+ },
+ {
+  "id": "C24",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "none mention social link ban / GetExternalLinkReference sunset"
+ }
+]

@@ -470,10 +470,10 @@ Reserved and private servers do not belong in the public registry: you cannot jo
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Parties and Group Teleports]] · [[Links - Reserved and private servers]] · [[Server Shutdowns Soft Updates and Migration]] · Open Cloud APIs · OrderedDataStores and Leaderboards · Debugging DataStore Problems
+[[Parties and Group Teleports]] · [[Official Docs - Networking and Multiplayer]] · [[Server Shutdowns Soft Updates and Migration]] · Open Cloud APIs · OrderedDataStores and Leaderboards · Debugging DataStore Problems
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Server Hop Rejoin and Server Lists with Ping]] · [[Session State Across Places]] · [[Joining Friends Parties and Private Servers]] · [[Genre Playbook - Battle Royale]] · [[OrderedDataStores and Leaderboards]] · [[Debugging Live Servers]]
+[[Server Hop Rejoin and Server Lists with Ping]] · [[Session State Across Places]] · [[Joining Friends Parties and Private Servers]] · [[Genre Playbook - Battle Royale]] · [[OrderedDataStores and Leaderboards]] · [[TeleportService - Engine Reference Card]]
 <!-- related:end -->

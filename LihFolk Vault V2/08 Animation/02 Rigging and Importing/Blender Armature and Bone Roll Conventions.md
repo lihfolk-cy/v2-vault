@@ -234,5 +234,5 @@ for b in rig.data.bones:
 
 <!-- related:start -->
 ## Related
-[[Weight Painting and Skinning for Roblox]] · [[3D Importer Settings Reference]] · [[Importing Models and Rigs]] · [[Skeleton Library]] · [[Accessories and Armor That Follow Animation]] · [[Custom Rigs - Weapons and Props]] · [[Weapon Design Rig Builder]] · [[Custom Characters and StarterCharacter]] · [[Facial Animation and Dynamic Heads]]
+[[Weight Painting and Skinning for Roblox]] · [[3D Importer Settings Reference]] · [[Importing Models and Rigs]] · [[Skeleton Library]] · [[Accessories and Armor That Follow Animation]] · [[Custom Rigs - Weapons and Props]] · [[Weapon Design Rig Builder]] · [[Custom Characters and StarterCharacter]] · [[Look-At Aim and Head Tracking]]
 <!-- related:end -->

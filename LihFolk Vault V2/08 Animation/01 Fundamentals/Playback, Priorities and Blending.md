@@ -146,10 +146,10 @@ Real games have several systems playing tracks on one character: locomotion, com
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Custom Locomotion Controller Design]] · [[Engine Gotchas]] · [[Snippets - Playing Animations]] · [[Weapon and Combat Animation]] · [[Links - Animation playback]] · AI Animation and Motion from Video · [[Animation Start Here]]
+[[Custom Locomotion Controller Design]] · [[Engine Gotchas]] · [[Snippets - Playing Animations]] · [[Weapon and Combat Animation]] · [[Official Docs - Characters and Animation]] · AI Animation and Motion from Video · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[R15 Run Cycle Key Poses]] · [[Animation Glossary]] · [[Snippets - Lua Keyframe Player Core]] · [[AI Pitfalls - Physics and Animation]] · [[Combat Animation Craft]] · [[Troubleshooting Table]] · [[Animation Objects]] · [[Timing Spacing and Frame Charts]] · [[Lua Keyframe Player]]
+[[Animator - Engine Reference Card]] · [[R15 Run Cycle Key Poses]] · [[Animation Glossary]] · [[Snippets - Lua Keyframe Player Core]] · [[Combat Animation Craft]] · [[AI Pitfalls - Physics and Animation]] · [[Troubleshooting Table]] · [[Lua Keyframe Player]] · [[Timing Spacing and Frame Charts]] · [[Animator Deep Dive]]
 <!-- related:end -->

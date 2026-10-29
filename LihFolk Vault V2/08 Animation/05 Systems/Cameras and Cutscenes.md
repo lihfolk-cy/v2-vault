@@ -247,7 +247,7 @@ The senior trade-off: cinematic camera work sells moments, but every second of t
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Cameras]] · Safe Areas and Insets · Side-Scroller in 3D - Locking Camera and Movement to a Plane · Modelling to the Roblox Camera and Player Scale · Safe Area · HUD Design · [[Animation Start Here]]
+[[Official Docs - Input and Controls]] · Safe Areas and Insets · Side-Scroller in 3D - Locking Camera and Movement to a Plane · Modelling to the Roblox Camera and Player Scale · Safe Area · HUD Design · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->

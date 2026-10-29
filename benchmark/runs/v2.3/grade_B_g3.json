@@ -1,0 +1,362 @@
+[
+ {
+  "id": "B1",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 2.5,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 2.5,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "R3/R7 do not state server-only award."
+ },
+ {
+  "id": "B2",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "All: streaming cause, WaitForChild/tags, Atomic/Persistent or server."
+ },
+ {
+  "id": "B3",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "All list unconditional Granted, no PurchaseId, Get+Set, nil plr."
+ },
+ {
+  "id": "B4",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "B5",
+  "scores": {
+   "R1": 1.67,
+   "R2": 1.67,
+   "R3": 1.67,
+   "R4": 1.67,
+   "R5": 1.67,
+   "R6": 1.67,
+   "R7": 1.67,
+   "R8": 1.67,
+   "R9": 1.67
+  },
+  "notes": "All fix ray length and nil check; none states 15,000-stud max."
+ },
+ {
+  "id": "B6",
+  "scores": {
+   "R1": 1.67,
+   "R2": 1.67,
+   "R3": 1.33,
+   "R4": 1.33,
+   "R5": 1,
+   "R6": 1.67,
+   "R7": 2,
+   "R8": 1.67,
+   "R9": 2
+  },
+  "notes": "Partial for missing IsStudio guard or pcall/retry."
+ },
+ {
+  "id": "B7",
+  "scores": {
+   "R1": 2.25,
+   "R2": 3,
+   "R3": 3,
+   "R4": 2.25,
+   "R5": 3,
+   "R6": 3,
+   "R7": 2.25,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "R1/R4/R7 only comment about argument validation."
+ },
+ {
+  "id": "B8",
+  "scores": {
+   "R1": 4,
+   "R2": 4,
+   "R3": 4,
+   "R4": 4,
+   "R5": 4,
+   "R6": 3.5,
+   "R7": 3,
+   "R8": 2,
+   "R9": 4
+  },
+  "notes": "R6 returns Granted when lock check cancels the write; R7 no assign-once; R8 no assign-once and grants for absent player."
+ },
+ {
+  "id": "B9",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2,
+   "R8": 2,
+   "R9": 2
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "B10",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "B11",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "B12",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "All use TeleportAsync/options, pcall retries, InitFailed, warn about teleport data."
+ },
+ {
+  "id": "B13",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.25,
+   "R3": 2.25,
+   "R4": 2.25,
+   "R5": 2.25,
+   "R6": 2.25,
+   "R7": 2.25,
+   "R8": 2.25,
+   "R9": 2.25
+  },
+  "notes": "None mention identifying caller via the automatic Player argument."
+ },
+ {
+  "id": "B14",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "B15",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "B16",
+  "scores": {
+   "R1": 1.88,
+   "R2": 1.88,
+   "R3": 1.88,
+   "R4": 1.88,
+   "R5": 1.88,
+   "R6": 1.88,
+   "R7": 2.63,
+   "R8": 2.25,
+   "R9": 1.88
+  },
+  "notes": "Most omit Touched-on-owned-parts risk and jitter from ownership changes; R7 notes jitter, R8 notes client touches."
+ },
+ {
+  "id": "B17",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 2.63,
+   "R9": 3
+  },
+  "notes": "R8 states ~900-byte limit."
+ },
+ {
+  "id": "B18",
+  "scores": {
+   "R1": 2.63,
+   "R2": 2.63,
+   "R3": 3,
+   "R4": 3,
+   "R5": 2.63,
+   "R6": 2.63,
+   "R7": 3,
+   "R8": 2.63,
+   "R9": 3
+  },
+  "notes": "Partial where require-in-parallel restriction is missing."
+ },
+ {
+  "id": "B19",
+  "scores": {
+   "R1": 1.67,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2,
+   "R8": 2,
+   "R9": 2
+  },
+  "notes": "R1 omits Opportunistic/Improved behaviour."
+ },
+ {
+  "id": "B20",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2,
+   "R8": 2,
+   "R9": 2
+  },
+  "notes": "All correct on cause and redesign."
+ },
+ {
+  "id": "B21",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 1.67,
+   "R5": 1.33,
+   "R6": 1.33,
+   "R7": 2,
+   "R8": 1.33,
+   "R9": 1.67
+  },
+  "notes": "Partial for missing stdio/studio_id detail."
+ },
+ {
+  "id": "B22",
+  "scores": {
+   "R1": 2.25,
+   "R2": 3,
+   "R3": 2.25,
+   "R4": 3,
+   "R5": 2.25,
+   "R6": 2.25,
+   "R7": 3,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "R1/R3/R5/R6 omit PlayerScriptsUseInputActionSystem."
+ },
+ {
+  "id": "B23",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "All name StyleSheet/Rule/Link/Derive, selectors, $ tokens."
+ },
+ {
+  "id": "B24",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2,
+   "R8": 2,
+   "R9": 1.5
+  },
+  "notes": "R9 omits rollout timeline."
+ }
+]

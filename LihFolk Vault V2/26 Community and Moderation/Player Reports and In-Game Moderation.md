@@ -302,10 +302,10 @@ A small obby with no chat-adjacent features, no UGC and no trading needs: defaul
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Discord Servers for Roblox Games]] · [[Anti-Exploit Start Here]] · Skill - Roblox Anti-Exploit Review · Links - Chat and text filtering · Genre Playbook - Roleplay and Social Hangouts · Avatar Context Menus Profiles and Social Surfaces
+[[Discord Servers for Roblox Games]] · [[Anti-Exploit Start Here]] · Skill - Roblox Anti-Exploit Review · Official Docs - Security and Moderation · Genre Playbook - Roleplay and Social Hangouts · Avatar Context Menus Profiles and Social Surfaces
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Admin Commands Done Safely - Permissions and Audit Logs]] · [[Roblox Communities as Your On-Platform Hub]] · [[Working with Content Creators]] · [[Block and Mute Respecting Platform Rules]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[In-Game AI - LLM NPCs and Text Generation]]
+[[Admin Commands Done Safely - Permissions and Audit Logs]] · [[Roblox Communities as Your On-Platform Hub]] · [[Working with Content Creators]] · [[Block and Mute Respecting Platform Rules]] · [[Text Filtering - TextService for Names, Signs and Messages]] · [[Genre Playbook - Roleplay and Social Hangouts]]
 <!-- related:end -->

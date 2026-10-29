@@ -1,6 +1,6 @@
 ---
 name: lihfolk-vfx
-description: 'LihFolk slash and combat VFX library (sweeps, crescents, stab, cleave, dash afterimage, hit spark, charge aura, ice burst). Use for "slash effect", "sword VFX", "make the swing look better".'
+description: 'LihFolk VFX: slashes, impacts, projectiles, auras, AoE telegraphs, shields, beams, heals, teleports, level-up, camera shake, hit-stop. Use for "slash effect", "ability VFX".'
 ---
 
 # LihFolk VFX: slashes, impacts and auras
@@ -67,6 +67,9 @@ Blind Reviews" and "Escalation and Grandeur Without Clutter".
 |---|---|
 | `src/LihFolkVFX.luau` | the module |
 | `examples/SwordVFXClient.client.luau` | wiring for our sword clips |
+| `src/LihFolkVFX_Abilities.luau` | ability presets beyond slashes (section "Ability VFX" below) |
+| `examples/AbilityShowcase.client.luau` | cycles every ability preset on the local character (review harness) |
+| `examples/AbilityVFXReplication.server.luau` / `.client.luau` | validate on the server, one payload to nearby clients, caster predicts |
 | `<LihFolk Asset Pack>\VFX\Textures\*.png` (separate local pack, not in this repo) | textures (`_textures.json` lists role and use) |
 | `...\VFX\Meshes\*.glb` | meshes (`_gate_report.json`): crescents (+ `crescent_single_thick_hd`), rings, `ground_ring`, `crystal`, `ice_mound`, `shard`, `petal` |
 | `...\VFX\Previews\` | one MP4 + one frame strip per preset, mesh and texture contact sheets |
@@ -155,3 +158,65 @@ Squash, card Rotation sign and SpecialMesh lighting are approximations. Score wi
 - Ghost cloning: parts with `Archivable = false` are skipped; check accessories and layered clothing.
 - `ChargeUp` retiming on SwordHeavy, `DashStart` follow distance against walls, `Impact` value routing.
 - Phone at game distance, darkest and brightest zones.
+
+## Ability VFX (LihFolkVFX_Abilities)
+
+Standalone module (`src/LihFolkVFX_Abilities.luau`, UNTESTED IN STUDIO) for everything that is not a slash: radial, path and
+attached effects, which the frontal rule allows. Same conventions as the slash module: one Heartbeat loop, Emit bursts,
+quality scaling, live cap 900 PC / 360 touch (`Config.externalLive` lets several modules share one cap), cull 220 studs,
+low detail 160 studs, at most one light per effect (no shadows), Debris safety net, client only.
+Vault: "Projectile VFX - Muzzle, Travel and Impact", "AoE Telegraphs - Readable Ground Warnings",
+"Auras, Shields and Status Effects", "Replicating VFX - Server Validates, Clients Render", "Hit-Stop and Screen Shake Tuning by Numbers".
+
+| Call | Does | Handle |
+|---|---|---|
+| `Projectile(fromCF, target?, opts)` | muzzle flash + forward sparks, Neon core (hot centre, or a ForceField rim for void), tapered Trail, element + dark wake, homing (`homing` deg/s), `gravity`, wall raycast, impact flash 1 frame late, sparks, chips, surface rings, light pulse. `target` = Vector3, BasePart, Attachment or nil (`direction`) | `:Impact(pos?, normal?)`, `:Destroy()` |
+| `Aura(character, opts)` | rising motes + dark specks from a feet Attachment, Highlight outline rim (no fill), breathing foot ring over a dark ring, 2 orbiting Trail wisps; sleeps beyond 160 studs | `:SetIntensity(0..1)`, `:Destroy()` |
+| `Telegraph(cf, "circle"/"cone"/"line", opts)` | raycast to floor and slope; dark outline, base fill, progress fill with hot leading edge, bright rim; fills over `duration`, pops; `important` by default | `:Cancel()`, `:Destroy()` |
+| `Shield(characterOrPart, opts)` | ForceField sphere + Highlight rim, grow-in overshoot, surface glints, ripple ring on the tangent plane + sparks per hit, break burst (shards, ring, light) | `:Hit(worldPos)`, `:Break()`, `:Destroy()` |
+| `BeamLaser(fromAtt, to, opts)` | charge (converging motes, growing orb), dark edge + body + white core Beams with width wobble and texture scroll, wall clip, impact glow + spark stream + light at the end every frame, end burst | `:SetTarget(posOrAtt)`, `:Stop()`, `:Destroy()` |
+| `Heal(character, opts)` / `Buff(...)` | rising motes; Heal: expanding ring + faint disc + gold glints; Buff: imploding ring, pop ring, upward streaks | `:Destroy()` |
+| `Teleport(fromCF, toCF, opts)` | source: imploding ring, converging motes, collapsing column; destination after `delay`: flash, column burst, bright + dark rings, sparks, dust | `:Destroy()` |
+| `LevelUp(character, opts)` | two escalating foot rings, scan ring rising round the body, light pillar above the head, sparkle fountain, confetti, motes, light above | `:Destroy()` |
+| `CameraShake(intensity, duration, {position, near, far})` | local camera, trauma squared noise, smoothstep falloff 30 to 150 studs, off under `Config.reducedMotion`, scaled by `Config.shakeScale` | none |
+| `HitStop(trackOrListOrAnimator, duration, {speed, catchUp})` | `AdjustSpeed(0)` then restore the speed from before the first overlapping stop; `catchUp` replays the lost time; capped at 0.2 s; off under reduced motion | none |
+| `playPayload(caster, presetId, cf, elementIndex, seed, aux?)` | replays a server broadcast (`PresetIds`, `ElementIds`, `PayloadDefaults`, `CastRules`) | the preset's handle |
+
+Common options: `element` (teal, violet, fire, ice, lightning, void, holy, plasma, heal), `palette`, `scale`, `important`, `seed`, `quality`.
+Culled calls return a handle whose methods do nothing, so callers never need nil checks.
+
+### Budgets (quality 1; touch 0.6)
+
+| Preset | Particles counted | Beams / Trails | Adornments / Neon parts | Highlights | Lights |
+|---|---|---|---|---|---|
+| Projectile | 9 muzzle + ~19 wake alive + 25 impact | 0 / 1 | 2 / 2 | 0 | 1 (travels, pulses at impact) |
+| Aura | ~15 alive | 0 / 2 | 2 / 0 | 1 | 0 (opt-in 1, above and behind) |
+| Telegraph | 0 | 0 / 0 | 5 circle, 7 cone or line / 0 | 0 | 0 |
+| Shield | ~3 alive, 10 per hit, 34 at break | 0 / 0 | up to 4 ripples + 1 / 0 (ForceField shell) | 1 | 1 at break only |
+| BeamLaser | 15 charge + ~9 alive + 16 end | 3 (2 below quality 0.55) / 0 | 0 / 2 | 0 | 1 at the endpoint |
+| Heal / Buff | 39 / 48 | 0 / 0 | 2 / 0 | 0 | 0 |
+| Teleport | 49 (dust 6 needs `smoke_puff`) | 0 / 0 | 3 / 2 | 0 | 1 at the destination |
+| LevelUp | 76 | 0 / 0 | 3 / 2 | 0 | 1 above the head |
+
+### Built-in looks with empty Textures
+`glow_soft`, `flash_hot`, `spark_streak`, `spark_square` fall back to the engine's default particle sprite (one warning each);
+`trail_soft`, `beam_core`, `beam_outer` draw solid gradient ribbons; rings, discs and sectors are HandleAdornments, cores and
+columns Neon parts, the shield a ForceField ball, rims Highlights: none of them needs an upload. Skipped until you upload
+your own: `smoke_puff` (teleport dust) and `scorch_mark` (projectile ground mark).
+
+### Replication pattern
+1. Client presses a key: plays the preset at once (`important = true`) and fires `AbilityCast(presetId, aim)`. It sends
+   no colour, size or CFrame for the server to trust; it mirrors `CastRules` so it predicts only accepted casts.
+2. Server: type checks, preset in `CastRules`, finite aim, alive, range clamp, per-preset cooldown + token bucket
+   (6 burst, 3/s), then gameplay (hits, damage) and ONE `AbilityVFX` payload
+   `(caster, presetId, cf, elementIndex, seed, aux)` to each player within 250 studs, skipping the caster.
+3. Other clients: `playPayload` (seeded variation); the caster ignores echoes of its own client-castable presets.
+   Server-originated presets (boss telegraphs, LevelUp) go to everyone, caster included.
+Persistent states (aura on, shield up) replicate as attributes on the character, and each client starts or stops its own
+`Aura`/`Shield` from `GetAttributeChangedSignal`; events carry only one-shots.
+
+### Studio checks still needed (abilities)
+- Telegraph cones: `CylinderHandleAdornment.Angle` start direction; set `Config.coneSectorOffset` once if the cone is rotated.
+- HandleAdornments on slopes and in dark/bright zones at game distance; ForceField shell colour per element.
+- Highlight rims when the character already has a Highlight (one per object; see "Highlights and Selection Effects").
+- CameraShake with custom camera scripts (bound at `RenderPriority.Camera + 1`); HitStop with clips that set their own speed.

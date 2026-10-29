@@ -162,10 +162,10 @@ Captured motion is dense by nature. On Roblox:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI Animation and Motion from Video]] · [[Animation Editor Workflow]] · [[Moon Animator and Third-Party Tools]] · Modeling Characters for R15 and Custom Rigs · Voxel Characters - Proportions Joints and Rigging · Links - Animation creation · [[Animation Start Here]]
+[[AI Animation and Motion from Video]] · [[Animation Editor Workflow]] · [[Moon Animator and Third-Party Tools]] · Modeling Characters for R15 and Custom Rigs · Voxel Characters - Proportions Joints and Rigging · Official Docs - Asset Creation · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Free Mocap and Mixamo Licensing for Roblox]] · [[Posing and Silhouettes]] · [[Authoring Clips in Code]] · [[R15 Run Cycle Key Poses]] · [[Spec-Driven Move Authoring]] · [[Animation Glossary]] · [[LihFolk R15 Keyframe Pipeline]] · [[Idle Breathing and Secondary Motion]]
+[[Posing and Silhouettes]] · [[Free Mocap and Mixamo Licensing for Roblox]] · [[Authoring Clips in Code]] · [[R15 Run Cycle Key Poses]] · [[Spec-Driven Move Authoring]] · [[Animation Glossary]] · [[LihFolk R15 Keyframe Pipeline]] · [[Spin and Whole-Body Rotation Moves]]
 <!-- related:end -->

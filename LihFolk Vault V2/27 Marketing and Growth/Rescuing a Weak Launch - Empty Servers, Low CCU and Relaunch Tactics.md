@@ -117,5 +117,5 @@ A relaunch is a **promise change plus a product change**, announced honestly. Ru
 
 <!-- related:start -->
 ## Related
-[[Click-Through Rate]] · [[Retention Cohorts]] · [[Experience Description and Search Keywords]] · [[Short-Form Video Marketing]] · [[Marketing to Kids and Teens - Age Rules and Paid-Promo Disclosure]] · [[Game Icon Design - Readable at Small Sizes]]
+[[From CTR to CCU - Impressions, Play-Through and the Discovery Loop]] · [[Click-Through Rate]] · [[Retention Cohorts]] · [[Experience Description and Search Keywords]] · [[Thumbnail and Icon A-B Testing - Method, Sample Size and Reading Results]] · [[Short-Form Video Marketing]]
 <!-- related:end -->

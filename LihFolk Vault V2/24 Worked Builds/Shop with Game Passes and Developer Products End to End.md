@@ -5,14 +5,14 @@ tags: [worked-build, monetization, game-passes, developer-products, processrecei
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
+> - Avoid: Expecting a timed retry after `NotProcessedYet`.
 > - Avoid: Two scripts assigning `ProcessReceipt`: one system silently never gets receipts.
 > - Avoid: Granting in `PromptProductPurchaseFinished` (the docs say it does not confirm a purchase).
-> - Avoid: Returning `PurchaseGranted` before the save.
+> - Buyer not in this server returns `NotProcessedYet`; Roblox re-sends it on rejoin or the next product purchase.
 > - One `ProcessReceipt`, wrapped in `pcall`, returns `NotProcessedYet` on any doubt
 > - `PurchaseId` and grant saved together; acknowledged only after save
-> - Grants cannot fail half-way (fallback to coins)
 >
-> Cost: TL;DR ~150 tok · whole note ~6.8k tok. Read more: ## 4. Server · ## 5. Client and UI · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~6.9k tok. Read more: ## 4. Server · ## 5. Client and UI · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A working in-game shop from an empty place: two game passes (VIP and Double Coins) whose benefits are derived from ownership, three coin packs and a starter pack sold as developer products and granted through one idempotent `ProcessReceipt`, prices read live for each player, and a shop window that refuses to sell while the player's data is not loaded. It is built on the foundation from [[Saved Inventory End to End]] (`PlayerData`, `Net`, `InventoryService`) and uses the `Receipts` field already in its `DataTemplate`.
@@ -359,6 +359,8 @@ If you multiply purchased coins, a "5,000 coins" pack silently becomes 12,500 fo
 
 ---
 
+A receipt left as `NotProcessedYet` is not retried on a timer: Roblox calls `ProcessReceipt` again when that player joins a server of the experience or buys another developer product. Returning `NotProcessedYet` when the buyer is not in this server (`Players:GetPlayerByUserId` is nil) is therefore safe; the grant happens wherever they play next.
+
 ## 5. Client and UI
 
 The client prompts purchases directly: `PromptGamePassPurchase` and `PromptProductPurchase` can be called from a LocalScript (Roblox docs). There is no "buy" remote, because the client never needs to tell the server anything about a purchase. Note: as of October 2026 the `MarketplaceService` reference page marks `PromptProductPurchase` as deprecated without naming a replacement on that page, while the Developer Products guide still uses it. This note follows the guide; check the reference for a successor before you ship.
@@ -567,6 +569,7 @@ Studio purchases are test purchases: the prompt says so and no Robux are charged
 
 ## Common mistakes
 
+- Avoid: Expecting a timed retry after `NotProcessedYet`. Symptom: grant waits until the buyer rejoins or buys another product.
 - Two scripts assigning `ProcessReceipt`: one system silently never gets receipts.
 - Granting in `PromptProductPurchaseFinished` (the docs say it does not confirm a purchase).
 - Returning `PurchaseGranted` before the save.
@@ -576,6 +579,7 @@ Studio purchases are test purchases: the prompt says so and no Robux are charged
 
 ## Checklist
 
+- [ ] Buyer not in this server returns `NotProcessedYet`; Roblox re-sends it on rejoin or the next product purchase.
 - [ ] One `ProcessReceipt`, wrapped in `pcall`, returns `NotProcessedYet` on any doubt
 - [ ] `PurchaseId` and grant saved together; acknowledged only after save
 - [ ] Grants cannot fail half-way (fallback to coins)
@@ -591,7 +595,7 @@ Studio purchases are test purchases: the prompt says so and no Robux are charged
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Idempotency]] · Skill - Roblox Monetization Compliance · Links - Developer products · Links - Game passes · Limited-Time Offers - Design and Ethics · Currency Architecture - Soft Hard and Event Currencies
+[[Idempotency]] · Skill - Roblox Monetization Compliance · Official Docs - Monetization · Limited-Time Offers - Design and Ethics · Currency Architecture - Soft Hard and Event Currencies
 <!-- auto-links:end -->
 
 <!-- related:start -->

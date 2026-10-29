@@ -338,10 +338,10 @@ See also: [[Accessibility Start Here]], [[Accessibility]], [[Text Fonts and Rich
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Debugging UI Layout and Input]] · Cookbook - UI · Skill - Roblox UI Builder · Links - UI elements · Case Study - Phone UI Overhaul · Accessibility Contrast
+[[Debugging UI Layout and Input]] · Cookbook - UI · Skill - Roblox UI Builder · Official Docs - UI · Case Study - Phone UI Overhaul · Accessibility Contrast
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[UIStroke on Text - Glyph Counters and the Stroke Ratio]] · [[Colourblind Palettes Text Size and Tooltips]] · [[AI Pitfalls - UI and Input]] · [[Onboarding Accessibility and Cross-Device Prompts]] · [[Captions and Audio Accessibility]] · [[Input Remapping and One-Handed Play]]
+[[UIStroke on Text - Glyph Counters and the Stroke Ratio]] · [[Colourblind Palettes Text Size and Tooltips]] · [[Onboarding Accessibility and Cross-Device Prompts]] · [[Captions and Audio Accessibility]] · [[Input Remapping and One-Handed Play]] · [[Motion Sensitivity and Camera Comfort]]
 <!-- related:end -->

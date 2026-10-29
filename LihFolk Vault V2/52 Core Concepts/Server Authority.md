@@ -62,10 +62,10 @@ Related concepts: [[Replication Boundary]], [[Rate Limiting]], [[Idempotency]], 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Anti-Exploit Start Here]] · Skill - Roblox Anti-Exploit Review · Links - Server authority · Cookbook - Remotes and Networking · Links - Latency and prediction · Links - Client-server and security model · [[Core Concepts Start Here]]
+[[Anti-Exploit Start Here]] · Skill - Roblox Anti-Exploit Review · Official Docs - Networking and Multiplayer · Cookbook - Remotes and Networking · Official Docs - Scripting and Luau · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[AI Pitfalls - Networking and Security]] · [[Deterministic Simulation]] · [[Streaming Radius]] · [[Input Buffering]] · [[Anticipation]] · [[Session Lock]] · [[Event Bus]] · [[Hit-Stop]] · [[Data Schema Versioning]]
+[[AI Pitfalls - Networking and Security]] · [[Deterministic Simulation]] · [[Streaming Radius]] · [[Input Buffering]] · [[Session Lock]] · [[Anticipation]] · [[Event Bus]] · [[Hit-Stop]] · [[Data Schema Versioning]]
 <!-- related:end -->

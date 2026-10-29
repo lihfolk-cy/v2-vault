@@ -5,14 +5,14 @@ tags: [world-building, collision, physics, collisionfidelity, colliders, collisi
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
+> - Avoid: Collision groups set up through `PhysicsService` in new code -> Same methods on `workspace` (WorldRoot); parts join a group via...
 > - Avoid: Visual mesh used as floor -> Primitive colliders
 > - Avoid: PCD on every mesh -> PCD only where walkable detail matters
-> - Avoid: Trying to set CollisionFidelity in game code -> Studio, or CreateMeshPartAsync + ApplyMesh
+> - Collision groups registered on `workspace` (WorldRoot), at most 32 per world; character parts assigned on spawn and on...
 > - Visual art non-colliding; colliders are simple invisible Parts.
 > - Decoration CanTouch / CanQuery off.
-> - Mesh fidelity: Box for small, Hull for convex, PCD only where needed.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.7k tok. Read more: ## Mesh CollisionFidelity · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.9k tok. Read more: ## Mesh CollisionFidelity · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 What players see and what they collide with should be two different problems. Visual geometry is detailed, irregular and full of tiny parts; good collision geometry is simple, smooth, predictable and cheap. This note covers the collision flags every part has, mesh `CollisionFidelity`, the visual/collider split, collision groups, invisible floors for AI, and how to test collision after an art pass. Physics simulation itself (assemblies, constraints, ownership) is in [[Physics Assemblies and Constraints]] and [[Physics Performance]].
@@ -131,26 +131,24 @@ Pathfinding uses collision geometry: decorative non-colliding props do not block
 
 ## Collision groups
 
-Collision groups decide which groups collide with which. Facts (Roblox docs):
+Collision groups decide which groups collide with which. Since September 2026 they are managed per world on `WorldRoot`: call `RegisterCollisionGroup`, `CollisionGroupSetCollidable` and the related methods on `workspace` (or a `WorldModel`). The `PhysicsService` versions are deprecated and forward to `Workspace`, so old code keeps working. Facts (Roblox docs):
 - One `Default` group always exists and cannot be renamed or deleted.
 - All groups collide with each other until you disable pairs.
 - A part belongs to exactly one group.
-- `PhysicsService:GetMaxCollisionGroups()` returns the limit (32 at the time of writing).
+- `WorldRoot:GetMaxCollisionGroups()` returns the limit: 32 **per world**. Workspace and each `WorldModel` have separate budgets; `WorldModel.UseWorkspaceCollisionGroups` defaults to false (true shares Workspace's groups).
 
 ```lua
 --!strict
-local PhysicsService = game:GetService("PhysicsService")
-
 local GROUPS = { "Players", "Enemies", "EnemyWalls" }
 for _, g in GROUPS do
-	if not PhysicsService:IsCollisionGroupRegistered(g) then
-		PhysicsService:RegisterCollisionGroup(g)
+	if not workspace:IsCollisionGroupRegistered(g) then
+		workspace:RegisterCollisionGroup(g)
 	end
 end
 -- Players pass through each other; invisible enemy-only walls stop enemies but not players.
-PhysicsService:CollisionGroupSetCollidable("Players", "Players", false)
-PhysicsService:CollisionGroupSetCollidable("Players", "EnemyWalls", false)
-PhysicsService:CollisionGroupSetCollidable("Enemies", "EnemyWalls", true)
+workspace:CollisionGroupSetCollidable("Players", "Players", false)
+workspace:CollisionGroupSetCollidable("Players", "EnemyWalls", false)
+workspace:CollisionGroupSetCollidable("Enemies", "EnemyWalls", true)
 
 local function setGroup(model: Instance, group: string)
 	for _, p in model:GetDescendants() do
@@ -160,6 +158,8 @@ local function setGroup(model: Instance, group: string)
 	end
 end
 ```
+
+For player-vs-player no-collide, assign the group on the server in `CharacterAdded` and again on the character's `DescendantAdded`, since accessories and tools arrive later; set `BasePart.CollisionGroup`, not the deprecated `SetPartCollisionGroup`.
 
 Uses in level design: enemy-only walls that keep AI inside arenas, player-only barriers, projectiles that pass through allies, debris that does not collide with characters.
 
@@ -216,6 +216,7 @@ end
 
 | Mistake | Symptom | Fix |
 |---|---|---|
+| Collision groups set up through `PhysicsService` in new code | Deprecation warnings since September 2026 (calls still forward to Workspace) | Same methods on `workspace` (WorldRoot); parts join a group via `BasePart.CollisionGroup` |
 | Visual mesh used as floor | Snagging, jitter, enemies floating | Primitive colliders |
 | PCD on every mesh | Slow loads, physics cost | PCD only where walkable detail matters |
 | Trying to set CollisionFidelity in game code | Nothing changes or error | Studio, or CreateMeshPartAsync + ApplyMesh |
@@ -226,6 +227,7 @@ end
 
 ## Checklist
 
+- [ ] Collision groups registered on `workspace` (WorldRoot), at most 32 per world; character parts assigned on spawn and on DescendantAdded.
 - [ ] Visual art non-colliding; colliders are simple invisible Parts.
 - [ ] Decoration CanTouch / CanQuery off.
 - [ ] Mesh fidelity: Box for small, Hull for convex, PCD only where needed.
@@ -246,7 +248,7 @@ end
 3. **Collision geometry is a server cost.** Every collidable part participates in the server's broad phase. A detailed city with thousands of small collidable props costs physics time on the server even when no one is near them. Turn collision off on anything players cannot meaningfully touch (small props, decoration above head height).
 4. **Network ownership changes who resolves contacts.** An unanchored crate owned by a player's client is simulated there; collisions with it feel perfect to that player and laggy to others. Anchored geometry does not have this problem. For gameplay-critical physics, keep ownership on the server and accept some latency (see [[Network Ownership]]).
 5. **Characters and stairs.** Humanoid characters step up small ledges, but a staircase built from exact visual steps produces bouncy movement and odd camera motion, worse on phones at low frame rates. A smooth invisible ramp collider over the visual stairs is almost always better.
-6. **Collision groups have a hard limit and a design cost.** Collision groups are limited in number (the commonly cited cap is 32 groups; unverified, the collisions guide does not state it as of October 2026, so check `PhysicsService:GetMaxCollisionGroups()` in your place). Each new group multiplies the pairs you have to reason about. Group by role (Players, Enemies, Projectiles, Debris), not by individual object type.
+6. **Collision groups have a hard limit and a design cost.** Collision groups are limited in number (32 per world from `WorldRoot:GetMaxCollisionGroups()`; each WorldModel has its own 32). Each new group multiplies the pairs you have to reason about. Group by role (Players, Enemies, Projectiles, Debris), not by individual object type.
 7. **Scale changes contact counts.** One player standing on a floor is a few contacts. A round with 50 players and 200 physics debris pieces in a small arena can produce thousands of contact pairs. Debris that should be decorative belongs in a collision group that does not collide with players or with itself.
 8. **Mesh collision fidelity on big meshes.** A single large terrain-like mesh with precise collision is expensive and can still give imperfect contact; splitting into tiles or using primitive colliders keeps physics predictable.
 
@@ -274,10 +276,10 @@ The senior trade-off: accurate collision costs authoring time and physics time; 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Collisions]] · Exporting and Validating Models for Roblox · Skill - Roblox Asset Import · Environment and Level Pipeline · Avatar Body Types and Scale in Gameplay · Modular Environment Kits
+[[Official Docs - Physics]] · Exporting and Validating Models for Roblox · Skill - Roblox Asset Import · Environment and Level Pipeline · Avatar Body Types and Scale in Gameplay · Modular Environment Kits
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Exporting and Validating Models for Roblox]] · [[Level of Detail and Model Streaming]] · [[Procedural World Generation]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Grid Placement and Player Building Systems]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Modeling in Blender for Roblox]] · [[Materials MaterialVariants and SurfaceAppearance]]
+[[Level of Detail and Model Streaming]] · [[Procedural World Generation]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Grid Placement and Player Building Systems]] · [[Materials MaterialVariants and SurfaceAppearance]] · [[Terrain Deep Dive - Materials Water and Performance]]
 <!-- related:end -->

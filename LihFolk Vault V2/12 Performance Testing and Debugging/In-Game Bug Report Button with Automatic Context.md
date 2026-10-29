@@ -153,7 +153,7 @@ Validate sizes and types on everything the client sends ([[Server Authority and 
 ## 5. Policy and abuse
 
 - **Personal information.** Do not ask for email, Discord handle or other off-platform contact details in the form; Roblox's Community Standards restrict soliciting personal information (see [[Roblox Policies Ratings and Compliance]]). The UserId is enough to contact them in-game or see their data.
-- **Text filtering.** If report text is ever shown to other players (a public "known issues" board built from reports), filter it with `TextService` first like any user text. Text only your team reads in your own tools is a different case; check the current Roblox text filtering rules in [[Links - Chat and text filtering]] before deciding.
+- **Text filtering.** If report text is ever shown to other players (a public "known issues" board built from reports), filter it with `TextService` first like any user text. Text only your team reads in your own tools is a different case; check the current Roblox text filtering rules in [[Official Docs - Security and Moderation]] before deciding.
 - **Spam.** Cooldown per player, cap per server per minute, drop identical text.
 - **Feedback loop.** Show "Thanks, report sent". If you fix a widely reported bug, say so in update notes. Players who see reports lead to fixes send better reports.
 
@@ -195,5 +195,5 @@ Group by `placeVersion` and the first error line. A new version whose reports cl
 
 <!-- related:start -->
 ## Related
-[[Multi-Client and Device Playtesting Protocols]] · [[Debugger Breakpoints and Logging]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[Dupe Hunting Test Script - Trades, Gifts, Drops and Rejoins]] · [[Automated Luau Checks - LihFolk Hook and Audit]] · [[Genre QA Passes - Test Checklists per Game Type]] · [[Testing Time-Based Features with a Controllable Clock]] · [[Multi-Client and Live Testing]]
+[[Multi-Client and Device Playtesting Protocols]] · [[Debugger Breakpoints and Logging]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[Dupe Hunting Test Script - Trades, Gifts, Drops and Rejoins]] · [[Automated Luau Checks - LihFolk Hook and Audit]] · [[Genre QA Passes - Test Checklists per Game Type]] · [[Multi-Client and Live Testing]] · [[Testing Time-Based Features with a Controllable Clock]]
 <!-- related:end -->

@@ -44,5 +44,5 @@ Collector and type function facts come from luau.org, engine limits from the Rob
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Dependency Injection in Luau]] · Resource Library - Scripting · Links - Luau language · Event Bus · Links - Coroutines, task library and async · Data Schema Versioning
+[[Dependency Injection in Luau]] · Official Docs - Scripting and Luau · Event Bus · Data Schema Versioning
 <!-- auto-links:end -->

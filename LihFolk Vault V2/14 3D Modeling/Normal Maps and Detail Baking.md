@@ -235,5 +235,5 @@ end)
 
 <!-- related:start -->
 ## Related
-[[Blender Workflow for Roblox Creators]] · [[Modeling Fundamentals for Games]] · [[Baking Lighting and Detail into Textures]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Low-Poly and Stylized Modeling]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[UGC Avatar Items and Accessories]] · [[Mesh Optimization for Mobile]] · [[Modular Environment Kits]] · [[Procedural Model Kits - Lessons]]
+[[Blender Workflow for Roblox Creators]] · [[Baking Lighting and Detail into Textures]] · [[Modeling Fundamentals for Games]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Low-Poly and Stylized Modeling]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[UGC Avatar Items and Accessories]] · [[Mesh Optimization for Mobile]] · [[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]] · [[Modular Environment Kits]]
 <!-- related:end -->

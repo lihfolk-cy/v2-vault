@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/ui, area/vfx, api/ZIndex]
 > - Avoid: Raising `ZIndex` on a child when its ancestor is the problem.
 > - ZIndex convention written down with gaps.
 >
-> Cost: TL;DR ~120 tok · whole note ~420 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~430 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,10 +28,10 @@ API snapshot: member of `Decal`, `GuiObject`, `HandleAdornment`, `ParticleEmitte
 
 ## Mentioned in
 
-9 notes in 9 sections. The 9 most relevant are linked:
+10 notes in 9 sections. The 10 most relevant are linked:
 
 ### 05 UI and UX
-[[ScreenGui Fundamentals]]
+[[Figma Property Mapping for Roblox UI]] · [[ScreenGui Fundamentals]]
 
 ### 07 Lighting VFX and Audio
 [[Highlights and Selection Effects]]
@@ -49,7 +49,7 @@ API snapshot: member of `Decal`, `GuiObject`, `HandleAdornment`, `ParticleEmitte
 [[Tiling Trim Sheets and Decal Tricks]]
 
 ### 46 Resource Library
-[[Links - Containers]]
+[[Official Docs - UI]]
 
 ### 51 2D Game Development
 [[A 2D Engine in a ScreenGui - Game Loop Entities and Rendering]]

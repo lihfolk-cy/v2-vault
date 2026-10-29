@@ -74,7 +74,7 @@ Related concepts: [[Instance Count]], [[Frame Budget]], [[Draw Calls]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Memory Budgets and Leaks]] · Links - Memory leaks and cleanup · [[Core Concepts Start Here]] · Instances Attributes and Tags · Game Feel and Juice · Game Feel Start Here
+[[Memory Budgets and Leaks]] · Official Docs - Performance · [[Core Concepts Start Here]] · Instances Attributes and Tags · Game Feel and Juice · Game Feel Start Here
 <!-- auto-links:end -->
 
 <!-- related:start -->

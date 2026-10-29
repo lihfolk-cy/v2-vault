@@ -53,5 +53,5 @@ It builds on four older notes. Read them first if the services are new to you; t
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Session Lock]] · Links - Reserved and private servers · Links - MemoryStore · Skill - Roblox DataStore Safety · Debugging DataStore Problems · Cookbook - Data and Saving
+[[Session Lock]] · Official Docs - Networking and Multiplayer · Official Docs - Data and Persistence · Skill - Roblox DataStore Safety · Debugging DataStore Problems · Cookbook - Data and Saving
 <!-- auto-links:end -->

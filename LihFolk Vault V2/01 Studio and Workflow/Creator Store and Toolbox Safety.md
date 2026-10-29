@@ -214,10 +214,10 @@ When you do use store content (prototypes, jams, solo projects):
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Plugin Security and Permissions]] · Links - Backdoors and malicious assets · Publishing Selling and Updating Plugins · Legal Basics - IP Licenses and Assets · Resource Library - Safety (free models and plugins) · Links - Models, Toolbox and Creator Store
+[[Plugin Security and Permissions]] · Official Docs - Security and Moderation · Publishing Selling and Updating Plugins · Legal Basics - IP Licenses and Assets · Official Docs - Building and World
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Publishing Selling and Updating Plugins]] · [[Legal Basics - IP Licenses and Assets]] · [[Version History and Backups]] · [[Team Create and Collaboration]] · [[Studio Assistant and AI Tools]] · [[Studio Interface Tour]] · [[Explorer Properties and Selection]] · [[Studio Settings and Shortcuts]]
+[[Publishing Selling and Updating Plugins]] · [[Legal Basics - IP Licenses and Assets]] · [[Version History and Backups]] · [[Team Create and Collaboration]] · [[Studio Assistant and AI Tools]] · [[Explorer Properties and Selection]] · [[Studio Interface Tour]] · [[Studio Settings and Shortcuts]]
 <!-- related:end -->

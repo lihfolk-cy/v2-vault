@@ -308,10 +308,10 @@ Every prepare and install tool in the project had a `Status()` that printed a ta
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animation Data from Blender to Roblox]] · [[Exporting and Validating Models for Roblox]] · Character and Creature Pipeline · Links - Importing into Studio · Skill - Roblox Asset Import · Modeling Characters for R15 and Custom Rigs · [[Animation Start Here]]
+[[Animation Data from Blender to Roblox]] · [[Exporting and Validating Models for Roblox]] · Character and Creature Pipeline · Official Docs - Asset Creation · Skill - Roblox Asset Import · Modeling Characters for R15 and Custom Rigs · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Character and Creature Pipeline]] · [[Pipeline - New Animated Weapon]] · [[Retargeting Animations Between Rigs]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Custom Characters and StarterCharacter]] · [[Bones and Skinned Meshes]] · [[Weight Painting and Skinning for Roblox]] · [[Engine Gotchas]] · [[Moon Animator and Third-Party Tools]] · [[Baked Clip Stubs and Archiving]]
+[[Character and Creature Pipeline]] · [[Pipeline - New Animated Weapon]] · [[Retargeting Animations Between Rigs]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Bones and Skinned Meshes]] · [[Custom Characters and StarterCharacter]] · [[Weight Painting and Skinning for Roblox]] · [[Engine Gotchas]] · [[Moon Animator and Third-Party Tools]] · [[Baked Clip Stubs and Archiving]]
 <!-- related:end -->

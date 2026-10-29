@@ -1,0 +1,58 @@
+{
+ "v21lookup_r1_A": {
+  "seconds": 135,
+  "tokens": 50880
+ },
+ "v21lookup_r1_B": {
+  "seconds": 135,
+  "tokens": 50880
+ },
+ "v21lookup_r2_A": {
+  "seconds": 132,
+  "tokens": 50686
+ },
+ "v21lookup_r2_B": {
+  "seconds": 132,
+  "tokens": 50686
+ },
+ "v2lookup_r1_A": {
+  "seconds": 184,
+  "tokens": 45414
+ },
+ "v2lookup_r1_B": {
+  "seconds": 184,
+  "tokens": 45414
+ },
+ "v2lookup_r2_A": {
+  "seconds": 232,
+  "tokens": 54328
+ },
+ "v2lookup_r2_B": {
+  "seconds": 232,
+  "tokens": 54328
+ },
+ "v2lookup_r3_A": {
+  "seconds": 176,
+  "tokens": 46334
+ },
+ "v2lookup_r3_B": {
+  "seconds": 176,
+  "tokens": 46334
+ },
+ "v22lookup_r1_A": {
+  "seconds": 273,
+  "tokens": 49892
+ },
+ "v22lookup_r1_B": {
+  "seconds": 273,
+  "tokens": 49892
+ },
+ "v22lookup_r2_A": {
+  "seconds": 352,
+  "tokens": 58250
+ },
+ "v22lookup_r2_B": {
+  "seconds": 352,
+  "tokens": 58250
+ }
+}

@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/scripting, area/performance]
 > - Avoid: Using `wait()` and `spawn()`. Deprecated and throttled; the code uses `task.wait`, `task.spawn` (see Task Library...
 > - New thread per handler (`task.spawn(fn, ...)`): isolation for errors and yields, but a new coroutine per handler per fire.
 >
-> Cost: TL;DR ~150 tok · whole note ~660 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~650 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,7 +26,7 @@ A coroutine is a thread with its own stack that you resume manually. (from [[Tas
 
 ## Mentioned in
 
-35 notes in 18 sections. The 25 most relevant are linked:
+34 notes in 17 sections. The 25 most relevant are linked:
 
 ### 02 Luau Scripting
 [[Error Handling - pcall xpcall and Promise Patterns]] · [[Error Handling and Retries]] · [[Events Signals and Connections]] · [[Functions Closures and Upvalues]] · [[Luau Language Essentials]] · [[Task Library Coroutines and Yielding]]
@@ -67,6 +67,6 @@ A coroutine is a thread with its own stack that you resume manually. (from [[Tas
 ### Root notes
 [[00 Start Here]]
 
-Also mentioned in (not linked): Hunting Memory Leaks Step by Step · Luau Cookbook Start Here · Parallel Luau and Actors · Procedural World Generation · Resource Library - Scripting · Round-Based Minigame Loop End to End · Saving Correctly - Autosave and BindToClose · Script Performance · Trading Systems Without Duplication · Undo and ChangeHistoryService Done Right
+Also mentioned in (not linked): Hunting Memory Leaks Step by Step · Luau Cookbook Start Here · Parallel Luau and Actors · Procedural World Generation · Round-Based Minigame Loop End to End · Saving Correctly - Autosave and BindToClose · Script Performance · Trading Systems Without Duplication · Undo and ChangeHistoryService Done Right
 
 <!-- atlas:generated -->

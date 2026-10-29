@@ -272,5 +272,5 @@ Players forgive a damage number that appears 100 ms late; they do not forgive a 
 
 <!-- related:start -->
 ## Related
-[[Client Prediction and Reconciliation for Combat]] · [[Melee Combat System End to End]] · [[AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses]] · [[Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Grabs, Carries and Throws - Moving Players Safely]] · [[Explosions - Radius Damage, Falloff and Cover Checks]] · [[Status Effects Buffs and Stacking Rules]] · [[Squad AI - Attack Tokens, Flanking and Attacker Limits]] · [[Custom Character Controllers]]
+[[Client Prediction and Reconciliation for Combat]] · [[Melee Combat System End to End]] · [[AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses]] · [[Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Explosions - Radius Damage, Falloff and Cover Checks]] · [[Grabs, Carries and Throws - Moving Players Safely]] · [[Status Effects Buffs and Stacking Rules]] · [[Squad AI - Attack Tokens, Flanking and Attacker Limits]] · [[Custom Character Controllers]]
 <!-- related:end -->

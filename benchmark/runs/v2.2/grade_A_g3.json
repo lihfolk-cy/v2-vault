@@ -1,0 +1,314 @@
+[
+ {
+  "id": "P1",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2
+  },
+  "notes": "All give renames, deprecated-but-working, and non-renamed methods."
+ },
+ {
+  "id": "P2",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.63,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "R1 lacks shared module and in-simulation restrictions; R2 lacks shared module/both-sides."
+ },
+ {
+  "id": "P3",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 2.5,
+   "R6": 2.5,
+   "R7": 3
+  },
+  "notes": "R5/R6 omit CreateDefaultPlayerModule=Disabled for forks."
+ },
+ {
+  "id": "P4",
+  "scores": {
+   "R1": 3,
+   "R2": 2.63,
+   "R3": 3,
+   "R4": 3,
+   "R5": 2.25,
+   "R6": 3,
+   "R7": 2.25
+  },
+  "notes": "R2 no PrefixText; R5 no PlatformIntegratedChat property or PrefixText; R7 no PrefixText, vague TextChannelWindow."
+ },
+ {
+  "id": "P5",
+  "scores": {
+   "R1": 2.25,
+   "R2": 3,
+   "R3": 2.63,
+   "R4": 3,
+   "R5": 2.63,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "R1 no Open Cloud sharing and no latest-version storage note; R3/R5 miss latest-version-only storage."
+ },
+ {
+  "id": "P6",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "All cover indirect purchase, odds display, luck potion, PolicyService checks."
+ },
+ {
+  "id": "P7",
+  "scores": {
+   "R1": 2.63,
+   "R2": 2.25,
+   "R3": 3,
+   "R4": 2.63,
+   "R5": 2.63,
+   "R6": 2.25,
+   "R7": 2.25
+  },
+  "notes": "Dates missing in R2/R5/R6/R7; selection-process details (16+ evaluation, exclusions) partial in several."
+ },
+ {
+  "id": "P8",
+  "scores": {
+   "R1": 2.25,
+   "R2": 1.88,
+   "R3": 1.13,
+   "R4": 2.25,
+   "R5": 1.88,
+   "R6": 2.63,
+   "R7": 2.63
+  },
+  "notes": "Audience Expansion conditions and US 18+ eligibility (product types, R15) mostly incomplete; R3 vague on Creator Rewards; R5 omits Audience Expansion."
+ },
+ {
+  "id": "G1",
+  "scores": {
+   "R1": 4,
+   "R2": 3,
+   "R3": 3,
+   "R4": 4,
+   "R5": 4,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "R2/R3/R6/R7 do not warn against granting from PromptProductPurchaseFinished."
+ },
+ {
+  "id": "G2",
+  "scores": {
+   "R1": 3,
+   "R2": 2.63,
+   "R3": 2.63,
+   "R4": 3,
+   "R5": 3,
+   "R6": 2.63,
+   "R7": 3
+  },
+  "notes": "R2/R3/R6 omit keyInfo parameter."
+ },
+ {
+  "id": "G3",
+  "scores": {
+   "R1": 1.33,
+   "R2": 1.33,
+   "R3": 1.33,
+   "R4": 1.33,
+   "R5": 1.33,
+   "R6": 1.33,
+   "R7": 1.33
+  },
+  "notes": "All catch NaN and fix it; none states the general rule that all non-Player remote args are attacker-controlled."
+ },
+ {
+  "id": "G4",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "All: Animator overwrites Transform, write in PreSimulation composing, C0 for rest pose."
+ },
+ {
+  "id": "G5",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2
+  },
+  "notes": "All give priority order, Action fix, weight blending."
+ },
+ {
+  "id": "G6",
+  "scores": {
+   "R1": 2,
+   "R2": 1.75,
+   "R3": 1.5,
+   "R4": 2,
+   "R5": 1.75,
+   "R6": 1.25,
+   "R7": 1.5
+  },
+  "notes": "Alternatives/caveats (0.01 scale, no stacking) and GLB note unevenly covered; R6 no GLB note."
+ },
+ {
+  "id": "G7",
+  "scores": {
+   "R1": 2,
+   "R2": 0.33,
+   "R3": 2,
+   "R4": 0.33,
+   "R5": 0.33,
+   "R6": 0.33,
+   "R7": 0.33
+  },
+  "notes": "R2/R4/R5/R6/R7 wrongly claim exporter Apply Modifiers bakes the Armature modifier and breaks skinning (-1); most omit default-off."
+ },
+ {
+  "id": "G8",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2
+  },
+  "notes": "All give UIAspectRatioConstraint and CoreUISafeInsets."
+ },
+ {
+  "id": "T1",
+  "scores": {
+   "R1": 4,
+   "R2": 4,
+   "R3": 4,
+   "R4": 4,
+   "R5": 4,
+   "R6": 4,
+   "R7": 4
+  },
+  "notes": "All complete: server price, NaN/int/bounds, balance check, rate limit."
+ },
+ {
+  "id": "T2",
+  "scores": {
+   "R1": 4,
+   "R2": 4,
+   "R3": 3.5,
+   "R4": 3,
+   "R5": 4,
+   "R6": 4,
+   "R7": 4
+  },
+  "notes": "R3/R4 BindToClose not parallel/30s; R4 release logic bug (release and nil or {...} never clears lock)."
+ },
+ {
+  "id": "T3",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "All use CoreUISafeInsets HUD, aspect constraint, separate None background."
+ },
+ {
+  "id": "T4",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "T5",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "T6",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2
+  },
+  "notes": "All use AwardBadgeAsync with pcall on server."
+ },
+ {
+  "id": "T7",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2
+  },
+  "notes": "All give correct hierarchy and Pressed/Released."
+ },
+ {
+  "id": "T8",
+  "scores": {
+   "R1": 0,
+   "R2": 1.5,
+   "R3": 1,
+   "R4": 0,
+   "R5": 1.5,
+   "R6": 1.5,
+   "R7": 0
+  },
+  "notes": "R1/R4/R7 miss MeshStreamingAndImprovedLoDs and claim Precise keeps full detail; R2/R5/R6 partial on removal/toggle; R3 no item 2."
+ }
+]

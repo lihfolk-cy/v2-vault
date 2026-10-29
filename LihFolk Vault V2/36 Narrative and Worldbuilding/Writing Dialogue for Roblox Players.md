@@ -296,10 +296,10 @@ Write the scene, then edit it in this order. Each pass usually cuts 20 to 40 per
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Localization Pipeline]] · Captions and Audio Accessibility · Notification and Toast Systems · Readable Text and UI Scale · Voice Chat and Safety Features · Links - Chat and text filtering
+[[Localization Pipeline]] · Captions and Audio Accessibility · Notification and Toast Systems · Readable Text and UI Scale · Voice Chat and Safety Features · Official Docs - Security and Moderation
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Captions and Audio Accessibility]] · [[Story State Flags and Chapter Saves]] · [[Notification and Toast Systems]] · [[Age Checks and Safety Features]] · [[Multiplayer Cutscene Sync - Server Clock, Late Joiners and Skip Votes]] · [[Puzzle Dependency Charts and Hint Systems]]
+[[Captions and Audio Accessibility]] · [[Story State Flags and Chapter Saves]] · [[Notification and Toast Systems]] · [[Voice Chat and Safety Features]] · [[Multiplayer Cutscene Sync - Server Clock, Late Joiners and Skip Votes]] · [[Puzzle Dependency Charts and Hint Systems]]
 <!-- related:end -->

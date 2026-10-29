@@ -256,5 +256,5 @@ A gradient atlas is a contract between the image and every mesh. Treat it like a
 
 <!-- related:start -->
 ## Related
-[[Low-Poly and Stylized Modeling]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[Texturing and PBR Baking]] · [[Keeping a Mixed Asset Library Consistent]] · [[Voxel Palettes - Ramps Hue Shifting and Limits]]
+[[Low-Poly and Stylized Modeling]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[Keeping a Mixed Asset Library Consistent]] · [[Texturing and PBR Baking]] · [[Voxel Palettes - Ramps Hue Shifting and Limits]]
 <!-- related:end -->

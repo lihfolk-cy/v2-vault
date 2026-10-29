@@ -59,10 +59,10 @@ Related concepts: [[Telemetry Events]], [[Data Schema Versioning]], [[Dependency
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Live Ops Deep Dive Start Here]] · Live Content Pipeline · Server Shutdowns Soft Updates and Migration · Debugging Live Servers · Resource Library - Publishing and Live Ops · Crash and Error Telemetry · [[Core Concepts Start Here]]
+[[Live Ops Deep Dive Start Here]] · Live Content Pipeline · Server Shutdowns Soft Updates and Migration · Debugging Live Servers · Official Docs - Publishing and Live Ops · Crash and Error Telemetry · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Retention Cohorts]] · [[Event Bus]] · [[Rate Limiting]] · [[Replication Boundary]] · [[Onboarding Funnel]] · [[Session Lock]] · [[Server Authority]] · [[Click-Through Rate]]
+[[Retention Cohorts]] · [[Event Bus]] · [[Rate Limiting]] · [[Replication Boundary]] · [[Onboarding Funnel]] · [[Session Lock]] · [[Click-Through Rate]] · [[Server Authority]]
 <!-- related:end -->

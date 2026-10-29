@@ -119,5 +119,5 @@ Ships, upgrades and cosmetics are saved per player. Cargo in flight can be sessi
 
 <!-- related:start -->
 ## Related
-[[Genre Playbook - Racing and Driving]] · [[Genre Playbook - Battle Royale]] · [[Genre Playbook - Open-World City and Crime Roleplay]] · [[Genre Playbook - Survival and Crafting]] · [[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Genre Playbook - Social Deduction and Murder Mystery]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Sports]]
+[[Genre Playbook - Racing and Driving]] · [[Genre Playbook - Battle Royale]] · [[Genre Playbook - Open-World City and Crime Roleplay]] · [[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Genre Playbook - Survival and Crafting]] · [[Genre Playbook - Social Deduction and Murder Mystery]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Sports]]
 <!-- related:end -->

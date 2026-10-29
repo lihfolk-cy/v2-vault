@@ -523,10 +523,10 @@ Never send hidden information (the opponent's hand, the next piece) to a client 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Deterministic Simulation]] · Entity Component Systems · [[Tilemaps Cameras and Parallax for 2D Levels]] · Links - Latency and prediction · Debugging Client-Server Desync · Serialization Formats for Saves and Networking
+[[Deterministic Simulation]] · Entity Component Systems · [[Tilemaps Cameras and Parallax for 2D Levels]] · Official Docs - Networking and Multiplayer · Debugging Client-Server Desync · Serialization Formats for Saves and Networking
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Snapshot Interpolation for Custom Replication]] · [[Serialization Formats for Saves and Networking]] · [[EditableImage for Pixel Buffers and Procedural 2D]] · [[Debugging Client-Server Desync]] · [[Replication Boundary]] · [[Projectiles and Ballistics]]
+[[Snapshot Interpolation for Custom Replication]] · [[Replicating VFX - Server Validates, Clients Render]] · [[Serialization Formats for Saves and Networking]] · [[Projectiles and Ballistics]] · [[EditableImage for Pixel Buffers and Procedural 2D]] · [[Debugging Client-Server Desync]]
 <!-- related:end -->

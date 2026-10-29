@@ -6,14 +6,14 @@ verified: 2026-10-28
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
+> - Avoid: Pre-2026 names (`AwardBadge`, `GetProductInfo`, `LoadCharacter`, `ReserveServerAsync`, `TeleportPartyAsync`...
 > - Avoid: Replacing `wait` with `task.wait` inside a polling loop that should be an event connection.
 > - Avoid: Converting `BodyVelocity` to `LinearVelocity` without an attachment or with `RelativeTo` wrong.
-> - Avoid: Treating deprecation warnings as optional in new code.
 > - Every lint pattern above returns nothing in new code.
 > - Animator created on the server; tracks loaded once and reused.
 > - No chat code outside TextChatService.
 >
-> Cost: TL;DR ~150 tok · whole note ~2.1k tok. Read more: ## 2. Methods renamed with `Async` (January 14, 2026) · ## 10. Invented members · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~2.2k tok. Read more: ## 2. Methods renamed with `Async` (January 14, 2026) · ## 10. Invented members · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The most visible AI mistake is old API surface: code that was idiomatic in 2019, or correct until January 2026. Most of it still runs, which is why it survives review. This note lists each stale pattern, why a model produces it, the current form, and a grep to find it. Hub: [[What AI Models Get Wrong in Roblox]]. Change dates: [[Engine and API Changes 2025-2026]].
@@ -29,7 +29,7 @@ The most visible AI mistake is old API surface: code that was idiomatic in 2019,
 
 - **Wrong:** `GetProductInfo`, `PlayerOwnsAsset`, `AwardBadge`, `LoadCharacter`, `IsInGroup`, `GetRankInGroup`, `ApplyDescription`, `ReserveServer`, `CreateHumanoidModelFromDescription`.
 - **Why:** the rename post-dates most training data. **Roblox docs:** old names are deprecated but keep working (https://devforum.roblox.com/t/psa-several-common-yielding-methods-have-been-renamed/4257585).
-- **Right:** the same name plus `Async`, same arguments. Wrap in `pcall`; these are network calls.
+- **Right:** the same name plus `Async`, same arguments. Wrap in `pcall`; these are network calls. Exceptions: group rank and role come from `GroupService:GetRolesInGroupAsync`, and reserved servers no longer use `ReserveServerAsync` at all (October 2026: `TeleportOptions.ReservedServerId` with a GUID). Later renames: [[API Renames and Deprecations 2025-2026]].
 - **Detect:** `rg -n ":(GetProductInfo|PlayerOwnsAsset|PlayerOwnsBundle|AwardBadge|LoadCharacter|IsInGroup|GetRankInGroup|GetRoleInGroup|IsFriendsWith|ApplyDescription|PlayEmote|ReserveServer|CreateHumanoidModelFrom\w+|GetHumanoidDescriptionFrom\w+)\("`. Full map: `_data/roblox_facts_2026.json`.
 
 ## 3. `Humanoid:LoadAnimation`
@@ -111,6 +111,7 @@ Models confidently write members that do not exist or live elsewhere:
 
 ## Common mistakes
 
+- Avoid: Pre-2026 names (`AwardBadge`, `GetProductInfo`, `LoadCharacter`, `ReserveServerAsync`, `TeleportPartyAsync`, `PromptPremiumPurchase`) -> `AwardBadgeAsync`, `GetProductInfoAsync`, `LoadCharacterAsync`, `TeleportOptions.ReservedServerId` + `TeleportAsync`, `PromptRobloxSubscriptionPurchase`.
 - Replacing `wait` with `task.wait` inside a polling loop that should be an event connection.
 - Converting `BodyVelocity` to `LinearVelocity` without an attachment or with `RelativeTo` wrong.
 - Treating deprecation warnings as optional in new code.
@@ -135,5 +136,5 @@ Models confidently write members that do not exist or live elsewhere:
 
 <!-- related:start -->
 ## Related
-[[Roblox Changes 2025-2026]] · [[AI Code Assistants for Luau]] · [[AI Pitfalls - Physics and Animation]] · [[AI Pitfalls - UI and Input]] · [[AI Pitfalls - Data and Monetization]] · [[AI Pitfalls - Networking and Security]] · [[Prompting and Verifying AI Output]] · [[Roblox Studio Assistant]]
+[[AI Code Assistants for Luau]] · [[AI Pitfalls - Physics and Animation]] · [[AI Pitfalls - UI and Input]] · [[AI Pitfalls - Data and Monetization]] · [[AI Pitfalls - Networking and Security]] · [[Prompting and Verifying AI Output]] · [[Roblox Studio Assistant]]
 <!-- related:end -->

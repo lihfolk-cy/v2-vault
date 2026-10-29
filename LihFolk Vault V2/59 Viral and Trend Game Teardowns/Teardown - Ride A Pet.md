@@ -153,5 +153,5 @@ Six players per server, each riding a visible collection. The social value is di
 
 <!-- related:start -->
 ## Related
-[[Teardown - Tap Simulator REBORN]] · [[Teardown - Bee Swarm Simulator]] · [[Teardown - Escape Tsunami for Brainrots]] · [[Teardown - Plants vs Brainrots]] · [[Teardown - Fish It]] · [[Teardown - Sol's RNG]] · [[Teardown - Build A Boat For Treasure]] · [[Teardown - +1 Speed Keyboard Escape]]
+[[Teardown - Tap Simulator REBORN]] · [[Teardown - Bee Swarm Simulator]] · [[Teardown - Escape Tsunami for Brainrots]] · [[Teardown - Plants vs Brainrots]] · [[Teardown - Fish It]] · [[Teardown - Sol's RNG]] · [[Teardown - Build A Boat For Treasure]] · [[Teardown - Fling Things and People]]
 <!-- related:end -->

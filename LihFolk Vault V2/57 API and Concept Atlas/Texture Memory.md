@@ -6,11 +6,11 @@ tags: [atlas, concept, type/atlas, area/world, area/modeling]
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - Texture memory checked in the Developer Console on a phone.
-> - Avoid: Importing at 4K "because it is allowed" on mobile-heavy games without checking texture memory.
 > - Textures Decals and Texture Memory, Level of Detail and Model Streaming, Parts Unions and MeshParts.
 > - Blockbench art is cheaper in geometry and more expensive in texture memory.
+> - Open Shift+F2 for draw calls and frame time, and the Developer Console memory tab for graphics texture memory (Developer...
 >
-> Cost: TL;DR ~130 tok · whole note ~930 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~980 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -19,13 +19,13 @@ Texture memory checked in the Developer Console on a phone. (from [[Textures Dec
 
 ## Key facts
 
-- Avoid: Importing at 4K "because it is allowed" on mobile-heavy games without checking texture memory. ([[AI Pitfalls - Assets and Import]])
 - Textures Decals and Texture Memory, Level of Detail and Model Streaming, Parts Unions and MeshParts. ([[Art Budgets - Triangles Draw Calls Memory]])
 - Blockbench art is cheaper in geometry and more expensive in texture memory. ([[MagicaVoxel Goxel and Blockbench Workflows Compared]])
+- Open Shift+F2 for draw calls and frame time, and the Developer Console memory tab for graphics texture memory (Developer Console and Stats). ([[Mesh Optimization for Mobile]])
 
 ## Mentioned in
 
-65 notes in 21 sections. The 25 most relevant are linked:
+68 notes in 20 sections. The 25 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[Studio Assistant and AI Tools]]
@@ -34,7 +34,7 @@ Texture memory checked in the Developer Console on a phone. (from [[Textures Dec
 [[Art Budgets - Triangles Draw Calls Memory]] · [[Environment Art Styles]] · [[Textures Decals and Texture Memory]] · [[Water Sky and Atmosphere Art]]
 
 ### 07 Lighting VFX and Audio
-[[Particle Emitters In Depth]]
+[[Designing VFX Textures and Flipbooks in Figma]]
 
 ### 12 Performance Testing and Debugging
 [[Hunting Memory Leaks Step by Step]] · [[Memory Budgets and Leaks]] · [[Weather Performance Budgets and Quality Tiers]]
@@ -66,6 +66,6 @@ Texture memory checked in the Developer Console on a phone. (from [[Textures Dec
 ### 54 Untextured Stylised Modelling
 [[Flat Colour vs Gradient Atlas vs Vertex Colour]]
 
-Also mentioned in (not linked): 00 Start Here · 2D Game Development Start Here · Ads and Rewarded Video · Beams and Trails · Building a Portfolio as a Roblox Developer · Chibi Character Rules in Practice · Developer Console and Stats · Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning · Engine and API Changes 2025-2026 · Hand-Painted and Stylized Texturing · Icon and Thumbnail Rendering Pipeline · Impact Decals and Material-Aware Hit Sparks · Materials MaterialVariants and SurfaceAppearance · Materials and Surfaces Start Here · Minimap and World Map UI - Projection, Rotation and Fog of War · Mobile and Low-End Optimization · Modeling in Blender for Roblox · Multi-Client and Device Playtesting Protocols · Open Questions - Whole Vault · Parts Unions and MeshParts · Pixel Art Pipeline - Aseprite to Roblox Without Blur · Reference - Purple Anime Settings UI (Claude + Figma) · Rendering Performance · Roads, Rivers and Paths Carved Along Curves in Terrain · ScreenGui Fundamentals · Skill - Roblox Asset Import · Squash Stretch and Anticipation in UI and Characters · Stylised vs Realistic Material Pipelines · SurfaceAppearance PBR Workflow · Terrain Materials and Painting · Texturing and PBR Baking · The Gradient Palette Texture Workflow · Trim Sheets Atlases and Vertex Colors · UV Unwrapping · Untextured Stylised Modelling Start Here · VFX Design Playbook · Virtualized Lists and Large Inventories · Voxel Art - Studs Outlines and Style Kits · Voxel Shading - Baked AO Edges and Lighting · World-Space UI - BillboardGui and SurfaceGui
+Also mentioned in (not linked): 00 Start Here · 2D Game Development Start Here · Ads and Rewarded Video · Beams and Trails · Building a Portfolio as a Roblox Developer · Chibi Character Rules in Practice · Designing Roblox UI in Figma - Frames, Safe Areas and Tokens · Developer Console and Stats · Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning · Engine Limits, Quotas and Defaults - Cheat Sheet · Engine and API Changes 2025-2026 · Hand-Painted and Stylized Texturing · Icon and Thumbnail Rendering Pipeline · Impact Decals and Material-Aware Hit Sparks · Materials MaterialVariants and SurfaceAppearance · Materials and Surfaces Start Here · Minimap and World Map UI - Projection, Rotation and Fog of War · Mobile and Low-End Optimization · Modeling in Blender for Roblox · Multi-Client and Device Playtesting Protocols · Open Questions - Whole Vault · Particle Emitters In Depth · Parts Unions and MeshParts · Pixel Art Pipeline - Aseprite to Roblox Without Blur · Rendering Performance · Roads, Rivers and Paths Carved Along Curves in Terrain · ScreenGui Fundamentals · Settings Menu Design for Roblox - Layout, Controls and Motion · Skill - Roblox Asset Import · Squash Stretch and Anticipation in UI and Characters · Stylised vs Realistic Material Pipelines · SurfaceAppearance PBR Workflow · Terrain Materials and Painting · Texturing and PBR Baking · The Gradient Palette Texture Workflow · Trim Sheets Atlases and Vertex Colors · UV Unwrapping · Untextured Stylised Modelling Start Here · VFX Design Playbook · Virtualized Lists and Large Inventories · Voxel Art - Studs Outlines and Style Kits · Voxel Shading - Baked AO Edges and Lighting · World-Space UI - BillboardGui and SurfaceGui
 
 <!-- atlas:generated -->

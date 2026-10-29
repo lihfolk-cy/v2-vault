@@ -1,5 +1,5 @@
 ---
-tags: [atlas, api, type/atlas, area/ai, area/gameplay, api/ApplyDescription]
+tags: [atlas, api, type/atlas, area/ai, area/platform, api/ApplyDescription]
 ---
 # ApplyDescription
 
@@ -8,8 +8,9 @@ tags: [atlas, api, type/atlas, area/ai, area/gameplay, api/ApplyDescription]
 > - `ApplyDescription` is a yielding server call that can fail (asset loading); wrap it in `pcall`, and apply only to a fully...
 > - Avoid: `ApplyDescription` without pcall -> pcall, fallback look.
 > - Wrong: `GetProductInfo`, `PlayerOwnsAsset`, `AwardBadge`, `LoadCharacter`, `IsInGroup`, `GetRankInGroup`, `ApplyDescription`...
+> - Avoid: `GetProductInfo`, `PlayerOwnsAsset`, `LoadCharacter`, `IsInGroup`, `IsFriendsWith`, `ApplyDescription` -> the same name...
 >
-> Cost: TL;DR ~120 tok · whole note ~350 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~160 tok · whole note ~430 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -22,10 +23,11 @@ API snapshot: member of `Humanoid`; flagged deprecated (`_tools/roblox_api.json`
 
 - Avoid: `ApplyDescription` without pcall -> pcall, fallback look. ([[Character Select and Class Systems with Different Rigs]])
 - Wrong: `GetProductInfo`, `PlayerOwnsAsset`, `AwardBadge`, `LoadCharacter`, `IsInGroup`, `GetRankInGroup`, `ApplyDescription`, `ReserveServer`, `CreateHumanoidModelFromDescription`. ([[AI Pitfalls - Stale APIs and Luau]])
+- Avoid: `GetProductInfo`, `PlayerOwnsAsset`, `LoadCharacter`, `IsInGroup`, `IsFriendsWith`, `ApplyDescription` -> the same name + `Async`. ([[API Renames and Deprecations 2025-2026]])
 
 ## Mentioned in
 
-7 notes in 6 sections. The 7 most relevant are linked:
+9 notes in 7 sections. The 9 most relevant are linked:
 
 ### 09 Gameplay Systems
 [[Character Select and Class Systems with Different Rigs]]
@@ -40,7 +42,10 @@ API snapshot: member of `Humanoid`; flagged deprecated (`_tools/roblox_api.json`
 [[HumanoidDescription and Outfit Systems]]
 
 ### 49 Roblox Platform Features
-[[Engine and API Changes 2025-2026]]
+[[API Renames and Deprecations 2025-2026]] · [[Engine and API Changes 2025-2026]]
+
+### 62 Engine Reference Cards
+[[Humanoid - Engine Reference Card]]
 
 ### Root notes
 [[Open Questions - Whole Vault]]

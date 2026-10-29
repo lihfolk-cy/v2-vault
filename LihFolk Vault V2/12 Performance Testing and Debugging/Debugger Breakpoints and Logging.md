@@ -295,10 +295,10 @@ end
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Debugging Live Servers]] · Links - Error handling and debugging · Debugging Start Here · Reading Luau Errors and Stack Traces · The Debugging Method - Reproduce Isolate Bisect · Error Handling - pcall xpcall and Promise Patterns
+[[Debugging Live Servers]] · Official Docs - Scripting and Luau · Debugging Start Here · Reading Luau Errors and Stack Traces · The Debugging Method - Reproduce Isolate Bisect · Error Handling - pcall xpcall and Promise Patterns
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Reading Luau Errors and Stack Traces]] · [[The Debugging Method - Reproduce Isolate Bisect]] · [[In-Game Bug Report Button with Automatic Context]] · [[Hunting Memory Leaks Step by Step]] · [[Gated Tester Commands and Debug Panels]] · [[MicroProfiler Guide]] · [[Automated Testing with TestEZ and Jest-Lua]] · [[Automated Luau Checks - LihFolk Hook and Audit]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[Multi-Client and Device Playtesting Protocols]]
+[[Reading Luau Errors and Stack Traces]] · [[The Debugging Method - Reproduce Isolate Bisect]] · [[In-Game Bug Report Button with Automatic Context]] · [[Hunting Memory Leaks Step by Step]] · [[MicroProfiler Guide]] · [[Gated Tester Commands and Debug Panels]] · [[Automated Testing with TestEZ and Jest-Lua]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[Automated Luau Checks - LihFolk Hook and Audit]] · [[Multi-Client and Device Playtesting Protocols]]
 <!-- related:end -->

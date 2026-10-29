@@ -129,5 +129,5 @@ Throttle: if more than a set number of impacts arrive in one frame (shotguns, mi
 
 <!-- related:start -->
 ## Related
-[[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Slash VFX Recipes - Crescent and Ring]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]] · [[Light Sources and Shadows]]
+[[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Projectile VFX - Muzzle, Travel and Impact]] · [[Designing VFX Textures and Flipbooks in Figma]] · [[Slash VFX Recipes - Crescent and Ring]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]]
 <!-- related:end -->

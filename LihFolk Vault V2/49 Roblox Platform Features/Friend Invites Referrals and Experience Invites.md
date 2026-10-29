@@ -344,7 +344,7 @@ Because you cannot see sends, the funnel is:
 - [ ] Nothing important gated behind inviting
 
 ## See also
-[[Platform Features Start Here]] · [[Social Design and Multiplayer Play]] · [[Community Building]] · [[Parties and Group Teleports]] · [[Cross-Server Messaging]] · [[Session Locking and Profile Libraries]] · [[Launch Strategy - The First Two Weeks]] · [[Working with Content Creators]] · [[Links - Community and social]]
+[[Platform Features Start Here]] · [[Social Design and Multiplayer Play]] · [[Community Building]] · [[Parties and Group Teleports]] · [[Cross-Server Messaging]] · [[Session Locking and Profile Libraries]] · [[Launch Strategy - The First Two Weeks]] · [[Working with Content Creators]] · [[Official Docs - Publishing and Live Ops]]
 
 ## Connected notes
 <!-- auto-links:start -->
@@ -353,5 +353,5 @@ Because you cannot see sends, the funnel is:
 
 <!-- related:start -->
 ## Related
-[[Photo Mode and In-Game Screenshots with CaptureService]] · [[Subscriptions and Recurring Revenue]] · [[Discovery and Monetization Changes 2025-2026]] · [[Commerce and Physical Goods]] · [[Roblox Changes 2025-2026]] · [[Regional Compliance - Paid Random Items and Country Rules]]
+[[Photo Mode and In-Game Screenshots with CaptureService]] · [[Subscriptions and Recurring Revenue]] · [[Discovery and Monetization Changes 2025-2026]] · [[Commerce and Physical Goods]] · [[Roblox Changes 2025-2026]] · [[API Renames and Deprecations 2025-2026]] · [[Regional Compliance - Paid Random Items and Country Rules]]
 <!-- related:end -->

@@ -187,7 +187,7 @@ These are the reference project's rules, generalised. See also [[Safe Changes in
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Team Create Permissions and Workflows]] · Links - Team Create · Team Collaboration Start Here · [[Studio Interface Tour]] · Documentation and Onboarding New Developers · Packages and Shared Assets Across Places
+[[Team Create Permissions and Workflows]] · Official Docs - Studio and Tooling · Team Collaboration Start Here · [[Studio Interface Tour]] · Documentation and Onboarding New Developers · Packages and Shared Assets Across Places
 <!-- auto-links:end -->
 
 <!-- related:start -->

@@ -54,7 +54,7 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 [[MaterialService and Custom Materials]] · [[Procedural Materials and Skies - Lessons]] · [[Stylised vs Realistic Material Pipelines]] · [[SurfaceAppearance PBR Workflow]] · [[Terrain Materials and Painting]]
 
 ### 46 Resource Library
-[[Links - Materials and MaterialVariants]]
+[[Official Docs - Building and World]]
 
 ### 49 Roblox Platform Features
 [[Engine and API Changes 2025-2026]]

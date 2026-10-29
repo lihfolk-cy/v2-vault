@@ -141,9 +141,6 @@ A field guide to **everything about animation in Roblox**: how the engine really
 - [[Snippets - Building and Sampling Clips]], [[Snippets - Lua Keyframe Player Core]]
 - [[Snippets - Enemy Client Animator]], [[Snippets - Camera Shake and FX]]
 
-### 09 References (studied clips)
-- [[Reference - Purple Anime Settings UI (Claude + Figma)]]: a Claude-made Figma Settings menu (TikTok), and how to animate it in Roblox
-
 ### Reference
 - [[Animation Glossary]]
 
@@ -152,5 +149,5 @@ The snippets were reviewed carefully by hand against the API docs, but test them
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI Animation and Motion from Video]] · Links - Animation creation · Modeling Characters for R15 and Custom Rigs · Voxel Characters - Proportions Joints and Rigging · Links - Inverse kinematics · Skeleton Library
+[[AI Animation and Motion from Video]] · Official Docs - Asset Creation · Modeling Characters for R15 and Custom Rigs · Voxel Characters - Proportions Joints and Rigging · Official Docs - Characters and Animation · Skeleton Library
 <!-- auto-links:end -->

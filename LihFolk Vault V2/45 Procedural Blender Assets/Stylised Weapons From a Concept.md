@@ -36,7 +36,7 @@ Tubes and balls are the fastest things to script, which is exactly why they cree
 3. **Forged parts as extruded 2D silhouettes with bevels.** The guard hub is a shield outline extruded and bevelled; the hook quillon is a tapering stroke outline with thorns inserted along its outer edge, extruded and bevelled; filigree spirals sit on the faces. Flat stock with bevelled edges is how real guards are made, so it reads as metal.
 4. **Flames as filled strokes.** A curved centreline, a width that tapers from root to tip, the outline offset on both sides, filled, extruded thinly; a narrower lighter core stroke on top; side tongues peeling off. Filled tapering shapes read as flame.
 5. **Moulded strap grip.** One cylinder whose radius follows a helix (flat-topped strap, sharp seam), swelling slightly in the middle: one mesh, reads as wrapped leather.
-6. **Real reflections for metal.** A CC0 studio HDRI (sources in [[Links - Free and CC0 asset libraries]]) lights the scene and is visible in reflections, while the camera sees a dark backdrop through a Light Path "Is Camera Ray" mix in the world shader.
+6. **Real reflections for metal.** A CC0 studio HDRI lights the scene and is visible in reflections, while the camera sees a dark backdrop through a Light Path "Is Camera Ray" mix in the world shader.
 7. **Void black needs a near-zero albedo.** A base colour of about 0.001 to 0.025 with low roughness and some specular reads black with reflections; anything brighter turns lavender under strong lights and bloom.
 
 **Measured in these builds:** about 25,000 triangles, mostly in the moulded grip (160 rings by 40 segments). That is over the 20,000 per-mesh limit for the grip alone if merged; drop the grip to 60 rings for game use.

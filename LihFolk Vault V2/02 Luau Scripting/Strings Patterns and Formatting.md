@@ -361,10 +361,10 @@ The senior trade-off: strings are the easiest data type to get working and the e
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Cookbook - Tables Strings and Time]] · Localization Pipeline · Dialogue System End to End · Links - Chat and text filtering · Clip Buffer Format · Links - UI elements
+[[Cookbook - Tables Strings and Time]] · Localization Pipeline · Dialogue System End to End · Official Docs - Security and Moderation · Clip Buffer Format · Official Docs - UI
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Tables Metatables and OOP]] · [[Luau Performance Patterns with Benchmarks]] · [[Functions Closures and Upvalues]] · [[Luau Performance and Native Codegen]] · [[Luau Type System and Strict Mode]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Metatables and OOP - When and When Not]] · [[Module Scripts and Requiring]]
+[[Text Filtering - TextService for Names, Signs and Messages]] · [[Tables Metatables and OOP]] · [[Luau Performance Patterns with Benchmarks]] · [[Luau Performance and Native Codegen]] · [[Functions Closures and Upvalues]] · [[Luau Type System and Strict Mode]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Metatables and OOP - When and When Not]]
 <!-- related:end -->

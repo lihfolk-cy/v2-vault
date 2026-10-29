@@ -1,0 +1,314 @@
+[
+ {
+  "id": "B1",
+  "scores": {
+   "R1": 3.0,
+   "R2": 2.75,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 2.5,
+   "R7": 3.0
+  },
+  "notes": "R2/R6 do not state server-side; R6 also no before-yield note."
+ },
+ {
+  "id": "B2",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 2.83,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 2.83
+  },
+  "notes": "R4/R7 omit Persistent-sparingly caveat."
+ },
+ {
+  "id": "B3",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "All list all bugs."
+ },
+ {
+  "id": "B4",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "B5",
+  "scores": {
+   "R1": 1.83,
+   "R2": 1.83,
+   "R3": 1.83,
+   "R4": 1.83,
+   "R5": 1.83,
+   "R6": 1.83,
+   "R7": 1.83
+  },
+  "notes": "None mention 15,000-stud max."
+ },
+ {
+  "id": "B6",
+  "scores": {
+   "R1": 2.0,
+   "R2": 1.89,
+   "R3": 1.22,
+   "R4": 2.0,
+   "R5": 1.33,
+   "R6": 2.0,
+   "R7": 2.0
+  },
+  "notes": "R3/R5 omit pcall/retry; R2/R3 Studio guard vague."
+ },
+ {
+  "id": "B7",
+  "scores": {
+   "R1": 2.63,
+   "R2": 3.0,
+   "R3": 2.63,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 2.63
+  },
+  "notes": "R1/R3/R7 leave arg validation as a comment."
+ },
+ {
+  "id": "B8",
+  "scores": {
+   "R1": 4.0,
+   "R2": 4.0,
+   "R3": 2.5,
+   "R4": 4.0,
+   "R5": 4.0,
+   "R6": 3.0,
+   "R7": 4.0
+  },
+  "notes": "R3 grants for absent player and omits assign-once; R6 omits assign-once."
+ },
+ {
+  "id": "B9",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "B10",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "B11",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "B12",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 2.25,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "R5 omits teleport-data-not-trusted warning."
+ },
+ {
+  "id": "B13",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.25,
+   "R3": 2.25,
+   "R4": 2.25,
+   "R5": 2.25,
+   "R6": 2.25,
+   "R7": 2.25
+  },
+  "notes": "None mentions using OnServerEvent's implicit Player argument."
+ },
+ {
+  "id": "B14",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "B15",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "B16",
+  "scores": {
+   "R1": 1.94,
+   "R2": 1.94,
+   "R3": 1.81,
+   "R4": 1.94,
+   "R5": 1.94,
+   "R6": 1.94,
+   "R7": 1.94
+  },
+  "notes": "None mention anchored/server, client-fired Touched, or ownership-change jitter."
+ },
+ {
+  "id": "B17",
+  "scores": {
+   "R1": 3.0,
+   "R2": 2.87,
+   "R3": 2.87,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 2.5,
+   "R7": 3.0
+  },
+  "notes": "R6 gives ~900-byte limit; R2/R3/R6 omit no-handler drop."
+ },
+ {
+  "id": "B18",
+  "scores": {
+   "R1": 2.63,
+   "R2": 2.63,
+   "R3": 2.81,
+   "R4": 2.63,
+   "R5": 2.63,
+   "R6": 2.81,
+   "R7": 2.81
+  },
+  "notes": "require-in-parallel limit only in R3/R6/R7; none note avoiding long unyielding work."
+ },
+ {
+  "id": "B19",
+  "scores": {
+   "R1": 1.77,
+   "R2": 1.77,
+   "R3": 1.66,
+   "R4": 1.77,
+   "R5": 1.89,
+   "R6": 1.89,
+   "R7": 1.77
+  },
+  "notes": "Only R5/R6 mention ModelStreamingBehavior Improved; none mention raycasts missing unstreamed parts."
+ },
+ {
+  "id": "B20",
+  "scores": {
+   "R1": 1.89,
+   "R2": 1.89,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 1.89,
+   "R6": 1.89,
+   "R7": 1.89
+  },
+  "notes": "R3/R4 mention combining into one key."
+ },
+ {
+  "id": "B21",
+  "scores": {
+   "R1": 1.33,
+   "R2": 1.67,
+   "R3": 1.33,
+   "R4": 1.67,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 1.33
+  },
+  "notes": "stdio/studio_id item only fully in R5/R6."
+ },
+ {
+  "id": "B22",
+  "scores": {
+   "R1": 3.0,
+   "R2": 2.25,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 2.25,
+   "R6": 2.25,
+   "R7": 2.25
+  },
+  "notes": "R2/R5/R6/R7 omit PlayerScriptsUseInputActionSystem."
+ },
+ {
+  "id": "B23",
+  "scores": {
+   "R1": 2.83,
+   "R2": 2.5,
+   "R3": 2.67,
+   "R4": 2.5,
+   "R5": 2.5,
+   "R6": 2.5,
+   "R7": 2.67
+  },
+  "notes": "Selector coverage varies; only R1 notes one sheet per tree."
+ },
+ {
+  "id": "B24",
+  "scores": {
+   "R1": 1.92,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 1.92,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 1.5
+  },
+  "notes": "R7 omits rollout timeline; R1/R4 miss under-9 parental approval."
+ }
+]

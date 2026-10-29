@@ -180,5 +180,5 @@ And the soft rule: **verify by data, not by the assistant's summary.** After any
 
 <!-- related:start -->
 ## Related
-[[Roblox Studio MCP Server]] · [[AI in Roblox Development Overview]] · [[Studio Interface Tour]] · [[Team Create and Collaboration]] · [[Studio Settings and Shortcuts]] · [[Packages and Asset Reuse]] · [[Explorer Properties and Selection]]
+[[Roblox Studio MCP Server]] · [[AI in Roblox Development Overview]] · [[Studio Interface Tour]] · [[Team Create and Collaboration]] · [[Packages and Asset Reuse]] · [[Studio Settings and Shortcuts]] · [[Explorer Properties and Selection]]
 <!-- related:end -->

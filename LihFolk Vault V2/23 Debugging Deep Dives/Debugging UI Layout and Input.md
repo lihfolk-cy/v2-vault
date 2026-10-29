@@ -338,10 +338,10 @@ end)
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Cookbook - UI]] · Safe Area · Skill - Roblox UI Builder · Links - Containers · Readable Text and UI Scale · Links - UI elements
+[[Cookbook - UI]] · Safe Area · Skill - Roblox UI Builder · Official Docs - UI · Readable Text and UI Scale
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[AI Pitfalls - UI and Input]] · [[Readable Text and UI Scale]] · [[Safe Area]] · [[Shared Close Buttons and Headers Across Many Screens]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[UI and GUI Animation]]
+[[AI Pitfalls - UI and Input]] · [[Safe Area]] · [[Readable Text and UI Scale]] · [[Shared Close Buttons and Headers Across Many Screens]] · [[ScrollingFrame - Engine Reference Card]] · [[Figma Property Mapping for Roblox UI]]
 <!-- related:end -->

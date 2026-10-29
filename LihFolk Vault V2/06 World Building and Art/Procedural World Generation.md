@@ -284,10 +284,10 @@ The senior trade-off: procedural content scales content volume, not content qual
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Procedural Generation Start Here]] · Deterministic Simulation · Links - Terrain · Environment and Level Pipeline · Terrain Materials and Painting · MCP Workflows for Building Worlds
+[[Procedural Generation Start Here]] · Deterministic Simulation · Official Docs - Building and World · Environment and Level Pipeline · Terrain Materials and Painting · MCP Workflows for Building Worlds
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Collision and Physics Geometry]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Parts Unions and MeshParts]] · [[Grid Placement and Player Building Systems]] · [[Zone and Biome Art Direction]] · [[Materials MaterialVariants and SurfaceAppearance]] · [[Environment Art Styles]]
+[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Collision and Physics Geometry]] · [[Parts Unions and MeshParts]] · [[Grid Placement and Player Building Systems]] · [[Zone and Biome Art Direction]] · [[Environment Art Styles]] · [[Materials MaterialVariants and SurfaceAppearance]]
 <!-- related:end -->

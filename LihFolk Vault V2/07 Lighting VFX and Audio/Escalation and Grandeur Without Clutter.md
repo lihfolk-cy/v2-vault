@@ -111,5 +111,5 @@ Escalation is not "add more each beat". Measure peak particles, parts, beams and
 
 <!-- related:start -->
 ## Related
-[[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Ice Ball Cast to Explosion - Approved Recipe]] · [[Beams and Trails]] · [[Light Sources and Shadows]] · [[Particle Emitters In Depth]] · [[Game Feel and Juice]] · [[Impact Decals and Material-Aware Hit Sparks]]
+[[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Projectile VFX - Muzzle, Travel and Impact]] · [[Ice Ball Cast to Explosion - Approved Recipe]] · [[Designing VFX Textures and Flipbooks in Figma]] · [[Auras, Shields and Status Effects]] · [[Beams and Trails]] · [[AoE Telegraphs - Readable Ground Warnings]]
 <!-- related:end -->

@@ -1,6 +1,6 @@
 ---
 name: lihfolk-worldbuilding
-description: 'LihFolk: build Roblox maps, levels, biomes, towns, dungeons, lobbies, obby areas and terrain that read as designed. Use for "build a map", "make the map look better", "map feels empty/cluttered", floating props.'
+description: 'Build Roblox maps, levels, towns, dungeons, lobbies, obby areas and terrain that read as designed. Use for "build a map", map feels empty/cluttered, floating props.'
 ---
 
 # LihFolk Worldbuilding: places that read as designed
@@ -50,7 +50,7 @@ Without MCP, ask for these facts or write the same checks as a command-bar scrip
    - Door 3.6-4 x 7.5-8; storey 10-12; interiors 2-3 avatar heights tall; clear arena height >= 30.
    - Tag walkable ground `LF_Ground` and paths, plazas, door fronts and prompt approaches `LF_NoScatter`.
    **Gate:** walk spawn to goal (`character_navigation` or play mode); the route is obvious with no UI.
-2. **Primary forms**: buildings (via `roblox-blender-modeling` and `scripts/lihfolk_house.py`, kit pieces on a
+2. **Primary forms**: buildings (via `roblox-blender-modeling` and `../roblox-blender-modeling/scripts/lihfolk_house.py`, kit pieces on a
    2-stud grid), cliffs, big trees, the real hero. Place with `placeOnGround`; buildings on flat pads, never tilted.
 3. **Composition pass** from the player camera at close (~10 studs), mid (~50) and far (spawn and max zoom), in
    16:9 and phone aspect. Move masses, not props. Check:

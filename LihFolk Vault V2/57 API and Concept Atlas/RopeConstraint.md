@@ -39,7 +39,7 @@ API snapshot: class, inherits `Constraint` (`_tools/roblox_api.json`, docs build
 [[Physics and Vehicles Start Here]] · [[Ropes Chains and Soft Bodies]]
 
 ### 46 Resource Library
-[[Links - Constraints]]
+[[Official Docs - Physics]]
 
 ### 51 2D Game Development
 [[Choosing GUI 2D or Locked-Camera 2.5D]]

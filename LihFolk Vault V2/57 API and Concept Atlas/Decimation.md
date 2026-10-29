@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/modeling, area/ai]
 > - Avoid: Decimate without symmetry -> Symmetry on.
 > - Avoid: Treating decimation output as final topology.
 >
-> Cost: TL;DR ~100 tok · whole note ~610 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~100 tok · whole note ~620 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,16 +27,16 @@ Decimate only what remains over budget. (from [[Retopology and Decimation]])
 
 ## Mentioned in
 
-31 notes in 10 sections. The 25 most relevant are linked:
+32 notes in 10 sections. The 25 most relevant are linked:
 
 ### 13 Production and Case Studies
 [[Case Study - Building LihFolk V2 with AI Agents]]
 
 ### 14 3D Modeling
-[[Blender Workflow for Roblox Creators]] · [[Low-Poly and Stylized Modeling]] · [[Mesh Optimization for Mobile]] · [[Modeling Fundamentals for Games]] · [[Normal Maps and Detail Baking]] · [[Organic and Creature Modeling]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Retopology and Decimation]] · [[Topology and Edge Flow]] · [[UGC Avatar Items and Accessories]]
+[[Blender Workflow for Roblox Creators]] · [[Low-Poly and Stylized Modeling]] · [[Mesh Optimization for Mobile]] · [[Modeling Fundamentals for Games]] · [[Normal Maps and Detail Baking]] · [[Organic and Creature Modeling]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Retopology and Decimation]] · [[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]] · [[Topology and Edge Flow]] · [[UGC Avatar Items and Accessories]]
 
 ### 15 AI Tools
-[[AI 3D Model Generation Outside Roblox]] · [[AI Pitfalls - Assets and Import]] · [[Roblox Generative AI - Cube Mesh and Texture Generation]]
+[[AI 3D Model Generation Outside Roblox]] · [[AI Pitfalls - Assets and Import]]
 
 ### 17 Pipelines
 [[Art Pipeline - Concept to In-Game Asset]] · [[Batch Processing Tools in Studio]]
@@ -53,6 +53,6 @@ Decimate only what remains over budget. (from [[Retopology and Decimation]])
 ### 55 Modelling Nuance and Readability
 [[Bevels Chamfers and Edge Highlights Without Textures]]
 
-Also mentioned in (not linked): 00 Start Here · Glossary · Procedural Blender Assets Start Here · Spending Triangles Where the Camera Looks · The Gradient Palette Texture Workflow · Triangle Budget
+Also mentioned in (not linked): 00 Start Here · Glossary · Procedural Blender Assets Start Here · Roblox Generative AI - Cube Mesh and Texture Generation · Spending Triangles Where the Camera Looks · The Gradient Palette Texture Workflow · Triangle Budget
 
 <!-- atlas:generated -->

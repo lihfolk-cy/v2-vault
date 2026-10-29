@@ -12,7 +12,7 @@ tags: [materials, baking, lighting, ambient-occlusion, blender, textures, styliz
 > - AO strength chosen per target lighting with a minimum floor.
 > - Directional light baked only in fully controlled scenes.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.2k tok. Read more: ## 3. Ambient occlusion into the colour map · ## 6. Full lighting bakes: when and how · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.1k tok. Read more: ## 3. Ambient occlusion into the colour map · ## 6. Full lighting bakes: when and how · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The Roblox PBR guide says the colour map "shouldn't contain baked-in lighting or shading" (Roblox docs, as of October 2026), and [[Texturing and PBR Baking]] teaches the correct default: bake colour with **Color only** so real lights do the lighting. This note is about the deliberate exceptions. Roblox gives you no lightmaps, no custom shaders, no AO slot and, on many phones, coarse lighting. So almost every good-looking Roblox game bakes *something* into its textures or vertices: ambient occlusion, edge wear, gradients, contact shadows, sometimes whole rooms of light. The skill is knowing which kinds of baked light survive a dynamic engine and which ones break the moment a player turns around.
@@ -67,7 +67,7 @@ Two refinements that help a lot:
 
 ### Using the CC0 AO maps
 
-Most CC0 PBR texture sets (sources in [[Links - Free and CC0 asset libraries]]) include `_ao_2k.jpg`, and the `_arm_2k.jpg` file packs AO in its red channel. Roblox ignores both, so combine them into the colour map before upload. For tiling MaterialVariants keep strength low (0.2 to 0.3): tiled AO repeats with the tile and becomes part of the pattern you are trying to hide.
+Most CC0 PBR texture sets include `_ao_2k.jpg`, and the `_arm_2k.jpg` file packs AO in its red channel. Roblox ignores both, so combine them into the colour map before upload. For tiling MaterialVariants keep strength low (0.2 to 0.3): tiled AO repeats with the tile and becomes part of the pattern you are trying to hide.
 
 ### A Blender script for the composite
 
@@ -163,7 +163,7 @@ The catch is avatars and anything that moves: they are lit by the engine, not by
 
 ### Match the bake environment to the game sky
 
-If the bake uses Blender's default grey world, bounce light will be neutral grey while the Roblox sky is blue and warm. Use the same HDRI for the Blender world that you convert into the game's `Sky` (free CC0 HDRI sources are in [[Links - Free and CC0 asset libraries]]). Baked bounce colour then agrees with the sky the player sees.
+If the bake uses Blender's default grey world, bounce light will be neutral grey while the Roblox sky is blue and warm. Use the same HDRI for the Blender world that you convert into the game's `Sky`. Baked bounce colour then agrees with the sky the player sees.
 
 ## 7. Consolidation bakes: many materials into one set
 
@@ -222,7 +222,7 @@ Run every baked asset through four checks:
 
 ## See also
 
-[[Materials and Surfaces Start Here]] · [[Texturing and PBR Baking]] · [[Normal Maps and Detail Baking]] · [[Hand-Painted and Stylized Texturing]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Links - Free and CC0 asset libraries]] · [[Lighting Technologies and Settings]] · [[Stylized Lighting Recipes]] · [[Light Sources and Shadows]] · [[Blender Automation with Python]] · [[SurfaceAppearance PBR Workflow]] · [[Stylised vs Realistic Material Pipelines]]
+[[Materials and Surfaces Start Here]] · [[Texturing and PBR Baking]] · [[Normal Maps and Detail Baking]] · [[Hand-Painted and Stylized Texturing]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Lighting Technologies and Settings]] · [[Stylized Lighting Recipes]] · [[Light Sources and Shadows]] · [[Blender Automation with Python]] · [[SurfaceAppearance PBR Workflow]] · [[Stylised vs Realistic Material Pipelines]]
 
 ## Connected notes
 <!-- auto-links:start -->

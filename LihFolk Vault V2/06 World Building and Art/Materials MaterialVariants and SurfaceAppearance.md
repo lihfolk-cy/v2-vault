@@ -162,7 +162,7 @@ A pattern from one production game that gives a classic LEGO-stud look to any su
 - Build stylised objects as **one mesh per colour**, each with the same SurfaceAppearance. Every station in the lobby was rebuilt this way.
 - For Parts (not meshes), the same image went into a `Texture` (`StudsPerTileU/V = 8`) on the **up-facing face only** of the hub ground, paving and bases. Walls, foliage, props, water and effects were left smooth on purpose.
 
-A better variant studied from another studio's voxel models: put the stud bumps in a **normal map** with a white ColorMap, so the studs respond to real light; only the lit-edge/shadow colour version is "baked". See [[Voxel Art - Studs Outlines and Style Kits]].
+A stronger variant we recommend: put the stud bumps in a **normal map** with a white ColorMap, so the studs respond to real light; only the lit-edge/shadow colour version is "baked". See [[Voxel Art - Studs Outlines and Style Kits]].
 
 ## Choosing the right layer
 

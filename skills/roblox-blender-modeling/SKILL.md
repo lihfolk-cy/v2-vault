@@ -29,6 +29,40 @@ For any house, cabin, cottage, shop, tower or hut, build from the parameterised 
 - Pipeline: put one module in each `lh.MeshBuilder`. Then run `lh.recentre` (one shared bottom-centre origin), `lh.finish_modules` (adds Triangulate for n-gons after the bevel), `lh.gate_modules`, `lh.floating_shells` (a whole-house scan; it must report 0), `lh.render_preview` and `lh.export_modules`.
 - Verified headless on Blender 5.2: a stone cottage (7 modules, every gate passed, 0 of 317 shells floating) and a log cabin (6 modules, every gate passed, 0 of 161 floating).
 
+## Stylized creatures: `scripts/lihfolk_creature.py`
+
+Use it for any cute, soft, painted creature: a pet, critter, ambient fish or companion. It builds one fused body, a single painted texture, a light bone rig and a looping idle, all from a small JSON spec:
+```
+blender -b --factory-startup --python scripts/lihfolk_creature.py -- spec.json <out_dir> [--blend f.blend] [--no-render]
+```
+In Python, call `lcr.build_creature(spec, out_dir)`. The method, numbers and mistakes are in the vault note `Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs` (14 3D Modeling). The demo is `LihFolk Asset Pack/Models/Creatures/Puffling/Puffling_spec.json`.
+
+- **Spec.** The spec has these keys:
+  - `name`, `tris` (whole creature including the eyes), `texture` (1024) and `grid` (0.025-stud SDF step).
+  - `parts`, an ordered list:
+    - `loft`: `stations` of `[y, half_w, half_h, z]` plus `caps`.
+    - `cone`: `a`, `b` and `r: [r1, r2]`.
+    - `ellipsoid`: `c` and `r`.
+    - `fin`: `root`, `tip`, `r: [root, tip]`, `t` (half-thickness), `normal` and `bend`.
+
+    Each part also takes a blend `k`, `op: "subtract"`, `tag` (`fin`, `lip`) and `bones` (a fin chain). Author parts with x > 0 once; they are mirrored. The creature faces -Y.
+  - `eyes`: `at`, `dir`, `r`, `depth` and `seat`.
+  - `rig.spine`: the midline polyline, head tip to tail tip, plus `body_index` and `tail_names`.
+  - Optional overrides: `palette`, `paint`, `anim` and `closeups`.
+- **Pipeline.** `Field` (smooth-union SDF) runs surface nets, a voxel remesh and QuadriFlow to the tri budget. It keeps the +X half, projects and relaxes it, then mirrors it. QuadriFlow is retried on new seeds until there are no self-intersections or flipped faces. Eyes are seated lens shells. Normals are weighted. UVs are mirrored and overlapping, giving 2x texel density.
+- **Budget.** 2-4k tris (class `creature` target 5,000), one material, one UV set, a 1024 colour map and a 1024 roughness map. Fin half-thickness must be at least 0.6x the quad edge (about 0.07 studs at 3-4k tris on a 4-stud body), or the fins fold.
+- **Bake.** A Cycles EMIT bake of a procedural paint graph:
+  - Base: a head-to-tail gradient, a banded warm top light and a counter-shaded belly by position and normal.
+  - Light and shadow: a bounce rim and warm-tinted AO, faded near the eyes.
+  - Detail: spots, blush, fin rays and edge, stroke noise, and eyes with glints.
+
+  It writes `<Name>_Color.png` (sRGB) and `<Name>_Roughness.png` (non-colour), then a Principled material that uses both.
+- **Rig.** The bones are `Root` (no deform), then `Body` (root motion), then the `Head` and `Tail*` chains, plus 1-2 bone chains per fin (`.L` = +X). Weights are automatic heat weights; the eyes go on the head bone. Every vertex has at most 4 influences, normalised.
+- **Animation.** `swim_action` is a 2 s loop with a skewed sine tail wave and per-bone phase lag, plus body counter-yaw, bob and roll, and rowing fins. The first frame equals the last, and the loop error is reported.
+- **Gate and export.** `lf.gate(ob, "creature", symmetric="X", seats=eyes)` runs before rigging. The GLB keeps the Armature and the action, and an FBX copy is written too.
+- **Outputs.** `<Name>_stats.json` (tris, bones, influences, texel, gate, loop) and the review renders: hero, turntable, views, close-ups, wireframe, silhouettes, animation strips and onion skins.
+- **Measured results.** In the Puffling demo the model passed the blind panel at 8.67. The swim clip did not (5.33): its tail lag is hidden inside the round body. Give the creature a visible tail stalk, or treat the clip as a draft.
+
 ## Pipeline (do every step)
 
 1. **Brief**: object class (budget key below), style, palette (2-3 colours + 1 accent), real size in studs (R15 avatar ~5 studs tall; door ~7-8 studs), where its origin goes.

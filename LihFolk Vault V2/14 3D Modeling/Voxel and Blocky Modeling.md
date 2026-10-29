@@ -8,23 +8,23 @@ tags: [modeling, voxel, blocky, studs, outlines, palette, art-style, blender, lu
 > - Avoid: Mixed grains -> One grid per model
 > - Avoid: Smooth primitives in a voxel model -> Voxelise every curve
 > - Avoid: Too much neon -> Respect the glow band for the tier
-> - Style chosen (neon tiered, outlined studded, pastel companion) for what the object means to the player.
+> - Style chosen (glow-trim showpiece, outlined studded, soft pastel) for what the object means to the player.
 > - One grid; cell size set; smallest details 1/40-1/60 of the longest dimension.
 > - Three tones per material; one main hue; one glow colour.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.7k tok. Read more: ## 3. Style B: outlined studded voxels ("toy-box heroes") · ## 5. Building voxels: Parts in Studio or meshes from Blender · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.6k tok. Read more: ## 3. Style B: outlined studded voxels ("toy-box heroes") · ## 5. Building voxels: Parts in Studio or meshes from Blender · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-Blocky art is Roblox's native language: the platform grew up on studded bricks, and players read cubes as "made for this world". A modern voxel style is not lazy art, though. The good ones follow strict rules (one grid, three tones per material, one glow colour, studs or outlines applied everywhere) and those rules are what make ten unrelated models look like one game. This note teaches three production voxel styles studied for the reference project (dark-and-neon tiered showpieces, outlined studded "toy-box" enemies, and cute pastel companions), the shared grammar behind them, how to build voxels as Parts in Studio or as meshes from Blender, and what they really cost. The reference project rebuilt all 49 of its first-realm enemies in the outlined studded style, so the numbers here are real.
+Blocky art is Roblox's native language: the platform grew up on studded bricks, and players read cubes as "made for this world". A modern voxel style is not lazy art, though. The good ones follow strict rules (one grid, three tones per material, one glow colour, studs or outlines applied everywhere) and those rules are what make ten unrelated models look like one game. This note sets out three voxel style archetypes that cover most needs (glow-trim showpieces, outlined studded "toy-box" enemies, and soft pastel companions), the shared grammar behind them, how to build voxels as Parts in Studio or as meshes from Blender, and what they really cost. The reference project rebuilt all 49 of its first-realm enemies in the outlined studded style, so the numbers here are real.
 
-The three styles were studied frame by frame from short public showcase videos of other Roblox developers' work, with colours sampled from the video pixels; they are presented here as style systems, not as anyone's assets.
+Each archetype is a set of rules you can hand to a builder or a generator script. Treat the numbers as **Rule of thumb** starting points unless they are marked **Measured** (from the reference project's own rebuild), and tune them on your own models under your own lighting.
 
 ---
 
 ## 1. Voxel grammar: rules shared by every good blocky style
 
 1. **One grid per model.** Every cube is the same cell size, and every edge lands on the grid. Mixing grains (a 0.5-stud body with 0.2-stud details) reads as two art styles glued together.
-2. **Visible steps.** Curves are stepped, spheres are voxelised. One smooth cylinder in a voxel model breaks the whole read ("a smooth sphere or cylinder slipped in" is listed as a top mistake in all three style guides).
+2. **Visible steps.** Curves are stepped, spheres are voxelised. A single smooth cylinder or sphere in a voxel model breaks the whole read, so it is the first thing to check in review.
 3. **One main hue per model, one glow colour**, plus set-wide accents (white, gold, a shared pink). Never two competing glow hues.
 4. **Three tones per material**: shadow, body, lit top. More than three steps reads muddy at this resolution.
 5. **Eyes or the hero glow are the brightest pixels.**
@@ -33,12 +33,12 @@ The three styles were studied frame by frame from short public showcase videos o
 
 ### Choosing the grain
 
-| Model | Cells across the main body | Cell size (studs) | Source |
+| Model | Cells across the main body | Cell size (studs) | Label |
 |---|---|---|---|
-| Small companion (3-4 studs) | 10-18 | 0.25-0.3 | Pastel style, estimated from the video |
-| Showpiece prop (about 20 studs) | 40-60 | 0.3-0.5 | Neon style |
-| Large character (13+ studs) | 40-50 tall | 0.5 | Outlined style; the project's boss rebuild used 0.5 studs, 58 cells tall |
-| Vehicle | 60-80 long | 0.3-0.5 | Outlined style |
+| Small companion (3-4 studs) | about 12-16 | 0.25-0.3 | Rule of thumb |
+| Showpiece prop (about 20 studs) | about 40-60 | 0.3-0.5 | Rule of thumb |
+| Large character (13+ studs) | about 40-60 tall | 0.5 | Measured: the project's boss rebuild used 0.5 studs, 58 cells tall |
+| Vehicle | about 50-80 long | 0.3-0.5 | Rule of thumb |
 
 Rule from the project: keep cells at or above about **0.3 studs** if you build with Parts, or part counts explode. Smallest details (glyph pixels, specks) are about 1/40 to 1/60 of the object's longest dimension.
 
@@ -67,37 +67,35 @@ end
 
 ---
 
-## 2. Style A: tiered voxel neon (dark bodies, light lines)
+## 2. Style A: glow-trim showpieces (dark bodies, light lines)
 
-For premium, themed or tiered objects: rarity pedestals, stations, gates, top-tier showpieces.
+For premium, themed or tiered objects: rarity pedestals, stations, gates, top-tier showpieces. The idea: a dark, quiet body lets a small amount of Neon do the talking, and rank is shown by adding pieces, not by changing the base.
 
-**Core rules (condensed from the study):**
-1. One fixed base silhouette per object; tiers bolt onto the same slots, never change the base.
-2. Dark body (near-black, tinted to the theme hue, brightness 10-20 percent), theme colour in **Neon**.
-3. **Neon is drawn, not filled**: it traces edges, frames panels, draws glyphs. One big neon area allowed: the hero shape (moon disc, orb).
-4. One hero **crown** on top, 0.5-1x the body height, so each theme reads from its silhouette alone.
-5. Corners are framed light boxes (dark cube with an inset neon square on its outward faces).
-6. One glyph per theme repeated on the main faces (chevrons, star, spiral, bolt, X, runes).
-7. Higher tiers sink into a **rubble skirt** of small dark cubes with single neon "specks" (5-10 percent density), spreading 15-30 percent of the footprint width.
-8. 3-10 small **floaters** break the outline (crystals, rings, rocks), each bobbing on its own phase.
+**Rules (Rule of thumb):**
+1. **Keep the base shape fixed across ranks.** Higher ranks add pieces to the same base, so players compare like with like.
+2. **Dark body, tinted.** Use a very dark version of the theme hue for the body rather than grey; grey on a coloured theme looks unfinished.
+3. **Outline with light, do not fill with it.** Neon runs along edges, panel borders and symbols. Allow one larger glowing focal shape at most.
+4. **One symbol per theme**, repeated on the main faces, so a theme can be named from any side.
+5. **Give the top a distinct shape per theme**, so themes are told apart by outline before colour is seen.
+6. **Add detail outward with rank.** Low ranks stay clean; high ranks gain extra pieces around and above the base. Anything that hovers should move gently, each piece on its own timing.
 
-**Slots.** Split any object into slots before building: frame edges, main face, corners, emblem panel, supports, crown, flanks, skirt, air. Every theme fills the same slots, so all variants share one silhouette. A sword maps blade edges to frame edges, the blade flat to the main face, the guard centre to the emblem.
+**Plan in regions first.** Before placing cells, name the regions every variant must fill (edges, main face, corners, symbol panel, supports, top, sides, surroundings). Every theme fills the same regions, so variants stay one family. The habit maps onto weapons too: blade edges are the frame, the flat is the main face, the guard is the symbol panel.
 
-**Glow budget** (share of the object's pixels that are bright and saturated, measured per theme): from 0.6 percent (clean tech look) to 16.1 percent (fire theme fully outlined in neon). Rule: tier 1 at 1-5 percent, mid tiers 5-10, top tiers 10-16. **Above about 16 percent the shape is lost in bloom.** Set Neon part colours slightly darker and more saturated than they should look, because bloom lifts them.
+**Glow budget (Rule of thumb).** Keep bright, saturated pixels to a small share of the object: a few percent at the lowest rank, growing to roughly a tenth to a sixth at the top. Past that the shape melts into bloom. Pick Neon colours a little darker and more saturated than the look you want, because bloom lifts them.
 
-**Palette derivation** from one hue H: sky at saturation about 60 percent, brightness 40; body at saturation 30-50, brightness 10-20; neon main at saturation 80-90, brightness 85-95; a second neon ±10-20 degrees of hue for gradients; neutral or gold trim; one small off-hue accent.
+**Palette from one hue (Rule of thumb):** a mid-dark sky, a very dark low-saturation body, a bright high-saturation Neon, a second Neon a few degrees of hue away for gradients, a neutral or gold trim, and one small contrasting accent.
 
-**Tier ladder:**
+**Rank ladder (Rule of thumb):**
 
-| Rank | Adds | Approx. cells (20-stud object, 0.4-stud grain) |
+| Rank | What it adds | Rough cell count (20-stud object, 0.4-stud grain) |
 |---|---|---|
-| 1 | Base only, neon as lines | 300-500 |
-| 2 | Theme colour, main-face glyph, corner caps, small crown | 600-900 |
-| 3 | Big crown, flank pieces, skirt, floaters | 1,000-1,500 |
-| 4 | Dense speck skirt, chains, floating rocks or crystals | 1,500-2,500 |
-| 5 | Biggest crown silhouette, props, most specks and floaters | 2,000-3,000 |
+| 1 | Base shape, Neon as thin lines | a few hundred |
+| 2 | Theme colour, symbol, corner details | under 1,000 |
+| 3 | Larger top shape, side pieces | about 1,000-1,500 |
+| 4 | Surrounding detail and hovering pieces | about 1,500-2,500 |
+| 5 | The boldest top shape and the most detail | up to about 3,000 |
 
-Each tier must be identifiable from its crown silhouette alone; neighbouring tiers differ by at least 40 degrees of hue or by value.
+Neighbouring ranks should differ clearly in hue or value, and each rank should be recognisable from its outline alone.
 
 ---
 
@@ -107,24 +105,24 @@ For enemies, armour sets, vehicles and turrets. The reference project's enemy ro
 
 **Core rules:**
 1. Voxel grid; large characters 40-50 cells tall, vehicles 60-80 long.
-2. **A raised square stud on every cell face**, top, side and front: about 40-50 percent of the cell width, 10-15 percent of the cell high, a lit edge 10-20 percent lighter, a shadow side 15-25 percent darker. A 2x2-cell brick shows 4 studs: the stud grid is the cell grid.
-3. **A near-black outline** (about one cell, colours like `#060808` to `#0a0b17`) round every part and the silhouette.
+2. **A raised square stud on every cell face**, top, side and front, so the stud grid is the cell grid (a 2x2-cell brick shows 4 studs). The project's tuned stud values are listed under "Studs: geometry or texture?" below (Measured).
+3. **A near-black outline** round every part and the silhouette, tinted very slightly toward the palette rather than pure black (Rule of thumb).
 4. Two body colours (main hue and its shadow) plus **gold trim** on edges, rims and rivets.
-5. **One neon colour per model** (eyes, lamps, bands, weapon), 3-8 percent of the model's pixels.
+5. **One neon colour per model** (eyes, lamps, bands, weapon), kept to a small share of the model (Rule of thumb: well under a tenth).
 6. Eyes always neon.
 7. One exaggerated feature, 1.5-2x realistic size.
 8. Neon, glass and special metal stay **smooth** (no studs): the contrast makes them read as special.
 
-**Archetypes** (proportions that worked):
+**Archetypes (Rule of thumb):**
 
-| Archetype | Proportions |
+| Archetype | What sells it |
 |---|---|
-| Heavy brute | Head below the shoulder line, head about 1/6 of height, shoulders 2.2-2.5x head width, arms to the knees, forearms thicker than upper arms, legs about 30 percent of height |
-| Armoured knight | Gunmetal plates, gold on every edge, 3-5-cell gold horns, neon visor slit and bands (5-8 percent), a contrasting cloth cape or plume |
-| Creature | One hue in 4-5 values, neon eyes only, tapered tentacles that hook 3-4 cells at the tip, cube heads read better than spheres |
-| Robot | Boxy limbs, repeated 2x2 window panels, one oversized neon eye |
+| Heavy brute | Small head set low between big shoulders, long heavy arms, short legs |
+| Armoured knight | Metal plates with a bright trim on the edges, a glowing visor slit, one soft contrasting element such as a cape |
+| Creature | One hue in a few values, glowing eyes only, limbs that taper in steps; boxy heads read better than round ones |
+| Robot | Boxy limbs, repeated panel patterns, one oversized glowing eye |
 
-**Palette system:** main hue at saturation 60-80 percent and value 35-55, a shadow at value 15-25, gold trim, one neon hue far from the main (cyan on navy, green on gunmetal, red on teal, lime on purple).
+**Palette (Rule of thumb):** a saturated mid-value main hue, a darker shadow of it, a gold or metal trim, and one Neon hue well away from the main hue on the colour wheel so it pops.
 
 ### Studs: geometry or texture?
 
@@ -151,22 +149,20 @@ Lines only where parts or materials meet: the project found that lines on every 
 
 ---
 
-## 4. Style C: cute pastel voxel companions
+## 4. Style C: soft pastel companions
 
-For pets, mascots and friendly NPCs: things the player owns or likes.
+For pets, mascots and friendly NPCs: things the player owns or likes. The goal is warmth and collectability, so simplicity wins over detail.
 
-1. One cosmic or themed object plus **one shared face**; no limbs, no neck.
-2. One hue per model in 2-3 values (light at brightness 95-100, saturation 15-30), plus set-wide white and a shared pink for cheeks and accents. The pink is what ties a blue planet and a yellow sun into one family.
-3. **Big forehead, low face**: eyes below the middle of the head.
-4. Eyes are the brightest pixels (white-hot catchlights); the white-hot share of the model is 15-25 percent, much more glow than style A, acceptable because the shapes are simple.
-5. One **orbit element** (ring, disc, sparkles, rays) roughly doubling the silhouette width, tilted 20-30 degrees.
-6. Float and spin; no rig needed.
+1. **Simple body, expressive face.** A rounded or iconic shape (a blob, a fruit, a planet, a cloud) carries a face; limbs are optional and small.
+2. **Soft colour.** One light, low-saturation hue per model in two or three values, plus one or two accent colours shared by the whole set. The shared accents are what make different shapes read as one family.
+3. **Cute proportions.** A large head area, eyes set low and wide, a small mouth.
+4. **Eyes are the brightest pixels.** A white highlight in each eye does more for charm than any other detail.
+5. **One accessory that extends the silhouette** (a halo, a leaf, a tail, a small orbiting object) so the pet reads at a distance.
+6. **Idle motion instead of a rig.** A gentle bob and slow turn is enough for most companions.
 
-**The face recipe** (cells): eyes 2 wide x 3 tall (top 2x2 white neon catchlight, bottom row tinted), eye centres about 4 cells apart, eye tops at about 45 percent of head height from the top; mouth a 2-3 x 1 "u" with a pink tongue cell, one cell below the eyes; cheeks 2x1 pink under the outer half of each eye. Face height (eye top to mouth) 35-40 percent of the head; width 55-65 percent. The face is identical on every model in the set: a shared face makes a collection.
+**One face for the whole set (Rule of thumb).** Design a single face layout in cells (eye size, spacing, mouth, blush) and reuse it on every companion. Shapes can vary widely; the shared face is what turns them into a collection. Test it at the smallest size the pet appears on screen and simplify until it still reads.
 
-**Body archetypes:** a 5-point star extruded about a third of its width with tips stepping down to one cell; a terraced sphere of 6-8 slabs each one cell narrower; a rounded cube with 1-2-step chamfers; a cloud of 3-4 overlapping voxel balls; rays as 1-2-cell pillars with a different-colour tip; a ring at about 2x body width.
-
-Budget: about 300-900 cells, merged to 80-250 parts.
+Budget (Rule of thumb): a few hundred cells, merged to a few hundred Parts at most, or one small mesh per colour.
 
 ---
 
@@ -327,7 +323,7 @@ Faces between two different colours are culled too (any neighbour hides the face
 ## 6. Lighting, materials and VFX for voxel art
 
 - Bodies in **SmoothPlastic** (or Plastic with the stud texture), CastShadow on. Neon parts CastShadow off.
-- **Bloom** does the glow: the neon style used Intensity about 0.8-1, Size about 24, Threshold 1.2-1.5 so Neon blooms and white trim does not.
+- **Bloom** does the glow (Rule of thumb: a moderate Intensity and a Threshold a little above 1, so Neon blooms and white trim does not; tune under your own lighting).
 - **One PointLight** in the crown or core (Range 10-16, Brightness 1-2), not dozens.
 - **Particles are voxels too**: tiny real cubes (0.05-0.3 studs) that tumble, shrink and fade, about 20-40 alive per object, capped and paused beyond about 150 studs. A pooled-Part emitter held about 35 cubes alive in a Studio test (Measured). For whole zones, swap to a ParticleEmitter with a square texture. See [[VFX Design Playbook]].
 
@@ -354,11 +350,11 @@ Faces between two different colours are culled too (any neighbour hides the face
 | Studs as real geometry in game | Triangle count explodes | Texture or normal map |
 | Outline hull on crowds | Double triangles everywhere | Seam lines in texture; hull or Highlight only on heroes |
 | Cells under 0.3 studs with Parts | Thousands of parts | Larger grain or meshes |
-| Floaters with no motion | Reads as clutter | Bob and spin, each on its own phase |
+| Hovering pieces with no motion | Reads as clutter | Bob and spin, each on its own timing |
 
 ## Checklist
 
-- [ ] Style chosen (neon tiered, outlined studded, pastel companion) for what the object means to the player.
+- [ ] Style chosen (glow-trim showpiece, outlined studded, soft pastel) for what the object means to the player.
 - [ ] One grid; cell size set; smallest details 1/40-1/60 of the longest dimension.
 - [ ] Three tones per material; one main hue; one glow colour.
 - [ ] Glow share within the style's band.
@@ -378,5 +374,5 @@ Faces between two different colours are culled too (any neighbour hides the face
 
 <!-- related:start -->
 ## Related
-[[Voxel Scale Grids and Stud Alignment]] · [[Hand-Painted and Stylized Texturing]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Organic and Creature Modeling]] · [[Hard-Surface Modeling]] · [[Modular Environment Kits]] · [[Mesh Optimization for Mobile]] · [[UV Unwrapping]] · [[Retopology and Decimation]] · [[Modeling Characters for R15 and Custom Rigs]]
+[[Voxel Scale Grids and Stud Alignment]] · [[Hand-Painted and Stylized Texturing]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Organic and Creature Modeling]] · [[Hard-Surface Modeling]] · [[Modular Environment Kits]] · [[Mesh Optimization for Mobile]] · [[UV Unwrapping]] · [[Texturing and PBR Baking]] · [[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]]
 <!-- related:end -->

@@ -295,7 +295,7 @@ Lune runs Luau outside Roblox with filesystem, process, network and a `roblox` l
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Code Pipeline - Rojo Git and CI]] · Links - External tooling · Code Review for Luau Teams · [[Packages and Asset Reuse]] · Documentation and Onboarding New Developers · AI Code Assistants for Luau
+[[Code Pipeline - Rojo Git and CI]] · Official Docs - Studio and Tooling · Code Review for Luau Teams · [[Packages and Asset Reuse]] · Documentation and Onboarding New Developers · AI Code Assistants for Luau
 <!-- auto-links:end -->
 
 <!-- related:start -->

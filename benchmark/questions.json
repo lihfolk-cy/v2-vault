@@ -120,8 +120,10 @@
       "points": 3,
       "sources": [
         "https://about.roblox.com/newsroom/2026/04/introducing-roblox-kids-and-select-accounts",
-        "https://create.roblox.com/docs/production/promotion/content-maturity"
-      ]
+        "https://create.roblox.com/docs/production/promotion/content-maturity",
+        "https://create.roblox.com/docs/production/publishing/kids-and-select"
+      ],
+      "grader_notes": "Key correction (2026-10-29): the Creator Hub page 'Kids and Select' lists a one-time refundable per-game fee OR an active Roblox Plus or Premium subscription held 2 consecutive months, plus ID verification and 2-Step Verification. Give full credit for item 3 to answers stating Plus/Premium or the fee; do not penalise 'Plus only' either."
     },
     {
       "id": "P8",

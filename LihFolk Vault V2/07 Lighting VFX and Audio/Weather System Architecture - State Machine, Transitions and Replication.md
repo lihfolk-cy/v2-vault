@@ -230,5 +230,5 @@ Transition gotchas:
 
 <!-- related:start -->
 ## Related
-[[Stylized Lighting Recipes]] · [[Lighting Technologies and Settings]] · [[Particle Emitters In Depth]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[Music and Adaptive Audio]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Light Sources and Shadows]]
+[[Stylized Lighting Recipes]] · [[Lighting Technologies and Settings]] · [[Replicating VFX - Server Validates, Clients Render]] · [[Particle Emitters In Depth]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[Music and Adaptive Audio]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]]
 <!-- related:end -->

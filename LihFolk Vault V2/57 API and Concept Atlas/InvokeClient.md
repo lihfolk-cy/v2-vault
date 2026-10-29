@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/scripting, area/networking, api/InvokeClient
 > - If the client never returns a value, the server yields forever, so an exploiter can leak server threads (and any lock they...
 > - Avoid: `InvokeClient` for anything -> Event plus reply event with timeout.
 >
-> Cost: TL;DR ~160 tok · whole note ~500 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~160 tok · whole note ~510 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,7 +27,7 @@ API snapshot: member of `RemoteFunction` (`_tools/roblox_api.json`, docs build o
 
 ## Mentioned in
 
-14 notes in 11 sections. The 14 most relevant are linked:
+15 notes in 11 sections. The 15 most relevant are linked:
 
 ### 02 Luau Scripting
 [[Error Handling and Retries]] · [[Task Library Coroutines and Yielding]]
@@ -50,14 +50,14 @@ API snapshot: member of `RemoteFunction` (`_tools/roblox_api.json`, docs build o
 ### 29 Luau Cookbook
 [[Cookbook - Remotes and Networking]]
 
-### 46 Resource Library
-[[Links - Remote events and functions]]
-
 ### 49 Roblox Platform Features
-[[Engine and API Changes 2025-2026]]
+[[API Renames and Deprecations 2025-2026]] · [[Engine and API Changes 2025-2026]]
 
 ### 50 Team Collaboration and Project Management
 [[Code Review for Luau Teams]]
+
+### 62 Engine Reference Cards
+[[RemoteEvent - Engine Reference Card]]
 
 ### Root notes
 [[Skill - Roblox Secure Remotes]]

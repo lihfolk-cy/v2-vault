@@ -262,5 +262,5 @@ Keep a shelf of 10 to 20 "golden" approved assets in the look-dev place specific
 
 <!-- related:start -->
 ## Related
-[[Low-Poly and Stylized Modeling]] · [[Spending Triangles Where the Camera Looks]] · [[AI 3D Model Generation Outside Roblox]] · [[Modeling Fundamentals for Games]] · [[Hard-Surface Modeling]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]
+[[Low-Poly and Stylized Modeling]] · [[AI 3D Model Generation Outside Roblox]] · [[Spending Triangles Where the Camera Looks]] · [[Modeling Fundamentals for Games]] · [[Hard-Surface Modeling]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]
 <!-- related:end -->

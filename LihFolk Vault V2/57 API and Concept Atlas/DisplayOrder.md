@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/ui, area/debugging, api/DisplayOrder]
 > - DisplayOrder bands written down and assigned to every ScreenGui.
 > - Screens as components registered with a presenter that enforces one-open-at-a-time and the band plan of `DisplayOrder`s...
 >
-> Cost: TL;DR ~120 tok · whole note ~370 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~360 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ API snapshot: member of `ScreenGui` (`_tools/roblox_api.json`, docs build of 202
 
 ## Mentioned in
 
-10 notes in 6 sections. The 10 most relevant are linked:
+9 notes in 5 sections. The 9 most relevant are linked:
 
 ### 05 UI and UX
 [[Declarative UI - React-Lua and Fusion]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[HUD Design]] · [[Safe Areas and Insets]] · [[ScreenGui Fundamentals]]
@@ -38,9 +38,6 @@ API snapshot: member of `ScreenGui` (`_tools/roblox_api.json`, docs build of 202
 
 ### 23 Debugging Deep Dives
 [[Debugging UI Layout and Input]]
-
-### 46 Resource Library
-[[Links - Containers]]
 
 ### 58 Player QoL and Game Tweaks
 [[Colourblind Palettes Text Size and Tooltips]]

@@ -72,10 +72,10 @@ Related concepts: [[Dependency Injection in Luau]], [[Telemetry Events]], [[Repl
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Advanced Luau Start Here]] · Links - Quests and progression · [[Core Concepts Start Here]] · Error Handling - pcall xpcall and Promise Patterns · Module Scripts and Requiring · Subscriptions and Premium Payouts
+[[Advanced Luau Start Here]] · Official Docs - Game Systems · [[Core Concepts Start Here]] · Error Handling - pcall xpcall and Promise Patterns · Module Scripts and Requiring · Subscriptions and Premium Payouts
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Feature Flags]] · [[Server Authority]] · [[Onboarding Funnel]] · [[Streaming Radius]] · [[Faucets and Sinks]] · [[Rate Limiting]] · [[Instance Count]] · [[Session Length]]
+[[Feature Flags]] · [[Server Authority]] · [[Onboarding Funnel]] · [[Streaming Radius]] · [[Faucets and Sinks]] · [[Rate Limiting]] · [[Session Length]] · [[Instance Count]]
 <!-- related:end -->

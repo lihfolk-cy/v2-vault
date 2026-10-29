@@ -271,5 +271,5 @@ To save a player-built structure, convert instances to plain data (class name, C
 
 <!-- related:start -->
 ## Related
-[[Script Types and Run Context]] · [[Metatables and OOP - When and When Not]] · [[Functions Closures and Upvalues]] · [[Module Scripts and Requiring]] · [[Luau Performance and Native Codegen]] · [[Luau Type System and Strict Mode]] · [[Task Library Coroutines and Yielding]] · [[Luau Performance Patterns with Benchmarks]]
+[[Instance - Engine Reference Card]] · [[CollectionService - Engine Reference Card]] · [[Script Types and Run Context]] · [[Debugging Client-Server Desync]] · [[Reading Luau Errors and Stack Traces]] · [[Functions Closures and Upvalues]]
 <!-- related:end -->

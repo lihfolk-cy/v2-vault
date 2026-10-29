@@ -92,5 +92,5 @@ Common causes:
 
 <!-- related:start -->
 ## Related
-[[Blender Workflow for Roblox Creators]] · [[Hard-Surface Modeling]] · [[Modeling Fundamentals for Games]] · [[Retopology and Decimation]] · [[Normal Maps and Detail Baking]] · [[Organic and Creature Modeling]] · [[UV Unwrapping]] · [[Modeling Weapons and Props]]
+[[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]] · [[Blender Workflow for Roblox Creators]] · [[Retopology and Decimation]] · [[Hard-Surface Modeling]] · [[Modeling Fundamentals for Games]] · [[Normal Maps and Detail Baking]] · [[Organic and Creature Modeling]] · [[UV Unwrapping]]
 <!-- related:end -->

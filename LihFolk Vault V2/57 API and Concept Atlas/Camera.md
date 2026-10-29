@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/animation, area/vfx, api/Camera]
 > - Camera code only on the client; bound at the right RenderStep priority.
 > - Avoid: Writing `Camera.CFrame` additively without removing it (camera drifts).
 >
-> Cost: TL;DR ~130 tok · whole note ~760 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~770 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -29,7 +29,7 @@ API snapshot: class, inherits `PVInstance` (`_tools/roblox_api.json`, docs build
 
 ## Mentioned in
 
-34 notes in 17 sections. The 25 most relevant are linked:
+35 notes in 18 sections. The 25 most relevant are linked:
 
 ### 05 UI and UX
 [[Off-Screen Objective Markers and Waypoint Arrows]]
@@ -67,6 +67,6 @@ API snapshot: class, inherits `PVInstance` (`_tools/roblox_api.json`, docs build
 ### 58 Player QoL and Game Tweaks
 [[Aim Assist and Generous Hitboxes]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]]
 
-Also mentioned in (not linked): Intersection and Collision Math · Responsive UI for Phone Tablet Console and PC · Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur · Script Performance · Terrain Deep Dive - Materials Water and Performance · Testing Animations in Studio · Thumbnails Icons and Store Page · Voxel Scale Grids and Stud Alignment · World-Space UI - BillboardGui and SurfaceGui
+Also mentioned in (not linked): Intersection and Collision Math · Responsive UI for Phone Tablet Console and PC · Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur · Script Performance · SoundService - Engine Reference Card · Terrain Deep Dive - Materials Water and Performance · Testing Animations in Studio · Thumbnails Icons and Store Page · Voxel Scale Grids and Stud Alignment · World-Space UI - BillboardGui and SurfaceGui
 
 <!-- atlas:generated -->

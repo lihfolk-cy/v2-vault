@@ -308,10 +308,10 @@ The senior trade-off: global leaderboards drive competition and attract exploite
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Cookbook - Data and Saving]] · Links - Leaderboards · Economy Resets and Seasonal Wipes · Debugging DataStore Problems · Session Lock · Cross-Server Messaging
+[[Cookbook - Data and Saving]] · Official Docs - Data and Persistence · Economy Resets and Seasonal Wipes · Debugging DataStore Problems · Session Lock · Cross-Server Messaging
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Resetting One Player's Data Safely]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[Global State and Live Config]] · [[Data Schema Design and Migrations]] · [[Open Cloud APIs]] · [[Schema Migrations - Worked Case Studies]] · [[Data Loss Prevention and Recovery]] · [[HttpService and External APIs]] · [[Trading Systems Without Duplication]]
+[[DataStoreService - Engine Reference Card]] · [[Resetting One Player's Data Safely]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[Global State and Live Config]] · [[Data Schema Design and Migrations]] · [[Data Loss Prevention and Recovery]] · [[Schema Migrations - Worked Case Studies]] · [[Open Cloud APIs]] · [[HttpService and External APIs]] · [[Trading Systems Without Duplication]]
 <!-- related:end -->

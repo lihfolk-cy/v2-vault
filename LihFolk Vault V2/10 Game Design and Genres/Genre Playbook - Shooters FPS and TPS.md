@@ -264,7 +264,7 @@ Paid random crates fall under Roblox's paid random item rules: odds disclosure a
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Genre Playbook - Sports]] · [[Physics and Vehicles Start Here]] · Links - Cameras · Melee Combat System End to End · Tower Defense Waves and Placement End to End · Combat Arena and Encounter Layout
+[[Genre Playbook - Sports]] · [[Physics and Vehicles Start Here]] · Official Docs - Input and Controls · Melee Combat System End to End · Tower Defense Waves and Placement End to End · Combat Arena and Encounter Layout
 <!-- auto-links:end -->
 
 <!-- related:start -->

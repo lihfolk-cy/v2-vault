@@ -117,7 +117,7 @@ Art guidance (rule of thumb):
 - **Resolution.** Six faces at 1024 is six 1024 textures of memory; a soft painted sky often looks identical at 512 (see [[Textures Decals and Texture Memory]]).
 - **No baked sun** if you use the engine sun: two suns look wrong, and shadows will disagree with the painted one.
 - **Horizon behaviour.** Atmosphere haze covers the bottom of the skybox; design the sky so the horizon band can be hidden.
-- **A flat colour sky** (Atmosphere doing all the work, no skybox detail) is a legitimate stylised choice: one style study found a whole showcase used a flat tinted sky with the horizon melted into haze.
+- **A flat colour sky** (Atmosphere doing all the work, no skybox detail) is a legitimate stylised choice: a flat tinted sky with the horizon melted into haze keeps all attention on the foreground objects.
 
 ### Sky dressing
 
@@ -132,7 +132,7 @@ Keep sky props **non-colliding, non-queryable, no shadows**, and consider whethe
 Art uses:
 - **Depth.** Even light haze separates foreground from background and hides the streaming edge.
 - **Hiding the edge of the world.** Higher density hides distant terrain and the point where streamed content ends.
-- **Theme tinting.** Tint `Color` and `Decay` toward the zone's hue and keep the floor neutral. A neon voxel style study used Atmosphere Color and Decay set to the theme's sky hue, Density about 0.35 to 0.45 and Haze about 1 to 2, so the horizon melted into a flat coloured sky; OutdoorAmbient was tinted toward the hue at about 40 percent value.
+- **Theme tinting.** Tint `Color` and `Decay` toward the zone's hue and keep the floor neutral. For a dark glowing theme (Rule of thumb): set Atmosphere `Color` and `Decay` to the theme's sky hue with a moderate `Density` and some `Haze`, so the horizon melts into a flat coloured sky, and tint `OutdoorAmbient` toward the same hue at a low-mid value. Tune by eye against your Neon pieces.
 - **Clouds for scale.** A few slow clouds make a sky feel big; heavy cover flattens lighting.
 
 ### Per-zone air
@@ -261,10 +261,10 @@ The senior trade-off: water and sky are large screen areas, so small changes aff
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Materials and Surfaces Start Here]] · Lighting Untextured Art in Roblox · Links - Lighting · [[Zone and Biome Art Direction]] · Bevels Chamfers and Edge Highlights Without Textures · Environment and Level Pipeline
+[[Materials and Surfaces Start Here]] · Lighting Untextured Art in Roblox · Official Docs - Building and World · [[Zone and Biome Art Direction]] · Bevels Chamfers and Edge Highlights Without Textures · Environment and Level Pipeline
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Level of Detail and Model Streaming]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Materials MaterialVariants and SurfaceAppearance]] · [[Foliage Props and Scatter]] · [[Modeling in Blender for Roblox]] · [[Level Design for Roblox]]
+[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Level of Detail and Model Streaming]] · [[Materials MaterialVariants and SurfaceAppearance]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Foliage Props and Scatter]] · [[Modeling in Blender for Roblox]] · [[Level Design for Roblox]]
 <!-- related:end -->

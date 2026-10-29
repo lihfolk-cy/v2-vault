@@ -565,10 +565,10 @@ With `SaveEveryStages = 5` and a 30-second gap, a fast player on short stages sa
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Checkpoints and spawning]] · Spawn Points Safe Zones and Respawn Flow · Purchase Data and Receipts · [[Racing Laps and Checkpoints End to End]] · Cookbook - Players and Characters · Level Design Start Here
+[[Official Docs - Game Systems]] · Spawn Points Safe Zones and Respawn Flow · Purchase Data and Receipts · [[Racing Laps and Checkpoints End to End]] · Cookbook - Players and Characters · Level Design Start Here
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Genre QA Passes - Test Checklists per Game Type]] · [[Tycoon Plots and Droppers End to End]] · [[Spawn Points Safe Zones and Respawn Flow]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]] · [[Tower Defense Waves and Placement End to End]] · [[Horror Monster Chase AI End to End]]
+[[Genre QA Passes - Test Checklists per Game Type]] · [[Tycoon Plots and Droppers End to End]] · [[Spawn Points Safe Zones and Respawn Flow]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]] · [[Horror Monster Chase AI End to End]] · [[Tower Defense Waves and Placement End to End]]
 <!-- related:end -->

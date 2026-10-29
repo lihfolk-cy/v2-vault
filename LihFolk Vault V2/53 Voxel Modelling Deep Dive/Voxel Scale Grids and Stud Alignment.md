@@ -228,5 +228,5 @@ Notes on the script: a MeshPart's `Size` is its bounding box, so a voxel mesh wi
 
 <!-- related:start -->
 ## Related
-[[Voxel Palettes - Ramps Hue Shifting and Limits]] · [[Modelling to the Roblox Camera and Player Scale]] · [[Exporting and Validating Models for Roblox]] · [[Modeling in Blender for Roblox]] · [[Bevels Chamfers and Edge Highlights Without Textures]] · [[Keeping a Mixed Asset Library Consistent]]
+[[Voxel Palettes - Ramps Hue Shifting and Limits]] · [[Modelling to the Roblox Camera and Player Scale]] · [[Voxel Chibi Heroes - Class Roster and Rarity Ladder]] · [[Exporting and Validating Models for Roblox]] · [[Modeling in Blender for Roblox]] · [[Bevels Chamfers and Edge Highlights Without Textures]]
 <!-- related:end -->

@@ -1,6 +1,6 @@
 ---
 name: roblox-debugging
-description: 'Fixed debugging method (reproduce, isolate, bisect, verify) for Luau errors, desync, races, physics ownership and live-only bugs. Use on "broken", errors, infinite yield, rubber-banding.'
+description: 'Debugging method (reproduce, isolate, bisect, verify) for Luau errors, desync, races, physics ownership, live-only bugs. Use on "broken", errors, infinite yield, rubber-banding.'
 ---
 # LihFolk Debugging
 

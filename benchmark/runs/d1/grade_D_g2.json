@@ -1,0 +1,290 @@
+[
+ {
+  "id": "D1",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 2.5,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "R3 muddles priority ordering ('same level'); others full"
+ },
+ {
+  "id": "D2",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "all cover client camera + Scriptable"
+ },
+ {
+  "id": "D3",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "D4",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "all full: weight, RelativeTo World, ApplyAtCenterOfMass+AlignOrientation"
+ },
+ {
+  "id": "D5",
+  "scores": {
+   "R1": 3,
+   "R2": 2,
+   "R3": 3,
+   "R4": 3,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "R2/R5/R6 miss PlayerCharacterDestroyBehavior/destroy item"
+ },
+ {
+  "id": "D6",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "all two-attachment Align movers, tuning, ownership trade-off"
+ },
+ {
+  "id": "D7",
+  "scores": {
+   "R1": 3.5,
+   "R2": 3.5,
+   "R3": 3.5,
+   "R4": 3.5,
+   "R5": 4,
+   "R6": 3.5
+  },
+  "notes": "only R5 gives blocked-index-ahead check; others recompute generically (0.5)"
+ },
+ {
+  "id": "D8",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "D9",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "D10",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "D11",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "D12",
+  "scores": {
+   "R1": 2,
+   "R2": 1.5,
+   "R3": 2,
+   "R4": 2.5,
+   "R5": 2.5,
+   "R6": 2.5
+  },
+  "notes": "R1/R3 'every write a version' 0.5; Open Cloud mentioned without API-key scoping 0.5 for all; R2 -1 for 'keep only the first' write in hour"
+ },
+ {
+  "id": "D13",
+  "scores": {
+   "R1": 3.5,
+   "R2": 3,
+   "R3": 4,
+   "R4": 3.5,
+   "R5": 3.5,
+   "R6": 3
+  },
+  "notes": "item4 (Open Cloud shares MessagingService limits): only R3 full; R1/R4/R5 partial via 429/budget; R2/R6 none"
+ },
+ {
+  "id": "D14",
+  "scores": {
+   "R1": 1.33,
+   "R2": 1.33,
+   "R3": 1.33,
+   "R4": 1.33,
+   "R5": 1.33,
+   "R6": 1.33
+  },
+  "notes": "none cover BindableFunction yield / cyclic require hang"
+ },
+ {
+  "id": "D15",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "D16",
+  "scores": {
+   "R1": 2.5,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 2.5,
+   "R6": 3
+  },
+  "notes": "R1/R5 use old limit formulas (0.5)"
+ },
+ {
+  "id": "D17",
+  "scores": {
+   "R1": 2.5,
+   "R2": 2,
+   "R3": 1.5,
+   "R4": 1,
+   "R5": 2,
+   "R6": 2.5
+  },
+  "notes": "no response gives separate Open Cloud 2500/min limit; R3/R4 -1 for saying Open Cloud counts toward 500; R2/R4/R5 no Success/StatusCode check"
+ },
+ {
+  "id": "D18",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "D19",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 2.5,
+   "R5": 3,
+   "R6": 2.5
+  },
+  "notes": "R4/R6 vague on player-scripts migration (no property/timeline)"
+ },
+ {
+  "id": "D20",
+  "scores": {
+   "R1": 2,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 1.5,
+   "R6": 3
+  },
+  "notes": "R1 names only fixed stepping, R5 no required settings; R1/R5 no named limitation"
+ },
+ {
+  "id": "D21",
+  "scores": {
+   "R1": 1.5,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 1,
+   "R6": 2
+  },
+  "notes": "R1 cites AuthorityMode instead of UseFixedSimulation; R5 cites PhysicsSteppingMethod Fixed"
+ },
+ {
+  "id": "D22",
+  "scores": {
+   "R1": 3,
+   "R2": 2.5,
+   "R3": 2,
+   "R4": 3,
+   "R5": 2,
+   "R6": 2.5
+  },
+  "notes": "mapping: R1/R4 full, R2/R6 Future only, R3/R5 none"
+ },
+ {
+  "id": "D23",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "D24",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "all full"
+ }
+]

@@ -214,5 +214,5 @@ The plugin's `/lihfolk:trend-game` command and the trend-game skill turn this in
 
 <!-- related:start -->
 ## Related
-[[Case Study - Steal a Brainrot]] · [[Onboarding by Genre - The First Five Minutes]] · [[Case Study - Grow a Garden]] · [[Case Study - Pet Simulator 99]] · [[Onboarding and FTUE - Tutorials That Keep Players]] · [[Core Loop]]
+[[Onboarding by Genre - The First Five Minutes]] · [[Case Study - Steal a Brainrot]] · [[Thumbnail Genre Patterns - What Top Games Show]] · [[Case Study - Grow a Garden]] · [[Case Study - Pet Simulator 99]] · [[Onboarding and FTUE - Tutorials That Keep Players]]
 <!-- related:end -->

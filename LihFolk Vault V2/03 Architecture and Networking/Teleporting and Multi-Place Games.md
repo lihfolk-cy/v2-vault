@@ -6,13 +6,13 @@ tags: [architecture, networking, teleport, multi-place, security, matchmaking, t
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - Avoid: Client-side `Teleport()` -> Remote, validate, `TeleportAsync` on the server
+> - Avoid: `ReserveServerAsync` + `ReservedServerAccessCode` or... -> `TeleportOptions.ReservedServerId =...
 > - Avoid: Currency or rewards in teleport data -> Stores; teleport data for hints only
-> - Avoid: Access Control left Fully open with gated places -> Secure within universe only
 > - All teleports are server-initiated through one `safeTeleport` helper.
+> - Reserved servers use `TeleportOptions.ReservedServerId` (a server-generated GUID); no `ReserveServerAsync` or...
 > - Teleport data contains no value; tickets live in MemoryStore or DataStore.
-> - Destination servers validate `SourcePlaceId`, membership, and default-deny.
 >
-> Cost: TL;DR ~160 tok · whole note ~5.0k tok. Read more: ## Teleport data: what you may trust · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.4k tok. Read more: ## Teleport data: what you may trust · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 An experience (universe) can contain many **places**: a lobby, dungeons, arenas, a trading hub, event maps. `TeleportService` moves players between places, between servers of the same place, and into **reserved servers** that only your code can send people to. Multi-place design keeps each server's memory small, lets you build instanced content (a private dungeon run, a ranked match), and separates risky features. It also introduces failure modes that do not exist in a single place: teleports that fail halfway, data that must survive the hop, a client that tells the destination lies, and sub-places that players can enter directly if you configure access wrongly. This note covers all of it with the documented rules.
@@ -27,7 +27,7 @@ Related: [[Places Universes and Experience Settings]], [[Session Locking and Pro
 - **Up to 50 players** per call; groups can only be teleported within one experience.
 - Without `TeleportOptions`, players go to a public server of the place, matchmade using the first player in the list.
 - With `TeleportOptions` it returns a `TeleportAsyncResult` describing the destination.
-- Older methods (`Teleport`, `TeleportPartyAsync`, `TeleportToPrivateServer`...) are deprecated or not recommended for new work; the client-side `Teleport()` in particular should not be used even if access is "Fully open".
+- Older methods (`Teleport`, `TeleportPartyAsync`, `TeleportToPlaceInstance`, `TeleportToPrivateServer`, `TeleportToSpawnByName`) are deprecated in favour of `TeleportAsync` (deprecation notices on the reference page since August 2026); the client-side `Teleport()` in particular should not be used even if access is "Fully open". Full list: [[API Renames and Deprecations 2025-2026]].
 - **TeleportService does not work in Studio playtests**; publish and test in the Roblox client.
 
 ### TeleportOptions
@@ -35,25 +35,26 @@ Related: [[Places Universes and Experience Settings]], [[Session Locking and Pro
 | Option | Effect |
 |---|---|
 | `ServerInstanceId` | Send to a specific public server (a `JobId`) |
-| `ReservedServerAccessCode` | Send to a specific reserved server |
-| `ShouldReserveServer = true` | Create a new reserved server and send the group there |
+| `ReservedServerId` | Send to the reserved server with this developer-generated GUID; the first teleport with a new ID creates it |
+| `VipServerId` | Send to a player-owned VIP (private) server, using its `game.PrivateServerId` |
 | `SetTeleportData(data)` | Attach non-secure data for the destination |
 
-Conflicting combinations error with "Incompatible Parameters": `ReservedServerAccessCode` with `ServerInstanceId`, `ShouldReserveServer` with `ServerInstanceId`, and `ShouldReserveServer` with `ReservedServerAccessCode` (Roblox docs).
+Set only one of `ReservedServerId`, `VipServerId` and `ServerInstanceId`; setting more than one errors (Roblox docs, October 2026). The older `ReservedServerAccessCode` and `ShouldReserveServer` are deprecated (still work for existing games).
 
 ## Reserved servers
 
-A reserved server is a server of a place that matchmaking never fills; only teleports carrying its access code can enter.
+A reserved server is a server of a place that matchmaking never fills; only teleports carrying its ID can enter.
 
-- `TeleportService:ReserveServerAsync(placeId)` returns an access code and the server's `PrivateServerId`; server-only. The older `ReserveServer` is deprecated (Roblox API reference, as of October 2026).
-- The server **starts when the code is first used**. Access codes **stay valid indefinitely**: if no server is running for the code, a new one starts.
-- `game.PrivateServerId` is the same across all server instances started for that code; `JobId` differs.
+- **Current way (Roblox docs, October 29, 2026):** generate `HttpService:GenerateGUID(false)` on the server, set `TeleportOptions.ReservedServerId`, call `TeleportAsync`. The first teleport with a new ID creates the server; reusing the ID routes later teleports to the same server. Persist the ID (DataStore or MemoryStore) to send more players there later.
+- `TeleportService:ReserveServerAsync` (and the older `ReserveServer`) is deprecated; it only generated a random GUID and returned an access code. Existing access-code servers keep working.
+- The server **starts when the ID is first used**. IDs **stay valid indefinitely**: if no server is running for the ID, a new one starts.
+- `game.PrivateServerId` on the destination equals the `ReservedServerId` you supplied and is the same across all server instances for it; `JobId` differs.
 - Detect a reserved server with `game.PrivateServerId ~= "" and game.PrivateServerOwnerId == 0` (a VIP/private server has a non-zero owner).
 - Players on Xbox and PlayStation with cross-play disabled arrive in a different server from cross-play players, so several servers can share one `PrivateServerId`; `DataModel.MatchmakingType` tells them apart (Roblox docs).
 
 Uses: dungeon runs, matches, parties, tutorials, a soft-shutdown holding server (see [[Server Lifecycle and Shutdown]]).
 
-Because codes never expire, **do not hand access codes to clients** and do not store them where players can reuse them to rejoin a finished match. Treat the code as a capability. Arrival validation (below) is still needed: a reserved server knows who it expected only if you tell it through a store.
+Because IDs never expire, **generate them on the server, do not hand them to clients**, and do not store them where players can reuse them to rejoin a finished match. Treat the ID as a capability. Arrival validation (below) is still needed: a reserved server knows who it expected only if you tell it through a store.
 
 ## Teleport data: what you may trust
 
@@ -100,7 +101,7 @@ local function startRun(party: { Player }, difficulty: string)
 	end
 
 	local options = Instance.new("TeleportOptions")
-	options.ShouldReserveServer = true
+	options.ReservedServerId = HttpService:GenerateGUID(false) -- new reserved server for this run
 	options:SetTeleportData({ ticket = ticketId }) -- the id is not a secret; the record is server-side
 
 	local success, result = pcall(function()
@@ -166,48 +167,63 @@ Default deny matters: if verification throws or is inconclusive, the player is n
 Teleports fail: the destination is full, the network hiccups, reserved server creation fails, the player's client crashes. Two layers (Roblox docs):
 
 1. `TeleportAsync` can **throw**. Wrap in `pcall` and retry a few times with a delay.
-2. Even after a successful call, the teleport can **fail at the last moment** and leave the player on the source server. `TeleportService.TeleportInitFailed(player, teleportResult, errorMessage, placeId, teleportOptions)` fires (on both server and client). The options passed are a **new** object populated to retry to the exact same destination, including the generated access code if the original used `ShouldReserveServer`. For a group teleport it fires once per player.
+2. Even after a successful call, the teleport can **fail at the last moment** and leave the player on the source server. `TeleportService.TeleportInitFailed(player, teleportResult, errorMessage, placeId, teleportOptions)` fires (on both server and client). The options passed are a **new** object populated to retry to the exact same destination, including the original `ReservedServerId`. For a group teleport it fires once per player.
 
 ```lua
 --!strict
--- ServerScriptService/Shared/SafeTeleport.luau (adapted from the Roblox docs pattern)
+-- ServerScriptService/Shared/TeleportGuard.luau
+-- One entry point for every hop: bounded retries on throw, bounded re-sends on late failure.
+local Players = game:GetService("Players")
 local TeleportService = game:GetService("TeleportService")
 
-local ATTEMPTS = 5
-local RETRY_DELAY = 1
-local FLOOD_DELAY = 15
+local MAX_CALL_TRIES = 4 -- TeleportAsync throwing (network, reserve failure)
+local MAX_LATE_RETRIES = 2 -- TeleportInitFailed after a successful call
+local BACKOFF = { 1, 2, 4, 8 } -- seconds between tries
 
-local function safeTeleport(placeId: number, players: { Player }, options: TeleportOptions?): (boolean, any)
-	local ok, result
-	for attempt = 1, ATTEMPTS do
-		ok, result = pcall(function()
-			return TeleportService:TeleportAsync(placeId, players, options)
-		end)
-		if ok then break end
-		task.wait(RETRY_DELAY * attempt)
+local lateRetries: { [Player]: number } = {}
+
+local TeleportGuard = {}
+
+function TeleportGuard.send(placeId: number, group: { Player }, options: TeleportOptions?): boolean
+	for try = 1, MAX_CALL_TRIES do
+		local ok, err = pcall(TeleportService.TeleportAsync, TeleportService, placeId, group, options)
+		if ok then
+			return true
+		end
+		warn(`TeleportAsync try {try} failed: {err}`)
+		task.wait(BACKOFF[try] or 8)
 	end
-	if not ok then warn("Teleport failed after retries: " .. tostring(result)) end
-	return ok, result
+	return false
 end
 
-TeleportService.TeleportInitFailed:Connect(function(player, teleportResult, errorMessage, placeId, options)
-	if teleportResult == Enum.TeleportResult.Flooded then
-		task.wait(FLOOD_DELAY)
-	elseif teleportResult == Enum.TeleportResult.Failure then
-		task.wait(RETRY_DELAY)
-	else
-		warn(("Invalid teleport [%s]: %s"):format(teleportResult.Name, errorMessage))
-		return -- do not retry invalid teleports; tell the player instead
+local function shouldRetry(result: Enum.TeleportResult): boolean
+	return result == Enum.TeleportResult.Flooded or result == Enum.TeleportResult.Failure
+end
+
+TeleportService.TeleportInitFailed:Connect(function(player, result, message, placeId, retryOptions)
+	local used = lateRetries[player] or 0
+	if not shouldRetry(result) or used >= MAX_LATE_RETRIES then
+		lateRetries[player] = nil
+		warn(`{player.Name} stays here: {result.Name} {message}`)
+		-- tell the player with your notification UI here
+		return
 	end
+	lateRetries[player] = used + 1
+	task.wait(if result == Enum.TeleportResult.Flooded then 10 else 2)
 	if player.Parent then
-		safeTeleport(placeId, { player }, options)
+		-- retryOptions targets the same destination, ReservedServerId included
+		TeleportGuard.send(placeId, { player }, retryOptions)
 	end
 end)
 
-return safeTeleport
+Players.PlayerRemoving:Connect(function(player)
+	lateRetries[player] = nil
+end)
+
+return TeleportGuard
 ```
 
-Add a cap on retries per player (the docs' sample retries forever on Flooded/Failure), and show the player a message after giving up.
+Both retry paths are capped, so a destination that stays full ends with a message to the player instead of a loop. Invalid results (a bad place id, a missing permission) are never retried.
 
 ## Data persistence across the hop
 
@@ -255,17 +271,19 @@ Budget MemoryStore requests (1,000 + 120 x concurrent users per minute, experien
 | Mistake | Fix |
 |---|---|
 | Client-side `Teleport()` | Remote, validate, `TeleportAsync` on the server |
+| `ReserveServerAsync` + `ReservedServerAccessCode` or `ShouldReserveServer` in new code (deprecated Oct 2026) | `TeleportOptions.ReservedServerId = HttpService:GenerateGUID(false)` + `TeleportAsync` |
 | Currency or rewards in teleport data | Stores; teleport data for hints only |
 | Access Control left Fully open with gated places | Secure within universe only |
 | Test places in the live universe | Separate private universe |
 | No `TeleportInitFailed` handling | Retry with the provided options; message the player |
 | Loading profile on arrival without a lock | Session locking; save and release before teleport |
 | Testing teleports in Studio | Publish and test live (unsupported in Studio) |
-| Handing access codes to clients | Keep codes server-side |
+| Handing reserved server IDs or access codes to clients | Generate and keep them server-side |
 
 ## Checklist
 
 - [ ] All teleports are server-initiated through one `safeTeleport` helper.
+- [ ] Reserved servers use `TeleportOptions.ReservedServerId` (a server-generated GUID); no `ReserveServerAsync` or `TeleportPartyAsync`.
 - [ ] Teleport data contains no value; tickets live in MemoryStore or DataStore.
 - [ ] Destination servers validate `SourcePlaceId`, membership, and default-deny.
 - [ ] `TeleportInitFailed` retries with a cap.
@@ -310,10 +328,10 @@ The senior trade-off: splitting a game into places allows bigger worlds and sepa
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Teleporting]] · Multiplayer Services Start Here · Links - Reserved and private servers · Server Shutdowns Soft Updates and Migration · Server Browsers and Server Lists · Session Lock
+[[Official Docs - Networking and Multiplayer]] · Multiplayer Services Start Here · Server Shutdowns Soft Updates and Migration · Server Browsers and Server Lists · Session Lock
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Joining Friends Parties and Private Servers]] · [[Server Hop Rejoin and Server Lists with Ping]] · [[Client-Server Model]] · [[Network Ownership]] · [[RemoteEvents RemoteFunctions and Unreliable Remotes]] · [[Project Structure and Bootstrapping]] · [[Rate Limiting and Abuse Prevention]] · [[Replication Rules]]
+[[TeleportService - Engine Reference Card]] · [[Joining Friends Parties and Private Servers]] · [[Server Hop Rejoin and Server Lists with Ping]] · [[Server Browsers and Server Lists]] · [[Server Shutdowns Soft Updates and Migration]] · [[Client-Server Model]]
 <!-- related:end -->

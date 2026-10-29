@@ -17,7 +17,7 @@ tags: [ui, menus, shop, settings, codes, daily-rewards, quests, archetypes, type
 
 Most Roblox games, whatever their genre, ship the same half-dozen menus: a shop, settings, a codes box, daily or playtime rewards, a quest board and often a rebirth or prestige screen. Players have learned what these look like from the most popular games, so following the archetype makes your menu instantly usable, and breaking it costs players time. This note describes each archetype's anatomy, the server/client split behind its buttons, the numbers that worked in production, and the mistakes that turn a menu into a support ticket.
 
-Sources: **Docs** (MarketplaceService, TextBox, GuiButton; October 2026), the **reference project** (one production game: quest board, free gifts, shop, settings and backpack rebuilds), a **cartoon simulator UI kit standard** (menu specs quoted as that kit's rules), and **rule of thumb**. Visual components are in [[UI Design Systems]]; purchases in [[Developer Products and ProcessReceipt]] and [[Game Passes]].
+Sources: **Docs** (MarketplaceService, TextBox, GuiButton; October 2026), the **reference project** (one production game: quest board, free gifts, shop, settings and backpack rebuilds), the house kit in [[LihFolk UI Design System]], and **rule of thumb**. Visual components are in [[UI Design Systems]]; purchases in [[Developer Products and ProcessReceipt]] and [[Game Passes]].
 
 ---
 
@@ -28,7 +28,7 @@ Every archetype is the same frame:
 ```
 +------------------------------------------------------+
 | [icon] TITLE                     (header action) [X] |  header, 60 px design
-|======================================================|  2-tier divider
+|------------------------------------------------------|  divider
 | [tab] [tab] [tab]                                     |  optional tab strip
 |                                                      |
 |   content: cards / rows / input                      |  scrolls if needed
@@ -41,7 +41,7 @@ Fixed rules that hold across archetypes:
 
 - **One open panel at a time**, opened and closed by one presenter (see [[ScreenGui Fundamentals]]).
 - **Close is always top-right**, large (the reference project settled on 72 design px), and also bound to `B` on gamepad and `Escape`/the back action on keyboard.
-- **The header colour tells players which menu they are in.** The cartoon kit assigns magenta to the shop, cyan to codes, silver to settings, violet to rebirth and lime to daily rewards.
+- **The header colour tells players which menu they are in.** Give each menu one signature colour and keep it everywhere that menu appears (its HUD button, header and badge), so players learn the mapping without reading.
 - **The primary action is the brightest thing on screen.** One lime button per card at most.
 
 ---
@@ -50,12 +50,12 @@ Fixed rules that hold across archetypes:
 
 Rewards and purchases share one state machine. Getting it wrong is how players double-claim or think a claim failed.
 
-| State | Look (cartoon kit) | Interactable | Meaning |
+| State | Look (rule of thumb) | Interactable | Meaning |
 |---|---|---|---|
-| Claim / Buy | lime | yes | Available now |
-| Claimed / Owned | silver | no | Done; keep visible as feedback |
-| Locked | crimson, lock icon, requirement text | no (or opens an explanation) | Not yet available |
-| Skip / Premium | amber | yes | Pay or watch to bypass |
+| Claim / Buy | the brightest accent on the card | yes | Available now |
+| Claimed / Owned | desaturated, with a check mark | no | Done; keep visible as feedback |
+| Locked | muted, lock icon, requirement text | no (or opens an explanation) | Not yet available |
+| Skip / Premium | the premium colour, Robux or ad icon | yes | Pay or watch to bypass |
 | Pending | current colour, spinner, dimmed | no | Request in flight |
 
 The **pending** state is the one most games forget. Between the click and the server's answer (50 to 500 ms on a normal connection, seconds on a bad one) the button must be non-interactable, or a second tap sends a second request.
@@ -206,7 +206,7 @@ Note that `TextBox.Text` typed by players is never auto-captured for translation
 
 ### Daily rewards (7-day calendar)
 
-The cartoon kit's spec: a 3 x 2 grid of 140 x 170 cards for days 1 to 6 (day header, 72 px icon, item name, state button) and a tall day-7 card spanning both rows (148 x 348) with a rainbow 45-degree gradient and a rotating sunburst. The visual promise of day 7 is the point: it is what brings players back.
+A common layout (rule of thumb): days 1 to 6 as equal cards in a grid, each with the day, a reward icon, the item name and a state button, and day 7 as a visibly larger card with the most special treatment on the screen. The visual promise of day 7 is the point: it is what brings players back.
 
 Design rules:
 
@@ -244,7 +244,7 @@ Quest logic and data are in [[Quests and Objectives]].
 
 ## 8. Rebirth / prestige
 
-The cartoon kit's rebirth screen: two side-by-side cards comparing the current tier and the next ("Rebirth 1: x1 Money" arrow "Rebirth 2: x1.3 Money"), an orange-to-gold progress bar towards the requirement ("58% Completed"), the requirement box, and an amber "Skip" header button for a paid skip.
+A clear rebirth screen (rule of thumb) puts the current tier and the next tier side by side with their multipliers, shows progress towards the requirement as a bar with a percentage, states the requirement in one line, and offers any paid skip as a separate, clearly priced button.
 
 What matters: show **what you lose and what you gain** on the same screen, numerically. Players who rebirth by accident and lose progress they did not expect to lose do not come back. Add a confirmation step for anything that resets progress, and make the confirmation describe the reset in one line.
 
@@ -290,10 +290,10 @@ See also: [[UI Design Systems]], [[HUD Design]], [[Pricing and Store Design]], [
 
 ## Connected notes
 <!-- auto-links:start -->
-[[LihFolk UI Design System]] · LihFolk UI Spec · Daily Rewards System End to End · Skill - Roblox UI Builder · Reference - Purple Anime Settings UI (Claude + Figma)
+[[LihFolk UI Design System]] · LihFolk UI Spec · Daily Rewards System End to End · Skill - Roblox UI Builder
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[UI Style Directions - A Visual Vocabulary for Briefs]] · [[Gamepad and Console UX]] · [[Responsive UI for Phone Tablet Console and PC]] · [[Tutorial Step Design Patterns - Teach by Doing]] · [[Notification and Toast Systems]] · [[Layout - Scale Offset and Constraints]] · [[UI Motion Language and Timing]] · [[Onboarding and FTUE - Tutorials That Keep Players]]
+[[Settings Menu Design for Roblox - Layout, Controls and Motion]] · [[Gamepad and Console UX]] · [[Responsive UI for Phone Tablet Console and PC]] · [[Tutorial Step Design Patterns - Teach by Doing]] · [[Notification and Toast Systems]] · [[Designing Roblox UI in Figma - Frames, Safe Areas and Tokens]] · [[Onboarding and FTUE - Tutorials That Keep Players]] · [[Layout - Scale Offset and Constraints]]
 <!-- related:end -->

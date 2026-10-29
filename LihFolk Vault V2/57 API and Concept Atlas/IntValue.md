@@ -9,7 +9,7 @@ tags: [atlas, api, type/atlas, area/gameplay, area/scripting, api/IntValue]
 > - Do not use `IntValue` for display; this build uses attributes and formats them.
 > - `leaderstats` (a Folder named `leaderstats` with `IntValue`/`NumberValue`/`StringValue` children under the Player) is still...
 >
-> Cost: TL;DR ~120 tok · whole note ~360 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~380 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -25,10 +25,13 @@ API snapshot: class, inherits `ValueBase` (`_tools/roblox_api.json`, docs build 
 
 ## Mentioned in
 
-11 notes in 6 sections. The 11 most relevant are linked:
+12 notes in 7 sections. The 12 most relevant are linked:
 
 ### 02 Luau Scripting
 [[Events Signals and Connections]] · [[Instances Attributes and Tags]]
+
+### 09 Gameplay Systems
+[[Clickable and Interactive Parts - ClickDetector, ProximityPrompt and Touched]]
 
 ### 24 Worked Builds
 [[Global Leaderboards End to End]] · [[Pet Hatching and Following End to End]] · [[Quest Chain System End to End]] · [[Rebirth and Prestige System End to End]] · [[Round-Based Minigame Loop End to End]]

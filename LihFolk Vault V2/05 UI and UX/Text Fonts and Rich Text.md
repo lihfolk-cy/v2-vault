@@ -1,5 +1,5 @@
 ---
-tags: [ui, text, fonts, fontface, richtext, textservice, uistroke, type/guide, area/ui, level/intermediate, api/UIStroke]
+tags: [ui, text, fonts, fontface, richtext, textservice, uistroke, type/guide, area/ui, level/intermediate, api/UIStroke, api/GuiService]
 ---
 # Text Fonts and Rich Text
 
@@ -239,7 +239,7 @@ The legacy `TextStrokeTransparency` / `TextStrokeColor3` give a thin 1 px outlin
 
 Rules of thumb from production cartoon UI:
 
-- A cartoon kit standard specifies 2.0 to 3.5 px black strokes for 13 to 38 px text (about 8 to 15% of the text size). Rounded heavy fonts such as Fredoka One need less: above about 7% the stroke fills the holes in 0, a and e ([[UIStroke on Text - Glyph Counters and the Stroke Ratio]]).
+- Dark strokes of roughly 8 to 12% of the text size read well on chunky cartoon text (rule of thumb). Rounded heavy fonts such as Fredoka One need less: above about 7% the stroke fills the holes in 0, a and e ([[UIStroke on Text - Glyph Counters and the Stroke Ratio]]).
 - Another style guide used by the reference project specifies navy strokes at about 11% of the text size.
 - Headers used heavier ratios (a 4.5 px stroke on a 54 px title, 8%).
 
@@ -331,10 +331,10 @@ See also: [[UI Design Systems]], [[Localization]], [[Accessibility]], [[Layout -
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Readable Text and UI Scale]] · LihFolk UI Design System · UI Asset Pipeline · Strings Patterns and Formatting · Links - UI elements · Accessibility Contrast
+[[Readable Text and UI Scale]] · LihFolk UI Design System · UI Asset Pipeline · Strings Patterns and Formatting · Official Docs - UI · Accessibility Contrast
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Nametags and Overhead Bars - Cost and Visibility Rules]] · [[ScreenGui Fundamentals]] · [[UI Style Directions - A Visual Vocabulary for Briefs]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[Responsive UI for Phone Tablet Console and PC]] · [[UI Motion Language and Timing]] · [[Race HUD - Position, Laps, Splits, Speedometer and Minimap]] · [[UI Layout Objects - Lists Grids and Pages]]
+[[Figma Property Mapping for Roblox UI]] · [[Designing Roblox UI in Figma - Frames, Safe Areas and Tokens]] · [[Nametags and Overhead Bars - Cost and Visibility Rules]] · [[Figma to Roblox UI - Pipeline and Handoff]] · [[Settings Menu Design for Roblox - Layout, Controls and Motion]] · [[ScreenGui Fundamentals]] · [[UI Style Directions - A Visual Vocabulary for Briefs]]
 <!-- related:end -->

@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/animation, area/gameplay, api/FloorMaterial]
 > - grounded = `FloorMaterial ~= Air` and a solid-floor check of five short downward rays where at least one hit has `Normal.Y >=...
 > - Wrong: `FloorMaterial ~= Air` as "grounded" for gameplay refills; `Humanoid.WalkSpeed` checks on the server as anti-speed...
 >
-> Cost: TL;DR ~150 tok · whole note ~560 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~580 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -30,7 +30,7 @@ API snapshot: member of `Humanoid` (`_tools/roblox_api.json`, docs build of 2026
 
 ## Mentioned in
 
-13 notes in 10 sections. The 13 most relevant are linked:
+14 notes in 11 sections. The 14 most relevant are linked:
 
 ### 03 Architecture and Networking
 [[Exploits and Anti-Cheat]]
@@ -61,5 +61,8 @@ API snapshot: member of `Humanoid` (`_tools/roblox_api.json`, docs build of 2026
 
 ### 49 Roblox Platform Features
 [[Server Authority and Input Migration 2026]]
+
+### 62 Engine Reference Cards
+[[Humanoid - Engine Reference Card]]
 
 <!-- atlas:generated -->

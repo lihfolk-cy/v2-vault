@@ -1,16 +1,16 @@
 ---
-tags: [atlas, api, type/atlas, area/networking, area/scripting, api/TeleportService]
+tags: [atlas, api, type/atlas, area/networking, area/platform, api/TeleportService]
 ---
 # TeleportService
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - `TeleportService` moves players between places, between servers of the same place, and into reserved servers that only your...
+> - Avoid: `TeleportService:ReserveServerAsync` + `ReservedServerAccessCode` or `ShouldReserveServer` ->...
 > - TeleportService does not work in Studio playtests; publish and test in the Roblox client.
 > - `TeleportService` does not work in Studio, so test on a live private experience.
-> - Teleports: `TeleportService:SetTeleportGui` shows a screen during place teleports; keep it visually consistent with the...
 >
-> Cost: TL;DR ~150 tok · whole note ~550 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~650 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -21,13 +21,14 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 
 ## Key facts
 
+- Avoid: `TeleportService:ReserveServerAsync` + `ReservedServerAccessCode` or `ShouldReserveServer` ->... ([[API Renames and Deprecations 2025-2026]])
 - TeleportService does not work in Studio playtests; publish and test in the Roblox client. ([[Teleporting and Multi-Place Games]])
 - `TeleportService` does not work in Studio, so test on a live private experience. ([[Server Lifecycle and Shutdown]])
 - Teleports: `TeleportService:SetTeleportGui` shows a screen during place teleports; keep it visually consistent with the loading screen (Teleporting and Multi-Place Games). ([[Loading Screen Skip and First-Session Goals]])
 
 ## Mentioned in
 
-21 notes in 12 sections. The 21 most relevant are linked:
+25 notes in 13 sections. The 25 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[Testing Modes - Play Run and Multi-Client]]
@@ -54,15 +55,18 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 [[Matchmaking Queues with MemoryStore]] · [[Parties and Group Teleports]] · [[Reserved and Private Servers in Practice]] · [[Server Browsers and Server Lists]] · [[Server Shutdowns Soft Updates and Migration]] · [[Session State Across Places]]
 
 ### 46 Resource Library
-[[Links - Teleporting]]
+[[Official Docs - Networking and Multiplayer]]
 
 ### 49 Roblox Platform Features
-[[Engine and API Changes 2025-2026]]
+[[API Renames and Deprecations 2025-2026]] · [[Engine Limits, Quotas and Defaults - Cheat Sheet]] · [[Engine and API Changes 2025-2026]]
 
 ### 50 Team Collaboration and Project Management
 [[Working with Contractors and Revenue Splits]]
 
 ### 58 Player QoL and Game Tweaks
 [[Joining Friends Parties and Private Servers]] · [[Loading Screen Skip and First-Session Goals]] · [[Server Hop Rejoin and Server Lists with Ping]]
+
+### 62 Engine Reference Cards
+[[Engine Reference Cards Start Here]] · [[TeleportService - Engine Reference Card]]
 
 <!-- atlas:generated -->

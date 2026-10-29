@@ -162,5 +162,5 @@ end
 
 <!-- related:start -->
 ## Related
-[[Weather Performance Budgets and Quality Tiers]] · [[QoL Audit Checklist]] · [[UI Scale HUD Hide and Compact Mode]] · [[Top 25 QoL Wins by Effort]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Mobile Button Layout Editor]] · [[Audio Mixer Settings with SoundGroups]] · [[Rebinding Controls with the Input Action System]] · [[Accessibility Cross-Links for QoL Settings]]
+[[Weather Performance Budgets and Quality Tiers]] · [[UI Scale HUD Hide and Compact Mode]] · [[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Mobile Button Layout Editor]] · [[Audio Mixer Settings with SoundGroups]] · [[Rebinding Controls with the Input Action System]] · [[Accessibility Cross-Links for QoL Settings]]
 <!-- related:end -->

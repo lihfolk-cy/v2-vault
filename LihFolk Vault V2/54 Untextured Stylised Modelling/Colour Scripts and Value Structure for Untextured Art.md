@@ -232,5 +232,5 @@ Reading the output: if one bucket holds about 60 percent of the area and the lig
 
 <!-- related:start -->
 ## Related
-[[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Hand-Painted and Stylized Texturing]] · [[Lighting Mood and Time of Day]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Clean Stylised Shading - Weighted and Custom Normals]]
+[[Thumbnail Composition for High CTR - Focal Point, Contrast and Readability]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Hand-Painted and Stylized Texturing]] · [[Lighting Mood and Time of Day]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Clean Stylised Shading - Weighted and Custom Normals]]
 <!-- related:end -->

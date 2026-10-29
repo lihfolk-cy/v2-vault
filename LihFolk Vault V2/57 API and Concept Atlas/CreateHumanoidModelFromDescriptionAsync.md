@@ -9,7 +9,7 @@ tags: [atlas, api, type/atlas, area/animation, area/gameplay, api/CreateHumanoid
 > - `Players:CreateHumanoidModelFromDescriptionAsync(desc, Enum.HumanoidRigType.R15)` builds test dummies in Edit.
 > - `Players:CreateHumanoidModelFromDescriptionAsync` in Edit returned a rig without Motor6Ds; build test rigs from rig attachments.
 >
-> Cost: TL;DR ~130 tok · whole note ~310 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~350 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -25,7 +25,7 @@ API snapshot: member of `Players` (`_tools/roblox_api.json`, docs build of 2026-
 
 ## Mentioned in
 
-9 notes in 3 sections. The 9 most relevant are linked:
+11 notes in 5 sections. The 11 most relevant are linked:
 
 ### 08 Animation
 [[Animation Editor Workflow]] · [[Animator Deep Dive]] · [[Custom Characters and StarterCharacter]] · [[Engine Gotchas]] · [[How the Animator Really Behaves]] · [[R15 Rig Anatomy and Attachments]] · [[Testing Animations in Studio]]
@@ -35,5 +35,11 @@ API snapshot: member of `Players` (`_tools/roblox_api.json`, docs build of 2026-
 
 ### 37 Avatars and UGC
 [[HumanoidDescription and Outfit Systems]]
+
+### 49 Roblox Platform Features
+[[API Renames and Deprecations 2025-2026]]
+
+### 62 Engine Reference Cards
+[[Players - Engine Reference Card]]
 
 <!-- atlas:generated -->

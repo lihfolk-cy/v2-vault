@@ -7,12 +7,12 @@ tags: [modeling, blender, workflow, modifiers, export, python, type/guide, area/
 > [!tldr] TL;DR
 > - Avoid: Mixing FBX scale methods -> One method: FBX Unit Scale, or use GLB
 > - Avoid: Front modelled toward +Y -> Front toward -Y
-> - Avoid: Mirror without Clipping -> Clipping + Merge on
+> - Avoid: GLB exported with Apply Modifiers off (the glTF default) -> Turn on Apply Modifiers: it skips Armature, so skinning survives...
 > - Units set (None, or Metric with 1 m = 1 stud) and never changed mid-project.
 > - Character proxy and 1-stud grid in the scene.
 > - Front toward -Y; origin placed per asset type.
 >
-> Cost: TL;DR ~130 tok · whole note ~5.8k tok. Read more: ## 1. Scene setup once, saved as your startup file · ## 3. Modifiers: non-destructive modelling · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.9k tok. Read more: ## 1. Scene setup once, saved as your startup file · ## 3. Modifiers: non-destructive modelling · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Blender is the default modelling tool for Roblox creators: free, scriptable, and the one Roblox's own guides are written for. This note is a working setup and a modifier-by-modifier guide for building game meshes that arrive in Studio at the right size, facing the right way, with the right pivots and shading. It goes deeper than the overview in [[Modeling in Blender for Roblox]], and it stops at the mesh: unwrapping, texturing and export validation have their own notes ([[UV Unwrapping]], [[Texturing and PBR Baking]], [[Exporting and Validating Models for Roblox]]). Rigging is in the Animation section ([[Rigging in Blender]]).
@@ -296,7 +296,7 @@ Full settings and the reasons are in [[Exporting FBX vs GLB]] and [[Exporting an
 |---|---|---|
 | Include | Selected Objects | Limit to Selected Objects |
 | Transform | +Y Up | Apply Scalings: FBX Unit Scale; Forward Z, Up Y |
-| Modifiers | Apply them yourself first | Apply them yourself first |
+| Modifiers | Apply Modifiers on (Armature is skipped; shape keys are then not exported), or apply them yourself first | Apply them yourself first |
 | Armature | (if any) one per file | Add Leaf Bones **off** |
 | Textures | Packed | Path Mode Copy + Embed Textures |
 | Animation | Off unless exporting clips | Bake Animation off unless exporting clips |
@@ -357,6 +357,7 @@ Windows gotcha (Measured): Blender and other native programs failed to open file
 |---|---|---|
 | Mixing FBX scale methods | Model 100x too big or small | One method: FBX Unit Scale, or use GLB |
 | Front modelled toward +Y | Model faces backwards after GLB import | Front toward -Y |
+| GLB exported with Apply Modifiers off (the glTF default) | Half a mirrored mesh, sharp edges where bevels were | Turn on Apply Modifiers: it skips Armature, so skinning survives, but shape keys are not exported |
 | Mirror without Clipping | Seam or overlap down the centre | Clipping + Merge on |
 | Bevel on unapplied scale | Uneven bevel widths | Apply scale first |
 | Subdivision left live at level 2+ | Triangle count explodes on export (export applies it) | Apply level 1 or remove |
@@ -389,5 +390,5 @@ Windows gotcha (Measured): Blender and other native programs failed to open file
 
 <!-- related:start -->
 ## Related
-[[AI Pitfalls - Assets and Import]] · [[Modeling Characters for R15 and Custom Rigs]] · [[AI 3D Model Generation Outside Roblox]] · [[Modeling Weapons and Props]] · [[Curve-Based Modelling in Blender for Roblox]] · [[Organic and Creature Modeling]] · [[Low-Poly and Stylized Modeling]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Mesh Optimization for Mobile]]
+[[AI Pitfalls - Assets and Import]] · [[Modeling Characters for R15 and Custom Rigs]] · [[AI 3D Model Generation Outside Roblox]] · [[Modeling Weapons and Props]] · [[Organic and Creature Modeling]] · [[Curve-Based Modelling in Blender for Roblox]] · [[Low-Poly and Stylized Modeling]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Mesh Optimization for Mobile]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]]
 <!-- related:end -->

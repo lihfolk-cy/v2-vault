@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/ui, area/gameplay, api/UDim2]
 > - `CellSize` (`UDim2`) and `CellPadding` (`UDim2`).
 > - Turn on a temporary debug frame in each gui with `Size = UDim2.fromScale(1, 1)` and a bright translucent fill: you see exactly...
 >
-> Cost: TL;DR ~140 tok · whole note ~1.0k tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~1.1k tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ API snapshot: Luau data type (`_tools/roblox_api.json`, docs build of 2026-10-27
 
 ## Mentioned in
 
-65 notes in 25 sections. The 25 most relevant are linked:
+69 notes in 26 sections. The 25 most relevant are linked:
 
 ### 05 UI and UX
 [[Declarative UI - React-Lua and Fusion]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[Layout - Scale Offset and Constraints]] · [[Safe Areas and Insets]] · [[UI Layout Objects - Lists Grids and Pages]] · [[World-Space UI - BillboardGui and SurfaceGui]]
@@ -60,6 +60,6 @@ API snapshot: Luau data type (`_tools/roblox_api.json`, docs build of 2026-10-27
 ### 56 Field Notes
 [[Centre-Screen Announcements That Stay Centred]] · [[Shared Close Buttons and Headers Across Many Screens]]
 
-Also mentioned in (not linked): AI Pitfalls - UI and Input · Big Numbers Precision and Formatting · Camera Shake and Camera FX · Captions and Audio Accessibility · Curves in Luau - Paths Beams and Motion · Data Schema Design and Migrations · Debugging UI Layout and Input · Developer Console and Stats · Easing · EditableImage for Pixel Buffers and Procedural 2D · Explorer Properties and Selection · Game Icon Design - Readable at Small Sizes · Global Leaderboards End to End · HUD Design · Horror Monster Chase AI End to End · Input - UserInputService and ContextActionService · Instances Attributes and Tags · Juice on a Budget - Mobile and Low-End · Melee Combat System End to End · Memory Budgets and Leaks · Metatables and OOP - When and When Not · Minimap and World Map UI - Projection, Rotation and Fog of War · Mobile Button Layout Editor · Off-Screen Objective Markers and Waypoint Arrows · Pipeline Design Principles · Plugins - Using and Writing · Race HUD - Position, Laps, Splits, Speedometer and Minimap · Racing Laps and Checkpoints End to End · Readable Text and UI Scale · Replication Rules · Safe Changes in a Shared Place · ScreenGui Fundamentals · Sprite Sheets and Frame Animation with ImageRectOffset · Squash Stretch and Anticipation in UI and Characters · Testing Your Own Remotes - Fuzzing and Abuse Tests · Tween and CFrame Animation of Objects · UI Design Systems · UI Motion Language and Timing · UI and GUI Animation · Virtualized Lists and Large Inventories
+Also mentioned in (not linked): AI Pitfalls - UI and Input · Big Numbers Precision and Formatting · BillboardGui - Engine Reference Card · Camera Shake and Camera FX · Captions and Audio Accessibility · ContextActionService - Engine Reference Card · Curves in Luau - Paths Beams and Motion · Data Schema Design and Migrations · Debugging UI Layout and Input · Developer Console and Stats · Easing · EditableImage for Pixel Buffers and Procedural 2D · Explorer Properties and Selection · Game Icon Design - Readable at Small Sizes · Global Leaderboards End to End · HUD Design · Horror Monster Chase AI End to End · Input - UserInputService and ContextActionService · Instances Attributes and Tags · Juice on a Budget - Mobile and Low-End · Melee Combat System End to End · Memory Budgets and Leaks · Metatables and OOP - When and When Not · Minimap and World Map UI - Projection, Rotation and Fog of War · Mobile Button Layout Editor · Off-Screen Objective Markers and Waypoint Arrows · Pipeline Design Principles · Plugins - Using and Writing · Race HUD - Position, Laps, Splits, Speedometer and Minimap · Racing Laps and Checkpoints End to End · Readable Text and UI Scale · Replication Rules · Safe Changes in a Shared Place · ScreenGui Fundamentals · ScrollingFrame - Engine Reference Card · Sprite Sheets and Frame Animation with ImageRectOffset · Squash Stretch and Anticipation in UI and Characters · Testing Your Own Remotes - Fuzzing and Abuse Tests · Tween and CFrame Animation of Objects · TweenService - Engine Reference Card · UI Design Systems · UI Motion Language and Timing · UI and GUI Animation · Virtualized Lists and Large Inventories
 
 <!-- atlas:generated -->

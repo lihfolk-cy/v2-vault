@@ -339,7 +339,7 @@ Remember the blocked-collaborator rule from section 1: removing someone from the
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Team Collaboration Start Here]] · [[Links - Team Create]] · Animation Asset Permissions and Groups · Scoping and Roles for Small Teams · Version History and Backups · Git and Source Control for Roblox
+[[Team Collaboration Start Here]] · [[Official Docs - Studio and Tooling]] · Animation Asset Permissions and Groups · Scoping and Roles for Small Teams · Version History and Backups · Git and Source Control for Roblox
 <!-- auto-links:end -->
 
 <!-- related:start -->

@@ -13,7 +13,7 @@ verified: 2026-10-28
 > - Analytics watched for first-play bounce and Day 8-28 retention.
 > - Prices shown via `GetProductInfoAsync`.
 >
-> Cost: TL;DR ~140 tok · whole note ~2.6k tok. Read more: ## 1. Recommended For You now values 28-day retention (June 15, 2026) · ## 5. Roblox Plus replaced Premium for new subscribers (April 30, 2026) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~2.7k tok. Read more: ## 1. Recommended For You now values 28-day retention (June 15, 2026) · ## 5. Roblox Plus replaced Premium for new subscribers (April 30, 2026) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 How games get recommended and how creators get paid both changed between mid-2025 and October 2026. Advice built on 2024 rules (optimise qualified play-through rate, design for Premium Payouts, assume one DevEx rate) is now wrong. Labels follow [[Roblox Changes 2025-2026]].
@@ -72,7 +72,7 @@ Engagement-based payouts and "Premium Payouts" no longer exist. Designing to kee
 - Plus members get **free, unlimited paid private servers**. Creators are paid instead: on each Plus renewal, Roblox looks back 30 days and pays up to **100 Robux per subscriber per server** for that subscriber's top 5 paid private servers with 60+ cumulative minutes (free private servers do not count).
 - **Sign-up bonus:** 250 Robux per month for the first three paid months (up to 750) for each subscriber who signs up through your game's `MarketplaceService:PromptRobloxSubscriptionPurchase`.
 - Use `GetProductInfoAsync` to show prices; hard-coded prices are wrong for discounted Plus members.
-- **Unverified:** how `Player.MembershipType` reports Plus members. Do not gate perks on `Enum.MembershipType.Premium` without testing a Plus account.
+- **Roblox docs** (Player reference, April 2026): `Player.MembershipType` is deprecated; check the subscription with `Player.HasRobloxSubscription` (true while the player has an active Roblox subscription). How `MembershipType` reports Plus members is still **Unverified**, so do not gate Plus perks on it.
 
 ```lua
 -- Client: a "Get Plus" button (creator earns the sign-up bonus)
@@ -84,7 +84,7 @@ local ok, info = pcall(MarketplaceService.GetProductInfoAsync, MarketplaceServic
 if ok then priceLabel.Text = `R$ {info.PriceInRobux}` end
 ```
 
-The vault's [[Subscriptions and Premium Payouts]] (checked against the reference in October 2026) gives the signature as `PromptRobloxSubscriptionPurchase(player)`, notes `PromptRobloxSubscriptionPurchaseFinished(didTryPurchasing)` means an attempt, not a purchase, and records **`PromptPremiumPurchase` as deprecated**: replace Premium upsells with the Plus prompt. Legacy Premium members still report `Enum.MembershipType.Premium`.
+The vault's [[Subscriptions and Premium Payouts]] (checked against the reference in October 2026) gives the signature as `PromptRobloxSubscriptionPurchase(player)`, notes `PromptRobloxSubscriptionPurchaseFinished(didTryPurchasing)` means an attempt, not a purchase, and records **`PromptPremiumPurchase` as deprecated**: replace Premium upsells with the Plus prompt. Legacy Premium members still report `Enum.MembershipType.Premium` (a deprecated property; see [[API Renames and Deprecations 2025-2026]]).
 
 ## 6. Regional pricing defaults
 
@@ -130,5 +130,5 @@ Impact: a pass's price differs by player. Display the price from `GetProductInfo
 
 <!-- related:start -->
 ## Related
-[[Monetization Overview]] · [[Sponsored Ads and Campaign Math]] · [[Policy and Age Rules 2026]] · [[Data and Cloud Changes 2025-2026]] · [[Engine and API Changes 2025-2026]] · [[Commerce and Physical Goods]]
+[[Monetization Overview]] · [[From CTR to CCU - Impressions, Play-Through and the Discovery Loop]] · [[Policy and Age Rules 2026]] · [[Data and Cloud Changes 2025-2026]] · [[Engine and API Changes 2025-2026]] · [[Commerce and Physical Goods]] · [[Regional Compliance - Paid Random Items and Country Rules]]
 <!-- related:end -->

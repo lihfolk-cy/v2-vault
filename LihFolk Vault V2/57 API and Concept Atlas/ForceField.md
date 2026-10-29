@@ -1,5 +1,5 @@
 ---
-tags: [atlas, api, type/atlas, area/gameplay, area/world, api/ForceField]
+tags: [atlas, api, type/atlas, area/vfx, area/gameplay, api/ForceField]
 ---
 # ForceField
 
@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/gameplay, area/world, api/ForceField]
 > - ForceField ignored: Damage sets `Health` directly -> Check in the damage function.
 > - Attacking ends protection. When the protected player deals damage, remove their ForceField immediately.
 >
-> Cost: TL;DR ~130 tok · whole note ~460 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~490 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,13 +28,13 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 
 ## Mentioned in
 
-12 notes in 8 sections. The 12 most relevant are linked:
+15 notes in 9 sections. The 15 most relevant are linked:
 
 ### 06 World Building and Art
 [[Art Budgets - Triangles Draw Calls Memory]] · [[Materials MaterialVariants and SurfaceAppearance]]
 
 ### 07 Lighting VFX and Audio
-[[Highlights and Selection Effects]]
+[[Auras, Shields and Status Effects]] · [[Highlights and Selection Effects]] · [[Projectile VFX - Muzzle, Travel and Impact]]
 
 ### 09 Gameplay Systems
 [[Characters and Humanoids]] · [[Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations]] · [[Spawning Teams and Rounds]]
@@ -46,12 +46,15 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 [[Combat Arena and Encounter Layout]] · [[Spawn Points Safe Zones and Respawn Flow]]
 
 ### 46 Resource Library
-[[Links - Checkpoints and spawning]]
+[[Official Docs - Game Systems]]
 
 ### 54 Untextured Stylised Modelling
 [[Lighting Untextured Art in Roblox]]
 
 ### 58 Player QoL and Game Tweaks
 [[Quick Respawn and Spawn Protection]]
+
+### 62 Engine Reference Cards
+[[Humanoid - Engine Reference Card]]
 
 <!-- atlas:generated -->

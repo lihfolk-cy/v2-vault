@@ -5,14 +5,14 @@ tags: [performance, memory, leaks, debugging, luau-heap, soak-test, procedure, t
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
+> - Avoid: Leaving `Workspace.PlayerCharacterDestroyBehavior` off.
 > - Avoid: Calling "memory did not drop after players left" a leak on the server.
 > - Avoid: Measuring once instead of measuring a slope after warm-up.
-> - Avoid: Reading client memory in Studio and treating it as the device number.
+> - `PlayerCharacterDestroyBehavior = Enabled` (or `Destroy()` old characters) so their connections are released.
 > - Workload held constant; at least three samples after warm-up.
 > - Growth expressed as MB per hour or KB per repetition.
-> - Time-to-ceiling estimated for server and for a low-end phone.
 >
-> Cost: TL;DR ~140 tok · whole note ~6.0k tok. Read more: ## 2. Find the category that grows · ## 6. Worked cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~6.1k tok. Read more: ## 2. Find the category that grows · ## 6. Worked cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Memory Budgets and Leaks]] explains where memory goes, the leak patterns and the Luau heap tool. This note is the procedure: what to do from the first "memory feels high" report to a fix you can prove. It is written for the case that actually happens in production: a server that crashes after eight hours, or phones that start dropping after twenty minutes, and nobody knows which of forty systems is responsible.
@@ -458,6 +458,7 @@ From the reference project (measured): instance hygiene in the *place file* beha
 
 ## Common mistakes
 
+- Avoid: Leaving `Workspace.PlayerCharacterDestroyBehavior` off. Symptom: old characters are never destroyed, so their connections live on.
 - Calling "memory did not drop after players left" a leak on the server.
 - Measuring once instead of measuring a slope after warm-up.
 - Reading client memory in Studio and treating it as the device number.
@@ -469,6 +470,7 @@ From the reference project (measured): instance hygiene in the *place file* beha
 
 ## Checklist
 
+- [ ] `PlayerCharacterDestroyBehavior = Enabled` (or `Destroy()` old characters) so their connections are released.
 - [ ] Workload held constant; at least three samples after warm-up.
 - [ ] Growth expressed as MB per hour or KB per repetition.
 - [ ] Time-to-ceiling estimated for server and for a low-end phone.
@@ -485,10 +487,10 @@ From the reference project (measured): instance hygiene in the *place file* beha
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Luau Garbage Collection and the Memory Model]] · Skill - Roblox Performance Audit · Links - Memory leaks and cleanup · Debugging Live Servers · Functions Closures and Upvalues · Building a Signal Library
+[[Luau Garbage Collection and the Memory Model]] · Skill - Roblox Performance Audit · Official Docs - Performance · Debugging Live Servers · Functions Closures and Upvalues · Building a Signal Library
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[Performance Fundamentals]] · [[Debugging Live Servers]] · [[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]] · [[Performance and Memory]] · [[Debugger Breakpoints and Logging]] · [[Network Bandwidth Budgets and Measuring Them]]
+[[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[Performance Fundamentals]] · [[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]] · [[Debugger Breakpoints and Logging]] · [[Network Bandwidth Budgets and Measuring Them]] · [[Client Zone Culling for Interiors and Cities]]
 <!-- related:end -->

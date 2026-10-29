@@ -274,5 +274,5 @@ See also: [[Lighting Technologies and Settings]], [[Lighting Mood and Time of Da
 
 <!-- related:start -->
 ## Related
-[[Particle Emitters In Depth]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[Atmosphere Sky Clouds and Post-Processing]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Beams and Trails]] · [[Slash VFX Recipes - Crescent and Ring]] · [[Escalation and Grandeur Without Clutter]]
+[[Particle Emitters In Depth]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[Atmosphere Sky Clouds and Post-Processing]] · [[Auras, Shields and Status Effects]] · [[Projectile VFX - Muzzle, Travel and Impact]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Designing VFX Textures and Flipbooks in Figma]]
 <!-- related:end -->

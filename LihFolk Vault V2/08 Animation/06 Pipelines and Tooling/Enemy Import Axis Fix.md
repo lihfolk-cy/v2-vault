@@ -259,7 +259,7 @@ After the fix, root motion played (spawn rises, intro drops, a boss leap), and e
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Blender Armature and Bone Roll Conventions]] · [[Retargeting Animations Between Rigs]] · [[Rigging in Blender]] · [[Exporting FBX vs GLB]] · [[Skeleton Library]] · Links - Importing into Studio · [[Animation Start Here]]
+[[Blender Armature and Bone Roll Conventions]] · [[Retargeting Animations Between Rigs]] · [[Rigging in Blender]] · [[Exporting FBX vs GLB]] · [[Skeleton Library]] · Official Docs - Asset Creation · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->

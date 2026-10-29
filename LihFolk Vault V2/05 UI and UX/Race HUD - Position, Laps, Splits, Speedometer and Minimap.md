@@ -135,5 +135,5 @@ For open-world races, use the general minimap from the minimap note and draw the
 
 <!-- related:start -->
 ## Related
-[[Off-Screen Objective Markers and Waypoint Arrows]] · [[UI Style Directions - A Visual Vocabulary for Briefs]] · [[Notification and Toast Systems]] · [[UI Design Systems]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[ScreenGui Fundamentals]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]]
+[[Off-Screen Objective Markers and Waypoint Arrows]] · [[Settings Menu Design for Roblox - Layout, Controls and Motion]] · [[Designing Roblox UI in Figma - Frames, Safe Areas and Tokens]] · [[Notification and Toast Systems]] · [[UI Style Directions - A Visual Vocabulary for Briefs]] · [[UI Design Systems]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]] · [[Figma to Roblox UI - Pipeline and Handoff]]
 <!-- related:end -->

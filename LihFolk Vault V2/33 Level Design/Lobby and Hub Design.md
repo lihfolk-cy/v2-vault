@@ -109,6 +109,7 @@ Detecting who stands on a pad with `Touched` and `TouchEnded` is unreliable for 
 -- Pad = an anchored Part; the query box extends 8 studs above it.
 local Players = game:GetService("Players")
 local TeleportService = game:GetService("TeleportService")
+local HttpService = game:GetService("HttpService")
 
 local PAD_HEIGHT = 8
 local COUNTDOWN = 10
@@ -161,7 +162,7 @@ local function runPad(pad: BasePart, placeId: number)
 		if remaining <= 0 and #group > 0 then
 			while #group > MAX_PLAYERS do table.remove(group) end
 			local options = Instance.new("TeleportOptions")
-			options.ShouldReserveServer = true -- a private server just for this group
+			options.ReservedServerId = HttpService:GenerateGUID(false) -- a reserved server just for this group
 			local ok, err = pcall(function()
 				TeleportService:TeleportAsync(placeId, group, options)
 			end)
@@ -269,5 +270,5 @@ Avoid hiding social nodes in corners: people stand where they can be seen. See [
 
 <!-- related:start -->
 ## Related
-[[Playtest Heatmaps - Position and Death Maps]] · [[Instanced Interiors - Pooled House and Room Copies for Many Players]] · [[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]] · [[Level of Detail and Model Streaming]] · [[Obby and Platforming Level Design]]
+[[Clickable and Interactive Parts - ClickDetector, ProximityPrompt and Touched]] · [[ProximityPrompt - Engine Reference Card]] · [[Playtest Heatmaps - Position and Death Maps]] · [[Instanced Interiors - Pooled House and Room Copies for Many Players]] · [[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]] · [[Obby and Platforming Level Design]]
 <!-- related:end -->

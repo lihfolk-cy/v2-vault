@@ -1,6 +1,6 @@
 ---
 name: lihfolk-ui
-description: 'The LihFolk house menu kit (cartoon/simulator shop, codes, rebirth, settings, daily rewards, HUD). Use only when the user explicitly asks for the LihFolk UI style or kit; general UI goes to roblox-ui-builder.'
+description: 'LihFolk house menu kit (cartoon/simulator shop, codes, rebirth, settings, daily, HUD). Only when the LihFolk UI style is asked for; other UI: roblox-ui-builder.'
 ---
 
 # LihFolk UI

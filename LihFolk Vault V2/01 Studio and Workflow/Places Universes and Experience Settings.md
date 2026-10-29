@@ -202,7 +202,7 @@ Limitation (Docs): the place publishing API does not update `EditableImage`, `Ed
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Build Test and Release Pipeline]] · Server Shutdowns Soft Updates and Migration · Code Pipeline - Rojo Git and CI · Asset Upload Automation with Open Cloud · Packages and Shared Assets Across Places · Links - Settings and publishing
+[[Build Test and Release Pipeline]] · Server Shutdowns Soft Updates and Migration · Code Pipeline - Rojo Git and CI · Asset Upload Automation with Open Cloud · Packages and Shared Assets Across Places · Official Docs - Publishing and Live Ops
 <!-- auto-links:end -->
 
 <!-- related:start -->

@@ -184,5 +184,5 @@ return { wavePhase = wavePhase }
 
 <!-- related:start -->
 ## Related
-[[Teardown - Steal An Egg]] · [[Teardown - Ride A Pet]] · [[Teardown - Tap Simulator REBORN]] · [[Teardown - Bee Swarm Simulator]] · [[Teardown - Sol's RNG]] · [[Teardown - Build A Boat For Treasure]] · [[Teardown - Natural Disaster Survival]] · [[Teardown - Fish It]]
+[[Teardown - Steal An Egg]] · [[Teardown - Ride A Pet]] · [[Teardown - Bee Swarm Simulator]] · [[Teardown - Tap Simulator REBORN]] · [[Teardown - Sol's RNG]] · [[Teardown - Build A Boat For Treasure]] · [[Teardown - Natural Disaster Survival]] · [[Teardown - Fish It]]
 <!-- related:end -->

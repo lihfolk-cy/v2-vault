@@ -160,5 +160,5 @@ Six-player servers share fields, so you see other swarms working beside you. Co-
 
 <!-- related:start -->
 ## Related
-[[Teardown - Ride A Pet]] · [[Teardown - Tap Simulator REBORN]] · [[Teardown - Escape Tsunami for Brainrots]] · [[Teardown - Steal An Egg]] · [[Teardown - Plants vs Brainrots]] · [[Teardown - Sol's RNG]] · [[Teardown - Fish It]] · [[Teardown - Build A Boat For Treasure]]
+[[Teardown - Ride A Pet]] · [[Teardown - Tap Simulator REBORN]] · [[Teardown - Escape Tsunami for Brainrots]] · [[Teardown - Steal An Egg]] · [[Teardown - Sol's RNG]] · [[Teardown - Plants vs Brainrots]] · [[Teardown - Fish It]] · [[Teardown - Build A Boat For Treasure]]
 <!-- related:end -->

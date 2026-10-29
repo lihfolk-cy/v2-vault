@@ -9,11 +9,11 @@ verified: 2026-10-28
 > - Avoid: Writing `GetProductInfo`, `LoadCharacter` or `AwardBadge` in new code.
 > - Avoid: Setting `RenderFidelity = Performance` as an optimisation.
 > - Avoid: Assuming UI images can be 4K because 3D textures can.
-> - `grep -nE ":(GetProductInfo|PlayerOwnsAsset|AwardBadge|LoadCharacter|IsInGroup|GetRankInGroup|ApplyDescription|ReserveServer)\(...
+> - `grep -nE ":(GetProductInfo|PlayerOwnsAsset|AwardBadge|LoadCharacter|IsInGroup|GetRankInGroup|ApplyDescription|ReserveServer|Re...
 > - No gameplay logic depends on `RenderFidelity`.
 > - Text uses `FontFace`.
 >
-> Cost: TL;DR ~150 tok · whole note ~3.0k tok. Read more: ## 1. Yielding methods renamed with `Async` (January 14, 2026) · ## 8. Smaller changes worth knowing · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.1k tok. Read more: ## 1. Yielding methods renamed with `Async` (January 14, 2026) · ## 8. Smaller changes worth knowing · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Engine and Studio API changes from January 2025 to October 2026 that matter when writing or reviewing code. Server Authority, replication and the Input Action System are big enough to have their own note: [[Server Authority and Input Migration 2026]]. Labels follow [[Roblox Changes 2025-2026]].
@@ -30,12 +30,12 @@ The ones generated code uses most:
 | `MarketplaceService:PlayerOwnsAsset` / `PlayerOwnsBundle` | `PlayerOwnsAssetAsync` / `PlayerOwnsBundleAsync` |
 | `BadgeService:AwardBadge` | `AwardBadgeAsync` |
 | `Player:LoadCharacter` | `LoadCharacterAsync` |
-| `Player:IsInGroup` / `GetRankInGroup` / `GetRoleInGroup` | `...Async` |
+| `Player:IsInGroup` / `GetRankInGroup` / `GetRoleInGroup` | `IsInGroupAsync`; for rank and role use `GroupService:GetRolesInGroupAsync` (`GetRankInGroupAsync` and `GetRoleInGroupAsync` are deprecated too; `IsInGroupAsync` is not) |
 | `Player:IsFriendsWith` / `GetFriendsOnline` | `...Async` |
 | `Humanoid:ApplyDescription` / `ApplyDescriptionReset` / `PlayEmote` | `...Async` |
 | `Players:CreateHumanoidModelFromDescription` / `FromUserId` | `...Async` |
 | `Players:GetHumanoidDescriptionFromUserId` / `FromOutfitId` | `...Async` |
-| `TeleportService:ReserveServer` | `ReserveServerAsync` |
+| `TeleportService:ReserveServer` | `ReserveServerAsync`, itself deprecated on October 29, 2026: use `TeleportOptions.ReservedServerId` with a GUID ([[API Renames and Deprecations 2025-2026]]) |
 | `Plugin:CreateDockWidgetPluginGui`, `ImportFbxRig`, `ImportFbxAnimation` | `...Async` |
 | `StudioService:PromptImportFile(s)` | `...Async` |
 
@@ -50,7 +50,7 @@ local info = MarketplaceService:GetProductInfo(id, Enum.InfoType.Product)
 local ok, info = pcall(MarketplaceService.GetProductInfoAsync, MarketplaceService, id, Enum.InfoType.Product)
 ```
 
-`DataStoreService:GetRequestBudgetForRequestType` and `TextService:FilterStringAsync` were not on the list. The full map is in `_data/roblox_facts_2026.json`.
+`DataStoreService:GetRequestBudgetForRequestType` and `TextService:FilterStringAsync` were not on the list. The full map is in `_data/roblox_facts_2026.json`; later deprecations (teleports, subscriptions, chat, input) are collected in [[API Renames and Deprecations 2025-2026]].
 
 ## 2. Mesh streaming and cloud LoDs replace `RenderFidelity`
 
@@ -157,7 +157,7 @@ Impact: code that assumes `Humanoid.WalkSpeed`, `Humanoid.Jump` or `Humanoid:Cha
 
 ## Checklist
 
-- [ ] `grep -nE ":(GetProductInfo|PlayerOwnsAsset|AwardBadge|LoadCharacter|IsInGroup|GetRankInGroup|ApplyDescription|ReserveServer)\(` returns nothing in new code.
+- [ ] `grep -nE ":(GetProductInfo|PlayerOwnsAsset|AwardBadge|LoadCharacter|IsInGroup|GetRankInGroup|ApplyDescription|ReserveServer|ReserveServerAsync)\(` returns nothing in new code (`AwardBadgeAsync`, `GetProductInfoAsync`, `LoadCharacterAsync`; reserved servers via `TeleportOptions.ReservedServerId`).
 - [ ] No gameplay logic depends on `RenderFidelity`.
 - [ ] Text uses `FontFace`.
 - [ ] Movement edits checked against the controller in use (Humanoid or CCL).
@@ -176,5 +176,5 @@ Impact: code that assumes `Humanoid.WalkSpeed`, `Humanoid.Jump` or `Humanoid:Cha
 
 <!-- related:start -->
 ## Related
-[[Data and Cloud Changes 2025-2026]] · [[Discovery and Monetization Changes 2025-2026]] · [[Policy and Age Rules 2026]] · [[Badges and Achievement Design]] · [[Avatar Context Menus Profiles and Social Surfaces]] · [[Console and VR Release Checklists]]
+[[Discovery and Monetization Changes 2025-2026]] · [[Badges and Achievement Design]] · [[Data and Cloud Changes 2025-2026]] · [[Policy and Age Rules 2026]] · [[Engine Limits, Quotas and Defaults - Cheat Sheet]] · [[Avatar Context Menus Profiles and Social Surfaces]] · [[Console and VR Release Checklists]]
 <!-- related:end -->

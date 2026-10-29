@@ -1,16 +1,16 @@
 ---
-tags: [atlas, api, type/atlas, area/networking, area/gameplay, api/Touched]
+tags: [atlas, api, type/atlas, area/gameplay, area/networking, api/Touched]
 ---
 # Touched
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - `Touched` fires per contact start and can fire many times per second for a moving part.
+> - Avoid: granting rewards from a `Touched` handler with no debounce.
+> - Player-chosen actions use `ProximityPrompt`; walk-into actions use `Touched`; areas use point tests or spatial queries.
 > - Zone does not notice a player who stood still: `Touched` for zones -> Poll point-in-shape tests.
-> - Zones are polled with containment tests, not `Touched`.
-> - Avoid: Unanchored part plus `Touched` for bullets -> Simulated point with swept casts.
 >
-> Cost: TL;DR ~130 tok · whole note ~760 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~820 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -23,15 +23,15 @@ API snapshot: member of `BasePart`, `Humanoid` (`_tools/roblox_api.json`, docs b
 
 ## Key facts
 
+- Avoid: granting rewards from a `Touched` handler with no debounce. ([[Clickable and Interactive Parts - ClickDetector, ProximityPrompt and Touched]])
+- Player-chosen actions use `ProximityPrompt`; walk-into actions use `Touched`; areas use point tests or spatial queries. ([[Clickable and Interactive Parts - ClickDetector, ProximityPrompt and Touched]])
 - Zone does not notice a player who stood still: `Touched` for zones -> Poll point-in-shape tests. ([[Intersection and Collision Math]])
 - Zones are polled with containment tests, not `Touched`. ([[Intersection and Collision Math]])
 - Avoid: Unanchored part plus `Touched` for bullets -> Simulated point with swept casts. ([[Projectiles and Ballistics]])
-- Avoid: Server-side `Touched` coins. Exploitable and expensive. ([[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]])
-- Avoid: `Touched` sword -> Query at hit time. ([[Hitboxes and Hit Detection]])
 
 ## Mentioned in
 
-30 notes in 19 sections. The 25 most relevant are linked:
+31 notes in 19 sections. The 25 most relevant are linked:
 
 ### 02 Luau Scripting
 [[CollectionService Patterns]] · [[Events Signals and Connections]]
@@ -49,7 +49,7 @@ API snapshot: member of `BasePart`, `Humanoid` (`_tools/roblox_api.json`, docs b
 [[Accessories and Armor That Follow Animation]]
 
 ### 09 Gameplay Systems
-[[Hitboxes and Hit Detection]] · [[Physics Assemblies and Constraints]] · [[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]]
+[[Clickable and Interactive Parts - ClickDetector, ProximityPrompt and Touched]] · [[Hitboxes and Hit Detection]] · [[Physics Assemblies and Constraints]] · [[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]]
 
 ### 12 Performance Testing and Debugging
 [[Physics Performance]]
@@ -64,7 +64,7 @@ API snapshot: member of `BasePart`, `Humanoid` (`_tools/roblox_api.json`, docs b
 [[Debugging Physics and Network Ownership]]
 
 ### 24 Worked Builds
-[[Melee Combat System End to End]] · [[Round-Based Minigame Loop End to End]]
+[[Round-Based Minigame Loop End to End]]
 
 ### 25 Physics and Vehicles
 [[Projectiles and Ballistics]]
@@ -90,6 +90,6 @@ API snapshot: member of `BasePart`, `Humanoid` (`_tools/roblox_api.json`, docs b
 ### 51 2D Game Development
 [[A 2D Engine in a ScreenGui - Game Loop Entities and Rendering]]
 
-Also mentioned in (not linked): Game Math Start Here · Obby Checkpoints and Stage Saves End to End · Remote Abuse Patterns and Rate Limiting in Practice · Replication Rules · Threat Modeling a Roblox Game
+Also mentioned in (not linked): Game Math Start Here · Melee Combat System End to End · Obby Checkpoints and Stage Saves End to End · Remote Abuse Patterns and Rate Limiting in Practice · Replication Rules · Threat Modeling a Roblox Game
 
 <!-- atlas:generated -->

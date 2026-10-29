@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/2d, area/studio, api/EditableImage]
 > - Roblox cannot read Aseprite's palette, but keeping colours exact (no near duplicates) makes runtime recolouring with...
 > - `EditableMesh`/`EditableImage` creation handles `nil`.
 >
-> Cost: TL;DR ~130 tok · whole note ~640 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~650 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ API snapshot: class, inherits `Object`, not creatable with `Instance.new` (`_too
 
 ## Mentioned in
 
-23 notes in 12 sections. The 23 most relevant are linked:
+24 notes in 12 sections. The 24 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[Git and Source Control for Roblox]] · [[Places Universes and Experience Settings]] · [[Testing Modes - Play Run and Multi-Client]]
@@ -58,7 +58,7 @@ API snapshot: class, inherits `Object`, not creatable with `Instance.new` (`_too
 [[SurfaceAppearance PBR Workflow]]
 
 ### 49 Roblox Platform Features
-[[Engine and API Changes 2025-2026]]
+[[API Renames and Deprecations 2025-2026]] · [[Engine and API Changes 2025-2026]]
 
 ### 51 2D Game Development
 [[2D Game Development Start Here]] · [[A 2D Engine in a ScreenGui - Game Loop Entities and Rendering]] · [[EditableImage for Pixel Buffers and Procedural 2D]] · [[Pixel Art Pipeline - Aseprite to Roblox Without Blur]] · [[Sprite Sheets and Frame Animation with ImageRectOffset]] · [[Tilemaps Cameras and Parallax for 2D Levels]]

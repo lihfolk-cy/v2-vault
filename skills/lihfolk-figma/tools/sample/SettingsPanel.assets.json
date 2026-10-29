@@ -1,0 +1,46 @@
+{
+  "frame": "Settings",
+  "frameId": "1:47",
+  "reference": [
+    1920,
+    1080
+  ],
+  "maxTexture": 1024,
+  "exportHint": "GET https://api.figma.com/v1/images/:key?ids=<id>&format=png&scale=<exportScale> with your own X-Figma-Token from $FIGMA_TOKEN",
+  "images": [
+    {
+      "id": "1:47",
+      "name": "Settings shadow",
+      "file": "shadow_r22_b24.png",
+      "kind": "shadow",
+      "designSize": [
+        96,
+        96
+      ],
+      "exportScale": 2,
+      "pixelSize": [
+        192,
+        192
+      ],
+      "sliceInset": 46,
+      "note": "a 48x48 rect, corner radius 22, WHITE drop shadow blur 24 spread 0, no offset; export only the shadow (hide the fill), tint in engine with ImageColor3"
+    },
+    {
+      "id": "1:10",
+      "name": "img_gear",
+      "file": "img_gear.png",
+      "designSize": [
+        48,
+        48
+      ],
+      "exportScale": 2,
+      "pixelSize": [
+        96,
+        96
+      ],
+      "kind": "image-fill",
+      "imageRef": "sample0imageref0gear",
+      "note": "export the original image (GET /v1/files/:key/images gives a URL per imageRef), not the frame"
+    }
+  ]
+}

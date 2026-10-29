@@ -169,5 +169,5 @@ After every update, compare the first three days of players who joined after it 
 
 <!-- related:start -->
 ## Related
-[[Sponsored Ads and Campaign Math]] · [[Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Measuring Onboarding - Funnels, Drop-off and A-B Tests]] · [[Robux Price Points and Offer Design]] · [[Economy Inflation Sinks and Faucets Math]] · [[Age Checks and Safety Features]]
+[[From CTR to CCU - Impressions, Play-Through and the Discovery Loop]] · [[Sponsored Ads and Campaign Math]] · [[Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Measuring Onboarding - Funnels, Drop-off and A-B Tests]] · [[Robux Price Points and Offer Design]]
 <!-- related:end -->

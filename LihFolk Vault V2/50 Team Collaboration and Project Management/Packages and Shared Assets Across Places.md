@@ -295,7 +295,7 @@ A third-party summary of the Roblox Developers Conference keynote in September 2
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animation Asset Permissions and Groups]] · [[Team Collaboration Start Here]] · Places Universes and Experience Settings · Links - Models, Toolbox and Creator Store · Creator Store and Toolbox Safety · Team Create and Collaboration
+[[Animation Asset Permissions and Groups]] · [[Team Collaboration Start Here]] · Places Universes and Experience Settings · Official Docs - Building and World · Creator Store and Toolbox Safety · Team Create and Collaboration
 <!-- auto-links:end -->
 
 <!-- related:start -->

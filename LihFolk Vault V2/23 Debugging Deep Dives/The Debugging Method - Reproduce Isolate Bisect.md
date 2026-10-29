@@ -318,7 +318,7 @@ Total: six tests and one read of a log. Without the method, the common outcome i
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox Debugging]] · Debugging Animation Problems · MCP Workflows for Scripting and Debugging · Links - Error handling and debugging · Case Study - Abilities That Only Worked in Studio · Deterministic Simulation
+[[Skill - Roblox Debugging]] · Debugging Animation Problems · MCP Workflows for Scripting and Debugging · Official Docs - Scripting and Luau · Case Study - Abilities That Only Worked in Studio · Deterministic Simulation
 <!-- auto-links:end -->
 
 <!-- related:start -->

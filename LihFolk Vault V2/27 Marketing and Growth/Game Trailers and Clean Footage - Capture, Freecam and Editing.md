@@ -115,5 +115,5 @@ Sources: https://create.roblox.com/docs/workspace/camera/free-camera ; https://c
 
 <!-- related:start -->
 ## Related
-[[Experience Description and Search Keywords]] · [[Marketing to Kids and Teens - Age Rules and Paid-Promo Disclosure]] · [[Update Cadence and Hype Cycles]] · [[Sponsored Ads and Campaign Math]] · [[Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics]] · [[Competitor Analysis Method]] · [[A-B Testing and Experiments on Roblox]] · [[Roblox Communities as Your On-Platform Hub]]
+[[Thumbnail Specs, Rules and Upload - Sizes, Count and Policy]] · [[Making Thumbnails in Studio and Blender - Capture, Lighting and Posing]] · [[Experience Description and Search Keywords]] · [[Music Licensing and Audio Upload Rules for 2026]] · [[Marketing to Kids and Teens - Age Rules and Paid-Promo Disclosure]] · [[Thumbnail Composition for High CTR - Focal Point, Contrast and Readability]]
 <!-- related:end -->

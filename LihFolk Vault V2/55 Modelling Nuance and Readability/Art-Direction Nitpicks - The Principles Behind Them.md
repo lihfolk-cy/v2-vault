@@ -193,5 +193,5 @@ Heavy outline or part lines read as cracks or seams. If the preview shows an art
 
 <!-- related:start -->
 ## Related
-[[World Composition and Set Dressing - Designed, Not Scattered]] · [[Spending Triangles Where the Camera Looks]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[Bevels Chamfers and Edge Highlights Without Textures]] · [[Chibi Character Rules in Practice]] · [[Modelling to the Roblox Camera and Player Scale]]
+[[World Composition and Set Dressing - Designed, Not Scattered]] · [[Spending Triangles Where the Camera Looks]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[Bevels Chamfers and Edge Highlights Without Textures]] · [[Voxel Chibi Heroes - Class Roster and Rarity Ladder]] · [[Modelling to the Roblox Camera and Player Scale]]
 <!-- related:end -->

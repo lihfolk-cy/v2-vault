@@ -506,10 +506,10 @@ Notice what the step function does first: copy current positions into previous o
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Pixel Art Pipeline - Aseprite to Roblox Without Blur]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] · [[Object Pooling]] · Links - Containers · Frame Budget · Debugging UI Layout and Input
+[[Pixel Art Pipeline - Aseprite to Roblox Without Blur]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] · [[Object Pooling]] · Official Docs - UI · Frame Budget · Debugging UI Layout and Input
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Deterministic Simulation]] · [[Frame Budget]] · [[Object Pooling]] · [[Debugging UI Layout and Input]] · [[Performance Fundamentals]] · [[Textures Decals and Texture Memory]]
+[[Deterministic Simulation]] · [[Object Pooling]] · [[Frame Budget]] · [[Debugging UI Layout and Input]] · [[Performance Fundamentals]] · [[Textures Decals and Texture Memory]]
 <!-- related:end -->

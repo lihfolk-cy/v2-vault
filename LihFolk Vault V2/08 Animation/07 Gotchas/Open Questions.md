@@ -199,5 +199,5 @@ Several look-at snippets in the wild (and an earlier version of this vault) buil
 
 <!-- related:start -->
 ## Related
-[[Debugging Animation Problems]] · [[Procedural Animation]] · [[Inverse Kinematics]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Timing Spacing and Frame Charts]] · [[Rigging in Blender]] · [[Pipeline - New Animated Weapon]] · [[Custom Rigs - Weapons and Props]]
+[[Debugging Animation Problems]] · [[Inverse Kinematics]] · [[Procedural Animation]] · [[Timing Spacing and Frame Charts]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Pipeline - New Animated Weapon]] · [[Rigging in Blender]] · [[Custom Rigs - Weapons and Props]]
 <!-- related:end -->

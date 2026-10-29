@@ -12,10 +12,10 @@ tags: [materials, materialservice, materialvariant, custom-materials, terrain, p
 > - Every variant's base chosen for physics and sound behaviour.
 > - Maps downscaled: 1024 for part variants, 512 for terrain; unused maps left blank.
 >
-> Cost: TL;DR ~170 tok · whole note ~5.7k tok. Read more: ## 3. Building a variant from a CC0 set · ## 5. Theme swaps: same names, different maps · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~5.6k tok. Read more: ## 3. Building a variant from a CC0 set · ## 5. Theme swaps: same names, different maps · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-[[Materials MaterialVariants and SurfaceAppearance]] explains the three layers of surface appearance (built-in `Material`, `MaterialVariant`, `SurfaceAppearance`) and the override-slot trap that hurt one production game. This note assumes you know that and goes one level down: how `MaterialService` actually resolves a custom material, how to build and maintain a library of custom materials as a project asset (with CC0 texture sets from the sources in [[Links - Free and CC0 asset libraries]] as the raw material), how to swap whole material themes at runtime, what each variant really costs, and the failure modes you only meet once a place has a few hundred thousand parts.
+[[Materials MaterialVariants and SurfaceAppearance]] explains the three layers of surface appearance (built-in `Material`, `MaterialVariant`, `SurfaceAppearance`) and the override-slot trap that hurt one production game. This note assumes you know that and goes one level down: how `MaterialService` actually resolves a custom material, how to build and maintain a library of custom materials as a project asset, how to swap whole material themes at runtime, what each variant really costs, and the failure modes you only meet once a place has a few hundred thousand parts.
 
 ## 1. How resolution really works
 
@@ -330,11 +330,11 @@ Studio's Material Generator creates variants from a text prompt, with a Studs Pe
 
 ## See also
 
-[[Materials and Surfaces Start Here]] · [[Materials MaterialVariants and SurfaceAppearance]] · [[Links - Free and CC0 asset libraries]] · [[Textures Decals and Texture Memory]] · [[Terrain Materials and Painting]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[Tiling Trim Sheets and Decal Tricks]] · [[SurfaceAppearance PBR Workflow]] · [[Stylised vs Realistic Material Pipelines]] · [[AI Material and Texture Generation]] · [[Lighting Technologies and Settings]] · [[Memory Budgets and Leaks]]
+[[Materials and Surfaces Start Here]] · [[Materials MaterialVariants and SurfaceAppearance]] · [[Textures Decals and Texture Memory]] · [[Terrain Materials and Painting]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[Tiling Trim Sheets and Decal Tricks]] · [[SurfaceAppearance PBR Workflow]] · [[Stylised vs Realistic Material Pipelines]] · [[AI Material and Texture Generation]] · [[Lighting Technologies and Settings]] · [[Memory Budgets and Leaks]]
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Materials and MaterialVariants]] · Texturing and PBR Baking · The Gradient Palette Texture Workflow · Hand-Painted and Stylized Texturing · Substance Painter and Texturing Tools · Texel Density
+[[Official Docs - Building and World]] · Texturing and PBR Baking · The Gradient Palette Texture Workflow · Hand-Painted and Stylized Texturing · Substance Painter and Texturing Tools · Texel Density
 <!-- auto-links:end -->
 
 <!-- related:start -->

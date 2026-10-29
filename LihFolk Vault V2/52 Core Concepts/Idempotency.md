@@ -61,10 +61,10 @@ Related concepts: [[Session Lock]], [[Data Schema Versioning]], [[Server Authori
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Shop with Game Passes and Developer Products End to End]] · Skill - Roblox DataStore Safety · Links - Developer products · Skill - Roblox Monetization Compliance · Server Authority and Validation · Battle Pass and Season Design · [[Core Concepts Start Here]]
+[[Shop with Game Passes and Developer Products End to End]] · Skill - Roblox DataStore Safety · Official Docs - Monetization · Skill - Roblox Monetization Compliance · Server Authority and Validation · Battle Pass and Season Design · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[AI Pitfalls - Data and Monetization]] · [[Purchase Receipts and Purchase History in UI]] · [[Rate Limiting]] · [[Feature Flags]] · [[Faucets and Sinks]] · [[Replication Boundary]] · [[Onboarding Funnel]] · [[Telemetry Events]] · [[Deterministic Simulation]] · [[Event Bus]]
+[[AI Pitfalls - Data and Monetization]] · [[Purchase Receipts and Purchase History in UI]] · [[Rate Limiting]] · [[Feature Flags]] · [[Faucets and Sinks]] · [[Replication Boundary]] · [[Onboarding Funnel]] · [[Telemetry Events]] · [[Event Bus]] · [[Deterministic Simulation]]
 <!-- related:end -->

@@ -362,7 +362,7 @@ A side benefit of constructor injection appears when testing edited code from th
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Dependency Injection in Luau]] · Event Bus · Luau Type System and Strict Mode · Links - OOP and module design · Skill - Roblox System Builder · Links - Script types
+[[Dependency Injection in Luau]] · Event Bus · Luau Type System and Strict Mode · Official Docs - Scripting and Luau · Skill - Roblox System Builder
 <!-- auto-links:end -->
 
 <!-- related:start -->

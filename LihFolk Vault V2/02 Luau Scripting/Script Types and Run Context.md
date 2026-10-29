@@ -212,10 +212,10 @@ Older places often have hundreds of scripts inside parts and models. A safe migr
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Script types]] · External Tooling - Rojo Wally Selene StyLua · [[Functions Closures and Upvalues]] · [[Task Library Coroutines and Yielding]] · Links - Services · Debugging Race Conditions and Yield Order
+[[Official Docs - Scripting and Luau]] · External Tooling - Rojo Wally Selene StyLua · [[Functions Closures and Upvalues]] · [[Task Library Coroutines and Yielding]] · Debugging Race Conditions and Yield Order
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Instances Attributes and Tags]] · [[Tables Metatables and OOP]] · [[Luau Performance and Native Codegen]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Metatables and OOP - When and When Not]] · [[Luau Type System and Strict Mode]] · [[Luau Performance Patterns with Benchmarks]]
+[[Instances Attributes and Tags]] · [[Tables Metatables and OOP]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Luau Performance and Native Codegen]] · [[Metatables and OOP - When and When Not]] · [[Luau Type System and Strict Mode]] · [[Luau Performance Patterns with Benchmarks]]
 <!-- related:end -->

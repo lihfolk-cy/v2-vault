@@ -242,7 +242,7 @@ Patterns, not copies:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Genre Playbook - Shooters FPS and TPS]] · [[Hit-Stop]] · [[Genre Playbook - Sports]] · Links - Combat · Input Responsiveness Buffering and Coyote Time · Level Design Start Here
+[[Genre Playbook - Shooters FPS and TPS]] · [[Hit-Stop]] · [[Genre Playbook - Sports]] · Official Docs - Game Systems · Input Responsiveness Buffering and Coyote Time · Level Design Start Here
 <!-- auto-links:end -->
 
 <!-- related:start -->

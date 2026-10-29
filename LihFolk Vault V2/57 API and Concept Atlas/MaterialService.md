@@ -43,7 +43,7 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 [[MaterialService and Custom Materials]] · [[Materials and Surfaces Start Here]] · [[Procedural Materials and Skies - Lessons]] · [[Stylised vs Realistic Material Pipelines]] · [[SurfaceAppearance PBR Workflow]] · [[Terrain Materials and Painting]] · [[Tiling Trim Sheets and Decal Tricks]]
 
 ### 46 Resource Library
-[[Links - Materials and MaterialVariants]]
+[[Official Docs - Building and World]]
 
 ### 52 Core Concepts
 [[Texel Density]]

@@ -80,7 +80,7 @@ Skills, hooks, CI and scripts address the vault by path. Renaming the vault fold
 ## See also
 
 - [[Documentation and Knowledge Bases]]
-- [[Third-Party Skill - Obsidian Skills]]
+- [[AI Skills Start Here]]
 - [[Benchmark - Does a Knowledge Vault Make AI Better at Roblox]]
 
 ## Connected notes
@@ -89,5 +89,5 @@ Skills, hooks, CI and scripts address the vault by path. Renaming the vault fold
 
 <!-- related:start -->
 ## Related
-[[AI Asset Pipelines - Scoring, Reviewers and Spot Checks]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[AI Agents and Autonomous Workflows]] · [[AI in Roblox Development Overview]] · [[AI Code Assistants for Luau]] · [[Roblox Studio Assistant]] · [[Prompting and Verifying AI Output]]
+[[AI Asset Pipelines - Scoring, Reviewers and Spot Checks]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[AI Agents and Autonomous Workflows]] · [[Roblox Studio Assistant]] · [[AI Code Assistants for Luau]] · [[AI in Roblox Development Overview]] · [[Prompting and Verifying AI Output]]
 <!-- related:end -->

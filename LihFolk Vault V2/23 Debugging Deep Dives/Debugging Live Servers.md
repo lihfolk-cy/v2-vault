@@ -299,7 +299,7 @@ When logs point at a cause but you still cannot reproduce in Studio:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox Debugging]] · Telemetry Events · Skill - Roblox Performance Audit · Links - Error handling and debugging · Feature Flags · Memory Budgets and Leaks
+[[Skill - Roblox Debugging]] · Telemetry Events · Skill - Roblox Performance Audit · Official Docs - Scripting and Luau · Feature Flags · Memory Budgets and Leaks
 <!-- auto-links:end -->
 
 <!-- related:start -->

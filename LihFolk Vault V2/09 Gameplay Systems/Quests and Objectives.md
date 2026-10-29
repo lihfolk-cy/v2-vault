@@ -259,10 +259,10 @@ Quest UI competes with everything else for attention. Measured rules from the re
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Quest Writing and Hooks]] · Quest Chain System End to End · Core Loops and Session Design · [[Combat Systems Architecture]] · Links - Quests and progression · Menu Archetypes - Shop Settings Codes Rewards
+[[Quest Writing and Hooks]] · Quest Chain System End to End · Core Loops and Session Design · [[Combat Systems Architecture]] · Official Docs - Game Systems · Menu Archetypes - Shop Settings Codes Rewards
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[RNG Drops and Luck Systems]] · [[Spawning Teams and Rounds]] · [[Tools and Inventory Systems]] · [[Status Effects Buffs and Stacking Rules]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[NPC AI and Behaviour]] · [[Downed, Revive and Bleed-Out States]] · [[Behaviour Trees Utility AI and State Machines for NPCs]]
+[[RNG Drops and Luck Systems]] · [[Spawning Teams and Rounds]] · [[Tools and Inventory Systems]] · [[Status Effects Buffs and Stacking Rules]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[NPC AI and Behaviour]] · [[Downed, Revive and Bleed-Out States]] · [[Enemy Archetype Kit - Fodder, Tank, Ranged, Support and Exploder]]
 <!-- related:end -->

@@ -323,10 +323,10 @@ Whatever you choose, keep scan logic out of components. A component that calls `
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Plugins and custom tools]] · Cookbook - UI · Studio Settings and Shortcuts · Links - UI elements · Studio Interface Tour · Debugging UI Layout and Input
+[[Official Docs - Asset Creation]] · Cookbook - UI · Studio Settings and Shortcuts · Official Docs - UI · Studio Interface Tour · Debugging UI Layout and Input
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Undo and ChangeHistoryService Done Right]] · [[Cookbook - UI]] · [[Publishing Selling and Updating Plugins]] · [[Debugging UI Layout and Input]] · [[Studio Interface Tour]] · [[Plugin Security and Permissions]]
+[[Undo and ChangeHistoryService Done Right]] · [[Cookbook - UI]] · [[Publishing Selling and Updating Plugins]] · [[Gamepad and Console UX]] · [[Studio Interface Tour]] · [[Plugin Security and Permissions]]
 <!-- related:end -->

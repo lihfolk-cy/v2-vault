@@ -308,5 +308,5 @@ Funnel volumes: courtyard entrance (step 10), tunnel below the cracked tile (ste
 
 <!-- related:start -->
 ## Related
-[[Onboarding and FTUE - Tutorials That Keep Players]] · [[Playtest Heatmaps - Position and Death Maps]] · [[Measuring Onboarding - Funnels, Drop-off and A-B Tests]] · [[Lobby and Hub Design]] · [[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]]
+[[Onboarding and FTUE - Tutorials That Keep Players]] · [[Playtest Heatmaps - Position and Death Maps]] · [[Measuring Onboarding - Funnels, Drop-off and A-B Tests]] · [[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Lobby and Hub Design]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]]
 <!-- related:end -->

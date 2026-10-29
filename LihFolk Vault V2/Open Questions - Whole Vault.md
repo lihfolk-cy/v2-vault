@@ -15,7 +15,7 @@ Conflicts the writers found between Roblox's own documentation pages, between th
 | `IgnoreGuiInset = true` now means "device safe", not fullscreen | [[Safe Areas and Insets]] |
 | Raycast / overlap filters: `ExcludeInstances` / `IncludeInstances` supersede `FilterDescendantsInstances` / `FilterType` (old names still appear in some notes' code and still work) | [[Raycasts Shapecasts and Spatial Queries]] |
 | Collision-group methods moved to `WorldRoot` (`workspace`), 32 per world | [[Collision and Physics Geometry]] |
-| `LoadCharacterAsync`, `ApplyDescriptionAsync`, `GetProductInfoAsync`, `ReserveServerAsync`, `CreateDockWidgetPluginGuiAsync` replace their non-Async forms | [[Characters and Humanoids]], [[Plugins - Using and Writing]] |
+| `LoadCharacterAsync`, `ApplyDescriptionAsync`, `GetProductInfoAsync`, `ReserveServerAsync`, `CreateDockWidgetPluginGuiAsync` replace their non-Async forms (`ReserveServerAsync` is itself deprecated since October 2026: use `TeleportOptions.ReservedServerId` with a GUID, **Roblox docs**) | [[Characters and Humanoids]], [[Plugins - Using and Writing]] |
 | Server Authority mode (`Workspace.AuthorityMode`, `RunService:BindToSimulation`, client prediction) documented; docs call it beta in places | [[Client-Server Model]], [[Custom Character Controllers]] |
 | `KeyframeSequenceProvider` deprecated for `AnimationClipProvider` | [[Animator Deep Dive]] |
 | New Type Solver general release (Nov 2025); strict users opt in via `Workspace.UseNewLuauTypeSolver` | [[Luau Type System and Strict Mode]] |
@@ -89,7 +89,7 @@ Conflicts the writers found between Roblox's own documentation pages, between th
 - Materials: one note says legacy materials, another that 2022 textures show. [[Materials MaterialVariants and SurfaceAppearance]]
 - Studio-call budget for tools: 5 s, then 3.5 s, then 1.5 s. [[Safety Rules for AI Agents in Studio]]
 - Deletion policy changed twice (never delete, delete after proof, no backups in the place). [[Safe Changes in a Shared Place]]
-- UI skill vs project: mandated GothamBlack (now removed), scale floor 0.52 vs ~0.82, close button 38 px vs 72 px, per-frame sunbursts vs idle-free tweens. [[UI Design Systems]]
+- UI scale floor: how low a phone scale can go before text drops under 12 px drawn (the reference project landed near 0.82), and whether decorative loops such as sunbursts should run per frame or as idle-free tweens. [[UI Design Systems]]
 
 ## 5. Compliance risks spotted in the reference project
 Kept here as general warnings because they are common in RNG games:
@@ -100,7 +100,7 @@ Kept here as general warnings because they are common in RNG games:
 - **No server-side roll cooldown**: rate-limit anyway. [[Rate Limiting and Abuse Prevention]]
 
 ## Not verified anywhere
-Assistant daily caps; `ShowAdResult` values; whether unprocessed receipts auto-refund; `BindReceiptHandler` coexisting with `ProcessReceipt`; MessagingService in Studio; tangent space (MikkTSpace) and UV wrapping in Roblox; the 2,048-stud part size limit; `PhysicsService:GetMaxCollisionGroups()`; top bar height (58 px reported); Open Cloud localization API; Assets API rate limits. Each is marked "unverified" where it appears.
+Assistant daily caps; `ShowAdResult` values; whether unprocessed receipts auto-refund; MessagingService in Studio; tangent space (MikkTSpace) and UV wrapping in Roblox; the 2,048-stud part size limit; top bar height (58 px reported); Open Cloud localization API; Assets API rate limits. Each is marked "unverified" where it appears.
 
 See also: [[00 Start Here]], [[Glossary]], [[Open Questions]].
 
@@ -187,7 +187,7 @@ See also: [[00 Start Here]], [[Glossary]], [[Open Questions]].
 **Genre Systems**
 - Which collision group calls are deprecated? Recheck RegisterCollisionGroup and CollisionGroupSetCollidable against the PhysicsService page.
 - Player:LoadCharacter now shows as deprecated in favour of LoadCharacterAsync.
-- Humanoid:MoveTo times out after about 8 seconds and the default WalkSpeed is 16: both are rules of thumb, not documented.
+- Resolved 2026-10-29: Humanoid:MoveTo's 8-second timeout and the default WalkSpeed of 16 (from StarterPlayer.CharacterWalkSpeed) are both stated on the Humanoid reference page (**Roblox docs**).
 - "Saved Inventory End to End": reconcile refills non-empty template arrays, and PlayerData has no BeforeRelease pre-save hook, so writes at leave time race the leave save.
 
 **Materials and Surfaces**
@@ -211,7 +211,7 @@ See also: [[00 Start Here]], [[Glossary]], [[Open Questions]].
 - MemoryStoreSortedMap:GetRangeAsync maximum count and the exact UpdateAsync return value are not documented.
 - IsPaidItemTradingAllowed appears on the paid random items page but not on the PolicyService reference page.
 - Top games case studies: peak player counts from trackers (RoMonitor, Rolimons, RoWatcher) could not be read directly and sometimes disagree; developer product prices are not available without logging in.
-- Not documented: whether math.sin and atan2 give identical results on every device, collision group cap (use GetMaxCollisionGroups), MessagingService ordering, and seeded Random stability across engine versions.
+- Not documented: whether math.sin and atan2 give identical results on every device, MessagingService ordering, and seeded Random stability across engine versions.
 
 ## Round 9 (sections 53 to 55, modelling)
 - Vertex colours on MeshParts: the importer keeps them and community guides say they multiply with MeshPart.Color, but the MeshPart reference does not document this or whether they show under a SurfaceAppearance. Older notes call it measured.

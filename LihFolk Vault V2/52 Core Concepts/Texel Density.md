@@ -51,7 +51,7 @@ Related concepts: [[Triangle Budget]], [[Draw Calls]], [[Thumbnail Contrast]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Materials and Surfaces Start Here]] · Stylised vs Realistic Material Pipelines · Modeling in Blender for Roblox · Baking Lighting and Detail into Textures · AI Material and Texture Generation · Links - UVs and texture prep · [[Core Concepts Start Here]]
+[[Materials and Surfaces Start Here]] · Stylised vs Realistic Material Pipelines · Modeling in Blender for Roblox · Baking Lighting and Detail into Textures · AI Material and Texture Generation · Official Docs - Asset Creation · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->

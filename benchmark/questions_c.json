@@ -1,0 +1,367 @@
+{
+  "meta": {
+    "name": "lihfolk-bench-set-c",
+    "version": "1.0",
+    "created": "2026-10-29",
+    "task_count": 24,
+    "total_points": 66,
+    "note": "Held-out set written without access to the vault or prior benchmark results; keys checked against primary sources on 2026-10-29."
+  },
+  "tasks": [
+    {
+      "id": "C1",
+      "category": "debugging",
+      "prompt": "A server Script makes a zombie NPC chase a far-away target with a single call:\n```lua\nzombie.Humanoid:MoveTo(target.Position)\nzombie.Humanoid.MoveToFinished:Wait()\nprint(\"arrived\")\n```\nOn long routes the zombie walks for a while, stops partway, prints \"arrived\" anyway, and it also walks straight into walls instead of going around them. Explain both problems and how to fix them.",
+      "answer_key": [
+        "Humanoid:MoveTo times out after 8 seconds if the goal is not reached; MoveToFinished then fires with reached = false (the script ignores the reached argument)",
+        "MoveTo walks in a straight line with no obstacle avoidance; use PathfindingService (CreatePath, Path:ComputeAsync, check Status == Success, GetWaypoints) and move waypoint by waypoint, calling MoveTo for each (or re-calling MoveTo periodically to refresh the timeout)",
+        "Handle waypoints whose Action is Jump (make the humanoid jump) and recompute when Path.Blocked fires or the computation fails"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/Humanoid",
+        "https://create.roblox.com/docs/characters/pathfinding"
+      ]
+    },
+    {
+      "id": "C2",
+      "category": "debugging",
+      "prompt": "A ScreenGui in StarterGui holds a settings menu. Players toggle options (music off, a selected tab) and the LocalScript inside the ScreenGui stores them in local variables. Every time the player's character dies and respawns, the menu reverts to its defaults. Why, and what is the fix?",
+      "answer_key": [
+        "ScreenGui.ResetOnSpawn defaults to true, so on each respawn the GUI is deleted and a fresh copy is cloned from StarterGui into PlayerGui, restarting its LocalScript and losing state",
+        "Fix: set ResetOnSpawn = false on the ScreenGui (a direct child of StarterGui is then cloned into PlayerGui only once and survives respawns), or keep the state outside the GUI (e.g. a script in StarterPlayerScripts, attributes, or the server)"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/LayerCollector"
+      ]
+    },
+    {
+      "id": "C3",
+      "category": "debugging",
+      "prompt": "In a LocalScript I play a sword-swing animation on my own character and every player sees it. In the same LocalScript I also play a waving animation on a shopkeeper NPC (a server-owned Model in Workspace with a Humanoid), but other players never see the NPC wave. For a second NPC, I created the Animator with Instance.new inside the LocalScript, and nobody else sees that one either. Explain the replication rules and the fix.",
+      "answer_key": [
+        "Animations started on a client replicate only for that player's own character (or models the client has network ownership of); for other models such as server-owned NPCs, the animation must be loaded and played on the server to replicate",
+        "The Animator must be created on the server (or exist in the model already) and replicate to clients; an Animator created locally on the client does not replicate its tracks",
+        "Fix: play the NPC animations from a server Script via Animator:LoadAnimation(...):Play() (or fire a remote to every client and have each play it locally if it is purely cosmetic)"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/Animator"
+      ]
+    },
+    {
+      "id": "C4",
+      "category": "debugging",
+      "prompt": "Three sound bugs in one game: (1) a Sound placed directly in Workspace for a barrel explosion is heard at full volume by every player across the whole map; (2) a Sound inside a siren Part goes silent once players are a moderate distance away, but the designer wants it audible much further; (3) a script does `siren.Loaded:Wait()` before playing and sometimes hangs forever. Explain each and fix.",
+      "answer_key": [
+        "(1) A Sound not parented to a BasePart or Attachment is global (same volume everywhere); parent it to the barrel part or an Attachment at the explosion to make it positional",
+        "(2) For positional sounds the audible range is controlled by RollOffMaxDistance (with RollOffMinDistance and RollOffMode shaping the falloff); raise RollOffMaxDistance",
+        "(3) Loaded does not fire if the sound has already loaded, so check Sound.IsLoaded first and only wait on Loaded when it is false"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/Sound"
+      ]
+    },
+    {
+      "id": "C5",
+      "category": "debugging",
+      "prompt": "A gun LocalScript does:\n```lua\nlocal dir = (mouseHit - head.Position).Unit\nlocal result = workspace:Raycast(head.Position, dir)\nprint(result.Instance.Name)\n```\nIt almost always errors with \"attempt to index nil with 'Instance'\", and when it does hit something it is often the player's own body. Diagnose and fix.",
+      "answer_key": [
+        "The direction vector's length is the ray's length, so a .Unit direction only casts 1 stud; multiply the unit direction by the desired range (e.g. dir * 300)",
+        "Workspace:Raycast returns nil when nothing is hit, so check the result before reading .Instance",
+        "Pass RaycastParams with FilterType = Enum.RaycastFilterType.Exclude and FilterDescendantsInstances = {player.Character} to ignore the shooter"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/workspace/raycasting"
+      ]
+    },
+    {
+      "id": "C6",
+      "category": "debugging",
+      "prompt": "A shop button has a hover effect (TweenService tweens BackgroundTransparency to 0.2 over 0.3 s on MouseEnter) and a click flash (a separate tween of BackgroundTransparency to 0 and back). When players click while the hover tween is still running, the hover effect stops halfway and the button ends in odd states. Why does this happen and how should the code be structured?",
+      "answer_key": [
+        "Two tweens on the same property of the same object conflict: the earlier tween is cancelled and overwritten by the most recently played one",
+        "Fix: keep a reference to the active tween per button and Cancel it before playing a new one (or chain via Completed), or have the effects animate different properties / objects (e.g. a child frame or UIStroke) so they don't share a property"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/TweenService",
+        "https://create.roblox.com/docs/reference/engine/classes/Tween"
+      ]
+    },
+    {
+      "id": "C7",
+      "category": "code-writing",
+      "prompt": "Write a short server-side Luau snippet that makes every part tagged \"Lava\" kill players who touch it, including Lava parts that are added later at runtime (e.g. cloned in during a round), and cleans up when a part loses the tag or is removed. State the key rules.",
+      "answer_key": [
+        "Use CollectionService:GetTagged(\"Lava\") for parts that already exist AND CollectionService:GetInstanceAddedSignal(\"Lava\") for later ones (the added signal does not fire for instances already tagged)",
+        "Store each part's Touched connection and disconnect it in CollectionService:GetInstanceRemovedSignal(\"Lava\") (fires when the tag is removed or the instance leaves the DataModel); run on the server (server tags replicate to clients)"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/CollectionService"
+      ]
+    },
+    {
+      "id": "C8",
+      "category": "code-writing",
+      "prompt": "Write a minimal Luau ProcessReceipt handler for a developer product that gives 500 coins (coins are saved in a DataStore). Explain the key rules that prevent lost or double-granted purchases.",
+      "answer_key": [
+        "Set MarketplaceService.ProcessReceipt only once, in a single server-side Script; it must handle all developer products (look up by receiptInfo.ProductId, player by receiptInfo.PlayerId)",
+        "Return Enum.ProductPurchaseDecision.PurchaseGranted only after the coins were successfully granted/saved; return NotProcessedYet if the player is not in the server or the grant/save failed",
+        "Make it idempotent: record receiptInfo.PurchaseId (e.g. via DataStore UpdateAsync) and skip granting if that PurchaseId was already processed, since the receipt can be delivered again",
+        "A NotProcessedYet receipt is not retried on a timer: the callback runs again when the player makes another product purchase or rejoins a server of the experience"
+      ],
+      "points": 4,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/MarketplaceService"
+      ],
+      "grader_notes": "The enum value is NotProcessedYet; 'NotYetProcessed' is a minor naming slip, score it 0.5 on item 2 rather than -1."
+    },
+    {
+      "id": "C9",
+      "category": "code-writing",
+      "prompt": "Players can type a custom message that is shown on a sign above their plot, visible to everyone in the server (and it stays after the author leaves). Write the server-side Luau for filtering the text before displaying it and state the key rules.",
+      "answer_key": [
+        "Filter on the server with TextService:FilterStringAsync(text, authorUserId) wrapped in pcall (it yields and can throw; the author must be in the server)",
+        "For text every user can see, display TextFilterResult:GetNonChatStringForBroadcastAsync() (GetNonChatStringForUserAsync is for text only one specific user sees; GetChatForUserAsync is deprecated)",
+        "If filtering fails, do not show the text (show nothing / a placeholder); never display the raw unfiltered string"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/TextService",
+        "https://create.roblox.com/docs/reference/engine/classes/TextFilterResult"
+      ]
+    },
+    {
+      "id": "C10",
+      "category": "code-writing",
+      "prompt": "Write a Luau function that safely adds an amount to a player's gem count stored under key \"Player_<UserId>\" in a standard DataStore using UpdateAsync. State the key rules for the callback and error handling.",
+      "answer_key": [
+        "The transform callback receives (currentValue, keyInfo); handle currentValue being nil for a new player (default to 0) and return the new value",
+        "The callback must not yield (no task.wait / other async calls) and may run more than once, so keep it pure; returning nil cancels the write",
+        "Wrap the UpdateAsync call in pcall (requests can fail) and handle/retry failures; keys are limited to 50 characters and values to 4 MB"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/GlobalDataStore",
+        "https://create.roblox.com/docs/cloud-services/data-stores/error-codes-and-limits"
+      ]
+    },
+    {
+      "id": "C11",
+      "category": "code-writing",
+      "prompt": "Write a short Luau snippet that awards a badge (ID 123456) when a player touches the finish line of an obby, without spamming badge requests. State where it must run and the conditions for the award to succeed.",
+      "answer_key": [
+        "Award from a server Script with BadgeService:AwardBadgeAsync(userId, badgeId) (AwardBadge is deprecated); clients cannot award badges. Wrap calls in pcall as they yield and can fail",
+        "Check BadgeService:UserHasBadgeAsync first and/or debounce per player; the award only succeeds if the player is currently in the experience, the badge is enabled, it belongs to this experience, and the player doesn't already own it"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/BadgeService"
+      ],
+      "grader_notes": "Accept AwardBadge for item 1 at 0.5 if the response does not note it is deprecated; do not score -1 for using the older name."
+    },
+    {
+      "id": "C12",
+      "category": "code-writing",
+      "prompt": "Write Luau that builds a physics-based swinging door: an anchored frame part and an unanchored door part connected by a HingeConstraint, which a script opens to 90 degrees and closes again smoothly using the constraint (not tweens or CFrame). State the key setup rules.",
+      "answer_key": [
+        "Create an Attachment on the frame and one on the door, assign them to HingeConstraint.Attachment0/Attachment1; the hinge rotates about the attachments' X axes, which must point along the intended hinge axis (e.g. vertical)",
+        "Set ActuatorType = Enum.ActuatorType.Servo and drive the door by setting TargetAngle (degrees, e.g. 90 to open, 0 to close)",
+        "Give the servo enough ServoMaxTorque and set AngularSpeed (radians/second) so it can actually move the door; optionally LimitsEnabled with LowerAngle/UpperAngle"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/HingeConstraint"
+      ]
+    },
+    {
+      "id": "C13",
+      "category": "architecture",
+      "prompt": "I'm building cross-server skill-based matchmaking: players in any lobby server join a shared queue, and a matchmaker groups them and sends them to a match. A teammate suggests storing the queue in a DataStore. What Roblox service should hold the queue instead, and what limits/design rules apply?",
+      "answer_key": [
+        "Use MemoryStoreService (a MemoryStoreQueue, or a sorted map) rather than DataStores: memory stores are for fast, frequently changing, ephemeral shared data, while DataStores are for durable data",
+        "Entries expire: set an expiration on AddAsync/SetAsync (maximum and default 45 days, use something short for queue entries); permanent data must still go to DataStores",
+        "Respect quotas: memory size about 64 KB + 1.2 KB x number of users, requests about 1000 + 120 x concurrent users per minute, item value limit 32 KB"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/cloud-services/memory-stores"
+      ],
+      "grader_notes": "Item 3: full credit for at least two of the three quotas roughly right; accept the older '64 KB + 1 KB x users' memory formula."
+    },
+    {
+      "id": "C14",
+      "category": "architecture",
+      "prompt": "Design the flow for sending a party of 4 players from a lobby place into a private match server of another place in the same experience. The match server needs to know each player's equipped loadout and current coin balance. Which APIs do you use, and what pitfalls apply?",
+      "answer_key": [
+        "From the server, call TeleportService:TeleportAsync(placeId, players, teleportOptions) with all party members in one call (server-only)",
+        "Target a reserved server: set TeleportOptions.ReservedServerId to a GUID from HttpService:GenerateGUID() (the older ReserveServer + ReservedServerAccessCode / ShouldReserveServer approach is deprecated)",
+        "Teleport data (TeleportOptions:SetTeleportData) can be spoofed by exploiters, so sensitive values like coin balance must be loaded on the destination from DataStores; only non-sensitive hints go in teleport data",
+        "Wrap in pcall and handle TeleportInitFailed (retry); teleports do not work in Studio playtesting, test in a published game"
+      ],
+      "points": 4,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/TeleportService",
+        "https://create.roblox.com/docs/reference/engine/classes/TeleportOptions"
+      ],
+      "grader_notes": "Item 2: the older ReserveServer + ReservedServerAccessCode approach without noting deprecation earns 0.5, not -1."
+    },
+    {
+      "id": "C15",
+      "category": "architecture",
+      "prompt": "My shop UI fires `BuyItem:FireServer(\"Sword\", 50)` where 50 is the price, and the server subtracts the price and gives the item. How should the shop's client/server responsibilities be designed so it can't be exploited?",
+      "answer_key": [
+        "Treat everything the client sends as untrusted: exploiters can fire the remote any number of times with arbitrary arguments, so the client sends only the item ID and the server looks up the real price from its own server-side table",
+        "The server is the source of truth: validate the argument (type, item exists), check the player's actual balance (and requirements like distance/ownership) before deducting and granting, then replicate the result; limit how often a player can call it"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/scripting/security/security-tactics",
+        "https://create.roblox.com/docs/scripting/events/remote"
+      ]
+    },
+    {
+      "id": "C16",
+      "category": "architecture",
+      "prompt": "We want our game playable in Spanish, Portuguese and German. Static UI labels are fine, but quest text is built at runtime by scripts, e.g. \"You collected 12 of 20 apples\", and NPC names should never be translated. How should localization be structured?",
+      "answer_key": [
+        "Roblox automatic translation / the experience's localization (translation) table covers static in-game text; disable AutoLocalize on objects like NPC name labels that must not be translated",
+        "For scripted dynamic strings, get a Translator with LocalizationService:GetTranslatorForPlayerAsync(player) wrapped in pcall, and use Translator:FormatByKey(key, args) with parameterized entries (e.g. {1:int} of {2:int}) in the localization table",
+        "Re-translate scripted text when the language changes by listening to the translator's LocaleId property change"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/production/localization",
+        "https://create.roblox.com/docs/production/localization/localize-with-scripting",
+        "https://create.roblox.com/docs/production/localization/translate-dynamic-content"
+      ]
+    },
+    {
+      "id": "C17",
+      "category": "performance-networking",
+      "prompt": "Our multiplayer racing game sends each car's steering/throttle state and cosmetic exhaust effects to all clients 20 times per second with a RemoteEvent, and also sends lap-completion events. Would UnreliableRemoteEvent help, and what are its rules?",
+      "answer_key": [
+        "UnreliableRemoteEvent does not guarantee delivery (lost events are not resent) or ordering, so it suits ephemeral or continuously updated data like the cosmetic/state updates",
+        "Payloads larger than 1000 bytes are dropped, so keep messages small",
+        "Keep using a regular RemoteEvent for events that must arrive and in order, such as lap completion"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/UnreliableRemoteEvent"
+      ]
+    },
+    {
+      "id": "C18",
+      "category": "performance-networking",
+      "prompt": "Server-controlled boss NPCs (unanchored, moved by Humanoids) stutter whenever players walk near them, and the boss's Touched-based damage can be faked by exploiters. What is going on with physics ownership and what should we do?",
+      "answer_key": [
+        "By default network ownership is automatic: the engine hands unanchored assemblies to nearby players' clients, and ownership changes cause hitches; call SetNetworkOwner(nil) on the NPC's parts/root so the server owns the NPC",
+        "When a client owns a part, Roblox cannot verify its physics, so client-owned parts' positions and Touched events can be faked; important hit detection must be validated on the server",
+        "Anchored parts are always server-owned and their ownership cannot be set; SetNetworkOwnershipAuto() returns a part to automatic ownership"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/physics/network-ownership"
+      ]
+    },
+    {
+      "id": "C19",
+      "category": "performance-networking",
+      "prompt": "Our server spends most of its frame time computing line-of-sight raycasts for 60 turrets every Heartbeat. We want to use Parallel Luau. Describe how to structure it and what the restrictions are.",
+      "answer_key": [
+        "Put the scripts under Actor instances (e.g. one actor per turret or group of turrets); only Actor descendants run in parallel",
+        "Switch to parallel with task.desynchronize() (or connect with RBXScriptSignal:ConnectParallel) for the read-only raycast work",
+        "Writing instance properties / modifying the DataModel is not allowed in parallel, so call task.synchronize() before applying results (e.g. rotating the turret, dealing damage); require cannot be called while desynchronized; share data via SharedTable or Actor messages"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/scripting/multithreading"
+      ]
+    },
+    {
+      "id": "C20",
+      "category": "performance-networking",
+      "prompt": "With StreamingEnabled on, our server teleports a player's character across the map (PivotTo) to a dungeon entrance. Players often fall through the floor or see an empty void on arrival. On low-end phones memory usage is also too high. Which streaming APIs and settings address this?",
+      "answer_key": [
+        "Call Player:RequestStreamAroundAsync(position, timeout) for the destination before moving the character so the area is streamed in first; set StreamingIntegrityMode to PauseOutsideLoadedArea so gameplay pauses rather than letting the player enter unstreamed space",
+        "For memory: lower StreamingTargetRadius (default 1024) and/or set StreamOutBehavior = Opportunistic so content beyond the target radius can be streamed out even without memory pressure; StreamingMinRadius regions never stream out, so keep it small"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/workspace/streaming",
+        "https://create.roblox.com/docs/reference/engine/classes/Player"
+      ]
+    },
+    {
+      "id": "C21",
+      "category": "recent-platform",
+      "prompt": "I keep hearing about Roblox's Input Action System. What is its structure, how do I read a 'Sprint' action in code, and what changed in 2026 for the default player scripts?",
+      "answer_key": [
+        "Instances: InputContext (groups actions; Enabled, Priority, Sink) contains InputAction objects (the gameplay intent, with a Type such as Bool or Direction2D), each with InputBinding children that map hardware input (e.g. KeyCode, modifier keys, a UI button for touch)",
+        "Read a Bool action through InputAction.Pressed / Released events (StateChanged for any type, or :GetState())",
+        "The system reached full release in June 2026 along with default player scripts converted to it; experiences opt in via Workspace.PlayerScriptsUseInputActionSystem, with the default planned to flip to enabled in a later phase (announced for early 2027)"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/InputAction",
+        "https://create.roblox.com/docs/reference/engine/classes/InputBinding",
+        "https://create.roblox.com/docs/reference/engine/classes/InputContext",
+        "https://devforum.roblox.com/t/full-release-input-action-system-ias-newly-converted-player-scripts/4678416"
+      ],
+      "grader_notes": "Item 3: accept 'mid-2026' for the full release; the future phase dates are announced plans, so full credit if the response mentions the opt-in property and that the default will later flip, with or without dates. Mentioning only the 2025 beta earns 0.5."
+    },
+    {
+      "id": "C22",
+      "category": "recent-platform",
+      "prompt": "An old game I'm reviving still uses the legacy Chat service and a forked chat system (ChatVersion = LegacyChatService). What happened to legacy chat, and what do I need to do now?",
+      "answer_key": [
+        "Roblox retired the legacy chat system on April 30, 2025 and began auto-migrating remaining experiences to TextChatService in batches from May 2025",
+        "Use TextChatService (ChatVersion set to TextChatService) and rebuild customizations on its APIs; player-to-player text communication must go through TextChatService",
+        "Custom/forked chat systems had to respect user permissions via CanUsersDirectChatAsync (and related CanUserChatAsync / CanUsersChatAsync checks) or were auto-migrated earlier (from February 2025)"
+      ],
+      "points": 3,
+      "sources": [
+        "https://devforum.roblox.com/t/update-on-legacy-chat-deprecation-and-textchatservice-migration/3376880",
+        "https://devforum.roblox.com/t/migrate-to-textchatservice-removing-support-for-legacy-chat-and-custom-chat-systems/3237100",
+        "https://create.roblox.com/docs/reference/engine/classes/TextChatService"
+      ],
+      "grader_notes": "Item 3: full credit for naming the permission-check API requirement for custom chat; exact deadline dates are optional."
+    },
+    {
+      "id": "C23",
+      "category": "recent-platform",
+      "prompt": "What is the current Developer Exchange (DevEx) cash-out rate for earned Robux, when did it last change for all creators, and are there any special rates or minimums I should know about?",
+      "answer_key": [
+        "Standard rate is $0.0038 per earned Robux, raised from $0.0035 effective September 5, 2025 (announced at RDC 2025); Robux earned before the change cash out at the old rate first",
+        "Minimum of 30,000 earned Robux to cash out; a higher $0.0054 rate applies to certain earned Robux from purchases by U.S. players verified 18+ in eligible experiences"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/production/monetization/developer-exchange",
+        "https://devforum.roblox.com/t/rdc25-what-we-announced/3920245"
+      ],
+      "grader_notes": "Item 2: full credit for the 30,000 minimum plus mention of the 0.0054 U.S. 18+ rate; the exact start date of the 18+ rate is not required. Accept 'September 2025' for the change date."
+    },
+    {
+      "id": "C24",
+      "category": "recent-platform",
+      "prompt": "In early 2026 Roblox changed who can chat with whom. As a developer of a social hangout game, what changed and what do I need to adjust in my experience?",
+      "answer_key": [
+        "Since January 2026 an age check (facial age estimation, or ID for 13+) is required globally to use chat; checked users are placed in age groups and by default can chat only with their own and adjacent age groups; under-9 users need parental consent for chat",
+        "Players who can't chat with each other simply don't see each other's messages; all text-based player-to-player communication must go through TextChatService (use TextChannel:DisplaySystemMessage for announcements)",
+        "In-experience social media links (Discord invites, X handles etc.) are no longer allowed and PolicyService GetExternalLinkReference is sunset; links remain on the experience page, visible to age-checked 13+ users"
+      ],
+      "points": 3,
+      "sources": [
+        "https://about.roblox.com/newsroom/2026/01/roblox-age-checks-required-to-chat",
+        "https://devforum.roblox.com/t/age-check-requirement-to-chat-now-live-globally/4226101"
+      ],
+      "grader_notes": "Item 1: accept 'December 2025 in some regions, global January 2026'. Item 3 date (February 23, 2026) is optional."
+    }
+  ]
+}

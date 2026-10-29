@@ -158,10 +158,10 @@ The full story is in [[Case Study - Building a Game with AI Agents]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Evaluating AI Tools - A Practical Rubric]] · [[Setting Up MCP Clients]] · Third-Party Skill - Caveman Token Saver · MCP Workflows for Scripting and Debugging · Links - External tooling · Audio Pipeline
+[[Evaluating AI Tools - A Practical Rubric]] · [[Setting Up MCP Clients]] · MCP Workflows for Scripting and Debugging · Official Docs - Studio and Tooling · Audio Pipeline
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[Who Owns AI-Generated Code and Assets]] · [[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[What AI Models Get Wrong in Roblox]]
+[[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[Who Owns AI-Generated Code and Assets]] · [[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[MCP Workflows for Scripting and Debugging]]
 <!-- related:end -->

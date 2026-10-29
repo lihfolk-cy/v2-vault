@@ -1,6 +1,6 @@
 ---
 name: roblox-asset-import
-description: 'Import FBX/GLB/OBJ, rigs and PBR textures into Studio at correct scale, pivot, collision and budget. Use for "import this model", wrong size, bad pivot, too many tris.'
+description: 'Import FBX/GLB/OBJ, rigs and PBR textures at correct scale, pivot, collision and budget. Use for "import this model", wrong size, bad pivot, too many tris.'
 ---
 # LihFolk Asset Import
 

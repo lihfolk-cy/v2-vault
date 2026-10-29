@@ -264,10 +264,10 @@ end
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Exporting and Validating Models for Roblox]] · Meshing Voxels for Roblox - Greedy Meshing and Export · Links - Parts, unions and meshes · Skill - Roblox Asset Import · Art Pipeline - Concept to In-Game Asset · Low-Poly and Stylized Modeling
+[[Exporting and Validating Models for Roblox]] · Meshing Voxels for Roblox - Greedy Meshing and Export · Official Docs - Building and World · Skill - Roblox Asset Import · Art Pipeline - Concept to In-Game Asset · Low-Poly and Stylized Modeling
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[AI Pitfalls - Assets and Import]] · [[Foliage Props and Scatter]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[Environment Art Styles]] · [[House Construction Method - Modular Kit Workflow]] · [[Procedural World Generation]] · [[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Zone and Biome Art Direction]] · [[Grid Placement and Player Building Systems]]
+[[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Art Pipeline - Concept to In-Game Asset]] · [[Foliage Props and Scatter]] · [[Environment Art Styles]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[House Construction Method - Modular Kit Workflow]] · [[Procedural World Generation]] · [[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Zone and Biome Art Direction]] · [[Grid Placement and Player Building Systems]]
 <!-- related:end -->

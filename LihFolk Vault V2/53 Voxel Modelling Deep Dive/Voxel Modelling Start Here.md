@@ -6,7 +6,7 @@ tags: [modeling, voxel, hub, start-here, blocky, magicavoxel, roblox, type/hub, 
 
 This section is a deep dive into blocky and voxel art for Roblox: the numbers, pipelines and failure modes behind models built from cubes on one grid. It assumes you already know what a good voxel style looks like and why it suits Roblox. That ground is covered by three older notes; read them first:
 
-1. [[Voxel and Blocky Modeling]]: voxel grammar (one grid, three tones, one glow colour), three studied styles, and Part and Blender builders.
+1. [[Voxel and Blocky Modeling]]: voxel grammar (one grid, three tones, one glow colour), three style archetypes, and Part and Blender builders.
 2. [[Voxel Art - Studs Outlines and Style Kits]]: studs, outlines, greedy Part merging and style kits.
 3. [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]: what [[MagicaVoxel]] and [[Blockbench]] are, and the unit traps of each tool.
 
@@ -23,6 +23,7 @@ The notes here go a level deeper. Roblox facts are checked against the Creator H
 | [[Voxel Palettes - Ramps Hue Shifting and Limits]] | Your voxel art looks dull or muddy, colours block merging, or you want cheap recolours per zone |
 | [[Meshing Voxels for Roblox - Greedy Meshing and Export]] | Triangle counts are too high, seams sparkle, studs stretch, or characters snag on voxel steps |
 | [[Voxel Characters - Proportions Joints and Rigging]] | You are building a blocky character, joints gap or intersect, or you want default R15 animations on voxel art |
+| [[Voxel Chibi Heroes - Class Roster and Rarity Ladder]] | You are designing a collectible hero or unit roster: chibi proportions, pixel faces, class colours and how detail escalates by rarity |
 | [[Voxel Shading - Baked AO Edges and Lighting]] | Models look flat, especially on phones, or you want block-game corner shading |
 | [[Voxel Props Environments and Modular Tiles]] | You are building a world from tiles, need autotiling, or a tiled world is too heavy for phones |
 

@@ -276,10 +276,10 @@ Rule of thumb: one module per system or concept, typically 100 to 1,500 lines. M
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Module Design and Dependency Injection]] · Dependency Injection in Luau · Links - Script types · Advanced Luau Start Here · MCP Workflows for Scripting and Debugging · Links - OOP and module design
+[[Module Design and Dependency Injection]] · Dependency Injection in Luau · Official Docs - Scripting and Luau · Advanced Luau Start Here · MCP Workflows for Scripting and Debugging
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Dependency Injection in Luau]] · [[Luau Type System and Strict Mode]] · [[Metatables and OOP - When and When Not]] · [[Events Signals and Connections]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Luau Performance and Native Codegen]] · [[CollectionService Patterns]] · [[Task Library Coroutines and Yielding]] · [[Instances Attributes and Tags]]
+[[Dependency Injection in Luau]] · [[Metatables and OOP - When and When Not]] · [[Luau Type System and Strict Mode]] · [[Events Signals and Connections]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[CollectionService Patterns]] · [[Luau Performance and Native Codegen]] · [[Task Library Coroutines and Yielding]] · [[Error Handling and Retries]]
 <!-- related:end -->

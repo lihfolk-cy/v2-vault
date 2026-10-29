@@ -94,5 +94,5 @@ Related: [[Blender Workflow for Roblox Creators]], [[Exporting and Validating Mo
 
 <!-- related:start -->
 ## Related
-[[Modeling Characters for R15 and Custom Rigs]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[3D Importer Settings Reference]] · [[Rigs and Joints]] · [[Blender Armature and Bone Roll Conventions]] · [[Skinning Weights]]
+[[Modeling Characters for R15 and Custom Rigs]] · [[3D Importer Settings Reference]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Rigs and Joints]] · [[Blender Armature and Bone Roll Conventions]] · [[Creature Rig Conventions]]
 <!-- related:end -->

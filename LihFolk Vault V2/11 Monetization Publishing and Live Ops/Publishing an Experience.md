@@ -166,7 +166,7 @@ Decide before launch. Group ownership survives team changes, lets you assign rol
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Sponsored Ads and Campaign Math]] · [[Ads and Rewarded Video]] · [[Monetization Overview]] · Links - Settings and publishing · Server Shutdowns Soft Updates and Migration · Launch Strategy - The First Two Weeks
+[[Sponsored Ads and Campaign Math]] · [[Ads and Rewarded Video]] · [[Monetization Overview]] · Official Docs - Publishing and Live Ops · Server Shutdowns Soft Updates and Migration · Launch Strategy - The First Two Weeks
 <!-- auto-links:end -->
 
 <!-- related:start -->

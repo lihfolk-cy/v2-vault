@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/vfx, area/ui, api/LightInfluence]
 > - Emitter built in code looks different from the Studio template: Different `LightInfluence` defaults between insert paths ->...
 > - VFX ribbons at LightInfluence 0 with appropriate LightEmission.
 >
-> Cost: TL;DR ~130 tok · whole note ~330 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~450 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -24,10 +24,12 @@ API snapshot: member of `Beam`, `BillboardGui`, `ParticleEmitter`, `SurfaceGui` 
 - Effect dark in caves, grey in shade: `LightInfluence` 1 (Studio insert default) -> Set 0 explicitly. ([[Particle Emitters In Depth]])
 - Emitter built in code looks different from the Studio template: Different `LightInfluence` defaults between insert paths -> Set every property explicitly in code or... ([[Particle Emitters In Depth]])
 - VFX ribbons at LightInfluence 0 with appropriate LightEmission. ([[Beams and Trails]])
+- Avoid: copying Studio-tuned values into `Instance.new` emitters without setting `LightInfluence`. ([[ParticleEmitter - Engine Reference Card]])
+- `LightInfluence`, `LightEmission` and `Brightness` set explicitly in scripts. ([[ParticleEmitter - Engine Reference Card]])
 
 ## Mentioned in
 
-8 notes in 3 sections. The 8 most relevant are linked:
+11 notes in 5 sections. The 11 most relevant are linked:
 
 ### 05 UI and UX
 [[Nametags and Overhead Bars - Cost and Visibility Rules]] · [[World-Space UI - BillboardGui and SurfaceGui]]
@@ -37,5 +39,11 @@ API snapshot: member of `Beam`, `BillboardGui`, `ParticleEmitter`, `SurfaceGui` 
 
 ### 24 Worked Builds
 [[Global Leaderboards End to End]]
+
+### 49 Roblox Platform Features
+[[Engine Limits, Quotas and Defaults - Cheat Sheet]]
+
+### 62 Engine Reference Cards
+[[BillboardGui - Engine Reference Card]] · [[ParticleEmitter - Engine Reference Card]]
 
 <!-- atlas:generated -->

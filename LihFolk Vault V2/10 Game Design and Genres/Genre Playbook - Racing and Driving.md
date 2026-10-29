@@ -202,7 +202,7 @@ Patterns, not copies:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Racing Laps and Checkpoints End to End]] · [[Genre Playbook - Sports]] · Links - Constraints · Genre Systems Start Here · Case Study - Brookhaven RP · Roblox Generative AI - Cube Mesh and Texture Generation
+[[Racing Laps and Checkpoints End to End]] · [[Genre Playbook - Sports]] · Official Docs - Physics · Genre Systems Start Here · Case Study - Brookhaven RP · Roblox Generative AI - Cube Mesh and Texture Generation
 <!-- auto-links:end -->
 
 <!-- related:start -->

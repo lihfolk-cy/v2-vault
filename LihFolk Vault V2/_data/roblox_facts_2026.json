@@ -2,7 +2,7 @@
   "meta": {
     "name": "roblox_facts_2026",
     "description": "Machine-readable Roblox limits, budgets, dates, deprecated-to-replacement API map, policy thresholds and money rules that changed or were confirmed between 2025 and late 2026. Apply numbers directly; check 'label' before treating a fact as settled.",
-    "verified": "2026-10-28",
+    "verified": "2026-10-29",
     "labels": {
       "roblox_docs": "Creator Hub documentation or an official Roblox staff announcement (DevForum, newsroom)",
       "reported": "Third-party press, community threads or creator reports",
@@ -174,8 +174,18 @@
     {"old": "SocialService:PromptLinkSharing", "new": "PromptLinkSharingAsync", "kind": "async_rename", "since": "2026-01-14", "label": "roblox_docs"},
     {"old": "StudioService:PromptImportFile", "new": "PromptImportFileAsync", "kind": "async_rename", "since": "2026-01-14", "label": "roblox_docs"},
     {"old": "StudioService:PromptImportFiles", "new": "PromptImportFilesAsync", "kind": "async_rename", "since": "2026-01-14", "label": "roblox_docs"},
-    {"old": "TeleportService:ReserveServer", "new": "ReserveServerAsync", "kind": "async_rename", "since": "2026-01-14", "label": "roblox_docs"},
-    {"old": "TestService:Run", "new": "RunAsync", "kind": "async_rename", "since": "2026-01-14", "label": "roblox_docs"}
+    {"old": "TeleportService:ReserveServer", "new": "ReserveServerAsync", "kind": "async_rename", "since": "2026-01-14", "label": "roblox_docs", "note": "ReserveServerAsync is itself deprecated since 2026-10-29; use TeleportOptions.ReservedServerId"},
+    {"old": "TestService:Run", "new": "RunAsync", "kind": "async_rename", "since": "2026-01-14", "label": "roblox_docs"},
+    {"old": "TeleportService:ReserveServerAsync + TeleportOptions.ReservedServerAccessCode", "new": "TeleportOptions.ReservedServerId = HttpService:GenerateGUID(false), then TeleportService:TeleportAsync", "kind": "deprecated", "status": "works, deprecated; access-code servers keep working", "since": "2026-10-29", "label": "roblox_docs", "source": "https://create.roblox.com/docs/projects/teleport-private-servers"},
+    {"old": "TeleportOptions.ShouldReserveServer", "new": "TeleportOptions.ReservedServerId (new GUID)", "kind": "deprecated", "status": "works, deprecated", "since": "2026-10-29", "label": "roblox_docs"},
+    {"old": "TeleportService:Teleport / TeleportPartyAsync / TeleportToPlaceInstance / TeleportToSpawnByName / TeleportToPrivateServer", "new": "TeleportService:TeleportAsync (server only)", "kind": "deprecated", "status": "works, deprecated", "since": "2026-08", "label": "roblox_docs", "source": "https://create.roblox.com/docs/projects/teleport"},
+    {"old": "Player:GetRankInGroupAsync / GetRoleInGroupAsync", "new": "GroupService:GetRolesInGroupAsync", "kind": "deprecated", "status": "works, deprecated", "since": "2026-09", "label": "roblox_docs"},
+    {"old": "Player.MembershipType (subscription check)", "new": "Player.HasRobloxSubscription", "kind": "deprecated", "status": "works, deprecated", "since": "2026-04-10", "label": "roblox_docs"},
+    {"old": "PolicyService AllowedExternalLinkReferences", "new": "(none; social links only on game page, profiles and Communities)", "kind": "legacy", "status": "always returns an empty array", "since": "2026-02", "label": "roblox_docs", "source": "https://devforum.roblox.com/t/age-checks-to-access-chat-studio-team-create-and-links-on-roblox/4079702"},
+    {"old": "InputAction:Fire", "new": "InputBinding:Fire (Enum.InputBindingType.Scriptable binding)", "kind": "deprecated", "status": "works, deprecated", "since": "2026-08-13", "label": "roblox_docs"},
+    {"old": "AudioPlayer.AssetId", "new": "AudioPlayer.Asset", "kind": "deprecated", "status": "works, deprecated", "since": "2025-02", "label": "roblox_docs"},
+    {"old": "GuiService:IsTenFootInterface", "new": "GuiService.ViewportDisplaySize", "kind": "deprecated", "status": "works, deprecated", "since": "2026-04", "label": "roblox_docs"},
+    {"old": "Pairwise TextChatService:CanUsersChatAsync over many players", "new": "TextChatService:GetChatGroupsAsync(players) (enable Chat & Voice Groups APIs)", "kind": "new_api", "since": "2026-02-05", "label": "roblox_docs", "source": "https://devforum.roblox.com/t/new-chat-apis-teleport-users-who-can-chat-together/4337233"}
   ],
   "async_rename_not_renamed": ["Instance:WaitForChild", "BindableFunction:Invoke", "RemoteFunction:InvokeServer", "RemoteFunction:InvokeClient"],
   "server_authority": {
@@ -228,7 +238,7 @@
     "Which six web API services got lower rate limits after 2026-10-19, and the new values",
     "Exact general-release date of Luau's new type solver (late 2025)",
     "Exact full-release date of UI Styling (early 2026) and current status of StyleQuery and Styling Transitions",
-    "How Player.MembershipType reports Roblox Plus members",
+    "How Player.MembershipType reports Roblox Plus members (property deprecated; use Player.HasRobloxSubscription)",
     "Whether Open Cloud Luau Execution left beta",
     "Whether Roblox moved to the IARC rating framework in 2026",
     "Exact removal dates for Gotham and Arial font families"

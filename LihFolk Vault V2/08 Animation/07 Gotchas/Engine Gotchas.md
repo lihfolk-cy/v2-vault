@@ -9,7 +9,7 @@ tags: [gotchas, debugging, animator, engine, type/guide, area/animation, level/i
 > - Avoid: Calling `LoadAnimation` per use.
 > - Avoid: Using `Stopped` for cleanup of things that are still visible.
 >
-> Cost: TL;DR ~100 tok · whole note ~6.0k tok. Read more: ## 1. Loading, assets and ids · ## 3. Interpolation and easing · ## Common mistakes (short list)
+> Cost: TL;DR ~100 tok · whole note ~6.1k tok. Read more: ## 1. Loading, assets and ids · ## 3. Interpolation and easing · ## Common mistakes (short list)
 <!-- tldr:end -->
 
 This note collects the Roblox engine behaviours that surprise people who already know animation. Each entry says what you see, why the engine does it, and what to do instead. Most of these cost the reference project (one live action game) hours or days. Where a fact was measured in that project rather than documented, it says so. Where docs and measurements disagree, both are given, and the conflict is tracked in [[Open Questions]].
@@ -283,10 +283,10 @@ See [[Importing Models and Rigs]] and [[3D Importer Settings Reference]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Snippets - Lua Keyframe Player Core]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Animation Objects]] · [[Weapon Rig Player]] · [[Links - Animation playback]] · AI Animation and Motion from Video · [[Animation Start Here]]
+[[Snippets - Lua Keyframe Player Core]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Animation Objects]] · [[Weapon Rig Player]] · [[Official Docs - Characters and Animation]] · AI Animation and Motion from Video · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Authoring Clips in Code]] · [[AI Pitfalls - Physics and Animation]] · [[Animation Data from Blender to Roblox]] · [[Lua Keyframe Player Internals]] · [[Keyframes, Easing and Interpolation]] · [[Animation Glossary]] · [[Animation Editor Workflow]] · [[Animation Editor Advanced]] · [[Moon Animator and Third-Party Tools]]
+[[Animator - Engine Reference Card]] · [[Authoring Clips in Code]] · [[Animation Data from Blender to Roblox]] · [[AI Pitfalls - Physics and Animation]] · [[Lua Keyframe Player Internals]] · [[Keyframes, Easing and Interpolation]] · [[Animation Glossary]] · [[Animation Editor Workflow]] · [[Animation Editor Advanced]] · [[Moon Animator and Third-Party Tools]]
 <!-- related:end -->

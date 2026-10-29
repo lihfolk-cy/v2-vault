@@ -12,7 +12,7 @@ tags: [publishing, thumbnails, icons, store-page, marketing, discovery, type/gui
 > - 2 to 5 custom 16:9 thumbnails at 1920x1080, under 3 MB
 > - Nothing critical in the bottom area
 >
-> Cost: TL;DR ~140 tok · whole note ~3.3k tok. Read more: ## 1. Specs (Docs, Oct 2026) · ## 3. What makes a thumbnail work (rule of thumb) · ## 10. Common mistakes · ## 11. Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.4k tok. Read more: ## 1. Specs (Docs, Oct 2026) · ## 3. What makes a thumbnail work (rule of thumb) · ## 10. Common mistakes · ## 11. Checklist
 <!-- tldr:end -->
 
 The icon, thumbnails, title and description are your game's storefront. They decide **play-through rate**, which the Creator Hub calls the most important signal for Recommended for You ([[Discovery and the Algorithm]]). This note gives the specs, the moderation rules, thumbnail personalisation, and how to make and test art that earns clicks without misleading anyone. Specs and rules verified against the Creator Hub "Thumbnails" and "Experience icons" pages **as of October 2026**; design guidance is rule of thumb.
@@ -212,5 +212,5 @@ First line: the core verb and the fantasy. Second line: the freshest reason to p
 
 <!-- related:start -->
 ## Related
-[[Experience Description and Search Keywords]] · [[Launch Strategy - The First Two Weeks]] · [[Roblox Policies Ratings and Compliance]] · [[Monetization Overview]] · [[Analytics and Funnels]] · [[Ads and Rewarded Video]] · [[Subscriptions and Premium Payouts]]
+[[Thumbnail Specs, Rules and Upload - Sizes, Count and Policy]] · [[Thumbnail and Icon A-B Testing - Method, Sample Size and Reading Results]] · [[Thumbnail Composition for High CTR - Focal Point, Contrast and Readability]] · [[Experience Description and Search Keywords]] · [[From CTR to CCU - Impressions, Play-Through and the Discovery Loop]] · [[Launch Strategy - The First Two Weeks]]
 <!-- related:end -->

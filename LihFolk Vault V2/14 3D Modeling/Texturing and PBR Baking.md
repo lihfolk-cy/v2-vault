@@ -290,5 +290,5 @@ Cost-saving rules:
 
 <!-- related:start -->
 ## Related
-[[Baking Lighting and Detail into Textures]] · [[Stylised vs Realistic Material Pipelines]] · [[Mesh Optimization for Mobile]] · [[Low-Poly and Stylized Modeling]] · [[Hard-Surface Modeling]] · [[Modeling Fundamentals for Games]] · [[Blender Workflow for Roblox Creators]]
+[[Baking Lighting and Detail into Textures]] · [[Stylised vs Realistic Material Pipelines]] · [[Mesh Optimization for Mobile]] · [[Low-Poly and Stylized Modeling]] · [[Hard-Surface Modeling]] · [[Voxel and Blocky Modeling]] · [[Modeling Fundamentals for Games]] · [[Blender Workflow for Roblox Creators]]
 <!-- related:end -->

@@ -52,7 +52,7 @@ The pivot is how every piece snaps. Choose one rule per kit and never mix:
 | **Bottom centre of the grid cell** | Centre of the footprint, on the floor | Rotating in place keeps the piece on its cell | Odd sizes put origins on half-grid points |
 | **Wall line** | Centre of the wall's base line | Walls and doors rotate around the line they sit on | Only for linear pieces |
 
-The reference project used "every piece base = pivot" with each blockout's `WorldPivot` "grounded base facing the altar" for hub pieces, and "WorldPivot bottom centre, LookVector into the valley" for zone landmarks. The common thread: **pivot on the ground**, **facing a meaningful direction**. Ground pivots make it trivial to place pieces on terrain with a raycast.
+The reference project used "every piece base = pivot" with each blockout's `WorldPivot` "grounded base facing the altar" for hub pieces, and "[[WorldPivot]] bottom centre, LookVector into the valley" for zone landmarks. The common thread: **pivot on the ground**, **facing a meaningful direction**. Ground pivots make it trivial to place pieces on terrain with a raycast.
 
 ### Facing
 
@@ -295,5 +295,5 @@ Per-zone instance budgets in the project's revamp plan: at most 6,000 instances,
 
 <!-- related:start -->
 ## Related
-[[Voxel Props Environments and Modular Tiles]] · [[Voxel Scale Grids and Stud Alignment]] · [[UV Unwrapping]] · [[Mesh Optimization for Mobile]] · [[Hard-Surface Modeling]] · [[Voxel and Blocky Modeling]] · [[Hand-Painted and Stylized Texturing]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Normal Maps and Detail Baking]] · [[Retopology and Decimation]]
+[[Voxel Props Environments and Modular Tiles]] · [[Voxel Scale Grids and Stud Alignment]] · [[UV Unwrapping]] · [[Mesh Optimization for Mobile]] · [[Hard-Surface Modeling]] · [[Voxel and Blocky Modeling]] · [[Hand-Painted and Stylized Texturing]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Retopology and Decimation]] · [[Normal Maps and Detail Baking]]
 <!-- related:end -->

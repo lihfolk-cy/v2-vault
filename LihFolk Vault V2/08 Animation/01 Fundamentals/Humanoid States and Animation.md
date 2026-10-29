@@ -1,5 +1,5 @@
 ---
-tags: [fundamentals, humanoid, states, locomotion, type/guide, area/animation, level/beginner, api/Humanoid, api/HipHeight]
+tags: [fundamentals, humanoid, states, locomotion, type/guide, area/animation, level/beginner, api/Humanoid, api/HipHeight, api/ChangeState, api/SetStateEnabled]
 ---
 # Humanoid States and Animation
 
@@ -143,10 +143,10 @@ A Humanoid on the ground brakes toward its move input. If you launch a dash with
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Characters and Humanoids]] · [[Snippets - Animation Controller Module]] · Links - Humanoids and character controllers · [[Snippets - Ragdoll]] · Mover Constraints and Physics Controllers · Custom Character Controllers · [[Animation Start Here]]
+[[Characters and Humanoids]] · [[Snippets - Animation Controller Module]] · Official Docs - Characters and Animation · [[Snippets - Ragdoll]] · Mover Constraints and Physics Controllers · Custom Character Controllers · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Custom Characters and StarterCharacter]] · [[Mounts and Rideable Creatures]] · [[Procedural Gait and Footstep Planning]] · [[R15 Run Cycle Key Poses]] · [[Animator Deep Dive]] · [[AnimationTrack Reference]] · [[Animation Objects]] · [[AnimationConstraint and Physically Simulated Characters]]
+[[Humanoid - Engine Reference Card]] · [[Custom Characters and StarterCharacter]] · [[Mounts and Rideable Creatures]] · [[Procedural Gait and Footstep Planning]] · [[R15 Run Cycle Key Poses]] · [[Animation Objects]] · [[Animator Deep Dive]] · [[AnimationTrack Reference]] · [[AnimationConstraint and Physically Simulated Characters]]
 <!-- related:end -->

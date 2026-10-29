@@ -212,5 +212,5 @@ Make sure the socket bone survived import (enable "Keep Zero Influence Bones" if
 
 <!-- related:start -->
 ## Related
-[[Rigging in Blender]] · [[Blender Armature and Bone Roll Conventions]] · [[Importing Models and Rigs]] · [[Weapon Design Rig Builder]] · [[Creature Rig Conventions]] · [[Retargeting Animations Between Rigs]] · [[Snippets - Ragdoll]] · [[Motor6D Math and CFrame Composition]]
+[[Rigging in Blender]] · [[Blender Armature and Bone Roll Conventions]] · [[Importing Models and Rigs]] · [[Weapon Design Rig Builder]] · [[Retargeting Animations Between Rigs]] · [[Creature Rig Conventions]] · [[Snippets - Ragdoll]] · [[Motor6D Math and CFrame Composition]]
 <!-- related:end -->

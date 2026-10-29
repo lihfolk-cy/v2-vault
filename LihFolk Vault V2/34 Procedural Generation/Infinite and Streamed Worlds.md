@@ -376,7 +376,7 @@ See [[Multi-Client and Device Playtesting Protocols]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Deterministic Simulation]] · Streaming Radius · Links - Terrain · Tilemaps Cameras and Parallax for 2D Levels · Destruction and Fracture · Math Vectors and CFrames
+[[Deterministic Simulation]] · Streaming Radius · Official Docs - Building and World · Tilemaps Cameras and Parallax for 2D Levels · Destruction and Fracture · Math Vectors and CFrames
 <!-- auto-links:end -->
 
 <!-- related:start -->

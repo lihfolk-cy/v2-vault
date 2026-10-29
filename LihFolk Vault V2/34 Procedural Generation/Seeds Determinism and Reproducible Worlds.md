@@ -338,5 +338,5 @@ The general method is in [[The Debugging Method - Reproduce Isolate Bisect]].
 
 <!-- related:start -->
 ## Related
-[[Math Vectors and CFrames]] · [[Cookbook - Tables Strings and Time]] · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]] · [[Dependency Injection in Luau]] · [[Tables Metatables and OOP]] · [[Drop Tables Rarity and Pity Systems]]
+[[Math Vectors and CFrames]] · [[Cookbook - Tables Strings and Time]] · [[Dependency Injection in Luau]] · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]] · [[Tables Metatables and OOP]] · [[Drop Tables Rarity and Pity Systems]]
 <!-- related:end -->

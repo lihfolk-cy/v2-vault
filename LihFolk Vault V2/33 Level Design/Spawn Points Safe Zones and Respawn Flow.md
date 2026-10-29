@@ -516,7 +516,7 @@ Things to adapt: the spot is chosen twice (at death for streaming, at respawn fo
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Checkpoints and spawning]] · Obby Checkpoints and Stage Saves End to End · Cookbook - Players and Characters · Arena Rounds with Teams and Spectating End to End · Genre Playbook - Combat and RPG · Streaming Radius
+[[Official Docs - Game Systems]] · Obby Checkpoints and Stage Saves End to End · Cookbook - Players and Characters · Arena Rounds with Teams and Spectating End to End · Genre Playbook - Combat and RPG · Streaming Radius
 <!-- auto-links:end -->
 
 <!-- related:start -->

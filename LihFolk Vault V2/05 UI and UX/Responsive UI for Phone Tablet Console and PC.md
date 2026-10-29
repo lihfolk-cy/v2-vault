@@ -235,7 +235,7 @@ See [[HUD Design]] for the layout system behind this.
 ## 7. TV and console
 
 - Treat `ViewportDisplaySize.Large` plus gamepad as "ten-foot UI": players sit 2 to 3 m away. Text that is fine at 1080p on a monitor is small on a TV; a rule of thumb is to raise body text by about 1.25 to 1.5x relative to desktop.
-- Cap growth: with pure Scale, a 4K TV makes panels enormous (Docs warn about this). Use a `UISizeConstraint` or a scale clamp (the cartoon UI kit clamps at 1.18).
+- Cap growth: with pure Scale, a 4K TV makes panels enormous (Docs warn about this). Use a `UISizeConstraint` or a scale clamp (rule of thumb: stop growing at about 1.2 times the design size).
 - Everything must be reachable with a gamepad and show a visible selection. See [[Gamepad and Console UX]].
 - Older TVs overscan; keep critical UI out of the outer few percent of the screen (rule of thumb, roughly 5%).
 
@@ -279,10 +279,10 @@ See also: [[Layout - Scale Offset and Constraints]], [[Safe Areas and Insets]], 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox UI Builder]] · Safe Area · Cookbook - UI · Readable Text and UI Scale · UI Asset Pipeline · Links - Scale vs offset and responsive design
+[[Skill - Roblox UI Builder]] · Safe Area · Cookbook - UI · Readable Text and UI Scale · UI Asset Pipeline · Official Docs - UI
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[AI Pitfalls - UI and Input]] · [[Safe Area]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]] · [[ScreenGui Fundamentals]] · [[Input - UserInputService and ContextActionService]] · [[UI Layout Objects - Lists Grids and Pages]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[UI Motion Language and Timing]]
+[[AI Pitfalls - UI and Input]] · [[Safe Area]] · [[Designing Roblox UI in Figma - Frames, Safe Areas and Tokens]] · [[Settings Menu Design for Roblox - Layout, Controls and Motion]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]] · [[ScreenGui Fundamentals]] · [[Input - UserInputService and ContextActionService]] · [[UI Layout Objects - Lists Grids and Pages]] · [[Figma to Roblox UI - Pipeline and Handoff]] · [[Off-Screen Objective Markers and Waypoint Arrows]]
 <!-- related:end -->

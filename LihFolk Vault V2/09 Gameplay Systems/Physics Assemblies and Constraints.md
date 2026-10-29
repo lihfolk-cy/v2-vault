@@ -229,7 +229,7 @@ Players.PlayerAdded:Connect(function(player)
 end)
 ```
 
-Older code calls the same methods on `PhysicsService` (`PhysicsService:RegisterCollisionGroup`). The current reference lists them on `WorldRoot`; prefer that for new work and check the PhysicsService page before mixing the two.
+Older code calls the same methods on `PhysicsService` (`PhysicsService:RegisterCollisionGroup`). Since September 2026 they live on `WorldRoot` (per world) and the `PhysicsService` versions are deprecated but still forward to Workspace; use `workspace:` in new code.
 
 Typical group plan for an action game (rule of thumb):
 
@@ -298,10 +298,10 @@ For gameplay this means:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Debugging Physics and Network Ownership]] · Cars with Constraints - Suspension Steering and Drive · Ropes Chains and Soft Bodies · Links - Constraints · Links - Forces and movers · Rigs and Joints
+[[Debugging Physics and Network Ownership]] · Cars with Constraints - Suspension Steering and Drive · Ropes Chains and Soft Bodies · Official Docs - Physics · Rigs and Joints
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Cars with Constraints - Suspension Steering and Drive]] · [[Grabs, Carries and Throws - Moving Players Safely]] · [[Explosions - Radius Damage, Falloff and Cover Checks]] · [[Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Custom Character Controllers]] · [[Pathfinding]]
+[[Cars with Constraints - Suspension Steering and Drive]] · [[Grabs, Carries and Throws - Moving Players Safely]] · [[BasePart - Engine Reference Card]] · [[Explosions - Radius Damage, Falloff and Cover Checks]] · [[Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run]] · [[Custom Character Controllers]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Pathfinding]]
 <!-- related:end -->

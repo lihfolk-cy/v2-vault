@@ -171,10 +171,10 @@ For maps that must be in full view at round start (a sniper map), set the map mo
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Arena Rounds with Teams and Spectating End to End]] · Links - Rounds and matchmaking · Matchmaking Queues with MemoryStore
+[[Arena Rounds with Teams and Spectating End to End]] · Official Docs - Game Systems · Matchmaking Queues with MemoryStore
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Raycasts Shapecasts and Spatial Queries]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Pathfinding Edge Cases and Fallbacks]] · [[Camera Obstruction Handling - Occlusion Modes, Fades and Collision]] · [[Behaviour Trees Utility AI and State Machines for NPCs]]
+[[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Raycasts Shapecasts and Spatial Queries]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Camera Obstruction Handling - Occlusion Modes, Fades and Collision]] · [[Pathfinding Edge Cases and Fallbacks]] · [[Behaviour Trees Utility AI and State Machines for NPCs]]
 <!-- related:end -->

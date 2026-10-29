@@ -1,0 +1,314 @@
+[
+ {
+  "id": "B1",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "All correct debounce; R6 only lacks explicit server/yield note (minor, still full via code). "
+ },
+ {
+  "id": "B2",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "All give streaming cause, WaitForChild/tags, Atomic/Persistent or server."
+ },
+ {
+  "id": "B3",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "All list unconditional Granted, no PurchaseId, Get+Set, nil plr."
+ },
+ {
+  "id": "B4",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "B5",
+  "scores": {
+   "R1": 1.67,
+   "R2": 1.67,
+   "R3": 1.67,
+   "R4": 1.67,
+   "R5": 1.67,
+   "R6": 1.67,
+   "R7": 1.67
+  },
+  "notes": "All identify 1-stud ray and scale fix; nil check only carried over in code, no 15000 limit."
+ },
+ {
+  "id": "B6",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 1.33,
+   "R4": 2,
+   "R5": 1.33,
+   "R6": 2,
+   "R7": 2
+  },
+  "notes": "R3/R5 omit pcall/retry."
+ },
+ {
+  "id": "B7",
+  "scores": {
+   "R1": 2.63,
+   "R2": 3,
+   "R3": 2.63,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 2.63
+  },
+  "notes": "R1/R3/R7 only comment about argument validation."
+ },
+ {
+  "id": "B8",
+  "scores": {
+   "R1": 4,
+   "R2": 4,
+   "R3": 2,
+   "R4": 4,
+   "R5": 4,
+   "R6": 3,
+   "R7": 4
+  },
+  "notes": "R3 grants when player absent (no NotProcessedYet) and no assign-once; R6 no assign-once note."
+ },
+ {
+  "id": "B9",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "B10",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "B11",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "B12",
+  "scores": {
+   "R1": 2.63,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 2.25,
+   "R6": 3,
+   "R7": 2.63
+  },
+  "notes": "R5 no teleport-data security note; R1/R7 retry Unauthorized (R7 calls it transient) with weak Flooded handling."
+ },
+ {
+  "id": "B13",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.25,
+   "R3": 2.25,
+   "R4": 2.25,
+   "R5": 2.25,
+   "R6": 2.25,
+   "R7": 2.25
+  },
+  "notes": "None states identifying caller from OnServerEvent first Player argument."
+ },
+ {
+  "id": "B14",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "B15",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "B16",
+  "scores": {
+   "R1": 1.88,
+   "R2": 1.88,
+   "R3": 1.88,
+   "R4": 1.88,
+   "R5": 1.88,
+   "R6": 1.88,
+   "R7": 1.88
+  },
+  "notes": "None mentions Touched spoofing by owner or jitter from ownership changes."
+ },
+ {
+  "id": "B17",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 2.25,
+   "R7": 3
+  },
+  "notes": "R6 states ~900-byte limit instead of 1,000."
+ },
+ {
+  "id": "B18",
+  "scores": {
+   "R1": 2.63,
+   "R2": 2.63,
+   "R3": 3,
+   "R4": 2.63,
+   "R5": 2.63,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "R1/R2/R4/R5 omit no-require-in-parallel limitation."
+ },
+ {
+  "id": "B19",
+  "scores": {
+   "R1": 1.67,
+   "R2": 1.67,
+   "R3": 1.67,
+   "R4": 1.67,
+   "R5": 2,
+   "R6": 2,
+   "R7": 1.67
+  },
+  "notes": "Only R5/R6 mention ModelStreamingBehavior Improved."
+ },
+ {
+  "id": "B20",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2
+  },
+  "notes": "All cover budgets/queue 302, staggered dirty saves, retries and leave/close saves."
+ },
+ {
+  "id": "B21",
+  "scores": {
+   "R1": 1.33,
+   "R2": 1.67,
+   "R3": 1.33,
+   "R4": 1.67,
+   "R5": 2,
+   "R6": 2,
+   "R7": 1.33
+  },
+  "notes": "Only R5/R6 mention stdio and studio_id; R2/R4 mention studio_id only."
+ },
+ {
+  "id": "B22",
+  "scores": {
+   "R1": 3,
+   "R2": 2.25,
+   "R3": 3,
+   "R4": 3,
+   "R5": 2.25,
+   "R6": 2.25,
+   "R7": 2.25
+  },
+  "notes": "R2/R5/R6/R7 omit PlayerScriptsUseInputActionSystem."
+ },
+ {
+  "id": "B23",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "All give instances, selectors, $ tokens."
+ },
+ {
+  "id": "B24",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 1.5
+  },
+  "notes": "R7 omits rollout timeline."
+ }
+]

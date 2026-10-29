@@ -211,7 +211,7 @@ Measured in the reference project: the local receiver that accepted dumps from S
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Backdoors and malicious assets]] · Resource Library - Safety (free models and plugins) · Command Bar and Studio Scripting · Clip Archive Server · Roblox Studio MCP Server · Animation Asset Permissions and Groups
+[[Official Docs - Security and Moderation]] · Command Bar and Studio Scripting · Clip Archive Server · Roblox Studio MCP Server · Animation Asset Permissions and Groups
 <!-- auto-links:end -->
 
 <!-- related:start -->

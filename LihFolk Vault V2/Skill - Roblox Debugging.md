@@ -38,5 +38,5 @@ Any bug report, error in Output, "works in Studio but not live", rubber-banding,
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox Secure Remotes]] · [[Skill - Roblox Anti-Exploit Review]] · [[Skill - Roblox Vault Research]] · [[Skill - Roblox DataStore Safety]] · [[Links - Error handling and debugging]] · Telemetry Events
+[[Skill - Roblox Secure Remotes]] · [[Skill - Roblox Anti-Exploit Review]] · [[Skill - Roblox Vault Research]] · [[Skill - Roblox DataStore Safety]] · [[Official Docs - Scripting and Luau]] · Telemetry Events
 <!-- auto-links:end -->

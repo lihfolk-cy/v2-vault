@@ -135,5 +135,5 @@ Started by a solo creator, then grew into a team with collaborators (Unverified)
 
 <!-- related:start -->
 ## Related
-[[Teardown - Anime Vanguards]] · [[Teardown - Grace]] · [[Teardown - Pressure]] · [[Teardown - Apocalypse Rising 2]] · [[Teardown - Evade]] · [[Teardown - Arsenal]] · [[Teardown - Phantom Forces]] · [[Teardown - BedWars]]
+[[Teardown - Anime Vanguards]] · [[Teardown - Grace]] · [[Teardown - Apocalypse Rising 2]] · [[Teardown - Pressure]] · [[Teardown - Evade]] · [[Teardown - Arsenal]] · [[Teardown - Phantom Forces]] · [[Teardown - BedWars]]
 <!-- related:end -->

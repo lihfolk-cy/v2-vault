@@ -206,5 +206,5 @@ end
 
 <!-- related:start -->
 ## Related
-[[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Modeling in Blender for Roblox]] · [[Texturing and PBR Baking]] · [[Colour Scripts and Value Structure for Untextured Art]]
+[[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Clean Stylised Shading - Weighted and Custom Normals]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Modeling in Blender for Roblox]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Colour Scripts and Value Structure for Untextured Art]]
 <!-- related:end -->

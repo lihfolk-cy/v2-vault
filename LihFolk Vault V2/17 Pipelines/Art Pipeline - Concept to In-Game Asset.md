@@ -37,7 +37,7 @@ The rest of the note walks the stages with the decisions and failure modes for e
 
 A brief is short. It answers: what is it, where does it sit, how big is it in studs, how close will the camera get, how many will be on screen, what style rules apply, and what is the triangle and material budget.
 
-The reference project kept three written style guides for its voxel models (pastel pets, saturated outlined enemies with raised studs, dark bodies with neon lines for premium pieces), each with sampled palettes, proportions and a QA checklist. A brief then said "enemy, outlined voxel style, one neon colour, under 8k triangles" and everything else followed. See [[Environment Art Styles]] and [[Voxel and Blocky Modeling]].
+The reference project kept three written style guides for its voxel models (soft pastel pets, saturated outlined enemies with raised studs, dark glow-trim bodies for premium pieces), each with a derived palette, proportions and a QA checklist. A brief then said "enemy, outlined voxel style, one neon colour, under 8k triangles" and everything else followed. See [[Environment Art Styles]] and [[Voxel and Blocky Modeling]].
 
 Budgets to start from (rule of thumb, adjust with [[Art Budgets - Triangles Draw Calls Memory]]):
 
@@ -277,5 +277,5 @@ Total wall clock was under an hour for the piece; the same scripted approach the
 
 <!-- related:start -->
 ## Related
-[[Modeling Fundamentals for Games]] · [[AI Pitfalls - Assets and Import]] · [[Build Test and Release Pipeline]] · [[Batch Processing Tools in Studio]] · [[Data and Config Pipeline - Spreadsheets to Game]] · [[Audio Pipeline]] · [[Code Pipeline - Rojo Git and CI]] · [[UI Asset Pipeline]] · [[Live Content Pipeline]]
+[[Modeling Fundamentals for Games]] · [[Parts Unions and MeshParts]] · [[Batch Processing Tools in Studio]] · [[Build Test and Release Pipeline]] · [[Data and Config Pipeline - Spreadsheets to Game]] · [[Audio Pipeline]] · [[UI Asset Pipeline]] · [[Code Pipeline - Rojo Git and CI]] · [[Live Content Pipeline]]
 <!-- related:end -->

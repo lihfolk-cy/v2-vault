@@ -239,10 +239,10 @@ If every enemy is already in a table, "who is within 12 studs" is a loop over th
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Intersection and Collision Math]] · Links - Raycasting and spatial queries · Collision and Physics Geometry · Projectiles and Ballistics · Physics Performance · MCP Workflows for Building Worlds
+[[Intersection and Collision Math]] · Official Docs - Physics · Collision and Physics Geometry · Projectiles and Ballistics · Physics Performance · MCP Workflows for Building Worlds
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]] · [[Camera Obstruction Handling - Occlusion Modes, Fades and Collision]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Explosions - Radius Damage, Falloff and Cover Checks]] · [[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]] · [[Pathfinding Edge Cases and Fallbacks]] · [[Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run]] · [[Characters and Humanoids]]
+[[Workspace - Engine Reference Card]] · [[Collision and Physics Geometry]] · [[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]] · [[Camera Obstruction Handling - Occlusion Modes, Fades and Collision]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Explosions - Radius Damage, Falloff and Cover Checks]] · [[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]] · [[Pathfinding Edge Cases and Fallbacks]] · [[Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run]]
 <!-- related:end -->

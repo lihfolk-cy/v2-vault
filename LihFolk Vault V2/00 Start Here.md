@@ -6,7 +6,7 @@ tags: [index, start, type/hub, level/beginner, api/Terrain, api/Animator, api/Da
 
 A field guide to **every aspect of making games in Roblox Studio**, written at senior-developer depth: Studio and workflow, Luau, architecture and networking, data, UI, world building, lighting/VFX/audio, animation, gameplay systems, game design, monetization and live ops, performance and testing, production, 3D modeling, AI tools, MCP and AI agents, and pipelines.
 
-About 1,340 notes (roughly twenty-five thick textbooks of original LihFolk writing), plus 9 skeleton rigs, 10 concept sheets, procedural Blender assets, and the LihFolk Claude Code plugin with 21 AI skills. The visual home page is [[000 Home]].
+About 1,300 notes (roughly twenty-five thick textbooks of original LihFolk writing), plus 9 skeleton rigs, 10 concept sheets, procedural Blender assets, and the LihFolk Claude Code plugin with 22 AI skills. The visual home page is [[000 Home]].
 
 ## How to read the labels
 - **Roblox docs**: the official engine reference and Creator Hub guides, checked in October 2026. Roblox changes fast, so anything marked "as of October 2026" (prices, payouts, policies, betas) is worth rechecking.
@@ -60,7 +60,7 @@ About 1,340 notes (roughly twenty-five thick textbooks of original LihFolk writi
 **Building art with scripts in Blender:**
 [[Procedural Blender Assets Start Here]] → [[Matching a Concept Sheet - Boss Creature Case Study]] → [[Blender 5 Python Gotchas for Headless Builds]]
 
-**Looking for an outside link:**
+**Looking for the official docs:**
 [[Resource Library Start Here]]
 
 **Something is broken or slow:**
@@ -153,6 +153,7 @@ About 1,340 notes (roughly twenty-five thick textbooks of original LihFolk writi
 - [[Responsive UI for Phone Tablet Console and PC]]
 - [[Safe Areas and Insets]]
 - [[ScreenGui Fundamentals]]
+- [[Settings Menu Design for Roblox - Layout, Controls and Motion]]
 - [[Text Fonts and Rich Text]]
 - [[UI Design Systems]]
 - [[UI Layout Objects - Lists Grids and Pages]]
@@ -209,7 +210,6 @@ Start at [[Animation Start Here]] (reading paths and full map) and [[Animation G
 - **Gotchas**: [[Animation LOD]], [[Debugging Animation Problems]], [[Engine Gotchas]], [[Open Questions]], [[Performance and Memory]], [[Testing Animations in Studio]], [[Troubleshooting Table]]
 - **Snippets**: [[Snippets - Animation Controller Module]], [[Snippets - Building and Sampling Clips]], [[Snippets - Camera Shake and FX]], [[Snippets - Enemy Client Animator]], [[Snippets - IK]], [[Snippets - Lua Keyframe Player Core]], [[Snippets - Playing Animations]], [[Snippets - Procedural Motion]], [[Snippets - Ragdoll]]
 
-- **References**: [[Reference - Purple Anime Settings UI (Claude + Figma)]]
 
 ### 09 Gameplay Systems (19 notes)
 - [[Behaviour Trees Utility AI and State Machines for NPCs]]
@@ -620,8 +620,8 @@ Start at [[Animation Start Here]] (reading paths and full map) and [[Animation G
 - [[Procedural Blender Assets Start Here]]
 - [[Stylised Weapons From a Concept]]
 
-### 46 Resource Library (121 notes, about 3,600 links)
-Start at [[Resource Library Start Here]]: 19 chapters, one note per topic.
+### 46 Resource Library (18 notes, 886 official links)
+Start at [[Resource Library Start Here]]: 17 topic notes that link only to first-party documentation from Roblox, Luau and Blender.
 
 ### 47 Game Feel and Juice (7 notes)
 - [[Game Feel Start Here]]

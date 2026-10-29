@@ -115,5 +115,5 @@ Details that matter:
 
 <!-- related:start -->
 ## Related
-[[Layering Camera Feedback on the Default Camera]] · [[A Stuck Player Watchdog That Logs the Cause]] · [[Server-Authoritative Freeze and Stun Timestamps]] · [[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[Shared Close Buttons and Headers Across Many Screens]] · [[Resetting One Player's Data Safely]]
+[[Input Remapping and One-Handed Play]] · [[Layering Camera Feedback on the Default Camera]] · [[A Stuck Player Watchdog That Logs the Cause]] · [[Server-Authoritative Freeze and Stun Timestamps]] · [[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[Shared Close Buttons and Headers Across Many Screens]] · [[Resetting One Player's Data Safely]]
 <!-- related:end -->

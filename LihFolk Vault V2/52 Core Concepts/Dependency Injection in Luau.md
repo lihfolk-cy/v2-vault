@@ -70,10 +70,10 @@ Related concepts: [[Event Bus]], [[Feature Flags]], [[Deterministic Simulation]]
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Advanced Luau Start Here]] · Skill - Roblox System Builder · MCP Workflows for Scripting and Debugging · Links - Testing · External Tooling - Rojo Wally Selene StyLua · Resource Library - Data and Persistence · [[Core Concepts Start Here]]
+[[Advanced Luau Start Here]] · Skill - Roblox System Builder · MCP Workflows for Scripting and Debugging · Official Docs - Studio and Tooling · External Tooling - Rojo Wally Selene StyLua · Official Docs - Data and Persistence · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Event Bus]] · [[MCP Workflows for Scripting and Debugging]] · [[Data Schema Versioning]] · [[Session Lock]] · [[Replication Boundary]] · [[Testing Time-Based Features with a Controllable Clock]]
+[[Event Bus]] · [[MCP Workflows for Scripting and Debugging]] · [[Data Schema Versioning]] · [[Replication Boundary]] · [[Session Lock]] · [[Testing Time-Based Features with a Controllable Clock]]
 <!-- related:end -->

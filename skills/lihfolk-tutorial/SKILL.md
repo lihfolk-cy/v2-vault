@@ -1,6 +1,6 @@
 ---
 name: lihfolk-tutorial
-description: 'Design and build Roblox tutorials and onboarding (FTUE) that keep first-time players: first 60 seconds, guide arrows, stuck hints, skip/resume, funnels, D1 retention. Use when new players leave early or "don''t know what to do".'
+description: 'Roblox tutorials and onboarding (FTUE) that keep new players: first 60 s, guide arrows, stuck hints, skip/resume, funnels. Use when new players leave early or "don''t know what to do".'
 ---
 
 # LihFolk Tutorial

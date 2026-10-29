@@ -5,14 +5,14 @@ tags: [monetization, subscriptions, roblox-plus, creator-rewards, premium, luau,
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
+> - Avoid: `PromptPremiumPurchase` or `MembershipType` checks in new code -> `PromptRobloxSubscriptionPurchase(player)` and...
 > - Avoid: Planning revenue around Premium playtime payouts (gone since July 2025).
 > - Avoid: Granting a Plus thank-you reward on `PromptRobloxSubscriptionPurchaseFinished` (it only says they tried).
-> - Avoid: Bronze/Silver/Gold experience subscriptions (not supported; all can be owned at once).
 > - Subscription benefits distinct from passes; same on every platform
 > - Status cached server-side; `UserSubscriptionStatusChanged` handled
 > - Daily stipend idempotent per UTC day
 >
-> Cost: TL;DR ~160 tok · whole note ~4.2k tok. Read more: ## 1. Experience subscriptions · ## 2. Roblox Plus (the platform subscription) · ## 5. Common mistakes · ## 6. Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.3k tok. Read more: ## 1. Experience subscriptions · ## 2. Roblox Plus (the platform subscription) · ## 5. Common mistakes · ## 6. Checklist
 <!-- tldr:end -->
 
 Recurring revenue on Roblox now comes from three different places, and their names are easy to confuse:
@@ -224,7 +224,7 @@ Docs (Oct 2026): Engagement-Based Payouts and the Creator Affiliate program are 
 ## 4. Premium legacy APIs
 
 You will find these in older games and tutorials:
-- `player.MembershipType == Enum.MembershipType.Premium` still identifies legacy Premium members. Fine for cosmetic perks you already promised them.
+- `player.MembershipType == Enum.MembershipType.Premium` still identifies legacy Premium members, but `Player.MembershipType` is **deprecated** (reference page since April 2026). Check the Roblox subscription with `player.HasRobloxSubscription`; keep the `MembershipType` read only for perks already promised to legacy Premium members.
 - `Players.PlayerMembershipChanged` still exists (referenced on the payouts page).
 - `MarketplaceService:PromptPremiumPurchase` is **marked deprecated** on the reference page (Oct 2026). With Premium closed to new sign-ups, replace Premium upsells with `PromptRobloxSubscriptionPurchase`.
 - "Premium Playtime Score" and "Engagement Payouts" dashboards describe the deprecated program.
@@ -234,6 +234,7 @@ If your game gave Premium players perks, decide whether Plus subscribers get the
 ---
 
 ## 5. Common mistakes
+- Avoid: `PromptPremiumPurchase` or `MembershipType` checks in new code -> `PromptRobloxSubscriptionPurchase(player)` and `player.HasRobloxSubscription` (both older names deprecated, still work).
 - Planning revenue around Premium playtime payouts (gone since July 2025).
 - Granting a Plus thank-you reward on `PromptRobloxSubscriptionPurchaseFinished` (it only says they tried).
 - Bronze/Silver/Gold experience subscriptions (not supported; all can be owned at once).
@@ -256,7 +257,7 @@ If your game gave Premium players perks, decide whether Plus subscribers get the
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Subscriptions and Recurring Revenue]] · Links - Subscriptions and payouts · DevEx and Cashing Out · Skill - Roblox Monetization Compliance · Platform Features Start Here · Sponsored Ads and Campaign Math
+[[Subscriptions and Recurring Revenue]] · Official Docs - Monetization · DevEx and Cashing Out · Skill - Roblox Monetization Compliance · Platform Features Start Here · Sponsored Ads and Campaign Math
 <!-- auto-links:end -->
 
 <!-- related:start -->

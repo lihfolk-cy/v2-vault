@@ -248,10 +248,10 @@ Give players a "Camera Effects" toggle and honour a reduced-motion preference ([
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Cameras]] · Motion Sensitivity and Camera Comfort · Side-Scroller in 3D - Locking Camera and Movement to a Plane · Game Feel Start Here · Modelling to the Roblox Camera and Player Scale · Safe Area
+[[Official Docs - Input and Controls]] · Motion Sensitivity and Camera Comfort · Side-Scroller in 3D - Locking Camera and Movement to a Plane · Game Feel Start Here · Modelling to the Roblox Camera and Player Scale · Safe Area
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Chase Cameras and Speed Effects for Vehicles]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Camera Obstruction Handling - Occlusion Modes, Fades and Collision]] · [[Layering Camera Feedback on the Default Camera]] · [[Motion Sensitivity and Camera Comfort]] · [[Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers]]
+[[Camera - Engine Reference Card]] · [[Chase Cameras and Speed Effects for Vehicles]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Camera Obstruction Handling - Occlusion Modes, Fades and Collision]] · [[Layering Camera Feedback on the Default Camera]] · [[Motion Sensitivity and Camera Comfort]]
 <!-- related:end -->

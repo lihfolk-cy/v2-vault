@@ -31,9 +31,6 @@ Tower Defense Simulator (TDS) is one of Roblox's long-running co-op tower defens
 ### 03 Architecture and Networking
 [[Entity Component Systems]] · [[Snapshot Interpolation for Custom Replication]]
 
-### 05 UI and UX
-[[UI Style Directions - A Visual Vocabulary for Briefs]]
-
 ### 08 Animation
 [[Snippets - Enemy Client Animator]]
 
@@ -60,6 +57,9 @@ Tower Defense Simulator (TDS) is one of Roblox's long-running co-op tower defens
 
 ### 52 Core Concepts
 [[Power Curve]]
+
+### 53 Voxel Modelling Deep Dive
+[[Voxel Chibi Heroes - Class Roster and Rarity Ladder]]
 
 ### 59 Viral and Trend Game Teardowns
 [[Teardown - Plants vs Brainrots]]

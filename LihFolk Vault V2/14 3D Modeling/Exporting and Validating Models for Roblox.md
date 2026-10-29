@@ -307,10 +307,10 @@ When a kit is placed by script, validate the placement numerically rather than b
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox Asset Import]] · Links - Importing into Studio · Modeling in Blender for Roblox · Meshing Voxels for Roblox - Greedy Meshing and Export · Art Pipeline - Concept to In-Game Asset · Rigging in Blender
+[[Skill - Roblox Asset Import]] · Official Docs - Asset Creation · Modeling in Blender for Roblox · Meshing Voxels for Roblox - Greedy Meshing and Export · Art Pipeline - Concept to In-Game Asset · Rigging in Blender
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[AI Pitfalls - Assets and Import]] · [[Modular Environment Kits]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Mesh Optimization for Mobile]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Substance Painter and Texturing Tools]] · [[Modeling Weapons and Props]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Hard-Surface Modeling]] · [[Topology and Edge Flow]]
+[[AI Pitfalls - Assets and Import]] · [[Modular Environment Kits]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Mesh Optimization for Mobile]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Substance Painter and Texturing Tools]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Modeling Weapons and Props]] · [[Topology and Edge Flow]] · [[Hard-Surface Modeling]]
 <!-- related:end -->

@@ -219,5 +219,5 @@ A 0.5-stud-cell cottage, 24 x 20 x 24 cells, five colours.
 
 <!-- related:start -->
 ## Related
-[[Lighting Untextured Art in Roblox]] · [[Hand-Painted and Stylized Texturing]] · [[The Gradient Palette Texture Workflow]] · [[Texturing and PBR Baking]] · [[Voxel Scale Grids and Stud Alignment]] · [[Voxel Characters - Proportions Joints and Rigging]]
+[[Lighting Untextured Art in Roblox]] · [[Hand-Painted and Stylized Texturing]] · [[The Gradient Palette Texture Workflow]] · [[Voxel Scale Grids and Stud Alignment]] · [[Voxel Chibi Heroes - Class Roster and Rarity Ladder]] · [[Voxel Characters - Proportions Joints and Rigging]]
 <!-- related:end -->

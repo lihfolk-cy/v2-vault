@@ -325,10 +325,10 @@ This is a stepping stone. The moment more than one person edits code daily, move
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Code Review for Luau Teams]] · Places Universes and Experience Settings · Links - External tooling · Documentation and Onboarding New Developers · Packages and Asset Reuse · AI Code Assistants for Luau
+[[Code Review for Luau Teams]] · Places Universes and Experience Settings · Official Docs - Studio and Tooling · Documentation and Onboarding New Developers · Packages and Asset Reuse · AI Code Assistants for Luau
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Batch Processing Tools in Studio]] · [[Live Content Pipeline]] · [[Icon and Thumbnail Rendering Pipeline]] · [[Blender Automation with Python]] · [[Art Pipeline - Concept to In-Game Asset]] · [[Environment and Level Pipeline]] · [[Localization Pipeline]] · [[Audio Pipeline]]
+[[Batch Processing Tools in Studio]] · [[Live Content Pipeline]] · [[Icon and Thumbnail Rendering Pipeline]] · [[Blender Automation with Python]] · [[Art Pipeline - Concept to In-Game Asset]] · [[Localization Pipeline]] · [[Environment and Level Pipeline]] · [[Audio Pipeline]]
 <!-- related:end -->

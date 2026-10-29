@@ -244,5 +244,5 @@ The gap between the plan (3-6k) and what shipped (15-40k) is the cost of a voxel
 
 <!-- related:start -->
 ## Related
-[[Modeling Fundamentals for Games]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Hard-Surface Modeling]] · [[Blender Workflow for Roblox Creators]] · [[Modeling Weapons and Props]] · [[Mesh Optimization for Mobile]] · [[UGC Avatar Items and Accessories]] · [[Normal Maps and Detail Baking]]
+[[Modeling Fundamentals for Games]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]] · [[Blender Workflow for Roblox Creators]] · [[Hard-Surface Modeling]] · [[Modeling Weapons and Props]] · [[Mesh Optimization for Mobile]] · [[UGC Avatar Items and Accessories]]
 <!-- related:end -->

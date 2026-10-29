@@ -259,7 +259,7 @@ Do not:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Currency Architecture - Soft Hard and Event Currencies]] · Faucets and Sinks · Economy Design Start Here · Release Process and Rollbacks · Data Schema Versioning · Links - Leaderboards
+[[Currency Architecture - Soft Hard and Event Currencies]] · Faucets and Sinks · Economy Design Start Here · Release Process and Rollbacks · Data Schema Versioning · Official Docs - Data and Persistence
 <!-- auto-links:end -->
 
 <!-- related:start -->

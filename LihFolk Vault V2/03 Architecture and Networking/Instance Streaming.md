@@ -258,7 +258,7 @@ The security docs suggest streaming as defence in depth ("if feasible, use strea
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Streaming Radius]] · Links - StreamingEnabled · [[Interest Management and Per-Player Replication]] · Infinite and Streamed Worlds · Network Performance · Performance and Memory
+[[Streaming Radius]] · Official Docs - Building and World · [[Interest Management and Per-Player Replication]] · Infinite and Streamed Worlds · Network Performance · Performance and Memory
 <!-- auto-links:end -->
 
 <!-- related:start -->

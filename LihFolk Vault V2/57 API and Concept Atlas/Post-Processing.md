@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/vfx, area/world]
 > - Phone drops frames on rewards only: Full-screen glows and post-processing -> Substitutes on low tiers; smaller, more opaque...
 > - Personal effects (low-health tint, ultimate grade) belong in the camera, managed by a priority stack (Atmosphere Sky Clouds...
 >
-> Cost: TL;DR ~140 tok · whole note ~880 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~930 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,13 +26,13 @@ Post-processing is what makes rendered icons read at 64 px in a busy grid. (from
 
 ## Mentioned in
 
-44 notes in 25 sections. The 25 most relevant are linked:
+46 notes in 26 sections. The 25 most relevant are linked:
 
 ### 06 World Building and Art
-[[Art Budgets - Triangles Draw Calls Memory]] · [[Environment Art Styles]] · [[Water Sky and Atmosphere Art]] · [[Zone and Biome Art Direction]]
+[[Art Budgets - Triangles Draw Calls Memory]] · [[Water Sky and Atmosphere Art]] · [[Zone and Biome Art Direction]]
 
 ### 07 Lighting VFX and Audio
-[[Atmosphere Sky Clouds and Post-Processing]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Lighting Mood and Time of Day]] · [[Lighting Technologies and Settings]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Stylized Lighting Recipes]] · [[Weather System Architecture - State Machine, Transitions and Replication]]
+[[Atmosphere Sky Clouds and Post-Processing]] · [[Lighting Mood and Time of Day]] · [[Lighting Technologies and Settings]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Stylized Lighting Recipes]] · [[Weather System Architecture - State Machine, Transitions and Replication]]
 
 ### 09 Gameplay Systems
 [[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]]
@@ -55,6 +55,9 @@ Post-processing is what makes rendered icons read at 64 px in a busy grid. (from
 ### 45 Procedural Blender Assets
 [[Dramatic Showcase Renders in Eevee]]
 
+### 46 Resource Library
+[[Official Docs - Visual Effects]]
+
 ### 47 Game Feel and Juice
 [[Juice on a Budget - Mobile and Low-End]]
 
@@ -73,6 +76,9 @@ Post-processing is what makes rendered icons read at 64 px in a busy grid. (from
 ### 55 Modelling Nuance and Readability
 [[Critiquing a Model - Paintovers and Iteration]]
 
-Also mentioned in (not linked): 00 Start Here · Accessibility Start Here · First-Person Viewmodels - Arms Rig, Sway and Camera Binding · Genre Playbook - Horror and Story · Hand-Painted and Stylized Texturing · Level Design Principles - Flow Sightlines and Landmarks · Lighting Untextured Art in Roblox · Lightning Strikes and Thunder - Procedural Bolts and Sound Delay · Materials and Surfaces Start Here · Menu Archetypes - Shop Settings Codes Rewards · Music and Adaptive Audio · Procedural Materials and Skies - Lessons · Rain - Camera-Local Particles, Splashes and Wet Surfaces · Resource Library - Visual Effects · Shape Language and Silhouette Testing · Snow, Sandstorm, Blizzard and Ash Recipes · Terrain Deep Dive - Materials Water and Performance · Thumbnails Icons and Store Page · Voxel Shading - Baked AO Edges and Lighting
+### 61 Thumbnails and CTR
+[[Making Thumbnails in Studio and Blender - Capture, Lighting and Posing]]
+
+Also mentioned in (not linked): 00 Start Here · Accessibility Start Here · Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning · Environment Art Styles · First-Person Viewmodels - Arms Rig, Sway and Camera Binding · Genre Playbook - Horror and Story · Hand-Painted and Stylized Texturing · Level Design Principles - Flow Sightlines and Landmarks · Lighting Untextured Art in Roblox · Lightning Strikes and Thunder - Procedural Bolts and Sound Delay · Materials and Surfaces Start Here · Menu Archetypes - Shop Settings Codes Rewards · Music and Adaptive Audio · Procedural Materials and Skies - Lessons · Rain - Camera-Local Particles, Splashes and Wet Surfaces · Shape Language and Silhouette Testing · Snow, Sandstorm, Blizzard and Ash Recipes · Terrain Deep Dive - Materials Water and Performance · Thumbnail Specs, Rules and Upload - Sizes, Count and Policy · Thumbnails Icons and Store Page · Voxel Shading - Baked AO Edges and Lighting
 
 <!-- atlas:generated -->

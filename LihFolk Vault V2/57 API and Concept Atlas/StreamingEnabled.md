@@ -6,11 +6,11 @@ tags: [atlas, api, type/atlas, area/animation, area/physics, api/StreamingEnable
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - StreamingEnabled does not stream ReplicatedStorage.
+> - `AuthorityMode = Server` forces StreamingEnabled, NextGenerationReplication, IAS scripts, UseFixedSimulation, Deferred signals.
 > - StreamingEnabled is mandatory at this size.
 > - Turning it on forces StreamingEnabled, deferred signals and fixed-step simulation.
-> - Tested with StreamingEnabled on, on a phone, and with a vehicle crossing borders fast.
 >
-> Cost: TL;DR ~110 tok · whole note ~880 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~900 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -21,14 +21,14 @@ API snapshot: member of `Workspace` (`_tools/roblox_api.json`, docs build of 202
 
 ## Key facts
 
+- `AuthorityMode = Server` forces StreamingEnabled, NextGenerationReplication, IAS scripts, UseFixedSimulation, Deferred signals. ([[Server Authority and Input Migration 2026]])
 - StreamingEnabled is mandatory at this size. ([[Genre Playbook - Open-World City and Crime Roleplay]])
 - Turning it on forces StreamingEnabled, deferred signals and fixed-step simulation. ([[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]])
 - Tested with StreamingEnabled on, on a phone, and with a vehicle crossing borders fast. ([[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]])
-- Right: with StreamingEnabled (on by default for new places and forced by Server Authority), anything outside the player's radius may be absent. ([[AI Pitfalls - Networking and Security]])
 
 ## Mentioned in
 
-42 notes in 19 sections. The 25 most relevant are linked:
+43 notes in 20 sections. The 25 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[External Tooling - Rojo Wally Selene StyLua]]
@@ -63,21 +63,21 @@ API snapshot: member of `Workspace` (`_tools/roblox_api.json`, docs build of 202
 ### 23 Debugging Deep Dives
 [[Debugging Client-Server Desync]]
 
-### 24 Worked Builds
-[[Quest Chain System End to End]]
-
 ### 25 Physics and Vehicles
 [[Choosing a Car Chassis - Raycast Suspension vs Constraint Builds vs Community Kits]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver]]
 
 ### 46 Resource Library
-[[Links - StreamingEnabled]]
+[[Official Docs - Building and World]]
 
 ### 49 Roblox Platform Features
-[[Photo Mode and In-Game Screenshots with CaptureService]] · [[Server Authority and Input Migration 2026]]
+[[Engine Limits, Quotas and Defaults - Cheat Sheet]] · [[Server Authority and Input Migration 2026]]
 
 ### 58 Player QoL and Game Tweaks
 [[Graphics and Performance Toggles for Low-End Devices]]
 
-Also mentioned in (not linked): Racing AI on a Racing Line - Spline Following and Rubber-Banding · Replication Boundary · Resource Library - Building and World · Rigs and Joints · Roblox Changes 2025-2026 · Round-Based Minigame Loop End to End · Side-Scroller in 3D - Locking Camera and Movement to a Plane · Snippets - Procedural Motion · Snippets - Ragdoll · Streaming Radius · Teardown - Apocalypse Rising 2 · Teardown - Driving Empire · Terrain Deep Dive - Materials Water and Performance · Testing Modes - Play Run and Multi-Client · The Debugging Method - Reproduce Isolate Bisect · What AI Models Get Wrong in Roblox · What Craft Looks Like on Roblox - Lessons from Top Studios
+### 62 Engine Reference Cards
+[[Workspace - Engine Reference Card]]
+
+Also mentioned in (not linked): Photo Mode and In-Game Screenshots with CaptureService · Quest Chain System End to End · Racing AI on a Racing Line - Spline Following and Rubber-Banding · Replication Boundary · Rigs and Joints · Roblox Changes 2025-2026 · Round-Based Minigame Loop End to End · Side-Scroller in 3D - Locking Camera and Movement to a Plane · Snippets - Procedural Motion · Snippets - Ragdoll · Streaming Radius · Teardown - Apocalypse Rising 2 · Teardown - Driving Empire · Terrain Deep Dive - Materials Water and Performance · Testing Modes - Play Run and Multi-Client · The Debugging Method - Reproduce Isolate Bisect · What AI Models Get Wrong in Roblox · What Craft Looks Like on Roblox - Lessons from Top Studios
 
 <!-- atlas:generated -->

@@ -12,12 +12,12 @@ tags: [vfx, design, playbook, combat, particles, beams, budgets, type/guide, are
 > - White core, colour edge, dark rim; one dark layer per bright stack.
 > - Tier ladder written and audited.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.3k tok. Read more: ## 1. Design before Studio · ## 5. Budgets and architecture · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.4k tok. Read more: ## 1. Design before Studio · ## 5. Budgets and architecture · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-This is the method for designing effects that look professional in Roblox, distilled from decoding several open-source effect packs (slashes, glass combos, lightning hand charges, water explosions, staggered beam slashes, auras) and from shipping hundreds of ability effects in one live action game (the reference project). The individual tools are covered elsewhere: [[Particle Emitters In Depth]], [[Beams and Trails]], [[Highlights and Selection Effects]], [[Light Sources and Shadows]]. Timing against animation is in [[VFX Timing with Animation]]. This note is about **design**: how to decide what layers an effect needs, what numbers make them read, how to scale effects by importance, and how to keep a fight readable and fast.
+This is the method for designing effects that look professional in Roblox, built up from shipping hundreds of ability effects in one live action game (the reference project) and from blind reviews of those effects. The individual tools are covered elsewhere: [[Particle Emitters In Depth]], [[Beams and Trails]], [[Highlights and Selection Effects]], [[Light Sources and Shadows]]. Timing against animation is in [[VFX Timing with Animation]]. This note is about **design**: how to decide what layers an effect needs, what numbers make them read, how to scale effects by importance, and how to keep a fight readable and fast.
 
-Source labels: **Docs**, **Reference project** (production game and its studies), **Rule of thumb**.
+Source labels: **Docs**, **Reference project** (one production game built with this vault), **Rule of thumb**.
 
 ---
 
@@ -41,24 +41,24 @@ Professional effects are designed on paper first. The method:
 
 ### The six phases of a hit
 
-Every hit effect is made of these phases, in this time order (studied packs):
+Every hit effect is made of these phases, in this time order (Rule of thumb; durations are starting points):
 
 | Phase | Duration | Content |
 |---|---|---|
 | Anticipation (optional) | before the hit | Converging specks, an imploding mesh, a highlight pulse, a charge glint |
-| Hot frame | 0.03 to 0.09 s | Star or impact flash, size 0 to 16 to 24 (or 30 to 0), LightEmission 1, Brightness 10 to 40, ZOffset 4 to 10 |
+| Hot frame | one to a few frames | A bright flash that pops to full size at once, additive, drawn in front of the other layers (positive `ZOffset`) |
 | Body | 0.2 to 0.4 s | The shape that reads: slash cards, beam arc, splash sheets, bolt |
 | Secondary | 0.3 to 0.8 s | Sparks, shards, specks, wisps, debris with gravity and drag |
 | Ground | 0.3 to 0.7 s | Flat rings, wind, cracks, dust, a smoke ring |
 | Tail | 0.6 to 2 s | Haze, mist, lingering glow at very low brightness |
 
-The reference project's own ladder, phrased the same way: anticipation, flash frame, shockwave, energy body, directional sparks and debris (along the swing, not radial), smoke, lingering residue. A guideline quoted there from a well-known studio's VFX guidance: **if your effects feel long, they are far too long.**
+The reference project's own ladder, phrased the same way: anticipation, flash frame, shockwave, energy body, directional sparks and debris (along the swing, not radial), smoke, lingering residue. The project's working rule: **when an effect starts to feel long, cut it hard, not a little.**
 
 ### Value and colour
 
 - **Value hierarchy:** a white-hot core, the element or weapon colour at the edges, a dark rim for contrast.
 - **Palette:** one base hue (often dark, on emitters at high brightness), one hot accent (orange or white), white for wind and foam. Saturated colours read better than pastel in motion.
-- **Every bright stack gets one dark layer:** a black-coloured ring at LightEmission 0.25, negative LightEmission (-0.4 to -2) on smoke and debris, a black Neon shell, or grey smoke at LightEmission 0 under additive smoke. Without it, additive layers sum to white and the effect has no shape.
+- **Every bright stack gets one dark layer:** a dark ring, a shadowed smoke puff that is not additive, or a dark mesh shell behind the glow. Without it, additive layers sum to white and the effect has no shape.
 - **Brightness inversely proportional to screen area** (numbers in [[Particle Emitters In Depth]]).
 - **Dark layers stay saturated** (blue-black thinning to blue, deep oxblood under fire), never grey: grey ink is what reviewers call "muddy". Add **one** contrasting accent hue at most. Blind-review lessons on value, clutter, smoke, flashes, effect lights and character tinting are collected in [[VFX Readability and Value - Lessons from Blind Reviews]]; multi-beat moves in [[Escalation and Grandeur Without Clutter]].
 
@@ -66,30 +66,32 @@ The reference project's own ladder, phrased the same way: anticipation, flash fr
 
 ## 2. Core recipes
 
+All recipes are **Rule of thumb** starting points from the reference project's own effects. Scale sizes to your characters and tune by eye at phone size.
+
 ### Slash card stack
-6 to 8 emitters on **one** attachment, each a 4x4 `OneShot` flipbook card, Lifetime 0.3, constant size 10 to 17, `VelocityPerpendicular` with Speed 0.001 and SpreadAngle 0, rotation offsets between 90 and 270, RotSpeed -360 to +800, ZOffset -0.2 to +0.1, Brightness 0.2 to 30, transparency 0 to t 0.5 then to 1. Add a glow copy at 1.3x size, LightEmission 1, Brightness 20, transparency 0.93 (barely there). Different textures per card (base, underlay, core, edge, wisps) give depth.
+Several flat cards on **one** attachment, each a short `OneShot` flipbook, so they share a pivot and play as one shape. Make the cards flat with `VelocityPerpendicular` and a tiny speed ([[Particle Emitters In Depth]], flat-card trick). Vary them: a wide soft underlay, a bright thin core, a sharp edge and a few wisps, each with its own texture and a slightly different rotation and spin. One faint, slightly larger glow copy behind the stack softens the edge without washing it out.
 
 ### Beam crescent
-See [[Beams and Trails]]: semicircle with 4/3 r handles, Width0 30 to Width1 0, a sweep of about 175 degrees in 0.18 to 0.25 s with widths shrinking, band copies for a travelling highlight.
+See [[Beams and Trails]]: a semicircle beam with 4/3 r handles, tapered from a wide start to 0, swept through roughly the swing's angle in a fraction of a second while it shrinks, with one thinner highlight copy.
 
 ### Ground burst
-A flat invisible plate (or a Disc emitter) with 3 to 6 ring cards: size 0 to 25 to 35 eased out, envelope 4 to 8, RotSpeed -1050 to -100, TimeScale 0.7 to 0.8, Brightness at most 0.15 for big rings and 6 to 10 for thin hard rings; plus debris that bursts then hangs (Speed 80 to 100, Drag 7, gravity -31) and a dark smoke ring.
+A flat plate or a Disc-shaped emitter with a few ring cards that grow fast and ease out, a little spin, and low brightness once they are large (thin, hard rings can be brighter). Add debris that pops out and hangs briefly before falling, and one dark smoke ring so the bright rings have something to sit on.
 
 ### Neon meshes
-Rings, domes, shells and swirls as meshes: Material Neon, double-sided, CastShadow off, transparency 0.9 to 0.97 going to 1 (a sheen, not a solid), size from 0 to about 35 x 7 x 35 or imploding 42 to 5.6, random yaw, ±45 to 180 degree spin, 0.3 to 0.5 s with Quad or Cubic Out.
+Rings, domes, shells and swirls as meshes: Material `Neon`, double-sided, `CastShadow` off, kept mostly transparent so they read as a sheen rather than a solid. Grow or implode them quickly with an ease-out tween, give each a random yaw and some spin, and remove them when they reach full transparency.
 
 ### Lightning
-Crackle: 4x4 OneShot lightning flipbooks on a `LockedToPart` disc, Rate 10, life 0.25 to 0.4, Rotation ±360, Brightness 10 to 30, LightEmission 0 (flicker comes from overlap). Bolts: scripted Neon segments (5 segments with ±3 stud jitter, each width swelling then pinching over 0.35 s, 10 ms between segments so the bolt grows, cleaned up after 0.45 s).
+Two layers work together. **Crackle:** a lightning flipbook on a small locked emitter around the source, short lives, random rotation, so overlapping frames flicker. **Bolts:** a chain of thin Neon parts between randomly offset points along the path, re-randomised every few frames, swelling then thinning, removed within half a second. Keep bolts fast; a bolt that lingers looks like a crack in the screen.
 
 ### Water
-Flash, then random-angle 4x4 splash cards (LightEmission -0.1 to -0.5, Brightness 10 to 45), spray with gravity and drag, ground rings and a fan, then mist (LightEmission 0.98, Brightness 0.005 to 0.06, 1 to 2 s), ripples and bubbles (Acceleration +3 to +5).
+A flash, then splash cards at random angles that are not additive (so the water looks solid and saturated), spray with gravity and drag, ground rings, and finally a faint mist that lingers for a second or two. A few slow rising bubbles sell depth when the effect is underwater.
 
 ### Auras
-Breathing sprites (Speed 0.001, LockedToPart, life 2, Rate 1, transparency 1 to 0 to 1, three sizes), ground decals at the feet, rising specks (Rate 20, Acceleration +3), beam cages on limbs, orbiters with trails, and a down-facing SpotLight in the aura colour.
+Build an aura from slow layers that never stop the character reading: a softly breathing glow locked to the body, a decal or ring at the feet, a few specks drifting upward, an optional outline on the limbs, and a dim light in the aura colour pointing down so the ground picks it up (Rule of thumb). Everything loops gently; nothing flashes.
 
 ### Composition tricks
-- **Stagger copies with delays.** One authored unit copied five times with 0.15 s delays traced a star in a studied pack.
-- **Copy the impact to the far end** of a beam slash with a 0.1 s delay so the hit travels.
+- **Stagger copies with delays.** Play one authored unit several times with small delays and changed rotations to draw a larger pattern from a single piece.
+- **Land the impact where the slash ends**, a beat after it starts, so the hit reads as travelling.
 - **Implode and explode together:** a vortex mesh shrinking while rings expand.
 - **Fire everything from animation markers**, not from wall-clock guesses ([[Markers and Events]]).
 
@@ -208,10 +210,10 @@ end
 
 - **Fresh uploads** fail `PreloadAsync` for about 20 to 60 seconds (reference project). Never judge a texture broken in the first minute; never ship before testing a new upload in a live server.
 - **EditableImage and EditableMesh fail in published games by default.** They require the experience setting "Allow Mesh / Image APIs" (Docs), have strict client memory budgets, and `EditableImage` is limited to 1024 x 1024 (Docs). The reference project's rule: never build runtime VFX on them. Bake textures and meshes offline and upload them.
-- **Third-party textures** from public packs may be "not approved for the requester" in your experience (the asset's permissions do not include you). Check each one loads in a live server; prefer your own uploads for anything shipped.
+- **Textures uploaded by other accounts** may be "not approved for the requester" in your experience (the asset's permissions do not include you). Check each one loads in a live server; your own uploads are the reliable choice for anything shipped.
 
 ### Licences
-Many open-source VFX packs are study-only or require credit. Study the technique and rebuild it with your own textures; do not paste another creator's instances into your place unless the licence allows it. See [[Creator Store and Toolbox Safety]].
+Make your effects from your own textures, meshes and instances. Anything made by someone else ships only under a licence that clearly allows it, recorded with the asset. See [[Creator Store and Toolbox Safety]] and [[Legal Basics - IP Licenses and Assets]].
 
 ---
 
@@ -267,10 +269,10 @@ See also: [[VFX Readability and Value - Lessons from Blind Reviews]], [[Escalati
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Mesh VFX Packs Built in Blender]] · [[VFX Performance Budgets and Culling]] · Dash VFX Presentation on an R15 Rig · Links - Particle emitters · Voxel and Blocky Modeling · Dramatic Showcase Renders in Eevee
+[[Mesh VFX Packs Built in Blender]] · [[VFX Performance Budgets and Culling]] · Dash VFX Presentation on an R15 Rig · Official Docs - Visual Effects · Voxel and Blocky Modeling · Dramatic Showcase Renders in Eevee
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Slash VFX Recipes - Crescent and Ring]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Ice Ball Cast to Explosion - Approved Recipe]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]]
+[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Slash VFX Recipes - Crescent and Ring]] · [[Designing VFX Textures and Flipbooks in Figma]] · [[Projectile VFX - Muzzle, Travel and Impact]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Auras, Shields and Status Effects]] · [[Ice Ball Cast to Explosion - Approved Recipe]] · [[Impact Decals and Material-Aware Hit Sparks]]
 <!-- related:end -->

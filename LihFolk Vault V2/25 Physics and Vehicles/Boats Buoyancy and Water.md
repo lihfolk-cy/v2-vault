@@ -363,7 +363,7 @@ Edge cases: jumping (keep carrying for a short time after leaving the deck, or t
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Genre Playbook - Racing and Driving]] · Debugging Physics and Network Ownership · Terrain Tools and Terrain API · Racing Laps and Checkpoints End to End · Links - Constraints · Links - Forces and movers
+[[Genre Playbook - Racing and Driving]] · Debugging Physics and Network Ownership · Terrain Tools and Terrain API · Racing Laps and Checkpoints End to End · Official Docs - Physics
 <!-- auto-links:end -->
 
 <!-- related:start -->

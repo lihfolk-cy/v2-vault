@@ -135,5 +135,5 @@ Under Settings or Shop → "Purchase history":
 
 <!-- related:start -->
 ## Related
-[[Idempotency]] · [[AI Pitfalls - Data and Monetization]] · [[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]] · [[AFK Detection Idle Kicks and AFK Reward Rules]] · [[Joining Friends Parties and Private Servers]] · [[Loading Screen Skip and First-Session Goals]] · [[Skippable Tutorials and Replayable Tips]] · [[Inventory QoL - Sort Filter Search Stack and Lock]] · [[Block and Mute Respecting Platform Rules]]
+[[Idempotency]] · [[AI Pitfalls - Data and Monetization]] · [[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]] · [[AFK Detection Idle Kicks and AFK Reward Rules]] · [[Joining Friends Parties and Private Servers]] · [[Skippable Tutorials and Replayable Tips]] · [[Loading Screen Skip and First-Session Goals]] · [[Inventory QoL - Sort Filter Search Stack and Lock]] · [[Block and Mute Respecting Platform Rules]]
 <!-- related:end -->

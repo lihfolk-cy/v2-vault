@@ -414,10 +414,10 @@ That last pattern is worth copying everywhere agents share a place: a tool that 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI Agents and Autonomous Workflows]] · Pipeline Design Principles · [[Blender MCP]] · [[MCP Workflows for Building Worlds]] · Plugin Development Start Here · Third-Party Skill - Caveman Token Saver
+[[AI Agents and Autonomous Workflows]] · Pipeline Design Principles · [[Blender MCP]] · [[MCP Workflows for Building Worlds]] · Plugin Development Start Here
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Case Study - Building a Game with AI Agents]] · [[MCP Workflows for Scripting and Debugging]] · [[Pipeline Design Principles]] · [[Command Bar and Studio Scripting]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]]
+[[Built-In Studio MCP vs Community MCP Servers - Migration Guide]] · [[Case Study - Building a Game with AI Agents]] · [[Pipeline Design Principles]] · [[MCP Workflows for Scripting and Debugging]] · [[Command Bar and Studio Scripting]] · [[Agent Handoff Notes - Project State and Resume Templates]] · [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]]
 <!-- related:end -->

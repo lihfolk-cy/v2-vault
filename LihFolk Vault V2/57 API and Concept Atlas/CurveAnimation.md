@@ -42,7 +42,7 @@ API snapshot: class, inherits `AnimationClip` (`_tools/roblox_api.json`, docs bu
 [[Bundles Animation Packs and Emotes for Sale]]
 
 ### 46 Resource Library
-[[Links - Animation creation]]
+[[Official Docs - Asset Creation]]
 
 ### Root notes
 [[00 Start Here]]

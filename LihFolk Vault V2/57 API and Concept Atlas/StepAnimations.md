@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/animation, area/studio, api/StepAnimations]
 > - A/B against `Animator:StepAnimations` on a few clips: uneven and evenly keyed, Linear and eased, big turns far from rest, two...
 > - One of the same project's tool snippets calls `StepAnimations(0)` right after `Play(0)`, which contradicts that rule; the...
 >
-> Cost: TL;DR ~170 tok · whole note ~610 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~170 tok · whole note ~630 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,14 +28,17 @@ API snapshot: member of `Animator` (`_tools/roblox_api.json`, docs build of 2026
 
 ## Mentioned in
 
-33 notes in 4 sections. The 25 most relevant are linked:
+34 notes in 5 sections. The 25 most relevant are linked:
 
 ### 08 Animation
-[[Animation Data from Blender to Roblox]] · [[Animation Editor Advanced]] · [[Animation Quality Standard]] · [[Animator Deep Dive]] · [[Authoring Clips in Code]] · [[Case Study - Abilities That Only Worked in Studio]] · [[CurveAnimation and Curve Channels]] · [[Custom Characters and StarterCharacter]] · [[Debugging Animation Problems]] · [[Engine Gotchas]] · [[Frame Order and RunService Timing]] · [[How the Animator Really Behaves]] · [[IKControl Reference]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Keyframes, Easing and Interpolation]] · [[Lua Keyframe Player]] · [[Lua Keyframe Player Internals]] · [[Open Questions]] · [[Procedural Animation]] · [[Snippets - Building and Sampling Clips]] · [[Snippets - Lua Keyframe Player Core]] · [[Studio Tooling Architecture]] · [[Testing Animations in Studio]] · [[Troubleshooting Table]]
+[[Animation Data from Blender to Roblox]] · [[Animation Editor Advanced]] · [[Animation Quality Standard]] · [[Animator Deep Dive]] · [[Authoring Clips in Code]] · [[Case Study - Abilities That Only Worked in Studio]] · [[CurveAnimation and Curve Channels]] · [[Custom Characters and StarterCharacter]] · [[Debugging Animation Problems]] · [[Engine Gotchas]] · [[Frame Order and RunService Timing]] · [[How the Animator Really Behaves]] · [[IKControl Reference]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Lua Keyframe Player]] · [[Lua Keyframe Player Internals]] · [[Open Questions]] · [[Procedural Animation]] · [[Snippets - Building and Sampling Clips]] · [[Snippets - Lua Keyframe Player Core]] · [[Studio Tooling Architecture]] · [[Testing Animations in Studio]] · [[Troubleshooting Table]]
 
 ### 15 AI Tools
 [[AI Pitfalls - Physics and Animation]]
 
-Also mentioned in (not linked): Moon Animator and Third-Party Tools · Pipeline - Arm IK Baking and QA · Playback, Priorities and Blending · Retargeting Animations Between Rigs · Testing Modes - Play Run and Multi-Client · Testing Strategies and Frameworks · Weapon Rig Player · Weight Painting and Skinning for Roblox
+### 62 Engine Reference Cards
+[[Animator - Engine Reference Card]]
+
+Also mentioned in (not linked): Keyframes, Easing and Interpolation · Moon Animator and Third-Party Tools · Pipeline - Arm IK Baking and QA · Playback, Priorities and Blending · Retargeting Animations Between Rigs · Testing Modes - Play Run and Multi-Client · Testing Strategies and Frameworks · Weapon Rig Player · Weight Painting and Skinning for Roblox
 
 <!-- atlas:generated -->

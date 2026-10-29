@@ -9,7 +9,7 @@ tags: [atlas, api, type/atlas, area/studio, area/gameplay, api/AssemblyAngularVe
 > - Setting `AssemblyLinearVelocity` and `AssemblyAngularVelocity` is supported on the assembly (Roblox docs, BasePart).
 > - Filter with `Ctrl Shift P`: typing "velo" shows AssemblyLinearVelocity and AssemblyAngularVelocity (Docs).
 >
-> Cost: TL;DR ~120 tok · whole note ~300 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~320 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -25,7 +25,7 @@ API snapshot: member of `BasePart` (`_tools/roblox_api.json`, docs build of 2026
 
 ## Mentioned in
 
-6 notes in 6 sections. The 6 most relevant are linked:
+7 notes in 7 sections. The 7 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[Explorer Properties and Selection]]
@@ -44,5 +44,8 @@ API snapshot: member of `BasePart` (`_tools/roblox_api.json`, docs build of 2026
 
 ### 40 Game Math
 [[Rotations Angles and Quaternions]]
+
+### 62 Engine Reference Cards
+[[BasePart - Engine Reference Card]]
 
 <!-- atlas:generated -->

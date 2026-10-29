@@ -372,10 +372,10 @@ Run checks against the aircraft root, not the character, and switch them on only
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Genre Playbook - Racing and Driving]] · Links - Forces and movers · Rotations Angles and Quaternions · Physics Assemblies and Constraints · Debugging Physics and Network Ownership · Motion Sensitivity and Camera Comfort
+[[Genre Playbook - Racing and Driving]] · Official Docs - Physics · Rotations Angles and Quaternions · Physics Assemblies and Constraints · Debugging Physics and Network Ownership · Motion Sensitivity and Camera Comfort
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Centre of Mass, Anti-Flip and Self-Righting]] · [[Choosing a Car Chassis - Raycast Suspension vs Constraint Builds vs Community Kits]] · [[Steering Geometry and Arcade Drifting - Ackermann, Slip and Grip Tuning]] · [[Standing on Moving Vehicles and Platforms - Keeping Players Glued]] · [[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[Engine, Gearbox and Torque Curve Model for Arcade Cars]] · [[Multi-Seat Vehicles - Driver, Passenger and Gunner Roles]]
+[[Centre of Mass, Anti-Flip and Self-Righting]] · [[Choosing a Car Chassis - Raycast Suspension vs Constraint Builds vs Community Kits]] · [[Steering Geometry and Arcade Drifting - Ackermann, Slip and Grip Tuning]] · [[Standing on Moving Vehicles and Platforms - Keeping Players Glued]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Engine, Gearbox and Torque Curve Model for Arcade Cars]] · [[Multi-Seat Vehicles - Driver, Passenger and Gunner Roles]]
 <!-- related:end -->

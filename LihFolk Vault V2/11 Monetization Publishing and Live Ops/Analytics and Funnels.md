@@ -298,7 +298,7 @@ Use a new session id per shop open. If 3 to 4 is weak, price or prompt timing is
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Economy Telemetry and Balancing Live]] · Currency Architecture - Soft Hard and Event Currencies · Telemetry Events · Onboarding Funnel · Links - Analytics · A-B Testing and Experiments on Roblox
+[[Economy Telemetry and Balancing Live]] · Currency Architecture - Soft Hard and Event Currencies · Telemetry Events · Onboarding Funnel · Official Docs - Publishing and Live Ops · A-B Testing and Experiments on Roblox
 <!-- auto-links:end -->
 
 <!-- related:start -->

@@ -12,7 +12,7 @@ tags: [genre-system, racing, vehicles, checkpoints, worked-build, anti-cheat, ti
 > - Drive backwards over the start line: no lap.
 > - Drive at full speed through a tight chicane: no missed gates (lower `TickHz` to 10 to stress it).
 >
-> Cost: TL;DR ~140 tok · whole note ~7.7k tok. Read more: ## 4. The server: RaceService · ## 5. The client: RaceClient · ## 6. Edge cases and failure modes · ## 9. Test checklist
+> Cost: TL;DR ~140 tok · whole note ~7.8k tok. Read more: ## 4. The server: RaceService · ## 5. The client: RaceClient · ## 6. Edge cases and failure modes · ## 9. Test checklist
 <!-- tldr:end -->
 
 This note builds the race layer around a car: a grid, a countdown that cannot be jumped, gate crossing detected by swept segments so cars at 200 studs per second never tunnel through a checkpoint, crossing times interpolated between server frames, laps and finish order, live race positions, wrong-way detection, resets to the last gate, plausibility checks against the car's real top speed, ghost collisions between racers, a DNF timer, and best laps saved only for clean laps. The car itself is out of scope; build it with [[Cars with Constraints - Suspension Steering and Drive]]. [[Genre Playbook - Racing and Driving]] explains network ownership and why lap times must not come from the client; this note implements the server-side timing it describes and covers the geometry and timing details that decide whether close finishes are fair.
@@ -68,7 +68,7 @@ StarterPlayer/StarterPlayerScripts/Client
 
 **Gate authoring rule.** Each gate is an anchored, invisible, `CanCollide = false`, `CanQuery = false` part whose front face (`LookVector`) points in the racing direction and whose X and Y size cover the road plus a margin. The server reads only its `CFrame` and `Size`; it is never touched. A gate that is rotated backwards makes the track impossible to lap, so the service asserts that consecutive gates face roughly the same way as the vector between them. Put the grid just behind gate 1: racers start with gate 2 as their next gate, so the first pass over the start line is ignored and lap 1 completes on the second.
 
-**Collision group for ghost racing.** Create a collision group `Cars` in Studio's Collision Groups editor and set it not to collide with itself. The service sets `BasePart.CollisionGroup = "Cars"` on every part of a spawned car. (Roblox docs (as of October 2026) list `PhysicsService:RegisterCollisionGroup` and `CollisionGroupSetCollidable` for doing this at runtime and the `BasePart.CollisionGroup` property for assignment; the older part-assignment methods are deprecated.) Ghost racing is the playbook's fix for ramming and phantom hits between client-owned cars.
+**Collision group for ghost racing.** Create a collision group `Cars` in Studio's Collision Groups editor and set it not to collide with itself. The service sets `BasePart.CollisionGroup = "Cars"` on every part of a spawned car. (Roblox docs (as of October 2026) list `workspace:RegisterCollisionGroup` and `workspace:CollisionGroupSetCollidable` (on WorldRoot since September 2026; the `PhysicsService` versions are deprecated) for doing this at runtime and the `BasePart.CollisionGroup` property for assignment; the older part-assignment methods are deprecated.) Ghost racing is the playbook's fix for ramming and phantom hits between client-owned cars.
 
 ---
 
@@ -706,7 +706,7 @@ The driver owns the car, so a cheater can still drive slightly better than physi
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Obby Checkpoints and Stage Saves End to End]] · [[Dot and Cross Products in Gameplay]] · Links - Constraints · Boats Buoyancy and Water · Game Math Start Here · Genre Playbook - Obbies and Platformers
+[[Obby Checkpoints and Stage Saves End to End]] · [[Dot and Cross Products in Gameplay]] · Official Docs - Physics · Boats Buoyancy and Water · Game Math Start Here · Genre Playbook - Obbies and Platformers
 <!-- auto-links:end -->
 
 <!-- related:start -->

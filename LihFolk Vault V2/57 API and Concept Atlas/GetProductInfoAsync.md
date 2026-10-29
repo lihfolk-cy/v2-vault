@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/monetization, area/ai, api/GetProductInfoAsy
 > - Every price on screen comes from `GetProductInfoAsync` (Dynamic Price Check passes) (Pricing and Store Design)
 > - Prices shown via `GetProductInfoAsync`. (Discovery and Monetization Changes 2025-2026)
 >
-> Cost: TL;DR ~130 tok · whole note ~580 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~620 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -31,13 +31,13 @@ API snapshot: member of `MarketplaceService` (`_tools/roblox_api.json`, docs bui
 
 ## Mentioned in
 
-18 notes in 9 sections. The 18 most relevant are linked:
+21 notes in 10 sections. The 21 most relevant are linked:
 
 ### 11 Monetization Publishing and Live Ops
 [[Developer Products and ProcessReceipt]] · [[Game Passes]] · [[Monetization Overview]] · [[Pricing and Store Design]] · [[Subscriptions and Premium Payouts]]
 
 ### 15 AI Tools
-[[AI Pitfalls - Data and Monetization]] · [[What AI Models Get Wrong in Roblox]]
+[[AI Pitfalls - Data and Monetization]] · [[AI Pitfalls - Stale APIs and Luau]] · [[What AI Models Get Wrong in Roblox]]
 
 ### 24 Worked Builds
 [[LihFolk Systems Library]] · [[Saved Inventory End to End]]
@@ -52,10 +52,13 @@ API snapshot: member of `MarketplaceService` (`_tools/roblox_api.json`, docs bui
 [[Publishing Selling and Updating Plugins]]
 
 ### 49 Roblox Platform Features
-[[Discovery and Monetization Changes 2025-2026]] · [[Engine and API Changes 2025-2026]]
+[[API Renames and Deprecations 2025-2026]] · [[Discovery and Monetization Changes 2025-2026]] · [[Engine and API Changes 2025-2026]]
 
 ### 56 Field Notes
 [[Sound Design Pitfalls - Reused Ids Onsets and Layered Loops]]
+
+### 62 Engine Reference Cards
+[[MarketplaceService - Engine Reference Card]]
 
 ### Root notes
 [[Open Questions - Whole Vault]] · [[Skill - Roblox Monetization Compliance]]

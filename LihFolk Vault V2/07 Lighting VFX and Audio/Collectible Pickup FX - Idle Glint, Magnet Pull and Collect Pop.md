@@ -141,5 +141,5 @@ end
 
 <!-- related:start -->
 ## Related
-[[VFX Design Playbook]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Light Sources and Shadows]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Slash VFX Recipes - Crescent and Ring]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Gore Policy and Kid-Friendly Hit Feedback]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]]
+[[Auras, Shields and Status Effects]] · [[VFX Design Playbook]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Designing VFX Textures and Flipbooks in Figma]] · [[Light Sources and Shadows]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Slash VFX Recipes - Crescent and Ring]]
 <!-- related:end -->

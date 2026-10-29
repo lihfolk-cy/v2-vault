@@ -1,0 +1,14 @@
+{
+ "cur_r1_F": {
+  "seconds": 185,
+  "tokens": 81542
+ },
+ "cur_r2_F": {
+  "seconds": 176,
+  "tokens": 80984
+ },
+ "plain_r1_F": {
+  "seconds": 62,
+  "tokens": 66479
+ }
+}

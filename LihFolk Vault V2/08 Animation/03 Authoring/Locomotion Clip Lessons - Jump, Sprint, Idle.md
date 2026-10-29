@@ -86,5 +86,5 @@ Rule of thumb: if two fix rounds on the same criterion return a delta of 0, stop
 
 <!-- related:start -->
 ## Related
-[[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Locomotion and Melee Reference Numbers]] · [[Human Swing Biomechanics]] · [[Animation Quality Standard]] · [[Animation Review Checklist]] · [[LihFolk R15 Keyframe Pipeline]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Blade Grip and Wrist Limits]]
+[[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Locomotion and Melee Reference Numbers]] · [[Human Swing Biomechanics]] · [[Animation Quality Standard]] · [[Animation Review Checklist]] · [[LihFolk R15 Keyframe Pipeline]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Weapon Swing Design]]
 <!-- related:end -->

@@ -12,7 +12,7 @@ tags: [gameplay, combat, grabs, carry, throw, network-ownership, physics, anti-a
 > - Victim neutralised, massless, non-colliding with the grabber; grabber is assembly root and owner.
 > - Release restores everything, returns ownership, runs once, with a max duration.
 >
-> Cost: TL;DR ~170 tok · whole note ~2.4k tok. Read more: ## 3. Doing the rigid weld correctly (server) · ## 4. Releasing and throwing · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~2.5k tok. Read more: ## 3. Doing the rigid weld correctly (server) · ## 4. Releasing and throwing · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Grabbing another player (a wrestler's throw, carrying a downed teammate, a monster dragging a victim, a "carry" emote) is one of the most bug-prone features on Roblox because it attaches two **client-owned** physics assemblies together. Done naively it flings both players, lets the grabbed player teleport the grabber, desyncs positions between clients, or becomes a griefing tool. This note covers the attachment options, network ownership during and after the grab, escape mechanics, throws, and the abuse rules. Ownership background is in [[Network Ownership]]; constraint behaviour in [[Physics Assemblies and Constraints]].
@@ -87,7 +87,7 @@ local function grab(grabber: Player, victim: Player): WeldConstraint?
 end
 ```
 
-Create the `Grabbed` collision group at startup with `PhysicsService:RegisterCollisionGroup` and set it not to collide with `Default` characters as needed (**Roblox docs**: https://create.roblox.com/docs/reference/engine/classes/PhysicsService).
+Create the `Grabbed` collision group at startup with `workspace:RegisterCollisionGroup` and set it not to collide with `Default` characters as needed with `workspace:CollisionGroupSetCollidable` (**Roblox docs**: collision groups live on WorldRoot since September 2026; the `PhysicsService` methods are deprecated, https://create.roblox.com/docs/reference/engine/classes/WorldRoot).
 
 ## 4. Releasing and throwing
 

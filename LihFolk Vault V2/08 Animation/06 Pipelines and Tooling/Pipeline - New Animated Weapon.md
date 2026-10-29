@@ -225,5 +225,5 @@ Cleanup removes test objects and restores the camera to `Custom` after a short d
 
 <!-- related:start -->
 ## Related
-[[Importing Models and Rigs]] · [[Animation Data from Blender to Roblox]] · [[Baked Clip Stubs and Archiving]] · [[Weapon Swing Design]] · [[Testing Animations in Studio]] · [[Arm Baker Internals]] · [[Lua Keyframe Player]] · [[Keyframes, Easing and Interpolation]]
+[[Importing Models and Rigs]] · [[Animation Data from Blender to Roblox]] · [[Baked Clip Stubs and Archiving]] · [[Weapon Swing Design]] · [[Lua Keyframe Player]] · [[Arm Baker Internals]] · [[Keyframes, Easing and Interpolation]] · [[Testing Animations in Studio]]
 <!-- related:end -->

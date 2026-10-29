@@ -4,7 +4,7 @@ tags: [materials, surfaces, hub, start-here, textures, pbr, terrain, type/hub, a
 ---
 # Materials and Surfaces Start Here
 
-This section is about everything that sits on the outside of geometry: custom materials, PBR maps, terrain paint, tiling textures, decals and the light you bake into all of them. It builds on three notes and assumes you have met them: [[Links - Free and CC0 asset libraries]] (where to get CC0 texture sets and HDRIs), [[Textures Decals and Texture Memory]] (how image memory works) and [[Stylized Lighting Recipes]] (the lighting your materials will be judged under). The notes here go deeper: API behaviour checked against the Roblox docs (as of October 2026), strict Luau and Blender Python where they help, and a checklist in each.
+This section is about everything that sits on the outside of geometry: custom materials, PBR maps, terrain paint, tiling textures, decals and the light you bake into all of them. It builds on two notes and assumes you have met them: [[Textures Decals and Texture Memory]] (how image memory works) and [[Stylized Lighting Recipes]] (the lighting your materials will be judged under). The notes here go deeper: API behaviour checked against the Roblox docs (as of October 2026), strict Luau and Blender Python where they help, and a checklist in each.
 
 ## The notes
 
@@ -53,5 +53,5 @@ Section 20 is a working asset library. Where it fits:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Texel Density]] · Links - Texturing · Skill - Roblox Asset Import · Links - Materials and MaterialVariants · Untextured Stylised Modelling Start Here · Draw Calls
+[[Texel Density]] · Official Docs - Asset Creation · Skill - Roblox Asset Import · Official Docs - Building and World · Untextured Stylised Modelling Start Here · Draw Calls
 <!-- auto-links:end -->

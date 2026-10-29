@@ -76,7 +76,7 @@ Inside the billboard, children use normal Scale/Offset relative to the billboard
 | `SizingMode` | `PixelsPerStud` (default): canvas size = face size in studs times `PixelsPerStud`. `FixedSize`: canvas is `CanvasSize` |
 | `PixelsPerStud` | Pixel density in `PixelsPerStud` mode |
 | `CanvasSize` | Virtual pixels in `FixedSize` mode, so a 1920 x 1080 design can be reused on a wall |
-| `AlwaysOnTop`, `LightInfluence`, `Brightness`, `MaxDistance`, `ClipsDescendants` | As billboards |
+| `AlwaysOnTop`, `LightInfluence`, `Brightness`, `MaxDistance`, `ClipsDescendants` | As billboards, except `MaxDistance` defaults to 1000 studs on a SurfaceGui (**Roblox docs**); a script-made `Instance.new("SurfaceGui")` can report 0, so set it explicitly |
 | `ZOffset` | Layering of several SurfaceGuis on the same face |
 | `ToolPunchThroughDistance` | Within this distance, left clicks act on the gui instead of the held tool |
 | `Active` | Sinks input (default true) |
@@ -197,7 +197,7 @@ Either way: pool (the reference project caps live numbers at 12), merge same-kin
 World UI is rendered per object and updated per frame for position. Rules that held up:
 
 - **Count them.** Hundreds of always-on billboards are a measurable cost, especially on phones. Budget them like particles: for example at most a few dozen live enemy bars on screen.
-- **Set `MaxDistance` on everything.** The default renders at any distance.
+- **Set `MaxDistance` on everything.** A BillboardGui renders at any distance by default (SurfaceGui defaults to 1000 studs in the docs).
 - **Hide when irrelevant.** Health bars only while the enemy is damaged or targeted; nameplates hidden in combat-heavy scenes if needed.
 - **Avoid per-frame property writes.** Update bars on health change, not every frame. Do not rotate or recolour billboard contents in a `RenderStepped` loop for every enemy.
 - **`AlwaysOnTop` sparingly.** It also changes sorting, and too many on-top labels clutter the scene.
@@ -310,10 +310,10 @@ See also: [[ScreenGui Fundamentals]], [[Text Fonts and Rich Text]], [[Game Feel 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Containers]] · Readable Text and UI Scale · Debugging UI Layout and Input · [[Layout - Scale Offset and Constraints]] · Links - UI elements · Accessibility Contrast
+[[Official Docs - UI]] · Readable Text and UI Scale · Debugging UI Layout and Input · [[Layout - Scale Offset and Constraints]] · Accessibility Contrast
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Nametags and Overhead Bars - Cost and Visibility Rules]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Safe Areas and Insets]] · [[UI Layout Objects - Lists Grids and Pages]] · [[HUD Design]] · [[Responsive UI for Phone Tablet Console and PC]] · [[UI Design Systems]]
+[[BillboardGui - Engine Reference Card]] · [[Nametags and Overhead Bars - Cost and Visibility Rules]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[Debugging UI Layout and Input]] · [[Readable Text and UI Scale]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]]
 <!-- related:end -->

@@ -1,0 +1,14 @@
+[
+ {"id": "F1", "scores": {"R1": 3, "R2": 3, "R3": 3}, "notes": "All three cover valid parents incl. PrimaryPart, RequiresLineOfSight, MaxActivationDistance."},
+ {"id": "F2", "scores": {"R1": 3, "R2": 3, "R3": 3}, "notes": "All cover group ownership, Action priority, Animator:LoadAnimation with replication."},
+ {"id": "F3", "scores": {"R1": 0.67, "R2": 0, "R3": 0}, "notes": "All confidently claim ties have no stable order (key: insertion order) -> -1 on item 3. R2 omits ascending direction. R3 also states SortOrder defaults to Name (-1 outside penalty), floored at 0."},
+ {"id": "F4", "scores": {"R1": 3, "R2": 3, "R3": 3}, "notes": "All: single ProcessReceipt, NotProcessedYet on failure/absent, PurchaseId idempotency, PlayerId/ProductId lookup."},
+ {"id": "F5", "scores": {"R1": 3, "R2": 3, "R3": 3}, "notes": "All bind with createTouchButton true, handle Begin/End/Cancel, Sink/Pass and UnbindAction."},
+ {"id": "F6", "scores": {"R1": 2, "R2": 2, "R3": 2}, "notes": "All: Servo, TargetAngle in degrees, ServoMaxTorque/AngularSpeed, unanchored door."},
+ {"id": "F7", "scores": {"R1": 2.63, "R2": 3, "R3": 3}, "notes": "R1 uses older publish formula (150+60*players) and no topic length -> 0.5 on limits item. R2/R3 full."},
+ {"id": "F8", "scores": {"R1": 3, "R2": 3, "R3": 3}, "notes": "All give client feel/server authority split and Handle/RequiresHandle fix."},
+ {"id": "F9", "scores": {"R1": 2, "R2": 3, "R3": 3}, "notes": "R1 omits the ~500 req/s per-client throttle."},
+ {"id": "F10", "scores": {"R1": 3, "R2": 3, "R3": 3}, "notes": "All: WaitForChild/CollectionService, ModelStreamingMode Atomic/Persistent, RequestStreamAroundAsync before moving."},
+ {"id": "F11", "scores": {"R1": 2, "R2": 0, "R3": 3}, "notes": "R1 no Nov 2025 GA date and no Workspace location for setting (partial items 1,3). R2 says enable via Beta Features toggle (removed) -> -1, no strict-stays-old info, floored 0. R3 full."},
+ {"id": "F12", "scores": {"R1": 3, "R2": 2.25, "R3": 2.25}, "notes": "R2 and R3 give no release status (item 4 = 0); R1 states full release June 2026."}
+]

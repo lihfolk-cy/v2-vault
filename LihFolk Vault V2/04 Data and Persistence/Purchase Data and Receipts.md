@@ -260,7 +260,7 @@ Roblox can send a **Transaction Refunded** webhook (developer products, passes, 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Shop with Game Passes and Developer Products End to End]] · Idempotency · Refunds Chargebacks and Purchase Support · Skill - Roblox DataStore Safety · Skill - Roblox Monetization Compliance · Links - Developer products
+[[Shop with Game Passes and Developer Products End to End]] · Idempotency · Refunds Chargebacks and Purchase Support · Skill - Roblox DataStore Safety · Skill - Roblox Monetization Compliance · Official Docs - Monetization
 <!-- auto-links:end -->
 
 <!-- related:start -->

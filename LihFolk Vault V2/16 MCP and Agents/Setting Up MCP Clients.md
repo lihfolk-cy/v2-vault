@@ -259,7 +259,7 @@ Review this setup after the first week: which prompts did people approve every t
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Agent Review Loops and Guardrails in Practice]] · [[Roblox Studio Assistant]] · Third-Party Skill - Caveman Token Saver · AI in Roblox Development Overview · AI Agents and Autonomous Workflows · Third-Party Skill - Obsidian Skills
+[[Agent Review Loops and Guardrails in Practice]] · [[Roblox Studio Assistant]] · AI in Roblox Development Overview · AI Agents and Autonomous Workflows
 <!-- auto-links:end -->
 
 <!-- related:start -->

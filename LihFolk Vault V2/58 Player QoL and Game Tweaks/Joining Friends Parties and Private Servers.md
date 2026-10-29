@@ -5,14 +5,14 @@ tags: [qol, social, friends, parties, teleport, private-servers, reserved-server
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
+> - Match server trusts coins or loadout sent as teleport data: Exploiters edit join data -> Load coins and loadout from data stores on arrival
 > - Join does nothing: Teleport failure ignored -> Handle failures, show reason
 > - Friends split across servers: Teleported one by one -> One `TeleportAsync` with the whole group
-> - Join button on private matches: No reserved-server check -> Show status, no button
+> - Private match: `ReservedServerId = HttpService:GenerateGUID(false)`, one `TeleportAsync` per party in `pcall`, retry on failure.
 > - In-game friends panel filtered to this experience, cached.
 > - Server-side Join with friend check, cooldown and failure messages.
-> - Invite button via `PromptGameInvite` where it makes sense.
 >
-> Cost: TL;DR ~160 tok · whole note ~2.0k tok. Read more: ## 1. A friends panel with Join · ## 4. Private-server QoL · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~2.2k tok. Read more: ## 1. A friends panel with Join · ## 3. Parties that stay together · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Playing with friends is the main reason many players are on Roblox. Every extra step between "my friend is in this game" and "I am next to my friend" loses players. This note is the QoL view: an in-game friends panel with a Join button, party teleports that keep groups together, private-server conveniences and invite prompts. The engineering is already covered: [[Parties and Group Teleports]], [[Reserved and Private Servers in Practice]], [[Teleporting and Multi-Place Games]] and [[Friend Invites Referrals and Experience Invites]].
@@ -74,12 +74,14 @@ Gotchas:
 ## 3. Parties that stay together
 
 When a game teleports to a match place or a new area, friends must not be split:
-- Teleport **the whole party in one `TeleportAsync` call** with `ShouldReserveServer` or to the same reserved server, so they land together.
+- Teleport **the whole party in one `TeleportAsync` call** with one `TeleportOptions.ReservedServerId` (a server-generated GUID; `ShouldReserveServer` is deprecated), so they land together.
 - **Leader starts, members confirm** with a short ready check, and a visible "waiting for X" list.
 - **Return together**: when the match ends, teleport the group back to one lobby server.
 - Roblox also exposes platform party data (`SocialService:GetPartyAsync`, `Player.PartyId`); check the current docs and availability before relying on them (**Unverified** for rollout and permissions in your context).
 
 Full patterns: [[Parties and Group Teleports]], [[Session State Across Places]].
+
+For a private match place, generate one GUID per party with `HttpService:GenerateGUID(false)`, set it as `TeleportOptions.ReservedServerId`, and pass every member in a single server-side `TeleportAsync` call wrapped in `pcall`, retrying on `TeleportInitFailed`. Teleport data is client-visible and editable, so it carries hints only (map, mode); the match server loads coins and loadout from data stores. Teleports do not run in Studio playtests, so test in a published place.
 
 ## 4. Private-server QoL
 
@@ -99,6 +101,7 @@ A social lobby with clear "play together" spots (portals that gather a group, a 
 
 | Symptom | Cause | Fix |
 |---|---|---|
+| Match server trusts coins or loadout sent as teleport data | Exploiters edit join data | Load coins and loadout from data stores on arrival |
 | Join does nothing | Teleport failure ignored | Handle failures, show reason |
 | Friends split across servers | Teleported one by one | One `TeleportAsync` with the whole group |
 | Join button on private matches | No reserved-server check | Show status, no button |
@@ -108,6 +111,7 @@ A social lobby with clear "play together" spots (portals that gather a group, a 
 
 ## Checklist
 
+- [ ] Private match: `ReservedServerId = HttpService:GenerateGUID(false)`, one `TeleportAsync` per party in `pcall`, retry on failure.
 - [ ] In-game friends panel filtered to this experience, cached.
 - [ ] Server-side Join with friend check, cooldown and failure messages.
 - [ ] Invite button via `PromptGameInvite` where it makes sense.
@@ -128,5 +132,5 @@ A social lobby with clear "play together" spots (portals that gather a group, a 
 
 <!-- related:start -->
 ## Related
-[[QoL Audit Checklist]] · [[Loading Screen Skip and First-Session Goals]] · [[Top 25 QoL Wins by Effort]] · [[Quick Respawn and Spawn Protection]] · [[Purchase Receipts and Purchase History in UI]] · [[Notification Queues and Limits]] · [[Feedback - Autosave Indicator Ping Display and Error Toasts]] · [[Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots]]
+[[TeleportService - Engine Reference Card]] · [[API Renames and Deprecations 2025-2026]] · [[Matchmaking Queues with MemoryStore]] · [[Loading Screen Skip and First-Session Goals]] · [[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]]
 <!-- related:end -->

@@ -239,10 +239,10 @@ Many "rigging bugs" are topology bugs. Before blaming weights in [[Weight Painti
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skinning Weights]] · [[Blender Workflow for Roblox Creators]] · Voxel Characters - Proportions Joints and Rigging · Links - Topology · Faceted Low-Poly - Flat Normals and Facet Size · Two-Bone IK Math
+[[Skinning Weights]] · [[Blender Workflow for Roblox Creators]] · Voxel Characters - Proportions Joints and Rigging · Official Docs - Asset Creation · Faceted Low-Poly - Flat Normals and Facet Size · Two-Bone IK Math
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Voxel Characters - Proportions Joints and Rigging]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Curve-Based Modelling in Blender for Roblox]] · [[UGC Avatar Items and Accessories]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Exporting and Validating Models for Roblox]] · [[Low-Poly and Stylized Modeling]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Modeling Weapons and Props]]
+[[Voxel Characters - Proportions Joints and Rigging]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]] · [[Curve-Based Modelling in Blender for Roblox]] · [[UGC Avatar Items and Accessories]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Exporting and Validating Models for Roblox]] · [[Low-Poly and Stylized Modeling]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]
 <!-- related:end -->

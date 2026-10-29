@@ -1,5 +1,5 @@
 ---
-tags: [ui, safe-area, screeninsets, topbar, notch, mobile, type/guide, area/ui, level/intermediate]
+tags: [ui, safe-area, screeninsets, topbar, notch, mobile, type/guide, area/ui, level/intermediate, api/TopbarInset, api/GuiService]
 ---
 # Safe Areas and Insets
 
@@ -255,10 +255,10 @@ See also: [[ScreenGui Fundamentals]], [[Responsive UI for Phone Tablet Console a
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Safe Area]] · Debugging UI Layout and Input · Skill - Roblox UI Builder · Links - Containers · Cookbook - UI · Camera Systems
+[[Safe Area]] · Debugging UI Layout and Input · Skill - Roblox UI Builder · Official Docs - UI · Cookbook - UI · Camera Systems
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Debugging UI Layout and Input]] · [[AI Pitfalls - UI and Input]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[UI Layout Objects - Lists Grids and Pages]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[Gamepad and Console UX]] · [[UI Design Systems]] · [[Accessibility]] · [[Menu Archetypes - Shop Settings Codes Rewards]]
+[[Designing Roblox UI in Figma - Frames, Safe Areas and Tokens]] · [[Debugging UI Layout and Input]] · [[AI Pitfalls - UI and Input]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[UI Layout Objects - Lists Grids and Pages]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[Figma Property Mapping for Roblox UI]] · [[Gamepad and Console UX]] · [[Settings Menu Design for Roblox - Layout, Controls and Motion]]
 <!-- related:end -->

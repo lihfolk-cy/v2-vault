@@ -9,7 +9,7 @@ tags: [atlas, api, type/atlas, area/animation, api/WeightCurrent]
 > - Track state: `TimePosition`, `Speed`, `Length`, `Looped`, `Priority` (and a numeric rank), `IsPlaying`, `WeightCurrent`...
 > - Weight vs WeightCurrent vs WeightTarget.
 >
-> Cost: TL;DR ~100 tok · whole note ~310 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~100 tok · whole note ~320 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,9 +26,12 @@ API snapshot: member of `AnimationStreamTrack`, `AnimationTrack` (`_tools/roblox
 
 ## Mentioned in
 
-8 notes in 1 sections. The 8 most relevant are linked:
+9 notes in 2 sections. The 9 most relevant are linked:
 
 ### 08 Animation
 [[Animation Glossary]] · [[AnimationTrack Reference]] · [[Debugging Animation Problems]] · [[Engine Gotchas]] · [[Lua Keyframe Player]] · [[Lua Keyframe Player Internals]] · [[Snippets - Lua Keyframe Player Core]] · [[Weapon Rig Player]]
+
+### 62 Engine Reference Cards
+[[Animator - Engine Reference Card]]
 
 <!-- atlas:generated -->

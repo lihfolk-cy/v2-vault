@@ -16,7 +16,7 @@ This skill makes an agent import models, rigs, kits and textures correctly the f
 5. **Pivots**: reset `PivotOffset` on uploaded parts, bottom-centre model pivots, `PrimaryPart.PivotOffset` when a PrimaryPart exists.
 6. **Collision**: decoration non-colliding, Box or Hull where collision is needed, PreciseConvexDecomposition only for walkable detail, invisible primitive colliders for floors.
 7. **Textures**: sized to on-screen use (256, 512 or 1024 for 5, 10 or 20 stud objects), PBR maps on `SurfaceAppearance` with OpenGL normal maps, `MaterialVariant` for parts and terrain, shared and cloned rather than re-imported.
-8. **Vault libraries**: the nine rigs in [[Skeleton Library]], free CC0 sources in [[Links - Free and CC0 asset libraries]], and the separate LihFolk Asset Pack (original models, materials and skies; see the `lihfolk-assets` skill).
+8. **Vault libraries**: the nine rigs in [[Skeleton Library]] and the separate LihFolk Asset Pack (original models, materials and skies; see the `lihfolk-assets` skill).
 9. **Audit**: triangle, mesh, texture, collision and pivot checks, plus a ray-grid test and walking every doorway.
 
 ## When to use it
@@ -39,5 +39,5 @@ The skeleton rigs were exported and checked by name and size but not yet test-im
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Materials and Surfaces Start Here]] · Links - Importing into Studio · SurfaceAppearance PBR Workflow · Modeling in Blender for Roblox · Triangle Budget · Exporting FBX vs GLB
+[[Materials and Surfaces Start Here]] · Official Docs - Asset Creation · SurfaceAppearance PBR Workflow · Modeling in Blender for Roblox · Triangle Budget · Exporting FBX vs GLB
 <!-- auto-links:end -->

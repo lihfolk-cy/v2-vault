@@ -294,7 +294,7 @@ Directives must appear before any code. Lint `CommentDirective` warns on unknown
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Luau language]] · [[Luau Performance Patterns with Benchmarks]] · Luau Garbage Collection and the Memory Model · AI Code Assistants for Luau · Testing Strategies and Frameworks · Cookbook - Tables Strings and Time
+[[Official Docs - Scripting and Luau]] · [[Luau Performance Patterns with Benchmarks]] · Luau Garbage Collection and the Memory Model · AI Code Assistants for Luau · Testing Strategies and Frameworks · Cookbook - Tables Strings and Time
 <!-- auto-links:end -->
 
 <!-- related:start -->

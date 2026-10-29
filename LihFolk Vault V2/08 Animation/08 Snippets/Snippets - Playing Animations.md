@@ -473,10 +473,10 @@ Beware duplicates: if a full-body clip and its upper-body copy can both play, li
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Animation playback]] · [[Animation Objects]] · [[Troubleshooting Table]] · [[Lua Keyframe Player]] · Input Buffering · Hitboxes and Hit Detection · [[Animation Start Here]]
+[[Official Docs - Characters and Animation]] · [[Animation Objects]] · [[Troubleshooting Table]] · [[Lua Keyframe Player]] · Input Buffering · Hitboxes and Hit Detection · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Snippets - Lua Keyframe Player Core]] · [[Snippets - Enemy Client Animator]] · [[Replication and Ownership]] · [[Combat Animation Craft]] · [[Custom Locomotion Controller Design]] · [[Snippets - Ragdoll]] · [[Debugging Animation Problems]] · [[Enemy Animation State Protocol]]
+[[Animator - Engine Reference Card]] · [[Snippets - Lua Keyframe Player Core]] · [[Snippets - Enemy Client Animator]] · [[Replication and Ownership]] · [[Combat Animation Craft]] · [[Custom Locomotion Controller Design]] · [[Snippets - Ragdoll]] · [[Debugging Animation Problems]] · [[Ability Kits Architecture]]
 <!-- related:end -->

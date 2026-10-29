@@ -297,10 +297,10 @@ The ethical line: **do not tune stages to be unfair so that skips sell**. Player
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Obby and Platforming Level Design]] · Obby Checkpoints and Stage Saves End to End · Genre Systems Start Here · Links - Checkpoints and spawning · Level Design Start Here · Difficulty Options and Cognitive Load
+[[Obby and Platforming Level Design]] · Obby Checkpoints and Stage Saves End to End · Genre Systems Start Here · Official Docs - Game Systems · Level Design Start Here · Difficulty Options and Cognitive Load
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Obby Checkpoints and Stage Saves End to End]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Genre Playbook - Party and Minigame Collections]] · [[Onboarding by Genre - The First Five Minutes]] · [[Genre Playbook - Racing and Driving]] · [[Genre Playbook - Tycoons]] · [[Progression and Pacing Design]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Sports]]
+[[Obby Checkpoints and Stage Saves End to End]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Genre Playbook - Party and Minigame Collections]] · [[Onboarding by Genre - The First Five Minutes]] · [[Genre Playbook - Racing and Driving]] · [[Genre Playbook - Tycoons]] · [[Progression and Pacing Design]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Combat and RPG]]
 <!-- related:end -->

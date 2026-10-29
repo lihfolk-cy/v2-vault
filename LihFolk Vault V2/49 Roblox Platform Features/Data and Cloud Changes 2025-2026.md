@@ -6,14 +6,14 @@ verified: 2026-10-28
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
-> - Avoid: Quoting per-server DataStore budgets as the limit, or the "6 second" per-key rule.
-> - Avoid: Running a bulk Open Cloud migration at peak CCU without throttling.
-> - Avoid: Storing large blobs per player without checking total storage against 500 MB + 1 MB per lifetime player.
+> - Avoid: Treating every DataStore throttle as one error.
+> - Avoid: Expecting the storage cap to block writes.
+> - Avoid: Quoting only per-server budgets. Budgets are per experience and shared with Open Cloud since July 29, 2026; per-server caps...
+> - DataStore calls in `pcall` with backoff and jitter; throttle codes logged; per-server limits raised with...
 > - Budgets taken from the per-experience table; `UpdateAsync` counted as read plus write.
 > - Background jobs self-throttle with `GetRequestBudgetForRequestType` or HTTP-side limits.
-> - Storage usage checked in Data Stores Observability.
 >
-> Cost: TL;DR ~170 tok · whole note ~1.7k tok. Read more: ## 1. Timeline · ## 2. Numbers to use now · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~2.1k tok. Read more: ## 1. Timeline · ## 2. Numbers to use now · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 DataStore limits moved from per-server to per-experience, then merged with Open Cloud into one budget, and a total storage cap arrived. Several legacy web endpoints that tools and bots used for passes and products were retired. Models trained on 2023-2024 material quote the old per-server formulas and the "one write per key every 6 seconds" rule. Labels follow [[Roblox Changes 2025-2026]].
@@ -40,8 +40,10 @@ Per-experience, per minute (Roblox docs limits page as recorded in [[DataStore F
 
 - `UpdateAsync` costs one read and one write.
 - **Per key:** value up to 4,194,304 characters serialized; write throughput **4 MB per minute** per key. The old "6 seconds between writes to one key" rule is not on the current limits page. Spacing saves several seconds apart is still sensible.
-- **Storage:** 500 MB + 1 MB x lifetime players for the experience.
-- Per-server defaults (60 + players x 40 for reads, and so on) still exist and can be lowered with `SetRateLimitForRequestType` (**Unverified** whether it can raise them); they are no longer the binding constraint.
+- **Storage:** 500 MB + 1 MB x lifetime players for the experience (up from a 100 MB base). Only the latest version of each key counts, by compressed size; old versions and deleted keys do not.
+- Per-server defaults (60 + players x 40 for reads, and so on) still exist. `DataStoreService:SetRateLimitForRequestType(requestType, baseLimit, perPlayerLimit)` overrides them for this server and can raise them (for `StandardRead`, `StandardWrite` and the other new types, base up to 10,000 and per player up to 200; `UpdateAsync` and `OnUpdate` cannot be set). Call it once per type at server start (Roblox docs, DataStoreService reference, October 2026).
+- **Throttle errors name the level hit:** `<RequestType>GameServerThrottled` (this server's limit or a full queue), `<RequestType>ExperienceThrottled` (the experience budget shared with Open Cloud), `DatastoreThrottled` and `KeyThrottled`, alongside the older 301 to 306 queue codes (Roblox docs, error codes and limits). Retry with exponential backoff plus jitter.
+- **Storage overage does not throttle writes.** After a 2-week grace period it is billed: Robux deducted from the owner, or paid through Extended Services; unpaid dues unpublish the experience (Roblox DevForum, Extended Services for Data Stores announcement).
 - **The trap:** an Open Cloud script (migration, support tool, RTBF bot, leaderboard export) now spends the same budget as live servers. A bulk job can throttle every server.
 
 ```lua
@@ -78,14 +80,17 @@ Impact: price-update scripts, product-creation tooling and dashboards that used 
 
 ## Common mistakes
 
-- Quoting per-server DataStore budgets as the limit, or the "6 second" per-key rule.
+- Treating every DataStore throttle as one error. Codes ending in `GameServerThrottled` mean this server's limit, `ExperienceThrottled` the shared experience budget; log the code and retry with exponential backoff and jitter.
+- Expecting the storage cap to block writes. Overage keeps writing and is billed after a 2-week grace period (Robux or Extended Services).
+- Quoting only per-server budgets. Budgets are per experience and shared with Open Cloud since July 29, 2026; per-server caps also apply. Nor the old "6 second" per-key rule.
 - Running a bulk Open Cloud migration at peak CCU without throttling.
-- Storing large blobs per player without checking total storage against 500 MB + 1 MB per lifetime player.
+- Ignoring the storage cap: 500 MB + 1 MB per lifetime player, counting only the latest version of each key.
 - Automation still calling `apis.roblox.com/game-passes/v1` or `developer-products/v1` endpoints.
 - Using a user cookie for tooling instead of a scoped Open Cloud API key.
 
 ## Checklist
 
+- [ ] DataStore calls in `pcall` with backoff and jitter; throttle codes logged; per-server limits raised with `SetRateLimitForRequestType` at startup only when a server genuinely needs more.
 - [ ] Budgets taken from the per-experience table; `UpdateAsync` counted as read plus write.
 - [ ] Background jobs self-throttle with `GetRequestBudgetForRequestType` or HTTP-side limits.
 - [ ] Storage usage checked in Data Stores Observability.
@@ -104,5 +109,5 @@ Impact: price-update scripts, product-creation tooling and dashboards that used 
 
 <!-- related:start -->
 ## Related
-[[Discovery and Monetization Changes 2025-2026]] · [[Engine and API Changes 2025-2026]] · [[Policy and Age Rules 2026]] · [[Server Authority and Input Migration 2026]] · [[Experience Notifications and Return Prompts]] · [[Badges and Achievement Design]]
+[[DataStoreService - Engine Reference Card]] · [[Cookbook - Data and Saving]] · [[Engine Limits, Quotas and Defaults - Cheat Sheet]] · [[Discovery and Monetization Changes 2025-2026]] · [[Engine and API Changes 2025-2026]] · [[Policy and Age Rules 2026]] · [[API Renames and Deprecations 2025-2026]]
 <!-- related:end -->

@@ -80,5 +80,5 @@ For ball-forming charges the owner prefers a **two-handed, grounded charge** ove
 
 <!-- related:start -->
 ## Related
-[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Light Sources and Shadows]] · [[Beams and Trails]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Stylized Lighting Recipes]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Particle Emitters In Depth]] · [[Game Feel and Juice]]
+[[Projectile VFX - Muzzle, Travel and Impact]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Auras, Shields and Status Effects]] · [[AoE Telegraphs - Readable Ground Warnings]] · [[Designing VFX Textures and Flipbooks in Figma]] · [[Replicating VFX - Server Validates, Clients Render]] · [[Beams and Trails]] · [[Light Sources and Shadows]]
 <!-- related:end -->

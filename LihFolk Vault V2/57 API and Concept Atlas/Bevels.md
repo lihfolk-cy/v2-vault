@@ -1,5 +1,5 @@
 ---
-tags: [atlas, concept, type/atlas, area/modeling, area/world]
+tags: [atlas, concept, type/atlas, area/modeling, area/ui]
 ---
 # Bevels
 
@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/modeling, area/world]
 > - Stepped strips on a faceted model: 3-segment round bevel with flat shading -> 1-segment chamfer.
 > - Avoid: Bevels on unapplied scale -> Apply scale first.
 >
-> Cost: TL;DR ~130 tok · whole note ~910 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~930 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ A bevel between them catches the sun and draws a line, restoring the corner. (fr
 
 ## Mentioned in
 
-52 notes in 13 sections. The 25 most relevant are linked:
+54 notes in 13 sections. The 25 most relevant are linked:
 
 ### 05 UI and UX
 [[UI Design Systems]]
@@ -54,6 +54,6 @@ A bevel between them catches the sun and draws a line, restoring the corner. (fr
 ### 55 Modelling Nuance and Readability
 [[Bevels Chamfers and Edge Highlights Without Textures]] · [[Critiquing a Model - Paintovers and Iteration]] · [[Modelling Nuance Start Here]] · [[Spending Triangles Where the Camera Looks]] · [[Style Bibles for Consistent Models]]
 
-Also mentioned in (not linked): 00 Start Here · AI 3D Model Generation Outside Roblox · Art-Direction Nitpicks - The Principles Behind Them · Baking Lighting and Detail into Textures · Blender Automation with Python · Dash VFX Presentation on an R15 Rig · Declarative UI - React-Lua and Fusion · Environment Art Styles · Exporting and Validating Models for Roblox · Faceted Low-Poly - Flat Normals and Facet Size · Hand-Painted and Stylized Texturing · Lighting Untextured Art in Roblox · Mesh Gates for Generated Models - Symmetry, Seating and Caps · Meshing Voxels for Roblox - Greedy Meshing and Export · Modeling in Blender for Roblox · Modular Environment Kits · Organic and Creature Modeling · Parts Unions and MeshParts · Procedural Blender Assets Start Here · Proportion Exaggeration and Gameplay Distance · Reference - Purple Anime Settings UI (Claude + Figma) · Stylised vs Realistic Material Pipelines · Stylized Lighting Recipes · SurfaceAppearance PBR Workflow · UI Asset Pipeline · UI Style Directions - A Visual Vocabulary for Briefs · What AI Models Get Wrong in Roblox
+Also mentioned in (not linked): 00 Start Here · AI 3D Model Generation Outside Roblox · Art-Direction Nitpicks - The Principles Behind Them · Baking Lighting and Detail into Textures · Blender Automation with Python · Dash VFX Presentation on an R15 Rig · Declarative UI - React-Lua and Fusion · Designing Roblox UI in Figma - Frames, Safe Areas and Tokens · Environment Art Styles · Exporting FBX vs GLB · Exporting and Validating Models for Roblox · Faceted Low-Poly - Flat Normals and Facet Size · Hand-Painted and Stylized Texturing · Lighting Untextured Art in Roblox · Mesh Gates for Generated Models - Symmetry, Seating and Caps · Meshing Voxels for Roblox - Greedy Meshing and Export · Modeling in Blender for Roblox · Modular Environment Kits · Organic and Creature Modeling · Parts Unions and MeshParts · Procedural Blender Assets Start Here · Proportion Exaggeration and Gameplay Distance · Stylised vs Realistic Material Pipelines · Stylized Lighting Recipes · SurfaceAppearance PBR Workflow · UI Asset Pipeline · UI Style Directions - A Visual Vocabulary for Briefs · Voxel Chibi Heroes - Class Roster and Rarity Ladder · What AI Models Get Wrong in Roblox
 
 <!-- atlas:generated -->

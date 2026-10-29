@@ -139,5 +139,5 @@ Source: https://create.roblox.com/docs/production/promotion/content-maturity (re
 
 <!-- related:start -->
 ## Related
-[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[VFX Design Playbook]] · [[Slash VFX Recipes - Crescent and Ring]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Light Sources and Shadows]] · [[VFX Performance Budgets and Culling]]
+[[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[VFX Design Playbook]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[Slash VFX Recipes - Crescent and Ring]] · [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[Light Sources and Shadows]] · [[Projectile VFX - Muzzle, Travel and Impact]]
 <!-- related:end -->

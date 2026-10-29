@@ -279,10 +279,10 @@ On the client, good candidates are visual-only computations: crowd or flock stee
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Infinite and Streamed Worlds]] · Luau Garbage Collection and the Memory Model · Links - Script types · Building a Signal Library · Frame Order and RunService Timing · Frame Budget
+[[Infinite and Streamed Worlds]] · Luau Garbage Collection and the Memory Model · Official Docs - Scripting and Luau · Building a Signal Library · Frame Order and RunService Timing · Frame Budget
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Luau Performance Patterns with Benchmarks]] · [[Script Types and Run Context]] · [[Tables Metatables and OOP]] · [[Events Signals and Connections]] · [[Metatables and OOP - When and When Not]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[CollectionService Patterns]] · [[Instances Attributes and Tags]]
+[[Luau Performance Patterns with Benchmarks]] · [[Script Types and Run Context]] · [[Tables Metatables and OOP]] · [[Events Signals and Connections]] · [[Metatables and OOP - When and When Not]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[CollectionService Patterns]] · [[Luau Language Essentials]]
 <!-- related:end -->

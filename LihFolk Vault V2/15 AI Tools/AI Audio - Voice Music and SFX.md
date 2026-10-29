@@ -223,7 +223,7 @@ Rules of thumb:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI in Roblox Development Overview]] · [[Captions and Audio Accessibility]] · Resource Library - Audio · Voice Chat and Safety Features · Links - Audio creation and uploading · Combat Sound Design and Feedback
+[[AI in Roblox Development Overview]] · [[Captions and Audio Accessibility]] · Official Docs - Audio · Voice Chat and Safety Features · Official Docs - Asset Creation · Combat Sound Design and Feedback
 <!-- auto-links:end -->
 
 <!-- related:start -->

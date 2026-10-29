@@ -351,6 +351,7 @@
     "sources": [
       "https://about.roblox.com/newsroom/2026/01/roblox-age-checks-required-to-chat",
       "https://about.roblox.com/newsroom/2025/11/roblox-requires-age-checks-limits-minor-and-adult-chat"
-    ]
+    ],
+    "grader_notes": "Key correction (2026-10-29): the Jan 2026 newsroom post says each age group can chat with the groups directly above and below it by default, and under-16s cannot chat with adults; it does not exclude 13-15 from 16-17. Give full credit for item 3 to answers stating adjacent-group chat (including 13-15 with 16-17) or the key's wording."
   }
 ]

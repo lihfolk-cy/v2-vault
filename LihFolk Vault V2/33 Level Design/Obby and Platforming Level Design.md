@@ -320,7 +320,7 @@ Above the stage, a run of stages has rhythm. The playbook gives the sawtooth (ra
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Obby Checkpoints and Stage Saves End to End]] · 2D Collision Physics and Platformer Movement · Input Buffering · Genre Systems Start Here · Avatar Body Types and Scale in Gameplay · Links - Checkpoints and spawning
+[[Obby Checkpoints and Stage Saves End to End]] · 2D Collision Physics and Platformer Movement · Input Buffering · Genre Systems Start Here · Avatar Body Types and Scale in Gameplay · Official Docs - Game Systems
 <!-- auto-links:end -->
 
 <!-- related:start -->

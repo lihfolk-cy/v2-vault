@@ -10,7 +10,7 @@ tags: [core-concept, game-feel, combat, animation, type/reference, area/animatio
 > - Clock-timed systems drift during a stop.
 > - Frame rate quantises the stop. At 30 fps a 50 ms stop is one or two frames depending on timing, so light stops flicker between...
 >
-> Cost: TL;DR ~130 tok · whole note ~950 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~130 tok · whole note ~960 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Hit-stop** (also hit-pause or freeze frames) briefly freezes or slows the attacker and target at the moment of impact, typically for 30 to 120 ms (rule of thumb). The pause makes the hit read as contact with something solid instead of a weapon passing through air.
@@ -66,5 +66,5 @@ Related concepts: [[Anticipation]], [[Easing]], [[Input Buffering]], [[Frame Bud
 
 <!-- related:start -->
 ## Related
-[[Tween vs Spring]] · [[Input Buffering]] · [[Server Authority]] · [[Core Loop]] · [[Deterministic Simulation]] · [[Skinning Weights]] · [[Streaming Radius]] · [[Object Pooling]]
+[[Tween vs Spring]] · [[Input Buffering]] · [[Game Feel and Juice]] · [[Server Authority]] · [[Core Loop]] · [[Deterministic Simulation]] · [[Skinning Weights]] · [[Streaming Radius]] · [[Object Pooling]]
 <!-- related:end -->

@@ -209,10 +209,10 @@ A 1.2 s stance clip that must fit a 0.7 s window plays at `1.2 / 0.7 ≈ 1.71`. 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animation Objects]] · [[Engine Gotchas]] · [[Weapon Rig Player]] · [[Snippets - Lua Keyframe Player Core]] · [[Links - Animation playback]] · Hit-Stop · [[Animation Start Here]]
+[[Animation Objects]] · [[Engine Gotchas]] · [[Weapon Rig Player]] · [[Snippets - Lua Keyframe Player Core]] · [[Official Docs - Characters and Animation]] · Hit-Stop · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[KeyframeSequence Keyframe and Pose Reference]] · [[Lua Keyframe Player Internals]] · [[Animation Glossary]] · [[Troubleshooting Table]] · [[Debugging Animation Problems]] · [[Custom Locomotion Controller Design]] · [[CurveAnimation and Curve Channels]] · [[Keyframes, Easing and Interpolation]]
+[[Animator - Engine Reference Card]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Lua Keyframe Player Internals]] · [[Animation Glossary]] · [[Troubleshooting Table]] · [[Debugging Animation Problems]] · [[AI Pitfalls - Physics and Animation]]
 <!-- related:end -->

@@ -1,6 +1,6 @@
 ---
 name: lihfolk-sfx
-description: 'LihFolk combat and UI sound effects (licensed sounds only, pooled layered Luau module). Use for "sfx", "swing/hit/impact sound", "footsteps", "UI click", "sounds are repetitive", "hits feel late".'
+description: 'LihFolk combat and UI sounds (licensed only, pooled layered module). Use for "sfx", hit/swing/footstep/UI click sounds, repetitive or late-feeling hits.'
 ---
 
 # LihFolk SFX: premium, licensed, layered, on the beat

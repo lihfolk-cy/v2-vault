@@ -57,7 +57,7 @@ Related concepts: [[Tween vs Spring]], [[Anticipation]], [[Hit-Stop]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[CurveAnimation and Curve Channels]] · Links - Tweening and UI animation · Game Feel Start Here · UI and GUI Animation · KeyframeSequence Keyframe and Pose Reference · Animation Editor Workflow · [[Core Concepts Start Here]]
+[[CurveAnimation and Curve Channels]] · Official Docs - UI · Game Feel Start Here · UI and GUI Animation · KeyframeSequence Keyframe and Pose Reference · Animation Editor Workflow · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->

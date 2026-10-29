@@ -43,5 +43,5 @@ No fake reviews, bot traffic, bought likes, misleading thumbnails, "free Robux" 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Click-Through Rate]] · Retention Cohorts · Live Ops Deep Dive Start Here · Top Games Case Studies Start Here · Roadmaps Milestones and Scope Control · Links - Ads
+[[Click-Through Rate]] · Retention Cohorts · Live Ops Deep Dive Start Here · Top Games Case Studies Start Here · Roadmaps Milestones and Scope Control · Official Docs - Monetization
 <!-- auto-links:end -->

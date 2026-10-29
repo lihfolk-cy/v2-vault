@@ -5,14 +5,14 @@ tags: [architecture, networking, remotes, security, performance, type/guide, are
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
+> - Avoid: Budgeting remote traffic per remote instead of per client -> Loss-tolerant streams on an UnreliableRemoteEvent (its own pool)...
 > - Avoid: `InvokeClient` for anything -> Event plus reply event with timeout
-> - Avoid: Relaying raw client arguments with `FireAllClients` -> Validate, rate-limit, relay server-built values
-> - Avoid: Reliable remote fired per frame -> Unreliable at 10 to 20 Hz, or send on change
+> - Avoid: Identity, price or balance taken from the payload -> The caller is `OnServerEvent`'s first argument; the server reads...
+> - Client send rates budgeted per client: about 500 calls per second shared by all remotes of one type (reliable and unreliable...
 > - All remotes created by the server, in one folder, from one list.
 > - No `InvokeClient` anywhere.
-> - Every handler: type, value (NaN, inf, length), context, rate limit, then act.
 >
-> Cost: TL;DR ~160 tok · whole note ~5.6k tok. Read more: ## The three types · ## Organising remotes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.8k tok. Read more: ## The three types · ## Organising remotes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Remotes are the explicit messages you send across the client-server boundary. Roblox has three kinds, each with different delivery promises, limits and failure modes. Choosing the wrong one gives you either lag (reliable traffic for data nobody needs), lost events (unreliable traffic for things that must happen), or a server thread that hangs forever (`InvokeClient`). This note covers the guarantees exactly as documented, the argument rules, the throttling and size limits, the RemoteFunction pitfalls, how to organise remotes in a project, and the production patterns that hold up: server-validated relays, request/response with timeouts, sequenced unreliable streams and [[honeypots]].
@@ -51,7 +51,7 @@ From the docs:
 
 Payloads are encoded and compressed (buffers in particular), which makes it hard to know your unreliable payload size before firing (Roblox docs). Design unreliable messages to be obviously small: a few numbers, an id, a short string.
 
-The 500/s throttle is per client and shared per remote type. One noisy system (a per-frame `FireServer` from a LocalScript) can consume the budget and delay every other RemoteEvent that client sends, including your purchase confirmation. Never fire reliable remotes per frame.
+The 500/s throttle is per client and shared per remote type. One noisy system (a per-frame `FireServer` from a LocalScript) can consume the budget and delay every other RemoteEvent that client sends, including your purchase confirmation. Never fire reliable remotes per frame. RemoteEvent and UnreliableRemoteEvent are different types, so each draws on its own pool: moving a high-rate stream (aim, look direction) to an UnreliableRemoteEvent frees the reliable budget for hits and purchases.
 
 ## Argument rules
 
@@ -368,7 +368,9 @@ Every remote shipped in a live game is callable by every player. Debug remotes (
 
 | Mistake | Consequence | Fix |
 |---|---|---|
+| Budgeting remote traffic per remote instead of per client | About 500 client-to-server calls per second per client are shared by every remote of one type; a 30 Hz aim stream on a RemoteEvent delays that client's hit reports and purchases | Loss-tolerant streams on an UnreliableRemoteEvent (its own pool); hits, purchases and state on reliable RemoteEvents |
 | `InvokeClient` for anything | Server threads hang forever on a malicious or crashed client | Event plus reply event with timeout |
+| Identity, price or balance taken from the payload | Anyone pays as, or harms, another player; items for free | The caller is `OnServerEvent`'s first argument; the server reads price and balance |
 | Relaying raw client arguments with `FireAllClients` | Spam, client crashes, unowned abilities | Validate, rate-limit, relay server-built values |
 | Reliable remote fired per frame | Uses the 500/s budget, delays everything else, bandwidth | Unreliable at 10 to 20 Hz, or send on change |
 | Unreliable remote for state changes | Lost "stop" messages, stuck effects | Reliable remote or attribute |
@@ -379,9 +381,10 @@ Every remote shipped in a live game is callable by every player. Debug remotes (
 
 ## Checklist
 
+- [ ] Client send rates budgeted per client: about 500 calls per second shared by all remotes of one type (reliable and unreliable pools are separate).
 - [ ] All remotes created by the server, in one folder, from one list.
 - [ ] No `InvokeClient` anywhere.
-- [ ] Every handler: type, value (NaN, inf, length), context, rate limit, then act.
+- [ ] Every argument after the automatic `Player` is attacker-controlled: check type, value (NaN, inf, length), context and rate, then act.
 - [ ] Unreliable remotes carry small, sequenced, loss-tolerant data only.
 - [ ] Relays send server-built values to other clients, never the caller's raw arguments.
 - [ ] Debug remotes absent from live servers or allowlisted on the server.
@@ -392,10 +395,10 @@ Every remote shipped in a live game is callable by every player. Debug remotes (
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox Secure Remotes]] · Cookbook - Remotes and Networking · [[Remote Abuse Patterns and Rate Limiting in Practice]] · Network Bandwidth Budgets and Measuring Them · How Exploits Work - The Client Boundary · Links - Remote events and functions
+[[Skill - Roblox Secure Remotes]] · Cookbook - Remotes and Networking · [[Remote Abuse Patterns and Rate Limiting in Practice]] · Network Bandwidth Budgets and Measuring Them · How Exploits Work - The Client Boundary · Official Docs - Scripting and Luau
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Cookbook - Remotes and Networking]] · [[AI Pitfalls - Networking and Security]] · [[Interest Management and Per-Player Replication]] · [[Cross-Server Messaging]] · [[Snapshot Interpolation for Custom Replication]] · [[Network Ownership]] · [[Instance Streaming]] · [[Client Prediction and Reconciliation for Combat]] · [[Entity Component Systems]]
+[[RemoteEvent - Engine Reference Card]] · [[Cookbook - Remotes and Networking]] · [[AI Pitfalls - Networking and Security]] · [[Interest Management and Per-Player Replication]] · [[Cross-Server Messaging]] · [[Snapshot Interpolation for Custom Replication]]
 <!-- related:end -->

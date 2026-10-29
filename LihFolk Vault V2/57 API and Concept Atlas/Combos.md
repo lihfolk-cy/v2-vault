@@ -1,5 +1,5 @@
 ---
-tags: [atlas, concept, type/atlas, area/animation, area/vfx]
+tags: [atlas, concept, type/atlas, area/animation, area/gameplay]
 ---
 # Combos
 
@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/animation, area/vfx]
 > - Two-client test with simulated latency (100 and 250 ms) for every character's combos.
 > - One-press buffer; combo window resets the step.
 >
-> Cost: TL;DR ~120 tok · whole note ~1000 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~990 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,7 +27,7 @@ A combo is a sequence where the victim cannot act between hits (they are in hits
 
 ## Mentioned in
 
-73 notes in 20 sections. The 25 most relevant are linked:
+72 notes in 20 sections. The 25 most relevant are linked:
 
 ### 07 Lighting VFX and Audio
 [[Combat Sound Design and Feedback]] · [[Escalation and Grandeur Without Clutter]]
@@ -56,6 +56,6 @@ A combo is a sequence where the victim cannot act between hits (they are in hits
 ### 60 High-Craft Game Teardowns
 [[Teardown - Jujutsu Shenanigans]]
 
-Also mentioned in (not linked): 00 Start Here · Animation Start Here · AnimationTrack Reference · Beams and Trails · Behaviour Trees Utility AI and State Machines for NPCs · Camera Shake and Camera FX · Case Study - Building a Game with AI Agents · Case Study - Enemy Roster Rebuild · Client Prediction and Reconciliation for Combat · Combat Systems Architecture · Creature Rig Conventions · Difficulty Options and Cognitive Load · Enemy Archetype Kit - Fodder, Tank, Ranged, Support and Exploder · Equip Draw and Flourish Systems · Feedback Timing - Sound Visual and Haptic Sync · Frame Order and RunService Timing · Game Feel Start Here · Game Feel and Juice · Hit Reactions Stagger and Hit-Stop · Input Remapping and One-Handed Play · Locomotion Systems · Locomotion and Melee Reference Numbers · Markers and Events · NPC AI and Behaviour · Onboarding by Genre - The First Five Minutes · Playback, Priorities and Blending · Post-Mortem - Building a Melee Action Game · Procedural Animation · Rate Limiting and Abuse Prevention · Replication and Ownership · Snippets - Enemy Client Animator · Snippets - Playing Animations · Social Design and Multiplayer Play · Sound Design Pitfalls - Reused Ids Onsets and Layered Loops · Sound Design for Games · Stance and Charge Moves · Stylised Weapons From a Concept · Teaching Through Level Design · Teardown - Deepwoken · Teardown - Funky Friday · Teardown - Plants vs Brainrots · Testing Strategies and Frameworks · Time-to-Kill Math and a Weapon Balance Sheet · Timing Spacing and Frame Charts · Tutorial Step Design Patterns - Teach by Doing · VFX Design Playbook · What Craft Looks Like on Roblox - Lessons from Top Studios · Worked Builds Start Here
+Also mentioned in (not linked): 00 Start Here · Animation Start Here · AnimationTrack Reference · Beams and Trails · Behaviour Trees Utility AI and State Machines for NPCs · Camera Shake and Camera FX · Case Study - Building a Game with AI Agents · Case Study - Enemy Roster Rebuild · Client Prediction and Reconciliation for Combat · Combat Systems Architecture · Creature Rig Conventions · Difficulty Options and Cognitive Load · Enemy Archetype Kit - Fodder, Tank, Ranged, Support and Exploder · Equip Draw and Flourish Systems · Feedback Timing - Sound Visual and Haptic Sync · Frame Order and RunService Timing · Game Feel Start Here · Game Feel and Juice · Hit Reactions Stagger and Hit-Stop · Input Remapping and One-Handed Play · Locomotion Systems · Locomotion and Melee Reference Numbers · Markers and Events · NPC AI and Behaviour · Onboarding by Genre - The First Five Minutes · Playback, Priorities and Blending · Post-Mortem - Building a Melee Action Game · Procedural Animation · Rate Limiting and Abuse Prevention · Replication and Ownership · Snippets - Enemy Client Animator · Snippets - Playing Animations · Social Design and Multiplayer Play · Sound Design Pitfalls - Reused Ids Onsets and Layered Loops · Sound Design for Games · Stance and Charge Moves · Stylised Weapons From a Concept · Teaching Through Level Design · Teardown - Deepwoken · Teardown - Funky Friday · Teardown - Plants vs Brainrots · Testing Strategies and Frameworks · Time-to-Kill Math and a Weapon Balance Sheet · Timing Spacing and Frame Charts · Tutorial Step Design Patterns - Teach by Doing · What Craft Looks Like on Roblox - Lessons from Top Studios · Worked Builds Start Here
 
 <!-- atlas:generated -->

@@ -166,5 +166,5 @@ The 100-player lobby is the product. Shared tension, mass eliminations and a gro
 
 <!-- related:start -->
 ## Related
-[[Teardown - Tower of Hell]] · [[Teardown - Plants vs Brainrots]] · [[Teardown - Fling Things and People]] · [[Teardown - Ride A Pet]] · [[Teardown - +1 Speed Keyboard Escape]] · [[Teardown - Escape Tsunami for Brainrots]] · [[Teardown - Build A Boat For Treasure]] · [[Teardown - PLS DONATE]]
+[[Teardown - Tower of Hell]] · [[Teardown - Plants vs Brainrots]] · [[Teardown - Fling Things and People]] · [[Teardown - Ride A Pet]] · [[Teardown - +1 Speed Keyboard Escape]] · [[Teardown - Escape Tsunami for Brainrots]] · [[Teardown - Fish It]] · [[Teardown - Build A Boat For Treasure]]
 <!-- related:end -->

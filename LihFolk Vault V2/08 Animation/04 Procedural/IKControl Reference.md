@@ -190,7 +190,7 @@ Related: [[Inverse Kinematics]], [[Two-Bone IK Math]], [[Foot Placement and Grou
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Troubleshooting Table]] · [[Arm Baker Internals]] · [[Animation Quality Standard]] · [[Animation Glossary]] · [[Links - Inverse kinematics]] · Voxel Characters - Proportions Joints and Rigging · [[Animation Start Here]]
+[[Troubleshooting Table]] · [[Arm Baker Internals]] · [[Animation Quality Standard]] · [[Animation Glossary]] · [[Official Docs - Characters and Animation]] · Voxel Characters - Proportions Joints and Rigging · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->

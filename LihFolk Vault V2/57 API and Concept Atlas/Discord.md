@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/community, area/marketing]
 > - Avoid: Codes only on Discord. (Discord Servers for Roblox Games)
 > - Avoid: Owner account used daily for plugins, Discord files and testing.
 >
-> Cost: TL;DR ~120 tok · whole note ~630 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~720 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -22,10 +22,11 @@ Discord changes its settings and names often; check menu names against the curre
 - Avoid: "Join our Discord" text in game UI (not allowed). ([[Discord Servers for Roblox Games]])
 - Avoid: Codes only on Discord. ([[Discord Servers for Roblox Games]])
 - Avoid: Owner account used daily for plugins, Discord files and testing. ([[Creator Account Security and Takeover Recovery]])
+- Avoid: Discord invites or social handles in game text -> links on the experience page only; `GetExternalLinkReference` is sunset. ([[Age Checks and Safety Features]])
 
 ## Mentioned in
 
-29 notes in 16 sections. The 25 most relevant are linked:
+33 notes in 17 sections. The 25 most relevant are linked:
 
 ### 03 Architecture and Networking
 [[Cross-Server Messaging]]
@@ -37,7 +38,7 @@ Discord changes its settings and names often; check menu names against the curre
 [[Genre Playbook - Social Deduction and Murder Mystery]]
 
 ### 11 Monetization Publishing and Live Ops
-[[Community Building]]
+[[Age Checks and Safety Features]] · [[Community Building]]
 
 ### 12 Performance Testing and Debugging
 [[In-Game Bug Report Button with Automatic Context]]
@@ -55,7 +56,7 @@ Discord changes its settings and names often; check menu names against the curre
 [[Launch Strategy - The First Two Weeks]] · [[Marketing to Kids and Teens - Age Rules and Paid-Promo Disclosure]] · [[Roblox Communities as Your On-Platform Hub]]
 
 ### 28 Business and Careers
-[[Building a Portfolio as a Roblox Developer]] · [[Hiring Freelancers and Revenue Shares]] · [[Open-Source Licenses for Roblox Libraries - Quick Reference]]
+[[Building a Portfolio as a Roblox Developer]] · [[Hiring Freelancers and Revenue Shares]]
 
 ### 32 Case Studies of Top Roblox Games
 [[Case Study - Blox Fruits]] · [[Case Study - Grow a Garden]]
@@ -64,14 +65,14 @@ Discord changes its settings and names often; check menu names against the curre
 [[Publishing Selling and Updating Plugins]]
 
 ### 49 Roblox Platform Features
-[[Friend Invites Referrals and Experience Invites]]
+[[API Renames and Deprecations 2025-2026]] · [[Friend Invites Referrals and Experience Invites]]
 
 ### 50 Team Collaboration and Project Management
 [[Documentation and Onboarding New Developers]]
 
 ### 60 High-Craft Game Teardowns
-[[Teardown - Blade Ball]] · [[What Craft Looks Like on Roblox - Lessons from Top Studios]]
+[[What Craft Looks Like on Roblox - Lessons from Top Studios]]
 
-Also mentioned in (not linked): 00 Start Here · Marketing and Growth Start Here · Text Chat Customization with TextChatService · Working with Contractors and Revenue Splits
+Also mentioned in (not linked): 00 Start Here · Marketing and Growth Start Here · Open-Source Licenses for Roblox Libraries - Quick Reference · Teardown - Blade Ball · Text Chat Customization with TextChatService · Thumbnail Review Checklist and Scoring Rubric · Thumbnail Specs, Rules and Upload - Sizes, Count and Policy · Working with Contractors and Revenue Splits
 
 <!-- atlas:generated -->

@@ -15,7 +15,9 @@ This page lists what LihFolk Vault V2 claims and how to check each claim yoursel
 | The plugin manifest is valid | `claude plugin validate .` |
 | Luau code checks catch common Roblox mistakes | Run `hooks/scripts/lihfolk-check.sh <file.luau>` (or the `.ps1` engine on Windows) on any file under `skills/`; all shipped Luau passes (the checker prints nothing and exits 0 when a file is clean, and prints each finding otherwise). Feed it a file with `wait()` or an unvalidated `RemoteEvent` handler to see it fire. |
 | Vault search finds the right note | `python "LihFolk Vault V2/_tools/eval.py"`: held-out test split hit@3 is 93% (search eval tasks are in `_tools/eval/`). |
-| Notes don't contradict each other on tracked facts | `python "LihFolk Vault V2/_tools/consistency.py"` |
+| Notes don't contradict each other on tracked facts | `python "LihFolk Vault V2/_tools/consistency.py" --strict`: 39 tracked limits and defaults, 0 contradictions |
+| The plugin helps on unseen questions | `benchmark/RESULTS_v2.5.md`: held-out sets C-F, 91-94% with the plugin vs 79-88% without; `py -I benchmark/v2_aggregate.py report e1 RESULTS_setE_scores.md` reproduces set E |
+| API names are current | `python "LihFolk Vault V2/_tools/vault.py" --api TeleportService.ReserveServerAsync` (snapshot plus `_tools/api_overrides.json`, verified 2026-10-29) |
 | API names in notes exist in the Roblox API | `python "LihFolk Vault V2/_tools/api_check.py"`. Deprecated APIs it flags appear in notes that list them as deprecated, on purpose. |
 | The vault improves Claude's Roblox answers | `benchmark/`: 48 tasks (set A plus a held-out set B), 3 runs per setup, scored blind by 3 graders. Re-run the aggregation with `python benchmark/v2_aggregate.py report`; it reproduces `benchmark/RESULTS_v2.md` exactly. |
 | Assets in the pack were blind-reviewed | Each catalogue row (`CATALOG.csv` per section in the pack) carries its score and status. Only `shipped` (median of 3 blind reviewers at least 8.5/10) and `approved` (owner-accepted) rows ship. |
@@ -38,7 +40,7 @@ This page lists what LihFolk Vault V2 claims and how to check each claim yoursel
 
 - The plugin and the vault notes are under `LICENSE.md`.
 - The asset pack: free to use in your own games, no resale or redistribution (`LICENSE.md`).
-- The bundled Everforest base theme is MIT (`LihFolk Vault V2/.obsidian/themes/Everforest/LICENSE.md`). The LihFolk Graph plugin is our own (CC BY 4.0).
+- The Obsidian look (Celestial snippets and base styles) and the LihFolk Graph plugin are our own (CC BY 4.0).
 - No third-party scraped assets are included. The sound skill points to licensed sources and never ships sound files.
 
 Found a problem? Open an issue with the note title or file path and what is wrong.

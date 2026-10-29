@@ -258,6 +258,7 @@ A pragmatic migration: keep existing CAS bindings working, build new systems on 
 - [ ] All UI actions use `Activated`.
 - [ ] Every `UserInputService` gameplay handler checks `gameProcessedEvent`.
 - [ ] Actions have keyboard, gamepad and touch bindings.
+- [ ] Tested with `Workspace.PlayerScriptsUseInputActionSystem` Enabled; menu contexts use a higher `Priority` and `Sink`.
 - [ ] Menus switch input context; held inputs are released on switch.
 - [ ] Prompts show device-correct glyphs and update on `PreferredInput` change.
 - [ ] Touch buttons are custom, separated and at least 44 px drawn.
@@ -267,10 +268,10 @@ See also: [[Gamepad and Console UX]], [[Responsive UI for Phone Tablet Console a
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Input Remapping and One-Handed Play]] · Links - Input services · Input Responsiveness Buffering and Coyote Time · Links - Devices · Links - Cross-platform UI · Cookbook - UI
+[[Input Remapping and One-Handed Play]] · Official Docs - Input and Controls · Input Responsiveness Buffering and Coyote Time · Official Docs - UI · Cookbook - UI
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Rebinding Controls with the Input Action System]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]] · [[Onboarding Accessibility and Cross-Device Prompts]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[UI Design Systems]]
+[[UserInputService - Engine Reference Card]] · [[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Rebinding Controls with the Input Action System]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]] · [[ContextActionService - Engine Reference Card]] · [[Shift-Lock Sprint and Gamepad B for Menus]]
 <!-- related:end -->

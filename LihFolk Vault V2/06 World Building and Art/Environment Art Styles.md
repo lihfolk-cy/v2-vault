@@ -12,7 +12,7 @@ tags: [world-building, art-direction, style, palette, stylised, voxel, pbr, type
 > - Palette derived systematically; sampled under game lighting.
 > - Silhouette test passed for key assets at 30 to 40 px.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.4k tok. Read more: ## Writing a style down · ## Palettes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~3.3k tok. Read more: ## Writing a style down · ## Palettes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 An art style is a set of rules that every asset obeys: shape language, palette, materials, texture density, lighting, and how much detail goes where. On Roblox the style must also survive a phone screen, the default camera distance, low graphics settings and dozens of assets from different hands. This note describes the common Roblox style families, how to write a style down so a team (or a script) can reproduce it, how to derive palettes, and the style lessons from one production game whose owner rejected several "technically fine" versions of its hub before landing on one that worked.
@@ -40,41 +40,39 @@ Observed in one production game:
 
 ## Writing a style down
 
-A style guide that a builder (or a generator script) can follow has the same sections whatever the style. One production game studied three stylised voxel looks from short devlog videos frame by frame and wrote each up in this structure; it is the most reusable format found.
+A style guide that a builder (or a generator script) can follow has the same sections whatever the style. The reference project wrote one per voxel style in this structure, and it is the most reusable format we have used.
 
-1. **Core rules in ten lines.** The non-negotiables. Example from a "dark body, neon line" voxel style: one fixed base silhouette per object; everything on one cube grid; dark body tinted to the theme hue; neon traces edges and glyphs but never fills; one hero crown on top taller than the body is wide; higher tiers sink into a rubble skirt; floaters break the outline; the sky takes the theme colour.
-2. **Anatomy (slots).** Split any object into named slots (frame edges, main face, corners, emblem, supports, crown, flanks, skirt, air) so every theme or tier fills the same slots and variants share a silhouette.
+1. **Core rules in ten lines.** The non-negotiables. Example for a glow-trim voxel style: the base shape never changes between ranks; everything sits on one cube grid; bodies are a dark tint of the theme hue; Neon outlines edges and symbols but never fills large areas; each theme has its own top shape; the sky carries the theme colour.
+2. **Anatomy (regions).** Split any object into named regions (edges, main face, corners, symbol panel, supports, top, sides, surroundings) so every theme or rank fills the same regions and variants share a silhouette.
 3. **Shape grammar.** How each shape is built: stepped curves, voxelised spheres, rings, spires, chains, crystals.
-4. **Materials and ratios.** Which materials, and how much of the image is glow. Measured glow coverage in that study ranged from about 1 percent (clean tier) to 16 percent (most lit theme); above about 16 percent the shape dissolved into bloom.
+4. **Materials and ratios.** Which materials, and how much of the image is glow (Rule of thumb: a few percent for clean pieces, up to roughly a sixth for the most lit; beyond that the shape dissolves into bloom).
 5. **Palette system.** How colours are derived (below).
 6. **Tier or rarity ladder.** What each step up adds (see the ladder table below).
 7. **Motion and VFX.** Ambient motion that belongs to the style.
 8. **Build procedure.** Steps in order, with code if the style is generated.
-9. **QA checklist.** Testable checks, such as "the crown silhouette names the theme from 30 studs away as a black shape against the sky".
+9. **QA checklist.** Testable checks, such as "the top shape names the theme from 30 studs away as a black shape against the sky".
 10. **Common mistakes.** What breaks the style.
 
 ## Palettes
 
 ### Deriving a palette from one hue
 
-A practical system from that style study, in HSV:
+A practical starting system for a dark, glowing theme, in HSV (Rule of thumb; tune under your lighting):
 
 | Role | Saturation | Value | Notes |
 |---|---|---|---|
-| Sky / haze | about 60 % | about 40 % | Tints the world; floor stays neutral |
-| Body (dark) | 30 to 50 % | 10 to 20 % | Tint toward the hue; grey looks unfinished |
-| Glow main | 80 to 90 % | 85 to 95 % | Set a little darker and more saturated than wanted; bloom lifts it |
-| Glow 2 | hue +-10 to 20 degrees, a little lighter | | For gradients |
-| Trim | neutral grey / white, or gold for holy, royal, storm themes | | |
-| Accent | one small off-hue touch | | Candle yellow, horn tips |
+| Sky / haze | mid | low-mid | Tints the world; the floor stays neutral |
+| Body (dark) | low-mid | very low | Tint toward the hue; grey looks unfinished |
+| Glow main | high | high | Set a little darker and more saturated than wanted; bloom lifts it |
+| Glow 2 | a few degrees of hue away, a little lighter | | For gradients |
+| Trim | neutral grey or white, or gold for royal or holy themes | | |
+| Accent | one small off-hue touch | | Draws the eye to one detail |
 
-A second study (outlined "toy" voxel enemies) used: main hue saturation 60 to 80 percent and value 35 to 55 percent, a shadow at value 15 to 25 percent, gold trim, and **one neon hue far from the main hue** (cyan on navy, green on gunmetal, red on teal, lime on purple).
-
-A third (cute companions) used light pastel bodies (value 95 to 100 percent, saturation 15 to 30 percent), one hue per creature in two or three values, and **shared set accents** (white and one pink) that tied very different creatures into one family.
+The same idea adapts to other styles. Bright studded enemies want a saturated mid-value body, a darker shadow, a metal trim and **one glow hue far from the body hue** so it pops. Soft companions want light, low-saturation bodies and **shared set accents** that tie different creatures into one family.
 
 ```lua
 --!strict
--- Derive a themed palette from one hue (0..1), following the dark-body/neon-line rules above.
+-- Derive a themed palette from one hue (0..1), following the dark-body, glow-trim rules above.
 export type Palette = { sky: Color3, body: Color3, trim: Color3, glow: Color3, glow2: Color3 }
 
 local function derivePalette(hue: number, gold: boolean?): Palette
@@ -121,17 +119,17 @@ The owner's feedback in one production game kept asking for "more detail" on the
 
 ## Tier and rarity ladders in the environment
 
-Many Roblox games tie visuals to rarity (pedestals, stations, gates, pets, chests). A ladder that worked across objects in one style study:
+Many Roblox games tie visuals to rarity (pedestals, stations, gates, pets, chests). A ladder shape that works across object types (Rule of thumb):
 
-| Rank | Adds | Glow coverage |
-|---|---|---|
-| 1 | Base only; neon as lines | about 1 % |
-| 2 | Full theme colour, main-face glyph, corner caps, small crown, embers | 5 to 16 % |
-| 3 | Big crown (halo, portal), flank pieces, skirt (clouds or rubble), floaters | 1 to 8 % |
-| 4 | Dense speck skirt, chains, floating planets or rocks, side spires | 4 to 10 % |
-| 5 | Biggest crown silhouette, props (skulls, candles), most specks and floaters | 10 to 15 % |
+| Rank | What it adds |
+|---|---|
+| 1 | The base shape only; glow as thin lines |
+| 2 | Full theme colour, a symbol on the main face, corner details |
+| 3 | A larger top shape and side pieces |
+| 4 | Detail around the base and a few hovering pieces |
+| 5 | The boldest top shape and the most detail and motion |
 
-Rules: each tier identifiable from its crown silhouette alone; neighbouring tiers differ in hue by at least 40 degrees or clearly in value; complexity keeps rising even where glow drops. Budget: showcase pieces (one in view) can carry the top tier; anything repeated per player or per zone should stop at rank 2 or 3, or be baked into a few MeshParts.
+Rules: each rank identifiable from its outline alone; neighbouring ranks differ clearly in hue or value; complexity keeps rising with rank even if the glow share does not. Budget: showcase pieces (one in view) can carry the top tier; anything repeated per player or per zone should stop at rank 2 or 3, or be baked into a few MeshParts.
 
 ## Lighting is part of the style
 
@@ -145,9 +143,9 @@ One production game's "game-ready" material pass also tuned `EnvironmentSpecular
 ## Using references
 
 - **Study frames, not impressions.** Step through a reference video frame by frame; sample colours from pixels; estimate sizes against the baseplate stud grid.
-- **Write the study down** in the style-guide structure above, with frames saved next to it.
-- **Separate what transfers from what is incidental.** One study's video dressed a treadmill in nine themes; the treadmill was irrelevant, the slot system was the lesson.
-- **Do not copy assets.** Learn the rules, build your own.
+- **Write your findings down** in the style-guide structure above, in your own words, with your own frames saved next to it.
+- **Separate what transfers from what is incidental.** Look for the system (how variants share regions, how glow scales with rank), not the specific object in the clip.
+- **Keep the result your own.** Learn general principles, then design and build your own style and assets.
 
 ## Common mistakes
 
@@ -184,5 +182,5 @@ One production game's "game-ready" material pass also tuned `EnvironmentSpecular
 
 <!-- related:start -->
 ## Related
-[[Stylized Lighting Recipes]] · [[Colour Scripts and Value Structure for Untextured Art]] · [[Zone and Biome Art Direction]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Parts Unions and MeshParts]] · [[Textures Decals and Texture Memory]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[House Construction Method - Modular Kit Workflow]] · [[Terrain Tools and Terrain API]]
+[[Stylized Lighting Recipes]] · [[Lighting Untextured Art in Roblox]] · [[Zone and Biome Art Direction]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Parts Unions and MeshParts]] · [[Textures Decals and Texture Memory]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[Terrain Tools and Terrain API]] · [[House Construction Method - Modular Kit Workflow]]
 <!-- related:end -->

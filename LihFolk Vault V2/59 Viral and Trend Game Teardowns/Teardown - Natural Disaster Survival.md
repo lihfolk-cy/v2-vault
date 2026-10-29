@@ -145,5 +145,5 @@ Thirty players share every round. There is no direct competition, only shared su
 
 <!-- related:start -->
 ## Related
-[[Teardown - Fling Things and People]] · [[Teardown - Tower of Hell]] · [[Teardown - Build A Boat For Treasure]] · [[Teardown - Ride A Pet]] · [[Teardown - Bee Swarm Simulator]] · [[Teardown - Plants vs Brainrots]] · [[Teardown - +1 Speed Keyboard Escape]] · [[Teardown - PLS DONATE]]
+[[Teardown - Fling Things and People]] · [[Teardown - Tower of Hell]] · [[Teardown - Build A Boat For Treasure]] · [[Teardown - Ride A Pet]] · [[Teardown - Bee Swarm Simulator]] · [[Teardown - Plants vs Brainrots]] · [[Teardown - Sol's RNG]] · [[Teardown - +1 Speed Keyboard Escape]]
 <!-- related:end -->

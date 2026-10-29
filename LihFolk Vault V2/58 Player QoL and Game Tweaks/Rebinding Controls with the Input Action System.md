@@ -145,5 +145,5 @@ After a rebind, every prompt must show the new key: tutorial hints, tooltips, th
 
 <!-- related:start -->
 ## Related
-[[Accessibility Cross-Links for QoL Settings]] · [[QoL Audit Checklist]] · [[Colourblind Palettes Text Size and Tooltips]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Top 25 QoL Wins by Effort]] · [[Skippable Tutorials and Replayable Tips]] · [[Graphics and Performance Toggles for Low-End Devices]] · [[UI Scale HUD Hide and Compact Mode]]
+[[UserInputService - Engine Reference Card]] · [[Accessibility Cross-Links for QoL Settings]] · [[QoL Audit Checklist]] · [[Colourblind Palettes Text Size and Tooltips]] · [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]] · [[Top 25 QoL Wins by Effort]] · [[Skippable Tutorials and Replayable Tips]] · [[Graphics and Performance Toggles for Low-End Devices]] · [[UI Scale HUD Hide and Compact Mode]]
 <!-- related:end -->

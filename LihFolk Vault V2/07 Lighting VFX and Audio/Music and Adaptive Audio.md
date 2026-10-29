@@ -295,10 +295,10 @@ The senior trade-off: adaptive music raises immersion but takes composition time
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Music and ambience]] · Resource Library - Audio · Links - Audio creation and uploading · Links - Sounds and the Audio API · Feedback Timing - Sound Visual and Haptic Sync · Voice Chat and Safety Features
+[[Official Docs - Audio]] · Official Docs - Asset Creation · Feedback Timing - Sound Visual and Haptic Sync · Voice Chat and Safety Features
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Music Licensing and Audio Upload Rules for 2026]] · [[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]] · [[Audio Mixer Settings with SoundGroups]] · [[Engine and Tyre Audio Driven by RPM and Slip]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]]
+[[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Music Licensing and Audio Upload Rules for 2026]] · [[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]] · [[Audio Mixer Settings with SoundGroups]] · [[SoundService - Engine Reference Card]] · [[Engine and Tyre Audio Driven by RPM and Slip]]
 <!-- related:end -->

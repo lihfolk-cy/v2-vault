@@ -231,7 +231,7 @@ A single art style was written down (flat colours, chunky stylised shapes, model
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Blender 5 Python Gotchas for Headless Builds]] · Links - Blender fundamentals for Roblox · [[Writing Your Own MCP Server]] · [[Case Study - Building a Game with AI Agents]] · AI Agents and Autonomous Workflows · Asset Pipelines
+[[Blender 5 Python Gotchas for Headless Builds]] · Official Docs - Asset Creation · [[Writing Your Own MCP Server]] · [[Case Study - Building a Game with AI Agents]] · AI Agents and Autonomous Workflows · Asset Pipelines
 <!-- auto-links:end -->
 
 <!-- related:start -->

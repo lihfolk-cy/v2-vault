@@ -371,7 +371,7 @@ The senior trade-off: every camera effect costs a little player control and a li
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Game Feel Start Here]] · Links - Cameras · Game Feel and Juice · [[Frame Order and RunService Timing]] · Hit-Stop · Accessibility · [[Animation Start Here]]
+[[Game Feel Start Here]] · Official Docs - Input and Controls · Game Feel and Juice · [[Frame Order and RunService Timing]] · Hit-Stop · Accessibility · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->

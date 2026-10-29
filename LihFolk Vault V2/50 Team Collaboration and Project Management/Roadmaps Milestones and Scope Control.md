@@ -272,7 +272,7 @@ Public roadmaps create promises. Share themes and "coming soon" items that are a
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Team Collaboration Start Here]] · [[Working with Contractors and Revenue Splits]] · [[Marketing and Growth Start Here]] · Links - Official · Retention Cohorts · Launch Strategy - The First Two Weeks
+[[Team Collaboration Start Here]] · [[Working with Contractors and Revenue Splits]] · [[Marketing and Growth Start Here]] · Resource Library Start Here · Retention Cohorts · Launch Strategy - The First Two Weeks
 <!-- auto-links:end -->
 
 <!-- related:start -->

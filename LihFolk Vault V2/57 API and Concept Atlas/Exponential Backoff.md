@@ -8,9 +8,9 @@ tags: [atlas, concept, type/atlas, area/data, area/scripting]
 > - Exponential backoff gives the service time to recover instead of hammering it inside the same throttle window.
 > - DataStore throttling cascades: Immediate retries in a loop -> Backoff with jitter; attempt cap.
 > - Uploader: content types, polling, backoff on 429/5xx, hash skip.
-> - Pending awards retried with backoff and on next join.
+> - DataStore calls in `pcall` with backoff and jitter; throttle codes logged; per-server limits raised with...
 >
-> Cost: TL;DR ~120 tok · whole note ~500 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~570 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -21,13 +21,13 @@ Exponential backoff gives the service time to recover instead of hammering it in
 
 - DataStore throttling cascades: Immediate retries in a loop -> Backoff with jitter; attempt cap. ([[Error Handling and Retries]])
 - Uploader: content types, polling, backoff on 429/5xx, hash skip. ([[Asset Upload Automation with Open Cloud]])
-- Pending awards retried with backoff and on next join. ([[Badges and Achievement Design]])
+- DataStore calls in `pcall` with backoff and jitter; throttle codes logged; per-server limits raised with... ([[Data and Cloud Changes 2025-2026]])
 - Every data store call is in `pcall`, with transient-error retry and backoff. ([[DataStore Fundamentals]])
-- One helper with `pcall`, status checks, retry on 429/5xx only, backoff, `retry-after`. ([[HttpService and External APIs]])
+- Block list empty at start: `GetCore` not ready -> Retry with backoff. ([[Block and Mute Respecting Platform Rules]])
 
 ## Mentioned in
 
-19 notes in 13 sections. The 19 most relevant are linked:
+24 notes in 14 sections. The 24 most relevant are linked:
 
 ### 02 Luau Scripting
 [[Error Handling - pcall xpcall and Promise Patterns]] · [[Error Handling and Retries]]
@@ -60,10 +60,13 @@ Exponential backoff gives the service time to recover instead of hammering it in
 [[Cookbook - Data and Saving]] · [[Luau Cookbook Start Here]]
 
 ### 49 Roblox Platform Features
-[[Badges and Achievement Design]]
+[[Badges and Achievement Design]] · [[Data and Cloud Changes 2025-2026]]
 
 ### 58 Player QoL and Game Tweaks
 [[Block and Mute Respecting Platform Rules]]
+
+### 62 Engine Reference Cards
+[[DataStoreService - Engine Reference Card]] · [[HttpService - Engine Reference Card]] · [[MemoryStoreService - Engine Reference Card]] · [[TeleportService - Engine Reference Card]]
 
 ### Root notes
 [[Skill - Roblox DataStore Safety]]

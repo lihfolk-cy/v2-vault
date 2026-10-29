@@ -176,5 +176,5 @@ One line per NPC, fixed key order, no colour codes. An agent can run the snapsho
 
 <!-- related:start -->
 ## Related
-[[Wildlife and Ambient Creature AI - Passive, Neutral and Hostile]] · [[AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses]] · [[Raycasts Shapecasts and Spatial Queries]] · [[Police Chases and Wanted Levels]] · [[Weather That Changes Gameplay - Grip, Visibility and Hearing]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Enemy Archetype Kit - Fodder, Tank, Ranged, Support and Exploder]] · [[Hitboxes and Hit Detection]]
+[[AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses]] · [[Wildlife and Ambient Creature AI - Passive, Neutral and Hostile]] · [[Raycasts Shapecasts and Spatial Queries]] · [[Police Chases and Wanted Levels]] · [[Weather That Changes Gameplay - Grip, Visibility and Hearing]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Enemy Archetype Kit - Fodder, Tank, Ranged, Support and Exploder]] · [[Hitboxes and Hit Detection]]
 <!-- related:end -->

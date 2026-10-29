@@ -5,14 +5,14 @@ tags: [safety, age-checks, chat, textchatservice, filtering, compliance, luau, t
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
-> - Avoid: A custom chat that sends messages through `RemoteEvent`s (bypasses filtering and age rules).
-> - Avoid: Displaying unfiltered player names for pets or signs.
-> - Avoid: Gameplay that requires typing to teammates.
+> - Avoid: Discord invites or social handles in game text -> links on the experience page only; `GetExternalLinkReference` is sunset.
+> - Avoid: Pairwise `CanUsersChatAsync` over a whole lobby to build teams -> `TextChatService:GetChatGroupsAsync(players)` once...
+> - Avoid: A custom whisper or party channel without `CanUsersDirectChatAsync` -> filter members with it and call...
+> - Chat assumes age checks: own and adjacent age groups by default, under-9s need parental consent; blocked messages just don't...
 > - All player-to-player text through `TextChatService` channels
-> - Private channels only for users allowed by `CanUsersDirectChatAsync`
-> - All user-authored text filtered server-side for the right audience
+> - Private channels only for users allowed by `CanUsersDirectChatAsync`, with `SetDirectChatRequester` set
 >
-> Cost: TL;DR ~150 tok · whole note ~3.4k tok. Read more: ## 2. Age groups and chat · ## 3. Code: chat and text the compliant way · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~210 tok · whole note ~4.1k tok. Read more: ## 2. Age groups and chat · ## 3. Code: chat and text the compliant way · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Between January and July 2026 Roblox moved from self-declared ages to **age checks** (facial age estimation or ID) as the basis for chat, social links, content access, publishing and collaboration. Players are split into **Roblox Kids (5 to 8)**, **Roblox Select (9 to 15)** and **Roblox (16+)** audiences. For developers this changes who can play your game, who can talk to whom inside it, what you may show, and what your own team needs to publish. This note collects what changed, what your code must do (chat through `TextChatService`, text filtering, direct-chat eligibility), and how to design for mixed-age servers. Facts verified against Creator Hub pages and official announcements **as of October 2026**; this area is still moving, so re-check dates and thresholds.
@@ -37,7 +37,7 @@ Between January and July 2026 Roblox moved from self-declared ages to **age chec
 ## 2. Age groups and chat
 
 ### How players are grouped
-Players complete an age check, typically facial age estimation; ID verification or parental controls can correct an estimate. News coverage lists chat age groups as under 9, 9 to 12, 13 to 15, 16 to 17, 18 to 20 and 21+ (secondary sources; the developer docs do not publish the bands as an API).
+Players complete an age check, typically facial age estimation; ID verification or parental controls can correct an estimate. The chat age groups are under 9, 9 to 12, 13 to 15, 16 to 17, 18 to 20 and 21+ (Announcement, November 2025; groups may vary by region, and no API exposes them). Enforcement began in select regions (Australia, New Zealand, the Netherlands) in early December 2025 and extended worldwide where chat is available in January 2026.
 
 ### Who can chat with whom (Announcement)
 - Age-based chat is designed to stop **children under 16 from communicating with adults**.
@@ -56,13 +56,15 @@ There is no documented API that returns a player's age group. Developers have as
 
 ---
 
+Since January 2026 chat requires an age check everywhere; users under 9 also need parental consent before chat features turn on. From early 2026 experiences may no longer show social media links (Discord invites, X handles) in game; links stay on the experience page, visible to age-checked users 13+, and PolicyService `GetExternalLinkReference` is sunset (returns an empty list).
+
 ## 3. Code: chat and text the compliant way
 
 ### All player text through `TextChatService`
 Custom chat UIs are fine; custom chat *transport* is not. Send and receive through `TextChannel`s so filtering and age rules apply. Messages a recipient may not see are simply not delivered to them.
 
 ### Direct (whisper/party) channels
-`TextChatService:CanUsersDirectChatAsync(requesterUserId, userIds)` returns the subset of users the requester can directly chat with (ignoring users not in the server; empty if none) (Docs). Create private channels only for allowed pairs.
+`TextChatService:CanUsersDirectChatAsync(requesterUserId, userIds)` returns the subset of users the requester can directly chat with (ignoring users not in the server; empty if none) (Docs). Create private channels only for allowed pairs, and call `TextChannel:SetDirectChatRequester(requester)` on the new channel so it keeps gating delivery itself (Docs; required for custom direct chat since the January 30, 2025 compliance deadline, DevForum https://devforum.roblox.com/t/integrate-textchatservicecanusersdirectchatasync-or-textchannelsetdirectchatrequester-api-to-comply-with-settings/3255672). For checking a pair of players in a public channel use `CanUsersChatAsync(fromUserId, toUserId)`; for grouping many players use `GetChatGroupsAsync(players)` (below).
 
 ```lua
 --!strict
@@ -85,7 +87,7 @@ local function createPartyChannel(leader: Player, members: { Player }): TextChan
 	local channel = Instance.new("TextChannel")
 	channel.Name = `Party_{leader.UserId}`
 	channel.Parent = TextChatService
-	channel:AddUserAsync(leader.UserId)
+	channel:SetDirectChatRequester(leader) -- adds the leader and delivers only between users allowed to direct chat with them
 	local allowedSet = {}
 	for _, id in allowed do
 		allowedSet[id] = true
@@ -192,11 +194,14 @@ Quick phrases are safe because the server builds them from a fixed table; the cl
 These patterns also help players on gamepads and phones, who type slowly, and players who do not share a language. Compliance and accessibility point the same way here ([[Accessibility]], [[Gamepad and Console UX]]).
 
 ### Matchmaking considerations
-If your game is cooperative and chat matters, the Text Chat matchmaking signal helps put players who can talk together in the same server (Announcement). If your game is competitive, avoid relying on chat for fairness; a team that can talk versus one that cannot is not balanced.
+If your game is cooperative and chat matters, the Text Chat matchmaking signal helps put players who can talk together in the same server (Announcement). For your own queues and teleports, `TextChatService:GetChatGroupsAsync(players)` (server-only, February 5, 2026) returns chat group IDs per player; players sharing an ID can text chat together. Enable **Chat & Voice Groups APIs** in Experience Settings > Communication first, and do not store the IDs after the player leaves (Docs; DevForum https://devforum.roblox.com/t/new-chat-apis-teleport-users-who-can-chat-together/4337233). `VoiceChatService:GetChatGroupsAsync` does the same for voice (February 13, 2026). If your game is competitive, avoid relying on chat for fairness; a team that can talk versus one that cannot is not balanced.
 
 ---
 
 ## 8. Common mistakes
+- Avoid: Discord invites or social handles in game text -> links on the experience page only; `GetExternalLinkReference` is sunset.
+- Avoid: Pairwise `CanUsersChatAsync` over a whole lobby to build teams -> `TextChatService:GetChatGroupsAsync(players)` once; same group ID means they can chat.
+- Avoid: A custom whisper or party channel without `CanUsersDirectChatAsync` -> filter members with it and call `TextChannel:SetDirectChatRequester(requester)`.
 - A custom chat that sends messages through `RemoteEvent`s (bypasses filtering and age rules).
 - Displaying unfiltered player names for pets or signs.
 - Gameplay that requires typing to teammates.
@@ -206,8 +211,10 @@ If your game is cooperative and chat matters, the Text Chat matchmaking signal h
 - A publisher account without an age check on update day.
 
 ## 9. Checklist
+- [ ] Chat assumes age checks: own and adjacent age groups by default, under-9s need parental consent; blocked messages just don't appear.
 - [ ] All player-to-player text through `TextChatService` channels
-- [ ] Private channels only for users allowed by `CanUsersDirectChatAsync`
+- [ ] Private channels only for users allowed by `CanUsersDirectChatAsync`, with `SetDirectChatRequester` set
+- [ ] Chat-compatible grouping via `GetChatGroupsAsync` (Chat & Voice Groups APIs enabled), never stored after the player leaves
 - [ ] All user-authored text filtered server-side for the right audience
 - [ ] Core gameplay playable without chat or voice
 - [ ] System messages via `DisplaySystemMessage`
@@ -220,10 +227,10 @@ If your game is cooperative and chat matters, the Text Chat matchmaking signal h
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Text Chat Customization with TextChatService]] · Community and Moderation Start Here · Discord Servers for Roblox Games · Voice Chat and Safety Features · Links - Chat and text filtering · Roblox Policies on AI-Generated Content
+[[Text Chat Customization with TextChatService]] · Community and Moderation Start Here · Discord Servers for Roblox Games · Voice Chat and Safety Features · Official Docs - Security and Moderation · Roblox Policies on AI-Generated Content
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Policy and Age Rules 2026]] · [[Voice Chat and Safety Features]] · [[Discord Servers for Roblox Games]] · [[Paid Random Items and Odds Disclosure in Practice]] · [[Monetization Overview]] · [[Ads and Rewarded Video]]
+[[Policy and Age Rules 2026]] · [[TextChatService - Engine Reference Card]] · [[Voice Chat and Safety Features]] · [[API Renames and Deprecations 2025-2026]] · [[Discord Servers for Roblox Games]] · [[Block and Mute Respecting Platform Rules]]
 <!-- related:end -->

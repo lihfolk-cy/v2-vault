@@ -1,6 +1,6 @@
 ---
 name: roblox-performance-audit
-description: 'Measured performance fixes (MicroProfiler, memory, network, mobile budgets). Use for lag, low fps, spikes, growing memory, phone crashes, "optimize this".'
+description: 'Measured performance fixes (MicroProfiler, memory, network, mobile budgets). Use for lag, low fps, spikes, growing memory, phone crashes.'
 ---
 # LihFolk Performance Audit
 

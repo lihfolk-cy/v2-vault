@@ -94,5 +94,5 @@ Idle is subtle by nature. If three rounds don't pass, add a clearly separate sec
 
 <!-- related:start -->
 ## Related
-[[Spin and Whole-Body Rotation Moves]] · [[Human Swing Biomechanics]] · [[Blade Grip and Wrist Limits]] · [[Posing and Silhouettes]] · [[Procedural Gait and Footstep Planning]] · [[Timing Spacing and Frame Charts]] · [[Foot Placement and Ground IK]] · [[Animation Quality Standard]]
+[[Spin and Whole-Body Rotation Moves]] · [[Human Swing Biomechanics]] · [[Posing and Silhouettes]] · [[Blade Grip and Wrist Limits]] · [[Procedural Gait and Footstep Planning]] · [[Timing Spacing and Frame Charts]] · [[Foot Placement and Ground IK]] · [[Animation Quality Standard]]
 <!-- related:end -->

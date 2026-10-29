@@ -1,0 +1,314 @@
+[
+ {
+  "id": "B1",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 2.75,
+   "R7": 3
+  },
+  "notes": "all correct; R6 no server/yield note"
+ },
+ {
+  "id": "B2",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 2.75,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "all correct; R4 no Persistent-sparingly"
+ },
+ {
+  "id": "B3",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "B4",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "B5",
+  "scores": {
+   "R1": 1.83,
+   "R2": 1.83,
+   "R3": 1.83,
+   "R4": 1.83,
+   "R5": 1.83,
+   "R6": 1.83,
+   "R7": 1.83
+  },
+  "notes": "none mention 15,000-stud max"
+ },
+ {
+  "id": "B6",
+  "scores": {
+   "R1": 1.83,
+   "R2": 1.67,
+   "R3": 1.17,
+   "R4": 1.83,
+   "R5": 1.33,
+   "R6": 2,
+   "R7": 1.83
+  },
+  "notes": "pcall/retry often missing; Studio guard vague in R2/R3"
+ },
+ {
+  "id": "B7",
+  "scores": {
+   "R1": 2.63,
+   "R2": 3,
+   "R3": 2.63,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 2.63
+  },
+  "notes": "R1/R3/R7 arg validation only a comment"
+ },
+ {
+  "id": "B8",
+  "scores": {
+   "R1": 4,
+   "R2": 4,
+   "R3": 2,
+   "R4": 4,
+   "R5": 4,
+   "R6": 3,
+   "R7": 3.5
+  },
+  "notes": "R3 grants when player absent, no assign-once; R6 no assign-once; R7 returns Granted if lock check cancels write"
+ },
+ {
+  "id": "B9",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "B10",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "B11",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "B12",
+  "scores": {
+   "R1": 2.81,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 2.25,
+   "R6": 3,
+   "R7": 2.81
+  },
+  "notes": "R5 no teleport-data sensitivity note; R1/R7 retry Unauthorized"
+ },
+ {
+  "id": "B13",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.25,
+   "R3": 2.25,
+   "R4": 2.25,
+   "R5": 2.25,
+   "R6": 2.25,
+   "R7": 2.25
+  },
+  "notes": "none mention identifying caller via OnServerEvent player arg"
+ },
+ {
+  "id": "B14",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "B15",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "B16",
+  "scores": {
+   "R1": 2.06,
+   "R2": 2.06,
+   "R3": 2.06,
+   "R4": 2.06,
+   "R5": 2.06,
+   "R6": 2.06,
+   "R7": 2.06
+  },
+  "notes": "none mention ownership changes cause jitter or Touched spoofing"
+ },
+ {
+  "id": "B17",
+  "scores": {
+   "R1": 3,
+   "R2": 2.81,
+   "R3": 2.81,
+   "R4": 3,
+   "R5": 3,
+   "R6": 2.44,
+   "R7": 3
+  },
+  "notes": "R6 says ~900 bytes; R2/R3/R6 omit no-handler drop"
+ },
+ {
+  "id": "B18",
+  "scores": {
+   "R1": 2.81,
+   "R2": 2.81,
+   "R3": 3,
+   "R4": 2.81,
+   "R5": 2.81,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "R1/R2/R4/R5 omit no-require-in-parallel"
+ },
+ {
+  "id": "B19",
+  "scores": {
+   "R1": 1.83,
+   "R2": 1.83,
+   "R3": 1.83,
+   "R4": 1.83,
+   "R5": 2,
+   "R6": 2,
+   "R7": 1.83
+  },
+  "notes": "only R5/R6 mention ModelStreamingBehavior Improved"
+ },
+ {
+  "id": "B20",
+  "scores": {
+   "R1": 1.83,
+   "R2": 1.83,
+   "R3": 1.83,
+   "R4": 2,
+   "R5": 1.83,
+   "R6": 1.83,
+   "R7": 1.83
+  },
+  "notes": "most omit combining into one key; R3 no 302"
+ },
+ {
+  "id": "B21",
+  "scores": {
+   "R1": 1.33,
+   "R2": 1.67,
+   "R3": 1.5,
+   "R4": 1.67,
+   "R5": 2,
+   "R6": 2,
+   "R7": 1.33
+  },
+  "notes": "stdio/studio_id item often missing"
+ },
+ {
+  "id": "B22",
+  "scores": {
+   "R1": 3,
+   "R2": 2.25,
+   "R3": 3,
+   "R4": 3,
+   "R5": 2.25,
+   "R6": 2.25,
+   "R7": 2.25
+  },
+  "notes": "R2/R5/R6/R7 omit PlayerScriptsUseInputActionSystem"
+ },
+ {
+  "id": "B23",
+  "scores": {
+   "R1": 2.75,
+   "R2": 2.25,
+   "R3": 2.5,
+   "R4": 2.25,
+   "R5": 2.25,
+   "R6": 2.25,
+   "R7": 2.5
+  },
+  "notes": "selector coverage partial (modifiers/@queries); one-sheet-per-tree only R1"
+ },
+ {
+  "id": "B24",
+  "scores": {
+   "R1": 1.88,
+   "R2": 1.88,
+   "R3": 2,
+   "R4": 1.88,
+   "R5": 2,
+   "R6": 1.88,
+   "R7": 1.5
+  },
+  "notes": "R7 no rollout timeline; minor misses on under-9 consent/regions"
+ }
+]

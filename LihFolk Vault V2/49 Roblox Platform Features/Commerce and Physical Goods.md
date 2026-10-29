@@ -272,5 +272,5 @@ Rules of thumb, aligned with the docs' standards:
 
 <!-- related:start -->
 ## Related
-[[Regional Compliance - Paid Random Items and Country Rules]] · [[Discovery and Monetization Changes 2025-2026]] · [[Experience Notifications and Return Prompts]] · [[Roblox Changes 2025-2026]] · [[Policy and Age Rules 2026]] · [[Friend Invites Referrals and Experience Invites]] · [[Badges and Achievement Design]]
+[[Regional Compliance - Paid Random Items and Country Rules]] · [[Discovery and Monetization Changes 2025-2026]] · [[Policy and Age Rules 2026]] · [[Experience Notifications and Return Prompts]] · [[Roblox Changes 2025-2026]] · [[Friend Invites Referrals and Experience Invites]] · [[Badges and Achievement Design]]
 <!-- related:end -->

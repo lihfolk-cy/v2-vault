@@ -172,7 +172,7 @@ Practical gotchas measured in the project:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Modeling Characters for R15 and Custom Rigs]] · Skinning Weights · Skeleton Library · Voxel Characters - Proportions Joints and Rigging · Character and Creature Pipeline · Links - Importing into Studio · [[Animation Start Here]]
+[[Modeling Characters for R15 and Custom Rigs]] · Skinning Weights · Skeleton Library · Voxel Characters - Proportions Joints and Rigging · Character and Creature Pipeline · Official Docs - Asset Creation · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->

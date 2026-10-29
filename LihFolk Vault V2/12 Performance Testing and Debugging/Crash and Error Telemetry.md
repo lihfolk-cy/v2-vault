@@ -306,10 +306,10 @@ The senior trade-off: more telemetry means more cost, more noise and more privac
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Telemetry Events]] · Links - Error handling and debugging · Debugging Start Here · [[Mobile and Low-End Optimization]] · Rate Limiting · Error Handling - pcall xpcall and Promise Patterns
+[[Telemetry Events]] · Official Docs - Scripting and Luau · Debugging Start Here · [[Mobile and Low-End Optimization]] · Rate Limiting · Error Handling - pcall xpcall and Promise Patterns
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[In-Game Bug Report Button with Automatic Context]] · [[Feature Flags]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Economy Telemetry and Balancing Live]] · [[Multi-Client and Device Playtesting Protocols]] · [[Economy Exploits - Dupes Races and Purchase Abuse]]
+[[In-Game Bug Report Button with Automatic Context]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Feature Flags]] · [[Economy Telemetry and Balancing Live]] · [[Economy Exploits - Dupes Races and Purchase Abuse]] · [[Multi-Client and Device Playtesting Protocols]]
 <!-- related:end -->

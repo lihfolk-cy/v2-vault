@@ -312,7 +312,7 @@ The senior trade-off: a living day cycle adds atmosphere and makes screenshots v
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Lighting Untextured Art in Roblox]] · Links - Lighting · Colour Scripts and Value Structure for Untextured Art · Links - Music and ambience · Baking Lighting and Detail into Textures · Voxel Palettes - Ramps Hue Shifting and Limits
+[[Lighting Untextured Art in Roblox]] · Official Docs - Building and World · Colour Scripts and Value Structure for Untextured Art · Official Docs - Audio · Baking Lighting and Detail into Textures · Voxel Palettes - Ramps Hue Shifting and Limits
 <!-- auto-links:end -->
 
 <!-- related:start -->

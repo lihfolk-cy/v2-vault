@@ -276,7 +276,7 @@ Because these are beta, wrap them in your own small module so endpoint changes t
 
 - [[Plugin Security and Permissions]]: the Studio-side counterpart of key hygiene.
 - [[Release Process and Rollbacks]]: when published places need to go back.
-- [[Links - Image uploading and moderation]]: official links on moderation and image upload rules.
+- [[Official Docs - Asset Creation]]: official links on moderation and image upload rules.
 - [[Legal Basics - IP Licenses and Assets]]: making sure uploaded files are yours to upload.
 - [[Groups Roles and Permissions for Studios]]: group ownership and who can create keys.
 - [[Packages and Shared Assets Across Places]]: reusing uploaded models across places.

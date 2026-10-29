@@ -9,10 +9,10 @@ tags: [networking, replication, interpolation, snapshots, extrapolation, unrelia
 > - Avoid: Delay of one interval -> 2 to 3 intervals
 > - Avoid: Reliable remotes for snapshots -> Unreliable for state, reliable for events
 > - Server sends packed snapshots at a fixed rate with server timestamps.
+> - Snapshot `buffer` layout fixed per version (fresh buffers are zero-filled, offsets are 0-based bytes); the receiver decodes...
 > - Spawns, despawns and critical state on a reliable channel.
-> - Client ring buffer per entity; out-of-order handling.
 >
-> Cost: TL;DR ~140 tok · whole note ~2.4k tok. Read more: ## 3. Server: sending snapshots · ## 4. Client: buffers and interpolation · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~2.4k tok. Read more: ## 3. Server: sending snapshots · ## 4. Client: buffers and interpolation · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 When you stop replicating entities as physics parts (hundreds of tower-defense enemies, projectiles, server-simulated NPCs rendered on clients, a 2D world in a GUI), you take over the job Roblox's replicator was doing: sending positions and making them look smooth despite jitter, packet loss and a send rate far below the frame rate. The standard answer is **snapshot interpolation**: the server sends timestamped snapshots at a fixed rate; each client renders entities slightly in the past, interpolating between the two snapshots around its render time, and extrapolates briefly when data is late. This note covers the clock, buffers, render delay, extrapolation limits, packing and the gotchas. Interest management (who gets which entities) is in [[Interest Management and Per-Player Replication]].
@@ -135,6 +135,7 @@ Render with `Workspace:BulkMoveTo` for many anchored entity models, or by settin
 
 ## Checklist
 - [ ] Server sends packed snapshots at a fixed rate with server timestamps.
+- [ ] Snapshot `buffer` layout fixed per version (fresh buffers are zero-filled, offsets are 0-based bytes); the receiver decodes its own copy ([[Buffers and Binary Data]]).
 - [ ] Spawns, despawns and critical state on a reliable channel.
 - [ ] Client ring buffer per entity; out-of-order handling.
 - [ ] Render delay 2 to 3 intervals; extrapolation capped; discontinuity flag for teleports.
@@ -151,5 +152,5 @@ Render with `Workspace:BulkMoveTo` for many anchored entity models, or by settin
 
 <!-- related:start -->
 ## Related
-[[Client-Server Model]] · [[Rate Limiting and Abuse Prevention]] · [[Network Ownership]] · [[Frameworks - Knit Matter and Others]] · [[Remote Abuse Patterns and Rate Limiting in Practice]] · [[Server Authority and Validation]] · [[Cross-Server Messaging]]
+[[Client-Server Model]] · [[Rate Limiting and Abuse Prevention]] · [[Remote Abuse Patterns and Rate Limiting in Practice]] · [[Network Ownership]] · [[Frameworks - Knit Matter and Others]] · [[Server Authority and Validation]] · [[Cross-Server Messaging]]
 <!-- related:end -->

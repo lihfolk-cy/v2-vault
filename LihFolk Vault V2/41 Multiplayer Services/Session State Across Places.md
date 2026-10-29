@@ -12,7 +12,7 @@ tags: [multiplayer, teleport, session, memorystore, datastore, session-locking, 
 > - Teleport data carries only a nonce and harmless hints.
 > - Source writes the envelope, saves and releases, then teleports.
 >
-> Cost: TL;DR ~160 tok · whole note ~6.5k tok. Read more: ## 4. Source side · ## 5. Destination bootstrap · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~6.6k tok. Read more: ## 4. Source side · ## 5. Destination bootstrap · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 When a player teleports, their server-side world ends. Their character, their in-memory tables, the round they were in and the buff they just drank exist only on the server they left. The destination starts from nothing and has to rebuild "who is this player and what were they doing" from three sources of very different trust: the durable profile, a short-lived transit record, and the teleport data the client carried. Most multi-place bugs are a piece of state in the wrong one of those three, or a hop that half failed. This note gives a complete, server-authoritative handoff protocol in strict Luau: what goes where, how the source hands over, how the destination claims, and what happens on every failure path.
@@ -208,7 +208,7 @@ end
 
 export type SendResult = "Sent" | "Busy" | "StoreUnavailable" | "SaveFailed" | "TeleportFailed"
 
--- Server only. `options` may carry ReservedServerAccessCode or ServerInstanceId; teleport data is set here.
+-- Server only. `options` may carry ReservedServerId or ServerInstanceId; teleport data is set here.
 function SessionHandoff.send(
 	player: Player,
 	toPlace: number,
@@ -502,7 +502,7 @@ Per hop: one `SetAsync` (1 unit) on the source, one `UpdateAsync` (at least 2 un
 ## 9. Testing
 
 - Teleports do not work in Studio playtests (Roblox docs). Unit-test `receive` by injecting join data and a fake hash map, and test validators with hostile payloads (wrong types, NaN, huge arrays, unknown purposes) ([[Testing Strategies and Frameworks]]).
-- In a published test universe: force each failure row in section 7 with a debug flag on a test server (make `saveAndRelease` return false, make the envelope write throw, teleport to a bogus access code) and confirm the player always ends up either at the destination with a loaded profile or at the source with a loaded profile, never in between.
+- In a published test universe: force each failure row in section 7 with a debug flag on a test server (make `saveAndRelease` return false, make the envelope write throw, teleport to a bogus place id) and confirm the player always ends up either at the destination with a loaded profile or at the source with a loaded profile, never in between.
 - Log every handoff with the session id, purpose, result and time to consume. A rising "consume failed" rate is the first sign of throttling or a version mismatch ([[Crash and Error Telemetry]]).
 
 ## When not to do this
@@ -538,10 +538,10 @@ A single-place game needs none of it. A multi-place game where places share noth
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Session Lock]] · [[Reserved and Private Servers in Practice]] · Debugging DataStore Problems · Trading Systems Without Duplication · Cookbook - Data and Saving · Links - Teleporting
+[[Session Lock]] · [[Reserved and Private Servers in Practice]] · Debugging DataStore Problems · Trading Systems Without Duplication · Cookbook - Data and Saving · Official Docs - Networking and Multiplayer
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Server Browsers and Server Lists]] · [[Server Hop Rejoin and Server Lists with Ping]] · [[Cookbook - Data and Saving]] · [[AI Pitfalls - Data and Monetization]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[Debugging DataStore Problems]]
+[[Server Hop Rejoin and Server Lists with Ping]] · [[Server Browsers and Server Lists]] · [[Cookbook - Data and Saving]] · [[AI Pitfalls - Data and Monetization]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[Debugging DataStore Problems]]
 <!-- related:end -->

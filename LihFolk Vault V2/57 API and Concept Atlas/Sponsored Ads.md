@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/marketing, area/design]
 > - Traffic source changes the cohort. Players from a sponsored ad, a viral video or a front-page placement behave differently.
 > - Conversion is permanent; credits can only be spent in Ads Manager; Robux earned at the US 18+ rate converts first.
 >
-> Cost: TL;DR ~140 tok · whole note ~530 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~600 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -22,11 +22,11 @@ Sponsored ads are measured in ad credits and Robux; ad credits are excluded from
 - Ads Manager access and billing set up by eligible ages. ([[Marketing to Kids and Teens - Age Rules and Paid-Promo Disclosure]])
 - Traffic source changes the cohort. Players from a sponsored ad, a viral video or a front-page placement behave differently. ([[Retention Cohorts]])
 - Conversion is permanent; credits can only be spent in Ads Manager; Robux earned at the US 18+ rate converts first. ([[Sponsored Ads and Campaign Math]])
-- Spending on ads to bring players to your game: Ads Manager campaigns (sponsored placements and search ads). ([[Ads and Rewarded Video]])
+- Budgeting and cost per play maths are in Sponsored Ads and Campaign Math. ([[Thumbnail and Icon A-B Testing - Method, Sample Size and Reading Results]])
 
 ## Mentioned in
 
-20 notes in 10 sections. The 20 most relevant are linked:
+24 notes in 11 sections. The 24 most relevant are linked:
 
 ### 11 Monetization Publishing and Live Ops
 [[Ads and Rewarded Video]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]]
@@ -54,6 +54,9 @@ Sponsored ads are measured in ad credits and Robux; ad credits are excluded from
 
 ### 52 Core Concepts
 [[Click-Through Rate]] · [[Retention Cohorts]]
+
+### 61 Thumbnails and CTR
+[[From CTR to CCU - Impressions, Play-Through and the Discovery Loop]] · [[Thumbnail Specs, Rules and Upload - Sizes, Count and Policy]] · [[Thumbnail and Icon A-B Testing - Method, Sample Size and Reading Results]] · [[Thumbnails and CTR Start Here]]
 
 ### Root notes
 [[00 Start Here]]

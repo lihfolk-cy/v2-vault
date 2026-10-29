@@ -1,0 +1,393 @@
+{
+  "meta": {
+    "name": "lihfolk-bench-set-e",
+    "version": "1.0",
+    "created": "2026-10-29",
+    "task_count": 24,
+    "total_points": 66,
+    "note": "Held-out set written without access to the vault, other question sets or prior results; keys checked against primary sources on 2026-10-29."
+  },
+  "tasks": [
+    {
+      "id": "E1",
+      "category": "debugging",
+      "prompt": "Two ProximityPrompts never appear in my game. (1) A vending machine: Workspace.VendingMachine is a Model with no PrimaryPart, and the prompt sits at VendingMachine > Folder 'Interact' > ProximityPrompt. (2) A lever: the prompt is a child of a Lever part that sits inside a closed glass display case (the glass is a separate part around it). Both prompts are Enabled and I am standing well inside MaxActivationDistance. Explain why each one fails and how to fix it.",
+      "answer_key": [
+        "A ProximityPrompt only works when parented to a BasePart, an Attachment, or a Model (with PrimaryPart set) in the Workspace; under a Folder (or a Model without PrimaryPart) it never shows, so move it under a part/attachment or set the model's PrimaryPart",
+        "RequiresLineOfSight is true by default and hides the prompt when the path from the camera to the prompt's parent is obstructed; the glass case blocks it (the prompt's own parent part/model is excluded from the check)",
+        "Lever fix: set RequiresLineOfSight = false, or move the prompt (e.g. on an Attachment/part) to a spot outside the case that the camera can see"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/ProximityPrompt",
+        "https://create.roblox.com/docs/ui/proximity-prompts"
+      ],
+      "grader_notes": "Item 1: naming BasePart/Attachment/Model as valid parents without the PrimaryPart detail is full credit as long as the Folder parent is identified as the problem."
+    },
+    {
+      "id": "E2",
+      "category": "debugging",
+      "prompt": "Overhead name tags are a BillboardGui in each character's Head with Size = UDim2.fromOffset(200, 50) and AlwaysOnTop = true. Players complain the tags show through walls, are visible from across the whole map, and stay the same pixel size no matter how far away the character is. The designer wants tags hidden behind walls, not drawn beyond about 100 studs, and shrinking with distance like a real object. Which BillboardGui properties should change, and why?",
+      "answer_key": [
+        "AlwaysOnTop = true makes the billboard render on top of all 3D content (ignores occlusion); set it to false so walls hide the tag",
+        "MaxDistance defaults to 0/infinite, meaning no distance limit; set MaxDistance = 100 so it stops rendering beyond 100 studs",
+        "Offset size is a fixed pixel size; the scale components of a BillboardGui's Size are measured in studs, so use a scale size (e.g. UDim2.fromScale(4, 1)) to make the tag shrink with distance"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/BillboardGui"
+      ]
+    },
+    {
+      "id": "E3",
+      "category": "debugging",
+      "prompt": "For a round-based game a server script sets Players.CharacterAutoLoads = false. Now players who join have no character, and players who die never respawn. I also set Players.RespawnTime = 3 but nothing changes. Explain what is happening and describe (or sketch) the minimal server-side fix.",
+      "answer_key": [
+        "With CharacterAutoLoads = false the engine never spawns characters automatically (not on join, not after death); the server must call player:LoadCharacterAsync() itself",
+        "RespawnTime only applies when CharacterAutoLoads is true (default 5 seconds), so changing it has no effect here",
+        "Fix sketch: call LoadCharacterAsync from a server Script on PlayerAdded (or when the round starts) and after Humanoid.Died (hooked via CharacterAdded) once your own delay/round logic allows; it yields and replaces/removes the old character"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/Players",
+        "https://create.roblox.com/docs/reference/engine/classes/Player"
+      ],
+      "grader_notes": "Player:LoadCharacter() was superseded by LoadCharacterAsync() (Dec 2025 Async renames; the old name still works). Using LoadCharacter instead of LoadCharacterAsync scores 0.5 on the item that needs it, never -1."
+    },
+    {
+      "id": "E4",
+      "category": "debugging",
+      "prompt": "Glass panes in a lab have CanCollide = false and CanQuery = false so players can walk through them. A server-side laser uses workspace:Raycast(origin, direction, params) and is supposed to stop at the glass, but the ray passes straight through. The RaycastParams has no filter set. Why, and what is the fix?",
+      "answer_key": [
+        "Spatial queries (Raycast, shapecasts, overlap queries) never include parts with CanQuery = false; CanQuery = false only takes effect because CanCollide is false, so the glass is invisible to the ray",
+        "Fix: set CanQuery = true on the glass while keeping CanCollide = false (and leave RaycastParams.RespectCanCollide false, since that would use CanCollide instead and skip the glass again), or add a separate query-only part"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/BasePart",
+        "https://create.roblox.com/docs/reference/engine/datatypes/RaycastParams"
+      ],
+      "grader_notes": "Item 2: the RespectCanCollide remark is not required for full credit; setting CanQuery = true (or an equivalent query-only part) is enough."
+    },
+    {
+      "id": "E5",
+      "category": "debugging",
+      "prompt": "A server script spawns enemies:\n```lua\nlocal template = game.ReplicatedStorage.Enemies.Goblin\nlocal function spawnGoblin(cf)\n    local g = template:Clone()\n    g:PivotTo(cf)\n    g.Parent = workspace\nend\n```\nIt errors with \"attempt to index nil with 'PivotTo'\". We found that an editor plugin had set Archivable = false on Goblin. A teammate then tried to avoid cloning by parenting the template itself to workspace, calling template:Destroy() when the goblin dies, and parenting it again for the next spawn; that throws \"The Parent property of Goblin is locked\". Explain both errors and the correct pattern.",
+      "answer_key": [
+        "Clone() returns nil when called directly on an instance whose Archivable is false (non-Archivable descendants are also skipped when an ancestor is cloned); set Archivable = true on the template",
+        "Destroy() sets Parent to nil and locks the Parent property (and disconnects connections and destroys descendants), so a destroyed instance can never be reparented or reused",
+        "Correct pattern: leave the template untouched in storage, Clone a fresh copy for every spawn, Destroy only the clone when it dies, and drop references to destroyed instances"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/Instance"
+      ]
+    },
+    {
+      "id": "E6",
+      "category": "code-writing",
+      "prompt": "Write a short server-side Luau snippet using TweenService that moves an anchored platform Part 20 studs up and back down forever, 4 seconds each way, with smooth Sine in-and-out easing. Also state the TweenInfo.new argument order and what happens if another tween later targets the same property of the same part.",
+      "answer_key": [
+        "TweenInfo.new argument order: time, easingStyle, easingDirection, repeatCount, reverses, delayTime, e.g. TweenInfo.new(4, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true)",
+        "repeatCount = -1 repeats indefinitely and reverses = true makes each cycle tween back to the start values",
+        "TweenService:Create(part, tweenInfo, {CFrame = ... or Position = ...}) returns a Tween that only runs after :Play() is called",
+        "Two tweens cannot animate the same property: starting a newer tween on that property cancels/overrides the earlier one"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/datatypes/TweenInfo",
+        "https://create.roblox.com/docs/reference/engine/classes/TweenService"
+      ]
+    },
+    {
+      "id": "E7",
+      "category": "code-writing",
+      "prompt": "Write a LocalScript snippet that hides Roblox's default backpack hotbar and the player list, disables the Reset Character option, and shows a 'Welcome!' toast notification for 3 seconds. Mention any reliability gotcha with these calls.",
+      "answer_key": [
+        "StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false) and StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false), run on the client",
+        "StarterGui:SetCore(\"ResetButtonCallback\", false) to disable reset, and StarterGui:SetCore(\"SendNotification\", {Title = ..., Text = ..., Duration = 3}) (Title and Text are required)",
+        "SetCore can fail if the CoreScripts have not registered that setting yet, so wrap it in pcall and retry until it succeeds"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/StarterGui",
+        "https://create.roblox.com/docs/reference/engine/enums/CoreGuiType"
+      ]
+    },
+    {
+      "id": "E8",
+      "category": "code-writing",
+      "prompt": "Write a server-side melee hitbox in Luau: a 6x5x6 stud box centred 3 studs in front of the attacker's HumanoidRootPart; every other character inside takes 20 damage exactly once per swing; the attacker must be ignored. Use a spatial query rather than Touched, and note any accuracy caveat of the query you chose.",
+      "answer_key": [
+        "workspace:GetPartBoundsInBox(cframe, size, overlapParams) with cframe = hrp.CFrame * CFrame.new(0, 0, -3) (forward is -Z) and size Vector3.new(6, 5, 6)",
+        "OverlapParams that exclude the attacker's character: params.ExcludeInstances = {attackerChar}, or FilterType = Enum.RaycastFilterType.Exclude with FilterDescendantsInstances = {attackerChar}",
+        "The query returns parts, so map each part to its character/Humanoid and keep a hit set so each Humanoid is damaged only once",
+        "GetPartBoundsInBox tests bounding boxes, not exact shapes (false positives on spheres, cylinders, meshes, unions); GetPartsInPart does a precise geometric check if accuracy matters"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/WorldRoot",
+        "https://create.roblox.com/docs/reference/engine/datatypes/OverlapParams"
+      ],
+      "grader_notes": "Item 2: either the 2026 ExcludeInstances property or the older FilterType/FilterDescendantsInstances pair is full credit. The deprecated Enum.RaycastFilterType.Blacklist scores 0.5, not -1."
+    },
+    {
+      "id": "E9",
+      "category": "code-writing",
+      "prompt": "Write Luau that awards badge 123456789 when a player touches a finish-line part, done safely. List the conditions that must hold for the award to succeed.",
+      "answer_key": [
+        "Call BadgeService:AwardBadgeAsync(player.UserId, badgeId) from a server Script (not a LocalScript), wrapped in pcall; it returns true when awarded",
+        "Guard against repeat calls: per-player debounce and/or check UserHasBadgeAsync first, and confirm the badge is enabled via GetBadgeInfoAsync(...).IsEnabled",
+        "Award only succeeds if the player is currently connected to the server, does not already own the badge, the badge is enabled, and it is awarded in a place belonging to the badge's experience"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/BadgeService",
+        "https://create.roblox.com/docs/production/publishing/badges"
+      ],
+      "grader_notes": "BadgeService:AwardBadge and UserHasBadge are deprecated names of the Async methods: using them scores 0.5 on that item, not -1."
+    },
+    {
+      "id": "E10",
+      "category": "code-writing",
+      "prompt": "Write a snippet that takes a tree Model (it has no PrimaryPart) from ServerStorage, clones it, makes it 1.5x its original size, and places it standing at a raycast hit position with a random rotation around the Y axis. Which older approaches should you avoid, and why?",
+      "answer_key": [
+        "model:ScaleTo(1.5) sets the scale factor relative to the model's original size (GetScale() returns the current factor, 1 = original); it scales around the pivot and resizes parts/joints etc., so no manual per-part resizing",
+        "model:PivotTo(CFrame.new(hitPosition) * CFrame.Angles(0, math.rad(randomDegrees), 0)); with no PrimaryPart the pivot is WorldPivot (bounding-box centre by default), so set the pivot at the trunk base (or offset by half the height) to stand on the ground",
+        "Avoid SetPrimaryPartCFrame (deprecated, superseded by PivotTo, and errors without a PrimaryPart) and MoveTo (does not preserve rotation and pushes the model upward when the spot is obstructed)"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/Model"
+      ]
+    },
+    {
+      "id": "E11",
+      "category": "architecture",
+      "prompt": "I need a cross-server 1v1 matchmaking queue and a 'top 100 scores this hour' leaderboard shared by all servers. Which Roblox service and data structures fit each, and which limits shape the design?",
+      "answer_key": [
+        "MemoryStoreService: a MemoryStoreQueue for matchmaking and a MemoryStoreSortedMap for the hourly leaderboard (read with GetRangeAsync, max 200 items per call, so 100 fits in one call)",
+        "Queue ReadAsync does not delete items: they become invisible for a timeout (default 30 s) and must be removed with RemoveAsync using the returned id, otherwise they reappear",
+        "Memory stores are not durable: every item has an expiration (max 45 days / 3,888,000 s) and values are limited to 32 KB; anything permanent belongs in DataStores",
+        "Quotas are experience-wide and scale with player count (memory about 64 KB + ~1 KB per user; request units 1000 + 120 x concurrent users per minute), so batch calls and handle throttling with backoff"
+      ],
+      "points": 4,
+      "sources": [
+        "https://create.roblox.com/docs/cloud-services/memory-stores",
+        "https://create.roblox.com/docs/reference/engine/classes/MemoryStoreSortedMap",
+        "https://create.roblox.com/docs/reference/engine/classes/MemoryStoreQueue"
+      ],
+      "grader_notes": "Item 4: the current docs give the memory quota as 64 KB + 1.2 KB per user; accept 1 KB or 1.2 KB per user. Naming either quota with the 'scales with users, experience-wide' idea is full credit."
+    },
+    {
+      "id": "E12",
+      "category": "architecture",
+      "prompt": "I'm designing player saves for 40-player servers: one key per player ('Player_<UserId>'), autosave every 60 seconds plus a save on leave, all via UpdateAsync on a standard DataStore. What per-server request budgets and per-key limits must this design respect?",
+      "answer_key": [
+        "UpdateAsync consumes both the read and the write budget; the default per-server standard read/write budget is 60 + 40 x players per minute (1,660 per minute for 40 players)",
+        "Key names are limited to 50 characters and each value to 4 MiB (4,194,304 characters of serialized data)",
+        "Per-key throughput across all servers is limited (writes 4 MB per minute, reads 25 MB per minute per key), so avoid writing the same key too often or too large"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/cloud-services/data-stores/error-codes-and-limits"
+      ],
+      "grader_notes": "Item 1: the long-documented older formula 60 + 10 x players scores 0.5, not -1. Mentioning the older ~6-second same-key write cooldown is not penalised."
+    },
+    {
+      "id": "E13",
+      "category": "architecture",
+      "prompt": "Players can name their pet. The name is shown above the pet to everyone in the server and saved in a DataStore so it appears again next session. Describe the correct text-filtering flow.",
+      "answer_key": [
+        "The client sends the raw name to the server; the server calls TextService:FilterStringAsync(text, fromUserId) once per submission inside pcall, and if it fails shows nothing (no manual retry needed; it retries internally)",
+        "For text everyone sees (overhead name, sign) use the result's GetNonChatStringForBroadcastAsync() (or GetNonChatStringForUserAsync per recipient); never send the unfiltered name to other clients",
+        "Text loaded back from the DataStore must be filtered again when retrieved/displayed; only in-game text chat is filtered automatically, custom UI text is the developer's responsibility"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/ui/text-filtering",
+        "https://create.roblox.com/docs/reference/engine/classes/TextService"
+      ]
+    },
+    {
+      "id": "E14",
+      "category": "architecture",
+      "prompt": "A Discord bot running on my own server (outside Roblox) must make every live server of my experience show a global announcement within seconds. Describe the architecture: the external call, credentials, and the in-game side.",
+      "answer_key": [
+        "Use the Open Cloud Messaging API: POST https://apis.roblox.com/cloud/v2/universes/{universeId}:publishMessage with a JSON body {topic, message} and the key in the x-api-key header",
+        "Create an API key in the Creator Dashboard with the messaging-service permission and the universe-messaging-service:publish operation for that experience; keep it secret on the bot's server",
+        "In each server: MessagingService:SubscribeAsync(topic, callback) and read message.Data; delivery is best effort (not guaranteed) and messages are limited to about 1 KB"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/cloud/guides/usage-messaging",
+        "https://create.roblox.com/docs/reference/engine/classes/MessagingService"
+      ],
+      "grader_notes": "Item 1: the older v1 path (https://apis.roblox.com/messaging-service/v1/universes/{universeId}/topics/{topic}) is full credit. OAuth 2.0 with the same scope is also acceptable."
+    },
+    {
+      "id": "E15",
+      "category": "performance-networking",
+      "prompt": "With StreamingEnabled on, a LocalScript that sets up a big building model sometimes finds half its parts missing. Separately, a scoreboard model on the far side of the map must always exist on every client for UI code. Which streaming settings and APIs solve these, and what are the trade-offs?",
+      "answer_key": [
+        "Set the building's ModelStreamingMode to Atomic: the model and its initial descendants stream in and out together, so once the model exists (WaitForChild) all its parts are present",
+        "Set the scoreboard to Persistent: sent shortly after join and never streamed out; client code waits for Workspace.PersistentLoaded; Persistent is meant for rare cases because overuse hurts performance (PersistentPerPlayer limits it to chosen players)",
+        "Default mode is Nonatomic; streaming radii (StreamingMinRadius 64, StreamingTargetRadius 1024 by default) govern what is present, and Player:RequestStreamAroundAsync can pre-stream an area before teleporting a player there"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/workspace/streaming",
+        "https://create.roblox.com/docs/reference/engine/classes/Model"
+      ],
+      "grader_notes": "Item 3: any two of the three facts (Nonatomic default, radius defaults, RequestStreamAroundAsync) is full credit."
+    },
+    {
+      "id": "E16",
+      "category": "performance-networking",
+      "prompt": "My shooter sends each player's aim direction to the server 30 times per second through a RemoteEvent, and uses another RemoteEvent to report hits. Should I switch either to UnreliableRemoteEvent? What limits apply?",
+      "answer_key": [
+        "UnreliableRemoteEvent gives no delivery guarantee and no ordering guarantee; it suits frequent, short-lived data like aim direction, while hit reports (and anything gameplay-critical) stay on a reliable RemoteEvent",
+        "Unreliable events whose payload exceeds 1000 bytes are dropped",
+        "Client-to-server FireServer is limited to roughly 500 requests per second per client, shared across all remotes of the same type (RemoteEvents and UnreliableRemoteEvents have separate pools)"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/UnreliableRemoteEvent",
+        "https://create.roblox.com/docs/reference/engine/classes/RemoteEvent",
+        "https://create.roblox.com/docs/scripting/events/remote"
+      ]
+    },
+    {
+      "id": "E17",
+      "category": "performance-networking",
+      "prompt": "Write Luau that packs a projectile update (projectile id as an unsigned 16-bit integer, position as three 32-bit floats) into a buffer to send through an UnreliableRemoteEvent, and unpacks it on the other side. State the key rules of the buffer library you relied on.",
+      "answer_key": [
+        "buffer.create(14) (2 + 3 x 4 bytes); buffers are fixed-size and zero-initialised",
+        "Write with buffer.writeu16(b, 0, id) and buffer.writef32(b, 2, x) / (b, 6, y) / (b, 10, z) and read back with readu16/readf32 at the same offsets; offsets are zero-based byte offsets and out-of-bounds access throws an error",
+        "The receiver gets a copy of the buffer (identity is not preserved across the network), and f32 stores less precision than a Luau number"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/libraries/buffer",
+        "https://create.roblox.com/docs/reference/engine/classes/UnreliableRemoteEvent"
+      ]
+    },
+    {
+      "id": "E18",
+      "category": "performance-networking",
+      "prompt": "A drivable cart (unanchored parts welded together, driven from a VehicleSeat) stutters and lags for the driver. Also, a server-side kill brick sometimes 'fires' for cart parts in odd ways. Explain network ownership here and what the server should call.",
+      "answer_key": [
+        "Unanchored parts are server-owned or auto-assigned to a nearby client by the engine; the server should call part:SetNetworkOwner(driverPlayer) when the driver sits (SetNetworkOwner(nil) = server, SetNetworkOwnershipAuto() reverts to automatic); it is a server-side call",
+        "Anchored parts are always server-owned and cannot be changed; ownership applies to the whole connected assembly/mechanism, not single welded parts",
+        "Client-owned physics cannot be verified by the server: the owning client can move the parts arbitrarily and can fire Touched for parts it owns, so validate touch/position results on the server"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/physics/network-ownership",
+        "https://create.roblox.com/docs/reference/engine/classes/BasePart"
+      ]
+    },
+    {
+      "id": "E19",
+      "category": "recent-platform",
+      "prompt": "What changed in 2026 for Roblox DataStore limits (both request/access limits and storage), and what should my data code do differently as a result?",
+      "answer_key": [
+        "Storage limit per experience is now 500 MB + 1 MB x lifetime users (base raised from 100 MB in mid-2026), measured on the compressed latest version of each key",
+        "Experience-level request limits were added (300 + concurrent users x N per minute per request type), shared between in-game DataStore calls and Open Cloud, on top of the per-server limits",
+        "Throttled calls return new error codes such as <RequestType>GameServerThrottled / <RequestType>ExperienceThrottled; wrap calls in retries with exponential backoff and jitter",
+        "DataStoreService:SetRateLimitForRequestType lets a creator change the per-server limits; storage overage is not write-throttled but is billed (Extended Services) after a grace period"
+      ],
+      "points": 4,
+      "sources": [
+        "https://create.roblox.com/docs/cloud-services/data-stores/error-codes-and-limits",
+        "https://devforum.roblox.com/t/extended-services-for-data-stores-is-now-available/4504347",
+        "https://devforum.roblox.com/t/unifying-data-stores-open-cloud-and-game-apis-and-increasing-storage-limits/4739240"
+      ],
+      "grader_notes": "Phases: storage limits activated April 2026 with a 100 MB base; the base became 500 MB and in-game/Open Cloud limits were unified in July 2026. Accept either date. Stating 100 MB + 1 MB per lifetime user as the current limit scores 0.5 on item 1. Item 4: either fact is full credit."
+    },
+    {
+      "id": "E20",
+      "category": "recent-platform",
+      "prompt": "In 2026 Roblox added new filter properties to RaycastParams and OverlapParams. What are they, how do they behave compared with FilterDescendantsInstances/FilterType, and how would you set up a ray that hits only things inside workspace.Map but never workspace.Map.Glass?",
+      "answer_key": [
+        "New properties ExcludeInstances and IncludeInstances (each {Instance}? on both RaycastParams and OverlapParams) can be used together; if an instance matches both, exclusion wins",
+        "IncludeInstances = nil includes everything while {} includes nothing; FilterDescendantsInstances/FilterType are superseded for new work but still work (kept for backward compatibility)",
+        "Example: params.IncludeInstances = {workspace.Map}; params.ExcludeInstances = {workspace.Map.Glass}"
+      ],
+      "points": 2,
+      "sources": [
+        "https://devforum.roblox.com/t/new-spatial-query-filters/4563575",
+        "https://create.roblox.com/docs/reference/engine/datatypes/RaycastParams",
+        "https://create.roblox.com/docs/reference/engine/datatypes/OverlapParams"
+      ],
+      "grader_notes": "Announced April 2026. Saying FilterDescendantsInstances was removed or no longer works is -1 on item 2."
+    },
+    {
+      "id": "E21",
+      "category": "recent-platform",
+      "prompt": "Write current best-practice Luau (late 2026) that stops players from colliding with each other using collision groups, and explain what changed recently in the collision group API.",
+      "answer_key": [
+        "Collision group methods moved to WorldRoot, so call them on Workspace (workspace:RegisterCollisionGroup, workspace:CollisionGroupSetCollidable, etc.); the PhysicsService versions are deprecated (2026) but still work by forwarding to Workspace",
+        "Register a group, call CollisionGroupSetCollidable(\"Players\", \"Players\", false), and on the server set BasePart.CollisionGroup = \"Players\" for every BasePart of each character (CharacterAdded plus DescendantAdded), not the deprecated SetPartCollisionGroup",
+        "Each world has its own limit of 32 collision groups (Workspace and each WorldModel separately; WorldModel.UseWorkspaceCollisionGroups defaults to false)"
+      ],
+      "points": 3,
+      "sources": [
+        "https://devforum.roblox.com/t/expanding-worldmodel-simulation-capabilities-support-for-collision-groups/4848541",
+        "https://create.roblox.com/docs/reference/engine/classes/WorldRoot",
+        "https://create.roblox.com/docs/reference/engine/classes/PhysicsService",
+        "https://create.roblox.com/docs/reference/engine/classes/BasePart"
+      ],
+      "grader_notes": "Announced September 2026. Code that uses PhysicsService:RegisterCollisionGroup / PhysicsService:CollisionGroupSetCollidable scores 0.5 on item 1 (old location, still works), not -1. Item 3: the 32-group limit alone is full credit."
+    },
+    {
+      "id": "E22",
+      "category": "recent-platform",
+      "prompt": "Studio's script analysis now flags Player:LoadCharacter() and MarketplaceService:GetProductInfo() as deprecated in my older code. What changed, and do I need to rewrite urgently?",
+      "answer_key": [
+        "Roblox superseded nearly all yielding methods that lacked an Async suffix with Async-named equivalents, e.g. LoadCharacterAsync, GetProductInfoAsync, PlayerOwnsAssetAsync, LoadCharacterWithHumanoidDescriptionAsync",
+        "The new methods behave the same; the old names still work (aliased, not removed), so migration is not urgent but new work should use the Async names"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/Player",
+        "https://create.roblox.com/docs/reference/engine/classes/MarketplaceService",
+        "https://devforum.roblox.com/t/release-notes-for-702/4138975"
+      ],
+      "grader_notes": "The change shipped around December 2025 (release 702); do not require a date, and accept 'late 2025' or 'early 2026'. Saying the old methods were removed or now error is -1 on item 2."
+    },
+    {
+      "id": "E23",
+      "category": "recent-platform",
+      "prompt": "MarketplaceService now has BindReceiptHandler as an alternative to ProcessReceipt. Explain how to use it for developer products (signature, what the handler returns, how several scripts can each handle their own products, and how it interacts with ProcessReceipt), with a short snippet.",
+      "answer_key": [
+        "MarketplaceService:BindReceiptHandler(Enum.ReceiptType.DeveloperProduct, handler, optionalProductIdArray) on the server; it returns an RBXScriptConnection and disconnecting it unregisters the handler",
+        "The handler receives a receipt-info table (PurchaseId, PlayerId, ProductId, CurrencySpent, ...) and returns Enum.ReceiptDecision.Processed only after the benefit is granted, otherwise Enum.ReceiptDecision.NotProcessedYet so the receipt is redelivered later (or on the player's next join)",
+        "One filtered handler per ReceiptType + product ID combination and one catch-all (no filter) per ReceiptType; filtered handlers win over the catch-all and registering a duplicate throws, so different scripts can own different products",
+        "Bound handlers take precedence; developer-product receipts no bound handler matches fall through to the legacy ProcessReceipt callback (the API also handles RobuxTransferSender/RobuxTransferReceiver receipts)"
+      ],
+      "points": 4,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/MarketplaceService",
+        "https://create.roblox.com/docs/reference/engine/enums/ReceiptDecision",
+        "https://create.roblox.com/docs/reference/engine/enums/ReceiptType"
+      ],
+      "grader_notes": "Returning Enum.ProductPurchaseDecision.PurchaseGranted/NotProcessedYet (the ProcessReceipt enum) in item 2 scores 0.5, not -1. An answer that only explains ProcessReceipt and ignores BindReceiptHandler scores 0 on items 1 and 3."
+    },
+    {
+      "id": "E24",
+      "category": "recent-platform",
+      "prompt": "Which math helpers were added to Luau's standard library in 2025 that Roblox scripts can use instead of hand-written versions? Give the signatures for linear interpolation and for remapping a value from one range to another.",
+      "answer_key": [
+        "math.lerp(a, b, t) (t is not clamped to 0-1) and math.map(x, inmin, inmax, outmin, outmax) for linear range remapping",
+        "Also added: math.isnan(x), math.isinf(x) and math.isfinite(x) (alongside buffer.readbits/buffer.writebits and the built-in vector library)"
+      ],
+      "points": 2,
+      "sources": [
+        "https://luau.org/news/2025-12-19-luau-recap-runtime-2025",
+        "https://create.roblox.com/docs/reference/engine/libraries/math"
+      ],
+      "grader_notes": "Item 2: naming the three NaN/infinity checks is full credit; naming only one or two, or only the buffer/vector additions, scores 0.5."
+    }
+  ]
+}

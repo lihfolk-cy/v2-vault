@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/world, area/vfx, api/SurfaceLight]
 > - Local lights: PointLight, SpotLight and SurfaceLight.
 > - In Roblox, emission does not light the world: give the glow module Neon, and add real lights, a SurfaceLight per window or one...
 >
-> Cost: TL;DR ~140 tok · whole note ~340 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~350 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -42,7 +42,7 @@ API snapshot: class, inherits `Light` (`_tools/roblox_api.json`, docs build of 2
 [[Stylised Log Cabin Worked Example]]
 
 ### 46 Resource Library
-[[Links - Lighting]]
+[[Official Docs - Building and World]]
 
 ### 54 Untextured Stylised Modelling
 [[Lighting Untextured Art in Roblox]]

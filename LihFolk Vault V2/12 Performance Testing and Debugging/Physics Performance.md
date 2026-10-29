@@ -271,10 +271,10 @@ See [[Raycasts Shapecasts and Spatial Queries]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Debugging Physics and Network Ownership]] · Links - Collisions · Tween and CFrame Animation of Objects · Links - Raycasting and spatial queries · Exporting and Validating Models for Roblox · Resource Library - Physics
+[[Debugging Physics and Network Ownership]] · Official Docs - Physics · Tween and CFrame Animation of Objects · Exporting and Validating Models for Roblox
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Network Bandwidth Budgets and Measuring Them]] · [[Network Performance]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[Rendering Performance]] · [[Performance Fundamentals]] · [[Client Zone Culling for Interiors and Cities]] · [[Mobile and Low-End Optimization]] · [[Weather Performance Budgets and Quality Tiers]]
+[[Network Performance]] · [[Network Bandwidth Budgets and Measuring Them]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[Rendering Performance]] · [[Performance Fundamentals]] · [[Client Zone Culling for Interiors and Cities]] · [[Mobile and Low-End Optimization]] · [[Weather Performance Budgets and Quality Tiers]]
 <!-- related:end -->

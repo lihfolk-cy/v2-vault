@@ -139,5 +139,5 @@ Kitawari group; owner and former owner named on a fan wiki (Unverified). Major u
 
 <!-- related:start -->
 ## Related
-[[Teardown - Blade Ball]] · [[Teardown - Apocalypse Rising 2]] · [[Teardown - Piggy]] · [[Teardown - Plants vs Brainrots]] · [[Teardown - Grace]] · [[Teardown - Phantom Forces]] · [[Teardown - BedWars]] · [[Teardown - Deepwoken]] · [[Teardown - Welcome to Bloxburg]]
+[[Teardown - Blade Ball]] · [[Teardown - Apocalypse Rising 2]] · [[Teardown - Piggy]] · [[Teardown - Plants vs Brainrots]] · [[Teardown - Grace]] · [[Teardown - Phantom Forces]] · [[Teardown - BedWars]] · [[Teardown - Welcome to Bloxburg]] · [[Teardown - Deepwoken]]
 <!-- related:end -->

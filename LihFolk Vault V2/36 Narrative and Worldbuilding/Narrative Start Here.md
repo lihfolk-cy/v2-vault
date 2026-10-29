@@ -48,5 +48,5 @@ Back to [[00 Start Here]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Accessibility Start Here]] · Links - Quests and progression · Captions and Audio Accessibility · Onboarding Funnel · Links - Chat and text filtering · Links - NPCs and AI
+[[Accessibility Start Here]] · Official Docs - Game Systems · Captions and Audio Accessibility · Onboarding Funnel · Official Docs - Security and Moderation
 <!-- auto-links:end -->

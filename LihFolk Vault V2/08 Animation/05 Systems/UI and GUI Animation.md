@@ -215,7 +215,7 @@ Read `GuiService.ReducedMotionEnabled` (a read-only user preference) and your ow
 | Pop undoes phone scaling | Tween to 1 ignores the base scale | Multiply by a stored base |
 | Model in viewport tinted | Gradient on the ViewportFrame | Gradient on a backdrop |
 
-See also: [[Reference - Purple Anime Settings UI (Claude + Figma)]] (a studied Settings menu design), [[Tween and CFrame Animation of Objects]], [[Springs Damping and Smoothing]], [[Camera Shake and Camera FX]], [[Emotes and Social Animation]], [[Performance and Memory]].
+See also: [[Settings Menu Design for Roblox - Layout, Controls and Motion]] (a full settings menu, control by control), [[Tween and CFrame Animation of Objects]], [[Springs Damping and Smoothing]], [[Camera Shake and Camera FX]], [[Emotes and Social Animation]], [[Performance and Memory]].
 
 ## Nuances and edge cases
 
@@ -252,10 +252,10 @@ The senior trade-off: UI motion is the cheapest juice in the game and the easies
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Tweening and UI animation]] · Debugging UI Layout and Input · Tween vs Spring · Accessibility · Squash Stretch and Anticipation in UI and Characters · Cookbook - UI · [[Animation Start Here]]
+[[Official Docs - UI]] · Debugging UI Layout and Input · Tween vs Spring · Accessibility · Squash Stretch and Anticipation in UI and Characters · Cookbook - UI · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Cameras and Cutscenes]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]] · [[Equip Draw and Flourish Systems]] · [[Custom Locomotion Controller Design]] · [[Enemy and NPC Animation]] · [[Hit Reactions Stagger and Hit-Stop]]
+[[Cameras and Cutscenes]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]] · [[Equip Draw and Flourish Systems]] · [[Hit Reactions Stagger and Hit-Stop]] · [[Custom Locomotion Controller Design]] · [[Enemy and NPC Animation]]
 <!-- related:end -->

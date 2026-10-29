@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "name": "lihfolk-bench-set-f",
+    "version": "1.0",
+    "created": "2026-10-29",
+    "task_count": 12,
+    "total_points": 34,
+    "note": "Quick held-out set written without access to the vault, other sets or results; keys checked against primary sources on 2026-10-29."
+  },
+  "tasks": [
+    {
+      "id": "F1",
+      "category": "debugging",
+      "prompt": "I put a ProximityPrompt inside a Folder in Workspace that holds my shop stand's parts, but no prompt ever appears when I walk up. Moving it into a different Model also didn't help, and on another stand the prompt only shows from some angles. What's wrong?",
+      "answer_key": [
+        "A ProximityPrompt only works when parented to a BasePart, an Attachment, or a Model that has its PrimaryPart set (in the Workspace); a Folder parent (or a Model without PrimaryPart) shows nothing",
+        "RequiresLineOfSight: when true the prompt is hidden if the path between the player's camera and the prompt's parent object is obstructed (the parent itself is excluded); set it false or move the prompt to an unobstructed part/Attachment",
+        "Check MaxActivationDistance: the character must be within that distance for the prompt to appear"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/ProximityPrompt"
+      ],
+      "grader_notes": "Do not penalise or require exact default values (e.g. 10 studs); they were not verified for this key."
+    },
+    {
+      "id": "F2",
+      "category": "debugging",
+      "prompt": "My custom sword-swing animation plays in Studio when I test alone, but in the live game (owned by my group) nothing plays. On my test place it plays but the arms look half-blended with walking. I load it from a LocalScript with Humanoid:LoadAnimation. What should I check?",
+      "answer_key": [
+        "Animation asset ownership: for a group-owned experience the animation must be published under/owned by that group (select the group as Creator when publishing) or it won't load in the live game",
+        "AnimationTrack.Priority: set the track (or animation) to Action (or higher: Action2-4) so it overrides Movement/Idle/Core animations; same-priority tracks blend by weight",
+        "Load via the Animator (Humanoid.Animator:LoadAnimation) instead of the deprecated Humanoid:LoadAnimation; loading on the client's own character also loads it for the server, so it replicates"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/AnimationTrack",
+        "https://create.roblox.com/docs/reference/engine/classes/Animator",
+        "https://create.roblox.com/docs/animation/editor"
+      ],
+      "grader_notes": "Item 3: saying Humanoid:LoadAnimation still works but is superseded by Animator earns full; recommending only Humanoid:LoadAnimation earns 0.5, not -1."
+    },
+    {
+      "id": "F3",
+      "category": "debugging",
+      "prompt": "My shop ScrollingFrame uses a UIListLayout. I set each item's LayoutOrder to its price (10, 50, 200, 1000) but the list shows them in alphabetical order. Another dev says two items with equal LayoutOrder 'swap randomly'. Explain both.",
+      "answer_key": [
+        "UIListLayout.SortOrder is set to Name, which sorts children alphanumerically by name and ignores LayoutOrder; set SortOrder to Enum.SortOrder.LayoutOrder",
+        "With SortOrder.LayoutOrder, children are sorted ascending by LayoutOrder (lower value first)",
+        "Ties are not random: children with the same LayoutOrder are ordered by which was added to the parent first"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/UIListLayout",
+        "https://create.roblox.com/docs/reference/engine/classes/UIGridStyleLayout"
+      ]
+    },
+    {
+      "id": "F4",
+      "category": "code_writing",
+      "prompt": "Write a minimal server-side Luau handler that grants 100 coins when a player buys developer product 123456, and list the key rules so purchases are never lost or double-granted.",
+      "answer_key": [
+        "Set MarketplaceService.ProcessReceipt once, in a single server Script, handling all products (or use the newer MarketplaceService:BindReceiptHandler)",
+        "Return Enum.ProductPurchaseDecision.PurchaseGranted only after the benefit is actually granted/saved; return NotProcessedYet if the player isn't in the server or granting/saving fails, so the receipt is redelivered (e.g. when the player rejoins)",
+        "Make it idempotent: record receiptInfo.PurchaseId (e.g. in a DataStore) and skip re-granting a PurchaseId already processed",
+        "Look up the player via receiptInfo.PlayerId and the product via receiptInfo.ProductId"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/MarketplaceService",
+        "https://create.roblox.com/docs/production/monetization/developer-products"
+      ],
+      "grader_notes": "BindReceiptHandler returning Enum.ReceiptDecision.Processed / NotProcessedYet is equally correct. Granting in PromptProductPurchaseFinished instead of a receipt handler: -1 on item 1."
+    },
+    {
+      "id": "F5",
+      "category": "code_writing",
+      "prompt": "Write a LocalScript that makes the player sprint (WalkSpeed 24, back to 16) while holding LeftShift on keyboard or ButtonL3 on gamepad, with an on-screen button on mobile, using ContextActionService. Note the key rules.",
+      "answer_key": [
+        "ContextActionService:BindAction(actionName, handler, true, Enum.KeyCode.LeftShift, Enum.KeyCode.ButtonL3) - the third argument (createTouchButton) creates the mobile touch button",
+        "Handler receives (actionName, inputState, inputObject); set speed on Enum.UserInputState.Begin and reset on End (and Cancel)",
+        "Return value: nil or Enum.ContextActionResult.Sink sinks the input; Enum.ContextActionResult.Pass lets the next bound action receive it; call UnbindAction when the context ends"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/ContextActionService"
+      ],
+      "grader_notes": "Setting WalkSpeed from a LocalScript on the own character is acceptable here."
+    },
+    {
+      "id": "F6",
+      "category": "code_writing",
+      "prompt": "Write Luau that makes a door (hinged with a HingeConstraint between the frame and the door) swing open to 90 degrees and closed again, using the physics constraint rather than tweening the CFrame. Which properties matter?",
+      "answer_key": [
+        "Set HingeConstraint.ActuatorType = Enum.ActuatorType.Servo",
+        "Drive it with TargetAngle, measured in degrees (90 to open, 0 to close)",
+        "Set ServoMaxTorque high enough to move the door and AngularSpeed for the swing speed (both apply with Servo); the door part must be unanchored"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/HingeConstraint"
+      ],
+      "grader_notes": "Stating TargetAngle is in radians (math.rad(90)) is -1 on item 2."
+    },
+    {
+      "id": "F7",
+      "category": "architecture",
+      "prompt": "I want an admin command that shows a global announcement banner in every running server of my experience at once. How should I architect it, and what limits should I respect?",
+      "answer_key": [
+        "Use MessagingService: every server SubscribeAsync to a topic at startup; the issuing server calls PublishAsync(topic, message); subscribers fire a RemoteEvent (FireAllClients) to show the banner",
+        "Delivery is best-effort and not guaranteed (typically within 1-2 s); wrap PublishAsync/SubscribeAsync in pcall and don't rely on it for critical state",
+        "Message size limit is 1 kB and topic names are 1-80 characters; there are per-server send and per-topic receive rate limits",
+        "Validate admin rights on the server before publishing (never trust the client's request)"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/MessagingService",
+        "https://create.roblox.com/docs/cloud-services/cross-server-messaging"
+      ],
+      "grader_notes": "Exact rate formulas (600 + 240*players sends/min per server; 40 + 80*servers receives/min per topic) are not required; older figures (e.g. 150 + 60*players) earn 0.5 instead of -1."
+    },
+    {
+      "id": "F8",
+      "category": "architecture",
+      "prompt": "I'm making a sword Tool that damages other players. How should I split the logic between client and server so it feels responsive but can't be exploited? Also, my Tool doesn't equip properly - it has a MeshPart called 'Blade' and no other parts.",
+      "answer_key": [
+        "Client: detect use (Tool.Activated) and play animation/effects locally; send a RemoteEvent request without trusted damage values",
+        "Server: validate everything (tool equipped in the character, cooldown, target distance / hit check done or sanity-checked on the server) and apply damage server-side",
+        "Tools need a BasePart named 'Handle' unless Tool.RequiresHandle is false; rename the part to Handle or set RequiresHandle = false"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/Tool",
+        "https://create.roblox.com/docs/scripting/security/security-tactics"
+      ]
+    },
+    {
+      "id": "F9",
+      "category": "performance_networking",
+      "prompt": "I replicate each player's aim direction to all other clients 30 times a second with a RemoteEvent and see network lag. Someone suggested UnreliableRemoteEvent. When is it appropriate, and what are its constraints?",
+      "answer_key": [
+        "UnreliableRemoteEvent is unordered and unreliable: lost events are not resent and don't wait for earlier ones - suited to ephemeral/continuously changing data like aim; use RemoteEvent where order or reliability matters",
+        "Payloads larger than 1000 bytes are dropped",
+        "Client-to-server remotes are throttled at roughly 500 requests per second per client, shared among all remotes of the same type; lower the send rate / batch"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/UnreliableRemoteEvent"
+      ],
+      "grader_notes": "Item 2: 900 bytes (an earlier figure) earns 0.5 instead of -1."
+    },
+    {
+      "id": "F10",
+      "category": "performance_networking",
+      "prompt": "After enabling StreamingEnabled, my client script errors with 'attempt to index nil' when it reads workspace.Map.Castle.Gate, and a teleport pad drops players into a void for a second. How do I fix both?",
+      "answer_key": [
+        "With instance streaming, distant parts may not exist on the client; use WaitForChild (with timeout) / ChildAdded / CollectionService signals and handle parts streaming out, instead of direct indexing",
+        "Set Model.ModelStreamingMode on important models: Atomic (model and descendants stream in/out together) or Persistent (sent soon after join, before Workspace.PersistentLoaded, not streamed out); PersistentPerPlayer also exists",
+        "Before moving the character, call Player:RequestStreamAroundAsync(position) on the server so the destination is streamed in first"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/Model",
+        "https://create.roblox.com/docs/reference/engine/enums/ModelStreamingMode",
+        "https://create.roblox.com/docs/reference/engine/classes/Player",
+        "https://create.roblox.com/docs/workspace/streaming"
+      ]
+    },
+    {
+      "id": "F11",
+      "category": "recent_platform",
+      "prompt": "In late 2025 Roblox changed how Luau type checking works in Studio. What changed, and how do I turn the new type solver on for a project that uses --!strict?",
+      "answer_key": [
+        "Luau's New Type Solver reached general release (announced Nov 20, 2025), moving out of Studio Beta; the Studio Beta toggle was removed on Jan 7, 2026",
+        "Scripts using nocheck/nonstrict modes moved to the new solver automatically; projects with strict scripts stay on the old solver by default",
+        "Opt in via the Workspace property UseNewLuauTypeSolver = Enabled (Scripting category); nonstrict became the default typecheck mode (LuauTypeCheckMode)"
+      ],
+      "points": 3,
+      "sources": [
+        "https://devforum.roblox.com/t/general-release-luau%E2%80%99s-new-type-solver/4084991"
+      ],
+      "grader_notes": "Item 1: 'November 2025' is enough. Saying it is still beta-only earns 0, not -1."
+    },
+    {
+      "id": "F12",
+      "category": "recent_platform",
+      "prompt": "What is Roblox's Input Action System, which instances does it use, and how would I make a 'Jump' action that works from Space and from an on-screen button?",
+      "answer_key": [
+        "Instances: InputContext (groups actions; Enabled/Priority/Sink), InputAction (a gameplay action that registers to its nearest ancestor InputContext), InputBinding (maps a hardware input to the action)",
+        "Create an InputAction with Type Bool and listen to InputAction.Pressed (false->true) / Released, or StateChanged",
+        "Use separate InputBindings for the key (KeyCode = Space) and the on-screen button (UIButton) - a single binding listens to only one input source",
+        "Status: Studio Beta in 2025, publishable via Client Beta from Aug 2025, announced fully released in June 2026"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/InputAction",
+        "https://create.roblox.com/docs/reference/engine/classes/InputContext",
+        "https://create.roblox.com/docs/reference/engine/classes/InputBinding",
+        "https://devforum.roblox.com/t/client-beta-input-action-system-is-now-available-to-publish-in-experiences/3890979"
+      ],
+      "grader_notes": "Item 4: accept either 'client beta' or 'fully released'; stating it is Studio-only/unpublishable earns 0.5. Item 3: one binding with both KeyCode and UIButton earns 0.5 (that worked before Feb 2026)."
+    }
+  ]
+}

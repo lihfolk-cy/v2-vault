@@ -269,10 +269,10 @@ See also: [[The Audio API - Players Emitters Wires and Effects]], [[Spatial Audi
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Audio Pipeline]] · [[Combat Sound Design and Feedback]] · AI Audio - Voice Music and SFX · Links - Sounds and the Audio API · Resource Library - Audio · Feedback Timing - Sound Visual and Haptic Sync
+[[Audio Pipeline]] · [[Combat Sound Design and Feedback]] · AI Audio - Voice Music and SFX · Official Docs - Audio · Feedback Timing - Sound Visual and Haptic Sync
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Audio Mixer Settings with SoundGroups]] · [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[AI Audio - Voice Music and SFX]] · [[Engine and Tyre Audio Driven by RPM and Slip]] · [[Music Licensing and Audio Upload Rules for 2026]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]]
+[[Audio Mixer Settings with SoundGroups]] · [[SoundService - Engine Reference Card]] · [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Engine and Tyre Audio Driven by RPM and Slip]] · [[Music Licensing and Audio Upload Rules for 2026]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]]
 <!-- related:end -->

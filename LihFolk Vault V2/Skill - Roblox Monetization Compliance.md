@@ -39,5 +39,5 @@ It cannot see the Creator Dashboard. It asks you for the product list or for you
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Shop with Game Passes and Developer Products End to End]] · [[Skill - Roblox System Builder]] · Resource Library - Monetization · Pity Timer · Genre Playbook - RNG and Collection Games · Links - Subscriptions and payouts
+[[Shop with Game Passes and Developer Products End to End]] · [[Skill - Roblox System Builder]] · Official Docs - Monetization · Pity Timer · Genre Playbook - RNG and Collection Games
 <!-- auto-links:end -->

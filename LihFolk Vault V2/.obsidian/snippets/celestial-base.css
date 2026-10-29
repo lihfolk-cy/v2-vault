@@ -1,0 +1,66 @@
+/* Celestial Base (LihFolk): DRAFT, not enabled.
+   A small foundation layer so the Celestial snippets can run on Obsidian's default theme
+   with no community base theme underneath. The other Celestial snippets already pin the
+   palette, headings, links, tags, callouts, tables and graph colours; this file only fills
+   the few remaining gaps (body text, editor details, layout touches, mobile metadata).
+
+   To switch: enable this snippet, set Appearance > Themes to Default, and compare the
+   notes, the editor, the graph and a phone view against the current look before shipping. */
+
+body.theme-dark {
+  /* body text and editor */
+  --font-monospace-theme: "Cascadia Code", "JetBrains Mono", ui-monospace, Consolas, monospace;
+  --text-on-accent-inverted: #e2dcec;
+
+  /* tags: hover state (the pill shape itself lives in celestial-v2-notes) */
+  --tag-color-hover: #9fe8ff;
+  --tag-background-hover: rgba(155, 123, 255, .2);
+  --tag-border-color-hover: rgba(64, 217, 255, .7);
+  --tag-weight: 500;
+
+  /* properties panel */
+  --metadata-divider-color-hover: rgba(64, 217, 255, .35);
+
+  /* graph: the parts graph-cosmic does not colour by class */
+  --graph-text: #e6defc;
+  --graph-node-unresolved: #4a3f6b;
+  --graph-node-tag: #ff5fb4;
+  --graph-node-attachment: #ffd27a;
+}
+
+body.theme-dark { font-size: 16px; }
+body.theme-dark :is(.markdown-rendered, .markdown-source-view, .menu, .modal) strong { font-weight: 600; }
+
+/* editor: a faint band on the line being edited */
+body.theme-dark .markdown-source-view.mod-cm6 .cm-line.cm-active {
+  background-color: rgba(155, 123, 255, .06);
+}
+body.theme-dark .markdown-source-view.mod-cm6 .cm-content { caret-color: var(--caret-color); }
+
+/* reading view: centre embedded images */
+.markdown-rendered :is(.image-embed, .markdown-preview-section) img {
+  display: block; margin-left: auto; margin-right: auto;
+}
+
+/* pane dividers in the main area: one thin violet line */
+body.theme-dark .workspace-split.mod-root .workspace-leaf-resize-handle {
+  background-color: rgba(155, 123, 255, .35);
+}
+body.theme-dark .workspace-split.mod-root.mod-vertical > .workspace-leaf-resize-handle { width: 1px; }
+body.theme-dark .workspace-split.mod-root.mod-horizontal > .workspace-leaf-resize-handle { height: 1px; }
+
+/* phones: compact properties and inputs */
+.is-phone body, body.is-phone {
+  --metadata-label-font-size: var(--font-adaptive-small);
+  --metadata-input-font-size: var(--font-adaptive-small);
+}
+body.is-mobile .workspace-drawer { --input-height: 36px; }
+
+/* comfort: honour the system reduced-motion setting everywhere */
+@media (prefers-reduced-motion: reduce) {
+  body *, body *::before, body *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

@@ -274,7 +274,7 @@ An inventory screen gave each rare item card its own animation loop (glow pulse,
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox Performance Audit]] · Frame Budget · Luau Performance and Native Codegen · Task Library Coroutines and Yielding · Luau Garbage Collection and the Memory Model · Links - Profiling
+[[Skill - Roblox Performance Audit]] · Frame Budget · Luau Performance and Native Codegen · Task Library Coroutines and Yielding · Luau Garbage Collection and the Memory Model · Official Docs - Performance
 <!-- auto-links:end -->
 
 <!-- related:start -->

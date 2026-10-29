@@ -240,10 +240,10 @@ Trading multiplies every inventory risk. Minimum rules: both players confirm the
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Trading Systems Without Duplication]] · Saved Inventory End to End · Links - Inventory and items · Pet Hatching and Following End to End · Schema Migrations - Worked Case Studies · Procedural Loot and Item Generation
+[[Trading Systems Without Duplication]] · Saved Inventory End to End · Official Docs - Game Systems · Pet Hatching and Following End to End · Schema Migrations - Worked Case Studies · Procedural Loot and Item Generation
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Quests and Objectives]] · [[Character Select and Class Systems with Different Rigs]] · [[Spawning Teams and Rounds]] · [[Characters and Humanoids]] · [[Status Effects Buffs and Stacking Rules]] · [[Downed, Revive and Bleed-Out States]] · [[Custom Character Controllers]] · [[Camera Systems]]
+[[Quests and Objectives]] · [[Character Select and Class Systems with Different Rigs]] · [[Spawning Teams and Rounds]] · [[Characters and Humanoids]] · [[Clickable and Interactive Parts - ClickDetector, ProximityPrompt and Touched]] · [[Status Effects Buffs and Stacking Rules]] · [[Downed, Revive and Bleed-Out States]] · [[Camera Systems]]
 <!-- related:end -->

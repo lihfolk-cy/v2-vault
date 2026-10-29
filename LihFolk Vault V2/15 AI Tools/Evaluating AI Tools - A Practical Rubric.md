@@ -263,7 +263,7 @@ See also: [[AI in Roblox Development Overview]], [[Prompting and Verifying AI Ou
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Team Roles and Workflows]] · Case Study - Building a Game with AI Agents · [[AI Image Generation for Icons Thumbnails and Concepts]] · Working with Contractors and Revenue Splits · Safety Rules for AI Agents in Studio · Third-Party Skill - Caveman Token Saver
+[[Team Roles and Workflows]] · Case Study - Building a Game with AI Agents · [[AI Image Generation for Icons Thumbnails and Concepts]] · Working with Contractors and Revenue Splits · Safety Rules for AI Agents in Studio
 <!-- auto-links:end -->
 
 <!-- related:start -->

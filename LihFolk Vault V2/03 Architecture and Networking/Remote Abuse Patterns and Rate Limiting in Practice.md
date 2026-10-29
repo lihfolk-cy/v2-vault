@@ -6,13 +6,13 @@ tags: [security, remotes, rate-limiting, validation, exploits, networking, type/
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - Avoid: Expensive lookup before the rate limit -> Rate limit first
-> - Avoid: Range check without NaN check -> `x == x`
+> - Avoid: Range check without a finite check -> `math.isfinite(x)` (or `x == x`) first
 > - Avoid: Payload `userId` used as identity -> Use the injected sender
 > - Every remote goes through one guard: rate, shape, bounds, lock, act, score.
 > - Numbers: finite, integral where needed, ranged.
 > - Strings: length cap, valid UTF-8, membership in fixed sets for keys.
 >
-> Cost: TL;DR ~140 tok · whole note ~5.3k tok. Read more: ## 2. Abuse patterns by payload · ## 3. Abuse patterns by behaviour · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.4k tok. Read more: ## 2. Abuse patterns by payload · ## 3. Abuse patterns by behaviour · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Rate Limiting and Abuse Prevention]] gives the algorithms (token bucket, sliding window, budgets) and production limits. [[Exploits and Anti-Cheat]] gives the threat model and the consequence ladder. [[Server Authority and Validation]] gives the validation layers. This note is the field guide that sits between them: the concrete shapes remote abuse takes, payload by payload, and a single guard layer that handles them in the right order. It also covers cost-weighted limits, re-entrancy (the race that validated code still loses), amplification, log flooding, shadow-mode tuning, and how to fuzz your own remotes before someone else does.
@@ -433,7 +433,7 @@ What to look for on the server afterwards: errors in Output (each one is a missi
 | Mistake | Consequence | Fix |
 |---|---|---|
 | Expensive lookup before the rate limit | Floods become CPU load | Rate limit first |
-| Range check without NaN check | NaN passes every comparison | `x == x` |
+| Range check without a finite check | NaN is a `number` and fails every comparison, so it passes range checks | `math.isfinite(x)` (or `x == x`) first |
 | Payload `userId` used as identity | Pay or harm any player | Use the injected sender |
 | Yield between check and write | Duplication | Lock, or mutate first |
 | Broadcasting relays per request | Amplification to all clients | Interest filter, coalesce, tight limit |
@@ -466,5 +466,5 @@ What to look for on the server afterwards: errors in Output (each one is a missi
 
 <!-- related:start -->
 ## Related
-[[AI Pitfalls - Networking and Security]] · [[Testing Your Own Remotes - Fuzzing and Abuse Tests]] · [[Client-Server Model]] · [[Client Prediction and Reconciliation for Combat]] · [[Replication Rules]] · [[Cross-Server Messaging]] · [[Snapshot Interpolation for Custom Replication]]
+[[AI Pitfalls - Networking and Security]] · [[Testing Your Own Remotes - Fuzzing and Abuse Tests]] · [[Client-Server Model]] · [[Client Prediction and Reconciliation for Combat]] · [[Replication Rules]] · [[Snapshot Interpolation for Custom Replication]] · [[Cross-Server Messaging]]
 <!-- related:end -->

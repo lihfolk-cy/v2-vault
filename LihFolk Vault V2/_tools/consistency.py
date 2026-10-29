@@ -39,6 +39,84 @@ FACTS = [
     ("UIStroke on text: ratio guidance mentions the rounded-font limit",
      r"(?i)stroke[^.|\n]{0,60}?\b(8|10|11|12) (?:to \d+ ?)?%", {"__needs_context__"},
      r"(?i)7 ?%|counters|rounded|Glyph Counters", "UIStroke on Text - Glyph Counters and the Stroke Ratio"),
+    # From the Engine Limits cheat sheet and the 62 Engine Reference Cards (verified against Creator Hub docs 2026-10-29).
+    ("Default Humanoid.JumpHeight", r"(?i)jump ?height`?(?: defaults? to| default(?: of)?| of| is|:)? (\d+(?:\.\d+)?)\b",
+     {"7.2"}, r"(?i)set|custom|higher|lower|=", "Characters and Humanoids"),
+    ("Default Players.RespawnTime", r"(?i)respawn ?time`?(?:,? which)?(?: defaults? to| default(?: of|:)?| of| is|:| \|| ?\()? ?(\d+(?:\.\d+)?) ?(?:s\b|sec)",
+     {"5", "5.0"}, r"(?i)set|custom|shorter|longer|=", "Players - Engine Reference Card"),
+    ("Humanoid:MoveTo timeout", r"(?i)MoveTo[^.|\n]{0,60}?(?:times? ?out|timeout)[^.|\n]{0,25}?\b(\d+)(?: ?s\b| ?sec|-second)",
+     {"8"}, None, "Humanoid - Engine Reference Card"),
+    ("Max collision groups per world",
+     r"(?i)(?:max(?:imum)?|up to|limit(?: of)?|cap(?: of)?)[^.|\n]{0,15}?\b(\d+) collision groups"
+     r"|collision groups?[^.|\n]{0,30}?(?:max(?:imum)?|limit|cap(?:ped)?|up to)[^.|\n]{0,10}?\b(\d+)\b(?! ?char)"
+     r"|collision groups?[^.|\n]{0,60}?\b(\d+) per world|collision groups (\d+)\b",
+     {"32"}, None, "PhysicsService - Engine Reference Card"),
+    ("Raycast max length", r"(?i)(?:\bray(?:cast)?s?\b|direction)[^.|\n]{0,60}?(?:max(?:imum)?|at most|up to|limit(?:ed)?|longer than|cap(?:ped)?)"
+     r"[^.|\n]{0,20}?\b(\d{1,3}(?:,\d{3})+|\d{4,6}) studs"
+     r"|max(?:imum)? ray(?:cast)? (?:length|distance)[^.|\n]{0,10}?\b(\d{1,3}(?:,\d{3})+|\d{4,6}) studs", {"15000"}, None, "Workspace - Engine Reference Card"),
+    # 1 kB in the engine docs; the Open Cloud messaging guide says "1,024 characters (1 KiB)".
+    ("MessagingService message size", r"(?i)messaging(?: ?service)?[^.|\n]{0,80}?\b(\d+(?:\.\d+)?) ?[kK]i?B\b"
+     r"|messages? (?:size )?(?:up to |of |is |:)?(\d[\d,]*) char", {"1", "1024"},
+     r"(?i)\bMB\b", "Cross-Server Messaging"),
+    ("MessagingService topic name length", r"(?i)topic(?: name)?s?[^.|\n]{0,30}?\b(\d+) char", {"80"}, None,
+     "MessagingService - Engine Reference Card"),
+    ("UnreliableRemoteEvent payload limit", r"(?i)unreliable[^.|\n]{0,80}?\b(\d[\d,]*) ?(?:bytes|B\b)"
+     r"|unreliable[^.|\n]{0,80}?\b(\d+) ?KB\b", {"1000", "900", "1"}, None, "RemoteEvents RemoteFunctions and Unreliable Remotes"),
+    ("MemoryStore max expiration", r"(?i)(?:memory ?store|sorted map|hash map|queue)[^.|\n]{0,80}?(?:expir\w*|ttl)[^.|\n]{0,30}?\b(\d+) days"
+     r"|(?:expir\w*|ttl)[^.|\n]{0,30}?(?:max(?:imum)?|at most|up to)[^.|\n]{0,25}?\b(\d+) days",
+     {"45"}, None, "MemoryStore"),
+    ("MemoryStore key length", r"(?i)(?:memory ?store|sorted map|hash map)[^.|\n]{0,60}?keys?[^.|\n]{0,20}?\b(\d+) char",
+     {"128"}, None, "MemoryStore"),
+    ("DataStore name/scope length", r"(?i)(?:data ?store|scope) ?names?[^.|\n]{0,30}?\b(\d+) char|scopes?[^.|\n]{0,20}?\b(\d+) char",
+     {"50"}, None, "DataStore Fundamentals"),
+    ("DataStore GetAsync cache time", r"(?i)(?:GetAsync|data ?store)[^.|\n]{0,40}?cache[^.|\n]{0,30}?\b(\d+) ?(?:s\b|sec)",
+     {"4"}, None, "DataStore Fundamentals"),
+    ("Instance.Name length", r"(?i)(?:Instance\.Name|instance names?)`?[^.|\n]{0,30}?\b(\d+) char", {"100"}, None,
+     "Instance - Engine Reference Card"),
+    ("Attribute name length", r"(?i)attribute names?[^.|\n]{0,30}?\b(\d+) char", {"100"},
+     r"(?i)playing tracks|attributes per instance",  # Server Authority's own replicated-attribute limits
+     "Instance - Engine Reference Card"),
+    ("ParticleEmitter rate cap",
+     r"(?i)(?:particle|emitter)[^.|\n]{0,50}?(?:cap(?:ped|s)?|max(?:imum)?|limit|up to|at most)[^.|\n]{0,20}?\b(\d+) (?:particles ?)?(?:per second|/s|particles/s)"
+     r"|\bRate cap\W{0,6}(\d+) (?:particles ?)?(?:per second|/s) per emitter",
+     {"400", "100"}, None, "ParticleEmitter - Engine Reference Card"),
+    ("Particle lifetime cap", r"(?i)lifetime[^.|\n]{0,30}?(?:caps?|capped|max(?:imum)?|clamped|limit)[^.|\n]{0,20}?\b(\d+)\b",
+     {"20"}, None, "ParticleEmitter - Engine Reference Card"),
+    ("FlipbookFramerate max", r"(?i)flipbook ?frame ?rate`?[^.|\n]{0,30}?(?:max(?:imum|es out)?|cap(?:ped|s)?|up to|at most|limit)[^.|\n]{0,15}?\b(\d+)",
+     {"30"}, None, "ParticleEmitter - Engine Reference Card"),
+    ("Mesh triangle limit", r"(?i)(?:mesh|triangle|tri)[^.|\n]{0,40}?(?:limit|max(?:imum)?|cap|ceiling|at most|hard)[^.|\n]{0,20}?"
+     r"\b(\d{1,3}(?:,\d{3})+|\d{4,6}|\d+k) (?:tris\b|triangles|polys|polygons)", {"20000", "20k", "20K"},
+     r"(?i)budget|aim|target|keep|LOD|per (?:character|prop|model|asset)|scene|total|generat|measured|cage|layered|clothing",
+     "Parts Unions and MeshParts"),
+    ("Place file size limit", r"(?i)place (?:file )?size[^.|\n]{0,30}?\b(\d+) ?MB", {"100"}, None,
+     "Engine Limits, Quotas and Defaults - Cheat Sheet"),
+    ("Default StreamingMinRadius", r"(?i)StreamingMinRadius`?(?: defaults?(?: to| of| is)?:?| default:?| is| of)? (\d+)",
+     {"64"}, r"(?i)set|=|rais|lower|custom|increase|decrease|chosen|recommend|\buse\b|\btry\b", "Instance Streaming"),
+    ("Default StreamingTargetRadius", r"(?i)StreamingTargetRadius`?(?: defaults?(?: to| of| is)?:?| default:?| is| of)? (\d+)",
+     {"1024"}, r"(?i)set|=|rais|lower|custom|increase|decrease|chosen|recommend|\buse\b|\btry\b", "Instance Streaming"),
+    ("Default Camera.FieldOfView",
+     r"(?i)(?:FieldOfView|\bFOV)`?[^.|\n]{0,20}?default[^.|\n]{0,10}?\b(\d+)|default (?:FieldOfView|FOV)`?[^.|\n]{0,10}?\b(\d+)",
+     {"70"}, None, "Camera - Engine Reference Card"),
+    ("Default TweenInfo EasingStyle",
+     r"(?i)(?:defaults?|TweenInfo\.new\(\))[^.|\n]{0,30}?(?:EasingStyle|easing style)`?(?:\.| is| of|:)? ?`?(?:Enum\.EasingStyle\.)?"
+     r"(Linear|Quad|Sine|Cubic|Quart|Quint|Exponential|Back|Bounce|Elastic|Circular)\b",
+     {"Quad"}, None, "TweenService - Engine Reference Card"),
+    ("Players per TeleportAsync call", r"(?i)TeleportAsync[^.|\n]{0,60}?\b(\d+) players|(\d+) players per `?TeleportAsync",
+     {"50"}, None, "TeleportService - Engine Reference Card"),
+    ("TextChat SendAsync metadata length", r"(?i)(?:SendAsync|TextChat\w*|chat)[^.|\n]{0,40}?metadata[^.|\n]{0,30}?\b(\d+) char",
+     {"200"}, None, "TextChatService - Engine Reference Card"),
+    ("BanAsync DisplayReason length", r"(?i)DisplayReason`?[^.|\n/]{0,20}?\b(\d[\d,]*) char", {"400"}, None,
+     "Players - Engine Reference Card"),
+    ("BanAsync PrivateReason length", r"(?i)PrivateReason`?[^.|\n/]{0,20}?\b(\d[\d,]*) char", {"1000"}, None,
+     "Players - Engine Reference Card"),
+    ("WaitForChild infinite-yield warning delay", r"(?i)(?:infinite[- ]yield|WaitForChild)[^.|\n]{0,60}?\bafter (\d+) ?(?:s\b|sec)",
+     {"5"}, None, "Instance - Engine Reference Card"),
+    ("Default animation fade time", r"(?i)fade ?time[^.|\n]{0,20}?(?:defaults?|default of|is)[^.|\n]{0,15}?\b(\d+(?:\.\d+)?) ?(?:s\b|sec)"
+     r"|default fade(?: time)?(?: of| is)? (\d+(?:\.\d+)?)", {"0.1"}, None, "Animator - Engine Reference Card"),
+    ("Default health regeneration rate", r"(?i)regen\w*[^.|\n]{0,40}?\b(\d+(?:\.\d+)?) ?% of `?MaxHealth", {"1"}, None,
+     "Humanoid - Engine Reference Card"),
+    ("Default Sound.Volume", r"(?i)(?:Sound\.|(?<![\w.]))Volume`?(?: defaults?(?: to| of| is)?| default:?) (\d+(?:\.\d+)?)"
+     r"|default (?:Sound\.)?Volume`?(?: of| is)? (\d+(?:\.\d+)?)", {"0.5"}, None, "SoundService - Engine Reference Card"),
 ]
 STAMP = re.compile(r"(?i)\b(?:as of|checked|verified)(?: in)?(?: \d{1,2})? (January|February|March|April|May|June|July|"
                    r"August|September|October|November|December) (20\d\d)")

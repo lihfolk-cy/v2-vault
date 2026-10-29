@@ -311,7 +311,7 @@ Server movement checks must allow grapple speeds while a grapple is active ([[De
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Constraints]] · Multi-Bone IK - FABRIK and CCD · [[Cars with Constraints - Suspension Steering and Drive]] · Links - Beams and trails · Squash Stretch and Anticipation in UI and Characters · Rigging in Blender
+[[Official Docs - Physics]] · Multi-Bone IK - FABRIK and CCD · [[Cars with Constraints - Suspension Steering and Drive]] · Official Docs - Visual Effects · Squash Stretch and Anticipation in UI and Characters · Rigging in Blender
 <!-- auto-links:end -->
 
 <!-- related:start -->

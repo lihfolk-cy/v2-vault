@@ -305,10 +305,10 @@ See [[Ethical Design and Player Trust]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Economy Telemetry and Balancing Live]] · Feature Flags and Staged Rollouts · Click-Through Rate · Links - Analytics · Economy Design Start Here · Discovery and the Algorithm
+[[Economy Telemetry and Balancing Live]] · Feature Flags and Staged Rollouts · Click-Through Rate · Official Docs - Publishing and Live Ops · Economy Design Start Here · Discovery and the Algorithm
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Update Cadence and Hype Cycles]] · [[Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics]] · [[Sponsored Ads and Campaign Math]] · [[Game Icon Design - Readable at Small Sizes]] · [[Short-Form Video Marketing]] · [[Experience Description and Search Keywords]] · [[Marketing to Kids and Teens - Age Rules and Paid-Promo Disclosure]] · [[Game Trailers and Clean Footage - Capture, Freecam and Editing]]
+[[Thumbnail and Icon A-B Testing - Method, Sample Size and Reading Results]] · [[Update Cadence and Hype Cycles]] · [[Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics]] · [[Sponsored Ads and Campaign Math]] · [[Game Icon Design - Readable at Small Sizes]] · [[Short-Form Video Marketing]] · [[Experience Description and Search Keywords]]
 <!-- related:end -->

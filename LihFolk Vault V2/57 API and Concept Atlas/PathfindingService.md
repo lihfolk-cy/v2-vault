@@ -8,8 +8,9 @@ tags: [atlas, api, type/atlas, area/gameplay, area/world, api/PathfindingService
 > - `PathfindingService:FindPathAsync(start, finish)` is the one-call form; it returns a Path whose status may be `NoPath` (Docs).
 > - If you keep `Humanoid`s, disable unneeded states, avoid per-zombie `PathfindingService` every frame, and share flow fields or...
 > - Navigation. `PathfindingService` handles terrain, but caves with ceilings close to agent height and steep tunnels create...
+> - PathfindingService - Engine Reference Card.
 >
-> Cost: TL;DR ~140 tok · whole note ~370 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~430 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -22,10 +23,11 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 
 - If you keep `Humanoid`s, disable unneeded states, avoid per-zombie `PathfindingService` every frame, and share flow fields or waypoint graphs across enemies (Pathfinding Edge Cases and Fallbacks). ([[Genre Playbook - Zombie and Wave Survival Co-op]])
 - Navigation. `PathfindingService` handles terrain, but caves with ceilings close to agent height and steep tunnels create unreachable spots. ([[Noise Functions and Terrain Generation]])
+- PathfindingService - Engine Reference Card. ([[Engine Reference Cards Start Here]])
 
 ## Mentioned in
 
-10 notes in 6 sections. The 10 most relevant are linked:
+12 notes in 7 sections. The 12 most relevant are linked:
 
 ### 09 Gameplay Systems
 [[NPC AI and Behaviour]] · [[Pathfinding]] · [[Pathfinding Edge Cases and Fallbacks]]
@@ -43,6 +45,9 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 [[Horror Monster Chase AI End to End]]
 
 ### 46 Resource Library
-[[Links - NPCs and AI]]
+[[Official Docs - Game Systems]]
+
+### 62 Engine Reference Cards
+[[Engine Reference Cards Start Here]] · [[PathfindingService - Engine Reference Card]]
 
 <!-- atlas:generated -->

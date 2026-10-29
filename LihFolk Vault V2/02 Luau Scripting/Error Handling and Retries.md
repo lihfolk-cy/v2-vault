@@ -345,10 +345,10 @@ return Breaker
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Error Handling - pcall xpcall and Promise Patterns]] · [[Cookbook - Data and Saving]] · Links - Error handling and debugging · Reading Luau Errors and Stack Traces · Debugging DataStore Problems · Skill - Roblox DataStore Safety
+[[Error Handling - pcall xpcall and Promise Patterns]] · [[Cookbook - Data and Saving]] · Official Docs - Scripting and Luau · Reading Luau Errors and Stack Traces · Debugging DataStore Problems · Skill - Roblox DataStore Safety
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Reading Luau Errors and Stack Traces]] · [[Functions Closures and Upvalues]] · [[Events Signals and Connections]] · [[Tables Metatables and OOP]] · [[Script Types and Run Context]] · [[Luau Performance Patterns with Benchmarks]] · [[Parallel Luau and Actors]]
+[[Reading Luau Errors and Stack Traces]] · [[Functions Closures and Upvalues]] · [[Events Signals and Connections]] · [[Tables Metatables and OOP]] · [[Text Filtering - TextService for Names, Signs and Messages]] · [[Script Types and Run Context]] · [[Luau Performance Patterns with Benchmarks]] · [[Parallel Luau and Actors]] · [[Metatables and OOP - When and When Not]]
 <!-- related:end -->

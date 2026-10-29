@@ -437,10 +437,10 @@ Either document "caller must not keep this" in the function name (`nearbyEnemies
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Luau Garbage Collection and the Memory Model]] · [[Luau Language Essentials]] · Advanced Luau Start Here · Links - Luau language · Entity Component Systems · Building a Signal Library
+[[Luau Garbage Collection and the Memory Model]] · [[Luau Language Essentials]] · Advanced Luau Start Here · Official Docs - Scripting and Luau · Entity Component Systems · Building a Signal Library
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Luau Type System and Strict Mode]] · [[Math Vectors and CFrames]] · [[Events Signals and Connections]] · [[Strings Patterns and Formatting]] · [[Task Library Coroutines and Yielding]] · [[Module Scripts and Requiring]] · [[Instances Attributes and Tags]] · [[Error Handling and Retries]]
+[[Luau Type System and Strict Mode]] · [[Events Signals and Connections]] · [[Math Vectors and CFrames]] · [[Strings Patterns and Formatting]] · [[Task Library Coroutines and Yielding]] · [[Module Scripts and Requiring]] · [[Instances Attributes and Tags]] · [[Error Handling and Retries]]
 <!-- related:end -->

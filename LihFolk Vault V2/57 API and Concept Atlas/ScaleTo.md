@@ -7,10 +7,10 @@ tags: [atlas, api, type/atlas, area/animation, area/world, api/ScaleTo]
 > [!tldr] TL;DR
 > - `ScaleTo` scales the model around its pivot; with the pivot at the trunk base, grounding stays correct.
 > - Know whether your characters are body-scaled or `ScaleTo`-scaled; author translations to match.
+> - Scale with ScaleTo rather than resizing parts by hand.
 > - Test. A `ScaleTo(2)` rig with translation keys on the root child and on a limb.
-> - Assuming `ScaleTo` works on upgraded characters.
 >
-> Cost: TL;DR ~130 tok · whole note ~530 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~520 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -22,13 +22,13 @@ API snapshot: member of `Model` (`_tools/roblox_api.json`, docs build of 2026-10
 ## Key facts
 
 - Know whether your characters are body-scaled or `ScaleTo`-scaled; author translations to match. ([[Scale and Animation]])
+- Scale with ScaleTo rather than resizing parts by hand. ([[Model - Engine Reference Card]])
 - Test. A `ScaleTo(2)` rig with translation keys on the root child and on a limb. ([[Open Questions]])
 - Assuming `ScaleTo` works on upgraded characters. Symptom: scaled characters with detached or misplaced limbs. ([[AnimationConstraint and Physically Simulated Characters]])
-- Body scale values versus model scale. If you scale players with `Model:ScaleTo`, `Model:GetScale()` reports it; body scale values do not. ([[Avatar Body Types and Scale in Gameplay]])
 
 ## Mentioned in
 
-24 notes in 6 sections. The 24 most relevant are linked:
+25 notes in 7 sections. The 25 most relevant are linked:
 
 ### 06 World Building and Art
 [[Foliage Props and Scatter]] · [[Modeling in Blender for Roblox]]
@@ -47,5 +47,8 @@ API snapshot: member of `Model` (`_tools/roblox_api.json`, docs build of 2026-10
 
 ### 47 Game Feel and Juice
 [[Squash Stretch and Anticipation in UI and Characters]]
+
+### 62 Engine Reference Cards
+[[Model - Engine Reference Card]]
 
 <!-- atlas:generated -->

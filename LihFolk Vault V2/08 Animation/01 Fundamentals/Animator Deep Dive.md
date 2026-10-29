@@ -211,10 +211,10 @@ Work down this list; each line is a real cause seen in production.
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Debugging Animation Problems]] · [[Snippets - Lua Keyframe Player Core]] · [[Troubleshooting Table]] · [[Performance and Memory]] · [[Links - Animation playback]] · Links - Rigs · [[Animation Start Here]]
+[[Debugging Animation Problems]] · [[Snippets - Lua Keyframe Player Core]] · [[Troubleshooting Table]] · [[Performance and Memory]] · [[Official Docs - Characters and Animation]] · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[KeyframeSequence Keyframe and Pose Reference]] · [[AI Pitfalls - Physics and Animation]] · [[Animation Glossary]] · [[Rigs and Joints]] · [[Open Questions]] · [[Bones and Skinned Meshes]] · [[Procedural Animation]] · [[Snippets - Ragdoll]] · [[CurveAnimation and Curve Channels]]
+[[Animator - Engine Reference Card]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[AI Pitfalls - Physics and Animation]] · [[Animation Glossary]] · [[Rigs and Joints]] · [[Open Questions]] · [[Bones and Skinned Meshes]] · [[Procedural Animation]] · [[CurveAnimation and Curve Channels]] · [[Snippets - Ragdoll]]
 <!-- related:end -->

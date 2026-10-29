@@ -184,5 +184,5 @@ return { pickSections = pickSections }
 
 <!-- related:start -->
 ## Related
-[[Teardown - Natural Disaster Survival]] · [[Teardown - Build A Boat For Treasure]] · [[Teardown - Fling Things and People]] · [[Teardown - Ink Game]] · [[Teardown - Escape Tsunami for Brainrots]] · [[Teardown - Ride A Pet]] · [[Teardown - Sol's RNG]] · [[Teardown - Plants vs Brainrots]]
+[[Teardown - Build A Boat For Treasure]] · [[Teardown - Natural Disaster Survival]] · [[Teardown - Fling Things and People]] · [[Teardown - Ink Game]] · [[Teardown - Escape Tsunami for Brainrots]] · [[Teardown - Ride A Pet]] · [[Teardown - Sol's RNG]] · [[Teardown - Plants vs Brainrots]]
 <!-- related:end -->

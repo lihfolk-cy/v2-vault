@@ -258,7 +258,7 @@ See also: [[Custom Locomotion Controller Design]], [[The Default Animate Script]
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Troubleshooting Table]] · [[Idle Breathing and Secondary Motion]] · [[Timing Spacing and Frame Charts]] · [[Animation Glossary]] · [[Custom Character Controllers]] · Links - Humanoids and character controllers · [[Animation Start Here]]
+[[Troubleshooting Table]] · [[Idle Breathing and Secondary Motion]] · [[Timing Spacing and Frame Charts]] · [[Animation Glossary]] · [[Custom Character Controllers]] · Official Docs - Characters and Animation · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->

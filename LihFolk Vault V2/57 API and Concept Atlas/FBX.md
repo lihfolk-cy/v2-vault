@@ -6,11 +6,11 @@ tags: [atlas, concept, type/atlas, area/animation, area/modeling]
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - FBX adds its own centimetre scale (Roblox's export page: Apply Scalings "FBX Unit Scale").
+> - Avoid: Default FBX export, or two scale fixes stacked -> Apply Scalings: FBX Unit Scale, other scales 1.0; or GLB, which...
 > - Avoid: Leaf bones left on (FBX) -> Add Leaf Bones off.
-> - Avoid: Simplify left at default (FBX) -> Simplify 0.
 > - Avoid: Blockbench ASCII FBX into Blender -> Use glTF/GLB or OBJ.
 >
-> Cost: TL;DR ~110 tok · whole note ~830 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~890 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -19,15 +19,15 @@ FBX adds its own centimetre scale (Roblox's export page: Apply Scalings "FBX Uni
 
 ## Key facts
 
+- Avoid: Default FBX export, or two scale fixes stacked -> Apply Scalings: FBX Unit Scale, other scales 1.0; or GLB, which... ([[Exporting FBX vs GLB]])
 - Avoid: Leaf bones left on (FBX) -> Add Leaf Bones off. ([[Exporting FBX vs GLB]])
-- Avoid: Simplify left at default (FBX) -> Simplify 0. ([[Exporting FBX vs GLB]])
 - Avoid: Blockbench ASCII FBX into Blender -> Use glTF/GLB or OBJ. ([[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]])
 - Avoid: Mixing FBX scale methods -> One method: FBX Unit Scale, or use GLB. ([[Blender Workflow for Roblox Creators]])
 - Shading fine in Blender, smeared in Studio: Modifiers not applied, or FBX Smoothing set to Face/Edge -> Apply modifiers; FBX Smoothing Normals Only. ([[Clean Stylised Shading - Weighted and Custom Normals]])
 
 ## Mentioned in
 
-55 notes in 14 sections. The 25 most relevant are linked:
+57 notes in 15 sections. The 25 most relevant are linked:
 
 ### 06 World Building and Art
 [[Modeling in Blender for Roblox]] · [[Parts Unions and MeshParts]]
@@ -53,6 +53,6 @@ FBX adds its own centimetre scale (Roblox's export page: Apply Scalings "FBX Uni
 ### Root notes
 [[00 Start Here]]
 
-Also mentioned in (not linked): Animation Editor Advanced · Animation Start Here · Bevels Chamfers and Edge Highlights Without Textures · Blender 5 Python Gotchas for Headless Builds · Blender Automation with Python · Commissions Pricing and Contracts · Creature Rig Conventions · Evaluating AI Tools - A Practical Rubric · Faceted Low-Poly - Flat Normals and Facet Size · Facial Animation and Dynamic Heads · Hard-Surface Modeling · Layered Clothing Creation Workflow · Low-Poly Creature From a Flat Reference Sheet · Low-Poly Tree Set Worked Example · Low-Poly and Stylized Modeling · Meshing Voxels for Roblox - Greedy Meshing and Export · Modeling Fundamentals for Games · Open Questions - Whole Vault · Pipeline - Importing Animated Enemies · Skeleton Library · Skill - Roblox Asset Import · Skinning Weights · Substance Painter and Texturing Tools · The Gradient Palette Texture Workflow · Trim Sheets Atlases and Vertex Colors · UGC Avatar Items and Accessories · Voxel Modelling Start Here · Voxel Shading - Baked AO Edges and Lighting · Weight Painting and Skinning for Roblox · What AI Models Get Wrong in Roblox
+Also mentioned in (not linked): Animation Editor Advanced · Animation Start Here · Bevels Chamfers and Edge Highlights Without Textures · Blender 5 Python Gotchas for Headless Builds · Blender Automation with Python · Commissions Pricing and Contracts · Creature Rig Conventions · Evaluating AI Tools - A Practical Rubric · Faceted Low-Poly - Flat Normals and Facet Size · Facial Animation and Dynamic Heads · Hard-Surface Modeling · Layered Clothing Creation Workflow · Low-Poly Creature From a Flat Reference Sheet · Low-Poly Tree Set Worked Example · Low-Poly and Stylized Modeling · Making Thumbnails in Studio and Blender - Capture, Lighting and Posing · Meshing Voxels for Roblox - Greedy Meshing and Export · Modeling Fundamentals for Games · Open Questions - Whole Vault · Pipeline - Importing Animated Enemies · Skeleton Library · Skill - Roblox Asset Import · Skinning Weights · Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs · Substance Painter and Texturing Tools · The Gradient Palette Texture Workflow · Trim Sheets Atlases and Vertex Colors · UGC Avatar Items and Accessories · Voxel Modelling Start Here · Voxel Shading - Baked AO Edges and Lighting · Weight Painting and Skinning for Roblox · What AI Models Get Wrong in Roblox
 
 <!-- atlas:generated -->

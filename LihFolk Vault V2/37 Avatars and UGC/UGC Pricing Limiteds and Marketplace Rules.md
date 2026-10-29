@@ -254,10 +254,10 @@ Moderation also applies to everything inside the item: textures and meshes must 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Commerce and Physical Goods]] · Player-Driven Trading Economies · Links - Avatars and UGC · Limited-Time Offers - Design and Ethics · Subscriptions and Premium Payouts · Game Passes
+[[Commerce and Physical Goods]] · Player-Driven Trading Economies · Official Docs - Asset Creation · Limited-Time Offers - Design and Ethics · Subscriptions and Premium Payouts · Game Passes
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Player-Driven Trading Economies]] · [[Limited-Time Offers - Design and Ethics]] · [[Subscriptions and Premium Payouts]] · [[HumanoidDescription and Outfit Systems]] · [[Layered Clothing Creation Workflow]] · [[Avatar Body Types and Scale in Gameplay]]
+[[Limited-Time Offers - Design and Ethics]] · [[Player-Driven Trading Economies]] · [[Subscriptions and Premium Payouts]] · [[HumanoidDescription and Outfit Systems]] · [[Layered Clothing Creation Workflow]] · [[Avatar Body Types and Scale in Gameplay]]
 <!-- related:end -->

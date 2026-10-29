@@ -303,7 +303,7 @@ See [[Documentation and Knowledge Bases]] for structuring the knowledge base its
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Cross-server messaging]] · Codes Redemption System End to End · Live Ops Deep Dive Start Here · Feature Flags · Places Universes and Experience Settings · Feature Flags and Staged Rollouts
+[[Official Docs - Networking and Multiplayer]] · Codes Redemption System End to End · Live Ops Deep Dive Start Here · Feature Flags · Places Universes and Experience Settings · Feature Flags and Staged Rollouts
 <!-- auto-links:end -->
 
 <!-- related:start -->

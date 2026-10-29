@@ -363,10 +363,10 @@ See also: [[Sound Design for Games]], [[Sound Fundamentals]], [[The Audio API - 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Audio Pipeline]] · Feedback Timing - Sound Visual and Haptic Sync · Captions and Audio Accessibility · Resource Library - Audio · AI Audio - Voice Music and SFX · Links - Music and ambience
+[[Audio Pipeline]] · Feedback Timing - Sound Visual and Haptic Sync · Captions and Audio Accessibility · Official Docs - Audio · AI Audio - Voice Music and SFX
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Audio Mixer Settings with SoundGroups]] · [[Feedback Timing - Sound Visual and Haptic Sync]] · [[Engine and Tyre Audio Driven by RPM and Slip]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[VFX Design Playbook]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Music Licensing and Audio Upload Rules for 2026]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]]
+[[Audio Mixer Settings with SoundGroups]] · [[Feedback Timing - Sound Visual and Haptic Sync]] · [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Engine and Tyre Audio Driven by RPM and Slip]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[Replicating VFX - Server Validates, Clients Render]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Music Licensing and Audio Upload Rules for 2026]] · [[Gore Policy and Kid-Friendly Hit Feedback]]
 <!-- related:end -->

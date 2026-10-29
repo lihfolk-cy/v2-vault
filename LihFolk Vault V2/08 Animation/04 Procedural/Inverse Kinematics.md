@@ -154,10 +154,10 @@ What to look for: the target jumping (a bad input, not a bad solver), the pole p
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animation Glossary]] · [[Animation Quality Standard]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Links - Inverse kinematics]] · Voxel Characters - Proportions Joints and Rigging · AI Animation and Motion from Video · [[Animation Start Here]]
+[[Animation Glossary]] · [[Animation Quality Standard]] · [[Case Study - Fixing Hundreds of Attack Clips]] · [[Official Docs - Characters and Animation]] · Voxel Characters - Proportions Joints and Rigging · AI Animation and Motion from Video · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Motor6D Math and CFrame Composition]] · [[Spec-Driven Move Authoring]] · [[Animation Editor Advanced]] · [[Troubleshooting Table]] · [[Posing and Silhouettes]] · [[Ragdolls and Physics-Based Animation]] · [[Retargeting Animations Between Rigs]] · [[Springs Damping and Smoothing]]
+[[Motor6D Math and CFrame Composition]] · [[Spec-Driven Move Authoring]] · [[Animation Editor Advanced]] · [[Troubleshooting Table]] · [[Posing and Silhouettes]] · [[Retargeting Animations Between Rigs]] · [[Ragdolls and Physics-Based Animation]] · [[Springs Damping and Smoothing]]
 <!-- related:end -->

@@ -97,7 +97,7 @@ Letting players type an audio id is the highest-risk audio feature:
 - [ ] Player audio features curated, mutable and capped.
 
 ## See also
-[[Audio Pipeline]] · [[AI Audio - Voice Music and SFX]] · [[Music and Adaptive Audio]] · [[Sound Fundamentals]] · [[Policy and Age Rules 2026]] · [[Roblox Policies on AI-Generated Content]] · [[Links - Audio creation and uploading]]
+[[Audio Pipeline]] · [[AI Audio - Voice Music and SFX]] · [[Music and Adaptive Audio]] · [[Sound Fundamentals]] · [[Policy and Age Rules 2026]] · [[Roblox Policies on AI-Generated Content]] · [[Official Docs - Asset Creation]]
 
 ## Connected notes
 <!-- auto-links:start -->
@@ -106,5 +106,5 @@ Letting players type an audio id is the highest-risk audio feature:
 
 <!-- related:start -->
 ## Related
-[[Legal Basics - IP Licenses and Assets]] · [[Who Owns AI-Generated Code and Assets]] · [[Spatial Audio and Mixing]] · [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Combat Sound Design and Feedback]] · [[The Audio API - Players Emitters Wires and Effects]]
+[[Legal Basics - IP Licenses and Assets]] · [[Who Owns AI-Generated Code and Assets]] · [[Spatial Audio and Mixing]] · [[Combat Sound Design and Feedback]] · [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[The Audio API - Players Emitters Wires and Effects]]
 <!-- related:end -->

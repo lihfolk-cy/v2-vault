@@ -67,10 +67,10 @@ Related concepts: [[Easing]], [[Anticipation]], [[Frame Budget]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Tweening and UI animation]] · Snippets - Procedural Motion · Game Feel Start Here · [[Hit-Stop]] · Multi-Bone IK - FABRIK and CCD · Timing Spacing and Frame Charts · [[Core Concepts Start Here]]
+[[Official Docs - UI]] · Snippets - Procedural Motion · Game Feel Start Here · [[Hit-Stop]] · Multi-Bone IK - FABRIK and CCD · Timing Spacing and Frame Charts · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Accessibility Contrast]] · [[Deterministic Simulation]] · [[Expected Value]] · [[Variance]] · [[Input Buffering]] · [[Power Curve]] · [[Skinning Weights]] · [[Safe Area]]
+[[Accessibility Contrast]] · [[Deterministic Simulation]] · [[Expected Value]] · [[Variance]] · [[Input Buffering]] · [[Power Curve]] · [[Skinning Weights]] · [[Server Authority]]
 <!-- related:end -->

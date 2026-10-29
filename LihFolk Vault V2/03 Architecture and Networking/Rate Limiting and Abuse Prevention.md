@@ -8,11 +8,11 @@ tags: [security, rate-limiting, networking, performance, abuse, type/guide, area
 > - Avoid: Rate limit after expensive parsing or DataStore calls -> Rate limit first
 > - Avoid: One global cooldown table keyed by player name -> Key by `Player` (or `UserId`), clear on leave
 > - Avoid: Kicking on rate-limit hits -> Log and score; drop the request
-> - Every client-triggerable entry point has a per-player limit as its first statement.
+> - Every client-triggerable entry point has a per-player limit as its first statement, then type and range checks on every argument.
 > - Limits are 1.5x to 2x the fastest legitimate use, with logged rejections.
 > - Backend calls go through server-wide budgets.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.6k tok. Read more: ## A reusable rate limiter · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~170 tok · whole note ~4.6k tok. Read more: ## A reusable rate limiter · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Any server logic a client can trigger (remotes, Touched, ProximityPrompts, ClickDetectors, chat, trade requests) can be triggered faster than you planned: by exploiters on purpose, by auto-clickers, by a buggy client loop, or by an honest player mashing a button on a laggy connection. Rate limiting decides how often each action may run, protects the economy from timing exploits, and protects the server (and Roblox's backend services) from overload. This note covers the algorithms, how to choose limits, the engine's own limits you must stay under, coalescing and idempotency, cleanup, and production numbers.
@@ -286,7 +286,7 @@ Client debounces do not stop exploiters, but they keep honest clients well insid
 
 ## Checklist
 
-- [ ] Every client-triggerable entry point has a per-player limit as its first statement.
+- [ ] Every client-triggerable entry point has a per-player limit as its first statement, then type and range checks on every argument.
 - [ ] Limits are 1.5x to 2x the fastest legitimate use, with logged rejections.
 - [ ] Backend calls go through server-wide budgets.
 - [ ] Saves and UI pushes are coalesced.
@@ -336,5 +336,5 @@ The senior trade-off: tight limits reduce abuse and anger honest players with ba
 
 <!-- related:start -->
 ## Related
-[[Cookbook - Remotes and Networking]] · [[Autoclicker and Macro Detection for Combat Remotes]] · [[Client Prediction and Reconciliation for Combat]] · [[Client-Server Model]] · [[Interest Management and Per-Player Replication]] · [[Replication Rules]] · [[Network Ownership]] · [[Snapshot Interpolation for Custom Replication]] · [[Teleporting and Multi-Place Games]] · [[Frameworks - Knit Matter and Others]]
+[[Cookbook - Remotes and Networking]] · [[Autoclicker and Macro Detection for Combat Remotes]] · [[Client Prediction and Reconciliation for Combat]] · [[Client-Server Model]] · [[Replication Rules]] · [[Interest Management and Per-Player Replication]] · [[Network Ownership]] · [[Snapshot Interpolation for Custom Replication]] · [[Teleporting and Multi-Place Games]] · [[Frameworks - Knit Matter and Others]]
 <!-- related:end -->

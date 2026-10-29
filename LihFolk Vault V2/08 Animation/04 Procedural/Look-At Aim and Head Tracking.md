@@ -202,10 +202,10 @@ Related: [[Springs Damping and Smoothing]], [[IKControl Reference]], [[Procedura
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Motor6D Math and CFrame Composition]] · [[Cookbook - Math CFrame and Vectors]] · Rotations Angles and Quaternions · [[Snippets - IK]] · Math Vectors and CFrames · Links - Inverse kinematics · [[Animation Start Here]]
+[[Motor6D Math and CFrame Composition]] · [[Cookbook - Math CFrame and Vectors]] · Rotations Angles and Quaternions · [[Snippets - IK]] · Math Vectors and CFrames · Official Docs - Characters and Animation · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Two-Bone IK Math]] · [[Inverse Kinematics]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Rotations Angles and Quaternions]] · [[Elbow Poles Swivel and Joint Limits]] · [[Flight Flocks and Path Animation]] · [[Blender Armature and Bone Roll Conventions]] · [[Procedural Weapon Motion]] · [[Procedural Gait and Footstep Planning]]
+[[Two-Bone IK Math]] · [[Inverse Kinematics]] · [[Rotations Angles and Quaternions]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Elbow Poles Swivel and Joint Limits]] · [[Blender Armature and Bone Roll Conventions]] · [[Flight Flocks and Path Animation]] · [[Procedural Weapon Motion]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]]
 <!-- related:end -->

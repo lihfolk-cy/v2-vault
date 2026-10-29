@@ -13,7 +13,7 @@ verified: 2026-10-28
 > - Every paid random item and luck modifier shows numeric odds summing to 100% before purchase.
 > - `ArePaidRandomItemsRestricted` and `IsPaidItemTradingAllowed` honoured server-side.
 >
-> Cost: TL;DR ~180 tok · whole note ~2.7k tok. Read more: ## 4. Paid random items (clarified May 26, 2026) · ## 5. Chat: legacy removed, TextChatService lockdown coming · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~2.8k tok. Read more: ## 4. Paid random items (clarified May 26, 2026) · ## 5. Chat: legacy removed, TextChatService lockdown coming · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Between late 2025 and October 2026 Roblox gated chat behind age checks, split under-16 users into curated account tiers, raised the age floor for several game types, tightened paid random item rules, and announced a lockdown of chat message access for scripts. Most of these change what a game must do, not only what players see. Labels follow [[Roblox Changes 2025-2026]].
@@ -41,9 +41,9 @@ Developer impact:
 | Roblox Select | 9-15 | Up to Moderate **and** passes selection |
 | Standard | 16+ | Unchanged |
 
-Selection: developer verification, real-time evaluation (how users 16+ engage with the game, user reports), maturity rating and default exclusions. Social hangouts, sensitive issues and free-form drawing games are excluded by default. Creator requirements: **ID verification, two-step verification, and an active Roblox Plus subscription**. Roblox plans to move to the IARC rating framework later in 2026 (status **Unverified** as of 2026-10-28). In Roblox Kids all communication is off by default.
+Selection: developer verification, real-time evaluation (how users 16+ engage with the game, user reports), maturity rating and default exclusions. Social hangouts, sensitive issues and free-form drawing games are excluded by default. Creator requirements: **ID verification, two-step verification, and either a Roblox Plus or Premium subscription at least 2 months old or a one-time refundable per-game fee** (Docs, Kids and Select publishing page; the April 2026 announcement listed Plus only). Roblox plans to move to the IARC rating framework later in 2026 (status **Unverified** as of 2026-10-28). In Roblox Kids all communication is off by default.
 
-Impact: a game for young players needs a Minimal or Mild label, a verified owner with Plus, and nothing that classifies it as a hangout or free-form creation game.
+Impact: a game for young players needs a Minimal or Mild label, a verified owner with Plus/Premium or the per-game fee, and nothing that classifies it as a hangout or free-form creation game.
 
 ## 3. Maturity labels and feature age floors
 
@@ -142,7 +142,7 @@ end)
 - [ ] `ArePaidRandomItemsRestricted` and `IsPaidItemTradingAllowed` honoured server-side.
 - [ ] All player-to-player text goes through TextChatService; non-chat text filtered and limited to 1 per minute.
 - [ ] Custom chat UI planned onto `TextChannelWindow` before February 2027.
-- [ ] If targeting under-16s: owner ID-verified with 2SV and Plus; label Minimal, Mild or Moderate; no default-excluded features.
+- [ ] If targeting under-16s: owner ID-verified with 2SV and Plus/Premium or the fee; label Minimal, Mild or Moderate; no default-excluded features.
 
 ## See also
 
@@ -155,5 +155,5 @@ end)
 
 <!-- related:start -->
 ## Related
-[[Regional Compliance - Paid Random Items and Country Rules]] · [[Discovery and Monetization Changes 2025-2026]] · [[Data and Cloud Changes 2025-2026]] · [[Engine and API Changes 2025-2026]] · [[Console and VR Release Checklists]] · [[Commerce and Physical Goods]] · [[Server Authority and Input Migration 2026]]
+[[API Renames and Deprecations 2025-2026]] · [[Regional Compliance - Paid Random Items and Country Rules]] · [[Text Chat Customization with TextChatService]] · [[Discovery and Monetization Changes 2025-2026]] · [[Data and Cloud Changes 2025-2026]] · [[Engine and API Changes 2025-2026]] · [[Commerce and Physical Goods]] · [[Console and VR Release Checklists]]
 <!-- related:end -->

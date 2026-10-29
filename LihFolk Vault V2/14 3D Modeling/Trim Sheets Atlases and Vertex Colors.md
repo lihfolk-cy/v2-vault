@@ -218,5 +218,5 @@ Sharing textures also helps rendering. Rule of thumb (Roblox does not document i
 
 <!-- related:start -->
 ## Related
-[[The Gradient Palette Texture Workflow]] · [[Modeling in Blender for Roblox]] · [[Modeling Fundamentals for Games]] · [[Hard-Surface Modeling]] · [[Mesh Optimization for Mobile]] · [[Blender Workflow for Roblox Creators]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[UGC Avatar Items and Accessories]] · [[Procedural Model Kits - Lessons]] · [[Retopology and Decimation]]
+[[The Gradient Palette Texture Workflow]] · [[Modeling in Blender for Roblox]] · [[Modeling Fundamentals for Games]] · [[Hard-Surface Modeling]] · [[Mesh Optimization for Mobile]] · [[Blender Workflow for Roblox Creators]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[UGC Avatar Items and Accessories]] · [[Procedural Model Kits - Lessons]] · [[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]]
 <!-- related:end -->

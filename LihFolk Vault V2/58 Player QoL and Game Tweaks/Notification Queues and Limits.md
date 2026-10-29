@@ -162,5 +162,5 @@ Persist these in the settings schema ([[Settings Menu Essentials and Persistence
 
 <!-- related:start -->
 ## Related
-[[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]] · [[Loading Screen Skip and First-Session Goals]] · [[Block and Mute Respecting Platform Rules]] · [[AFK Detection Idle Kicks and AFK Reward Rules]] · [[Accessibility Cross-Links for QoL Settings]] · [[Confirmation and Undo Patterns for Destructive and Paid Actions]] · [[Joining Friends Parties and Private Servers]]
+[[QoL Audit Checklist]] · [[Top 25 QoL Wins by Effort]] · [[Loading Screen Skip and First-Session Goals]] · [[Block and Mute Respecting Platform Rules]] · [[AFK Detection Idle Kicks and AFK Reward Rules]] · [[Accessibility Cross-Links for QoL Settings]] · [[Confirmation and Undo Patterns for Destructive and Paid Actions]] · [[Mobile Button Layout Editor]]
 <!-- related:end -->

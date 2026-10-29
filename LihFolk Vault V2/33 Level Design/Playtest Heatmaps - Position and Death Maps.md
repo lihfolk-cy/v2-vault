@@ -150,5 +150,5 @@ Change **one thing** per map version, bump the version, and compare. Without the
 
 <!-- related:start -->
 ## Related
-[[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Combat Arena and Encounter Layout]] · [[Economy Telemetry and Balancing Live]] · [[Lobby and Hub Design]] · [[Global State and Live Config]] · [[Instanced Interiors - Pooled House and Room Copies for Many Players]]
+[[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Combat Arena and Encounter Layout]] · [[Lobby and Hub Design]] · [[Economy Telemetry and Balancing Live]] · [[Global State and Live Config]] · [[Instanced Interiors - Pooled House and Room Copies for Many Players]]
 <!-- related:end -->

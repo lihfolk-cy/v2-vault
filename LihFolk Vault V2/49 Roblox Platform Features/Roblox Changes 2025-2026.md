@@ -13,7 +13,7 @@ verified: 2026-10-28
 > - Game has completed the maturity questionnaire (unrated games are unplayable).
 > - Any paid random item shows numerical odds for every outcome before purchase.
 >
-> Cost: TL;DR ~190 tok · whole note ~1.9k tok. Read more: ## The ten changes most likely to break generated code · ## Child notes · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~1.8k tok. Read more: ## The ten changes most likely to break generated code · ## Child notes · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 This hub lists what changed on Roblox between January 2025 and late October 2026 that a capable developer or a strong AI model trained before mid-2025 is likely to miss. It is a delta, not a tutorial: each child note says what changed, when, what code or behaviour must change, and gives a short migration snippet. The numbers are also in machine-readable form in `_data/roblox_facts_2026.json`.
@@ -86,5 +86,5 @@ All dates are post dates or stated effective dates. "As of 2026-10-28" means the
 
 <!-- related:start -->
 ## Related
-[[AI Pitfalls - Stale APIs and Luau]] · [[AI Pitfalls - Data and Monetization]] · [[Regional Compliance - Paid Random Items and Country Rules]] · [[Console and VR Release Checklists]] · [[Commerce and Physical Goods]] · [[Subscriptions and Recurring Revenue]] · [[Badges and Achievement Design]] · [[Experience Notifications and Return Prompts]] · [[Avatar Context Menus Profiles and Social Surfaces]] · [[Friend Invites Referrals and Experience Invites]]
+[[API Renames and Deprecations 2025-2026]] · [[Regional Compliance - Paid Random Items and Country Rules]] · [[Console and VR Release Checklists]] · [[Badges and Achievement Design]] · [[Commerce and Physical Goods]] · [[Subscriptions and Recurring Revenue]]
 <!-- related:end -->

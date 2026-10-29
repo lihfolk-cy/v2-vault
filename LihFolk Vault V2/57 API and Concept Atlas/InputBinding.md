@@ -1,5 +1,5 @@
 ---
-tags: [atlas, api, type/atlas, area/accessibility, area/ui, api/InputBinding]
+tags: [atlas, api, type/atlas, area/accessibility, area/platform, api/InputBinding]
 ---
 # InputBinding
 
@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/accessibility, area/ui, api/InputBinding]
 > - `InputBinding`: one hardware mapping. (Input - UserInputService and ContextActionService)
 > - Input Action System: set the action's touch `InputBinding.UIButton` to your `GuiButton` (Roblox docs), so pressing it drives...
 >
-> Cost: TL;DR ~150 tok · whole note ~410 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~460 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,7 +27,7 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 
 ## Mentioned in
 
-10 notes in 7 sections. The 10 most relevant are linked:
+13 notes in 8 sections. The 13 most relevant are linked:
 
 ### 05 UI and UX
 [[Input - UserInputService and ContextActionService]]
@@ -42,10 +42,13 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 [[Input Remapping and One-Handed Play]] · [[Onboarding Accessibility and Cross-Device Prompts]]
 
 ### 49 Roblox Platform Features
-[[Server Authority and Input Migration 2026]]
+[[API Renames and Deprecations 2025-2026]] · [[Server Authority and Input Migration 2026]]
 
 ### 58 Player QoL and Game Tweaks
 [[Controller Support QoL]] · [[Mobile Button Layout Editor]] · [[Rebinding Controls with the Input Action System]]
+
+### 62 Engine Reference Cards
+[[ContextActionService - Engine Reference Card]] · [[UserInputService - Engine Reference Card]]
 
 ### Root notes
 [[Open Questions - Whole Vault]]

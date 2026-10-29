@@ -1,5 +1,5 @@
 ---
-tags: [luau, types, strict-mode, type-checking, generics, type/guide, area/scripting, level/intermediate, api/Humanoid, api/Player]
+tags: [luau, types, strict-mode, type-checking, generics, type/guide, area/scripting, level/intermediate, api/Humanoid, api/Player, api/WalkSpeed]
 ---
 # Luau Type System and Strict Mode
 
@@ -412,10 +412,10 @@ The senior trade-off: types catch mistakes before play-testing and document inte
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Advanced Luau Start Here]] · Links - Luau language · [[Metatables and OOP - When and When Not]] · Code Review for Luau Teams · Testing Strategies and Frameworks · Dependency Injection in Luau
+[[Advanced Luau Start Here]] · Official Docs - Scripting and Luau · [[Metatables and OOP - When and When Not]] · Code Review for Luau Teams · Testing Strategies and Frameworks · Dependency Injection in Luau
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Luau Performance Patterns with Benchmarks]] · [[Events Signals and Connections]] · [[Error Handling and Retries]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Instances Attributes and Tags]] · [[Buffers and Binary Data]] · [[Script Types and Run Context]] · [[Strings Patterns and Formatting]]
+[[Luau Performance Patterns with Benchmarks]] · [[Error Handling and Retries]] · [[Events Signals and Connections]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Instances Attributes and Tags]] · [[Buffers and Binary Data]] · [[Strings Patterns and Formatting]] · [[Script Types and Run Context]]
 <!-- related:end -->

@@ -269,10 +269,10 @@ Patterns, not copies:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Arena Rounds with Teams and Spectating End to End]] · Links - Rounds and matchmaking · [[Genre Playbook - Sports]] · Worked Builds Start Here · Genre Systems Start Here · Multiplayer Services Start Here
+[[Arena Rounds with Teams and Spectating End to End]] · Official Docs - Game Systems · [[Genre Playbook - Sports]] · Worked Builds Start Here · Genre Systems Start Here · Multiplayer Services Start Here
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Genre Playbook - Social Deduction and Murder Mystery]] · [[Teardown - Ink Game]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Battle Royale]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Racing and Driving]] · [[Boss Fight Design Patterns]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Genre Playbook - Zombie and Wave Survival Co-op]]
+[[Genre Playbook - Social Deduction and Murder Mystery]] · [[Teardown - Ink Game]] · [[Genre Playbook - Tower Defense]] · [[Genre Playbook - Battle Royale]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Genre Playbook - Racing and Driving]] · [[Boss Fight Design Patterns]] · [[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Genre Playbook - Puzzle and Escape Rooms]]
 <!-- related:end -->

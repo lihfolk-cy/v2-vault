@@ -437,10 +437,10 @@ The reference project's rule was "fades only, no scale or lift" under reduced mo
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Easing]] · Tween vs Spring · Links - Tweening and UI animation · Squash Stretch and Anticipation in UI and Characters · Skill - Roblox UI Builder · Tween and CFrame Animation of Objects
+[[Easing]] · Tween vs Spring · Official Docs - UI · Squash Stretch and Anticipation in UI and Characters · Skill - Roblox UI Builder · Tween and CFrame Animation of Objects
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Tween vs Spring]] · [[Layout - Scale Offset and Constraints]] · [[Responsive UI for Phone Tablet Console and PC]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Text Fonts and Rich Text]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[Safe Areas and Insets]] · [[World-Space UI - BillboardGui and SurfaceGui]]
+[[TweenService - Engine Reference Card]] · [[Tween vs Spring]] · [[Settings Menu Design for Roblox - Layout, Controls and Motion]] · [[Layout - Scale Offset and Constraints]] · [[Responsive UI for Phone Tablet Console and PC]] · [[Figma to Roblox UI - Pipeline and Handoff]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]]
 <!-- related:end -->

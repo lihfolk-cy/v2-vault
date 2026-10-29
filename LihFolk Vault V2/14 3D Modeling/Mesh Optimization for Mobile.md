@@ -330,5 +330,5 @@ See also: [[Modeling Fundamentals for Games]], [[Retopology and Decimation]], [[
 
 <!-- related:start -->
 ## Related
-[[Triangle Budget]] · [[Spending Triangles Where the Camera Looks]] · [[UV Unwrapping]] · [[Texturing and PBR Baking]] · [[Blender Workflow for Roblox Creators]] · [[Hand-Painted and Stylized Texturing]] · [[Voxel and Blocky Modeling]] · [[Hard-Surface Modeling]] · [[Normal Maps and Detail Baking]] · [[Organic and Creature Modeling]]
+[[Spending Triangles Where the Camera Looks]] · [[Triangle Budget]] · [[UV Unwrapping]] · [[Voxel and Blocky Modeling]] · [[Blender Workflow for Roblox Creators]] · [[Texturing and PBR Baking]] · [[Hard-Surface Modeling]] · [[Hand-Painted and Stylized Texturing]] · [[Organic and Creature Modeling]] · [[Normal Maps and Detail Baking]]
 <!-- related:end -->

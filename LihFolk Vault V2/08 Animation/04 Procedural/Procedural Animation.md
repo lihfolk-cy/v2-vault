@@ -297,10 +297,10 @@ Related: [[Frame Order and RunService Timing]], [[Motor6D Math and CFrame Compos
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animation Start Here]] · [[Animation Glossary]] · [[Snippets - IK]] · [[AnimationConstraint and Physically Simulated Characters]] · [[Links - Inverse kinematics]] · Script Performance
+[[Animation Start Here]] · [[Animation Glossary]] · [[Snippets - IK]] · [[AnimationConstraint and Physically Simulated Characters]] · [[Official Docs - Characters and Animation]] · Script Performance
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[Rigs and Joints]] · [[AI Pitfalls - Physics and Animation]] · [[Animator Deep Dive]] · [[Troubleshooting Table]] · [[Idle Breathing and Secondary Motion]] · [[Debugging Animation Problems]] · [[Custom Rigs - Weapons and Props]] · [[Snippets - Lua Keyframe Player Core]] · [[Open Questions]]
+[[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[Rigs and Joints]] · [[AI Pitfalls - Physics and Animation]] · [[Animator Deep Dive]] · [[Idle Breathing and Secondary Motion]] · [[Troubleshooting Table]] · [[Debugging Animation Problems]] · [[Custom Rigs - Weapons and Props]] · [[Open Questions]] · [[Snippets - Lua Keyframe Player Core]]
 <!-- related:end -->

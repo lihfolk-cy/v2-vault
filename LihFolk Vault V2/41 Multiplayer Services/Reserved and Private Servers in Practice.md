@@ -5,17 +5,17 @@ tags: [multiplayer, reserved-servers, private-servers, teleport, monetization, d
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
+> - Avoid: `ReserveServerAsync` + `ReservedServerAccessCode` or... -> `TeleportOptions.ReservedServerId =...
 > - Avoid: Treating `PrivateServerId ~= ""` as "player-owned" -> Check `PrivateServerOwnerId` too
 > - Avoid: Owner check on the client -> Server check every call
-> - Avoid: Keying room state by `JobId` -> Key by `PrivateServerId`
+> - Reserved servers created with a server-generated GUID in `TeleportOptions.ReservedServerId`.
 > - One `ServerKind` module; no ad-hoc checks.
 > - Private server price chosen with "permanent" in mind; free option considered.
-> - Owner and co-owner powers validated server-side, keyed by `PrivateServerId`.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.4k tok. Read more: ## 2. Private servers as a product · ## 3. Reserved servers as a building block · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~5.6k tok. Read more: ## 2. Private servers as a product · ## 3. Reserved servers as a building block · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
-Roblox has two kinds of server that matchmaking never fills: **private servers** that players buy or get for free from your game page, and **reserved servers** that your code creates with `TeleportService:ReserveServerAsync`. Both report a non-empty `game.PrivateServerId`, both can run many server instances over their lifetime, and both change what your game should do: who has admin powers, whether rewards should be limited, whether a match that already ended may restart, how a player-shared "room code" maps to a real server. This note is the practical layer on top of the reserved-server basics in [[Teleporting and Multi-Place Games]] and the social framing in [[Social Design and Multiplayer Play]].
+Roblox has two kinds of server that matchmaking never fills: **private servers** that players buy or get for free from your game page, and **reserved servers** that your code creates by teleporting with `TeleportOptions.ReservedServerId` set to a GUID (the older `ReserveServerAsync` access-code flow is deprecated since October 2026). Both report a non-empty `game.PrivateServerId`, both can run many server instances over their lifetime, and both change what your game should do: who has admin powers, whether rewards should be limited, whether a match that already ended may restart, how a player-shared "room code" maps to a real server. This note is the practical layer on top of the reserved-server basics in [[Teleporting and Multi-Place Games]] and the social framing in [[Social Design and Multiplayer Play]].
 
 Related in this section: [[Matchmaking Queues with MemoryStore]], [[Parties and Group Teleports]], [[Server Browsers and Server Lists]], [[Server Shutdowns Soft Updates and Migration]].
 
@@ -24,7 +24,7 @@ Related in this section: [[Matchmaking Queues with MemoryStore]], [[Parties and 
 | Kind | Created by | `PrivateServerId` | `PrivateServerOwnerId` | Matchmaking fills it |
 |---|---|---|---|---|
 | Public | Roblox matchmaking | `""` | `0` | Yes |
-| Reserved | Your code (`ReserveServerAsync` or `ShouldReserveServer`) | non-empty | `0` | No |
+| Reserved | Your code (`TeleportOptions.ReservedServerId`; legacy: `ReserveServerAsync`, `ShouldReserveServer`) | non-empty | `0` | No |
 | Private | A player, from the game page | non-empty | owner's UserId | No |
 
 Facts behind the table (Roblox docs, as of October 2026):
@@ -212,19 +212,20 @@ Private servers remove competition for spawns, bosses and drops. If rewards are 
 
 ## 3. Reserved servers as a building block
 
-The reserved-server guarantees that drive every pattern below (Roblox docs, as of October 2026):
+The reserved-server guarantees that drive every pattern below (Roblox docs, "Teleport to private servers", October 29, 2026):
 
-- `ReserveServerAsync(placeId)` is server-only and returns an **access code** and the server's `PrivateServerId`.
-- A server starts **when the code is first used**.
-- **Access codes stay valid indefinitely**: if no server is running for the code, a new one starts.
-- `TeleportAsync` with `ReservedServerAccessCode` enters it; `ShouldReserveServer = true` reserves and enters in one call, and `TeleportAsyncResult` then reports the new `ReservedServerAccessCode` and `PrivateServerId` so you can send more people later.
+- The server generates an ID with `HttpService:GenerateGUID(false)` and sets `TeleportOptions.ReservedServerId`; `TeleportAsync` with it creates the server on first use and routes every later teleport with the same ID to it. There is no separate reserve call.
+- On the destination, `game.PrivateServerId` equals the `ReservedServerId` you supplied and stays constant across instances.
+- **IDs stay valid indefinitely**: if no server is running for the ID, a new one starts.
+- Set only one of `ReservedServerId`, `VipServerId` and `ServerInstanceId` per `TeleportOptions`.
+- Legacy: `ReserveServerAsync`, `ReservedServerAccessCode` and `ShouldReserveServer` are deprecated but still work, and servers created with access codes keep functioning; `TeleportAsyncResult.ReservedServerAccessCode` is filled only for those legacy teleports.
 - Teleports, and so reserved servers, do not work in Studio playtests.
 
 Four patterns come out of those guarantees.
 
 ### Pattern A: one-shot instances (matches, dungeon runs)
 
-Reserve, teleport the group, play, send everyone back. The trap is the word "indefinitely". A player who saved the code (they cannot see it unless you leak it, but your own rejoin logic might store it) or a teleport retry that lands after the match ended will **start a fresh, empty instance** of the same reserved server with the same `PrivateServerId`. The new instance knows nothing about the old one.
+Reserve, teleport the group, play, send everyone back. The trap is the word "indefinitely". A player who saved the ID (they cannot see it unless you leak it, but your own rejoin logic might store it) or a teleport retry that lands after the match ended will **start a fresh, empty instance** of the same reserved server with the same `PrivateServerId`. The new instance knows nothing about the old one.
 
 Guard: write a **run record** keyed by `PrivateServerId` (or by a run id carried in teleport data and stored server-side), and on every new instance read it before admitting anyone. If the run is finished, send arrivals back to the lobby.
 
@@ -301,42 +302,38 @@ The "data store down means refuse" choice is deliberate: for a run that grants r
 
 ### Pattern B: persistent rooms (houses, guild halls, player-made worlds)
 
-A player's house, a guild hall, a custom map: one reserved server per room, entered any time. Store the access code durably, keyed by the room id, and reserve lazily the first time anyone enters.
+A player's house, a guild hall, a custom map: one reserved server per room, entered any time. Store the reserved server ID durably, keyed by the room id, and create it lazily the first time anyone enters.
 
 ```lua
 --!strict
 -- ServerScriptService/Rooms/RoomDirectory.luau
 local DataStoreService = game:GetService("DataStoreService")
-local TeleportService = game:GetService("TeleportService")
+local HttpService = game:GetService("HttpService")
 
-local ROOM_PLACE_ID = 0
 local directory = DataStoreService:GetDataStore("RoomDirectory_v1")
 
-type RoomEntry = { accessCode: string, privateServerId: string, owner: number, createdAt: number }
+-- serverId is the TeleportOptions.ReservedServerId; it also becomes game.PrivateServerId on arrival
+type RoomEntry = { serverId: string, owner: number, createdAt: number }
 
 local RoomDirectory = {}
 local cache: { [string]: RoomEntry } = {}
 
--- Returns the room's access code, reserving a server the first time. Server only.
+-- Returns the room's reserved server ID, creating one the first time. Server only.
+-- Teleport with options.ReservedServerId = entry.serverId; the first teleport starts the server.
 function RoomDirectory.resolve(roomId: string, owner: number): RoomEntry?
 	local hit = cache[roomId]
 	if hit then
 		return hit
 	end
-	-- Reserve first (cheap and harmless if unused), then commit atomically.
-	local okReserve, code, psid = pcall(function()
-		return TeleportService:ReserveServerAsync(ROOM_PLACE_ID)
-	end)
-	if not okReserve or type(code) ~= "string" then
-		return nil
-	end
+	-- Generate first (free and harmless if unused), then commit atomically.
+	local serverId = HttpService:GenerateGUID(false)
 	local now = os.time()
 	local ok, entry = pcall(function()
 		return directory:UpdateAsync(roomId, function(old: any)
-			if type(old) == "table" and type(old.accessCode) == "string" then
+			if type(old) == "table" and type(old.serverId) == "string" then
 				return nil -- someone else created it first; keep theirs
 			end
-			return { accessCode = code, privateServerId = psid, owner = owner, createdAt = now }
+			return { serverId = serverId, owner = owner, createdAt = now }
 		end)
 	end)
 	if not ok then
@@ -359,16 +356,16 @@ end
 return RoomDirectory
 ```
 
-`DataStore:UpdateAsync` returning `nil` from the transform cancels the write and the call returns `nil`, which is why the code reads the winner afterwards. The unused reservation from a lost race costs nothing measurable (rule of thumb: an unused access code never starts a server).
+`DataStore:UpdateAsync` returning `nil` from the transform cancels the write and the call returns `nil`, which is why the code reads the winner afterwards. The unused GUID from a lost race costs nothing: a server starts only when a teleport first uses an ID (Roblox docs).
 
 Inside the room server, key room state (furniture, permissions, visit count) by `game.PrivateServerId`, which is stable across instances. Load on start, save on change and at `BindToClose` ([[Saving Correctly - Autosave and BindToClose]]). Two instances can exist at once only in the cross-play case above; if room edits matter, use `UpdateAsync` with a version number so two instances cannot overwrite each other blindly.
 
 ### Pattern C: shareable room codes
 
-Players love "join code: K7QF2M". Never make the access code the shareable code. Generate a short human code, store `code -> roomId` in a data store, and resolve it on the server.
+Players love "join code: K7QF2M". Never make the reserved server ID the shareable code. Generate a short human code, store `code -> roomId` in a data store, and resolve it on the server.
 
 - Alphabet without lookalikes (no 0/O, 1/I/L): 30 symbols, 6 characters is 30^6, about 729 million codes. Rate-limit lookups per player (for example 5 per minute) so nobody brute-forces private rooms.
-- Let owners rotate the code (new code, old mapping deleted) and set the room to friends-only, checking friendship on arrival with `Player:IsFriendsWith` on the server.
+- Let owners rotate the code (new code, old mapping deleted) and set the room to friends-only, checking friendship on arrival with `Player:IsFriendsWithAsync` on the server.
 - Filter any room **name** with `TextService` before showing it to others; room names are user-generated text ([[Server Browsers and Server Lists]] covers filtering for listings).
 
 ### Pattern D: holding and utility servers
@@ -391,24 +388,26 @@ A reserved server is the standard "holding pen" for the soft-shutdown pattern in
 
 | Mistake | Consequence | Fix |
 |---|---|---|
+| `ReserveServerAsync` + `ReservedServerAccessCode` or `ShouldReserveServer` in new code | Deprecated flow (still works) | `TeleportOptions.ReservedServerId = HttpService:GenerateGUID(false)` + `TeleportAsync` |
 | Treating `PrivateServerId ~= ""` as "player-owned" | Reserved servers get owner logic with owner 0 | Check `PrivateServerOwnerId` too |
 | Owner check on the client | Anyone runs owner commands | Server check every call |
 | Keying room state by `JobId` | Room resets every time it empties | Key by `PrivateServerId` |
 | Changing private server price for a promotion | All subscriptions cancelled | Treat price as permanent |
 | Reused match codes replaying rewards | Free loot from finished runs | Run record checked on every instance start |
-| Access code as the shareable room code | Codes leak; anyone can enter forever | Short human code mapped server-side |
+| Reserved server ID as the shareable room code | IDs leak; anyone can enter forever | Short human code mapped server-side |
 | Spawns tuned only for full public servers | Private-server farming | Scale by headcount, cap scarce rewards |
 | Match places open to direct joins | Public servers of a match place | Secure within universe only |
 
 ## Checklist
 
+- [ ] Reserved servers created with a server-generated GUID in `TeleportOptions.ReservedServerId`.
 - [ ] One `ServerKind` module; no ad-hoc checks.
 - [ ] Private server price chosen with "permanent" in mind; free option considered.
 - [ ] Owner and co-owner powers validated server-side, keyed by `PrivateServerId`.
 - [ ] Reward and spawn rates hold up in a one-player private server.
 - [ ] One-shot reserved servers check a run record before admitting anyone.
-- [ ] Persistent rooms store codes durably with an atomic create.
-- [ ] Shareable codes are separate from access codes and rate-limited.
+- [ ] Persistent rooms store reserved server IDs durably with an atomic create.
+- [ ] Shareable codes are separate from reserved server IDs and rate-limited.
 - [ ] Access Control for Places set to Secure within universe only for instance places.
 
 ## See also
@@ -416,10 +415,10 @@ A reserved server is the standard "holding pen" for the soft-shutdown pattern in
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Reserved and private servers]] · [[Session State Across Places]] · Links - Teleporting · Resource Library - Networking and Multiplayer · Cross-Server Messaging · Monetization Overview
+[[Official Docs - Networking and Multiplayer]] · [[Session State Across Places]] · Cross-Server Messaging · Monetization Overview
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Joining Friends Parties and Private Servers]] · [[Server Hop Rejoin and Server Lists with Ping]] · [[Cross-Server Messaging]] · [[Session Lock]] · [[Genre Playbook - Battle Royale]] · [[AI Pitfalls - Data and Monetization]]
+[[TeleportService - Engine Reference Card]] · [[Joining Friends Parties and Private Servers]] · [[Server Hop Rejoin and Server Lists with Ping]] · [[API Renames and Deprecations 2025-2026]] · [[Cross-Server Messaging]] · [[Genre Playbook - Battle Royale]]
 <!-- related:end -->

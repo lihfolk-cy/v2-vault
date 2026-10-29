@@ -112,5 +112,5 @@ Two lathes whose poles coincide (a stem top equal to a hub top) weld into one sh
 
 <!-- related:start -->
 ## Related
-[[Curve-Based Modelling in Blender for Roblox]] · [[Hard-Surface Modeling]] · [[Low-Poly and Stylized Modeling]] · [[Blender Workflow for Roblox Creators]] · [[Modeling Fundamentals for Games]] · [[Normal Maps and Detail Baking]] · [[Topology and Edge Flow]] · [[Modular Environment Kits]]
+[[Curve-Based Modelling in Blender for Roblox]] · [[Hard-Surface Modeling]] · [[Low-Poly and Stylized Modeling]] · [[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]] · [[Blender Workflow for Roblox Creators]] · [[Modeling Fundamentals for Games]] · [[Normal Maps and Detail Baking]] · [[Modular Environment Kits]]
 <!-- related:end -->

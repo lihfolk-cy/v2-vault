@@ -710,5 +710,5 @@ The reference project's production player added, on top of this core:
 
 <!-- related:start -->
 ## Related
-[[Authoring Clips in Code]] · [[Snippets - Playing Animations]] · [[Animation Glossary]] · [[Open Questions]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Animation Data from Blender to Roblox]] · [[Performance and Memory]] · [[Animator Deep Dive]]
+[[Authoring Clips in Code]] · [[Snippets - Playing Animations]] · [[Animation Glossary]] · [[Open Questions]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Animator - Engine Reference Card]] · [[Animation Data from Blender to Roblox]] · [[Performance and Memory]] · [[Animator Deep Dive]]
 <!-- related:end -->

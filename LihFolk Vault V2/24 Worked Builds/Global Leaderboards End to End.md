@@ -609,10 +609,10 @@ Prizes for top places need care: decide the cutoff time in UTC, freeze by readin
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Cookbook - Data and Saving]] · Links - Leaderboards · Economy Resets and Seasonal Wipes · [[Codes Redemption System End to End]] · Saving Correctly - Autosave and BindToClose · Session Lock
+[[Cookbook - Data and Saving]] · Official Docs - Data and Persistence · Economy Resets and Seasonal Wipes · [[Codes Redemption System End to End]] · Saving Correctly - Autosave and BindToClose · Session Lock
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Daily Rewards System End to End]] · [[Rebirth and Prestige System End to End]] · [[Shop with Game Passes and Developer Products End to End]] · [[LihFolk Systems Library]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[Round-Based Minigame Loop End to End]] · [[Quest Chain System End to End]] · [[Weekend Build - Survival Gather, Craft and Place]]
+[[Daily Rewards System End to End]] · [[Rebirth and Prestige System End to End]] · [[Shop with Game Passes and Developer Products End to End]] · [[LihFolk Systems Library]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[Round-Based Minigame Loop End to End]] · [[Weekend Build - Survival Gather, Craft and Place]] · [[Pet Hatching and Following End to End]]
 <!-- related:end -->

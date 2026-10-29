@@ -122,5 +122,5 @@ For each animation from external data: source (Mixamo clip name, CMU subject and
 
 <!-- related:start -->
 ## Related
-[[Animation Editor Workflow]] · [[Animation Editor Advanced]] · [[Animation Asset Permissions and Groups]] · [[Blender Armature and Bone Roll Conventions]] · [[Animation Review Checklist]] · [[Rigging in Blender]] · [[Locomotion and Melee Reference Numbers]] · [[Blade Grip and Wrist Limits]]
+[[Animation Editor Advanced]] · [[Animation Editor Workflow]] · [[Animation Asset Permissions and Groups]] · [[Blender Armature and Bone Roll Conventions]] · [[Animation Review Checklist]] · [[Rigging in Blender]] · [[Locomotion and Melee Reference Numbers]] · [[Blade Grip and Wrist Limits]]
 <!-- related:end -->

@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/animation, area/ai]
 > - Avoid: Publishing Mixamo or CMU animations as free models or Creator Store packages.
 > - "Free model" means free to insert, not cleared of copyright.
 >
-> Cost: TL;DR ~120 tok · whole note ~480 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~450 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,7 +26,7 @@ Free models from the Creator Store save weeks when used carefully, and are the m
 
 ## Mentioned in
 
-17 notes in 12 sections. The 17 most relevant are linked:
+15 notes in 11 sections. The 15 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[Creator Store and Toolbox Safety]]
@@ -57,9 +57,6 @@ Free models from the Creator Store save weeks when used carefully, and are the m
 
 ### 44 Materials and Surfaces
 [[Stylised vs Realistic Material Pipelines]]
-
-### 46 Resource Library
-[[Links - Backdoors and malicious assets]] · [[Resource Library Start Here]]
 
 ### 54 Untextured Stylised Modelling
 [[Keeping a Mixed Asset Library Consistent]]

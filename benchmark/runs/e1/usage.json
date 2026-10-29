@@ -1,0 +1,26 @@
+{
+ "cur_r1_E": {
+  "seconds": 220,
+  "tokens": 92023
+ },
+ "cur_r2_E": {
+  "seconds": 218,
+  "tokens": 82544
+ },
+ "v240_r1_E": {
+  "seconds": 256,
+  "tokens": 90836
+ },
+ "v240_r2_E": {
+  "seconds": 222,
+  "tokens": 90658
+ },
+ "plain_r1_E": {
+  "seconds": 133,
+  "tokens": 76029
+ },
+ "plain_r2_E": {
+  "seconds": 135,
+  "tokens": 76332
+ }
+}

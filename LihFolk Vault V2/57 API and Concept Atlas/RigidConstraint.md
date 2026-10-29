@@ -42,7 +42,7 @@ API snapshot: class, inherits `Constraint` (`_tools/roblox_api.json`, docs build
 [[Destruction and Fracture]]
 
 ### 46 Resource Library
-[[Links - Constraints]]
+[[Official Docs - Physics]]
 
 ### Root notes
 [[Open Questions - Whole Vault]]

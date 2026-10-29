@@ -330,7 +330,7 @@ The reference project's leaderboard service applied the most important rule here
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox DataStore Safety]] · Debugging DataStore Problems · Cookbook - Data and Saving · Session Lock · Links - DataStoreService · Saved Inventory End to End
+[[Skill - Roblox DataStore Safety]] · Debugging DataStore Problems · Cookbook - Data and Saving · Session Lock · Official Docs - Data and Persistence · Saved Inventory End to End
 <!-- auto-links:end -->
 
 <!-- related:start -->

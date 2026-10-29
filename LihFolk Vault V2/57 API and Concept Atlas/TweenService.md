@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/animation, area/ui, api/TweenService]
 > - `TweenService` makes tweens one line, so most Roblox UI uses them for everything.
 > - `CubicV2`: code `4 + direction` (In 0, Out 1, InOut 2): TweenService directions.
 >
-> Cost: TL;DR ~140 tok · whole note ~870 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~910 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,10 +28,7 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 
 ## Mentioned in
 
-60 notes in 21 sections. The 25 most relevant are linked:
-
-### 02 Luau Scripting
-[[CollectionService Patterns]]
+64 notes in 22 sections. The 25 most relevant are linked:
 
 ### 05 UI and UX
 [[Accessibility]] · [[Gamepad and Console UX]] · [[ScreenGui Fundamentals]] · [[UI Motion Language and Timing]]
@@ -46,7 +43,7 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 [[IKControl Reference]] · [[Snippets - Camera Shake and FX]] · [[Snippets - IK]] · [[Snippets - Procedural Motion]] · [[Tween and CFrame Animation of Objects]] · [[UI and GUI Animation]] · [[Weapon Rig Player]]
 
 ### 09 Gameplay Systems
-[[Camera Systems]]
+[[Camera Systems]] · [[Clickable and Interactive Parts - ClickDetector, ProximityPrompt and Touched]]
 
 ### 24 Worked Builds
 [[Melee Combat System End to End]]
@@ -55,10 +52,10 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 [[Cookbook - UI]]
 
 ### 40 Game Math
-[[Curves in Luau - Paths Beams and Motion]] · [[Interpolation Easing and Curves Math]]
+[[Interpolation Easing and Curves Math]]
 
 ### 46 Resource Library
-[[Links - Tweening and UI animation]]
+[[Official Docs - UI]]
 
 ### 52 Core Concepts
 [[Easing]]
@@ -69,6 +66,9 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 ### 58 Player QoL and Game Tweaks
 [[Audio Mixer Settings with SoundGroups]]
 
-Also mentioned in (not linked): AI Pitfalls - Stale APIs and Luau · Animation Editor Workflow · Authoring Clips in Code · Beams and Trails · Camera Obstruction Handling - Occlusion Modes, Fades and Collision · Declarative UI - React-Lua and Fusion · Engine Gotchas · Genre Playbook - Obbies and Platformers · Highlights and Selection Effects · Horror Monster Chase AI End to End · Keyframes, Easing and Interpolation · Light Sources and Shadows · Lua Keyframe Player · Lua Keyframe Player Internals · Mesh VFX Packs Built in Blender · MicroProfiler Guide · Moon Animator and Third-Party Tools · Network Performance · Open Questions · Open Questions - Whole Vault · Pet Hatching and Following End to End · Prompting and Verifying AI Output · Replication and Ownership · Rides and Attractions - Roller Coasters, Ziplines, Elevators and Cable Cars · Rigs and Joints · Snippets - Building and Sampling Clips · Springs Damping and Smoothing · Standing on Moving Vehicles and Platforms - Keeping Players Glued · Stylized Lighting Recipes · Terrain Deep Dive - Materials Water and Performance · Terrain Materials and Painting · Timing Spacing and Frame Charts · Tween vs Spring · UI Layout Objects - Lists Grids and Pages · World-Space UI - BillboardGui and SurfaceGui
+### 62 Engine Reference Cards
+[[TweenService - Engine Reference Card]]
+
+Also mentioned in (not linked): AI Pitfalls - Stale APIs and Luau · Animation Editor Workflow · Authoring Clips in Code · Beams and Trails · Camera - Engine Reference Card · Camera Obstruction Handling - Occlusion Modes, Fades and Collision · CollectionService Patterns · Curves in Luau - Paths Beams and Motion · Declarative UI - React-Lua and Fusion · Engine Gotchas · Engine Reference Cards Start Here · Genre Playbook - Obbies and Platformers · Highlights and Selection Effects · Horror Monster Chase AI End to End · Keyframes, Easing and Interpolation · Light Sources and Shadows · Lua Keyframe Player · Lua Keyframe Player Internals · Mesh VFX Packs Built in Blender · MicroProfiler Guide · Moon Animator and Third-Party Tools · Network Performance · Open Questions · Open Questions - Whole Vault · Pet Hatching and Following End to End · Prompting and Verifying AI Output · Replication and Ownership · Rides and Attractions - Roller Coasters, Ziplines, Elevators and Cable Cars · Rigs and Joints · Snippets - Building and Sampling Clips · Springs Damping and Smoothing · Standing on Moving Vehicles and Platforms - Keeping Players Glued · Stylized Lighting Recipes · Terrain Deep Dive - Materials Water and Performance · Terrain Materials and Painting · Timing Spacing and Frame Charts · Tween vs Spring · UI Layout Objects - Lists Grids and Pages · World-Space UI - BillboardGui and SurfaceGui
 
 <!-- atlas:generated -->

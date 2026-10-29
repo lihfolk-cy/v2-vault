@@ -93,5 +93,5 @@ Write this table before building any tutorial. If a row is empty, that is the ga
 
 <!-- related:start -->
 ## Related
-[[Genre QA Passes - Test Checklists per Game Type]] · [[Viral Game Anatomy - Hooks, Loops and Timing]] · [[Retention and Return Hooks]] · [[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Genre Playbook - Open-World City and Crime Roleplay]] · [[Progression and Pacing Design]] · [[Boss Fight Design Patterns]] · [[Genre Playbook - Social Deduction and Murder Mystery]] · [[Genre Playbook - Party and Minigame Collections]]
+[[Genre QA Passes - Test Checklists per Game Type]] · [[Viral Game Anatomy - Hooks, Loops and Timing]] · [[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Retention and Return Hooks]] · [[Genre Playbook - Puzzle and Escape Rooms]] · [[Genre Playbook - Open-World City and Crime Roleplay]] · [[Progression and Pacing Design]] · [[Boss Fight Design Patterns]] · [[Genre Playbook - Social Deduction and Murder Mystery]] · [[Genre Playbook - Party and Minigame Collections]]
 <!-- related:end -->

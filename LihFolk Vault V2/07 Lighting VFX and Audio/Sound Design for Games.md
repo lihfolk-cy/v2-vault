@@ -256,10 +256,10 @@ See also: [[Sound Fundamentals]], [[Spatial Audio and Mixing]], [[Music and Adap
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Combat Sound Design and Feedback]] · [[Audio Pipeline]] · Feedback Timing - Sound Visual and Haptic Sync · AI Audio - Voice Music and SFX · Captions and Audio Accessibility · Links - Sounds and the Audio API
+[[Combat Sound Design and Feedback]] · [[Audio Pipeline]] · Feedback Timing - Sound Visual and Haptic Sync · AI Audio - Voice Music and SFX · Captions and Audio Accessibility · Official Docs - Audio
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Sound Design Pitfalls - Reused Ids Onsets and Layered Loops]] · [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Engine and Tyre Audio Driven by RPM and Slip]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[VFX Design Playbook]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Music Licensing and Audio Upload Rules for 2026]] · [[Escalation and Grandeur Without Clutter]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]]
+[[Sound Design Pitfalls - Reused Ids Onsets and Layered Loops]] · [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Engine and Tyre Audio Driven by RPM and Slip]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[VFX Design Playbook]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Music Licensing and Audio Upload Rules for 2026]] · [[Escalation and Grandeur Without Clutter]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]]
 <!-- related:end -->

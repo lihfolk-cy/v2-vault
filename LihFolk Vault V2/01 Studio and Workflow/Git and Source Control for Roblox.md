@@ -293,7 +293,7 @@ No Rojo, no CI, still worth doing:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Code Pipeline - Rojo Git and CI]] · Build Test and Release Pipeline · Code Review for Luau Teams · [[Packages and Asset Reuse]] · Links - Version control · Documentation and Onboarding New Developers
+[[Code Pipeline - Rojo Git and CI]] · Build Test and Release Pipeline · Code Review for Luau Teams · [[Packages and Asset Reuse]] · Official Docs - Studio and Tooling · Documentation and Onboarding New Developers
 <!-- auto-links:end -->
 
 <!-- related:start -->

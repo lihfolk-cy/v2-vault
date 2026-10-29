@@ -303,7 +303,7 @@ The senior trade-off: ECS makes "do X to everything with Y" trivial and makes "w
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - OOP and module design]] · Metatables and OOP - When and When Not · 2D Multiplayer - Server Authority and Replicating GUI Worlds · Advanced Luau Start Here · Deterministic Simulation · Genre Playbook - Tower Defense
+[[Official Docs - Scripting and Luau]] · Metatables and OOP - When and When Not · 2D Multiplayer - Server Authority and Replicating GUI Worlds · Advanced Luau Start Here · Deterministic Simulation · Genre Playbook - Tower Defense
 <!-- auto-links:end -->
 
 <!-- related:start -->

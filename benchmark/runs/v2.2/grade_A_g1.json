@@ -1,0 +1,314 @@
+[
+ {
+  "id": "P1",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "P2",
+  "scores": {
+   "R1": 2.38,
+   "R2": 2.75,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "R1 no shared module/no sim restrictions; R2 no shared module."
+ },
+ {
+  "id": "P3",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 2.67,
+   "R6": 2.67,
+   "R7": 2.83
+  },
+  "notes": "R5/R6 omit CreateDefaultPlayerModule; R7 says 'appropriately' not Disabled."
+ },
+ {
+  "id": "P4",
+  "scores": {
+   "R1": 3.0,
+   "R2": 2.56,
+   "R3": 2.69,
+   "R4": 3.0,
+   "R5": 2.06,
+   "R6": 2.69,
+   "R7": 2.06
+  },
+  "notes": "Partial: missing PrefixText/Target/warning/opt-out in several."
+ },
+ {
+  "id": "P5",
+  "scores": {
+   "R1": 2.44,
+   "R2": 3.0,
+   "R3": 2.69,
+   "R4": 2.75,
+   "R5": 2.69,
+   "R6": 2.75,
+   "R7": 2.75
+  },
+  "notes": "Deductions for missing Open Cloud/per-server configurability/latest-version storage."
+ },
+ {
+  "id": "P6",
+  "scores": {
+   "R1": 2.88,
+   "R2": 2.88,
+   "R3": 2.88,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 2.88
+  },
+  "notes": "Minor: rounding disclaimer missing in some."
+ },
+ {
+  "id": "P7",
+  "scores": {
+   "R1": 2.5,
+   "R2": 2.5,
+   "R3": 3.0,
+   "R4": 2.5,
+   "R5": 2.63,
+   "R6": 2.5,
+   "R7": 2.5
+  },
+  "notes": "Most miss April date and 16+ evaluation or exclusions."
+ },
+ {
+  "id": "P8",
+  "scores": {
+   "R1": 2.5,
+   "R2": 2.0,
+   "R3": 1.13,
+   "R4": 2.25,
+   "R5": 1.75,
+   "R6": 2.38,
+   "R7": 2.63
+  },
+  "notes": "Audience Expansion conditions and US 18+ scope often missing; R3 vague on program mechanics; R5 omits Audience Expansion."
+ },
+ {
+  "id": "G1",
+  "scores": {
+   "R1": 4.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 4.0,
+   "R5": 4.0,
+   "R6": 3.5,
+   "R7": 3.0
+  },
+  "notes": "R2/R3/R7 omit PromptProductPurchaseFinished warning; R6 only partial."
+ },
+ {
+  "id": "G2",
+  "scores": {
+   "R1": 3.0,
+   "R2": 2.81,
+   "R3": 2.81,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 2.81,
+   "R7": 3.0
+  },
+  "notes": "R2/R3/R6 omit keyInfo argument."
+ },
+ {
+  "id": "G3",
+  "scores": {
+   "R1": 1.33,
+   "R2": 1.33,
+   "R3": 1.33,
+   "R4": 1.33,
+   "R5": 1.33,
+   "R6": 1.33,
+   "R7": 1.33
+  },
+  "notes": "All catch NaN and fix; none states general all-remote-args-untrusted rule."
+ },
+ {
+  "id": "G4",
+  "scores": {
+   "R1": 2.67,
+   "R2": 2.67,
+   "R3": 2.67,
+   "R4": 2.67,
+   "R5": 2.67,
+   "R6": 2.67,
+   "R7": 2.67
+  },
+  "notes": "All correct core; none notes batched application / C0 immediate."
+ },
+ {
+  "id": "G5",
+  "scores": {
+   "R1": 1.89,
+   "R2": 1.89,
+   "R3": 1.89,
+   "R4": 1.89,
+   "R5": 1.89,
+   "R6": 2.0,
+   "R7": 1.89
+  },
+  "notes": "Only R6 notes Core enum value quirk."
+ },
+ {
+  "id": "G6",
+  "scores": {
+   "R1": 1.83,
+   "R2": 1.67,
+   "R3": 1.5,
+   "R4": 1.83,
+   "R5": 1.25,
+   "R6": 1.17,
+   "R7": 1.42
+  },
+  "notes": "R5 stacks Unit Scale 0.01 with FBX Unit Scale; R3/R7 omit alternatives; R6 omits GLB."
+ },
+ {
+  "id": "G7",
+  "scores": {
+   "R1": 2.0,
+   "R2": 0.33,
+   "R3": 2.0,
+   "R4": 0.33,
+   "R5": 0.33,
+   "R6": 0.33,
+   "R7": 0.33
+  },
+  "notes": "R2/R4/R5/R6/R7 wrongly claim exporter Apply Modifiers bakes Armature (-1)."
+ },
+ {
+  "id": "G8",
+  "scores": {
+   "R1": 1.83,
+   "R2": 1.83,
+   "R3": 1.83,
+   "R4": 1.83,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 1.83
+  },
+  "notes": "Only R5/R6 clearly explain DeviceSafeInsets vs CoreUISafeInsets."
+ },
+ {
+  "id": "T1",
+  "scores": {
+   "R1": 4.0,
+   "R2": 4.0,
+   "R3": 4.0,
+   "R4": 4.0,
+   "R5": 4.0,
+   "R6": 4.0,
+   "R7": 4.0
+  },
+  "notes": "All meet every item."
+ },
+ {
+  "id": "T2",
+  "scores": {
+   "R1": 4.0,
+   "R2": 4.0,
+   "R3": 3.5,
+   "R4": 3.5,
+   "R5": 4.0,
+   "R6": 4.0,
+   "R7": 4.0
+  },
+  "notes": "R3/R4 BindToClose not parallel/30s."
+ },
+ {
+  "id": "T3",
+  "scores": {
+   "R1": 2.83,
+   "R2": 2.83,
+   "R3": 2.83,
+   "R4": 2.83,
+   "R5": 2.83,
+   "R6": 3.0,
+   "R7": 2.83
+  },
+  "notes": "Offset (not Scale) position on button except R6."
+ },
+ {
+  "id": "T4",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "T5",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0
+  },
+  "notes": "All correct."
+ },
+ {
+  "id": "T6",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0
+  },
+  "notes": "All use AwardBadgeAsync with pcall on server."
+ },
+ {
+  "id": "T7",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0
+  },
+  "notes": "All give correct IAS hierarchy and Pressed/Released."
+ },
+ {
+  "id": "T8",
+  "scores": {
+   "R1": 0.0,
+   "R2": 1.5,
+   "R3": 1.25,
+   "R4": 0.0,
+   "R5": 1.67,
+   "R6": 1.33,
+   "R7": 0.0
+  },
+  "notes": "R1/R4/R7 miss MeshStreamingAndImprovedLoDs entirely; others partial on removal/toggle/report."
+ }
+]

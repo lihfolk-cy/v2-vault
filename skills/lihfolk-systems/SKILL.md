@@ -1,6 +1,6 @@
 ---
 name: lihfolk-systems
-description: 'Install ready-made LihFolk Luau modules as-is (PlayerData, Net, Currency, Shop, receipts, Inventory, EggHatch, Codes, DailyRewards, Rebirth, Quests, Leaderboard), or /lihfolk:new-system. Custom systems: roblox-system-builder.'
+description: 'Install ready-made LihFolk modules as-is (data, net, currency, shop, receipts, inventory, eggs, codes, daily, rebirth, quests, leaderboard). Custom systems: roblox-system-builder.'
 ---
 # LihFolk Systems Library
 

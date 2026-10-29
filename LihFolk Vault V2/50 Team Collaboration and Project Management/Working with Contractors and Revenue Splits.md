@@ -100,7 +100,7 @@ Access decisions are covered in depth in [[Team Create Permissions and Workflows
 
 ## 5. Intake: scan every delivered model
 
-Delivered models are the classic route for backdoors: a script hidden deep inside a prop that `require`s an outside module or calls `loadstring` ([[Creator Store and Toolbox Safety]], [[Links - Backdoors and malicious assets]]). Most contractors are honest; some reuse kits they downloaded without checking them, which is how the backdoor gets in. Scan before inserting into anything that matters.
+Delivered models are the classic route for backdoors: a script hidden deep inside a prop that `require`s an outside module or calls `loadstring` ([[Creator Store and Toolbox Safety]]). Most contractors are honest; some reuse kits they downloaded without checking them, which is how the backdoor gets in. Scan before inserting into anything that matters.
 
 Insert the delivery into a **scratch place** first, put it under `ServerStorage.Intake`, and run this from the Command Bar. Reading `Source` works in the Command Bar and in plugins, not in game scripts.
 
@@ -378,5 +378,5 @@ Roblox does not arbitrate disagreements between group members; the group owner's
 
 <!-- related:start -->
 ## Related
-[[Legal Basics - IP Licenses and Assets]] · [[Creator Account Security and Takeover Recovery]] · [[Working with Content Creators]] · [[Community Building]] · [[Plugin Security and Permissions]] · [[Building a Portfolio as a Roblox Developer]]
+[[Legal Basics - IP Licenses and Assets]] · [[Creator Account Security and Takeover Recovery]] · [[Working with Content Creators]] · [[Community Building]] · [[Team Roles and Workflows]] · [[Building a Portfolio as a Roblox Developer]]
 <!-- related:end -->

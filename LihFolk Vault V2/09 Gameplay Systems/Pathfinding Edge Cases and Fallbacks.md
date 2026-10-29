@@ -139,7 +139,7 @@ A computed path is a snapshot. Doors close, players build walls, physics props r
 A waypoint is "reached" when the flat distance is under 1.5 to 2.5 studs (rule of thumb). Too small and NPCs orbit a waypoint they cannot quite reach (common on slopes); too large and they cut corners into walls. Test flat distance (ignore Y): the root is above the floor, waypoints are on it.
 
 ### The MoveTo timeout
-`Humanoid:MoveTo` stops trying after about 8 seconds if the goal is not reached. That is long-standing documented behaviour; the current Humanoid reference page shows it indirectly through a sample that calls `MoveTo` again to "refresh the timeout" (Docs). For long walks between distant waypoints (`WaypointSpacing = math.huge`) the NPC can simply stop. Keep waypoint spacing modest, or re-issue `MoveTo` for the same point every few seconds.
+`Humanoid:MoveTo` stops trying after about 8 seconds if the goal is not reached. The Humanoid reference page states the 8-second timeout directly, and says calling `MoveTo` again within that window resets it (**Roblox docs**). For long walks between distant waypoints (`WaypointSpacing = math.huge`) the NPC can simply stop. Keep waypoint spacing modest, or re-issue `MoveTo` for the same point every few seconds.
 
 ### Progress, not speed, detects being stuck
 The [[Pathfinding]] follower checks low velocity. That misses two cases: an NPC pushing against a wall can have a non-zero velocity as it slides back and forth, and an NPC orbiting a waypoint moves fast while going nowhere. Track **distance to the current waypoint over a window**:
@@ -327,10 +327,10 @@ Visualise: turn on the navigation mesh and pathfinding modifier overlays in Stud
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Horror Monster Chase AI End to End]] · Combat Arena and Encounter Layout · Links - NPCs and AI · Detecting Movement Exploits - Speed Fly Noclip Teleport · Humanoid States and Animation · Physics Performance
+[[Horror Monster Chase AI End to End]] · Combat Arena and Encounter Layout · Official Docs - Game Systems · Detecting Movement Exploits - Speed Fly Noclip Teleport · Humanoid States and Animation · Physics Performance
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Police Chases and Wanted Levels]] · [[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]] · [[Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Squad AI - Attack Tokens, Flanking and Attacker Limits]] · [[Wildlife and Ambient Creature AI - Passive, Neutral and Hostile]]
+[[PathfindingService - Engine Reference Card]] · [[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Police Chases and Wanted Levels]] · [[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run]] · [[Squad AI - Attack Tokens, Flanking and Attacker Limits]]
 <!-- related:end -->

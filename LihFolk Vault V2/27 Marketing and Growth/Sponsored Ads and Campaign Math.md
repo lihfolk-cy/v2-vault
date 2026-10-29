@@ -282,5 +282,5 @@ Reviewed, not run. Notes:
 
 <!-- related:start -->
 ## Related
-[[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics]] · [[Discovery and Monetization Changes 2025-2026]] · [[Marketing to Kids and Teens - Age Rules and Paid-Promo Disclosure]] · [[Experience Description and Search Keywords]] · [[Competitor Analysis Method]]
+[[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics]] · [[From CTR to CCU - Impressions, Play-Through and the Discovery Loop]] · [[Marketing to Kids and Teens - Age Rules and Paid-Promo Disclosure]] · [[Experience Description and Search Keywords]] · [[Competitor Analysis Method]]
 <!-- related:end -->

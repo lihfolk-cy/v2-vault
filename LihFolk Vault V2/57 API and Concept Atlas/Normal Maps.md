@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/modeling, area/materials]
 > - Roblox docs: a uniform [127, 127, 255] is a flat normal map.
 > - Floating detail is allowed. Bolts, vents and panels can be separate floating meshes hovering on the surface; the bake projects...
 >
-> Cost: TL;DR ~140 tok · whole note ~630 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~650 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ Normal map: A texture that fakes surface detail through lighting. (from [[Glossa
 
 ## Mentioned in
 
-34 notes in 8 sections. The 25 most relevant are linked:
+35 notes in 9 sections. The 25 most relevant are linked:
 
 ### 06 World Building and Art
 [[Environment Art Styles]] · [[Materials MaterialVariants and SurfaceAppearance]] · [[Modeling in Blender for Roblox]] · [[Voxel Art - Studs Outlines and Style Kits]]
@@ -48,6 +48,6 @@ Normal map: A texture that fakes surface detail through lighting. (from [[Glossa
 ### 53 Voxel Modelling Deep Dive
 [[Voxel Shading - Baked AO Edges and Lighting]]
 
-Also mentioned in (not linked): 00 Start Here · Glossary · Hand-Painted and Stylized Texturing · Materials and Surfaces Start Here · Organic and Creature Modeling · Procedural Materials and Skies - Lessons · Skill - Roblox Asset Import · Tiling Trim Sheets and Decal Tricks · Triangle Budget
+Also mentioned in (not linked): 00 Start Here · Glossary · Hand-Painted and Stylized Texturing · Making Thumbnails in Studio and Blender - Capture, Lighting and Posing · Materials and Surfaces Start Here · Organic and Creature Modeling · Procedural Materials and Skies - Lessons · Skill - Roblox Asset Import · Tiling Trim Sheets and Decal Tricks · Triangle Budget
 
 <!-- atlas:generated -->

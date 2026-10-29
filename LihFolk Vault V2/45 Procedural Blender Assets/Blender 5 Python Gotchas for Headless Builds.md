@@ -96,5 +96,5 @@ Related: [[Blender Workflow for Roblox Creators]], [[Modeling in Blender for Rob
 
 <!-- related:start -->
 ## Related
-[[Low-Poly Creature From a Flat Reference Sheet]] · [[Stylised Log Cabin Worked Example]] · [[Stylised Weapons From a Concept]] · [[Stylised Shop Stand Worked Example]] · [[Low-Poly Tree Set Worked Example]] · [[Mesh VFX Packs Built in Blender]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[Chibi Character Rules in Practice]]
+[[Low-Poly Creature From a Flat Reference Sheet]] · [[Stylised Log Cabin Worked Example]] · [[Stylised Shop Stand Worked Example]] · [[Low-Poly Tree Set Worked Example]] · [[Stylised Weapons From a Concept]] · [[Mesh VFX Packs Built in Blender]] · [[Matching a Concept Sheet - Boss Creature Case Study]] · [[Chibi Character Rules in Practice]]
 <!-- related:end -->

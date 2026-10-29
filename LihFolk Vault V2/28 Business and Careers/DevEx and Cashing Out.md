@@ -6,13 +6,13 @@ tags: [business, devex, payouts, robux, earnings, taxes, careers, minors, type/g
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - Avoid: Counting purchased Robux as income. Robux you bought is not exchangeable.
-> - Avoid: Assuming the headline rate. Legacy balances, mixed rates and dashboard lag all change the figure.
-> - Avoid: Submitting with the minimum exactly. A late adjustment or lag drops you below 30,000 and the request fails.
+> - Avoid: Assuming one rate. Standard is 0.0038 USD per Earned Robux; 0.0054 applies only to spend by age-checked US 18+ buyers in R15...
+> - Avoid: Misreading Creator Rewards. Daily Engagement: 5 Robux/day per Active Spender; Audience Expansion: 35% of new users' first $100.
 > - Read the current DevEx Terms of Use and the DevEx page on the Creator Hub.
 > - Verified email; legal name matches what you will use on the form.
 > - Tax form type known (W-9 or W-8); a tax professional consulted where needed.
 >
-> Cost: TL;DR ~180 tok · whole note ~4.4k tok. Read more: ## 2. The numbers (Roblox docs, as of October 2026) · ## 4. Eligibility and the request flow · ## 9. Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~4.5k tok. Read more: ## 2. The numbers (Roblox docs, as of October 2026) · ## 4. Eligibility and the request flow · ## 9. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 > **Not advice.** This note is general information about how the Developer Exchange works and how developers usually plan around it. It is not tax, legal or financial advice. Tax and contract rules differ by country (and often by state or province). The only binding rules are Roblox's own **Developer Exchange Terms of Use** and the DevEx page on the Creator Hub (Creator Hub, Docs, Monetization, Developer Exchange). Read them on the day you cash out; rates and requirements change.
@@ -212,7 +212,8 @@ Points to notice:
 ## 9. Common mistakes
 
 - **Counting purchased Robux as income.** Robux you bought is not exchangeable.
-- **Assuming the headline rate.** Legacy balances, mixed rates and dashboard lag all change the figure.
+- **Assuming one rate.** Standard is 0.0038 USD per Earned Robux; 0.0054 applies only to spend by age-checked US 18+ buyers in R15 games. Legacy balances, mixed rates and dashboard lag also change the figure.
+- **Misreading Creator Rewards.** Daily Engagement: 5 Robux/day per Active Spender; Audience Expansion: 35% of new users' first $100. Details: [[Subscriptions and Premium Payouts]].
 - **Submitting with the minimum exactly.** A late adjustment or lag drops you below 30,000 and the request fails.
 - **Missing the one-week portal window.** The request is declined; you wait for next month.
 - **Using a nickname or a parent's name inconsistently.** Name mismatches block payouts; fix them with Support before resubmitting.
@@ -255,5 +256,5 @@ Points to notice:
 
 <!-- related:start -->
 ## Related
-[[Publishing Selling and Updating Plugins]] · [[Building a Portfolio as a Roblox Developer]] · [[Groups Roles and Permissions for Studios]] · [[Discovery and Monetization Changes 2025-2026]] · [[Commerce and Physical Goods]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]]
+[[Discovery and Monetization Changes 2025-2026]] · [[Publishing Selling and Updating Plugins]] · [[Building a Portfolio as a Roblox Developer]] · [[Groups Roles and Permissions for Studios]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]] · [[Commerce and Physical Goods]]
 <!-- related:end -->

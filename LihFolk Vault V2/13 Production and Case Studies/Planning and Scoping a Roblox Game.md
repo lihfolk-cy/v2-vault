@@ -229,5 +229,5 @@ A plan should have a risk list with a mitigation for each. From the reference pr
 
 <!-- related:start -->
 ## Related
-[[Case Study - Instance Cleanup and Place Size]] · [[Working with AI Assistants in Studio]] · [[Asset Pipelines]] · [[Ship a Game in 30 Days - Week-by-Week Plan for a Solo Dev]] · [[Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts]] · [[Template Reskin Checklist - One Codebase, New Game]] · [[Case Study - Phone UI Overhaul]] · [[Case Study - Building LihFolk V2 with AI Agents]]
+[[Case Study - Instance Cleanup and Place Size]] · [[Asset Pipelines]] · [[Working with AI Assistants in Studio]] · [[Ship a Game in 30 Days - Week-by-Week Plan for a Solo Dev]] · [[Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts]] · [[Template Reskin Checklist - One Codebase, New Game]] · [[Case Study - Phone UI Overhaul]] · [[Live Incident Response and Post-Mortems]]
 <!-- related:end -->

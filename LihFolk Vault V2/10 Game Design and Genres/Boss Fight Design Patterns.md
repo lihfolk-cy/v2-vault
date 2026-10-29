@@ -299,5 +299,5 @@ Implementation notes: copies of an arena placed far from the map need their own 
 
 <!-- related:start -->
 ## Related
-[[Time-to-Kill Math and a Weapon Balance Sheet]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Simulator and RNG Genre Teardown]] · [[Genre Playbook - Battlegrounds and Arena Fighters]] · [[Genre Playbook - Battle Royale]] · [[First-Time User Experience and Onboarding]]
+[[Time-to-Kill Math and a Weapon Balance Sheet]] · [[Genre Playbook - Party and Minigame Collections]] · [[Genre Playbook - Simulators]] · [[Genre Playbook - Zombie and Wave Survival Co-op]] · [[Genre Playbook - Battlegrounds and Arena Fighters]] · [[Simulator and RNG Genre Teardown]] · [[First-Time User Experience and Onboarding]] · [[Genre Playbook - Battle Royale]]
 <!-- related:end -->

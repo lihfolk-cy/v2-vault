@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/vfx, area/world]
 > - Sound captions come from your sound play helper.
 > - Limit simultaneously audible remote cars to the nearest 4 to 6 (Rule of thumb; voice limits in Spatial Audio and Mixing).
 >
-> Cost: TL;DR ~140 tok · whole note ~690 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~700 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,10 +26,7 @@ Spatial audio decides where a sound seems to be and how loud it is from here. (f
 
 ## Mentioned in
 
-29 notes in 14 sections. The 25 most relevant are linked:
-
-### 06 World Building and Art
-[[Terrain Deep Dive - Materials Water and Performance]]
+30 notes in 15 sections. The 25 most relevant are linked:
 
 ### 07 Lighting VFX and Audio
 [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Combat Sound Design and Feedback]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[Engine and Tyre Audio Driven by RPM and Slip]] · [[Game Feel and Juice]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Music and Adaptive Audio]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Sound Design for Games]] · [[Sound Fundamentals]] · [[Spatial Audio and Mixing]] · [[The Audio API - Players Emitters Wires and Effects]]
@@ -61,9 +58,12 @@ Spatial audio decides where a sound seems to be and how loud it is from here. (f
 ### 43 Genre Systems End to End
 [[Horror Monster Chase AI End to End]]
 
+### 46 Resource Library
+[[Official Docs - Audio]]
+
 ### 58 Player QoL and Game Tweaks
 [[Audio Mixer Settings with SoundGroups]]
 
-Also mentioned in (not linked): 00 Start Here · Accessibility Start Here · Resource Library - Audio · Zone and Biome Art Direction
+Also mentioned in (not linked): 00 Start Here · Accessibility Start Here · SoundService - Engine Reference Card · Terrain Deep Dive - Materials Water and Performance · Zone and Biome Art Direction
 
 <!-- atlas:generated -->

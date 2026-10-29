@@ -53,7 +53,7 @@ for _, coin in CollectionService:GetTagged("Coin") do startSpin(coin) end
 - [[Debugging Client-Server Desync]]: missing-on-client bugs.
 - [[Memory Budgets and Leaks]]: the memory the radius buys.
 - [[Zone and Biome Art Direction]]: designing horizons that survive streaming.
-- [[Links - StreamingEnabled]]: external references.
+- [[Official Docs - Building and World]]: the official StreamingEnabled docs.
 - [[Racing Laps and Checkpoints End to End]]: fast movement outrunning streaming.
 - [[Interest Management and Per-Player Replication]]: deciding what each player receives.
 
@@ -61,10 +61,10 @@ Related concepts: [[Replication Boundary]], [[Instance Count]], [[Frame Budget]]
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Replication Rules]] · Debugging Race Conditions and Yield Order · Instances Attributes and Tags · Obby Checkpoints and Stage Saves End to End · Links - Checkpoints and spawning · Network Performance · [[Core Concepts Start Here]]
+[[Replication Rules]] · Debugging Race Conditions and Yield Order · Instances Attributes and Tags · Obby Checkpoints and Stage Saves End to End · Official Docs - Game Systems · Network Performance · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]] · [[Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver]] · [[Server Authority]] · [[Object Pooling]] · [[Triangle Budget]] · [[Deterministic Simulation]] · [[Event Bus]] · [[Texel Density]] · [[Draw Calls]] · [[Onboarding Funnel]]
+[[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]] · [[Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver]] · [[Server Authority]] · [[Object Pooling]] · [[Triangle Budget]] · [[Deterministic Simulation]] · [[Texel Density]] · [[Event Bus]] · [[Draw Calls]] · [[Onboarding Funnel]]
 <!-- related:end -->

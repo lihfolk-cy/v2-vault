@@ -287,10 +287,10 @@ Touched-based logic misbehaves in predictable ways:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Cars with Constraints - Suspension Steering and Drive]] · Snippets - Ragdoll · Links - Network ownership · Ragdolls and Physics-Based Animation · Boats Buoyancy and Water · Physics and Vehicles Start Here
+[[Cars with Constraints - Suspension Steering and Drive]] · Snippets - Ragdoll · Official Docs - Physics · Ragdolls and Physics-Based Animation · Boats Buoyancy and Water · Physics and Vehicles Start Here
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Standing on Moving Vehicles and Platforms - Keeping Players Glued]] · [[AI Pitfalls - Physics and Animation]] · [[Centre of Mass, Anti-Flip and Self-Righting]] · [[Grabs, Carries and Throws - Moving Players Safely]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[Snippets - Ragdoll]]
+[[Standing on Moving Vehicles and Platforms - Keeping Players Glued]] · [[AI Pitfalls - Physics and Animation]] · [[Centre of Mass, Anti-Flip and Self-Righting]] · [[Grabs, Carries and Throws - Moving Players Safely]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[BasePart - Engine Reference Card]]
 <!-- related:end -->

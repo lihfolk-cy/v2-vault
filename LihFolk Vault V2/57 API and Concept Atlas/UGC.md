@@ -27,9 +27,6 @@ UGC: User-generated avatar items sold on the Marketplace. (from [[Glossary]])
 
 48 notes in 18 sections. The 25 most relevant are linked:
 
-### 04 Data and Persistence
-[[Serial-Numbered Limited Items - Atomic Counters]]
-
 ### 08 Animation
 [[3D Importer Settings Reference]] · [[Free Mocap and Mixamo Licensing for Roblox]]
 
@@ -51,6 +48,9 @@ UGC: User-generated avatar items sold on the Marketplace. (from [[Glossary]])
 ### 37 Avatars and UGC
 [[AvatarEditorService and In-Game Avatar Editors]] · [[Avatars and UGC Start Here]] · [[Bundles Animation Packs and Emotes for Sale]] · [[HumanoidDescription and Outfit Systems]] · [[Layered Clothing Creation Workflow]] · [[UGC Pricing Limiteds and Marketplace Rules]]
 
+### 46 Resource Library
+[[Official Docs - Asset Creation]]
+
 ### 49 Roblox Platform Features
 [[Commerce and Physical Goods]]
 
@@ -66,6 +66,6 @@ UGC: User-generated avatar items sold on the Marketplace. (from [[Glossary]])
 ### Root notes
 [[00 Start Here]]
 
-Also mentioned in (not linked): 000 Home · AI 3D Model Generation Outside Roblox · Avatar Body Types and Scale in Gameplay · Blade Grip and Wrist Limits · Case Study - Dress to Impress · Case Study - Murder Mystery 2 · Character and Creature Pipeline · Custom Characters and StarterCharacter · Glossary · Legal Basics - IP Licenses and Assets · Open Questions - Whole Vault · Platform Features Start Here · Resource Library - Assets (creation) · Roblox Generative AI - Cube Mesh and Texture Generation · Short-Form Video Marketing · Skinning Weights · Spending Triangles Where the Camera Looks · Sponsored Ads and Campaign Math · Subscriptions and Premium Payouts · SurfaceAppearance PBR Workflow · Texturing and PBR Baking · Trim Sheets Atlases and Vertex Colors · UV Unwrapping
+Also mentioned in (not linked): 000 Home · AI 3D Model Generation Outside Roblox · Avatar Body Types and Scale in Gameplay · Blade Grip and Wrist Limits · Case Study - Dress to Impress · Case Study - Murder Mystery 2 · Character and Creature Pipeline · Custom Characters and StarterCharacter · Glossary · Legal Basics - IP Licenses and Assets · Open Questions - Whole Vault · Platform Features Start Here · Roblox Generative AI - Cube Mesh and Texture Generation · Serial-Numbered Limited Items - Atomic Counters · Short-Form Video Marketing · Skinning Weights · Spending Triangles Where the Camera Looks · Sponsored Ads and Campaign Math · Subscriptions and Premium Payouts · SurfaceAppearance PBR Workflow · Texturing and PBR Baking · Trim Sheets Atlases and Vertex Colors · UV Unwrapping
 
 <!-- atlas:generated -->

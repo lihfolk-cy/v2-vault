@@ -53,5 +53,5 @@ Use [[Competitor Analysis Method]] to study a game that is not covered here. Rec
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Core Loop]] · Click-Through Rate · Session Length · Core Loops and Session Design · Links - Store page · Power Curve
+[[Core Loop]] · Click-Through Rate · Session Length · Core Loops and Session Design · Official Docs - Publishing and Live Ops · Power Curve
 <!-- auto-links:end -->

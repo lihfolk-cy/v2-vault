@@ -12,7 +12,7 @@ tags: [gameplay, characters, humanoid, spawning, health, states, type/guide, are
 > - Movement-state edits happen on the owning machine.
 > - Character scale decided before ranges are tuned.
 >
-> Cost: TL;DR ~130 tok · whole note ~4.5k tok. Read more: ## 2. Movement properties and their defaults · ## 6. Keeping players in the world (production guards) · ## 9. Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.4k tok. Read more: ## 2. Movement properties and their defaults · ## 6. Keeping players in the world (production guards) · ## 9. Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The `Humanoid` is the most used and least understood object in Roblox. It is a movement controller, a state machine, a health container, an appearance applier and a network-ownership anchor in one. Most "my character does something weird" bugs come from not knowing which of those jobs is running, on which machine. This note covers the character model, the Humanoid's properties and states, health and death, spawning and respawning, scaling, and the production failure modes (wall-jump exploits, players stuck in geometry, falling through the world).
@@ -259,10 +259,10 @@ Rule of thumb: name local-only flags with a `Local` suffix and never let the ser
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Spawn Points Safe Zones and Respawn Flow]] · Cookbook - Players and Characters · Ragdolls and Physics-Based Animation · Links - Humanoids and character controllers · Snippets - Ragdoll · Debugging Physics and Network Ownership
+[[Spawn Points Safe Zones and Respawn Flow]] · Cookbook - Players and Characters · Ragdolls and Physics-Based Animation · Official Docs - Characters and Animation · Snippets - Ragdoll · Debugging Physics and Network Ownership
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Cookbook - Players and Characters]] · [[Ragdolls and Physics-Based Animation]] · [[Character Select and Class Systems with Different Rigs]] · [[Pathfinding Edge Cases and Fallbacks]] · [[Combat Systems Architecture]] · [[Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run]] · [[Downed, Revive and Bleed-Out States]] · [[Grabs, Carries and Throws - Moving Players Safely]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]]
+[[Humanoid - Engine Reference Card]] · [[Cookbook - Players and Characters]] · [[Ragdolls and Physics-Based Animation]] · [[Snippets - Ragdoll]] · [[Character Select and Class Systems with Different Rigs]] · [[Pathfinding Edge Cases and Fallbacks]]
 <!-- related:end -->

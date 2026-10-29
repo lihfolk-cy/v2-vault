@@ -1,0 +1,62 @@
+{
+ "F1": {
+  "R1": "cur_r1",
+  "R2": "plain_r1",
+  "R3": "cur_r2"
+ },
+ "F2": {
+  "R1": "cur_r2",
+  "R2": "plain_r1",
+  "R3": "cur_r1"
+ },
+ "F3": {
+  "R1": "cur_r1",
+  "R2": "plain_r1",
+  "R3": "cur_r2"
+ },
+ "F4": {
+  "R1": "cur_r1",
+  "R2": "plain_r1",
+  "R3": "cur_r2"
+ },
+ "F5": {
+  "R1": "cur_r1",
+  "R2": "plain_r1",
+  "R3": "cur_r2"
+ },
+ "F6": {
+  "R1": "cur_r2",
+  "R2": "plain_r1",
+  "R3": "cur_r1"
+ },
+ "F7": {
+  "R1": "plain_r1",
+  "R2": "cur_r2",
+  "R3": "cur_r1"
+ },
+ "F8": {
+  "R1": "cur_r2",
+  "R2": "plain_r1",
+  "R3": "cur_r1"
+ },
+ "F9": {
+  "R1": "plain_r1",
+  "R2": "cur_r1",
+  "R3": "cur_r2"
+ },
+ "F10": {
+  "R1": "cur_r2",
+  "R2": "plain_r1",
+  "R3": "cur_r1"
+ },
+ "F11": {
+  "R1": "cur_r2",
+  "R2": "plain_r1",
+  "R3": "cur_r1"
+ },
+ "F12": {
+  "R1": "cur_r2",
+  "R2": "plain_r1",
+  "R3": "cur_r1"
+ }
+}

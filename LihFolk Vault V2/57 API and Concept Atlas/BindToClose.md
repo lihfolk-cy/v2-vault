@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/data, area/gameplay, api/BindToClose]
 > - Avoid: Saving players one by one in `BindToClose` (Large servers time out; the last players lose data) (Saving Correctly...
 > - Avoid: One sequential save loop in `BindToClose` -> Parallel saves with a deadline.
 >
-> Cost: TL;DR ~160 tok · whole note ~1.3k tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~160 tok · whole note ~1.4k tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,10 +27,11 @@ API snapshot: member of `DataModel`, `PluginGui` (`_tools/roblox_api.json`, docs
 - Avoid: Saving players one by one in `BindToClose` (Large servers time out; the last players lose data) ([[Saving Correctly - Autosave and BindToClose]])
 - Avoid: One sequential save loop in `BindToClose` -> Parallel saves with a deadline. ([[Server Lifecycle and Shutdown]])
 - Avoid: `BindToClose` and `PlayerRemoving` saving the same profile... -> Per-player save serialisation; idempotent saves. ([[Server Lifecycle and Shutdown]])
+- Player data saved with `UpdateAsync` plus a session lock, on leave and in `game:BindToClose`. ([[DataStoreService - Engine Reference Card]])
 
 ## Mentioned in
 
-89 notes in 37 sections. The 25 most relevant are linked:
+92 notes in 38 sections. The 25 most relevant are linked:
 
 ### 02 Luau Scripting
 [[Error Handling and Retries]]
@@ -69,7 +70,7 @@ API snapshot: member of `DataModel`, `PluginGui` (`_tools/roblox_api.json`, docs
 [[Reserved and Private Servers in Practice]] · [[Server Shutdowns Soft Updates and Migration]]
 
 ### 46 Resource Library
-[[Links - DataStoreService]]
+[[Official Docs - Data and Persistence]]
 
 ### 48 Economy Design Deep Dive
 [[Economy Telemetry and Balancing Live]]
@@ -77,6 +78,6 @@ API snapshot: member of `DataModel`, `PluginGui` (`_tools/roblox_api.json`, docs
 ### 50 Team Collaboration and Project Management
 [[Code Review for Luau Teams]]
 
-Also mentioned in (not linked): 00 Start Here · AI Skills Start Here · Accessibility Start Here · Automated Luau Checks - LihFolk Hook and Audit · Big Numbers Precision and Formatting · Build Test and Release Pipeline · Case Study - Adopt Me · Client-Server Model · Commissions Pricing and Contracts · Cookbook - Players and Characters · Core Loops and Session Design · Crash and Error Telemetry · Custom Schedulers and Coroutine Patterns · Daily Rewards System End to End · Data Schema Design and Migrations · Data and Cloud Changes 2025-2026 · Debugging Live Servers · Developer Products and ProcessReceipt · Difficulty Options and Cognitive Load · Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts · Events Signals and Connections · Feedback - Autosave Indicator Ping Display and Error Toasts · Genre Playbook - Survival and Crafting · Genre QA Passes - Test Checklists per Game Type · Glossary · Idempotency · In-Game Bug Report Button with Automatic Context · Infinite and Streamed Worlds · Launch Strategy - The First Two Weeks · LihFolk Systems Library · Limited-Time Offers - Design and Ethics · Live Incident Response and Post-Mortems · Load and Soak Testing Servers - Long Sessions and Many Clients · Luau Cookbook Start Here · MemoryStore Service · Mobile and Low-End Optimization · Multiplayer Services Start Here · Obby Checkpoints and Stage Saves End to End · OrderedDataStores and Leaderboards · Places Universes and Experience Settings · Playtest Heatmaps - Position and Death Maps · Purchase Data and Receipts · QA Checklists Before Release · Quest Chain System End to End · Rate Limiting and Abuse Prevention · Reference - Purple Anime Settings UI (Claude + Figma) · Release Process and Rollbacks · Resetting One Player's Data Safely · Running a Small Studio as a Business · Schema Migrations - Worked Case Studies · Server Browsers and Server Lists · Server Hop Rejoin and Server Lists with Ping · Session Lock · Session State Across Places · Settings Menu Essentials and Persistence · Skill - Roblox DataStore Safety · Story State Flags and Chapter Saves · Testing Your Own Remotes - Fuzzing and Abuse Tests · Trading Systems Without Duplication · Tycoon Plots and Droppers End to End · Undo and ChangeHistoryService Done Right · Weekend Build - Survival Gather, Craft and Place · Worked Builds Start Here · Working with Content Creators
+Also mentioned in (not linked): 00 Start Here · AI Skills Start Here · Accessibility Start Here · Automated Luau Checks - LihFolk Hook and Audit · Big Numbers Precision and Formatting · Build Test and Release Pipeline · Case Study - Adopt Me · Client-Server Model · Commissions Pricing and Contracts · Cookbook - Players and Characters · Core Loops and Session Design · Crash and Error Telemetry · Custom Schedulers and Coroutine Patterns · Daily Rewards System End to End · Data Schema Design and Migrations · Data and Cloud Changes 2025-2026 · DataStoreService - Engine Reference Card · Debugging Live Servers · Developer Products and ProcessReceipt · Difficulty Options and Cognitive Load · Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts · Events Signals and Connections · Feedback - Autosave Indicator Ping Display and Error Toasts · Genre Playbook - Survival and Crafting · Genre QA Passes - Test Checklists per Game Type · Glossary · Idempotency · In-Game Bug Report Button with Automatic Context · Infinite and Streamed Worlds · Launch Strategy - The First Two Weeks · LihFolk Systems Library · Limited-Time Offers - Design and Ethics · Live Incident Response and Post-Mortems · Load and Soak Testing Servers - Long Sessions and Many Clients · Luau Cookbook Start Here · MemoryStore Service · MessagingService - Engine Reference Card · Mobile and Low-End Optimization · Multiplayer Services Start Here · Obby Checkpoints and Stage Saves End to End · OrderedDataStores and Leaderboards · Places Universes and Experience Settings · Players - Engine Reference Card · Playtest Heatmaps - Position and Death Maps · Purchase Data and Receipts · QA Checklists Before Release · Quest Chain System End to End · Rate Limiting and Abuse Prevention · Release Process and Rollbacks · Resetting One Player's Data Safely · Running a Small Studio as a Business · Schema Migrations - Worked Case Studies · Server Browsers and Server Lists · Server Hop Rejoin and Server Lists with Ping · Session Lock · Session State Across Places · Settings Menu Design for Roblox - Layout, Controls and Motion · Settings Menu Essentials and Persistence · Skill - Roblox DataStore Safety · Story State Flags and Chapter Saves · Testing Your Own Remotes - Fuzzing and Abuse Tests · Trading Systems Without Duplication · Tycoon Plots and Droppers End to End · Undo and ChangeHistoryService Done Right · Weekend Build - Survival Gather, Craft and Place · Worked Builds Start Here · Working with Content Creators
 
 <!-- atlas:generated -->

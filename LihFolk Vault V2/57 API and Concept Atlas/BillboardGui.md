@@ -6,11 +6,11 @@ tags: [atlas, api, type/atlas, area/ui, area/gameplay, api/BillboardGui]
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - `BillboardGui.Active` controls whether descendants receive input (Docs).
+> - `BillboardGui.MaxDistance` inf by default; `SurfaceGui.MaxDistance` 1000 studs per the docs.
 > - Billboards at the hit position (pooled `BillboardGui`s with Offset size, tweened upward via `StudsOffsetWorldSpace` and faded).
 > - World-Space UI - BillboardGui and SurfaceGui: labels over any background.
-> - Pooled labels so a 30-player fight does not create thousands of `BillboardGui` instances.
 >
-> Cost: TL;DR ~130 tok · whole note ~650 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~690 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -21,14 +21,14 @@ API snapshot: class, inherits `LayerCollector` (`_tools/roblox_api.json`, docs b
 
 ## Key facts
 
+- `BillboardGui.MaxDistance` inf by default; `SurfaceGui.MaxDistance` 1000 studs per the docs. ([[BillboardGui - Engine Reference Card]])
 - Billboards at the hit position (pooled `BillboardGui`s with Offset size, tweened upward via `StudsOffsetWorldSpace` and faded). ([[World-Space UI - BillboardGui and SurfaceGui]])
 - World-Space UI - BillboardGui and SurfaceGui: labels over any background. ([[Accessibility Contrast]])
 - Pooled labels so a 30-player fight does not create thousands of `BillboardGui` instances. ([[Comfort Toggles - Flashes Damage Numbers and Hit-Stop]])
-- World markers for teammates showing downed players and their remaining time (World-Space UI - BillboardGui and SurfaceGui). ([[Downed, Revive and Bleed-Out States]])
 
 ## Mentioned in
 
-27 notes in 15 sections. The 25 most relevant are linked:
+31 notes in 17 sections. The 25 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[Packages and Asset Reuse]]
@@ -37,10 +37,7 @@ API snapshot: class, inherits `LayerCollector` (`_tools/roblox_api.json`, docs b
 [[OrderedDataStores and Leaderboards]]
 
 ### 05 UI and UX
-[[Nametags and Overhead Bars - Cost and Visibility Rules]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[ScreenGui Fundamentals]] · [[Text Fonts and Rich Text]] · [[Tutorial Step Design Patterns - Teach by Doing]] · [[World-Space UI - BillboardGui and SurfaceGui]]
-
-### 06 World Building and Art
-[[Textures Decals and Texture Memory]]
+[[Nametags and Overhead Bars - Cost and Visibility Rules]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[ScreenGui Fundamentals]] · [[World-Space UI - BillboardGui and SurfaceGui]]
 
 ### 07 Lighting VFX and Audio
 [[Highlights and Selection Effects]]
@@ -61,7 +58,10 @@ API snapshot: class, inherits `LayerCollector` (`_tools/roblox_api.json`, docs b
 [[Readable Text and UI Scale]]
 
 ### 46 Resource Library
-[[Links - Containers]]
+[[Official Docs - UI]]
+
+### 49 Roblox Platform Features
+[[Engine Limits, Quotas and Defaults - Cheat Sheet]]
 
 ### 51 2D Game Development
 [[Pixel Art Pipeline - Aseprite to Roblox Without Blur]]
@@ -72,6 +72,9 @@ API snapshot: class, inherits `LayerCollector` (`_tools/roblox_api.json`, docs b
 ### 58 Player QoL and Game Tweaks
 [[Comfort Toggles - Flashes Damage Numbers and Hit-Stop]]
 
-Also mentioned in (not linked): 00 Start Here · Visual AI Debugging - State Labels, Path Lines and Perception Gizmos
+### 62 Engine Reference Cards
+[[BillboardGui - Engine Reference Card]] · [[ScrollingFrame - Engine Reference Card]]
+
+Also mentioned in (not linked): 00 Start Here · Engine Reference Cards Start Here · Text Fonts and Rich Text · Textures Decals and Texture Memory · Tutorial Step Design Patterns - Teach by Doing · Visual AI Debugging - State Labels, Path Lines and Perception Gizmos
 
 <!-- atlas:generated -->

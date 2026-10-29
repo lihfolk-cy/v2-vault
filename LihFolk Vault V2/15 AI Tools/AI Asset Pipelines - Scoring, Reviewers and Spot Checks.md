@@ -103,5 +103,5 @@ Each review is a full agent run. The platform allows a limited number of concurr
 
 <!-- related:start -->
 ## Related
-[[Blind Review Scores - Noise, Panels and Shipping the Best Version]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Procedural Materials and Skies - Lessons]] · [[Benchmark - Does a Knowledge Vault Make AI Better at Roblox]] · [[Locomotion Readability - Lessons from Blind Panels]] · [[Obsidian Vaults for AI Agents - Structure, Graph and Theming]]
+[[Blind Review Scores - Noise, Panels and Shipping the Best Version]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Procedural Materials and Skies - Lessons]] · [[Benchmark - Does a Knowledge Vault Make AI Better at Roblox]] · [[Thumbnail Review Checklist and Scoring Rubric]] · [[Obsidian Vaults for AI Agents - Structure, Graph and Theming]]
 <!-- related:end -->

@@ -41,5 +41,5 @@ Adding or changing any remote, Touched handler, ProximityPrompt or ClickDetector
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox Debugging]] · [[Links - Remote events and functions]] · Links - Client-server and security model · Exploits and Anti-Cheat · Rate Limiting · Anti-Exploit Start Here
+[[Skill - Roblox Debugging]] · [[Official Docs - Scripting and Luau]] · Exploits and Anti-Cheat · Rate Limiting · Anti-Exploit Start Here
 <!-- auto-links:end -->

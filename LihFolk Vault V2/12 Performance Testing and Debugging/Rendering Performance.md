@@ -10,9 +10,9 @@ tags: [performance, rendering, draw-calls, lod, particles, highlights, shadows, 
 > - Avoid: Precise render fidelity everywhere.
 > - Draw calls and triangles checked in the busiest view on a mid phone.
 > - Repeated meshes share ids and appearance so they instance.
-> - `RenderFidelity` Automatic or Performance except where justified.
+> - `RenderFidelity` Automatic or Performance; it is ignored when `Workspace.MeshStreamingAndImprovedLoDs` is Enabled.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.8k tok. Read more: ## 6. Effects budgets · ## 8. Sleep ambient effects by distance and quality · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~3.8k tok. Read more: ## 6. Effects budgets · ## 8. Sleep ambient effects by distance and quality · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Rendering is usually the largest slice of a client frame, and it is the slice you control least directly: you cannot write the renderer, you can only decide what you ask it to draw. This note covers what makes Roblox rendering expensive (draw calls, geometry complexity, overdraw, lights and shadows, effects, UI), how instancing works, the engine's level-of-detail options and when to switch them off, effect budgets with real production numbers, the Highlight limit, and gating ambient effects by distance and graphics quality.
@@ -247,7 +247,7 @@ See [[ScreenGui Fundamentals]] and [[HUD Design]].
 
 - [ ] Draw calls and triangles checked in the busiest view on a mid phone.
 - [ ] Repeated meshes share ids and appearance so they instance.
-- [ ] `RenderFidelity` Automatic or Performance except where justified.
+- [ ] `RenderFidelity` Automatic or Performance; it is ignored when `Workspace.MeshStreamingAndImprovedLoDs` is Enabled.
 - [ ] `LevelOfDetail` chosen deliberately per model group (and recorded if pinned).
 - [ ] Shadows off on small, distant and moving parts; lights limited in range and count.
 - [ ] Every effect has a cap, a measured peak and a low-quality variant; onlookers get less.
@@ -261,7 +261,7 @@ See [[ScreenGui Fundamentals]] and [[HUD Design]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[VFX Performance Budgets and Culling]] · Draw Calls · [[Performance Fundamentals]] · Mesh Optimization for Mobile · Juice on a Budget - Mobile and Low-End · Resource Library - Visual Effects
+[[VFX Performance Budgets and Culling]] · Draw Calls · [[Performance Fundamentals]] · Mesh Optimization for Mobile · Juice on a Budget - Mobile and Low-End · Official Docs - Visual Effects
 <!-- auto-links:end -->
 
 <!-- related:start -->

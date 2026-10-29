@@ -305,7 +305,7 @@ Word count went from 62 to 49 across all pieces, the objective names the exact e
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Quests and progression]] · Core Loop · Teaching Through Level Design · Links - Menus, HUDs, inventories and shops · Menu Archetypes - Shop Settings Codes Rewards · Experience Notifications and Return Prompts
+[[Official Docs - Game Systems]] · Core Loop · Teaching Through Level Design · Official Docs - UI · Menu Archetypes - Shop Settings Codes Rewards · Experience Notifications and Return Prompts
 <!-- auto-links:end -->
 
 <!-- related:start -->

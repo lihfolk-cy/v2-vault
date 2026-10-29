@@ -337,5 +337,5 @@ Written as: a weight-0 root Pose named after the weapon's root part (`Handle`), 
 
 <!-- related:start -->
 ## Related
-[[Animation Editor Workflow]] · [[Snippets - Lua Keyframe Player Core]] · [[Animation Glossary]] · [[Moon Animator and Third-Party Tools]] · [[Pipeline - New Animated Weapon]] · [[Timing Spacing and Frame Charts]] · [[Animation Review Checklist]] · [[Animation Quality Standard]]
+[[Animation Editor Workflow]] · [[Animation Glossary]] · [[Snippets - Lua Keyframe Player Core]] · [[Moon Animator and Third-Party Tools]] · [[Pipeline - New Animated Weapon]] · [[Timing Spacing and Frame Charts]] · [[Animation Review Checklist]] · [[Animation Quality Standard]]
 <!-- related:end -->

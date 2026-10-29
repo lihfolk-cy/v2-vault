@@ -296,10 +296,10 @@ For "statues of top players" or "your friend's avatar", use `GetHumanoidDescript
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Layered Clothing Cages and Animation]] · Links - Avatars and UGC · Links - Custom characters and avatars · [[Layered Clothing Creation Workflow]] · Modeling Characters for R15 and Custom Rigs · Emotes and Social Animation
+[[Layered Clothing Cages and Animation]] · Official Docs - Asset Creation · Official Docs - Characters and Animation · [[Layered Clothing Creation Workflow]] · Modeling Characters for R15 and Custom Rigs · Emotes and Social Animation
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Character Select and Class Systems with Different Rigs]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Emotes and Social Animation]] · [[R15 Rig Anatomy and Attachments]] · [[UGC Pricing Limiteds and Marketplace Rules]] · [[Avatar Context Menus Profiles and Social Surfaces]]
+[[Character Select and Class Systems with Different Rigs]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Emotes and Social Animation]] · [[R15 Rig Anatomy and Attachments]] · [[UGC Pricing Limiteds and Marketplace Rules]] · [[Character and Creature Pipeline]]
 <!-- related:end -->

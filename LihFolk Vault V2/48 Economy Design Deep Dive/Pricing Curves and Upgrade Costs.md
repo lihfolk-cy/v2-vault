@@ -320,5 +320,5 @@ Store the rounded prices in the config ([[Data and Config Pipeline - Spreadsheet
 
 <!-- related:start -->
 ## Related
-[[Faucets and Sinks]] · [[Economies and Currencies]] · [[Expected Value]] · [[Genre Playbook - Tycoons]] · [[Player-Driven Trading Economies]] · [[Drop Tables Rarity and Pity Systems]]
+[[Faucets and Sinks]] · [[Economies and Currencies]] · [[Expected Value]] · [[Simulator and RNG Genre Teardown]] · [[Player-Driven Trading Economies]] · [[Drop Tables Rarity and Pity Systems]]
 <!-- related:end -->

@@ -12,7 +12,7 @@ tags: [physics, vehicles, rides, roller-coaster, zipline, elevator, cable-car, s
 > - Schedules stored as `DepartAt` server time; speed profile is a shared pure function.
 > - Standing rides are unanchored, server-owned, with limits and sized force.
 >
-> Cost: TL;DR ~160 tok · whole note ~2.2k tok. Read more: ## 2. Coasters on a shared clock · ## 3. Elevators that people stand in · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~2.3k tok. Read more: ## 2. Coasters on a shared clock · ## 3. Elevators that people stand in · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Theme-park and hangout games are full of things that carry players along a fixed path: coasters, ziplines, elevators, gondolas, trams. None of them need a tyre model, and almost all of them break in the same three ways: they jitter for everyone except the server, riders slide off or fall through, and the ride state desyncs between servers or after a rejoin. The fix is choosing the right driver for the ride (shared clock on clients, a server-owned physics mover, or the rider's own client) and attaching riders in a way the engine actually supports. Path maths lives in [[Curves in Luau - Paths Beams and Motion]]; this note is the ride layer.
@@ -114,5 +114,5 @@ Closed, seated cabins: use the coaster pattern (shared clock, cabins evenly spac
 
 <!-- related:start -->
 ## Related
-[[Standing on Moving Vehicles and Platforms - Keeping Players Glued]] · [[Cars with Constraints - Suspension Steering and Drive]] · [[Choosing a Car Chassis - Raycast Suspension vs Constraint Builds vs Community Kits]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[Racing AI on a Racing Line - Spline Following and Rubber-Banding]] · [[Centre of Mass, Anti-Flip and Self-Righting]]
+[[Standing on Moving Vehicles and Platforms - Keeping Players Glued]] · [[Cars with Constraints - Suspension Steering and Drive]] · [[Choosing a Car Chassis - Raycast Suspension vs Constraint Builds vs Community Kits]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[Racing AI on a Racing Line - Spline Following and Rubber-Banding]] · [[Mounts and Rideable Creatures]] · [[Debugging Physics and Network Ownership]]
 <!-- related:end -->

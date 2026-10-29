@@ -50,7 +50,7 @@ Related concepts: [[Core Loop]], [[Retention Cohorts]], [[Onboarding Funnel]], [
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Subscriptions and payouts]] · [[Click-Through Rate]] · [[Core Concepts Start Here]] · Monetization Overview · Top Games Case Studies Start Here · Sponsored Ads and Campaign Math
+[[Official Docs - Monetization]] · [[Click-Through Rate]] · [[Core Concepts Start Here]] · Monetization Overview · Top Games Case Studies Start Here · Sponsored Ads and Campaign Math
 <!-- auto-links:end -->
 
 <!-- related:start -->

@@ -139,7 +139,7 @@ Some effects may not show in Studio at a low **Editor Quality Level**; raise it 
 
 ### Bloom and HDR brightness
 
-Particles, beams and trails have a `Brightness` that can go far above 1 (beams and trails accept 0 to 10000, Docs). With `LightInfluence = 0`, a high-brightness additive particle produces scene colour above 1.0, and bloom catches it. That is why studied professional VFX packs ship with a strong bloom: one decoded pack set bloom to Intensity 1.6, Size 56, Threshold 2, and its flash particles at Brightness 10 to 40 rely on it (reference project study). With Threshold above 1, ordinary white parts and UI-coloured surfaces stop blooming, and only deliberately over-bright effects glow.
+Particles, beams and trails have a `Brightness` that can go far above 1 (beams and trails accept 0 to 10000, Docs). With `LightInfluence = 0`, a high-brightness additive particle produces scene colour above 1.0, and bloom catches it. So pair over-bright effects with a deliberate bloom setting and tune both together: a threshold a little above 1 and a moderate intensity is a good place to start (Rule of thumb). With Threshold above 1, ordinary white parts and UI-coloured surfaces stop blooming, and only deliberately over-bright effects glow.
 
 **Rule of thumb:** a combat game that wants glowing VFX without glowing white walls sets bloom Threshold around 1.5 to 2 and lets VFX Brightness do the work. A stylised game that wants Neon parts to glow sets Threshold near 0.9 to 1 and keeps white surfaces off-white.
 
@@ -283,10 +283,10 @@ See also: [[Lighting Technologies and Settings]], [[Lighting Mood and Time of Da
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Stylized Lighting Recipes]] · [[Links - Post-processing]] · Lighting Untextured Art in Roblox · Colour-Blind Safe Design · Environment Art Styles · Zone and Biome Art Direction
+[[Stylized Lighting Recipes]] · [[Official Docs - Visual Effects]] · Lighting Untextured Art in Roblox · Colour-Blind Safe Design · Environment Art Styles · Zone and Biome Art Direction
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[Light Sources and Shadows]] · [[Weather System Architecture - State Machine, Transitions and Replication]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Particle Emitters In Depth]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[VFX Performance Budgets and Culling]]
+[[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[Making Thumbnails in Studio and Blender - Capture, Lighting and Posing]] · [[Light Sources and Shadows]] · [[Weather System Architecture - State Machine, Transitions and Replication]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Particle Emitters In Depth]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Designing VFX Textures and Flipbooks in Figma]]
 <!-- related:end -->

@@ -7,12 +7,12 @@ tags: [gameplay, pathfinding, navigation, npc, ai, type/guide, area/gameplay, le
 > [!tldr] TL;DR
 > - Avoid: Default agent size for big NPCs -> Real radius and height per size class
 > - Avoid: Waiting on `MoveToFinished` forever -> Per-waypoint timeout
-> - Avoid: Ignoring `Blocked` -> Recompute when blocked ahead
+> - Avoid: Ignoring `Blocked`, or recomputing for any block -> Recompute only if blocked index >= current waypoint
 > - Agent parameters match each NPC size class.
 > - Costs table includes danger labels and link labels.
 > - Follower has per-waypoint timeouts, stuck handling and blocked recompute.
 >
-> Cost: TL;DR ~140 tok · whole note ~4.6k tok. Read more: ## 3. A robust follower · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.6k tok. Read more: ## 3. A robust follower · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 `PathfindingService` computes walkable routes over a navigation mesh that Roblox builds from your world. It handles stairs, ramps, jumps, gaps and (with links) ladders, boats and teleporters. It is also slower, more failure-prone and more limited than people expect: a path can be blocked a moment after you compute it, the agent shape must be described honestly, long paths fail, and following waypoints with a Humanoid needs care. This note covers the API, costs, modifiers and links, a robust follower, when not to use pathfinding at all, and debugging.
@@ -251,7 +251,7 @@ A tutorial "follow the trail" guide is a good client use: compute once, draw the
 |---|---|---|
 | Default agent size for big NPCs | Stuck under bridges and doors | Real radius and height per size class |
 | Waiting on `MoveToFinished` forever | NPC freezes on a blocked waypoint | Per-waypoint timeout |
-| Ignoring `Blocked` | NPC walks into a closed door | Recompute when blocked ahead |
+| Ignoring `Blocked`, or recomputing for any block | NPC walks into a door, or turns back | Recompute only if blocked index >= current waypoint |
 | Recompute every frame | Server stalls | Timer, budget, direct movement near target |
 | Goal inside a part | `NoPath` | Project the goal onto the floor |
 | Paths over 3,000 studs | Fail | Chain via intermediate points |
@@ -303,10 +303,10 @@ The senior trade-off: built-in pathfinding is excellent for occasional, varied r
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - NPCs and AI]] · Links - Horror game mechanics · MCP Workflows for Building Worlds · Physics and Vehicles Start Here · Level Design Start Here · Roblox Studio Assistant
+[[Official Docs - Game Systems]] · MCP Workflows for Building Worlds · Physics and Vehicles Start Here · Level Design Start Here · Roblox Studio Assistant
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]] · [[Police Chases and Wanted Levels]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Squad AI - Attack Tokens, Flanking and Attacker Limits]] · [[Spawning Teams and Rounds]] · [[Weather That Changes Gameplay - Grip, Visibility and Hearing]] · [[Camera Obstruction Handling - Occlusion Modes, Fades and Collision]]
+[[PathfindingService - Engine Reference Card]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]] · [[Police Chases and Wanted Levels]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Squad AI - Attack Tokens, Flanking and Attacker Limits]]
 <!-- related:end -->

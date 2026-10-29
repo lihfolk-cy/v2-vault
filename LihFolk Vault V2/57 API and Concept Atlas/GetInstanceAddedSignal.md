@@ -6,11 +6,11 @@ tags: [atlas, api, type/atlas, area/world, area/performance, api/GetInstanceAdde
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - `GetInstanceAddedSignal` does not fire for instances that were already tagged before you connected.
+> - Avoid: connecting only `GetInstanceAddedSignal`.
 > - Use `CollectionService:GetInstanceAddedSignal(tag)` and handle removal; set `Model.ModelStreamingMode = Persistent` only for...
 > - With Instance Streaming on, a far-away board may not exist on the client yet; re-render on...
-> - Content streamed in later is not tagged yet.
 >
-> Cost: TL;DR ~140 tok · whole note ~680 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~700 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -21,20 +21,20 @@ API snapshot: member of `CollectionService` (`_tools/roblox_api.json`, docs buil
 
 ## Key facts
 
+- Avoid: connecting only `GetInstanceAddedSignal`. ([[CollectionService - Engine Reference Card]])
 - Use `CollectionService:GetInstanceAddedSignal(tag)` and handle removal; set `Model.ModelStreamingMode = Persistent` only for small, essential models. ([[AI Pitfalls - Networking and Security]])
 - With Instance Streaming on, a far-away board may not exist on the client yet; re-render on `CollectionService:GetInstanceAddedSignal`, or keep boards in a persistent model. ([[Global Leaderboards End to End]])
 - Content streamed in later is not tagged yet. Listen to `CollectionService:GetInstanceAddedSignal("DecoShadow")` and apply the current preset to new parts. ([[Graphics and Performance Toggles for Low-End Devices]])
-- Fix: tag-based setup with `GetInstanceAddedSignal` and removal handling. ([[Level of Detail and Model Streaming]])
 
 ## Mentioned in
 
-26 notes in 16 sections. The 25 most relevant are linked:
+28 notes in 17 sections. The 25 most relevant are linked:
 
 ### 02 Luau Scripting
 [[CollectionService Patterns]]
 
 ### 03 Architecture and Networking
-[[Instance Streaming]]
+[[Instance Streaming]] · [[Network Ownership]]
 
 ### 05 UI and UX
 [[Accessibility]]
@@ -52,7 +52,7 @@ API snapshot: member of `CollectionService` (`_tools/roblox_api.json`, docs buil
 [[Raycasts Shapecasts and Spatial Queries]]
 
 ### 12 Performance Testing and Debugging
-[[Client Zone Culling for Interiors and Cities]] · [[Hunting Memory Leaks Step by Step]] · [[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]]
+[[Client Zone Culling for Interiors and Cities]] · [[Hunting Memory Leaks Step by Step]]
 
 ### 15 AI Tools
 [[AI Pitfalls - Networking and Security]]
@@ -76,8 +76,11 @@ API snapshot: member of `CollectionService` (`_tools/roblox_api.json`, docs buil
 [[Streaming Radius]]
 
 ### 58 Player QoL and Game Tweaks
-[[Graphics and Performance Toggles for Low-End Devices]] · [[UI Scale HUD Hide and Compact Mode]]
+[[Graphics and Performance Toggles for Low-End Devices]]
 
-Also mentioned in (not linked): World-Space UI - BillboardGui and SurfaceGui
+### 62 Engine Reference Cards
+[[CollectionService - Engine Reference Card]]
+
+Also mentioned in (not linked): StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs · UI Scale HUD Hide and Compact Mode · World-Space UI - BillboardGui and SurfaceGui
 
 <!-- atlas:generated -->

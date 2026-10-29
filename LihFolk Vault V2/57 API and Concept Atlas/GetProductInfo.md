@@ -1,5 +1,5 @@
 ---
-tags: [atlas, api, type/atlas, area/ai, area/monetization, api/GetProductInfo]
+tags: [atlas, api, type/atlas, area/ai, area/platform, api/GetProductInfo]
 ---
 # GetProductInfo
 
@@ -7,10 +7,10 @@ tags: [atlas, api, type/atlas, area/ai, area/monetization, api/GetProductInfo]
 > [!tldr] TL;DR
 > - `GetProductInfo` is now marked deprecated on the reference page in favour of `GetProductInfoAsync` (Docs, Oct 2026).
 > - Avoid: Writing `GetProductInfo`, `LoadCharacter` or `AwardBadge` in new code.
-> - Wrong: `GetProductInfo`, `PlayerOwnsAsset`, `AwardBadge`, `LoadCharacter`, `IsInGroup`, `GetRankInGroup`, `ApplyDescription`...
-> - `GetProductInfo`, `LoadCharacter`, `AwardBadge`, `IsInGroup`, `ReserveServer` and 41 others have `Async` names.
+> - `grep -nE ":(GetProductInfo|PlayerOwnsAsset|AwardBadge|LoadCharacter|IsInGroup|GetRankInGroup|ApplyDescription|ReserveServer|Re...
+> - Avoid: Pre-2026 names (`AwardBadge`, `GetProductInfo`, `LoadCharacter`, `ReserveServerAsync`, `TeleportPartyAsync`...
 >
-> Cost: TL;DR ~150 tok · whole note ~380 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~400 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -22,12 +22,12 @@ API snapshot: member of `MarketplaceService`; flagged deprecated (`_tools/roblox
 ## Key facts
 
 - Avoid: Writing `GetProductInfo`, `LoadCharacter` or `AwardBadge` in new code. ([[Engine and API Changes 2025-2026]])
-- Wrong: `GetProductInfo`, `PlayerOwnsAsset`, `AwardBadge`, `LoadCharacter`, `IsInGroup`, `GetRankInGroup`, `ApplyDescription`, `ReserveServer`, `CreateHumanoidModelFromDescription`. ([[AI Pitfalls - Stale APIs and Luau]])
-- `GetProductInfo`, `LoadCharacter`, `AwardBadge`, `IsInGroup`, `ReserveServer` and 41 others have `Async` names. ([[Roblox Changes 2025-2026]])
+- `grep -nE ":(GetProductInfo|PlayerOwnsAsset|AwardBadge|LoadCharacter|IsInGroup|GetRankInGroup|ApplyDescription|ReserveServer|Re... ([[Engine and API Changes 2025-2026]])
+- Avoid: Pre-2026 names (`AwardBadge`, `GetProductInfo`, `LoadCharacter`, `ReserveServerAsync`, `TeleportPartyAsync`... ([[AI Pitfalls - Stale APIs and Luau]])
 
 ## Mentioned in
 
-10 notes in 6 sections. The 10 most relevant are linked:
+12 notes in 7 sections. The 12 most relevant are linked:
 
 ### 02 Luau Scripting
 [[Error Handling and Retries]]
@@ -39,10 +39,13 @@ API snapshot: member of `MarketplaceService`; flagged deprecated (`_tools/roblox
 [[AI Pitfalls - Data and Monetization]] · [[AI Pitfalls - Stale APIs and Luau]] · [[What AI Models Get Wrong in Roblox]]
 
 ### 49 Roblox Platform Features
-[[Engine and API Changes 2025-2026]] · [[Roblox Changes 2025-2026]]
+[[API Renames and Deprecations 2025-2026]] · [[Engine and API Changes 2025-2026]] · [[Roblox Changes 2025-2026]]
 
 ### 56 Field Notes
 [[Sound Design Pitfalls - Reused Ids Onsets and Layered Loops]]
+
+### 62 Engine Reference Cards
+[[MarketplaceService - Engine Reference Card]]
 
 ### Root notes
 [[Open Questions - Whole Vault]]

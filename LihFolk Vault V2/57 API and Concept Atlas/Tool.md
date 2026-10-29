@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/animation, area/gameplay, api/Tool]
 > - Avoid: Inventory as Tools in Backpack -> Data inventory, Tool only for equipped.
 > - Tool used only for holding; inventory lives in the profile.
 >
-> Cost: TL;DR ~110 tok · whole note ~540 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~110 tok · whole note ~570 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,13 +28,13 @@ API snapshot: class, inherits `BackpackItem` (`_tools/roblox_api.json`, docs bui
 
 ## Mentioned in
 
-26 notes in 9 sections. The 25 most relevant are linked:
+28 notes in 10 sections. The 25 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[External Tooling - Rojo Wally Selene StyLua]]
 
 ### 08 Animation
-[[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Blade Grip and Wrist Limits]] · [[Custom Rigs - Weapons and Props]] · [[Engine Gotchas]] · [[Equip Draw and Flourish Systems]] · [[LihFolk R15 Keyframe Pipeline]] · [[Locomotion Systems]] · [[Procedural Weapon Motion]] · [[R15 Rig Anatomy and Attachments]] · [[Rigs and Joints]] · [[Snippets - Playing Animations]] · [[The Default Animate Script]] · [[Weapon and Combat Animation]]
+[[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]] · [[Blade Grip and Wrist Limits]] · [[Custom Rigs - Weapons and Props]] · [[Engine Gotchas]] · [[Equip Draw and Flourish Systems]] · [[LihFolk R15 Keyframe Pipeline]] · [[Locomotion Systems]] · [[Procedural Weapon Motion]] · [[Rigs and Joints]] · [[Snippets - Playing Animations]] · [[The Default Animate Script]] · [[Weapon and Combat Animation]]
 
 ### 09 Gameplay Systems
 [[Characters and Humanoids]] · [[Tools and Inventory Systems]]
@@ -57,6 +57,9 @@ API snapshot: class, inherits `BackpackItem` (`_tools/roblox_api.json`, docs bui
 ### 58 Player QoL and Game Tweaks
 [[Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots]]
 
-Also mentioned in (not linked): R15 Run Cycle Key Poses
+### 62 Engine Reference Cards
+[[ContextActionService - Engine Reference Card]]
+
+Also mentioned in (not linked): R15 Rig Anatomy and Attachments · R15 Run Cycle Key Poses · RemoteEvent - Engine Reference Card
 
 <!-- atlas:generated -->

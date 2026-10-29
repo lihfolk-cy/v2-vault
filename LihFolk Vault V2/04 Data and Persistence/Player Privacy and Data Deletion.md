@@ -197,7 +197,7 @@ Partial deletion inside shared records (a guild roster, a trade log, a gift ledg
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Open Cloud and external APIs]] · Refunds Chargebacks and Purchase Support · Links - Session locking and data safety · Cookbook - Data and Saving · Logging Bans and Appeals · Crash and Error Telemetry
+[[Official Docs - Scripting and Luau]] · Refunds Chargebacks and Purchase Support · Official Docs - Data and Persistence · Cookbook - Data and Saving · Logging Bans and Appeals · Crash and Error Telemetry
 <!-- auto-links:end -->
 
 <!-- related:start -->

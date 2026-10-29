@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/ui, area/animation, api/CanvasGroup]
 > - Avoid: Rotating a frame with `ClipsDescendants` -> `CanvasGroup` window, rotate an inner frame.
 > - Rotating map uses a CanvasGroup window; upright icons counter-rotated.
 >
-> Cost: TL;DR ~120 tok · whole note ~430 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~440 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -30,13 +30,13 @@ API snapshot: class, inherits `GuiObject` (`_tools/roblox_api.json`, docs build 
 
 ## Mentioned in
 
-14 notes in 9 sections. The 14 most relevant are linked:
+15 notes in 9 sections. The 15 most relevant are linked:
 
 ### 05 UI and UX
-[[Accessibility]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[ScreenGui Fundamentals]] · [[UI Design Systems]] · [[UI Motion Language and Timing]]
+[[Accessibility]] · [[Figma Property Mapping for Roblox UI]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[ScreenGui Fundamentals]] · [[Settings Menu Design for Roblox - Layout, Controls and Motion]] · [[UI Design Systems]] · [[UI Motion Language and Timing]]
 
 ### 08 Animation
-[[Reference - Purple Anime Settings UI (Claude + Figma)]] · [[UI and GUI Animation]]
+[[UI and GUI Animation]]
 
 ### 12 Performance Testing and Debugging
 [[Rendering Performance]]

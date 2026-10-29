@@ -1,5 +1,5 @@
 ---
-tags: [atlas, concept, type/atlas, area/procedural, area/animation]
+tags: [atlas, concept, type/atlas, area/procedural, area/vfx]
 ---
 # Random Seeds
 
@@ -29,7 +29,7 @@ Seeds are fine for items that are never saved (a run-only roguelike item) or for
 
 ## Mentioned in
 
-76 notes in 33 sections. The 25 most relevant are linked:
+79 notes in 33 sections. The 25 most relevant are linked:
 
 ### 02 Luau Scripting
 [[Math Vectors and CFrames]]
@@ -38,10 +38,13 @@ Seeds are fine for items that are never saved (a run-only roguelike item) or for
 [[Foliage Props and Scatter]] · [[Procedural World Generation]]
 
 ### 07 Lighting VFX and Audio
-[[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Weather System Architecture - State Machine, Transitions and Replication]]
+[[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Replicating VFX - Server Validates, Clients Render]] · [[Weather System Architecture - State Machine, Transitions and Replication]]
 
 ### 08 Animation
 [[Spec-Driven Move Authoring]]
+
+### 14 3D Modeling
+[[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]]
 
 ### 22 Anti-Exploit and Security
 [[Testing Your Own Remotes - Fuzzing and Abuse Tests]]
@@ -64,18 +67,12 @@ Seeds are fine for items that are never saved (a run-only roguelike item) or for
 ### 48 Economy Design Deep Dive
 [[Drop Tables Rarity and Pity Systems]] · [[Simulating an Economy Before Launch]]
 
-### 51 2D Game Development
-[[2D Multiplayer - Server Authority and Replicating GUI Worlds]]
-
 ### 52 Core Concepts
 [[Deterministic Simulation]]
-
-### 53 Voxel Modelling Deep Dive
-[[Voxel Props Environments and Modular Tiles]]
 
 ### 59 Viral and Trend Game Teardowns
 [[Teardown - Plants vs Brainrots]]
 
-Also mentioned in (not linked): 00 Start Here · 2D Game Development Start Here · Automated Testing with TestEZ and Jest-Lua · Blender 5 Python Gotchas for Headless Builds · Blender Automation with Python · Case Study - Adopt Me · Case Study - Doors · Client Prediction and Reconciliation for Combat · Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop · Cookbook - Math CFrame and Vectors · Cookbook - Tables Strings and Time · Dash VFX Presentation on an R15 Rig · Debugging Start Here · Dramatic Showcase Renders in Eevee · Economy Design Start Here · EditableImage for Pixel Buffers and Procedural 2D · Faceted Low-Poly - Flat Normals and Facet Size · First-Time User Experience and Onboarding · Flight Flocks and Path Animation · Genre Playbook - RNG and Collection Games · Genre Playbook - Shooters FPS and TPS · Genre Playbook - Social Deduction and Murder Mystery · Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers · House Construction Method - Modular Kit Workflow · Ice Ball Cast to Explosion - Approved Recipe · Icon and Thumbnail Rendering Pipeline · In-Game AI - LLM NPCs and Text Generation · Interest Management and Per-Player Replication · Inverse Kinematics · Localization · Modular Environment Kits · Module Design and Dependency Injection · Obby and Platforming Level Design · Open Questions - Whole Vault · Parties and Group Teleports · Pet Hatching and Following End to End · Physics and Vehicles Start Here · Pipeline - New Animated Weapon · Probability and Statistics for Designers · Procedural Animation · RNG Drops and Luck Systems · Retopology and Decimation · Skill - Roblox Debugging · Snippets - Camera Shake and FX · Stylised Log Cabin Worked Example · Teardown - Pressure · Template Reskin Checklist - One Codebase, New Game · Testing Strategies and Frameworks · Variance · Viral Game Anatomy - Hooks, Loops and Timing · Voxel and Blocky Modeling
+Also mentioned in (not linked): 00 Start Here · 2D Game Development Start Here · 2D Multiplayer - Server Authority and Replicating GUI Worlds · Automated Testing with TestEZ and Jest-Lua · Blender 5 Python Gotchas for Headless Builds · Blender Automation with Python · Case Study - Adopt Me · Case Study - Doors · Client Prediction and Reconciliation for Combat · Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop · Cookbook - Math CFrame and Vectors · Cookbook - Tables Strings and Time · Dash VFX Presentation on an R15 Rig · Debugging Start Here · Dramatic Showcase Renders in Eevee · Economy Design Start Here · EditableImage for Pixel Buffers and Procedural 2D · Faceted Low-Poly - Flat Normals and Facet Size · First-Time User Experience and Onboarding · Flight Flocks and Path Animation · Genre Playbook - RNG and Collection Games · Genre Playbook - Shooters FPS and TPS · Genre Playbook - Social Deduction and Murder Mystery · Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers · House Construction Method - Modular Kit Workflow · Ice Ball Cast to Explosion - Approved Recipe · Icon and Thumbnail Rendering Pipeline · In-Game AI - LLM NPCs and Text Generation · Interest Management and Per-Player Replication · Inverse Kinematics · Localization · Modular Environment Kits · Module Design and Dependency Injection · Obby and Platforming Level Design · Open Questions - Whole Vault · Parties and Group Teleports · Pet Hatching and Following End to End · Physics and Vehicles Start Here · Pipeline - New Animated Weapon · Probability and Statistics for Designers · Procedural Animation · Projectile VFX - Muzzle, Travel and Impact · RNG Drops and Luck Systems · Retopology and Decimation · Skill - Roblox Debugging · Snippets - Camera Shake and FX · Stylised Log Cabin Worked Example · Teardown - Pressure · Template Reskin Checklist - One Codebase, New Game · Testing Strategies and Frameworks · Variance · Viral Game Anatomy - Hooks, Loops and Timing · Voxel Props Environments and Modular Tiles · Voxel and Blocky Modeling
 
 <!-- atlas:generated -->

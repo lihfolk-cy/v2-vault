@@ -12,7 +12,7 @@ tags: [gameplay, combat, co-op, downed, revive, bleed-out, health, state-machine
 > - Lethal damage downs instead of kills when downs remain; instant-kill sources defined.
 > - Bleed-out from server timestamps; pauses while revived; shortens on hits and repeat downs.
 >
-> Cost: TL;DR ~180 tok · whole note ~2.3k tok. Read more: ## 2. Intercepting lethal damage · ## 4. Revive interaction · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~2.4k tok. Read more: ## 2. Intercepting lethal damage · ## 4. Revive interaction · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 In co-op games, dying should usually be a *state*, not an event: the player goes down, crawls, can be revived by a teammate within a time limit, and only dies for real if nobody comes. It turns deaths into team moments and gives skilled groups a recovery loop. On Roblox the main trap is the Humanoid: when `Health` reaches 0 the character dies, joints break by default, and the respawn timer starts. A downed system must intercept damage *before* that. This note covers the state machine, intercepting death, the revive interaction, bleed-out, and the rules that stop downed states being abused.
@@ -157,5 +157,5 @@ If every alive player in the group is downed or dead, the encounter is lost: end
 
 <!-- related:start -->
 ## Related
-[[Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations]] · [[Enemy Archetype Kit - Fodder, Tank, Ranged, Support and Exploder]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Spawning Teams and Rounds]] · [[Hitboxes and Hit Detection]] · [[Character Select and Class Systems with Different Rigs]] · [[Squad AI - Attack Tokens, Flanking and Attacker Limits]] · [[Quests and Objectives]]
+[[Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations]] · [[Enemy Archetype Kit - Fodder, Tank, Ranged, Support and Exploder]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Spawning Teams and Rounds]] · [[Clickable and Interactive Parts - ClickDetector, ProximityPrompt and Touched]] · [[Hitboxes and Hit Detection]] · [[Character Select and Class Systems with Different Rigs]] · [[Squad AI - Attack Tokens, Flanking and Attacker Limits]]
 <!-- related:end -->

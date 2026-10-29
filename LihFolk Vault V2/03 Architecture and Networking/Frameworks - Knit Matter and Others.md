@@ -211,7 +211,7 @@ The reference project used no third-party framework. It had a central service th
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - OOP and module design]] · Dependency Injection in Luau · Links - Remote events and functions · Links - UI frameworks · Module Design and Dependency Injection · Links - Services
+[[Official Docs - Scripting and Luau]] · Dependency Injection in Luau · Official Docs - UI · Module Design and Dependency Injection
 <!-- auto-links:end -->
 
 <!-- related:start -->

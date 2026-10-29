@@ -459,7 +459,7 @@ Roblox's advice before adopting any module: check ownership and maintenance, and
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox DataStore Safety]] · Debugging DataStore Problems · Saved Inventory End to End · Session Lock · Cookbook - Data and Saving · Links - Session locking and data safety
+[[Skill - Roblox DataStore Safety]] · Debugging DataStore Problems · Saved Inventory End to End · Session Lock · Cookbook - Data and Saving · Official Docs - Data and Persistence
 <!-- auto-links:end -->
 
 <!-- related:start -->

@@ -467,7 +467,7 @@ Limits used by the reference project's wrist: flex 70, deviation 30, twist 85 de
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Troubleshooting Table]] · [[Animation Glossary]] · [[Spec-Driven Move Authoring]] · [[Animation Quality Standard]] · [[Links - Inverse kinematics]] · Voxel Characters - Proportions Joints and Rigging · [[Animation Start Here]]
+[[Troubleshooting Table]] · [[Animation Glossary]] · [[Spec-Driven Move Authoring]] · [[Animation Quality Standard]] · [[Official Docs - Characters and Animation]] · Voxel Characters - Proportions Joints and Rigging · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->

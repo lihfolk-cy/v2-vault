@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/gameplay, area/studio, api/Script]
 > - Client code runs twice: Client-context `Script` in a Starter container -> LocalScript there, or move to ReplicatedStorage.
 > - One entry Script per side; modules with `init`/`start`.
 >
-> Cost: TL;DR ~140 tok · whole note ~970 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~1.0k tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -29,7 +29,7 @@ API snapshot: class, inherits `BaseScript` (`_tools/roblox_api.json`, docs build
 
 ## Mentioned in
 
-59 notes in 22 sections. The 25 most relevant are linked:
+62 notes in 25 sections. The 25 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[Creator Store and Toolbox Safety]] · [[External Tooling - Rojo Wally Selene StyLua]] · [[Testing Modes - Play Run and Multi-Client]] · [[Version History and Backups]]
@@ -49,6 +49,9 @@ API snapshot: class, inherits `BaseScript` (`_tools/roblox_api.json`, docs build
 ### 08 Animation
 [[The Default Animate Script]]
 
+### 09 Gameplay Systems
+[[Clickable and Interactive Parts - ClickDetector, ProximityPrompt and Touched]]
+
 ### 12 Performance Testing and Debugging
 [[Developer Console and Stats]]
 
@@ -59,7 +62,7 @@ API snapshot: class, inherits `BaseScript` (`_tools/roblox_api.json`, docs build
 [[Reading Luau Errors and Stack Traces]] · [[The Debugging Method - Reproduce Isolate Bisect]]
 
 ### 24 Worked Builds
-[[Melee Combat System End to End]] · [[Pet Hatching and Following End to End]] · [[Quest Chain System End to End]] · [[Rebirth and Prestige System End to End]] · [[Round-Based Minigame Loop End to End]] · [[Saved Inventory End to End]]
+[[Melee Combat System End to End]] · [[Pet Hatching and Following End to End]] · [[Quest Chain System End to End]] · [[Rebirth and Prestige System End to End]] · [[Saved Inventory End to End]]
 
 ### 36 Narrative and Worldbuilding
 [[Dialogue System End to End]]
@@ -70,6 +73,6 @@ API snapshot: class, inherits `BaseScript` (`_tools/roblox_api.json`, docs build
 ### 51 2D Game Development
 [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]]
 
-Also mentioned in (not linked): Ability Kits Architecture · Agent Review Loops and Guardrails in Practice · Animation Asset Permissions and Groups · Arena Rounds with Teams and Spectating End to End · Audio Pipeline · Avatar Context Menus Profiles and Social Surfaces · Building a Studio Plugin End to End · Cars with Constraints - Suspension Steering and Drive · Commerce and Physical Goods · Data and Config Pipeline - Spreadsheets to Game · DataStore Fundamentals · Developer Products and ProcessReceipt · Error Handling and Retries · Explorer Properties and Selection · Horror Monster Chase AI End to End · Hunting Memory Leaks Step by Step · Infinite and Streamed Worlds · LihFolk Systems Library · Luau Performance Patterns with Benchmarks · Moving Data Out of a Play Session · Network Ownership · Obby Checkpoints and Stage Saves End to End · Packages and Asset Reuse · Plugin Security and Permissions · Plugins - Using and Writing · Prompting and Verifying AI Output · Racing Laps and Checkpoints End to End · Saving Correctly - Autosave and BindToClose · Session Locking and Profile Libraries · Text Chat Customization with TextChatService · Tower Defense Waves and Placement End to End · Tycoon Plots and Droppers End to End · Voice Chat and Safety Features · Weekend Build - Arena Shooter with Server-Checked Hits
+Also mentioned in (not linked): Ability Kits Architecture · Agent Review Loops and Guardrails in Practice · Animation Asset Permissions and Groups · Arena Rounds with Teams and Spectating End to End · Audio Pipeline · Avatar Context Menus Profiles and Social Surfaces · BadgeService - Engine Reference Card · Building a Studio Plugin End to End · Cars with Constraints - Suspension Steering and Drive · Commerce and Physical Goods · Data and Config Pipeline - Spreadsheets to Game · DataStore Fundamentals · DataStoreService - Engine Reference Card · Developer Products and ProcessReceipt · Error Handling and Retries · Explorer Properties and Selection · Horror Monster Chase AI End to End · Hunting Memory Leaks Step by Step · Infinite and Streamed Worlds · LihFolk Systems Library · Luau Performance Patterns with Benchmarks · Making Thumbnails in Studio and Blender - Capture, Lighting and Posing · Moving Data Out of a Play Session · Obby Checkpoints and Stage Saves End to End · Packages and Asset Reuse · Plugin Security and Permissions · Plugins - Using and Writing · Prompting and Verifying AI Output · Racing Laps and Checkpoints End to End · Round-Based Minigame Loop End to End · Saving Correctly - Autosave and BindToClose · Session Locking and Profile Libraries · Text Chat Customization with TextChatService · Tower Defense Waves and Placement End to End · Tycoon Plots and Droppers End to End · Voice Chat and Safety Features · Weekend Build - Arena Shooter with Server-Checked Hits
 
 <!-- atlas:generated -->

@@ -8,9 +8,9 @@ tags: [atlas, api, type/atlas, area/ui, area/platform, api/GetImageForKeyCode]
 > - `GetImageForKeyCode` returns an image appropriate to the connected controller type, so PlayStation players see PlayStation...
 > - PlayStation players see Xbox glyphs: Custom glyph sheet -> `GetImageForKeyCode` (Controller Support QoL)
 > - Fallback for any system: `UserInputService:GetImageForKeyCode(keyCode)` gives platform-specific gamepad images, and...
-> - Button prompts match the device: `InputActionLabel` for Input Action System bindings, otherwise...
+> - Symptom: wrong glyphs on gamepad or other keyboard layouts; use `GetStringForKeyCode` or `GetImageForKeyCode`.
 >
-> Cost: TL;DR ~160 tok · whole note ~340 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~160 tok · whole note ~400 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -23,11 +23,12 @@ API snapshot: member of `UserInputService` (`_tools/roblox_api.json`, docs build
 
 - PlayStation players see Xbox glyphs: Custom glyph sheet -> `GetImageForKeyCode` ([[Controller Support QoL]])
 - Fallback for any system: `UserInputService:GetImageForKeyCode(keyCode)` gives platform-specific gamepad images, and `GetStringForKeyCode` gives keyboard strings (Docs). ([[Input - UserInputService and ContextActionService]])
+- Symptom: wrong glyphs on gamepad or other keyboard layouts; use `GetStringForKeyCode` or `GetImageForKeyCode`. ([[UserInputService - Engine Reference Card]])
 - Button prompts match the device: `InputActionLabel` for Input Action System bindings, otherwise `UserInputService:GetStringForKeyCode()` or `GetImageForKeyCode()`. ([[Console and VR Release Checklists]])
 
 ## Mentioned in
 
-5 notes in 3 sections. The 5 most relevant are linked:
+6 notes in 4 sections. The 6 most relevant are linked:
 
 ### 05 UI and UX
 [[Gamepad and Console UX]] · [[Input - UserInputService and ContextActionService]]
@@ -37,5 +38,8 @@ API snapshot: member of `UserInputService` (`_tools/roblox_api.json`, docs build
 
 ### 58 Player QoL and Game Tweaks
 [[Controller Support QoL]] · [[Rebinding Controls with the Input Action System]]
+
+### 62 Engine Reference Cards
+[[UserInputService - Engine Reference Card]]
 
 <!-- atlas:generated -->

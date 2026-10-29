@@ -384,10 +384,10 @@ Applying a description loads meshes, textures and cages, and on layered clothing
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Avatar Context Menus Profiles and Social Surfaces]] · Commerce and Physical Goods · [[Bundles Animation Packs and Emotes for Sale]] · Platform Features Start Here · Cookbook - Players and Characters · Links - Avatars and UGC
+[[Avatar Context Menus Profiles and Social Surfaces]] · Commerce and Physical Goods · [[Bundles Animation Packs and Emotes for Sale]] · Platform Features Start Here · Cookbook - Players and Characters · Official Docs - Asset Creation
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Commerce and Physical Goods]] · [[Character Select and Class Systems with Different Rigs]] · [[Layered Clothing Creation Workflow]] · [[Emotes and Social Animation]] · [[Game Passes]] · [[Shop with Game Passes and Developer Products End to End]]
+[[Commerce and Physical Goods]] · [[Character Select and Class Systems with Different Rigs]] · [[Layered Clothing Creation Workflow]] · [[MarketplaceService - Engine Reference Card]] · [[Emotes and Social Animation]] · [[Game Passes]]
 <!-- related:end -->

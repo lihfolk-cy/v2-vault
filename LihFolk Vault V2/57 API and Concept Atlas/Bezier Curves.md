@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/animation, area/math]
 > - Repeating a knot lowers continuity at that spot (a deliberate crease) and lets a NURBS curve reproduce Bezier pieces exactly.
 > - Resolution U sets how many evaluated points each Bezier segment gets, uniformly, whether the segment bends or not.
 >
-> Cost: TL;DR ~130 tok · whole note ~360 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~380 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,7 +26,7 @@ A Bezier curve is defined by control points. (from [[Bezier Curves and Splines f
 
 ## Mentioned in
 
-11 notes in 5 sections. The 11 most relevant are linked:
+12 notes in 6 sections. The 12 most relevant are linked:
 
 ### 06 World Building and Art
 [[Roads, Rivers and Paths Carved Along Curves in Terrain]]
@@ -42,5 +42,8 @@ A Bezier curve is defined by control points. (from [[Bezier Curves and Splines f
 
 ### 40 Game Math
 [[Curves in Luau - Paths Beams and Motion]] · [[Game Math Start Here]] · [[Interpolation Easing and Curves Math]]
+
+### 62 Engine Reference Cards
+[[TweenService - Engine Reference Card]]
 
 <!-- atlas:generated -->

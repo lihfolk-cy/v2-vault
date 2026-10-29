@@ -9,7 +9,7 @@ tags: [atlas, api, type/atlas, area/security, area/networking, api/GetNetworkPin
 > - `GetNetworkPing()` returns the player's isolated network latency in seconds, measured as a client-server round trip (Roblox docs).
 > - Current server ping is measurable: `Player:GetNetworkPing()` on the client returns the player's network latency to their...
 >
-> Cost: TL;DR ~120 tok · whole note ~340 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~360 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -25,7 +25,7 @@ API snapshot: member of `Player` (`_tools/roblox_api.json`, docs build of 2026-1
 
 ## Mentioned in
 
-7 notes in 5 sections. The 7 most relevant are linked:
+8 notes in 6 sections. The 8 most relevant are linked:
 
 ### 03 Architecture and Networking
 [[Client-Server Model]]
@@ -41,5 +41,8 @@ API snapshot: member of `Player` (`_tools/roblox_api.json`, docs build of 2026-1
 
 ### 58 Player QoL and Game Tweaks
 [[Feedback - Autosave Indicator Ping Display and Error Toasts]] · [[Server Hop Rejoin and Server Lists with Ping]]
+
+### 62 Engine Reference Cards
+[[Player - Engine Reference Card]]
 
 <!-- atlas:generated -->

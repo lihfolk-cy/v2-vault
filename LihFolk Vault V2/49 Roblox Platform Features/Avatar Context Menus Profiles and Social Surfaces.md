@@ -355,7 +355,7 @@ Never turn friend presence into pressure ("Your friend is waiting for you!" when
 - [ ] `SetCore` and `GetCore` calls wrapped with retries
 
 ## See also
-[[Platform Features Start Here]] · [[Social Design and Multiplayer Play]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Emotes and Social Animation]] · [[HumanoidDescription and Outfit Systems]] · [[Player Reports and In-Game Moderation]] · [[Voice Chat and Safety Features]] · [[Trading Systems Without Duplication]] · [[Links - Community and social]]
+[[Platform Features Start Here]] · [[Social Design and Multiplayer Play]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Emotes and Social Animation]] · [[HumanoidDescription and Outfit Systems]] · [[Player Reports and In-Game Moderation]] · [[Voice Chat and Safety Features]] · [[Trading Systems Without Duplication]] · [[Official Docs - Publishing and Live Ops]]
 
 ## Connected notes
 <!-- auto-links:start -->
@@ -364,5 +364,5 @@ Never turn friend presence into pressure ("Your friend is waiting for you!" when
 
 <!-- related:start -->
 ## Related
-[[Block and Mute Respecting Platform Rules]] · [[Joining Friends Parties and Private Servers]] · [[Age Checks and Safety Features]] · [[Community Building]] · [[Notification and Toast Systems]] · [[Engine and API Changes 2025-2026]]
+[[Block and Mute Respecting Platform Rules]] · [[Joining Friends Parties and Private Servers]] · [[API Renames and Deprecations 2025-2026]] · [[Community Building]] · [[BadgeService - Engine Reference Card]] · [[Age Checks and Safety Features]]
 <!-- related:end -->

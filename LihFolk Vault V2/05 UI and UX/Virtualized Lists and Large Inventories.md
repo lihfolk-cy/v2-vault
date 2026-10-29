@@ -492,10 +492,10 @@ The reference project's backpack was a fixed 1160 x 720 panel scaled to fit 84% 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Cookbook - UI]] · Debugging UI Layout and Input · Plugin UI with DockWidgets · Grid Placement and Player Building Systems · AvatarEditorService and In-Game Avatar Editors · Reference - Purple Anime Settings UI (Claude + Figma)
+[[Cookbook - UI]] · Debugging UI Layout and Input · Plugin UI with DockWidgets · Grid Placement and Player Building Systems · AvatarEditorService and In-Game Avatar Editors
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Inventory QoL - Sort Filter Search Stack and Lock]] · [[Layout - Scale Offset and Constraints]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Declarative UI - React-Lua and Fusion]] · [[HUD Design]] · [[Safe Areas and Insets]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[Notification and Toast Systems]]
+[[Inventory QoL - Sort Filter Search Stack and Lock]] · [[Settings Menu Design for Roblox - Layout, Controls and Motion]] · [[Layout - Scale Offset and Constraints]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[Designing Roblox UI in Figma - Frames, Safe Areas and Tokens]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Declarative UI - React-Lua and Fusion]] · [[Figma to Roblox UI - Pipeline and Handoff]] · [[HUD Design]]
 <!-- related:end -->

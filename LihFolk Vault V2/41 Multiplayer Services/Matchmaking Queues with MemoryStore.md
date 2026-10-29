@@ -5,14 +5,14 @@ tags: [multiplayer, matchmaking, memorystore, queues, lobby, reserved-servers, t
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
+> - Avoid: `ReserveServerAsync` + `ReservedServerAccessCode` per match... -> `HttpService:GenerateGUID(false)` as...
 > - Avoid: Every lobby runs the matcher -> Lease election
 > - Avoid: Cancel by trying to delete from the queue -> State in a hash map, validate on read
-> - Avoid: Remove batch before re-adding leftovers -> Re-add first, remove last
 > - Decided between built-in custom matchmaking and a queue, and wrote down why.
 > - Party is one ticket; party rating rule chosen.
 > - One leader per queue via a lease; ownership re-checked before reserving.
 >
-> Cost: TL;DR ~150 tok · whole note ~7.7k tok. Read more: ## 1. First question: do you need a queue at all? · ## 6. The code · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~7.7k tok. Read more: ## 1. First question: do you need a queue at all? · ## 6. The code · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A "Play Ranked" button looks like one feature. Behind it sit five problems that each fail in their own way: deciding whether you need your own queue at all, describing a player (or a party) as a ticket, letting exactly one server do the matching, handing the result back to the right lobby servers, and surviving every crash in between without matching a player twice or losing them forever. This note goes past the starter queue in [[MemoryStore Service]] and the four-step sketch in [[Teleporting and Multi-Place Games]]. It covers the built-in custom matchmaking option first (because it removes the need for a queue in many games), then a full queue-based matchmaker in strict Luau with leader election, ticket cancellation, widening skill windows, budget maths and failure paths.
@@ -47,16 +47,16 @@ Lobby server A ──┐                         ┌── Match record (hash ma
 Lobby server B ──┼─ tickets ─▶ Queue ─▶ Matchmaker (one leader) ─┤
 Lobby server C ──┘    ▲                         │                 └── MessagingService "assign"
                       │                         ▼
-              Ticket state (hash map, per user)  ReserveServerAsync once per match
+              Ticket state (hash map, per user)  one ReservedServerId (GUID) per match
                       ▲
-Lobby servers read their own players' assignments ─▶ TeleportAsync with the access code
+Lobby servers read their own players' assignments ─▶ TeleportAsync with that ReservedServerId
 ```
 
 Three structures:
 
 1. **Queue** `MM_Q_<mode>`: ticket payloads in order of priority then arrival. `MemoryStoreQueue` retrieves higher priority first and equal priority in order of addition (Roblox docs, as of October 2026).
 2. **Hash map** `MM_Tickets`: one key per user, `{ ticketId, state, mode, at, matchId? }`. This is the source of truth for "is this player still searching". The queue item is only a pointer.
-3. **Hash map** `MM_Matches`: one key per match id, `{ placeId, accessCode, members, createdAt }`, written by the leader, read by lobbies.
+3. **Hash map** `MM_Matches`: one key per match id, `{ placeId, serverId, members, createdAt }` (`serverId` is the match's `TeleportOptions.ReservedServerId`), written by the leader, read by lobbies.
 
 Why the split: you **cannot remove one arbitrary item from a queue**. `RemoveAsync` takes the id returned by a `ReadAsync` batch and removes that whole batch (Roblox docs). So cancellation has to be a state change somewhere else, checked when the ticket is read. Treat every queue item as possibly stale.
 
@@ -151,7 +151,7 @@ type TicketState = {
 
 type MatchRecord = {
 	placeId: number,
-	accessCode: string,
+	serverId: string, -- TeleportOptions.ReservedServerId (a GUID)
 	members: { number },
 	createdAt: number,
 }
@@ -394,17 +394,8 @@ local function runCycle()
 			continue
 		end
 
-		local reserved, accessCode = try("ReserveServerAsync", function()
-			local code = TeleportService:ReserveServerAsync(MATCH_PLACE_ID)
-			return code
-		end)
-		if not reserved or type(accessCode) ~= "string" then
-			release(claimedTickets, matchId)
-			for _, t in claimedTickets do
-				table.insert(leftovers, t)
-			end
-			continue
-		end
+		-- The first teleport with a new ReservedServerId creates the match server
+		local serverId = HttpService:GenerateGUID(false)
 
 		local members: { number } = {}
 		for _, t in group do
@@ -414,7 +405,7 @@ local function runCycle()
 		end
 		local record: MatchRecord = {
 			placeId = MATCH_PLACE_ID,
-			accessCode = accessCode,
+			serverId = serverId,
 			members = members,
 			createdAt = now,
 		}
@@ -497,7 +488,7 @@ local function deliver(matchId: string)
 		return
 	end
 	local options = Instance.new("TeleportOptions")
-	options.ReservedServerAccessCode = rec.accessCode
+	options.ReservedServerId = rec.serverId
 	options:SetTeleportData({ matchId = matchId }) -- a hint; the match server re-reads MM_Matches
 	local sent = try("TeleportAsync", function()
 		return TeleportService:TeleportAsync(rec.placeId, here, options)
@@ -576,7 +567,6 @@ Memory: tickets near 200 bytes, states near 100 bytes. 300 searching players use
 | Two leaders briefly | Claims are compare-and-set; only one wins each ticket | Nothing |
 | Member left lobby before claim | Their `PlayerRemoving` cancelled the state; claim fails; group released | Others keep searching |
 | Member leaves after `matched` | Match server times them out | Match starts short or with a bot |
-| `ReserveServerAsync` fails 3 times | Claims released, tickets re-added | Slightly longer wait |
 | Assign message lost | Lobby poll finds `matched` within 5 s | A few seconds slower |
 | `TeleportAsync` throws | `teleporting` flag cleared; next poll retries | Retry, then a message after the poll keeps failing |
 | Teleport fails after the call | `TeleportInitFailed` retry logic from the teleport note | Retry or "could not join match" |
@@ -603,6 +593,7 @@ Always give the player a **cancel button that works locally** (stop showing "sea
 
 | Mistake | Symptom | Fix |
 |---|---|---|
+| `ReserveServerAsync` + `ReservedServerAccessCode` per match (deprecated Oct 2026) | Old flow, extra yielding call | `HttpService:GenerateGUID(false)` as `TeleportOptions.ReservedServerId` |
 | Every lobby runs the matcher | Half-matches, players matched twice | Lease election |
 | Cancel by trying to delete from the queue | Impossible; cancelled players still matched | State in a hash map, validate on read |
 | Remove batch before re-adding leftovers | Tickets lost on crash | Re-add first, remove last |
@@ -611,7 +602,7 @@ Always give the player a **cancel button that works locally** (stop showing "sea
 | Polling every player's state | Budget gone at peak | Poll only searching players |
 | Waiting reads with long timeouts | A unit every 2 s spent waiting | `waitTimeout = 0` plus your own wait |
 | No sweeper for orphaned states | Players stuck in "matched" forever | TTL plus sweeper |
-| Access code sent to clients | Players rejoin finished matches | Keep codes in the match record only |
+| Reserved server ID sent to clients | Players rejoin finished matches | Keep IDs in the match record only |
 
 ## Checklist
 
@@ -630,10 +621,10 @@ Always give the player a **cancel button that works locally** (stop showing "sea
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Server Browsers and Server Lists]] · [[Session Locking and Profile Libraries]] · Links - MemoryStore · [[Server Shutdowns Soft Updates and Migration]] · Saving Correctly - Autosave and BindToClose · Arena Rounds with Teams and Spectating End to End
+[[Server Browsers and Server Lists]] · [[Session Locking and Profile Libraries]] · Official Docs - Data and Persistence · [[Server Shutdowns Soft Updates and Migration]] · Saving Correctly - Autosave and BindToClose · Arena Rounds with Teams and Spectating End to End
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Server Hop Rejoin and Server Lists with Ping]] · [[Genre Playbook - Battle Royale]] · [[Joining Friends Parties and Private Servers]] · [[Arena Rounds with Teams and Spectating End to End]] · [[Saving Correctly - Autosave and BindToClose]] · [[OrderedDataStores and Leaderboards]]
+[[MemoryStoreService - Engine Reference Card]] · [[Joining Friends Parties and Private Servers]] · [[Server Hop Rejoin and Server Lists with Ping]] · [[TeleportService - Engine Reference Card]] · [[Genre Playbook - Battle Royale]] · [[Arena Rounds with Teams and Spectating End to End]]
 <!-- related:end -->

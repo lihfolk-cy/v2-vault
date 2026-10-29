@@ -145,5 +145,5 @@ for _, p in Players:GetPlayers() do task.spawn(onPlayer, p) end
 
 <!-- related:start -->
 ## Related
-[[Cookbook - Remotes and Networking]] · [[Client-Server Model]] · [[Server Authority]] · [[AI Pitfalls - Physics and Animation]] · [[Replication Boundary]] · [[Rate Limiting]]
+[[Cookbook - Remotes and Networking]] · [[RemoteEvent - Engine Reference Card]] · [[Client-Server Model]] · [[Server Authority]] · [[AI Pitfalls - Physics and Animation]] · [[Replication Boundary]]
 <!-- related:end -->

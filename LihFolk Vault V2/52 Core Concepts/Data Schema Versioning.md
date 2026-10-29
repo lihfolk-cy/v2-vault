@@ -67,7 +67,7 @@ Related concepts: [[Session Lock]], [[Idempotency]], [[Feature Flags]].
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Cookbook - Data and Saving]] · Skill - Roblox DataStore Safety · [[Core Concepts Start Here]] · Live Ops Deep Dive Start Here · Multiplayer Services Start Here · Links - DataStoreService
+[[Cookbook - Data and Saving]] · Skill - Roblox DataStore Safety · [[Core Concepts Start Here]] · Live Ops Deep Dive Start Here · Multiplayer Services Start Here · Official Docs - Data and Persistence
 <!-- auto-links:end -->
 
 <!-- related:start -->

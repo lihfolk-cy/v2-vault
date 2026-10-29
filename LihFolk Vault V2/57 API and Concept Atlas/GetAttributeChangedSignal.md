@@ -7,9 +7,10 @@ tags: [atlas, api, type/atlas, area/animation, area/gameplay, api/GetAttributeCh
 > [!tldr] TL;DR
 > - `GetAttributeChangedSignal` lets a controller react on the frame the owner changes.
 > - Either send everything the client needs in the remote's arguments, or have the client react to the property itself...
+> - Prefer GetPropertyChangedSignal and GetAttributeChangedSignal over Changed with name checks.
 > - Client code reads attributes and listens with `GetAttributeChangedSignal`.
 >
-> Cost: TL;DR ~110 tok · whole note ~680 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~750 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -21,11 +22,12 @@ API snapshot: member of `Instance` (`_tools/roblox_api.json`, docs build of 2026
 ## Key facts
 
 - Either send everything the client needs in the remote's arguments, or have the client react to the property itself (`ChildAdded`, `GetAttributeChangedSignal`). ([[Replication Rules]])
+- Prefer GetPropertyChangedSignal and GetAttributeChangedSignal over Changed with name checks. ([[Instance - Engine Reference Card]])
 - Client code reads attributes and listens with `GetAttributeChangedSignal`. ([[Interest Management and Per-Player Replication]])
 
 ## Mentioned in
 
-37 notes in 17 sections. The 25 most relevant are linked:
+40 notes in 18 sections. The 25 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[Packages and Asset Reuse]]
@@ -39,14 +41,14 @@ API snapshot: member of `Instance` (`_tools/roblox_api.json`, docs build of 2026
 ### 05 UI and UX
 [[Declarative UI - React-Lua and Fusion]]
 
+### 07 Lighting VFX and Audio
+[[Auras, Shields and Status Effects]]
+
 ### 08 Animation
 [[Custom Locomotion Controller Design]] · [[Enemy Animation State Protocol]] · [[Snippets - Enemy Client Animator]]
 
-### 13 Production and Case Studies
-[[Release Process and Rollbacks]]
-
 ### 24 Worked Builds
-[[Pet Hatching and Following End to End]] · [[Quest Chain System End to End]] · [[Rebirth and Prestige System End to End]] · [[Round-Based Minigame Loop End to End]]
+[[Pet Hatching and Following End to End]] · [[Quest Chain System End to End]] · [[Round-Based Minigame Loop End to End]]
 
 ### 25 Physics and Vehicles
 [[Destruction and Fracture]]
@@ -63,6 +65,9 @@ API snapshot: member of `Instance` (`_tools/roblox_api.json`, docs build of 2026
 ### 49 Roblox Platform Features
 [[Avatar Context Menus Profiles and Social Surfaces]]
 
-Also mentioned in (not linked): Script Performance · Server Authority and Input Migration 2026 · Server-Authoritative Freeze and Stun Timestamps · Shop with Game Passes and Developer Products End to End · Snippets - Animation Controller Module · Snippets - Procedural Motion · Snippets - Ragdoll · Teaching Through Level Design · The Debugging Method - Reproduce Isolate Bisect · Vehicle Damage, Repair and Wreck States · Weather System Architecture - State Machine, Transitions and Replication · World-Space UI - BillboardGui and SurfaceGui
+### 62 Engine Reference Cards
+[[Instance - Engine Reference Card]]
+
+Also mentioned in (not linked): Rebirth and Prestige System End to End · Release Process and Rollbacks · Replicating VFX - Server Validates, Clients Render · Script Performance · Server Authority and Input Migration 2026 · Server-Authoritative Freeze and Stun Timestamps · Shop with Game Passes and Developer Products End to End · Snippets - Animation Controller Module · Snippets - Procedural Motion · Snippets - Ragdoll · Teaching Through Level Design · The Debugging Method - Reproduce Isolate Bisect · Vehicle Damage, Repair and Wreck States · Weather System Architecture - State Machine, Transitions and Replication · World-Space UI - BillboardGui and SurfaceGui
 
 <!-- atlas:generated -->

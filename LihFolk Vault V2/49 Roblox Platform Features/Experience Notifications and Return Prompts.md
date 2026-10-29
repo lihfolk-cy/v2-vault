@@ -347,7 +347,7 @@ Keep them honest: the guidelines' bans on false time pressure apply in spirit to
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Discovery and the Algorithm]] · Update Cadence and Hype Cycles · Links - Community and social · Cross-Server Messaging · Community Building · Click-Through Rate
+[[Discovery and the Algorithm]] · Update Cadence and Hype Cycles · Official Docs - Publishing and Live Ops · Cross-Server Messaging · Community Building · Click-Through Rate
 <!-- auto-links:end -->
 
 <!-- related:start -->

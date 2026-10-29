@@ -12,7 +12,7 @@ tags: [platform, camera, photo-mode, captureservice, screenshots, sharing, growt
 > - Save and share only on explicit buttons; results handled gracefully.
 > - Free camera leashed, collides, and restores on every exit path.
 >
-> Cost: TL;DR ~150 tok · whole note ~2.2k tok. Read more: ## 2. Flow that respects the player · ## 3. The photo-mode camera · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~2.3k tok. Read more: ## 2. Flow that respects the player · ## 3. The photo-mode camera · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Screenshots are free marketing: every capture a player saves or shares is a thumbnail you did not have to make. Roblox exposes the platform's capture system to scripts through `CaptureService`, so an experience can take a screenshot from its own UI, offer to save it to the player's captures gallery, and prompt a share that carries launch data back into the game. Pair it with a photo-mode camera and you have a feature that players use for fun and that drives invites. This note covers the API surface, a safe photo-mode camera, and the traps (HUD in shots, streaming holes, abuse).
@@ -133,5 +133,5 @@ Cheap, local, reversible:
 
 <!-- related:start -->
 ## Related
-[[Experience Notifications and Return Prompts]] · [[Console and VR Release Checklists]] · [[Roblox Changes 2025-2026]] · [[Server Authority and Input Migration 2026]] · [[Regional Compliance - Paid Random Items and Country Rules]] · [[Badges and Achievement Design]]
+[[Making Thumbnails in Studio and Blender - Capture, Lighting and Posing]] · [[Chase Cameras and Speed Effects for Vehicles]] · [[Experience Notifications and Return Prompts]] · [[Console and VR Release Checklists]] · [[Roblox Changes 2025-2026]] · [[Engine Limits, Quotas and Defaults - Cheat Sheet]] · [[Regional Compliance - Paid Random Items and Country Rules]]
 <!-- related:end -->

@@ -31,6 +31,7 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 - day/night or zone lighting flickers at borders | Two scripts write ClockTime, Ambient or other Lighting properties | One owner per Lighting property, blend weights | [[Lighting Mood and Time of Day]] [[Lighting Technologies and Settings]]
 - my screen effect (blur, colour grade) shows for every player | Effect parented to Lighting from the server | Parent personal effects to CurrentCamera on the client | [[Atmosphere Sky Clouds and Post-Processing]]
 - image sharp in Studio, blurry on phone | Lower texture quality on low-memory devices | Expected; design for it and compare px per stud | [[Textures Decals and Texture Memory]]
+- Lighting.Technology = Enum.Technology.Future errors from a script, and Technology no longer shows in Properties | Unified Lighting deprecated Technology (not scriptable) | Set LightingStyle and PrioritizeLightingQuality in Studio: Future = Realistic + on, ShadowMap = Soft + on, Voxel = Soft + off | [[Lighting Technologies and Settings]]
 
 ## UI, text, layout and mobile
 
@@ -41,6 +42,10 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 - CanvasGroup content looks blurry or pixelated | CanvasGroups render to a texture with resolution limits | Use CanvasGroups only where needed | [[Debugging UI Layout and Input]]
 - setting ZIndex = 100 on a button does nothing | Sibling ZIndexBehavior: the button's ancestor is under another branch | Raise the ancestor, or move the button | [[Debugging UI Layout and Input]]
 - popup or modal sometimes appears under the HUD | Two ScreenGuis with equal DisplayOrder; ZIndex does not cross ScreenGuis | Set explicit DisplayOrder on every ScreenGui | [[Debugging UI Layout and Input]] [[ScreenGui Fundamentals]]
+- chat message Text is an empty string, custom chat UI, chat tags (PrefixText), OnIncomingMessage or Player.Chatted stop working | TextChatService.PlatformIntegratedChat is Enabled (opt-in since October 2026; every game opted in February 2027 with an opt-out; only option for custom chat from May 2027) | Commands as TextChatCommand; custom chat UI as a TextChannelWindow whose Target is a TextChannel; native prefixes are planned | [[Text Chat Customization with TextChatService]] [[Policy and Age Rules 2026]]
+- players can't chat in a custom whisper or party channel, or private messages reach players who shouldn't get them (direct chat permission) | Custom direct channel without the permission check required since January 30, 2025 | Filter members with TextChatService:CanUsersDirectChatAsync and call TextChannel:SetDirectChatRequester(requester) | [[Age Checks and Safety Features]] [[Text Chat Customization with TextChatService]] [[API Renames and Deprecations 2025-2026]]
+- check if two players can chat, or put players who can talk together in the same match or team | Pairwise checks scale badly; age groups decide who can chat | CanUsersChatAsync(fromUserId, toUserId) for one pair; TextChatService:GetChatGroupsAsync(players) for a lobby (same group ID = can chat; enable Chat & Voice Groups APIs) | [[Age Checks and Safety Features]] [[API Renames and Deprecations 2025-2026]]
+- some players never see each other's chat messages | Age-based chat: an age check (facial age estimation, or ID) puts each user in under 9, 9-12, 13-15, 16-17, 18-20 or 21+, and by default a group chats only with its own group and the groups directly above and below; under-16s never with adults | Do not make gameplay depend on chat; Trusted Connections (13+) widen it | [[Age Checks and Safety Features]] [[Text Chat Customization with TextChatService]]
 - top bar or chat covers my button | UI inside the inset area (ScreenInsets None or IgnoreGuiInset) | Keep interactive UI in the device-safe area | [[Debugging UI Layout and Input]] [[Safe Areas and Insets]]
 - clicking a button does nothing in one area | Invisible GuiObject with Active = true sits on top | Find the overlay; set Active = false on decorative frames | [[Debugging UI Layout and Input]]
 - clicks in the 3D world never register | Full-screen frame with Active = true sinks them | Active = false on decorative full-screen frames | [[Debugging UI Layout and Input]]
@@ -54,9 +59,13 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 - UI right for the first character, wrong after respawn | Listeners bound to the old character's Humanoid | Re-bind on respawn | [[Debugging Client-Server Desync]] [[Debugging Race Conditions and Yield Order]]
 - menus reset every time the player respawns | ScreenGuis in StarterGui folders or with ResetOnSpawn on | ResetOnSpawn = false for persistent UI, no folders in StarterGui | [[ScreenGui Fundamentals]] [[Script Types and Run Context]]
 - menus look fine on PC but are cut off at the screen edge on phones, with tiny text | Offset sizes with no safe-area handling or scale floor | Scale-based layout with constraints, safe-area insets and a UIScale floor | [[Responsive UI for Phone Tablet Console and PC]] [[Layout - Scale Offset and Constraints]]
+- scripted text stays in the old language after the player changes language | Translated once with a Translator; LocaleId changes are ignored | Re-translate on the translator's LocaleId change; FormatByKey with parameters | [[Localization]]
+- pet name, sign or guild name shows as hashtags (####) | That is the filter's output for blocked words, or a per-viewer result shown to everyone | Expected; store the raw text, filter on show with GetNonChatStringForBroadcastAsync for public text | [[Text Filtering - TextService for Names, Signs and Messages]]
+- every message or name comes back as an empty string | TextFilterResult:GetChatForUserAsync is deprecated and returns "" | Route chat through TextChatService; use GetNonChatStringForBroadcastAsync or GetNonChatStringForUserAsync for names and signs | [[Text Filtering - TextService for Names, Signs and Messages]]
 
 ## Input and controls
 
+- custom input or menu context fights the default character controls, or code calling PlayerModule:GetControls() breaks | Default player scripts converted to the Input Action System (Workspace.PlayerScriptsUseInputActionSystem; default Enabled planned for early 2027) | Give your InputContext a higher Priority and Sink to block lower contexts; forked player scripts need StarterPlayer.CreateDefaultPlayerModule Disabled | [[Server Authority and Input Migration 2026]] [[Input - UserInputService and ContextActionService]]
 - world clicks or attacks fire while the shop is open | Input handler ignores gameProcessedEvent | Return early when gameProcessedEvent is true | [[Debugging UI Layout and Input]] [[Input - UserInputService and ContextActionService]]
 - ContextActionService action never fires | Another higher-priority binding returned Sink | Check binding priorities and return values | [[Debugging UI Layout and Input]]
 - gamepad player stuck when a menu opens, nothing selected | Nothing set GuiService.SelectedObject | Select the primary button when the menu opens | [[Debugging UI Layout and Input]] [[Gamepad and Console UX]]
@@ -68,6 +77,7 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 - input handlers multiply after each respawn | Character or GUI scripts re-run; old connections leaked | Disconnect on removal; ResetOnSpawn = false for persistent UI | [[Script Types and Run Context]]
 - "I pressed jump on the edge" | No coyote time | Coyote window on walk-offs only | [[Input Responsiveness Buffering and Coyote Time]]
 - my F key does nothing during a Studio test | Studio shortcuts swallow game keys | Adjust "Respect Studio shortcuts when game has focus" or rebind | [[Studio Settings and Shortcuts]]
+- ClickDetector does nothing on console (works on PC and phone) | Gamepad needs the centre dot on the part plus the bound ButtonR2, and nothing on screen says so | Use a ProximityPrompt for important actions, or add a visible hint | [[Clickable and Interactive Parts - ClickDetector, ProximityPrompt and Touched]]
 
 ## Animation and rigs
 
@@ -110,6 +120,7 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 - enemies visible through walls with an outline | Highlight DepthMode default AlwaysOnTop | Use Occluded unless intended | [[Highlights and Selection Effects]]
 - glowing particle does not light the floor | LightEmission is blending, not lighting | Add one small PointLight | [[Light Sources and Shadows]]
 - attack telegraph missing on phones or low settings | Gameplay effect culled or scaled as decoration | Flag gameplay effects; simplify, never skip | [[VFX Performance Budgets and Culling]] [[Juice on a Budget - Mobile and Low-End]]
+- particle effect shorter or sparser than its settings, worse on phones | Lifetime capped at 20 s; Rate capped at 400/s (100/s on mobile) | Use more emitters or Emit bursts | [[Particle Emitters In Depth]] [[Engine Limits, Quotas and Defaults - Cheat Sheet]]
 
 ## Audio
 
@@ -127,6 +138,7 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 
 ## Physics, movement and network ownership
 
+- driven car stutters or jitters when ownership changes, or exploiters teleport a car they drive | Frequent ownership switches or server ownership add jitter; a client-owned car's physics and Touched events are client-controlled | Set the driver as owner once on sit, SetNetworkOwnershipAuto on exit, SetNetworkOwner(nil) only for critical parts; the server validates checkpoints, lap times, speed and position | [[Network Ownership]] [[Genre Playbook - Racing and Driving]]
 - NPCs jitter or freeze briefly when players come close | NPC on automatic network ownership flipping between clients | SetNetworkOwner(nil) after spawn | [[Debugging Physics and Network Ownership]] [[Physics Assemblies and Constraints]]
 - players get flung or launched when spawning or teleporting | Overlapping collision at the moment of spawn or teleport | Spawn above ground; check overlap with GetPartsInPart | [[Debugging Physics and Network Ownership]]
 - character slides and cannot stop | Heavy attached parts; Massless missing on accessories or weapons | Set Massless on attached visuals; check HipHeight | [[Debugging Physics and Network Ownership]]
@@ -140,10 +152,12 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 - character floats above or sinks into the ground | HipHeight wrong after scaling or a custom rig | Recompute HipHeight from the rest model | [[Characters and Humanoids]] [[Custom Characters and StarterCharacter]]
 - NPC freezes on a blocked waypoint | Waiting on MoveToFinished forever | Per-waypoint timeout | [[Pathfinding]]
 - pathfinding returns NoPath | Goal inside a part, or the player's root while jumping | Project the goal down onto the floor | [[Pathfinding]] [[Pathfinding Edge Cases and Fallbacks]]
+- PhysicsService collision group calls show deprecation warnings | Collision groups moved to WorldRoot (September 2026); old calls forward to Workspace | Call RegisterCollisionGroup and CollisionGroupSetCollidable on workspace or the WorldModel | [[Collision and Physics Geometry]]
 - zone exit is detected late or never | TouchEnded used for zone exits | Spatial queries on a timer or server region checks | [[Debugging Physics and Network Ownership]]
 
 ## Combat and hitboxes
 
+- hitscan raycast almost never hits, even point-blank | Direction passed as a unit vector: the direction's length is the ray's length, so .Unit casts 1 stud | Pass (target - origin) or dir * range (max ray length 15,000 studs) and check the result for nil | [[Raycasts Shapecasts and Spatial Queries]] [[Projectiles and Ballistics]]
 - sword hits randomly miss or hit twice | Touched-based sword hitbox | Spatial query at the swing's hit time | [[Hitboxes and Hit Detection]] [[Physics Assemblies and Constraints]]
 - one swing deals 15x damage on R15 characters | Damage applied per part hit | Dedupe by character model per swing | [[Hitboxes and Hit Detection]] [[Raycasts Shapecasts and Spatial Queries]]
 - hits register late on the server | Server waits the full hit time after receipt | Subtract clamped one-way latency | [[Hitboxes and Hit Detection]]
@@ -176,41 +190,57 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 - server and client "share" a module table but values differ | Each side runs its own copy of the module | Use remotes or attributes | [[Module Scripts and Requiring]]
 - methods missing on an object after sending it to the client | Metatables dropped through remotes | Send plain data; rebuild objects client-side | [[Tables Metatables and OOP]]
 - exploiter fires a remote thousands of times a second to farm money | No per-player rate limit or argument validation | One guard per remote: rate limit first, then type, range and NaN checks | [[Remote Abuse Patterns and Rate Limiting in Practice]] [[Rate Limiting and Abuse Prevention]]
-- party or friends in the lobby get split across different match servers | One TeleportAsync moves only players in this server; no shared reservation | Reserve one server per party and teleport the group together | [[Parties and Group Teleports]]
+- party or friends in the lobby get split across different match servers | One TeleportAsync moves only players in this server; no shared reservation | Generate one ReservedServerId (GUID) per party, share it server-side, teleport the group together | [[Parties and Group Teleports]]
+- ReserveServerAsync, ReservedServerAccessCode or ShouldReserveServer shows as deprecated, or how to teleport a party to a reserved server now | Reserved servers moved to developer-generated IDs (docs October 29, 2026) | TeleportOptions.ReservedServerId = HttpService:GenerateGUID(false), then TeleportAsync; the first teleport creates the server, reusing the ID joins it; VIP servers use VipServerId | [[API Renames and Deprecations 2025-2026]] [[Reserved and Private Servers in Practice]] [[Teleporting and Multi-Place Games]]
+- TeleportPartyAsync, TeleportToPlaceInstance or client TeleportService:Teleport marked deprecated | All deprecated in favour of server-side TeleportAsync (docs August 2026) | Client fires a remote; server validates and calls TeleportAsync with TeleportOptions | [[Teleporting and Multi-Place Games]] [[API Renames and Deprecations 2025-2026]]
+- aim or movement stream makes the same player's hits and purchases arrive late | Every RemoteEvent from one client shares about 500 calls per second; a per-frame stream uses it up | Move the stream to an UnreliableRemoteEvent (separate pool) at 10 to 20 Hz; keep hits and purchases reliable | [[RemoteEvents RemoteFunctions and Unreliable Remotes]]
+- position or value read back from a buffer is slightly different from what was written | f32 fields keep less precision than a Luau number | Compare with a tolerance, or writef64 where exact values matter | [[Buffers and Binary Data]]
+- HttpService requests start failing on busy servers | Over 500 external requests per minute per server (Open Cloud calls have a separate 2500/min) | Batch and queue analytics; keys from HttpService:GetSecret; check Success and StatusCode | [[HttpService and External APIs]]
+- cross-server messages go missing when many servers publish to one topic | Over the 40 + 80 x servers per minute received-per-topic limit, or a message over 1 kB | Shard topics; send ids, not payloads | [[Cross-Server Messaging]] [[Engine Limits, Quotas and Defaults - Cheat Sheet]]
 
 ## DataStores, data loss and dupes
 
 - player's whole save replaced by defaults, data lost on rejoin | A nil load after an error treated as a new player | Distinguish "no data" from "call failed"; kick or retry | [[DataStore Fundamentals]] [[Error Handling and Retries]]
 - progress rolled back by minutes or hours | Save never reached the store, or a stale overwrite | Read that key's version history | [[Debugging DataStore Problems]]
-- occasional rollbacks and duplicated items after server hops | GetAsync then SetAsync for player data | UpdateAsync plus session locking | [[DataStore Fundamentals]]
+- occasional rollbacks and duplicated items after server hops, teleports or quick rejoins | GetAsync then SetAsync for player data, no session lock | Load and lock in one UpdateAsync (job id plus timestamp); lock expires and is refreshed by autosave; every save checks ownership; leave-save releases it; BindToClose saves in parallel | [[DataStore Fundamentals]] [[Session Locking and Profile Libraries]]
 - player cannot load after a server crash, works a few minutes later | Stuck session lease | Read the lease; never clear it by hand while the owner may live | [[Debugging DataStore Problems]]
 - save looks like it failed when checked right after | GetAsync 4 second cache | Re-read with UseCache = false | [[Debugging DataStore Problems]] [[DataStore Fundamentals]]
 - saves take 10 to 30 s then error 301 to 306 | Throttling and a full request queue | Buffer in memory and autosave; log budgets; no instant retries | [[Debugging DataStore Problems]] [[DataStore Fundamentals]]
+- DataStore errors ending in GameServerThrottled or ExperienceThrottled | Over this server's per-type limit, or over the experience budget shared with Open Cloud | Back off with jitter; raise the server limit with SetRateLimitForRequestType at startup; throttle Open Cloud jobs | [[Data and Cloud Changes 2025-2026]] [[DataStore Fundamentals]]
 - save fails with 104 CantStoreValue | Vector3 or CFrame saved directly | Save plain numbers instead of Roblox types | [[Data Schema Design and Migrations]] [[Debugging DataStore Problems]]
 - "Callbacks cannot yield" error when saving | Yield inside the UpdateAsync transform | Compute everything before calling UpdateAsync | [[DataStore Fundamentals]]
 - Studio test sessions overwrite real player saves | Studio API access on the live game with no guard | Separate test experience, or a Studio-only test key | [[DataStore Fundamentals]] [[Places Universes and Experience Settings]]
-- last players lose progress when the server shuts down or updates | No BindToClose, or saving one by one inside it | Parallel saves with a deadline in BindToClose | [[Saving Correctly - Autosave and BindToClose]] [[Server Lifecycle and Shutdown]]
+- last players lose progress when the server shuts down or updates | No BindToClose, or saving one by one inside it; PlayerRemoving saves cut off at shutdown | BindToClose saves everyone in parallel, each DataStore call in pcall with retry, and yields until all finish (skip it in Studio with RunService:IsStudio()) | [[Saving Correctly - Autosave and BindToClose]] [[Server Lifecycle and Shutdown]]
 - data bleeds between players, new players edit each other's data | One shared DEFAULT table | Return a fresh default table for every player | [[Data Schema Design and Migrations]]
 - items duplicated after trades or crashes | Missing lease or fencing, or a trade race | Version history and audit log; server-owned trades with immediate saves | [[Debugging DataStore Problems]] [[Trading Systems Without Duplication]]
 - items duplicated by spamming a button | Yield between check and write in the handler | Mark state before yielding; synchronous commit | [[Economy Exploits - Dupes Races and Purchase Abuse]] [[RemoteEvents RemoteFunctions and Unreliable Remotes]]
 - data reset did nothing for an online player | Session save wrote the old data back | Kick, wait for lock release, then remove | [[Resetting One Player's Data Safely]]
 - data restore gets overwritten | Restored with SetAsync while the player was online | Restore only while the player is offline and unlocked | [[Data Loss Prevention and Recovery]] [[Resetting One Player's Data Safely]]
+- one player's saves throttle while the server's request budget looks fine | Per-key write throughput (4 MB per minute, rounded up per KB) exceeded by a large profile | Save less often or shrink the profile | [[DataStore Fundamentals]] [[Engine Limits, Quotas and Defaults - Cheat Sheet]]
+- MemoryStore SetAsync or AddAsync errors on the expiration argument | Expiration above 3,888,000 s (45 days) | Clamp expirations to 45 days | [[MemoryStore Service]] [[Engine Limits, Quotas and Defaults - Cheat Sheet]]
 
 ## Monetization and receipts
 
 - player paid Robux but got nothing | PurchaseGranted returned before saving, or profile failed to load | Save first, then return PurchaseGranted; never grant into an unloaded profile | [[Developer Products and ProcessReceipt]] [[Purchase Data and Receipts]]
 - one system's developer products never grant | Two scripts assign ProcessReceipt; only the last wins | One owner script that dispatches by product | [[Developer Products and ProcessReceipt]] [[Purchase Data and Receipts]]
 - purchase granted twice | Grant without checking PurchaseId, or receipt records removed | Save the PurchaseId with the grant; never touch receipt stores | [[Purchase Data and Receipts]] [[Resetting One Player's Data Safely]]
+- BindReceiptHandler errors when a second script registers | A handler already exists for that receipt type and product ID, or a second catch-all | One filtered handler per product, one catch-all per receipt type | [[Developer Products and ProcessReceipt]]
+- ProcessReceipt stops firing for some products after adding BindReceiptHandler | Bound handlers take precedence; only unmatched developer product receipts fall through | Move those products' grants into the bound handler, or filter it to its own product IDs | [[Developer Products and ProcessReceipt]]
 - items granted to players who cancelled the prompt | Granting in PromptProductPurchaseFinished | Grant in ProcessReceipt only | [[Developer Products and ProcessReceipt]] [[Monetization Overview]]
 - Store-tab purchase stuck until the player rejoins | NotProcessedYet returned while the profile was still loading | Wait for the profile to load before answering | [[Purchase Data and Receipts]]
 - shown price is wrong for some players | Hard-coded prices ignore regional, test and Plus pricing | Look prices up with GetProductInfoAsync | [[Developer Products and ProcessReceipt]] [[Pricing and Store Design]]
 - game pass perk missing after respawn | Character-based pass benefits not reapplied | Reapply benefits on every spawn | [[Game Passes]]
 - shown odds do not add up to 100% | Tier odds shown instead of final outcomes | Flatten tiers into item odds | [[Paid Random Items and Odds Disclosure in Practice]]
 - displayed odds do not match what players roll | Display table separate from the roll table | One source of truth; roll from the flattened table | [[Paid Random Items and Odds Disclosure in Practice]] [[RNG Drops and Luck Systems]]
+- Creator Rewards Daily Engagement pays less than expected | Only Active Spenders count (USD 9.99+ qualifying purchases in 60 days, not new or reactivated) who play 10+ minutes, with your game among the first 3 they launch that day | 5 Robux per qualifying user per day; grow retained spenders | [[Subscriptions and Premium Payouts]] [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]]
+- Creator Rewards Audience Expansion pays nothing for players you brought in | The user must be new or reactivated, join via your Share Link (or first session that day via direct link or search) and play 10+ minutes; game averages 100+ DAU; owner ID-verified | Pays 35% of that user's first USD 100 of qualifying purchases in their first 60 days, held 60 days | [[Subscriptions and Premium Payouts]] [[Short-Form Video Marketing]]
+- US 18+ DevEx rate (0.0054 USD per Robux) missing from some revenue | It counts only spend by age-checked 18+ US buyers on passes, developer products, subscriptions, private servers and Paid Access, in games meeting the R15 avatar rule; avatar items never qualify | Check eligibility in the Creator Dashboard; the standard rate is 0.0038 | [[DevEx and Cashing Out]] [[Discovery and Monetization Changes 2025-2026]]
 - analytics revenue disagrees with payouts | Revenue computed from config prices | Use receipt amounts (CurrencySpent) | [[Robux Price Points and Offer Design]] [[Analytics and Funnels]]
-- Robux coin pack must still grant if the player leaves or the server crashes mid-purchase | Granting outside ProcessReceipt, or returning PurchaseGranted before saving | Grant and save inside ProcessReceipt; return PurchaseGranted only after the save | [[Developer Products and ProcessReceipt]] [[Purchase Data and Receipts]]
+- Robux coin pack must still grant if the player leaves or the server crashes mid-purchase | Granting outside ProcessReceipt, or returning PurchaseGranted before saving | Grant and save inside ProcessReceipt; return NotProcessedYet while the player is not in the server; PurchaseGranted only after the save | [[Developer Products and ProcessReceipt]] [[Purchase Data and Receipts]]
+- PromptPremiumPurchase or Player.MembershipType marked deprecated, Premium perks miss Roblox Plus members | Premium replaced by Roblox Plus (April 2026) | PromptRobloxSubscriptionPurchase(player) for the upsell, Player.HasRobloxSubscription for the check | [[Subscriptions and Premium Payouts]] [[API Renames and Deprecations 2025-2026]]
 - selling a crate or loot box for Robux with random rewards | Paid random items need disclosed odds | Show final-outcome odds before purchase, from the same table the server rolls | [[Paid Random Items and Odds Disclosure in Practice]] [[Regional Compliance - Paid Random Items and Country Rules]]
 - players go too long without a rare drop and want a bad-luck guarantee | Independent rolls with no pity counter | Pity counter kept with the drop table and saved per player | [[Drop Tables Rarity and Pity Systems]] [[Rarity Ladders and Drop Pacing Math]]
+- purchase not granted until the player rejoins or buys again | ProcessReceipt returned NotProcessedYet (player absent or save failed); Roblox re-sends only on rejoin or the next purchase | Keep it pending; grant idempotently by PurchaseId when the receipt returns | [[Developer Products and ProcessReceipt]] [[Purchase Data and Receipts]]
 
 ## Performance, memory and lag
 
@@ -241,14 +271,19 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 - script refuses to compile after adding one line | 200 active locals in the main chunk | Split into modules or group locals in tables | [[Luau Language Essentials]]
 - "attempt to call a nil value (global)" on a rare path | Local function used above its declaration | Reorder or forward-declare | [[Luau Language Essentials]]
 - every button prints the same name | Shared outer loop variable captured | Per-iteration local | [[Functions Closures and Upvalues]]
+- AwardBadge, GetProductInfo, LoadCharacter, PlayerOwnsAsset or IsInGroup warning: deprecated (Script Analysis) | 46 yielding methods renamed with Async on January 14, 2026; old names still work | Use the same name + Async (AwardBadgeAsync, GetProductInfoAsync, LoadCharacterAsync) in pcall; group rank via GroupService:GetRolesInGroupAsync | [[API Renames and Deprecations 2025-2026]] [[Engine and API Changes 2025-2026]]
 - LocalScript does nothing | LocalScript placed in Workspace or ReplicatedStorage | Put it in a Starter container, or use a Client RunContext Script | [[Script Types and Run Context]]
 - client code runs twice | Client-context Script inside a Starter container | Use a LocalScript there, or move it to ReplicatedStorage | [[Script Types and Run Context]]
 - pcall returned true but an error still printed | Error happened in a spawned thread or handler | Report back from the thread | [[Error Handling - pcall xpcall and Promise Patterns]]
 - output flooded with dozens of errors | Later errors are consequences of the first | Fix the first error, not the latest | [[Reading Luau Errors and Stack Traces]]
 - part disappears or flies to huge coordinates | NaN from .Unit of a zero vector or divide by zero | Guard magnitude; validate inputs | [[Math Vectors and CFrames]]
+- methods missing on a table received through a BindableEvent or BindableFunction, or a script hangs at require or Invoke | Bindable arguments are copied (metatable dropped); cyclic require or Invoke with no handler yields forever | Share objects through a required ModuleScript; keep requires one-directional | [[Metatables and OOP - When and When Not]] [[Events Signals and Connections]]
+- SetAttribute throws on a name that looks fine | Space or symbol in the name, over 100 characters, or an RBX prefix | Letters, digits and . - / _ only | [[Instances Attributes and Tags]] [[Engine Limits, Quotas and Defaults - Cheat Sheet]]
+- coin or pickup awards several times from one step | Touched fires once per body part with no debounce | Set a taken flag before awarding; map the part to a player and ignore non-characters | [[Clickable and Interactive Parts - ClickDetector, ProximityPrompt and Touched]]
 
 ## Studio, tooling, plugins and MCP agents
 
+- AI client cannot see Studio's built-in MCP server | Server not enabled, or client not restarted | Assistant > ... > Manage MCP Servers > Enable Studio as MCP server; it runs locally over stdio and every tool call takes a studio_id | [[Roblox Studio MCP Server]] [[Setting Up MCP Clients]]
 - Studio frozen for minutes during a script search | Leading [^\n]* or .- patterns in gmatch over big sources | Plain find first, or split into lines | [[Studio Automation Without Freezing Studio]]
 - Studio unresponsive during bulk edits | Long job with no yielding | task.wait() every ~50 ms; paged jobs | [[Studio Automation Without Freezing Studio]] [[Command Bar and Studio Scripting]]
 - hours of edits vanished | Worked in an AutoRecovery copy | Check game.PlaceId before working | [[Studio Automation Without Freezing Studio]]
@@ -266,7 +301,8 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 
 ## Building, importing and modelling
 
-- model 100x too big or too small after import | Scene in metres, or mixed FBX scale methods | 1 unit = 1 stud; one FBX scale method, or use GLB | [[Modeling in Blender for Roblox]] [[Blender Workflow for Roblox Creators]]
+- model 100x too big or too small after FBX import from Blender | FBX exported at default settings (unit-scale mismatch), or several scale fixes stacked | Apply Scalings: FBX Unit Scale with all other scales 1.0 (alternatives: export scale 0.01 or scene Unit Scale 0.01, one method only); GLB needs none | [[Exporting FBX vs GLB]] [[Blender Workflow for Roblox Creators]]
+- Mirror or Bevel modifiers missing after GLB import: half the mesh, sharp edges | glTF Apply Modifiers is off by default | Turn on Apply Modifiers: Armature is skipped so skinning survives, but shape keys are not exported | [[AI Pitfalls - Assets and Import]] [[Blender Workflow for Roblox Creators]]
 - model faces backwards after GLB import | Front modelled toward +Y in Blender | Model the front toward -Y | [[Blender Workflow for Roblox Creators]]
 - holes or black faces in Studio, fine in Blender | Flipped normals hidden by Blender's back-face rendering | Face Orientation overlay; Recalculate Outside | [[Hard-Surface Modeling]] [[Modeling Fundamentals for Games]]
 - rotated, skewed parts or wrong pivots after import | Unapplied transforms | Apply rotation and scale before export | [[Modeling in Blender for Roblox]] [[Exporting and Validating Models for Roblox]]
@@ -285,6 +321,7 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 
 ## Streaming and loading
 
+- long join times and high client memory on mobile, StreamingEnabled off | The whole world replicates at join | StreamingEnabled on (default for new places); keep StreamingMinRadius 64 and StreamingTargetRadius 1024, ModelStreamingBehavior Improved, StreamOutBehavior Opportunistic; Atomic for models that must arrive whole, Persistent sparingly; client scripts use WaitForChild or PersistentLoaded | [[Instance Streaming]] [[Level of Detail and Model Streaming]]
 - "attempt to index nil" in a LocalScript on join | Direct indexing into Workspace with streaming on | WaitForChild with timeout, Atomic models, tags | [[Instance Streaming]]
 - player falls through the floor after a teleport | Destination not streamed in yet | RequestStreamAroundAsync before moving | [[Instance Streaming]] [[Level of Detail and Model Streaming]]
 - interactable only works after walking near it twice | Setup ran once at start and missed late arrivals | Use the tag added signal | [[Instance Streaming]]
@@ -302,6 +339,8 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 - exploiters one-shot bosses | Client computes damage and sends it | Server computes damage from server-side stats | [[Client-Server Model]] [[Hitboxes and Hit Detection]]
 - exploiters read anti-cheat thresholds, odds or prices | Server modules or secrets in ReplicatedStorage | Move them to ServerScriptService or ServerStorage | [[Module Scripts and Requiring]] [[How Exploits Work - The Client Boundary]]
 - exploiters place items anywhere or pass range checks | NaN passes every comparison | Check x == x and integers | [[Remote Abuse Patterns and Rate Limiting in Practice]] [[Grid Placement and Player Building Systems]]
+- remote amount (gold, trade offer, bet, price) passes a typeof number check and range check but is NaN or inf | NaN is type "number" and every comparison with it is false | math.isfinite(x) before range checks against server-held values; treat every remote argument after the Player as attacker-controlled | [[Remote Abuse Patterns and Rate Limiting in Practice]] [[RemoteEvents RemoteFunctions and Unreliable Remotes]]
+- players buy shop items for free or with someone else's coins | Price, balance or player id read from the remote payload | Send only an item id; the caller is OnServerEvent's first argument; the server reads price and balance, then updates the UI with FireClient or an attribute (never InvokeClient) | [[RemoteEvents RemoteFunctions and Unreliable Remotes]] [[Client-Server Model]]
 - a remote lets someone pay or hurt any player | Payload userId used as identity | Use the injected sender player | [[Remote Abuse Patterns and Rate Limiting in Practice]]
 - remote spam becomes server CPU load | Expensive lookup before the rate limit | Rate limit first | [[Remote Abuse Patterns and Rate Limiting in Practice]] [[Rate Limiting and Abuse Prevention]]
 - honest players kicked on bad connections | Kicking on a single violation | Suspicion scores and a consequence ladder | [[Remote Abuse Patterns and Rate Limiting in Practice]] [[False Positives Lag and Fair Enforcement]]
@@ -316,11 +355,14 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 ## Publishing and live issues
 
 - works in Studio, broken in the live game | Real latency, devices, asset permissions, streaming and teleports differ live | Find the server and moment; check load-order races | [[Debugging Live Servers]] [[Debugging Race Conditions and Yield Order]]
+- game not available to Roblox Kids (5-8) or Roblox Select (9-15) accounts, only 16+ players can join | All-ages requirements not met: Kids allows only Minimal or Mild labels, Select up to Moderate; creator ID-verified with 2SV plus Roblox Plus or Premium (2+ months) or the refundable per-game fee; game still in its 16+ trial evaluation; social hangouts, sensitive-issue and free-form drawing games excluded by default | Check the Audience Reach dashboard and the current requirements page | [[Publishing an Experience]] [[Policy and Age Rules 2026]]
 - players never see my change | Save treated as Publish | Publish, then restart servers when needed | [[Studio Interface Tour]]
 - players on mixed versions for hours after an update | Old servers keep running the old version | Restart outdated servers | [[Places Universes and Experience Settings]] [[Server Lifecycle and Shutdown]]
 - old servers write data in the old format | Data format change shipped without restarting servers | Restart outdated servers; migrations tolerant both ways | [[Places Universes and Experience Settings]]
 - publish overwrote the wrong place | Plain Publish used when changing the start place | Publish As and choose the current start place | [[Places Universes and Experience Settings]] [[Publishing an Experience]]
 - live players get test behaviour | Test flags left on | IsStudio guard on every flag; boot warning | [[Testing Modes - Play Run and Multi-Client]] [[Project Structure and Bootstrapping]]
+- badge never awarded although the server code runs | Badge disabled, already owned, player left, or place outside the badge's experience | Check GetBadgeInfoAsync IsEnabled and ownership in pcall; award from the server while the player is present | [[Badges and Achievement Design]]
 - teleports fail when testing in Studio | Teleports are unsupported in Studio | Publish and test live | [[Teleporting and Multi-Place Games]]
+- Discord link or social handles no longer show in game, AllowedExternalLinkReferences is always empty | In-game social links ended early 2026; the field is legacy | Put links on the game page (shown to age-checked 16+); in game say "see our game page" | [[Discord Servers for Roblox Games]] [[API Renames and Deprecations 2025-2026]]
 - live bug reports cannot be matched to a server | No job id or version in logs | Log JobId and place version | [[Debugging Live Servers]]
 - error report fragments into thousands of unique errors | Error messages contain ids and numbers | Normalise numbers, ids and quotes before reporting | [[Error Handling - pcall xpcall and Promise Patterns]] [[Crash and Error Telemetry]]

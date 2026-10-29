@@ -6,11 +6,11 @@ tags: [atlas, api, type/atlas, area/vfx, area/modeling, api/Lighting]
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - Lighting is global state, and Edit-mode previews leak.
+> - `Lighting.Technology` set by script errors: `Technology` deprecated, not scriptable -> Studio: Future=Realistic+Prioritize on...
 > - Fog settings do nothing: An `Atmosphere` is in `Lighting` (fog properties are hidden and... -> Use `Atmosphere.Density`/`Haze`...
 > - Avoid: Server tweens `Lighting` -> Server writes attributes, client interpolates.
-> - Avoid: Effects parented to `Lighting` in a game that also uses lighting zones.
 >
-> Cost: TL;DR ~130 tok · whole note ~840 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~910 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -23,16 +23,14 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 
 ## Key facts
 
+- `Lighting.Technology` set by script errors: `Technology` deprecated, not scriptable -> Studio: Future=Realistic+Prioritize on, Voxel=Soft+off. ([[Lighting Technologies and Settings]])
 - Fog settings do nothing: An `Atmosphere` is in `Lighting` (fog properties are hidden and... -> Use `Atmosphere.Density`/`Haze` instead, or remove the Atmosphere. ([[Lighting Technologies and Settings]])
 - Avoid: Server tweens `Lighting` -> Server writes attributes, client interpolates. ([[Weather System Architecture - State Machine, Transitions and Replication]])
 - Avoid: Effects parented to `Lighting` in a game that also uses lighting zones. ([[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]])
 
 ## Mentioned in
 
-39 notes in 21 sections. The 25 most relevant are linked:
-
-### 03 Architecture and Networking
-[[Client-Server Model]]
+41 notes in 23 sections. The 25 most relevant are linked:
 
 ### 06 World Building and Art
 [[Water Sky and Atmosphere Art]] · [[Zone and Biome Art Direction]]
@@ -76,6 +74,9 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 ### 58 Player QoL and Game Tweaks
 [[Graphics and Performance Toggles for Low-End Devices]]
 
-Also mentioned in (not linked): Creator Store and Toolbox Safety · Glossary · Hand-Painted and Stylized Texturing · Low-Poly and Stylized Modeling · MaterialService and Custom Materials · Normal Maps and Detail Baking · Open Questions - Whole Vault · Photo Mode and In-Game Screenshots with CaptureService · Pixel Art Pipeline - Aseprite to Roblox Without Blur · Reserved and Private Servers in Practice · Safe Changes in a Shared Place · Studio Interface Tour · Substance Painter and Texturing Tools · Weather Performance Budgets and Quality Tiers
+### 61 Thumbnails and CTR
+[[Making Thumbnails in Studio and Blender - Capture, Lighting and Posing]]
+
+Also mentioned in (not linked): Client-Server Model · Creator Store and Toolbox Safety · Figma Property Mapping for Roblox UI · Glossary · Hand-Painted and Stylized Texturing · Low-Poly and Stylized Modeling · MaterialService and Custom Materials · Normal Maps and Detail Baking · Open Questions - Whole Vault · Photo Mode and In-Game Screenshots with CaptureService · Pixel Art Pipeline - Aseprite to Roblox Without Blur · Reserved and Private Servers in Practice · Safe Changes in a Shared Place · Studio Interface Tour · Substance Painter and Texturing Tools · Weather Performance Budgets and Quality Tiers
 
 <!-- atlas:generated -->

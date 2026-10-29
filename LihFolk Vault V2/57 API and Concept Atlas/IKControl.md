@@ -39,7 +39,7 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 [[Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run]]
 
 ### 46 Resource Library
-[[Links - Inverse kinematics]]
+[[Official Docs - Characters and Animation]]
 
 ### Root notes
 [[00 Start Here]]

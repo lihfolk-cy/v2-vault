@@ -145,7 +145,7 @@ body.theme-dark {
   --nav-indentation-guide-color: transparent;
   --nav-item-radius: 9px;
 
-  /* theme-proof palette: pins the core variables a community theme (e.g. Everforest) would otherwise
+  /* theme-proof palette: pins the core variables another base theme would otherwise
      leak into the cosmic look. Celestial-lite already pins the main ones; these are the rest. */
   --color-base-00: #07060d; --color-base-05: #0b0914; --color-base-10: #0e0c16; --color-base-20: #15121e; --color-base-25: #1b1728;
   --color-base-30: #241e33; --color-base-35: #2f2842; --color-base-40: #4a3f6b; --color-base-50: #5c556e; --color-base-60: #8f86ad;

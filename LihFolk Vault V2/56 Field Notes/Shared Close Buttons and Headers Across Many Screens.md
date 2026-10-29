@@ -121,5 +121,5 @@ end
 
 <!-- related:start -->
 ## Related
-[[ScreenGui Fundamentals]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[UIStroke on Text - Glyph Counters and the Stroke Ratio]] · [[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[Running Many AI Agents on One Roblox Place]] · [[Shift-Lock Sprint and Gamepad B for Menus]]
+[[UIStroke on Text - Glyph Counters and the Stroke Ratio]] · [[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[Running Many AI Agents on One Roblox Place]] · [[Shift-Lock Sprint and Gamepad B for Menus]] · [[ProximityPrompt Gamepad Keys and the Hidden PlayerList Tab]] · [[ipairs Stops at the First nil - Cleanup Tables That Leak]]
 <!-- related:end -->

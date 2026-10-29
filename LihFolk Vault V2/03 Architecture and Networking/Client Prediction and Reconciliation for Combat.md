@@ -323,7 +323,7 @@ What failures look like:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Detecting Combat Exploits - Reach Rate and Aim]] · Server Authority · 2D Multiplayer - Server Authority and Replicating GUI Worlds · Links - Latency and prediction · Projectiles and Ballistics · Debugging Client-Server Desync
+[[Detecting Combat Exploits - Reach Rate and Aim]] · Server Authority · 2D Multiplayer - Server Authority and Replicating GUI Worlds · Official Docs - Networking and Multiplayer · Projectiles and Ballistics · Debugging Client-Server Desync
 <!-- auto-links:end -->
 
 <!-- related:start -->

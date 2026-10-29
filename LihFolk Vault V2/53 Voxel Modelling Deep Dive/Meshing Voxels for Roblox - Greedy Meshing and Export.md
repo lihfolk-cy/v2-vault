@@ -245,5 +245,5 @@ A 0.25-stud-cell lantern post, 8 x 8 x 40 cells (2 x 2 x 10 studs), four colours
 
 <!-- related:start -->
 ## Related
-[[Modeling Fundamentals for Games]] · [[Parts Unions and MeshParts]] · [[Modeling in Blender for Roblox]] · [[Retopology and Decimation]] · [[Voxel Palettes - Ramps Hue Shifting and Limits]] · [[Voxel Characters - Proportions Joints and Rigging]]
+[[Modeling Fundamentals for Games]] · [[Parts Unions and MeshParts]] · [[Modeling in Blender for Roblox]] · [[Voxel Palettes - Ramps Hue Shifting and Limits]] · [[Voxel Characters - Proportions Joints and Rigging]] · [[Voxel Chibi Heroes - Class Roster and Rarity Ladder]]
 <!-- related:end -->

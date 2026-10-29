@@ -12,7 +12,7 @@ tags: [world-building, art, performance, budgets, draw-calls, triangles, memory,
 > - Budgets written per prop, zone and hub.
 > - Unique mesh count tracked; copies are clones.
 >
-> Cost: TL;DR ~130 tok · whole note ~4.1k tok. Read more: ## Measuring: an art audit script · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~130 tok · whole note ~4.2k tok. Read more: ## Measuring: an art audit script · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 An art budget is a limit you set before building, so the game runs on the weakest device you care about. Roblox does not publish hard per-scene budgets; it publishes **mechanisms** (instancing rules, texture memory rules, shadow costs) and leaves the numbers to you. This note explains what actually costs frame time and memory for world art, gives starting budgets (marked as rules of thumb), and shows how to measure. Deep profiling technique lives in [[Rendering Performance]], [[MicroProfiler Guide]] and [[Memory Budgets and Leaks]].
@@ -72,7 +72,7 @@ SLIM (see [[Level of Detail and Model Streaming]]) can cut distant triangles dra
 Transparent pixels are drawn once per layer. Budget them:
 - Partially transparent objects near each other force overlapping pixels to render several times (docs). Remove layered transparencies.
 - Alpha-card foliage, stacked water planes, glass walls, big particle systems and [[ForceField]] surfaces all add layers.
-- Neon surfaces are not transparent, but large neon areas plus bloom raise post-processing cost and wash shapes out; one style study capped glow coverage at about 16 percent of an object's pixels for readability alone.
+- Neon surfaces are not transparent, but large neon areas plus bloom raise post-processing cost and wash shapes out; for readability alone, keep glow to a modest share of an object (Rule of thumb: no more than about a sixth of its pixels).
 
 ## Shadows and lights
 
@@ -107,7 +107,7 @@ Starting budgets (rule of thumb):
 | A voxel showcase piece | under 1,000 parts after merging |
 | Whole place | a few hundred thousand at most; investigate anything in the millions |
 
-Parts in voxel builds explode fastest. One style study's showcase objects held 1,000 to 3,000 cells that merged to 400 to 1,000 parts; anything repeated in the world should be far smaller, or baked into a few MeshParts. See [[Voxel Art - Studs Outlines and Style Kits]].
+Parts in voxel builds explode fastest. In the reference project, a 1,216-cell test pedestal still merged to 459 Parts (Measured), so a top-rank showcase of a few thousand cells lands near a thousand; anything repeated in the world should be far smaller, or baked into a few MeshParts. See [[Voxel Art - Studs Outlines and Style Kits]].
 
 ## Measuring: an art audit script
 

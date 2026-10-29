@@ -12,12 +12,12 @@ tags: [luau, advanced-luau, signals, events, coroutines, library-design, testing
 > - Disconnect and connect during fire have defined, tested behaviour.
 > - Handlers run isolated from each other's errors and yields without allocating per call in the common case.
 >
-> Cost: TL;DR ~180 tok · whole note ~5.4k tok. Read more: ## 2. Where handlers run: the runner thread · ## 4. The library · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.3k tok. Read more: ## 2. Where handlers run: pooled runner threads · ## 4. The library · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Events Signals and Connections]] explains engine signals, Immediate versus Deferred handlers, connection leaks, and gives a compact pure-Luau signal that spawns a thread per handler. That signal is correct and fine for most uses. This note builds a production-grade one from first principles, and more importantly explains each design decision a signal library has to make, because those decisions are where custom signals cause bugs: what happens when a handler disconnects during a fire, connects during a fire, errors, or yields; what order handlers run in; how much each fire allocates; and how deferred mode differs. By the end you will have a typed library, a test list for it, and an observable value built on top.
 
-Popular community signal libraries (for example GoodSignal by stravant, and the signal implementations bundled with frameworks) solve the same problems. Reading one after this note is a good exercise; the design here deliberately differs in one choice (handler storage) so the trade-off is visible.
+Community signal libraries and the signals bundled with frameworks answer the same questions, each in its own way. Comparing one with this note after reading it is a good exercise in spotting which decisions each library made.
 
 ---
 
@@ -27,7 +27,7 @@ Every signal library answers these questions, explicitly or by accident.
 
 | Decision | Options | This library |
 |---|---|---|
-| Where does a handler run? | Inline in the firing thread; a new thread per handler; a reused thread | A reused "runner" thread, new one only when needed |
+| Where does a handler run? | Inline in the firing thread; a new thread per handler; a reused thread | A small pool of reused "runner" threads, new one only when needed |
 | Handler order | Unspecified; connect order; reverse order | Connect order, guaranteed |
 | Disconnect during fire | Still called this fire; not called | Not called if disconnected before its turn |
 | Connect during fire | Called this fire; not called | Not called until the next fire |
@@ -41,43 +41,41 @@ The engine's own promise on order is weaker: handler order for engine signals is
 
 ---
 
-## 2. Where handlers run: the runner thread
+## 2. Where handlers run: pooled runner threads
 
 Three options, with costs:
 
 - **Inline** (`fn(...)` directly in `Fire`): no allocation, fastest. But one handler that errors stops the rest, and one that yields (a `task.wait` buried in a helper) stalls the firing code. Every handler author must know the rules. Acceptable for a private signal inside one module; dangerous in a shared library.
 - **New thread per handler** (`task.spawn(fn, ...)`): isolation for errors and yields, but a new coroutine per handler per fire. For a signal fired every frame with ten listeners, that is 600 threads per second of garbage ([[Luau Garbage Collection and the Memory Model]]).
-- **Reused runner thread**: keep one idle coroutine around. To call a handler, resume the idle coroutine with the handler and its arguments. If the handler returns normally, the coroutine goes back to idle and is reused for the next handler. If the handler yields or errors, the coroutine is no longer available, so the next handler gets a fresh one. You pay for a new thread only in the rare cases that need isolation.
+- **Pooled runner threads**: keep a small stack of idle coroutines. To call a handler, pop an idle one (or create one if the stack is empty) and start it with the handler and its arguments. A runner that finishes its handler normally pushes itself back on the stack and parks. A runner whose handler yields or errors never reaches that push, so it simply drops out of the pool. You pay for a new thread only in the cases that need isolation.
 
 The mechanism in a few lines:
 
 ```lua
-local freeRunner: thread? = nil
+local idleRunners: { thread } = {}
+local MAX_IDLE_RUNNERS = 16
 
-local function callHandler(fn: (...any) -> (), ...: any)
-	-- This runs inside the runner. Take it out of the free slot while fn runs,
-	-- so a yield or error inside fn cannot let another handler reuse this thread.
-	local runner = freeRunner
-	freeRunner = nil
+local function serve(fn: (...any) -> (), ...: any)
 	fn(...)
-	-- Only reached if fn returned (possibly after yielding and being resumed later).
-	freeRunner = runner
 end
 
-local function runnerLoop()
-	while true do
-		callHandler(coroutine.yield())   -- wait for (fn, ...) and call it
+local function runnerBody(...: any)
+	serve(...) -- the first job arrives as the coroutine's start arguments
+	while #idleRunners < MAX_IDLE_RUNNERS do
+		table.insert(idleRunners, coroutine.running()) -- only reached after a clean return
+		serve(coroutine.yield()) -- later jobs arrive as resume arguments
 	end
 end
 ```
 
-To dispatch: if `freeRunner` is nil, create one with `coroutine.create(runnerLoop)` and resume it once so it parks on its first `coroutine.yield()`. Then `task.spawn(freeRunner, fn, ...)` hands it the next handler.
+To dispatch: `local runner = table.remove(idleRunners) or coroutine.create(runnerBody)`, then `task.spawn(runner, fn, ...)`. A fresh coroutine receives `fn, ...` as its start arguments; a parked one receives them as the results of `coroutine.yield()`. Both paths end in `serve`, so no priming resume is needed.
 
 Walk through the cases:
 
-- **Handler returns.** `callHandler` puts the runner back into `freeRunner`, loops, yields, and waits. The next `task.spawn` reuses it. No allocation.
-- **Handler yields** (for example `task.wait(1)`). The runner is suspended inside `fn`, and `freeRunner` is nil. `task.spawn` returns to `Fire`, which needs a runner for the next handler, sees nil, and creates a new one. When the old runner wakes up and finishes `fn`, it writes itself back to `freeRunner`, possibly replacing the newer one, which then becomes garbage. Correct either way.
-- **Handler errors.** The runner thread dies with the error. `task.spawn` reports it to the Output with a traceback, which is the behaviour developers expect from engine signals. `freeRunner` stays nil, so the next handler gets a new runner.
+- **Handler returns.** `serve` returns, the runner pushes itself onto `idleRunners` and parks in `coroutine.yield()`. The next dispatch pops it. No allocation.
+- **Handler yields** (for example `task.wait(1)`). The runner is suspended inside `fn` and is not on the stack, so the next dispatch pops another idle runner or creates one. When the old runner wakes and finishes, it pushes itself back, so the pool refills on its own.
+- **Handler errors.** The runner dies with the error before it can push itself back. `task.spawn` reports the error to the Output with a traceback, which is the behaviour developers expect from engine signals.
+- **Pool full.** A runner that finishes while the stack already holds `MAX_IDLE_RUNNERS` threads returns from `runnerBody` and is collected, so a burst of yielding handlers cannot leave hundreds of parked threads behind.
 
 The `task.spawn` call matters: resuming the runner through the task library (rather than `coroutine.resume`) is what gives proper error reporting and keeps the thread in the engine's scheduler if the handler yields ([[Task Library Coroutines and Yielding]]).
 
@@ -94,7 +92,7 @@ Disconnecting or connecting while a fire is in progress is common: a `Once` hand
 - `Fire` allocates nothing for the iteration.
 - `Connect` and `Disconnect` cost O(n) because they copy the array.
 
-**Linked list** (the approach used by GoodSignal): connections form a list; connect prepends at the head, disconnect unlinks. A fire walks the list from the head it saw at the start; a node that is unlinked during the fire keeps its `next` pointer so iteration can continue past it. Connect and disconnect are O(1), but with prepend the handlers run in reverse connect order, and the iteration rules are subtler to get right.
+**Linked list**: connections form a list; connect prepends at the head, disconnect unlinks. A fire walks the list from the head it saw at the start; a node that is unlinked during the fire keeps its `next` pointer so iteration can continue past it. Connect and disconnect are O(1), but with prepend the handlers run in reverse connect order, and the iteration rules are subtler to get right.
 
 The trade-off is about churn. Signals with a few to a few dozen long-lived connections (most game signals) favour the array: ordered, simple, no per-fire cost. A signal with thousands of short-lived connections (one per projectile, connected and disconnected constantly) favours the linked list. If you are in the second case, reconsider whether every projectile should hold a connection at all; a central system that iterates projectiles is usually better ([[Entity Component Systems]]).
 
@@ -104,7 +102,7 @@ The trade-off is about churn. Signals with a few to a few dozen long-lived conne
 
 ```lua
 --!strict
--- Signal.lua: typed, ordered, reuses a runner thread, optional deferred mode.
+-- Signal.lua: typed, ordered, reuses pooled runner threads, optional deferred mode.
 
 export type Connection = {
 	Connected: boolean,
@@ -121,29 +119,25 @@ export type Signal<T...> = {
 	Destroy: (self: Signal<T...>) -> (),
 }
 
--- Runner thread machinery (shared by all signals in this VM)
-local freeRunner: thread? = nil
+-- Runner pool (shared by all signals in this VM)
+local idleRunners: { thread } = {}
+local MAX_IDLE_RUNNERS = 16
 
-local function callHandler(fn: (...any) -> (), ...: any)
-	local runner = freeRunner
-	freeRunner = nil
+local function serve(fn: (...any) -> (), ...: any)
 	fn(...)
-	freeRunner = runner
 end
 
-local function runnerLoop()
-	while true do
-		callHandler(coroutine.yield())
+local function runnerBody(...: any)
+	serve(...)
+	while #idleRunners < MAX_IDLE_RUNNERS do
+		table.insert(idleRunners, coroutine.running())
+		serve(coroutine.yield())
 	end
 end
 
 local function dispatch(fn: (...any) -> (), ...: any)
-	if freeRunner == nil then
-		local runner = coroutine.create(runnerLoop)
-		coroutine.resume(runner)        -- park it on its first yield
-		freeRunner = runner
-	end
-	task.spawn(freeRunner :: thread, fn, ...)
+	local runner = table.remove(idleRunners) or coroutine.create(runnerBody)
+	task.spawn(runner, fn, ...)
 end
 
 -- Connection
@@ -414,7 +408,7 @@ Two nuances are in the comment and the type. NaN never equals itself, so a naive
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Functions Closures and Upvalues]] · Error Handling - pcall xpcall and Promise Patterns · Reading Luau Errors and Stack Traces · Event Bus · Links - Coroutines, task library and async · Links - Events, signals and connections
+[[Functions Closures and Upvalues]] · Error Handling - pcall xpcall and Promise Patterns · Reading Luau Errors and Stack Traces · Event Bus · Official Docs - Scripting and Luau
 <!-- auto-links:end -->
 
 <!-- related:start -->

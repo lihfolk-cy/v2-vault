@@ -1,0 +1,27 @@
+{
+  "_about": "Deprecations in the current create.roblox.com reference that the dated API snapshot (roblox_api.json) does not show yet. vault.py --api and the query API notes merge these over the snapshot. Each entry: Class.Member -> replacement (or 1 = deprecated, no single replacement). Verified 2026-10-29 against the creator-docs reference YAML.",
+  "_sources": {
+    "TeleportService": "https://create.roblox.com/docs/reference/engine/classes/TeleportService",
+    "TeleportOptions": "https://create.roblox.com/docs/reference/engine/classes/TeleportOptions",
+    "PhysicsService": "https://create.roblox.com/docs/reference/engine/classes/PhysicsService",
+    "Player": "https://create.roblox.com/docs/reference/engine/classes/Player",
+    "TextChatService": "https://create.roblox.com/docs/reference/engine/classes/TextChatService",
+    "PathfindingService": "https://create.roblox.com/docs/reference/engine/classes/PathfindingService"
+  },
+  "TeleportService.ReserveServer": "TeleportAsync with TeleportOptions.ReservedServerId (GUID)",
+  "TeleportService.ReserveServerAsync": "TeleportAsync with TeleportOptions.ReservedServerId (GUID)",
+  "TeleportService.TeleportToPrivateServer": "TeleportAsync with TeleportOptions.ReservedServerId (GUID)",
+  "TeleportOptions.ReservedServerAccessCode": "TeleportOptions.ReservedServerId (GUID)",
+  "TeleportOptions.ShouldReserveServer": "TeleportOptions.ReservedServerId (GUID)",
+  "PhysicsService.RegisterCollisionGroup": "workspace:RegisterCollisionGroup (WorldRoot)",
+  "PhysicsService.UnregisterCollisionGroup": "workspace:UnregisterCollisionGroup (WorldRoot)",
+  "PhysicsService.RenameCollisionGroup": "workspace:RenameCollisionGroup (WorldRoot)",
+  "PhysicsService.CollisionGroupSetCollidable": "workspace:CollisionGroupSetCollidable (WorldRoot)",
+  "PhysicsService.CollisionGroupsAreCollidable": "workspace:CollisionGroupsAreCollidable (WorldRoot)",
+  "PhysicsService.GetRegisteredCollisionGroups": "workspace:GetRegisteredCollisionGroups (WorldRoot)",
+  "PhysicsService.IsCollisionGroupRegistered": "workspace:IsCollisionGroupRegistered (WorldRoot)",
+  "PhysicsService.GetMaxCollisionGroups": "workspace:GetMaxCollisionGroups (WorldRoot)",
+  "Player.MembershipType": "Player.HasRobloxSubscription",
+  "TextChatService.ChatVersion": 1,
+  "PathfindingService.FindPathAsync": "PathfindingService:CreatePath + Path:ComputeAsync"
+}

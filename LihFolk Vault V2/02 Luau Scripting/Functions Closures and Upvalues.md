@@ -392,7 +392,7 @@ The senior trade-off: closures are the clearest way to express "do this later wi
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Reading Luau Errors and Stack Traces]] · [[Luau Performance Patterns with Benchmarks]] · [[Metatables and OOP - When and When Not]] · Advanced Luau Start Here · Links - Coroutines, task library and async · Script Performance
+[[Reading Luau Errors and Stack Traces]] · [[Luau Performance Patterns with Benchmarks]] · [[Metatables and OOP - When and When Not]] · Advanced Luau Start Here · Official Docs - Scripting and Luau · Script Performance
 <!-- auto-links:end -->
 
 <!-- related:start -->

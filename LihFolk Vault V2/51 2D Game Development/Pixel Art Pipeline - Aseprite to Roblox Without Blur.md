@@ -293,7 +293,7 @@ Every image you upload is reviewed by Roblox moderation, and the ImageLabel docs
 - **Keep the sources.** Moderation outcomes on resubmission vary; keep the Aseprite source so you can adjust colours or split the sheet and re-upload.
 - **Detect failures in-game.** In development builds, check `IsLoaded` on a timer after setup and log any sheet that never loads, so a rejected upload shows up as a clear warning instead of an invisible character.
 
-Bulk uploading is available through Studio's Asset Manager and through Open Cloud; see [[Asset Upload Automation with Open Cloud]] and [[Links - Image uploading and moderation]]. Upload into the same owner (user or group) that owns the experience; ownership matters for runtime loading through EditableImage (section 8) even when plain display works.
+Bulk uploading is available through Studio's Asset Manager and through Open Cloud; see [[Asset Upload Automation with Open Cloud]] and [[Official Docs - Asset Creation]]. Upload into the same owner (user or group) that owns the experience; ownership matters for runtime loading through EditableImage (section 8) even when plain display works.
 
 ---
 
@@ -352,5 +352,5 @@ Bulk uploading is available through Studio's Asset Manager and through Open Clou
 
 <!-- related:start -->
 ## Related
-[[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[SurfaceAppearance PBR Workflow]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[2D Collision Physics and Platformer Movement]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]]
+[[Designing VFX Textures and Flipbooks in Figma]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[SurfaceAppearance PBR Workflow]] · [[2D Collision Physics and Platformer Movement]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]]
 <!-- related:end -->

@@ -1,5 +1,5 @@
 ---
-tags: [atlas, api, type/atlas, area/physics, area/accessibility, api/InputAction]
+tags: [atlas, api, type/atlas, area/platform, area/physics, api/InputAction]
 ---
 # InputAction
 
@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/physics, area/accessibility, api/InputAction
 > - `InputAction`: one mechanic ("Sprint", "Shoot", "CameraRotate").
 > - Show the right glyphs. `InputAction.PreferredBinding` tells you which binding matches the active device so hints show "RT" or...
 >
-> Cost: TL;DR ~140 tok · whole note ~500 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~540 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 
 ## Mentioned in
 
-13 notes in 8 sections. The 13 most relevant are linked:
+16 notes in 9 sections. The 16 most relevant are linked:
 
 ### 03 Architecture and Networking
 [[Client Prediction and Reconciliation for Combat]]
@@ -46,12 +46,15 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 [[Input Remapping and One-Handed Play]] · [[Onboarding Accessibility and Cross-Device Prompts]]
 
 ### 46 Resource Library
-[[Links - Input services]]
+[[Official Docs - Input and Controls]]
 
 ### 49 Roblox Platform Features
-[[Console and VR Release Checklists]] · [[Server Authority and Input Migration 2026]]
+[[API Renames and Deprecations 2025-2026]] · [[Console and VR Release Checklists]] · [[Server Authority and Input Migration 2026]]
 
 ### 58 Player QoL and Game Tweaks
 [[Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots]] · [[Mobile Button Layout Editor]] · [[Rebinding Controls with the Input Action System]]
+
+### 62 Engine Reference Cards
+[[ContextActionService - Engine Reference Card]] · [[UserInputService - Engine Reference Card]]
 
 <!-- atlas:generated -->

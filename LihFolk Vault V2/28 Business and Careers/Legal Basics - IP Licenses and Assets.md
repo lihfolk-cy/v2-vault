@@ -78,7 +78,7 @@ Being on the Creator Store does not prove an asset is clean. Someone can upload 
 | Source | What to check |
 |---|---|
 | Free 3D model sites | The exact licence per model; commercial use allowed? attribution required? |
-| Texture and HDRI libraries | Many are CC0 (public domain dedication, no conditions); confirm per asset ([[Links - Free and CC0 asset libraries]]) |
+| Texture and HDRI libraries | Many are CC0 (public domain dedication, no conditions); confirm per asset |
 | Fonts | Roblox ships a set of fonts; outside fonts need a licence that allows the use |
 | Music and sound effects | Licences differ a lot; "royalty free" means no per-play fee, not "free to use" |
 | Code libraries | The licence file in the repository (section 4) |
@@ -256,11 +256,11 @@ After the fixes, the studio can answer "yes" with evidence. Each fix was easier 
 
 ## See also
 
-[[Business and Careers Start Here]], [[Commissions Pricing and Contracts]], [[Hiring Freelancers and Revenue Shares]], [[Running a Small Studio as a Business]], [[Creator Store and Toolbox Safety]], [[Animation Asset Permissions and Groups]], [[Packages and Asset Reuse]], [[Roblox Policies Ratings and Compliance]], [[Roblox Policies on AI-Generated Content]], [[Plugins - Using and Writing]], [[UGC Avatar Items and Accessories]], [[Links - Free and CC0 asset libraries]]
+[[Business and Careers Start Here]], [[Commissions Pricing and Contracts]], [[Hiring Freelancers and Revenue Shares]], [[Running a Small Studio as a Business]], [[Creator Store and Toolbox Safety]], [[Animation Asset Permissions and Groups]], [[Packages and Asset Reuse]], [[Roblox Policies Ratings and Compliance]], [[Roblox Policies on AI-Generated Content]], [[Plugins - Using and Writing]], [[UGC Avatar Items and Accessories]]
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Publishing Selling and Updating Plugins]] · [[Building a Portfolio as a Roblox Developer]] · Working with Content Creators · Groups Roles and Permissions for Studios · LICENSE · Links - Free and CC0 asset libraries
+[[Publishing Selling and Updating Plugins]] · [[Building a Portfolio as a Roblox Developer]] · Working with Content Creators · Groups Roles and Permissions for Studios · LICENSE · Official Docs - Asset Creation
 <!-- auto-links:end -->
 
 <!-- related:start -->

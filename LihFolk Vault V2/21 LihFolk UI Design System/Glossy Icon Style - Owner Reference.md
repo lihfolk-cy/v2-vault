@@ -46,5 +46,5 @@ For coloured icons (coin, gem, star), keep the same recipe: base hue on the lit 
 
 <!-- related:start -->
 ## Related
-[[VFX Readability and Value - Lessons from Blind Reviews]] · [[Bevels Chamfers and Edge Highlights Without Textures]] · [[Hand-Painted and Stylized Texturing]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[UI Style Directions - A Visual Vocabulary for Briefs]] · [[LihFolk UI Spec]]
+[[VFX Readability and Value - Lessons from Blind Reviews]] · [[Bevels Chamfers and Edge Highlights Without Textures]] · [[Hand-Painted and Stylized Texturing]] · [[UI Style Directions - A Visual Vocabulary for Briefs]] · [[Designing VFX Textures and Flipbooks in Figma]] · [[LihFolk UI Spec]]
 <!-- related:end -->

@@ -407,7 +407,7 @@ See also: [[Accessibility Start Here]], [[Accessibility]], [[Sound Design for Ga
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI Audio - Voice Music and SFX]] · Voice Chat and Safety Features · Feedback Timing - Sound Visual and Haptic Sync · Audio Pipeline · Sound Fundamentals · Resource Library - Audio
+[[AI Audio - Voice Music and SFX]] · Voice Chat and Safety Features · Feedback Timing - Sound Visual and Haptic Sync · Audio Pipeline · Sound Fundamentals · Official Docs - Audio
 <!-- auto-links:end -->
 
 <!-- related:start -->

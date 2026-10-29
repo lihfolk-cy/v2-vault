@@ -267,5 +267,5 @@ Run it inside a ChangeHistoryService recording if you use it as a plugin, so the
 
 <!-- related:start -->
 ## Related
-[[The Gradient Palette Texture Workflow]] · [[Lighting Untextured Art in Roblox]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Voxel Scale Grids and Stud Alignment]] · [[Voxel Props Environments and Modular Tiles]] · [[Voxel Characters - Proportions Joints and Rigging]]
+[[The Gradient Palette Texture Workflow]] · [[Lighting Untextured Art in Roblox]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Voxel Scale Grids and Stud Alignment]] · [[Voxel Props Environments and Modular Tiles]] · [[Voxel Chibi Heroes - Class Roster and Rarity Ladder]] · [[Voxel Characters - Proportions Joints and Rigging]]
 <!-- related:end -->

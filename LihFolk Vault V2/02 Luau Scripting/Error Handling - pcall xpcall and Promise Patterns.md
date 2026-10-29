@@ -461,10 +461,10 @@ Whatever you pick, apply it consistently per layer. Half the bugs in mixed codeb
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Reading Luau Errors and Stack Traces]] · Custom Schedulers and Coroutine Patterns · Links - Coroutines, task library and async · Building a Signal Library · Links - Error handling and debugging · Debugging Race Conditions and Yield Order
+[[Reading Luau Errors and Stack Traces]] · Custom Schedulers and Coroutine Patterns · Official Docs - Scripting and Luau · Building a Signal Library · Debugging Race Conditions and Yield Order
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Functions Closures and Upvalues]] · [[Luau Type System and Strict Mode]] · [[Script Types and Run Context]] · [[Luau Language Essentials]] · [[Metatables and OOP - When and When Not]] · [[Luau Performance Patterns with Benchmarks]] · [[Parallel Luau and Actors]] · [[Luau Performance and Native Codegen]]
+[[Functions Closures and Upvalues]] · [[Script Types and Run Context]] · [[Luau Type System and Strict Mode]] · [[Luau Language Essentials]] · [[Metatables and OOP - When and When Not]] · [[Luau Performance Patterns with Benchmarks]] · [[Parallel Luau and Actors]] · [[Luau Performance and Native Codegen]]
 <!-- related:end -->

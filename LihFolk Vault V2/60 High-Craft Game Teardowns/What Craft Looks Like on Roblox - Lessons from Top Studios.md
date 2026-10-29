@@ -136,5 +136,5 @@ The premium feeling on Roblox mostly comes from response, not from polygons.
 
 <!-- related:start -->
 ## Related
-[[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]] · [[Viral Game Anatomy - Hooks, Loops and Timing]] · [[Teardown - Escape Tsunami for Brainrots]] · [[Onboarding by Genre - The First Five Minutes]] · [[Hit-Stop]] · [[Teardown - Steal An Egg]]
+[[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]] · [[Viral Game Anatomy - Hooks, Loops and Timing]] · [[Teardown - Escape Tsunami for Brainrots]] · [[Onboarding by Genre - The First Five Minutes]] · [[Hit-Stop]] · [[Teardown - Natural Disaster Survival]]
 <!-- related:end -->

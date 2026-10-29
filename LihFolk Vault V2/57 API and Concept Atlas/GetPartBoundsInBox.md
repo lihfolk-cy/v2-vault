@@ -7,10 +7,10 @@ tags: [atlas, api, type/atlas, area/gameplay, area/world, api/GetPartBoundsInBox
 > [!tldr] TL;DR
 > - `GetPartBoundsInBox` uses bounding boxes, so a large rotated mesh can report a false overlap; the real guard used exact tests...
 > - Clear-pad check with `GetPartBoundsInBox`; spawn offset above the pad.
+> - Avoid: trusting GetPartBoundsInBox for precise hits.
 > - Wrong: treating `GetPartBoundsInBox` hits as exact contact.
-> - For zones, use spatial queries on a timer (`GetPartsInPart`, `GetPartBoundsInBox`) or region checks on the server (Raycasts...
 >
-> Cost: TL;DR ~140 tok · whole note ~570 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~600 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -22,13 +22,13 @@ API snapshot: member of `WorldRoot` (`_tools/roblox_api.json`, docs build of 202
 ## Key facts
 
 - Clear-pad check with `GetPartBoundsInBox`; spawn offset above the pad. ([[Vehicle Spawner and Garage - Spawn, Ownership, Despawn and Limits]])
+- Avoid: trusting GetPartBoundsInBox for precise hits. ([[Workspace - Engine Reference Card]])
 - Wrong: treating `GetPartBoundsInBox` hits as exact contact. ([[AI Pitfalls - Physics and Animation]])
 - For zones, use spatial queries on a timer (`GetPartsInPart`, `GetPartBoundsInBox`) or region checks on the server (Raycasts Shapecasts and Spatial Queries). ([[Debugging Physics and Network Ownership]])
-- `GetPartBoundsInBox` on geometry you just moved is slower and order-sensitive. ([[Dungeon and Room Generation]])
 
 ## Mentioned in
 
-21 notes in 13 sections. The 21 most relevant are linked:
+23 notes in 15 sections. The 23 most relevant are linked:
 
 ### 02 Luau Scripting
 [[Parallel Luau and Actors]]
@@ -68,5 +68,11 @@ API snapshot: member of `WorldRoot` (`_tools/roblox_api.json`, docs build of 202
 
 ### 40 Game Math
 [[Intersection and Collision Math]]
+
+### 49 Roblox Platform Features
+[[Engine Limits, Quotas and Defaults - Cheat Sheet]]
+
+### 62 Engine Reference Cards
+[[Workspace - Engine Reference Card]]
 
 <!-- atlas:generated -->

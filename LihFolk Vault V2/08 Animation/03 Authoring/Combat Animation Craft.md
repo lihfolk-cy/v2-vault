@@ -271,5 +271,5 @@ Animation length feeds design numbers. In the reference project an ability's dam
 
 <!-- related:start -->
 ## Related
-[[Locomotion and Melee Reference Numbers]] · [[Spec-Driven Move Authoring]] · [[Posing and Silhouettes]] · [[Publishing Animations]] · [[Snippets - Playing Animations]] · [[Stance and Charge Moves]] · [[Equip Draw and Flourish Systems]] · [[Idle Breathing and Secondary Motion]]
+[[Locomotion and Melee Reference Numbers]] · [[Posing and Silhouettes]] · [[Spec-Driven Move Authoring]] · [[Publishing Animations]] · [[Snippets - Playing Animations]] · [[Stance and Charge Moves]] · [[Idle Breathing and Secondary Motion]] · [[Equip Draw and Flourish Systems]]
 <!-- related:end -->

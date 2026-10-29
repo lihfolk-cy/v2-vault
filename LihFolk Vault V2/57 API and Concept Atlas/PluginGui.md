@@ -34,6 +34,6 @@ API snapshot: class, inherits `LayerCollector`, not creatable with `Instance.new
 [[Building a Studio Plugin End to End]] · [[Plugin UI with DockWidgets]]
 
 ### 46 Resource Library
-[[Links - Plugins and custom tools]]
+[[Official Docs - Asset Creation]]
 
 <!-- atlas:generated -->

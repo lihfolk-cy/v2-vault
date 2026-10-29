@@ -5,14 +5,14 @@ tags: [luau, buffer, binary, serialization, networking, compression, type/guide,
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
+> - Edits to a buffer after sending it never show on the other side: A buffer passed through a remote or bindable arrives as a copy... -> Treat each received buffer as a...
 > - "out of bounds" errors: Offsets start at 0; wrong size; writer did not grow -> Growable writer; size checks
 > - Values garbled after a format change: No version byte -> Version first; branch on read
-> - Positions jitter or snap: Quantization step too coarse, or overflow at map edges -> Choose scale per range; clamp
+> - Layout written down against the buffer rules: fixed size, created zero-filled, 0-based byte offsets, out-of-range reads and...
 > - Every format starts with a version byte and has a round-trip test.
 > - Writer and reader live together and mirror each other.
-> - Field precision and ranges are documented and clamped.
 >
-> Cost: TL;DR ~170 tok · whole note ~4.9k tok. Read more: ## 2. A typed writer and reader · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~200 tok · whole note ~5.0k tok. Read more: ## 2. A typed writer and reader · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 `buffer` is a Luau type for a fixed-size, mutable block of raw bytes, with functions to read and write integers, floats, strings and bit fields at byte offsets. It replaces most uses of `string.pack`/`string.unpack` and of hand-rolled string encodings. Use it to make network payloads and saved data compact, to implement binary formats, and to give hot numeric code a dense, native-friendly memory layout. This note covers the API and its exact semantics, a typed reader/writer, quantization techniques, buffers across remotes, attributes and DataStores, `EncodingService` (base64, compression, hashing), and a production case where a binary clip format cut animation data to a fraction of its instance size.
@@ -286,6 +286,7 @@ end
 
 | Symptom | Cause | Fix |
 |---|---|---|
+| Edits to a buffer after sending it never show on the other side | A buffer passed through a remote or bindable arrives as a copy; identity is not kept | Treat each received buffer as a new value; send again after changes |
 | "out of bounds" errors | Offsets start at 0; wrong size; writer did not grow | Growable writer; size checks |
 | Values garbled after a format change | No version byte | Version first; branch on read |
 | Positions jitter or snap | Quantization step too coarse, or overflow at map edges | Choose scale per range; clamp |
@@ -296,6 +297,7 @@ end
 
 ## Checklist
 
+- [ ] Layout written down against the buffer rules: fixed size, created zero-filled, 0-based byte offsets, out-of-range reads and writes throw, remotes deliver a copy, f32 keeps less precision than a Luau number.
 - [ ] Every format starts with a version byte and has a round-trip test.
 - [ ] Writer and reader live together and mirror each other.
 - [ ] Field precision and ranges are documented and clamped.
@@ -347,5 +349,5 @@ The senior trade-off: binary formats trade developer time and debuggability for 
 
 <!-- related:start -->
 ## Related
-[[Tables Metatables and OOP]] · [[Luau Type System and Strict Mode]] · [[Luau Language Essentials]] · [[Metatables and OOP - When and When Not]] · [[Functions Closures and Upvalues]] · [[Instances Attributes and Tags]] · [[Parallel Luau and Actors]] · [[Module Scripts and Requiring]]
+[[Tables Metatables and OOP]] · [[Luau Type System and Strict Mode]] · [[Metatables and OOP - When and When Not]] · [[Luau Language Essentials]] · [[Functions Closures and Upvalues]] · [[Events Signals and Connections]] · [[Instances Attributes and Tags]] · [[Parallel Luau and Actors]]
 <!-- related:end -->

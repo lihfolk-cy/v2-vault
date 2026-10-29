@@ -304,10 +304,10 @@ None of these were "slow code". All were "code running more often, or for more r
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Luau Performance Patterns with Benchmarks]] · Luau Garbage Collection and the Memory Model · Functions Closures and Upvalues · Frame Budget · Links - Coroutines, task library and async · Skill - Roblox Performance Audit
+[[Luau Performance Patterns with Benchmarks]] · Luau Garbage Collection and the Memory Model · Functions Closures and Upvalues · Frame Budget · Official Docs - Scripting and Luau · Skill - Roblox Performance Audit
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Luau Garbage Collection and the Memory Model]] · [[Network Bandwidth Budgets and Measuring Them]] · [[Developer Console and Stats]] · [[Rendering Performance]] · [[Hunting Memory Leaks Step by Step]] · [[Physics Performance]] · [[Automated Luau Checks - LihFolk Hook and Audit]] · [[Mobile and Low-End Optimization]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]]
+[[Luau Garbage Collection and the Memory Model]] · [[Network Bandwidth Budgets and Measuring Them]] · [[Developer Console and Stats]] · [[Rendering Performance]] · [[Physics Performance]] · [[Mobile and Low-End Optimization]] · [[Hunting Memory Leaks Step by Step]] · [[Client Zone Culling for Interiors and Cities]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]]
 <!-- related:end -->

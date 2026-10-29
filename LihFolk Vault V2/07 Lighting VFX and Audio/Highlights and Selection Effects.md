@@ -174,7 +174,7 @@ Note the trade-off: the arbiter destroys the Highlight when no request remains (
 | Use | Look | Reference |
 |---|---|---|
 | Hit flash | Red or white fill 0.3 to 0.5, no outline, 0.03 s in, 0.12 to 0.2 s out; throttle one per 0.12 s per character; stronger for big hits (reference project: bigger flash for hits of 12% or more of max health) | Reference project |
-| Charge pulse | `FillTransparency` 1 to 0.4 to 0.6, Circular InOut, reversing, 0.18 to 0.3 s | Studied VFX packs |
+| Charge pulse | Fill fades in and out on a short, reversing ease-in-out tween while the move charges; never fully opaque, so the character stays readable | Rule of thumb |
 | Aggro / elite rim | Coloured outline, no fill, `Occluded` | Reference project |
 | Enemy stroke for readability | Black outline, no fill, `Occluded`, one Highlight adorned to the enemy container | Reference project |
 | Teammates through walls | Outline only, `AlwaysOnTop`, team colour, outline transparency 0.3 | Rule of thumb |
@@ -250,10 +250,10 @@ See also: [[VFX Design Playbook]], [[Game Feel and Juice]], [[Light Sources and 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Highlights and selection]] · Voxel Art - Studs Outlines and Style Kits · Rendering Performance · Accessibility Contrast · Colour-Blind Safe Design · Voxel and Blocky Modeling
+[[Official Docs - Visual Effects]] · Voxel Art - Studs Outlines and Style Kits · Rendering Performance · Accessibility Contrast · Colour-Blind Safe Design · Voxel and Blocky Modeling
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[VFX Performance Budgets and Culling]] · [[Gore Policy and Kid-Friendly Hit Feedback]] · [[Particle Emitters In Depth]] · [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]] · [[Beams and Trails]] · [[Stylized Lighting Recipes]]
+[[Auras, Shields and Status Effects]] · [[AoE Telegraphs - Readable Ground Warnings]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[VFX Performance Budgets and Culling]] · [[Projectile VFX - Muzzle, Travel and Impact]] · [[Gore Policy and Kid-Friendly Hit Feedback]] · [[Particle Emitters In Depth]]
 <!-- related:end -->

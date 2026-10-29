@@ -248,7 +248,7 @@ Other Studio health rules that came from that project:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Skill - Roblox Performance Audit]] · Frame Budget · Links - Profiling · [[Hunting Memory Leaks Step by Step]] · Juice on a Budget - Mobile and Low-End · Luau Performance Patterns with Benchmarks
+[[Skill - Roblox Performance Audit]] · Frame Budget · Official Docs - Performance · [[Hunting Memory Leaks Step by Step]] · Juice on a Budget - Mobile and Low-End · Luau Performance Patterns with Benchmarks
 <!-- auto-links:end -->
 
 <!-- related:start -->

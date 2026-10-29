@@ -205,7 +205,7 @@ Big rewards earn a sequence: anticipation (a charge, rising pitch), a reveal (fl
 |---|---|---|
 | Hit confirm | Hit-stop on your own hits | From marker strength 0.45 (reference project); see [[Hit Reactions Stagger and Hit-Stop]] |
 | Contact | Spark at the blade tip, flash frame | Glint size 2.5 + 3s, life 0.18 + 0.08s (strength-scaled) |
-| Weight | Camera shake | Medium impact: amplitude 0.07, frequency 0.22, fade in 0.05, sustain 0.1, fade out 0.6, falloff 30 studs (studied pack) |
+| Weight | Camera shake | Short, small and fast-decaying for ordinary hits; reserve big shake for heavy or rare moves, and fade it with distance from the hit (Rule of thumb; numbers in [[Hit-Stop and Screen Shake Tuning by Numbers]]) |
 | Damage taken | Highlight flash on the character | Throttled to one per 0.12 s, stronger for 12%+ of max health (reference project) |
 | Damage dealt | Damage numbers | Pooled, merged, optional in settings |
 | Body | Hit sound with peak on the frame | See [[Sound Design for Games]] |
@@ -310,5 +310,5 @@ The senior trade-off: juice is cheap to add and expensive to tune. A small set o
 
 <!-- related:start -->
 ## Related
-[[Reward Moments and Celebrations]] · [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[VFX Design Playbook]] · [[Gore Policy and Kid-Friendly Hit Feedback]] · [[Escalation and Grandeur Without Clutter]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Impact Decals and Material-Aware Hit Sparks]]
+[[Reward Moments and Celebrations]] · [[Hit-Stop]] · [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[VFX Design Playbook]] · [[Projectile VFX - Muzzle, Travel and Impact]] · [[Gore Policy and Kid-Friendly Hit Feedback]] · [[Escalation and Grandeur Without Clutter]] · [[Auras, Shields and Status Effects]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]]
 <!-- related:end -->

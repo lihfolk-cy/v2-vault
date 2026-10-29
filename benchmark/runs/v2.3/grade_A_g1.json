@@ -1,0 +1,362 @@
+[
+ {
+  "id": "P1",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2,
+   "R8": 2,
+   "R9": 2
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "P2",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 2.44,
+   "R5": 3,
+   "R6": 3,
+   "R7": 2.63,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "R4 lacks shared module & Destroy rule; R7 lacks client/server shared module"
+ },
+ {
+  "id": "P3",
+  "scores": {
+   "R1": 2.75,
+   "R2": 3,
+   "R3": 3,
+   "R4": 2.75,
+   "R5": 3,
+   "R6": 3,
+   "R7": 2.75,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "R1/R7 omit CreateDefaultPlayerModule; R4 vague 'appropriately'"
+ },
+ {
+  "id": "P4",
+  "scores": {
+   "R1": 2.81,
+   "R2": 2.25,
+   "R3": 2.44,
+   "R4": 2.63,
+   "R5": 2.81,
+   "R6": 3,
+   "R7": 2.06,
+   "R8": 3,
+   "R9": 2.63
+  },
+  "notes": "partials for missing PrefixText/planned prefixes, TextChannelWindow Target, opt-in property"
+ },
+ {
+  "id": "P5",
+  "scores": {
+   "R1": 2.81,
+   "R2": 2.44,
+   "R3": 2.81,
+   "R4": 3,
+   "R5": 2.81,
+   "R6": 3,
+   "R7": 2.63,
+   "R8": 3,
+   "R9": 2.63
+  },
+  "notes": "partials for missing configurable per-server limits / latest-version-only storage"
+ },
+ {
+  "id": "P6",
+  "scores": {
+   "R1": 2.81,
+   "R2": 2.81,
+   "R3": 2.63,
+   "R4": 2.81,
+   "R5": 2.63,
+   "R6": 3,
+   "R7": 2.81,
+   "R8": 2.81,
+   "R9": 2.63
+  },
+  "notes": "partials for indirect-currency breadth or missing rounding disclaimer"
+ },
+ {
+  "id": "P7",
+  "scores": {
+   "R1": 3,
+   "R2": 2.44,
+   "R3": 2.25,
+   "R4": 2.44,
+   "R5": 2.44,
+   "R6": 2.44,
+   "R7": 2.44,
+   "R8": 2.25,
+   "R9": 2.44
+  },
+  "notes": "most omit April/June dates; selection detail (16+ eval, exclusions) varies"
+ },
+ {
+  "id": "P8",
+  "scores": {
+   "R1": 2.06,
+   "R2": 2.25,
+   "R3": 1.88,
+   "R4": 1.69,
+   "R5": 2.44,
+   "R6": 2.81,
+   "R7": 2.63,
+   "R8": 1.13,
+   "R9": 2.81
+  },
+  "notes": "Audience Expansion conditions and US18+ eligibility often incomplete; R4 no Audience Expansion; R8 vague"
+ },
+ {
+  "id": "G1",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 4,
+   "R6": 4,
+   "R7": 4,
+   "R8": 4,
+   "R9": 3
+  },
+  "notes": "R1-R4,R9 omit never-grant-from-PromptProductPurchaseFinished"
+ },
+ {
+  "id": "G2",
+  "scores": {
+   "R1": 2.81,
+   "R2": 2.81,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 2.81,
+   "R9": 2.81
+  },
+  "notes": "R1,R2,R8,R9 omit DataStoreKeyInfo arg"
+ },
+ {
+  "id": "G3",
+  "scores": {
+   "R1": 1.33,
+   "R2": 1.33,
+   "R3": 1.33,
+   "R4": 1.33,
+   "R5": 1.33,
+   "R6": 1.33,
+   "R7": 1.33,
+   "R8": 1.33,
+   "R9": 1.33
+  },
+  "notes": "none state general rule that all remote args are attacker-controlled"
+ },
+ {
+  "id": "G4",
+  "scores": {
+   "R1": 2.5,
+   "R2": 2.5,
+   "R3": 2.5,
+   "R4": 2.5,
+   "R5": 2.5,
+   "R6": 2.5,
+   "R7": 2.5,
+   "R8": 2.5,
+   "R9": 2.5
+  },
+  "notes": "none mention batch-before-physics or Transform-over-C0 recommendation explicitly"
+ },
+ {
+  "id": "G5",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2,
+   "R8": 2,
+   "R9": 2
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "G6",
+  "scores": {
+   "R1": 1.5,
+   "R2": 1.88,
+   "R3": 1.88,
+   "R4": 1.63,
+   "R5": 1.25,
+   "R6": 1.5,
+   "R7": 1.88,
+   "R8": 1.88,
+   "R9": 1.75
+  },
+  "notes": "alternatives/caveats and glTF note vary"
+ },
+ {
+  "id": "G7",
+  "scores": {
+   "R1": 0.17,
+   "R2": 2,
+   "R3": 2,
+   "R4": 0.17,
+   "R5": 2,
+   "R6": 0.17,
+   "R7": 0.17,
+   "R8": 0.17,
+   "R9": 2
+  },
+  "notes": "R1,R4,R6,R7,R8 wrongly claim Apply Modifiers bakes Armature (-1)"
+ },
+ {
+  "id": "G8",
+  "scores": {
+   "R1": 2,
+   "R2": 1.75,
+   "R3": 2,
+   "R4": 1.75,
+   "R5": 1.75,
+   "R6": 2,
+   "R7": 2,
+   "R8": 2,
+   "R9": 2
+  },
+  "notes": "R2,R4,R5 omit DeviceSafeInsets distinction"
+ },
+ {
+  "id": "T1",
+  "scores": {
+   "R1": 4,
+   "R2": 4,
+   "R3": 4,
+   "R4": 4,
+   "R5": 4,
+   "R6": 4,
+   "R7": 4,
+   "R8": 4,
+   "R9": 4
+  },
+  "notes": "all meet checklist"
+ },
+ {
+  "id": "T2",
+  "scores": {
+   "R1": 4,
+   "R2": 3.75,
+   "R3": 3.75,
+   "R4": 4,
+   "R5": 3,
+   "R6": 4,
+   "R7": 3.5,
+   "R8": 3.75,
+   "R9": 3.75
+  },
+  "notes": "BindToClose parallel/30s detail varies; R5 'release and nil or X' never releases lock"
+ },
+ {
+  "id": "T3",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3,
+   "R8": 3,
+   "R9": 3
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "T4",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2,
+   "R8": 2,
+   "R9": 2
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "T5",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2,
+   "R8": 2,
+   "R9": 2
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "T6",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2,
+   "R8": 2,
+   "R9": 2
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "T7",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2,
+   "R8": 2,
+   "R9": 2
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "T8",
+  "scores": {
+   "R1": 1.5,
+   "R2": 1.5,
+   "R3": 1.25,
+   "R4": 1.75,
+   "R5": 1.5,
+   "R6": 0,
+   "R7": 0,
+   "R8": 1.5,
+   "R9": 0
+  },
+  "notes": "R6,R7,R9 miss MeshStreamingAndImprovedLoDs; R7 claims Precise keeps full detail (wrong)"
+ }
+]

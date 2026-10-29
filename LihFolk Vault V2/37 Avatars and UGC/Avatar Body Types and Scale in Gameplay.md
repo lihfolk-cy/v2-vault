@@ -241,7 +241,7 @@ Whatever you choose, **tell players**. A short line in the settings or loading s
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Modeling Characters for R15 and Custom Rigs]] · Links - Custom characters and avatars · UGC Avatar Items and Accessories · Links - Avatars and UGC · Proportion Exaggeration and Gameplay Distance · Layered Clothing Cages and Animation
+[[Modeling Characters for R15 and Custom Rigs]] · Official Docs - Characters and Animation · UGC Avatar Items and Accessories · Official Docs - Asset Creation · Proportion Exaggeration and Gameplay Distance · Layered Clothing Cages and Animation
 <!-- auto-links:end -->
 
 <!-- related:start -->

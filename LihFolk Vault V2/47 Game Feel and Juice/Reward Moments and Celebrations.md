@@ -334,5 +334,5 @@ Big reward moments combine the things that cause problems: flashes, shakes, loud
 
 <!-- related:start -->
 ## Related
-[[Hit-Stop and Screen Shake Tuning by Numbers]] · [[Simulator and RNG Genre Teardown]] · [[Pity Timer]] · [[Comfort Toggles - Flashes Damage Numbers and Hit-Stop]] · [[Drop Tables Rarity and Pity Systems]] · [[Input Responsiveness Buffering and Coyote Time]]
+[[Hit-Stop and Screen Shake Tuning by Numbers]] · [[Simulator and RNG Genre Teardown]] · [[Comfort Toggles - Flashes Damage Numbers and Hit-Stop]] · [[Pity Timer]] · [[Drop Tables Rarity and Pity Systems]] · [[Input Responsiveness Buffering and Coyote Time]]
 <!-- related:end -->

@@ -12,7 +12,7 @@ tags: [ui, design-system, lihfolk-ui, simulator, cartoon, menus, hud, type/guide
 > - Each window has a theme, an icon, one `go` action and a `defaultSelection`.
 > - Server owns every outcome; placeholders replaced.
 >
-> Cost: TL;DR ~150 tok · whole note ~1.9k tok. Read more: ## 1. The look: Ink and Candy · ## 3. How to use it · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~2.0k tok. Read more: ## 1. The look: Ink and Candy · ## 3. How to use it · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 **LihFolk UI** is LihFolk's own design system for cartoon and simulator Roblox games. It comes with a typed Luau kit: theme tokens, components, a window controller and an icon registry. There are ready examples for the five menus every simulator needs (Shop, Codes, Rebirth, Settings, Daily Rewards) plus a buttons showcase. The skill that applies it is `skills/lihfolk-ui/` in the plugin. The exact numbers are in [[LihFolk UI Spec]].
@@ -119,5 +119,5 @@ License: this note is CC BY 4.0 (LihFolk). The LihFolk UI code is free to use an
 
 <!-- related:start -->
 ## Related
-[[UI Asset Pipeline]] · [[UI Style Directions - A Visual Vocabulary for Briefs]] · [[Accessibility Contrast]] · [[Cookbook - UI]] · [[Glossy Icon Style - Owner Reference]] · [[HUD Design]]
+[[Designing Roblox UI in Figma - Frames, Safe Areas and Tokens]] · [[UI Asset Pipeline]] · [[UI Style Directions - A Visual Vocabulary for Briefs]] · [[Settings Menu Design for Roblox - Layout, Controls and Motion]] · [[Figma to Roblox UI - Pipeline and Handoff]] · [[Glossy Icon Style - Owner Reference]]
 <!-- related:end -->

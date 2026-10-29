@@ -5,14 +5,14 @@ tags: [luau, metatables, oop, architecture, composition, typing, type/guide, are
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
-> - Methods missing after a save/load or remote: Metatable dropped -> Plain data at boundaries; rebuild objects
+> - Methods missing after a save/load, remote or Bindable: Arguments copied, metatable dropped -> Plain data at boundaries; rebuild objects
 > - Subclass explosion: Inheritance for variation -> Composition + data rows
 > - Change events miss nested writes: `__newindex` proxy only sees top level -> Explicit mutation functions
+> - Shared objects live in required ModuleScripts; requires are one-way (cyclic require hangs), and no bindable crossings.
 > - Saved and networked state is plain data, not class instances.
 > - Singletons are modules, not classes.
-> - Classes are used for many-instance or resource-owning objects only.
 >
-> Cost: TL;DR ~160 tok · whole note ~5.0k tok. Read more: ## 1. Four ways to model a thing · ## 4. Metamethod tricks: clever, and what they cost · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~5.2k tok. Read more: ## 4. Metamethod tricks: clever, and what they cost · ## 5. Lifecycle: where OOP goes wrong in Roblox · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Tables Metatables and OOP]] teaches the mechanics: metamethods, the class idiom, inheritance, weak tables, and what happens to tables at Roblox boundaries. This note is about judgement. It compares the four ways of modelling "things" in Luau (metatable classes, closure objects, plain data with module functions, and structure-of-arrays or [[Entity Component System|ECS]]), shows where each one wins and where it hurts, covers the metamethod tricks that look clever and cause bugs (proxies, `__newindex` tracking, operator overloading), and finishes with lifecycle, typing and serialisation, which is where most OOP pain in Roblox games really comes from.
@@ -314,6 +314,8 @@ How to spot lifecycle bugs: memory grows on long servers ([[Memory Budgets and L
 
 ---
 
+BindableEvent and BindableFunction arguments are copied, not referenced: the receiver gets a new table without its metatable, non-string keys become strings and mixed array/dictionary tables can lose items. `BindableFunction:Invoke` also yields until a handler returns and never resumes if none is set. Share live objects by requiring a ModuleScript instead (it runs once per side and every `require` returns the same value), and keep dependencies one-directional, because a cyclic `require` hangs rather than erroring.
+
 ## 6. Typing classes in strict mode
 
 The common strict-mode pattern from [[Tables Metatables and OOP]] (`typeof(setmetatable({} :: Fields, Class))`) works, with known friction:
@@ -371,7 +373,7 @@ Question: "We need a reusable dialog widget with open, close, animations and but
 
 | Symptom | Cause | Fix |
 |---|---|---|
-| Methods missing after a save/load or remote | Metatable dropped | Plain data at boundaries; rebuild objects |
+| Methods missing after a save/load, remote or Bindable | Arguments copied, metatable dropped | Plain data at boundaries; rebuild objects |
 | Subclass explosion | Inheritance for variation | Composition + data rows |
 | Change events miss nested writes | `__newindex` proxy only sees top level | Explicit mutation functions |
 | `#t` is 0 on a proxy | Data lives in a hidden table | Add `__len`/`__iter`, or avoid proxies |
@@ -382,6 +384,7 @@ Question: "We need a reusable dialog widget with open, close, animations and but
 
 ## Checklist
 
+- [ ] Shared objects live in required ModuleScripts; requires are one-way (cyclic require hangs), and no bindable crossings.
 - [ ] Saved and networked state is plain data, not class instances.
 - [ ] Singletons are modules, not classes.
 - [ ] Classes are used for many-instance or resource-owning objects only.
@@ -397,10 +400,10 @@ Question: "We need a reusable dialog widget with open, close, animations and but
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - OOP and module design]] · [[Luau Performance and Native Codegen]] · Luau Garbage Collection and the Memory Model · Links - Luau language · Advanced Luau Start Here · Advanced Types - Generics and Type Functions
+[[Official Docs - Scripting and Luau]] · [[Luau Performance and Native Codegen]] · Luau Garbage Collection and the Memory Model · Advanced Luau Start Here · Advanced Types - Generics and Type Functions
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Luau Language Essentials]] · [[Instances Attributes and Tags]] · [[CollectionService Patterns]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Script Types and Run Context]] · [[Task Library Coroutines and Yielding]] · [[Parallel Luau and Actors]] · [[Error Handling and Retries]]
+[[Luau Language Essentials]] · [[Instances Attributes and Tags]] · [[CollectionService Patterns]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Task Library Coroutines and Yielding]] · [[Script Types and Run Context]] · [[Parallel Luau and Actors]] · [[Error Handling and Retries]]
 <!-- related:end -->

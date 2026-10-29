@@ -5,30 +5,29 @@ tags: [atlas, api, type/atlas, area/networking, area/ui, api/ProximityPrompt]
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
-> - `ProximityPrompt.GamepadKeyCode` defaults to `Enum.KeyCode.ButtonX` and `KeyboardKeyCode` to `E` (Roblox docs).
+> - `ProximityPrompt` shows the right key glyph per device and can be tapped on mobile.
+> - Player-chosen actions use `ProximityPrompt`; walk-into actions use `Touched`; areas use point tests or spatial queries.
 > - Egg model names match `PetConfig.Eggs` keys; each egg has a ProximityPrompt and a PrimaryPart.
 > - Avoid: Client-reported revives -> `ProximityPrompt.Triggered` with server checks.
-> - Run it in its own thread if the caller should not yield (a ProximityPrompt handler can spawn it).
 >
-> Cost: TL;DR ~140 tok · whole note ~800 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~820 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
 
-`ProximityPrompt.GamepadKeyCode` defaults to `Enum.KeyCode.ButtonX` and `KeyboardKeyCode` to `E` (Roblox docs). (from [[ProximityPrompt Gamepad Keys and the Hidden PlayerList Tab]])
+`ProximityPrompt` shows the right key glyph per device and can be tapped on mobile. (from [[Clickable and Interactive Parts - ClickDetector, ProximityPrompt and Touched]])
 
 API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build of 2026-10-27).
 
 ## Key facts
 
+- Player-chosen actions use `ProximityPrompt`; walk-into actions use `Touched`; areas use point tests or spatial queries. ([[Clickable and Interactive Parts - ClickDetector, ProximityPrompt and Touched]])
 - Egg model names match `PetConfig.Eggs` keys; each egg has a ProximityPrompt and a PrimaryPart. ([[Pet Hatching and Following End to End]])
 - Avoid: Client-reported revives -> `ProximityPrompt.Triggered` with server checks. ([[Downed, Revive and Bleed-Out States]])
-- Run it in its own thread if the caller should not yield (a ProximityPrompt handler can spawn it). ([[Instance Streaming]])
-- The pickup is a server-side `ProximityPrompt.Triggered` handler with a distance check, so there is no "I found entry X" remote to abuse (the same rule as Quest Chain System End to End). ([[Lore Delivery Without Walls of Text]])
 
 ## Mentioned in
 
-37 notes in 18 sections. The 25 most relevant are linked:
+41 notes in 19 sections. The 25 most relevant are linked:
 
 ### 02 Luau Scripting
 [[CollectionService Patterns]]
@@ -40,10 +39,7 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 [[Enemy and NPC Animation]]
 
 ### 09 Gameplay Systems
-[[Downed, Revive and Bleed-Out States]]
-
-### 10 Game Design and Genres
-[[Genre Playbook - Naval and Open-Sea Adventure]] · [[Genre Playbook - Puzzle and Escape Rooms]]
+[[Clickable and Interactive Parts - ClickDetector, ProximityPrompt and Touched]] · [[Downed, Revive and Bleed-Out States]]
 
 ### 12 Performance Testing and Debugging
 [[Client Zone Culling for Interiors and Cities]]
@@ -75,6 +71,9 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 ### 58 Player QoL and Game Tweaks
 [[Controller Support QoL]]
 
-Also mentioned in (not linked): Field Notes Start Here · Input - UserInputService and ContextActionService · Instanced Interiors - Pooled House and Room Copies for Many Players · Lobby and Hub Design · Mounts and Rideable Creatures · Network Ownership · Open Questions - Whole Vault · Remote Abuse Patterns and Rate Limiting in Practice · Replication Rules · Skill - Roblox Secure Remotes · Tutorial Step Design Patterns - Teach by Doing · World-Space UI - BillboardGui and SurfaceGui
+### 62 Engine Reference Cards
+[[ProximityPrompt - Engine Reference Card]]
+
+Also mentioned in (not linked): Engine Limits, Quotas and Defaults - Cheat Sheet · Engine Reference Cards Start Here · Field Notes Start Here · Genre Playbook - Naval and Open-Sea Adventure · Genre Playbook - Puzzle and Escape Rooms · Input - UserInputService and ContextActionService · Instanced Interiors - Pooled House and Room Copies for Many Players · Lobby and Hub Design · Mounts and Rideable Creatures · Network Ownership · Open Questions - Whole Vault · Remote Abuse Patterns and Rate Limiting in Practice · Replication Rules · Skill - Roblox Secure Remotes · Tutorial Step Design Patterns - Teach by Doing · World-Space UI - BillboardGui and SurfaceGui
 
 <!-- atlas:generated -->

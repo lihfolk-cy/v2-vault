@@ -255,10 +255,10 @@ The companion note [[Snippets - Camera Shake and FX]] covers implementation edge
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Camera Systems]] · Game Feel Start Here · Hit-Stop · Game Feel and Juice · Custom Character Controllers · Links - Cameras · [[Animation Start Here]]
+[[Camera Systems]] · Game Feel Start Here · Hit-Stop · Game Feel and Juice · Custom Character Controllers · Official Docs - Input and Controls · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Layering Camera Feedback on the Default Camera]] · [[Ability Kits Architecture]] · [[VFX Timing with Animation]] · [[Boss Animation and Phases]] · [[Combat Combo Systems]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]] · [[Procedural Death Knockdown and Hit Reactions]] · [[Custom Locomotion Controller Design]]
+[[Layering Camera Feedback on the Default Camera]] · [[VFX Timing with Animation]] · [[Ability Kits Architecture]] · [[Boss Animation and Phases]] · [[Combat Combo Systems]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]] · [[Procedural Death Knockdown and Hit Reactions]] · [[Custom Locomotion Controller Design]] · [[Enemy and NPC Animation]]
 <!-- related:end -->

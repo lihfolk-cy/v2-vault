@@ -149,10 +149,10 @@ Everything that used to listen to Animator signals must listen to the Lua player
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Engine Gotchas]] · [[AnimationTrack Reference]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Animation Objects]] · [[Links - Animation playback]] · AI Animation and Motion from Video · [[Animation Start Here]]
+[[Engine Gotchas]] · [[AnimationTrack Reference]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Animation Objects]] · [[Official Docs - Characters and Animation]] · AI Animation and Motion from Video · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Authoring Clips in Code]] · [[Publishing Animations]] · [[Animation Glossary]] · [[Animation Data from Blender to Roblox]] · [[Animator Deep Dive]] · [[Debugging Animation Problems]] · [[Snippets - Building and Sampling Clips]] · [[Troubleshooting Table]]
+[[Authoring Clips in Code]] · [[Publishing Animations]] · [[Animation Glossary]] · [[Animation Data from Blender to Roblox]] · [[Animator Deep Dive]] · [[Snippets - Building and Sampling Clips]] · [[Debugging Animation Problems]] · [[Troubleshooting Table]]
 <!-- related:end -->

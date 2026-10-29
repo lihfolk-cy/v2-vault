@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/animation, area/gameplay, api/LocalTranspare
 > - `hide`: set the part's (or a list of parts') `LocalTransparencyModifier` to 1.
 > - Hide them with `LocalTransparencyModifier` (per-client, does not replicate, does not fight other scripts that set `Transparency`).
 >
-> Cost: TL;DR ~160 tok · whole note ~490 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~160 tok · whole note ~520 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ API snapshot: member of `BasePart`, `Beam`, `Decal`, `Explosion` and 5 more (`_t
 
 ## Mentioned in
 
-10 notes in 5 sections. The 10 most relevant are linked:
+12 notes in 6 sections. The 12 most relevant are linked:
 
 ### 08 Animation
 [[Accessories and Armor That Follow Animation]] · [[Enemy Animation State Protocol]] · [[Equip Draw and Flourish Systems]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]] · [[Procedural Death Knockdown and Hit Reactions]] · [[Procedural Weapon Motion]]
@@ -44,5 +44,8 @@ API snapshot: member of `BasePart`, `Beam`, `Decal`, `Explosion` and 5 more (`_t
 
 ### 51 2D Game Development
 [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]]
+
+### 62 Engine Reference Cards
+[[BasePart - Engine Reference Card]] · [[ParticleEmitter - Engine Reference Card]]
 
 <!-- atlas:generated -->

@@ -123,5 +123,5 @@ If you replaced the list with your own leaderboard, bind Tab to that instead. Ei
 
 <!-- related:start -->
 ## Related
-[[Hold-to-Attack Input That Never Sticks]] · [[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[Shared Close Buttons and Headers Across Many Screens]] · [[Centre-Screen Announcements That Stay Centred]] · [[Springs That Survive Long Frames - dt Clamps and NaN Guards]] · [[Layering Camera Feedback on the Default Camera]] · [[A Stuck Player Watchdog That Logs the Cause]] · [[Moving Data Out of a Play Session]]
+[[ProximityPrompt - Engine Reference Card]] · [[Clickable and Interactive Parts - ClickDetector, ProximityPrompt and Touched]] · [[Controller Support QoL]] · [[Onboarding Accessibility and Cross-Device Prompts]] · [[Hold-to-Attack Input That Never Sticks]] · [[Input - UserInputService and ContextActionService]]
 <!-- related:end -->

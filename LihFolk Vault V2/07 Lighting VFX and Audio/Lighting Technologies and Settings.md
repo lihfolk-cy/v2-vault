@@ -5,14 +5,14 @@ tags: [lighting, rendering, environment, settings, performance, type/guide, area
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
+> - `Lighting.Technology` set by script errors: `Technology` deprecated, not scriptable -> Studio: Future=Realistic+Prioritize on, Voxel=Soft+off
 > - Fog settings do nothing: An `Atmosphere` is in `Lighting` (fog properties are hidden and... -> Use `Atmosphere.Density`/`Haze` instead, or remove the Atmosphere.
 > - Indoors is as bright as outdoors: `GlobalShadows` off, or `Ambient` channels above `OutdoorAmbient` -> Turn shadows on; keep `Ambient` at or below `OutdoorAmbient` per...
-> - Light leaks through walls: Voxel-style path with walls under 4 studs thick -> Thicker or doubled walls, or a shadow-map path.
+> - Old `Technology` mapped: Future = Realistic + Prioritize on, ShadowMap = Soft + on, Voxel = Soft + off.
 > - `LightingStyle` and `PrioritizeLightingQuality` chosen deliberately, not inherited from a template.
 > - `GlobalShadows` on unless the art style needs it off; interiors sealed and thick enough.
-> - `Ambient` at or below `OutdoorAmbient` in every channel.
 >
-> Cost: TL;DR ~220 tok · whole note ~5.1k tok. Read more: ## 1. Technology is deprecated: what replaced it · ## 3. The global properties, one by one · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~240 tok · whole note ~5.2k tok. Read more: ## 1. Technology is deprecated: what replaced it · ## 3. The global properties, one by one · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 The `Lighting` service decides how every pixel of your world is shaded: which shading path the renderer uses, how bright the sun is, what colour the shadows take, how far players can see when their device is struggling, and what "indoors" means. Most lighting problems people bring to a forum ("my game looks flat", "light leaks through the wall", "it looks great in Studio and grey on my phone", "shadows vanished") come from four or five properties and one deprecated setting that still appears in every old tutorial.
@@ -225,6 +225,7 @@ Usage: `local s = LightingSnapshot.take()` before the preview, `LightingSnapshot
 
 | Symptom | Cause | Fix |
 |---|---|---|
+| `Lighting.Technology` set by script errors | `Technology` deprecated, not scriptable | Studio: Future=Realistic+Prioritize on, Voxel=Soft+off |
 | Fog settings do nothing | An `Atmosphere` is in `Lighting` (fog properties are hidden and ignored) | Use `Atmosphere.Density`/`Haze` instead, or remove the Atmosphere. |
 | Indoors is as bright as outdoors | `GlobalShadows` off, or `Ambient` channels above `OutdoorAmbient` | Turn shadows on; keep `Ambient` at or below `OutdoorAmbient` per channel. |
 | Light leaks through walls | Voxel-style path with walls under 4 studs thick | Thicker or doubled walls, or a shadow-map path. |
@@ -238,6 +239,7 @@ Usage: `local s = LightingSnapshot.take()` before the preview, `LightingSnapshot
 
 ## Checklist
 
+- [ ] Old `Technology` mapped: Future = Realistic + Prioritize on, ShadowMap = Soft + on, Voxel = Soft + off.
 - [ ] `LightingStyle` and `PrioritizeLightingQuality` chosen deliberately, not inherited from a template.
 - [ ] `GlobalShadows` on unless the art style needs it off; interiors sealed and thick enough.
 - [ ] `Ambient` at or below `OutdoorAmbient` in every channel.
@@ -251,10 +253,10 @@ See also: [[Atmosphere Sky Clouds and Post-Processing]], [[Light Sources and Sha
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Stylized Lighting Recipes]] · [[Lighting Untextured Art in Roblox]] · Links - Lighting · Baking Lighting and Detail into Textures · Voxel Shading - Baked AO Edges and Lighting · Stylised vs Realistic Material Pipelines
+[[Stylized Lighting Recipes]] · [[Lighting Untextured Art in Roblox]] · Official Docs - Building and World · Baking Lighting and Detail into Textures · Voxel Shading - Baked AO Edges and Lighting · Stylised vs Realistic Material Pipelines
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Voxel Shading - Baked AO Edges and Lighting]] · [[Baking Lighting and Detail into Textures]] · [[Weather System Architecture - State Machine, Transitions and Replication]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Particle Emitters In Depth]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[VFX Performance Budgets and Culling]]
+[[Voxel Shading - Baked AO Edges and Lighting]] · [[Baking Lighting and Detail into Textures]] · [[Weather System Architecture - State Machine, Transitions and Replication]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Particle Emitters In Depth]] · [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[VFX Performance Budgets and Culling]]
 <!-- related:end -->

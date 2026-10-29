@@ -257,10 +257,10 @@ See also: [[Sound Fundamentals]], [[The Audio API - Players Emitters Wires and E
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Audio Pipeline]] · [[Combat Sound Design and Feedback]] · Links - Spatial audio · Captions and Audio Accessibility · Resource Library - Audio · AI Audio - Voice Music and SFX
+[[Audio Pipeline]] · [[Combat Sound Design and Feedback]] · Official Docs - Audio · Captions and Audio Accessibility · AI Audio - Voice Music and SFX
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Audio Mixer Settings with SoundGroups]] · [[Engine and Tyre Audio Driven by RPM and Slip]] · [[Captions and Audio Accessibility]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[Music Licensing and Audio Upload Rules for 2026]]
+[[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Audio Mixer Settings with SoundGroups]] · [[SoundService - Engine Reference Card]] · [[Engine and Tyre Audio Driven by RPM and Slip]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[Music Licensing and Audio Upload Rules for 2026]]
 <!-- related:end -->

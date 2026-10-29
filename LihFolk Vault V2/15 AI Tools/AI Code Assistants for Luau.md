@@ -236,10 +236,10 @@ Models often know an obscure API correctly. Do not reject unfamiliar code on ins
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI in Roblox Development Overview]] · [[Studio Assistant and AI Tools]] · Roblox Studio MCP Server · Code Review for Luau Teams · Links - External tooling · Safety Rules for AI Agents in Studio
+[[AI in Roblox Development Overview]] · [[Studio Assistant and AI Tools]] · Roblox Studio MCP Server · Code Review for Luau Teams · Official Docs - Studio and Tooling · Safety Rules for AI Agents in Studio
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[Roblox Studio MCP Server]] · [[What AI Models Get Wrong in Roblox]] · [[AI Pitfalls - Stale APIs and Luau]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[Windows Tooling Pitfalls for Agent Pipelines]] · [[Evaluating AI Tools - A Practical Rubric]] · [[Agent Orchestration - Sub-Agents, Hooks and Skill Costs]] · [[In-Game AI - LLM NPCs and Text Generation]]
+[[Local vs Cloud AI - Keeping Unreleased Game Code Private]] · [[Roblox Studio MCP Server]] · [[What AI Models Get Wrong in Roblox]] · [[Roblox Built-In AI Tools Timeline 2023-2026]] · [[AI Pitfalls - Stale APIs and Luau]] · [[Evaluating AI Tools - A Practical Rubric]] · [[Windows Tooling Pitfalls for Agent Pipelines]] · [[Agent Orchestration - Sub-Agents, Hooks and Skill Costs]] · [[In-Game AI - LLM NPCs and Text Generation]]
 <!-- related:end -->

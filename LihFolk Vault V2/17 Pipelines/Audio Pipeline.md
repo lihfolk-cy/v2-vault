@@ -294,7 +294,7 @@ Numbers make sounds consistent; only ears make them right. Listen on phone speak
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Combat Sound Design and Feedback]] · Resource Library - Audio · Asset Pipelines · Links - Audio creation and uploading · Links - Music and ambience · Captions and Audio Accessibility
+[[Combat Sound Design and Feedback]] · Official Docs - Audio · Asset Pipelines · Official Docs - Asset Creation · Captions and Audio Accessibility
 <!-- auto-links:end -->
 
 <!-- related:start -->

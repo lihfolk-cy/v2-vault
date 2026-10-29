@@ -417,7 +417,7 @@ See [[Case Study - Instance Cleanup and Place Size]] and [[Safe Changes in a Sha
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Hunting Memory Leaks Step by Step]] · [[Luau Garbage Collection and the Memory Model]] · Links - Memory leaks and cleanup · [[Performance Fundamentals]] · Functions Closures and Upvalues · Instance Count
+[[Hunting Memory Leaks Step by Step]] · [[Luau Garbage Collection and the Memory Model]] · Official Docs - Performance · [[Performance Fundamentals]] · Functions Closures and Upvalues · Instance Count
 <!-- auto-links:end -->
 
 <!-- related:start -->

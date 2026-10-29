@@ -371,7 +371,7 @@ Use cheat tooling to reach states quickly; route cheats through the same APIs pl
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Automated Testing with TestEZ and Jest-Lua]] · [[Code Pipeline - Rojo Git and CI]] · MCP Workflows for Scripting and Debugging · Build Test and Release Pipeline · Links - Testing · Dependency Injection in Luau
+[[Automated Testing with TestEZ and Jest-Lua]] · [[Code Pipeline - Rojo Git and CI]] · MCP Workflows for Scripting and Debugging · Build Test and Release Pipeline · Official Docs - Studio and Tooling · Dependency Injection in Luau
 <!-- auto-links:end -->
 
 <!-- related:start -->

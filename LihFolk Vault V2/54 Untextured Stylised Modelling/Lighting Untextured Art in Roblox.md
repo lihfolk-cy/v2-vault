@@ -228,7 +228,7 @@ Delete or move the look-dev folder out of the published place (for example to `S
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Baking Lighting and Detail into Textures]] · Voxel Shading - Baked AO Edges and Lighting · Bevels Chamfers and Edge Highlights Without Textures · Hand-Painted and Stylized Texturing · Voxel Palettes - Ramps Hue Shifting and Limits · Links - Lighting
+[[Baking Lighting and Detail into Textures]] · Voxel Shading - Baked AO Edges and Lighting · Bevels Chamfers and Edge Highlights Without Textures · Hand-Painted and Stylized Texturing · Voxel Palettes - Ramps Hue Shifting and Limits · Official Docs - Building and World
 <!-- auto-links:end -->
 
 <!-- related:start -->

@@ -767,7 +767,7 @@ Profile with many players swinging using [[MicroProfiler Guide]]; `GetPartBounds
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Combat]] · Genre Playbook - Battlegrounds and Arena Fighters · Hit-Stop · Anti-Exploit Start Here · Combat Animation Craft · Server Authority
+[[Official Docs - Game Systems]] · Genre Playbook - Battlegrounds and Arena Fighters · Hit-Stop · Anti-Exploit Start Here · Combat Animation Craft · Server Authority
 <!-- auto-links:end -->
 
 <!-- related:start -->

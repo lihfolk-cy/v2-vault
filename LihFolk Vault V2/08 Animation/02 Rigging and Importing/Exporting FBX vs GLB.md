@@ -5,14 +5,14 @@ tags: [export, blender, fbx, gltf, glb, import, type/guide, area/animation, leve
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
+> - Avoid: Default FBX export, or two scale fixes stacked -> Apply Scalings: FBX Unit Scale, other scales 1.0; or GLB, which...
+> - Avoid: GLB with Apply Modifiers off (default) -> Turn it on (Armature is skipped; shape keys then do not export) or...
 > - Avoid: Leaf bones left on (FBX) -> Add Leaf Bones off
-> - Avoid: Optimize Animation Size on (glTF) -> Turn it off, or key all bones explicitly
-> - Avoid: Simplify left at default (FBX) -> Simplify 0
 > - Transforms applied (scale 1, rotation 0) on armature and meshes; root at the origin.
 > - Faces -Y, final stud height, feet on Z = 0.
 > - Weights limited to 4 and normalised; no zero-weight vertices.
 >
-> Cost: TL;DR ~140 tok · whole note ~3.7k tok. Read more: ## 3. GLB export: settings and the reasons for them · ## 4. FBX export: settings and the reasons for them · ## 7. Pre-export checklist · ## Common mistakes
+> Cost: TL;DR ~170 tok · whole note ~3.8k tok. Read more: ## 3. GLB export: settings and the reasons for them · ## 4. FBX export: settings and the reasons for them · ## 7. Pre-export checklist · ## Common mistakes
 <!-- tldr:end -->
 
 Studio's 3D Importer reads `.fbx`, `.gltf` / `.glb` and `.obj` (Roblox docs). FBX and glTF both carry multiple meshes, PBR textures, cage meshes, rigs, avatar components, animation data and vertex colours. So the choice is not "which one works" but "which one fails in ways you can control". This note compares them as they behave on the Blender to Roblox route, lists the export settings that matter and why, and records what one production game measured.
@@ -51,7 +51,7 @@ The reference project exported every creature with the same keyword set from bac
 | Format | glTF Binary (.glb) | One self-contained file |
 | Include > Selected Objects | on | Export exactly the rig and its meshes; nothing else in the scene leaks in |
 | Transform > +Y Up | on | glTF convention; the importer expects it |
-| Mesh > Apply Modifiers | off, apply them yourself first | Deterministic geometry; the Armature modifier must not be "applied" |
+| Mesh > Apply Modifiers | off here, with geometry modifiers applied by hand first; on is fine for rigs without shape keys | Off by default, which drops Mirror, Bevel and the rest. On applies every modifier except Armature (skinning still exports) but stops shape keys from exporting |
 | Vertex Color | "Active" (or make the material use it) | Default "Material" silently drops vertex colours not wired into the material |
 | Materials | Export | Textures come along |
 | Armature > Use Rest Position | on (default) | Rest pose is the bind pose, not whatever frame the timeline sits on |
@@ -101,7 +101,7 @@ Roblox's documented Blender FBX steps, with the reasoning:
 | Setting | Value | Reason |
 |---|---|---|
 | Path Mode | Copy, with Embed Textures on | Textures travel inside the file |
-| Transform > Apply Scalings | FBX Unit Scale | Roblox docs' recommended scale handling. Alternatives in the docs: Transform Scale 0.01, or scene Unit Scale 0.01 (which the docs warn can cause camera and modifier problems) |
+| Transform > Apply Scalings | FBX Unit Scale | Roblox docs' recommended scale handling. Leave every other scale at 1.0. Alternatives in the docs: Transform Scale 0.01, or scene Unit Scale 0.01 (the docs warn it can cause Blender camera issues); use one method only |
 | Forward / Up | Z Forward, Y Up (Roblox Blender guide) | Matches the importer's World Forward "Front" / World Up "Top" |
 | Armature > Add Leaf Bones | **off** | Otherwise every chain gets an extra `_end` bone in Roblox |
 | Armature > Only Deform Bones | on when you have control bones | Same reason as glTF |
@@ -152,6 +152,8 @@ If you build clips from your own exported data instead (recommended for anything
 
 | Mistake | On screen | Fix |
 |---|---|---|
+| Default FBX export, or two scale fixes stacked | Model about 100x too big in Studio | Apply Scalings: FBX Unit Scale, other scales 1.0; or GLB, which needs no scale setting |
+| GLB with Apply Modifiers off (default) | Mirror, Bevel, Solidify missing | Turn it on (Armature is skipped; shape keys then do not export) or apply by hand |
 | Leaf bones left on (FBX) | Extra `_end` bones; clip joint counts off; bone-count budgets blown | Add Leaf Bones off |
 | Optimize Animation Size on (glTF) | A still limb in one clip is overridden by another track in game | Turn it off, or key all bones explicitly |
 | Simplify left at default (FBX) | Snappy hits feel soft; contact frames drift | Simplify 0 |
@@ -170,5 +172,5 @@ If you build clips from your own exported data instead (recommended for anything
 
 <!-- related:start -->
 ## Related
-[[AI Pitfalls - Assets and Import]] · [[Bones and Skinned Meshes]] · [[Creature Rig Conventions]] · [[Blender Workflow for Roblox Creators]] · [[Retargeting Animations Between Rigs]] · [[Weapon Design Rig Builder]] · [[Layered Clothing Cages and Animation]] · [[Animation Editor Advanced]] · [[LihFolk R15 Keyframe Pipeline]] · [[Custom Characters and StarterCharacter]]
+[[AI Pitfalls - Assets and Import]] · [[Blender Workflow for Roblox Creators]] · [[Bones and Skinned Meshes]] · [[Creature Rig Conventions]] · [[Retargeting Animations Between Rigs]] · [[Weapon Design Rig Builder]] · [[Layered Clothing Cages and Animation]] · [[Animation Editor Advanced]] · [[Custom Characters and StarterCharacter]] · [[LihFolk R15 Keyframe Pipeline]]
 <!-- related:end -->

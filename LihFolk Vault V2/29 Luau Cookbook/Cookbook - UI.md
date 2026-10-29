@@ -433,10 +433,10 @@ end
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Safe Area]] · Skill - Roblox UI Builder · Links - UI elements · LihFolk UI Design System · Plugin UI with DockWidgets · UI and GUI Animation
+[[Safe Area]] · Skill - Roblox UI Builder · Official Docs - UI · LihFolk UI Design System · Plugin UI with DockWidgets · UI and GUI Animation
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[AI Pitfalls - UI and Input]] · [[UI Scale HUD Hide and Compact Mode]] · [[Mobile Button Layout Editor]] · [[Cookbook - Players and Characters]] · [[Cookbook - Data and Saving]] · [[Cookbook - Math CFrame and Vectors]]
+[[AI Pitfalls - UI and Input]] · [[Settings Menu Design for Roblox - Layout, Controls and Motion]] · [[UI Scale HUD Hide and Compact Mode]] · [[Cookbook - Data and Saving]] · [[Cookbook - Players and Characters]] · [[Cookbook - Math CFrame and Vectors]]
 <!-- related:end -->

@@ -418,10 +418,10 @@ Signs you went too far: a type alias needs a comment longer than the function it
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Luau language]] · Tables Metatables and OOP · Dependency Injection in Luau · Functions Closures and Upvalues · Luau Performance and Native Codegen · Testing Your Own Remotes - Fuzzing and Abuse Tests
+[[Official Docs - Scripting and Luau]] · Tables Metatables and OOP · Dependency Injection in Luau · Functions Closures and Upvalues · Luau Performance and Native Codegen · Testing Your Own Remotes - Fuzzing and Abuse Tests
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Tables Metatables and OOP]] · [[Functions Closures and Upvalues]] · [[Dependency Injection in Luau]] · [[Module Scripts and Requiring]] · [[Custom Schedulers and Coroutine Patterns]] · [[Luau Garbage Collection and the Memory Model]]
+[[Tables Metatables and OOP]] · [[Functions Closures and Upvalues]] · [[Module Scripts and Requiring]] · [[Dependency Injection in Luau]] · [[Custom Schedulers and Coroutine Patterns]] · [[Luau Garbage Collection and the Memory Model]]
 <!-- related:end -->

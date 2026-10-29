@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/animation, area/gameplay]
 > - Living player dies the instant the ragdoll starts: neck joint disabled with `RequiresNeck = true` -> set it false first.
 > - Ragdoll stands back up or slides around: Humanoid still in a normal state -> `Physics` state on the owner, or...
 >
-> Cost: TL;DR ~140 tok · whole note ~810 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~840 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -22,10 +22,11 @@ Ragdolls are physics assemblies, and physics scales badly. One R15 ragdoll adds 
 - Avoid: Leaving the Animator playing locomotion during the ragdoll (limbs fight physics or the body slides). ([[Snippets - Ragdoll]])
 - Living player dies the instant the ragdoll starts: neck joint disabled with `RequiresNeck = true` -> set it false first. ([[Ragdolls and Physics-Based Animation]])
 - Ragdoll stands back up or slides around: Humanoid still in a normal state -> `Physics` state on the owner, or `EvaluateStateMachine = false` ([[Ragdolls and Physics-Based Animation]])
+- Set BreakJointsOnDeath false for ragdolls. ([[Humanoid - Engine Reference Card]])
 
 ## Mentioned in
 
-51 notes in 20 sections. The 25 most relevant are linked:
+52 notes in 21 sections. The 25 most relevant are linked:
 
 ### 03 Architecture and Networking
 [[Network Ownership]]
@@ -57,9 +58,9 @@ Ragdolls are physics assemblies, and physics scales badly. One R15 ragdoll adds 
 ### 59 Viral and Trend Game Teardowns
 [[Teardown - Fling Things and People]]
 
-### 60 High-Craft Game Teardowns
-[[Teardown - Jujutsu Shenanigans]]
+### 62 Engine Reference Cards
+[[Humanoid - Engine Reference Card]]
 
-Also mentioned in (not linked): 00 Start Here · A Stuck Player Watchdog That Logs the Cause · Animation LOD · Animation Start Here · Avatar Body Types and Scale in Gameplay · Characters and Humanoids · Choosing GUI 2D or Locked-Camera 2.5D · Custom Characters and StarterCharacter · Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations · Debugging Physics and Network Ownership · Genre QA Passes - Test Checklists per Game Type · Grabs, Carries and Throws - Moving Players Safely · Hit Reactions Stagger and Hit-Stop · Level Design Principles - Flow Sightlines and Landmarks · Locomotion Systems · Motor6D Math and CFrame Composition · Obby Checkpoints and Stage Saves End to End · Obby and Platforming Level Design · Physics and Vehicles Start Here · R15 Rig Anatomy and Attachments · Rigs and Joints · Ropes Chains and Soft Bodies · Server-Authoritative Freeze and Stun Timestamps · Skeleton Library · Snippets - Animation Controller Module · The Default Animate Script
+Also mentioned in (not linked): 00 Start Here · A Stuck Player Watchdog That Logs the Cause · Animation LOD · Animation Start Here · Avatar Body Types and Scale in Gameplay · Characters and Humanoids · Choosing GUI 2D or Locked-Camera 2.5D · Custom Characters and StarterCharacter · Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations · Debugging Physics and Network Ownership · Genre QA Passes - Test Checklists per Game Type · Grabs, Carries and Throws - Moving Players Safely · Hit Reactions Stagger and Hit-Stop · Level Design Principles - Flow Sightlines and Landmarks · Locomotion Systems · Motor6D Math and CFrame Composition · Obby Checkpoints and Stage Saves End to End · Obby and Platforming Level Design · Physics and Vehicles Start Here · R15 Rig Anatomy and Attachments · Rigs and Joints · Ropes Chains and Soft Bodies · Server-Authoritative Freeze and Stun Timestamps · Skeleton Library · Snippets - Animation Controller Module · Teardown - Jujutsu Shenanigans · The Default Animate Script
 
 <!-- atlas:generated -->

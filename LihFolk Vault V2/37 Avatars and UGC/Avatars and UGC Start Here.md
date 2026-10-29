@@ -49,5 +49,5 @@ Not confirmed as of October 2026, and flagged in the notes: whether `ApplyDescri
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Avatars and UGC]] · Commerce and Physical Goods · Links - Custom characters and avatars · 3D Importer Settings Reference · Links - Animation creation · Skinning Weights
+[[Official Docs - Asset Creation]] · Commerce and Physical Goods · Official Docs - Characters and Animation · 3D Importer Settings Reference · Skinning Weights
 <!-- auto-links:end -->

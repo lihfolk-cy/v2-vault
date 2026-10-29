@@ -285,10 +285,10 @@ The senior trade-off: cross-server features (global events, shouts, live config)
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Live Content Pipeline]] · Links - Cross-server messaging · Multiplayer Services Start Here · Experience Notifications and Return Prompts · Debugging DataStore Problems · Parties and Group Teleports
+[[Live Content Pipeline]] · Official Docs - Networking and Multiplayer · Multiplayer Services Start Here · Experience Notifications and Return Prompts · Debugging DataStore Problems · Parties and Group Teleports
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[RemoteEvents RemoteFunctions and Unreliable Remotes]] · [[Remote Abuse Patterns and Rate Limiting in Practice]] · [[Client-Server Model]] · [[Interest Management and Per-Player Replication]] · [[Replication Rules]] · [[Instance Streaming]] · [[Project Structure and Bootstrapping]] · [[Server Authority and Validation]]
+[[MessagingService - Engine Reference Card]] · [[RemoteEvents RemoteFunctions and Unreliable Remotes]] · [[Experience Notifications and Return Prompts]] · [[Parties and Group Teleports]] · [[Debugging DataStore Problems]] · [[Cookbook - Data and Saving]]
 <!-- related:end -->

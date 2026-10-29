@@ -152,5 +152,5 @@ Changing class mid-match: only at spawn points or between rounds; changing on th
 
 <!-- related:start -->
 ## Related
-[[HumanoidDescription and Outfit Systems]] · [[Cookbook - Players and Characters]] · [[Downed, Revive and Bleed-Out States]] · [[Tools and Inventory Systems]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers]] · [[Spawning Teams and Rounds]]
+[[HumanoidDescription and Outfit Systems]] · [[Downed, Revive and Bleed-Out States]] · [[Tools and Inventory Systems]] · [[Spawning Teams and Rounds]] · [[Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Combat Systems Architecture]]
 <!-- related:end -->

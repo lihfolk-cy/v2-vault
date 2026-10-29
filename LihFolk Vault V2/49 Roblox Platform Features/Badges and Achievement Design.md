@@ -5,14 +5,14 @@ tags: [platform-features, badges, achievements, badgeservice, progression, reten
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
+> - Avoid: Awarding without first confirming the badge is enabled... -> Fetch badge info once per server in `pcall`, cache it, skip and...
+> - Avoid: `BadgeService:AwardBadge` or `UserHasBadge` in new code -> `BadgeService:AwardBadgeAsync` and `UserHasBadgeAsync`, in...
 > - Avoid: Awarding from a LocalScript -> Award on the server
-> - Avoid: Awarding as the player teleports out -> Ledger first, pending retries on next join
-> - Avoid: `UserHasBadgeAsync` per badge on every join -> One `GetUserBadgesAsync` batch, then trust the ledger
-> - Ledger in saved data is the source of truth; badges are a mirror
-> - Every award is server-side and preceded by validation of the feat
-> - Pending awards retried with backoff and on next join
+> - Before each award: badge info cached and `IsEnabled` is true, plus a per-player debounce or `UserHasBadgeAsync` check so...
+> - Award succeeds only if the player is in this server, owns it not yet, and the badge is enabled and belongs to this experience.
+> - Awards call `BadgeService:AwardBadgeAsync` (renamed from `AwardBadge` January 14, 2026) from a server Script
 >
-> Cost: TL;DR ~160 tok · whole note ~5.8k tok. Read more: ## 1. What the platform gives you · ## 4. An award pipeline that does not lose badges · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~220 tok · whole note ~6.0k tok. Read more: ## 1. What the platform gives you · ## 4. An award pipeline that does not lose badges · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Badges are the one piece of your progression that leaves your game. A badge lands in the player's Roblox inventory, shows on their profile and stays there after they stop playing. That makes badges powerful (they are a public trophy and a reason to come back) and awkward (they cost money past a daily allowance, you cannot take them back, and the API that awards them has rules that bite at the worst moment). This note covers the platform facts, a two-layer model that separates badges from in-game achievements, rarity design, an award pipeline that never loses or double-awards a badge, and the failure modes that show up in live games.
@@ -371,6 +371,8 @@ The badge list on the game page is not enough; players should see progress where
 
 | Mistake | What you see | Fix |
 |---|---|---|
+| Awarding without first confirming the badge is enabled (`GetBadgeInfoAsync(badgeId).IsEnabled`) | Award quietly fails for disabled or retired event badges and retry loops keep calling | Fetch badge info once per server in `pcall`, cache it, skip and log disabled badges |
+| `BadgeService:AwardBadge` or `UserHasBadge` in new code | Deprecation warning in Script Analysis (still works) | `BadgeService:AwardBadgeAsync` and `UserHasBadgeAsync`, in `pcall`, on the server |
 | Awarding from a LocalScript | Nothing happens, no error you notice | Award on the server |
 | Awarding as the player teleports out | Random missing badges, "I beat it but no badge" reports | Ledger first, pending retries on next join |
 | `UserHasBadgeAsync` per badge on every join | Award calls fail at peak times | One `GetUserBadgesAsync` batch, then trust the ledger |
@@ -381,6 +383,9 @@ The badge list on the game page is not enough; players should see progress where
 | Cross-game badge gates for offline lookups | Players reported as not owning badges they own | Only check while the player is in the server |
 
 ## 9. Checklist
+- [ ] Before each award: badge info cached and `IsEnabled` is true, plus a per-player debounce or `UserHasBadgeAsync` check so repeated touches cannot spam the call.
+- [ ] Award succeeds only if the player is in this server, owns it not yet, and the badge is enabled and belongs to this experience.
+- [ ] Awards call `BadgeService:AwardBadgeAsync` (renamed from `AwardBadge` January 14, 2026) from a server Script
 - [ ] Ledger in saved data is the source of truth; badges are a mirror
 - [ ] Every award is server-side and preceded by validation of the feat
 - [ ] Pending awards retried with backoff and on next join
@@ -392,14 +397,14 @@ The badge list on the game page is not enough; players should see progress where
 - [ ] Badge art readable inside a circle at small sizes
 
 ## See also
-[[Platform Features Start Here]] · [[Progression Levels and Unlocks]] · [[Quests and Objectives]] · [[Retention and Return Hooks]] · [[Economy Resets and Seasonal Wipes]] · [[Session Locking and Profile Libraries]] · [[Server Authority and Validation]] · [[Analytics and Funnels]] · [[Links - Badges]]
+[[Platform Features Start Here]] · [[Progression Levels and Unlocks]] · [[Quests and Objectives]] · [[Retention and Return Hooks]] · [[Economy Resets and Seasonal Wipes]] · [[Session Locking and Profile Libraries]] · [[Server Authority and Validation]] · [[Analytics and Funnels]] · [[Official Docs - Publishing and Live Ops]]
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Quests and progression]] · Event Bus · Purchase Data and Receipts · Battle Pass and Season Design · OrderedDataStores and Leaderboards · Player Privacy and Data Deletion
+[[Official Docs - Game Systems]] · Event Bus · Purchase Data and Receipts · Battle Pass and Season Design · OrderedDataStores and Leaderboards · Player Privacy and Data Deletion
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Friend Invites Referrals and Experience Invites]] · [[Experience Notifications and Return Prompts]] · [[Subscriptions and Recurring Revenue]] · [[Engine and API Changes 2025-2026]] · [[Commerce and Physical Goods]] · [[Roblox Changes 2025-2026]] · [[Data and Cloud Changes 2025-2026]] · [[Discovery and Monetization Changes 2025-2026]]
+[[BadgeService - Engine Reference Card]] · [[API Renames and Deprecations 2025-2026]] · [[Engine and API Changes 2025-2026]] · [[Friend Invites Referrals and Experience Invites]] · [[Experience Notifications and Return Prompts]] · [[Daily Rewards System End to End]]
 <!-- related:end -->

@@ -131,7 +131,7 @@ Plugins run inside Studio with access to the whole data model. Before installing
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Animation Start Here]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Engine Gotchas]] · [[Keyframes, Easing and Interpolation]] · [[AI Animation and Motion from Video]] · Links - Animation creation
+[[Animation Start Here]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Engine Gotchas]] · [[Keyframes, Easing and Interpolation]] · [[AI Animation and Motion from Video]] · Official Docs - Asset Creation
 <!-- auto-links:end -->
 
 <!-- related:start -->

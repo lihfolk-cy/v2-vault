@@ -24,6 +24,7 @@ python "LihFolk Vault V2/_tools/vault.py" --paths "slash vfx"                   
 python "LihFolk Vault V2/_tools/vault.py" -k 5 --json "processreceipt"             # machine-readable
 python "LihFolk Vault V2/_tools/vault.py" --sections "DataStore Fundamentals"      # list a note's ## headings
 python "LihFolk Vault V2/_tools/vault.py" --read "DataStore Fundamentals" "UpdateAsync"   # print one section
+python "LihFolk Vault V2/_tools/vault.py" --api TeleportService.ReserveServer AwardBadge   # check API names against the dated snapshot
 ```
 
 Ranking is BM25F over each note's title, tags, TL;DR, headings, body and the `SYMPTOMS.md` lines that link to it. A small synonym map turns everyday words into vault vocabulary (lag → performance, save → datastore, buy → purchase). Link lists, short glossary notes and hubs are ranked below full explanations. The index is cached in `.cache/` (git-ignored) and rebuilt when any note changes. A cold run takes about 2 s, and a cached run about 0.3 s.
@@ -38,7 +39,7 @@ Ranking is BM25F over each note's title, tags, TL;DR, headings, body and the `SY
 | **test (held out)** | 30 | **77%** | **93%** | 0.84 | 60% |
 
 - **Baseline:** the same ranking on titles and tags only, which is roughly what grepping `INDEX_SLIM.md` finds.
-- **Cost per task:** an agent reads about 600 tokens of output: three TL;DRs and section lists without the callout and cost boilerplate, plus any symptom lines (`--full` is about 745, `--brief` about 400).
+- **Cost per task:** an agent reads about 570 tokens of output: three TL;DRs (repeats printed once), the top note's section list without the callout and cost boilerplate, plus any symptom lines (`--full` is about 745, `--brief` about 400).
 - **Older protocol:** grep the index, then read "Common mistakes" and "Checklist" from 2 notes. That costs about 1,600 tokens per task (see `--measure` below) and needs 3-5 tool calls instead of one.
 
 ## api_check.py: no made-up or deprecated APIs
@@ -76,13 +77,14 @@ This is a syntax and compile check. API names are `api_check.py`'s job, and ther
 
 ## consistency.py: notes agree with each other
 
-`FACTS` lists numbers many notes repeat:
-- DataStore value size;
-- default `WalkSpeed`, `JumpPower` and `Gravity`;
-- the HttpService budget and MemoryStore item size;
+`FACTS` lists 39 numbers many notes repeat:
+- DataStore value size, key/name/scope length (50) and `GetAsync` cache (4 s);
+- defaults: `WalkSpeed`, `JumpPower`, `JumpHeight`, `Gravity`, `RespawnTime`, streaming radii (64/1024), `FieldOfView` (70), TweenInfo easing (Quad), animation fade (0.1 s), health regen (1%/s), `Sound.Volume` (0.5);
+- service limits: HttpService budget, MemoryStore item size, key length (128) and max expiration (45 days), MessagingService message (1 kB / 1,024 chars) and topic (80 chars), `UnreliableRemoteEvent` payload (1,000 bytes; 900 as the vault's margin), `TeleportAsync` (50 players), TextChat metadata (200 chars), BanAsync reasons (400/1,000 chars);
+- engine limits: `MoveTo` timeout (8 s), collision groups (32), Raycast length (15,000 studs), Instance and attribute names (100 chars), WaitForChild warning (5 s), particle rate (400/s, 100 mobile), lifetime (20 s), flipbook framerate (30), mesh triangles (20,000), place size (100 MB);
 - the text stroke ratio.
 
-Every mention is compared with the agreed value. The first run found one real conflict: 3 notes recommended 8-15% text strokes without the limit of about 7% for rounded heavy fonts. Those notes now carry the limit and link to the Field Note. The script also flags "as of <month year>" stamps older than 12 months. All 900+ stamps are currently October 2026.
+The last 31 come from the Engine Limits cheat sheet and the `62 Engine Reference Cards`, verified against the Creator Hub docs on 2026-10-29. Every regex was checked against every hit in the vault and against a list of deliberately wrong statements. Every mention is compared with the agreed value. The first run found one real conflict: 3 notes recommended 8-15% text strokes without the limit of about 7% for rounded heavy fonts. Those notes now carry the limit and link to the Field Note. The script also flags "as of <month year>" stamps older than 12 months. All 900+ stamps are currently October 2026.
 
 ## build_index.py
 

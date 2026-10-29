@@ -6,10 +6,10 @@ tags: [atlas, concept, type/atlas, area/ai, area/pipelines]
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - MCP is the right pipe for decisions and small results (the agent asks, Studio answers in a few lines).
-> - Studio updated; MCP enabled; green indicator shows the client.
+> - Studio updated; Assistant > ... > Manage MCP Servers > Enable Studio as MCP server (local, stdio); green indicator shows the...
 > - Tool names checked against the current MCP tool list.
 >
-> Cost: TL;DR ~100 tok · whole note ~840 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~110 tok · whole note ~900 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -20,14 +20,14 @@ MCP is versioned by date (2024-11-05, 2025-03-26, 2025-06-18, 2025-11-25, 2026-0
 
 ## Key facts
 
-- Studio updated; MCP enabled; green indicator shows the client. ([[Roblox Studio MCP Server]])
+- Studio updated; Assistant > ... > Manage MCP Servers > Enable Studio as MCP server (local, stdio); green indicator shows the... ([[Roblox Studio MCP Server]])
 - Tool names checked against the current MCP tool list. ([[Roblox Built-In AI Tools Timeline 2023-2026]])
 - Spec: the MCP specification at modelcontextprotocol.io (revisions 2025-06-18 and 2026-07-28 were read for this note). ([[What Is MCP]])
 - `command` + `args` start a stdio server: the host launches this process and talks to it over stdin and stdout (What Is MCP). ([[Setting Up MCP Clients]])
 
 ## Mentioned in
 
-53 notes in 12 sections. The 25 most relevant are linked:
+56 notes in 14 sections. The 25 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[Studio Assistant and AI Tools]]
@@ -47,6 +47,6 @@ MCP is versioned by date (2024-11-05, 2025-03-26, 2025-06-18, 2025-11-25, 2026-0
 ### Root notes
 [[00 Start Here]]
 
-Also mentioned in (not linked): 000 Home · AI 3D Model Generation Outside Roblox · AI Material and Texture Generation · AI Pitfalls - Stale APIs and Luau · Agent Handoff Notes - Project State and Resume Templates · Asset Upload Automation with Open Cloud · Batch Processing Tools in Studio · Blender 5 Python Gotchas for Headless Builds · Blender Workflow for Roblox Creators · Code Pipeline - Rojo Git and CI · Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts · Environment and Level Pipeline · Evaluating AI Tools - A Practical Rubric · Glossary · Icon and Thumbnail Rendering Pipeline · Moving Data Out of a Play Session · Open Questions - Whole Vault · Plugin Development Start Here · Plugin Security and Permissions · Roblox Generative AI - Cube Mesh and Texture Generation · Roblox Policies on AI-Generated Content · Skill - Roblox Asset Import · Skill - Roblox Debugging · Studio Automation Without Freezing Studio · Testing Time-Based Features with a Controllable Clock · Third-Party Skill - Caveman Token Saver · Visual AI Debugging - State Labels, Path Lines and Perception Gizmos · Windows Tooling Pitfalls for Agent Pipelines
+Also mentioned in (not linked): 000 Home · AI 3D Model Generation Outside Roblox · AI Material and Texture Generation · AI Pitfalls - Stale APIs and Luau · Agent Handoff Notes - Project State and Resume Templates · Asset Upload Automation with Open Cloud · Batch Processing Tools in Studio · Blender 5 Python Gotchas for Headless Builds · Blender Workflow for Roblox Creators · Code Pipeline - Rojo Git and CI · Designing Roblox UI in Figma - Frames, Safe Areas and Tokens · Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts · Environment and Level Pipeline · Evaluating AI Tools - A Practical Rubric · Figma Property Mapping for Roblox UI · Figma to Roblox UI - Pipeline and Handoff · Glossary · Icon and Thumbnail Rendering Pipeline · Moving Data Out of a Play Session · Official Docs - Studio and Tooling · Open Questions - Whole Vault · Plugin Development Start Here · Plugin Security and Permissions · Roblox Generative AI - Cube Mesh and Texture Generation · Roblox Policies on AI-Generated Content · Skill - Roblox Asset Import · Skill - Roblox Debugging · Studio Automation Without Freezing Studio · Testing Time-Based Features with a Controllable Clock · Visual AI Debugging - State Labels, Path Lines and Perception Gizmos · Windows Tooling Pitfalls for Agent Pipelines
 
 <!-- atlas:generated -->

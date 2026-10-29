@@ -129,5 +129,5 @@ end
 
 <!-- related:start -->
 ## Related
-[[Cookbook - Data and Saving]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[Shop with Game Passes and Developer Products End to End]] · [[Session Lock]] · [[Idempotency]] · [[Purchase Receipts and Purchase History in UI]]
+[[Cookbook - Data and Saving]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[Shop with Game Passes and Developer Products End to End]] · [[Session Lock]] · [[Idempotency]] · [[AI Pitfalls - Stale APIs and Luau]]
 <!-- related:end -->

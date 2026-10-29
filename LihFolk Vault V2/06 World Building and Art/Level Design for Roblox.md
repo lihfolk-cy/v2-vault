@@ -219,5 +219,5 @@ Every bulk change stored its "before" state as attributes (old pivots, old colou
 
 <!-- related:start -->
 ## Related
-[[Level Design Principles - Flow Sightlines and Landmarks]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Parts Unions and MeshParts]] · [[Water Sky and Atmosphere Art]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[Textures Decals and Texture Memory]]
+[[Level Design Principles - Flow Sightlines and Landmarks]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Environment and Level Pipeline]] · [[Parts Unions and MeshParts]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[Water Sky and Atmosphere Art]] · [[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Textures Decals and Texture Memory]] · [[Voxel Art - Studs Outlines and Style Kits]]
 <!-- related:end -->

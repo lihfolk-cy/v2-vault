@@ -5,14 +5,14 @@ tags: [community, moderation, chat, textchatservice, safety, luau, ui, type/guid
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
-> - Tags or colours vanish after adding a module: Two scripts assigned the same callback slot
-> - Some players "never answer": They cannot see each other's chat because of age groups; design for it
-> - Admin command works in Studio, fails live: Rank check against the wrong group id, or the group lookup...
+> - Message `Text` reads as "" with a warning; chat tags gone: `PlatformIntegratedChat` enabled: `Text`, `Translation` and...
+> - Some players "never answer": They cannot see each other's chat because of age groups; check a...
+> - Whisper or party channel delivers to players who should not chat: Custom direct channel without `CanUsersDirectChatAsync` /...
 > - No player text travels through remotes; all chat via `TextChatService`
 > - No code reads, logs or reacts to message text (except `TextChatCommand`)
-> - Each callback owned by exactly one module; no yields inside
+> - Custom chat UI is a `TextChannelWindow` with `Target` set to its `TextChannel`; commands are `TextChatCommand`s
 >
-> Cost: TL;DR ~170 tok · whole note ~5.4k tok. Read more: ## 2. Platform-integrated chat (Announcement and Roblox docs, October 2026) · ## 3. The object model · ## 11. Common mistakes and how to spot them · ## 12. Checklist
+> Cost: TL;DR ~200 tok · whole note ~5.5k tok. Read more: ## 2. Platform-integrated chat (Announcement and Roblox docs, October 2026) · ## 3. The object model · ## 11. Common mistakes and how to spot them · ## 12. Checklist
 <!-- tldr:end -->
 
 Text chat is where players talk to each other, which makes it the single most safety-sensitive feature in most games. This note goes past the basics in [[Age Checks and Safety Features]] (all player text through `TextChatService`, filtering, direct-chat eligibility) and covers what you can actually customize: channels, delivery rules, chat tags, commands, bubbles, system messages, and the October 2026 change called **platform-integrated chat**, which removes your code's access to message text and will be required for every game in 2027. If you are designing a chat feature today, read section 2 before you write a line, because some popular customizations are on a deprecation clock.
@@ -326,11 +326,12 @@ Party and guild channels need a server-created `TextChannel`, members added with
 
 | Symptom | Likely cause |
 |---|---|
+| Message `Text` reads as "" with a warning; chat tags gone | `PlatformIntegratedChat` enabled: `Text`, `Translation` and `PrefixText` unsupported |
+| Some players "never answer" | They cannot see each other's chat because of age groups; check a pair with `CanUsersChatAsync`, group a lobby with `GetChatGroupsAsync` |
+| Whisper or party channel delivers to players who should not chat | Custom direct channel without `CanUsersDirectChatAsync` / `SetDirectChatRequester` |
 | Tags or colours vanish after adding a module | Two scripts assigned the same callback slot |
-| Some players "never answer" | They cannot see each other's chat because of age groups; design for it |
 | Admin command works in Studio, fails live | Rank check against the wrong group id, or the group lookup (`GroupService:GetRolesInGroupAsync`) failing without `pcall` |
 | Chat freezes for everyone | A yielding call inside a callback |
-| Warning spam about empty `Text` | Platform-integrated chat enabled while code still reads `Text` |
 | Quick-chat wheel stopped sending | `SendAsync` used for presets; move to Quick Words |
 
 ---
@@ -339,6 +340,7 @@ Party and guild channels need a server-created `TextChannel`, members added with
 
 - [ ] No player text travels through remotes; all chat via `TextChatService`
 - [ ] No code reads, logs or reacts to message text (except `TextChatCommand`)
+- [ ] Custom chat UI is a `TextChannelWindow` with `Target` set to its `TextChannel`; commands are `TextChatCommand`s
 - [ ] Each callback owned by exactly one module; no yields inside
 - [ ] Delivery rules only narrow, never widen
 - [ ] Staff commands are server-checked, hidden from autocomplete and logged
@@ -351,10 +353,10 @@ Party and guild channels need a server-created `TextChannel`, members added with
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Chat and text filtering]] · [[Discord Servers for Roblox Games]] · Links - Teams and permissions · Notification and Toast Systems · Cross-Server Messaging · Writing Dialogue for Roblox Players
+[[Official Docs - Security and Moderation]] · [[Discord Servers for Roblox Games]] · Official Docs - Game Systems · Notification and Toast Systems · Cross-Server Messaging · Writing Dialogue for Roblox Players
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Block and Mute Respecting Platform Rules]] · [[Policy and Age Rules 2026]] · [[Admin Commands Done Safely - Permissions and Audit Logs]] · [[AI Pitfalls - Stale APIs and Luau]] · [[Roblox Changes 2025-2026]] · [[Working with Content Creators]]
+[[TextChatService - Engine Reference Card]] · [[Block and Mute Respecting Platform Rules]] · [[Policy and Age Rules 2026]] · [[API Renames and Deprecations 2025-2026]] · [[Admin Commands Done Safely - Permissions and Audit Logs]] · [[Text Filtering - TextService for Names, Signs and Messages]]
 <!-- related:end -->

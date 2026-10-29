@@ -9,7 +9,7 @@ tags: [atlas, api, type/atlas, area/design, area/monetization, api/AnalyticsServ
 > - Roblox gives you built-in channels: `AnalyticsService` has methods for economy events, progression events, funnel steps and...
 > - Funnel logged with `AnalyticsService` onboarding steps.
 >
-> Cost: TL;DR ~120 tok · whole note ~670 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~680 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -71,6 +71,6 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 ### 52 Core Concepts
 [[Onboarding Funnel]] · [[Telemetry Events]]
 
-Also mentioned in (not linked): Economy Design Start Here · Links - Analytics · Marketing and Growth Start Here
+Also mentioned in (not linked): Economy Design Start Here · Marketing and Growth Start Here · Official Docs - Publishing and Live Ops
 
 <!-- atlas:generated -->

@@ -1,6 +1,6 @@
 ---
 name: lihfolk-assets
-description: 'Find and import assets from the local LihFolk Asset Pack (models, materials, skies, animations, VFX). Use for "use a LihFolk asset", "what assets do we have".'
+description: 'Find and import assets from the local LihFolk Asset Pack (models, materials, skies, animations, VFX). Use for "LihFolk asset", "what assets do we have".'
 ---
 
 # LihFolk Assets: use the local asset pack

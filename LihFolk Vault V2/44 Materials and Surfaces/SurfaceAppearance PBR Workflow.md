@@ -188,7 +188,7 @@ Build a **look-dev room** in a separate place (or a far corner of the game, stre
 
 - **Reference objects:** a matte grey sphere (colour 128, roughness 1), a chrome sphere (metal 1, roughness 0.05), a white card (sRGB 240), a black card (sRGB 30). If the grey sphere does not look mid-grey, the lighting is lying to you, not the texture.
 - **Every lighting setup the asset will live in**, as switchable presets (store them as data: [[Stylized Lighting Recipes]] shows how). Lighting is selected with `Lighting.LightingStyle` (Realistic or Soft) and `PrioritizeLightingQuality` in current Studio; the older `Technology` property is deprecated and superseded by those (Roblox docs, as of October 2026). Check both styles if your game might change.
-- **Matching skies.** Metals and glossy surfaces reflect the sky. CC0 HDRIs (sources in [[Links - Free and CC0 asset libraries]]) can be converted to six cube faces for a `Sky`; using the same HDRI as the Blender world and the Studio sky makes authoring-tool and Studio reflections far closer. Example: a partly cloudy daylight HDRI such as `kloofendal_38d_partly_cloudy_puresky` for an outdoor game.
+- **Matching skies.** Metals and glossy surfaces reflect the sky. CC0 HDRIs can be converted to six cube faces for a `Sky`; using the same HDRI as the Blender world and the Studio sky makes authoring-tool and Studio reflections far closer. Example: a partly cloudy daylight HDRI such as `kloofendal_38d_partly_cloudy_puresky` for an outdoor game.
 - **Environment lighting values.** `Lighting.EnvironmentSpecularScale` and `EnvironmentDiffuseScale` both default to 0 (Roblox docs). At 0 specular, metalness has no effect. Set them to the game's real values in the look-dev room.
 - **Quality levels.** Check at the lowest and highest graphics quality (Studio's rendering settings), and on one real phone.
 
@@ -346,14 +346,14 @@ Nuance: a SurfaceAppearance on a mesh that only needs flat colour is the most co
 
 ## See also
 
-[[Materials and Surfaces Start Here]] · [[Texturing and PBR Baking]] · [[Materials MaterialVariants and SurfaceAppearance]] · [[Normal Maps and Detail Baking]] · [[Substance Painter and Texturing Tools]] · [[3D Importer Settings Reference]] · [[Exporting and Validating Models for Roblox]] · [[Asset Upload Automation with Open Cloud]] · [[Links - Free and CC0 asset libraries]] · [[Stylized Lighting Recipes]] · [[Rendering Performance]] · [[Baking Lighting and Detail into Textures]]
+[[Materials and Surfaces Start Here]] · [[Texturing and PBR Baking]] · [[Materials MaterialVariants and SurfaceAppearance]] · [[Normal Maps and Detail Baking]] · [[Substance Painter and Texturing Tools]] · [[3D Importer Settings Reference]] · [[Exporting and Validating Models for Roblox]] · [[Asset Upload Automation with Open Cloud]] · [[Stylized Lighting Recipes]] · [[Rendering Performance]] · [[Baking Lighting and Detail into Textures]]
 
 ## Connected notes
 <!-- auto-links:start -->
-[[AI Material and Texture Generation]] · Hand-Painted and Stylized Texturing · Textures Decals and Texture Memory · Links - Texturing · Skill - Roblox Asset Import · Texel Density
+[[AI Material and Texture Generation]] · Hand-Painted and Stylized Texturing · Textures Decals and Texture Memory · Official Docs - Asset Creation · Skill - Roblox Asset Import · Texel Density
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Hand-Painted and Stylized Texturing]] · [[Textures Decals and Texture Memory]] · [[Procedural Materials and Skies - Lessons]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[The Gradient Palette Texture Workflow]]
+[[Hand-Painted and Stylized Texturing]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Textures Decals and Texture Memory]] · [[Procedural Materials and Skies - Lessons]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Texel Density]]
 <!-- related:end -->

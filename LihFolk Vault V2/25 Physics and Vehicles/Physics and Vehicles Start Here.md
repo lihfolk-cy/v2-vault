@@ -48,5 +48,5 @@ The base layer; unfamiliar terms are explained there.
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Constraints]] · Racing Laps and Checkpoints End to End · Multi-Bone IK - FABRIK and CCD · Genre Playbook - Roleplay and Social Hangouts · Resource Library - Physics · Snippets - Ragdoll
+[[Official Docs - Physics]] · Racing Laps and Checkpoints End to End · Multi-Bone IK - FABRIK and CCD · Genre Playbook - Roleplay and Social Hangouts · Snippets - Ragdoll
 <!-- auto-links:end -->

@@ -1,0 +1,405 @@
+{
+  "meta": {
+    "name": "lihfolk-bench-set-d",
+    "version": "1.0",
+    "created": "2026-10-29",
+    "task_count": 24,
+    "total_points": 66,
+    "note": "Held-out set written without access to the vault, other question sets or prior results; keys checked against primary sources on 2026-10-29."
+  },
+  "tasks": [
+    {
+      "id": "D1",
+      "category": "debugging",
+      "prompt": "A LocalScript plays a sword-swing animation when the player clicks:\n```lua\nlocal humanoid = player.Character:WaitForChild(\"Humanoid\")\ntool.Activated:Connect(function()\n    local track = humanoid:LoadAnimation(script.SwingAnim)\n    track:Play()\nend)\n```\nThe animation was exported from the Animation Editor with its priority left at Core. In game the swing is barely visible: while standing or walking the arms keep following the default idle/walk animation. Explain why and fix it.",
+      "answer_key": [
+        "Cause: Core is the lowest AnimationPriority; the default Animate script's idle/walk tracks have a higher priority, and when tracks animate the same joints the highest-priority track wins (same-priority tracks are blended by weight), so idle/walk override the swing",
+        "Fix: give the swing a higher priority such as Action (or Action2-Action4), either re-exported from the Animation Editor or by setting track.Priority = Enum.AnimationPriority.Action before Play()",
+        "Load the animation through the Animator (humanoid:FindFirstChildOfClass(\"Animator\"):LoadAnimation) instead of the deprecated Humanoid:LoadAnimation, and load the track once and reuse it instead of creating a new track on every click"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/AnimationTrack",
+        "https://create.roblox.com/docs/reference/engine/enums/AnimationPriority",
+        "https://create.roblox.com/docs/reference/engine/classes/Animator",
+        "https://create.roblox.com/docs/reference/engine/classes/Humanoid"
+      ],
+      "grader_notes": "Item 2: only suggesting AdjustWeight / a higher weight without changing priority = 0.5. Item 3: either half (Animator instead of Humanoid:LoadAnimation, or load once and reuse) = 0.5; both = 1. Saying Humanoid:LoadAnimation was removed or no longer works = -1 for item 3 (it is deprecated but still functions)."
+    },
+    {
+      "id": "D2",
+      "category": "debugging",
+      "prompt": "For an intro cutscene, a developer first tried this in a server Script and nothing happened, then moved it to a LocalScript:\n```lua\nlocal cam = workspace.CurrentCamera\ncam.CFrame = workspace.CutsceneCam.CFrame\n```\nNow the view flickers to the cutscene angle for a moment and then snaps straight back behind the player's character. Explain both problems and the fix.",
+      "answer_key": [
+        "With the default CameraType (Custom) the default camera scripts keep setting Camera.CFrame, overwriting the script; set CameraType to Enum.CameraType.Scriptable before positioning the camera (and set it back to Custom when the cutscene ends)",
+        "Each client has its own Camera (Workspace.CurrentCamera is local to that client and is not replicated), so camera control must run on the client (LocalScript / client RunContext); a server Script cannot move a player's view"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/Camera",
+        "https://create.roblox.com/docs/workspace/camera"
+      ]
+    },
+    {
+      "id": "D3",
+      "category": "debugging",
+      "prompt": "A shop ScrollingFrame contains a UIListLayout. Item buttons are cloned into it at runtime from a config (sometimes 8 items, sometimes 40). CanvasSize was set in Studio to {0, 0}, {0, 600}. With many items the player cannot scroll down to the last ones. What is wrong and what is the cleanest fix?",
+      "answer_key": [
+        "CanvasSize defines the scrollable area and is fixed; it does not grow when children are added, so content beyond 600 px is unreachable",
+        "Fix: set AutomaticCanvasSize to Y (Enum.AutomaticSize.Y) and leave the CanvasSize Y at 0, or update CanvasSize from the UIListLayout's AbsoluteContentSize (listening for it to change)"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/ScrollingFrame",
+        "https://create.roblox.com/docs/reference/engine/classes/UIGridStyleLayout",
+        "https://create.roblox.com/docs/reference/engine/classes/UIListLayout"
+      ]
+    },
+    {
+      "id": "D4",
+      "category": "debugging",
+      "prompt": "A hover platform (one unanchored 20x2x20 stud part) has an Attachment at one corner and a VectorForce using that attachment as Attachment0 with Force = Vector3.new(0, 5000, 0). The platform never lifts off. After the developer raised the force a lot, it rises but as soon as it tilts it starts sliding and spinning away sideways. Explain the problems and how to set the VectorForce up correctly.",
+      "answer_key": [
+        "To lift, the upward force must exceed the weight = assembly mass x workspace.Gravity (default 196.2 studs/s^2); compute it from AssemblyMass (or GetMass for a single part) instead of guessing a constant like 5000",
+        "RelativeTo defaults to Attachment0, so the force is expressed in the attachment's frame and tilts with the part, pushing it sideways; set RelativeTo = Enum.ActuatorRelativeTo.World for a constant upward force",
+        "By default the force is applied at Attachment0's position (ApplyAtCenterOfMass = false); an off-centre attachment creates torque that spins the platform, so enable ApplyAtCenterOfMass (or centre the attachment) and keep it level with something like an AlignOrientation"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/VectorForce",
+        "https://create.roblox.com/docs/reference/engine/classes/Workspace",
+        "https://create.roblox.com/docs/reference/engine/classes/BasePart",
+        "https://create.roblox.com/docs/physics/mover-constraints"
+      ]
+    },
+    {
+      "id": "D5",
+      "category": "debugging",
+      "prompt": "Long-running servers of a combat game slowly climb in memory over several hours until they lag. Server code (simplified):\n```lua\nlocal sessions = {}\nPlayers.PlayerAdded:Connect(function(player)\n    sessions[player] = { kills = 0, history = {} }\n    player.CharacterAdded:Connect(function(char)\n        RunService.Heartbeat:Connect(function()\n            updateAura(char)\n        end)\n    end)\nend)\n```\nNothing else cleans up. Identify the leaks and give the fixes.",
+      "answer_key": [
+        "The sessions table is keyed by Player and never cleared, so players (and their data) stay referenced after leaving; remove the entry in Players.PlayerRemoving",
+        "A new RunService.Heartbeat connection is made for every character and never disconnected; it keeps running and keeps the old character alive after death/respawn. Store the connection and Disconnect it when the character dies or is removed (or use a cleanup/maid pattern, Destroying event)",
+        "Destroy() disconnects all connections on an instance and its descendants, but old characters / Player objects are not guaranteed to be destroyed by default; enable Workspace.PlayerCharacterDestroyBehavior (Enabled) or explicitly Destroy old characters so their own connections are released"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/Instance",
+        "https://create.roblox.com/docs/reference/engine/classes/Workspace",
+        "https://create.roblox.com/docs/reference/engine/classes/Players"
+      ],
+      "grader_notes": "Item 3: naming the property on the wrong service (e.g. Players.PlayerCharacterDestroyBehavior) is not penalised. Manually destroying old characters on respawn/leave without naming the property is full credit if the reason (connections released by Destroy) is given."
+    },
+    {
+      "id": "D6",
+      "category": "code-writing",
+      "prompt": "Write a short server-side Luau snippet that makes an unanchored pet part follow 3 studs behind and 2 studs above a player's HumanoidRootPart smoothly and face the same way as the player, using modern constraint movers (not BodyPosition/BodyGyro). List the key rules.",
+      "answer_key": [
+        "Pet has an Attachment used as Attachment0 for AlignPosition and AlignOrientation; either Mode = OneAttachment with the goal written to AlignPosition.Position / AlignOrientation.CFrame each step, or Mode = TwoAttachment pointing at an attachment on the HumanoidRootPart placed at the offset",
+        "Smoothness is tuned with Responsiveness (range 5-200) and capped by MaxForce/MaxVelocity (MaxTorque/MaxAngularVelocity for orientation), or RigidityEnabled for instant snapping; the pet part must be unanchored and not welded to the character",
+        "Network ownership: give the pet to the owning player (SetNetworkOwner(player)) for smooth motion on their screen, or keep it server-owned knowing that can look jittery; anchored parts cannot have an owner"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/AlignPosition",
+        "https://create.roblox.com/docs/reference/engine/classes/AlignOrientation",
+        "https://create.roblox.com/docs/physics/network-ownership"
+      ],
+      "grader_notes": "Code that uses BodyPosition/BodyGyro scores 0 for item 1 (legacy movers). Item 3: either ownership choice is full credit if the trade-off is stated."
+    },
+    {
+      "id": "D7",
+      "category": "code-writing",
+      "prompt": "Write a short server Luau snippet that moves an NPC Humanoid to a target position with PathfindingService. Requirements: it must never walk through regions marked with a PathfindingModifier whose Label is \"Lava\", it should avoid Water terrain when a reasonable dry route exists, and it must jump when the path requires it. List the key rules.",
+      "answer_key": [
+        "PathfindingService:CreatePath with agent parameters including a Costs table: keys are Material names or PathfindingModifier Labels; Lava = math.huge (non-traversable) and Water set higher than the default cost of 1",
+        "path:ComputeAsync(startPos, targetPos) is wrapped in pcall and path.Status is checked to equal Enum.PathStatus.Success before using waypoints",
+        "Iterate path:GetWaypoints(), calling Humanoid:MoveTo(waypoint.Position) and waiting for MoveToFinished; when waypoint.Action == Enum.PathWaypointAction.Jump make the humanoid jump (Humanoid.Jump = true or ChangeState Jumping)",
+        "Handle path.Blocked: if the blocked waypoint index is ahead of the current one, recompute the path"
+      ],
+      "points": 4,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/PathfindingService",
+        "https://create.roblox.com/docs/reference/engine/classes/Path",
+        "https://create.roblox.com/docs/reference/engine/classes/PathfindingModifier",
+        "https://create.roblox.com/docs/characters/pathfinding"
+      ]
+    },
+    {
+      "id": "D8",
+      "category": "code-writing",
+      "prompt": "Write a short server Luau snippet that shows the global top 10 players by total wins on a lobby leaderboard, using an OrderedDataStore named \"Wins\" (keys are UserIds). List the key rules.",
+      "answer_key": [
+        "Get the store with DataStoreService:GetOrderedDataStore(\"Wins\"); stored values must be integers (write with SetAsync/UpdateAsync/IncrementAsync)",
+        "Call store:GetSortedAsync(false, 10) (descending, pageSize 10; pageSize max 100) and read page:GetCurrentPage(), whose entries have .key and .value",
+        "Wrap data store calls in pcall and refresh on an interval (for example every 60 seconds) rather than on every request, from the server"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/OrderedDataStore",
+        "https://create.roblox.com/docs/reference/engine/classes/DataStorePages",
+        "https://create.roblox.com/docs/cloud-services/data-stores"
+      ],
+      "grader_notes": "Item 2: ascending=true with manual reversal is 0.5."
+    },
+    {
+      "id": "D9",
+      "category": "code-writing",
+      "prompt": "Using the newer Audio API (not Sound objects), write a short Luau snippet that (a) plays looping background music that is not spatial and (b) plays a crackling sound from a campfire part that gets quieter with distance. List the key rules.",
+      "answer_key": [
+        "Create an AudioPlayer, set its Asset to the audio asset id and Looping = true, then call :Play()",
+        "Streams are connected with Wire instances: Wire.SourceInstance = the AudioPlayer and Wire.TargetInstance = the receiver (Output pin to Input pin); without a wire nothing is heard",
+        "Non-spatial music: wire to an AudioDeviceOutput (its optional Player property limits it to one player). Spatial campfire: wire to an AudioEmitter parented to the part/attachment, heard by an AudioListener (e.g. on the camera or character) in the same AudioInteractionGroup"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/AudioPlayer",
+        "https://create.roblox.com/docs/reference/engine/classes/Wire",
+        "https://create.roblox.com/docs/reference/engine/classes/AudioDeviceOutput",
+        "https://create.roblox.com/docs/reference/engine/classes/AudioEmitter",
+        "https://create.roblox.com/docs/reference/engine/classes/AudioListener"
+      ],
+      "grader_notes": "Item 1: using the deprecated AudioPlayer.AssetId property instead of Asset scores 0.5, not -1. A solution built on Sound objects scores 0 for items 1-2."
+    },
+    {
+      "id": "D10",
+      "category": "code-writing",
+      "prompt": "An experience sells a monthly subscription (id \"EXP-1234567890\") that gives a VIP chat tag and 2x coins. Write a short Luau snippet that grants and revokes the perk correctly, and list the key rules.",
+      "answer_key": [
+        "On the server, call MarketplaceService:GetUserSubscriptionStatusAsync(player, subscriptionId) inside pcall (e.g. on PlayerAdded) and grant the perk only when the returned table's IsSubscribed is true; never trust the client",
+        "Connect Players.UserSubscriptionStatusChanged(player, subscriptionId) to re-check status and grant or revoke mid-session (subscriptions can lapse or be revoked); purchases are prompted from the client with MarketplaceService:PromptSubscriptionPurchase"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/MarketplaceService",
+        "https://create.roblox.com/docs/reference/engine/classes/Players",
+        "https://create.roblox.com/docs/production/monetization/subscriptions"
+      ]
+    },
+    {
+      "id": "D11",
+      "category": "architecture",
+      "prompt": "A game has drivable cars (VehicleSeat + constraints) and server-controlled NPC guards that chase players. Cars feel laggy for drivers, and exploiters sometimes fling guards or teleport cars. Describe how network ownership should be set up for each and what the security implications are.",
+      "answer_key": [
+        "The engine auto-assigns ownership of unanchored parts to nearby clients; for a car, call SetNetworkOwner(driver) when someone sits in the seat and SetNetworkOwnershipAuto() (or nil) when the seat is vacated, so the driver simulates it with no input lag",
+        "Gameplay-critical NPCs can be kept server-owned with SetNetworkOwner(nil) (sparingly, since it can look jittery to clients); ownership applies to the whole assembly/mechanism, and anchored parts cannot have their owner set",
+        "Roblox cannot verify physics from a client that owns a part (it can move it anywhere and fake Touched), so the server must validate client-owned results (speed/position sanity checks) or use Server Authority mode"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/physics/network-ownership",
+        "https://create.roblox.com/docs/reference/engine/classes/BasePart",
+        "https://create.roblox.com/docs/reference/engine/classes/VehicleSeat"
+      ]
+    },
+    {
+      "id": "D12",
+      "category": "architecture",
+      "prompt": "A bad update yesterday corrupted some players' save data in a standard (non-ordered) DataStore. Design a support tool that restores a given player's data to what it was just before the update. What does the engine keep, which APIs do you use, and what are the limits?",
+      "answer_key": [
+        "Standard data stores keep versioned backups automatically: a backup version is created on the first write to each key in each UTC hour (later writes in that hour overwrite it), and backups expire 30 days after being overwritten (the latest version never expires)",
+        "Find the version with DataStore:ListVersionsAsync(key, sortDirection, minDate, maxDate) and read it with GetVersionAsync(key, version) or GetVersionAtTimeAsync(key, timestampMs); then write it back with SetAsync/UpdateAsync while the player is not in a session that would overwrite it",
+        "The same can be done from outside the game with the Open Cloud data stores API using an API key limited to that experience/data store (entry list/read/update permissions, optional IP restriction)"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/cloud-services/data-stores/versioning-listing-and-caching",
+        "https://create.roblox.com/docs/reference/engine/classes/DataStore",
+        "https://create.roblox.com/docs/cloud/guides/data-stores"
+      ],
+      "grader_notes": "Item 1: saying every single write is kept as a version is 0.5; the 30-day figure is required for full credit."
+    },
+    {
+      "id": "D13",
+      "category": "architecture",
+      "prompt": "A team wants a web admin panel (outside Roblox) that can (1) push an announcement to every live server instantly and (2) grant an item to a specific player, who may be online or offline. Design this.",
+      "answer_key": [
+        "Use Open Cloud with an API key created on the Creator Hub, scoped to the experience and only the needed permissions (messaging publish, data store entries), sent in the x-api-key header from the backend; never ship the key to clients; optional IP restriction/expiry",
+        "Live servers: POST to the Open Cloud messaging endpoint (universes/{universeId}:publishMessage) with a topic and message; each server subscribes with MessagingService:SubscribeAsync(topic, callback) and reads message.Data",
+        "Messaging delivery is best effort and not guaranteed (messages up to ~1 KB), so durable grants are written to a data store (via Open Cloud) as a pending grant that the server applies on join or when notified",
+        "Open Cloud publishing shares the MessagingService rate limits of the experience, so the panel must respect those limits (batch/throttle announcements)"
+      ],
+      "points": 4,
+      "sources": [
+        "https://create.roblox.com/docs/cloud/guides/usage-messaging",
+        "https://create.roblox.com/docs/reference/engine/classes/MessagingService",
+        "https://create.roblox.com/docs/cloud/guides/data-stores"
+      ]
+    },
+    {
+      "id": "D14",
+      "category": "architecture",
+      "prompt": "A developer splits server code into many Scripts that talk through BindableEvents, passing state tables like `{player = plr, inventory = invObject}` where invObject is a table with a metatable (OOP class). Methods on the received object fail. Explain what goes wrong and how ModuleScripts would change the design.",
+      "answer_key": [
+        "BindableEvent/BindableFunction arguments are copied, not passed by reference: tables lose identity and their metatable (so OOP methods disappear), mixed array/dictionary tables can lose elements, and non-string keys are converted to strings; bindables also only work on the same side of the client-server boundary",
+        "A ModuleScript runs once per Luau environment and require() returns the same cached value to every server script, so systems can share live objects/state by requiring each other (client and server get separate copies)",
+        "BindableFunction:Invoke yields until a callback handles it (never resumes if none is set), and cyclic requires between modules hang rather than error, so dependencies should be one-directional"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/scripting/events/bindable",
+        "https://create.roblox.com/docs/reference/engine/classes/ModuleScript",
+        "https://create.roblox.com/docs/reference/engine/classes/BindableEvent"
+      ]
+    },
+    {
+      "id": "D15",
+      "category": "performance-networking",
+      "prompt": "To show other players' aim direction and footstep VFX, a client fires a RemoteEvent 30 times per second, and the server re-broadcasts to all clients. Under load, remote queues back up and important events (hits, purchases) arrive late. Someone suggests UnreliableRemoteEvent. Explain when it is appropriate and its constraints.",
+      "answer_key": [
+        "UnreliableRemoteEvent does not resend lost events and does not guarantee order, so it fits ephemeral/continuously refreshed cosmetic data (aim direction, VFX) but not state that must arrive (hits, purchases, inventory), which stays on RemoteEvent",
+        "Payloads larger than 1000 bytes are dropped (silently in live games; Studio Output reports it), so send compact data such as numbers/ids rather than large tables",
+        "It has the same trust model as RemoteEvent: the server must still validate and rate-limit what clients send before re-broadcasting"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/UnreliableRemoteEvent",
+        "https://create.roblox.com/docs/scripting/events/remote"
+      ]
+    },
+    {
+      "id": "D16",
+      "category": "performance-networking",
+      "prompt": "A developer builds a cross-server lobby browser: every server publishes a ~3 KB JSON table of its players every 5 seconds to one MessagingService topic \"ServerList\", and every server subscribes to it. The game runs about 500 servers. What limits and behaviours of MessagingService make this design problematic?",
+      "answer_key": [
+        "Each message is limited to about 1 KB (1024 characters), so 3 KB payloads fail; the data must be shrunk or split",
+        "Throughput limits scale with players/servers and apply per server, per topic and per game: e.g. sends per server 600 + 240 x players per minute, receives per topic 40 + 80 x servers per minute, receives for the whole game 400 + 200 x servers per minute, subscriptions per server 20 + 8 x players",
+        "Delivery is best effort and not guaranteed (callback gets a table with Data and Sent), so a server list built on it can be stale or miss servers; it should tolerate loss"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/MessagingService",
+        "https://create.roblox.com/docs/cloud/guides/usage-messaging"
+      ],
+      "grader_notes": "Item 2: the limits are documented as subject to change. Older published figures (for example 150 + 60 x players sends per minute) earn 0.5, not -1. Full credit needs at least two limit categories with the current formulas or an equally specific statement that per-topic and game-wide receive limits scale with server count."
+    },
+    {
+      "id": "D17",
+      "category": "performance-networking",
+      "prompt": "A server Script calls an external analytics API with HttpService three times on every player join and once per kill, and also calls an Open Cloud endpoint with an API key written as a string literal in the script. On busy servers some requests start failing. What are the relevant limits and the correct setup?",
+      "answer_key": [
+        "External HTTP requests are limited to 500 per minute per game server; Open Cloud requests made from the game have a separate limit of 2500 per minute and do not count toward the 500, so batch/queue analytics instead of one request per event",
+        "Never hard-code keys: store the API key in the experience's Secrets store and read it with HttpService:GetSecret() (the x-api-key header for Open Cloud from in-game must be a Secret); HTTP requests must be enabled in Experience Settings > Security (Allow HTTP Requests / HttpEnabled)",
+        "Use RequestAsync inside pcall and check the response's Success (true only for 2xx) / StatusCode before using Body, with retry/backoff"
+      ],
+      "points": 3,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/HttpService",
+        "https://create.roblox.com/docs/cloud-services/http-service"
+      ],
+      "grader_notes": "Item 1: 500/min alone without the Open Cloud distinction is 0.5."
+    },
+    {
+      "id": "D18",
+      "category": "performance-networking",
+      "prompt": "A client camera-follow script updates Camera.CFrame in RunService.Heartbeat and the camera visibly jitters. A server projectile script was copied from a client script and uses RunService.RenderStepped, which errors. Which RunService events/methods should each use and why?",
+      "answer_key": [
+        "Camera and other per-frame visual updates should run before the frame renders: RunService.PreRender (supersedes RenderStepped) or RunService:BindToRenderStep with Enum.RenderPriority.Camera; these are client-only",
+        "Server per-step logic must use simulation events instead: PreSimulation (supersedes Stepped) before physics or PostSimulation/Heartbeat after physics, scaled by deltaTime, keeping per-frame callbacks light"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/RunService",
+        "https://create.roblox.com/docs/reference/engine/enums/RenderPriority"
+      ],
+      "grader_notes": "Using the older names RenderStepped/Stepped correctly (as the right timing) earns 0.5 per item instead of -1 since they are superseded but still work; full credit with PreRender/PreSimulation or BindToRenderStep."
+    },
+    {
+      "id": "D19",
+      "category": "recent-platform",
+      "prompt": "In October 2026 a developer starts a new cross-platform game and needs sprint/interact controls for keyboard, gamepad and touch. Should they use ContextActionService or the Input Action System, how is the latter structured, and what is happening to Roblox's default movement/camera player scripts?",
+      "answer_key": [
+        "The Input Action System is fully released (June 2026) and is the recommended approach; ContextActionService binding methods are not recommended for new work and are planned for deprecation but still work",
+        "Structure: an InputContext (group, can be Enabled/prioritised/Sink) contains InputActions (with a Type such as Bool or Direction2D) which contain InputBindings mapping device inputs (KeyCode etc.); scripts handle InputAction.Pressed/Released (Bool) or StateChanged / poll GetState",
+        "Default PlayerModule movement and camera scripts are being converted to IAS via Workspace.PlayerScriptsUseInputActionSystem: opt-in now, planned default-enabled in early 2027 and the property removed (everyone on new scripts) by mid 2027"
+      ],
+      "points": 3,
+      "sources": [
+        "https://devforum.roblox.com/t/full-release-input-action-system-ias-newly-converted-player-scripts/4678416",
+        "https://create.roblox.com/docs/input/input-action-system",
+        "https://create.roblox.com/docs/reference/engine/classes/ContextActionService",
+        "https://create.roblox.com/docs/reference/engine/classes/InputAction"
+      ],
+      "grader_notes": "Item 1: describing IAS as in beta (it was in client beta through early 2026) is 0.5. Saying ContextActionService has been removed or no longer works = -1. Item 3: phase dates are announced plans; accept 'opt-in now, becomes default and then mandatory in 2027' without exact months."
+    },
+    {
+      "id": "D20",
+      "category": "recent-platform",
+      "prompt": "A team making a competitive fighting game heard Roblox shipped 'Server Authority' in 2026. How is it turned on, what does it do, and what has to change in their scripts?",
+      "answer_key": [
+        "It is opt-in: set Workspace.AuthorityMode to Server; the server becomes the single source of truth and rejects invalid client movement, while clients predict locally and roll back / resimulate when the server disagrees",
+        "Turning it on enables or requires UseFixedSimulation, StreamingEnabled, Deferred SignalBehavior, NextGenerationReplication and PlayerScriptsUseInputActionSystem (at least three of these named)",
+        "Custom gameplay logic must move into RunService:BindToSimulation callbacks and read player input through InputActions so it can be predicted and resimulated; known limits include remote events not being on the shared timeline and a cap of 8 actively playing Animator tracks"
+      ],
+      "points": 3,
+      "sources": [
+        "https://devforum.roblox.com/t/full-release-ship-fair-and-competitive-games-with-server-authority/4727993",
+        "https://devforum.roblox.com/t/studio-beta-build-fair-responsive-games-with-server-authority/4139157",
+        "https://create.roblox.com/docs/reference/engine/classes/Workspace"
+      ],
+      "grader_notes": "Studio beta was late 2025; full release July 2026. Describing it as beta with otherwise correct mechanics is not penalised. Item 3: either half (BindToSimulation/InputActions, or a named limitation) = 0.5."
+    },
+    {
+      "id": "D21",
+      "category": "recent-platform",
+      "prompt": "Custom movement code running in RunService.PreSimulation behaves differently for players at 30 FPS and at 144 FPS, and the server's results don't match the client's. What 2026 engine API addresses this, and what are its requirements?",
+      "answer_key": [
+        "RunService:BindToSimulation(callback, frequency) runs logic at a fixed frequency that is identical on all clients and the server regardless of frame rate (frequencies such as 1/5/10/15/30/60 Hz, default 30 Hz); the callback receives deltaTime",
+        "It requires Workspace.UseFixedSimulation to be enabled (opt-in during rollout, planned to become default), which also steps Humanoid/animation/ControllerManager logic at a fixed rate; only properties allowed for simulation access can be modified inside the callback (others error)"
+      ],
+      "points": 2,
+      "sources": [
+        "https://devforum.roblox.com/t/full-release-bindtosimulation-rolling-out-usefixedsimulation/4605516",
+        "https://create.roblox.com/docs/reference/engine/classes/RunService",
+        "https://create.roblox.com/docs/reference/engine/classes/Workspace"
+      ],
+      "grader_notes": "Item 1 needs the API name and fixed-rate/frame-rate-independent behaviour; exact Hz list optional. Suggesting only multiplying by deltaTime in PreSimulation = 0."
+    },
+    {
+      "id": "D22",
+      "category": "recent-platform",
+      "prompt": "An old settings menu does `game.Lighting.Technology = Enum.Technology.Future` from a LocalScript to switch to high-quality lighting, and it errors. In Studio the Technology property also no longer appears where it used to. What changed?",
+      "answer_key": [
+        "Unified Lighting (fully live July 2025) deprecated Lighting.Technology and replaced it with two properties: Lighting.LightingStyle (Realistic or Soft) and Lighting.PrioritizeLightingQuality (boolean)",
+        "Mapping: Future -> Realistic + PrioritizeLightingQuality on, ShadowMap -> Soft + on, Voxel -> Soft + off; PrioritizeLightingQuality chooses whether lighting quality or other things like draw distance are reduced first on weaker devices",
+        "Technology is non-scriptable (Studio-only, RobloxScriptSecurity), which is why the script errors; lighting style is chosen in Studio rather than toggled by player scripts"
+      ],
+      "points": 3,
+      "sources": [
+        "https://devforum.roblox.com/t/let-there-be-unified-light-unified-lighting-is-fully-live/3401512",
+        "https://create.roblox.com/docs/reference/engine/classes/Lighting"
+      ],
+      "grader_notes": "Item 3: the launch post said the new properties are not scriptable, while the current API reference lists them without security restrictions; do not penalise either claim about the new properties' scriptability. Full credit needs the reason the Technology write fails."
+    },
+    {
+      "id": "D23",
+      "category": "recent-platform",
+      "prompt": "A script loops over workspace:GetDescendants() every round to find BaseParts that have the CollectionService tag \"Coin\" and an attribute Collected == false. Is there a newer engine API that does this filtering directly? Show the call.",
+      "answer_key": [
+        "Instance:QueryDescendants(selector) (added late 2025) returns an array of descendants matching a CSS-like selector string (empty array if none match)",
+        "Selector syntax: class name (IsA match), .Tag for CollectionService tags, #Name, [$Attribute = value] for attributes and [Property = value] for properties, combinators > / >> and comma, :not() / :has(); e.g. workspace:QueryDescendants(\"BasePart.Coin[$Collected = false]\")"
+      ],
+      "points": 2,
+      "sources": [
+        "https://create.roblox.com/docs/reference/engine/classes/Instance",
+        "https://devforum.roblox.com/t/release-notes-for-697/4032740"
+      ],
+      "grader_notes": "CollectionService:GetTagged(\"Coin\") plus an attribute check is a valid older alternative: 0.5 for item 1. Item 2 needs a correct tag + attribute selector."
+    },
+    {
+      "id": "D24",
+      "category": "recent-platform",
+      "prompt": "A Luau utility module hand-rolls `lerp(a, b, t)`, a `remap(x, inMin, inMax, outMin, outMax)` function, a NaN check written as `x ~= x`, and manual bit shifting to pack 3-bit and 5-bit fields into a buffer. Which of these now have built-in Luau library replacements (added in 2025)?",
+      "answer_key": [
+        "math.lerp(a, b, t) and math.map(x, inmin, inmax, outmin, outmax)",
+        "math.isnan(n), plus math.isinf and math.isfinite",
+        "buffer.readbits / buffer.writebits for bit-level reads and writes in a buffer"
+      ],
+      "points": 2,
+      "sources": [
+        "https://luau.org/news/2025-12-19-luau-recap-runtime-2025/",
+        "https://luau.org/library"
+      ],
+      "grader_notes": "Mentioning the vector library is correct but not required. Claiming one of these functions does not exist = -1 for that item."
+    }
+  ]
+}

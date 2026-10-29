@@ -455,7 +455,7 @@ Rule of thumb: build the overhead label before the second enemy type. It pays fo
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Horror Monster Chase AI End to End]] · Enemy and NPC Animation · Links - NPCs and AI · Anticipation · Dialogue System End to End · Hit Reactions Stagger and Hit-Stop
+[[Horror Monster Chase AI End to End]] · Enemy and NPC Animation · Official Docs - Game Systems · Anticipation · Dialogue System End to End · Hit Reactions Stagger and Hit-Stop
 <!-- auto-links:end -->
 
 <!-- related:start -->

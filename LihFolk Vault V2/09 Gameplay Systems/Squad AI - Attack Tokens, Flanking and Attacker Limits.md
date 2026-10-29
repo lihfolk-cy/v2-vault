@@ -162,5 +162,5 @@ Squads feel smart when they *say* what they do: "flanking", "reloading", "cover 
 
 <!-- related:start -->
 ## Related
-[[Wildlife and Ambient Creature AI - Passive, Neutral and Hostile]] · [[Hitboxes and Hit Detection]] · [[Pathfinding Edge Cases and Fallbacks]] · [[Weather That Changes Gameplay - Grip, Visibility and Hearing]] · [[Pathfinding]] · [[Explosions - Radius Damage, Falloff and Cover Checks]] · [[Police Chases and Wanted Levels]] · [[Status Effects Buffs and Stacking Rules]]
+[[Wildlife and Ambient Creature AI - Passive, Neutral and Hostile]] · [[Pathfinding Edge Cases and Fallbacks]] · [[Hitboxes and Hit Detection]] · [[Weather That Changes Gameplay - Grip, Visibility and Hearing]] · [[Pathfinding]] · [[Police Chases and Wanted Levels]] · [[Explosions - Radius Damage, Falloff and Cover Checks]] · [[Status Effects Buffs and Stacking Rules]]
 <!-- related:end -->

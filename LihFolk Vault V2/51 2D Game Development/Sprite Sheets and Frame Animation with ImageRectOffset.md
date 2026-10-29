@@ -397,5 +397,5 @@ Simple tools beat clever ones: a debug overlay that draws hitboxes as translucen
 
 <!-- related:start -->
 ## Related
-[[UV Unwrapping]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[The Gradient Palette Texture Workflow]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]]
+[[Designing VFX Textures and Flipbooks in Figma]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[UV Unwrapping]] · [[The Gradient Palette Texture Workflow]] · [[2D Multiplayer - Server Authority and Replicating GUI Worlds]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]]
 <!-- related:end -->

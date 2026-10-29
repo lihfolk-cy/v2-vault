@@ -247,7 +247,7 @@ Log each placement's offer rate, opt-in rate and post-ad session length. A place
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Sponsored Ads and Campaign Math]] · Links - Ads · Launch Strategy - The First Two Weeks · Marketing and Growth Start Here · Click-Through Rate · Shop with Game Passes and Developer Products End to End
+[[Sponsored Ads and Campaign Math]] · Official Docs - Monetization · Launch Strategy - The First Two Weeks · Marketing and Growth Start Here · Click-Through Rate · Shop with Game Passes and Developer Products End to End
 <!-- auto-links:end -->
 
 <!-- related:start -->

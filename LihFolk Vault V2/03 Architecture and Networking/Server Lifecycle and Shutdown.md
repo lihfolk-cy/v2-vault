@@ -171,6 +171,7 @@ A sketch:
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local TeleportService = game:GetService("TeleportService")
+local HttpService = game:GetService("HttpService")
 
 local isReservedServer = game.PrivateServerId ~= "" and game.PrivateServerOwnerId == 0
 
@@ -180,7 +181,7 @@ game:BindToClose(function(reason: Enum.CloseReason)
 	if #players == 0 then return end
 
 	local options = Instance.new("TeleportOptions")
-	options.ShouldReserveServer = true
+	options.ReservedServerId = HttpService:GenerateGUID(false) -- new holding server (ShouldReserveServer is deprecated)
 	options:SetTeleportData({ softShutdown = true })
 	-- Saves are handled by Lifecycle in parallel; this only moves people.
 	pcall(function()
@@ -265,5 +266,5 @@ Log a heartbeat every few minutes with uptime, player count, memory and key coun
 
 <!-- related:start -->
 ## Related
-[[Places Universes and Experience Settings]] · [[Cross-Server Messaging]] · [[Cookbook - Data and Saving]] · [[RemoteEvents RemoteFunctions and Unreliable Remotes]] · [[Client-Server Model]] · [[Replication Rules]]
+[[Places Universes and Experience Settings]] · [[Cookbook - Data and Saving]] · [[Cross-Server Messaging]] · [[Live Incident Response and Post-Mortems]] · [[RemoteEvents RemoteFunctions and Unreliable Remotes]] · [[Client-Server Model]]
 <!-- related:end -->

@@ -92,5 +92,5 @@ Across seven fox reviews proportion requests changed every round: bigger head, t
 
 <!-- related:start -->
 ## Related
-[[Modeling Fundamentals for Games]] · [[Blender Workflow for Roblox Creators]] · [[Curve-Based Modelling in Blender for Roblox]] · [[Hard-Surface Modeling]] · [[Normal Maps and Detail Baking]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[UV Unwrapping]]
+[[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]] · [[Modeling Fundamentals for Games]] · [[Blender Workflow for Roblox Creators]] · [[Curve-Based Modelling in Blender for Roblox]] · [[Hard-Surface Modeling]] · [[Normal Maps and Detail Baking]] · [[Modeling Characters for R15 and Custom Rigs]] · [[UV Unwrapping]]
 <!-- related:end -->

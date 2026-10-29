@@ -188,7 +188,7 @@ If the server is mostly codes and scams, simplify it to announcement-only and in
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Short-Form Video Marketing]] · [[Text Chat Customization with TextChatService]] · Links - Community and social · [[Voice Chat and Safety Features]] · Publishing an Experience · Links - Open Cloud and external APIs
+[[Short-Form Video Marketing]] · [[Text Chat Customization with TextChatService]] · Official Docs - Publishing and Live Ops · [[Voice Chat and Safety Features]] · Publishing an Experience · Official Docs - Scripting and Luau
 <!-- auto-links:end -->
 
 <!-- related:start -->

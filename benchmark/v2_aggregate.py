@@ -10,7 +10,7 @@ import json, os, random, statistics as st, sys, glob, itertools
 B = os.path.dirname(os.path.abspath(__file__))
 R = os.path.join(B, "runs", sys.argv[2] if len(sys.argv) > 2 else "v2")
 OUT = sys.argv[3] if len(sys.argv) > 3 else "RESULTS_v2.md"
-SETS = {"A": "questions.json", "B": "questions_b.json"}
+SETS = {"A": "questions.json", "B": "questions_b.json", "C": "questions_c.json", "D": "questions_d.json", "E": "questions_e.json", "F": "questions_f.json"}
 
 
 def tasks(s):

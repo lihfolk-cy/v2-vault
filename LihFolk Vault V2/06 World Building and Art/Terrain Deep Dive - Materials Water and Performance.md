@@ -407,10 +407,10 @@ Decisions this table forces early: whether Expanded Terrain is on (needed for th
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Terrain Materials and Painting]] · Links - Terrain · MaterialService and Custom Materials · Noise Functions and Terrain Generation · AI Material and Texture Generation · Materials and Surfaces Start Here
+[[Terrain Materials and Painting]] · Official Docs - Building and World · MaterialService and Custom Materials · Noise Functions and Terrain Generation · AI Material and Texture Generation · Materials and Surfaces Start Here
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Textures Decals and Texture Memory]] · [[Parts Unions and MeshParts]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Environment Art Styles]] · [[Level Design for Roblox]] · [[Modeling in Blender for Roblox]] · [[Voxel Art - Studs Outlines and Style Kits]]
+[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Terrain - Engine Reference Card]] · [[Parts Unions and MeshParts]] · [[Textures Decals and Texture Memory]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Environment Art Styles]] · [[Level Design for Roblox]] · [[Modeling in Blender for Roblox]] · [[Voxel Art - Studs Outlines and Style Kits]]
 <!-- related:end -->

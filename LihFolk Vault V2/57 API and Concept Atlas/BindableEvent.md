@@ -28,10 +28,10 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 
 ## Mentioned in
 
-27 notes in 18 sections. The 25 most relevant are linked:
+28 notes in 18 sections. The 25 most relevant are linked:
 
 ### 02 Luau Scripting
-[[Error Handling - pcall xpcall and Promise Patterns]] · [[Events Signals and Connections]] · [[Functions Closures and Upvalues]] · [[Module Scripts and Requiring]]
+[[Error Handling - pcall xpcall and Promise Patterns]] · [[Events Signals and Connections]] · [[Functions Closures and Upvalues]] · [[Metatables and OOP - When and When Not]] · [[Module Scripts and Requiring]]
 
 ### 04 Data and Persistence
 [[Global State and Live Config]] · [[Session Locking and Profile Libraries]]
@@ -63,14 +63,11 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 ### 42 Accessibility and Inclusive Design
 [[Colour-Blind Safe Design]] · [[Motion Sensitivity and Camera Comfort]]
 
+### 46 Resource Library
+[[Official Docs - Scripting and Luau]]
+
 ### 49 Roblox Platform Features
 [[Avatar Context Menus Profiles and Social Surfaces]]
-
-### 50 Team Collaboration and Project Management
-[[Working with Contractors and Revenue Splits]]
-
-### 51 2D Game Development
-[[Side-Scroller in 3D - Locking Camera and Movement to a Plane]]
 
 ### 52 Core Concepts
 [[Event Bus]]
@@ -78,6 +75,6 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 ### 58 Player QoL and Game Tweaks
 [[Block and Mute Respecting Platform Rules]] · [[Settings Menu Essentials and Persistence]]
 
-Also mentioned in (not linked): Links - Remote events and functions · Zone Detection - Area Enter and Exit for Music, Lighting and Ambience
+Also mentioned in (not linked): Side-Scroller in 3D - Locking Camera and Movement to a Plane · Working with Contractors and Revenue Splits · Zone Detection - Area Enter and Exit for Music, Lighting and Ambience
 
 <!-- atlas:generated -->

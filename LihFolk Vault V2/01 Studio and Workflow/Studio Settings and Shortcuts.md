@@ -255,10 +255,10 @@ end
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Building a Studio Plugin End to End]] · Links - Roblox Studio · [[Team Create and Collaboration]] · Plugin Development Start Here · Code Pipeline - Rojo Git and CI · Undo and ChangeHistoryService Done Right
+[[Building a Studio Plugin End to End]] · Official Docs - Studio and Tooling · [[Team Create and Collaboration]] · Plugin Development Start Here · Code Pipeline - Rojo Git and CI · Undo and ChangeHistoryService Done Right
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Git and Source Control for Roblox]] · [[Packages and Asset Reuse]] · [[Studio Assistant and AI Tools]] · [[Undo and ChangeHistoryService Done Right]] · [[Code Pipeline - Rojo Git and CI]] · [[Creator Store and Toolbox Safety]]
+[[Git and Source Control for Roblox]] · [[Packages and Asset Reuse]] · [[Undo and ChangeHistoryService Done Right]] · [[Studio Assistant and AI Tools]] · [[Code Pipeline - Rojo Git and CI]] · [[Creator Store and Toolbox Safety]]
 <!-- related:end -->

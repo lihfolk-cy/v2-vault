@@ -16,9 +16,8 @@ without attribution.
 
 | Material | Where | License |
 |---|---|---|
-| Short excerpts and adapted code samples from the Roblox Creator Documentation | Notes that cite `Roblox docs` (e.g. Network Ownership, Teleporting and Multi-Place Games) | Text: CC BY 4.0; code samples: MIT. Source: github.com/Roblox/creator-docs, (c) Roblox Corporation |
-| Free-runner-thread signal technique | `35 Advanced Luau/Building a Signal Library`, `02 Luau Scripting/Events Signals and Connections` | Technique credited to GoodSignal by stravant (MIT); notes are rewritten, not copied |
-| Linked websites | `46 Resource Library/` | Links only; the linked pages belong to their owners |
+| Short quotations from the Roblox Creator Documentation, where a note quotes it to cite a fact | Notes labelled `Roblox docs` | CC BY 4.0, (c) Roblox Corporation (github.com/Roblox/creator-docs) |
+| Links to official documentation | `46 Resource Library/` | Links only; the linked pages belong to their owners |
 
 Roblox, Roblox Studio and related marks belong to Roblox Corporation. This vault is not affiliated with
 or endorsed by Roblox Corporation. Blender is a trademark of the Blender Foundation. Obsidian is a
@@ -31,5 +30,5 @@ documentation before relying on limits, prices or policies. Test all code before
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Free and CC0 asset libraries]] · [[Third-Party Skill - Obsidian Skills]] · Legal Basics - IP Licenses and Assets · [[AI Skills Start Here]] · [[Skill - Roblox Asset Import]]
+[[Legal Basics - IP Licenses and Assets]] · [[AI Skills Start Here]] · [[Skill - Roblox Asset Import]]
 <!-- auto-links:end -->

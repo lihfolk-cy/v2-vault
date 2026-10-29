@@ -10,9 +10,10 @@
     "celestial-v2-hud",
     "celestial-v2-banners",
     "celestial-v2",
-    "celestial-v2-chrome"
+    "celestial-v2-chrome",
+    "celestial-base"
   ],
   "theme": "obsidian",
-  "cssTheme": "Everforest",
+  "cssTheme": "",
   "accentColor": "#9b7bff"
 }

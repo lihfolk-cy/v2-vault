@@ -5,14 +5,14 @@ tags: [data, datastore, persistence, limits, fundamentals, type/guide, area/data
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
+> - Avoid: Key name over 50 characters, or a value over 4 MB serialized -> Short keys like `Player_{UserId}`; measure...
 > - Avoid: `GetAsync` then `SetAsync` for player data -> `UpdateAsync` plus session locking
 > - Avoid: Treating a `nil` load result after an error as "new player" -> Distinguish "no data" from "call failed" (Data Loss Prevention and...
-> - Avoid: Yielding inside the transform -> Compute everything before calling `UpdateAsync`
+> - Transform handles `nil` (new key), never yields, may run more than once, returns `nil` to cancel; keys at most 50 characters.
 > - Every data store call is in `pcall`, with transient-error retry and backoff.
 > - Player data is written only through one module, with `UpdateAsync` and a session lock.
-> - Load failure and "new player" are different code paths.
 >
-> Cost: TL;DR ~180 tok · whole note ~5.5k tok. Read more: ## UpdateAsync, precisely · ## Limits (Roblox docs, as of October 2026) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~200 tok · whole note ~5.6k tok. Read more: ## UpdateAsync, precisely · ## Limits (Roblox docs, as of October 2026) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 `DataStoreService` is the only durable, cross-server storage built into the engine. Everything a player expects to still exist tomorrow (currency, inventory, settings, purchase history) ends up in a data store. This note explains what a data store actually is, the exact limits and budgets it enforces (as of October 2026), how the 4 second read cache works and bites, how versioning gives you free backups, and which API to call for which job. The rest of this folder builds on it: [[Session Locking and Profile Libraries]], [[Saving Correctly - Autosave and BindToClose]], [[Data Schema Design and Migrations]].
@@ -261,6 +261,7 @@ Distinguish **permanent** errors (1xx, 403, 511 to 513: retrying cannot help) fr
 
 | Mistake | What it looks like | Fix |
 |---|---|---|
+| Key name over 50 characters, or a value over 4 MB serialized | The write errors every time for that key | Short keys like `Player_{UserId}`; measure `#HttpService:JSONEncode(data)` |
 | `GetAsync` then `SetAsync` for player data | Occasional rollbacks, duplicated items after server hops | `UpdateAsync` plus session locking |
 | Treating a `nil` load result after an error as "new player" | A player's whole save replaced by defaults | Distinguish "no data" from "call failed" ([[Data Loss Prevention and Recovery]]) |
 | Yielding inside the transform | Error "Callbacks cannot yield" or a silently failed save | Compute everything before calling `UpdateAsync` |
@@ -274,6 +275,7 @@ Distinguish **permanent** errors (1xx, 403, 511 to 513: retrying cannot help) fr
 
 ## Checklist
 
+- [ ] Transform handles `nil` (new key), never yields, may run more than once, returns `nil` to cancel; keys at most 50 characters.
 - [ ] Every data store call is in `pcall`, with transient-error retry and backoff.
 - [ ] Player data is written only through one module, with `UpdateAsync` and a session lock.
 - [ ] Load failure and "new player" are different code paths.
@@ -288,10 +290,10 @@ Distinguish **permanent** errors (1xx, 403, 511 to 513: retrying cannot help) fr
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Debugging DataStore Problems]] · Cookbook - Data and Saving · Skill - Roblox DataStore Safety · Session Lock · Links - DataStoreService · Global Leaderboards End to End
+[[Debugging DataStore Problems]] · Cookbook - Data and Saving · Skill - Roblox DataStore Safety · Session Lock · Official Docs - Data and Persistence · Global Leaderboards End to End
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Cookbook - Data and Saving]] · [[AI Pitfalls - Data and Monetization]] · [[Session Lock]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[Schema Migrations - Worked Case Studies]] · [[Trading Systems Without Duplication]]
+[[DataStoreService - Engine Reference Card]] · [[Cookbook - Data and Saving]] · [[AI Pitfalls - Data and Monetization]] · [[Session Lock]] · [[Engine Limits, Quotas and Defaults - Cheat Sheet]] · [[Serial-Numbered Limited Items - Atomic Counters]]
 <!-- related:end -->

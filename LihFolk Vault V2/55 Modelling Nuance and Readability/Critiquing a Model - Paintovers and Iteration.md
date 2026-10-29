@@ -12,7 +12,7 @@ tags: [modeling, critique, paintover, feedback, iteration, review, art-direction
 > - Critique in order: purpose, silhouette, proportion, value, colour, edges, detail, technical.
 > - Three to five must-fix notes, each with what, where, why and how much.
 >
-> Cost: TL;DR ~190 tok · whole note ~3.7k tok. Read more: ## Paintovers · ## Worked example: critiquing a slime enemy · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~3.8k tok. Read more: ## Paintovers · ## Worked example: critiquing a slime enemy · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Most models get better through review, not through the first pass. The difference between a team whose art improves and one whose art goes in circles is usually not talent; it is how feedback is given and used. This note covers a fixed order for critiquing a 3D model (so the biggest problems get fixed first), how to do paintovers on screenshots and in Blender, how to check value structure in Studio, how to write feedback a modeller can act on, how many review rounds to plan, and how to know when to stop. It applies to solo work too: critiquing your own model a day later, with the same method, catches most of what a reviewer would.
@@ -205,5 +205,5 @@ Three must-fix notes, three paintovers, about 25 minutes of review. The same fee
 
 <!-- related:start -->
 ## Related
-[[Art-Direction Nitpicks - The Principles Behind Them]] · [[Low-Poly and Stylized Modeling]] · [[Keeping a Mixed Asset Library Consistent]] · [[The Gradient Palette Texture Workflow]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Clean Stylised Shading - Weighted and Custom Normals]]
+[[Art-Direction Nitpicks - The Principles Behind Them]] · [[Low-Poly and Stylized Modeling]] · [[Keeping a Mixed Asset Library Consistent]] · [[The Gradient Palette Texture Workflow]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[Thumbnail Composition for High CTR - Focal Point, Contrast and Readability]]
 <!-- related:end -->

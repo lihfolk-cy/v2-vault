@@ -280,10 +280,10 @@ Related: [[UI and GUI Animation]], [[Procedural Animation]], [[Performance and M
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Tweening and UI animation]] · [[Custom Rigs - Weapons and Props]] · Tween vs Spring · Easing · UI Motion Language and Timing · Links - Forces and movers · [[Animation Start Here]]
+[[Official Docs - UI]] · [[Custom Rigs - Weapons and Props]] · Tween vs Spring · Easing · UI Motion Language and Timing · Official Docs - Physics · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Procedural Weapon Motion]] · [[Weapon Rig Player]] · [[Look-At Aim and Head Tracking]] · [[Springs Damping and Smoothing]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Rigs and Joints]] · [[Snippets - Enemy Client Animator]] · [[Motor6D Math and CFrame Composition]]
+[[TweenService - Engine Reference Card]] · [[Procedural Weapon Motion]] · [[Look-At Aim and Head Tracking]] · [[Weapon Rig Player]] · [[Springs Damping and Smoothing]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Rigs and Joints]] · [[Motor6D Math and CFrame Composition]] · [[Snippets - Enemy Client Animator]]
 <!-- related:end -->

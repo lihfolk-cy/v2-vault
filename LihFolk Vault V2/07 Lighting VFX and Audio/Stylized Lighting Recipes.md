@@ -91,7 +91,7 @@ Combat needs the opposite of a bright hub: a calmer, slightly darker world so ef
 | Bloom | Intensity 1, Size 40, Threshold 1.6 |
 | Grade | Contrast 0.12, Saturation -0.05 |
 
-Why: environment saturation slightly below zero leaves saturation for effects. Bloom threshold around 1.5 to 2 means only over-bright effect particles (Brightness well above 1, `LightInfluence` 0) glow; [[Atmosphere Sky Clouds and Post-Processing]] covers why. One studied professional VFX pack set bloom to Intensity 1.6, Size 56, Threshold 2 (measured in the reference project's study) and tuned all its flashes against that.
+Why: environment saturation slightly below zero leaves saturation for effects. Bloom threshold around 1.5 to 2 means only over-bright effect particles (Brightness well above 1, `LightInfluence` 0) glow; [[Atmosphere Sky Clouds and Post-Processing]] covers why. Pick the bloom settings first and tune every flash against them, so effects look the same across the game (Rule of thumb).
 
 Breaks when: the arena is also a dark zone. The reference project's stylised effect set, designed in daylight, nearly vanished in its dark zones and had to be rebaked brighter (emissive raised from 1.1 to 1.9, a small coloured light on large pieces). Test every effect in the darkest arena, not only this one.
 
@@ -138,7 +138,7 @@ Breaks when: you lower `Ambient` further for drama. Check a screenshot in greysc
 
 Why: dark purple base, high specular so wet-looking floors catch Neon signs, low bloom threshold so Neon glows. Here the Neon parts *are* the lighting. Haze 2 makes distant signs bleed into colour fields.
 
-Breaks when: every surface is Neon (it becomes a flat glowing mess and bloom washes shapes out; one style study capped glow at about 16 percent of an object's pixels). Also expensive: many local lights. Fake most "light pools" with Neon decals or transparent coloured parts and keep real lights to a handful near the play space, shadows off ([[Light Sources and Shadows]]).
+Breaks when: every surface is Neon (it becomes a flat glowing mess and bloom washes shapes out; as a rule of thumb keep glow to no more than about a sixth of an object's pixels). Also expensive: many local lights. Fake most "light pools" with Neon decals or transparent coloured parts and keep real lights to a handful near the play space, shadows off ([[Light Sources and Shadows]]).
 
 ### 3.6 Fog horror
 
@@ -404,5 +404,5 @@ See also: [[Lighting Technologies and Settings]], [[Atmosphere Sky Clouds and Po
 
 <!-- related:start -->
 ## Related
-[[Colour Scripts and Value Structure for Untextured Art]] · [[Zone and Biome Art Direction]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Weather System Architecture - State Machine, Transitions and Replication]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Particle Emitters In Depth]]
+[[Colour Scripts and Value Structure for Untextured Art]] · [[Zone and Biome Art Direction]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[VFX Readability and Value - Lessons from Blind Reviews]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Weather System Architecture - State Machine, Transitions and Replication]] · [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Particle Emitters In Depth]]
 <!-- related:end -->

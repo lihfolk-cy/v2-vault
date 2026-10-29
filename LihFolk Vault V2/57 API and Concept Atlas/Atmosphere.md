@@ -62,14 +62,14 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 [[Dramatic Showcase Renders in Eevee]]
 
 ### 46 Resource Library
-[[Links - Lighting]]
-
-### 49 Roblox Platform Features
-[[Photo Mode and In-Game Screenshots with CaptureService]]
+[[Official Docs - Building and World]]
 
 ### 54 Untextured Stylised Modelling
 [[Colour Scripts and Value Structure for Untextured Art]]
 
-Also mentioned in (not linked): 00 Start Here · Accessibility Contrast · Accessibility Start Here · Agent Review Loops and Guardrails in Practice · Batch Processing Tools in Studio · Boats Buoyancy and Water · Critiquing a Model - Paintovers and Iteration · Game Trailers and Clean Footage - Capture, Freecam and Editing · Hand-Painted and Stylized Texturing · Instance Streaming · Instanced Interiors - Pooled House and Room Copies for Many Players · Lighting Untextured Art in Roblox · Low-Poly and Stylized Modeling · Materials and Surfaces Start Here · Music and Adaptive Audio · Noise Functions and Terrain Generation · Onboarding by Genre - The First Five Minutes · Packages and Shared Assets Across Places · Procedural Generation Start Here · Rain - Camera-Local Particles, Splashes and Wet Surfaces · Reference - Purple Anime Settings UI (Claude + Figma) · Roads, Rivers and Paths Carved Along Curves in Terrain · Safety Rules for AI Agents in Studio · Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur · Studio Interface Tour · Testing Modes - Play Run and Multi-Client · Textures Decals and Texture Memory · Texturing and PBR Baking · Voxel Palettes - Ramps Hue Shifting and Limits · Weather Performance Budgets and Quality Tiers · Weather That Changes Gameplay - Grip, Visibility and Hearing
+### 61 Thumbnails and CTR
+[[Making Thumbnails in Studio and Blender - Capture, Lighting and Posing]]
+
+Also mentioned in (not linked): 00 Start Here · Accessibility Contrast · Accessibility Start Here · Agent Review Loops and Guardrails in Practice · Batch Processing Tools in Studio · Boats Buoyancy and Water · Critiquing a Model - Paintovers and Iteration · Game Trailers and Clean Footage - Capture, Freecam and Editing · Hand-Painted and Stylized Texturing · Instance Streaming · Instanced Interiors - Pooled House and Room Copies for Many Players · Lighting Untextured Art in Roblox · Low-Poly and Stylized Modeling · Materials and Surfaces Start Here · Music and Adaptive Audio · Noise Functions and Terrain Generation · Onboarding by Genre - The First Five Minutes · Packages and Shared Assets Across Places · Photo Mode and In-Game Screenshots with CaptureService · Procedural Generation Start Here · Rain - Camera-Local Particles, Splashes and Wet Surfaces · Roads, Rivers and Paths Carved Along Curves in Terrain · Safety Rules for AI Agents in Studio · Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur · Studio Interface Tour · Testing Modes - Play Run and Multi-Client · Textures Decals and Texture Memory · Texturing and PBR Baking · Voxel Palettes - Ramps Hue Shifting and Limits · Weather Performance Budgets and Quality Tiers · Weather That Changes Gameplay - Grip, Visibility and Hearing
 
 <!-- atlas:generated -->

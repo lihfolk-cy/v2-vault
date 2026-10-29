@@ -311,7 +311,7 @@ The cost of option 2 is clutter: attributes left on thousands of instances. Give
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Studio Settings and Shortcuts]] · Batch Processing Tools in Studio · Links - Plugins and custom tools · Studio Interface Tour · Working with AI Assistants in Studio · Roblox Studio Assistant
+[[Studio Settings and Shortcuts]] · Batch Processing Tools in Studio · Official Docs - Asset Creation · Studio Interface Tour · Working with AI Assistants in Studio · Roblox Studio Assistant
 <!-- auto-links:end -->
 
 <!-- related:start -->

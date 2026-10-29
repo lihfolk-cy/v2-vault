@@ -129,5 +129,5 @@ Two young developers at launch, building on an established game category and ope
 
 <!-- related:start -->
 ## Related
-[[Teardown - Anime Vanguards]] · [[Teardown - Jujutsu Shenanigans]] · [[Teardown - Apocalypse Rising 2]] · [[Teardown - Deepwoken]] · [[Teardown - Phantom Forces]] · [[Teardown - Arsenal]] · [[Teardown - Grace]] · [[Teardown - Piggy]]
+[[Teardown - Anime Vanguards]] · [[Teardown - Jujutsu Shenanigans]] · [[Teardown - Apocalypse Rising 2]] · [[Teardown - Phantom Forces]] · [[Teardown - Deepwoken]] · [[Teardown - Arsenal]] · [[Teardown - Grace]] · [[Teardown - Piggy]]
 <!-- related:end -->

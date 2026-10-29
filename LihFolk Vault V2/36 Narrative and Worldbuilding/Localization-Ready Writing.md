@@ -336,5 +336,5 @@ Notes:
 
 <!-- related:start -->
 ## Related
-[[Experience Description and Search Keywords]] · [[Captions and Audio Accessibility]] · [[Cookbook - Tables Strings and Time]] · [[Story State Flags and Chapter Saves]] · [[Multiplayer Cutscene Sync - Server Clock, Late Joiners and Skip Votes]] · [[Puzzle Dependency Charts and Hint Systems]]
+[[Experience Description and Search Keywords]] · [[Thumbnail Specs, Rules and Upload - Sizes, Count and Policy]] · [[Captions and Audio Accessibility]] · [[Story State Flags and Chapter Saves]] · [[Multiplayer Cutscene Sync - Server Clock, Late Joiners and Skip Votes]] · [[Puzzle Dependency Charts and Hint Systems]]
 <!-- related:end -->

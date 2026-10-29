@@ -165,5 +165,5 @@ end
 
 <!-- related:start -->
 ## Related
-[[Playtest Heatmaps - Position and Death Maps]] · [[Teaching Through Level Design]] · [[Lobby and Hub Design]] · [[Instanced Interiors - Pooled House and Room Copies for Many Players]] · [[Teardown - Phantom Forces]] · [[Obby and Platforming Level Design]]
+[[Playtest Heatmaps - Position and Death Maps]] · [[Teaching Through Level Design]] · [[Lobby and Hub Design]] · [[Instanced Interiors - Pooled House and Room Copies for Many Players]] · [[PathfindingService - Engine Reference Card]] · [[Teardown - Phantom Forces]] · [[Obby and Platforming Level Design]]
 <!-- related:end -->

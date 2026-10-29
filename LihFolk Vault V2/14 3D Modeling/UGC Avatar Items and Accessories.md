@@ -224,10 +224,10 @@ If you also run a game:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Layered Clothing Creation Workflow]] · Bundles Animation Packs and Emotes for Sale · UGC Pricing Limiteds and Marketplace Rules · Avatars and UGC Start Here · Links - Avatars and UGC · HumanoidDescription and Outfit Systems
+[[Layered Clothing Creation Workflow]] · Bundles Animation Packs and Emotes for Sale · UGC Pricing Limiteds and Marketplace Rules · Avatars and UGC Start Here · Official Docs - Asset Creation · HumanoidDescription and Outfit Systems
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[UGC Pricing Limiteds and Marketplace Rules]] · [[Bundles Animation Packs and Emotes for Sale]] · [[Topology and Edge Flow]] · [[Normal Maps and Detail Baking]] · [[Blender Workflow for Roblox Creators]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Organic and Creature Modeling]] · [[Mesh Optimization for Mobile]] · [[Hand-Painted and Stylized Texturing]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]
+[[UGC Pricing Limiteds and Marketplace Rules]] · [[Bundles Animation Packs and Emotes for Sale]] · [[Topology and Edge Flow]] · [[Blender Workflow for Roblox Creators]] · [[Normal Maps and Detail Baking]] · [[Trim Sheets Atlases and Vertex Colors]] · [[Organic and Creature Modeling]] · [[Mesh Optimization for Mobile]] · [[Hand-Painted and Stylized Texturing]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]
 <!-- related:end -->

@@ -252,7 +252,7 @@ MCP did not make these patterns obsolete. MCP is the right pipe for **decisions 
 ## Related decisions
 
 - [[Plugin Security and Permissions]]: what permissions a bridge plugin should and should not ask for.
-- [[Links - Backdoors and malicious assets]]: why live places should not allow arbitrary HTTP.
+- [[Official Docs - Security and Moderation]]: official security and Creator Store safety pages.
 - [[Building a Studio Plugin End to End]]: turning a bridge script into a maintained plugin.
 - [[Code Pipeline - Rojo Git and CI]]: Rojo as the most common bridge of this kind.
 - [[Threat Modeling a Roblox Game]]: tooling as part of the attack surface.

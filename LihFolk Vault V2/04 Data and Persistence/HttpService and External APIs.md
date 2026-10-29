@@ -6,13 +6,13 @@ tags: [data, httpservice, web, secrets, json, rate-limits, external-services, ty
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - Avoid: Keys or webhook URLs in scripts (Leaked with the place file or any shared model)
-> - Avoid: One request per player event (500/min limit hit at modest player counts)
+> - Avoid: One request per player event (500/min external limit hit fast (Open Cloud: separate 2500/min))
 > - Avoid: `GetAsync`/`PostAsync` without `pcall` (Script errors on any failure)
+> - Limits: 500 external requests/min per server; Open Cloud calls a separate 2500/min; Open Cloud `x-api-key` from `GetSecret`.
 > - HTTP enabled only where needed; all requests server-side.
 > - Secrets in the secrets store with tight domains; local secrets for Studio.
-> - One helper with `pcall`, status checks, retry on 429/5xx only, backoff, `retry-after`.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.6k tok. Read more: ## A reliable request helper · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~180 tok · whole note ~4.7k tok. Read more: ## A reliable request helper · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 `HttpService` lets game servers talk to the outside world: your own backend, analytics and error trackers, Discord-style webhooks for moderation alerts, and a growing set of Roblox Open Cloud endpoints. It also hosts the JSON and GUID helpers every Roblox codebase uses. This note covers enabling it, the request API, the limits (500 requests per minute per server, a separate 2,500 per minute for Open Cloud), the secrets store, JSON edge cases, security, and patterns for reliable outbound calls. Open Cloud from outside Roblox is in [[Open Cloud APIs]].
@@ -208,7 +208,7 @@ The HttpService observability dashboard (Creator Hub) shows Request Count (by me
 | Mistake | Consequence |
 |---|---|
 | Keys or webhook URLs in scripts | Leaked with the place file or any shared model |
-| One request per player event | 500/min limit hit at modest player counts |
+| One request per player event | 500/min external limit hit fast (Open Cloud: separate 2500/min) |
 | `GetAsync`/`PostAsync` without `pcall` | Script errors on any failure |
 | Treating `RequestAsync` returning as success | 4xx/5xx bodies parsed as data |
 | Retrying 4xx | Wasted budget; never succeeds |
@@ -219,6 +219,7 @@ The HttpService observability dashboard (Creator Hub) shows Request Count (by me
 
 ## Checklist
 
+- [ ] Limits: 500 external requests/min per server; Open Cloud calls a separate 2500/min; Open Cloud `x-api-key` from `GetSecret`.
 - [ ] HTTP enabled only where needed; all requests server-side.
 - [ ] Secrets in the secrets store with tight domains; local secrets for Studio.
 - [ ] One helper with `pcall`, status checks, retry on 429/5xx only, backoff, `retry-after`.
@@ -265,10 +266,10 @@ The senior trade-off: an external backend adds power (web dashboards, cross-game
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Open Cloud and external APIs]] · Telemetry Events · Plugin Security and Permissions · [[DataStore Fundamentals]] · Clip Archive Server · Batch Processing Tools in Studio
+[[Official Docs - Scripting and Luau]] · Telemetry Events · Plugin Security and Permissions · [[DataStore Fundamentals]] · Clip Archive Server · Batch Processing Tools in Studio
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Data Loss Prevention and Recovery]] · [[Data Schema Design and Migrations]] · [[MemoryStore Service]] · [[OrderedDataStores and Leaderboards]] · [[Schema Migrations - Worked Case Studies]] · [[Session Locking and Profile Libraries]] · [[Purchase Data and Receipts]] · [[Serial-Numbered Limited Items - Atomic Counters]]
+[[HttpService - Engine Reference Card]] · [[Plugin Security and Permissions]] · [[In-Game Bug Report Button with Automatic Context]] · [[Data and Cloud Changes 2025-2026]] · [[Data Loss Prevention and Recovery]] · [[Telemetry Events]]
 <!-- related:end -->

@@ -173,10 +173,10 @@ Plugin note: SurfaceAppearance map properties are Plugin security, so a Studio p
 
 ## Connected notes
 <!-- auto-links:start -->
-[[SurfaceAppearance PBR Workflow]] · Links - Texturing · Materials and Surfaces Start Here · Stylised vs Realistic Material Pipelines · Baking Lighting and Detail into Textures · MagicaVoxel Goxel and Blockbench Workflows Compared
+[[SurfaceAppearance PBR Workflow]] · Official Docs - Asset Creation · Materials and Surfaces Start Here · Stylised vs Realistic Material Pipelines · Baking Lighting and Detail into Textures · MagicaVoxel Goxel and Blockbench Workflows Compared
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Baking Lighting and Detail into Textures]] · [[Blender Workflow for Roblox Creators]] · [[Modeling Fundamentals for Games]] · [[Low-Poly and Stylized Modeling]] · [[Mesh Optimization for Mobile]] · [[Modular Environment Kits]] · [[Voxel and Blocky Modeling]] · [[Hard-Surface Modeling]] · [[Procedural Model Kits - Lessons]]
+[[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Baking Lighting and Detail into Textures]] · [[Blender Workflow for Roblox Creators]] · [[Modeling Fundamentals for Games]] · [[Low-Poly and Stylized Modeling]] · [[Voxel and Blocky Modeling]] · [[Mesh Optimization for Mobile]] · [[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]] · [[Modular Environment Kits]] · [[Hard-Surface Modeling]]
 <!-- related:end -->

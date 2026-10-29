@@ -710,7 +710,7 @@ The pattern behind the table is the same as everywhere in this folder: the clien
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Rounds and matchmaking]] · Genre Playbook - Sports · Spawn Points Safe Zones and Respawn Flow · Matchmaking Queues with MemoryStore · Level Design Start Here · Combat Arena and Encounter Layout
+[[Official Docs - Game Systems]] · Genre Playbook - Sports · Spawn Points Safe Zones and Respawn Flow · Matchmaking Queues with MemoryStore · Level Design Start Here · Combat Arena and Encounter Layout
 <!-- auto-links:end -->
 
 <!-- related:start -->

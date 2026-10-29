@@ -315,7 +315,7 @@ Test the state machine, not just the happy path. Useful cases: first purchase wi
 - [ ] Lapse and refund policy written and shown before purchase
 
 ## See also
-[[Platform Features Start Here]] · [[Subscriptions and Premium Payouts]] · [[Monetization Overview]] · [[Game Passes]] · [[Battle Pass and Season Design]] · [[Economy Inflation Sinks and Faucets Math]] · [[Purchase Data and Receipts]] · [[Refunds Chargebacks and Purchase Support]] · [[Links - Subscriptions and payouts]]
+[[Platform Features Start Here]] · [[Subscriptions and Premium Payouts]] · [[Monetization Overview]] · [[Game Passes]] · [[Battle Pass and Season Design]] · [[Economy Inflation Sinks and Faucets Math]] · [[Purchase Data and Receipts]] · [[Refunds Chargebacks and Purchase Support]] · [[Official Docs - Monetization]]
 
 ## Connected notes
 <!-- auto-links:start -->
@@ -324,5 +324,5 @@ Test the state machine, not just the happy path. Useful cases: first purchase wi
 
 <!-- related:start -->
 ## Related
-[[Discovery and Monetization Changes 2025-2026]] · [[Regional Compliance - Paid Random Items and Country Rules]] · [[Badges and Achievement Design]] · [[Experience Notifications and Return Prompts]] · [[Friend Invites Referrals and Experience Invites]] · [[Roblox Changes 2025-2026]]
+[[Discovery and Monetization Changes 2025-2026]] · [[Badges and Achievement Design]] · [[Regional Compliance - Paid Random Items and Country Rules]] · [[Experience Notifications and Return Prompts]] · [[Friend Invites Referrals and Experience Invites]] · [[Roblox Changes 2025-2026]] · [[API Renames and Deprecations 2025-2026]]
 <!-- related:end -->

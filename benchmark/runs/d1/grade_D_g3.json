@@ -1,0 +1,290 @@
+[
+ {
+  "id": "D1",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 2.75,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "All cover priority, Action fix, Animator+load once. R3 garbled wording implying idle/walk share Core level (item1 0.75)."
+ },
+ {
+  "id": "D2",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "All give Scriptable fix and client-only camera."
+ },
+ {
+  "id": "D3",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "All: fixed CanvasSize + AutomaticCanvasSize Y / AbsoluteContentSize."
+ },
+ {
+  "id": "D4",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "All cover weight, RelativeTo World, ApplyAtCenterOfMass/centre + AlignOrientation."
+ },
+ {
+  "id": "D5",
+  "scores": {
+   "R1": 2.5,
+   "R2": 2,
+   "R3": 3,
+   "R4": 2.5,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "Item3 (Destroy/PlayerCharacterDestroyBehavior): R3 full with reason; R1/R4 name property without reason (0.5); R2/R5/R6 missing."
+ },
+ {
+  "id": "D6",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "All two-attachment AlignPosition/Orientation, Responsiveness/MaxForce, ownership with trade-off."
+ },
+ {
+  "id": "D7",
+  "scores": {
+   "R1": 3.5,
+   "R2": 3.5,
+   "R3": 3.5,
+   "R4": 3.5,
+   "R5": 4,
+   "R6": 3.5
+  },
+  "notes": "Item4 Blocked: only R5 gives blocked-index-ahead condition; others generic recompute (0.5)."
+ },
+ {
+  "id": "D8",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "All correct GetOrderedDataStore/GetSortedAsync(false,10)/pcall+interval."
+ },
+ {
+  "id": "D9",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "All AudioPlayer Asset/Looping, Wire, DeviceOutput/Emitter/Listener+group. DistanceAttenuationMode enum names in R3/R6 unverified, not penalised."
+ },
+ {
+  "id": "D10",
+  "scores": {
+   "R1": 1.75,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "R1 omits PromptSubscriptionPurchase (item2 partial)."
+ },
+ {
+  "id": "D11",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "All cover driver ownership, server-owned NPCs, validation/Server Authority."
+ },
+ {
+  "id": "D12",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.5,
+   "R3": 2.25,
+   "R4": 2.5,
+   "R5": 2.5,
+   "R6": 2.5
+  },
+  "notes": "Item3 Open Cloud mentioned but no scoped API key by all (0.5). R1/R3 say every write is a version with only hedged hourly note (item1 0.75)."
+ },
+ {
+  "id": "D13",
+  "scores": {
+   "R1": 3.5,
+   "R2": 3,
+   "R3": 3.75,
+   "R4": 3.5,
+   "R5": 3.5,
+   "R6": 3
+  },
+  "notes": "Item4 (Open Cloud shares MessagingService limits) weak: R3 closest; R1/R4/R5 only 429 handling (0.5); R2/R6 none."
+ },
+ {
+  "id": "D14",
+  "scores": {
+   "R1": 1.33,
+   "R2": 1.33,
+   "R3": 1.33,
+   "R4": 1.33,
+   "R5": 1.33,
+   "R6": 1.33
+  },
+  "notes": "Items1-2 full for all; none mention BindableFunction Invoke yielding or cyclic require hang."
+ },
+ {
+  "id": "D15",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "All: unreliable/unordered cosmetic, ~1000 byte drop, validate+rate-limit."
+ },
+ {
+  "id": "D16",
+  "scores": {
+   "R1": 2.5,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 2.5,
+   "R6": 3
+  },
+  "notes": "R1/R5 use older limit formulas (item2 0.5)."
+ },
+ {
+  "id": "D17",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2,
+   "R3": 1.75,
+   "R4": 1.5,
+   "R5": 2,
+   "R6": 2.25
+  },
+  "notes": "No one gives Open Cloud separate 2500/min; R3/R4 confidently say Open Cloud counts toward 500 (item1 0). Secrets+HttpEnabled all full. Success/StatusCode check only implied."
+ },
+ {
+  "id": "D18",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "All: BindToRenderStep camera client-only; Heartbeat/Pre/PostSimulation with dt on server."
+ },
+ {
+  "id": "D19",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 2.5,
+   "R5": 3,
+   "R6": 2.5
+  },
+  "notes": "R4/R6 vague on PlayerScriptsUseInputActionSystem rollout (item3 0.5)."
+ },
+ {
+  "id": "D20",
+  "scores": {
+   "R1": 2,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 1.5,
+   "R6": 3
+  },
+  "notes": "R1 names only fixed stepping (item2 0.5), no limit (item3 0.5); R5 no forced settings, no limit. Others accept 64-attribute/EquipTool limits as named limitations."
+ },
+ {
+  "id": "D21",
+  "scores": {
+   "R1": 1,
+   "R2": 1.75,
+   "R3": 1.75,
+   "R4": 1.75,
+   "R5": 1,
+   "R6": 1.75
+  },
+  "notes": "R1/R5 give wrong requirement (AuthorityMode/PhysicsSteppingMethod) instead of UseFixedSimulation; no one states simulation-access property restriction beyond no Destroy/reparent (0.75)."
+ },
+ {
+  "id": "D22",
+  "scores": {
+   "R1": 3,
+   "R2": 2.5,
+   "R3": 2.25,
+   "R4": 2.75,
+   "R5": 2,
+   "R6": 2.5
+  },
+  "notes": "Mapping/meaning of PrioritizeLightingQuality varies: R1 full; R4 mapping only; R2/R6 Future only; R3 vague; R5 none. All give non-scriptable reason."
+ },
+ {
+  "id": "D23",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "All QueryDescendants with correct selector."
+ },
+ {
+  "id": "D24",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "All four built-ins named correctly."
+ }
+]

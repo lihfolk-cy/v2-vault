@@ -1,5 +1,5 @@
 ---
-tags: [atlas, api, type/atlas, area/studio, area/scripting, api/Plugin]
+tags: [atlas, api, type/atlas, area/studio, area/platform, api/Plugin]
 ---
 # Plugin
 
@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/studio, area/scripting, api/Plugin]
 > - Plugin debugging on; dev loop through `PluginDebugService`.
 > - Plugin runner runs suites sequentially and checks `EditModeActive`.
 >
-> Cost: TL;DR ~140 tok · whole note ~400 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~420 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,7 +27,7 @@ API snapshot: class, inherits `Instance`, not creatable with `Instance.new` (`_t
 
 ## Mentioned in
 
-12 notes in 9 sections. The 12 most relevant are linked:
+13 notes in 9 sections. The 13 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[Plugins - Using and Writing]] · [[Testing Modes - Play Run and Multi-Client]] · [[Version History and Backups]]
@@ -51,7 +51,7 @@ API snapshot: class, inherits `Instance`, not creatable with `Instance.new` (`_t
 [[Building a Studio Plugin End to End]] · [[Selection Editing and Bulk Tools]]
 
 ### 49 Roblox Platform Features
-[[Engine and API Changes 2025-2026]]
+[[API Renames and Deprecations 2025-2026]] · [[Engine and API Changes 2025-2026]]
 
 ### Root notes
 [[Open Questions - Whole Vault]]

@@ -324,7 +324,7 @@ See also: [[Accessibility Start Here]], [[Accessibility]], [[First-Time User Exp
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Genre Playbook - Puzzle and Escape Rooms]] · Obby Checkpoints and Stage Saves End to End · Quests and Objectives · Obby and Platforming Level Design · Links - Leaderboards · Core Loops and Session Design
+[[Genre Playbook - Puzzle and Escape Rooms]] · Obby Checkpoints and Stage Saves End to End · Quests and Objectives · Obby and Platforming Level Design · Official Docs - Data and Persistence · Core Loops and Session Design
 <!-- auto-links:end -->
 
 <!-- related:start -->

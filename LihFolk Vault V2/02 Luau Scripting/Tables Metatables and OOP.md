@@ -370,7 +370,7 @@ The senior trade-off: tables are the only data structure, so the question is nev
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - OOP and module design]] · Cookbook - Tables Strings and Time · Links - Luau language · [[Luau Performance Patterns with Benchmarks]] · Reading Luau Errors and Stack Traces · Advanced Luau Start Here
+[[Official Docs - Scripting and Luau]] · Cookbook - Tables Strings and Time · [[Luau Performance Patterns with Benchmarks]] · Reading Luau Errors and Stack Traces · Advanced Luau Start Here
 <!-- auto-links:end -->
 
 <!-- related:start -->

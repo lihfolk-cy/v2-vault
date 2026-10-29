@@ -52,7 +52,7 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 [[SurfaceAppearance PBR Workflow]]
 
 ### 46 Resource Library
-[[Links - Plugins and custom tools]]
+[[Official Docs - Asset Creation]]
 
 ### 53 Voxel Modelling Deep Dive
 [[Voxel Palettes - Ramps Hue Shifting and Limits]]

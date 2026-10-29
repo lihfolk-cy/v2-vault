@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/animation, area/vfx]
 > - Smoothing feels faster on high-refresh monitors: `lerp` by a constant per frame -> `1 - exp(-k dt)` (Springs Damping and...
 > - Avoid: Constant-fraction lerp magnet. Feels sticky at the end.
 >
-> Cost: TL;DR ~120 tok · whole note ~780 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~790 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,7 +27,7 @@ Lerp is not always the shortest rotation you expect. `CFrame:Lerp` interpolates 
 
 ## Mentioned in
 
-35 notes in 15 sections. The 25 most relevant are linked:
+36 notes in 15 sections. The 25 most relevant are linked:
 
 ### 02 Luau Scripting
 [[Math Vectors and CFrames]]
@@ -62,6 +62,6 @@ Lerp is not always the shortest rotation you expect. `CFrame:Lerp` interpolates 
 ### 56 Field Notes
 [[Animation Data Hygiene - Euler Wrap Joint Holes and Easing]]
 
-Also mentioned in (not linked): Off-Screen Objective Markers and Waypoint Arrows · Performance and Memory · Pet Hatching and Following End to End · Principles of Animation for Games · Side-Scroller in 3D - Locking Camera and Movement to a Plane · Snippets - Building and Sampling Clips · Snippets - Lua Keyframe Player Core · Stylized Lighting Recipes · Terrain Materials and Painting · Weather Performance Budgets and Quality Tiers
+Also mentioned in (not linked): Off-Screen Objective Markers and Waypoint Arrows · Performance and Memory · Pet Hatching and Following End to End · Principles of Animation for Games · Projectile VFX - Muzzle, Travel and Impact · Side-Scroller in 3D - Locking Camera and Movement to a Plane · Snippets - Building and Sampling Clips · Snippets - Lua Keyframe Player Core · Stylized Lighting Recipes · Terrain Materials and Painting · Weather Performance Budgets and Quality Tiers
 
 <!-- atlas:generated -->

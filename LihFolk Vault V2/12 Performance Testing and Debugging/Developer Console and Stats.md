@@ -370,7 +370,7 @@ Docs: the server heartbeat is capped at 60; check Server Jobs, Heartbeat, Steps 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Hunting Memory Leaks Step by Step]] · [[Debugging Live Servers]] · Skill - Roblox Performance Audit · Links - Profiling · Studio Settings and Shortcuts · Links - Memory leaks and cleanup
+[[Hunting Memory Leaks Step by Step]] · [[Debugging Live Servers]] · Skill - Roblox Performance Audit · Official Docs - Performance · Studio Settings and Shortcuts
 <!-- auto-links:end -->
 
 <!-- related:start -->

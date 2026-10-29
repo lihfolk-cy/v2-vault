@@ -516,10 +516,10 @@ Ten minutes of cooldown logic runs in microseconds, deterministically, without S
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Coroutines, task library and async]] · Functions Closures and Upvalues · Reading Luau Errors and Stack Traces · Error Handling and Retries · Debugger Breakpoints and Logging · Frame Budget
+[[Official Docs - Scripting and Luau]] · Functions Closures and Upvalues · Reading Luau Errors and Stack Traces · Error Handling and Retries · Debugger Breakpoints and Logging · Frame Budget
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Functions Closures and Upvalues]] · [[Reading Luau Errors and Stack Traces]] · [[Script Performance]] · [[Error Handling and Retries]] · [[Advanced Types - Generics and Type Functions]] · [[Serialization Formats for Saves and Networking]]
+[[Reading Luau Errors and Stack Traces]] · [[Functions Closures and Upvalues]] · [[Script Performance]] · [[Error Handling and Retries]] · [[Advanced Types - Generics and Type Functions]] · [[Serialization Formats for Saves and Networking]]
 <!-- related:end -->

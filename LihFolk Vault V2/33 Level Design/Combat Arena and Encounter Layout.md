@@ -307,5 +307,5 @@ Outside arenas, zones carry ambient encounters. Rules of thumb:
 
 <!-- related:start -->
 ## Related
-[[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Genre Playbook - Combat and RPG]] · [[Playtest Heatmaps - Position and Death Maps]] · [[Obby and Platforming Level Design]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]] · [[Boss Animation and Phases]] · [[Lobby and Hub Design]]
+[[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Genre Playbook - Combat and RPG]] · [[Playtest Heatmaps - Position and Death Maps]] · [[Obby and Platforming Level Design]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]] · [[Lobby and Hub Design]] · [[Boss Animation and Phases]]
 <!-- related:end -->

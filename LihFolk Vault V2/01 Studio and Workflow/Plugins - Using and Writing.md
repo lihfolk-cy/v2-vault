@@ -312,14 +312,14 @@ The senior trade-off: writing a plugin pays off when the same manual task happen
 - [[Plugin UI with DockWidgets]]: widget layout and lifecycle details.
 - [[Selection Editing and Bulk Tools]]: patterns for safe bulk edits.
 - [[Publishing Selling and Updating Plugins]]: distribution and update discipline.
-- [[Links - Backdoors and malicious assets]]: what malicious plugins look like.
+- [[Official Docs - Security and Moderation]]: official pages on safe Creator Store use and reporting malicious assets.
 - [[Batch Processing Tools in Studio]]: batching and progress for large edits.
 - [[Studio Plugins and Local HTTP Bridges]]: plugins that talk to external tools.
 - [[Safe Changes in a Shared Place]]: plugin edits in Team Create.
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Plugin Development Start Here]] · Links - Plugins and custom tools · [[Studio Interface Tour]] · [[Team Create and Collaboration]] · Resource Library - Safety (free models and plugins) · Writing Your Own MCP Server
+[[Plugin Development Start Here]] · Official Docs - Asset Creation · [[Studio Interface Tour]] · [[Team Create and Collaboration]] · Official Docs - Security and Moderation · Writing Your Own MCP Server
 <!-- auto-links:end -->
 
 <!-- related:start -->

@@ -1,5 +1,5 @@
 ---
-tags: [ui, hud, layout, overlap, popups, mobile, type/guide, area/ui, level/intermediate, area/design]
+tags: [ui, hud, layout, overlap, popups, mobile, type/guide, area/ui, level/intermediate, area/design, api/GuiService]
 ---
 # HUD Design
 
@@ -278,10 +278,10 @@ See also: [[Safe Areas and Insets]], [[Responsive UI for Phone Tablet Console an
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Case Study - Phone UI Overhaul]] · Links - Menus, HUDs, inventories and shops · [[Notification and Toast Systems]] · [[Layout - Scale Offset and Constraints]] · Debugging UI Layout and Input · Cookbook - UI
+[[Case Study - Phone UI Overhaul]] · Official Docs - UI · [[Notification and Toast Systems]] · [[Layout - Scale Offset and Constraints]] · Debugging UI Layout and Input · Cookbook - UI
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[UI Asset Pipeline]] · [[Gamepad and Console UX]] · [[UI Layout Objects - Lists Grids and Pages]] · [[UI Motion Language and Timing]] · [[Declarative UI - React-Lua and Fusion]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[Tutorial Step Design Patterns - Teach by Doing]] · [[Virtualized Lists and Large Inventories]]
+[[UI Asset Pipeline]] · [[Settings Menu Design for Roblox - Layout, Controls and Motion]] · [[Gamepad and Console UX]] · [[UI Layout Objects - Lists Grids and Pages]] · [[UI Motion Language and Timing]] · [[Designing Roblox UI in Figma - Frames, Safe Areas and Tokens]] · [[Declarative UI - React-Lua and Fusion]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]] · [[Off-Screen Objective Markers and Waypoint Arrows]]
 <!-- related:end -->

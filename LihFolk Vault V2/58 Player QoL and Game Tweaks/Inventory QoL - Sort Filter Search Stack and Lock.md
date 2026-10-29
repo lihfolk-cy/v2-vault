@@ -155,5 +155,5 @@ Rules:
 
 <!-- related:start -->
 ## Related
-[[Top 25 QoL Wins by Effort]] · [[QoL Audit Checklist]] · [[Settings Menu Essentials and Persistence]] · [[Quick Respawn and Spawn Protection]] · [[Feedback - Autosave Indicator Ping Display and Error Toasts]] · [[Mobile Button Layout Editor]] · [[Notification Queues and Limits]] · [[Accessibility Cross-Links for QoL Settings]]
+[[Top 25 QoL Wins by Effort]] · [[QoL Audit Checklist]] · [[Settings Menu Essentials and Persistence]] · [[Quick Respawn and Spawn Protection]] · [[Feedback - Autosave Indicator Ping Display and Error Toasts]] · [[Mobile Button Layout Editor]] · [[Purchase Receipts and Purchase History in UI]] · [[Notification Queues and Limits]]
 <!-- related:end -->

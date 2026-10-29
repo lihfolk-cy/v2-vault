@@ -302,5 +302,5 @@ See [[Multiple Agents in One Studio]] and [[Safety Rules for AI Agents in Studio
 
 <!-- related:start -->
 ## Related
-[[Case Study - Building a Game with AI Agents]] · [[Writing Your Own MCP Server]] · [[Code Pipeline - Rojo Git and CI]] · [[Icon and Thumbnail Rendering Pipeline]] · [[Build Test and Release Pipeline]] · [[Data and Config Pipeline - Spreadsheets to Game]] · [[Asset Upload Automation with Open Cloud]] · [[Environment and Level Pipeline]] · [[Character and Creature Pipeline]] · [[Art Pipeline - Concept to In-Game Asset]]
+[[Case Study - Building a Game with AI Agents]] · [[Writing Your Own MCP Server]] · [[Code Pipeline - Rojo Git and CI]] · [[Icon and Thumbnail Rendering Pipeline]] · [[Build Test and Release Pipeline]] · [[Data and Config Pipeline - Spreadsheets to Game]] · [[Environment and Level Pipeline]] · [[Asset Upload Automation with Open Cloud]] · [[Character and Creature Pipeline]] · [[Art Pipeline - Concept to In-Game Asset]]
 <!-- related:end -->

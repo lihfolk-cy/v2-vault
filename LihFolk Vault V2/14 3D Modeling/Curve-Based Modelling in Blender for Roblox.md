@@ -262,5 +262,5 @@ What made them look right, in order of impact:
 
 <!-- related:start -->
 ## Related
-[[Procedural Model Kits - Lessons]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Modeling Fundamentals for Games]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Retopology and Decimation]] · [[Low-Poly and Stylized Modeling]] · [[Normal Maps and Detail Baking]] · [[Modular Environment Kits]]
+[[Procedural Model Kits - Lessons]] · [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]] · [[Modeling Fundamentals for Games]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Retopology and Decimation]] · [[Low-Poly and Stylized Modeling]] · [[Normal Maps and Detail Baking]] · [[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]]
 <!-- related:end -->

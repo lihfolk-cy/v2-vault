@@ -132,5 +132,5 @@ Lyte Interactive (team details Unverified). Song additions and cosmetic updates.
 
 <!-- related:start -->
 ## Related
-[[Teardown - Grace]] · [[Teardown - Jujutsu Shenanigans]] · [[Teardown - Phantom Forces]] · [[Teardown - Evade]] · [[Teardown - BedWars]] · [[Teardown - Anime Vanguards]] · [[Teardown - Apocalypse Rising 2]] · [[Teardown - Driving Empire]]
+[[Teardown - Grace]] · [[Teardown - Jujutsu Shenanigans]] · [[Teardown - Phantom Forces]] · [[Teardown - Evade]] · [[Teardown - BedWars]] · [[Teardown - Anime Vanguards]] · [[Teardown - Apocalypse Rising 2]] · [[Teardown - Arsenal]]
 <!-- related:end -->

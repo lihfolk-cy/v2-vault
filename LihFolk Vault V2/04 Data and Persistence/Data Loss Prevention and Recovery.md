@@ -5,14 +5,14 @@ tags: [data, datastore, data-loss, recovery, rollback, versioning, incident, typ
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
+> - Avoid: Assuming every write is a version (Only the first write per key per UTC hour is kept as a backup)
 > - Avoid: Restoring with `SetAsync` while the player is online (Their session overwrites the restore on the next autosave, or the...)
 > - Avoid: Restoring ordered stores from version history (They have none; rebuild from profiles)
-> - Avoid: Waiting weeks to restore (Versions older than 30 days after supersession are gone)
+> - Outside tools use an Open Cloud key scoped to this experience and store (entry list/read/update), ideally IP-restricted.
 > - Failed load never leads to a save; "new" only when the read succeeded and returned nil.
 > - Studio access is off on the live game or fully guarded (test key, simulator, side systems obey).
-> - Saves validated; failures alert and keep the last good copy.
 >
-> Cost: TL;DR ~190 tok · whole note ~4.0k tok. Read more: ## Guard 3: validate before you write · ## Recovery tool 1: per-key version history · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~200 tok · whole note ~4.2k tok. Read more: ## Guard 3: validate before you write · ## Recovery tool 1: per-key version history · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Players forgive bugs. They rarely forgive losing a week of progress. This note is the defensive layer around everything else in this folder: where loss really comes from (most of it is self-inflicted), the guards that stop it before it happens, how to see it happening in production, and how to restore a player or a whole population from Roblox's built-in version history and snapshots. It ends with an incident runbook.
@@ -180,6 +180,8 @@ Limits of version history:
 - **30 days** after being superseded. Act fast.
 - Ordered data stores have **no** versions; rebuild them from profiles.
 
+For a support tool outside Roblox, use the Open Cloud data stores API with an API key limited to this experience and data store, granting only the entry list, read and update permissions it needs, with an IP allowlist and expiry where possible.
+
 ## Recovery tool 2: snapshots
 
 The Open Cloud **Snapshot Data Stores** API takes a snapshot of all of an experience's data stores, available **once per day**. Roblox's guidance: take one right before publishing any update that changes data logic. Why it matters, in their example: release at 3:30 UTC corrupts data; without a snapshot, writes in 3:00 to 3:30 are lost because that hour's backup gets overwritten by corrupted writes; with a snapshot at 3:29 the latest good value of every key is preserved. Put the snapshot call in your release checklist or deployment script ([[Open Cloud APIs]], [[Release Process and Rollbacks]]).
@@ -212,6 +214,7 @@ Roblox's open-source Data Stores Batch Processor is designed for large jobs like
 
 | Mistake | Consequence |
 |---|---|
+| Assuming every write is a version | Only the first write per key per UTC hour is kept as a backup |
 | Restoring with `SetAsync` while the player is online | Their session overwrites the restore on the next autosave, or the restore overwrites their session |
 | Restoring ordered stores from version history | They have none; rebuild from profiles |
 | Waiting weeks to restore | Versions older than 30 days after supersession are gone |
@@ -221,6 +224,7 @@ Roblox's open-source Data Stores Batch Processor is designed for large jobs like
 
 ## Checklist
 
+- [ ] Outside tools use an Open Cloud key scoped to this experience and store (entry list/read/update), ideally IP-restricted.
 - [ ] Failed load never leads to a save; "new" only when the read succeeded and returned nil.
 - [ ] Studio access is off on the live game or fully guarded (test key, simulator, side systems obey).
 - [ ] Saves validated; failures alert and keep the last good copy.
@@ -239,5 +243,5 @@ Roblox's open-source Data Stores Batch Processor is designed for large jobs like
 
 <!-- related:start -->
 ## Related
-[[Schema Migrations - Worked Case Studies]] · [[Cookbook - Data and Saving]] · [[Global State and Live Config]] · [[Player Privacy and Data Deletion]] · [[Trading Systems Without Duplication]] · [[OrderedDataStores and Leaderboards]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[MemoryStore Service]]
+[[Schema Migrations - Worked Case Studies]] · [[Cookbook - Data and Saving]] · [[Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts]] · [[Global State and Live Config]] · [[Player Privacy and Data Deletion]] · [[Trading Systems Without Duplication]] · [[OrderedDataStores and Leaderboards]] · [[Serial-Numbered Limited Items - Atomic Counters]] · [[MemoryStore Service]]
 <!-- related:end -->

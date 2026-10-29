@@ -12,7 +12,7 @@ tags: [2d, 2.5d, side-scroller, camera, movement, platformer, physics, constrain
 > - Camera is `Scriptable`, re-asserted after respawn, updated at `RenderPriority.Camera`, and sets `Focus`.
 > - FOV chosen deliberately; distance computed from the visible height; a 4:3 safe column respected.
 >
-> Cost: TL;DR ~230 tok · whole note ~7.5k tok. Read more: ## 2. The camera lock · ## 5. Complete setup · ## 9. Common mistakes and how to spot them · ## 10. Checklist
+> Cost: TL;DR ~230 tok · whole note ~7.7k tok. Read more: ## 2. The camera lock · ## 5. Complete setup · ## 9. Common mistakes and how to spot them · ## 10. Checklist
 <!-- tldr:end -->
 
 A 2.5D side-scroller is a normal Roblox 3D place in which the camera looks at the world from the side and every moving thing is kept on one flat slice of the world. You keep almost everything the engine gives you for free: Humanoid physics and animation, avatars, lighting, particles, sound, streaming, replication, and Studio's level editing tools. You give up the guarantee that "nothing moves in depth", and the whole craft of this style is putting that guarantee back. This note covers the three locks you need (camera, input, body), how to choose each one, how they fail, and a complete working setup.
@@ -103,7 +103,7 @@ The default player scripts (the `PlayerModule` copied into each player's `Player
 | A. Keep default controls, rely on the body lock | Leave `PlayerModule` running; the plane constraint cancels depth motion | Free touch thumbstick, jump button, gamepad support | Up and down on the stick waste input; diagonals feel slow because only the X component survives; the character briefly turns to face the screen |
 | B. Disable default controls and drive the Humanoid yourself | `require(PlayerModule):GetControls():Disable()`, then call `Humanoid:Move(Vector3.new(x, 0, 0), false)` | Full control: digital left and right, analogue dead zones, coyote time, jump buffering | You must build touch buttons yourself and bind gamepad and keyboard |
 
-Option B is the right one for anything that wants to feel like a platformer. Note that `PlayerModule` and `GetControls` belong to the default player scripts that Roblox ships, not to the documented engine API, so pin your assumptions with a check at startup and fail loudly if the module shape changes.
+Option B is the right one for anything that wants to feel like a platformer. Note that `PlayerModule` and `GetControls` belong to the default player scripts that Roblox ships, not to the documented engine API, so pin your assumptions with a check at startup and fail loudly if the module shape changes. Roblox has said `GetControls()`-style calls may stop working when the Input Action System player scripts become the default (early 2027, planned); the forward-compatible way is to disable the default movement `InputContext` instead ([[Server Authority and Input Migration 2026]], [[API Renames and Deprecations 2025-2026]]). Roblox has said `GetControls()`-style calls may stop working when the Input Action System player scripts become the default (early 2027, planned); the forward-compatible way is to disable the default movement `InputContext` instead ([[Server Authority and Input Migration 2026]], [[API Renames and Deprecations 2025-2026]]).
 
 `Humanoid:Move(moveDirection, relativeToCamera)` takes a world direction when the second argument is `false` (Roblox docs (as of October 2026)). Always pass `false` here: camera relative movement with a side camera is exactly the depth leak you are trying to remove.
 
@@ -482,5 +482,5 @@ The networking side (who owns what, how enemies replicate) is the same as any Ro
 
 <!-- related:start -->
 ## Related
-[[Chase Cameras and Speed Effects for Vehicles]] · [[Layering Camera Feedback on the Default Camera]] · [[Modelling to the Roblox Camera and Player Scale]] · [[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Sprite Sheets and Frame Animation with ImageRectOffset]] · [[EditableImage for Pixel Buffers and Procedural 2D]]
+[[Chase Cameras and Speed Effects for Vehicles]] · [[Layering Camera Feedback on the Default Camera]] · [[Camera - Engine Reference Card]] · [[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Sprite Sheets and Frame Animation with ImageRectOffset]] · [[EditableImage for Pixel Buffers and Procedural 2D]]
 <!-- related:end -->

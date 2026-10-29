@@ -257,7 +257,7 @@ Not every layered garment needs the Marketplace. A game can ship its own layered
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Bundles Animation Packs and Emotes for Sale]] · [[Links - Avatars and UGC]] · Modeling Characters for R15 and Custom Rigs · Skinning Weights · UV Unwrapping · Rigging in Blender
+[[Bundles Animation Packs and Emotes for Sale]] · [[Official Docs - Asset Creation]] · Modeling Characters for R15 and Custom Rigs · Skinning Weights · UV Unwrapping · Rigging in Blender
 <!-- auto-links:end -->
 
 <!-- related:start -->

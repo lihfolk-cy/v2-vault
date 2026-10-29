@@ -415,7 +415,7 @@ See also: [[Accessibility Start Here]], [[Accessibility]], [[Camera Shake and Ca
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Snippets - Camera Shake and FX]] · Game Feel Start Here · Hit-Stop and Screen Shake Tuning by Numbers · Links - Cameras · Juice on a Budget - Mobile and Low-End · Tween vs Spring
+[[Snippets - Camera Shake and FX]] · Game Feel Start Here · Hit-Stop and Screen Shake Tuning by Numbers · Official Docs - Input and Controls · Juice on a Budget - Mobile and Low-End · Tween vs Spring
 <!-- auto-links:end -->
 
 <!-- related:start -->

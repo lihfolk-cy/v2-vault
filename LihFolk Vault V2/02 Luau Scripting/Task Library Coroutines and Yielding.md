@@ -290,10 +290,10 @@ Each connected handler runs in its own thread, so one handler yielding does not 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Custom Schedulers and Coroutine Patterns]] · Building a Signal Library · [[Error Handling - pcall xpcall and Promise Patterns]] · Links - Coroutines, task library and async · Debugging Race Conditions and Yield Order · Reading Luau Errors and Stack Traces
+[[Custom Schedulers and Coroutine Patterns]] · Building a Signal Library · [[Error Handling - pcall xpcall and Promise Patterns]] · Official Docs - Scripting and Luau · Debugging Race Conditions and Yield Order · Reading Luau Errors and Stack Traces
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Building a Signal Library]] · [[Debugging Race Conditions and Yield Order]] · [[Script Types and Run Context]] · [[Luau Language Essentials]] · [[Tables Metatables and OOP]] · [[Module Scripts and Requiring]] · [[Luau Performance and Native Codegen]] · [[Luau Performance Patterns with Benchmarks]]
+[[Building a Signal Library]] · [[Debugging Race Conditions and Yield Order]] · [[Script Types and Run Context]] · [[Luau Language Essentials]] · [[Tables Metatables and OOP]] · [[Module Scripts and Requiring]] · [[Luau Performance and Native Codegen]] · [[Metatables and OOP - When and When Not]]
 <!-- related:end -->

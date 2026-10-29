@@ -8,9 +8,9 @@ tags: [atlas, api, type/atlas, area/networking, area/performance, api/PlayerRemo
 > - `PlayerRemoving` fires while the `Player` object is still valid, so you can read its state and save it before dropping the...
 > - Avoid: Not waiting for `PlayerRemoving` saves in `BindToClose` (Last player in an emptying server loses progress) (Saving...
 > - Avoid: `BindToClose` and `PlayerRemoving` saving the same profile... -> Per-player save serialisation; idempotent saves.
-> - Avoid: Per-player tables with no `PlayerRemoving` cleanup.
+> - Per-character `Heartbeat` connections disconnected on death or `CharacterRemoving`; per-player tables cleared on `PlayerRemoving`.
 >
-> Cost: TL;DR ~150 tok · whole note ~930 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~170 tok · whole note ~960 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -23,13 +23,13 @@ API snapshot: member of `Players` (`_tools/roblox_api.json`, docs build of 2026-
 
 - Avoid: Not waiting for `PlayerRemoving` saves in `BindToClose` (Last player in an emptying server loses progress) ([[Saving Correctly - Autosave and BindToClose]])
 - Avoid: `BindToClose` and `PlayerRemoving` saving the same profile... -> Per-player save serialisation; idempotent saves. ([[Server Lifecycle and Shutdown]])
+- Per-character `Heartbeat` connections disconnected on death or `CharacterRemoving`; per-player tables cleared on `PlayerRemoving`. ([[Events Signals and Connections]])
 - Avoid: Per-player tables with no `PlayerRemoving` cleanup. ([[Memory Budgets and Leaks]])
 - Every system with connections has a cleanup owner and uses `Destroying`/`PlayerRemoving`. ([[Memory Budgets and Leaks]])
-- Avoid: Rewarding in the wave loop and in `PlayerRemoving` without a guard. ([[Tower Defense Waves and Placement End to End]])
 
 ## Mentioned in
 
-50 notes in 20 sections. The 25 most relevant are linked:
+51 notes in 21 sections. The 25 most relevant are linked:
 
 ### 02 Luau Scripting
 [[Events Signals and Connections]] · [[Functions Closures and Upvalues]] · [[Metatables and OOP - When and When Not]]
@@ -50,7 +50,7 @@ API snapshot: member of `Players` (`_tools/roblox_api.json`, docs build of 2026-
 [[Autoclicker and Macro Detection for Combat Remotes]]
 
 ### 23 Debugging Deep Dives
-[[Debugging DataStore Problems]] · [[Debugging Race Conditions and Yield Order]]
+[[Debugging DataStore Problems]]
 
 ### 24 Worked Builds
 [[Global Leaderboards End to End]]
@@ -68,11 +68,14 @@ API snapshot: member of `Players` (`_tools/roblox_api.json`, docs build of 2026-
 [[Tower Defense Waves and Placement End to End]] · [[Tycoon Plots and Droppers End to End]]
 
 ### 46 Resource Library
-[[Links - DataStoreService]]
+[[Official Docs - Data and Persistence]]
 
 ### 50 Team Collaboration and Project Management
 [[Code Review for Luau Teams]]
 
-Also mentioned in (not linked): Developer Products and ProcessReceipt · Genre Systems Start Here · Horror Monster Chase AI End to End · In-Game Bug Report Button with Automatic Context · Instanced Interiors - Pooled House and Room Copies for Many Players · LihFolk Systems - Data and Purchase Guarantees · Load and Soak Testing Servers - Long Sessions and Many Clients · Luau Cookbook Start Here · Luau Garbage Collection and the Memory Model · Luau Performance and Native Codegen · Map Voting and Rotation for Round Games · Matchmaking Queues with MemoryStore · Measuring Onboarding - Funnels, Drop-off and A-B Tests · Physics Performance · Rate Limiting · Remote Abuse Patterns and Rate Limiting in Practice · RemoteEvents RemoteFunctions and Unreliable Remotes · Round-Based Minigame Loop End to End · Session Locking and Profile Libraries · Squad AI - Attack Tokens, Flanking and Attacker Limits · Teardown - Tap Simulator REBORN · Teleporting and Multi-Place Games · Testing Your Own Remotes - Fuzzing and Abuse Tests · Trading Systems Without Duplication · Weekend Build - Roleplay Town with Jobs and Paychecks
+### 62 Engine Reference Cards
+[[Players - Engine Reference Card]]
+
+Also mentioned in (not linked): Debugging Race Conditions and Yield Order · Developer Products and ProcessReceipt · Genre Systems Start Here · Horror Monster Chase AI End to End · In-Game Bug Report Button with Automatic Context · Instanced Interiors - Pooled House and Room Copies for Many Players · LihFolk Systems - Data and Purchase Guarantees · Load and Soak Testing Servers - Long Sessions and Many Clients · Luau Cookbook Start Here · Luau Garbage Collection and the Memory Model · Luau Performance and Native Codegen · Map Voting and Rotation for Round Games · Matchmaking Queues with MemoryStore · Measuring Onboarding - Funnels, Drop-off and A-B Tests · Physics Performance · Rate Limiting · Remote Abuse Patterns and Rate Limiting in Practice · RemoteEvents RemoteFunctions and Unreliable Remotes · Round-Based Minigame Loop End to End · Session Locking and Profile Libraries · Squad AI - Attack Tokens, Flanking and Attacker Limits · Teardown - Tap Simulator REBORN · Teleporting and Multi-Place Games · Testing Your Own Remotes - Fuzzing and Abuse Tests · Trading Systems Without Duplication · Weekend Build - Roleplay Town with Jobs and Paychecks
 
 <!-- atlas:generated -->

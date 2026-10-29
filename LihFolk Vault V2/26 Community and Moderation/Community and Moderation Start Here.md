@@ -43,5 +43,5 @@ This section was written against Roblox docs and announcements as of October 202
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Resource Library - Security and Moderation]] · Links - Chat and text filtering · Links - Moderation compliance · Hiring Freelancers and Revenue Shares · Links - Community and social · Roblox Policies on AI-Generated Content
+[[Official Docs - Security and Moderation]] · Hiring Freelancers and Revenue Shares · Official Docs - Publishing and Live Ops · Roblox Policies on AI-Generated Content
 <!-- auto-links:end -->

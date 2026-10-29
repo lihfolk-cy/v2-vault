@@ -61,10 +61,10 @@ Related concepts: [[Retention Cohorts]], [[Core Loop]], [[Telemetry Events]], [[
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Click-Through Rate]] · [[Links - Analytics]] · Discovery and the Algorithm · Core Loops and Session Design · Links - Quests and progression · Level Design Start Here · [[Core Concepts Start Here]]
+[[Click-Through Rate]] · [[Official Docs - Publishing and Live Ops]] · Discovery and the Algorithm · Core Loops and Session Design · Official Docs - Game Systems · Level Design Start Here · [[Core Concepts Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Variance]] · [[Faucets and Sinks]] · [[Feature Flags]] · [[Event Bus]] · [[Anticipation]] · [[Streaming Radius]] · [[Data Schema Versioning]] · [[Instance Count]]
+[[Variance]] · [[Faucets and Sinks]] · [[Feature Flags]] · [[Event Bus]] · [[Streaming Radius]] · [[Anticipation]] · [[Data Schema Versioning]] · [[Instance Count]]
 <!-- related:end -->

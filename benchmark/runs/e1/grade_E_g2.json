@@ -1,0 +1,290 @@
+[
+ {
+  "id": "E1",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "all identify Folder parent and LoS; full"
+ },
+ {
+  "id": "E2",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "all three properties correct"
+ },
+ {
+  "id": "E3",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 2.5,
+   "R4": 2.5,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "R3/R4 use LoadCharacter (0.5 on item1 per notes)"
+ },
+ {
+  "id": "E4",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "all set CanQuery=true keep CanCollide=false"
+ },
+ {
+  "id": "E5",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "all cover Archivable nil, Destroy lock, clone pattern"
+ },
+ {
+  "id": "E6",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "all correct order, -1/true, Create+Play, override"
+ },
+ {
+  "id": "E7",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "all correct with pcall retry"
+ },
+ {
+  "id": "E8",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "all GetPartBoundsInBox, exclude, hit set, bbox caveat"
+ },
+ {
+  "id": "E9",
+  "scores": {
+   "R1": 3,
+   "R2": 2.5,
+   "R3": 2.5,
+   "R4": 2.5,
+   "R5": 2.5,
+   "R6": 2.5
+  },
+  "notes": "R2-R4 no GetBadgeInfoAsync IsEnabled check (0.5 item2); R5/R6 use AwardBadge (0.5 item1)"
+ },
+ {
+  "id": "E10",
+  "scores": {
+   "R1": 2.5,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "R1 omits MoveTo"
+ },
+ {
+  "id": "E11",
+  "scores": {
+   "R1": 4,
+   "R2": 4,
+   "R3": 4,
+   "R4": 3.5,
+   "R5": 4,
+   "R6": 3.5
+  },
+  "notes": "R4 no 200-per-call; R6 does not say read items reappear"
+ },
+ {
+  "id": "E12",
+  "scores": {
+   "R1": 1.33,
+   "R2": 1.67,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "R1/R2 old 60+10 formula; R1 no per-key MB/min throughput"
+ },
+ {
+  "id": "E13",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "all correct flow incl. re-filter on load"
+ },
+ {
+  "id": "E14",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "all correct endpoint, key, SubscribeAsync, best-effort, 1KB"
+ },
+ {
+  "id": "E15",
+  "scores": {
+   "R1": 2.5,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3
+  },
+  "notes": "R1 Persistent without PersistentLoaded/waiting"
+ },
+ {
+  "id": "E16",
+  "scores": {
+   "R1": 2.5,
+   "R2": 2,
+   "R3": 2,
+   "R4": 3,
+   "R5": 3,
+   "R6": 2
+  },
+  "notes": "500/s per-client limit: R4/R5 full, R1 vague, R2/R3/R6 missing"
+ },
+ {
+  "id": "E17",
+  "scores": {
+   "R1": 1.67,
+   "R2": 1.67,
+   "R3": 1.67,
+   "R4": 1.67,
+   "R5": 1.33,
+   "R6": 2
+  },
+  "notes": "zero-init missing R1/R3/R5; remote copy missing R2/R4/R5"
+ },
+ {
+  "id": "E18",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "all correct ownership, assembly, untrusted client physics"
+ },
+ {
+  "id": "E19",
+  "scores": {
+   "R1": 2.5,
+   "R2": 1.5,
+   "R3": 2.5,
+   "R4": 2.5,
+   "R5": 0.5,
+   "R6": 2.5
+  },
+  "notes": "none name new throttle error codes or SetRateLimit/billing; R2/R5 100MB base; R5 says overage blocks writes (-1 item4)"
+ },
+ {
+  "id": "E20",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 1,
+   "R4": 2,
+   "R5": 0.67,
+   "R6": 2
+  },
+  "notes": "R3 hedged names, placeholder code; R5 no property names"
+ },
+ {
+  "id": "E21",
+  "scores": {
+   "R1": 3,
+   "R2": 2.5,
+   "R3": 2.5,
+   "R4": 2.5,
+   "R5": 2.5,
+   "R6": 2.5
+  },
+  "notes": "only R1 uses workspace collision group methods; others PhysicsService (0.5)"
+ },
+ {
+  "id": "E22",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "all correct: Async renames, old names still work, not urgent"
+ },
+ {
+  "id": "E23",
+  "scores": {
+   "R1": 2.5,
+   "R2": 1.5,
+   "R3": 2,
+   "R4": 1.5,
+   "R5": 1.5,
+   "R6": 1
+  },
+  "notes": "R2/R3/R6 hedged wrong productId signature and ProductPurchaseDecision; none fully explain one-per-product/catch-all/duplicate throws; R4/R5 -1 for wrong filter format in code; R3 states ProcessReceipt fallback"
+ },
+ {
+  "id": "E24",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2
+  },
+  "notes": "all give lerp/map signatures and isnan/isinf/isfinite"
+ }
+]

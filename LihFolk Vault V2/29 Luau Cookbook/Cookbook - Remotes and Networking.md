@@ -494,5 +494,5 @@ end
 
 <!-- related:start -->
 ## Related
-[[AI Pitfalls - Networking and Security]] · [[Rate Limiting]] · [[Debugging Client-Server Desync]] · [[Cookbook - Math CFrame and Vectors]] · [[Cookbook - Tables Strings and Time]] · [[Cookbook - UI]]
+[[RemoteEvent - Engine Reference Card]] · [[AI Pitfalls - Networking and Security]] · [[Rate Limiting]] · [[Cookbook - Math CFrame and Vectors]] · [[Cookbook - Tables Strings and Time]] · [[Cookbook - UI]]
 <!-- related:end -->

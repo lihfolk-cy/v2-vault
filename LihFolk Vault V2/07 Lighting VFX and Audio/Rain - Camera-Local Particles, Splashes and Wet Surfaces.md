@@ -164,5 +164,5 @@ Wetness should lag the rain: start darkening ~10 s after rain begins and dry ove
 
 <!-- related:start -->
 ## Related
-[[Impact Decals and Material-Aware Hit Sparks]] · [[VFX Design Playbook]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Lighting Mood and Time of Day]] · [[Stylized Lighting Recipes]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[Music and Adaptive Audio]] · [[Light Sources and Shadows]]
+[[Weather That Changes Gameplay - Grip, Visibility and Hearing]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Lighting Mood and Time of Day]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Stylized Lighting Recipes]] · [[VFX Design Playbook]] · [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]] · [[Designing VFX Textures and Flipbooks in Figma]] · [[Music and Adaptive Audio]]
 <!-- related:end -->

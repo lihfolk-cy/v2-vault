@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/studio, area/production]
 > - Avoid: Reverting while others are editing -> Disable Team Create, then revert.
 > - Avoid: Restoring during a live Team Create session -> Disable Team Create first.
 >
-> Cost: TL;DR ~140 tok · whole note ~830 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~820 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -25,7 +25,7 @@ Team Create turns a place into a live shared document: everyone with edit access
 
 ## Mentioned in
 
-54 notes in 19 sections. The 25 most relevant are linked:
+53 notes in 18 sections. The 25 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[Git and Source Control for Roblox]] · [[Plugins - Using and Writing]] · [[Studio Interface Tour]] · [[Studio Settings and Shortcuts]] · [[Team Create and Collaboration]] · [[Version History and Backups]]
@@ -63,6 +63,6 @@ Team Create turns a place into a live shared document: everyone with edit access
 ### 50 Team Collaboration and Project Management
 [[Documentation and Onboarding New Developers]] · [[Packages and Shared Assets Across Places]] · [[Team Collaboration Start Here]] · [[Team Create Permissions and Workflows]]
 
-Also mentioned in (not linked): 00 Start Here · Agent Handoff Notes - Project State and Resume Templates · Animation Asset Permissions and Groups · Build Test and Release Pipeline · Building a Studio Plugin End to End · Business and Careers Start Here · Code Pipeline - Rojo Git and CI · Command Bar and Studio Scripting · Community Building · DataStore Fundamentals · Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts · External Tooling - Rojo Wally Selene StyLua · Glossary · Level of Detail and Model Streaming · Logging Bans and Appeals · Module Scripts and Requiring · Open Questions - Whole Vault · Pipeline Design Principles · Places Universes and Experience Settings · Plugin Development Start Here · Resource Library - Tools and Workflow · Roblox Communities as Your On-Platform Hub · Safety Rules for AI Agents in Studio · Session Locking and Profile Libraries · Snippets - Building and Sampling Clips · Terrain Materials and Painting · Testing Modes - Play Run and Multi-Client · Undo and ChangeHistoryService Done Right · Working with Contractors and Revenue Splits
+Also mentioned in (not linked): 00 Start Here · Agent Handoff Notes - Project State and Resume Templates · Animation Asset Permissions and Groups · Build Test and Release Pipeline · Building a Studio Plugin End to End · Business and Careers Start Here · Code Pipeline - Rojo Git and CI · Command Bar and Studio Scripting · Community Building · DataStore Fundamentals · Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts · External Tooling - Rojo Wally Selene StyLua · Glossary · Level of Detail and Model Streaming · Logging Bans and Appeals · Module Scripts and Requiring · Open Questions - Whole Vault · Pipeline Design Principles · Places Universes and Experience Settings · Plugin Development Start Here · Roblox Communities as Your On-Platform Hub · Safety Rules for AI Agents in Studio · Session Locking and Profile Libraries · Snippets - Building and Sampling Clips · Terrain Materials and Painting · Testing Modes - Play Run and Multi-Client · Undo and ChangeHistoryService Done Right · Working with Contractors and Revenue Splits
 
 <!-- atlas:generated -->

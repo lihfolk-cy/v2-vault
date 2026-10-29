@@ -955,7 +955,7 @@ The general rules behind these live in [[Server Authority and Validation]], [[Re
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Genre Playbook - Party and Minigame Collections]] · Arena Rounds with Teams and Spectating End to End · Links - Rounds and matchmaking · Genre Systems Start Here · Obby Checkpoints and Stage Saves End to End · Spawn Points Safe Zones and Respawn Flow
+[[Genre Playbook - Party and Minigame Collections]] · Arena Rounds with Teams and Spectating End to End · Official Docs - Game Systems · Genre Systems Start Here · Obby Checkpoints and Stage Saves End to End · Spawn Points Safe Zones and Respawn Flow
 <!-- auto-links:end -->
 
 <!-- related:start -->

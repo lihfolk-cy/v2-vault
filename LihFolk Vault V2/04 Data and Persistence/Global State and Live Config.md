@@ -297,7 +297,7 @@ The senior trade-off: live config turns deploys into data edits, which is faster
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Feature Flags]] · Economy Telemetry and Balancing Live · Live Ops Deep Dive Start Here · Live Content Pipeline · Links - Cross-server messaging · Codes Redemption System End to End
+[[Feature Flags]] · Economy Telemetry and Balancing Live · Live Ops Deep Dive Start Here · Live Content Pipeline · Official Docs - Networking and Multiplayer · Codes Redemption System End to End
 <!-- auto-links:end -->
 
 <!-- related:start -->

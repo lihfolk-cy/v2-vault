@@ -9,7 +9,7 @@ tags: [reference, glossary, type/reference, area/animation, level/beginner, api/
 > - Avoid: Calling a stub an animation. Symptom: a stub plays nothing through the engine.
 > - Avoid: Confusing IKControl with a baked IK clip.
 >
-> Cost: TL;DR ~100 tok · whole note ~3.1k tok. Read more: ## Nuances and edge cases · ## Common mistakes
+> Cost: TL;DR ~100 tok · whole note ~3.2k tok. Read more: ## Nuances and edge cases · ## Common mistakes
 <!-- tldr:end -->
 
 | Term | Meaning | Read more |
@@ -18,7 +18,7 @@ tags: [reference, glossary, type/reference, area/animation, level/beginner, api/
 | **Action, Action2-4** | The four highest animation priorities; abilities typically at Action4 | [[Playback, Priorities and Blending]] |
 | **Anchor (ultimate)** | Where the enemy's body centre must be at an ultimate's climax; enemies are pulled there before damage | [[Cinematic Ultimates]] |
 | **Animate script** | The default LocalScript that plays idle, walk, run, jump and so on for player characters | [[The Default Animate Script]] |
-| **AnimationClipProvider** | The documented replacement for [[KeyframeSequenceProvider]] | [[Animator Deep Dive]] |
+| **[[AnimationClipProvider]]** | The documented replacement for [[KeyframeSequenceProvider]] | [[Animator Deep Dive]] |
 | **[[AnimationConstraint]]** | The joint type for R15 characters under the Avatar Joint Upgrade; animated through its `Transform` like a Motor6D | [[AnimationConstraint and Physically Simulated Characters]] |
 | **AnimationController** | The Animator host for rigs without a Humanoid (weapons, props, creatures) | [[Animation Objects]] |
 | **AnimationTrack** | One loaded clip on one Animator | [[AnimationTrack Reference]] |

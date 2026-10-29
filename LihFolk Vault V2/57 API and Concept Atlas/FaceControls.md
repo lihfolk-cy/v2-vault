@@ -33,6 +33,6 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 [[Animation Glossary]] · [[Animation Objects]] · [[CurveAnimation and Curve Channels]] · [[Facial Animation and Dynamic Heads]] · [[KeyframeSequence Keyframe and Pose Reference]]
 
 ### 46 Resource Library
-[[Links - Animation creation]]
+[[Official Docs - Asset Creation]]
 
 <!-- atlas:generated -->

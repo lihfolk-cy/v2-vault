@@ -176,10 +176,10 @@ One production game used **only** KeyframeSequences and never shipped CurveAnima
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Engine Gotchas]] · [[Animation Glossary]] · [[Animation Editor Advanced]] · [[Snippets - Playing Animations]] · [[Links - Animation playback]] · Links - Animation creation · [[Animation Start Here]]
+[[Engine Gotchas]] · [[Animation Glossary]] · [[Animation Editor Advanced]] · [[Snippets - Playing Animations]] · [[Official Docs - Characters and Animation]] · Official Docs - Asset Creation · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[How the Animator Really Behaves]] · [[Open Questions]] · [[Animation Data from Blender to Roblox]] · [[Animation Editor Workflow]] · [[Weapon Rig Player]] · [[Snippets - Lua Keyframe Player Core]] · [[Troubleshooting Table]] · [[Debugging Animation Problems]]
+[[Animator - Engine Reference Card]] · [[How the Animator Really Behaves]] · [[Open Questions]] · [[Animation Data from Blender to Roblox]] · [[Animation Editor Workflow]] · [[Weapon Rig Player]] · [[Snippets - Lua Keyframe Player Core]] · [[Troubleshooting Table]] · [[Debugging Animation Problems]]
 <!-- related:end -->

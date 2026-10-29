@@ -168,5 +168,5 @@ See also: [[Enemy Animation State Protocol]], [[Boss Animation and Phases]], [[S
 
 <!-- related:start -->
 ## Related
-[[NPC AI and Behaviour]] · [[Weapon and Combat Animation]] · [[Custom Characters and StarterCharacter]] · [[Retargeting Animations Between Rigs]] · [[Foot Placement and Ground IK]] · [[Rigging in Blender]] · [[Locomotion Systems]] · [[Importing Models and Rigs]] · [[Animation Glossary]]
+[[NPC AI and Behaviour]] · [[Weapon and Combat Animation]] · [[Custom Characters and StarterCharacter]] · [[Retargeting Animations Between Rigs]] · [[Foot Placement and Ground IK]] · [[Rigging in Blender]] · [[Locomotion Systems]] · [[Animation Glossary]] · [[Importing Models and Rigs]]
 <!-- related:end -->

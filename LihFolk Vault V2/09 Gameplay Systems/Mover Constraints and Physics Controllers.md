@@ -331,7 +331,7 @@ As of October 2026 the docs describe a beta **Character Controller Library** (CC
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Aircraft and Flight Models]] · Links - Forces and movers · Boats Buoyancy and Water · Debugging Physics and Network Ownership · Cars with Constraints - Suspension Steering and Drive · Snippets - Ragdoll
+[[Aircraft and Flight Models]] · Official Docs - Physics · Boats Buoyancy and Water · Debugging Physics and Network Ownership · Cars with Constraints - Suspension Steering and Drive · Snippets - Ragdoll
 <!-- auto-links:end -->
 
 <!-- related:start -->

@@ -285,7 +285,7 @@ Do not use fear to push purchases ("buy a revive NOW" during a chase with a coun
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Horror Monster Chase AI End to End]] · Links - Horror game mechanics · [[Genre Playbook - Puzzle and Escape Rooms]] · Case Study - Doors · Links - Music and ambience · Case Study - 99 Nights in the Forest
+[[Horror Monster Chase AI End to End]] · Official Docs - Game Systems · [[Genre Playbook - Puzzle and Escape Rooms]] · Case Study - Doors · Official Docs - Audio · Case Study - 99 Nights in the Forest
 <!-- auto-links:end -->
 
 <!-- related:start -->

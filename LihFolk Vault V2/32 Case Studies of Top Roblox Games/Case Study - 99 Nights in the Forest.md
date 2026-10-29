@@ -203,7 +203,7 @@ The monster's AI checks `isInsideLight` before chasing a target, and the client 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Case Study - Grow a Garden]] · [[Case Study - Steal a Brainrot]] · [[Top Games Case Studies Start Here]] · [[Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks]] · [[Links - Horror game mechanics]] · Links - Music and ambience
+[[Case Study - Grow a Garden]] · [[Case Study - Steal a Brainrot]] · [[Top Games Case Studies Start Here]] · [[Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks]] · [[Official Docs - Game Systems]] · Official Docs - Audio
 <!-- auto-links:end -->
 
 <!-- related:start -->

@@ -282,10 +282,10 @@ Turn pass effects off where they would break the tutorial. The reference project
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Game passes]] · Shop with Game Passes and Developer Products End to End · Purchase Data and Receipts · Skill - Roblox Monetization Compliance · Genre Playbook - Simulators · UGC Pricing Limiteds and Marketplace Rules
+[[Official Docs - Monetization]] · Shop with Game Passes and Developer Products End to End · Purchase Data and Receipts · Skill - Roblox Monetization Compliance · Genre Playbook - Simulators · UGC Pricing Limiteds and Marketplace Rules
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Shop with Game Passes and Developer Products End to End]] · [[Robux Price Points and Offer Design]] · [[AI Pitfalls - Data and Monetization]] · [[Subscriptions and Premium Payouts]] · [[Roblox Policies Ratings and Compliance]] · [[Paid Random Items and Odds Disclosure in Practice]] · [[Refunds Chargebacks and Purchase Support]] · [[Economy Inflation Sinks and Faucets Math]] · [[Ads and Rewarded Video]] · [[Community Building]]
+[[Shop with Game Passes and Developer Products End to End]] · [[Robux Price Points and Offer Design]] · [[Purchase Data and Receipts]] · [[Subscriptions and Premium Payouts]] · [[Refunds Chargebacks and Purchase Support]] · [[Roblox Policies Ratings and Compliance]] · [[Paid Random Items and Odds Disclosure in Practice]] · [[Economy Inflation Sinks and Faucets Math]] · [[Ads and Rewarded Video]] · [[Community Building]]
 <!-- related:end -->

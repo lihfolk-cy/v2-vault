@@ -5,17 +5,17 @@ tags: [atlas, api, type/atlas, area/avatars, area/animation, api/CharacterAppear
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
-> - `CharacterAppearanceLoaded` fires after the avatar's own animation package has been applied, so your ids are not overwritten...
+> - CharacterAppearanceLoaded fires only on the server.
 > - Avoid: Setting ids before `CharacterAppearanceLoaded` -> Set after appearance loads.
 > - Applies happen after `CharacterAppearanceLoaded` or via spawn-with.
 > - Measure on spawn after `CharacterAppearanceLoaded`, cache the result, and re-measure when the description changes.
 >
-> Cost: TL;DR ~140 tok · whole note ~370 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~310 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
 
-`CharacterAppearanceLoaded` fires after the avatar's own animation package has been applied, so your ids are not overwritten by it. (from [[Snippets - Playing Animations]])
+CharacterAppearanceLoaded fires only on the server. (from [[Player - Engine Reference Card]])
 
 API snapshot: member of `Player` (`_tools/roblox_api.json`, docs build of 2026-10-27).
 
@@ -24,11 +24,10 @@ API snapshot: member of `Player` (`_tools/roblox_api.json`, docs build of 2026-1
 - Avoid: Setting ids before `CharacterAppearanceLoaded` -> Set after appearance loads. ([[The Default Animate Script]])
 - Applies happen after `CharacterAppearanceLoaded` or via spawn-with. ([[HumanoidDescription and Outfit Systems]])
 - Measure on spawn after `CharacterAppearanceLoaded`, cache the result, and re-measure when the description changes. ([[Avatar Body Types and Scale in Gameplay]])
-- Capture the base once. `CharacterAppearanceLoaded` fires on every respawn; capturing on every spawn after a try-on would make the try-on the new "real" look. ([[AvatarEditorService and In-Game Avatar Editors]])
 
 ## Mentioned in
 
-6 notes in 3 sections. The 6 most relevant are linked:
+7 notes in 4 sections. The 7 most relevant are linked:
 
 ### 08 Animation
 [[Snippets - Playing Animations]] · [[The Default Animate Script]]
@@ -38,5 +37,8 @@ API snapshot: member of `Player` (`_tools/roblox_api.json`, docs build of 2026-1
 
 ### 37 Avatars and UGC
 [[Avatar Body Types and Scale in Gameplay]] · [[AvatarEditorService and In-Game Avatar Editors]] · [[HumanoidDescription and Outfit Systems]]
+
+### 62 Engine Reference Cards
+[[Player - Engine Reference Card]]
 
 <!-- atlas:generated -->

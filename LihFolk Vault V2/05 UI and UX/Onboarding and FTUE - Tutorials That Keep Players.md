@@ -115,5 +115,5 @@ Treat every number as a hypothesis. Your own funnel replaces it as soon as you h
 
 <!-- related:start -->
 ## Related
-[[Core Loop]] · [[Quests and Objectives]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[Accessibility]] · [[Notification and Toast Systems]] · [[UI Motion Language and Timing]] · [[Responsive UI for Phone Tablet Console and PC]]
+[[Menu Archetypes - Shop Settings Codes Rewards]] · [[Settings Menu Design for Roblox - Layout, Controls and Motion]] · [[Accessibility]] · [[Notification and Toast Systems]] · [[UI Motion Language and Timing]] · [[Responsive UI for Phone Tablet Console and PC]]
 <!-- related:end -->

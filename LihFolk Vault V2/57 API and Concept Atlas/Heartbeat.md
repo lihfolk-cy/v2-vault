@@ -6,11 +6,11 @@ tags: [atlas, api, type/atlas, area/animation, area/performance, api/Heartbeat]
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - `Heartbeat` runs in Edit in Studio, which is why this works without a running game (rule of thumb, widely relied on by plugins).
+> - Per-character `Heartbeat` connections disconnected on death or `CharacterRemoving`; per-player tables cleared on `PlayerRemoving`.
 > - Avoid: Writing in `Heartbeat` -> PreSimulation.
 > - Procedural head turn does nothing on a character: write happens in `PreRender` or `Heartbeat` -> move it to `PreSimulation`...
-> - Camera judders while running: Camera updated in `Heartbeat` or with frame dependent lerp -> Bind at `RenderPriority.Camera`...
 >
-> Cost: TL;DR ~150 tok · whole note ~810 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~820 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -21,11 +21,11 @@ API snapshot: member of `RunService` (`_tools/roblox_api.json`, docs build of 20
 
 ## Key facts
 
+- Per-character `Heartbeat` connections disconnected on death or `CharacterRemoving`; per-player tables cleared on `PlayerRemoving`. ([[Events Signals and Connections]])
 - Avoid: Writing in `Heartbeat` -> PreSimulation. ([[Frame Order and RunService Timing]])
 - Procedural head turn does nothing on a character: write happens in `PreRender` or `Heartbeat` -> move it to `PreSimulation` ([[Procedural Animation]])
 - Camera judders while running: Camera updated in `Heartbeat` or with frame dependent lerp -> Bind at `RenderPriority.Camera`, use `1 - exp(-k * dt)` ([[Side-Scroller in 3D - Locking Camera and Movement to a Plane]])
 - Avoid: Writing joints in `PreRender`/`Heartbeat` (overwritten by the next animation step). ([[Snippets - Procedural Motion]])
-- Server loop on `Heartbeat` with accumulator; one input per player per tick; queue capped. ([[2D Multiplayer - Server Authority and Replicating GUI Worlds]])
 
 ## Mentioned in
 

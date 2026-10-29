@@ -372,7 +372,7 @@ Quarantine rather than delete: move a flaky test to a "known flaky" list that ru
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Dependency Injection in Luau]] · Module Design and Dependency Injection · Links - Testing · Testing Your Own Remotes - Fuzzing and Abuse Tests · Git and Source Control for Roblox · Data Schema Versioning
+[[Dependency Injection in Luau]] · Module Design and Dependency Injection · Official Docs - Studio and Tooling · Testing Your Own Remotes - Fuzzing and Abuse Tests · Git and Source Control for Roblox · Data Schema Versioning
 <!-- auto-links:end -->
 
 <!-- related:start -->

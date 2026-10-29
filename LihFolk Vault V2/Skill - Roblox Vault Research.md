@@ -43,5 +43,5 @@ AI agents are confident even when wrong. The habit of citing notes and flagging 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Third-Party Skill - Obsidian Skills]] · [[Skill - Roblox DataStore Safety]] · [[Skill - Roblox Performance Audit]] · [[Skill - Roblox Debugging]] · [[Resource Library Start Here]]
+[[Skill - Roblox DataStore Safety]] · [[Skill - Roblox Performance Audit]] · [[Skill - Roblox Debugging]] · [[Resource Library Start Here]]
 <!-- auto-links:end -->

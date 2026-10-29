@@ -761,10 +761,10 @@ The blink to a patrol point only happens when no player can see the monster and 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Horror game mechanics]] · Links - Music and ambience · Links - NPCs and AI · Combat Arena and Encounter Layout · Anticipation · Level Design Start Here
+[[Official Docs - Game Systems]] · Official Docs - Audio · Combat Arena and Encounter Layout · Anticipation · Level Design Start Here
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Teardown - Piggy]] · [[Spawn Director - Credit Budgets and Player-Count Scaling]] · [[Tycoon Plots and Droppers End to End]] · [[Obby Checkpoints and Stage Saves End to End]] · [[Racing Laps and Checkpoints End to End]] · [[Arena Rounds with Teams and Spectating End to End]]
+[[PathfindingService - Engine Reference Card]] · [[Teardown - Piggy]] · [[Tycoon Plots and Droppers End to End]] · [[Obby Checkpoints and Stage Saves End to End]] · [[Racing Laps and Checkpoints End to End]] · [[Arena Rounds with Teams and Spectating End to End]]
 <!-- related:end -->

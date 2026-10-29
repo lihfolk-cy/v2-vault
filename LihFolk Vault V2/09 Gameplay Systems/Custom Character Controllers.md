@@ -1,5 +1,5 @@
 ---
-tags: [gameplay, character-controller, movement, stamina, dash, input, type/guide, area/gameplay, level/intermediate, api/Humanoid]
+tags: [gameplay, character-controller, movement, stamina, dash, input, type/guide, area/gameplay, level/intermediate, api/Humanoid, api/WalkSpeed]
 ---
 # Custom Character Controllers
 
@@ -358,7 +358,7 @@ Details: [[Input - UserInputService and ContextActionService]], [[Gamepad and Co
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Humanoids and character controllers]] · Input Responsiveness Buffering and Coyote Time · Humanoid States and Animation · Input Buffering · Side-Scroller in 3D - Locking Camera and Movement to a Plane · 2D Collision Physics and Platformer Movement
+[[Official Docs - Characters and Animation]] · Input Responsiveness Buffering and Coyote Time · Humanoid States and Animation · Input Buffering · Side-Scroller in 3D - Locking Camera and Movement to a Plane · 2D Collision Physics and Platformer Movement
 <!-- auto-links:end -->
 
 <!-- related:start -->

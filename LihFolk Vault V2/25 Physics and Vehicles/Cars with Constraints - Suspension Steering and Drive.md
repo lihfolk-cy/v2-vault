@@ -475,7 +475,7 @@ Use a collision group so the rays ignore the car itself and other cars' visuals,
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Racing Laps and Checkpoints End to End]] · Links - Constraints · [[Ropes Chains and Soft Bodies]] · Rigs and Joints · Modeling Weapons and Props · Custom Rigs - Weapons and Props
+[[Racing Laps and Checkpoints End to End]] · Official Docs - Physics · [[Ropes Chains and Soft Bodies]] · Rigs and Joints · Modeling Weapons and Props · Custom Rigs - Weapons and Props
 <!-- auto-links:end -->
 
 <!-- related:start -->

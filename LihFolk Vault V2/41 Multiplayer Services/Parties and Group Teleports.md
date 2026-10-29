@@ -5,14 +5,14 @@ tags: [multiplayer, parties, teleport, socialservice, reserved-servers, messagin
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
+> - Avoid: `ReserveServerAsync` + `ReservedServerAccessCode`... -> One server-generated GUID as `TeleportOptions.ReservedServerId`...
 > - Avoid: Assuming one `TeleportAsync` moves the whole party -> It moves only players in this server; gather the rest
 > - Avoid: Two servers teleporting the same party to a public place without... -> Reserve, or reunite first then teleport once
-> - Avoid: Trusting teleport data for party membership -> Gather record in MemoryStore
 > - `PartyId` read on the server; changes handled between rounds.
-> - One reservation per gather; code stored server-side only.
+> - One `ReservedServerId` (server-generated GUID) per gather, stored server-side only.
 > - Gather record with short TTL; message plus manual rejoin for reliability.
 >
-> Cost: TL;DR ~170 tok · whole note ~6.1k tok. Read more: ## 5. The code · ## 6. The destination: an arrival barrier · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~6.1k tok. Read more: ## 5. The code · ## 6. The destination: an arrival barrier · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Friends who arrive together and get split by a teleport stop playing together, and players who stop playing together stop playing. Keeping a group whole across servers and places is one of the highest-value multiplayer features you can build, and one of the easiest to get subtly wrong: one member is in another server, one is mid-teleport, one has a flaky connection, the destination fills up, the leader leaves. This note covers Roblox's own party data (`Player.PartyId` and `SocialService`), when to run your own party system instead, the exact behaviour of group teleports, gathering a party spread over several servers, the arrival barrier on the destination, and every failure path, with strict Luau.
@@ -35,7 +35,7 @@ From the Roblox docs (as of October 2026):
 
 - `Player.PartyId` is a read-only string; empty when the player is not in a party. It is tagged not replicated, so read it on the server. React to changes with `player:GetPropertyChangedSignal("PartyId")`, which the official samples use.
 - `SocialService:GetPlayersByPartyId(partyId)` returns the connected `Player` objects **in this server** whose `PartyId` matches. It does not yield.
-- `SocialService:GetPartyAsync(partyId)` yields and returns an array of dictionaries for all members **currently in the experience, across all servers**, ordered by the time each member accepted the party invite (first element is the earliest). Each entry has `UserId`, `PlaceId`, `JobId`, `PrivateServerId` (when in a private or reserved server) and `ReservedServerAccessCode` (when in a reserved server, so you can teleport other members to them).
+- `SocialService:GetPartyAsync(partyId)` yields and returns an array of dictionaries for all members **currently in the experience, across all servers**, ordered by the time each member accepted the party invite (first element is the earliest). Each entry has `UserId`, `PlaceId`, `JobId`, `PrivateServerId` (when in a private or reserved server) and `ReservedServerAccessCode` (a legacy access code, only for reserved servers created the old way; for new work the docs point to `TeleportOptions.ReservedServerId`).
 - Studio has a **Party Simulator** in the Server and Clients test mode: it assigns test players to simulated parties, sets their `PartyId`, and makes both `SocialService` calls return simulated data.
 
 Use the Roblox party whenever it exists: it is the group the players themselves chose, before they even loaded in. Build your own party only for things the platform party cannot express: a party formed from strangers in your lobby, a size cap tied to a mode, a guild squad that persists across sessions, or a leader role with powers. Many games do both: on join, seed the in-game party from `PartyId`, then let players edit it.
@@ -55,7 +55,7 @@ Who can create Roblox parties, and on which platforms, is not described on the r
 
 What it does not guarantee:
 
-- That everyone arrives. A teleport can fail for one member after the call returned; `TeleportInitFailed` fires once per player (Roblox docs) with a fresh `TeleportOptions` you can retry with, including the generated access code if you used `ShouldReserveServer`.
+- That everyone arrives. A teleport can fail for one member after the call returned; `TeleportInitFailed` fires once per player (Roblox docs) with a `TeleportOptions` you can retry with, including the `ReservedServerId` you set.
 - That a public destination has room. If you target a specific public server with `ServerInstanceId` and it is full, the result is `Enum.TeleportResult.GameFull`. Without a target, matchmaking picks a server for the group, but a party near the server's capacity can still be a problem in games with small servers (rule of thumb: keep the largest party size at most half of max players for public-server groups).
 - That members who were themselves teleporting arrive anywhere sensible. `IsTeleporting` is a real result.
 
@@ -65,15 +65,15 @@ The `TeleportResult` values are `Success`, `Failure`, `GameNotFound`, `GameEnded
 
 | Goal | Option | Notes |
 |---|---|---|
-| Party into a fresh instance (dungeon, match) | `ShouldReserveServer = true`, or `ReserveServerAsync` then `ReservedServerAccessCode` | Reserve once, share the code across servers |
+| Party into a fresh instance (dungeon, match) | `ReservedServerId = HttpService:GenerateGUID(false)` | Generate once, share the ID across servers |
 | Party into a busy public world | No options, all members in one call | One call per source server; members in other servers may land elsewhere |
 | Member joins the party leader's public server | `ServerInstanceId = leader's JobId` | Can be `GameFull`; leader's `JobId` from `GetPartyAsync` |
-| Member joins the leader's reserved server | `ReservedServerAccessCode` from `GetPartyAsync` | The platform hands you the code for party use |
+| Member joins the leader's reserved server | The same `ReservedServerId` from your gather record (`GetPartyAsync` only reports a legacy `ReservedServerAccessCode`) | Keep the ID in a server-side store |
 | Whole party, spread over servers, into one public server | Not possible to guarantee directly | Reserve, or move everyone to the leader's server first |
 
-The last row is the trap. Two source servers calling `TeleportAsync` to the same public place without options get two independent matchmaking decisions. If the party must be together, either make the destination a **reserved server** (both calls carry the same access code) or send the stragglers to the **leader's current server** with `ServerInstanceId` and then teleport the reunited party in one call.
+The last row is the trap. Two source servers calling `TeleportAsync` to the same public place without options get two independent matchmaking decisions. If the party must be together, either make the destination a **reserved server** (both calls carry the same `ReservedServerId`) or send the stragglers to the **leader's current server** with `ServerInstanceId` and then teleport the reunited party in one call.
 
-`ShouldReserveServer = true` is convenient when the whole party is in one server: one call reserves and teleports. When the party is spread out, call `ReserveServerAsync(placeId)` yourself first; it returns the access code and the `PrivateServerId` (Roblox docs). Every source server then uses the same code.
+Since October 2026 the docs use one pattern for both cases: the server generates a GUID with `HttpService:GenerateGUID(false)` and sets it as `TeleportOptions.ReservedServerId`; the first teleport with that ID creates the server and every later teleport with it lands there (Roblox docs, "Teleport to private servers"). Every source server then uses the same ID. The older `ShouldReserveServer`, `ReserveServerAsync` and `ReservedServerAccessCode` are deprecated but still work ([[API Renames and Deprecations 2025-2026]]).
 
 ## 4. Gathering a spread-out party
 
@@ -81,9 +81,9 @@ The flow, run on the server where the leader pressed "Start":
 
 1. Read the party: `GetPartyAsync(partyId)`. Filter to members in places from which you allow the activity (for example, only your lobby place). Members in a match should not be yanked out.
 2. Reserve one server for the destination.
-3. Write a **gather record** to a MemoryStore hash map: `{ partyId, placeId, accessCode, members, expiresAt }`, short TTL (60 to 120 s). The access code lives only here and in server memory.
+3. Write a **gather record** to a MemoryStore hash map: `{ partyId, placeId, serverId, members, expiresAt }`, short TTL (60 to 120 s). The reserved server ID lives only here and in server memory.
 4. Teleport the members who are in this server.
-5. Publish a small message to a gather topic with the gather id. Other servers that host members read the record, re-check each local player's `PartyId` against `partyId`, and teleport them with the same code.
+5. Publish a small message to a gather topic with the gather id. Other servers that host members read the record, re-check each local player's `PartyId` against `partyId`, and teleport them with the same ID.
 6. The destination server reads the same record by the gather id in teleport data, admits listed members only, and runs an **arrival barrier**.
 
 Why re-check `PartyId` on each source server: the member may have left the party between step 1 and step 5. Teleporting a player who is no longer in the group is a support ticket.
@@ -115,7 +115,7 @@ local gathers = MemoryStoreService:GetHashMap("PartyGathers")
 export type GatherRecord = {
 	partyId: string,
 	placeId: number,
-	accessCode: string,
+	serverId: string, -- TeleportOptions.ReservedServerId (a GUID)
 	members: { number },
 	leader: number,
 	createdAt: number,
@@ -167,7 +167,7 @@ local function teleportLocalMembers(gatherId: string, record: GatherRecord)
 		return
 	end
 	local options = Instance.new("TeleportOptions")
-	options.ReservedServerAccessCode = record.accessCode
+	options.ReservedServerId = record.serverId
 	options:SetTeleportData({ gather = gatherId }) -- a pointer; the record is the truth
 	local ok, err = pcall(function()
 		return TeleportService:TeleportAsync(record.placeId, group, options)
@@ -212,20 +212,12 @@ function PartyGather.start(leader: Player, placeId: number): (boolean, string?)
 		return false, "party too large"
 	end
 
-	local okReserve, accessCode = pcall(function()
-		local code = TeleportService:ReserveServerAsync(placeId)
-		return code
-	end)
-	if not okReserve or type(accessCode) ~= "string" then
-		busy[partyId] = nil
-		return false, "could not reserve a server"
-	end
-
+	-- The first teleport with a new ReservedServerId creates the server (no separate reserve call)
 	local gatherId = HttpService:GenerateGUID(false)
 	local record: GatherRecord = {
 		partyId = partyId,
 		placeId = placeId,
-		accessCode = accessCode,
+		serverId = HttpService:GenerateGUID(false),
 		members = userIds,
 		leader = leader.UserId,
 		createdAt = os.time(),
@@ -296,7 +288,7 @@ end
 return PartyGather
 ```
 
-The client never chooses `placeId`, never sees the access code, and never names other players. The "Start" remote carries at most a mode name, which the server maps to a place id from its own table and validates against the leader's eligibility ([[Server Authority and Validation]]).
+The client never chooses `placeId`, never sees the reserved server ID, and never names other players. The "Start" remote carries at most a mode name, which the server maps to a place id from its own table and validates against the leader's eligibility ([[Server Authority and Validation]]).
 
 ## 6. The destination: an arrival barrier
 
@@ -400,8 +392,8 @@ return Barrier
 Points worth noticing:
 
 - **The first arrival fetches the record once.** Later arrivals compare against the cached `expected` list. This keeps MemoryStore reads to one per run.
-- **The deadline starts on the first valid arrival**, not at server start: a reserved server starts when its access code is first used (Roblox docs), which is the first arrival, so these are close, but the first arrival is the one you can measure.
-- **Expiry is a feature.** If someone uses an old code after the gather record expired, the record is gone and they are refused. Since access codes stay valid indefinitely (Roblox docs), the record's TTL is your real time limit.
+- **The deadline starts on the first valid arrival**, not at server start: a reserved server starts when its ID is first used (Roblox docs), which is the first arrival, so these are close, but the first arrival is the one you can measure.
+- **Expiry is a feature.** If someone uses an old ID after the gather record expired, the record is gone and they are refused. Since reserved server IDs stay valid indefinitely (Roblox docs), the record's TTL is your real time limit.
 - Players who left the party after the gather began are still in `expected`. Decide whether to admit them (friendlier) or check their current `PartyId` against `record.partyId` (stricter). `PartyId` on the destination reflects the platform party, so the check is cheap.
 
 ## 7. Keeping the party together inside a server
@@ -441,6 +433,7 @@ Do not persist parties in data stores unless the design needs a long-lived squad
 
 | Mistake | Fix |
 |---|---|
+| `ReserveServerAsync` + `ReservedServerAccessCode`, `ShouldReserveServer` or `TeleportPartyAsync` in new code (deprecated) | One server-generated GUID as `TeleportOptions.ReservedServerId`, shared by every source server, then `TeleportAsync` |
 | Assuming one `TeleportAsync` moves the whole party | It moves only players in this server; gather the rest |
 | Two servers teleporting the same party to a public place without options | Reserve, or reunite first then teleport once |
 | Trusting teleport data for party membership | Gather record in MemoryStore |
@@ -452,7 +445,7 @@ Do not persist parties in data stores unless the design needs a long-lived squad
 ## Checklist
 
 - [ ] `PartyId` read on the server; changes handled between rounds.
-- [ ] One reservation per gather; code stored server-side only.
+- [ ] One `ReservedServerId` (server-generated GUID) per gather, stored server-side only.
 - [ ] Gather record with short TTL; message plus manual rejoin for reliability.
 - [ ] Source servers re-check membership and place before teleporting.
 - [ ] `TeleportInitFailed` retries capped; failure surfaces a "Rejoin party" option.
@@ -465,10 +458,10 @@ Do not persist parties in data stores unless the design needs a long-lived squad
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Server Browsers and Server Lists]] · [[Links - Teleporting]] · [[Server Shutdowns Soft Updates and Migration]] · Links - Reserved and private servers · Friend Invites Referrals and Experience Invites · Links - Cross-server messaging
+[[Server Browsers and Server Lists]] · [[Official Docs - Networking and Multiplayer]] · [[Server Shutdowns Soft Updates and Migration]] · Friend Invites Referrals and Experience Invites
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Joining Friends Parties and Private Servers]] · [[Server Hop Rejoin and Server Lists with Ping]] · [[Friend Invites Referrals and Experience Invites]] · [[Genre Playbook - Battle Royale]] · [[Experience Notifications and Return Prompts]] · [[Arena Rounds with Teams and Spectating End to End]]
+[[Joining Friends Parties and Private Servers]] · [[TeleportService - Engine Reference Card]] · [[Server Hop Rejoin and Server Lists with Ping]] · [[MessagingService - Engine Reference Card]] · [[Friend Invites Referrals and Experience Invites]] · [[Genre Playbook - Battle Royale]]
 <!-- related:end -->

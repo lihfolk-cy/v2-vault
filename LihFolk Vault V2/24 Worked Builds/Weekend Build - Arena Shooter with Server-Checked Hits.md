@@ -206,5 +206,5 @@ Spawn selection and protection details are covered in [[Spawn Points Safe Zones 
 
 <!-- related:start -->
 ## Related
-[[Melee Combat System End to End]] · [[Weekend Build - Roleplay Town with Jobs and Paychecks]] · [[Weekend Build - Survival Gather, Craft and Place]] · [[Quest Chain System End to End]] · [[Daily Rewards System End to End]] · [[Rebirth and Prestige System End to End]] · [[Saved Inventory End to End]] · [[Codes Redemption System End to End]]
+[[Melee Combat System End to End]] · [[Weekend Build - Roleplay Town with Jobs and Paychecks]] · [[Weekend Build - Survival Gather, Craft and Place]] · [[Quest Chain System End to End]] · [[Rebirth and Prestige System End to End]] · [[Daily Rewards System End to End]] · [[Saved Inventory End to End]] · [[Codes Redemption System End to End]]
 <!-- related:end -->

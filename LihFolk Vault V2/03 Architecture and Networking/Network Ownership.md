@@ -7,12 +7,12 @@ tags: [architecture, networking, physics, ownership, security, type/guide, area/
 > [!tldr] TL;DR
 > - Avoid: Leaving boss NPCs on automatic ownership -> `SetNetworkOwner(nil)` after spawn
 > - Avoid: Prompts and ClickDetectors on unanchored parts -> Anchor them or server-own them; server distance check
-> - Avoid: Awarding from client-owned Touched -> Server proximity check or server queries
+> - Avoid: `SetNetworkOwner` on anchored parts, or no way back to automatic -> Anchored parts are always server-owned...
 > - Every gameplay-critical unanchored object has a deliberate owner.
 > - No valuable interaction relies on client-owned Touched or prompt position alone.
-> - Vehicles assign the driver and reset on exit.
+> - Vehicles assign the driver on sit and reset on exit, and ownership changes nowhere else (switches cause jitter).
 >
-> Cost: TL;DR ~160 tok · whole note ~4.3k tok. Read more: ## When to set ownership manually · ## Security: what owned physics lets an exploiter do · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~4.6k tok. Read more: ## When to set ownership manually · ## Security: what owned physics lets an exploiter do · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox physics is **distributed**: each unanchored assembly is simulated by one machine, its **network owner**, and that machine's results are replicated to everyone else. Owner can be the server or any one client. Ownership is why your character feels instant, why a ball you kick responds immediately, and also why exploiters can fly, teleport, fling other players and fire Touched events from across the map. This note covers the documented rules, how automatic ownership behaves in practice, when and how to set ownership yourself, the security model, and the diagnosis tools.
@@ -106,26 +106,48 @@ Notes:
 - If a part of the NPC is anchored, the call fails for that assembly (`CanSetNetworkOwnership` returns false with a reason). Anchored NPCs are already server-owned.
 - Welding the NPC to something else, or a constraint that joins it to a player's assembly, can merge mechanisms and change ownership. Re-assert after big structural changes (ragdoll on death, carrying).
 
-### Vehicle seat ownership (adapted from the docs)
+### Vehicle seat ownership
 
 ```lua
 --!strict
--- Script inside a VehicleSeat. The driver owns the vehicle; nobody owns it when empty.
+-- ServerScriptService/VehicleOwnership: hand each tagged vehicle to its driver, back to the server when empty.
+local CollectionService = game:GetService("CollectionService")
 local Players = game:GetService("Players")
-local seat = script.Parent :: VehicleSeat
 
-seat:GetPropertyChangedSignal("Occupant"):Connect(function()
+local function driverOf(seat: VehicleSeat): Player?
 	local humanoid = seat.Occupant
-	if humanoid then
-		local player = Players:GetPlayerFromCharacter(humanoid.Parent)
-		if player then
-			seat:SetNetworkOwner(player)
-		end
-	else
-		seat:SetNetworkOwnershipAuto()
+	return if humanoid then Players:GetPlayerFromCharacter(humanoid.Parent) else nil
+end
+
+local function refreshOwner(seat: VehicleSeat)
+	local ok, reason = seat:CanSetNetworkOwnership()
+	if not ok then
+		warn(`{seat:GetFullName()}: {reason}`) -- usually an anchored part in the vehicle
+		return
 	end
-end)
+	local driver = driverOf(seat)
+	if driver then
+		seat:SetNetworkOwner(driver) -- applies to the whole assembly
+	else
+		seat:SetNetworkOwner(nil) -- empty vehicles stay with the server
+	end
+end
+
+local function watch(instance: Instance)
+	if not instance:IsA("VehicleSeat") then return end
+	instance:GetPropertyChangedSignal("Occupant"):Connect(function()
+		refreshOwner(instance)
+	end)
+	refreshOwner(instance)
+end
+
+CollectionService:GetInstanceAddedSignal("DrivableSeat"):Connect(watch)
+for _, seat in CollectionService:GetTagged("DrivableSeat") do
+	watch(seat)
+end
 ```
+
+Pinning an empty vehicle to the server (rather than leaving it on automatic) stops a nearby player from picking up ownership of a parked car and flinging it.
 
 Driver ownership means the driver controls the car's physics. Validate what matters: speed caps checked on the server, finish lines decided by server-side checkpoints, collisions that damage other players recomputed on the server.
 
@@ -264,6 +286,7 @@ Symptoms:
 |---|---|
 | Leaving boss NPCs on automatic ownership | `SetNetworkOwner(nil)` after spawn |
 | Prompts and ClickDetectors on unanchored parts | Anchor them or server-own them; server distance check |
+| `SetNetworkOwner` on anchored parts, or no way back to automatic | Anchored parts are always server-owned; `SetNetworkOwnershipAuto()` restores automatic |
 | Awarding from client-owned Touched | Server proximity check or server queries |
 | Calling `SetNetworkOwner` before parenting | Call after the assembly exists in Workspace |
 | Treating server ownership as free | It adds latency for nearby players; use it for critical objects only |
@@ -273,7 +296,7 @@ Symptoms:
 
 - [ ] Every gameplay-critical unanchored object has a deliberate owner.
 - [ ] No valuable interaction relies on client-owned Touched or prompt position alone.
-- [ ] Vehicles assign the driver and reset on exit.
+- [ ] Vehicles assign the driver on sit and reset on exit, and ownership changes nowhere else (switches cause jitter).
 - [ ] Movement validation accounts for latency and whitelists server teleports.
 - [ ] Ownership visualised once in a multi-client test.
 
@@ -282,10 +305,10 @@ Symptoms:
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Debugging Physics and Network Ownership]] · Detecting Movement Exploits - Speed Fly Noclip Teleport · Links - Network ownership · Cars with Constraints - Suspension Steering and Drive · Racing Laps and Checkpoints End to End · How Exploits Work - The Client Boundary
+[[Debugging Physics and Network Ownership]] · Detecting Movement Exploits - Speed Fly Noclip Teleport · Official Docs - Physics · Cars with Constraints - Suspension Steering and Drive · Racing Laps and Checkpoints End to End · How Exploits Work - The Client Boundary
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Detecting Movement Exploits - Speed Fly Noclip Teleport]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[RemoteEvents RemoteFunctions and Unreliable Remotes]] · [[Client Prediction and Reconciliation for Combat]] · [[Rate Limiting and Abuse Prevention]] · [[Instance Streaming]] · [[Remote Abuse Patterns and Rate Limiting in Practice]] · [[Teleporting and Multi-Place Games]] · [[Snapshot Interpolation for Custom Replication]]
+[[Detecting Movement Exploits - Speed Fly Noclip Teleport]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[RemoteEvents RemoteFunctions and Unreliable Remotes]] · [[Client Prediction and Reconciliation for Combat]] · [[Rate Limiting and Abuse Prevention]] · [[Instance Streaming]] · [[Remote Abuse Patterns and Rate Limiting in Practice]] · [[Teleporting and Multi-Place Games]]
 <!-- related:end -->

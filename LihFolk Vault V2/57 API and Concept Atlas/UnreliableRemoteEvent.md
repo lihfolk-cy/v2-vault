@@ -1,14 +1,14 @@
 ---
-tags: [atlas, api, type/atlas, area/networking, area/animation, api/UnreliableRemoteEvent]
+tags: [atlas, api, type/atlas, area/networking, area/vfx, api/UnreliableRemoteEvent]
 ---
 # UnreliableRemoteEvent
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - `UnreliableRemoteEvent` (Docs) can drop or reorder messages.
-> - `RemoteEvent` and `UnreliableRemoteEvent` client-to-server calls are throttled at roughly 500 requests per second per client...
-> - Never send a state change that must arrive (a hit, a purchase, an equip) over an UnreliableRemoteEvent.
-> - Use `UnreliableRemoteEvent` for corrections and reliable remotes for spawn and death.
+> - Avoid: Budgeting remote traffic per remote instead of per client -> Loss-tolerant streams on an UnreliableRemoteEvent (its own...
+> - Avoid: sending full state over an `UnreliableRemoteEvent`.
+> - `RemoteEvent` for state changes, `UnreliableRemoteEvent` for replaceable cosmetic or positional updates, `RemoteFunction` only...
 >
 > Cost: TL;DR ~140 tok · whole note ~790 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
@@ -21,23 +21,19 @@ API snapshot: class, inherits `BaseRemoteEvent` (`_tools/roblox_api.json`, docs 
 
 ## Key facts
 
-- `RemoteEvent` and `UnreliableRemoteEvent` client-to-server calls are throttled at roughly 500 requests per second per client, shared across all remotes of the same type. ([[Network Bandwidth Budgets and Measuring Them]])
-- Never send a state change that must arrive (a hit, a purchase, an equip) over an UnreliableRemoteEvent. ([[Cookbook - Remotes and Networking]])
-- Use `UnreliableRemoteEvent` for corrections and reliable remotes for spawn and death. ([[Genre Playbook - Tower Defense]])
-- Floating numbers for cosmetic effects can go over an `UnreliableRemoteEvent` because losing one is harmless (RemoteEvents RemoteFunctions and Unreliable Remotes). ([[Notification and Toast Systems]])
+- Avoid: Budgeting remote traffic per remote instead of per client -> Loss-tolerant streams on an UnreliableRemoteEvent (its own pool)... ([[RemoteEvents RemoteFunctions and Unreliable Remotes]])
+- Avoid: sending full state over an `UnreliableRemoteEvent`. ([[Engine Limits, Quotas and Defaults - Cheat Sheet]])
+- `RemoteEvent` for state changes, `UnreliableRemoteEvent` for replaceable cosmetic or positional updates, `RemoteFunction` only... ([[RemoteEvent - Engine Reference Card]])
 
 ## Mentioned in
 
-35 notes in 21 sections. The 25 most relevant are linked:
+39 notes in 23 sections. The 25 most relevant are linked:
 
 ### 02 Luau Scripting
 [[Events Signals and Connections]]
 
 ### 03 Architecture and Networking
-[[Frameworks - Knit Matter and Others]] · [[Interest Management and Per-Player Replication]] · [[RemoteEvents RemoteFunctions and Unreliable Remotes]] · [[Replication Rules]] · [[Snapshot Interpolation for Custom Replication]]
-
-### 05 UI and UX
-[[Notification and Toast Systems]]
+[[Frameworks - Knit Matter and Others]] · [[RemoteEvents RemoteFunctions and Unreliable Remotes]] · [[Replication Rules]] · [[Snapshot Interpolation for Custom Replication]]
 
 ### 07 Lighting VFX and Audio
 [[Combat Sound Design and Feedback]] · [[Engine and Tyre Audio Driven by RPM and Slip]]
@@ -61,7 +57,7 @@ API snapshot: class, inherits `BaseRemoteEvent` (`_tools/roblox_api.json`, docs 
 [[Debugging Client-Server Desync]]
 
 ### 25 Physics and Vehicles
-[[Multi-Seat Vehicles - Driver, Passenger and Gunner Roles]] · [[Projectiles and Ballistics]]
+[[Multi-Seat Vehicles - Driver, Passenger and Gunner Roles]]
 
 ### 29 Luau Cookbook
 [[Cookbook - Remotes and Networking]]
@@ -72,12 +68,18 @@ API snapshot: class, inherits `BaseRemoteEvent` (`_tools/roblox_api.json`, docs 
 ### 47 Game Feel and Juice
 [[Feedback Timing - Sound Visual and Haptic Sync]]
 
+### 49 Roblox Platform Features
+[[API Renames and Deprecations 2025-2026]] · [[Engine Limits, Quotas and Defaults - Cheat Sheet]]
+
 ### 50 Team Collaboration and Project Management
 [[Documentation and Onboarding New Developers]]
 
 ### 51 2D Game Development
 [[2D Multiplayer - Server Authority and Replicating GUI Worlds]]
 
-Also mentioned in (not linked): Glossary · Links - Remote events and functions · Luau Cookbook Start Here · Open Questions - Whole Vault · Rate Limiting and Abuse Prevention · Replication Boundary · Replication and Ownership · Serialization Formats for Saves and Networking · Testing Modes - Play Run and Multi-Client · Threat Modeling a Roblox Game
+### 62 Engine Reference Cards
+[[RemoteEvent - Engine Reference Card]]
+
+Also mentioned in (not linked): Glossary · Interest Management and Per-Player Replication · Luau Cookbook Start Here · Notification and Toast Systems · Official Docs - Scripting and Luau · Open Questions - Whole Vault · Projectiles and Ballistics · Rate Limiting and Abuse Prevention · Replicating VFX - Server Validates, Clients Render · Replication Boundary · Replication and Ownership · Serialization Formats for Saves and Networking · Testing Modes - Play Run and Multi-Client · Threat Modeling a Roblox Game
 
 <!-- atlas:generated -->

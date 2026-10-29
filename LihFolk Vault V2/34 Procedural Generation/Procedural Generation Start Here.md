@@ -56,5 +56,5 @@ Engine facts are labelled "Roblox docs (as of October 2026)". Several behaviours
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Deterministic Simulation]] · Links - Terrain · Level Design Start Here · Economy Design Start Here · Variance · Math Vectors and CFrames
+[[Deterministic Simulation]] · Official Docs - Building and World · Level Design Start Here · Economy Design Start Here · Variance · Math Vectors and CFrames
 <!-- auto-links:end -->

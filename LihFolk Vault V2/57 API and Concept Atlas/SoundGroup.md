@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/vfx, area/production, api/SoundGroup]
 > - Every sound, including runtime ones, has a `SoundGroup`.
 > - Avoid: Warning sounds on the music bus -> put warnings on their own SoundGroup that the music slider cannot mute.
 >
-> Cost: TL;DR ~150 tok · whole note ~440 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~450 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,7 +27,7 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 
 ## Mentioned in
 
-15 notes in 9 sections. The 15 most relevant are linked:
+16 notes in 10 sections. The 16 most relevant are linked:
 
 ### 07 Lighting VFX and Audio
 [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Combat Sound Design and Feedback]] · [[Engine and Tyre Audio Driven by RPM and Slip]] · [[Sound Fundamentals]] · [[Spatial Audio and Mixing]] · [[The Audio API - Players Emitters Wires and Effects]]
@@ -42,7 +42,7 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 [[Captions and Audio Accessibility]]
 
 ### 46 Resource Library
-[[Links - Sounds and the Audio API]]
+[[Official Docs - Audio]]
 
 ### 56 Field Notes
 [[Sound Design Pitfalls - Reused Ids Onsets and Layered Loops]]
@@ -52,6 +52,9 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 
 ### 60 High-Craft Game Teardowns
 [[Teardown - Pressure]]
+
+### 62 Engine Reference Cards
+[[SoundService - Engine Reference Card]]
 
 ### Root notes
 [[Open Questions - Whole Vault]]

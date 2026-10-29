@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/animation, area/performance, api/BulkMoveTo]
 > - Foliage sway: leaves near the camera swayed at 30 Hz using `BulkMoveTo`; far leaves did not move.
 > - BulkMoveTo and streaming. One loop moving 500 pickups with `workspace:BulkMoveTo` is cheap, but with StreamingEnabled some of...
 >
-> Cost: TL;DR ~150 tok · whole note ~510 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~520 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ API snapshot: member of `WorldRoot` (`_tools/roblox_api.json`, docs build of 202
 
 ## Mentioned in
 
-18 notes in 9 sections. The 18 most relevant are linked:
+19 notes in 10 sections. The 19 most relevant are linked:
 
 ### 02 Luau Scripting
 [[Luau Performance Patterns with Benchmarks]] · [[Luau Performance and Native Codegen]]
@@ -56,5 +56,8 @@ API snapshot: member of `WorldRoot` (`_tools/roblox_api.json`, docs build of 202
 
 ### 52 Core Concepts
 [[Object Pooling]]
+
+### 62 Engine Reference Cards
+[[Workspace - Engine Reference Card]]
 
 <!-- atlas:generated -->

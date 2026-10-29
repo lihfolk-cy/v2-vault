@@ -267,10 +267,10 @@ See also: [[Project Structure and Bootstrapping]], [[Frameworks - Knit Matter an
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - UI frameworks]] · Tween vs Spring · Cookbook - UI · Plugin UI with DockWidgets · Tools and Inventory Systems · Code Pipeline - Rojo Git and CI
+[[Official Docs - UI]] · Tween vs Spring · Cookbook - UI · Plugin UI with DockWidgets · Tools and Inventory Systems · Code Pipeline - Rojo Git and CI
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[HUD Design]] · [[Virtualized Lists and Large Inventories]] · [[UI Motion Language and Timing]] · [[Layout - Scale Offset and Constraints]] · [[Gamepad and Console UX]] · [[Input - UserInputService and ContextActionService]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]]
+[[HUD Design]] · [[Virtualized Lists and Large Inventories]] · [[UI Motion Language and Timing]] · [[Layout - Scale Offset and Constraints]] · [[Gamepad and Console UX]] · [[Designing Roblox UI in Figma - Frames, Safe Areas and Tokens]] · [[Figma to Roblox UI - Pipeline and Handoff]] · [[Input - UserInputService and ContextActionService]]
 <!-- related:end -->

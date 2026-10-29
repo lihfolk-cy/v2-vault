@@ -5,14 +5,14 @@ tags: [monetization, developer-products, processreceipt, datastore, idempotency,
 
 <!-- tldr:start -->
 > [!tldr] TL;DR
-> - Avoid: Granting in `PromptProductPurchaseFinished` -> Grant in `ProcessReceipt` only
+> - Avoid: Two `BindReceiptHandler` registrations for the same product, or... -> One filtered handler per product ID per receipt type, at most one...
+> - Avoid: Granting in `PromptProductPurchaseFinished` or another client signal -> Grant in `ProcessReceipt` only (client signals can be spoofed)
 > - Avoid: Returning `PurchaseGranted` before saving -> Save, then acknowledge
-> - Avoid: Receipt marker in a different store than the grant -> Same document
+> - With `BindReceiptHandler`: each script binds a filter array of its own product IDs, one catch-all at most, and returns...
 > - Exactly one `ProcessReceipt` assignment in the codebase (grep it)
-> - Every configured product has a grant; startup assert
-> - Grant and receipt marker in the same saved document
+> - Player not in this server (`GetPlayerByUserId` is nil), unknown product or failed save returns `NotProcessedYet`
 >
-> Cost: TL;DR ~150 tok · whole note ~6.0k tok. Read more: ## 2. The receipt contract · ## 3. A correct implementation · ## 8. Common mistakes · ## 9. Checklist
+> Cost: TL;DR ~210 tok · whole note ~6.4k tok. Read more: ## 2. The receipt contract · ## 3. A correct implementation · ## 8. Common mistakes · ## 9. Checklist
 <!-- tldr:end -->
 
 Developer products are repeatable purchases: currency packs, boosts, revives, bundles, starter packs. Every one of them is delivered through a single server callback, `MarketplaceService.ProcessReceipt`. Getting that callback right is the most important piece of monetization code in a Roblox game, because mistakes cost real money: players charged with nothing granted, or items granted twice.
@@ -259,9 +259,26 @@ end
 
 Returning `nil` from the transform cancels the write; `UpdateAsync` still succeeds, which is what we want for "already granted". This is only safe if **nothing else overwrites that key from a stale in-memory copy**. If any part of the game caches the profile and later saves it with `SetAsync` or a blind `UpdateAsync`, the cached save will erase this grant. Mixing the two models is the bug; pick one. See [[DataStore Fundamentals]].
 
-### `BindReceiptHandler` (new, partly documented)
+### `BindReceiptHandler` (alternative to `ProcessReceipt`)
 
-The reference lists a newer `MarketplaceService:BindReceiptHandler(transactionType: Enum.ReceiptType, handler, filter?)` that returns an `RBXScriptConnection`, with handlers returning `Enum.ReceiptDecision.Processed` or `NotProcessedYet` (Docs, Oct 2026). `Enum.ReceiptType` has `DeveloperProduct`, `RobuxTransferSender` and `RobuxTransferReceiver`. The Robux transfers guide uses it for transfer receipts. Its sample also recommends `UpdateAsync` to prevent double grants. As of October 2026 the Developer Products guide still teaches `ProcessReceipt`, and the docs do not say whether `ProcessReceipt` and a `DeveloperProduct` handler can coexist. Recommendation: keep developer products on `ProcessReceipt` and use `BindReceiptHandler` for Robux transfer receipts until the guide says otherwise. **Unverified:** coexistence behaviour.
+`MarketplaceService:BindReceiptHandler(receiptType, handler, filter?)` runs on the server and returns an `RBXScriptConnection`; disconnecting it unregisters the handler. It covers `Enum.ReceiptType.DeveloperProduct` plus the Robux transfer types (`RobuxTransferSender`, `RobuxTransferReceiver`). The handler gets the receipt-info table (`PurchaseId`, `PlayerId`, `ProductId`, `CurrencySpent`, ...) and returns an `Enum.ReceiptDecision`: `Processed` once the benefit is granted and saved, otherwise `NotProcessedYet`, and the receipt comes back later or on the buyer's next join (Roblox docs, MarketplaceService reference, October 2026).
+
+Routing rules for developer products:
+- **Filtered:** pass an array of product IDs; the handler fires only for those. One handler per receipt type and product ID, so each system's script can own its own products.
+- **Catch-all:** omit the filter; it fires for any developer product receipt no filtered handler claimed. One per receipt type.
+- Registering a second handler for the same product, or a second catch-all, throws.
+- Bound handlers take precedence over `ProcessReceipt`; a developer product receipt that no bound handler matches falls through to `ProcessReceipt`, so migration can be gradual.
+
+```lua
+-- Server: the pets system owns its two products
+local MarketplaceService = game:GetService("MarketplaceService")
+local conn = MarketplaceService:BindReceiptHandler(Enum.ReceiptType.DeveloperProduct, function(receipt)
+	local ok = grantAndSave(receipt.PlayerId, receipt.ProductId, receipt.PurchaseId) -- idempotent by PurchaseId
+	return if ok then Enum.ReceiptDecision.Processed else Enum.ReceiptDecision.NotProcessedYet
+end, { PET_EGG_ID, PET_SLOT_ID })
+```
+
+The same grant rules apply as for `ProcessReceipt`: player must be in this server, grant and `PurchaseId` marker saved together, `Processed` only after the save.
 
 ---
 
@@ -342,7 +359,8 @@ end)
 
 | Mistake | What it looks like | Fix |
 |---|---|---|
-| Granting in `PromptProductPurchaseFinished` | Free items for anyone who cancels at the right time; missing grants | Grant in `ProcessReceipt` only |
+| Two `BindReceiptHandler` registrations for the same product, or two catch-alls | The second script errors when it binds; its products route elsewhere | One filtered handler per product ID per receipt type, at most one catch-all; filtered beats catch-all, unmatched receipts fall to `ProcessReceipt` |
+| Granting in `PromptProductPurchaseFinished` or another client signal | Free items for anyone who cancels or spoofs the signal; missing grants | Grant in `ProcessReceipt` only (client signals can be spoofed) |
 | Returning `PurchaseGranted` before saving | Rare "paid, nothing" tickets after server crashes | Save, then acknowledge |
 | Receipt marker in a different store than the grant | Lost or doubled grants on crash | Same document |
 | Two scripts set `ProcessReceipt` | One system's products never grant | One owner script, dispatch by key |
@@ -353,11 +371,12 @@ end)
 
 ## 9. Checklist
 
+- [ ] With `BindReceiptHandler`: each script binds a filter array of its own product IDs, one catch-all at most, and returns `Enum.ReceiptDecision.Processed` only after the grant is saved (else `NotProcessedYet`).
 - [ ] Exactly one `ProcessReceipt` assignment in the codebase (grep it)
+- [ ] Player not in this server (`GetPlayerByUserId` is nil), unknown product or failed save returns `NotProcessedYet`
+- [ ] Grant and `PurchaseId` marker in the same saved document, so a repeated receipt grants nothing
 - [ ] Every configured product has a grant; startup assert
-- [ ] Grant and receipt marker in the same saved document
 - [ ] `PurchaseGranted` only after a successful save
-- [ ] Unknown product / missing player returns `NotProcessedYet`
 - [ ] One-per-player rules enforced at prompt time
 - [ ] Retired products keep their grant code
 - [ ] Purchase log kept; data-wipe plan re-grants purchases
@@ -368,10 +387,10 @@ end)
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Shop with Game Passes and Developer Products End to End]] · Idempotency · [[Refunds Chargebacks and Purchase Support]] · Skill - Roblox Monetization Compliance · Links - Developer products · Economy Exploits - Dupes Races and Purchase Abuse
+[[Shop with Game Passes and Developer Products End to End]] · Idempotency · [[Refunds Chargebacks and Purchase Support]] · Skill - Roblox Monetization Compliance · Official Docs - Monetization · Economy Exploits - Dupes Races and Purchase Abuse
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[AI Pitfalls - Data and Monetization]] · [[Purchase Receipts and Purchase History in UI]] · [[Idempotency]] · [[Robux Price Points and Offer Design]] · [[Subscriptions and Premium Payouts]] · [[Paid Random Items and Odds Disclosure in Practice]]
+[[AI Pitfalls - Data and Monetization]] · [[MarketplaceService - Engine Reference Card]] · [[Purchase Receipts and Purchase History in UI]] · [[Robux Price Points and Offer Design]] · [[Subscriptions and Premium Payouts]] · [[Paid Random Items and Odds Disclosure in Practice]]
 <!-- related:end -->

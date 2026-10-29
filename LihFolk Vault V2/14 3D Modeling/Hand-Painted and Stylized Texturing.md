@@ -181,5 +181,5 @@ Players' avatars are on screen with your art. Classic blocky avatars and many UG
 
 <!-- related:start -->
 ## Related
-[[Stylised vs Realistic Material Pipelines]] · [[Bevels Chamfers and Edge Highlights Without Textures]] · [[Hard-Surface Modeling]] · [[Modeling Fundamentals for Games]] · [[Mesh Optimization for Mobile]] · [[Modular Environment Kits]] · [[Blender Workflow for Roblox Creators]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]
+[[Stylised vs Realistic Material Pipelines]] · [[Bevels Chamfers and Edge Highlights Without Textures]] · [[Hard-Surface Modeling]] · [[Modeling Fundamentals for Games]] · [[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]] · [[Mesh Optimization for Mobile]] · [[Modular Environment Kits]] · [[Blender Workflow for Roblox Creators]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]
 <!-- related:end -->

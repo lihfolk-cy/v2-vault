@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/vfx, area/modeling, api/ColorCorrectionEffec
 > - Greyscale pass in Studio. Insert a `ColorCorrectionEffect` under `Lighting` with `Saturation = -1` and play a session.
 > - `ColorCorrectionEffect` shifts everything at the end.
 >
-> Cost: TL;DR ~130 tok · whole note ~640 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~670 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -24,11 +24,11 @@ API snapshot: class, inherits `PostEffect` (`_tools/roblox_api.json`, docs build
 - Avoid: Several scripts tweening the same `ColorCorrectionEffect`. ([[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]])
 - Greyscale pass in Studio. Insert a `ColorCorrectionEffect` under `Lighting` with `Saturation = -1` and play a session. ([[Colour-Blind Safe Design]])
 - `ColorCorrectionEffect` shifts everything at the end. ([[Colour Scripts and Value Structure for Untextured Art]])
-- Greyscale check. Desaturate a screenshot (or set a temporary `ColorCorrectionEffect` with `Saturation = -1`). ([[Voxel Palettes - Ramps Hue Shifting and Limits]])
+- Effects: `BloomEffect` for glow, `ColorCorrectionEffect` for a small contrast and saturation lift, `SunRaysEffect` sparingly. ([[Making Thumbnails in Studio and Blender - Capture, Lighting and Posing]])
 
 ## Mentioned in
 
-21 notes in 12 sections. The 21 most relevant are linked:
+22 notes in 13 sections. The 22 most relevant are linked:
 
 ### 06 World Building and Art
 [[Zone and Biome Art Direction]]
@@ -65,5 +65,8 @@ API snapshot: class, inherits `PostEffect` (`_tools/roblox_api.json`, docs build
 
 ### 58 Player QoL and Game Tweaks
 [[Graphics and Performance Toggles for Low-End Devices]]
+
+### 61 Thumbnails and CTR
+[[Making Thumbnails in Studio and Blender - Capture, Lighting and Posing]]
 
 <!-- atlas:generated -->

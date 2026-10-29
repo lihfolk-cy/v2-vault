@@ -179,5 +179,5 @@ Only after that, decide whether the game needs multiplayer, and if it does, read
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Input Buffering]] · Resource Library - Networking and Multiplayer · Deterministic Simulation · Game Feel Start Here · Voxel Modelling Start Here · Modelling to the Roblox Camera and Player Scale
+[[Input Buffering]] · Official Docs - Networking and Multiplayer · Deterministic Simulation · Game Feel Start Here · Voxel Modelling Start Here · Modelling to the Roblox Camera and Player Scale
 <!-- auto-links:end -->

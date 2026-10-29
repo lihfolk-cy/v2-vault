@@ -341,5 +341,5 @@ Debug move: print from the place that **writes the label**, not from the data. I
 
 <!-- related:start -->
 ## Related
-[[Network Performance]] · [[Cookbook - Remotes and Networking]] · [[Reading Luau Errors and Stack Traces]] · [[The Debugging Method - Reproduce Isolate Bisect]] · [[Debugging Live Servers]] · [[Debugging DataStore Problems]]
+[[Network Performance]] · [[Cookbook - Remotes and Networking]] · [[The Debugging Method - Reproduce Isolate Bisect]] · [[Debugging Live Servers]] · [[Reading Luau Errors and Stack Traces]] · [[Debugging DataStore Problems]]
 <!-- related:end -->

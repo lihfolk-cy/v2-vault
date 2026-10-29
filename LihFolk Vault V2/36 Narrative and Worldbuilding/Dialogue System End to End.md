@@ -1211,10 +1211,10 @@ Rate limiting here is light because each input already needs a fresh token, and 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Strings Patterns and Formatting]] · [[Lore Delivery Without Walls of Text]] · [[Naming Items Zones and Abilities]] · Notification and Toast Systems · Captions and Audio Accessibility · Links - NPCs and AI
+[[Strings Patterns and Formatting]] · [[Lore Delivery Without Walls of Text]] · [[Naming Items Zones and Abilities]] · Notification and Toast Systems · Captions and Audio Accessibility · Official Docs - Game Systems
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Story State Flags and Chapter Saves]] · [[Puzzle Dependency Charts and Hint Systems]] · [[Notification and Toast Systems]] · [[Cookbook - UI]] · [[Round-Based Minigame Loop End to End]] · [[Multiplayer Cutscene Sync - Server Clock, Late Joiners and Skip Votes]]
+[[Story State Flags and Chapter Saves]] · [[Puzzle Dependency Charts and Hint Systems]] · [[Notification and Toast Systems]] · [[Cookbook - UI]] · [[Saved Inventory End to End]] · [[Multiplayer Cutscene Sync - Server Clock, Late Joiners and Skip Votes]]
 <!-- related:end -->

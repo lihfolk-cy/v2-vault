@@ -397,5 +397,5 @@ Two subtleties:
 
 <!-- related:start -->
 ## Related
-[[Faucets and Sinks]] · [[Progression Levels and Unlocks]] · [[Pricing and Store Design]] · [[Shop with Game Passes and Developer Products End to End]] · [[Rebirth and Prestige System End to End]] · [[Monetization Overview]]
+[[Faucets and Sinks]] · [[Progression Levels and Unlocks]] · [[Pricing and Store Design]] · [[Monetization Overview]] · [[Shop with Game Passes and Developer Products End to End]] · [[Rebirth and Prestige System End to End]]
 <!-- related:end -->

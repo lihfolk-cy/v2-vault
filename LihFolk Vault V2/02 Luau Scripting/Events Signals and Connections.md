@@ -8,11 +8,11 @@ tags: [luau, events, signals, connections, deferred-events, memory, type/guide, 
 > - Memory grows per round or per spawn: Short-lived object connected to a long-lived signal -> Disconnect on teardown; cleanup bag
 > - Handler runs for a destroyed object: Deferred events queued before destroy -> Validate at the top of handlers
 > - One-shot logic runs twice: `Connect` + self-disconnect under Deferred -> `Once`
+> - Per-character `Heartbeat` connections disconnected on death or `CharacterRemoving`; per-player tables cleared on `PlayerRemoving`.
 > - The place runs with `SignalBehavior = Deferred` during development.
 > - Every connection to a signal that outlives its owner is stored and disconnected.
-> - Systems handle existing state, then subscribe.
 >
-> Cost: TL;DR ~170 tok · whole note ~5.5k tok. Read more: ## 4. Connection lifetime and leaks · ## Nuances and edge cases · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~190 tok · whole note ~5.6k tok. Read more: ## 4. Connection lifetime and leaks · ## Nuances and edge cases · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Roblox is event driven. The engine exposes thousands of signals (`RBXScriptSignal`): `Touched`, `Changed`, `PlayerAdded`, `Heartbeat`, `ChildAdded`, `Activated`. Your code connects functions to them and gets back an `RBXScriptConnection`. Getting connections right means three things: run handlers at the right time (immediate vs deferred), avoid races, and disconnect what you connect. Leaked connections are the most common cause of memory growth and "ghost" behaviour in long-running servers.
@@ -289,7 +289,7 @@ return Signal
 ```
 
 Design notes:
-- `task.spawn` per handler isolates errors and yields but allocates a thread per handler per fire. For very hot signals, call handlers directly and document that they must not yield, or reuse a free runner thread (the approach used by popular community signal libraries).
+- `task.spawn` per handler isolates errors and yields but allocates a thread per handler per fire. For very hot signals, call handlers directly and document that they must not yield, or reuse pooled runner threads ([[Building a Signal Library]] builds one).
 - Handler order here is unspecified (dictionary iteration), the same promise the engine gives.
 - To mimic Deferred behaviour, use `task.defer(fn, ...)` instead of `task.spawn`.
 
@@ -375,6 +375,7 @@ Every per-player table in your codebase (`cooldowns[player]`, `damageBy[player]`
 
 ## Checklist
 
+- [ ] Per-character `Heartbeat` connections disconnected on death or `CharacterRemoving`; per-player tables cleared on `PlayerRemoving`.
 - [ ] The place runs with `SignalBehavior = Deferred` during development.
 - [ ] Every connection to a signal that outlives its owner is stored and disconnected.
 - [ ] Systems handle existing state, then subscribe.
@@ -421,10 +422,10 @@ The senior trade-off: events decouple code but hide the flow. A system with 30 s
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Links - Events, signals and connections]] · Event Bus · Script Performance · Links - Memory leaks and cleanup · Custom Schedulers and Coroutine Patterns · Advanced Luau Start Here
+[[Official Docs - Scripting and Luau]] · Event Bus · Script Performance · Official Docs - Performance · Custom Schedulers and Coroutine Patterns · Advanced Luau Start Here
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Event Bus]] · [[Luau Garbage Collection and the Memory Model]] · [[Tables Metatables and OOP]] · [[Metatables and OOP - When and When Not]] · [[Script Types and Run Context]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Module Scripts and Requiring]] · [[Luau Performance Patterns with Benchmarks]] · [[Luau Type System and Strict Mode]] · [[Error Handling and Retries]]
+[[Event Bus]] · [[Custom Schedulers and Coroutine Patterns]] · [[Tables Metatables and OOP]] · [[Metatables and OOP - When and When Not]] · [[Script Types and Run Context]] · [[Error Handling - pcall xpcall and Promise Patterns]] · [[Module Scripts and Requiring]] · [[Luau Performance Patterns with Benchmarks]] · [[Luau Type System and Strict Mode]] · [[Error Handling and Retries]]
 <!-- related:end -->

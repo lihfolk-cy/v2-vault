@@ -7,10 +7,10 @@ tags: [atlas, api, type/atlas, area/animation, area/ai, api/LoadAnimation]
 > [!tldr] TL;DR
 > - `LoadAnimation` returns immediately; the asset downloads in the background.
 > - Avoid: `Humanoid:LoadAnimation` in new code -> `humanoid:FindFirstChildOfClass("Animator"):LoadAnimation(anim)` (Animation...
-> - Avoid: Calling `LoadAnimation` per use. (Engine Gotchas)
-> - Avoid: `animator:LoadAnimation(anim):Play()` per click (new track each time; 256-track warning).
+> - Avoid: calling `LoadAnimation` every time an attack plays.
+> - Use Animator:LoadAnimation and ApplyDescriptionAsync.
 >
-> Cost: TL;DR ~130 tok · whole note ~560 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~650 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -22,15 +22,16 @@ API snapshot: member of `AnimationController`, `Animator`, `Humanoid` (`_tools/r
 ## Key facts
 
 - Avoid: `Humanoid:LoadAnimation` in new code -> `humanoid:FindFirstChildOfClass("Animator"):LoadAnimation(anim)` ([[Animation Objects]])
-- Avoid: Calling `LoadAnimation` per use. ([[Engine Gotchas]])
+- Avoid: calling `LoadAnimation` every time an attack plays. ([[Animator - Engine Reference Card]])
+- Use Animator:LoadAnimation and ApplyDescriptionAsync. ([[Humanoid - Engine Reference Card]])
 - Avoid: `animator:LoadAnimation(anim):Play()` per click (new track each time; 256-track warning). ([[Snippets - Playing Animations]])
 
 ## Mentioned in
 
-39 notes in 4 sections. The 25 most relevant are linked:
+43 notes in 7 sections. The 25 most relevant are linked:
 
 ### 08 Animation
-[[Ability Kits Architecture]] · [[Animation Asset Permissions and Groups]] · [[Animation Objects]] · [[AnimationTrack Reference]] · [[Animator Deep Dive]] · [[Authoring Clips in Code]] · [[Case Study - Abilities That Only Worked in Studio]] · [[Combat Animation Craft]] · [[Combat Combo Systems]] · [[Custom Locomotion Controller Design]] · [[Debugging Animation Problems]] · [[Emotes and Social Animation]] · [[Engine Gotchas]] · [[Idle Breathing and Secondary Motion]] · [[KeyframeSequence Keyframe and Pose Reference]] · [[Lua Keyframe Player]] · [[Open Questions]] · [[Performance and Memory]] · [[Snippets - Playing Animations]] · [[Troubleshooting Table]]
+[[Ability Kits Architecture]] · [[Animation Asset Permissions and Groups]] · [[Animation Objects]] · [[AnimationTrack Reference]] · [[Animator Deep Dive]] · [[Authoring Clips in Code]] · [[Case Study - Abilities That Only Worked in Studio]] · [[Combat Animation Craft]] · [[Combat Combo Systems]] · [[Custom Locomotion Controller Design]] · [[Debugging Animation Problems]] · [[Emotes and Social Animation]] · [[Engine Gotchas]] · [[Lua Keyframe Player]] · [[Open Questions]] · [[Performance and Memory]] · [[Snippets - Playing Animations]] · [[Troubleshooting Table]]
 
 ### 12 Performance Testing and Debugging
 [[Hunting Memory Leaks Step by Step]]
@@ -38,6 +39,9 @@ API snapshot: member of `AnimationController`, `Animator`, `Humanoid` (`_tools/r
 ### 15 AI Tools
 [[AI Code Assistants for Luau]] · [[AI Pitfalls - Physics and Animation]] · [[AI Pitfalls - Stale APIs and Luau]] · [[What AI Models Get Wrong in Roblox]]
 
-Also mentioned in (not linked): Lua Keyframe Player Internals · Melee Combat System End to End · Memory Budgets and Leaks · Moon Animator and Third-Party Tools · Prompting and Verifying AI Output · Publishing Animations · Replication and Ownership · Roblox Studio Assistant · Snippets - Building and Sampling Clips · Snippets - Enemy Client Animator · Snippets - Lua Keyframe Player Core · Studio Tooling Architecture · Testing Animations in Studio · Weapon Rig Player
+### 62 Engine Reference Cards
+[[Animator - Engine Reference Card]] · [[Humanoid - Engine Reference Card]]
+
+Also mentioned in (not linked): Idle Breathing and Secondary Motion · KeyframeSequence Keyframe and Pose Reference · Lua Keyframe Player Internals · Making Thumbnails in Studio and Blender - Capture, Lighting and Posing · Melee Combat System End to End · Memory Budgets and Leaks · Moon Animator and Third-Party Tools · Prompting and Verifying AI Output · Publishing Animations · Replication and Ownership · Roblox Studio Assistant · Snippets - Building and Sampling Clips · Snippets - Enemy Client Animator · Snippets - Lua Keyframe Player Core · Studio Tooling Architecture · Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs · Testing Animations in Studio · Weapon Rig Player
 
 <!-- atlas:generated -->

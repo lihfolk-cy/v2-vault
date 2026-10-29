@@ -12,7 +12,7 @@ tags: [ui, screengui, playergui, zindex, displayorder, fundamentals, type/guide,
 > - A written `DisplayOrder` band plan; tutorial layers on top.
 > - New screens use `ZIndexBehavior.Sibling`.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.5k tok. Read more: ## 6. The GuiObject basics you will use every day · ## 10. A minimal, robust screen controller · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.6k tok. Read more: ## 6. The GuiObject basics you will use every day · ## 10. A minimal, robust screen controller · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Every piece of 2D interface a player sees on their screen lives inside a `ScreenGui`. This note explains how that container actually behaves at runtime: where it comes from, when it is destroyed and re-created, how several of them stack, how draw order works inside one, and how input passes through it. Most "my UI disappeared", "my button is behind the frame" and "my menu reset when I died" bugs come from misunderstanding one of these rules, not from layout maths.
@@ -370,10 +370,10 @@ See also: [[Layout - Scale Offset and Constraints]], [[Safe Areas and Insets]], 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Debugging UI Layout and Input]] · Links - Containers · UI Asset Pipeline · Cookbook - UI · Skill - Roblox UI Builder · Safe Area
+[[Debugging UI Layout and Input]] · Official Docs - UI · UI Asset Pipeline · Cookbook - UI · Skill - Roblox UI Builder · Safe Area
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[UI Asset Pipeline]] · [[Cookbook - UI]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[UI Motion Language and Timing]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[Menu Archetypes - Shop Settings Codes Rewards]] · [[Text Fonts and Rich Text]] · [[Virtualized Lists and Large Inventories]] · [[Accessibility]]
+[[UI Asset Pipeline]] · [[Cookbook - UI]] · [[Figma Property Mapping for Roblox UI]] · [[Designing Roblox UI in Figma - Frames, Safe Areas and Tokens]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[UI Motion Language and Timing]] · [[Settings Menu Design for Roblox - Layout, Controls and Motion]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[Figma to Roblox UI - Pipeline and Handoff]] · [[World-Space UI - BillboardGui and SurfaceGui]]
 <!-- related:end -->

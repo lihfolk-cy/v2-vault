@@ -190,10 +190,10 @@ One production game did exactly the "keep it and override" approach: its univers
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Snippets - Playing Animations]] · [[Custom Locomotion Controller Design]] · [[Bundles Animation Packs and Emotes for Sale]] · [[Snippets - Animation Controller Module]] · Characters and Humanoids · Links - Animation playback · [[Animation Start Here]]
+[[Snippets - Playing Animations]] · [[Custom Locomotion Controller Design]] · [[Bundles Animation Packs and Emotes for Sale]] · [[Snippets - Animation Controller Module]] · Characters and Humanoids · Official Docs - Characters and Animation · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Animation Objects]] · [[AnimationTrack Reference]] · [[R15 Run Cycle Key Poses]] · [[Mounts and Rideable Creatures]] · [[How the Animator Really Behaves]] · [[Replication and Ownership]] · [[Engine Gotchas]] · [[Procedural Gait and Footstep Planning]]
+[[Animation Objects]] · [[AnimationTrack Reference]] · [[R15 Run Cycle Key Poses]] · [[Mounts and Rideable Creatures]] · [[How the Animator Really Behaves]] · [[Replication and Ownership]] · [[Procedural Gait and Footstep Planning]] · [[Engine Gotchas]]
 <!-- related:end -->

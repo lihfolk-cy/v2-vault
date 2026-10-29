@@ -524,10 +524,10 @@ The trade-off a senior developer weighs is breadth against ownership: a controll
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Procedural Gait and Footstep Planning]] · [[Engine Gotchas]] · [[Scale and Animation]] · [[Weapon and Combat Animation]] · [[Links - Humanoids and character controllers]] · Characters and Humanoids · [[Animation Start Here]]
+[[Procedural Gait and Footstep Planning]] · [[Engine Gotchas]] · [[Scale and Animation]] · [[Weapon and Combat Animation]] · [[Official Docs - Characters and Animation]] · Characters and Humanoids · [[Animation Start Here]]
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Snippets - Ragdoll]] · [[Snippets - Lua Keyframe Player Core]] · [[Ability Kits Architecture]] · [[R15 Run Cycle Key Poses]] · [[Replication and Ownership]] · [[Emotes and Social Animation]] · [[Mounts and Rideable Creatures]] · [[Snippets - Procedural Motion]]
+[[Snippets - Ragdoll]] · [[Snippets - Lua Keyframe Player Core]] · [[Ability Kits Architecture]] · [[R15 Run Cycle Key Poses]] · [[Emotes and Social Animation]] · [[Replication and Ownership]] · [[Mounts and Rideable Creatures]] · [[Combat Animation Craft]]
 <!-- related:end -->

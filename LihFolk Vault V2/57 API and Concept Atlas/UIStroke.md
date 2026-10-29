@@ -1,5 +1,5 @@
 ---
-tags: [atlas, api, type/atlas, area/ui, area/animation, api/UIStroke]
+tags: [atlas, api, type/atlas, area/ui, area/accessibility, api/UIStroke]
 ---
 # UIStroke
 
@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/ui, area/animation, api/UIStroke]
 > - Set `UIStroke.StrokeSizingMode` to `ScaledSize` so thickness is relative to the text size (listed in Text Fonts and Rich Text...
 > - Rounded heavy fonts such as Fredoka One need less: above about 7% the stroke fills the holes in 0, a and e (UIStroke on Text...
 >
-> Cost: TL;DR ~160 tok · whole note ~580 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~160 tok · whole note ~620 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,16 +28,16 @@ API snapshot: class, inherits `UIComponent` (`_tools/roblox_api.json`, docs buil
 
 ## Mentioned in
 
-23 notes in 11 sections. The 23 most relevant are linked:
+26 notes in 11 sections. The 25 most relevant are linked:
 
 ### 05 UI and UX
-[[Accessibility]] · [[Layout - Scale Offset and Constraints]] · [[Nametags and Overhead Bars - Cost and Visibility Rules]] · [[Safe Areas and Insets]] · [[ScreenGui Fundamentals]] · [[Text Fonts and Rich Text]] · [[UI Design Systems]] · [[UI Motion Language and Timing]] · [[UI Style Directions - A Visual Vocabulary for Briefs]] · [[Virtualized Lists and Large Inventories]]
+[[Accessibility]] · [[Designing Roblox UI in Figma - Frames, Safe Areas and Tokens]] · [[Figma Property Mapping for Roblox UI]] · [[Figma to Roblox UI - Pipeline and Handoff]] · [[Layout - Scale Offset and Constraints]] · [[Nametags and Overhead Bars - Cost and Visibility Rules]] · [[Safe Areas and Insets]] · [[ScreenGui Fundamentals]] · [[Settings Menu Design for Roblox - Layout, Controls and Motion]] · [[Text Fonts and Rich Text]] · [[UI Design Systems]] · [[UI Motion Language and Timing]] · [[UI Style Directions - A Visual Vocabulary for Briefs]] · [[Virtualized Lists and Large Inventories]]
 
 ### 07 Lighting VFX and Audio
 [[Game Feel and Juice]]
 
 ### 08 Animation
-[[Reference - Purple Anime Settings UI (Claude + Figma)]] · [[UI and GUI Animation]]
+[[UI and GUI Animation]]
 
 ### 17 Pipelines
 [[UI Asset Pipeline]]
@@ -51,9 +51,6 @@ API snapshot: class, inherits `UIComponent` (`_tools/roblox_api.json`, docs buil
 ### 42 Accessibility and Inclusive Design
 [[Colour-Blind Safe Design]] · [[Readable Text and UI Scale]]
 
-### 46 Resource Library
-[[Links - Layouts and constraints]]
-
 ### 51 2D Game Development
 [[Choosing GUI 2D or Locked-Camera 2.5D]]
 
@@ -62,5 +59,7 @@ API snapshot: class, inherits `UIComponent` (`_tools/roblox_api.json`, docs buil
 
 ### 56 Field Notes
 [[Field Notes Start Here]] · [[UIStroke on Text - Glyph Counters and the Stroke Ratio]]
+
+Also mentioned in (not linked): Official Docs - UI
 
 <!-- atlas:generated -->

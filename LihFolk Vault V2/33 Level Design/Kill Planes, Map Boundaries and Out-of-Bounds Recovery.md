@@ -1,5 +1,5 @@
 ---
-tags: [level-design, boundaries, out-of-bounds, kill-plane, collision-groups, respawn, type/guide, area/level-design, level/intermediate, api/FallenPartsDestroyHeight, api/PhysicsService, api/PivotTo]
+tags: [level-design, boundaries, out-of-bounds, kill-plane, collision-groups, respawn, type/guide, area/level-design, level/intermediate, api/FallenPartsDestroyHeight, api/WorldRoot, api/PivotTo]
 ---
 # Kill Planes, Map Boundaries and Out-of-Bounds Recovery
 
@@ -35,17 +35,15 @@ Rule of thumb: the boundary should match the genre's promise. Obby players accep
 
 ## 2. Invisible walls that only block players
 
-An invisible wall that is `CanCollide = true` blocks everything: characters, but also vehicles you may want stopped and projectiles you may not. Use collision groups (Roblox docs: `PhysicsService:RegisterCollisionGroup`, `PhysicsService:CollisionGroupSetCollidable`, and the part's `CollisionGroup` string property):
+An invisible wall that is `CanCollide = true` blocks everything: characters, but also vehicles you may want stopped and projectiles you may not. Use collision groups (Roblox docs: since September 2026 they are registered per world with `workspace:RegisterCollisionGroup` and `workspace:CollisionGroupSetCollidable`; the older `PhysicsService` methods still work but are deprecated. Assign with the part's `CollisionGroup` string property):
 
 ```lua
 --!strict
 -- Server, once at startup.
-local PhysicsService = game:GetService("PhysicsService")
-
-PhysicsService:RegisterCollisionGroup("Boundary")
-PhysicsService:RegisterCollisionGroup("Players")
-PhysicsService:CollisionGroupSetCollidable("Boundary", "Default", false) -- props and debris pass
-PhysicsService:CollisionGroupSetCollidable("Boundary", "Players", true)
+workspace:RegisterCollisionGroup("Boundary")
+workspace:RegisterCollisionGroup("Players")
+workspace:CollisionGroupSetCollidable("Boundary", "Default", false) -- props and debris pass
+workspace:CollisionGroupSetCollidable("Boundary", "Players", true)
 
 for _, wall in workspace.Boundaries:GetDescendants() do
 	if wall:IsA("BasePart") then

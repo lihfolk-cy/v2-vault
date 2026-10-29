@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/design, area/monetization, api/PolicyService
 > - `PolicyService:GetPolicyInfoForPlayerAsync(player)` yields and returns a dictionary of policy flags for that player (Roblox docs).
 > - Assuming `PolicyService` succeeded; not failing closed.
 >
-> Cost: TL;DR ~130 tok · whole note ~820 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~830 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 
 ## Mentioned in
 
-49 notes in 18 sections. The 25 most relevant are linked:
+50 notes in 18 sections. The 25 most relevant are linked:
 
 ### 04 Data and Persistence
 [[Trading Systems Without Duplication]]
@@ -37,7 +37,7 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 [[Ethical Design and Player Trust]] · [[Genre Playbook - RNG and Collection Games]] · [[Genre Playbook - Tower Defense]] · [[Social Design and Multiplayer Play]]
 
 ### 11 Monetization Publishing and Live Ops
-[[Age Checks and Safety Features]] · [[Community Building]] · [[Roblox Policies Ratings and Compliance]]
+[[Age Checks and Safety Features]] · [[Roblox Policies Ratings and Compliance]]
 
 ### 12 Performance Testing and Debugging
 [[Automated Luau Checks - LihFolk Hook and Audit]]
@@ -55,11 +55,11 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 [[Player-Driven Trading Economies]]
 
 ### 49 Roblox Platform Features
-[[Commerce and Physical Goods]] · [[Policy and Age Rules 2026]] · [[Regional Compliance - Paid Random Items and Country Rules]] · [[Subscriptions and Recurring Revenue]]
+[[API Renames and Deprecations 2025-2026]] · [[Commerce and Physical Goods]] · [[Policy and Age Rules 2026]] · [[Regional Compliance - Paid Random Items and Country Rules]] · [[Subscriptions and Recurring Revenue]]
 
 ### 59 Viral and Trend Game Teardowns
 [[Teardown - Fish It]] · [[Teardown - Plants vs Brainrots]] · [[Teardown - Sol's RNG]] · [[Teardown - Steal An Egg]] · [[Teardown - Tap Simulator REBORN]] · [[Viral Game Anatomy - Hooks, Loops and Timing]]
 
-Also mentioned in (not linked): AI Skills Start Here · Discord Servers for Roblox Games · Economy Design Start Here · Error Handling and Retries · Genre Playbook - Shooters FPS and TPS · Genre Playbook - Simulators · Genre Playbook - Social Deduction and Murder Mystery · Genre Playbook - Zombie and Wave Survival Co-op · Genre QA Passes - Test Checklists per Game Type · Links - Moderation compliance · Monetization Overview · Open Questions - Whole Vault · Paid Random Items and Odds Disclosure in Practice · Retention and Return Hooks · Roadmaps Milestones and Scope Control · Skill - Roblox Monetization Compliance · Teardown - Bee Swarm Simulator · Teardown - Blade Ball · Teardown - Escape Tsunami for Brainrots · Teardown - PLS DONATE · Teardown - Ride A Pet · Template Reskin Checklist - One Codebase, New Game · Testing Modes - Play Run and Multi-Client · Viral and Trend Teardowns Start Here
+Also mentioned in (not linked): AI Skills Start Here · Community Building · Discord Servers for Roblox Games · Economy Design Start Here · Error Handling and Retries · Genre Playbook - Shooters FPS and TPS · Genre Playbook - Simulators · Genre Playbook - Social Deduction and Murder Mystery · Genre Playbook - Zombie and Wave Survival Co-op · Genre QA Passes - Test Checklists per Game Type · Monetization Overview · Official Docs - Security and Moderation · Open Questions - Whole Vault · Paid Random Items and Odds Disclosure in Practice · Retention and Return Hooks · Roadmaps Milestones and Scope Control · Skill - Roblox Monetization Compliance · Teardown - Bee Swarm Simulator · Teardown - Blade Ball · Teardown - Escape Tsunami for Brainrots · Teardown - PLS DONATE · Teardown - Ride A Pet · Template Reskin Checklist - One Codebase, New Game · Testing Modes - Play Run and Multi-Client · Viral and Trend Teardowns Start Here
 
 <!-- atlas:generated -->

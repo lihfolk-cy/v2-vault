@@ -12,7 +12,7 @@ tags: [policy, compliance, policyservice, paid-random-items, regions, trading, c
 > - One server `PolicyGate`; missing keys and failures resolve to restrictive.
 > - Every prompt, receipt and trade handler re-checks on the server.
 >
-> Cost: TL;DR ~140 tok · whole note ~2.2k tok. Read more: ## What `PolicyService` gives you · ## One policy gate, fail closed · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~140 tok · whole note ~2.3k tok. Read more: ## What `PolicyService` gives you · ## One policy gate, fail closed · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Some players cannot legally or contractually be offered certain things, and the rules depend on where they are and who they are. Roblox does not hand you a country code and a rulebook; it hands you `PolicyService`, which answers per player "is this allowed?". This note is the implementation side: one server-side policy gate that every money-touching feature consults, how to fail closed, how to design the alternative experience for restricted players, and how to test it. The odds-disclosure mechanics are in [[Paid Random Items and Odds Disclosure in Practice]] and the 2026 rule dates in [[Policy and Age Rules 2026]]; neither is repeated here.
@@ -22,7 +22,7 @@ Source labels: **Roblox docs** (create.roblox.com engine reference and policy pa
 ## What `PolicyService` gives you
 
 - `PolicyService:GetPolicyInfoForPlayerAsync(player)` yields and returns a dictionary of policy flags for that player (Roblox docs). The current reference page shows `ArePaidRandomItemsRestricted` and `IsEligibleToPurchaseCommerceProduct` in samples and wraps the call in `pcall`.
-- Other flags in use across V2 notes and older documentation include `IsPaidItemTradingAllowed` and `IsEligibleToPurchaseSubscription`. Older versions of the reference also listed `AllowedExternalLinkReferences` and `AreAdsAllowed`; their current presence is **Unverified**, so read them defensively (treat a missing key as "not allowed").
+- Other flags in use across V2 notes and older documentation include `IsPaidItemTradingAllowed` and `IsEligibleToPurchaseSubscription`. The current reference (October 2026) also lists `AreAdsAllowed`, `IsContentSharingAllowed`, `IsPhotoToAvatarAllowed`, `IsEndlessContentLoadAllowed` and `IsEndlessContentAutoplayAllowed`. `AllowedExternalLinkReferences` is a legacy field that **always returns an empty array** (since early 2026): social links are no longer shown in-game at all ([[API Renames and Deprecations 2025-2026]]). Read flags defensively (treat a missing key as "not allowed").
 - The service also exposes `IsLuobuServer` and related members tied to the former China-specific programme; do not build new logic on them (Unverified status; legacy).
 
 Key design facts:
@@ -158,5 +158,5 @@ Source: https://create.roblox.com/docs/reference/engine/classes/PolicyService (r
 
 <!-- related:start -->
 ## Related
-[[AI Pitfalls - Data and Monetization]] · [[LihFolk Systems Library]] · [[Monetization Overview]] · [[Pricing and Store Design]] · [[Roblox Changes 2025-2026]] · [[Discovery and Monetization Changes 2025-2026]]
+[[AI Pitfalls - Data and Monetization]] · [[LihFolk Systems Library]] · [[Roblox Changes 2025-2026]] · [[Discovery and Monetization Changes 2025-2026]] · [[Friend Invites Referrals and Experience Invites]] · [[Console and VR Release Checklists]]
 <!-- related:end -->

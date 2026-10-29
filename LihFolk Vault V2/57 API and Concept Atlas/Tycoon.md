@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/design, area/world]
 > - Roblox games, especially simulators, RPGs and tycoons, are built on visible numbers going up.
 > - Ends a stage with a big reveal (a floor appears, a roof, a vehicle), the tycoon's version of a boss kill.
 >
-> Cost: TL;DR ~140 tok · whole note ~720 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~740 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,13 +26,10 @@ Tycoon is one of the genres the docs list as common on the platform (Docs, "Desi
 
 ## Mentioned in
 
-40 notes in 21 sections. The 25 most relevant are linked:
+41 notes in 22 sections. The 25 most relevant are linked:
 
 ### 03 Architecture and Networking
 [[Frameworks - Knit Matter and Others]]
-
-### 05 UI and UX
-[[UI Style Directions - A Visual Vocabulary for Briefs]]
 
 ### 06 World Building and Art
 [[Environment Art Styles]] · [[Grid Placement and Player Building Systems]]
@@ -73,6 +70,9 @@ Tycoon is one of the genres the docs list as common on the platform (Docs, "Desi
 ### 59 Viral and Trend Game Teardowns
 [[Teardown - Steal An Egg]] · [[Viral Game Anatomy - Hooks, Loops and Timing]]
 
-Also mentioned in (not linked): 00 Start Here · Genre Systems Start Here · Lore Delivery Without Walls of Text · Object Pooling · Power Curve · Short-Form Video Marketing · Teardown - Bee Swarm Simulator · Teardown - Escape Tsunami for Brainrots · Teardown - Plants vs Brainrots · Teardown - Ride A Pet · Teardown - Welcome to Bloxburg · Top Games Case Studies Start Here · Tween and CFrame Animation of Objects · Voice Chat and Safety Features · Weekend Build - Survival Gather, Craft and Place
+### 61 Thumbnails and CTR
+[[Thumbnail Genre Patterns - What Top Games Show]]
+
+Also mentioned in (not linked): 00 Start Here · Genre Systems Start Here · Lore Delivery Without Walls of Text · Object Pooling · Power Curve · Short-Form Video Marketing · Teardown - Bee Swarm Simulator · Teardown - Escape Tsunami for Brainrots · Teardown - Plants vs Brainrots · Teardown - Ride A Pet · Teardown - Welcome to Bloxburg · Top Games Case Studies Start Here · Tween and CFrame Animation of Objects · UI Style Directions - A Visual Vocabulary for Briefs · Voice Chat and Safety Features · Weekend Build - Survival Gather, Craft and Place
 
 <!-- atlas:generated -->

@@ -279,7 +279,7 @@ Actors can run in separate Luau VMs, each with its own heap and collector. Data 
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Task Library Coroutines and Yielding]] · Luau Language Essentials · Metatables and OOP - When and When Not · Links - Memory leaks and cleanup · Tables Metatables and OOP · Script Performance
+[[Task Library Coroutines and Yielding]] · Luau Language Essentials · Metatables and OOP - When and When Not · Official Docs - Performance · Tables Metatables and OOP · Script Performance
 <!-- auto-links:end -->
 
 <!-- related:start -->

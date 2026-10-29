@@ -10,7 +10,7 @@ tags: [core-concept, marketing, discovery, analytics, thumbnails, type/reference
 > - CTR depends on placement. The same icon gets a different CTR in search (players looking for it) than in a recommendation row...
 > - Small differences need large samples. A change from 4.0 to 4.3 percent needs many thousands of impressions per variant before...
 >
-> Cost: TL;DR ~170 tok · whole note ~980 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
+> Cost: TL;DR ~170 tok · whole note ~990 tok. Read more: ## Why it matters on Roblox · ## The nuance most people miss
 <!-- tldr:end -->
 
 **Click-through rate (CTR)** is the share of people who saw something and clicked it: clicks divided by impressions. On Roblox it most often means how many players who saw your experience's tile in discovery (home sort, search, recommendations) opened or played it. It also applies to ads, in-game prompts and shop buttons.
@@ -55,10 +55,10 @@ Related concepts: [[Thumbnail Contrast]], [[Onboarding Funnel]], [[Retention Coh
 
 ## Connected notes
 <!-- auto-links:start -->
-[[Marketing and Growth Start Here]] · Launch Strategy - The First Two Weeks · [[Core Concepts Start Here]] · Ads and Rewarded Video · Top Games Case Studies Start Here · Links - Store page
+[[Marketing and Growth Start Here]] · Launch Strategy - The First Two Weeks · [[Core Concepts Start Here]] · Ads and Rewarded Video · Top Games Case Studies Start Here · Official Docs - Publishing and Live Ops
 <!-- auto-links:end -->
 
 <!-- related:start -->
 ## Related
-[[Launch Strategy - The First Two Weeks]] · [[Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics]] · [[Session Length]] · [[Telemetry Events]] · [[Core Loop]] · [[Expected Value]] · [[Feature Flags]] · [[Safe Area]] · [[Texel Density]] · [[Draw Calls]]
+[[From CTR to CCU - Impressions, Play-Through and the Discovery Loop]] · [[Thumbnail and Icon A-B Testing - Method, Sample Size and Reading Results]] · [[Session Length]] · [[Telemetry Events]] · [[Core Loop]] · [[Feature Flags]] · [[Expected Value]] · [[Safe Area]] · [[Texel Density]]
 <!-- related:end -->

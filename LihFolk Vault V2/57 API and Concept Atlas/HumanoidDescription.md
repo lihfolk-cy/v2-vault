@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/animation, area/avatars, api/HumanoidDescrip
 > - Avoid: Sending a `HumanoidDescription` through a remote -> Send ids; build on server.
 > - Custom emotes go into the character's `HumanoidDescription`: `SetEmotes(table)` maps emote names to arrays of asset ids...
 >
-> Cost: TL;DR ~160 tok · whole note ~560 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~160 tok · whole note ~570 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 
 ## Mentioned in
 
-20 notes in 7 sections. The 20 most relevant are linked:
+21 notes in 8 sections. The 21 most relevant are linked:
 
 ### 08 Animation
 [[Animation Objects]] · [[Custom Characters and StarterCharacter]] · [[Emotes and Social Animation]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]] · [[Layered Clothing Cages and Animation]] · [[R15 Rig Anatomy and Attachments]] · [[Scale and Animation]] · [[The Default Animate Script]]
@@ -43,10 +43,13 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 [[Avatar Body Types and Scale in Gameplay]] · [[AvatarEditorService and In-Game Avatar Editors]] · [[Avatars and UGC Start Here]] · [[Bundles Animation Packs and Emotes for Sale]] · [[HumanoidDescription and Outfit Systems]]
 
 ### 46 Resource Library
-[[Links - Custom characters and avatars]]
+[[Official Docs - Characters and Animation]]
 
 ### 49 Roblox Platform Features
 [[Avatar Context Menus Profiles and Social Surfaces]]
+
+### 62 Engine Reference Cards
+[[Players - Engine Reference Card]]
 
 ### Root notes
 [[00 Start Here]] · [[Open Questions - Whole Vault]]
