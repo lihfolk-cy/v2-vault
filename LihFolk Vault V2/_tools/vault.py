@@ -1,7 +1,8 @@
 """One-call search for LihFolk Vault V2: the best notes for a task, with their TL;DRs.
 
 Usage (stdlib only, no network; paths are under LihFolk Vault V2/):
-    python "LihFolk Vault V2/_tools/vault.py" "hit camera shake goes black"      # top 3 notes + TL;DRs + matching symptoms
+    python "LihFolk Vault V2/_tools/vault.py" "hit camera shake goes black"      # top 3 notes (compact) + matching symptoms
+    python "LihFolk Vault V2/_tools/vault.py" --full "hit camera shake goes black"   # raw TL;DR blocks with paths and sizes
     python "LihFolk Vault V2/_tools/vault.py" -k 5 "datastore session lock"      # top 5
     python "LihFolk Vault V2/_tools/vault.py" --paths "slash vfx"                # titles and paths only (cheapest)
     python "LihFolk Vault V2/_tools/vault.py" --json "processreceipt"            # machine-readable
@@ -11,6 +12,10 @@ Usage (stdlib only, no network; paths are under LihFolk Vault V2/):
 Ranking is BM25F over title, tags, TL;DR, headings and body, plus links from SYMPTOMS.md, so a bug
 described in everyday words ("screen goes black when I get hit") still finds the note. The index is
 cached in _tools/.cache/ and rebuilt automatically when any note changes.
+
+Default output is compact: each note's TL;DR bullets and section list without the callout header, cost
+line or path, then matching symptom lines. --full prints the raw TL;DR blocks with paths and sizes;
+--brief keeps only the first two TL;DR lines of notes #2 and #3 (cheapest, but can hide facts).
 """
 import hashlib
 import json
@@ -265,6 +270,23 @@ def print_section(title, heading, idx):
     print(text[pos: nxt.start() if nxt else len(text)].rstrip())
 
 
+def tldr_parts(d):
+    """TL;DR bullets and the 'Read more' section list, without the callout header and cost boilerplate."""
+    if not d["tldr"]:
+        return ([d["summary"]] if d["summary"] else []), ""
+    bullets, more = [], ""
+    for line in d["tldr"].split("\n"):
+        line = line.lstrip(">").strip()
+        if not line or line.startswith("[!tldr]"):
+            continue
+        if line.startswith("Cost:"):
+            m = re.search(r"Read more:\s*(.*)", line)
+            more = m.group(1).replace("## ", "").strip() if m else ""
+            continue
+        bullets.append(line if line.startswith("- ") else "- " + line)
+    return bullets, more
+
+
 def main():
     try:  # Windows consoles default to cp1252, and notes contain arrows and dashes
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -281,12 +303,12 @@ def main():
     if args[0] == "--sections":
         print_section(args[1], None, idx)
         return
-    k, mode, words = 3, "full", []
+    k, mode, words = 3, "compact", []
     it = iter(args)
     for a in it:
         if a == "-k":
             k = int(next(it))
-        elif a in ("--paths", "--json"):
+        elif a in ("--paths", "--json", "--full", "--brief"):
             mode = a[2:]
         else:
             words.append(a)
@@ -299,20 +321,33 @@ def main():
     if not results:
         print("no match; try other words or grep LihFolk Vault V2/INDEX_SLIM.md")
         return
-    for s, d in results:
-        if mode == "paths":
+    if mode == "paths":
+        for s, d in results:
             print(f"{d['title']} | {d['path']}")
-            continue
-        print(f"## {d['title']}  ({d['path']}, {d['kb']} KB)")
-        print(d["tldr"] or ("> " + d["summary"] if d["summary"] else "> (no summary)"))
-        print()
-    if mode == "full" and symptoms:
-        print("Symptom matches (symptom | cause | fix | note):")
+        return
+    if mode == "full":
+        for s, d in results:
+            print(f"## {d['title']}  ({d['path']}, {d['kb']} KB)")
+            print(d["tldr"] or ("> " + d["summary"] if d["summary"] else "> (no summary)"))
+            print()
+        if symptoms:
+            print("Symptom matches (symptom | cause | fix | note):")
+            for s in symptoms:
+                print("- " + s["line"])
+            print()
+        print('Next: python "LihFolk Vault V2/_tools/vault.py" --read "<title>" "<heading words>"  (one section only)')
+        return
+    for rank, (s, d) in enumerate(results, 1):
+        bullets, more = tldr_parts(d)
+        print(f"{rank}. {d['title']}")
+        brief = mode == "brief" and rank > 1
+        print("\n".join(bullets[:2] if brief else bullets))
+        if more and not brief:
+            print("Sections: " + more)
+    if symptoms:
+        print("Symptoms (symptom | cause | fix | note):")
         for s in symptoms:
             print("- " + s["line"])
-        print()
-    if mode == "full":
-        print('Next: python "LihFolk Vault V2/_tools/vault.py" --read "<title>" "<heading words>"  (one section only)')
 
 
 if __name__ == "__main__":

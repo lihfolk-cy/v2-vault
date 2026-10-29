@@ -1,5 +1,5 @@
 ---
-description: Plan and build a fast trend Roblox game (collect-upgrade-steal loop) with a twist, compliant with 2026 Roblox rules
+description: 'Plan and build a fast trend Roblox game (collect-upgrade-steal) with a twist, under 2026 Roblox rules'
 argument-hint: <trend or idea, e.g. "steal a ___ but underwater">
 ---
 

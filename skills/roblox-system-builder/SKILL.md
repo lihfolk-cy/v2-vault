@@ -1,6 +1,6 @@
 ---
 name: roblox-system-builder
-description: 'LihFolk: design and build a custom gameplay system end to end (config, server, client, remotes, saving, UI, tests) when no ready-made LihFolk module fits: rounds, combat, trading, custom pets, bespoke progression. Use for "design a system", "build a custom feature", "make a round system". To install a ready-made LihFolk module, use lihfolk-systems.'
+description: 'Design and build a custom gameplay system end to end (rounds, combat, trading, bespoke progression): config, server, client, remotes, saving, UI, tests. Ready-made LihFolk modules: lihfolk-systems.'
 ---
 # LihFolk System Builder
 

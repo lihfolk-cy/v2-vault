@@ -1,5 +1,5 @@
 ---
-description: Distill the project's quality ledger (.lihfolk/ledger.jsonl) into recipes so first drafts score higher
+description: 'Distill the quality ledger (.lihfolk/ledger.jsonl) into recipes so first drafts score higher'
 argument-hint: [type: model|animation|system|ui|world|vfx|all]
 ---
 

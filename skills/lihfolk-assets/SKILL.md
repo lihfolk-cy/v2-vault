@@ -1,6 +1,6 @@
 ---
 name: lihfolk-assets
-description: 'LihFolk: find and use the local LihFolk Asset Pack (original models, materials, skies, animations and VFX previews) by searching its catalogues, checking preview sheets and importing into Roblox; use for "use a LihFolk asset", "find a model/material/sky/animation", "what assets do we have", "import from the asset pack", "set up the asset pack".'
+description: 'Find and import assets from the local LihFolk Asset Pack (models, materials, skies, animations, VFX). Use for "use a LihFolk asset", "what assets do we have".'
 ---
 
 # LihFolk Assets: use the local asset pack

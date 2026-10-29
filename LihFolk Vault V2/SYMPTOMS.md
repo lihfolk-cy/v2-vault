@@ -53,6 +53,7 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 - UI shows the value from join and never updates | Value read once in setup, never subscribed | Listen for changes while the UI is open | [[Debugging Client-Server Desync]]
 - UI right for the first character, wrong after respawn | Listeners bound to the old character's Humanoid | Re-bind on respawn | [[Debugging Client-Server Desync]] [[Debugging Race Conditions and Yield Order]]
 - menus reset every time the player respawns | ScreenGuis in StarterGui folders or with ResetOnSpawn on | ResetOnSpawn = false for persistent UI, no folders in StarterGui | [[ScreenGui Fundamentals]] [[Script Types and Run Context]]
+- menus look fine on PC but are cut off at the screen edge on phones, with tiny text | Offset sizes with no safe-area handling or scale floor | Scale-based layout with constraints, safe-area insets and a UIScale floor | [[Responsive UI for Phone Tablet Console and PC]] [[Layout - Scale Offset and Constraints]]
 
 ## Input and controls
 
@@ -157,6 +158,7 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 - slows get stuck or wrong WalkSpeed restored | Effects write WalkSpeed or Health directly | Modifiers plus one owner that recomputes | [[Status Effects Buffs and Stacking Rules]]
 - enemy keeps attacking through stun | Interrupts duplicated per state, one forgot stagger | Global transitions in a parent state | [[Behaviour Trees Utility AI and State Machines for NPCs]]
 - bullets miss or tunnel through walls | Unanchored part plus Touched used for bullets | Simulated point with swept casts | [[Projectiles and Ballistics]]
+- punches or hits feel weak and floaty, nothing seems to connect | No hit-stop, shake or reaction driven by hit strength | Hit-stop and screen shake scaled by one hit-strength value, plus hit reactions | [[Hit-Stop and Screen Shake Tuning by Numbers]] [[Hit Reactions Stagger and Hit-Stop]] [[Game Feel and Juice]]
 
 ## Remotes, networking and replication
 
@@ -173,6 +175,8 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 - private values visible on other players' clients | Data stored as attributes on the character or Player | PlayerGui holder or FireClient to the owner | [[Interest Management and Per-Player Replication]]
 - server and client "share" a module table but values differ | Each side runs its own copy of the module | Use remotes or attributes | [[Module Scripts and Requiring]]
 - methods missing on an object after sending it to the client | Metatables dropped through remotes | Send plain data; rebuild objects client-side | [[Tables Metatables and OOP]]
+- exploiter fires a remote thousands of times a second to farm money | No per-player rate limit or argument validation | One guard per remote: rate limit first, then type, range and NaN checks | [[Remote Abuse Patterns and Rate Limiting in Practice]] [[Rate Limiting and Abuse Prevention]]
+- party or friends in the lobby get split across different match servers | One TeleportAsync moves only players in this server; no shared reservation | Reserve one server per party and teleport the group together | [[Parties and Group Teleports]]
 
 ## DataStores, data loss and dupes
 
@@ -204,6 +208,9 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 - shown odds do not add up to 100% | Tier odds shown instead of final outcomes | Flatten tiers into item odds | [[Paid Random Items and Odds Disclosure in Practice]]
 - displayed odds do not match what players roll | Display table separate from the roll table | One source of truth; roll from the flattened table | [[Paid Random Items and Odds Disclosure in Practice]] [[RNG Drops and Luck Systems]]
 - analytics revenue disagrees with payouts | Revenue computed from config prices | Use receipt amounts (CurrencySpent) | [[Robux Price Points and Offer Design]] [[Analytics and Funnels]]
+- Robux coin pack must still grant if the player leaves or the server crashes mid-purchase | Granting outside ProcessReceipt, or returning PurchaseGranted before saving | Grant and save inside ProcessReceipt; return PurchaseGranted only after the save | [[Developer Products and ProcessReceipt]] [[Purchase Data and Receipts]]
+- selling a crate or loot box for Robux with random rewards | Paid random items need disclosed odds | Show final-outcome odds before purchase, from the same table the server rolls | [[Paid Random Items and Odds Disclosure in Practice]] [[Regional Compliance - Paid Random Items and Country Rules]]
+- players go too long without a rare drop and want a bad-luck guarantee | Independent rolls with no pity counter | Pity counter kept with the drop table and saved per player | [[Drop Tables Rarity and Pity Systems]] [[Rarity Ladders and Drop Pacing Math]]
 
 ## Performance, memory and lag
 
@@ -222,6 +229,7 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 - game smooth at first, laggy after 15 minutes on phones | Thermal throttling | Quality governor all session; test after 15 to 20 minutes | [[Juice on a Budget - Mobile and Low-End]] [[Mobile and Low-End Optimization]]
 - memory looks huge in Studio | Studio numbers include Studio itself | Measure on the real device | [[Developer Console and Stats]]
 - lag scales with player count | Large attributes on Player rewritten often | Owner-only containers, deltas, lower frequency | [[Instances Attributes and Tags]] [[Network Performance]]
+- game hitches or frame spikes every few seconds and you can't tell which script | Guessing instead of measuring | Capture 30 to 90 frames in the MicroProfiler on the affected device and find the family | [[MicroProfiler Guide]] [[Performance Fundamentals]]
 
 ## Scripts, errors and load order
 
@@ -284,6 +292,7 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 - memory keeps growing on phones with streaming | LowMemory never streams out until pressure | StreamOutBehavior Opportunistic | [[Instance Streaming]]
 - world pops in when turning around | StreamingTargetRadius too small for the view | Raise the target radius, or hide edges with fog and LOD | [[Instance Streaming]]
 - half-built buildings pop in | Nonatomic building models | ModelStreamingMode Atomic | [[Level of Detail and Model Streaming]]
+- MeshPart RenderFidelity Precise is ignored; meshes still lose detail at a distance in the published game | Workspace.MeshStreamingAndImprovedLoDs is Enabled (cloud LoDs and mesh streaming), which ignores RenderFidelity | Check that Workspace property first; budget triangles at the source | [[Level of Detail and Model Streaming]] [[Engine and API Changes 2025-2026]]
 - loading screen never goes away for some players | WaitForChild without timeout on a streamed instance | Timeouts plus a watchdog | [[Streaming Joins - Frozen Players and Loading Screen Teardown]]
 - other players hang frozen in mid-air after spawning | Their client has not started simulating yet | Expected; spawn on the ground, optional cosmetic fade | [[Streaming Joins - Frozen Players and Loading Screen Teardown]]
 - players stuck after a join fix | Server anchored roots and missed the unanchor | Never anchor to hide join poses | [[Streaming Joins - Frozen Players and Loading Screen Teardown]]
@@ -302,6 +311,7 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 - backdoor or spam appeared after inserting a free model | Toolbox model inserted into the live place | Scratch place first; read every script | [[Creator Store and Toolbox Safety]]
 - key gameplay item moved across the map by an attacker | Unowned prop on automatic network ownership | Server ownership or anchoring | [[How Exploits Work - The Client Boundary]] [[Network Ownership]]
 - debug or admin remotes abused in live servers | Debug remotes left in production | Studio gate plus allowlist, or remove them | [[Remote Abuse Patterns and Rate Limiting in Practice]]
+- players flying, speeding or noclipping through the map | Server never checks client-owned movement | Server movement checks with conservative thresholds and exemptions for server moves | [[Detecting Movement Exploits - Speed Fly Noclip Teleport]] [[False Positives Lag and Fair Enforcement]]
 
 ## Publishing and live issues
 

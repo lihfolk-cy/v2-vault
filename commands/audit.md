@@ -1,5 +1,5 @@
 ---
-description: Audit a Roblox project's Luau - run the LihFolk checker over every .lua/.luau file, then a prioritised security, data, exploit and performance review that ends in a ranked fix list
+description: 'Audit a Roblox project''s Luau: checker on every file, then a ranked security, data, exploit and performance fix list'
 argument-hint: [path to scan, default: project root]
 ---
 

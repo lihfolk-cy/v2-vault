@@ -1,6 +1,6 @@
 ---
 name: council-member
-description: One independent seat on the LihFolk Council. Answers or reviews a Roblox question through a single assigned lens, blind to other members. Spawned by the council-method skill; not for general use.
+description: 'One blind LihFolk Council seat with an assigned lens. Spawned by council-method only.'
 tools: Read, Grep, Glob
 model: sonnet
 ---

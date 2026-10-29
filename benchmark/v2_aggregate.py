@@ -2,12 +2,14 @@
 
   py -I v2_aggregate.py blind      -> runs/v2/blind_<set>.json (arms x reps shuffled per task, labels R1..Rn) + _key
   py -I v2_aggregate.py report     -> RESULTS_v2.md from runs/v2/grade_<set>_<g>.json
+  py -I v2_aggregate.py blind|report <run dir name> <results file>   e.g. v2.1 RESULTS_v2.1_scores.md
 Arms are answer files runs/v2/<arm>_r<rep>_<set>.json  ({"<id>": "<answer>"}); timing/tokens in runs/v2/usage.json.
 """
 import json, os, random, statistics as st, sys, glob, itertools
 
 B = os.path.dirname(os.path.abspath(__file__))
-R = os.path.join(B, "runs", "v2")
+R = os.path.join(B, "runs", sys.argv[2] if len(sys.argv) > 2 else "v2")
+OUT = sys.argv[3] if len(sys.argv) > 3 else "RESULTS_v2.md"
 SETS = {"A": "questions.json", "B": "questions_b.json"}
 
 
@@ -55,7 +57,7 @@ def boot_ci(vals, n=4000, seed=7):
 
 
 def report():
-    lines = ["# LihFolk Benchmark v2", ""]
+    lines = [f"# LihFolk Benchmark {os.path.basename(R)}", ""]
     usage = json.load(open(os.path.join(R, "usage.json"), encoding="utf-8")) if os.path.exists(os.path.join(R, "usage.json")) else {}
     for s in SETS:
         kp = os.path.join(R, f"_key_{s}.json")
@@ -102,7 +104,7 @@ def report():
             for x, y in itertools.combinations(v, 2):
                 diffs.append(abs(x - y) / T[tid]["points"])
         lines += ["", f"Grader agreement: mean |difference| between graders = {st.mean(diffs)*100:.1f}% of task points (lower is better)." if diffs else "", ""]
-    open(os.path.join(B, "RESULTS_v2.md"), "w", encoding="utf-8", newline="\n").write("\n".join(lines))
+    open(os.path.join(B, OUT), "w", encoding="utf-8", newline="\n").write("\n".join(lines))
     print("\n".join(lines))
 
 

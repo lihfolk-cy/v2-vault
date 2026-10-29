@@ -37,7 +37,7 @@ Point your tool at this folder. `AGENTS.md` tells any agent how to search the va
 
 ## Built to be trusted by AI agents
 
-- **One-call search:** from the repo folder, `python "LihFolk Vault V2/_tools/vault.py" "my sword floats away from the hand when I attack"` returns the 3 best notes with their TL;DRs (use `python3` or, on Windows, `py` if that's your launcher). It understands bugs described in everyday words through `LihFolk Vault V2/SYMPTOMS.md`, which has 250+ symptom → cause → fix lines. On a held-out test set of hand-written tasks, the right note is in the top 3 **93%** of the time, against 57% for grepping the index. The average answer costs about 700 tokens.
+- **One-call search:** from the repo folder, `python "LihFolk Vault V2/_tools/vault.py" "my sword floats away from the hand when I attack"` returns the 3 best notes with their TL;DRs (use `python3` or, on Windows, `py` if that's your launcher). It understands bugs described in everyday words through `LihFolk Vault V2/SYMPTOMS.md`, which has 250+ symptom → cause → fix lines. On a held-out test set of hand-written tasks, the right note is in the top 3 **93%** of the time, against 60% for grepping the index. The average answer costs about 600 tokens.
 - **No made-up APIs:** every Roblox and Luau API name in the notes is checked against a dated snapshot of the real API, including deprecations. Methods Roblox renamed to `...Async` are already updated throughout.
 - **Code that compiles:** all 1,800+ Luau code blocks are compiled with the official Luau compiler on every push.
 - **Notes that agree:** numbers repeated across notes, such as limits, defaults and ratios, are cross-checked, and stale date stamps are flagged.

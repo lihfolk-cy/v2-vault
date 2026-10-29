@@ -1,5 +1,5 @@
 ---
-description: Run the LihFolk Council - blind, anonymized multi-agent verdict on a Roblox question or built work (add "standard" or "full" for bigger tiers)
+description: 'Run the LihFolk Council: blind multi-agent verdict on a Roblox question or built work (standard/full for bigger tiers)'
 argument-hint: [quick|standard|full] <question or what to review>
 ---
 

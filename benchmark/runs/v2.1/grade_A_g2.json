@@ -1,0 +1,314 @@
+[
+ {
+  "id": "P1",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2
+  },
+  "notes": "all complete"
+ },
+ {
+  "id": "P2",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.63,
+   "R3": 3,
+   "R4": 2.63,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "R1/R2/R4 miss shared module/both-sides; R1 misses disallowed ops"
+ },
+ {
+  "id": "P3",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 2.5,
+   "R4": 3,
+   "R5": 2.5,
+   "R6": 2.5,
+   "R7": 3
+  },
+  "notes": "R3/R5/R6 lack CreateDefaultPlayerModule=Disabled"
+ },
+ {
+  "id": "P4",
+  "scores": {
+   "R1": 2.63,
+   "R2": 2.25,
+   "R3": 2.63,
+   "R4": 1.88,
+   "R5": 1.5,
+   "R6": 1.88,
+   "R7": 1.5
+  },
+  "notes": "few mention TextChannelWindow.Target, PrefixText, opt-out in Feb 2027"
+ },
+ {
+  "id": "P5",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.63,
+   "R3": 2.63,
+   "R4": 2.63,
+   "R5": 2.25,
+   "R6": 3,
+   "R7": 2.63
+  },
+  "notes": "partial on per-server limits/Open Cloud and latest-version-only storage"
+ },
+ {
+  "id": "P6",
+  "scores": {
+   "R1": 2.63,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 2.63,
+   "R7": 3
+  },
+  "notes": "R1/R6 omit IsPaidItemTradingAllowed"
+ },
+ {
+  "id": "P7",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.25,
+   "R3": 2.25,
+   "R4": 2.25,
+   "R5": 2.81,
+   "R6": 2.25,
+   "R7": 2.25
+  },
+  "notes": "most miss 16+ evaluation or dates; R1/R4/R6 hedge Plus vs fee"
+ },
+ {
+  "id": "P8",
+  "scores": {
+   "R1": 3,
+   "R2": 1.88,
+   "R3": 2.63,
+   "R4": 2.25,
+   "R5": 1.88,
+   "R6": 1.13,
+   "R7": 2.63
+  },
+  "notes": "R5 omits Audience Expansion; R6 vague on reward mechanics"
+ },
+ {
+  "id": "G1",
+  "scores": {
+   "R1": 4,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 4,
+   "R6": 3,
+   "R7": 4
+  },
+  "notes": "R2/R3/R4/R6 never mention not granting from PromptProductPurchaseFinished"
+ },
+ {
+  "id": "G2",
+  "scores": {
+   "R1": 3,
+   "R2": 2.63,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 2.63,
+   "R7": 2.63
+  },
+  "notes": "R2/R6/R7 omit keyInfo argument"
+ },
+ {
+  "id": "G3",
+  "scores": {
+   "R1": 1.33,
+   "R2": 1.33,
+   "R3": 1.33,
+   "R4": 1.33,
+   "R5": 1.33,
+   "R6": 1.33,
+   "R7": 1.33
+  },
+  "notes": "none states general rule that all remote args are attacker-controlled"
+ },
+ {
+  "id": "G4",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "G5",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "G6",
+  "scores": {
+   "R1": 1.25,
+   "R2": 1.75,
+   "R3": 1.5,
+   "R4": 1.5,
+   "R5": 1.75,
+   "R6": 1.0,
+   "R7": 1.5
+  },
+  "notes": "R6 wrongly says 0.01 unit scale causes the problem (-1); few give 0.01 alternatives"
+ },
+ {
+  "id": "G7",
+  "scores": {
+   "R1": 0.33,
+   "R2": 0.33,
+   "R3": 0.33,
+   "R4": 1.0,
+   "R5": 0.33,
+   "R6": 0.33,
+   "R7": 0.33
+  },
+  "notes": "most confidently claim Apply Modifiers bakes Armature/breaks skinning (key: Armature excepted)"
+ },
+ {
+  "id": "G8",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "T1",
+  "scores": {
+   "R1": 4,
+   "R2": 4,
+   "R3": 4,
+   "R4": 4,
+   "R5": 4,
+   "R6": 4,
+   "R7": 4
+  },
+  "notes": "all complete"
+ },
+ {
+  "id": "T2",
+  "scores": {
+   "R1": 4,
+   "R2": 4,
+   "R3": 3.5,
+   "R4": 3.5,
+   "R5": 4,
+   "R6": 4,
+   "R7": 3.5
+  },
+  "notes": "R3/R4/R7 BindToClose not parallel"
+ },
+ {
+  "id": "T3",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3,
+   "R6": 3,
+   "R7": 3
+  },
+  "notes": "all complete"
+ },
+ {
+  "id": "T4",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "T5",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "T6",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "T7",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2,
+   "R6": 2,
+   "R7": 2
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "T8",
+  "scores": {
+   "R1": 0,
+   "R2": 1.5,
+   "R3": 1.5,
+   "R4": 0,
+   "R5": 1.0,
+   "R6": 1.5,
+   "R7": 0
+  },
+  "notes": "R1/R4/R7 miss MeshStreamingAndImprovedLoDs entirely"
+ }
+]

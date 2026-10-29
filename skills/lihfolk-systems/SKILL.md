@@ -1,6 +1,6 @@
 ---
 name: lihfolk-systems
-description: 'LihFolk: install the ready-made LihFolk systems library (drop-in Luau modules: session-locked PlayerData, validated Net remotes, Currency, Shop, ProcessReceipt router, Inventory, EggHatch with odds disclosure and PolicyService, Codes, DailyRewards, Rebirth, Quests, Leaderboard, RateLimit, Signal, Janitor). Use when the user wants one of these modules added as-is, says "use the LihFolk systems", "install the LihFolk shop/eggs/codes/daily rewards/rebirth/quests/leaderboard/data module", or runs /lihfolk:new-system. Designing a custom system goes to roblox-system-builder.'
+description: 'Install ready-made LihFolk Luau modules as-is (PlayerData, Net, Currency, Shop, receipts, Inventory, EggHatch, Codes, DailyRewards, Rebirth, Quests, Leaderboard), or /lihfolk:new-system. Custom systems: roblox-system-builder.'
 ---
 # LihFolk Systems Library
 

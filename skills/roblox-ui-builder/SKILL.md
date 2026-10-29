@@ -1,6 +1,6 @@
 ---
 name: roblox-ui-builder
-description: 'LihFolk: responsive Roblox UI review and build (layout, safe areas, motion, accessibility). Use for any ScreenGui/HUD/menu work or "UI broken on phone", "buttons too small", "buttons under the notch". For the LihFolk house menu style, use lihfolk-ui.'
+description: 'Responsive Roblox UI build and review (layout, safe areas, motion, accessibility) for any ScreenGui/HUD/menu or "UI broken on phone". LihFolk house menu style: lihfolk-ui.'
 ---
 # LihFolk UI Builder
 

@@ -5,66 +5,27 @@ description: 'LihFolk: Roblox knowledge router (1,300+ notes, also answers "chec
 
 # LihFolk Roblox Knowledge Router
 
-LihFolk Vault V2, the knowledge base, lives in the plugin root's `LihFolk Vault V2/` folder. It contains 1,300+ notes written for AI agents.
+LihFolk Vault V2 (1,300+ notes written for AI agents) lives in the plugin root's `LihFolk Vault V2/` folder.
 
-**Resolve the vault path first.** When this skill loads, Claude Code shows its base directory (`.../skills/lihfolk`). The plugin root is two folders above it, so `VAULT` = `<base directory>/../../LihFolk Vault V2`, written out as an absolute path (for example `C:/Users/me/.claude/plugins/.../LihFolk Vault V2`). Use this absolute `VAULT` in every command and Read below; the user's project folder does not contain the vault. If the base directory is not shown, use `${CLAUDE_PLUGIN_ROOT}/LihFolk Vault V2`.
+**Resolve the vault path first.** Claude Code shows this skill's base directory (`.../skills/lihfolk`). The plugin root is two folders above it, so `VAULT` = `<base directory>/../../LihFolk Vault V2`, written out as an absolute path (for example `C:/Users/me/.claude/plugins/.../LihFolk Vault V2`). Use this absolute `VAULT` in every command and Read; the user's project folder does not contain the vault. If the base directory is not shown, use `${CLAUDE_PLUGIN_ROOT}/LihFolk Vault V2`.
 
-**Python launcher:** the commands below say `python`. If it is not found (or prints "Python was not found"), use `python3`, and on Windows use `py`.
+**Python launcher:** commands say `python`. If it is not found (or prints "Python was not found"), use `python3`, and on Windows `py`.
 
-## Fastest path: delegate the lookup (default)
+## Default: delegate the lookup
 
-For any Roblox question that needs the vault, spawn the `lihfolk-lookup` agent with a prompt that starts with the line `VAULT=<absolute vault path>` (resolved above), followed by the question, and use its short answer. It runs on a small model, searches the vault in its own context and returns only the facts, gotchas and note titles, so the main context stays clean and the task finishes faster and cheaper. Do the lookup yourself (steps below) only when you need to quote a long code pattern verbatim or the agent says "not in vault".
-- Don't look things up for work you already know cold (plain Luau, well-known APIs): just do it.
-- One lookup per topic per session; reuse the answer.
-- Don't trigger `quality-score` or `council-method` for ordinary coding tasks. They're for generated assets/systems the user asked to be scored, and for decisions the user asked to have reviewed.
-## How to use it (cheap by default)
+For a Roblox question that needs the vault, spawn the `lihfolk-lookup` agent with a prompt whose first line is `VAULT=<absolute vault path>`, then the question (batch related questions in one call). It searches on a small model and returns only facts, gotchas and note titles, keeping the main context clean. Look things up yourself (below) only to quote a long code pattern verbatim or when the agent says "not in vault".
+- Skip lookups for work you know cold (plain Luau, well-known APIs). One lookup per topic per session; reuse the answer.
+- `quality-score` and `council-method` are for work the user asked to have scored or reviewed, not ordinary coding.
 
-Scale the lookup to the task. The goal is the few lines that change what you do, not reading notes.
+## Looking it up yourself
 
-| Task | Lookup |
-|---|---|
-| Trivial (rename, typo, one-line fix, a question you already know cold) | None |
-| Normal (a feature, a bug, a review) | One `vault.py` search (prints the best notes' TL;DRs); open nothing else unless needed |
-| Big or unfamiliar (new system, security, money, data, publishing) | Up to 3-4 notes; TL;DRs first, then the one full section that applies, still not whole notes |
+Scale to the task: trivial = none; normal (feature, bug, review) = one search; big or unfamiliar (new system, security, money, data, publishing) = up to 3-4 notes, one section each.
 
-1. **One call first:** `python "<VAULT>/_tools/vault.py" "<task or bug in plain words>"` (quote the path: it contains spaces). It prints the best 3 notes with their TL;DRs and, for bugs, matching `SYMPTOMS.md` lines (symptom | cause | fix | note). Top-3 hit rate on a held-out test set: 93%.
-2. **Fallback:** if Python is unavailable or the search misses, grep `<VAULT>/INDEX_SLIM.md` (`title | path | tags`) for exact API names and `<VAULT>/SYMPTOMS.md` for the symptom. `<VAULT>/ROUTER.md` (about 5 KB) only at the start of a long multi-topic session.
-3. **TL;DR first:** every prose note opens with a TL;DR block (3-6 rules from its Common mistakes and Checklist, plus `Read more: ## <sections>`). Read only that: `Grep pattern="tldr:start" path="<VAULT>" glob="**/<note title>.md" output_mode=content -A 10`, or Read the note with `limit: 20`.
-4. **Sections, not files:** only when the TL;DR isn't enough, `python "<VAULT>/_tools/vault.py" --read "<title>" "<heading words>"` prints just the section it points to (or grep `^## ` and read that range). Never read whole large notes.
-5. **Reuse within the session:** don't re-read a note you've already used for the same topic.
-6. **Apply and cite** the note titles briefly.
-7. **Trust labels:** `Roblox docs` and `Measured` beat `Rule of thumb`; check `Unverified` before relying on it. If nothing matches, say so and use the official Roblox docs. Never invent APIs or asset ids.
+1. `python "<VAULT>/_tools/vault.py" "<task or bug in plain words>"` (quote the path). It prints the 3 best notes' TL;DR bullets and section lists, plus matching `SYMPTOMS.md` lines (symptom | cause | fix | note).
+2. One section, not the file: `python "<VAULT>/_tools/vault.py" --read "<title>" "<heading words>"` (`--sections "<title>"` lists headings).
+3. Without Python: grep `<VAULT>/INDEX_SLIM.md` (`title | path | tags`) for API names and `<VAULT>/SYMPTOMS.md` for the symptom.
+4. Apply and cite note titles. Trust labels: `Roblox docs` and `Measured` beat `Rule of thumb`; check `Unverified` before relying on it. If nothing matches, say so and use the official Roblox docs. Never invent APIs or asset ids.
 
-**Accuracy over savings (non-negotiable):** the TL;DR is a pointer, not a substitute. For high-stakes work (player data and DataStores, purchases and receipts, paid random items and policy, remotes and security, anything that ships to live players), always read the note's full `## Common mistakes` and `## Checklist` sections, and the section that holds the exact numbers or API rules you are about to use. Also read further whenever the TL;DR leaves any doubt. Never cite a number you only saw in a TL;DR without opening its section.
+**Accuracy over savings:** a TL;DR is a pointer. For player data, purchases and receipts, paid random items and policy, remotes and security, or anything shipping to live players, read the note's `Common mistakes` and `Checklist` sections and the section holding the exact numbers or API rules you use. Never cite a number seen only in a TL;DR.
 
-## Where things are
-
-| Need | Look in `<VAULT>/` |
-|---|---|
-| Studio, tooling, Rojo, plugins | 01, 39 |
-| Luau language, patterns, cookbook | 02, 29, 35, 40 |
-| Client/server, remotes, architecture | 03, 41 |
-| Saving, DataStores, sessions | 04 |
-| UI / UX (house cartoon/simulator menu style: the `lihfolk-ui` skill) | 05, 42 |
-| Worldbuilding, level design, terrain | 06, 33, 34, 36 |
-| Lighting, VFX, audio | 07 |
-| Animation, rigs | 08, 18 |
-| Gameplay systems, genre systems | 09, 43, 25 |
-| Game design, economy, game feel | 10, 47, 48 |
-| Monetization, publishing, live ops | 11, 38, 27, 49 |
-| Performance, debugging, testing | 12, 23 |
-| Case studies of top games | 13, 32 |
-| 3D modeling, materials, styles | 14, 44, 45, 53, 54, 55, 19 |
-| AI tools, MCP, pipelines | 15, 16, 17 |
-| Security, anti-exploit | 22 |
-| End-to-end worked builds | 24 |
-| Avatars, UGC | 37 |
-| Original asset pack (models, materials, skies, animations, VFX) | `<base directory>/../../assets/README.md` (absolute path) |
-
-## Specialist skills in this plugin
-
-Prefer these when the task matches: `quality-score` (every generated asset or system must score at least 8.5/10), `council-method` (objective verdicts; the user-facing command is `/lihfolk:council`), `lihfolk-ui` (house menu style), `lihfolk-assets` (original models, materials, skies, animations and VFX from the local asset pack: search its catalogues before modelling from scratch), `lihfolk-vfx`, `lihfolk-sfx` (layered, pooled combat and UI sounds synced to the same markers, sourced only from premium licensed sounds: Roblox-licensed Creator Store audio or a library the user owns), `lihfolk-systems`, `roblox-blender-modeling`, `roblox-trend-game`, `roblox-system-builder`, `roblox-ui-builder`, `roblox-secure-remotes`, `roblox-datastore-safety`, `roblox-performance-audit`, `roblox-debugging`, `roblox-anti-exploit-review`, `roblox-monetization-compliance`, `roblox-asset-import`.
-
-## Reference images
-
-Notes in 19 (Concept Sheets) and 45 (Procedural Blender Assets) include images. View them with the Read tool when matching a style or proportions - they are references to look at, not just files.
+Folder map by topic, the asset pack path, the specialist skill list and reference images: `<base directory>/references/vault-map.md`.

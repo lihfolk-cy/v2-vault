@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased: leaner context, same accuracy
+
+### Improved
+- **Smaller always-loaded footprint:** skill, agent and command descriptions trimmed from about 1,720 to 1,120 tokens, with the same routing on a 30-request test.
+- **Leaner router:** the `lihfolk` skill body went from about 1,610 to 720 tokens; the folder map, specialist list and extra tips now live in `skills/lihfolk/references/vault-map.md`.
+- **Compact search output:** `vault.py` prints TL;DR bullets and section lists without boilerplate, about 594 tokens per task instead of 745. `--full` keeps the old output and `--brief` is cheaper still.
+- **Sharper lookup agent:** replies lead with dated facts, renames, deprecations and limits, retry once with exact API names, and check the Python launcher once.
+- **Better search:** 10 new symptom lines (dev hit@3 85% to 92%, held-out test unchanged at 93%), including mesh streaming overriding `RenderFidelity`.
+- **Benchmark v2.1:** lookup arm re-graded blind next to the original answers: 56.2 vs 55.4 on set A and 61.6 vs 60.7 on set B under the same graders (`benchmark/RESULTS_v2.1.md`).
+
 ## 2.3.0 (2026-10-29): Assets, sound and combat
 
 **Highlights:** find and import original assets with one command, premium sound design, new combat VFX and animations, a reusable house-building kit, and a plugin that works from any project folder.

@@ -4,7 +4,7 @@ Python 3, standard library only. Everything here is deterministic, and every che
 
 | Tool | What it does | Command |
 |---|---|---|
-| `vault.py` | One-call search: the best 3 notes for a task or bug, with their TL;DRs and matching symptom lines. Reads one section of a note on request. | `python "LihFolk Vault V2/_tools/vault.py" "screen goes black when I get hit"` |
+| `vault.py` | One-call search: the best 3 notes for a task or bug, with their TL;DR bullets and section lists, and matching symptom lines. Reads one section of a note on request. | `python "LihFolk Vault V2/_tools/vault.py" "screen goes black when I get hit"` |
 | `build_index.py` | Regenerates TL;DRs, `INDEX.md`, `INDEX_SLIM.md` and `ROUTER.md` from the notes. | `python "LihFolk Vault V2/_tools/build_index.py"` (`--check` in CI) |
 | `api_check.py` | Checks every Roblox and Luau API name in the notes against the real API. | `python "LihFolk Vault V2/_tools/api_check.py" --strict` |
 | `snippets.py` | Compiles every Luau code block with the official Luau compiler. | `python "LihFolk Vault V2/_tools/snippets.py" --strict` |
@@ -17,7 +17,9 @@ Reports are written to `reports/`.
 ## vault.py: one-call search
 
 ```
-python "LihFolk Vault V2/_tools/vault.py" "datastore session lock"                 # best 3 notes + TL;DRs + symptom lines
+python "LihFolk Vault V2/_tools/vault.py" "datastore session lock"                 # best 3 notes' TL;DR bullets + symptom lines
+python "LihFolk Vault V2/_tools/vault.py" --brief "datastore session lock"         # cheaper: notes 2-3 cut to two lines (can hide facts)
+python "LihFolk Vault V2/_tools/vault.py" --full "datastore session lock"          # raw TL;DR blocks with paths and sizes
 python "LihFolk Vault V2/_tools/vault.py" --paths "slash vfx"                      # titles and paths only
 python "LihFolk Vault V2/_tools/vault.py" -k 5 --json "processreceipt"             # machine-readable
 python "LihFolk Vault V2/_tools/vault.py" --sections "DataStore Fundamentals"      # list a note's ## headings
@@ -32,11 +34,11 @@ Ranking is BM25F over each note's title, tags, TL;DR, headings, body and the `SY
 
 | Split | Tasks | hit@1 | hit@3 | MRR@3 | Baseline hit@3 |
 |---|---:|---:|---:|---:|---:|
-| dev | 60 | 60% | 85% | 0.71 | 52% |
-| **test (held out)** | 30 | **80%** | **93%** | 0.86 | 57% |
+| dev | 60 | 63% | 92% | 0.76 | 52% |
+| **test (held out)** | 30 | **77%** | **93%** | 0.84 | 60% |
 
 - **Baseline:** the same ranking on titles and tags only, which is roughly what grepping `INDEX_SLIM.md` finds.
-- **Cost per task:** an agent reads about 716 tokens of output: three TL;DRs plus any symptom lines.
+- **Cost per task:** an agent reads about 600 tokens of output: three TL;DRs and section lists without the callout and cost boilerplate, plus any symptom lines (`--full` is about 745, `--brief` about 400).
 - **Older protocol:** grep the index, then read "Common mistakes" and "Checklist" from 2 notes. That costs about 1,600 tokens per task (see `--measure` below) and needs 3-5 tool calls instead of one.
 
 ## api_check.py: no made-up or deprecated APIs

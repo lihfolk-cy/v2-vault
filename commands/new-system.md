@@ -1,5 +1,5 @@
 ---
-description: Install and wire a drop-in LihFolk system (shop, inventory, eggs, codes, daily rewards, rebirth, quests, leaderboard, data saving) into this Roblox project, then score it (system rubric, min 8.5)
+description: 'Install and wire a ready-made LihFolk system (shop, inventory, eggs, codes, daily, rebirth, quests, leaderboard, data), then score it'
 argument-hint: <system: playerdata|currency|shop|receipts|inventory|eggs|codes|daily|rebirth|quests|leaderboard|all> [notes]
 ---
 

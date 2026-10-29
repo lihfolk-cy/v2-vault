@@ -1,6 +1,6 @@
 ---
 name: roblox-secure-remotes
-description: 'LihFolk: server-authoritative RemoteEvents/RemoteFunctions with validation and rate limits. Use when adding, writing or reviewing remotes, or "can this be exploited".'
+description: 'Server-authoritative RemoteEvents/RemoteFunctions with validation and rate limits. Use when adding or reviewing remotes, or "can this be exploited".'
 ---
 # LihFolk Secure Remotes
 

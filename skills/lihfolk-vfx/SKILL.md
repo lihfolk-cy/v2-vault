@@ -1,6 +1,6 @@
 ---
 name: lihfolk-vfx
-description: 'LihFolk: stylised slash and combat VFX library (frontal sweeps, crescents, stab cone, overhead cleave with ground crack, dash afterimages, hit sparks, charge-up aura, ice explosion) as a Luau timeline module with element tints and animation-marker sync; use for "slash effect", "sword VFX", "crescent", "stab", "dash trail", "hit spark", "charge", "ice explosion", "make the swing look better".'
+description: 'LihFolk slash and combat VFX library (sweeps, crescents, stab, cleave, dash afterimage, hit spark, charge aura, ice burst). Use for "slash effect", "sword VFX", "make the swing look better".'
 ---
 
 # LihFolk VFX: slashes, impacts and auras

@@ -1,0 +1,314 @@
+[
+ {
+  "id": "B1",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 2.5,
+   "R7": 3.0
+  },
+  "notes": "R6 does not say server-side"
+ },
+ {
+  "id": "B2",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "all complete"
+ },
+ {
+  "id": "B3",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "all complete"
+ },
+ {
+  "id": "B4",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "all complete"
+ },
+ {
+  "id": "B5",
+  "scores": {
+   "R1": 1.67,
+   "R2": 1.67,
+   "R3": 1.67,
+   "R4": 1.67,
+   "R5": 1.67,
+   "R6": 1.67,
+   "R7": 1.67
+  },
+  "notes": "none state 15,000-stud max"
+ },
+ {
+  "id": "B6",
+  "scores": {
+   "R1": 1.67,
+   "R2": 1.67,
+   "R3": 1.33,
+   "R4": 1.67,
+   "R5": 1.67,
+   "R6": 1.67,
+   "R7": 1.67
+  },
+  "notes": "pcall rarely explicit; R2 no Studio guard; R3 no pcall/retry"
+ },
+ {
+  "id": "B7",
+  "scores": {
+   "R1": 3.0,
+   "R2": 2.62,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 2.62
+  },
+  "notes": "R2/R7 only comment placeholder for arg validation"
+ },
+ {
+  "id": "B8",
+  "scores": {
+   "R1": 4.0,
+   "R2": 3.5,
+   "R3": 2.5,
+   "R4": 4.0,
+   "R5": 4.0,
+   "R6": 3.5,
+   "R7": 4.0
+  },
+  "notes": "R3 grants without player present (no NotProcessedYet); single-assignment not stated in R2/R3/R6"
+ },
+ {
+  "id": "B9",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0
+  },
+  "notes": "all complete"
+ },
+ {
+  "id": "B10",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "all complete"
+ },
+ {
+  "id": "B11",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "all complete"
+ },
+ {
+  "id": "B12",
+  "scores": {
+   "R1": 3.0,
+   "R2": 2.25,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 2.25,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "R2/R5 omit teleport-data sensitivity"
+ },
+ {
+  "id": "B13",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.25,
+   "R3": 2.25,
+   "R4": 2.25,
+   "R5": 2.25,
+   "R6": 2.25,
+   "R7": 2.25
+  },
+  "notes": "none state OnServerEvent first arg identifies caller"
+ },
+ {
+  "id": "B14",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "all complete"
+ },
+ {
+  "id": "B15",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "all complete"
+ },
+ {
+  "id": "B16",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.25,
+   "R3": 2.25,
+   "R4": 2.25,
+   "R5": 2.25,
+   "R6": 2.25,
+   "R7": 2.25
+  },
+  "notes": "none mention ownership-change jitter"
+ },
+ {
+  "id": "B17",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "all complete"
+ },
+ {
+  "id": "B18",
+  "scores": {
+   "R1": 3.0,
+   "R2": 2.62,
+   "R3": 3.0,
+   "R4": 2.62,
+   "R5": 2.62,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "partial item3 when require-in-parallel limit missing"
+ },
+ {
+  "id": "B19",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0
+  },
+  "notes": "all complete"
+ },
+ {
+  "id": "B20",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0
+  },
+  "notes": "all complete"
+ },
+ {
+  "id": "B21",
+  "scores": {
+   "R1": 1.33,
+   "R2": 1.67,
+   "R3": 1.33,
+   "R4": 1.67,
+   "R5": 1.67,
+   "R6": 1.67,
+   "R7": 1.33
+  },
+  "notes": "no response mentions stdio; studio_id partial"
+ },
+ {
+  "id": "B22",
+  "scores": {
+   "R1": 3.0,
+   "R2": 2.25,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 2.25,
+   "R7": 2.25
+  },
+  "notes": "R2/R6/R7 omit PlayerScriptsUseInputActionSystem"
+ },
+ {
+  "id": "B23",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "all complete"
+ },
+ {
+  "id": "B24",
+  "scores": {
+   "R1": 1.75,
+   "R2": 1.75,
+   "R3": 1.25,
+   "R4": 1.75,
+   "R5": 1.75,
+   "R6": 1.75,
+   "R7": 1.25
+  },
+  "notes": "FLAG: key says 13-15 cannot chat with 16+, responses saying 13-15<->16-17 given partial; key item may be wrong"
+ }
+]

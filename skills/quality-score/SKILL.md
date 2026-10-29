@@ -1,6 +1,6 @@
 ---
 name: quality-score
-description: 'LihFolk: score generated models, animations, UI, systems, worlds or VFX 0-10 on fixed rubrics (min 8.5) with a learning ledger. Use only when the user asks for a score or quality bar, or for assets made for the LihFolk asset pipeline. Not for ordinary code edits.'
+description: 'Score generated models, animations, UI, systems, worlds or VFX 0-10 on LihFolk rubrics (min 8.5), only when the user asks for a score or for LihFolk asset-pipeline work. Not for ordinary code edits.'
 ---
 
 # LihFolk Quality Score

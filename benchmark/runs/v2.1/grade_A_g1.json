@@ -1,0 +1,314 @@
+[
+ {
+  "id": "P1",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0
+  },
+  "notes": "all three items covered by every response"
+ },
+ {
+  "id": "P2",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.62,
+   "R3": 2.62,
+   "R4": 2.62,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "partial if no shared module/both-sides note; R1 lacks Destroy/UIS restriction"
+ },
+ {
+  "id": "P3",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 2.5,
+   "R4": 3.0,
+   "R5": 2.5,
+   "R6": 2.5,
+   "R7": 3.0
+  },
+  "notes": "partial when CreateDefaultPlayerModule=Disabled not given"
+ },
+ {
+  "id": "P4",
+  "scores": {
+   "R1": 2.62,
+   "R2": 2.25,
+   "R3": 2.62,
+   "R4": 2.25,
+   "R5": 1.88,
+   "R6": 2.25,
+   "R7": 2.25
+  },
+  "notes": "none mention TextChannelWindow.Target; PrefixText only R1/R3; R5 omits property"
+ },
+ {
+  "id": "P5",
+  "scores": {
+   "R1": 2.62,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 2.62,
+   "R5": 2.62,
+   "R6": 3.0,
+   "R7": 2.62
+  },
+  "notes": "partial item1 when per-server limits/Open Cloud sharing missing"
+ },
+ {
+  "id": "P6",
+  "scores": {
+   "R1": 2.62,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 2.62,
+   "R7": 3.0
+  },
+  "notes": "R1/R6 miss IsPaidItemTradingAllowed"
+ },
+ {
+  "id": "P7",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.25,
+   "R3": 2.25,
+   "R4": 2.25,
+   "R5": 2.62,
+   "R6": 2.25,
+   "R7": 2.25
+  },
+  "notes": "Plus-or-fee answers partial vs key; 16+ evaluation/exclusions rarely both"
+ },
+ {
+  "id": "P8",
+  "scores": {
+   "R1": 3.0,
+   "R2": 1.5,
+   "R3": 2.62,
+   "R4": 2.62,
+   "R5": 2.25,
+   "R6": 1.12,
+   "R7": 2.62
+  },
+  "notes": "R2 says US creators 18+ (wrong: buyers); R5 no Audience Expansion; R6 vague"
+ },
+ {
+  "id": "G1",
+  "scores": {
+   "R1": 4.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 4.0,
+   "R6": 3.0,
+   "R7": 4.0
+  },
+  "notes": "item4 (no grant from PromptProductPurchaseFinished) missing in R2/R3/R4/R6"
+ },
+ {
+  "id": "G2",
+  "scores": {
+   "R1": 3.0,
+   "R2": 2.62,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 2.62,
+   "R7": 2.62
+  },
+  "notes": "partial item4 when keyInfo not mentioned"
+ },
+ {
+  "id": "G3",
+  "scores": {
+   "R1": 1.33,
+   "R2": 1.33,
+   "R3": 1.33,
+   "R4": 1.33,
+   "R5": 1.33,
+   "R6": 1.33,
+   "R7": 1.33
+  },
+  "notes": "all catch NaN and fix; none state all remote args are attacker-controlled"
+ },
+ {
+  "id": "G4",
+  "scores": {
+   "R1": 3.0,
+   "R2": 2.5,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "R2 gives no frame-order explanation"
+ },
+ {
+  "id": "G5",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0
+  },
+  "notes": "all correct"
+ },
+ {
+  "id": "G6",
+  "scores": {
+   "R1": 1.25,
+   "R2": 1.75,
+   "R3": 1.5,
+   "R4": 1.5,
+   "R5": 1.75,
+   "R6": 1.0,
+   "R7": 1.5
+  },
+  "notes": "R6 claims Unit Scale 0.01 causes the problem (contradicts key alternative); R1 no glTF"
+ },
+ {
+  "id": "G7",
+  "scores": {
+   "R1": 1.0,
+   "R2": 1.0,
+   "R3": 1.0,
+   "R4": 1.33,
+   "R5": 1.0,
+   "R6": 1.0,
+   "R7": 1.0
+  },
+  "notes": "most wrongly claim Apply Modifiers bakes/breaks Armature (key: Armature excluded)"
+ },
+ {
+  "id": "G8",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 1.5,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0
+  },
+  "notes": "R4 offers DeviceSafeInsets as primary fix"
+ },
+ {
+  "id": "T1",
+  "scores": {
+   "R1": 4.0,
+   "R2": 4.0,
+   "R3": 4.0,
+   "R4": 4.0,
+   "R5": 4.0,
+   "R6": 4.0,
+   "R7": 4.0
+  },
+  "notes": "all complete"
+ },
+ {
+  "id": "T2",
+  "scores": {
+   "R1": 4.0,
+   "R2": 4.0,
+   "R3": 3.5,
+   "R4": 3.5,
+   "R5": 4.0,
+   "R6": 4.0,
+   "R7": 3.5
+  },
+  "notes": "partial item4 when BindToClose not parallel"
+ },
+ {
+  "id": "T3",
+  "scores": {
+   "R1": 3.0,
+   "R2": 3.0,
+   "R3": 3.0,
+   "R4": 3.0,
+   "R5": 3.0,
+   "R6": 3.0,
+   "R7": 3.0
+  },
+  "notes": "all complete"
+ },
+ {
+  "id": "T4",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0
+  },
+  "notes": "all complete"
+ },
+ {
+  "id": "T5",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0
+  },
+  "notes": "all complete"
+ },
+ {
+  "id": "T6",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0
+  },
+  "notes": "all complete"
+ },
+ {
+  "id": "T7",
+  "scores": {
+   "R1": 2.0,
+   "R2": 2.0,
+   "R3": 2.0,
+   "R4": 2.0,
+   "R5": 2.0,
+   "R6": 2.0,
+   "R7": 2.0
+  },
+  "notes": "all complete"
+ },
+ {
+  "id": "T8",
+  "scores": {
+   "R1": 0,
+   "R2": 1.5,
+   "R3": 1.5,
+   "R4": 0,
+   "R5": 1.0,
+   "R6": 1.5,
+   "R7": 0
+  },
+  "notes": "R1/R4/R7 miss MeshStreamingAndImprovedLoDs entirely"
+ }
+]

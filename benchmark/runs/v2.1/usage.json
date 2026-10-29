@@ -1,0 +1,16 @@
+{
+  "lookup_r1_A": {"seconds": 135, "tokens": 50880},
+  "lookup_r1_B": {"seconds": 135, "tokens": 50880},
+  "lookup_r2_A": {"seconds": 132, "tokens": 50686},
+  "lookup_r2_B": {"seconds": 132, "tokens": 50686},
+  "brief_r1_A": {"seconds": 177, "tokens": 51969},
+  "brief_r1_B": {"seconds": 177, "tokens": 51969},
+  "brief_r2_A": {"seconds": 175, "tokens": 49997},
+  "brief_r2_B": {"seconds": 175, "tokens": 49997},
+  "v2lookup_r1_A": {"seconds": 184, "tokens": 45414},
+  "v2lookup_r1_B": {"seconds": 184, "tokens": 45414},
+  "v2lookup_r2_A": {"seconds": 232, "tokens": 54328},
+  "v2lookup_r2_B": {"seconds": 232, "tokens": 54328},
+  "v2lookup_r3_A": {"seconds": 176, "tokens": 46334},
+  "v2lookup_r3_B": {"seconds": 176, "tokens": 46334}
+}

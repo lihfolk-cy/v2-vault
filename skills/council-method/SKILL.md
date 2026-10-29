@@ -1,6 +1,6 @@
 ---
 name: council-method
-description: 'LihFolk: blind multi-agent verdict (Quick 1 seat / Standard 3 / Full) for high-stakes Roblox decisions, ship-readiness and "be objective" / "second opinion" requests. Not for routine coding.'
+description: 'LihFolk Council method: blind multi-agent verdict for high-stakes Roblox decisions, ship-readiness, "be objective" or "second opinion" requests. Not for routine coding.'
 ---
 
 # LihFolk Council

@@ -20,6 +20,8 @@ The raw data behind `RESULTS_v2.md`, so you can check the numbers and re-run the
 
 `RESULTS.md` is the earlier v1 result (one run per arm). Only its summary is included here.
 
+`RESULTS_v2.1.md` re-checks the lookup arm after the v2.1 token-cost pass (data in `runs/v2.1/`, graded together with the original v2 lookup answers as anchors). `py -I benchmark/v2_aggregate.py report v2.1 RESULTS_v2.1_scores.md` regenerates its score table.
+
 ## Re-run the aggregation
 
 ```

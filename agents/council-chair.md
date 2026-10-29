@@ -1,6 +1,6 @@
 ---
 name: council-chair
-description: Chair of the LihFolk Council. Aggregates anonymized council responses and peer reviews into one objective verdict with preserved dissent. Spawned by the council-method skill; not for general use.
+description: 'LihFolk Council chair: merges anonymized member answers into one verdict with dissent. Spawned by council-method only.'
 tools: Read, Grep, Glob
 ---
 

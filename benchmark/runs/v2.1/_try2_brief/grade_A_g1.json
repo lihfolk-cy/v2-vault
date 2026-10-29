@@ -1,0 +1,266 @@
+[
+ {
+  "id": "P1",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2
+  },
+  "notes": "all three items covered"
+ },
+ {
+  "id": "P2",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.63,
+   "R3": 2.63,
+   "R4": 3,
+   "R5": 3
+  },
+  "notes": "R1-R3 miss shared ModuleScript; R1 omits Destroy/reparent/UIS limits"
+ },
+ {
+  "id": "P3",
+  "scores": {
+   "R1": 3,
+   "R2": 2.5,
+   "R3": 3,
+   "R4": 2.5,
+   "R5": 3
+  },
+  "notes": "R2/R4 omit CreateDefaultPlayerModule=Disabled for forks"
+ },
+ {
+  "id": "P4",
+  "scores": {
+   "R1": 3,
+   "R2": 2.25,
+   "R3": 1.88,
+   "R4": 2.63,
+   "R5": 1.88
+  },
+  "notes": "PrefixText only R1; opt-out mention only R1/R4; R3/R5 no warning/property detail"
+ },
+ {
+  "id": "P5",
+  "scores": {
+   "R1": 2.63,
+   "R2": 2.25,
+   "R3": 2.63,
+   "R4": 2.25,
+   "R5": 3
+  },
+  "notes": "per-server limits and latest-version-only storage often missing"
+ },
+ {
+  "id": "P6",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 2.63,
+   "R5": 2.63
+  },
+  "notes": "R4/R5 omit IsPaidItemTradingAllowed"
+ },
+ {
+  "id": "P7",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.63,
+   "R3": 2.63,
+   "R4": 1.13,
+   "R5": 2.63
+  },
+  "notes": "R4 confidently wrong creator reqs (facial estimate, Plus months or fee); R1 hedged Plus/Premium"
+ },
+ {
+  "id": "P8",
+  "scores": {
+   "R1": 1.88,
+   "R2": 2.25,
+   "R3": 1.5,
+   "R4": 2.63,
+   "R5": 2.25
+  },
+  "notes": "R1 no Audience Expansion; R3 says US 18+ rate is for US creators (wrong); none give R15/avatar-item scope"
+ },
+ {
+  "id": "G1",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 4,
+   "R4": 4,
+   "R5": 4
+  },
+  "notes": "R1/R2 omit never grant from PromptProductPurchaseFinished"
+ },
+ {
+  "id": "G2",
+  "scores": {
+   "R1": 2.63,
+   "R2": 2.63,
+   "R3": 3,
+   "R4": 3,
+   "R5": 2.63
+  },
+  "notes": "DataStoreKeyInfo arg only in R3/R4"
+ },
+ {
+  "id": "G3",
+  "scores": {
+   "R1": 1.67,
+   "R2": 1.33,
+   "R3": 1.67,
+   "R4": 1.33,
+   "R5": 1.67
+  },
+  "notes": "NaN and fix all correct; attacker-controlled-args rule only hinted"
+ },
+ {
+  "id": "G4",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 2.5,
+   "R4": 2.5,
+   "R5": 2.5
+  },
+  "notes": "R3-R5 vague on animator step order"
+ },
+ {
+  "id": "G5",
+  "scores": {
+   "R1": 1,
+   "R2": 1,
+   "R3": 1,
+   "R4": 2,
+   "R5": 2
+  },
+  "notes": "R1/R2/R3 confidently state default walk is Movement priority (default anims are Core): -1"
+ },
+ {
+  "id": "G6",
+  "scores": {
+   "R1": 1.5,
+   "R2": 1.5,
+   "R3": 1,
+   "R4": 1.5,
+   "R5": 1.75
+  },
+  "notes": "0.01 alternatives mostly missing; R3 says 0.01 unit scale causes same problem (wrong); R4 stacks 0.01 with FBX Units Scale"
+ },
+ {
+  "id": "G7",
+  "scores": {
+   "R1": 0.67,
+   "R2": 0.67,
+   "R3": 0.67,
+   "R4": 1.33,
+   "R5": 0.67
+  },
+  "notes": "R1/R2/R3/R5 wrongly claim Apply Modifiers bakes/breaks Armature skinning"
+ },
+ {
+  "id": "G8",
+  "scores": {
+   "R1": 1.5,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2
+  },
+  "notes": "R1 leads with DeviceSafeInsets"
+ },
+ {
+  "id": "T1",
+  "scores": {
+   "R1": 4,
+   "R2": 4,
+   "R3": 4,
+   "R4": 4,
+   "R5": 4
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "T2",
+  "scores": {
+   "R1": 3.5,
+   "R2": 3.5,
+   "R3": 4,
+   "R4": 4,
+   "R5": 4
+  },
+  "notes": "R1/R2 BindToClose not parallel/30s"
+ },
+ {
+  "id": "T3",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "T4",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "T5",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "T6",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "T7",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "T8",
+  "scores": {
+   "R1": 0,
+   "R2": 1.5,
+   "R3": 0,
+   "R4": 1.5,
+   "R5": 0
+  },
+  "notes": "R1/R3/R5 miss MeshStreamingAndImprovedLoDs; R1 claims Precise keeps full detail (wrong)"
+ }
+]

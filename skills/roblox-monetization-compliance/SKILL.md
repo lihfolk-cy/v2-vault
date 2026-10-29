@@ -1,6 +1,6 @@
 ---
 name: roblox-monetization-compliance
-description: 'LihFolk: game passes, dev products, ProcessReceipt, shop prices, eggs/luck boosts with 2026 odds rules and PolicyService. Use when adding or auditing purchases, or "players paid and got nothing".'
+description: 'Game passes, dev products, ProcessReceipt, prices, eggs and luck boosts under 2026 odds rules and PolicyService. Use when adding or auditing purchases, or "paid and got nothing".'
 ---
 # LihFolk Monetization Compliance
 

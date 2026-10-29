@@ -1,0 +1,266 @@
+[
+ {
+  "id": "B1",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 2.5,
+   "R4": 3,
+   "R5": 3
+  },
+  "notes": "R3 no server mention"
+ },
+ {
+  "id": "B2",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "B3",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "B4",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "B5",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "B6",
+  "scores": {
+   "R1": 1.33,
+   "R2": 2,
+   "R3": 2,
+   "R4": 1.67,
+   "R5": 2
+  },
+  "notes": "R1 no pcall/retry; R4 no Studio guard"
+ },
+ {
+  "id": "B7",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "B8",
+  "scores": {
+   "R1": 3.5,
+   "R2": 4,
+   "R3": 3.5,
+   "R4": 2.5,
+   "R5": 4
+  },
+  "notes": "R3 returns Granted when lock not owned (nil cancels); R4 grants offline instead of NotProcessedYet; R1/R4 no assign-once statement"
+ },
+ {
+  "id": "B9",
+  "scores": {
+   "R1": 2,
+   "R2": 2,
+   "R3": 2,
+   "R4": 2,
+   "R5": 2
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "B10",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "B11",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "B12",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 2.25,
+   "R4": 3,
+   "R5": 2.25
+  },
+  "notes": "R3/R5 no teleport-data sensitivity note"
+ },
+ {
+  "id": "B13",
+  "scores": {
+   "R1": 2.25,
+   "R2": 2.25,
+   "R3": 2.25,
+   "R4": 2.25,
+   "R5": 2.25
+  },
+  "notes": "none explicitly says identify caller via first Player arg"
+ },
+ {
+  "id": "B14",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "B15",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "B16",
+  "scores": {
+   "R1": 1.88,
+   "R2": 1.88,
+   "R3": 1.88,
+   "R4": 1.88,
+   "R5": 1.88
+  },
+  "notes": "none mention Touched spoofing or ownership-change jitter"
+ },
+ {
+  "id": "B17",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 3,
+   "R5": 3
+  },
+  "notes": "all full"
+ },
+ {
+  "id": "B18",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 2.63,
+   "R4": 2.63,
+   "R5": 2.63
+  },
+  "notes": "require-in-desync only R1/R2"
+ },
+ {
+  "id": "B19",
+  "scores": {
+   "R1": 1.67,
+   "R2": 2,
+   "R3": 2,
+   "R4": 1.67,
+   "R5": 1.67
+  },
+  "notes": "ModelStreamingBehavior Improved only R2/R3"
+ },
+ {
+  "id": "B20",
+  "scores": {
+   "R1": 2,
+   "R2": 1.67,
+   "R3": 1.67,
+   "R4": 1.67,
+   "R5": 1.67
+  },
+  "notes": "combine into one key only R1"
+ },
+ {
+  "id": "B21",
+  "scores": {
+   "R1": 1.33,
+   "R2": 1.67,
+   "R3": 1.33,
+   "R4": 1.33,
+   "R5": 1.67
+  },
+  "notes": "stdio/studio_id rarely mentioned"
+ },
+ {
+  "id": "B22",
+  "scores": {
+   "R1": 3,
+   "R2": 3,
+   "R3": 3,
+   "R4": 2.25,
+   "R5": 2.25
+  },
+  "notes": "R4/R5 omit PlayerScriptsUseInputActionSystem"
+ },
+ {
+  "id": "B23",
+  "scores": {
+   "R1": 2.5,
+   "R2": 2.5,
+   "R3": 2.5,
+   "R4": 2.5,
+   "R5": 3
+  },
+  "notes": "selector coverage (modifiers, @queries) incomplete except R5"
+ },
+ {
+  "id": "B24",
+  "scores": {
+   "R1": 0.5,
+   "R2": 0.75,
+   "R3": 2,
+   "R4": 1,
+   "R5": 1
+  },
+  "notes": "R1/R2/R4/R5 say 13-15 can chat with 16-17 (contradicts key; flag for operator); R1 no rollout dates"
+ }
+]

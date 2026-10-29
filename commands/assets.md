@@ -1,5 +1,5 @@
 ---
-description: Find a LihFolk Asset Pack asset (model, material, sky, animation or VFX) for this task, or set up where the pack lives
+description: 'Find a LihFolk Asset Pack model, material, sky, animation or VFX, or set where the pack lives'
 argument-hint: "[what you need, or 'setup']"
 ---
 

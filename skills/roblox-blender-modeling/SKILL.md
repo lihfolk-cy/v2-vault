@@ -1,6 +1,6 @@
 ---
 name: roblox-blender-modeling
-description: 'LihFolk: make Roblox-ready models in Blender with an automatic quality gate (symmetry, caps, budgets, export). Use whenever a prop, weapon, building, rock, tree, creature or kit is modelled, fixed or exported.'
+description: 'Roblox-ready Blender models with a quality gate (symmetry, budgets, export). Use whenever a prop, weapon, building, creature or kit is modelled, fixed or exported.'
 ---
 
 # LihFolk Blender Modeling for Roblox

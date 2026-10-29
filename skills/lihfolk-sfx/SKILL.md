@@ -1,6 +1,6 @@
 ---
 name: lihfolk-sfx
-description: 'LihFolk: Roblox combat and UI sound-effects playbook built on premium, properly licensed sounds only (Roblox-licensed Creator Store audio first, then a premium library the user owns), with a quality vetting checklist, an editing pipeline, per-preset search keywords and a pooled Luau SFX module (layered transient/body/tail, pitch and volume variation, round-robin takes, voice cap, SoundGroup buses with player volume sliders, animation-marker sync paired with the lihfolk-vfx presets); use for "sound effects", "sfx", "swing sound", "hit sound", "impact sound", "footsteps", "UI click sound", "find sounds", "licensed sounds", "volume settings", "SoundGroup", "sounds are repetitive", "hits feel late", "make the attack sound better".'
+description: 'LihFolk combat and UI sound effects (licensed sounds only, pooled layered Luau module). Use for "sfx", "swing/hit/impact sound", "footsteps", "UI click", "sounds are repetitive", "hits feel late".'
 ---
 
 # LihFolk SFX: premium, licensed, layered, on the beat

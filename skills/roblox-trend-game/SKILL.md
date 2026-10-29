@@ -1,6 +1,6 @@
 ---
 name: roblox-trend-game
-description: 'LihFolk: plan, build and run fast trend games (Steal/Grow a ___, collect-upgrade-steal) under 2026 Roblox rules; discovery, retention, thumbnails, luck boosts, live ops.'
+description: 'Plan, build and run fast trend games (Steal/Grow a ___, collect-upgrade-steal) under 2026 Roblox rules, with live ops.'
 ---
 
 # LihFolk Trend Game

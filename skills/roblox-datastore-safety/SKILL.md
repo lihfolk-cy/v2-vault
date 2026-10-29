@@ -1,6 +1,6 @@
 ---
 name: roblox-datastore-safety
-description: 'LihFolk: player data that never loses or dupes progress (session locks, retries, autosave, BindToClose, migrations, receipts). Use when touching DataStores/profiles or on data loss, rollback, duped items.'
+description: 'Player data that never loses or dupes progress (session locks, retries, autosave, BindToClose, migrations). Use when touching DataStores or on data loss, rollback, duped items.'
 ---
 # LihFolk DataStore Safety
 
