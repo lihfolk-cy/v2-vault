@@ -29,3 +29,7 @@ jobs:
         run: python "LihFolk Vault V2/_tools/consistency.py" --strict
       - name: Search finds the right note (held-out test set, top 3)
         run: python "LihFolk Vault V2/_tools/eval.py" --min-hit3 0.85
+      - name: Codex integration installs and routes correctly
+        run: |
+          python scripts/sync_codex_skills.py
+          python -m unittest discover -s tests -v

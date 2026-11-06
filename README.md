@@ -31,8 +31,17 @@ Download it from [Releases](https://github.com/lihfolk-cy/v2-vault/releases) (in
 ### Coming from V1
 In Obsidian: vault switcher → **Manage vaults** → remove V1 from the list → open V2, then delete the old folder. V1 was a 39 GB download; the complete V2 with the full asset pack is 1.3 GB, and the vault and plugin alone are 41 MB.
 
-### Other AI tools (OpenCode, Codex, Cursor and others)
-Open this folder in your tool. `AGENTS.md` tells any agent how to search the vault and apply the notes. From your own game project, add one line to its `AGENTS.md` or rules file: *"For Roblox work, follow `<path to this repo>/AGENTS.md` and search the vault before answering."* The skill guides in `skills/*/SKILL.md` work as plain instructions. Automatic skill loading, slash commands, the code-check hook and the council are Claude Code features.
+### OpenAI Codex
+Codex has native skill entries, custom agent profiles, a vault-search helper, and an optional Luau PostToolUse hook. Install them into a Roblox project with Python 3:
+
+```powershell
+py -3 "C:\path\to\v2-vault\scripts\install_codex.py" --project "C:\path\to\my-game" --vault-root "C:\path\to\v2-vault"
+```
+
+Then open the game project in Codex. For the optional post-edit checker, add `--enable-hooks` and review/trust the project hook in Codex (`/hooks` in the CLI). See [CODEX.md](CODEX.md) for setup, workflows, portability, and hook behavior. The installer leaves Claude Code files alone and records the machine-local vault path in a gitignored `.lihfolk-codex.json` file.
+
+### Other AI tools (OpenCode, Cursor and others)
+Open this folder in your tool. `AGENTS.md` tells any agent how to search the vault and apply the notes. From your own game project, add one line to its `AGENTS.md` or rules file: *"For Roblox work, follow `<path to this repo>/AGENTS.md` and search the vault before answering."* The skill guides in `skills/*/SKILL.md` work as plain instructions. Automatic skill loading, slash commands, the code-check hook and the council are Claude Code features; Codex has its native setup described above.
 
 ---
 
@@ -124,6 +133,9 @@ The sets were written without access to the vault, every answer key was checked 
 - `LihFolk Vault V2/`: the vault (59 sections, index, home page, theme, search tools in `_tools/`)
 - `benchmark/`: test sets A-F with source-checked keys, answers, blind grades and the script that reproduces every result
 - `AGENTS.md`: instructions for any AI agent
+- `.agents/skills/` and `.codex/`: native Codex discovery entries, agent profiles, and optional hook adapter
+- `scripts/install_codex.py`: install or update Codex support in a separate Roblox project
+- `CODEX.md`: Codex installation and usage guide
 - `REVIEWERS.md`: every claim and how to check it
 - `CHANGELOG.md`: what changed in each version
 

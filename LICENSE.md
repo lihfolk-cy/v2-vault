@@ -5,7 +5,7 @@
 Copyright (c) 2026 LihFolk.
 
 The notes in this vault, the generated images (rig sheets, concept sheets, section 45 renders) and the
-scripts and code in the plugin (`skills/`, `agents/`, `commands/`, `hooks/`, `benchmark/`, the vault's `_tools/`, CSS snippets and the bundled **LihFolk Graph** Obsidian plugin in `.obsidian/plugins/lihfolk-graph/`) and section 45, including its `.blend` and `.fbx` rig files, are licensed under **Creative Commons Attribution 4.0
+scripts and code in the plugin (`skills/`, `agents/`, `commands/`, `hooks/`, `benchmark/`, the vault's `_tools/`, CSS snippets and the bundled **LihFolk Graph** Obsidian plugin in `.obsidian/plugins/lihfolk-graph/`), the native Codex integration (`.agents/`, `.codex/`, `scripts/`, `tests/` and the Codex check in `.github/workflows/vault-checks.yml`), and section 45, including its `.blend` and `.fbx` rig files, are licensed under **Creative Commons Attribution 4.0
 International (CC BY 4.0)**: https://creativecommons.org/licenses/by/4.0/
 
 You may share and adapt them for any purpose, including commercially, as long as you give credit
