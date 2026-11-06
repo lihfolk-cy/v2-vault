@@ -1,0 +1,20 @@
+{
+  "description": "LihFolk V2 post-edit Luau checks for changed Roblox files. Licensed CC BY 4.0: https://creativecommons.org/licenses/by/4.0/. Codex requires the user to review and trust this hook before it runs.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "^(apply_patch|Edit|Write)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c 'import runpy,pathlib; cwd=pathlib.Path.cwd(); root=next((p for p in (cwd,*cwd.parents) if (p/\".codex\"/\"lihfolk\"/\"codex_post_tool.py\").is_file()),cwd); runpy.run_path(str(root/\".codex\"/\"lihfolk\"/\"codex_post_tool.py\"),run_name=\"__main__\")'",
+            "commandWindows": "py -3 -c \"import runpy,pathlib; cwd=pathlib.Path.cwd(); root=next((p for p in (cwd,*cwd.parents) if (p/'.codex'/'lihfolk'/'codex_post_tool.py').is_file()),cwd); runpy.run_path(str(root/'.codex'/'lihfolk'/'codex_post_tool.py'),run_name='__main__')\"",
+            "timeout": 30,
+            "statusMessage": "Checking changed Luau files",
+            "additionalContextLimit": 1800
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -12,4 +12,6 @@ For Roblox work (Luau, Studio, remotes, DataStores, UI, worldbuilding, modelling
 
 **Accuracy over savings (non-negotiable):** the TL;DR is a pointer, not a substitute. For high-stakes work (player data and DataStores, purchases and receipts, paid random items and policy, remotes and security, anything that ships to live players), always read the note's full `## Common mistakes` and `## Checklist` sections, and the section that holds the exact numbers or API rules you are about to use. Also read further whenever the TL;DR leaves any doubt. Never cite a number you only saw in a TL;DR without opening its section.
 
+For OpenAI Codex in a separate Roblox project, use `scripts/install_codex.py` to install the native `.agents/skills/` entries and `.codex/agents/` profiles. The detailed guides remain in `skills/` and `commands/`; resolve `CLAUDE_PLUGIN_ROOT` in those guides as the configured LihFolk source root. The optional Codex post-edit Luau hook is installed only with `--enable-hooks` and requires the user's project trust. See `CODEX.md` for details.
+
 Deeper workflows (Blender modelling, trend games, council review) are in `skills/*/SKILL.md`; any agent can follow them as plain instructions.

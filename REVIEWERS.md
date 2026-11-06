@@ -7,12 +7,15 @@ This page lists what LihFolk Vault V2 claims and how to check each claim yoursel
 - A Roblox game-development knowledge vault (`LihFolk Vault V2/`, 1,290+ original notes) that opens in Obsidian.
 - A Claude Code plugin (`.claude-plugin/`, `skills/`, `agents/`, `commands/`, `hooks/`) that routes Roblox tasks to the right notes, checks Luau as it is written, and adds specialist skills (systems, UI, VFX, SFX, assets, quality scoring, council review).
 - An optional, separately downloaded asset pack of original models, materials, skies, animations and VFX previews (GitHub Releases). A small sample pack is attached to each release.
+- Native OpenAI Codex discovery entries and an installer for separate Roblox projects (`.agents/skills/`, `.codex/`, `scripts/install_codex.py`).
 
 ## Claims and how to verify them
 
 | Claim | How to check |
 |---|---|
 | The plugin manifest is valid | `claude plugin validate .` |
+| Native Codex skills and project installer are consistent | `python scripts/sync_codex_skills.py` then `python -m unittest discover -s tests -v` |
+| Codex integration works in a project path with spaces | The integration tests install into a temporary path with spaces, rerun to check idempotency, preserve existing Codex config, exercise the vault helper, and feed fixtures through the optional hook adapter. |
 | Luau code checks catch common Roblox mistakes | Run `hooks/scripts/lihfolk-check.sh <file.luau>` (or the `.ps1` engine on Windows) on any file under `skills/`; all shipped Luau passes (the checker prints nothing and exits 0 when a file is clean, and prints each finding otherwise). Feed it a file with `wait()` or an unvalidated `RemoteEvent` handler to see it fire. |
 | Vault search finds the right note | `python "LihFolk Vault V2/_tools/eval.py"`: held-out test split hit@3 is 93% (search eval tasks are in `_tools/eval/`). |
 | Notes don't contradict each other on tracked facts | `python "LihFolk Vault V2/_tools/consistency.py" --strict`: 39 tracked limits and defaults, 0 contradictions |
@@ -42,5 +45,6 @@ This page lists what LihFolk Vault V2 claims and how to check each claim yoursel
 - The asset pack: free to use in your own games, no resale or redistribution (`LICENSE.md`).
 - The Obsidian look (Celestial snippets and base styles) and the LihFolk Graph plugin are our own (CC BY 4.0).
 - No third-party scraped assets are included. The sound skill points to licensed sources and never ships sound files.
+- Codex entries are thin wrappers around the canonical guides in `skills/` and `commands/`; they do not copy the separately distributed asset pack. See [CODEX.md](CODEX.md) for Codex-specific paths and behavior.
 
 Found a problem? Open an issue with the note title or file path and what is wrong.
