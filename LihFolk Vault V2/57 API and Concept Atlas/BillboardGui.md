@@ -6,11 +6,11 @@ tags: [atlas, api, type/atlas, area/ui, area/gameplay, api/BillboardGui]
 <!-- tldr:start -->
 > [!tldr] TL;DR
 > - `BillboardGui.Active` controls whether descendants receive input (Docs).
+> - Avoid: `VideoFrame` not inside a ScreenGui, SurfaceGui or BillboardGui -> Parent it to a GUI container.
 > - `BillboardGui.MaxDistance` inf by default; `SurfaceGui.MaxDistance` 1000 studs per the docs.
 > - Billboards at the hit position (pooled `BillboardGui`s with Offset size, tweened upward via `StudsOffsetWorldSpace` and faded).
-> - World-Space UI - BillboardGui and SurfaceGui: labels over any background.
 >
-> Cost: TL;DR ~140 tok · whole note ~690 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~710 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -21,14 +21,14 @@ API snapshot: class, inherits `LayerCollector` (`_tools/roblox_api.json`, docs b
 
 ## Key facts
 
+- Avoid: `VideoFrame` not inside a ScreenGui, SurfaceGui or BillboardGui -> Parent it to a GUI container. ([[Video in Experiences - VideoPlayer, VideoDisplay and VideoFrame]])
 - `BillboardGui.MaxDistance` inf by default; `SurfaceGui.MaxDistance` 1000 studs per the docs. ([[BillboardGui - Engine Reference Card]])
 - Billboards at the hit position (pooled `BillboardGui`s with Offset size, tweened upward via `StudsOffsetWorldSpace` and faded). ([[World-Space UI - BillboardGui and SurfaceGui]])
 - World-Space UI - BillboardGui and SurfaceGui: labels over any background. ([[Accessibility Contrast]])
-- Pooled labels so a 30-player fight does not create thousands of `BillboardGui` instances. ([[Comfort Toggles - Flashes Damage Numbers and Hit-Stop]])
 
 ## Mentioned in
 
-31 notes in 17 sections. The 25 most relevant are linked:
+32 notes in 17 sections. The 25 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[Packages and Asset Reuse]]
@@ -37,7 +37,7 @@ API snapshot: class, inherits `LayerCollector` (`_tools/roblox_api.json`, docs b
 [[OrderedDataStores and Leaderboards]]
 
 ### 05 UI and UX
-[[Nametags and Overhead Bars - Cost and Visibility Rules]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[ScreenGui Fundamentals]] · [[World-Space UI - BillboardGui and SurfaceGui]]
+[[Nametags and Overhead Bars - Cost and Visibility Rules]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[ScreenGui Fundamentals]] · [[Video in Experiences - VideoPlayer, VideoDisplay and VideoFrame]] · [[World-Space UI - BillboardGui and SurfaceGui]]
 
 ### 07 Lighting VFX and Audio
 [[Highlights and Selection Effects]]
@@ -73,8 +73,8 @@ API snapshot: class, inherits `LayerCollector` (`_tools/roblox_api.json`, docs b
 [[Comfort Toggles - Flashes Damage Numbers and Hit-Stop]]
 
 ### 62 Engine Reference Cards
-[[BillboardGui - Engine Reference Card]] · [[ScrollingFrame - Engine Reference Card]]
+[[BillboardGui - Engine Reference Card]]
 
-Also mentioned in (not linked): 00 Start Here · Engine Reference Cards Start Here · Text Fonts and Rich Text · Textures Decals and Texture Memory · Tutorial Step Design Patterns - Teach by Doing · Visual AI Debugging - State Labels, Path Lines and Perception Gizmos
+Also mentioned in (not linked): 00 Start Here · Engine Reference Cards Start Here · ScrollingFrame - Engine Reference Card · Text Fonts and Rich Text · Textures Decals and Texture Memory · Tutorial Step Design Patterns - Teach by Doing · Visual AI Debugging - State Labels, Path Lines and Perception Gizmos
 
 <!-- atlas:generated -->

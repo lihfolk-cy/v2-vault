@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/vfx, area/modeling]
 > - The editor's incompatibility message reads "Particle texture must be 1024 by 1024 to use flipbooks" (API dump), while the...
 > - The reference VFX used 4 x 4 greyscale flipbooks tinted per element.
 >
-> Cost: TL;DR ~140 tok · whole note ~480 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~490 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -25,7 +25,7 @@ Flipbooks are 1024 x 1024 frames with a 2x2, 4x4 or 8x8 grid, one clipped frame 
 
 ## Mentioned in
 
-19 notes in 9 sections. The 19 most relevant are linked:
+20 notes in 9 sections. The 20 most relevant are linked:
 
 ### 07 Lighting VFX and Audio
 [[Designing VFX Textures and Flipbooks in Figma]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Particle Emitters In Depth]] · [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]] · [[Slash VFX Recipes - Crescent and Ring]] · [[Snow, Sandstorm, Blizzard and Ash Recipes]] · [[VFX Design Playbook]]
@@ -52,6 +52,6 @@ Flipbooks are 1024 x 1024 frames with a 2x2, 4x4 or 8x8 grid, one clipped frame 
 [[ParticleEmitter - Engine Reference Card]]
 
 ### Root notes
-[[Open Questions - Whole Vault]]
+[[00 Start Here]] · [[Open Questions - Whole Vault]]
 
 <!-- atlas:generated -->

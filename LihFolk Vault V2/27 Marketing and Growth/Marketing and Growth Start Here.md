@@ -17,6 +17,12 @@ One idea runs through every note here: **on Roblox, growth is mostly retention m
 | [[Short-Form Video Marketing]] | You want players from video apps. Formats, capture in Studio, share links and Audience Expansion rewards, platform age rules, and what you may not say inside the game |
 | [[Update Cadence and Hype Cycles]] | You are planning your live game's rhythm. The update spike and new baseline, sustainable cadences, honest teasing, handling slips, and getting off the content treadmill |
 | [[Competitor Analysis Method]] | You are scoping a game or wondering why yours lags its genre. A stopwatch teardown template, store teardown, weekly tracking, and the line between study and copying |
+| [[Experience Description and Search Keywords]] | You want players who search for your kind of game to find it. How search reads your page, writing for the query, testing your position, localising, search attribution |
+| [[Game Icon Design - Readable at Small Sizes]] | Your icon needs to work at thumbnail size. Composition, contrast and colour, text and wordmarks, testing at real sizes, iterating live |
+| [[Game Trailers and Clean Footage - Capture, Freecam and Editing]] | You are making a trailer or video thumbnail. The built-in free camera, page video rules, trailer structure, capture settings and editing |
+| [[Marketing to Kids and Teens - Age Rules and Paid-Promo Disclosure]] | Your audience is young, which on Roblox it usually is. 2026 changes, who can buy ads, creative rules, paid creators and disclosure |
+| [[Roblox Communities as Your On-Platform Hub]] | You want an on-platform home for players. Structure, in-game perks and prompts, automation, moderation, using it for retention |
+| [[Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics]] | Your launch missed. Find the broken stage, get enough traffic to measure, fix empty servers and the first session, then decide to fix, reposition or move on |
 | [[A-B Testing and Experiments on Roblox]] | You want to know whether a change caused an effect. Configs and the built-in experiments system, strict Luau wiring, sample size maths for small games, and building your own split |
 
 ## Suggested reading order

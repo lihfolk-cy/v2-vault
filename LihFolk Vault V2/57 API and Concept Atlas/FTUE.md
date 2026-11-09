@@ -9,7 +9,7 @@ tags: [atlas, concept, type/atlas, area/design, area/ui]
 > - Designing your tutorial: read the "first minutes" part of the case study for your genre, then Onboarding by Genre - The First...
 > - Onboarding and FTUE - Tutorials That Keep Players: the principles and target numbers in one place.
 >
-> Cost: TL;DR ~110 tok · whole note ~350 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~110 tok · whole note ~360 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -23,7 +23,7 @@ FTUE: First-time user experience. (from [[Glossary]])
 
 ## Mentioned in
 
-13 notes in 8 sections. The 13 most relevant are linked:
+14 notes in 8 sections. The 14 most relevant are linked:
 
 ### 05 UI and UX
 [[Onboarding and FTUE - Tutorials That Keep Players]] · [[Tutorial Step Design Patterns - Teach by Doing]]
@@ -47,6 +47,6 @@ FTUE: First-time user experience. (from [[Glossary]])
 [[Loading Screen Skip and First-Session Goals]] · [[Player QoL Start Here]]
 
 ### Root notes
-[[Glossary]]
+[[00 Start Here]] · [[Glossary]]
 
 <!-- atlas:generated -->

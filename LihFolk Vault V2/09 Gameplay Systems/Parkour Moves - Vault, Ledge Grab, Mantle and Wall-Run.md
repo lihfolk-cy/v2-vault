@@ -137,5 +137,5 @@ Parkour lives or dies on consistent geometry: standard vault heights (2 to 3 stu
 
 <!-- related:start -->
 ## Related
-[[Grabs, Carries and Throws - Moving Players Safely]] · [[Pathfinding Edge Cases and Fallbacks]] · [[Physics Assemblies and Constraints]] · [[Hitboxes and Hit Detection]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Camera Obstruction Handling - Occlusion Modes, Fades and Collision]] · [[Explosions - Radius Damage, Falloff and Cover Checks]] · [[Weather That Changes Gameplay - Grip, Visibility and Hearing]]
+[[Grabs, Carries and Throws - Moving Players Safely]] · [[Pathfinding Edge Cases and Fallbacks]] · [[Physics Assemblies and Constraints]] · [[Hitboxes and Hit Detection]] · [[Camera Obstruction Handling - Occlusion Modes, Fades and Collision]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Explosions - Radius Damage, Falloff and Cover Checks]] · [[Weather That Changes Gameplay - Grip, Visibility and Hearing]]
 <!-- related:end -->

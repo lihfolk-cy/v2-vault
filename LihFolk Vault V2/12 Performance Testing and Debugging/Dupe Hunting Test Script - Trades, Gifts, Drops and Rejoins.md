@@ -177,5 +177,5 @@ Keep audit logs in production too ([[Logging Bans and Appeals]]): when a dupe sl
 
 <!-- related:start -->
 ## Related
-[[Save Migration Tests - Fixture Saves and Golden Files]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[Automated Luau Checks - LihFolk Hook and Audit]] · [[Testing Time-Based Features with a Controllable Clock]] · [[Multi-Client and Live Testing]] · [[In-Game Bug Report Button with Automatic Context]] · [[QA Checklists Before Release]] · [[Testing Strategies and Frameworks]]
+[[Save Migration Tests - Fixture Saves and Golden Files]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]] · [[Automated Luau Checks - LihFolk Hook and Audit]] · [[Testing Time-Based Features with a Controllable Clock]] · [[Multi-Client and Live Testing]] · [[In-Game Bug Report Button with Automatic Context]] · [[QA Checklists Before Release]] · [[Multi-Client and Device Playtesting Protocols]]
 <!-- related:end -->

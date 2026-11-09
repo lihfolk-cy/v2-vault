@@ -243,5 +243,5 @@ The senior trade-off: art budgets protect performance and frustrate artists. Mak
 
 <!-- related:start -->
 ## Related
-[[Materials MaterialVariants and SurfaceAppearance]] · [[Triangle Budget]] · [[Foliage Props and Scatter]] · [[Water Sky and Atmosphere Art]] · [[Environment Art Styles]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[Collision and Physics Geometry]] · [[Zone and Biome Art Direction]] · [[Level Design for Roblox]]
+[[Materials MaterialVariants and SurfaceAppearance]] · [[Triangle Budget]] · [[Foliage Props and Scatter]] · [[Water Sky and Atmosphere Art]] · [[Environment Art Styles]] · [[Terrain Deep Dive - Materials Water and Performance]] · [[EditableMesh - Runtime Mesh Editing, Budgets and Publishing]] · [[Collision and Physics Geometry]] · [[Zone and Biome Art Direction]]
 <!-- related:end -->

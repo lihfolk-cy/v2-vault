@@ -17,6 +17,7 @@ This section covers the work around making games: getting paid, paying others, p
 | [[Hiring Freelancers and Revenue Shares]] | You hire help: fixed pay versus shares, vesting and exit rules, protecting your game, hiring young developers safely |
 | [[Running a Small Studio as a Business]] | A team is turning into a business: group and legal layers, budgets, runway, records, risk |
 | [[Building a Portfolio as a Roblox Developer]] | You want clients or a job: what to show per discipline, stating your role honestly, showing confidential work |
+| [[Open-Source Licenses for Roblox Libraries - Quick Reference]] | You ship community libraries: what each licence asks of a game, popular libraries' licences, a ten-minute compliance setup, AI-generated code |
 | [[Legal Basics - IP Licenses and Assets]] | You use or sell assets, or someone copies you: copyright, licences, Creator Store rules, License Manager, Rights Manager |
 
 ## Suggested reading order

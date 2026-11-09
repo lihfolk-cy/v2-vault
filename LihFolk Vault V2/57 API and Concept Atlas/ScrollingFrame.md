@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/ui, area/gameplay, api/ScrollingFrame]
 > - Built-in input can fight your input. Touch swiping a page also scrolls a `ScrollingFrame` inside it; the mouse wheel pages...
 > - A header that never scrolls plus a `ScrollingFrame` that fills the rest: `Size = UDim2.new(1, 0, 1, -headerHeight)`.
 >
-> Cost: TL;DR ~160 tok · whole note ~590 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~160 tok · whole note ~600 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ API snapshot: class, inherits `GuiObject` (`_tools/roblox_api.json`, docs build 
 
 ## Mentioned in
 
-19 notes in 9 sections. The 19 most relevant are linked:
+20 notes in 10 sections. The 20 most relevant are linked:
 
 ### 05 UI and UX
 [[Designing Roblox UI in Figma - Frames, Safe Areas and Tokens]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[Figma Property Mapping for Roblox UI]] · [[Layout - Scale Offset and Constraints]] · [[UI Layout Objects - Lists Grids and Pages]] · [[Virtualized Lists and Large Inventories]]
@@ -56,5 +56,8 @@ API snapshot: class, inherits `GuiObject` (`_tools/roblox_api.json`, docs build 
 
 ### 62 Engine Reference Cards
 [[Engine Reference Cards Start Here]] · [[ScrollingFrame - Engine Reference Card]]
+
+### Root notes
+[[00 Start Here]]
 
 <!-- atlas:generated -->

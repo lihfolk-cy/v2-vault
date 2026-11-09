@@ -28,7 +28,7 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 
 ## Mentioned in
 
-34 notes in 17 sections. The 25 most relevant are linked:
+35 notes in 18 sections. The 25 most relevant are linked:
 
 ### 06 World Building and Art
 [[Foliage Props and Scatter]]
@@ -75,6 +75,6 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 ### 62 Engine Reference Cards
 [[ParticleEmitter - Engine Reference Card]]
 
-Also mentioned in (not linked): Engine Reference Cards Start Here · Official Docs - Visual Effects · Scale and Animation · Stylised Log Cabin Worked Example · UI and GUI Animation · VFX Previews in Blender for Roblox - Colour and Framing · VFX Timing with Animation · Voxel Art - Studs Outlines and Style Kits · Voxel and Blocky Modeling
+Also mentioned in (not linked): 00 Start Here · Engine Reference Cards Start Here · Official Docs - Visual Effects · Scale and Animation · Stylised Log Cabin Worked Example · UI and GUI Animation · VFX Previews in Blender for Roblox - Colour and Framing · VFX Timing with Animation · Voxel Art - Studs Outlines and Style Kits · Voxel and Blocky Modeling
 
 <!-- atlas:generated -->

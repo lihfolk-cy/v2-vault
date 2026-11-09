@@ -62,6 +62,9 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 - scripted text stays in the old language after the player changes language | Translated once with a Translator; LocaleId changes are ignored | Re-translate on the translator's LocaleId change; FormatByKey with parameters | [[Localization]]
 - pet name, sign or guild name shows as hashtags (####) | That is the filter's output for blocked words, or a per-viewer result shown to everyone | Expected; store the raw text, filter on show with GetNonChatStringForBroadcastAsync for public text | [[Text Filtering - TextService for Names, Signs and Messages]]
 - every message or name comes back as an empty string | TextFilterResult:GetChatForUserAsync is deprecated and returns "" | Route chat through TextChatService; use GetNonChatStringForBroadcastAsync or GetNonChatStringForUserAsync for names and signs | [[Text Filtering - TextService for Names, Signs and Messages]]
+- video screen is blank but its sound plays | No Wire from the VideoPlayer to a VideoDisplay | Wire SourceInstance = VideoPlayer, TargetInstance = VideoDisplay | [[Video in Experiences - VideoPlayer, VideoDisplay and VideoFrame]]
+- some video screens never start, or only two of several play | At most two videos play at once | Load screens by proximity and Unload() them when out of view | [[Video in Experiences - VideoPlayer, VideoDisplay and VideoFrame]]
+- VideoFrame shows nothing | Not inside a ScreenGui, SurfaceGui or BillboardGui | Parent it to a GUI container | [[Video in Experiences - VideoPlayer, VideoDisplay and VideoFrame]]
 
 ## Input and controls
 
@@ -135,6 +138,7 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 - 3D sound silent with the new Audio API | No AudioListener, or listener not wired to output | Create and wire a listener | [[The Audio API - Players Emitters Wires and Effects]]
 - music stems drift out of sync | Stems started one by one or with task.delay | Play(atTime) on mixer time | [[Music and Adaptive Audio]] [[The Audio API - Players Emitters Wires and Effects]]
 - attacker hears every hit twice | Server echo of a locally predicted hit not suppressed | Per-target echo window | [[Client Hit Prediction for Melee Feedback]]
+- video picture plays but there is no sound | Soundtrack wired to an AudioEmitter with no AudioListener | Set up an AudioListener (Audio API) | [[Video in Experiences - VideoPlayer, VideoDisplay and VideoFrame]]
 
 ## Physics, movement and network ownership
 
@@ -241,6 +245,8 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 - selling a crate or loot box for Robux with random rewards | Paid random items need disclosed odds | Show final-outcome odds before purchase, from the same table the server rolls | [[Paid Random Items and Odds Disclosure in Practice]] [[Regional Compliance - Paid Random Items and Country Rules]]
 - players go too long without a rare drop and want a bad-luck guarantee | Independent rolls with no pity counter | Pity counter kept with the drop table and saved per player | [[Drop Tables Rarity and Pity Systems]] [[Rarity Ladders and Drop Pacing Math]]
 - purchase not granted until the player rejoins or buys again | ProcessReceipt returned NotProcessedYet (player absent or save failed); Roblox re-sends only on rejoin or the next purchase | Keep it pending; grant idempotently by PurchaseId when the receipt returns | [[Developer Products and ProcessReceipt]] [[Purchase Data and Receipts]]
+- avatar creation prompt fails at once, or creation stopped working for the whole game | Token from another experience or wrong item type, or the token owner lost ID verification or Premium/Plus | One token per type created on this experience; keep the owner qualified | [[In-Experience Avatar Creation - Tokens, Editing and Prompting]]
+- avatar the player bought looks different from the in-game preview | PrepareAvatarForPreviewAsync not called after cage or mesh edits | Call it after every edit before showing the preview | [[In-Experience Avatar Creation - Tokens, Editing and Prompting]]
 
 ## Performance, memory and lag
 
@@ -318,6 +324,10 @@ Look up a bug by what you see, not by API name. Grep this file for the words you
 - terrain turned bright purple | Custom terrain material deleted while still in use | Replace it first, then delete | [[Terrain Deep Dive - Materials Water and Performance]]
 - recolouring grass in one area changes the whole place | Terrain material colours are global | Use a different material | [[Terrain Tools and Terrain API]]
 - weapon held at the wrong point | Origin at the pommel or bounding-box centre | Origin at the grip centre | [[Modeling Weapons and Props]]
+- EditableMesh works in Studio but errors in the live game | Enable Mesh / Image APIs is off for the published experience | Turn it on in the Creator Dashboard settings | [[EditableMesh - Runtime Mesh Editing, Budgets and Publishing]]
+- players walk on the old surface after a crater or mesh edit | Collision does not follow visual EditableMesh edits | CreateMeshPartAsync + ApplyMesh once each edit is finished | [[EditableMesh - Runtime Mesh Editing, Budgets and Publishing]]
+- AddTriangle or AddVertex errors halfway through building a big mesh | Over 20,000 triangles or 60,000 vertices in one EditableMesh | Tile the surface; a full grid tops out at 100 by 100 cells | [[EditableMesh - Runtime Mesh Editing, Budgets and Publishing]]
+- generated mesh is invisible from above but visible from below | Triangle winding order reversed | Swap two vertex ids in each AddTriangle call | [[EditableMesh - Runtime Mesh Editing, Budgets and Publishing]]
 
 ## Streaming and loading
 

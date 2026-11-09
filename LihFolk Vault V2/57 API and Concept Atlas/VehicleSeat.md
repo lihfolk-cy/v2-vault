@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/physics, area/networking, api/VehicleSeat]
 > - Avoid: Two VehicleSeats -> One VehicleSeat, all others Seat.
 > - One VehicleSeat; seats carry `Role`, `ExitAttachment`, optional `Locked`.
 >
-> Cost: TL;DR ~120 tok · whole note ~580 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~590 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -29,7 +29,7 @@ API snapshot: class, inherits `BasePart` (`_tools/roblox_api.json`, docs build o
 
 ## Mentioned in
 
-17 notes in 7 sections. The 17 most relevant are linked:
+18 notes in 7 sections. The 18 most relevant are linked:
 
 ### 03 Architecture and Networking
 [[Network Ownership]]
@@ -47,7 +47,7 @@ API snapshot: class, inherits `BasePart` (`_tools/roblox_api.json`, docs build o
 [[Genre Playbook - Racing and Driving]]
 
 ### 25 Physics and Vehicles
-[[Aircraft and Flight Models]] · [[Boats Buoyancy and Water]] · [[Cars with Constraints - Suspension Steering and Drive]] · [[Choosing a Car Chassis - Raycast Suspension vs Constraint Builds vs Community Kits]] · [[Engine, Gearbox and Torque Curve Model for Arcade Cars]] · [[Multi-Seat Vehicles - Driver, Passenger and Gunner Roles]] · [[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Vehicle Damage, Repair and Wreck States]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[Vehicle Spawner and Garage - Spawn, Ownership, Despawn and Limits]] · [[Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver]]
+[[Aircraft and Flight Models]] · [[Boats Buoyancy and Water]] · [[Cars with Constraints - Suspension Steering and Drive]] · [[Choosing a Car Chassis - Raycast Suspension vs Constraint Builds vs Community Kits]] · [[Engine, Gearbox and Torque Curve Model for Arcade Cars]] · [[Multi-Seat Vehicles - Driver, Passenger and Gunner Roles]] · [[Physics and Vehicles Start Here]] · [[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Vehicle Damage, Repair and Wreck States]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[Vehicle Spawner and Garage - Spawn, Ownership, Despawn and Limits]] · [[Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver]]
 
 ### 43 Genre Systems End to End
 [[Racing Laps and Checkpoints End to End]]

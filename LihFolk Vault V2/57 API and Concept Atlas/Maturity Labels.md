@@ -1,5 +1,5 @@
 ---
-tags: [atlas, concept, type/atlas, area/monetization, area/ai]
+tags: [atlas, concept, type/atlas, area/platform, area/monetization]
 ---
 # Maturity Labels
 
@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/monetization, area/ai]
 > - Does using it change your content maturity questionnaire answers?
 > - Games without content maturity information are unplayable for all players.
 >
-> Cost: TL;DR ~120 tok · whole note ~590 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~600 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,7 +26,7 @@ Maturity labels decide which age groups see you on Home and Charts (Docs). (from
 
 ## Mentioned in
 
-26 notes in 12 sections. The 25 most relevant are linked:
+27 notes in 12 sections. The 25 most relevant are linked:
 
 ### 07 Lighting VFX and Audio
 [[Gore Policy and Kid-Friendly Hit Feedback]]
@@ -61,6 +61,6 @@ Maturity labels decide which age groups see you on Home and Charts (Docs). (from
 ### 61 Thumbnails and CTR
 [[Thumbnail Genre Patterns - What Top Games Show]] · [[Thumbnail Review Checklist and Scoring Rubric]] · [[Thumbnail Specs, Rules and Upload - Sizes, Count and Policy]]
 
-Also mentioned in (not linked): Community and Moderation Start Here
+Also mentioned in (not linked): Community and Moderation Start Here · Platform Features Start Here
 
 <!-- atlas:generated -->

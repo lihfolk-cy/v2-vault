@@ -1,5 +1,5 @@
 ---
-tags: [atlas, api, type/atlas, area/vfx, area/physics, api/Beam]
+tags: [atlas, api, type/atlas, area/vfx, area/world, api/Beam]
 ---
 # Beam
 
@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/vfx, area/physics, api/Beam]
 > - Beam chains share one attachment per point; `FaceCamera` on for lines and cables.
 > - Sheet or arc: a `Beam` with a scrolling texture (`TextureSpeed`) curved via `CurveSize0/1`, or a swept mesh.
 >
-> Cost: TL;DR ~150 tok · whole note ~670 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~690 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,13 +28,13 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 
 ## Mentioned in
 
-24 notes in 12 sections. The 24 most relevant are linked:
+25 notes in 12 sections. The 25 most relevant are linked:
 
 ### 05 UI and UX
 [[Tutorial Step Design Patterns - Teach by Doing]]
 
 ### 06 World Building and Art
-[[Roads, Rivers and Paths Carved Along Curves in Terrain]]
+[[EditableMesh - Runtime Mesh Editing, Budgets and Publishing]] · [[Roads, Rivers and Paths Carved Along Curves in Terrain]]
 
 ### 07 Lighting VFX and Audio
 [[Beams and Trails]] · [[Designing VFX Textures and Flipbooks in Figma]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Light Sources and Shadows]] · [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]] · [[Projectile VFX - Muzzle, Travel and Impact]] · [[Slash VFX Recipes - Crescent and Ring]] · [[VFX Design Playbook]] · [[VFX Performance Budgets and Culling]] · [[VFX Previews in Blender for Roblox - Colour and Framing]] · [[VFX Readability and Value - Lessons from Blind Reviews]]

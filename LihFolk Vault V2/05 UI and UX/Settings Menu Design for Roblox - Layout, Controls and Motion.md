@@ -140,5 +140,5 @@ Category names and descriptions grow in other languages. Use `AutomaticSize` on 
 
 <!-- related:start -->
 ## Related
-[[Designing Roblox UI in Figma - Frames, Safe Areas and Tokens]] · [[Cookbook - UI]] · [[UI Design Systems]] · [[UI Scale HUD Hide and Compact Mode]] · [[HUD Design]] · [[UI Layout Objects - Lists Grids and Pages]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[Virtualized Lists and Large Inventories]] · [[ScreenGui Fundamentals]] · [[Figma Property Mapping for Roblox UI]]
+[[Designing Roblox UI in Figma - Frames, Safe Areas and Tokens]] · [[Cookbook - UI]] · [[UI Design Systems]] · [[UI Scale HUD Hide and Compact Mode]] · [[UI Layout Objects - Lists Grids and Pages]] · [[HUD Design]] · [[Drag-and-Drop Inventories and Sliders with UIDragDetector]] · [[Virtualized Lists and Large Inventories]] · [[ScreenGui Fundamentals]] · [[Figma Property Mapping for Roblox UI]]
 <!-- related:end -->

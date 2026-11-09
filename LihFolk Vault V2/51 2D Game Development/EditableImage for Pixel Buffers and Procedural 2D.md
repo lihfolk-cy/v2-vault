@@ -424,7 +424,7 @@ Every feature built on EditableImage should have a "unavailable" path that still
 
 ## See also
 
-[[Memory Budgets and Leaks]], [[Procedural World Generation]], [[Noise Functions and Terrain Generation]], [[Tilemaps Cameras and Parallax for 2D Levels]], [[Rendering Performance]].
+[[Memory Budgets and Leaks]], [[Procedural World Generation]], [[Noise Functions and Terrain Generation]], [[Tilemaps Cameras and Parallax for 2D Levels]], [[Rendering Performance]], [[EditableMesh - Runtime Mesh Editing, Budgets and Publishing]] (the mesh twin, same budget and publishing switch).
 
 ## Connected notes
 <!-- auto-links:start -->
@@ -433,5 +433,5 @@ Every feature built on EditableImage should have a "unavailable" path that still
 
 <!-- related:start -->
 ## Related
-[[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Textures Decals and Texture Memory]] · [[2D Collision Physics and Platformer Movement]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] · [[Infinite and Streamed Worlds]] · [[Luau Performance Patterns with Benchmarks]]
+[[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Textures Decals and Texture Memory]] · [[2D Collision Physics and Platformer Movement]] · [[In-Experience Avatar Creation - Tokens, Editing and Prompting]] · [[Side-Scroller in 3D - Locking Camera and Movement to a Plane]] · [[Infinite and Streamed Worlds]]
 <!-- related:end -->

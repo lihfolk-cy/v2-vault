@@ -1,5 +1,5 @@
 ---
-tags: [atlas, api, type/atlas, area/vfx, area/ai, api/AudioEmitter]
+tags: [atlas, api, type/atlas, area/vfx, area/ui, api/AudioEmitter]
 ---
 # AudioEmitter
 
@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/vfx, area/ai, api/AudioEmitter]
 > - Pre-create a pool of N emitter rigs (an `Attachment` on an anchored, non-colliding, non-querying helper part, with an...
 > - With the newer Audio API you would pool `AudioPlayer` plus `AudioEmitter` pairs instead; the stealing logic is the same.
 >
-> Cost: TL;DR ~150 tok · whole note ~390 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~410 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,7 +27,10 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 
 ## Mentioned in
 
-10 notes in 5 sections. The 10 most relevant are linked:
+11 notes in 6 sections. The 11 most relevant are linked:
+
+### 05 UI and UX
+[[Video in Experiences - VideoPlayer, VideoDisplay and VideoFrame]]
 
 ### 07 Lighting VFX and Audio
 [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Combat Sound Design and Feedback]] · [[Engine and Tyre Audio Driven by RPM and Slip]] · [[Sound Fundamentals]] · [[Spatial Audio and Mixing]] · [[The Audio API - Players Emitters Wires and Effects]]

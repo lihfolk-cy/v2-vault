@@ -380,7 +380,7 @@ Applying a description loads meshes, textures and cages, and on layered clothing
 
 ## See also
 
-[[Avatars and UGC Start Here]] · [[HumanoidDescription and Outfit Systems]] · [[UGC Avatar Items and Accessories]] · [[UGC Pricing Limiteds and Marketplace Rules]] · [[Avatar Body Types and Scale in Gameplay]] · [[Server Authority and Validation]] · [[Remote Abuse Patterns and Rate Limiting in Practice]] · [[Virtualized Lists and Large Inventories]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Ethical Design and Player Trust]] · [[Monetization Overview]]
+[[Avatars and UGC Start Here]] · [[In-Experience Avatar Creation - Tokens, Editing and Prompting]] · [[HumanoidDescription and Outfit Systems]] · [[UGC Avatar Items and Accessories]] · [[UGC Pricing Limiteds and Marketplace Rules]] · [[Avatar Body Types and Scale in Gameplay]] · [[Server Authority and Validation]] · [[Remote Abuse Patterns and Rate Limiting in Practice]] · [[Virtualized Lists and Large Inventories]] · [[Genre Playbook - Roleplay and Social Hangouts]] · [[Ethical Design and Player Trust]] · [[Monetization Overview]]
 
 ## Connected notes
 <!-- auto-links:start -->
@@ -389,5 +389,5 @@ Applying a description loads meshes, textures and cages, and on layered clothing
 
 <!-- related:start -->
 ## Related
-[[Commerce and Physical Goods]] · [[Character Select and Class Systems with Different Rigs]] · [[Layered Clothing Creation Workflow]] · [[MarketplaceService - Engine Reference Card]] · [[Emotes and Social Animation]] · [[Game Passes]]
+[[Commerce and Physical Goods]] · [[Character Select and Class Systems with Different Rigs]] · [[MarketplaceService - Engine Reference Card]] · [[Layered Clothing Creation Workflow]] · [[Emotes and Social Animation]] · [[Game Passes]]
 <!-- related:end -->

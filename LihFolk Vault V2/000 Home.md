@@ -18,13 +18,13 @@ tags: [hub, type/hub, level/intermediate]
 
 > [!lf-grid]
 > > [!lf-code] Code
-> > [[Luau Language Essentials|Luau]] · [[Luau Cookbook Start Here|Cookbook]] · [[Advanced Luau Start Here|Advanced Luau]] · [[Client-Server Model|Architecture]] · [[Game Math Start Here|Game Math]] · [[Plugin Development Start Here|Studio Plugins]] · [[Studio Interface Tour|Studio]]
+> > [[Luau Language Essentials|Luau]] · [[Luau Cookbook Start Here|Cookbook]] · [[Advanced Luau Start Here|Advanced Luau]] · [[Client-Server Model|Architecture]] · [[Game Math Start Here|Game Math]] · [[Plugin Development Start Here|Studio Plugins]] · [[Studio Interface Tour|Studio]] · [[Engine Reference Cards Start Here|Reference Cards]] · [[API and Concept Atlas Start Here|API Atlas]]
 >
 > > [!lf-data] Data & Security
 > > [[DataStore Fundamentals|DataStores]] · [[Anti-Exploit Start Here|Anti-Exploit]] · [[Multiplayer Services Start Here|Multiplayer Services]] · [[Server Authority and Validation|Server Authority]]
 >
 > > [!lf-ui] Interface
-> > [[ScreenGui Fundamentals|UI & UX]] · [[LihFolk UI Design System|LihFolk UI]] · [[Accessibility Start Here|Accessibility]]
+> > [[ScreenGui Fundamentals|UI & UX]] · [[LihFolk UI Design System|LihFolk UI]] · [[Accessibility Start Here|Accessibility]] · [[Player QoL Start Here|Player QoL]]
 >
 > > [!lf-world] World & Art
 > > [[Environment Art Styles|World Building]] · [[Level Design Start Here|Level Design]] · [[Procedural Generation Start Here|Procedural]] · [[Narrative Start Here|Narrative]] · [[Modeling Fundamentals for Games|3D Modeling]] · [[Materials and Surfaces Start Here|Materials]] · [[Voxel Modelling Start Here|Voxel]] · [[Untextured Stylised Modelling Start Here|Stylised]] · [[Modelling Nuance Start Here|Readability]] · [[Procedural Blender Assets Start Here|Blender Assets]] · [[Concept Sheets]] · [[Avatars and UGC Start Here|Avatars & UGC]]
@@ -36,10 +36,10 @@ tags: [hub, type/hub, level/intermediate]
 > > [[Core Loops and Session Design|Design & Genres]] · [[Combat Systems Architecture|Gameplay Systems]] · [[Genre Systems Start Here|Genre Systems]] · [[Economy Design Start Here|Economy]] · [[Physics and Vehicles Start Here|Physics & Vehicles]]
 >
 > > [!lf-business] Ship & Grow
-> > [[Monetization Overview|Monetization]] · [[Live Ops Deep Dive Start Here|Live Ops]] · [[Marketing and Growth Start Here|Marketing]] · [[Community and Moderation Start Here|Community]] · [[Business and Careers Start Here|Business]] · [[Platform Features Start Here|Platform Features]] · [[Team Collaboration Start Here|Teams]] · [[Top Games Case Studies Start Here|Top Game Case Studies]] · [[Lessons Learned Index|Production]]
+> > [[Monetization Overview|Monetization]] · [[Live Ops Deep Dive Start Here|Live Ops]] · [[Marketing and Growth Start Here|Marketing]] · [[Community and Moderation Start Here|Community]] · [[Business and Careers Start Here|Business]] · [[Platform Features Start Here|Platform Features]] · [[Team Collaboration Start Here|Teams]] · [[Top Games Case Studies Start Here|Top Game Case Studies]] · [[Viral and Trend Teardowns Start Here|Viral Teardowns]] · [[High-Craft Teardowns Start Here|High-Craft Teardowns]] · [[Thumbnails and CTR Start Here|Thumbnails & CTR]] · [[Lessons Learned Index|Production]]
 >
 > > [!lf-pipeline] Pipelines & AI
-> > [[AI in Roblox Development Overview|AI Tools]] · [[What Is MCP|MCP & Agents]] · [[Code Pipeline - Rojo Git and CI|Pipelines]] · [[Script Performance|Performance]] · [[Debugging Start Here|Debugging]] · [[Worked Builds Start Here|Worked Builds]] · [[Core Concepts Start Here|Core Concepts]] · [[2D Game Development Start Here|2D Games]] · [[Resource Library Start Here|Resources]]
+> > [[AI in Roblox Development Overview|AI Tools]] · [[What Is MCP|MCP & Agents]] · [[Code Pipeline - Rojo Git and CI|Pipelines]] · [[Script Performance|Performance]] · [[Debugging Start Here|Debugging]] · [[Worked Builds Start Here|Worked Builds]] · [[Core Concepts Start Here|Core Concepts]] · [[Field Notes Start Here|Field Notes]] · [[2D Game Development Start Here|2D Games]] · [[Resource Library Start Here|Resources]]
 
 > [!lf-ai] Using this with Claude Code
 > Install the LihFolk plugin and the AI reads this vault on its own: it greps [[INDEX]] for every Roblox task, applies each note's **Common mistakes** and **Checklist**, and cites what it used.

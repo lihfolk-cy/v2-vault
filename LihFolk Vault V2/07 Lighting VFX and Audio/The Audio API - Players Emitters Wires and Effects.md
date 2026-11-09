@@ -301,6 +301,8 @@ Notes:
 
 Voice features have their own policy and age requirements; see [[Age Checks and Safety Features]] and [[Roblox Policies Ratings and Compliance]].
 
+Video soundtracks use the same wiring: a `VideoPlayer` is a source whose `Output` pin can feed an `AudioEmitter` or an effect chain, so a cinema screen's sound can be positioned and mixed like any other source ([[Video in Experiences - VideoPlayer, VideoDisplay and VideoFrame]]).
+
 ---
 
 ## 8. Migrating from Sound

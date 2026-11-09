@@ -27,7 +27,7 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 
 ## Mentioned in
 
-41 notes in 19 sections. The 25 most relevant are linked:
+42 notes in 19 sections. The 25 most relevant are linked:
 
 ### 02 Luau Scripting
 [[CollectionService Patterns]]
@@ -74,6 +74,6 @@ API snapshot: class, inherits `Instance` (`_tools/roblox_api.json`, docs build o
 ### 62 Engine Reference Cards
 [[ProximityPrompt - Engine Reference Card]]
 
-Also mentioned in (not linked): Engine Limits, Quotas and Defaults - Cheat Sheet · Engine Reference Cards Start Here · Field Notes Start Here · Genre Playbook - Naval and Open-Sea Adventure · Genre Playbook - Puzzle and Escape Rooms · Input - UserInputService and ContextActionService · Instanced Interiors - Pooled House and Room Copies for Many Players · Lobby and Hub Design · Mounts and Rideable Creatures · Network Ownership · Open Questions - Whole Vault · Remote Abuse Patterns and Rate Limiting in Practice · Replication Rules · Skill - Roblox Secure Remotes · Tutorial Step Design Patterns - Teach by Doing · World-Space UI - BillboardGui and SurfaceGui
+Also mentioned in (not linked): 00 Start Here · Engine Limits, Quotas and Defaults - Cheat Sheet · Engine Reference Cards Start Here · Field Notes Start Here · Genre Playbook - Naval and Open-Sea Adventure · Genre Playbook - Puzzle and Escape Rooms · Input - UserInputService and ContextActionService · Instanced Interiors - Pooled House and Room Copies for Many Players · Lobby and Hub Design · Mounts and Rideable Creatures · Network Ownership · Open Questions - Whole Vault · Remote Abuse Patterns and Rate Limiting in Practice · Replication Rules · Skill - Roblox Secure Remotes · Tutorial Step Design Patterns - Teach by Doing · World-Space UI - BillboardGui and SurfaceGui
 
 <!-- atlas:generated -->

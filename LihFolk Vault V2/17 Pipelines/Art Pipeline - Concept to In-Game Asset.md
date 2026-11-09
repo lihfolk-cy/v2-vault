@@ -277,5 +277,5 @@ Total wall clock was under an hour for the piece; the same scripted approach the
 
 <!-- related:start -->
 ## Related
-[[Modeling Fundamentals for Games]] · [[Parts Unions and MeshParts]] · [[Batch Processing Tools in Studio]] · [[Build Test and Release Pipeline]] · [[Data and Config Pipeline - Spreadsheets to Game]] · [[Audio Pipeline]] · [[UI Asset Pipeline]] · [[Code Pipeline - Rojo Git and CI]] · [[Live Content Pipeline]]
+[[Modeling Fundamentals for Games]] · [[AI Pitfalls - Assets and Import]] · [[Batch Processing Tools in Studio]] · [[Build Test and Release Pipeline]] · [[Data and Config Pipeline - Spreadsheets to Game]] · [[Audio Pipeline]] · [[UI Asset Pipeline]] · [[Code Pipeline - Rojo Git and CI]] · [[Live Content Pipeline]]
 <!-- related:end -->

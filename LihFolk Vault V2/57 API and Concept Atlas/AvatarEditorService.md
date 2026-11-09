@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/avatars, area/platform, api/AvatarEditorServ
 > - When an avatar item sells inside a game (through the Avatar Inspect Menu, `AvatarEditorService` or `MarketplaceService`), the...
 > - Pair with Genre Playbook - Roleplay and Social Hangouts, Trading Systems Without Duplication and AvatarEditorService and...
 >
-> Cost: TL;DR ~170 tok · whole note ~410 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~170 tok · whole note ~430 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,10 +27,10 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 
 ## Mentioned in
 
-10 notes in 3 sections. The 10 most relevant are linked:
+11 notes in 3 sections. The 11 most relevant are linked:
 
 ### 37 Avatars and UGC
-[[AvatarEditorService and In-Game Avatar Editors]] · [[Avatars and UGC Start Here]] · [[HumanoidDescription and Outfit Systems]] · [[UGC Pricing Limiteds and Marketplace Rules]]
+[[AvatarEditorService and In-Game Avatar Editors]] · [[Avatars and UGC Start Here]] · [[HumanoidDescription and Outfit Systems]] · [[In-Experience Avatar Creation - Tokens, Editing and Prompting]] · [[UGC Pricing Limiteds and Marketplace Rules]]
 
 ### 49 Roblox Platform Features
 [[API Renames and Deprecations 2025-2026]] · [[Avatar Context Menus Profiles and Social Surfaces]] · [[Commerce and Physical Goods]] · [[Platform Features Start Here]]

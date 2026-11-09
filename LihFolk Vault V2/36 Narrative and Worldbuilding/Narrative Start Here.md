@@ -16,6 +16,9 @@ Older notes that touch the same ground, and that these notes build on rather tha
 - [[Quest Writing and Hooks]]: the seven pieces of quest text, hook types, the objective-line formula (verb, count, target, place), the three-beat quest with a mid-quest complication, chains as arcs, writing for the hundredth read of a daily, and return hooks that keep their promises.
 - [[Naming Items Zones and Abilities]]: what a name must do, patterns that scale to large catalogues, names as a rarity ladder, zone and ability naming, length and distinctness budgets, ids versus display names versus instance names, legal and cultural risk, the chat filter, and a name validator.
 - [[Localization-Ready Writing]]: complete sentences with named placeholders, plurals without plural support, writing around grammatical gender, names inside sentences in inflecting languages, ambiguous short words, idioms and puns, a style guide and glossary, and a source-string lint.
+- [[Story State Flags and Chapter Saves]]: a flag registry instead of free strings, storing facts and deriving the rest, save shape, chapter select and replay, multiplayer story games, and updating a live story.
+- [[Puzzle Dependency Charts and Hint Systems]]: the dependency chart encoded as data with automatic validation, context-aware hints and analytics from the chart, and answer safety.
+- [[Multiplayer Cutscene Sync - Server Clock, Late Joiners and Skip Votes]]: the server schedules and clients render, seekable cutscenes, who watches, skip votes, and failure handling.
 
 ## Suggested reading order
 

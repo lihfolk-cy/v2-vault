@@ -31,6 +31,13 @@ Every game note follows the same six parts: Snapshot, Click-through, First five 
 | [[Case Study - Grow a Garden]] | Idle farming simulator | Offline growth and a shared restock timer make waiting sticky, but a waiting loop needs depth to survive the spike |
 | [[Case Study - Steal a Brainrot]] | Idle tycoon with player stealing | Put the verb in the title and make risk visible with a timer, but never sell power over other players |
 | [[Case Study - 99 Nights in the Forest]] | Co-op survival horror | A mascot readable at icon size and a scary first night in five minutes, built by a five-person team |
+| [[Case Study - Dead Rails]] | Co-op survival on a moving train | A moving base works as a progress bar, and forced stops become group risk-reward decisions |
+| [[Case Study - Forsaken]] | Asymmetric survival horror | Two goals, one timer and small lobbies, with counterplay designed alongside every Killer ability |
+| [[Case Study - Jailbreak]] | Cops versus criminals open city | Asymmetric teams in one space, with server-wide timed objectives generating encounters |
+| [[Case Study - Murder Mystery 2]] | Social deduction rounds | A loop explainable in three lines, role rotation for one more round, and a hero mechanic for the weakest role |
+| [[Case Study - Rivals]] | First-person arena duels | Cut the genre to its most replayable unit and start it in seconds from pads in a social lobby |
+| [[Case Study - The Strongest Battlegrounds]] | Free-for-all battlegrounds fighter | Equal baseline stats, depth from movesets and timing, and a tiny control scheme shown everywhere |
+| [[Case Study - Tower Defense Simulator]] | Co-op tower defense | Lobby and match places with group teleports, and episodic content that refreshes the title and thumbnails |
 | [[Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks]] | Comparison of all the games above | What the titles, icons and thumbnails have in common, and which habits are worth copying |
 
 ## Suggested reading paths

@@ -25,6 +25,24 @@ It builds on older notes. Read them first if the topic is new; the notes here go
 | [[Commerce and Physical Goods]] | Selling real-world merchandise, or the digital alternative | Shopify-linked commerce products, US-only buyers 13+, digital benefit thresholds, revocation by webhook, 40% game-owner commission on in-game avatar item sales |
 | [[Avatar Context Menus Profiles and Social Surfaces]] | Safe, useful ways for players to act on each other | Avatar Context Menu options and theme, inspect menu modes, [[SetCore]] friend and block prompts, respecting blocks server-side, profile card data |
 
+## 2025-2026 changes, limits and release checks
+
+Added after the six notes above. Start at the hub, [[Roblox Changes 2025-2026]], which lists the ten changes most likely to break generated code.
+
+| Note | Problem it solves |
+|---|---|
+| [[Roblox Changes 2025-2026]] | One entry point to everything that changed between January 2025 and October 2026 |
+| [[API Renames and Deprecations 2025-2026]] | A lookup table of renamed, deprecated and replaced API names, including the `Async` renames |
+| [[Engine and API Changes 2025-2026]] | Engine and Studio changes that matter when writing or reviewing code: mesh streaming, 4K textures, fonts, the new type solver, UI Styling, the Character Controller Library |
+| [[Server Authority and Input Migration 2026]] | Server Authority, Next Generation Replication, the physics replication rewrite and the Input Action System |
+| [[Data and Cloud Changes 2025-2026]] | DataStore and Open Cloud budget changes, retired web endpoints, rate limits and Open Cloud Luau Execution |
+| [[Discovery and Monetization Changes 2025-2026]] | Retention in recommendations, Creator Rewards, Roblox Plus, regional pricing defaults and DevEx rates |
+| [[Policy and Age Rules 2026]] | Age checks for chat, Roblox Kids and Select, maturity labels, paid random items and chat changes |
+| [[Regional Compliance - Paid Random Items and Country Rules]] | One fail-closed `PolicyService` gate and designing the restricted experience |
+| [[Engine Limits, Quotas and Defaults - Cheat Sheet]] | The numbers people most often get wrong, from DataStores to terrain, in one place |
+| [[Console and VR Release Checklists]] | What to check before enabling Xbox, PlayStation or VR, and after release |
+| [[Photo Mode and In-Game Screenshots with CaptureService]] | Screenshots and shares players make inside your game, with a safe photo-mode camera |
+
 ## Suggested reading paths
 
 - **New game preparing for launch:** Badges first (create them over several days before launch), then Invites, then Notifications. Pair with [[Launch Strategy - The First Two Weeks]] and [[First-Time User Experience and Onboarding]].

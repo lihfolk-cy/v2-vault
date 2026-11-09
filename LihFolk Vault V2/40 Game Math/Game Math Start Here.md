@@ -22,6 +22,8 @@ The notes here go a level deeper without repeating them.
 | [[Intersection and Collision Math]] | Zones without `Touched`, building cursors, lag-compensated melee, bullets that cannot tunnel, leading targets, big fights | Containment tests, ray vs plane, sphere and box, capsules, swept spheres, intercepts, spatial hashing |
 | [[Big Numbers Precision and Formatting]] | Simulators past 10^15, worlds far from the origin, long timers, huge leaderboards, honest number display | Container types and limits, float32 gaps, mantissa-exponent numbers, integer currency, order-preserving encodings |
 
+A seventh note was added later: [[Curves in Luau - Paths Beams and Motion]] (rails, roads, coasters and cables with Catmull-Rom paths, even spacing, frames that never flip, Beams driven from paths, projectiles on curves and `Path2D` for UI). Read it after Interpolation when anything follows a path.
+
 ## Suggested reading paths
 
 - **Combat programmer:** Dot and Cross, then Intersection and Collision, then Rotations. Pair with [[Hitboxes and Hit Detection]], [[Projectiles and Ballistics]] and [[Client Prediction and Reconciliation for Combat]].

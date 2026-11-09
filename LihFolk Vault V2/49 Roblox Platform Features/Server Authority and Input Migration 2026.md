@@ -185,5 +185,5 @@ Players.PlayerAdded:Connect(function(p) template:Clone().Parent = p end)
 
 <!-- related:start -->
 ## Related
-[[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[API Renames and Deprecations 2025-2026]] · [[Data and Cloud Changes 2025-2026]] · [[Console and VR Release Checklists]] · [[Discovery and Monetization Changes 2025-2026]] · [[Policy and Age Rules 2026]]
+[[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]] · [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]] · [[API Renames and Deprecations 2025-2026]] · [[Console and VR Release Checklists]] · [[Data and Cloud Changes 2025-2026]] · [[Discovery and Monetization Changes 2025-2026]] · [[Policy and Age Rules 2026]]
 <!-- related:end -->

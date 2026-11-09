@@ -1,5 +1,5 @@
 ---
-tags: [atlas, concept, type/atlas, area/business, area/monetization]
+tags: [atlas, concept, type/atlas, area/business, area/platform]
 ---
 # DevEx
 
@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/business, area/monetization]
 > - Avoid: Quoting $0.0035 per Robux, or one DevEx rate for all revenue.
 > - Avoid: Quoting Robux without computing its real-money value after DevEx.
 >
-> Cost: TL;DR ~130 tok · whole note ~550 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~560 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,7 +26,7 @@ DevEx is requested by a person, so group revenue reaches a person through group 
 
 ## Mentioned in
 
-23 notes in 10 sections. The 23 most relevant are linked:
+24 notes in 10 sections. The 24 most relevant are linked:
 
 ### 11 Monetization Publishing and Live Ops
 [[Monetization Overview]] · [[Subscriptions and Premium Payouts]] · [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]]
@@ -50,7 +50,7 @@ DevEx is requested by a person, so group revenue reaches a person through group 
 [[Publishing Selling and Updating Plugins]]
 
 ### 49 Roblox Platform Features
-[[API Renames and Deprecations 2025-2026]] · [[Discovery and Monetization Changes 2025-2026]] · [[Roblox Changes 2025-2026]]
+[[API Renames and Deprecations 2025-2026]] · [[Discovery and Monetization Changes 2025-2026]] · [[Platform Features Start Here]] · [[Roblox Changes 2025-2026]]
 
 ### 50 Team Collaboration and Project Management
 [[Team Collaboration Start Here]] · [[Working with Contractors and Revenue Splits]]

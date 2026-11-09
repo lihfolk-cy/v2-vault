@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/design, area/scripting]
 > - Text filtering. If report text is ever shown to other players (a public "known issues" board built from reports), filter it...
 > - Jail and spawn protections; filtered text.
 >
-> Cost: TL;DR ~130 tok · whole note ~630 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~640 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,7 +26,7 @@ Filtered text comes back with blocked words replaced by `#` characters, which is
 
 ## Mentioned in
 
-22 notes in 17 sections. The 22 most relevant are linked:
+23 notes in 18 sections. The 23 most relevant are linked:
 
 ### 02 Luau Scripting
 [[Strings Patterns and Formatting]] · [[Text Filtering - TextService for Names, Signs and Messages]]
@@ -78,5 +78,8 @@ Filtered text comes back with blocked words replaced by `#` characters, which is
 
 ### 60 High-Craft Game Teardowns
 [[Teardown - Piggy]]
+
+### Root notes
+[[00 Start Here]]
 
 <!-- atlas:generated -->

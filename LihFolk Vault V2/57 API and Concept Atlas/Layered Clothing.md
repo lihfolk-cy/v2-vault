@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/animation, area/avatars]
 > - Roblox supports skinned meshes driven by `Bone` instances, used for creatures, custom characters, layered clothing and soft props.
 > - With layered clothing the opposite holds: puffy jackets and dresses clip more than the dummy predicts.
 >
-> Cost: TL;DR ~150 tok · whole note ~650 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~660 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ Layered clothing uses the same names to position, then cages to fit. (from [[R15
 
 ## Mentioned in
 
-36 notes in 9 sections. The 25 most relevant are linked:
+37 notes in 9 sections. The 25 most relevant are linked:
 
 ### 06 World Building and Art
 [[Art Budgets - Triangles Draw Calls Memory]]
@@ -51,6 +51,6 @@ Layered clothing uses the same names to position, then cages to fit. (from [[R15
 ### 53 Voxel Modelling Deep Dive
 [[Voxel Characters - Proportions Joints and Rigging]]
 
-Also mentioned in (not linked): 00 Start Here · Animation Start Here · AvatarEditorService and In-Game Avatar Editors · Avatars and UGC Start Here · Cookbook - Players and Characters · Exporting FBX vs GLB · Facial Animation and Dynamic Heads · Open Questions · Rigging in Blender · UGC Pricing Limiteds and Marketplace Rules · Weight Painting and Skinning for Roblox
+Also mentioned in (not linked): 00 Start Here · Animation Start Here · AvatarEditorService and In-Game Avatar Editors · Avatars and UGC Start Here · Cookbook - Players and Characters · Exporting FBX vs GLB · Facial Animation and Dynamic Heads · In-Experience Avatar Creation - Tokens, Editing and Prompting · Open Questions · Rigging in Blender · UGC Pricing Limiteds and Marketplace Rules · Weight Painting and Skinning for Roblox
 
 <!-- atlas:generated -->

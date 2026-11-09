@@ -12,7 +12,7 @@ tags: [ui, billboardgui, surfacegui, world-space, nameplates, damage-numbers, pe
 > - Every billboard and surface gui has `MaxDistance`.
 > - Anchored to attachments or extents, not fixed offsets.
 >
-> Cost: TL;DR ~150 tok · whole note ~4.1k tok. Read more: ## 1. BillboardGui · ## 3. Patterns · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~4.2k tok. Read more: ## 1. BillboardGui · ## 3. Patterns · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 Some UI belongs in the world rather than on the screen: names over heads, enemy health bars, damage numbers, shop signs, interactive screens on a wall, a leaderboard on a pillar. Roblox offers two containers for this. A `BillboardGui` always faces the camera and follows a part or attachment. A `SurfaceGui` is painted onto a face of a part. Both use ordinary `GuiObject`s inside, so everything you know about layout applies, but their sizing, lighting, input and performance rules are different and are the source of most "my nameplate is giant", "my sign is blurry" and "the server lags with 200 enemies" problems.
@@ -189,6 +189,7 @@ Either way: pool (the reference project caps live numbers at 12), merge same-kin
 - Offset-sized, `MaxDistance` around 60 to 150 studs depending on the game, `PlayerToHideFrom` set to the owner.
 - Show the minimum: name and one social signal. The reference project adds the held weapon's name as a title line under the player's name as a deliberate social flex.
 - Use a premium style for important NPCs and stations (the reference project tags station titles and gives them one consistent font and treatment). A duplicate title billboard that someone added on top of a station (a blue pill reading "SHOP", `AlwaysOnTop`, used by no script) covered the real, consistently styled title; the fix was deleting it. Keep one owner per world label.
+- Video screens (a cinema wall, a lobby trailer) are a `VideoDisplay` or `VideoFrame` inside a `SurfaceGui`; upload rules, the two-video cap and syncing are in [[Video in Experiences - VideoPlayer, VideoDisplay and VideoFrame]].
 
 ---
 

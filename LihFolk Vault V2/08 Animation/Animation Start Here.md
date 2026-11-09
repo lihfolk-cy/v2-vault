@@ -103,6 +103,9 @@ A field guide to **everything about animation in Roblox**: how the engine really
 - [[Animation Quality Standard]]: measurable rules for human-looking arms
 - [[Authoring Clips in Code]], [[Spec-Driven Move Authoring]]
 - [[Publishing Animations]], [[Animation Review Checklist]]
+- Reference numbers and key poses: [[Locomotion and Melee Reference Numbers]], [[R15 Run Cycle Key Poses]], [[Human Swing Biomechanics]], [[Blade Grip and Wrist Limits]]
+- Lessons from blind-reviewed clips: [[Locomotion Readability - Lessons from Blind Panels]], [[Locomotion Clip Lessons - Jump, Sprint, Idle]], [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]], [[Spin and Whole-Body Rotation Moves]]
+- [[Free Mocap and Mixamo Licensing for Roblox]]: what free motion data you may ship
 
 ### 04 Procedural (code-driven motion and IK)
 - [[Procedural Animation]] (hub), [[Springs Damping and Smoothing]]
@@ -119,9 +122,10 @@ A field guide to **everything about animation in Roblox**: how the engine really
 - [[Enemy and NPC Animation]], [[Enemy Animation State Protocol]], [[Boss Animation and Phases]]
 - [[Cameras and Cutscenes]], [[Camera Shake and Camera FX]], [[Cinematic Ultimates]]
 - [[Emotes and Social Animation]], [[UI and GUI Animation]], [[VFX Timing with Animation]]
+- [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]], [[Mounts and Rideable Creatures]]
 
 ### 06 Pipelines and Tooling (production)
-- [[Studio Tooling Architecture]]
+- [[Studio Tooling Architecture]], [[LihFolk R15 Keyframe Pipeline]] (scripted R15 clips from Blender with automatic checks)
 - [[Pipeline - Arm IK Baking and QA]], [[Arm Baker Internals]], [[Arm QA Metrics Reference]]
 - [[Pipeline - New Animated Weapon]], [[Weapon Design Rig Builder]], [[Weapon Rig Player]]
 - [[Pipeline - Importing Animated Enemies]], [[Enemy Import Axis Fix]], [[Ground Fitting Pipeline]]

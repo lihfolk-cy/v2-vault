@@ -232,5 +232,5 @@ Rules of thumb, compared with the reference project's shipped numbers:
 
 <!-- related:start -->
 ## Related
-[[Bevels Chamfers and Edge Highlights Without Textures]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[UV Unwrapping]] · [[Mesh Optimization for Mobile]] · [[Normal Maps and Detail Baking]] · [[Organic and Creature Modeling]] · [[Procedural Model Kits - Lessons]] · [[Blender Workflow for Roblox Creators]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Retopology and Decimation]]
+[[Bevels Chamfers and Edge Highlights Without Textures]] · [[Faceted Low-Poly - Flat Normals and Facet Size]] · [[UV Unwrapping]] · [[Mesh Optimization for Mobile]] · [[Normal Maps and Detail Baking]] · [[Organic and Creature Modeling]] · [[Procedural Model Kits - Lessons]] · [[Blender Workflow for Roblox Creators]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Retopology and Decimation]]
 <!-- related:end -->

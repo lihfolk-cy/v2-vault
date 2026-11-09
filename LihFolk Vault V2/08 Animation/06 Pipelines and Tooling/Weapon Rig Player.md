@@ -173,5 +173,5 @@ PoseDriver.Step(rig, 1 / 30)                    -- advance 1/30 s and apply
 
 <!-- related:start -->
 ## Related
-[[Animation Data from Blender to Roblox]] · [[Snippets - Building and Sampling Clips]] · [[Engine Gotchas]] · [[Animation Glossary]] · [[AnimationTrack Reference]] · [[Animation Editor Workflow]] · [[Animation Editor Advanced]] · [[Publishing Animations]]
+[[Animation Data from Blender to Roblox]] · [[Snippets - Building and Sampling Clips]] · [[Engine Gotchas]] · [[Animation Glossary]] · [[Animation Editor Workflow]] · [[AnimationTrack Reference]] · [[Animation Editor Advanced]] · [[Publishing Animations]]
 <!-- related:end -->

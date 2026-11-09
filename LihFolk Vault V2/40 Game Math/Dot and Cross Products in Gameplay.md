@@ -392,5 +392,5 @@ Float notes. A dot product of two unit vectors can come out at `1.0000001`; feed
 
 <!-- related:start -->
 ## Related
-[[Interpolation Easing and Curves Math]] · [[Curves in Luau - Paths Beams and Motion]] · [[Motor6D Math and CFrame Composition]] · [[Mover Constraints and Physics Controllers]] · [[Big Numbers Precision and Formatting]] · [[Probability and Statistics for Designers]]
+[[Interpolation Easing and Curves Math]] · [[Curves in Luau - Paths Beams and Motion]] · [[Motor6D Math and CFrame Composition]] · [[Projectile VFX - Muzzle, Travel and Impact]] · [[Big Numbers Precision and Formatting]] · [[Probability and Statistics for Designers]]
 <!-- related:end -->

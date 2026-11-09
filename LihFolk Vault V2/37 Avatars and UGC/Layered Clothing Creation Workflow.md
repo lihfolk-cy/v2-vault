@@ -262,5 +262,5 @@ Not every layered garment needs the Marketplace. A game can ship its own layered
 
 <!-- related:start -->
 ## Related
-[[Modeling Characters for R15 and Custom Rigs]] · [[HumanoidDescription and Outfit Systems]] · [[Rigging in Blender]] · [[Bones and Skinned Meshes]] · [[Skinning Weights]] · [[AvatarEditorService and In-Game Avatar Editors]]
+[[Modeling Characters for R15 and Custom Rigs]] · [[HumanoidDescription and Outfit Systems]] · [[Rigging in Blender]] · [[Bones and Skinned Meshes]] · [[In-Experience Avatar Creation - Tokens, Editing and Prompting]] · [[AvatarEditorService and In-Game Avatar Editors]]
 <!-- related:end -->

@@ -309,5 +309,5 @@ None of these were "slow code". All were "code running more often, or for more r
 
 <!-- related:start -->
 ## Related
-[[Luau Garbage Collection and the Memory Model]] · [[Network Bandwidth Budgets and Measuring Them]] · [[Developer Console and Stats]] · [[Rendering Performance]] · [[Physics Performance]] · [[Mobile and Low-End Optimization]] · [[Hunting Memory Leaks Step by Step]] · [[Client Zone Culling for Interiors and Cities]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]]
+[[Luau Garbage Collection and the Memory Model]] · [[Network Bandwidth Budgets and Measuring Them]] · [[Developer Console and Stats]] · [[Rendering Performance]] · [[Physics Performance]] · [[Mobile and Low-End Optimization]] · [[Hunting Memory Leaks Step by Step]] · [[Automated Luau Checks - LihFolk Hook and Audit]] · [[Load and Soak Testing Servers - Long Sessions and Many Clients]]
 <!-- related:end -->

@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/monetization, area/platform]
 > - Subscription perks check `HasRobloxSubscription`; the Plus upsell uses `PromptRobloxSubscriptionPurchase`.
 > - Transaction Refunded (and Subscription Refunded if relevant) webhooks configured with a secret.
 >
-> Cost: TL;DR ~130 tok · whole note ~940 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~950 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -29,7 +29,7 @@ A subscription stipend is a faucet that never turns off. (from [[Subscriptions a
 
 ## Mentioned in
 
-62 notes in 22 sections. The 25 most relevant are linked:
+63 notes in 23 sections. The 25 most relevant are linked:
 
 ### 03 Architecture and Networking
 [[Cross-Server Messaging]]
@@ -61,6 +61,6 @@ A subscription stipend is a faucet that never turns off. (from [[Subscriptions a
 ### 62 Engine Reference Cards
 [[MessagingService - Engine Reference Card]]
 
-Also mentioned in (not linked): 00 Start Here · Analytics and Funnels · Business and Careers Start Here · Case Study - Brookhaven RP · Case Study - Pet Simulator 99 · Commerce and Physical Goods · Competitor Analysis Method · Creator Account Security and Takeover Recovery · Debugging Client-Server Desync · Debugging Race Conditions and Yield Order · Engine Limits, Quotas and Defaults - Cheat Sheet · Engine and API Changes 2025-2026 · Evaluating AI Tools - A Practical Rubric · Experience Description and Search Keywords · Game Passes · Global State and Live Config · Glossary · Groups Roles and Permissions for Studios · Interest Management and Per-Player Replication · Limited-Time Offers - Design and Ethics · Local vs Cloud AI - Keeping Unreleased Game Code Private · MarketplaceService - Engine Reference Card · Open Cloud APIs · Open Questions - Whole Vault · Policy and Age Rules 2026 · Publishing an Experience · Roblox Studio Assistant · Session Length · Shop with Game Passes and Developer Products End to End · Short-Form Video Marketing · Skill - Roblox Monetization Compliance · Sponsored Ads and Campaign Math · Substance Painter and Texturing Tools · Teardown - PLS DONATE · Template Reskin Checklist - One Codebase, New Game · Threat Modeling a Roblox Game · Working with Contractors and Revenue Splits
+Also mentioned in (not linked): 00 Start Here · Analytics and Funnels · Business and Careers Start Here · Case Study - Brookhaven RP · Case Study - Pet Simulator 99 · Commerce and Physical Goods · Competitor Analysis Method · Creator Account Security and Takeover Recovery · Debugging Client-Server Desync · Debugging Race Conditions and Yield Order · Engine Limits, Quotas and Defaults - Cheat Sheet · Engine and API Changes 2025-2026 · Evaluating AI Tools - A Practical Rubric · Experience Description and Search Keywords · Game Passes · Global State and Live Config · Glossary · Groups Roles and Permissions for Studios · In-Experience Avatar Creation - Tokens, Editing and Prompting · Interest Management and Per-Player Replication · Limited-Time Offers - Design and Ethics · Local vs Cloud AI - Keeping Unreleased Game Code Private · MarketplaceService - Engine Reference Card · Open Cloud APIs · Open Questions - Whole Vault · Policy and Age Rules 2026 · Publishing an Experience · Roblox Studio Assistant · Session Length · Shop with Game Passes and Developer Products End to End · Short-Form Video Marketing · Skill - Roblox Monetization Compliance · Sponsored Ads and Campaign Math · Substance Painter and Texturing Tools · Teardown - PLS DONATE · Template Reskin Checklist - One Codebase, New Game · Threat Modeling a Roblox Game · Working with Contractors and Revenue Splits
 
 <!-- atlas:generated -->

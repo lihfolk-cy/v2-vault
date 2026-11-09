@@ -220,7 +220,7 @@ If you also run a game:
 
 ## See also
 
-[[Layered Clothing Cages and Animation]] · [[Accessories and Armor That Follow Animation]] · [[R15 Rig Anatomy and Attachments]] · [[Weight Painting and Skinning for Roblox]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Exporting and Validating Models for Roblox]] · [[Texturing and PBR Baking]] · [[Substance Painter and Texturing Tools]] · [[3D Importer Settings Reference]] · [[Monetization Overview]] · [[Roblox Policies Ratings and Compliance]] · [[Roblox Policies on AI-Generated Content]]
+[[Layered Clothing Cages and Animation]] · [[Accessories and Armor That Follow Animation]] · [[R15 Rig Anatomy and Attachments]] · [[Weight Painting and Skinning for Roblox]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Exporting and Validating Models for Roblox]] · [[Texturing and PBR Baking]] · [[Substance Painter and Texturing Tools]] · [[3D Importer Settings Reference]] · [[Monetization Overview]] · [[Roblox Policies Ratings and Compliance]] · [[Roblox Policies on AI-Generated Content]] · [[In-Experience Avatar Creation - Tokens, Editing and Prompting]]
 
 ## Connected notes
 <!-- auto-links:start -->

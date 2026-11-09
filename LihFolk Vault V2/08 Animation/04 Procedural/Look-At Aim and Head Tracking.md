@@ -207,5 +207,5 @@ Related: [[Springs Damping and Smoothing]], [[IKControl Reference]], [[Procedura
 
 <!-- related:start -->
 ## Related
-[[Two-Bone IK Math]] · [[Inverse Kinematics]] · [[Rotations Angles and Quaternions]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Elbow Poles Swivel and Joint Limits]] · [[Blender Armature and Bone Roll Conventions]] · [[Flight Flocks and Path Animation]] · [[Procedural Weapon Motion]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]]
+[[Two-Bone IK Math]] · [[Inverse Kinematics]] · [[Multi-Bone IK - FABRIK and CCD]] · [[Rotations Angles and Quaternions]] · [[Elbow Poles Swivel and Joint Limits]] · [[Blender Armature and Bone Roll Conventions]] · [[Flight Flocks and Path Animation]] · [[Procedural Weapon Motion]] · [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]]
 <!-- related:end -->

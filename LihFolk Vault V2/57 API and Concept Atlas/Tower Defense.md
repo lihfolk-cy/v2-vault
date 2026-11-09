@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/design, area/gameplay]
 > - Genre Playbook - Tower Defense, Genre Systems Start Here, Worked Builds Start Here.
 > - Path and waves: Tower Defense Waves and Placement End to End and Genre Playbook - Tower Defense.
 >
-> Cost: TL;DR ~150 tok · whole note ~630 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~640 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,7 +26,7 @@ Tower Defense Simulator (TDS) is one of Roblox's long-running co-op tower defens
 
 ## Mentioned in
 
-27 notes in 14 sections. The 25 most relevant are linked:
+28 notes in 14 sections. The 25 most relevant are linked:
 
 ### 03 Architecture and Networking
 [[Entity Component Systems]] · [[Snapshot Interpolation for Custom Replication]]
@@ -58,15 +58,15 @@ Tower Defense Simulator (TDS) is one of Roblox's long-running co-op tower defens
 ### 52 Core Concepts
 [[Power Curve]]
 
-### 53 Voxel Modelling Deep Dive
-[[Voxel Chibi Heroes - Class Roster and Rarity Ladder]]
-
 ### 59 Viral and Trend Game Teardowns
 [[Teardown - Plants vs Brainrots]]
 
 ### 60 High-Craft Game Teardowns
 [[High-Craft Teardowns Start Here]] · [[Teardown - Anime Vanguards]] · [[Teardown - Dandy's World]] · [[Teardown - Welcome to Bloxburg]]
 
-Also mentioned in (not linked): 00 Start Here · Genre Systems Start Here
+### Root notes
+[[00 Start Here]]
+
+Also mentioned in (not linked): Genre Systems Start Here · Top Games Case Studies Start Here · Voxel Chibi Heroes - Class Roster and Rarity Ladder
 
 <!-- atlas:generated -->

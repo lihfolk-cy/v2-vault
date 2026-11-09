@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/animation, area/vfx, api/TimePosition]
 > - Late joiners see attacks restart: No offset -> `TimePosition = offset * speed` (Enemy Animation State Protocol)
 > - Track state: `TimePosition`, `Speed`, `Length`, `Looped`, `Priority` (and a numeric rank), `IsPlaying`, `WeightCurrent`...
 >
-> Cost: TL;DR ~150 tok · whole note ~500 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~520 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,10 +27,13 @@ API snapshot: member of `AnimationPlayer`, `AnimationTrack`, `AudioPlayer`, `Aud
 
 ## Mentioned in
 
-26 notes in 4 sections. The 25 most relevant are linked:
+27 notes in 5 sections. The 25 most relevant are linked:
+
+### 05 UI and UX
+[[Video in Experiences - VideoPlayer, VideoDisplay and VideoFrame]]
 
 ### 07 Lighting VFX and Audio
-[[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Music and Adaptive Audio]] · [[Sound Fundamentals]] · [[The Audio API - Players Emitters Wires and Effects]]
+[[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]] · [[Music and Adaptive Audio]] · [[Sound Fundamentals]]
 
 ### 08 Animation
 [[Animation Objects]] · [[AnimationTrack Reference]] · [[Combat Combo Systems]] · [[Custom Locomotion Controller Design]] · [[Debugging Animation Problems]] · [[Emotes and Social Animation]] · [[Enemy Animation State Protocol]] · [[Engine Gotchas]] · [[Frame Order and RunService Timing]] · [[Locomotion Systems]] · [[Lua Keyframe Player]] · [[Lua Keyframe Player Internals]] · [[Markers and Events]] · [[Mounts and Rideable Creatures]] · [[Procedural Gait and Footstep Planning]] · [[Replication and Ownership]] · [[Snippets - Lua Keyframe Player Core]] · [[Snippets - Playing Animations]] · [[Troubleshooting Table]]
@@ -41,6 +44,6 @@ API snapshot: member of `AnimationPlayer`, `AnimationTrack`, `AudioPlayer`, `Aud
 ### 62 Engine Reference Cards
 [[SoundService - Engine Reference Card]]
 
-Also mentioned in (not linked): Weapon Rig Player
+Also mentioned in (not linked): The Audio API - Players Emitters Wires and Effects · Weapon Rig Player
 
 <!-- atlas:generated -->

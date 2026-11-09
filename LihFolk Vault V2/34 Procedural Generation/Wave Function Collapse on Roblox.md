@@ -379,5 +379,5 @@ WFC shines for towns, road networks, coastlines, interior decoration, dungeon dr
 
 <!-- related:start -->
 ## Related
-[[Deterministic Simulation]] · [[Procedural Loot and Item Generation]] · [[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Terrain Materials and Painting]] · [[Voxel Scale Grids and Stud Alignment]] · [[Environment and Level Pipeline]]
+[[Deterministic Simulation]] · [[Procedural Loot and Item Generation]] · [[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Terrain Materials and Painting]] · [[EditableMesh - Runtime Mesh Editing, Budgets and Publishing]] · [[Voxel Scale Grids and Stud Alignment]]
 <!-- related:end -->

@@ -15,6 +15,7 @@ This section is about everything that sits on the outside of geometry: custom ma
 | [[Terrain Materials and Painting]] | You paint terrain by hand or by script, want slopes painted automatically, or import a colormap |
 | [[Tiling Trim Sheets and Decal Tricks]] | Your world is mostly Parts and repeats visibly, or you need signs, grime and impact decals that stay cheap |
 | [[Baking Lighting and Detail into Textures]] | Assets look flat on phones, you want AO or gradients without engine support, or you are baking a fixed room |
+| [[Procedural Materials and Skies - Lessons]] | You generate tiling PBR sets or skyboxes by script: proving a material tiles, automated gates, what reviewers scored down, sky seams and poles |
 | [[Stylised vs Realistic Material Pipelines]] | You are choosing a direction, converting CC0 sets to a stylised look, or changing direction mid-project |
 
 ## A suggested path

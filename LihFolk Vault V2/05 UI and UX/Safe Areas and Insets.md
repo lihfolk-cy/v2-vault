@@ -260,5 +260,5 @@ See also: [[ScreenGui Fundamentals]], [[Responsive UI for Phone Tablet Console a
 
 <!-- related:start -->
 ## Related
-[[Designing Roblox UI in Figma - Frames, Safe Areas and Tokens]] · [[Debugging UI Layout and Input]] · [[AI Pitfalls - UI and Input]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[UI Layout Objects - Lists Grids and Pages]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[Figma Property Mapping for Roblox UI]] · [[Gamepad and Console UX]] · [[Settings Menu Design for Roblox - Layout, Controls and Motion]]
+[[Designing Roblox UI in Figma - Frames, Safe Areas and Tokens]] · [[Debugging UI Layout and Input]] · [[AI Pitfalls - UI and Input]] · [[Off-Screen Objective Markers and Waypoint Arrows]] · [[UI Layout Objects - Lists Grids and Pages]] · [[World-Space UI - BillboardGui and SurfaceGui]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Figma Property Mapping for Roblox UI]] · [[Gamepad and Console UX]] · [[Settings Menu Design for Roblox - Layout, Controls and Motion]]
 <!-- related:end -->

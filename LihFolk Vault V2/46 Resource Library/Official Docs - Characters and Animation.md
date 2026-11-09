@@ -1,5 +1,5 @@
 ---
-tags: [resources, links, official-docs, type/reference, area/animation, level/beginner, api/AnimationTrack, api/Humanoid, api/HumanoidDescription]
+tags: [resources, links, official-docs, type/reference, area/animation, level/beginner, api/AnimationTrack, api/Humanoid, api/HumanoidDescription, api/IKControl]
 ---
 # Official Docs - Characters and Animation
 

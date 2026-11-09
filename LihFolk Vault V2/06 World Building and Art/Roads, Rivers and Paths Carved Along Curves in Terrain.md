@@ -162,5 +162,5 @@ Boats need enough depth and width; check against [[Boats Buoyancy and Water]].
 
 <!-- related:start -->
 ## Related
-[[Terrain Materials and Painting]] · [[Terrain - Engine Reference Card]] · [[Parts Unions and MeshParts]] · [[Materials MaterialVariants and SurfaceAppearance]] · [[Level Design for Roblox]] · [[Voxel Art - Studs Outlines and Style Kits]]
+[[Terrain Materials and Painting]] · [[Terrain - Engine Reference Card]] · [[EditableMesh - Runtime Mesh Editing, Budgets and Publishing]] · [[Parts Unions and MeshParts]] · [[Materials MaterialVariants and SurfaceAppearance]] · [[Level Design for Roblox]] · [[Voxel Art - Studs Outlines and Style Kits]]
 <!-- related:end -->

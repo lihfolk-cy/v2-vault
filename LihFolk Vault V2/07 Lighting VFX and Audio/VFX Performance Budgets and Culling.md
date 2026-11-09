@@ -422,5 +422,5 @@ See also: [[VFX Design Playbook]], [[Particle Emitters In Depth]], [[Beams and T
 
 <!-- related:start -->
 ## Related
-[[Weather Performance Budgets and Quality Tiers]] · [[Graphics and Performance Toggles for Low-End Devices]] · [[Projectile VFX - Muzzle, Travel and Impact]] · [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]] · [[Designing VFX Textures and Flipbooks in Figma]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Auras, Shields and Status Effects]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Slash VFX Recipes - Crescent and Ring]] · [[Replicating VFX - Server Validates, Clients Render]]
+[[Weather Performance Budgets and Quality Tiers]] · [[Graphics and Performance Toggles for Low-End Devices]] · [[Projectile VFX - Muzzle, Travel and Impact]] · [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]] · [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]] · [[Designing VFX Textures and Flipbooks in Figma]] · [[Auras, Shields and Status Effects]] · [[Impact Decals and Material-Aware Hit Sparks]] · [[Slash VFX Recipes - Crescent and Ring]] · [[Replicating VFX - Server Validates, Clients Render]]
 <!-- related:end -->

@@ -34,6 +34,15 @@ These are written alongside the ones above and stand on their own; each carries 
 9. [[Melee Combat System End to End]]: a combo sword with server hitboxes, blocking, stun and knockback.
 10. [[Rebirth and Prestige System End to End]]: two reset layers with closed-form bulk buys and safe saving.
 
+## Weekend builds and the systems library
+
+Smaller, complete games you can finish in a weekend, plus the drop-in module library the plugin ships:
+
+11. [[Weekend Build - Arena Shooter with Server-Checked Hits]]: a free-for-all arena with one hitscan blaster and server-validated hits.
+12. [[Weekend Build - Roleplay Town with Jobs and Paychecks]]: three jobs and a paycheck loop for players who are working.
+13. [[Weekend Build - Survival Gather, Craft and Place]]: the smallest complete gather, craft and build loop.
+14. [[LihFolk Systems Library]]: drop-in strict Luau modules for data, remotes, currency, shop, eggs, codes, daily rewards, rebirth, quests and leaderboards. [[LihFolk Systems - Data and Purchase Guarantees]] explains, guarantee by guarantee, how it keeps player data and Robux purchases safe.
+
 A sensible order: Saved Inventory, then Shop for a first monetisation pass, Daily Rewards and Codes for launch retention, Leaderboards for competition, and the gameplay builds for your core loop.
 
 ## What these builds deliberately leave out

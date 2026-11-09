@@ -60,6 +60,21 @@ About 1,300 notes (roughly twenty-five thick textbooks of original LihFolk writi
 **Building art with scripts in Blender:**
 [[Procedural Blender Assets Start Here]] → [[Matching a Concept Sheet - Boss Creature Case Study]] → [[Blender 5 Python Gotchas for Headless Builds]]
 
+**Learning from hit games:**
+[[Top Games Case Studies Start Here]] → [[Viral and Trend Teardowns Start Here]] → [[Viral Game Anatomy - Hooks, Loops and Timing]] → [[High-Craft Teardowns Start Here]] → [[What Craft Looks Like on Roblox - Lessons from Top Studios]]
+
+**Getting the click (thumbnails, icons, CTR):**
+[[Thumbnails and CTR Start Here]] → [[Thumbnail Composition for High CTR - Focal Point, Contrast and Readability]] → [[From CTR to CCU - Impressions, Play-Through and the Discovery Loop]] → [[Thumbnail Review Checklist and Scoring Rubric]]
+
+**Polishing for players (quality of life):**
+[[Player QoL Start Here]] → [[Top 25 QoL Wins by Effort]] → [[Settings Menu Essentials and Persistence]] → [[QoL Audit Checklist]]
+
+**Exact engine numbers and current API names:**
+[[Engine Reference Cards Start Here]] → [[Engine Limits, Quotas and Defaults - Cheat Sheet]] → [[API Renames and Deprecations 2025-2026]] → [[Roblox Changes 2025-2026]] → [[API and Concept Atlas Start Here]]
+
+**Runtime assets and player creation:**
+[[EditableImage for Pixel Buffers and Procedural 2D]] → [[EditableMesh - Runtime Mesh Editing, Budgets and Publishing]] → [[In-Experience Avatar Creation - Tokens, Editing and Prompting]] → [[Video in Experiences - VideoPlayer, VideoDisplay and VideoFrame]]
+
 **Looking for the official docs:**
 [[Resource Library Start Here]]
 
@@ -84,7 +99,7 @@ About 1,300 notes (roughly twenty-five thick textbooks of original LihFolk writi
 - [[Testing Modes - Play Run and Multi-Client]]
 - [[Version History and Backups]]
 
-### 02 Luau Scripting (19 notes)
+### 02 Luau Scripting (20 notes)
 - [[Buffers and Binary Data]]
 - [[CollectionService Patterns]]
 - [[Error Handling - pcall xpcall and Promise Patterns]]
@@ -93,8 +108,8 @@ About 1,300 notes (roughly twenty-five thick textbooks of original LihFolk writi
 - [[Functions Closures and Upvalues]]
 - [[Instances Attributes and Tags]]
 - [[Luau Language Essentials]]
-- [[Luau Performance Patterns with Benchmarks]]
 - [[Luau Performance and Native Codegen]]
+- [[Luau Performance Patterns with Benchmarks]]
 - [[Luau Type System and Strict Mode]]
 - [[Math Vectors and CFrames]]
 - [[Metatables and OOP - When and When Not]]
@@ -104,8 +119,9 @@ About 1,300 notes (roughly twenty-five thick textbooks of original LihFolk writi
 - [[Strings Patterns and Formatting]]
 - [[Tables Metatables and OOP]]
 - [[Task Library Coroutines and Yielding]]
+- [[Text Filtering - TextService for Names, Signs and Messages]]
 
-### 03 Architecture and Networking (17 notes)
+### 03 Architecture and Networking (18 notes)
 - [[Client Prediction and Reconciliation for Combat]]
 - [[Client-Server Model]]
 - [[Cross-Server Messaging]]
@@ -122,9 +138,10 @@ About 1,300 notes (roughly twenty-five thick textbooks of original LihFolk writi
 - [[Replication Rules]]
 - [[Server Authority and Validation]]
 - [[Server Lifecycle and Shutdown]]
+- [[Snapshot Interpolation for Custom Replication]]
 - [[Teleporting and Multi-Place Games]]
 
-### 04 Data and Persistence (14 notes)
+### 04 Data and Persistence (15 notes)
 - [[Data Loss Prevention and Recovery]]
 - [[Data Schema Design and Migrations]]
 - [[DataStore Fundamentals]]
@@ -137,60 +154,98 @@ About 1,300 notes (roughly twenty-five thick textbooks of original LihFolk writi
 - [[Purchase Data and Receipts]]
 - [[Saving Correctly - Autosave and BindToClose]]
 - [[Schema Migrations - Worked Case Studies]]
+- [[Serial-Numbered Limited Items - Atomic Counters]]
 - [[Session Locking and Profile Libraries]]
 - [[Trading Systems Without Duplication]]
 
-### 05 UI and UX (18 notes)
+### 05 UI and UX (32 notes)
 - [[Accessibility]]
 - [[Declarative UI - React-Lua and Fusion]]
+- [[Designing Roblox UI in Figma - Frames, Safe Areas and Tokens]]
+- [[Drag-and-Drop Inventories and Sliders with UIDragDetector]]
+- [[Figma Property Mapping for Roblox UI]]
+- [[Figma to Roblox UI - Pipeline and Handoff]]
 - [[Gamepad and Console UX]]
 - [[HUD Design]]
 - [[Input - UserInputService and ContextActionService]]
 - [[Layout - Scale Offset and Constraints]]
 - [[Localization]]
 - [[Menu Archetypes - Shop Settings Codes Rewards]]
+- [[Minimap and World Map UI - Projection, Rotation and Fog of War]]
+- [[Nametags and Overhead Bars - Cost and Visibility Rules]]
 - [[Notification and Toast Systems]]
+- [[Off-Screen Objective Markers and Waypoint Arrows]]
+- [[Onboarding and FTUE - Tutorials That Keep Players]]
+- [[Race HUD - Position, Laps, Splits, Speedometer and Minimap]]
 - [[Responsive UI for Phone Tablet Console and PC]]
 - [[Safe Areas and Insets]]
 - [[ScreenGui Fundamentals]]
 - [[Settings Menu Design for Roblox - Layout, Controls and Motion]]
 - [[Text Fonts and Rich Text]]
+- [[Touch Gestures - Pinch, Pan, Swipe and Long Press]]
+- [[Tutorial Step Design Patterns - Teach by Doing]]
 - [[UI Design Systems]]
 - [[UI Layout Objects - Lists Grids and Pages]]
 - [[UI Motion Language and Timing]]
+- [[UI Style Directions - A Visual Vocabulary for Briefs]]
+- [[Video in Experiences - VideoPlayer, VideoDisplay and VideoFrame]]
 - [[Virtualized Lists and Large Inventories]]
 - [[World-Space UI - BillboardGui and SurfaceGui]]
 
-### 06 World Building and Art (17 notes)
+### 06 World Building and Art (21 notes)
 - [[Art Budgets - Triangles Draw Calls Memory]]
 - [[Collision and Physics Geometry]]
+- [[EditableMesh - Runtime Mesh Editing, Budgets and Publishing]]
 - [[Environment Art Styles]]
 - [[Foliage Props and Scatter]]
 - [[Grid Placement and Player Building Systems]]
+- [[House Construction Method - Modular Kit Workflow]]
 - [[Level Design for Roblox]]
 - [[Level of Detail and Model Streaming]]
 - [[Materials MaterialVariants and SurfaceAppearance]]
 - [[Modeling in Blender for Roblox]]
 - [[Parts Unions and MeshParts]]
 - [[Procedural World Generation]]
+- [[Roads, Rivers and Paths Carved Along Curves in Terrain]]
 - [[Terrain Deep Dive - Materials Water and Performance]]
 - [[Terrain Tools and Terrain API]]
 - [[Textures Decals and Texture Memory]]
 - [[Voxel Art - Studs Outlines and Style Kits]]
 - [[Water Sky and Atmosphere Art]]
+- [[World Composition and Set Dressing - Designed, Not Scattered]]
 - [[Zone and Biome Art Direction]]
 
-### 07 Lighting VFX and Audio (17 notes)
+### 07 Lighting VFX and Audio (40 notes)
+- [[Ambient Soundscapes - Layer Stacks, Overlapping Zones and Voice Pools]]
+- [[AoE Telegraphs - Readable Ground Warnings]]
 - [[Atmosphere Sky Clouds and Post-Processing]]
+- [[Auras, Shields and Status Effects]]
 - [[Beams and Trails]]
+- [[Collectible Pickup FX - Idle Glint, Magnet Pull and Collect Pop]]
 - [[Combat Sound Design and Feedback]]
+- [[Custom Character Sounds - Replacing Default Footstep and Jump Sounds]]
+- [[Designing VFX Textures and Flipbooks in Figma]]
+- [[Elemental VFX Kits - Fire, Ice, Earth, Water, Wind and Lightning]]
+- [[Engine and Tyre Audio Driven by RPM and Slip]]
+- [[Escalation and Grandeur Without Clutter]]
 - [[Game Feel and Juice]]
+- [[Gore Policy and Kid-Friendly Hit Feedback]]
 - [[Highlights and Selection Effects]]
+- [[Ice Ball Cast to Explosion - Approved Recipe]]
+- [[Impact Decals and Material-Aware Hit Sparks]]
 - [[Light Sources and Shadows]]
 - [[Lighting Mood and Time of Day]]
 - [[Lighting Technologies and Settings]]
+- [[Lightning Strikes and Thunder - Procedural Bolts and Sound Delay]]
 - [[Music and Adaptive Audio]]
+- [[Music Licensing and Audio Upload Rules for 2026]]
 - [[Particle Emitters In Depth]]
+- [[Projectile VFX - Muzzle, Travel and Impact]]
+- [[Rain - Camera-Local Particles, Splashes and Wet Surfaces]]
+- [[Replicating VFX - Server Validates, Clients Render]]
+- [[Screen Damage Effects - Hit Flash, Low-Health Vignette and Blur]]
+- [[Slash VFX Recipes - Crescent and Ring]]
+- [[Snow, Sandstorm, Blizzard and Ash Recipes]]
 - [[Sound Design for Games]]
 - [[Sound Fundamentals]]
 - [[Spatial Audio and Mixing]]
@@ -198,68 +253,99 @@ About 1,300 notes (roughly twenty-five thick textbooks of original LihFolk writi
 - [[The Audio API - Players Emitters Wires and Effects]]
 - [[VFX Design Playbook]]
 - [[VFX Performance Budgets and Culling]]
+- [[VFX Previews in Blender for Roblox - Colour and Framing]]
+- [[VFX Readability and Value - Lessons from Blind Reviews]]
+- [[Weather System Architecture - State Machine, Transitions and Replication]]
 
-### 08 Animation (118 notes)
+### 08 Animation (130 notes)
 Start at [[Animation Start Here]] (reading paths and full map) and [[Animation Glossary]]. Subsections:
 - **Fundamentals**: [[Animation Asset Permissions and Groups]], [[Animation Objects]], [[AnimationConstraint and Physically Simulated Characters]], [[AnimationTrack Reference]], [[Animator Deep Dive]], [[Bones and Skinned Meshes]], [[CurveAnimation and Curve Channels]], [[Frame Order and RunService Timing]], [[How the Animator Really Behaves]], [[Humanoid States and Animation]], [[Keyframes, Easing and Interpolation]], [[KeyframeSequence Keyframe and Pose Reference]], [[Markers and Events]], [[Motor6D Math and CFrame Composition]], [[Playback, Priorities and Blending]], [[Replication and Ownership]], [[Rigs and Joints]], [[Scale and Animation]], [[The Default Animate Script]]
 - **Rigging and Importing**: [[3D Importer Settings Reference]], [[Accessories and Armor That Follow Animation]], [[Animation Data from Blender to Roblox]], [[Blender Armature and Bone Roll Conventions]], [[Creature Rig Conventions]], [[Custom Characters and StarterCharacter]], [[Custom Rigs - Weapons and Props]], [[Exporting FBX vs GLB]], [[Facial Animation and Dynamic Heads]], [[Importing Models and Rigs]], [[Layered Clothing Cages and Animation]], [[R15 Rig Anatomy and Attachments]], [[Retargeting Animations Between Rigs]], [[Rigging in Blender]], [[Weight Painting and Skinning for Roblox]]
-- **Authoring**: [[Animating Creatures and Monsters]], [[Animation Capture and Mocap]], [[Animation Editor Advanced]], [[Animation Editor Workflow]], [[Animation Quality Standard]], [[Animation Review Checklist]], [[Authoring Clips in Code]], [[Combat Animation Craft]], [[Idle Breathing and Secondary Motion]], [[Moon Animator and Third-Party Tools]], [[Posing and Silhouettes]], [[Principles of Animation for Games]], [[Publishing Animations]], [[Spec-Driven Move Authoring]], [[Timing Spacing and Frame Charts]], [[Weapon Swing Design]]
+- **Authoring**: [[Animating Creatures and Monsters]], [[Animation Capture and Mocap]], [[Animation Editor Advanced]], [[Animation Editor Workflow]], [[Animation Quality Standard]], [[Animation Review Checklist]], [[Arm Twist and Grip Roll - Lessons from Baked Sword Clips]], [[Authoring Clips in Code]], [[Blade Grip and Wrist Limits]], [[Combat Animation Craft]], [[Free Mocap and Mixamo Licensing for Roblox]], [[Human Swing Biomechanics]], [[Idle Breathing and Secondary Motion]], [[Locomotion and Melee Reference Numbers]], [[Locomotion Clip Lessons - Jump, Sprint, Idle]], [[Locomotion Readability - Lessons from Blind Panels]], [[Moon Animator and Third-Party Tools]], [[Posing and Silhouettes]], [[Principles of Animation for Games]], [[Publishing Animations]], [[R15 Run Cycle Key Poses]], [[Spec-Driven Move Authoring]], [[Spin and Whole-Body Rotation Moves]], [[Timing Spacing and Frame Charts]], [[Weapon Swing Design]]
 - **Procedural**: [[Elbow Poles Swivel and Joint Limits]], [[Flight Flocks and Path Animation]], [[Foot Placement and Ground IK]], [[IKControl Reference]], [[Inverse Kinematics]], [[Look-At Aim and Head Tracking]], [[Multi-Bone IK - FABRIK and CCD]], [[Procedural Animation]], [[Procedural Death Knockdown and Hit Reactions]], [[Procedural Gait and Footstep Planning]], [[Procedural Weapon Motion]], [[Ragdolls and Physics-Based Animation]], [[Springs Damping and Smoothing]], [[Tween and CFrame Animation of Objects]], [[Two-Bone IK Math]]
-- **Systems**: [[Ability Kits Architecture]], [[Boss Animation and Phases]], [[Camera Shake and Camera FX]], [[Cameras and Cutscenes]], [[Cinematic Ultimates]], [[Combat Combo Systems]], [[Custom Locomotion Controller Design]], [[Emotes and Social Animation]], [[Enemy and NPC Animation]], [[Enemy Animation State Protocol]], [[Equip Draw and Flourish Systems]], [[Hit Reactions Stagger and Hit-Stop]], [[Locomotion Systems]], [[Stance and Charge Moves]], [[UI and GUI Animation]], [[VFX Timing with Animation]], [[Weapon and Combat Animation]]
-- **Pipelines and Tooling**: [[Arm Baker Internals]], [[Arm QA Metrics Reference]], [[Baked Clip Stubs and Archiving]], [[Case Study - Abilities That Only Worked in Studio]], [[Case Study - Cutting a Million Instances]], [[Case Study - Fixing Hundreds of Attack Clips]], [[Clip Archive Server]], [[Clip Buffer Format]], [[Enemy Import Axis Fix]], [[Ground Fitting Pipeline]], [[Lua Keyframe Player Internals]], [[Lua Keyframe Player]], [[Pipeline - Arm IK Baking and QA]], [[Pipeline - Importing Animated Enemies]], [[Pipeline - New Animated Weapon]], [[Studio Tooling Architecture]], [[Weapon Design Rig Builder]], [[Weapon Rig Player]]
+- **Systems**: [[Ability Kits Architecture]], [[Boss Animation and Phases]], [[Camera Shake and Camera FX]], [[Cameras and Cutscenes]], [[Cinematic Ultimates]], [[Combat Combo Systems]], [[Custom Locomotion Controller Design]], [[Emotes and Social Animation]], [[Enemy and NPC Animation]], [[Enemy Animation State Protocol]], [[Equip Draw and Flourish Systems]], [[First-Person Viewmodels - Arms Rig, Sway and Camera Binding]], [[Hit Reactions Stagger and Hit-Stop]], [[Locomotion Systems]], [[Mounts and Rideable Creatures]], [[Stance and Charge Moves]], [[UI and GUI Animation]], [[VFX Timing with Animation]], [[Weapon and Combat Animation]]
+- **Pipelines and Tooling**: [[Arm Baker Internals]], [[Arm QA Metrics Reference]], [[Baked Clip Stubs and Archiving]], [[Case Study - Abilities That Only Worked in Studio]], [[Case Study - Cutting a Million Instances]], [[Case Study - Fixing Hundreds of Attack Clips]], [[Clip Archive Server]], [[Clip Buffer Format]], [[Enemy Import Axis Fix]], [[Ground Fitting Pipeline]], [[LihFolk R15 Keyframe Pipeline]], [[Lua Keyframe Player]], [[Lua Keyframe Player Internals]], [[Pipeline - Arm IK Baking and QA]], [[Pipeline - Importing Animated Enemies]], [[Pipeline - New Animated Weapon]], [[Studio Tooling Architecture]], [[Weapon Design Rig Builder]], [[Weapon Rig Player]]
 - **Gotchas**: [[Animation LOD]], [[Debugging Animation Problems]], [[Engine Gotchas]], [[Open Questions]], [[Performance and Memory]], [[Testing Animations in Studio]], [[Troubleshooting Table]]
 - **Snippets**: [[Snippets - Animation Controller Module]], [[Snippets - Building and Sampling Clips]], [[Snippets - Camera Shake and FX]], [[Snippets - Enemy Client Animator]], [[Snippets - IK]], [[Snippets - Lua Keyframe Player Core]], [[Snippets - Playing Animations]], [[Snippets - Procedural Motion]], [[Snippets - Ragdoll]]
 
-
-### 09 Gameplay Systems (19 notes)
+### 09 Gameplay Systems (41 notes)
+- [[AI Difficulty Tuning - Reaction Time, Aim Error and Fair Misses]]
 - [[Behaviour Trees Utility AI and State Machines for NPCs]]
+- [[Camera Obstruction Handling - Occlusion Modes, Fades and Collision]]
 - [[Camera Systems]]
+- [[Character Select and Class Systems with Different Rigs]]
 - [[Characters and Humanoids]]
+- [[Chase Cameras and Speed Effects for Vehicles]]
+- [[Clickable and Interactive Parts - ClickDetector, ProximityPrompt and Touched]]
 - [[Combat Systems Architecture]]
 - [[Custom Character Controllers]]
+- [[Damage Formula Pipeline - Armor, Resistances, Crits and Order of Operations]]
+- [[Downed, Revive and Bleed-Out States]]
 - [[Economies and Currencies]]
+- [[Enemy Archetype Kit - Fodder, Tank, Ranged, Support and Exploder]]
+- [[Explosions - Radius Damage, Falloff and Cover Checks]]
+- [[Grabs, Carries and Throws - Moving Players Safely]]
+- [[Gun Feel - Recoil, Spread, Bloom and Headshot Multipliers]]
 - [[Hitboxes and Hit Detection]]
+- [[Kill Credit, Assists, Kill Feed and Death Recaps]]
+- [[Map Voting and Rotation for Round Games]]
 - [[Mover Constraints and Physics Controllers]]
 - [[NPC AI and Behaviour]]
+- [[Parkour Moves - Vault, Ledge Grab, Mantle and Wall-Run]]
 - [[Pathfinding]]
 - [[Pathfinding Edge Cases and Fallbacks]]
 - [[Physics Assemblies and Constraints]]
+- [[Police Chases and Wanted Levels]]
 - [[Progression Levels and Unlocks]]
 - [[Quests and Objectives]]
-- [[RNG Drops and Luck Systems]]
+- [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]]
 - [[Raycasts Shapecasts and Spatial Queries]]
+- [[RNG Drops and Luck Systems]]
+- [[Spawn Director - Credit Budgets and Player-Count Scaling]]
 - [[Spawning Teams and Rounds]]
+- [[Squad AI - Attack Tokens, Flanking and Attacker Limits]]
 - [[Status Effects Buffs and Stacking Rules]]
 - [[Tools and Inventory Systems]]
+- [[Visual AI Debugging - State Labels, Path Lines and Perception Gizmos]]
+- [[Weather That Changes Gameplay - Grip, Visibility and Hearing]]
+- [[Wildlife and Ambient Creature AI - Passive, Neutral and Hostile]]
+- [[Zone Detection - Area Enter and Exit for Music, Lighting and Ambience]]
 
-### 10 Game Design and Genres (25 notes)
+### 10 Game Design and Genres (32 notes)
 - [[Balancing with Spreadsheets and Data]]
 - [[Boss Fight Design Patterns]]
 - [[Core Loops and Session Design]]
 - [[Ethical Design and Player Trust]]
 - [[First-Time User Experience and Onboarding]]
+- [[Genre Playbook - Battle Royale]]
 - [[Genre Playbook - Battlegrounds and Arena Fighters]]
 - [[Genre Playbook - Combat and RPG]]
 - [[Genre Playbook - Horror and Story]]
+- [[Genre Playbook - Naval and Open-Sea Adventure]]
 - [[Genre Playbook - Obbies and Platformers]]
+- [[Genre Playbook - Open-World City and Crime Roleplay]]
 - [[Genre Playbook - Party and Minigame Collections]]
 - [[Genre Playbook - Puzzle and Escape Rooms]]
-- [[Genre Playbook - RNG and Collection Games]]
 - [[Genre Playbook - Racing and Driving]]
+- [[Genre Playbook - RNG and Collection Games]]
 - [[Genre Playbook - Roleplay and Social Hangouts]]
 - [[Genre Playbook - Shooters FPS and TPS]]
 - [[Genre Playbook - Simulators]]
+- [[Genre Playbook - Social Deduction and Murder Mystery]]
 - [[Genre Playbook - Sports]]
 - [[Genre Playbook - Survival and Crafting]]
 - [[Genre Playbook - Tower Defense]]
 - [[Genre Playbook - Tycoons]]
+- [[Genre Playbook - Zombie and Wave Survival Co-op]]
+- [[Onboarding by Genre - The First Five Minutes]]
 - [[Progression and Pacing Design]]
 - [[Rarity Ladders and Drop Pacing Math]]
 - [[Retention and Return Hooks]]
 - [[Simulator and RNG Genre Teardown]]
 - [[Social Design and Multiplayer Play]]
+- [[Time-to-Kill Math and a Weapon Balance Sheet]]
 
-### 11 Monetization Publishing and Live Ops (18 notes)
+### 11 Monetization Publishing and Live Ops (20 notes)
 - [[Ads and Rewarded Video]]
 - [[Age Checks and Safety Features]]
 - [[Analytics and Funnels]]
@@ -269,6 +355,7 @@ Start at [[Animation Start Here]] (reading paths and full map) and [[Animation G
 - [[Economy Inflation Sinks and Faucets Math]]
 - [[Game Passes]]
 - [[Live Ops Events and Updates]]
+- [[Measuring Onboarding - Funnels, Drop-off and A-B Tests]]
 - [[Monetization Overview]]
 - [[Paid Random Items and Odds Disclosure in Practice]]
 - [[Pricing and Store Design]]
@@ -278,13 +365,21 @@ Start at [[Animation Start Here]] (reading paths and full map) and [[Animation G
 - [[Robux Price Points and Offer Design]]
 - [[Subscriptions and Premium Payouts]]
 - [[Thumbnails Icons and Store Page]]
+- [[Unit Economics - ARPDAU, Payer Conversion, LTV and Ad Payback]]
 
-### 12 Performance Testing and Debugging (18 notes)
+### 12 Performance Testing and Debugging (30 notes)
+- [[Automated Luau Checks - LihFolk Hook and Audit]]
 - [[Automated Testing with TestEZ and Jest-Lua]]
+- [[Client Zone Culling for Interiors and Cities]]
 - [[Crash and Error Telemetry]]
 - [[Debugger Breakpoints and Logging]]
 - [[Developer Console and Stats]]
+- [[Dupe Hunting Test Script - Trades, Gifts, Drops and Rejoins]]
+- [[Gated Tester Commands and Debug Panels]]
+- [[Genre QA Passes - Test Checklists per Game Type]]
 - [[Hunting Memory Leaks Step by Step]]
+- [[In-Game Bug Report Button with Automatic Context]]
+- [[Load and Soak Testing Servers - Long Sessions and Many Clients]]
 - [[Memory Budgets and Leaks]]
 - [[MicroProfiler Guide]]
 - [[Mobile and Low-End Optimization]]
@@ -296,15 +391,22 @@ Start at [[Animation Start Here]] (reading paths and full map) and [[Animation G
 - [[Physics Performance]]
 - [[QA Checklists Before Release]]
 - [[Rendering Performance]]
+- [[Save Migration Tests - Fixture Saves and Golden Files]]
 - [[Script Performance]]
+- [[StreamingEnabled QA - Forcing Stream-Out to Catch Nil Bugs]]
 - [[Testing Strategies and Frameworks]]
+- [[Testing Time-Based Features with a Controllable Clock]]
+- [[UI Automation with VirtualInput and StudioTestService]]
+- [[Weather Performance Budgets and Quality Tiers]]
 
-### 13 Production and Case Studies (15 notes)
+### 13 Production and Case Studies (19 notes)
 - [[Asset Pipelines]]
+- [[Case Study - Building LihFolk V2 with AI Agents]]
 - [[Case Study - Enemy Roster Rebuild]]
 - [[Case Study - Fast Join and Deferred Loading]]
 - [[Case Study - Instance Cleanup and Place Size]]
 - [[Case Study - Phone UI Overhaul]]
+- [[Disaster Recovery for a Roblox Game - Places, Code, Assets, Data and Accounts]]
 - [[Documentation and Knowledge Bases]]
 - [[Lessons Learned Index]]
 - [[Live Incident Response and Post-Mortems]]
@@ -313,15 +415,20 @@ Start at [[Animation Start Here]] (reading paths and full map) and [[Animation G
 - [[Release Process and Rollbacks]]
 - [[Safe Changes in a Shared Place]]
 - [[Scoping and Roles for Small Teams]]
+- [[Ship a Game in 30 Days - Week-by-Week Plan for a Solo Dev]]
 - [[Team Roles and Workflows]]
+- [[Template Reskin Checklist - One Codebase, New Game]]
 - [[Working with AI Assistants in Studio]]
 
-### 14 3D Modeling (21 notes)
+### 14 3D Modeling (27 notes)
+- [[Bezier Curves and Splines for Modellers]]
 - [[Blender Workflow for Roblox Creators]]
+- [[Curve-Based Modelling in Blender for Roblox]]
 - [[Exporting and Validating Models for Roblox]]
 - [[Hand-Painted and Stylized Texturing]]
 - [[Hard-Surface Modeling]]
 - [[Low-Poly and Stylized Modeling]]
+- [[Mesh Gates for Generated Models - Symmetry, Seating and Caps]]
 - [[Mesh Optimization for Mobile]]
 - [[Modeling Characters for R15 and Custom Rigs]]
 - [[Modeling Fundamentals for Games]]
@@ -330,7 +437,10 @@ Start at [[Animation Start Here]] (reading paths and full map) and [[Animation G
 - [[Normal Maps and Detail Baking]]
 - [[Organic and Creature Modeling]]
 - [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]]
+- [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]]
+- [[Procedural Model Kits - Lessons]]
 - [[Retopology and Decimation]]
+- [[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]]
 - [[Substance Painter and Texturing Tools]]
 - [[Texturing and PBR Baking]]
 - [[Topology and Edge Flow]]
@@ -339,25 +449,44 @@ Start at [[Animation Start Here]] (reading paths and full map) and [[Animation G
 - [[UV Unwrapping]]
 - [[Voxel and Blocky Modeling]]
 
-### 15 AI Tools (14 notes)
+### 15 AI Tools (30 notes)
+- [[Agent Orchestration - Sub-Agents, Hooks and Skill Costs]]
 - [[AI 3D Model Generation Outside Roblox]]
 - [[AI Agents and Autonomous Workflows]]
 - [[AI Animation and Motion from Video]]
+- [[AI Asset Pipelines - Scoring, Reviewers and Spot Checks]]
 - [[AI Audio - Voice Music and SFX]]
 - [[AI Code Assistants for Luau]]
 - [[AI Image Generation for Icons Thumbnails and Concepts]]
-- [[AI Material and Texture Generation]]
 - [[AI in Roblox Development Overview]]
+- [[AI Material and Texture Generation]]
+- [[AI Pitfalls - Assets and Import]]
+- [[AI Pitfalls - Data and Monetization]]
+- [[AI Pitfalls - Networking and Security]]
+- [[AI Pitfalls - Physics and Animation]]
+- [[AI Pitfalls - Stale APIs and Luau]]
+- [[AI Pitfalls - UI and Input]]
+- [[Benchmark - Does a Knowledge Vault Make AI Better at Roblox]]
 - [[Evaluating AI Tools - A Practical Rubric]]
 - [[In-Game AI - LLM NPCs and Text Generation]]
+- [[Local vs Cloud AI - Keeping Unreleased Game Code Private]]
+- [[Obsidian Vaults for AI Agents - Structure, Graph and Theming]]
 - [[Prompting and Verifying AI Output]]
+- [[Roblox Built-In AI Tools Timeline 2023-2026]]
 - [[Roblox Generative AI - Cube Mesh and Texture Generation]]
 - [[Roblox Policies on AI-Generated Content]]
 - [[Roblox Studio Assistant]]
+- [[Token Cost Benchmarks]]
+- [[What AI Models Get Wrong in Roblox]]
+- [[Who Owns AI-Generated Code and Assets]]
+- [[Windows Tooling Pitfalls for Agent Pipelines]]
 
-### 16 MCP and Agents (12 notes)
+### 16 MCP and Agents (15 notes)
+- [[Agent Handoff Notes - Project State and Resume Templates]]
 - [[Agent Review Loops and Guardrails in Practice]]
+- [[AI-Ready Project Boilerplate - Repo Layout Agents Navigate Well]]
 - [[Blender MCP]]
+- [[Built-In Studio MCP vs Community MCP Servers - Migration Guide]]
 - [[Case Study - Building a Game with AI Agents]]
 - [[MCP Workflows for Building Worlds]]
 - [[MCP Workflows for Scripting and Debugging]]
@@ -392,11 +521,16 @@ Start at [[Animation Start Here]] (reading paths and full map) and [[Animation G
 ### 19 Concept Sheets (10 sheets, 4K PNG)
 - [[Concept Sheets]]
 
-### 21 LihFolk UI Design System
+### 21 LihFolk UI Design System (3 notes)
 - [[LihFolk UI Design System]]
+- [[Glossy Icon Style - Owner Reference]]
+- [[LihFolk UI Spec]]
 
-### 22 Anti-Exploit and Security (9 notes)
+### 22 Anti-Exploit and Security (12 notes)
 - [[Anti-Exploit Start Here]]
+- [[Admin Commands Done Safely - Permissions and Audit Logs]]
+- [[Autoclicker and Macro Detection for Combat Remotes]]
+- [[Creator Account Security and Takeover Recovery]]
 - [[Detecting Combat Exploits - Reach Rate and Aim]]
 - [[Detecting Movement Exploits - Speed Fly Noclip Teleport]]
 - [[Economy Exploits - Dupes Races and Purchase Abuse]]
@@ -407,20 +541,23 @@ Start at [[Animation Start Here]] (reading paths and full map) and [[Animation G
 - [[Threat Modeling a Roblox Game]]
 
 ### 23 Debugging Deep Dives (9 notes)
+- [[Debugging Start Here]]
 - [[Debugging Client-Server Desync]]
 - [[Debugging DataStore Problems]]
 - [[Debugging Live Servers]]
 - [[Debugging Physics and Network Ownership]]
 - [[Debugging Race Conditions and Yield Order]]
-- [[Debugging Start Here]]
 - [[Debugging UI Layout and Input]]
 - [[Reading Luau Errors and Stack Traces]]
 - [[The Debugging Method - Reproduce Isolate Bisect]]
 
-### 24 Worked Builds (11 notes)
+### 24 Worked Builds (16 notes)
+- [[Worked Builds Start Here]]
 - [[Codes Redemption System End to End]]
 - [[Daily Rewards System End to End]]
 - [[Global Leaderboards End to End]]
+- [[LihFolk Systems - Data and Purchase Guarantees]]
+- [[LihFolk Systems Library]]
 - [[Melee Combat System End to End]]
 - [[Pet Hatching and Following End to End]]
 - [[Quest Chain System End to End]]
@@ -428,16 +565,31 @@ Start at [[Animation Start Here]] (reading paths and full map) and [[Animation G
 - [[Round-Based Minigame Loop End to End]]
 - [[Saved Inventory End to End]]
 - [[Shop with Game Passes and Developer Products End to End]]
-- [[Worked Builds Start Here]]
+- [[Weekend Build - Arena Shooter with Server-Checked Hits]]
+- [[Weekend Build - Roleplay Town with Jobs and Paychecks]]
+- [[Weekend Build - Survival Gather, Craft and Place]]
 
-### 25 Physics and Vehicles (7 notes)
+### 25 Physics and Vehicles (20 notes)
+- [[Physics and Vehicles Start Here]]
 - [[Aircraft and Flight Models]]
 - [[Boats Buoyancy and Water]]
 - [[Cars with Constraints - Suspension Steering and Drive]]
+- [[Centre of Mass, Anti-Flip and Self-Righting]]
+- [[Choosing a Car Chassis - Raycast Suspension vs Constraint Builds vs Community Kits]]
 - [[Destruction and Fracture]]
-- [[Physics and Vehicles Start Here]]
+- [[Engine, Gearbox and Torque Curve Model for Arcade Cars]]
+- [[Multi-Seat Vehicles - Driver, Passenger and Gunner Roles]]
 - [[Projectiles and Ballistics]]
+- [[Racing AI on a Racing Line - Spline Following and Rubber-Banding]]
+- [[Rides and Attractions - Roller Coasters, Ziplines, Elevators and Cable Cars]]
 - [[Ropes Chains and Soft Bodies]]
+- [[Standing on Moving Vehicles and Platforms - Keeping Players Glued]]
+- [[Steering Geometry and Arcade Drifting - Ackermann, Slip and Grip Tuning]]
+- [[Vehicle Controls on Phone and Gamepad - Input Actions for Throttle and Steer]]
+- [[Vehicle Damage, Repair and Wreck States]]
+- [[Vehicle Ownership and Anti-Exploit - Server-Checked Driving]]
+- [[Vehicle Spawner and Garage - Spawn, Ownership, Despawn and Limits]]
+- [[Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver]]
 
 ### 26 Community and Moderation (7 notes)
 - [[Community and Moderation Start Here]]
@@ -448,32 +600,39 @@ Start at [[Animation Start Here]] (reading paths and full map) and [[Animation G
 - [[Voice Chat and Safety Features]]
 - [[Working with Content Creators]]
 
-### 27 Marketing and Growth (7 notes)
+### 27 Marketing and Growth (13 notes)
+- [[Marketing and Growth Start Here]]
 - [[A-B Testing and Experiments on Roblox]]
 - [[Competitor Analysis Method]]
+- [[Experience Description and Search Keywords]]
+- [[Game Icon Design - Readable at Small Sizes]]
+- [[Game Trailers and Clean Footage - Capture, Freecam and Editing]]
 - [[Launch Strategy - The First Two Weeks]]
-- [[Marketing and Growth Start Here]]
+- [[Marketing to Kids and Teens - Age Rules and Paid-Promo Disclosure]]
+- [[Rescuing a Weak Launch - Empty Servers, Low CCU and Relaunch Tactics]]
+- [[Roblox Communities as Your On-Platform Hub]]
 - [[Short-Form Video Marketing]]
 - [[Sponsored Ads and Campaign Math]]
 - [[Update Cadence and Hype Cycles]]
 
-### 28 Business and Careers (7 notes)
-- [[Building a Portfolio as a Roblox Developer]]
+### 28 Business and Careers (8 notes)
 - [[Business and Careers Start Here]]
+- [[Building a Portfolio as a Roblox Developer]]
 - [[Commissions Pricing and Contracts]]
 - [[DevEx and Cashing Out]]
 - [[Hiring Freelancers and Revenue Shares]]
 - [[Legal Basics - IP Licenses and Assets]]
+- [[Open-Source Licenses for Roblox Libraries - Quick Reference]]
 - [[Running a Small Studio as a Business]]
 
 ### 29 Luau Cookbook (7 notes)
+- [[Luau Cookbook Start Here]]
 - [[Cookbook - Data and Saving]]
 - [[Cookbook - Math CFrame and Vectors]]
 - [[Cookbook - Players and Characters]]
 - [[Cookbook - Remotes and Networking]]
 - [[Cookbook - Tables Strings and Time]]
 - [[Cookbook - UI]]
-- [[Luau Cookbook Start Here]]
 
 ### 31 LihFolk AI Skills (11 notes)
 - [[AI Skills Start Here]]
@@ -488,34 +647,45 @@ Start at [[Animation Start Here]] (reading paths and full map) and [[Animation G
 - [[Skill - Roblox UI Builder]]
 - [[Skill - Roblox Vault Research]]
 
-### 32 Case Studies of Top Roblox Games (12 notes)
+### 32 Case Studies of Top Roblox Games (19 notes)
 - [[Top Games Case Studies Start Here]]
 - [[Case Study - 99 Nights in the Forest]]
 - [[Case Study - Adopt Me]]
 - [[Case Study - Blox Fruits]]
 - [[Case Study - Brookhaven RP]]
+- [[Case Study - Dead Rails]]
 - [[Case Study - Doors]]
 - [[Case Study - Dress to Impress]]
 - [[Case Study - Fisch]]
+- [[Case Study - Forsaken]]
 - [[Case Study - Grow a Garden]]
+- [[Case Study - Jailbreak]]
+- [[Case Study - Murder Mystery 2]]
 - [[Case Study - Pet Simulator 99]]
+- [[Case Study - Rivals]]
 - [[Case Study - Steal a Brainrot]]
+- [[Case Study - The Strongest Battlegrounds]]
+- [[Case Study - Tower Defense Simulator]]
 - [[Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks]]
 
-### 33 Level Design (7 notes)
-- [[Combat Arena and Encounter Layout]]
-- [[Level Design Principles - Flow Sightlines and Landmarks]]
+### 33 Level Design (11 notes)
 - [[Level Design Start Here]]
+- [[Combat Arena and Encounter Layout]]
+- [[Instanced Interiors - Pooled House and Room Copies for Many Players]]
+- [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]]
+- [[Level Design Principles - Flow Sightlines and Landmarks]]
 - [[Lobby and Hub Design]]
 - [[Obby and Platforming Level Design]]
+- [[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]]
+- [[Playtest Heatmaps - Position and Death Maps]]
 - [[Spawn Points Safe Zones and Respawn Flow]]
 - [[Teaching Through Level Design]]
 
 ### 34 Procedural Generation (7 notes)
+- [[Procedural Generation Start Here]]
 - [[Dungeon and Room Generation]]
 - [[Infinite and Streamed Worlds]]
 - [[Noise Functions and Terrain Generation]]
-- [[Procedural Generation Start Here]]
 - [[Procedural Loot and Item Generation]]
 - [[Seeds Determinism and Reproducible Worlds]]
 - [[Wave Function Collapse on Roblox]]
@@ -529,95 +699,106 @@ Start at [[Animation Start Here]] (reading paths and full map) and [[Animation G
 - [[Module Design and Dependency Injection]]
 - [[Serialization Formats for Saves and Networking]]
 
-### 36 Narrative and Worldbuilding (7 notes)
+### 36 Narrative and Worldbuilding (10 notes)
+- [[Narrative Start Here]]
 - [[Dialogue System End to End]]
 - [[Localization-Ready Writing]]
 - [[Lore Delivery Without Walls of Text]]
+- [[Multiplayer Cutscene Sync - Server Clock, Late Joiners and Skip Votes]]
 - [[Naming Items Zones and Abilities]]
-- [[Narrative Start Here]]
+- [[Puzzle Dependency Charts and Hint Systems]]
 - [[Quest Writing and Hooks]]
+- [[Story State Flags and Chapter Saves]]
 - [[Writing Dialogue for Roblox Players]]
 
-### 37 Avatars and UGC (7 notes)
+### 37 Avatars and UGC (8 notes)
+- [[Avatars and UGC Start Here]]
 - [[Avatar Body Types and Scale in Gameplay]]
 - [[AvatarEditorService and In-Game Avatar Editors]]
-- [[Avatars and UGC Start Here]]
 - [[Bundles Animation Packs and Emotes for Sale]]
 - [[HumanoidDescription and Outfit Systems]]
+- [[In-Experience Avatar Creation - Tokens, Editing and Prompting]]
 - [[Layered Clothing Creation Workflow]]
 - [[UGC Pricing Limiteds and Marketplace Rules]]
 
 ### 38 Live Ops Deep Dive (7 notes)
+- [[Live Ops Deep Dive Start Here]]
 - [[Battle Pass and Season Design]]
 - [[Economy Resets and Seasonal Wipes]]
 - [[Event Calendars and Content Planning]]
 - [[Feature Flags and Staged Rollouts]]
 - [[Limited-Time Offers - Design and Ethics]]
-- [[Live Ops Deep Dive Start Here]]
 - [[Patch Notes and Player Communication]]
 
 ### 39 Studio Plugins and Tooling (7 notes)
-- [[Building a Studio Plugin End to End]]
 - [[Plugin Development Start Here]]
+- [[Building a Studio Plugin End to End]]
 - [[Plugin Security and Permissions]]
 - [[Plugin UI with DockWidgets]]
 - [[Publishing Selling and Updating Plugins]]
 - [[Selection Editing and Bulk Tools]]
 - [[Undo and ChangeHistoryService Done Right]]
 
-### 40 Game Math (7 notes)
-- [[Big Numbers Precision and Formatting]]
-- [[Dot and Cross Products in Gameplay]]
+### 40 Game Math (8 notes)
 - [[Game Math Start Here]]
+- [[Big Numbers Precision and Formatting]]
+- [[Curves in Luau - Paths Beams and Motion]]
+- [[Dot and Cross Products in Gameplay]]
 - [[Interpolation Easing and Curves Math]]
 - [[Intersection and Collision Math]]
 - [[Probability and Statistics for Designers]]
 - [[Rotations Angles and Quaternions]]
 
 ### 41 Multiplayer Services (7 notes)
-- [[Matchmaking Queues with MemoryStore]]
 - [[Multiplayer Services Start Here]]
+- [[Matchmaking Queues with MemoryStore]]
 - [[Parties and Group Teleports]]
 - [[Reserved and Private Servers in Practice]]
 - [[Server Browsers and Server Lists]]
 - [[Server Shutdowns Soft Updates and Migration]]
 - [[Session State Across Places]]
 
-### 42 Accessibility and Inclusive Design (7 notes)
+### 42 Accessibility and Inclusive Design (8 notes)
 - [[Accessibility Start Here]]
 - [[Captions and Audio Accessibility]]
 - [[Colour-Blind Safe Design]]
 - [[Difficulty Options and Cognitive Load]]
 - [[Input Remapping and One-Handed Play]]
 - [[Motion Sensitivity and Camera Comfort]]
+- [[Onboarding Accessibility and Cross-Device Prompts]]
 - [[Readable Text and UI Scale]]
 
 ### 43 Genre Systems End to End (7 notes)
-- [[Arena Rounds with Teams and Spectating End to End]]
 - [[Genre Systems Start Here]]
+- [[Arena Rounds with Teams and Spectating End to End]]
 - [[Horror Monster Chase AI End to End]]
 - [[Obby Checkpoints and Stage Saves End to End]]
 - [[Racing Laps and Checkpoints End to End]]
 - [[Tower Defense Waves and Placement End to End]]
 - [[Tycoon Plots and Droppers End to End]]
 
-### 44 Materials and Surfaces (7 notes)
-- [[Baking Lighting and Detail into Textures]]
+### 44 Materials and Surfaces (8 notes)
 - [[Materials and Surfaces Start Here]]
+- [[Baking Lighting and Detail into Textures]]
 - [[MaterialService and Custom Materials]]
+- [[Procedural Materials and Skies - Lessons]]
 - [[Stylised vs Realistic Material Pipelines]]
 - [[SurfaceAppearance PBR Workflow]]
 - [[Terrain Materials and Painting]]
 - [[Tiling Trim Sheets and Decal Tricks]]
 
-### 45 Procedural Blender Assets (8 notes)
+### 45 Procedural Blender Assets (12 notes)
+- [[Procedural Blender Assets Start Here]]
 - [[Blender 5 Python Gotchas for Headless Builds]]
 - [[Chibi Character Rules in Practice]]
+- [[Dash VFX Presentation on an R15 Rig]]
 - [[Dramatic Showcase Renders in Eevee]]
+- [[Low-Poly Creature From a Flat Reference Sheet]]
 - [[Low-Poly Tree Set Worked Example]]
 - [[Matching a Concept Sheet - Boss Creature Case Study]]
 - [[Mesh VFX Packs Built in Blender]]
-- [[Procedural Blender Assets Start Here]]
+- [[Stylised Log Cabin Worked Example]]
+- [[Stylised Shop Stand Worked Example]]
 - [[Stylised Weapons From a Concept]]
 
 ### 46 Resource Library (18 notes, 886 official links)
@@ -641,13 +822,24 @@ Start at [[Resource Library Start Here]]: 17 topic notes that link only to first
 - [[Pricing Curves and Upgrade Costs]]
 - [[Simulating an Economy Before Launch]]
 
-### 49 Roblox Platform Features (7 notes)
+### 49 Roblox Platform Features (18 notes)
 - [[Platform Features Start Here]]
+- [[API Renames and Deprecations 2025-2026]]
 - [[Avatar Context Menus Profiles and Social Surfaces]]
 - [[Badges and Achievement Design]]
 - [[Commerce and Physical Goods]]
+- [[Console and VR Release Checklists]]
+- [[Data and Cloud Changes 2025-2026]]
+- [[Discovery and Monetization Changes 2025-2026]]
+- [[Engine and API Changes 2025-2026]]
+- [[Engine Limits, Quotas and Defaults - Cheat Sheet]]
 - [[Experience Notifications and Return Prompts]]
 - [[Friend Invites Referrals and Experience Invites]]
+- [[Photo Mode and In-Game Screenshots with CaptureService]]
+- [[Policy and Age Rules 2026]]
+- [[Regional Compliance - Paid Random Items and Country Rules]]
+- [[Roblox Changes 2025-2026]]
+- [[Server Authority and Input Migration 2026]]
 - [[Subscriptions and Recurring Revenue]]
 
 ### 50 Team Collaboration and Project Management (7 notes)
@@ -711,11 +903,12 @@ Start at [[Resource Library Start Here]]: 17 topic notes that link only to first
 - [[Tween vs Spring]]
 - [[Variance]]
 
-### 53 Voxel Modelling Deep Dive (8 notes)
+### 53 Voxel Modelling Deep Dive (9 notes)
 - [[Voxel Modelling Start Here]]
 - [[MagicaVoxel Goxel and Blockbench Workflows Compared]]
 - [[Meshing Voxels for Roblox - Greedy Meshing and Export]]
 - [[Voxel Characters - Proportions Joints and Rigging]]
+- [[Voxel Chibi Heroes - Class Roster and Rarity Ladder]]
 - [[Voxel Palettes - Ramps Hue Shifting and Limits]]
 - [[Voxel Props Environments and Modular Tiles]]
 - [[Voxel Scale Grids and Stud Alignment]]
@@ -731,8 +924,9 @@ Start at [[Resource Library Start Here]]: 17 topic notes that link only to first
 - [[Lighting Untextured Art in Roblox]]
 - [[The Gradient Palette Texture Workflow]]
 
-### 55 Modelling Nuance and Readability (8 notes)
+### 55 Modelling Nuance and Readability (9 notes)
 - [[Modelling Nuance Start Here]]
+- [[Art-Direction Nitpicks - The Principles Behind Them]]
 - [[Bevels Chamfers and Edge Highlights Without Textures]]
 - [[Critiquing a Model - Paintovers and Iteration]]
 - [[Modelling to the Roblox Camera and Player Scale]]
@@ -741,8 +935,126 @@ Start at [[Resource Library Start Here]]: 17 topic notes that link only to first
 - [[Spending Triangles Where the Camera Looks]]
 - [[Style Bibles for Consistent Models]]
 
-### 56 Field Notes (21 notes)
-Start at [[Field Notes Start Here]]: 20 hard-won lessons from a shipped action RPG (camera, UI, input, animation, audio, data, Studio automation, many-agent workflows).
+### 56 Field Notes (22 notes)
+Start at [[Field Notes Start Here]]: 21 hard-won lessons from a shipped action RPG (camera, UI, input, animation, audio, data, Studio automation, many-agent workflows).
+
+### 57 API and Concept Atlas (310 notes, generated)
+Start at [[API and Concept Atlas Start Here]]: 309 short nodes, one per Roblox API or core concept that at least 3 notes mention, each linking the notes that cover it. Generated by `_tools/link_builder.py`; do not edit by hand.
+
+### 58 Player QoL and Game Tweaks (29 notes)
+- [[Player QoL Start Here]]
+- [[Accessibility Cross-Links for QoL Settings]]
+- [[AFK Detection Idle Kicks and AFK Reward Rules]]
+- [[Aim Assist and Generous Hitboxes]]
+- [[Audio Mixer Settings with SoundGroups]]
+- [[Block and Mute Respecting Platform Rules]]
+- [[Camera Settings - FOV Shake Sensitivity and Shift-Lock]]
+- [[Colourblind Palettes Text Size and Tooltips]]
+- [[Comfort Toggles - Flashes Damage Numbers and Hit-Stop]]
+- [[Confirmation and Undo Patterns for Destructive and Paid Actions]]
+- [[Controller Support QoL]]
+- [[Feedback - Autosave Indicator Ping Display and Error Toasts]]
+- [[Graphics and Performance Toggles for Low-End Devices]]
+- [[Hold vs Toggle Auto-Sprint Auto-Equip and Quick Slots]]
+- [[Inventory QoL - Sort Filter Search Stack and Lock]]
+- [[Joining Friends Parties and Private Servers]]
+- [[Loading Screen Skip and First-Session Goals]]
+- [[Making Numbers Feel Good - Cooldowns Buffering and Coyote Time]]
+- [[Mobile Button Layout Editor]]
+- [[Notification Queues and Limits]]
+- [[Purchase Receipts and Purchase History in UI]]
+- [[QoL Audit Checklist]]
+- [[Quick Respawn and Spawn Protection]]
+- [[Rebinding Controls with the Input Action System]]
+- [[Server Hop Rejoin and Server Lists with Ping]]
+- [[Settings Menu Essentials and Persistence]]
+- [[Skippable Tutorials and Replayable Tips]]
+- [[Top 25 QoL Wins by Effort]]
+- [[UI Scale HUD Hide and Compact Mode]]
+
+### 59 Viral and Trend Game Teardowns (17 notes)
+- [[Viral and Trend Teardowns Start Here]]
+- [[Teardown - +1 Speed Keyboard Escape]]
+- [[Teardown - Bee Swarm Simulator]]
+- [[Teardown - Build A Boat For Treasure]]
+- [[Teardown - Escape Tsunami for Brainrots]]
+- [[Teardown - Fish It]]
+- [[Teardown - Fling Things and People]]
+- [[Teardown - Ink Game]]
+- [[Teardown - Natural Disaster Survival]]
+- [[Teardown - Plants vs Brainrots]]
+- [[Teardown - PLS DONATE]]
+- [[Teardown - Ride A Pet]]
+- [[Teardown - Sol's RNG]]
+- [[Teardown - Steal An Egg]]
+- [[Teardown - Tap Simulator REBORN]]
+- [[Teardown - Tower of Hell]]
+- [[Viral Game Anatomy - Hooks, Loops and Timing]]
+
+### 60 High-Craft Game Teardowns (18 notes)
+- [[High-Craft Teardowns Start Here]]
+- [[Teardown - Anime Vanguards]]
+- [[Teardown - Apocalypse Rising 2]]
+- [[Teardown - Arsenal]]
+- [[Teardown - BedWars]]
+- [[Teardown - Blade Ball]]
+- [[Teardown - Dandy's World]]
+- [[Teardown - Deepwoken]]
+- [[Teardown - Driving Empire]]
+- [[Teardown - Evade]]
+- [[Teardown - Funky Friday]]
+- [[Teardown - Grace]]
+- [[Teardown - Jujutsu Shenanigans]]
+- [[Teardown - Phantom Forces]]
+- [[Teardown - Piggy]]
+- [[Teardown - Pressure]]
+- [[Teardown - Welcome to Bloxburg]]
+- [[What Craft Looks Like on Roblox - Lessons from Top Studios]]
+
+### 61 Thumbnails and CTR (8 notes)
+- [[Thumbnails and CTR Start Here]]
+- [[From CTR to CCU - Impressions, Play-Through and the Discovery Loop]]
+- [[Making Thumbnails in Studio and Blender - Capture, Lighting and Posing]]
+- [[Thumbnail and Icon A-B Testing - Method, Sample Size and Reading Results]]
+- [[Thumbnail Composition for High CTR - Focal Point, Contrast and Readability]]
+- [[Thumbnail Genre Patterns - What Top Games Show]]
+- [[Thumbnail Review Checklist and Scoring Rubric]]
+- [[Thumbnail Specs, Rules and Upload - Sizes, Count and Policy]]
+
+### 62 Engine Reference Cards (33 notes)
+- [[Engine Reference Cards Start Here]]
+- [[Animator - Engine Reference Card]]
+- [[BadgeService - Engine Reference Card]]
+- [[BasePart - Engine Reference Card]]
+- [[BillboardGui - Engine Reference Card]]
+- [[Camera - Engine Reference Card]]
+- [[CollectionService - Engine Reference Card]]
+- [[ContextActionService - Engine Reference Card]]
+- [[DataStoreService - Engine Reference Card]]
+- [[GuiService - Engine Reference Card]]
+- [[HttpService - Engine Reference Card]]
+- [[Humanoid - Engine Reference Card]]
+- [[Instance - Engine Reference Card]]
+- [[MarketplaceService - Engine Reference Card]]
+- [[MemoryStoreService - Engine Reference Card]]
+- [[MessagingService - Engine Reference Card]]
+- [[Model - Engine Reference Card]]
+- [[ParticleEmitter - Engine Reference Card]]
+- [[PathfindingService - Engine Reference Card]]
+- [[PhysicsService - Engine Reference Card]]
+- [[Player - Engine Reference Card]]
+- [[Players - Engine Reference Card]]
+- [[ProximityPrompt - Engine Reference Card]]
+- [[RemoteEvent - Engine Reference Card]]
+- [[RunService - Engine Reference Card]]
+- [[ScrollingFrame - Engine Reference Card]]
+- [[SoundService - Engine Reference Card]]
+- [[TeleportService - Engine Reference Card]]
+- [[Terrain - Engine Reference Card]]
+- [[TextChatService - Engine Reference Card]]
+- [[TweenService - Engine Reference Card]]
+- [[UserInputService - Engine Reference Card]]
+- [[Workspace - Engine Reference Card]]
 
 ### Reference
 - [[Obsidian Vaults for AI Agents - Structure, Graph and Theming]] (how this vault is structured and searched)

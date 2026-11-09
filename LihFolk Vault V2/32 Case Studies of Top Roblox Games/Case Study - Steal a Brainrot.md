@@ -209,5 +209,5 @@ Use `workspace:GetServerTimeNow()` for `now` so lock timers shown on clients mat
 
 <!-- related:start -->
 ## Related
-[[Teardown - Escape Tsunami for Brainrots]] · [[Teardown - Plants vs Brainrots]] · [[Case Study - Adopt Me]] · [[Case Study - Pet Simulator 99]] · [[Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks]] · [[Case Study - Brookhaven RP]] · [[Case Study - Doors]] · [[Case Study - Fisch]] · [[Case Study - Dead Rails]] · [[Case Study - The Strongest Battlegrounds]]
+[[Teardown - Escape Tsunami for Brainrots]] · [[Teardown - Plants vs Brainrots]] · [[Case Study - Adopt Me]] · [[Case Study - Pet Simulator 99]] · [[Cross-Game Patterns - Thumbnails Icons and Titles That Get Clicks]] · [[Case Study - Doors]] · [[Case Study - Brookhaven RP]] · [[Case Study - Fisch]] · [[Case Study - Dead Rails]] · [[Case Study - The Strongest Battlegrounds]]
 <!-- related:end -->

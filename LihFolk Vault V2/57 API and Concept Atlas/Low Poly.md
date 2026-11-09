@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/modeling, area/ai]
 > - Avoid: Smooth shading a low poly with no normal fix -> Weighted Normal / Harden Normals.
 > - On the target (low-poly) object's material, add an Image Texture node with a new image at the target resolution.
 >
-> Cost: TL;DR ~130 tok · whole note ~920 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~130 tok · whole note ~930 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -29,7 +29,7 @@ Retopology: Rebuilding a mesh with clean, low-poly topology. (from [[Glossary]])
 65 notes in 18 sections. The 25 most relevant are linked:
 
 ### 14 3D Modeling
-[[Blender Workflow for Roblox Creators]] · [[Hand-Painted and Stylized Texturing]] · [[Hard-Surface Modeling]] · [[Low-Poly and Stylized Modeling]] · [[Normal Maps and Detail Baking]] · [[Organic and Creature Modeling]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Texturing and PBR Baking]] · [[Trim Sheets Atlases and Vertex Colors]]
+[[Hand-Painted and Stylized Texturing]] · [[Hard-Surface Modeling]] · [[Low-Poly and Stylized Modeling]] · [[Normal Maps and Detail Baking]] · [[Organic and Creature Modeling]] · [[Other Modeling Tools - Maya Max ZBrush MagicaVoxel]] · [[Texturing and PBR Baking]] · [[Trim Sheets Atlases and Vertex Colors]]
 
 ### 15 AI Tools
 [[AI 3D Model Generation Outside Roblox]] · [[AI Image Generation for Icons Thumbnails and Concepts]] · [[Roblox Generative AI - Cube Mesh and Texture Generation]]
@@ -55,6 +55,9 @@ Retopology: Rebuilding a mesh with clean, low-poly topology. (from [[Glossary]])
 ### 61 Thumbnails and CTR
 [[Thumbnail Composition for High CTR - Focal Point, Contrast and Readability]]
 
-Also mentioned in (not linked): 00 Start Here · AI Material and Texture Generation · Blender Automation with Python · Blender MCP · Building a Portfolio as a Roblox Developer · Chibi Character Rules in Practice · Creator Store and Toolbox Safety · Dash VFX Presentation on an R15 Rig · Draw Calls · Environment Art Styles · Flat Colour vs Gradient Atlas vs Vertex Colour · Foliage Props and Scatter · Glossary · Hiring Freelancers and Revenue Shares · Layered Clothing Creation Workflow · Lighting Technologies and Settings · Lighting Untextured Art in Roblox · Low-Poly Tree Set Worked Example · Matching a Concept Sheet - Boss Creature Case Study · Materials and Surfaces Start Here · Mesh Optimization for Mobile · Modeling Fundamentals for Games · Modelling Nuance Start Here · Modular Environment Kits · Procedural Blender Assets Start Here · Procedural Creatures - Fused Shells, Quad Cages and Faceting · Proportion Exaggeration and Gameplay Distance · Retopology and Decimation · Shape Language and Silhouette Testing · Stylised Log Cabin Worked Example · Stylised vs Realistic Material Pipelines · Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs · Stylized Lighting Recipes · Thumbnail Review Checklist and Scoring Rubric · Topology and Edge Flow · UGC Avatar Items and Accessories · UV Unwrapping · Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver · Voxel Modelling Start Here · Voxel and Blocky Modeling
+### Root notes
+[[00 Start Here]]
+
+Also mentioned in (not linked): AI Material and Texture Generation · Blender Automation with Python · Blender MCP · Blender Workflow for Roblox Creators · Building a Portfolio as a Roblox Developer · Chibi Character Rules in Practice · Creator Store and Toolbox Safety · Dash VFX Presentation on an R15 Rig · Draw Calls · Environment Art Styles · Flat Colour vs Gradient Atlas vs Vertex Colour · Foliage Props and Scatter · Glossary · Hiring Freelancers and Revenue Shares · Layered Clothing Creation Workflow · Lighting Technologies and Settings · Lighting Untextured Art in Roblox · Low-Poly Tree Set Worked Example · Matching a Concept Sheet - Boss Creature Case Study · Materials and Surfaces Start Here · Mesh Optimization for Mobile · Modeling Fundamentals for Games · Modelling Nuance Start Here · Modular Environment Kits · Procedural Blender Assets Start Here · Procedural Creatures - Fused Shells, Quad Cages and Faceting · Proportion Exaggeration and Gameplay Distance · Retopology and Decimation · Shape Language and Silhouette Testing · Stylised Log Cabin Worked Example · Stylised vs Realistic Material Pipelines · Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs · Stylized Lighting Recipes · Thumbnail Review Checklist and Scoring Rubric · Topology and Edge Flow · UGC Avatar Items and Accessories · UV Unwrapping · Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver · Voxel Modelling Start Here · Voxel and Blocky Modeling
 
 <!-- atlas:generated -->

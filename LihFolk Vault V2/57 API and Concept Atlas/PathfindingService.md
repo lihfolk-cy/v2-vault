@@ -23,11 +23,11 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 
 - If you keep `Humanoid`s, disable unneeded states, avoid per-zombie `PathfindingService` every frame, and share flow fields or waypoint graphs across enemies (Pathfinding Edge Cases and Fallbacks). ([[Genre Playbook - Zombie and Wave Survival Co-op]])
 - Navigation. `PathfindingService` handles terrain, but caves with ceilings close to agent height and steep tunnels create unreachable spots. ([[Noise Functions and Terrain Generation]])
-- PathfindingService - Engine Reference Card. ([[Engine Reference Cards Start Here]])
+- PathfindingService - Engine Reference Card. ([[00 Start Here]])
 
 ## Mentioned in
 
-12 notes in 7 sections. The 12 most relevant are linked:
+13 notes in 8 sections. The 13 most relevant are linked:
 
 ### 09 Gameplay Systems
 [[NPC AI and Behaviour]] · [[Pathfinding]] · [[Pathfinding Edge Cases and Fallbacks]]
@@ -49,5 +49,8 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 
 ### 62 Engine Reference Cards
 [[Engine Reference Cards Start Here]] · [[PathfindingService - Engine Reference Card]]
+
+### Root notes
+[[00 Start Here]]
 
 <!-- atlas:generated -->

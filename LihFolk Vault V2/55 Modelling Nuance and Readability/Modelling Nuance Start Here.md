@@ -28,6 +28,7 @@ Read roughly in this order. The camera note comes second because its pixel formu
 5. [[Spending Triangles Where the Camera Looks]]: the sagitta rule for segment counts by radius and distance, which faces the Roblox camera actually sees, where to delete and where to add, zone-level spend shares, and a Blender script that reports triangle spend by direction.
 6. [[Style Bibles for Consistent Models]]: the twelve parts of a modelling style bible, how to write rules people follow, golden assets, and a Studio palette and material audit script.
 7. [[Critiquing a Model - Paintovers and Iteration]]: a fixed critique order, in-context review, four kinds of paintover, a Studio greyscale value check, feedback that gets used, and how many review rounds to plan.
+8. [[Art-Direction Nitpicks - The Principles Behind Them]]: twelve principles behind common reviewer nitpicks (primary mass, features near a face, taper versus uniform width, value, repetition, joints, load-bearing support, reading from every angle), when not to apply them, and a worked example.
 
 ## How the notes connect
 

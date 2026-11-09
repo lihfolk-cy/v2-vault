@@ -1,5 +1,5 @@
 ---
-tags: [index, unresolved, research, type/guide, level/intermediate, api/DataStore, api/SurfaceAppearance, api/Terrain]
+tags: [index, unresolved, research, type/guide, level/intermediate, api/DataStore, api/SurfaceAppearance, api/Terrain, api/VideoPlayer]
 ---
 # Open Questions - Whole Vault
 
@@ -221,3 +221,10 @@ See also: [[00 Start Here]], [[Glossary]], [[Open Questions]].
 - Default camera zoom distances and the starting camera distance (about 12 to 13 studs) are set by the camera scripts and not documented on the StarterPlayer page.
 - Voxel grain: older voxel notes use 0.3 and 0.4 stud grains; [[Voxel Scale Grids and Stud Alignment]] prefers binary 0.25 and 0.5 for anything tiled or scripted. Both are reasonable; pick one per project.
 - [[MagicaVoxel]]'s 256 voxels per axis limit and its OBJ exporter behaviour come from community sources; [[Blockbench]] glTF unit mapping and Goxel face merging are unconfirmed.
+
+## Round 10 (November 2026: runtime assets, avatar creation, video)
+- [[EditableMesh - Runtime Mesh Editing, Budgets and Publishing]]: the reference page does not say how EditableMesh contents replicate, or whether a MeshPart the server creates from one shows the same geometry to every client. The note replays server-validated edit operations on each client, which works either way.
+- EditableMesh creation over the client memory budget: EditableImage is documented to return nil; assumed the same for meshes, not confirmed. No numeric client budget is published.
+- [[In-Experience Avatar Creation - Tokens, Editing and Prompting]]: the reference lists no client or server restriction for PromptCreateAvatarAsync, while editing runs on the client. Which side the official demo calls it from was not checked.
+- Photo-to-avatar generation methods on AvatarCreationService were announced as alpha and beta in 2025; general availability as of November 2026 is unconfirmed. Creation Advance and Creation Fee amounts are only shown on the Create Token screen.
+- [[Video in Experiences - VideoPlayer, VideoDisplay and VideoFrame]]: the two-videos-at-once cap and the Video Uploads beta toggle come from the [[VideoFrame]] guide; whether they apply to [[VideoPlayer]], and whether one VideoPlayer can drive several VideoDisplays, is unconfirmed.

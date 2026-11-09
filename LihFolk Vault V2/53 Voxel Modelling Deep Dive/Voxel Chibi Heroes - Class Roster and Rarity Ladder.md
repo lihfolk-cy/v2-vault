@@ -117,5 +117,5 @@ Players should read rarity before they read the name. Escalate a few levers per 
 
 <!-- related:start -->
 ## Related
-[[Voxel and Blocky Modeling]] · [[Chibi Character Rules in Practice]] · [[Environment Art Styles]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Voxel Scale Grids and Stud Alignment]] · [[Voxel Props Environments and Modular Tiles]]
+[[Voxel and Blocky Modeling]] · [[Chibi Character Rules in Practice]] · [[MagicaVoxel Goxel and Blockbench Workflows Compared]] · [[Environment Art Styles]] · [[Voxel Scale Grids and Stud Alignment]] · [[Voxel Props Environments and Modular Tiles]]
 <!-- related:end -->

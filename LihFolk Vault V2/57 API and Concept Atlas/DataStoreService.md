@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/data, area/gameplay, api/DataStoreService]
 > - Budget check. Print `DataStoreService:GetRequestBudgetForRequestType(Enum.DataStoreRequestType.OrderedWrite)` before and after...
 > - Call it once per type at server start (Roblox docs, DataStoreService reference, October 2026).
 >
-> Cost: TL;DR ~150 tok · whole note ~800 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~810 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -27,7 +27,7 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 
 ## Mentioned in
 
-45 notes in 21 sections. The 25 most relevant are linked:
+46 notes in 21 sections. The 25 most relevant are linked:
 
 ### 04 Data and Persistence
 [[Data Loss Prevention and Recovery]] · [[DataStore Fundamentals]] · [[Global State and Live Config]] · [[OrderedDataStores and Leaderboards]] · [[Session Locking and Profile Libraries]]
@@ -71,6 +71,6 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 ### 62 Engine Reference Cards
 [[DataStoreService - Engine Reference Card]]
 
-Also mentioned in (not linked): A Stuck Player Watchdog That Logs the Cause · Automated Testing with TestEZ and Jest-Lua · Dependency Injection in Luau · Engine Reference Cards Start Here · Engine and API Changes 2025-2026 · Error Handling and Retries · HttpService and External APIs · MemoryStoreService - Engine Reference Card · Module Design and Dependency Injection · Reading Luau Errors and Stack Traces · Refunds Chargebacks and Purchase Support · Resetting One Player's Data Safely · Round-Based Minigame Loop End to End · Saved Inventory End to End · Schema Migrations - Worked Case Studies · Serial-Numbered Limited Items - Atomic Counters · Session Lock · Skill - Roblox DataStore Safety · Trading Systems Without Duplication · Working with Contractors and Revenue Splits
+Also mentioned in (not linked): 00 Start Here · A Stuck Player Watchdog That Logs the Cause · Automated Testing with TestEZ and Jest-Lua · Dependency Injection in Luau · Engine Reference Cards Start Here · Engine and API Changes 2025-2026 · Error Handling and Retries · HttpService and External APIs · MemoryStoreService - Engine Reference Card · Module Design and Dependency Injection · Reading Luau Errors and Stack Traces · Refunds Chargebacks and Purchase Support · Resetting One Player's Data Safely · Round-Based Minigame Loop End to End · Saved Inventory End to End · Schema Migrations - Worked Case Studies · Serial-Numbered Limited Items - Atomic Counters · Session Lock · Skill - Roblox DataStore Safety · Trading Systems Without Duplication · Working with Contractors and Revenue Splits
 
 <!-- atlas:generated -->

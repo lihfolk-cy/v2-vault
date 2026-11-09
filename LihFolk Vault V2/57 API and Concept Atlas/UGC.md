@@ -9,7 +9,7 @@ tags: [atlas, concept, type/atlas, area/modeling, area/avatars]
 > - Roblox enforces hard limits per mesh: a MeshPart import is limited to 20,000 triangles, and UGC avatar items have their own...
 > - Gameplay gear is not UGC. Weapons, armour and tools that only exist in your game do not need the Marketplace spec, fees or...
 >
-> Cost: TL;DR ~120 tok · whole note ~810 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~830 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -25,7 +25,7 @@ UGC: User-generated avatar items sold on the Marketplace. (from [[Glossary]])
 
 ## Mentioned in
 
-48 notes in 18 sections. The 25 most relevant are linked:
+49 notes in 18 sections. The 25 most relevant are linked:
 
 ### 08 Animation
 [[3D Importer Settings Reference]] · [[Free Mocap and Mixamo Licensing for Roblox]]
@@ -40,13 +40,13 @@ UGC: User-generated avatar items sold on the Marketplace. (from [[Glossary]])
 [[Player Reports and In-Game Moderation]]
 
 ### 28 Business and Careers
-[[Building a Portfolio as a Roblox Developer]] · [[Running a Small Studio as a Business]]
+[[Building a Portfolio as a Roblox Developer]]
 
 ### 32 Case Studies of Top Roblox Games
 [[Case Study - Doors]]
 
 ### 37 Avatars and UGC
-[[AvatarEditorService and In-Game Avatar Editors]] · [[Avatars and UGC Start Here]] · [[Bundles Animation Packs and Emotes for Sale]] · [[HumanoidDescription and Outfit Systems]] · [[Layered Clothing Creation Workflow]] · [[UGC Pricing Limiteds and Marketplace Rules]]
+[[AvatarEditorService and In-Game Avatar Editors]] · [[Avatars and UGC Start Here]] · [[Bundles Animation Packs and Emotes for Sale]] · [[HumanoidDescription and Outfit Systems]] · [[In-Experience Avatar Creation - Tokens, Editing and Prompting]] · [[Layered Clothing Creation Workflow]] · [[UGC Pricing Limiteds and Marketplace Rules]]
 
 ### 46 Resource Library
 [[Official Docs - Asset Creation]]
@@ -66,6 +66,6 @@ UGC: User-generated avatar items sold on the Marketplace. (from [[Glossary]])
 ### Root notes
 [[00 Start Here]]
 
-Also mentioned in (not linked): 000 Home · AI 3D Model Generation Outside Roblox · Avatar Body Types and Scale in Gameplay · Blade Grip and Wrist Limits · Case Study - Dress to Impress · Case Study - Murder Mystery 2 · Character and Creature Pipeline · Custom Characters and StarterCharacter · Glossary · Legal Basics - IP Licenses and Assets · Open Questions - Whole Vault · Platform Features Start Here · Roblox Generative AI - Cube Mesh and Texture Generation · Serial-Numbered Limited Items - Atomic Counters · Short-Form Video Marketing · Skinning Weights · Spending Triangles Where the Camera Looks · Sponsored Ads and Campaign Math · Subscriptions and Premium Payouts · SurfaceAppearance PBR Workflow · Texturing and PBR Baking · Trim Sheets Atlases and Vertex Colors · UV Unwrapping
+Also mentioned in (not linked): 000 Home · AI 3D Model Generation Outside Roblox · Avatar Body Types and Scale in Gameplay · Blade Grip and Wrist Limits · Case Study - Dress to Impress · Case Study - Murder Mystery 2 · Character and Creature Pipeline · Custom Characters and StarterCharacter · Glossary · Legal Basics - IP Licenses and Assets · Open Questions - Whole Vault · Platform Features Start Here · Roblox Generative AI - Cube Mesh and Texture Generation · Running a Small Studio as a Business · Serial-Numbered Limited Items - Atomic Counters · Short-Form Video Marketing · Skinning Weights · Spending Triangles Where the Camera Looks · Sponsored Ads and Campaign Math · Subscriptions and Premium Payouts · SurfaceAppearance PBR Workflow · Texturing and PBR Baking · Trim Sheets Atlases and Vertex Colors · UV Unwrapping
 
 <!-- atlas:generated -->

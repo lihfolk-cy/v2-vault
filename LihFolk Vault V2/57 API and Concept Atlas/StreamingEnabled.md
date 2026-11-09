@@ -1,5 +1,5 @@
 ---
-tags: [atlas, api, type/atlas, area/animation, area/physics, api/StreamingEnabled]
+tags: [atlas, api, type/atlas, area/physics, area/animation, api/StreamingEnabled]
 ---
 # StreamingEnabled
 
@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/animation, area/physics, api/StreamingEnable
 > - StreamingEnabled is mandatory at this size.
 > - Turning it on forces StreamingEnabled, deferred signals and fixed-step simulation.
 >
-> Cost: TL;DR ~120 tok · whole note ~900 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~120 tok · whole note ~910 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ API snapshot: member of `Workspace` (`_tools/roblox_api.json`, docs build of 202
 
 ## Mentioned in
 
-43 notes in 20 sections. The 25 most relevant are linked:
+45 notes in 21 sections. The 25 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[External Tooling - Rojo Wally Selene StyLua]]
@@ -78,6 +78,6 @@ API snapshot: member of `Workspace` (`_tools/roblox_api.json`, docs build of 202
 ### 62 Engine Reference Cards
 [[Workspace - Engine Reference Card]]
 
-Also mentioned in (not linked): Photo Mode and In-Game Screenshots with CaptureService · Quest Chain System End to End · Racing AI on a Racing Line - Spline Following and Rubber-Banding · Replication Boundary · Rigs and Joints · Roblox Changes 2025-2026 · Round-Based Minigame Loop End to End · Side-Scroller in 3D - Locking Camera and Movement to a Plane · Snippets - Procedural Motion · Snippets - Ragdoll · Streaming Radius · Teardown - Apocalypse Rising 2 · Teardown - Driving Empire · Terrain Deep Dive - Materials Water and Performance · Testing Modes - Play Run and Multi-Client · The Debugging Method - Reproduce Isolate Bisect · What AI Models Get Wrong in Roblox · What Craft Looks Like on Roblox - Lessons from Top Studios
+Also mentioned in (not linked): 00 Start Here · Photo Mode and In-Game Screenshots with CaptureService · Physics and Vehicles Start Here · Quest Chain System End to End · Racing AI on a Racing Line - Spline Following and Rubber-Banding · Replication Boundary · Rigs and Joints · Roblox Changes 2025-2026 · Round-Based Minigame Loop End to End · Side-Scroller in 3D - Locking Camera and Movement to a Plane · Snippets - Procedural Motion · Snippets - Ragdoll · Streaming Radius · Teardown - Apocalypse Rising 2 · Teardown - Driving Empire · Terrain Deep Dive - Materials Water and Performance · Testing Modes - Play Run and Multi-Client · The Debugging Method - Reproduce Isolate Bisect · What AI Models Get Wrong in Roblox · What Craft Looks Like on Roblox - Lessons from Top Studios
 
 <!-- atlas:generated -->

@@ -246,5 +246,5 @@ Whatever you choose, **tell players**. A short line in the settings or loading s
 
 <!-- related:start -->
 ## Related
-[[Bundles Animation Packs and Emotes for Sale]] · [[Character Select and Class Systems with Different Rigs]] · [[Aim Assist and Generous Hitboxes]] · [[AvatarEditorService and In-Game Avatar Editors]] · [[Layered Clothing Creation Workflow]] · [[UGC Pricing Limiteds and Marketplace Rules]]
+[[Bundles Animation Packs and Emotes for Sale]] · [[Character Select and Class Systems with Different Rigs]] · [[Aim Assist and Generous Hitboxes]] · [[AvatarEditorService and In-Game Avatar Editors]] · [[Layered Clothing Creation Workflow]] · [[In-Experience Avatar Creation - Tokens, Editing and Prompting]] · [[UGC Pricing Limiteds and Marketplace Rules]]
 <!-- related:end -->

@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/networking, area/platform, api/TeleportServi
 > - TeleportService does not work in Studio playtests; publish and test in the Roblox client.
 > - `TeleportService` does not work in Studio, so test on a live private experience.
 >
-> Cost: TL;DR ~140 tok · whole note ~650 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~140 tok · whole note ~670 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 
 ## Mentioned in
 
-25 notes in 13 sections. The 25 most relevant are linked:
+26 notes in 14 sections. The 25 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[Testing Modes - Play Run and Multi-Client]]
@@ -67,6 +67,11 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 [[Joining Friends Parties and Private Servers]] · [[Loading Screen Skip and First-Session Goals]] · [[Server Hop Rejoin and Server Lists with Ping]]
 
 ### 62 Engine Reference Cards
-[[Engine Reference Cards Start Here]] · [[TeleportService - Engine Reference Card]]
+[[TeleportService - Engine Reference Card]]
+
+### Root notes
+[[00 Start Here]]
+
+Also mentioned in (not linked): Engine Reference Cards Start Here
 
 <!-- atlas:generated -->

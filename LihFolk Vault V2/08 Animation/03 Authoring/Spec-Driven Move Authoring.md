@@ -257,5 +257,5 @@ Checks before baking: no stance change under 0.12 s (the feet change WIDE > DEEP
 
 <!-- related:start -->
 ## Related
-[[Animation Review Checklist]] · [[Timing Spacing and Frame Charts]] · [[Inverse Kinematics]] · [[Animation Editor Workflow]] · [[Keyframes, Easing and Interpolation]] · [[R15 Run Cycle Key Poses]] · [[Animation Editor Advanced]] · [[Snippets - IK]]
+[[Animation Review Checklist]] · [[Timing Spacing and Frame Charts]] · [[Animation Editor Workflow]] · [[Inverse Kinematics]] · [[Keyframes, Easing and Interpolation]] · [[R15 Run Cycle Key Poses]] · [[Animation Editor Advanced]] · [[Snippets - IK]]
 <!-- related:end -->

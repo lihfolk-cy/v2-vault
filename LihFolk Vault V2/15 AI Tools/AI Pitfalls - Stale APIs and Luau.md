@@ -136,5 +136,5 @@ Models confidently write members that do not exist or live elsewhere:
 
 <!-- related:start -->
 ## Related
-[[AI Code Assistants for Luau]] · [[AI Pitfalls - Physics and Animation]] · [[AI Pitfalls - UI and Input]] · [[AI Pitfalls - Data and Monetization]] · [[AI Pitfalls - Networking and Security]] · [[Prompting and Verifying AI Output]] · [[Roblox Studio Assistant]]
+[[AI Code Assistants for Luau]] · [[AI Pitfalls - Physics and Animation]] · [[AI Pitfalls - UI and Input]] · [[AI Pitfalls - Data and Monetization]] · [[Prompting and Verifying AI Output]] · [[AI Pitfalls - Networking and Security]] · [[Roblox Studio Assistant]]
 <!-- related:end -->

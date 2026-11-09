@@ -16,6 +16,10 @@ Facts are labelled "Roblox docs (as of October 2026)", "measured in the referenc
 4. [[Combat Arena and Encounter Layout]]: sizing arenas from the dodge test, cover heights against the third-person camera, cover and pathfinding, enemy entry and a spawn picker that avoids players' view, waves, containment and safe arena seals, telegraph readability, and fair PvP layouts with spawn alcoves.
 5. [[Teaching Through Level Design]]: a visual language with an audit script, the show-try-test-combine sequence, gating with geometry instead of UI, direction without arrows, stuck detection with escalating hints, device-aware teaching, and a spatial onboarding funnel built on trigger volumes.
 6. [[Spawn Points Safe Zones and Respawn Flow]]: respawn as a timed pipeline, owning character loading, choosing spots by context and safety, spawn protection abuse rules, safe zones with hysteresis and combat tags, three layers of fall recovery with per-zone thresholds, streaming during the death presentation, and a complete respawn service with a watchdog.
+7. [[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]]: shared rules for objective maps, each mode's layout, sizing zones and measuring routes, and server-side capture logic.
+8. [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]]: boundary types, walls that only block players, server-side out-of-bounds detection, soft boundaries, and kill planes done well.
+9. [[Instanced Interiors - Pooled House and Room Copies for Many Players]]: every player's own house or shop on one map: choosing the instancing model, slot layout, pooling, the door transition, per-interior lighting and audio, and security.
+10. [[Playtest Heatmaps - Position and Death Maps]]: what to record, death capture, aggregating across servers, drawing the data back in Studio, and reading the maps.
 
 ## Suggested reading order
 

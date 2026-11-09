@@ -101,5 +101,5 @@ Trust labels: **Roblox docs** (class behaviour, as of October 2026), **Reference
 
 <!-- related:start -->
 ## Related
-[[Menu Archetypes - Shop Settings Codes Rewards]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Gamepad and Console UX]] · [[Settings Menu Design for Roblox - Layout, Controls and Motion]] · [[Nametags and Overhead Bars - Cost and Visibility Rules]] · [[UI Motion Language and Timing]] · [[Input - UserInputService and ContextActionService]] · [[Touch Gestures - Pinch, Pan, Swipe and Long Press]]
+[[Menu Archetypes - Shop Settings Codes Rewards]] · [[Minimap and World Map UI - Projection, Rotation and Fog of War]] · [[Gamepad and Console UX]] · [[Settings Menu Design for Roblox - Layout, Controls and Motion]] · [[Nametags and Overhead Bars - Cost and Visibility Rules]] · [[UI Motion Language and Timing]] · [[Input - UserInputService and ContextActionService]] · [[ScreenGui Fundamentals]]
 <!-- related:end -->

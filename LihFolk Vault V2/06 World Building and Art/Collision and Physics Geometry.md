@@ -281,5 +281,5 @@ The senior trade-off: accurate collision costs authoring time and physics time; 
 
 <!-- related:start -->
 ## Related
-[[Level of Detail and Model Streaming]] · [[Procedural World Generation]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Grid Placement and Player Building Systems]] · [[Materials MaterialVariants and SurfaceAppearance]] · [[Terrain Deep Dive - Materials Water and Performance]]
+[[Level of Detail and Model Streaming]] · [[Procedural World Generation]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Voxel Art - Studs Outlines and Style Kits]] · [[EditableMesh - Runtime Mesh Editing, Budgets and Publishing]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Grid Placement and Player Building Systems]] · [[Materials MaterialVariants and SurfaceAppearance]]
 <!-- related:end -->

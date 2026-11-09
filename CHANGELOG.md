@@ -1,5 +1,21 @@
 # Changelog
 
+## Unreleased (2026-11-09): Index refresh and runtime-asset notes
+
+**Highlights:** every note is now reachable from the index pages, and three new guides cover runtime meshes, in-experience avatar creation and video.
+
+### Added
+- **EditableMesh - Runtime Mesh Editing, Budgets and Publishing** (06): creation and fixed-size meshes, the 60,000-vertex and 20,000-triangle limits, display and collision refresh with `CreateMeshPartAsync` / `ApplyMesh`, the client memory budget, the Mesh / Image APIs switch, and a heightfield and crater example. The vault only mentioned EditableMesh in passing before.
+- **In-Experience Avatar Creation - Tokens, Editing and Prompting** (37): avatar creation tokens and their costs, the EditableMesh, EditableImage and WrapDeformer editing flow, `PromptCreateAvatarAsync` and its siblings, moderation events and join attribution. `AvatarCreationService` had no coverage.
+- **Video in Experiences - VideoPlayer, VideoDisplay and VideoFrame** (05): upload rules and costs, VideoFrame versus wired VideoPlayer and VideoDisplay, memory, the two-video cap and syncing a shared screen. Video had no coverage.
+- 10 symptom lines in `SYMPTOMS.md` and five open questions for the points the docs leave unconfirmed. All new facts are from the Creator Hub reference and guide pages, checked 2026-11-09.
+
+### Improved
+- **00 Start Here:** the map was missing about 300 notes added in 2.2-2.5 and stopped at section 56, with stale counts. It now lists every note in sections 01-56 and 58-62 with correct counts, points to the 57 Atlas, and has five new reading paths (hit games, thumbnails and CTR, QoL, exact engine numbers, runtime assets).
+- **000 Home:** links to the Field Notes, Player QoL, Engine Reference Cards, API Atlas, both teardown sections and Thumbnails and CTR.
+- **13 section hubs** (Animation, Anti-Exploit, Worked Builds, Physics and Vehicles, Marketing, Business, Top Games, Level Design, Narrative, Game Math, Materials, Platform Features, Modelling Nuance) now link the 68 notes added in 2.2-2.5 that they were missing; the Avatars hub links the new creation note.
+- Related blocks, Atlas nodes, TL;DRs and indexes regenerated with `link_builder.py` and `build_index.py`; `build_index --check`, `link_builder --check`, `api_check --strict`, `consistency --strict` and `eval` all pass (held-out hit@3 93%). `snippets.py` was not run locally (no `luau-compile` on the machine); CI runs it.
+
 ## 2.5.0 (2026-10-29): Ability VFX, Figma, engine reference cards
 
 **Highlights:** ability VFX beyond slashes, a Figma-to-Roblox UI skill, 32 engine reference cards and a limits cheat sheet verified against the official docs, every 2025-2026 API rename, and a lookup that is cheaper per search and checks API names before answering. On four fresh held-out benchmark sets the plugin scores 91-94%, 3 to 13 points above the same model without it.

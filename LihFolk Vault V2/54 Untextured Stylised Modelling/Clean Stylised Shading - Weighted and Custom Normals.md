@@ -173,5 +173,5 @@ Triangle count: about 250 to 350 with 1-segment bevels. A 2-segment bevel roughl
 
 <!-- related:start -->
 ## Related
-[[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Modeling Fundamentals for Games]] · [[Blender Workflow for Roblox Creators]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Meshing Voxels for Roblox - Greedy Meshing and Export]] · [[Colour Scripts and Value Structure for Untextured Art]]
+[[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Modeling Fundamentals for Games]] · [[Blender Workflow for Roblox Creators]] · [[Voxel Shading - Baked AO Edges and Lighting]] · [[Style Bibles for Consistent Models]] · [[Colour Scripts and Value Structure for Untextured Art]]
 <!-- related:end -->

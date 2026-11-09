@@ -412,5 +412,5 @@ Decisions this table forces early: whether Expanded Terrain is on (needed for th
 
 <!-- related:start -->
 ## Related
-[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Terrain - Engine Reference Card]] · [[Parts Unions and MeshParts]] · [[Textures Decals and Texture Memory]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Environment Art Styles]] · [[Level Design for Roblox]] · [[Modeling in Blender for Roblox]] · [[Voxel Art - Studs Outlines and Style Kits]]
+[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[Terrain - Engine Reference Card]] · [[Parts Unions and MeshParts]] · [[Textures Decals and Texture Memory]] · [[Art Budgets - Triangles Draw Calls Memory]] · [[Environment Art Styles]] · [[Level Design for Roblox]] · [[EditableMesh - Runtime Mesh Editing, Budgets and Publishing]] · [[Modeling in Blender for Roblox]]
 <!-- related:end -->

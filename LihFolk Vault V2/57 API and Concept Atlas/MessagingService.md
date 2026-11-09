@@ -30,7 +30,7 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 
 ## Mentioned in
 
-34 notes in 20 sections. The 25 most relevant are linked:
+35 notes in 20 sections. The 25 most relevant are linked:
 
 ### 01 Studio and Workflow
 [[Places Universes and Experience Settings]]
@@ -80,6 +80,6 @@ API snapshot: service, inherits `Instance` (`_tools/roblox_api.json`, docs build
 ### 62 Engine Reference Cards
 [[DataStoreService - Engine Reference Card]] · [[MessagingService - Engine Reference Card]]
 
-Also mentioned in (not linked): Engine Reference Cards Start Here · Glossary · Multiplayer Services Start Here · Open Questions - Whole Vault · Refunds Chargebacks and Purchase Support · Resetting One Player's Data Safely · Server Shutdowns Soft Updates and Migration · Viral Game Anatomy - Hooks, Loops and Timing · Working with Contractors and Revenue Splits
+Also mentioned in (not linked): 00 Start Here · Engine Reference Cards Start Here · Glossary · Multiplayer Services Start Here · Open Questions - Whole Vault · Refunds Chargebacks and Purchase Support · Resetting One Player's Data Safely · Server Shutdowns Soft Updates and Migration · Viral Game Anatomy - Hooks, Loops and Timing · Working with Contractors and Revenue Splits
 
 <!-- atlas:generated -->

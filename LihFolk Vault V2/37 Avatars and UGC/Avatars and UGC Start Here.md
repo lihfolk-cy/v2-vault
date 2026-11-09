@@ -13,6 +13,7 @@ Everything time-sensitive is marked **as of October 2026**. Roblox renamed many 
 | Note | Read it when |
 |---|---|
 | [[AvatarEditorService and In-Game Avatar Editors]] | You are building a catalog, try-on or "save outfit" feature: permissions, server-validated try-on, saving unowned items, rentals, performance |
+| [[In-Experience Avatar Creation - Tokens, Editing and Prompting]] | Players should make and buy their own body, accessory or makeup inside your game: creation tokens, the EditableMesh and WrapDeformer flow, the prompt, moderation and attribution |
 | [[HumanoidDescription and Outfit Systems]] | You change how characters look in code: diff versus reset applies, uniforms over player avatars, saving outfits as data, NPC crowds |
 | [[Layered Clothing Creation Workflow]] | You are making a layered garment: Blender setup, outer cage editing, skinning routes, the WrapLayer debug modes, garment-specific fixes |
 | [[UGC Pricing Limiteds and Marketplace Rules]] | You are pricing or publishing: floor-relative prices, the revenue-share curve worked out, advance break-even, irreversible Limited switches, in-game sales |
@@ -21,7 +22,7 @@ Everything time-sensitive is marked **as of October 2026**. Roblox renamed many 
 
 ## Suggested paths
 
-**Game developer adding avatar features:** HumanoidDescription and Outfit Systems, then [[AvatarEditorService]] and In-Game Avatar Editors, then Avatar Body Types and Scale in Gameplay. Finish with the in-game sales section of UGC Pricing Limiteds and Marketplace Rules.
+**Game developer adding avatar features:** HumanoidDescription and Outfit Systems, then [[AvatarEditorService]] and In-Game Avatar Editors, then Avatar Body Types and Scale in Gameplay. Finish with the in-game sales section of UGC Pricing Limiteds and Marketplace Rules. To let players create and buy brand-new items in your game, add In-Experience Avatar Creation - Tokens, Editing and Prompting.
 
 **Competitive or obby game:** Avatar Body Types and Scale in Gameplay first. It decides whether you need any of the rest.
 

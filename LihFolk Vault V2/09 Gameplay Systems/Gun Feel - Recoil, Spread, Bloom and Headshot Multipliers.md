@@ -151,5 +151,5 @@ Record test patterns: fire full magazines at a wall at 25 and 50 studs without c
 
 <!-- related:start -->
 ## Related
-[[Teardown - Phantom Forces]] · [[Time-to-Kill Math and a Weapon Balance Sheet]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Combat Systems Architecture]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Camera Systems]] · [[Explosions - Radius Damage, Falloff and Cover Checks]] · [[Custom Character Controllers]]
+[[Teardown - Phantom Forces]] · [[Time-to-Kill Math and a Weapon Balance Sheet]] · [[Kill Credit, Assists, Kill Feed and Death Recaps]] · [[Combat Systems Architecture]] · [[Ranged Enemy Tactics - Cover Points, Line of Sight and Peeking]] · [[Camera Systems]] · [[Explosions - Radius Damage, Falloff and Cover Checks]]
 <!-- related:end -->
