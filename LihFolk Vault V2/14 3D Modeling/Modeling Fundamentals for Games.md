@@ -252,5 +252,5 @@ Always check models in the game's real lighting and at the real camera distance,
 
 <!-- related:start -->
 ## Related
-[[Mesh Optimization for Mobile]] · [[AI 3D Model Generation Outside Roblox]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Hand-Painted and Stylized Texturing]] · [[UGC Avatar Items and Accessories]] · [[Curve-Based Modelling in Blender for Roblox]] · [[Procedural Model Kits - Lessons]] · [[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]]
+[[Mesh Optimization for Mobile]] · [[AI 3D Model Generation Outside Roblox]] · [[Modeling Characters for R15 and Custom Rigs]] · [[Procedural Creatures - Fused Shells, Quad Cages and Faceting]] · [[Hand-Painted and Stylized Texturing]] · [[UGC Avatar Items and Accessories]] · [[Procedural Model Kits - Lessons]] · [[Curve-Based Modelling in Blender for Roblox]] · [[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]]
 <!-- related:end -->

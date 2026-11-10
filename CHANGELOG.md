@@ -9,6 +9,7 @@
 - **In-Experience Avatar Creation - Tokens, Editing and Prompting** (37): avatar creation tokens and their costs, the EditableMesh, EditableImage and WrapDeformer editing flow, `PromptCreateAvatarAsync` and its siblings, moderation events and join attribution. `AvatarCreationService` had no coverage.
 - **Video in Experiences - VideoPlayer, VideoDisplay and VideoFrame** (05): upload rules and costs, VideoFrame versus wired VideoPlayer and VideoDisplay, memory, the two-video cap and syncing a shared screen. Video had no coverage.
 - 10 symptom lines in `SYMPTOMS.md` and five open questions for the points the docs leave unconfirmed. All new facts are from the Creator Hub reference and guide pages, checked 2026-11-09.
+- **3D Text Signs in Blender - Passing the Mesh Gates** (56 Field Notes, 2026-11-10): why converted text fails the mesh gates (unwelded caps, n-gon caps, offset outlines folding at sharp corners, small bevels crossing themselves), a `bmesh` clean-up pass, and measured numbers from two text-heavy lobby gates (51k → 18k triangles, 12 → 0 failing pieces). Plus one symptom line and a Field Notes hub entry.
 
 ### Improved
 - **00 Start Here:** the map was missing about 300 notes added in 2.2-2.5 and stopped at section 56, with stale counts. It now lists every note in sections 01-56 and 58-62 with correct counts, points to the 57 Atlas, and has five new reading paths (hit games, thumbnails and CTR, QoL, exact engine numbers, runtime assets).

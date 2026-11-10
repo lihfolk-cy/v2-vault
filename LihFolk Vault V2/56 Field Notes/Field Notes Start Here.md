@@ -1,4 +1,7 @@
 ---
+tags: [type/hub, level/beginner]
+---
+---
 cssclasses: [vault-hub]
 tags: [field-notes, hub, start-here, gotchas, production, lessons, type/hub, area/monetization, level/beginner]
 ---
@@ -24,6 +27,9 @@ The foundations these notes build on live elsewhere:
 - [[Springs That Survive Long Frames - dt Clamps and NaN Guards]]: why Euler springs explode on hitches into a black screen, and a safe spring helper.
 - [[Layering Camera Feedback on the Default Camera]]: roll and FOV punch after the camera step, without accumulating or fighting cutscenes.
 - [[Client Hit Prediction for Melee Feedback]]: hit feel at the contact frame on the attacker's client, server echo suppressed per target.
+
+**Art and import**
+- [[3D Text Signs in Blender - Passing the Mesh Gates]]: converted text fails the mesh gates (open caps, n-gons, folded outlines, self-crossing bevels); a clean-up pass and the numbers that fixed it.
 
 **UI**
 - [[UIStroke on Text - Glyph Counters and the Stroke Ratio]]: thick strokes fill the holes in 0, a and e; keep rounded fonts at or below about 7%.

@@ -344,5 +344,5 @@ Remember the blocked-collaborator rule from section 1: removing someone from the
 
 <!-- related:start -->
 ## Related
-[[Animation Asset Permissions and Groups]] · [[Scoping and Roles for Small Teams]] · [[Version History and Backups]] · [[Creator Account Security and Takeover Recovery]] · [[Multiple Agents in One Studio]] · [[Roadmaps Milestones and Scope Control]]
+[[Animation Asset Permissions and Groups]] · [[Version History and Backups]] · [[Scoping and Roles for Small Teams]] · [[Creator Account Security and Takeover Recovery]] · [[Multiple Agents in One Studio]] · [[Roadmaps Milestones and Scope Control]]
 <!-- related:end -->

@@ -1048,12 +1048,13 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 
 ## 56 Field Notes
 
+- 3D Text Signs in Blender - Passing the Mesh Gates | 56 Field Notes/3D Text Signs in Blender - Passing the Mesh Gates.md | field-notes, blender, modeling, text, signs, mesh-gates, import | ~1.5k tok
 - A Stuck Player Watchdog That Logs the Cause | 56 Field Notes/A Stuck Player Watchdog That Logs the Cause.md | field-notes, characters, movement, watchdog, telemetry, datastore, debugging, luau | ~2.2k tok
 - Animation Data Hygiene - Euler Wrap Joint Holes and Easing | 56 Field Notes/Animation Data Hygiene - Euler Wrap Joint Holes and Easing.md | field-notes, animation, keyframes, euler, interpolation, easing, procedural, luau | ~1.7k tok
 - Blind Review Scores - Noise, Panels and Shipping the Best Version | 56 Field Notes/Blind Review Scores - Noise, Panels and Shipping the Best Version.md | field-notes, review, scoring, rubric, panel, median, reviewer-noise, ai-agents, versioning, backups, animation, vfx, lihfolk | ~1.1k tok
 - Centre-Screen Announcements That Stay Centred | 56 Field Notes/Centre-Screen Announcements That Stay Centred.md | field-notes, ui, announcements, layout, queue, notifications, luau | ~1.7k tok
 - Client Hit Prediction for Melee Feedback | 56 Field Notes/Client Hit Prediction for Melee Feedback.md | field-notes, combat, melee, prediction, latency, networking, game-feel, luau | ~1.7k tok
-- Field Notes Start Here | 56 Field Notes/Field Notes Start Here.md | field-notes, hub, start-here, gotchas, production, lessons | ~1.4k tok
+- Field Notes Start Here | 56 Field Notes/Field Notes Start Here.md |  | ~1.4k tok
 - Held Weapons on Motor6D - Locking the Grip During Attacks | 56 Field Notes/Held Weapons on Motor6D - Locking the Grip During Attacks.md | field-notes, animation, motor6d, weapons, grip, procedural, combat | ~1.8k tok
 - Hold-to-Attack Input That Never Sticks | 56 Field Notes/Hold-to-Attack Input That Never Sticks.md | field-notes, input, contextactionservice, combat, stamina, gamepad, luau | ~1.8k tok
 - Layering Camera Feedback on the Default Camera | 56 Field Notes/Layering Camera Feedback on the Default Camera.md | field-notes, camera, bindtorenderstep, fov, game-feel, playermodule, luau | ~2.0k tok
@@ -1068,7 +1069,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Springs That Survive Long Frames - dt Clamps and NaN Guards | 56 Field Notes/Springs That Survive Long Frames - dt Clamps and NaN Guards.md | field-notes, springs, renderstepped, camera, nan, stability, game-feel, luau | ~1.8k tok
 - Streaming Joins - Frozen Players and Loading Screen Teardown | 56 Field Notes/Streaming Joins - Frozen Players and Loading Screen Teardown.md | field-notes, streaming, loading-screen, joins, network-ownership, replicatedfirst, luau | ~1.8k tok
 - Studio Automation Without Freezing Studio | 56 Field Notes/Studio Automation Without Freezing Studio.md | field-notes, studio, command-bar, mcp, automation, patterns, scripts, performance | ~1.9k tok
-- UIStroke on Text - Glyph Counters and the Stroke Ratio | 56 Field Notes/UIStroke on Text - Glyph Counters and the Stroke Ratio.md | field-notes, ui, uistroke, text, fonts, readability, numbers | ~1.6k tok
+- UIStroke on Text - Glyph Counters and the Stroke Ratio | 56 Field Notes/UIStroke on Text - Glyph Counters and the Stroke Ratio.md | field-notes, ui, uistroke, text, fonts, readability, numbers | ~1.7k tok
 - ipairs Stops at the First nil - Cleanup Tables That Leak | 56 Field Notes/ipairs Stops at the First nil - Cleanup Tables That Leak.md | field-notes, luau, ipairs, tables, cleanup, memory-leaks, sound | ~1.6k tok
 
 ## 57 API and Concept Atlas
@@ -1103,7 +1104,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Battle Pass | 57 API and Concept Atlas/Battle Pass.md | atlas, concept | ~650 tok
 - Beam | 57 API and Concept Atlas/Beam.md | atlas, api | ~690 tok
 - Behaviour Trees | 57 API and Concept Atlas/Behaviour Trees.md | atlas, concept | ~460 tok
-- Bevels | 57 API and Concept Atlas/Bevels.md | atlas, concept | ~930 tok
+- Bevels | 57 API and Concept Atlas/Bevels.md | atlas, concept | ~960 tok
 - Bezier Curves | 57 API and Concept Atlas/Bezier Curves.md | atlas, concept | ~390 tok
 - BillboardGui | 57 API and Concept Atlas/BillboardGui.md | atlas, api | ~710 tok
 - BindToClose | 57 API and Concept Atlas/BindToClose.md | atlas, api | ~1.4k tok

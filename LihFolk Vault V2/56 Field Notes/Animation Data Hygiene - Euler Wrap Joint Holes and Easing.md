@@ -125,5 +125,5 @@ Catch all three at load in Studio, not in playtests:
 
 <!-- related:start -->
 ## Related
-[[Snippets - Building and Sampling Clips]] · [[Animation Editor Advanced]] · [[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[Springs That Survive Long Frames - dt Clamps and NaN Guards]] · [[ipairs Stops at the First nil - Cleanup Tables That Leak]] · [[Layering Camera Feedback on the Default Camera]] · [[Streaming Joins - Frozen Players and Loading Screen Teardown]] · [[Client Hit Prediction for Melee Feedback]]
+[[Snippets - Building and Sampling Clips]] · [[Animation Editor Advanced]] · [[Held Weapons on Motor6D - Locking the Grip During Attacks]] · [[Springs That Survive Long Frames - dt Clamps and NaN Guards]] · [[ipairs Stops at the First nil - Cleanup Tables That Leak]] · [[Layering Camera Feedback on the Default Camera]] · [[3D Text Signs in Blender - Passing the Mesh Gates]] · [[Streaming Joins - Frozen Players and Loading Screen Teardown]] · [[Client Hit Prediction for Melee Feedback]]
 <!-- related:end -->

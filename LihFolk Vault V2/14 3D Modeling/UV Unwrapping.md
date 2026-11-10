@@ -273,5 +273,5 @@ A quick in-Studio test: assign a checker texture (a uniform grid image) as the `
 
 <!-- related:start -->
 ## Related
-[[The Gradient Palette Texture Workflow]] · [[Low-Poly and Stylized Modeling]] · [[Modular Environment Kits]] · [[Hard-Surface Modeling]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Mesh Optimization for Mobile]] · [[Retopology and Decimation]] · [[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]] · [[Voxel and Blocky Modeling]] · [[Modeling Characters for R15 and Custom Rigs]]
+[[The Gradient Palette Texture Workflow]] · [[Low-Poly and Stylized Modeling]] · [[Modular Environment Kits]] · [[Flat Colour vs Gradient Atlas vs Vertex Colour]] · [[Hard-Surface Modeling]] · [[Mesh Optimization for Mobile]] · [[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]] · [[Retopology and Decimation]] · [[Voxel and Blocky Modeling]] · [[Modeling Characters for R15 and Custom Rigs]]
 <!-- related:end -->
