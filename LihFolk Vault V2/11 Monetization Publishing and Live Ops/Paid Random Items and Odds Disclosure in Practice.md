@@ -12,7 +12,7 @@ tags: [monetization, policy, paid-random-items, odds, rng, compliance, luau, typ
 > - Odds disclosed on every random system; restricted behaviour decided per system.
 > - Final-outcome odds flattened from the same tables the server rolls.
 >
-> Cost: TL;DR ~150 tok · whole note ~5.0k tok. Read more: ## 2. Audit first: draw the money paths · ## 3. One source of truth: flatten what the server rolls · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~150 tok · whole note ~5.2k tok. Read more: ## 3. One source of truth: flatten what the server rolls · ## 9. Restricted players: the alternatives in numbers · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 [[Roblox Policies Ratings and Compliance]] states the rules: what counts as a paid random item, the disclosure format, the `PolicyService` checks. This note is about implementing them in a real RNG game, where the hard parts are not the rules but the maths around them: tiered rolls whose final odds must be flattened, luck boosts that change odds live, pity counters, once-per-player outcomes, multi-roll packs, rarity caps, and the compliant alternatives for restricted players. It ends with a statistical test that proves your displayed odds match your server rolls.
@@ -218,6 +218,7 @@ Percentages for rare outcomes get tiny: 1 in 5,000,000 is 0.00002%. The docs all
 - **Shared odds:** if many items share one probability, the docs allow "Odds for each item listed below: X%".
 - **Label the control.** "Odds", "Details" or "Info" as text, visible before purchase, on every purchase surface: shop cards, contextual pop-ups, in-world egg prompts, and the confirmation dialog of a paid-currency spend.
 - **Localise numbers carefully.** Some locales use a comma as the decimal separator; a formatter that inserts thousands separators can turn 0.0002 into something unreadable ([[Localization]]).
+- **A fixed-height odds line clips on phones.** A disclosure the player can't read in full is not a disclosure. Measured (a party game's class roll window, November 2026): six outcomes plus a note needed 36 px in a 34 px label at phone width (258 px), so the last line was cut off on phones only. Measure with `TextService:GetTextBoundsAsync` at the label's real width and step the text size down until it fits (12 to 11 px was enough), or give the label automatic height.
 
 ---
 
@@ -239,6 +240,8 @@ This produces absurd prices for genuinely rare outcomes. A 1 in 1,000,000 item f
 | Very rare | Free earnable path (milestones, quests), or hide |
 | Cosmetic-only random items | Predetermined order (the docs' example: 5, then 10, then 20 gems) |
 | Luck boosts | Block with a clear message; a modifier has no non-random equivalent |
+
+**Coin-priced rolls (Measured design).** When the roll costs soft currency that is also sold for Robux, a predetermined order works well: each roll gives the next outcome the player doesn't own yet, then repeats in the same shown order; same price, no spin animation, and the window names the next outcome. The server picks the outcome from the policy; the client only changes the text.
 
 **Test the restricted path.** Add a debug override that forces the restricted policy for a test account in Studio, and walk every purchase surface. The usual failure is a contextual pop-up (near-miss luck boost) that bypasses the shop's policy check because it calls the prompt remote directly. Gate in the prompt remote itself, not in the UI.
 

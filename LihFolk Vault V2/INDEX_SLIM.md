@@ -75,7 +75,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Open Cloud APIs | 04 Data and Persistence/Open Cloud APIs.md | data, open-cloud, api-keys, automation, datastore, messaging, webhooks | ~3.9k tok
 - OrderedDataStores and Leaderboards | 04 Data and Persistence/OrderedDataStores and Leaderboards.md | data, ordereddatastore, leaderboards, memorystore, ranking | ~4.6k tok
 - Player Privacy and Data Deletion | 04 Data and Persistence/Player Privacy and Data Deletion.md | data, privacy, gdpr, rtbf, right-to-erasure, compliance, webhooks | ~3.5k tok
-- Purchase Data and Receipts | 04 Data and Persistence/Purchase Data and Receipts.md | data, monetization, processreceipt, idempotency, purchases, receipts | ~4.2k tok
+- Purchase Data and Receipts | 04 Data and Persistence/Purchase Data and Receipts.md | data, monetization, processreceipt, idempotency, purchases, receipts | ~4.3k tok
 - Saving Correctly - Autosave and BindToClose | 04 Data and Persistence/Saving Correctly - Autosave and BindToClose.md | data, datastore, autosave, bindtoclose, retries, shutdown | ~4.4k tok
 - Schema Migrations - Worked Case Studies | 04 Data and Persistence/Schema Migrations - Worked Case Studies.md | data, schema, migrations, versioning, rollback, case-study, luau | ~6.0k tok
 - Serial-Numbered Limited Items - Atomic Counters | 04 Data and Persistence/Serial-Numbered Limited Items - Atomic Counters.md | data, datastores, limited-items, serials, atomic, updateasync, idempotency, economy, dupes | ~2.2k tok
@@ -409,7 +409,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Live Ops Events and Updates | 11 Monetization Publishing and Live Ops/Live Ops Events and Updates.md | live-ops, events, notifications, updates, scheduling, luau | ~3.4k tok
 - Measuring Onboarding - Funnels, Drop-off and A-B Tests | 11 Monetization Publishing and Live Ops/Measuring Onboarding - Funnels, Drop-off and A-B Tests.md | analytics, onboarding, ftue, funnels, drop-off, ab-testing, retention, d1-retention, analyticsservice | ~1.7k tok
 - Monetization Overview | 11 Monetization Publishing and Live Ops/Monetization Overview.md | monetization, robux, overview, business, live-ops | ~3.9k tok
-- Paid Random Items and Odds Disclosure in Practice | 11 Monetization Publishing and Live Ops/Paid Random Items and Odds Disclosure in Practice.md | monetization, policy, paid-random-items, odds, rng, compliance, luau | ~5.0k tok
+- Paid Random Items and Odds Disclosure in Practice | 11 Monetization Publishing and Live Ops/Paid Random Items and Odds Disclosure in Practice.md | monetization, policy, paid-random-items, odds, rng, compliance, luau | ~5.2k tok
 - Pricing and Store Design | 11 Monetization Publishing and Live Ops/Pricing and Store Design.md | monetization, pricing, managed-pricing, regional-pricing, shop, store-design, luau | ~4.1k tok
 - Publishing an Experience | 11 Monetization Publishing and Live Ops/Publishing an Experience.md | publishing, release, audience, kids-and-select, server-management, live-ops | ~3.4k tok
 - Refunds Chargebacks and Purchase Support | 11 Monetization Publishing and Live Ops/Refunds Chargebacks and Purchase Support.md | monetization, refunds, chargebacks, support, webhooks, purchases, live-ops, luau | ~5.2k tok

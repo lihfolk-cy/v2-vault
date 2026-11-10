@@ -12,7 +12,7 @@ tags: [data, monetization, processreceipt, idempotency, purchases, receipts, typ
 > - Waits for the profile; refuses when it cannot save.
 > - Grant and `PurchaseId` recorded together, synchronously, in the same key.
 >
-> Cost: TL;DR ~160 tok · whole note ~4.2k tok. Read more: ## The handler · ## Two-layer design for gifts (production lesson) · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~4.3k tok. Read more: ## The handler · ## Two-layer design for gifts (production lesson) · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 A developer product purchase is the one write in your game where a bug costs a player real money or costs you a refund dispute. The rules come from two places: the exact guarantees `MarketplaceService.ProcessReceipt` gives (and does not give), and the data store's failure modes. This note covers both, then gives a complete idempotent receipt handler built on a session-locked profile, the extra ledger needed for gifting, and the production lessons from one game that sold boosts, bundles, gifts and one-time packs. The monetization side (pricing, product design) lives in [[Developer Products and ProcessReceipt]] and [[Monetization Overview]]; this note is about getting the data right.
@@ -243,6 +243,7 @@ Roblox can send a **Transaction Refunded** webhook (developer products, passes, 
 | Multiple scripts setting `ProcessReceipt` | Only the last assignment is used; products handled elsewhere never grant |
 | Side effects (announce, analytics) before the durable save | Repeated on every retry |
 | Trusting the client about what was bought | Exploitable; the receipt is the only truth |
+| Undoing a failed grant by restoring a pre-grant snapshot | Coins earned, or a second receipt granted, while the save yielded are wiped; a paid item can vanish while its id stays recorded. Undo only this grant's own delta, and process one receipt per player at a time |
 
 ## Checklist
 
@@ -252,6 +253,7 @@ Roblox can send a **Transaction Refunded** webhook (developer products, passes, 
 - [ ] `PurchaseGranted` only after a confirmed save.
 - [ ] Receipt list bounded; kept across resets.
 - [ ] Gifts and cross-profile grants use a ledger claimed with `UpdateAsync`.
+- [ ] A failed save rolls back only that grant's delta (never a snapshot); one receipt per player at a time.
 - [ ] One-off side effects run once.
 - [ ] Unknown or undeliverable products are never prompted.
 
