@@ -836,7 +836,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Reserved and Private Servers in Practice | 41 Multiplayer Services/Reserved and Private Servers in Practice.md | multiplayer, reserved-servers, private-servers, teleport, monetization, datastore, luau, strict | ~5.6k tok
 - Server Browsers and Server Lists | 41 Multiplayer Services/Server Browsers and Server Lists.md | multiplayer, server-browser, memorystore, teleport, lobby, text-filtering, luau, strict | ~5.5k tok
 - Server Shutdowns Soft Updates and Migration | 41 Multiplayer Services/Server Shutdowns Soft Updates and Migration.md | multiplayer, updates, shutdown, migration, versioning, live-ops, configs, luau, strict | ~5.3k tok
-- Session State Across Places | 41 Multiplayer Services/Session State Across Places.md | multiplayer, teleport, session, memorystore, datastore, session-locking, multi-place, luau, strict | ~6.6k tok
+- Session State Across Places | 41 Multiplayer Services/Session State Across Places.md | multiplayer, teleport, session, memorystore, datastore, session-locking, multi-place, luau, strict | ~6.7k tok
 
 ## 42 Accessibility and Inclusive Design
 

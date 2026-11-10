@@ -12,7 +12,7 @@ tags: [multiplayer, teleport, session, memorystore, datastore, session-locking, 
 > - Teleport data carries only a nonce and harmless hints.
 > - Source writes the envelope, saves and releases, then teleports.
 >
-> Cost: TL;DR ~160 tok · whole note ~6.6k tok. Read more: ## 4. Source side · ## 5. Destination bootstrap · ## Common mistakes · ## Checklist
+> Cost: TL;DR ~160 tok · whole note ~6.7k tok. Read more: ## 4. Source side · ## 5. Destination bootstrap · ## Common mistakes · ## Checklist
 <!-- tldr:end -->
 
 When a player teleports, their server-side world ends. Their character, their in-memory tables, the round they were in and the buff they just drank exist only on the server they left. The destination starts from nothing and has to rebuild "who is this player and what were they doing" from three sources of very different trust: the durable profile, a short-lived transit record, and the teleport data the client carried. Most multi-place bugs are a piece of state in the wrong one of those three, or a hop that half failed. This note gives a complete, server-authoritative handoff protocol in strict Luau: what goes where, how the source hands over, how the destination claims, and what happens on every failure path.
@@ -381,6 +381,7 @@ Things the code relies on and why:
 
 - `travelling` makes `send` idempotent per player: a double-clicked "Enter" cannot start two handoffs.
 - `markTravelling` lets the profile gateway's own `PlayerRemoving` save skip a profile it no longer owns. Without it, a successful teleport triggers a save on the source after release, which a correct session lock refuses (good) or, with a naive loader, overwrites the destination's newer data (bad).
+- The periodic autosave needs the same flag. A loop that re-stamps every loaded profile's lock to keep the claim alive will also re-claim a profile that was just released, if it fires in the seconds between release and the player actually leaving. The destination then sees a fresh foreign lock and waits for it to go stale. Make every save release while the flag is set, or skip flagged players in the loop.
 - The destination consumes with `CONSUMED_TTL` rather than deleting. A consumed envelope that lingers for 10 minutes lets you answer "did this player's handoff arrive?" in a support case, and it blocks reuse of the same nonce.
 - `withRetry` on consume treats throttling as transient. If the store stays down, `receive` returns `nil` and the place's default applies. Decide per place whether that default is acceptable (next section).
 
@@ -519,6 +520,7 @@ A single-place game needs none of it. A multi-place game where places share noth
 | Deleting the envelope on read instead of consuming atomically | Two arrivals both apply it |
 | Destination trusting a payload's grants | Treat payload as a selection, verify against the profile |
 | Saving on `PlayerRemoving` after release | `markTravelling` so the gateway skips it |
+| Autosave loop re-claiming a travelling player's lock | While `markTravelling` is set, every save releases (or the loop skips the player); otherwise an autosave between release and leaving re-stamps the lock and the destination waits for it to go stale |
 | Unversioned payloads | `v` field, refuse newer |
 | Same default for every place | Hubs can improvise, instances should send players home |
 
@@ -543,5 +545,5 @@ A single-place game needs none of it. A multi-place game where places share noth
 
 <!-- related:start -->
 ## Related
-[[Server Hop Rejoin and Server Lists with Ping]] · [[Server Browsers and Server Lists]] · [[Cookbook - Data and Saving]] · [[AI Pitfalls - Data and Monetization]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[Debugging DataStore Problems]]
+[[Server Hop Rejoin and Server Lists with Ping]] · [[Server Browsers and Server Lists]] · [[Cookbook - Data and Saving]] · [[LihFolk Systems - Data and Purchase Guarantees]] · [[AI Pitfalls - Data and Monetization]] · [[Debugging DataStore Problems]]
 <!-- related:end -->

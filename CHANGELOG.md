@@ -12,6 +12,7 @@
 - **3D Text Signs in Blender - Passing the Mesh Gates** (56 Field Notes, 2026-11-10): why converted text fails the mesh gates (unwelded caps, n-gon caps, offset outlines folding at sharp corners, small bevels crossing themselves), a `bmesh` clean-up pass, and measured numbers from two text-heavy lobby gates (51k → 18k triangles, 12 → 0 failing pieces). Plus one symptom line and a Field Notes hub entry.
 
 ### Improved
+- **Session State Across Places:** a periodic autosave that re-stamps locks also re-claims a profile that was just released for a teleport, so the destination waits for a stale lock. New paragraph and Common mistakes row (found reviewing a live lobby-to-round balloon teleport, 2026-11-10).
 - **00 Start Here:** the map was missing about 300 notes added in 2.2-2.5 and stopped at section 56, with stale counts. It now lists every note in sections 01-56 and 58-62 with correct counts, points to the 57 Atlas, and has five new reading paths (hit games, thumbnails and CTR, QoL, exact engine numbers, runtime assets).
 - **000 Home:** links to the Field Notes, Player QoL, Engine Reference Cards, API Atlas, both teardown sections and Thumbnails and CTR.
 - **13 section hubs** (Animation, Anti-Exploit, Worked Builds, Physics and Vehicles, Marketing, Business, Top Games, Level Design, Narrative, Game Math, Materials, Platform Features, Modelling Nuance) now link the 68 notes added in 2.2-2.5 that they were missing; the Avatars hub links the new creation note.
