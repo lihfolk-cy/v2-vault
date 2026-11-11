@@ -10,7 +10,7 @@ tags: [atlas, concept, type/atlas, area/world, area/design]
 > - Sightline parity. Every long sightline should have a matching one.
 > - Sightline length should match the roster: no 400-stud sightlines if there are no long-range weapons.
 >
-> Cost: TL;DR ~150 tok · whole note ~640 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~150 tok · whole note ~660 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -26,7 +26,7 @@ Sightlines are what the player actually sees from a spot; they also leak locked 
 
 ## Mentioned in
 
-26 notes in 10 sections. The 25 most relevant are linked:
+27 notes in 11 sections. The 25 most relevant are linked:
 
 ### 06 World Building and Art
 [[Foliage Props and Scatter]] · [[Level Design for Roblox]] · [[Procedural World Generation]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Zone and Biome Art Direction]]
@@ -41,7 +41,7 @@ Sightlines are what the player actually sees from a spot; they also leak locked 
 [[Vehicles and StreamingEnabled - Atomic Models and Streaming Ahead of the Driver]]
 
 ### 33 Level Design
-[[Combat Arena and Encounter Layout]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]] · [[Level Design Principles - Flow Sightlines and Landmarks]] · [[Level Design Start Here]] · [[Lobby and Hub Design]] · [[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Playtest Heatmaps - Position and Death Maps]] · [[Spawn Points Safe Zones and Respawn Flow]] · [[Teaching Through Level Design]]
+[[Combat Arena and Encounter Layout]] · [[Kill Planes, Map Boundaries and Out-of-Bounds Recovery]] · [[Level Design Principles - Flow Sightlines and Landmarks]] · [[Lobby and Hub Design]] · [[Objective Mode Maps - Capture the Flag, King of the Hill and Control Points]] · [[Playtest Heatmaps - Position and Death Maps]] · [[Spawn Points Safe Zones and Respawn Flow]] · [[Teaching Through Level Design]]
 
 ### 43 Genre Systems End to End
 [[Horror Monster Chase AI End to End]]
@@ -52,12 +52,15 @@ Sightlines are what the player actually sees from a spot; they also leak locked 
 ### 55 Modelling Nuance and Readability
 [[Modelling to the Roblox Camera and Player Scale]]
 
+### 56 Field Notes
+[[Re-theming a Live Game - UI Theme Scripts and a Reversible World Pass]]
+
 ### 60 High-Craft Game Teardowns
 [[Teardown - Evade]] · [[What Craft Looks Like on Roblox - Lessons from Top Studios]]
 
 ### Root notes
 [[00 Start Here]]
 
-Also mentioned in (not linked): Modelling Nuance Start Here
+Also mentioned in (not linked): Level Design Start Here · Modelling Nuance Start Here
 
 <!-- atlas:generated -->

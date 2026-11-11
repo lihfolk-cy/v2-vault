@@ -10,7 +10,7 @@ tags: [atlas, api, type/atlas, area/ui, area/accessibility, api/UIStroke]
 > - Set `UIStroke.StrokeSizingMode` to `ScaledSize` so thickness is relative to the text size (listed in Text Fonts and Rich Text...
 > - Rounded heavy fonts such as Fredoka One need less: above about 7% the stroke fills the holes in 0, a and e (UIStroke on Text...
 >
-> Cost: TL;DR ~160 tok · whole note ~620 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~160 tok · whole note ~640 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -28,7 +28,7 @@ API snapshot: class, inherits `UIComponent` (`_tools/roblox_api.json`, docs buil
 
 ## Mentioned in
 
-26 notes in 11 sections. The 25 most relevant are linked:
+27 notes in 11 sections. The 25 most relevant are linked:
 
 ### 05 UI and UX
 [[Accessibility]] · [[Designing Roblox UI in Figma - Frames, Safe Areas and Tokens]] · [[Figma Property Mapping for Roblox UI]] · [[Figma to Roblox UI - Pipeline and Handoff]] · [[Layout - Scale Offset and Constraints]] · [[Nametags and Overhead Bars - Cost and Visibility Rules]] · [[Safe Areas and Insets]] · [[ScreenGui Fundamentals]] · [[Settings Menu Design for Roblox - Layout, Controls and Motion]] · [[Text Fonts and Rich Text]] · [[UI Design Systems]] · [[UI Motion Language and Timing]] · [[UI Style Directions - A Visual Vocabulary for Briefs]] · [[Virtualized Lists and Large Inventories]]
@@ -58,8 +58,8 @@ API snapshot: class, inherits `UIComponent` (`_tools/roblox_api.json`, docs buil
 [[Accessibility Contrast]]
 
 ### 56 Field Notes
-[[Field Notes Start Here]] · [[UIStroke on Text - Glyph Counters and the Stroke Ratio]]
+[[Re-theming a Live Game - UI Theme Scripts and a Reversible World Pass]] · [[UIStroke on Text - Glyph Counters and the Stroke Ratio]]
 
-Also mentioned in (not linked): Official Docs - UI
+Also mentioned in (not linked): Field Notes Start Here · Official Docs - UI
 
 <!-- atlas:generated -->

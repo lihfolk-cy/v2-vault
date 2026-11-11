@@ -92,5 +92,5 @@ Common causes:
 
 <!-- related:start -->
 ## Related
-[[3D Text Signs in Blender - Passing the Mesh Gates]] · [[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]] · [[Blender Workflow for Roblox Creators]] · [[Retopology and Decimation]] · [[Hard-Surface Modeling]] · [[Modeling Fundamentals for Games]] · [[Normal Maps and Detail Baking]] · [[UV Unwrapping]] · [[Organic and Creature Modeling]]
+[[3D Text Signs in Blender - Passing the Mesh Gates]] · [[Stylized Creatures - Soft Forms, Painted Gradients and Light Rigs]] · [[Blender Workflow for Roblox Creators]] · [[Retopology and Decimation]] · [[Hard-Surface Modeling]] · [[Modeling Fundamentals for Games]] · [[Normal Maps and Detail Baking]] · [[Organic and Creature Modeling]] · [[UV Unwrapping]]
 <!-- related:end -->

@@ -171,5 +171,5 @@ Twenty players share islands. Fishing is parallel play: you see others' catches 
 
 <!-- related:start -->
 ## Related
-[[Teardown - Tap Simulator REBORN]] · [[Teardown - Plants vs Brainrots]] · [[Teardown - Ride A Pet]] · [[Teardown - Bee Swarm Simulator]] · [[Teardown - +1 Speed Keyboard Escape]] · [[Teardown - Steal An Egg]] · [[Teardown - Escape Tsunami for Brainrots]] · [[Teardown - Build A Boat For Treasure]]
+[[Teardown - Tap Simulator REBORN]] · [[Teardown - Plants vs Brainrots]] · [[Teardown - Ride A Pet]] · [[Teardown - Bee Swarm Simulator]] · [[Teardown - Steal An Egg]] · [[Teardown - +1 Speed Keyboard Escape]] · [[Teardown - Escape Tsunami for Brainrots]] · [[Teardown - Build A Boat For Treasure]]
 <!-- related:end -->

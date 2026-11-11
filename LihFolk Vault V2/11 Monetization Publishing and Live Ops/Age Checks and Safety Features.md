@@ -232,5 +232,5 @@ If your game is cooperative and chat matters, the Text Chat matchmaking signal h
 
 <!-- related:start -->
 ## Related
-[[Policy and Age Rules 2026]] · [[TextChatService - Engine Reference Card]] · [[Voice Chat and Safety Features]] · [[API Renames and Deprecations 2025-2026]] · [[Discord Servers for Roblox Games]] · [[Block and Mute Respecting Platform Rules]]
+[[Policy and Age Rules 2026]] · [[TextChatService - Engine Reference Card]] · [[Voice Chat and Safety Features]] · [[Discord Servers for Roblox Games]] · [[API Renames and Deprecations 2025-2026]] · [[Block and Mute Respecting Platform Rules]]
 <!-- related:end -->

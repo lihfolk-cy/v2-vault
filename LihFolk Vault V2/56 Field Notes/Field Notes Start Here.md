@@ -30,6 +30,7 @@ The foundations these notes build on live elsewhere:
 
 **Art and import**
 - [[3D Text Signs in Blender - Passing the Mesh Gates]]: converted text fails the mesh gates (open caps, n-gons, folded outlines, self-crossing bevels); a clean-up pass and the numbers that fixed it.
+- [[Re-theming a Live Game - UI Theme Scripts and a Reversible World Pass]]: a new palette, fonts and button style across 30 screens without rewriting them, six traps (gradients multiply, rotated objects don't clip, text caps, the phone top bar), and a world colour pass that keeps meaningful colours.
 
 **UI**
 - [[UIStroke on Text - Glyph Counters and the Stroke Ratio]]: thick strokes fill the holes in 0, a and e; keep rounded fonts at or below about 7%.

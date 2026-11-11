@@ -130,5 +130,5 @@ Instead, add a **mirror script** that applies designer edits on top of the runti
 
 <!-- related:start -->
 ## Related
-[[Studio Automation Without Freezing Studio]] · [[Running Many AI Agents on One Roblox Place]] · [[Centre-Screen Announcements That Stay Centred]] · [[Springs That Survive Long Frames - dt Clamps and NaN Guards]] · [[ipairs Stops at the First nil - Cleanup Tables That Leak]] · [[UIStroke on Text - Glyph Counters and the Stroke Ratio]] · [[Resetting One Player's Data Safely]] · [[3D Text Signs in Blender - Passing the Mesh Gates]]
+[[Studio Automation Without Freezing Studio]] · [[Running Many AI Agents on One Roblox Place]] · [[Re-theming a Live Game - UI Theme Scripts and a Reversible World Pass]] · [[Centre-Screen Announcements That Stay Centred]] · [[Springs That Survive Long Frames - dt Clamps and NaN Guards]] · [[ipairs Stops at the First nil - Cleanup Tables That Leak]] · [[UIStroke on Text - Glyph Counters and the Stroke Ratio]] · [[Resetting One Player's Data Safely]]
 <!-- related:end -->

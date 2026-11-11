@@ -9,7 +9,7 @@ tags: [atlas, api, type/atlas, area/ui, api/TopbarInset]
 > - Avoid: Reading `TopbarInset` once at startup.
 > - HUD layout respects `TopbarInset` or `ScreenInsets`.
 >
-> Cost: TL;DR ~100 tok · whole note ~220 tok. Read more: ## In short · ## Key facts
+> Cost: TL;DR ~100 tok · whole note ~240 tok. Read more: ## In short · ## Key facts
 <!-- tldr:end -->
 
 ## In short
@@ -25,13 +25,13 @@ API snapshot: member of `GuiService` (`_tools/roblox_api.json`, docs build of 20
 
 ## Mentioned in
 
-3 notes in 3 sections. The 3 most relevant are linked:
+4 notes in 3 sections. The 4 most relevant are linked:
 
 ### 05 UI and UX
 [[Safe Areas and Insets]]
 
 ### 56 Field Notes
-[[Centre-Screen Announcements That Stay Centred]]
+[[Centre-Screen Announcements That Stay Centred]] · [[Re-theming a Live Game - UI Theme Scripts and a Reversible World Pass]]
 
 ### 62 Engine Reference Cards
 [[GuiService - Engine Reference Card]]

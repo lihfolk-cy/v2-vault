@@ -135,5 +135,5 @@ Voldex runs the game and publishes partnership news (Unverified, publisher site)
 
 <!-- related:start -->
 ## Related
-[[Teardown - Welcome to Bloxburg]] · [[Teardown - Evade]] · [[Teardown - Piggy]] · [[Teardown - Funky Friday]] · [[Teardown - Anime Vanguards]] · [[Teardown - Phantom Forces]] · [[Teardown - Grace]] · [[Teardown - BedWars]]
+[[Teardown - Welcome to Bloxburg]] · [[Teardown - Evade]] · [[Teardown - Funky Friday]] · [[Teardown - Piggy]] · [[Teardown - Anime Vanguards]] · [[Teardown - Phantom Forces]] · [[Teardown - Grace]] · [[Teardown - BedWars]]
 <!-- related:end -->

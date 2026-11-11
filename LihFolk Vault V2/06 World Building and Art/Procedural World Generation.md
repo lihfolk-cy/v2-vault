@@ -289,5 +289,5 @@ The senior trade-off: procedural content scales content volume, not content qual
 
 <!-- related:start -->
 ## Related
-[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Collision and Physics Geometry]] · [[Parts Unions and MeshParts]] · [[Grid Placement and Player Building Systems]] · [[EditableMesh - Runtime Mesh Editing, Budgets and Publishing]] · [[Zone and Biome Art Direction]] · [[Environment Art Styles]]
+[[Roads, Rivers and Paths Carved Along Curves in Terrain]] · [[World Composition and Set Dressing - Designed, Not Scattered]] · [[Collision and Physics Geometry]] · [[Parts Unions and MeshParts]] · [[Grid Placement and Player Building Systems]] · [[EditableMesh - Runtime Mesh Editing, Budgets and Publishing]] · [[Zone and Biome Art Direction]] · [[Materials MaterialVariants and SurfaceAppearance]]
 <!-- related:end -->

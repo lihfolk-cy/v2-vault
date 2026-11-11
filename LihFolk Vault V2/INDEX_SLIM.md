@@ -1054,12 +1054,13 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Blind Review Scores - Noise, Panels and Shipping the Best Version | 56 Field Notes/Blind Review Scores - Noise, Panels and Shipping the Best Version.md | field-notes, review, scoring, rubric, panel, median, reviewer-noise, ai-agents, versioning, backups, animation, vfx, lihfolk | ~1.1k tok
 - Centre-Screen Announcements That Stay Centred | 56 Field Notes/Centre-Screen Announcements That Stay Centred.md | field-notes, ui, announcements, layout, queue, notifications, luau | ~1.7k tok
 - Client Hit Prediction for Melee Feedback | 56 Field Notes/Client Hit Prediction for Melee Feedback.md | field-notes, combat, melee, prediction, latency, networking, game-feel, luau | ~1.7k tok
-- Field Notes Start Here | 56 Field Notes/Field Notes Start Here.md |  | ~1.4k tok
+- Field Notes Start Here | 56 Field Notes/Field Notes Start Here.md |  | ~1.5k tok
 - Held Weapons on Motor6D - Locking the Grip During Attacks | 56 Field Notes/Held Weapons on Motor6D - Locking the Grip During Attacks.md | field-notes, animation, motor6d, weapons, grip, procedural, combat | ~1.8k tok
 - Hold-to-Attack Input That Never Sticks | 56 Field Notes/Hold-to-Attack Input That Never Sticks.md | field-notes, input, contextactionservice, combat, stamina, gamepad, luau | ~1.8k tok
 - Layering Camera Feedback on the Default Camera | 56 Field Notes/Layering Camera Feedback on the Default Camera.md | field-notes, camera, bindtorenderstep, fov, game-feel, playermodule, luau | ~2.0k tok
 - Moving Data Out of a Play Session | 56 Field Notes/Moving Data Out of a Play Session.md | field-notes, studio, playtest, httpservice, mcp, tooling, ui, datamodel | ~1.9k tok
 - ProximityPrompt Gamepad Keys and the Hidden PlayerList Tab | 56 Field Notes/ProximityPrompt Gamepad Keys and the Hidden PlayerList Tab.md | field-notes, input, gamepad, proximityprompt, coregui, playerlist, console | ~1.6k tok
+- Re-theming a Live Game - UI Theme Scripts and a Reversible World Pass | 56 Field Notes/Re-theming a Live Game - UI Theme Scripts and a Reversible World Pass.md | field-notes, ui, theming, colour, fonts, world-art, lighting | ~2.0k tok
 - Resetting One Player's Data Safely | 56 Field Notes/Resetting One Player's Data Safely.md | field-notes, datastore, data, reset, support, versioning, live-ops, luau | ~1.7k tok
 - Running Many AI Agents on One Roblox Place | 56 Field Notes/Running Many AI Agents on One Roblox Place.md | field-notes, ai, agents, mcp, coordination, studio, workflow, backups | ~1.7k tok
 - Server-Authoritative Freeze and Stun Timestamps | 56 Field Notes/Server-Authoritative Freeze and Stun Timestamps.md | field-notes, status-effects, stun, freeze, server-authority, attributes, combat, luau | ~1.8k tok
@@ -1189,7 +1190,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - GetUserSubscriptionStatusAsync | 57 API and Concept Atlas/GetUserSubscriptionStatusAsync.md | atlas, api | ~280 tok
 - GlobalShadows | 57 API and Concept Atlas/GlobalShadows.md | atlas, api | ~380 tok
 - Greyboxing | 57 API and Concept Atlas/Greyboxing.md | atlas, concept | ~590 tok
-- GuiService | 57 API and Concept Atlas/GuiService.md | atlas, api | ~840 tok
+- GuiService | 57 API and Concept Atlas/GuiService.md | atlas, api | ~860 tok
 - Haptics | 57 API and Concept Atlas/Haptics.md | atlas, concept | ~620 tok
 - Heartbeat | 57 API and Concept Atlas/Heartbeat.md | atlas, api | ~820 tok
 - HipHeight | 57 API and Concept Atlas/HipHeight.md | atlas, api | ~450 tok
@@ -1217,7 +1218,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - Kick | 57 API and Concept Atlas/Kick.md | atlas, api | ~560 tok
 - Kill Switches | 57 API and Concept Atlas/Kill Switches.md | atlas, concept | ~610 tok
 - Knockback | 57 API and Concept Atlas/Knockback.md | atlas, concept | ~690 tok
-- Landmarks | 57 API and Concept Atlas/Landmarks.md | atlas, concept | ~920 tok
+- Landmarks | 57 API and Concept Atlas/Landmarks.md | atlas, concept | ~940 tok
 - Layered Clothing | 57 API and Concept Atlas/Layered Clothing.md | atlas, concept | ~660 tok
 - Leaderboards | 57 API and Concept Atlas/Leaderboards.md | atlas, concept | ~1.4k tok
 - Lerp | 57 API and Concept Atlas/Lerp.md | atlas, concept | ~790 tok
@@ -1316,7 +1317,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - SetSetting | 57 API and Concept Atlas/SetSetting.md | atlas, api | ~380 tok
 - SetStateEnabled | 57 API and Concept Atlas/SetStateEnabled.md | atlas, api | ~300 tok
 - ShadowSoftness | 57 API and Concept Atlas/ShadowSoftness.md | atlas, api | ~290 tok
-- Sightlines | 57 API and Concept Atlas/Sightlines.md | atlas, concept | ~640 tok
+- Sightlines | 57 API and Concept Atlas/Sightlines.md | atlas, concept | ~660 tok
 - Silhouette | 57 API and Concept Atlas/Silhouette.md | atlas, concept | ~1.8k tok
 - Slerp | 57 API and Concept Atlas/Slerp.md | atlas, concept | ~420 tok
 - SmoothTime | 57 API and Concept Atlas/SmoothTime.md | atlas, api | ~230 tok
@@ -1353,7 +1354,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - TimePosition | 57 API and Concept Atlas/TimePosition.md | atlas, api | ~520 tok
 - TintColor | 57 API and Concept Atlas/TintColor.md | atlas, api | ~350 tok
 - Tool | 57 API and Concept Atlas/Tool.md | atlas, api | ~570 tok
-- TopbarInset | 57 API and Concept Atlas/TopbarInset.md | atlas, api | ~220 tok
+- TopbarInset | 57 API and Concept Atlas/TopbarInset.md | atlas, api | ~240 tok
 - Topology | 57 API and Concept Atlas/Topology.md | atlas, concept | ~770 tok
 - TouchEnded | 57 API and Concept Atlas/TouchEnded.md | atlas, api | ~370 tok
 - Touched | 57 API and Concept Atlas/Touched.md | atlas, api | ~820 tok
@@ -1367,7 +1368,7 @@ One line per note: `title | path | tags | ~whole-note tokens`. Grep it for an AP
 - UGC | 57 API and Concept Atlas/UGC.md | atlas, concept | ~830 tok
 - UIDragDetector | 57 API and Concept Atlas/UIDragDetector.md | atlas, api | ~250 tok
 - UIScale | 57 API and Concept Atlas/UIScale.md | atlas, api | ~770 tok
-- UIStroke | 57 API and Concept Atlas/UIStroke.md | atlas, api | ~620 tok
+- UIStroke | 57 API and Concept Atlas/UIStroke.md | atlas, api | ~640 tok
 - UnreliableRemoteEvent | 57 API and Concept Atlas/UnreliableRemoteEvent.md | atlas, api | ~790 tok
 - UpdateAsync | 57 API and Concept Atlas/UpdateAsync.md | atlas, api | ~880 tok
 - UserInputService | 57 API and Concept Atlas/UserInputService.md | atlas, api | ~1.3k tok

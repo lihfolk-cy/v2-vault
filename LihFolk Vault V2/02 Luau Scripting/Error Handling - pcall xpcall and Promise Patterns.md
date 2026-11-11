@@ -466,5 +466,5 @@ Whatever you pick, apply it consistently per layer. Half the bugs in mixed codeb
 
 <!-- related:start -->
 ## Related
-[[Functions Closures and Upvalues]] · [[Script Types and Run Context]] · [[Luau Type System and Strict Mode]] · [[Luau Language Essentials]] · [[Metatables and OOP - When and When Not]] · [[Luau Performance Patterns with Benchmarks]] · [[Parallel Luau and Actors]] · [[Luau Performance and Native Codegen]]
+[[Functions Closures and Upvalues]] · [[Luau Type System and Strict Mode]] · [[Script Types and Run Context]] · [[Luau Language Essentials]] · [[Metatables and OOP - When and When Not]] · [[Luau Performance Patterns with Benchmarks]] · [[Parallel Luau and Actors]] · [[Luau Performance and Native Codegen]]
 <!-- related:end -->
